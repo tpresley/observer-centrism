@@ -14,8 +14,8 @@
     { "id": "thermodynamics/action-planck", "title": "Action and Planck's Constant", "group": "dynamics", "status": "provisional" },
     { "id": "spacetime/speed-of-light", "title": "Speed of Light", "group": "geometry", "status": "provisional" },
     { "id": "spacetime/lorentz-invariance", "title": "Lorentz Invariance", "group": "geometry", "status": "provisional" },
-    { "id": "spacetime/gravity", "title": "Gravity as Curvature", "group": "geometry", "status": "draft" },
-    { "id": "spacetime/einstein-equations", "title": "Einstein Field Equations", "group": "geometry", "status": "draft" },
+    { "id": "spacetime/gravity", "title": "Gravity as Curvature", "group": "geometry", "status": "provisional" },
+    { "id": "spacetime/einstein-equations", "title": "Einstein Field Equations", "group": "geometry", "status": "provisional" },
     { "id": "dimensions/three-dimensions", "title": "Three Spatial Dimensions", "group": "geometry", "status": "provisional" },
     { "id": "quantum/born-rule", "title": "Born Rule", "group": "quantum", "status": "provisional" },
     { "id": "quantum/preferred-basis", "title": "Preferred Basis", "group": "quantum", "status": "provisional" },
@@ -24,10 +24,10 @@
     { "id": "particles/pauli-exclusion", "title": "Pauli Exclusion Principle", "group": "particles", "status": "provisional" },
     { "id": "particles/mass-hierarchy", "title": "Mass Hierarchy", "group": "particles", "status": "provisional" },
     { "id": "particles/three-generations", "title": "Three Generations", "group": "particles", "status": "provisional" },
-    { "id": "holography/area-scaling", "title": "Holographic Entropy Bound", "group": "holography", "status": "draft" },
-    { "id": "holography/black-hole-entropy", "title": "Black Hole Entropy", "group": "holography", "status": "draft" },
-    { "id": "holography/hawking-radiation", "title": "Hawking Radiation", "group": "holography", "status": "draft" },
-    { "id": "holography/information-paradox", "title": "Information Paradox", "group": "holography", "status": "draft" }
+    { "id": "holography/area-scaling", "title": "Holographic Entropy Bound", "group": "holography", "status": "provisional" },
+    { "id": "holography/black-hole-entropy", "title": "Black Hole Entropy", "group": "holography", "status": "provisional" },
+    { "id": "holography/hawking-radiation", "title": "Hawking Radiation", "group": "holography", "status": "provisional" },
+    { "id": "holography/information-paradox", "title": "Information Paradox", "group": "holography", "status": "provisional" }
   ],
   "edges": [
     { "from": "axioms/coherence-conservation", "to": "minimal-observer/structure" },
