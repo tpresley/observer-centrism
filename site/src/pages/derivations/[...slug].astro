@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
 import DerivationLayout from '../../components/layouts/DerivationLayout.astro'
+import ProofStepViewer from '../../components/interactive/ProofStepViewer.jsx'
 
 export async function getStaticPaths() {
   const entries = await getCollection('derivations')
@@ -12,6 +13,71 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props
 const { Content } = await entry.render()
+
+// Extract proof steps from the markdown body
+// Look for h3 headings that follow the "Step N: Title" pattern
+const body = entry.body || ''
+const stepRegex = /^###\s+Step\s+\d+[:\s]+(.+)$/gm
+const stepMatches: { title: string; index: number; length: number }[] = []
+
+let match
+while ((match = stepRegex.exec(body)) !== null) {
+  stepMatches.push({
+    title: match[1].trim(),
+    index: match.index,
+    length: match[0].length,
+  })
+}
+
+// Find section boundaries (next ### heading or ## heading or end of file)
+const sectionBoundaryRegex = /^##[#]?\s+/gm
+const sectionStarts: number[] = []
+let bMatch
+while ((bMatch = sectionBoundaryRegex.exec(body)) !== null) {
+  sectionStarts.push(bMatch.index)
+}
+
+const steps: { title: string; anchor: string; summary: string; keyResult: string }[] = []
+
+for (let i = 0; i < stepMatches.length; i++) {
+  const sm = stepMatches[i]
+  const title = sm.title
+
+  // Create an anchor slug from the heading text
+  const fullHeading = `Step ${i + 1}: ${title}`
+  const anchor = '#' + fullHeading
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '')
+
+  // Bound the search to just this step's section (until next heading)
+  const stepStart = sm.index + sm.length
+  const nextBoundary = sectionStarts.find(s => s > stepStart)
+  const sectionText = nextBoundary
+    ? body.slice(stepStart, nextBoundary)
+    : body.slice(stepStart)
+
+  // Extract key result: first **Theorem/Proposition/Corollary/Definition N.N**
+  const resultMatch = sectionText.match(/\*\*(Theorem|Proposition|Corollary|Definition)\s+[\d.]+[^*]*\*\*/)
+  const keyResult = resultMatch ? resultMatch[0].replace(/\*\*/g, '') : ''
+
+  // Extract summary: first italicized statement after bold marker, bounded to this section
+  let summary = ''
+  const summaryMatch = sectionText.match(/\*\*[^*]+\*\*[.\s]*\*([^*]+)\*/)
+  if (summaryMatch && summaryMatch[1]) {
+    summary = summaryMatch[1]
+      .trim()
+      .replace(/\$[^$]+\$/g, '(...)')
+      .replace(/\s+/g, ' ')
+    if (summary.length > 100) {
+      summary = summary.slice(0, 97) + '...'
+    }
+  }
+
+  steps.push({ title, anchor, keyResult, summary })
+}
 ---
 
 <DerivationLayout
@@ -21,5 +87,8 @@ const { Content } = await entry.render()
   enablesDerivation={entry.data.enablesDerivation}
   sourceSection={entry.data.sourceSection}
 >
+  {steps.length >= 2 && (
+    <ProofStepViewer client:load steps={steps} />
+  )}
   <Content />
 </DerivationLayout>

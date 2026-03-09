@@ -1,30 +1,29 @@
 ---
 import { getCollection } from 'astro:content'
 import MainLayout from '../../components/layouts/MainLayout.astro'
+import PredictionTracker from '../../components/interactive/PredictionTracker.jsx'
 
 const predictions = await getCollection('predictions')
+
+// Prepare prediction data for the Sygnal component
+const predictionData = predictions.map(entry => ({
+  slug: entry.slug,
+  title: entry.data.title,
+  status: entry.data.status,
+  testability: entry.data.testability,
+  distinctiveness: entry.data.distinctiveness,
+  currentEvidence: entry.data.currentEvidence || '',
+  dependsOn: entry.data.dependsOn || [],
+}))
 ---
 
 <MainLayout title="Predictions">
   <h1>Predictions</h1>
   <p>
     Testable predictions that distinguish Observer-Centrism from standard
-    theoretical expectations. Ranked by distinctiveness and testability.
+    theoretical expectations. Filter by distinctiveness and sort by any dimension.
+    Click a card to expand details, or click the title to read the full prediction.
   </p>
 
-  <ul class="derivation-list">
-    {predictions.map(entry => (
-      <li>
-        <span class={`status-badge status-${entry.data.distinctiveness === 'unique' ? 'rigorous' : entry.data.distinctiveness === 'shared' ? 'provisional' : 'draft'}`}>
-          {entry.data.distinctiveness}
-        </span>
-        <div>
-          <a href={`/predictions/${entry.slug}`}>{entry.data.title}</a>
-          <span class="summary">
-            Testability: {entry.data.testability} | Status: {entry.data.status}
-          </span>
-        </div>
-      </li>
-    ))}
-  </ul>
+  <PredictionTracker client:load predictions={predictionData} />
 </MainLayout>

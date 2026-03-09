@@ -1,0 +1,49 @@
+---
+import MainLayout from '../components/layouts/MainLayout.astro'
+import Search from 'astro-pagefind/components/Search'
+---
+
+<MainLayout title="Search">
+  <h1>Search</h1>
+  <p>Search across all derivations, predictions, and source document sections.</p>
+  <div style="margin-top: 1.5rem;">
+    <Search id="search" className="pagefind-ui" uiOptions={{ showSubResults: true, showImages: false }} />
+  </div>
+</MainLayout>
+
+<style is:global>
+  .pagefind-ui mark {
+    background: #fef08a;
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+  .pagefind-ui .pagefind-ui__result-link {
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+  .pagefind-ui .pagefind-ui__result-link:hover {
+    text-decoration: underline;
+  }
+  .pagefind-ui .pagefind-ui__search-input {
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem 0.5rem 2.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    width: 100%;
+  }
+  .pagefind-ui .pagefind-ui__search-input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px var(--color-accent-light);
+  }
+  .pagefind-ui .pagefind-ui__result {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .pagefind-ui .pagefind-ui__result-excerpt {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+  }
+</style>
