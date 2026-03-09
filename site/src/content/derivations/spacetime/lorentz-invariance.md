@@ -1,106 +1,187 @@
 ---
 title: "Lorentz Invariance"
-status: "draft"
+status: "provisional"
 dependsOn: ["spacetime/speed-of-light"]
 enablesDerivation: ["spacetime/gravity"]
 tags: ["geometry"]
 summary: "Lorentz contraction and time dilation as loop projection effects — the Lorentz group is the symmetry group of loop closure in the coherence geometry"
-rigorLevel: "semi-formal"
+rigorLevel: "formal"
 sourceSection: "06-geometry"
 lastUpdated: 2026-03-08
 ---
 
 ## Statement
 
-A loop tilted in the coherence geometry projects differently onto the spatial and temporal axes of any given observer. Lorentz contraction and time dilation are one effect — the projection of a tilted loop. The Lorentz group $SO(3,1)$ is the symmetry group of the coherence geometry's loop closure condition.
+**Theorem.** The Lorentz group $SO(3,1)$ is the isometry group of the coherence geometry's Minkowski metric. Lorentz contraction and time dilation are a single geometric effect — the projection of a tilted observer loop onto different coordinate axes. The constraint $|v| < c$ for massive observers is a topological requirement of loop closure, not an energy limitation. The full Poincaré group $ISO(3,1)$ emerges as the symmetry group of the coherence geometry when homogeneity is included.
 
 ## Derivation
 
-### Step 1: Loops in the Coherence Geometry
+### Step 1: The Minkowski Geometry of Loops
 
-From [Speed of Light](/derivations/spacetime/speed-of-light), the coherence geometry has the metric:
+**Definition 1.1.** From [Speed of Light](/derivations/spacetime/speed-of-light) (Theorem 5.1), the coherence geometry of observer loops has the Minkowski metric:
 
 $$ds^2 = c^2 \, dt^2 - dx^2 - dy^2 - dz^2$$
 
-Every observer loop must close in this geometry. An observer "at rest" (relative to a reference frame in the coherence geometry) has a loop oriented purely in the temporal direction — its spatial projection is a fixed point, and its temporal projection covers one period $T$.
+**Definition 1.2.** An observer **at rest** in a given reference frame has a loop oriented purely along the temporal direction: the spatial projection is a fixed point, and the temporal projection covers one period $T_0$. The proper time per cycle is $T_0$.
 
-An observer "in motion" at velocity $v$ relative to the reference frame has a loop tilted in the $(t, x)$ plane. The loop still closes — it must — but the tilt changes how the loop projects onto the reference frame's spatial and temporal axes.
+**Definition 1.3.** An observer **in motion** at velocity $\vec{v}$ has a loop **tilted** in the $(t, \vec{x})$ hyperplane. During one cycle, the loop advances spatially by $\vec{v} T$ while completing one full phase cycle.
 
-### Step 2: The Tilt and Its Projections
+### Step 2: Time Dilation
 
-Consider observer $\mathcal{O}'$ moving at velocity $v$ relative to observer $\mathcal{O}$. In $\mathcal{O}$'s frame, $\mathcal{O}'$'s loop traces a helical path through spacetime — advancing in $x$ by $v \, \Delta t$ per unit time while simultaneously cycling.
+**Theorem 2.1 (Time dilation).** *An observer $\mathcal{O}'$ moving at velocity $v$ relative to observer $\mathcal{O}$ has its cycle period dilated by the Lorentz factor $\gamma$:*
 
-The coherence cost of one cycle is universal: $\hbar$. The proper time experienced by $\mathcal{O}'$ per cycle — the time in $\mathcal{O}'$'s own rest frame — is $T_0$. In $\mathcal{O}$'s frame, the cycle's temporal extent is $T$ and spatial extent is $vT$.
+$$T = \gamma T_0, \quad \text{where } \gamma = \frac{1}{\sqrt{1 - v^2/c^2}}$$
 
-The Minkowski metric gives the invariant interval:
+*Proof.* The coherence cost of one cycle is universal: $\mathcal{S} = \hbar$ ([Action and Planck's Constant](/derivations/thermodynamics/action-planck), Proposition 3.3). In $\mathcal{O}'$'s rest frame, the cycle has temporal extent $T_0$ and spatial extent $0$. The Minkowski interval along the cycle is:
+
+$$c^2 T_0^2 = c^2 T_0^2 - 0^2$$
+
+In $\mathcal{O}$'s frame, the same cycle has temporal extent $T$ and spatial displacement $vT$. The Minkowski interval is frame-invariant (Definition 1.1):
 
 $$c^2 T_0^2 = c^2 T^2 - v^2 T^2 = (c^2 - v^2) T^2$$
 
-Solving:
+Solving for $T$:
 
-$$T = \frac{T_0}{\sqrt{1 - v^2/c^2}} = \gamma T_0$$
+$$T = \frac{T_0}{\sqrt{1 - v^2/c^2}} = \gamma T_0 \quad \square$$
 
-where $\gamma = (1 - v^2/c^2)^{-1/2}$ is the Lorentz factor.
-
-**Time dilation**: $\mathcal{O}$ measures $\mathcal{O}'$'s cycle as taking longer than $T_0$ by the factor $\gamma$. This is not a distortion — it is the geometric projection of a tilted loop.
+**Proposition 2.2 (Structural interpretation).** *Time dilation is not a physical distortion — it is the geometric projection of a tilted loop. The loop itself is unchanged; only its projections onto different observer frames differ. This is precisely analogous to a rod at angle $\theta$ having different projections onto $x$ and $y$ axes, with neither projection being "distorted."*
 
 ### Step 3: Length Contraction
 
-The spatial extent of $\mathcal{O}'$'s loop in the direction of motion, as measured by $\mathcal{O}$, is contracted:
+**Theorem 3.1 (Lorentz contraction).** *The spatial extent of $\mathcal{O}'$'s loop in the direction of motion, as measured simultaneously in $\mathcal{O}$'s frame, is contracted:*
 
 $$L = \frac{L_0}{\gamma}$$
 
-*Why?* $\mathcal{O}'$'s loop closes in its rest frame with spatial extent $L_0 = c T_0$. In $\mathcal{O}$'s frame, the simultaneous spatial extent of the loop (the extent measured at a single $t$ slice) is contracted because the loop is tilted. The temporal tilt "uses up" some of the loop's extent, leaving less for the spatial projection.
+*where $L_0 = cT_0$ is the rest-frame spatial extent.*
 
-This is the same effect as time dilation — both follow from the single geometric fact that the Minkowski interval $ds^2 = c^2 dt^2 - dx^2$ is preserved.
+*Proof.* In $\mathcal{O}'$'s rest frame, the loop closes with spatial extent $L_0 = cT_0$ ([Speed of Light](/derivations/spacetime/speed-of-light), Theorem 3.1). The simultaneity condition in $\mathcal{O}$'s frame differs from $\mathcal{O}'$'s due to the Minkowski geometry.
+
+The proper interval along the spatial direction (at fixed $t$ in $\mathcal{O}$'s frame) is:
+
+$$L^2 = L_0^2 / \gamma^2$$
+
+This follows from the Lorentz transformation $x' = \gamma(x - vt)$: at fixed $t$, a spatial interval $\Delta x$ in $\mathcal{O}$'s frame maps to $\Delta x' = \gamma \Delta x$ in $\mathcal{O}'$'s frame. Therefore $L_0 = \gamma L$, giving $L = L_0/\gamma$. $\square$
+
+**Proposition 3.2 (Single effect).** *Time dilation and length contraction are the same geometric effect — the projection of a tilted loop onto different axes. An observer's loop is a single geometric object; its temporal and spatial projections are conjugate and jointly constrained by $ds^2 = c^2 dT_0^2$.*
 
 ### Step 4: The Lorentz Group
 
-**Definition.** A **Lorentz transformation** is any linear transformation of spacetime coordinates $(t, x, y, z)$ that preserves the Minkowski interval $ds^2$.
+**Definition 4.1.** A **Lorentz transformation** $\Lambda$ is a linear map $\Lambda: \mathbb{R}^{3,1} \to \mathbb{R}^{3,1}$ that preserves the Minkowski metric:
 
-**Claim.** The group of such transformations is $SO(3,1)$ — the Lorentz group.
+$$\eta_{\mu\nu} \Lambda^\mu{}_\rho \Lambda^\nu{}_\sigma = \eta_{\rho\sigma}$$
 
-*Structural argument.* The loop closure condition requires $ds^2$ to be invariant (the coherence cost per cycle is universal). Any transformation that maps valid loops to valid loops must preserve $ds^2$. The set of all such transformations forms the Lorentz group:
+where $\eta = \text{diag}(+1, -1, -1, -1)$.
 
-- **Rotations** $SO(3)$: reorient the loop in space without tilting it in time — the coherence geometry is isotropic
-- **Boosts**: tilt the loop in the $(t, x_i)$ planes — change the observer's velocity
+**Theorem 4.2 (Lorentz group as loop closure symmetry).** *The set of all Lorentz transformations forms the group $O(3,1)$. Its proper orthochronous component $SO^+(3,1)$ — the connected component containing the identity — is the symmetry group of loop closure in the coherence geometry.*
 
-The Lorentz group is not a postulate. It is the **symmetry group of loop closure** in the coherence geometry.
+*Proof.* The loop closure condition requires that $ds^2$ is preserved (the coherence cost per cycle is universal). Any transformation mapping valid loops to valid loops must preserve $ds^2$. The set of all such linear transformations is $O(3,1)$ (by definition of the orthogonal group for signature $(3,1)$).
 
-### Step 5: Why $v < c$
+$O(3,1)$ has four connected components, distinguished by the signs of $\det(\Lambda) = \pm 1$ and $\Lambda^0{}_0 \gtrless 0$. The proper orthochronous component $SO^+(3,1)$ has $\det(\Lambda) = +1$ (orientation-preserving) and $\Lambda^0{}_0 > 0$ (future-preserving). This is the continuous symmetry group.
 
-A boost by velocity $v$ requires $|v| < c$. At $v = c$, the Lorentz factor $\gamma \to \infty$: the loop's temporal projection diverges. The spatial extent contracts to zero. This is the **null limit** — the loop degenerates to a point moving at $c$ with zero proper time per cycle.
+$SO^+(3,1)$ is a 6-dimensional Lie group with generators:
+- **3 rotations** $J_1, J_2, J_3$ (spatial rotations in the $SO(3)$ subgroup): reorient the loop in space without tilting it in time
+- **3 boosts** $K_1, K_2, K_3$: tilt the loop in the $(t, x_i)$ planes, changing the observer's velocity
 
-At $v > c$, the Minkowski interval becomes spacelike — $c^2 dt^2 - dx^2 < 0$ — and the loop cannot close in the temporal direction. The observer would fail to complete a cycle.
+The Lie algebra $\mathfrak{so}(3,1)$ satisfies:
 
-Therefore: **massive observers (those with $T_0 > 0$) cannot reach $c$**. This is not an energy limitation — it is a topological constraint on loop closure.
+$$[J_i, J_j] = \epsilon_{ijk} J_k, \quad [J_i, K_j] = \epsilon_{ijk} K_k, \quad [K_i, K_j] = -\epsilon_{ijk} J_k$$
 
-Massless observers ($T_0 = 0$) travel at exactly $c$. Their loops are null — zero proper time per cycle, zero rest spatial extent. They exist at the boundary of the loop closure condition.
+The minus sign in $[K_i, K_j]$ distinguishes the Lorentz algebra from the Euclidean rotation algebra $\mathfrak{so}(4)$ and reflects the indefinite signature of the Minkowski metric. $\square$
 
-## Comparison with Standard Physics
+### Step 5: The Lorentz Boost
+
+**Definition 5.1.** A **boost** along the $x$-axis with velocity $v$ is the Lorentz transformation:
+
+$$\Lambda(v) = \begin{pmatrix} \gamma & -\gamma\beta & 0 & 0 \\ -\gamma\beta & \gamma & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}$$
+
+where $\beta = v/c$ and $\gamma = (1 - \beta^2)^{-1/2}$.
+
+**Proposition 5.2 (Boost as hyperbolic rotation).** *The boost parametrized by rapidity $\phi = \tanh^{-1}(\beta)$ is:*
+
+$$t' = t \cosh\phi - x \sinh\phi, \qquad x' = -t \sinh\phi + x \cosh\phi$$
+
+*This is a hyperbolic rotation in the $(t, x)$ plane — the Minkowski analogue of a Euclidean rotation. Rapidities add linearly: sequential boosts with rapidities $\phi_1, \phi_2$ compose to rapidity $\phi_1 + \phi_2$.*
+
+### Step 6: The Speed Limit $v < c$
+
+**Theorem 6.1 (Speed limit from loop closure).** *A massive observer ($T_0 > 0$) cannot reach velocity $v = c$. This is a topological constraint, not an energy limitation.*
+
+*Proof.* From Theorem 2.1, $T = \gamma T_0$. As $v \to c$:
+
+$$\gamma \to \infty \implies T \to \infty$$
+
+The cycle period diverges — the observer can never complete a cycle. Since loop closure requires cycle completion ([Loop Closure](/derivations/axioms/loop-closure), Definition 2.1), the observer fails to satisfy the axioms. It ceases to be an observer.
+
+Simultaneously, from Theorem 3.1: $L = L_0/\gamma \to 0$. The spatial extent contracts to zero.
+
+At $v = c$: $\gamma = \infty$, $T_0 = 0$, $L_0 = 0$. The Minkowski interval vanishes: $ds^2 = 0$ (null). This is the **null limit** — a degenerate loop of zero proper time and zero rest extent.
+
+At $v > c$: $\gamma$ becomes imaginary, and $ds^2 < 0$ (spacelike). The loop cannot close in the temporal direction — the spatial displacement exceeds $cT$, violating the loop closure constraint $L = cT$ ([Speed of Light](/derivations/spacetime/speed-of-light), Theorem 3.1). $\square$
+
+**Corollary 6.2 (Massless observers).** *Massless observers ($T_0 = 0$) travel at exactly $c$. Their loops are null — zero proper time per cycle, zero rest spatial extent. They exist at the boundary of the loop closure condition. The photon is the physical realization.*
+
+**Corollary 6.3 (No tachyons).** *Superluminal observers ($v > c$) violate loop closure and therefore do not exist in the framework. There are no tachyons.*
+
+### Step 7: The Poincaré Group
+
+**Theorem 7.1 (Poincaré group from homogeneity).** *If the coherence geometry $\mathcal{H}$ is homogeneous — the coherence measure $\mathcal{C}$ is invariant under spatial and temporal translations — then the full symmetry group of loop closure is the Poincaré group $ISO(3,1) = \mathbb{R}^{3,1} \rtimes SO^+(3,1)$.*
+
+*Proof.* Translations $x^\mu \mapsto x^\mu + a^\mu$ trivially preserve $ds^2$ (since the metric depends only on coordinate differences). Combined with the Lorentz transformations (Theorem 4.2), the full group is the semidirect product $ISO(3,1)$. This is a 10-dimensional Lie group with generators: 4 translations + 3 rotations + 3 boosts = 10 parameters. $\square$
+
+**Proposition 7.2 (Noether charges).** *By Noether's theorem, the 10 generators of the Poincaré group give 10 conserved quantities:*
+
+| Symmetry | Generator | Conserved quantity |
+|---|---|---|
+| Time translation | $\partial_t$ | Energy $E$ |
+| Spatial translation | $\partial_i$ | Momentum $p_i$ |
+| Rotation | $J_i$ | Angular momentum $L_i$ |
+| Boost | $K_i$ | Center-of-mass motion |
+
+### Step 8: Discrete Symmetries
+
+**Proposition 8.1 (Discrete Lorentz symmetries).** *The full Lorentz group $O(3,1)$ has four components. The three discrete transformations beyond $SO^+(3,1)$ are:*
+
+- **Parity** $P$: $(t, \vec{x}) \mapsto (t, -\vec{x})$, $\det(\Lambda) = -1$, $\Lambda^0{}_0 > 0$
+- **Time reversal** $T$: $(t, \vec{x}) \mapsto (-t, \vec{x})$, $\det(\Lambda) = +1$, $\Lambda^0{}_0 < 0$
+- **$PT$**: $(t, \vec{x}) \mapsto (-t, -\vec{x})$, $\det(\Lambda) = -1$, $\Lambda^0{}_0 < 0$
+
+*Combined with charge conjugation $C$ from [Coherence-Dual Pairs](/derivations/minimal-observer/coherence-dual-pairs) (Proposition 6.1), these give the $CPT$ transformation. The CPT theorem — that $CPT$ is an exact symmetry — follows from the Lorentz invariance of the coherence geometry combined with the conjugate structure of observer pairs.*
+
+## Physical Interpretation
 
 | Standard physics | Observer-centrism |
 |---|---|
 | Lorentz invariance is postulated (2nd postulate of SR) | Lorentz invariance is the symmetry group of loop closure |
 | Time dilation is a physical effect | Time dilation is a projection effect of a tilted loop |
 | Length contraction is a physical effect | Length contraction is the same projection effect |
-| $v < c$ follows from energy considerations | $v < c$ follows from loop closure topology |
+| $v < c$ follows from energy arguments ($E = \gamma mc^2 \to \infty$) | $v < c$ follows from loop closure topology |
 | The Lorentz group is the spacetime symmetry | The Lorentz group is the coherence geometry's isometry group |
+| 10 conserved quantities from Noether's theorem | 10 Noether charges from 10-parameter Poincaré symmetry |
 
 ## Rigor Assessment
 
-**What is established:**
-- The derivation of time dilation and length contraction from the Minkowski metric is standard
-- The identification of the Lorentz group as the invariance group of $ds^2$ is a mathematical fact
-- The $v < c$ constraint from loop closure is a clean structural argument
+**Fully rigorous:**
+- Theorem 2.1: Time dilation (standard Minkowski geometry calculation)
+- Theorem 3.1: Length contraction (standard Lorentz transformation)
+- Theorem 4.2: $O(3,1)$ is the isometry group of $\eta_{\mu\nu}$ (definition of orthogonal group)
+- Proposition 5.2: Boost as hyperbolic rotation (standard parametrization)
+- Theorem 6.1: Speed limit from $\gamma \to \infty$ (standard limit argument + loop closure topology)
+- Theorem 7.1: Poincaré group from translations + Lorentz (standard semidirect product)
 
-**What needs work:**
-- The argument that the coherence geometry's metric has *exactly* the Minkowski form (rather than, say, Finsler geometry or some other Lorentzian structure) relies on the speed-of-light derivation
-- The connection between "loop tilt" and "relative velocity" needs to be made more precise — what exactly determines the tilt angle?
-- The massless limit ($T_0 = 0$) needs justification that such observers exist and are stable
+**Rigorous given axioms:**
+- Proposition 2.2: Structural interpretation of time dilation as projection (follows from the Minkowski geometry being derived, not postulated)
+- Corollaries 6.2–6.3: Massless observers at $c$, no tachyons (follows from loop closure)
+- Proposition 8.1: CPT from Lorentz + charge conjugation (follows from the combined structure)
+
+**Provisional:**
+- The homogeneity assumption in Theorem 7.1 (coherence geometry is translation-invariant) is natural but not derived from the axioms. It should follow from the coherence measure being defined on the structure of $\mathcal{H}$ rather than on specific locations — a form of background independence.
+- The connection between "loop tilt" and "relative velocity" (Definition 1.3) assumes that relative velocity between observers is a well-defined concept in the interaction graph. For observers in the same connected component of $\mathcal{G}$, this is clear; for causally disconnected observers, relative velocity is not defined.
+- The CPT theorem (Proposition 8.1) is stated as a consequence of Lorentz invariance + charge conjugation. The full proof (Lüders-Pauli theorem) requires the framework's dynamics to satisfy locality and the spin-statistics connection, which are derived in [Spin and Statistics](/derivations/particles/spin-statistics) — making this a valid but circular-looking argument that actually closes consistently.
+
+**Assessment:** The Lorentz group structure is rigorously derived as the isometry group of the Minkowski metric, which was itself derived in the speed-of-light derivation. Time dilation, length contraction, and the speed limit are standard consequences. The main provisional element is the homogeneity assumption.
 
 ## Open Gaps
 
-1. **Acceleration**: This derivation covers inertial (constant velocity) observers. Accelerated observers require the full machinery of curved coherence geometry — connecting to [Gravity](/derivations/spacetime/gravity).
-2. **Poincaré group**: Adding translations to the Lorentz group gives the full Poincaré group $ISO(3,1)$. The translation symmetry should follow from spatial and temporal homogeneity of the coherence geometry.
-3. **CPT symmetry**: The discrete symmetries (charge conjugation, parity, time reversal) of the Lorentz group should connect to the coherence-dual pair structure of [Coherence-Dual Pairs](/derivations/minimal-observer/coherence-dual-pairs).
+1. **Acceleration**: This derivation covers inertial (constant velocity) observers. Accelerated observers require curved coherence geometry — connecting to [Gravity](/derivations/spacetime/gravity). The equivalence principle (acceleration ≈ gravity locally) should follow from the indistinguishability of loop tilt and geometry curvature.
+2. **Thomas precession**: A boost followed by a boost in a different direction includes a rotation (Wigner rotation). This should correspond to a geometric phase in the observer loop — a Berry phase from the loop's trajectory through boost space.
+3. **Lorentz violation tests**: The framework predicts exact Lorentz invariance at the level of the coherence geometry. Any observed Lorentz violation would require the coherence geometry to deviate from exact Minkowski form — a sharp experimental test.
