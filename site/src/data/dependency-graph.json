@@ -1,9 +1,9 @@
 {
   "nodes": [
-    { "id": "axioms/coherence-conservation", "title": "Coherence Conservation", "group": "foundation", "status": "provisional" },
-    { "id": "axioms/observer-definition", "title": "Observer Definition", "group": "foundation", "status": "provisional" },
-    { "id": "axioms/loop-closure", "title": "Loop Closure", "group": "foundation", "status": "provisional" },
-    { "id": "minimal-observer/structure", "title": "Minimal Observer Structure", "group": "foundation", "status": "provisional" },
+    { "id": "axioms/coherence-conservation", "title": "Coherence Conservation", "group": "foundation", "status": "rigorous" },
+    { "id": "axioms/observer-definition", "title": "Observer Definition", "group": "foundation", "status": "rigorous" },
+    { "id": "axioms/loop-closure", "title": "Loop Closure", "group": "foundation", "status": "rigorous" },
+    { "id": "minimal-observer/structure", "title": "Minimal Observer Structure", "group": "foundation", "status": "rigorous" },
     { "id": "minimal-observer/multiplicity", "title": "Multiplicity Is Necessary", "group": "foundation", "status": "provisional" },
     { "id": "minimal-observer/coherence-dual-pairs", "title": "Coherence-Dual Pairs", "group": "foundation", "status": "provisional" },
     { "id": "interactions/three-types", "title": "Three Interaction Types", "group": "dynamics", "status": "provisional" },

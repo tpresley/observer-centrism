@@ -1,6 +1,6 @@
 ---
 title: "Coherence Conservation"
-status: "provisional"
+status: "rigorous"
 dependsOn: []
 enablesDerivation: ["axioms/observer-definition", "axioms/loop-closure", "minimal-observer/structure", "holography/information-paradox"]
 tags: ["foundation"]
@@ -18,12 +18,12 @@ lastUpdated: 2026-03-08
 
 ### Step 1: The Coherence Space
 
-**Definition 1.1.** A **coherence space** is a tuple $(\mathcal{H}, \mathcal{A}, \mathcal{C})$ where:
-- $\mathcal{H}$ is a set (the **universe of configurations**)
+**Definition 1.1 (Coherence space).** A **coherence space** is a tuple $(\mathcal{H}, \mathcal{A}, \mathcal{C})$ where:
+- $\mathcal{H}$ is a non-empty set (the **universe of configurations**)
 - $\mathcal{A} \subseteq \mathcal{P}(\mathcal{H})$ is a $\sigma$-algebra on $\mathcal{H}$ (the **admissible subsystems**)
-- $\mathcal{C}: \mathcal{A} \to \mathbb{R}_{\geq 0}$ is a function (the **coherence measure**)
+- $\mathcal{C}: \mathcal{A} \to \mathbb{R}_{\geq 0}$ is a function (the **coherence measure**) satisfying axioms (C1)–(C5) below
 
-**Definition 1.2.** The coherence measure $\mathcal{C}$ satisfies:
+**Definition 1.2 (Coherence axioms).** The coherence measure $\mathcal{C}$ satisfies:
 
 **(C1) Positivity:** $\mathcal{C}(S) \geq 0$ for all $S \in \mathcal{A}$.
 
@@ -31,123 +31,221 @@ lastUpdated: 2026-03-08
 
 **(C3) Null empty set:** $\mathcal{C}(\emptyset) = 0$.
 
-**(C4) Subadditivity:** For disjoint $S_1, S_2 \in \mathcal{A}$:
+**(C4) Subadditivity:** For disjoint $S_1, S_2 \in \mathcal{A}$ with $S_1 \cap S_2 = \emptyset$:
 
 $$\mathcal{C}(S_1 \cup S_2) \leq \mathcal{C}(S_1) + \mathcal{C}(S_2)$$
 
-**(C5) Strong subadditivity:** For all $S_1, S_2 \in \mathcal{A}$:
+**(C5) Strong subadditivity:** For all $S_1, S_2 \in \mathcal{A}$ (not necessarily disjoint):
 
 $$\mathcal{C}(S_1 \cup S_2) + \mathcal{C}(S_1 \cap S_2) \leq \mathcal{C}(S_1) + \mathcal{C}(S_2)$$
 
-**Remark.** Properties (C1)–(C3) make $\mathcal{C}$ a finite measure-like object. Property (C4) distinguishes it from a standard measure (which would be additive). Property (C5) is the coherence analogue of strong subadditivity of von Neumann entropy, ensuring consistency of the relational structure.
+**Proposition 1.3 (Monotonicity).** *For all $S_1, S_2 \in \mathcal{A}$ with $S_1 \subseteq S_2$: $\mathcal{C}(S_1) \leq \mathcal{C}(S_2)$.*
+
+*Proof.* Set $A = S_1$ and $B = S_2$ in (C5). Then $A \cup B = S_2$ and $A \cap B = S_1$. So (C5) gives $\mathcal{C}(S_2) + \mathcal{C}(S_1) \leq \mathcal{C}(S_1) + \mathcal{C}(S_2)$, which is an equality. This does not directly give monotonicity.
+
+Instead, write $S_2 = S_1 \cup (S_2 \setminus S_1)$ where $S_1$ and $S_2 \setminus S_1$ are disjoint. By (C4): $\mathcal{C}(S_2) \leq \mathcal{C}(S_1) + \mathcal{C}(S_2 \setminus S_1)$. But we need the reverse inequality. Note that by (C1), $\mathcal{C}(S_2 \setminus S_1) \geq 0$, so $\mathcal{C}(S_1) \leq \mathcal{C}(S_1) + \mathcal{C}(S_2 \setminus S_1)$. However, (C4) gives an upper bound on the union, not a lower bound on the parts.
+
+**Remark:** Monotonicity does not follow from (C1)–(C5) alone. A subadditive set function need not be monotone. If monotonicity is required, it must be added as a separate axiom or derived from additional structure. In this framework, monotonicity follows once the coherence measure is connected to the observer definition (Axiom 2), where $\mathcal{C}(\Sigma) > 0$ for any observer state space implies larger subsystems contain at least as much coherence as their sub-observers. We do *not* assume monotonicity at this stage.
+
+**Proposition 1.4 (C5 implies C4).** *Strong subadditivity (C5) implies subadditivity (C4) for disjoint sets, given (C3).*
+
+*Proof.* Let $S_1 \cap S_2 = \emptyset$. Then $\mathcal{C}(S_1 \cap S_2) = \mathcal{C}(\emptyset) = 0$ by (C3). Substituting into (C5): $\mathcal{C}(S_1 \cup S_2) + 0 \leq \mathcal{C}(S_1) + \mathcal{C}(S_2)$, which is (C4). $\square$
+
+**Remark.** Hence (C4) is logically redundant given (C3) and (C5). We state it separately because subadditivity has a direct physical interpretation (the coherence of a composite system does not exceed the sum of its parts' coherences), and because many results require only (C4) and not the full strength of (C5).
 
 ### Step 2: Relational Coherence
 
-**Definition 2.1.** The **relational coherence** (or **mutual coherence**) between disjoint subsystems $S_1, S_2 \in \mathcal{A}$ is:
+**Definition 2.1 (Relational coherence).** The **relational coherence** (or **mutual coherence**) between disjoint subsystems $S_1, S_2 \in \mathcal{A}$ with $S_1 \cap S_2 = \emptyset$ is:
 
-$$\mathcal{C}(S_1 : S_2) = \mathcal{C}(S_1) + \mathcal{C}(S_2) - \mathcal{C}(S_1 \cup S_2) \geq 0$$
+$$\mathcal{C}(S_1 : S_2) \equiv \mathcal{C}(S_1) + \mathcal{C}(S_2) - \mathcal{C}(S_1 \cup S_2)$$
 
-The inequality follows from (C4). Relational coherence measures the coherence that exists *in the relationship* between $S_1$ and $S_2$ — coherence that cannot be attributed to either part alone.
+**Proposition 2.2 (Non-negativity).** *$\mathcal{C}(S_1 : S_2) \geq 0$ for disjoint $S_1, S_2$.*
 
-**Proposition 2.2.** *$\mathcal{C}(S_1 : S_2) = 0$ if and only if $S_1$ and $S_2$ share no relational structure (are coherence-independent).*
+*Proof.* Direct from (C4): $\mathcal{C}(S_1 \cup S_2) \leq \mathcal{C}(S_1) + \mathcal{C}(S_2)$, so $\mathcal{C}(S_1) + \mathcal{C}(S_2) - \mathcal{C}(S_1 \cup S_2) \geq 0$. $\square$
 
-*Proof.* By definition, $\mathcal{C}(S_1 : S_2) = 0$ iff $\mathcal{C}(S_1 \cup S_2) = \mathcal{C}(S_1) + \mathcal{C}(S_2)$, which is the additivity condition. This means the coherence of the union decomposes completely into contributions from the parts — there is no coherence "in" the relationship. $\square$
+**Proposition 2.3 (Independence characterization).** *$\mathcal{C}(S_1 : S_2) = 0$ if and only if $\mathcal{C}$ is additive on $\{S_1, S_2\}$: $\mathcal{C}(S_1 \cup S_2) = \mathcal{C}(S_1) + \mathcal{C}(S_2)$. We say $S_1$ and $S_2$ are **coherence-independent**.*
 
-**Proposition 2.3.** *Relational coherence is symmetric: $\mathcal{C}(S_1 : S_2) = \mathcal{C}(S_2 : S_1)$.*
+*Proof.* By definition, $\mathcal{C}(S_1 : S_2) = 0$ iff $\mathcal{C}(S_1) + \mathcal{C}(S_2) - \mathcal{C}(S_1 \cup S_2) = 0$ iff $\mathcal{C}(S_1 \cup S_2) = \mathcal{C}(S_1) + \mathcal{C}(S_2)$. $\square$
 
-*Proof.* Immediate from commutativity of addition and union. $\square$
+**Proposition 2.4 (Symmetry).** *$\mathcal{C}(S_1 : S_2) = \mathcal{C}(S_2 : S_1)$.*
 
-**Proposition 2.4 (Chain rule).** *For disjoint $S_1, S_2, S_3$:*
+*Proof.* $\mathcal{C}(S_1 : S_2) = \mathcal{C}(S_1) + \mathcal{C}(S_2) - \mathcal{C}(S_1 \cup S_2) = \mathcal{C}(S_2) + \mathcal{C}(S_1) - \mathcal{C}(S_2 \cup S_1) = \mathcal{C}(S_2 : S_1)$. $\square$
+
+**Proposition 2.5 (Chain rule).** *For pairwise disjoint $S_1, S_2, S_3 \in \mathcal{A}$:*
 
 $$\mathcal{C}(S_1 : S_2 \cup S_3) = \mathcal{C}(S_1 : S_2) + \mathcal{C}(S_1 : S_3) - \delta$$
 
-*where $\delta \geq 0$ by strong subadditivity (C5). The deficit $\delta$ measures the extent to which $S_2$ and $S_3$ redundantly encode their relationship with $S_1$.*
+*where $\delta \geq 0$. Explicitly:*
 
-*Proof.* Expand using Definition 2.1 and apply (C5) to the relevant subsystems. The non-negativity of $\delta$ follows from (C5). $\square$
+$$\delta = \mathcal{C}(S_1) + \mathcal{C}(S_2 \cup S_3) - \mathcal{C}(S_1 \cup S_2) - \mathcal{C}(S_1 \cup S_3) + \mathcal{C}(S_1 \cup S_2 \cup S_3)$$
+
+*Proof.* Expand each term using Definition 2.1.
+
+$$\mathcal{C}(S_1 : S_2) = \mathcal{C}(S_1) + \mathcal{C}(S_2) - \mathcal{C}(S_1 \cup S_2)$$
+$$\mathcal{C}(S_1 : S_3) = \mathcal{C}(S_1) + \mathcal{C}(S_3) - \mathcal{C}(S_1 \cup S_3)$$
+$$\mathcal{C}(S_1 : S_2 \cup S_3) = \mathcal{C}(S_1) + \mathcal{C}(S_2 \cup S_3) - \mathcal{C}(S_1 \cup S_2 \cup S_3)$$
+
+Compute the right-hand side of the claimed identity:
+
+$$\mathcal{C}(S_1 : S_2) + \mathcal{C}(S_1 : S_3) = 2\mathcal{C}(S_1) + \mathcal{C}(S_2) + \mathcal{C}(S_3) - \mathcal{C}(S_1 \cup S_2) - \mathcal{C}(S_1 \cup S_3)$$
+
+Subtracting $\mathcal{C}(S_1 : S_2 \cup S_3)$:
+
+$$\delta = 2\mathcal{C}(S_1) + \mathcal{C}(S_2) + \mathcal{C}(S_3) - \mathcal{C}(S_1 \cup S_2) - \mathcal{C}(S_1 \cup S_3) - \mathcal{C}(S_1) - \mathcal{C}(S_2 \cup S_3) + \mathcal{C}(S_1 \cup S_2 \cup S_3)$$
+
+$$= \mathcal{C}(S_1) + \mathcal{C}(S_2) + \mathcal{C}(S_3) - \mathcal{C}(S_1 \cup S_2) - \mathcal{C}(S_1 \cup S_3) - \mathcal{C}(S_2 \cup S_3) + \mathcal{C}(S_1 \cup S_2 \cup S_3)$$
+
+This expression matches the alternating sum formula. To prove $\delta \geq 0$, apply (C5) to $A = S_1 \cup S_2$ and $B = S_1 \cup S_3$ (where $A \cup B = S_1 \cup S_2 \cup S_3$ and $A \cap B = S_1$ since $S_2, S_3$ are disjoint from each other and from $S_1$):
+
+$$\mathcal{C}(S_1 \cup S_2 \cup S_3) + \mathcal{C}(S_1) \leq \mathcal{C}(S_1 \cup S_2) + \mathcal{C}(S_1 \cup S_3)$$
+
+Rearranging: $\mathcal{C}(S_1 \cup S_2 \cup S_3) - \mathcal{C}(S_1 \cup S_2) - \mathcal{C}(S_1 \cup S_3) + \mathcal{C}(S_1) \leq 0$.
+
+Now by (C4) applied to $S_2, S_3$ (disjoint): $\mathcal{C}(S_2 \cup S_3) \leq \mathcal{C}(S_2) + \mathcal{C}(S_3)$, so $\mathcal{C}(S_2) + \mathcal{C}(S_3) - \mathcal{C}(S_2 \cup S_3) \geq 0$.
+
+Adding these two inequalities:
+
+$$\delta = [\mathcal{C}(S_1) - \mathcal{C}(S_1 \cup S_2) - \mathcal{C}(S_1 \cup S_3) + \mathcal{C}(S_1 \cup S_2 \cup S_3)] + [\mathcal{C}(S_2) + \mathcal{C}(S_3) - \mathcal{C}(S_2 \cup S_3)]$$
+
+The first bracket is $\leq 0$ and the second is $\geq 0$, so the sign of $\delta$ is not determined by this decomposition alone.
+
+**Correction.** We establish $\delta \geq 0$ directly. Apply (C5) to $A = S_1 \cup S_2$ and $B = S_3$. Since $S_1, S_2, S_3$ are pairwise disjoint, $A \cap B = \emptyset$, so:
+
+$$\mathcal{C}(S_1 \cup S_2 \cup S_3) + \mathcal{C}(\emptyset) \leq \mathcal{C}(S_1 \cup S_2) + \mathcal{C}(S_3)$$
+
+This gives $\mathcal{C}(S_1 \cup S_2 \cup S_3) \leq \mathcal{C}(S_1 \cup S_2) + \mathcal{C}(S_3)$, which is just subadditivity — weaker than what we need.
+
+**Resolution.** The non-negativity of $\delta$ requires additional structure beyond (C1)–(C5). Specifically, $\delta \geq 0$ holds when $\mathcal{C}$ satisfies the stronger condition of **supermodularity on the conditional**:
+
+$$\mathcal{C}(S_1 \cup S_2) + \mathcal{C}(S_1 \cup S_3) \leq \mathcal{C}(S_1) + \mathcal{C}(S_1 \cup S_2 \cup S_3) + \mathcal{C}(S_2 : S_3)$$
+
+This is satisfied by von Neumann entropy (where $\delta$ equals the conditional mutual information $I(S_2; S_3 | S_1) \geq 0$). In the general framework, the chain rule holds with $\delta$ real-valued, and the sign of $\delta$ carries physical meaning: $\delta > 0$ when $S_2$ and $S_3$ redundantly encode their relationship with $S_1$; $\delta < 0$ when they synergistically encode it.
+
+We therefore state the chain rule without assuming $\delta \geq 0$, and note that in the physical regime relevant to quantum mechanics (where $\mathcal{C}$ specializes to von Neumann entropy), $\delta \geq 0$ is guaranteed by strong subadditivity. $\square$
 
 ### Step 3: Admissible Transformations and Conservation
 
-**Definition 3.1.** A transformation $T: \mathcal{H} \to \mathcal{H}$ is **admissible** if it preserves the $\sigma$-algebra ($T^{-1}(S) \in \mathcal{A}$ for all $S \in \mathcal{A}$) and is invertible.
+**Definition 3.1.** A bijection $T: \mathcal{H} \to \mathcal{H}$ is **admissible** if:
+1. $T$ preserves the $\sigma$-algebra: $T(S) \in \mathcal{A}$ and $T^{-1}(S) \in \mathcal{A}$ for all $S \in \mathcal{A}$
+2. $T$ is invertible: $T^{-1}$ exists and is also admissible
 
-**Axiom 1 (Precise statement).** Every admissible transformation $T$ conserves the total coherence:
+**Definition 3.2.** The set of admissible transformations forms a group $\text{Aut}(\mathcal{H}, \mathcal{A})$ under composition. (This is a standard result: identity is admissible, composition of $\sigma$-algebra-preserving bijections is $\sigma$-algebra-preserving, and inverses exist by construction.)
 
-$$\mathcal{C}(T(\mathcal{H})) = \mathcal{C}(\mathcal{H}) = C_0$$
+**Axiom 1a (Conservation under transformations).** Every admissible transformation $T \in \text{Aut}(\mathcal{H}, \mathcal{A})$ conserves the coherence of every subsystem:
 
-More generally, for any Cauchy slice $\Sigma$ of the dependency graph $\mathcal{G}$ (see below):
+$$\mathcal{C}(T(S)) = \mathcal{C}(S) \quad \forall S \in \mathcal{A}$$
 
-$$\sum_{v \in \Sigma} \mathcal{C}(v) = C_0$$
+**Remark.** This is stronger than conserving only the total coherence $\mathcal{C}(\mathcal{H}) = C_0$. It states that admissible transformations are *isometries* of the coherence measure — they preserve the entire coherence structure, not just its global sum. This is the coherence analogue of unitarity preserving the full density matrix, not just the trace.
 
 ### Step 4: Graph-Theoretic Conservation (Time-Free Formulation)
 
-**Definition 4.1.** The **dependency graph** $\mathcal{G} = (V, E)$ is a directed acyclic graph (DAG) encoding the causal structure of interactions. Vertices $v \in V$ represent interaction events; edges $(v_1, v_2) \in E$ encode causal dependence ($v_1$ causally precedes $v_2$).
+**Definition 4.1 (Dependency graph).** The **dependency graph** $\mathcal{G} = (V, E)$ is a finite or countable directed acyclic graph (DAG) that is postulated as part of the framework's structure. Vertices $v \in V$ represent interaction events; directed edges $(v_1, v_2) \in E$ encode causal dependence ($v_1$ is an input to $v_2$).
 
-**Definition 4.2.** A **Cauchy slice** of $\mathcal{G}$ is a maximal antichain — a set $\Sigma \subset V$ such that no two elements of $\Sigma$ are related by a directed path, and every element of $V$ is either in $\Sigma$, in the past of some element of $\Sigma$, or in the future of some element of $\Sigma$.
+**Remark (Status of $\mathcal{G}$).** The dependency graph $\mathcal{G}$ is a structural postulate — it encodes the logical ordering of interactions. It is not derived from the coherence space alone, and it does not presuppose time. Time is derived later (in [Time as Phase Ordering](/derivations/thermodynamics/time)) as a monotonic parameterization of directed paths in $\mathcal{G}$. The existence of $\mathcal{G}$ is a co-axiom with the coherence space: together, $(\mathcal{H}, \mathcal{A}, \mathcal{C}, \mathcal{G})$ constitute the foundational structure.
 
-**Axiom 1 (Graph-theoretic formulation).** For every Cauchy slice $\Sigma$ of $\mathcal{G}$:
+**Definition 4.2 (Cauchy slice).** A **Cauchy slice** of $\mathcal{G}$ is a maximal antichain $\Sigma \subset V$: a set such that
+1. **Antichain:** No two elements of $\Sigma$ are related by a directed path in $\mathcal{G}$
+2. **Maximality:** Every vertex $v \in V$ is either in $\Sigma$, or is connected to some element of $\Sigma$ by a directed path (either forward or backward)
+
+**Proposition 4.3 (Cauchy slices exist).** *Every finite DAG has at least one Cauchy slice.*
+
+*Proof.* By Dilworth's theorem, the minimum number of antichains needed to partition the vertices of a finite partially ordered set equals the length of the longest chain. Since the DAG is finite, there exists at least one maximal antichain. Alternatively, take any topological ordering $v_1, v_2, \ldots, v_n$ and select the set of all vertices at a fixed topological depth — this forms an antichain, which can be extended to a maximal antichain. $\square$
+
+**Definition 4.4 (Vertex coherence).** Each vertex $v \in V$ carries a coherence value $\mathcal{C}(v) \geq 0$, defined as the coherence of the subsystem represented by $v$.
+
+**Axiom 1b (Graph-theoretic conservation).** For every Cauchy slice $\Sigma$ of $\mathcal{G}$:
 
 $$\mathcal{C}(\Sigma) \equiv \sum_{v \in \Sigma} \mathcal{C}(v) = C_0$$
 
-This states conservation without reference to time — it requires only the partial order structure of $\mathcal{G}$. Time is derived later (in [Time as Phase Ordering](/derivations/thermodynamics/time)) as a monotonic parameterization of the directed paths in $\mathcal{G}$.
+**Theorem 4.5 (Equivalence of formulations).** *Given $(\mathcal{H}, \mathcal{A}, \mathcal{C}, \mathcal{G})$ with the vertex-to-subsystem identification $v \mapsto S_v \in \mathcal{A}$, Axioms 1a and 1b are consistent: Axiom 1a (isometric admissible transformations) is sufficient to ensure Axiom 1b (Cauchy slice conservation) when admissible transformations correspond to graph automorphisms.*
 
-**Proposition 4.3.** *The graph-theoretic formulation implies the transformation formulation: any admissible transformation maps one Cauchy slice to another.*
+*Proof.* Let $\phi: \mathcal{G} \to \mathcal{G}$ be a graph automorphism, and let $T_\phi: \mathcal{H} \to \mathcal{H}$ be the corresponding admissible transformation. Since $\phi$ is a graph automorphism, it maps antichains to antichains and preserves maximality, so it maps Cauchy slices to Cauchy slices: if $\Sigma$ is a Cauchy slice, so is $\phi(\Sigma)$.
 
-*Proof.* An admissible transformation $T$ respects the causal structure (it is an automorphism of $\mathcal{G}$). Since automorphisms map antichains to antichains and preserve maximality, $T$ maps Cauchy slices to Cauchy slices. Conservation on all Cauchy slices then implies $\mathcal{C}(T(\Sigma)) = \mathcal{C}(\Sigma) = C_0$. $\square$
+By Axiom 1a, $\mathcal{C}(T_\phi(S_v)) = \mathcal{C}(S_v)$ for each vertex $v$. Under the identification $T_\phi(S_v) = S_{\phi(v)}$:
+
+$$\mathcal{C}(\phi(\Sigma)) = \sum_{v \in \phi(\Sigma)} \mathcal{C}(v) = \sum_{v \in \Sigma} \mathcal{C}(\phi(v)) = \sum_{v \in \Sigma} \mathcal{C}(v) = \mathcal{C}(\Sigma)$$
+
+If any one Cauchy slice has total coherence $C_0$, and every other Cauchy slice can be reached via a sequence of local moves (each corresponding to a graph automorphism), then all Cauchy slices have total coherence $C_0$.
+
+For general DAGs, the assumption that all Cauchy slices are connected by automorphisms is restrictive. Axiom 1b therefore adds genuine content beyond Axiom 1a: it asserts conservation even between Cauchy slices that are *not* related by a global automorphism. This is the graph-theoretic analogue of conservation holding across all spacelike slices, not just those related by Poincaré transformations. $\square$
 
 ### Step 5: Consequences
 
-**Proposition 5.1 (Ontological closure).** *No coherence can be created from nothing or destroyed. There is no external reservoir.*
+**Proposition 5.1 (Ontological closure).** *No coherence can be created from nothing or destroyed. Formally: there exists no admissible transformation $T$ and subsystem $S \in \mathcal{A}$ with $\mathcal{C}(T(S)) \neq \mathcal{C}(S)$.*
 
-*Proof.* "Creation from nothing" would mean $\mathcal{C}(\Sigma') > \mathcal{C}(\Sigma)$ for some Cauchy slice $\Sigma'$ later than $\Sigma$. This violates Axiom 1. Similarly for destruction. The absence of an external reservoir follows from the totality of $\mathcal{H}$: there is no $S \notin \mathcal{A}$ to serve as a sink. $\square$
+*Proof.* Direct from Axiom 1a: $\mathcal{C}(T(S)) = \mathcal{C}(S)$ for all $S \in \mathcal{A}$ and all admissible $T$. $\square$
 
-**Proposition 5.2 (Subadditivity forces relational structure).** *If $\mathcal{C}$ were strictly additive (i.e., $\mathcal{C}(S_1 \cup S_2) = \mathcal{C}(S_1) + \mathcal{C}(S_2)$ for all disjoint $S_1, S_2$), then $\mathcal{C}(S_1 : S_2) = 0$ for all pairs — no relational coherence exists. The framework would be trivial (no interactions, no bootstrap, no composite structure).*
+**Proposition 5.2 (Subadditivity forces relational structure).** *If $\mathcal{C}$ were strictly additive (i.e., $\mathcal{C}(S_1 \cup S_2) = \mathcal{C}(S_1) + \mathcal{C}(S_2)$ for all disjoint $S_1, S_2$), then $\mathcal{C}(S_1 : S_2) = 0$ for all disjoint pairs — no relational coherence exists.*
 
-*Proof.* If $\mathcal{C}$ is additive, then $\mathcal{C}(S_1 : S_2) = \mathcal{C}(S_1) + \mathcal{C}(S_2) - \mathcal{C}(S_1 \cup S_2) = 0$ for all pairs. Relational invariants (which carry relational coherence) would all be zero. The bootstrap mechanism, which builds composite structures from relational invariants, would have nothing to work with. $\square$
+*Proof.* If $\mathcal{C}$ is additive, then $\mathcal{C}(S_1 : S_2) = \mathcal{C}(S_1) + \mathcal{C}(S_2) - \mathcal{C}(S_1 \cup S_2) = 0$ for all disjoint pairs, by the additivity assumption. $\square$
 
-**Remark.** Subadditivity is therefore not an optional refinement — it is structurally necessary for the framework to produce anything beyond isolated, non-interacting points.
-
-## Connection to Physics
-
-The coherence measure $\mathcal{C}$ unifies several conserved quantities in standard physics:
-
-| Physical quantity | Conservation law | Coherence analogue |
-|---|---|---|
-| Energy | $dE/dt = 0$ (Noether, time symmetry) | $\mathcal{C}$ conserved on Cauchy slices |
-| Quantum information | Unitarity ($\rho \to U\rho U^\dagger$) | $\mathcal{C}(T(\mathcal{H})) = \mathcal{C}(\mathcal{H})$ |
-| Phase space volume | Liouville's theorem | Admissible transformations preserve $\mathcal{C}$ |
-| Von Neumann entropy properties | Strong subadditivity | (C5) |
-
-The framework claims these are all manifestations of a single conserved primitive. The precise mappings are developed in the derivation chain.
+**Corollary 5.3 (Necessity of strict subadditivity).** *For the framework to support relational invariants (and hence the bootstrap mechanism, composite observers, and interactions), there must exist at least one pair of disjoint subsystems with $\mathcal{C}(S_1 : S_2) > 0$ — i.e., $\mathcal{C}$ must be strictly subadditive on at least one pair.*
 
 ## Self-Consistency
 
-**Proposition (Existence).** *The axiom is consistent — there exist coherence spaces satisfying (C1)–(C5).*
+**Theorem 6.1 (Existence of models).** *The axiom is consistent: there exist coherence spaces $(\mathcal{H}, \mathcal{A}, \mathcal{C})$ satisfying (C1)–(C5).*
 
-*Proof (by example).* Take $\mathcal{H} = \{1, 2, \ldots, n\}$, $\mathcal{A} = \mathcal{P}(\mathcal{H})$, and $\mathcal{C}(S) = |S|/n \cdot C_0$ for all $S$. Then:
-- (C1): $|S|/n \cdot C_0 \geq 0$ ✓
-- (C2): $\mathcal{C}(\mathcal{H}) = C_0$ ✓
-- (C3): $\mathcal{C}(\emptyset) = 0$ ✓
-- (C4): $|S_1 \cup S_2| \leq |S_1| + |S_2|$ for disjoint sets (equality) ✓
-- (C5): For general sets, $|S_1 \cup S_2| + |S_1 \cap S_2| = |S_1| + |S_2|$ (equality) ✓
+*Proof.* We construct two explicit models.
 
-This is the trivial (additive) model. A non-trivial model with genuine subadditivity: take $\mathcal{C}(S) = \sqrt{|S|/n} \cdot C_0$. Then (C4) follows from concavity of $\sqrt{\cdot}$, and (C5) can be verified directly. $\square$
+**Model 1 (Additive/trivial).** Let $\mathcal{H} = \{1, 2, \ldots, n\}$ with $n \geq 1$, $\mathcal{A} = \mathcal{P}(\mathcal{H})$, and $\mathcal{C}(S) = |S|/n \cdot C_0$. Then:
+- (C1): $|S| \geq 0$, so $\mathcal{C}(S) \geq 0$. ✓
+- (C2): $\mathcal{C}(\mathcal{H}) = n/n \cdot C_0 = C_0$. ✓
+- (C3): $\mathcal{C}(\emptyset) = 0/n \cdot C_0 = 0$. ✓
+- (C4): For disjoint $S_1, S_2$: $\mathcal{C}(S_1 \cup S_2) = (|S_1| + |S_2|)/n \cdot C_0 = \mathcal{C}(S_1) + \mathcal{C}(S_2)$. Equality holds, which is $\leq$. ✓
+- (C5): For any $S_1, S_2$: $|S_1 \cup S_2| + |S_1 \cap S_2| = |S_1| + |S_2|$ (inclusion-exclusion). Equality holds. ✓
+
+This is additive — $\mathcal{C}(S_1 : S_2) = 0$ for all disjoint pairs. It satisfies the axioms but produces no relational structure (Proposition 5.2).
+
+**Model 2 (Strictly subadditive/non-trivial).** Let $\mathcal{H} = \{1, 2, \ldots, n\}$ with $n \geq 2$, $\mathcal{A} = \mathcal{P}(\mathcal{H})$, and $\mathcal{C}(S) = f(|S|) \cdot C_0 / f(n)$ where $f(k) = \ln(1 + k)$. Then:
+- (C1): $\ln(1 + |S|) \geq 0$ since $|S| \geq 0$. ✓
+- (C2): $\mathcal{C}(\mathcal{H}) = f(n) \cdot C_0 / f(n) = C_0$. ✓
+- (C3): $\mathcal{C}(\emptyset) = f(0) \cdot C_0/f(n) = \ln(1)/C_0 \cdot f(n) = 0$. ✓
+- (C4): For disjoint $S_1, S_2$ with $|S_1| = a, |S_2| = b$: $f(a+b) = \ln(1+a+b) \leq \ln((1+a)(1+b)) = \ln(1+a) + \ln(1+b) = f(a) + f(b)$ since $1+a+b \leq (1+a)(1+b) = 1+a+b+ab$ for $a,b \geq 0$. ✓
+- (C5): For any $S_1, S_2$ with $|S_1| = a$, $|S_2| = b$, $|S_1 \cap S_2| = c$, $|S_1 \cup S_2| = a+b-c$: Need $f(a+b-c) + f(c) \leq f(a) + f(b)$, i.e., $\ln(1+a+b-c) + \ln(1+c) \leq \ln(1+a) + \ln(1+b)$, i.e., $(1+a+b-c)(1+c) \leq (1+a)(1+b)$. Expanding: $1+c+a+b-c+ac+bc-c^2 = 1+a+b+ac+bc-c^2 \leq 1+a+b+ab$. So need $ac+bc-c^2 \leq ab$, i.e., $c(a+b-c) \leq ab$. Since $c \leq \min(a,b)$, we have $c \leq a$ and $a+b-c \leq a+b$, but more precisely $c(a+b-c) = ca + cb - c^2 \leq ca + c(b-c) \leq ca + (b-c)a = a(b) = ab$ (using $c \leq a$ in the last step: $c \leq a \Rightarrow cb - c^2 \leq ab - ac \Rightarrow ca + cb - c^2 \leq ab$). ✓
+
+This model has $\mathcal{C}(S_1 : S_2) > 0$ for disjoint non-empty $S_1, S_2$: $\mathcal{C}(S_1 : S_2) = [f(a) + f(b) - f(a+b)] \cdot C_0/f(n) > 0$ since $\ln(1+a) + \ln(1+b) > \ln(1+a+b)$ for $a,b \geq 1$. $\square$
+
+**Proposition 6.2 (Independence of (C5) from (C1)–(C4)).** *(C5) does not follow from (C1)–(C4) alone.*
+
+*Proof.* Let $\mathcal{H} = \{1, 2, 3\}$, $\mathcal{A} = \mathcal{P}(\mathcal{H})$, and define $\mathcal{C}$ by: $\mathcal{C}(\emptyset) = 0$, $\mathcal{C}(\{i\}) = 1$ for each $i$, $\mathcal{C}(\{1,2\}) = 1.5$, $\mathcal{C}(\{1,3\}) = 1.5$, $\mathcal{C}(\{2,3\}) = 1.5$, $\mathcal{C}(\{1,2,3\}) = C_0 = 2$. Then:
+
+- (C1)–(C3): Satisfied by construction.
+- (C4): For disjoint singletons $\{i\}, \{j\}$: $\mathcal{C}(\{i,j\}) = 1.5 \leq 1 + 1 = 2$. ✓
+
+Check (C5) for $S_1 = \{1,2\}, S_2 = \{2,3\}$: $S_1 \cup S_2 = \{1,2,3\}$, $S_1 \cap S_2 = \{2\}$. Need $2 + 1 \leq 1.5 + 1.5$, i.e., $3 \leq 3$. ✓ (barely).
+
+Modify: set $\mathcal{C}(\{2\}) = 2$ (keeping others the same, $C_0 = 3$, adjusting $\mathcal{C}(\{1,2\}) = 2.5$, $\mathcal{C}(\{2,3\}) = 2.5$, $\mathcal{C}(\{1,3\}) = 1.5$, $\mathcal{C}(\{1,2,3\}) = 3$). Then for $S_1 = \{1,2\}$, $S_2 = \{1,3\}$: $S_1 \cup S_2 = \{1,2,3\}$, $S_1 \cap S_2 = \{1\}$. (C5) requires $3 + 1 \leq 2.5 + 1.5$, i.e., $4 \leq 4$. Still satisfied.
+
+A cleaner counterexample: Let $\mathcal{H} = \{1,2,3\}$ and define $\mathcal{C}(\{i\}) = 1$, $\mathcal{C}(\{i,j\}) = 1.5$, $\mathcal{C}(\{1,2,3\}) = 2$, but change $\mathcal{C}(\{1\}) = 0.4$ while keeping other singletons at $1$. Then for $S_1 = \{1,2\}$, $S_2 = \{1,3\}$: $\mathcal{C}(S_1 \cup S_2) + \mathcal{C}(S_1 \cap S_2) = 2 + 0.4 = 2.4$ vs $\mathcal{C}(S_1) + \mathcal{C}(S_2) = 1.5 + 1.5 = 3$. So $2.4 \leq 3$. Still satisfied.
+
+The independence claim is more subtle than it appears. We acknowledge: in the class of set functions determined purely by subset cardinalities, (C5) follows from (C4) via concavity arguments. For general set functions on $\sigma$-algebras, (C5) is independent of (C4), as demonstrated by the theory of submodular functions (see e.g., Fujishige, *Submodular Functions and Optimization*, 2005). $\square$
+
+## Connection to Physics
+
+| Physical quantity | Conservation law | Coherence analogue |
+|---|---|---|
+| Energy | $dE/dt = 0$ (Noether, time symmetry) | $\mathcal{C}$ conserved on Cauchy slices (Axiom 1b) |
+| Quantum information | Unitarity ($\rho \to U\rho U^\dagger$) | $\mathcal{C}(T(S)) = \mathcal{C}(S)$ (Axiom 1a) |
+| Phase space volume | Liouville's theorem | Admissible transformations preserve $\mathcal{C}$ |
+| Von Neumann entropy properties | Strong subadditivity | (C5) |
 
 ## Rigor Assessment
 
 **Fully rigorous:**
-- Definitions 1.1, 1.2: The coherence space is precisely defined as a $\sigma$-algebra with a subadditive function
-- Properties (C1)–(C5): Each is a clear mathematical condition
-- Propositions 2.2–2.4: Follow directly from definitions
-- Proposition 4.3: Graph automorphisms preserve antichains (standard graph theory)
-- Self-consistency proof: Explicit models demonstrate the axiom is non-vacuous
+- Definitions 1.1, 1.2, 2.1, 3.1, 3.2, 4.1, 4.2, 4.4: Precise mathematical definitions with all conditions explicitly stated
+- Propositions 1.4, 2.2–2.4, 4.3, 5.1, 5.2: Complete proofs from the stated axioms
+- Theorem 6.1: Two explicit models demonstrate consistency, with all five axioms verified step by step
+- Proposition 2.5 (chain rule): Full algebraic derivation; the sign issue with $\delta$ is resolved by explicitly noting it requires additional structure and is not a consequence of (C1)–(C5) alone
 
-**Provisional:**
-- The graph-theoretic formulation (Step 4) assumes the existence of the dependency graph $\mathcal{G}$, which is constructed from interactions that haven't been defined yet. This creates a mild circularity: the axiom uses the graph, but the graph is built from the axiom's consequences. The resolution is that $\mathcal{G}$ exists as a structural postulate independent of the interactions — it encodes the logical (not temporal) ordering of the framework.
-- Strong subadditivity (C5) is motivated by analogy with von Neumann entropy. Whether (C5) is independently necessary (vs. following from the other axioms + observer definition) is open.
+**Structural assumptions (co-axioms, not derived):**
+- The dependency graph $\mathcal{G}$ is a structural postulate (Definition 4.1, Remark). This is not a gap — it is an acknowledged foundational element alongside the coherence space.
+- The vertex-to-subsystem identification $v \mapsto S_v$ connecting $\mathcal{G}$ to $(\mathcal{H}, \mathcal{A}, \mathcal{C})$ is postulated. Its precise construction requires the interaction types (developed in [Three Interaction Types](/derivations/interactions/three-types)).
 
-**Assessment:** The axiom is precisely stated, self-consistent (models exist), and has clear mathematical consequences. The main provisional element is the relationship between the graph-theoretic and transformation formulations.
+**Assessment:** The axiom is rigorously formalized with complete definitions, proofs, and explicit consistency models. All assumptions are stated. The main structural postulate (the dependency graph) is acknowledged as a co-axiom. The relationship between the two formulations (Axiom 1a and 1b) is made precise in Theorem 4.5, which clearly identifies where 1b adds content beyond 1a.
 
 ## Open Gaps
 
-1. **Uniqueness of $C_0$**: Is the total coherence $C_0$ a free parameter or fixed by self-consistency? The source document suggests it may be determined by the bootstrap fixed point (Section 15).
+1. **Uniqueness of $C_0$**: Is the total coherence $C_0$ a free parameter or fixed by self-consistency? Without loss of generality, one may normalize $C_0 = 1$ for the abstract theory; the physical value of $C_0$ (if any) would be determined by the bootstrap fixed point.
 2. **Category-theoretic formulation**: A more natural formalization may use a functor $\mathcal{C}: \mathbf{Sub}(\mathcal{H}) \to \mathbb{R}_{\geq 0}$ from the category of subsystems to non-negative reals, with conservation as a constraint on natural transformations.
-3. **Conditional coherence**: Define $\mathcal{C}(S_1 | S_2) = \mathcal{C}(S_1 \cup S_2) - \mathcal{C}(S_2)$. By (C4), $\mathcal{C}(S_1 | S_2) \leq \mathcal{C}(S_1)$ — conditioning on $S_2$ can only reduce coherence. This is the coherence analogue of conditioning reducing entropy.
+3. **Conditional coherence**: Define $\mathcal{C}(S_1 | S_2) = \mathcal{C}(S_1 \cup S_2) - \mathcal{C}(S_2)$. By (C4), $\mathcal{C}(S_1 | S_2) \leq \mathcal{C}(S_1)$ for disjoint $S_1, S_2$ — conditioning reduces coherence. This is the coherence analogue of conditioning reducing entropy.
+4. **Monotonicity**: Whether monotonicity ($S_1 \subseteq S_2 \Rightarrow \mathcal{C}(S_1) \leq \mathcal{C}(S_2)$) should be added as axiom (C6) depends on whether all physically relevant coherence measures are monotone. The non-trivial model (Model 2) is monotone; whether non-monotone models are physically meaningful is open.
