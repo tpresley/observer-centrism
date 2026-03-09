@@ -1,13 +1,13 @@
 ---
 title: "Three Interaction Types"
-status: "provisional"
+status: "rigorous"
 dependsOn: ["minimal-observer/multiplicity"]
 enablesDerivation: ["interactions/relational-invariants", "thermodynamics/time", "thermodynamics/entropy"]
 tags: ["dynamics"]
 summary: "Exhaustive classification of observer interactions by invariant outcome: Passage (phase transfer), Fusion (reorganization), Resonance (new relational invariant)"
 rigorLevel: "formal"
 sourceSection: "04-interaction-bootstrap"
-lastUpdated: 2026-03-08
+lastUpdated: 2026-03-09
 ---
 
 ## Statement
@@ -18,11 +18,13 @@ lastUpdated: 2026-03-08
 
 ### Step 1: Setup
 
-**Definition 1.1.** Let $\mathcal{O}_1 = (\Sigma_1, I_1, \mathcal{B}_1)$ and $\mathcal{O}_2 = (\Sigma_2, I_2, \mathcal{B}_2)$ be two observers (from [Multiplicity](/derivations/minimal-observer/multiplicity), at least two must exist). An **interaction** is a transformation $T_{12}$ acting on the joint state space $\Sigma_1 \times \Sigma_2$ that is **non-separable**:
+**Definition 1.1.** Let $\mathcal{O}_1 = (\Sigma_1, I_1, \mathcal{B}_1)$ and $\mathcal{O}_2 = (\Sigma_2, I_2, \mathcal{B}_2)$ be two observers (from [Multiplicity](/derivations/minimal-observer/multiplicity), Theorem 3.1, at least two must exist). An **interaction** is a smooth map $T_{12}: \Sigma_1 \times \Sigma_2 \to \Sigma_1 \times \Sigma_2$ satisfying:
 
-$$T_{12} \neq T_1 \otimes T_2$$
+**(I1) Non-separability:** $T_{12}$ cannot be factored as a product of individual transformations:
 
-for any pair of individual transformations $T_1 \in \text{Aut}(\Sigma_1)$, $T_2 \in \text{Aut}(\Sigma_2)$.
+$$T_{12} \neq T_1 \times T_2 \quad \text{for any } T_1 \in \text{Aut}(\Sigma_1), \; T_2 \in \text{Aut}(\Sigma_2)$$
+
+**(I2) Coherence conservation:** $T_{12}$ preserves total coherence: $\mathcal{C}(T_{12}(\sigma_1, \sigma_2)) = \mathcal{C}(\sigma_1, \sigma_2)$ for all $(\sigma_1, \sigma_2) \in \Sigma_1 \times \Sigma_2$.
 
 **Definition 1.2.** After an interaction, each invariant either **survives** ($I_k$ is preserved) or is **destroyed** ($I_k$ is not preserved). This gives a $2 \times 2$ outcome table:
 
@@ -71,21 +73,23 @@ $$T_{12}^{(I)}: (\theta_1, Q_1; \theta_2, Q_2) \mapsto (\theta_1 + \delta\theta_
 
 Phase conservation (from coherence conservation applied to the joint system) requires $\delta\theta_1 + \delta\theta_2 = 0$ modulo the appropriate periodicity. $\square$
 
-**Definition 4.3 (Type II — Fusion).** The individual state spaces merge: $\Sigma_1 \times \Sigma_2 \to \Sigma_{12}$ where $\Sigma_{12}$ is not a product space. The individual invariants $I_1, I_2$ are replaced by a composite invariant $I_{12}$ on $\Sigma_{12}$:
+**Definition 4.3 (Type II — Fusion).** The individual state spaces merge into a non-product space: there exists a smooth manifold $\Sigma_{12}$ and a surjection $\pi: \Sigma_1 \times \Sigma_2 \to \Sigma_{12}$ with $\dim(\Sigma_{12}) < \dim(\Sigma_1) + \dim(\Sigma_2)$, such that $T_{12}^{(II)}$ factors through $\pi$. The individual invariants $I_1, I_2$ are replaced by a composite invariant $I_{12}$ on $\Sigma_{12}$:
 
 $$T_{12}^{(II)}: (\Sigma_1, I_1) \times (\Sigma_2, I_2) \mapsto (\Sigma_{12}, I_{12})$$
 
-Coherence is conserved: $\mathcal{C}(\Sigma_{12}) = \mathcal{C}(\Sigma_1 \cup \Sigma_2)$ (including relational coherence).
+Coherence is conserved: $\mathcal{C}(\Sigma_{12}) = \mathcal{C}(\Sigma_1 \cup \Sigma_2)$ (including relational coherence). The formal criterion for fusion is that the **effective joint state space loses dimensions** — the observers become entangled in a way that eliminates independent degrees of freedom.
 
 **Remark.** Type II is "both survive" in the sense that total coherence survives — individual identities merge into a new composite observer. The original observers cease to exist as separate entities.
 
-**Definition 4.4 (Type III — Resonance).** Both $I_1$ and $I_2$ survive unchanged, **and** a new invariant $I_{12}$ emerges on the joint space:
+**Definition 4.4 (Type III — Resonance).** Both $I_1$ and $I_2$ survive unchanged, the individual state spaces $\Sigma_1$ and $\Sigma_2$ remain as independent factors, **and** a new invariant $I_{12}$ emerges on the joint space:
 
 $$T_{12}^{(III)}: \text{generates } I_{12}: \Sigma_1 \times \Sigma_2 \to V$$
 
-where $I_{12}$ is **irreducibly relational** — it cannot be decomposed:
+where $V$ is a normed vector space and $I_{12}$ is **irreducibly relational** — it cannot be decomposed:
 
 $$\nexists \, f: \Sigma_1 \to V, \; g: \Sigma_2 \to V \text{ such that } I_{12}(\sigma_1, \sigma_2) = f(\sigma_1) + g(\sigma_2)$$
+
+The formal criterion distinguishing Type III from Type II is that the product structure of $\Sigma_1 \times \Sigma_2$ is **preserved**: both factors retain their individual identity and dynamics, while a new conserved quantity is added on the joint space.
 
 ### Step 5: Exhaustiveness Proof
 
@@ -115,28 +119,45 @@ Every branch terminates. No interaction escapes the tree. The three types are mu
 | **II (Fusion)** | Individual invariants merge into composite | Bound state formation, pair annihilation, confinement |
 | **III (Resonance)** | New relational invariant generated | Entanglement, chemical bonding, measurement |
 
-**Proposition 6.1 (Wave behavior is Type I).** *Quantum wave behavior arises because Type I is the unique invariant-preserving transient interaction, and it transfers only phase. Interference patterns are phase relationships between observer loops.*
+**Proposition 6.1 (Type I transfers only phase).** *Type I is the unique interaction type that preserves both individual invariants without creating new structure. All Type I interactions are phase exchanges.*
 
-*Proof sketch.* In a Type I interaction, the only exchanged quantity is phase ($\theta$). Multiple Type I interactions between an observer and its environment create a superposition of phase shifts. The probability of detection depends on the total accumulated phase — constructive interference when phases align, destructive when they cancel. This is the wave-like behavior of quantum mechanics, derived from the structure of Type I interactions rather than postulated. $\square$
+*Proof.* This is a restatement of Proposition 4.2: if both invariants survive and no new invariant is created, the only changeable quantity is the phase conjugate to each conserved charge. The uniqueness of Type I follows from the exhaustive classification (Theorem 5.1). $\square$
+
+**Remark (Wave behavior).** The connection from phase-only exchange (Type I) to quantum wave behavior — interference, superposition, diffraction — requires the coherence path sum and the Born rule ([Born Rule](/derivations/quantum/born-rule)). The structural content at this level is: Type I interactions transfer the same quantity ($\theta$) that enters the coherence phase $e^{i\mathcal{S}/\hbar}$ in the path integral formulation ([Action and Planck's Constant](/derivations/thermodynamics/action-planck), Theorem 5.1). The full derivation of wave-particle duality is deferred to the quantum derivation chain.
+
+## Consistency Model
+
+**Theorem 7.1.** *The three interaction types are realized in the product coherence space $\mathcal{H} = S^1 \times S^1$ with observers $\mathcal{O}_1 = (S^1_1, I_1, \mathcal{B}_1)$ and $\mathcal{O}_2 = (S^1_2, I_2, \mathcal{B}_2)$.*
+
+**Type I model:** $T_{12}^{(I)}(\theta_1, \theta_2) = (\theta_1 + \delta, \theta_2 - \delta)$ for small $\delta$. Both invariants ($U(1)$ winding numbers) are preserved. Phase is redistributed: $\delta\theta_1 = +\delta$, $\delta\theta_2 = -\delta$, total $\delta\theta_1 + \delta\theta_2 = 0$. No new invariant is created. ✓
+
+**Type II model:** $\pi: S^1 \times S^1 \to S^1$ defined by $\pi(\theta_1, \theta_2) = \theta_1 + \theta_2$. The joint state space collapses from the torus $T^2$ to a single $S^1$. The composite invariant is the total winding number. Individual invariants are absorbed into the composite. $\dim(\Sigma_{12}) = 1 < 2 = \dim(\Sigma_1) + \dim(\Sigma_2)$. ✓
+
+**Type III model:** $I_{12}(\theta_1, \theta_2) = \cos(\theta_1 - \theta_2)$. This is conserved under joint phase shifts ($\theta_1 \to \theta_1 + \alpha$, $\theta_2 \to \theta_2 + \alpha$) but is irreducible: $\cos(\theta_1 - \theta_2) \neq f(\theta_1) + g(\theta_2)$ for any $f, g$ (since the cosine of a difference is not additively separable). Both individual $S^1$ factors are preserved, and the product structure remains. ✓ $\square$
 
 ## Rigor Assessment
 
 **Fully rigorous:**
-- The $2 \times 2$ outcome table (Definition 1.2) is logically exhaustive
+- Definition 1.1: Interaction defined with explicit conditions (I1) non-separability, (I2) coherence conservation
+- Definition 1.2: $2 \times 2$ outcome table is logically exhaustive
 - Proposition 2.1: Case D reduces (coherence conservation forces redistribution)
-- Proposition 3.1: Asymmetric cases reduce (coherence must go somewhere)
-- Proposition 4.2: Phase is the unique transferable quantity (Noether structure)
-- Theorem 5.1: Decision tree is exhaustive and each branch terminates
+- Proposition 3.1: Asymmetric cases reduce (coherence conservation + invariant tracking)
+- Definition 4.1 + Proposition 4.2: Type I defined and phase as unique transferable quantity proved from Noether structure
+- Definition 4.3: Type II formalized with dimension-reduction criterion ($\dim \Sigma_{12} < \dim \Sigma_1 + \dim \Sigma_2$)
+- Definition 4.4: Type III formalized with product-preservation and irreducibility conditions
+- Theorem 5.1: Decision tree is exhaustive, each branch terminates, types are mutually exclusive
+- Proposition 6.1: Type I uniqueness (restatement of Proposition 4.2)
+- Theorem 7.1: Consistency model verified for all three types
 
-**Provisional:**
-- The distinction between Type II (fusion) and Type III (resonance) at step 3 of the decision tree relies on whether the joint space is a product or not. This is a topological distinction that is clear in principle but may be blurred in practice (what counts as "merging"?). A formal definition of product vs. non-product joint spaces in the coherence geometry would sharpen this.
-- Proposition 6.1 (wave behavior) is a proof sketch. The full derivation requires the Born rule ([Born Rule](/derivations/quantum/born-rule)) to connect phase differences to probabilities.
-- Whether mixed interactions (partial fusion + resonance) are possible is an open question. The classification assumes clean types.
+**Deferred to later derivations:**
+- Wave behavior from Type I (requires Born rule + action/path integral)
+- Interaction rates and probabilities (requires Born rule + quantum formalism)
+- Energy thresholds for type transitions (requires action-Planck + spacetime geometry)
 
-**Assessment:** The classification is logically exhaustive and mathematically clean. The three types are well-defined by distinct structural outcomes. The main provisional elements are the product/non-product distinction for Type II vs. III, and the wave behavior derivation.
+**Assessment:** The classification is logically exhaustive, mathematically clean, and each type is formally distinguished by a precise criterion (invariant survival, dimension reduction, product preservation). The consistency model verifies all three types in the minimal setting. Physical predictions (rates, thresholds, wave behavior) are properly deferred to later derivations.
 
 ## Open Gaps
 
 1. **Interaction rates**: The classification is kinematic (what outcomes are possible). The dynamics (which type occurs, with what probability) requires the Born rule and the full quantum formalism.
 2. **Energy thresholds**: At what energy does Type I give way to Type II? The threshold likely depends on the coherence content of the observers relative to their relational coherence.
-3. **Mixed interactions**: Can an interaction be partly Type I and partly Type III? The classification assumes a single type per interaction event, but real interactions may involve superpositions of types.
+3. **Mixed interactions**: The classification assigns a single type per interaction event. Whether superpositions of interaction types are physical (e.g., an interaction that is partly Type I and partly Type III) depends on the quantum formalism — specifically, whether the decision tree branches correspond to orthogonal sectors of the coherence path sum.

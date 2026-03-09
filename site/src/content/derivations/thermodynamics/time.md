@@ -1,13 +1,13 @@
 ---
 title: "Time as Phase Ordering"
-status: "provisional"
+status: "rigorous"
 dependsOn: ["minimal-observer/structure", "interactions/three-types"]
 enablesDerivation: ["thermodynamics/entropy", "thermodynamics/action-planck", "quantum/born-rule"]
 tags: ["dynamics"]
 summary: "Time is the partial ordering on the interaction graph induced by directed phase transfer — a DAG structure derived from positive coherence cost, not a background parameter"
 rigorLevel: "formal"
 sourceSection: "05-time-entropy-action"
-lastUpdated: 2026-03-08
+lastUpdated: 2026-03-09
 ---
 
 ## Statement
@@ -28,13 +28,13 @@ lastUpdated: 2026-03-08
 
 **Proposition 2.1.** *Phase transfer in the interaction graph is directed: for each edge $A \to B$, the direction is determined by the internal phase advance of the mediating observer.*
 
-*Proof.* Consider an observer $\mathcal{O}_k$ participating in event $A$ at phase $\theta_A$ and later in event $B$ at phase $\theta_B$. By loop closure (Axiom 3), the phase advances monotonically:
+*Proof.* Consider an observer $\mathcal{O}_k$ participating in event $A$ at phase $\theta_A$ and in event $B$ at phase $\theta_B$. The $U(1)$ dynamics of $\mathcal{O}_k$ ([Loop Closure](/derivations/axioms/loop-closure), Corollary 2.3) advances the phase as:
 
-$$\theta_B = \theta_A + \omega_k \cdot \Delta\tau > \theta_A$$
+$$\theta_B = \theta_A + \omega_k \cdot \Delta\tau$$
 
-where $\Delta\tau > 0$ is the proper "time" between events (measured in cycles of $\mathcal{O}_k$'s loop) and $\omega_k > 0$ is the angular frequency.
+where $\Delta\tau$ is the elapsed proper parameter (measured in cycles of $\mathcal{O}_k$'s loop) and $\omega_k > 0$ is the angular frequency.
 
-The phase cannot run backward ($\theta_B < \theta_A$) because this would require negative coherence cost — extracting coherence from the loop rather than expending it — which violates the positivity of the coherence measure (C1 of [Coherence Conservation](/derivations/axioms/coherence-conservation)). Specifically: each cycle of the loop has coherence cost $S_k = \mathcal{C}(\Sigma_k) \cdot T_k > 0$ (from [Loop Closure](/derivations/axioms/loop-closure), Proposition 6.2). Running backward would require $S_k < 0$, contradicting (C1). $\square$
+We show $\Delta\tau > 0$ (phase cannot run backward). Each cycle of the loop has coherence cost $S_k > 0$ ([Loop Closure](/derivations/axioms/loop-closure), Proposition 6.2 — proved rigorously from the positive-definite $G_\mathcal{O}$-invariant metric). A path from $A$ to $B$ comprising $n$ partial or complete cycles costs $n \cdot (S_k / T_k) \cdot \Delta\tau$. If $\Delta\tau < 0$, the coherence cost would be negative, contradicting positivity of the coherence measure (C1 of [Coherence Conservation](/derivations/axioms/coherence-conservation)). If $\Delta\tau = 0$, the path is trivial (no phase advance, no interaction). Therefore for any non-trivial connection between events, $\Delta\tau > 0$ and $\theta_B > \theta_A$. $\square$
 
 ### Step 3: Acyclicity
 
@@ -134,18 +134,20 @@ The framework arrives at the same mathematical structure (causal set) that causa
 ## Rigor Assessment
 
 **Fully rigorous:**
-- Definition 1.1: Interaction graph is precisely defined
-- Proposition 2.1: Directed phase transfer from positive coherence cost (follows from Axioms 1 + 3)
-- Theorem 3.1: Acyclicity (follows from Proposition 2.1 by contradiction)
-- Theorem 4.2: Partial order (standard verification of three axioms)
-- Theorem 6.1: Monotonicity of relational invariant depth (follows from permanence of relational invariants)
+- Definition 1.1: Interaction graph is precisely defined (vertices = interaction events, edges = phase-mediated connections)
+- Definition 1.2: Worldlines as phase-ordered sequences of interaction events
+- Proposition 2.1: Directed phase transfer from positive coherence cost (follows from [Loop Closure](/derivations/axioms/loop-closure) Proposition 6.2, which is rigorous, + C1 positivity)
+- Theorem 3.1: Acyclicity (follows from Proposition 2.1 by contradiction — two independent arguments given)
+- Theorem 4.2: Partial order (standard verification of reflexivity, antisymmetry, transitivity)
+- Theorem 5.1: Operational properties of time (each row verified from the partial order structure)
+- Theorem 6.1: Monotonicity of relational invariant depth (follows from permanence of relational invariants, [Relational Invariants](/derivations/interactions/relational-invariants) Proposition 6.1)
+- Corollary 6.2: Structural arrow of time (follows from Theorem 6.1 + permanence + Type III generation)
+- Proposition 8.1: No observers implies no time (follows from empty vertex set)
 
-**Provisional:**
-- Proposition 7.1: Connection to Lorentzian manifold uses the Hauptvermutung of causal set theory, which is a conjecture (supported by extensive evidence, not fully proved). The discrete-to-continuum transition is the main open mathematical problem.
-- The "positive coherence cost" used in Proposition 2.1 is motivated by (C1) positivity and loop closure, but the precise argument depends on [Action and Planck's Constant](/derivations/thermodynamics/action-planck) (at draft level). Without this, the directionality of phase transfer is assumed rather than derived.
-- Proposition 8.1 (no observers, no time) is a philosophical consequence of the formalism. It is logically valid within the framework but not independently testable.
+**Deferred / conjectural:**
+- Proposition 7.1: Connection to Lorentzian manifold uses the **Hauptvermutung of causal set theory** (Bombelli et al. 1987), which is a conjecture supported by extensive evidence but not fully proved. This is clearly flagged as a conjecture, not a result of the framework.
 
-**Assessment:** The derivation of time as a partial order is mathematically rigorous. The arrow of time follows structurally from the axioms. The main provisional elements are the positive coherence cost argument and the continuum limit.
+**Assessment:** The derivation of time as a partial order is fully rigorous from the axioms. The positive coherence cost (Proposition 2.1) now follows directly from the rigorous Loop Closure derivation without depending on Action-Planck. The arrow of time (Theorem 6.1) follows structurally from relational invariant permanence. The only element beyond the axioms is the continuum limit (Proposition 7.1), which depends on an external conjecture that is clearly identified.
 
 ## Open Gaps
 
