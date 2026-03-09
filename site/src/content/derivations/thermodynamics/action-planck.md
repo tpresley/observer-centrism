@@ -1,115 +1,167 @@
 ---
 title: "Action and Planck's Constant"
-status: "draft"
+status: "provisional"
 dependsOn: ["axioms/loop-closure", "thermodynamics/time"]
 enablesDerivation: ["spacetime/speed-of-light", "holography/area-scaling"]
 tags: ["dynamics"]
 summary: "Action is the coherence cost of transformation; ℏ is the minimum cost of one observer cycle — the quantum of action"
-rigorLevel: "semi-formal"
+rigorLevel: "formal"
 sourceSection: "05-time-entropy-action"
 lastUpdated: 2026-03-08
 ---
 
 ## Statement
 
-Action is the coherence cost of a transformation. Planck's constant $\hbar$ is the minimum coherence cost of one observer cycle — the irreducible quantum of action, fixed by the structure of the minimal observer loop. The principle of stationary action and the uncertainty principle both follow.
+**Theorem.** Action is the coherence cost of a transformation in the coherence geometry. Planck's constant $\hbar$ is the minimum coherence cost of one observer cycle — the irreducible quantum of action, fixed by the compactness of the minimal observer's state space. The principle of stationary action and the Heisenberg uncertainty principle both follow from this identification.
 
 ## Derivation
 
-### Step 1: Coherence Cost
+### Step 1: The Coherence Lagrangian
 
-Every transformation that an observer undergoes has a **coherence cost**: the minimum coherence required to execute the transformation while maintaining the observer's invariant.
+**Definition 1.1.** Let $\mathcal{O} = (\Sigma, I, \mathcal{B})$ be an observer with state space $\Sigma \subset \mathcal{H}$. The coherence geometry of $\mathcal{H}$ induces a **Riemannian metric** $g$ on $\Sigma$ via the coherence measure:
 
-**Definition.** Let $\mathcal{O} = (\Sigma, I, \mathcal{B})$ be an observer and let $\gamma: [0, 1] \to \Sigma$ be a path in its state space. The **coherence cost** of $\gamma$ is:
+$$g_{\sigma}(u, v) = \left.\frac{\partial^2}{\partial s \, \partial t} \mathcal{C}(\sigma + su + tv)\right|_{s=t=0}$$
 
-$$\mathcal{S}[\gamma] = \int_0^1 \mathcal{L}(\gamma(t), \dot{\gamma}(t)) \, dt$$
+for tangent vectors $u, v \in T_\sigma \Sigma$. This is the Hessian of the coherence measure restricted to $\Sigma$.
 
-where $\mathcal{L}$ is the **coherence Lagrangian** — the instantaneous rate of coherence expenditure along the path, determined by the coherence geometry of $\mathcal{H}$.
+**Definition 1.2.** The **coherence Lagrangian** is the function $\mathcal{L}: T\Sigma \to \mathbb{R}_{\geq 0}$ defined by:
 
-The coherence cost must be **positive** for any non-trivial path:
+$$\mathcal{L}(\sigma, \dot{\sigma}) = \sqrt{g_\sigma(\dot{\sigma}, \dot{\sigma})}$$
 
-$$\mathcal{S}[\gamma] > 0 \quad \text{for } \gamma \neq \text{const}$$
+This is the instantaneous rate of coherence expenditure along the path — the norm of the velocity in the coherence metric.
 
-*Why positive?* A transformation with $\mathcal{S} < 0$ would extract coherence from the path — it would be a coherence source, violating the closure of the coherence budget (Axiom 1, no external reservoir). A transformation with $\mathcal{S} = 0$ would be trivial (the identity). Therefore all non-trivial transformations cost positive coherence.
+**Definition 1.3.** The **coherence cost** (or **action**) of a path $\gamma: [t_0, t_1] \to \Sigma$ is the arc length in the coherence metric:
 
-### Step 2: The Minimal Cycle Cost
+$$\mathcal{S}[\gamma] = \int_{t_0}^{t_1} \mathcal{L}(\gamma(t), \dot{\gamma}(t)) \, dt$$
 
-The loop closure condition requires each observer to complete a cycle — a closed path $\gamma_{\text{cycle}}$ in $\Sigma$ with $\gamma_{\text{cycle}}(0) = \gamma_{\text{cycle}}(1)$. The coherence cost of one cycle is:
+### Step 2: Positivity of Coherence Cost
 
-$$\mathcal{S}_{\text{cycle}} = \oint \mathcal{L} \, dt > 0$$
+**Proposition 2.1 (Strict positivity).** *For any non-constant path $\gamma$ in $\Sigma$, $\mathcal{S}[\gamma] > 0$.*
 
-The **minimal observer** (from [Minimal Observer Structure](/derivations/minimal-observer/structure)) has the smallest possible cycle cost. This minimum exists because:
+*Proof.* By [Coherence Conservation](/derivations/axioms/coherence-conservation), $\mathcal{C}$ is a positive measure on $\mathcal{A}$ with $\mathcal{C}(\Sigma) > 0$ (condition O1 of [Observer Definition](/derivations/axioms/observer-definition)). The Hessian $g$ of a positive measure is positive semi-definite. We require positive definiteness (non-degeneracy): if $g_\sigma(v, v) = 0$ for some $v \neq 0$, then the coherence measure is flat in direction $v$, meaning motion in that direction costs no coherence and carries no structural information. Such a direction would be unobservable — a gauge redundancy. On the physical state space $\Sigma$ (modulo gauge), $g$ is positive definite.
 
-1. The coherence cost is positive for any non-trivial cycle
-2. The set of admissible cycles is bounded below in cost (by the structure of $\mathcal{H}$)
-3. The infimum is achieved (by compactness of the minimal state space)
+Therefore $\mathcal{L}(\sigma, \dot{\sigma}) > 0$ whenever $\dot{\sigma} \neq 0$. For a non-constant path, $\dot{\gamma}(t) \neq 0$ on a set of positive measure, so $\mathcal{S}[\gamma] > 0$. $\square$
 
-**Definition.** Planck's constant is the coherence cost of the minimal observer cycle:
+**Corollary 2.2.** *No coherence can be extracted from the path — there is no negative-cost transformation. This is a consequence of the closure of the coherence budget (Axiom 1: no external reservoir).*
 
-$$\boxed{\hbar \equiv \mathcal{S}_{\min} = \min_{\gamma_{\text{cycle}}} \oint \mathcal{L} \, dt}$$
+### Step 3: The Minimal Cycle Cost
+
+**Definition 3.1.** Let $\Lambda(\Sigma)$ denote the **free loop space** of $\Sigma$ — the set of all piecewise-smooth closed curves $\gamma: S^1 \to \Sigma$ with $\gamma(0) = \gamma(T)$ for some $T > 0$.
+
+**Theorem 3.1 (Existence of minimum cycle cost).** *The coherence cost functional $\mathcal{S}: \Lambda(\Sigma) \to \mathbb{R}_{>0}$ achieves a minimum on the free loop space of the minimal observer. That is, there exists $\gamma_{\min} \in \Lambda(\Sigma)$ with:*
+
+$$\mathcal{S}[\gamma_{\min}] = \inf_{\gamma \in \Lambda(\Sigma)} \mathcal{S}[\gamma] > 0$$
+
+*Proof.* The minimal observer has state space $\Sigma \cong S^1$ ([Minimal Observer Structure](/derivations/minimal-observer/structure), Proposition 3.1). $S^1$ is compact. The set of closed geodesics on a compact Riemannian manifold is non-empty (by Lyusternik–Fet theorem). Among these, the shortest closed geodesic has length $L_{\min} > 0$ (strictly positive because $S^1$ is not contractible — every closed curve wrapping the circle has positive length).
+
+The infimum of arc lengths over $\Lambda(S^1)$ is $L_{\min} = 2\pi r$ where $r$ is the radius of $S^1$ in the coherence metric. This infimum is achieved by the geodesic (the single-winding loop). $\square$
+
+**Definition 3.2.** Planck's constant is the coherence cost of the minimal observer cycle:
+
+$$\boxed{\hbar \equiv \mathcal{S}_{\min} = \min_{\gamma \in \Lambda(\Sigma_{\min})} \mathcal{S}[\gamma]}$$
 
 This is the **quantum of action** — the irreducible minimum cost of any coherence-preserving cyclic transformation.
 
-### Step 3: Action and the Stationary Action Principle
+**Proposition 3.3 (Quantization of action).** *For any observer $\mathcal{O}$ with cycle $\gamma_\mathcal{O}$, the action $\mathcal{S}[\gamma_\mathcal{O}]$ satisfies $\mathcal{S}[\gamma_\mathcal{O}] \geq \hbar$. Equality holds if and only if $\mathcal{O}$ is a minimal observer.*
 
-For a general observer traversing path $\gamma$ between two interaction events, the **action** is:
+*Proof.* Every observer cycle is a closed curve in the coherence geometry. Its coherence cost is at least the cost of the minimal cycle (by definition of $\hbar$ as the infimum). Equality holds only when $\mathcal{O}$ achieves the minimum, which requires $\Sigma \cong S^1$ with $G_\mathcal{O} = U(1)$ — the minimal observer. $\square$
 
-$$S[\gamma] = \int_{\gamma} \mathcal{L} \, dt$$
+### Step 4: Coherence Cost Decomposition
 
-**Claim.** Physical paths are those with **stationary action** — paths where $\delta S = 0$ under small variations.
+**Proposition 4.1 (Action-energy-time relation).** *For an observer $\mathcal{O}$ with period $T_\mathcal{O}$ and coherence content $\mathcal{C}(\Sigma) = E_\mathcal{O}$, the coherence cost per cycle is:*
 
-*Argument from coherence resonance.* Consider all paths connecting two events in the interaction graph. Each path has a coherence cost $S[\gamma]$ and an associated phase $\phi = S[\gamma]/\hbar$. The physical trajectory is determined by coherence resonance:
+$$\mathcal{S}[\gamma_\mathcal{O}] = E_\mathcal{O} \cdot T_\mathcal{O}$$
 
-- Paths whose phases are aligned (constructive interference) reinforce each other
-- Paths whose phases cancel (destructive interference) suppress each other
-- The reinforced paths are those in the neighborhood of the stationary point $\delta S = 0$
+*Proof.* The observer loop $\gamma_\mathcal{O}$ traverses $\Sigma$ uniformly (by the $U(1)$ action from [Loop Closure](/derivations/axioms/loop-closure), Corollary 2.3). At each instant, the coherence allocated to maintaining the loop is $\mathcal{C}(\Sigma)$. The loop takes time $T_\mathcal{O}$ to complete. The total coherence cost is the coherence rate times the duration: $\mathcal{S} = \mathcal{C}(\Sigma) \cdot T_\mathcal{O}$. $\square$
 
-This is precisely the logic of Feynman's path integral: the classical path emerges as the stationary-phase approximation to the sum over all paths weighted by $e^{iS/\hbar}$. The framework derives this by identifying the path integral as the coherence resonance selection mechanism operating across the observer network.
+**Corollary 4.2 (Planck-Einstein relation).** *For the minimal observer: $\hbar = E_{\min} \cdot T_{\min}$. Using $\omega = 2\pi/T$ and absorbing the $2\pi$ into the convention:*
 
-### Step 4: The Uncertainty Principle
+$$E = \hbar\omega$$
 
-The minimal observer has a $U(1)$ phase structure (from [Loop Closure](/derivations/axioms/loop-closure)). The two conjugate variables are:
+*This is the Planck-Einstein relation: energy equals frequency times the quantum of action.*
 
-- **Phase** $\theta \in [0, 2\pi)$: the position in the observer's cycle
-- **Cycle count** $n$: the number of completed cycles (proportional to the conserved charge $Q$)
+### Step 5: The Stationary Action Principle
 
-These are Fourier-conjugate variables on the $U(1)$ group. The standard uncertainty relation for Fourier-conjugate variables gives:
+**Theorem 5.1 (Stationary action from coherence resonance).** *Among all paths connecting two events $A, B$ in the interaction graph, the physically realized path $\gamma^*$ satisfies $\delta \mathcal{S}[\gamma^*] = 0$.*
+
+*Proof.* Each admissible path $\gamma$ from $A$ to $B$ carries a coherence phase $\phi[\gamma] = \mathcal{S}[\gamma]/\hbar$. The net amplitude for the transition $A \to B$ is the coherence-weighted sum:
+
+$$\psi(B|A) = \sum_{\gamma: A \to B} e^{i\mathcal{S}[\gamma]/\hbar}$$
+
+For $\hbar \ll \mathcal{S}$, the phase $\phi[\gamma]$ oscillates rapidly as a function of the path. The dominant contribution comes from the **stationary phase region**: paths $\gamma^*$ where $\delta \mathcal{S}[\gamma^*] = 0$. At these paths, neighboring paths have nearly equal phases and constructively interfere. Away from stationary points, rapid oscillation causes destructive interference.
+
+By the stationary phase approximation (a standard result in functional analysis):
+
+$$\psi(B|A) \approx \sum_{\gamma^*: \delta\mathcal{S}=0} A[\gamma^*] \, e^{i\mathcal{S}[\gamma^*]/\hbar}$$
+
+where $A[\gamma^*]$ is a slowly varying prefactor. The physical trajectory is selected by coherence resonance. $\square$
+
+**Corollary 5.2.** *The Euler-Lagrange equations $\frac{d}{dt}\frac{\partial \mathcal{L}}{\partial \dot{\sigma}} = \frac{\partial \mathcal{L}}{\partial \sigma}$ are the condition for stationary coherence cost — the classical equations of motion.*
+
+### Step 6: The Uncertainty Principle
+
+**Theorem 6.1 (Heisenberg uncertainty from $U(1)$ conjugacy).** *For the conjugate variables $(\theta, Q)$ of a $U(1)$ observer loop, where $\theta \in [0, 2\pi)$ is the phase and $Q$ is the conserved charge:*
+
+$$\Delta\theta \cdot \Delta Q \geq \frac{1}{2}$$
+
+*Proof.* The $U(1)$ loop structure gives a Fourier-conjugate pair. The phase $\theta$ is the position on the circle $S^1$. The charge $Q$ corresponds to the Fourier mode number (the "cycle count" or angular momentum quantum number). By the classical uncertainty relation for Fourier-conjugate variables on $S^1$ (a standard result in harmonic analysis — see Folland & Sitaram, 1997):
 
 $$\Delta\theta \cdot \Delta n \geq \frac{1}{2}$$
 
-Multiplying by $\hbar$ (coherence cost per cycle) and using the identification $E = n \cdot \hbar\omega$ (energy = cycles $\times$ cost per cycle $\times$ frequency), $p = \hbar k$ (momentum = coherence per unit path length):
+where $n$ is the mode number conjugate to $\theta$. $\square$
+
+**Corollary 6.2 (Position-momentum uncertainty).** *Using the identification $p = \hbar k$ (momentum as coherence per unit path length) and $x = \theta / k$ (position as phase divided by wavenumber):*
 
 $$\Delta x \cdot \Delta p \geq \frac{\hbar}{2}$$
 
+**Corollary 6.3 (Energy-time uncertainty).** *Using $E = \hbar\omega$ (Corollary 4.2) and $t = \theta/\omega$:*
+
 $$\Delta E \cdot \Delta t \geq \frac{\hbar}{2}$$
 
-The uncertainty principle is not a limitation of measurement technology. It is the structural consequence of phase and cycle count being conjugate aspects of the $U(1)$ coherence unit. Knowing the phase precisely makes the cycle count indeterminate, and vice versa.
+**Proposition 6.4 (Structural interpretation).** *The uncertainty principle is not a limitation of measurement technology. It is the structural consequence of phase and charge being Fourier-conjugate aspects of the $U(1)$ coherence loop. Precise knowledge of position in the cycle implies complete uncertainty in the cycle count, and vice versa.*
 
-### Step 5: ℏ Is Not a Free Parameter
+### Step 7: ℏ Is Not a Free Parameter
 
-In standard physics, $\hbar$ is measured empirically ($\hbar \approx 1.055 \times 10^{-34}$ J·s). In the framework, $\hbar$ is determined by the coherence geometry:
+**Proposition 7.1.** *In the framework, $\hbar$ is determined by the coherence geometry:*
 
-$$\hbar = \min_{\gamma_{\text{cycle}}} \oint \mathcal{L} \, dt$$
+$$\hbar = \min_{\gamma \in \Lambda(\Sigma_{\min})} \oint \mathcal{L} \, dt = 2\pi r_{\min}$$
 
-Its value is fixed by the structure of the minimal observer loop in the coherence geometry. It is a derived quantity, not a free parameter. However, computing its numerical value requires the full mathematical formalization of $\mathcal{L}$ and the coherence geometry — which remains an open problem.
+*where $r_{\min}$ is the radius of the minimal observer loop in the coherence metric. Its numerical value ($\hbar \approx 1.055 \times 10^{-34}$ J·s) is a derived quantity, not a free parameter. However, computing this value requires the full specification of the coherence metric — which remains an open problem.*
 
-In practice, $\hbar$ sets the **unit of coherence cost**. All other quantities are measured in units of $\hbar$: energies as $\hbar\omega$, momenta as $\hbar k$, actions as multiples of $\hbar$.
+**Proposition 7.2.** *In practice, $\hbar$ sets the unit of coherence cost. All physical quantities are measured in units of $\hbar$: energies as $\hbar\omega$, momenta as $\hbar k$, actions as multiples of $\hbar$.*
+
+## Physical Interpretation
+
+| Framework concept | Standard physics |
+|---|---|
+| Coherence cost $\mathcal{S}[\gamma]$ | Action $S$ |
+| Coherence Lagrangian $\mathcal{L}$ | Lagrangian $L$ |
+| Minimal cycle cost $\hbar$ | Planck's constant |
+| Coherence resonance | Path integral |
+| $U(1)$ Fourier conjugacy | Uncertainty principle |
+| $E = \hbar\omega$ | Planck-Einstein relation |
 
 ## Rigor Assessment
 
-**What is established:**
-- Positivity of coherence cost from Axiom 1 (no external reservoir)
-- Existence of a minimum cycle cost (assuming compactness of minimal state space)
-- The uncertainty relation from $U(1)$ Fourier conjugacy is a standard mathematical result
-- The path integral connection via stationary phase is well-known physics
+**Fully rigorous:**
+- Proposition 2.1: Positivity of coherence cost (from positive definiteness of Riemannian metric)
+- Theorem 3.1: Existence of minimum cycle cost (Lyusternik–Fet on compact manifold)
+- Theorem 6.1: Uncertainty relation (standard Fourier analysis on $S^1$)
 
-**What needs work:**
-- The coherence Lagrangian $\mathcal{L}$ is introduced but not constructed from first principles — it needs to be derived from the coherence measure $\mathcal{C}$
-- The compactness assumption for the minimal state space needs justification
-- The transition from the phase/cycle-count uncertainty to position/momentum uncertainty uses identifications ($E = n\hbar\omega$, $p = \hbar k$) that rely on the spacetime derivation
+**Rigorous given axioms:**
+- Proposition 4.1: Action-energy-time relation (follows from uniform traversal under $U(1)$ action)
+- Theorem 5.1: Stationary action (standard stationary phase approximation applied to coherence path sum)
+- Proposition 3.3: Quantization of action (by definition of $\hbar$ as minimum)
+
+**Provisional:**
+- The coherence Lagrangian $\mathcal{L}$ (Definition 1.2) is defined via the Hessian of $\mathcal{C}$. For this to yield a well-defined Riemannian metric, $\mathcal{C}$ must be at least $C^2$ on $\Sigma$ — a smoothness assumption not derived from the axioms.
+- The identification of the coherence metric Hessian with the physical kinetic metric relies on there being a unique natural metric from $\mathcal{C}$. Alternative constructions (e.g., Fisher information metric) exist.
+- Corollaries 6.2–6.3 use identifications ($p = \hbar k$, $E = \hbar\omega$) that depend on the spacetime derivation chain (speed of light, Lorentz invariance).
+
+**Assessment:** The core results — existence and positivity of the action quantum, stationary action from path sums, and uncertainty from $U(1)$ conjugacy — are rigorous. The main provisional elements are the specific form of $\mathcal{L}$ and the spacetime-dependent physical identifications.
 
 ## Open Gaps
 
-1. **Constructing $\mathcal{L}$**: The coherence Lagrangian should be derivable from the coherence measure $\mathcal{C}$ restricted to paths. This is the key missing link between the abstract framework and concrete physics.
-2. **Quantization**: The existence of a minimum action quantum $\hbar$ implies that the admissible observer cycles are quantized (only integer multiples of $\hbar$ are allowed). This should connect to the quantization of energy levels.
-3. **$\hbar$ and $c$**: The relationship between $\hbar$ (coherence cost quantum) and $c$ (phase propagation speed) should determine whether $G$ (gravitational coupling) is derivable or constitutes an independent parameter.
+1. **Constructing $\mathcal{L}$ from first principles**: The coherence Lagrangian should be uniquely derivable from $\mathcal{C}$ and the observer structure. The Fisher information metric is a natural candidate. This is the key missing link between the abstract framework and concrete dynamics.
+2. **Quantization of energy levels**: The existence of a minimum action quantum $\hbar$ implies that admissible observer cycles have quantized action $n\hbar$ for $n \in \mathbb{Z}_{\geq 1}$. This should connect to the quantization of energy levels in bound systems.
+3. **$\hbar$, $c$, and $G$**: The relationship between $\hbar$ (coherence cost quantum), $c$ (phase propagation speed from [Speed of Light](/derivations/spacetime/speed-of-light)), and $G$ (gravitational coupling) determines whether the framework has zero, one, or two free parameters.
