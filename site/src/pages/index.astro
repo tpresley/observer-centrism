@@ -1,0 +1,63 @@
+---
+import MainLayout from '../components/layouts/MainLayout.astro'
+---
+
+<MainLayout title="Home">
+  <h1>Observer-Centrism</h1>
+  <p class="subtitle">A Framework for Physics, Mind, and Structure</p>
+
+  <p>
+    A derivation of quantum mechanics, general relativity, thermodynamics,
+    the particle spectrum, holography, and the basis of experience
+    from three axioms.
+  </p>
+
+  <div class="axiom-card">
+    <h3>Axiom 1: Coherence Conservation</h3>
+    <p>
+      There exists a primitive quantity &mdash; coherence &mdash; that is globally
+      conserved. Coherence cannot be created from nothing, destroyed, or exported
+      to an external reservoir. The ontology is closed.
+    </p>
+  </div>
+
+  <div class="axiom-card">
+    <h3>Axiom 2: The Observer Definition</h3>
+    <p>
+      Any structure that maintains at least one invariant quantity across
+      transformations, together with a distinction between transformations that
+      preserve that invariant (self) and those that threaten it (non-self),
+      qualifies as an observer.
+    </p>
+  </div>
+
+  <div class="axiom-card">
+    <h3>Axiom 3: Loop Closure</h3>
+    <p>
+      Observer dynamics must be closed loops. The internal dynamics of an observer
+      must be cyclic: the state must return, at least approximately, to its initial
+      configuration after a finite time.
+    </p>
+  </div>
+
+  <h2>This Site</h2>
+  <p>
+    This site houses the ongoing development of Observer-Centrism: rigorous
+    derivations from the axioms, exploration of the framework's structure,
+    and development of measurable predictions.
+  </p>
+
+  <ul>
+    <li><a href="/source/01-introduction">Source Document</a> &mdash; the original framework description</li>
+    <li><a href="/derivations/">Derivations</a> &mdash; rigorous proofs and formalizations</li>
+    <li><a href="/predictions/">Predictions</a> &mdash; testable consequences unique to this framework</li>
+  </ul>
+</MainLayout>
+
+<style>
+  .subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+  }
+</style>

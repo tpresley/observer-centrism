@@ -1,0 +1,67 @@
+---
+import MainLayout from './MainLayout.astro'
+
+interface Props {
+  title: string
+  status?: string
+  dependsOn?: string[]
+  enablesDerivation?: string[]
+  sourceSection?: string
+}
+
+const { title, status, dependsOn = [], enablesDerivation = [], sourceSection } = Astro.props
+
+const statusClass = status ? `status-${status}` : ''
+---
+
+<MainLayout title={title}>
+  <article>
+    <header>
+      <h1>{title}</h1>
+      {status && <span class={`status-badge ${statusClass}`}>{status}</span>}
+      {sourceSection && (
+        <a href={`/source/${sourceSection}`} class="source-link">
+          View in source document &rarr;
+        </a>
+      )}
+    </header>
+
+    {dependsOn.length > 0 && (
+      <div class="depends-on">
+        <h4>Depends On</h4>
+        <ul>
+          {dependsOn.map(dep => (
+            <li><a href={`/derivations/${dep}`}>{dep}</a></li>
+          ))}
+        </ul>
+      </div>
+    )}
+
+    <slot />
+
+    {enablesDerivation.length > 0 && (
+      <div class="depends-on" style="margin-top: 2rem;">
+        <h4>Enables</h4>
+        <ul>
+          {enablesDerivation.map(d => (
+            <li><a href={`/derivations/${d}`}>{d}</a></li>
+          ))}
+        </ul>
+      </div>
+    )}
+  </article>
+</MainLayout>
+
+<style>
+  header {
+    margin-bottom: 2rem;
+  }
+  .source-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+  .source-link:hover { text-decoration: underline; }
+</style>

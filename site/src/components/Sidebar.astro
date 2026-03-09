@@ -1,0 +1,83 @@
+---
+import { getCollection } from 'astro:content'
+
+const sourceEntries = await getCollection('source')
+const derivationEntries = await getCollection('derivations')
+const predictionEntries = await getCollection('predictions')
+
+const sortedSource = sourceEntries.sort((a, b) => a.data.order - b.data.order)
+
+const derivationGroups = {
+  'Foundation': derivationEntries.filter(d => d.data.tags.includes('foundation')),
+  'Dynamics': derivationEntries.filter(d => d.data.tags.includes('dynamics')),
+  'Geometry': derivationEntries.filter(d => d.data.tags.includes('geometry')),
+  'Quantum': derivationEntries.filter(d => d.data.tags.includes('quantum')),
+  'Particles': derivationEntries.filter(d => d.data.tags.includes('particles')),
+  'Holography': derivationEntries.filter(d => d.data.tags.includes('holography')),
+}
+
+function statusIcon(status: string) {
+  switch(status) {
+    case 'rigorous': return '●'
+    case 'provisional': return '◐'
+    case 'draft': return '○'
+    case 'stub': return '·'
+    default: return '·'
+  }
+}
+
+function statusColor(status: string) {
+  switch(status) {
+    case 'rigorous': return 'var(--color-rigorous)'
+    case 'provisional': return 'var(--color-provisional)'
+    case 'draft': return 'var(--color-draft)'
+    case 'stub': return 'var(--color-stub)'
+    default: return 'var(--color-stub)'
+  }
+}
+---
+
+<nav class="sidebar">
+  <div class="site-title">Observer-Centrism</div>
+  <div class="site-subtitle">Physics from Three Axioms</div>
+
+  <a href="/">Home</a>
+  <a href="/map">Derivation Map</a>
+
+  <h2>Source Document</h2>
+  {sortedSource.map(entry => (
+    <a href={`/source/${entry.slug}`}>{entry.data.section}. {entry.data.title}</a>
+  ))}
+
+  <h2>Derivations</h2>
+  <a href="/derivations/">Index</a>
+  {Object.entries(derivationGroups).map(([group, entries]) => (
+    entries.length > 0 && (
+      <>
+        <div class="sidebar-group-label">{group}</div>
+        {entries.map(entry => (
+          <a href={`/derivations/${entry.slug}`}>
+            <span style={`color: ${statusColor(entry.data.status)}`}>{statusIcon(entry.data.status)}</span>
+            {' '}{entry.data.title}
+          </a>
+        ))}
+      </>
+    )
+  ))}
+
+  <h2>Predictions</h2>
+  <a href="/predictions/">Overview</a>
+  {predictionEntries.map(entry => (
+    <a href={`/predictions/${entry.slug}`}>{entry.data.title}</a>
+  ))}
+</nav>
+
+<style>
+  .sidebar-group-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    padding: 0.5rem 0.5rem 0.15rem;
+    letter-spacing: 0.04em;
+  }
+</style>

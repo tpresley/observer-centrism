@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content'
+import MainLayout from '../../components/layouts/MainLayout.astro'
+
+const predictions = await getCollection('predictions')
+---
+
+<MainLayout title="Predictions">
+  <h1>Predictions</h1>
+  <p>
+    Testable predictions that distinguish Observer-Centrism from standard
+    theoretical expectations. Ranked by distinctiveness and testability.
+  </p>
+
+  <ul class="derivation-list">
+    {predictions.map(entry => (
+      <li>
+        <span class={`status-badge status-${entry.data.distinctiveness === 'unique' ? 'rigorous' : entry.data.distinctiveness === 'shared' ? 'provisional' : 'draft'}`}>
+          {entry.data.distinctiveness}
+        </span>
+        <div>
+          <a href={`/predictions/${entry.slug}`}>{entry.data.title}</a>
+          <span class="summary">
+            Testability: {entry.data.testability} | Status: {entry.data.status}
+          </span>
+        </div>
+      </li>
+    ))}
+  </ul>
+</MainLayout>

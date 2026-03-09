@@ -1,0 +1,59 @@
+---
+import { getCollection } from 'astro:content'
+import MainLayout from '../../components/layouts/MainLayout.astro'
+
+const derivations = await getCollection('derivations')
+
+const groups = {
+  'Foundation': derivations.filter(d => d.data.tags.includes('foundation')),
+  'Dynamics': derivations.filter(d => d.data.tags.includes('dynamics')),
+  'Geometry': derivations.filter(d => d.data.tags.includes('geometry')),
+  'Quantum': derivations.filter(d => d.data.tags.includes('quantum')),
+  'Particles': derivations.filter(d => d.data.tags.includes('particles')),
+  'Holography': derivations.filter(d => d.data.tags.includes('holography')),
+}
+
+function statusClass(status: string) { return `status-badge status-${status}` }
+---
+
+<MainLayout title="Derivations">
+  <h1>Derivations</h1>
+  <p>
+    Rigorous derivations from the three axioms. Each derivation tracks its
+    dependencies, rigor level, and what it enables.
+  </p>
+
+  <div class="legend">
+    <span class="status-badge status-rigorous">rigorous</span>
+    <span class="status-badge status-provisional">provisional</span>
+    <span class="status-badge status-draft">draft</span>
+    <span class="status-badge status-stub">stub</span>
+  </div>
+
+  {Object.entries(groups).map(([group, entries]) => (
+    entries.length > 0 && (
+      <>
+        <h2>{group}</h2>
+        <ul class="derivation-list">
+          {entries.map(entry => (
+            <li>
+              <span class={statusClass(entry.data.status)}>{entry.data.status}</span>
+              <div>
+                <a href={`/derivations/${entry.slug}`}>{entry.data.title}</a>
+                <span class="summary">{entry.data.summary}</span>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </>
+    )
+  ))}
+</MainLayout>
+
+<style>
+  .legend {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem 0 2rem;
+  }
+</style>

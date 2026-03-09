@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content'
+import MainLayout from '../../components/layouts/MainLayout.astro'
+
+export async function getStaticPaths() {
+  const entries = await getCollection('source')
+  return entries.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }))
+}
+
+const { entry } = Astro.props
+const { Content } = await entry.render()
+---
+
+<MainLayout title={entry.data.title}>
+  <div class="source-header">
+    <span class="source-label">Source Document</span>
+    <h1>{entry.data.section}. {entry.data.title}</h1>
+  </div>
+  <article class="source-content">
+    <Content />
+  </article>
+</MainLayout>
+
+<style>
+  .source-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+  }
+  .source-content {
+    border-left: 3px solid var(--color-border);
+    padding-left: 1.5rem;
+  }
+</style>

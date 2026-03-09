@@ -1,0 +1,10 @@
+---
+import MainLayout from '../components/layouts/MainLayout.astro'
+import DependencyGraph from '../components/interactive/DependencyGraph.jsx'
+import graphData from '../data/dependency-graph.json'
+---
+<MainLayout title="Derivation Map">
+  <h1>Derivation Map</h1>
+  <p>Derivation dependency graph from axioms to predictions. Hover to trace dependencies, click to navigate.</p>
+  <DependencyGraph client:load nodes={graphData.nodes} edges={graphData.edges} />
+</MainLayout>

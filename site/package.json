@@ -1,0 +1,16 @@
+{
+  "name": "observer-centrism-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^5.0.0",
+    "sygnal": "file:../../sygnal",
+    "remark-math": "^6.0.0",
+    "rehype-katex": "^7.0.0"
+  }
+}
