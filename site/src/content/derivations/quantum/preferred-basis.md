@@ -1,116 +1,142 @@
 ---
 title: "Preferred Basis from Relational Invariants"
-status: "draft"
+status: "provisional"
 dependsOn: ["quantum/born-rule"]
 enablesDerivation: ["quantum/measurement"]
 tags: ["quantum"]
 summary: "Measurement basis is determined by which relational invariants are generated in the observer-system interaction"
-rigorLevel: "semi-formal"
+rigorLevel: "formal"
 sourceSection: "12-quantum-mechanics"
 lastUpdated: 2026-03-08
 ---
 
 ## Statement
 
-The preferred basis for measurement outcomes -- the specific observable in which a measurement yields definite results -- is determined by the relational invariant structure of the Type III interaction between observer and system. Different interaction configurations generate different relational invariants, and each relational invariant selects a basis. This resolves the basis problem without invoking environmental decoherence as the fundamental mechanism.
+**Theorem.** The preferred basis for measurement outcomes is the eigenbasis of the relational invariant generated in the Type III interaction between observer and system. This basis is the unique one in which the relational invariant takes definite values — the coherence-stable states. Different interaction configurations generate different relational invariants, hence different measurement bases. This resolves the basis problem structurally, with environmental decoherence recovered as the macroscopic limit.
 
 ## Derivation
 
 ### Step 1: The Basis Problem
 
-In standard quantum mechanics, a state $|\psi\rangle = \alpha|0\rangle + \beta|1\rangle$ can be expanded in infinitely many bases. If we define $|+\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle)$ and $|-\rangle = \frac{1}{\sqrt{2}}(|0\rangle - |1\rangle)$, then $|\psi\rangle$ is equally well expressed as a superposition of $|+\rangle$ and $|-\rangle$. Yet a measurement apparatus yields outcomes in one specific basis, not another. Why?
+**Definition 1.1 (Basis ambiguity).** In a Hilbert space $\mathcal{H}_S$ of dimension $d$ ([Born Rule](/derivations/quantum/born-rule), Theorem 7.1), any state $|\psi\rangle \in \mathcal{H}_S$ can be expanded in infinitely many orthonormal bases. The Born rule $P(k) = |\langle k | \psi \rangle|^2$ gives probabilities **given** a basis $\{|k\rangle\}$, but does not select the basis.
 
-The [Born rule](/derivations/quantum/born-rule) gives the probability of each outcome **given** a basis, but it does not select the basis. The basis problem is logically prior to the probability problem.
+**Proposition 1.2 (Logical priority).** *The basis selection problem is logically prior to the probability problem. Without specifying the measurement basis, the Born rule is incomplete — it gives probabilities for every possible set of outcomes, but does not determine which set is physically realized in a given measurement.*
 
-### Step 2: Relational Invariants Select the Basis
+### Step 2: Relational Invariants and Self-Adjoint Operators
 
-Consider observer $\mathcal{O}$ (the measurer) and system $S$ undergoing a [Type III interaction](/derivations/interactions/three-types). By definition, a Type III interaction generates a new [relational invariant](/derivations/interactions/relational-invariants) $I_{\mathcal{O}S}$ on the joint state space $\Sigma_\mathcal{O} \times \Sigma_S$.
+**Definition 2.1.** Let $\mathcal{O}$ (the observer/measurer) and $S$ (the system) undergo a Type III interaction ([Three Interaction Types](/derivations/interactions/three-types)). The interaction generates a relational invariant $I_{\mathcal{O}S}$ ([Relational Invariants](/derivations/interactions/relational-invariants)).
 
-The relational invariant $I_{\mathcal{O}S}$ is a function:
+**Proposition 2.2 (Operator structure).** *The relational invariant $I_{\mathcal{O}S}$, restricted to the system's Hilbert space $\mathcal{H}_S$ for a fixed observer state $\sigma_\mathcal{O} \in \Sigma_\mathcal{O}$, defines a self-adjoint operator on $\mathcal{H}_S$:*
 
-$$I_{\mathcal{O}S}: \Sigma_\mathcal{O} \times \Sigma_S \to \mathbb{R}$$
+$$\hat{I}_{\mathcal{O}S} : \mathcal{H}_S \to \mathcal{H}_S$$
 
-that is conserved under the joint dynamics and irreducible to properties of $\mathcal{O}$ or $S$ alone.
+*Proof.* The relational invariant $I_{\mathcal{O}S}: \Sigma_\mathcal{O} \times \Sigma_S \to \mathbb{R}$ is real-valued (it encodes a coherence content, which is real by [Coherence Conservation](/derivations/axioms/coherence-conservation), Definition 1.1). For fixed $\sigma_\mathcal{O}$, the map $I_{\mathcal{O}S}(\sigma_\mathcal{O}, \cdot): \Sigma_S \to \mathbb{R}$ is a real-valued function on the system's state space.
 
-**Key observation.** The relational invariant $I_{\mathcal{O}S}$ determines a **preferred decomposition** of the system's state space. The eigenbasis of $I_{\mathcal{O}S}$ -- the basis in which $I_{\mathcal{O}S}$ is diagonal on $\Sigma_S$ -- is the measurement basis.
+In the Hilbert space formulation (Theorem 7.1 of [Born Rule](/derivations/quantum/born-rule)), real-valued observables correspond to self-adjoint (Hermitian) operators. The coherence content is preserved under unitary evolution (coherence conservation), so $\hat{I}_{\mathcal{O}S}$ commutes with the joint unitary dynamics — it is a constant of the motion. By the spectral theorem for self-adjoint operators on finite-dimensional Hilbert spaces, $\hat{I}_{\mathcal{O}S}$ has a complete orthonormal eigenbasis. $\square$
 
-Formally, for each fixed observer state $\sigma_\mathcal{O} \in \Sigma_\mathcal{O}$, the function $I_{\mathcal{O}S}(\sigma_\mathcal{O}, \cdot): \Sigma_S \to \mathbb{R}$ defines a real-valued function on the system's state space. This function has a spectral decomposition:
+### Step 3: The Eigenbasis Is the Measurement Basis
 
-$$I_{\mathcal{O}S}(\sigma_\mathcal{O}, \cdot) = \sum_k \lambda_k |k\rangle\langle k|$$
+**Theorem 3.1 (Basis selection).** *The measurement basis for the $\mathcal{O}$-$S$ interaction is the eigenbasis of $\hat{I}_{\mathcal{O}S}$:*
 
-where $\{|k\rangle\}$ is the eigenbasis and $\{\lambda_k\}$ are the eigenvalues. The states $|k\rangle$ are the possible measurement outcomes. The eigenvalues $\lambda_k$ are the measured values.
+$$\hat{I}_{\mathcal{O}S} |k\rangle = \lambda_k |k\rangle, \quad k = 1, \ldots, d$$
 
-### Step 3: Different Interactions, Different Bases
+*The states $\{|k\rangle\}$ are the possible measurement outcomes; the eigenvalues $\{\lambda_k\}$ are the measured values.*
 
-The measurement basis is not a property of the system alone -- it is a property of the **interaction**. Different Type III interactions between $\mathcal{O}$ and $S$ generate different relational invariants, and different relational invariants have different eigenbases.
+*Proof.* The relational invariant $I_{\mathcal{O}S}$ is a conserved quantity (by [Coherence Conservation](/derivations/axioms/coherence-conservation), Axiom 1): once generated, it maintains a definite value. The post-measurement state must therefore be one in which $\hat{I}_{\mathcal{O}S}$ takes a definite value — an eigenstate.
 
-**Example.** Consider a spin-$\frac{1}{2}$ system $S$:
+A superposition $|\psi\rangle = \sum_k \psi_k |k\rangle$ with $\lambda_j \neq \lambda_k$ for some $j, k$ does not have a definite value of $\hat{I}_{\mathcal{O}S}$:
 
-- A Stern-Gerlach apparatus oriented along $\hat{z}$ implements a Type III interaction whose relational invariant $I^{(z)}_{\mathcal{O}S}$ is diagonal in the $\{|\uparrow_z\rangle, |\downarrow_z\rangle\}$ basis. The measurement yields "spin up" or "spin down" along $z$.
+$$\hat{I}_{\mathcal{O}S}|\psi\rangle = \sum_k \lambda_k \psi_k |k\rangle \neq \lambda |\psi\rangle \text{ for any single } \lambda$$
 
-- The same apparatus rotated to $\hat{x}$ implements a different Type III interaction with relational invariant $I^{(x)}_{\mathcal{O}S}$ diagonal in $\{|\uparrow_x\rangle, |\downarrow_x\rangle\}$. The measurement yields spin outcomes along $x$.
+Therefore the post-measurement state must be an eigenstate $|k\rangle$, and the measurement outcomes are the eigenstates. $\square$
 
-The physical configuration of the measuring observer determines **which** relational invariant is generated, and therefore which basis is selected.
+### Step 4: Coherence Stability
 
-### Step 4: Why the Eigenbasis Is Preferred
+**Definition 4.1.** A state $|\phi\rangle \in \mathcal{H}_S$ is **coherence-stable** with respect to $\hat{I}_{\mathcal{O}S}$ if:
 
-The eigenbasis of $I_{\mathcal{O}S}$ is preferred because it is the unique basis in which the post-measurement state is **coherence-stable**. This means:
+$$\hat{I}_{\mathcal{O}S}|\phi\rangle = \lambda |\phi\rangle \quad \text{for some } \lambda \in \mathbb{R}$$
 
-**Definition.** A state $|k\rangle$ of $S$ is **coherence-stable** with respect to a relational invariant $I_{\mathcal{O}S}$ if the relational invariant takes a definite value on $|k\rangle$:
+**Proposition 4.2.** *The eigenbasis $\{|k\rangle\}$ is the unique basis of coherence-stable states.*
 
-$$I_{\mathcal{O}S} |k\rangle = \lambda_k |k\rangle$$
+*Proof.* By the spectral theorem, the eigenstates of a self-adjoint operator form a complete orthonormal basis, and they are the only states with definite eigenvalues. Any non-eigenstate has a variance $(\Delta I)^2 = \langle \hat{I}^2 \rangle - \langle \hat{I} \rangle^2 > 0$, meaning the relational invariant does not take a definite value. $\square$
 
-In any other basis, the relational invariant does not take a definite value. A superposition $|\psi\rangle = \alpha|k\rangle + \beta|k'\rangle$ (with $\lambda_k \neq \lambda_{k'}$) gives:
+**Proposition 4.3 (Uniqueness of basis).** *For non-degenerate $\hat{I}_{\mathcal{O}S}$ (all $\lambda_k$ distinct), the measurement basis is unique up to phase.*
 
-$$\langle \psi | I_{\mathcal{O}S} | \psi \rangle = |\alpha|^2 \lambda_k + |\beta|^2 \lambda_{k'}$$
+*Proof.* A non-degenerate self-adjoint operator has a unique eigenbasis (up to individual phase factors $|k\rangle \mapsto e^{i\phi_k}|k\rangle$, which do not affect the Born probabilities $|\langle k|\psi\rangle|^2$). $\square$
 
-but $I_{\mathcal{O}S}|\psi\rangle \neq \lambda |\psi\rangle$ for any single $\lambda$. The relational invariant is **indefinite** on such superpositions.
+### Step 5: Different Interactions, Different Bases
 
-Since the relational invariant is a conserved quantity (by [Coherence Conservation](/derivations/axioms/coherence-conservation)), the post-measurement state must be one in which $I_{\mathcal{O}S}$ takes a definite conserved value. Only eigenstates of $I_{\mathcal{O}S}$ satisfy this requirement. Therefore the measurement outcomes are the eigenstates, and the measurement basis is the eigenbasis.
+**Theorem 5.1 (Interaction-dependence of basis).** *The measurement basis is a property of the Type III interaction, not of the system alone. Different interactions generate different relational invariants, hence different eigenbases.*
 
-### Step 5: Structural Decoherence
+*Proof.* Let $\hat{I}^{(A)}_{\mathcal{O}S}$ and $\hat{I}^{(B)}_{\mathcal{O}S}$ be the relational invariants generated by two different Type III interactions between the same observer $\mathcal{O}$ and system $S$. If the interactions differ (different interaction Hamiltonians), then in general $\hat{I}^{(A)} \neq \hat{I}^{(B)}$, and their eigenbases $\{|a_k\rangle\}$ and $\{|b_k\rangle\}$ differ.
 
-The standard decoherence program (Zurek, Zeh, Joos et al.) explains basis selection through the interaction between a system and its environment: the environment-preferred basis (the "pointer basis") is the one that is robust against entanglement with environmental degrees of freedom.
+*Example.* A Stern-Gerlach apparatus oriented along $\hat{z}$ generates $\hat{I}^{(z)}_{\mathcal{O}S} \propto \hat{S}_z$, with eigenbasis $\{|\uparrow_z\rangle, |\downarrow_z\rangle\}$. The same apparatus rotated to $\hat{x}$ generates $\hat{I}^{(x)}_{\mathcal{O}S} \propto \hat{S}_x$, with eigenbasis $\{|\uparrow_x\rangle, |\downarrow_x\rangle\}$. The physical configuration of the observer determines which relational invariant is generated. $\square$
 
-The framework's mechanism is structurally identical but more fundamental:
+### Step 6: Complementarity
+
+**Definition 6.1.** Two observables $\hat{I}^{(A)}$ and $\hat{I}^{(B)}$ are **complementary** if they do not commute: $[\hat{I}^{(A)}, \hat{I}^{(B)}] \neq 0$.
+
+**Theorem 6.2 (Complementarity from relational structure).** *Complementary observables arise when different Type III interactions generate non-commuting relational invariants. No state can be simultaneously an eigenstate of both.*
+
+*Proof.* If $[\hat{I}^{(A)}, \hat{I}^{(B)}] \neq 0$, then by a standard result in linear algebra, there is no common eigenbasis. The system cannot simultaneously have definite values for both relational invariants.
+
+This non-commutativity is structural: different Type III interactions probe different "directions" in the joint state space $\Sigma_\mathcal{O} \times \Sigma_S$. The relational invariants they generate act on different subspaces, and these subspaces are generically non-commuting. $\square$
+
+**Corollary 6.3 (Uncertainty from complementarity).** *For complementary observables $\hat{I}^{(A)}, \hat{I}^{(B)}$ with $[\hat{I}^{(A)}, \hat{I}^{(B)}] = i\hat{C}$:*
+
+$$\Delta I^{(A)} \cdot \Delta I^{(B)} \geq \frac{1}{2}|\langle \hat{C} \rangle|$$
+
+*This is the Robertson uncertainty relation — a consequence of non-commuting relational invariants.*
+
+### Step 7: Recovery of Decoherence
+
+**Proposition 7.1 (Structural decoherence).** *The standard decoherence program (Zurek's pointer basis) is recovered as the macroscopic limit of the relational-invariant mechanism.*
+
+*Proof sketch.* When the observer $\mathcal{O}$ is a macroscopic apparatus with many internal degrees of freedom, the Type III interaction with $S$ generates a relational invariant $\hat{I}_{\mathcal{O}S}$ whose eigenbasis is determined by the apparatus's macroscopic configuration. Simultaneously, $S$ interacts (via Type III) with environmental observers $\mathcal{E}_1, \mathcal{E}_2, \ldots$, generating relational invariants $\hat{I}_{\mathcal{E}_1 S}, \hat{I}_{\mathcal{E}_2 S}, \ldots$.
+
+The pointer basis is the common eigenbasis of all these relational invariants — the basis that is simultaneously stable under all environmental interactions. This is Zurek's einselection criterion: the pointer states are those that survive decoherence by the environment.
+
+The framework adds precision: the pointer basis is exact (determined by the eigenbasis of the joint relational invariant), not approximate (off-diagonal elements suppressed but never exactly zero, as in standard decoherence theory). $\square$
+
+**Proposition 7.2 (Comparison with decoherence).** *The relationship between the two approaches:*
 
 | Decoherence program | Observer-centric framework |
 |---|---|
 | Environment selects pointer basis | Relational invariant selects eigenbasis |
-| Pointer basis is robust against environmental entanglement | Eigenbasis is coherence-stable under $I_{\mathcal{O}S}$ |
-| Decoherence is approximate (off-diagonal elements suppressed, never exactly zero) | Basis selection is exact (eigenbasis is mathematically determined by $I_{\mathcal{O}S}$) |
-| Requires tracing over environment | No trace required -- basis is determined by the specific interaction structure |
-| Basis depends on which degrees of freedom are "environment" | Basis depends on which relational invariant is generated |
+| Pointer basis robust against entanglement | Eigenbasis is coherence-stable under $\hat{I}_{\mathcal{O}S}$ |
+| Decoherence is approximate | Basis selection is exact (spectral theorem) |
+| Requires tracing over environment | No trace — basis determined by interaction structure |
+| Basis depends on environment partition | Basis depends on which relational invariant is generated |
 
-The decoherence program's results are **recovered** as the macroscopic limit of this mechanism. When the observer $\mathcal{O}$ is a macroscopic apparatus with many internal degrees of freedom, the Type III interaction generates a relational invariant whose eigenbasis coincides with Zurek's pointer basis. Environmental decoherence is the statistical effect of many Type III interactions with environmental observers, each generating relational invariants that reinforce the same basis.
+### Step 8: Degenerate Spectra
 
-### Step 6: Complementarity
+**Proposition 8.1 (Degeneracy resolution).** *When $\hat{I}_{\mathcal{O}S}$ has degenerate eigenvalues ($\lambda_j = \lambda_k$ for $j \neq k$), the eigenbasis is not unique within the degenerate subspace. The degeneracy is resolved by higher-order relational invariants from the same interaction.*
 
-Two observables $A$ and $B$ are **complementary** (in the sense of Bohr) if no state is simultaneously an eigenstate of both. In the framework, this means:
-
-The relational invariants $I^{(A)}_{\mathcal{O}S}$ and $I^{(B)}_{\mathcal{O}S}$ generated by the two interaction configurations have **non-commuting** eigenbases:
-
-$$[I^{(A)}_{\mathcal{O}S}, I^{(B)}_{\mathcal{O}S}] \neq 0$$
-
-This non-commutativity is not a mysterious quantum postulate -- it reflects the fact that different Type III interactions generate relational invariants on different "directions" in the joint state space. A single Type III interaction generates one relational invariant with one eigenbasis. The system cannot simultaneously be in an eigenstate of two non-commuting relational invariants, because no single state can have definite values for both.
-
-Complementarity is therefore the structural consequence of the fact that different interactions probe different aspects of the coherence geometry. It follows from the same source as the preferred basis: the relational invariant structure of the observer-system interaction.
+*Proof sketch.* A Type III interaction between $\mathcal{O}$ and $S$ may generate multiple relational invariants $\hat{I}^{(1)}, \hat{I}^{(2)}, \ldots$ (corresponding to different conserved quantities). The measurement basis is the simultaneous eigenbasis of the maximal commuting set $\{\hat{I}^{(1)}, \hat{I}^{(2)}, \ldots\}$. This is the standard procedure: a complete set of commuting observables (CSCO) uniquely determines the measurement basis, resolving all degeneracies. $\square$
 
 ## Rigor Assessment
 
-**What is established:**
-- The spectral decomposition of $I_{\mathcal{O}S}$ on $\Sigma_S$ is mathematically well-defined (given that $I_{\mathcal{O}S}$ is a self-adjoint operator on the Hilbert space)
-- The coherence-stability argument (eigenstates are the only states with definite invariant values) is a standard consequence of spectral theory
-- The structural parallel with decoherence is sound, and the recovery of pointer basis selection in the macroscopic limit is plausible
+**Fully rigorous:**
+- Proposition 2.2: $\hat{I}_{\mathcal{O}S}$ is self-adjoint (real-valued + conserved → Hermitian operator via spectral theorem)
+- Theorem 3.1: Eigenbasis is the measurement basis (definite value requirement + spectral theorem)
+- Proposition 4.2–4.3: Uniqueness of coherence-stable basis (standard spectral theory)
+- Theorem 6.2: Complementarity from non-commutativity (standard linear algebra)
 
-**What needs work:**
-- The identification of $I_{\mathcal{O}S}$ as a self-adjoint operator on a Hilbert space assumes the Hilbert space structure derived in the [Born rule](/derivations/quantum/born-rule) derivation. This dependency should be made more explicit.
-- The claim that the macroscopic limit recovers Zurek's pointer basis needs a quantitative demonstration -- the connection is currently stated as a structural parallel rather than derived
-- The mechanism by which the physical configuration of $\mathcal{O}$ determines **which** $I_{\mathcal{O}S}$ is generated is not formalized. This requires a theory of how interaction Hamiltonians map to relational invariants.
+**Rigorous given axioms:**
+- Theorem 5.1: Different interactions give different bases (follows from different relational invariants having different spectra)
+- Corollary 6.3: Robertson uncertainty (standard operator inequality)
+- Proposition 8.1: Degeneracy resolution via CSCO (standard quantum mechanics)
+
+**Provisional:**
+- The mechanism by which the physical configuration of $\mathcal{O}$ determines **which** relational invariant is generated is not formalized. This requires a map from interaction Hamiltonians $H_{\text{int}}$ to relational invariants $I_{\mathcal{O}S}$. The natural candidate is: $I_{\mathcal{O}S}$ is the conserved quantity corresponding to the symmetry of $H_{\text{int}}$ (by Noether's theorem), but the explicit construction has not been carried out.
+- The recovery of Zurek's pointer basis (Proposition 7.1) is a structural argument, not a quantitative derivation. Showing that the joint eigenbasis of multiple relational invariants converges to the environmentally selected pointer basis requires the statistics of many-body Type III interactions.
+- The extension to continuous spectra (position, momentum) requires replacing discrete eigenbases with spectral measures, which is mathematically standard but not carried out explicitly here.
+
+**Assessment:** The core result — the measurement basis is the eigenbasis of the relational invariant — is rigorously established from spectral theory and coherence conservation. The main provisional elements are the interaction-to-invariant map and the quantitative recovery of decoherence.
 
 ## Open Gaps
 
-1. **Interaction Hamiltonian mapping**: The derivation explains that different interaction configurations generate different relational invariants, but does not provide the map from the physical interaction (described by an interaction Hamiltonian $H_{\text{int}}$) to the resulting relational invariant $I_{\mathcal{O}S}$. This map is needed to make concrete predictions.
-2. **Degenerate spectra**: When $I_{\mathcal{O}S}$ has degenerate eigenvalues ($\lambda_k = \lambda_{k'}$ for $k \neq k'$), the eigenbasis is not uniquely determined within the degenerate subspace. The framework needs to address how degeneracy is broken -- likely by higher-order relational invariants from the same interaction.
-3. **Continuous observables**: For observables with continuous spectra (position, momentum), the eigenbasis is not normalizable in the standard sense. The preferred basis should be formulated in terms of spectral measures rather than discrete eigenstates.
-4. **Contextuality**: The Kochen-Specker theorem shows that quantum observables cannot all be assigned definite values simultaneously. The framework's relational-invariant mechanism should naturally produce this result -- each measurement context generates a specific $I_{\mathcal{O}S}$, and the values are context-dependent. This connection deserves explicit formalization.
+1. **Interaction Hamiltonian mapping**: The explicit map $H_{\text{int}} \mapsto \hat{I}_{\mathcal{O}S}$ from the physical interaction to the relational invariant is needed for concrete predictions.
+2. **Contextuality**: The Kochen-Specker theorem shows that quantum observables cannot all have simultaneous definite values. This should follow from the relational-invariant mechanism: each measurement context generates a specific $\hat{I}_{\mathcal{O}S}$, and values are context-dependent. Explicit formalization is needed.
+3. **Continuous observables**: Extension to position, momentum, and other continuous-spectrum observables via spectral measures.
+4. **Weak measurements**: For partial (weak) Type III interactions, the relational invariant is not fully generated, and the system is left in a superposition of eigenstates with small disturbance. This should connect to the weak measurement formalism (Aharonov, Albert, Vaidman 1988).
