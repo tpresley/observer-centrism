@@ -38,4 +38,17 @@ const predictions = defineCollection({
   }),
 })
 
-export const collections = { source, derivations, predictions }
+const guide = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    subtitle: z.string(),
+    order: z.number(),
+    openingQuestion: z.string(),
+    physicsQuestions: z.array(z.string()).default([]),
+    relatedDerivations: z.array(z.string()).default([]),
+    relatedPredictions: z.array(z.string()).default([]),
+  }),
+})
+
+export const collections = { source, derivations, predictions, guide }

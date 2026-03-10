@@ -1,0 +1,75 @@
+---
+import { getCollection } from 'astro:content'
+import MainLayout from '../../components/layouts/MainLayout.astro'
+
+const guideEntries = await getCollection('guide')
+const sorted = guideEntries.sort((a, b) => a.data.order - b.data.order)
+---
+
+<MainLayout title="Guide">
+  <h1>A Guide to Observer-Centrism</h1>
+  <p class="guide-intro">
+    This guide walks through the Observer-Centrism framework in narrative form.
+    It explains what the framework does, why it works the way it does, and what
+    questions it answers &mdash; without requiring the mathematical derivations
+    (though it links to them throughout). Start at the beginning or jump to
+    any topic.
+  </p>
+
+  <div class="guide-toc">
+    {sorted.map(entry => (
+      <a href={`/guide/${entry.slug}`} class="guide-toc-card">
+        <span class="guide-toc-number">{entry.data.order}</span>
+        <div>
+          <span class="guide-toc-title">{entry.data.title}</span>
+          <span class="guide-toc-subtitle">{entry.data.subtitle}</span>
+        </div>
+      </a>
+    ))}
+  </div>
+</MainLayout>
+
+<style>
+  .guide-intro {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  .guide-toc {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .guide-toc-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color 0.15s;
+  }
+  .guide-toc-card:hover {
+    border-color: var(--color-accent);
+  }
+  .guide-toc-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    width: 2rem;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .guide-toc-title {
+    font-weight: 600;
+    display: block;
+  }
+  .guide-toc-subtitle {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    display: block;
+    margin-top: 0.15rem;
+  }
+</style>

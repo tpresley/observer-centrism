@@ -1,0 +1,146 @@
+---
+import { getCollection } from 'astro:content'
+import MainLayout from './MainLayout.astro'
+import GuideNav from '../GuideNav.astro'
+import graphData from '../../data/dependency-graph.json'
+
+interface Props {
+  title: string
+  subtitle: string
+  openingQuestion: string
+  physicsQuestions: string[]
+  relatedDerivations: string[]
+  relatedPredictions: string[]
+  prev: { slug: string; data: { title: string } } | null
+  next: { slug: string; data: { title: string } } | null
+}
+
+const {
+  title, subtitle, openingQuestion, physicsQuestions,
+  relatedDerivations, relatedPredictions, prev, next
+} = Astro.props
+
+const titleMap: Record<string, string> = {}
+for (const node of graphData.nodes) {
+  titleMap[node.id] = node.title
+}
+
+const predictionEntries = await getCollection('predictions')
+const predictionTitleMap: Record<string, string> = {}
+for (const entry of predictionEntries) {
+  predictionTitleMap[entry.slug] = entry.data.title
+}
+---
+
+<MainLayout title={title}>
+  <article class="guide-article">
+    <header class="guide-header">
+      <div class="guide-label">Guide</div>
+      <h1>{title}</h1>
+      <p class="guide-subtitle">{subtitle}</p>
+      <blockquote class="guide-question">{openingQuestion}</blockquote>
+    </header>
+
+    {physicsQuestions.length > 0 && (
+      <div class="guide-questions-addressed">
+        <h4>Questions this page addresses</h4>
+        <ul>
+          {physicsQuestions.map(q => <li>{q}</li>)}
+        </ul>
+      </div>
+    )}
+
+    <div class="guide-body">
+      <slot />
+    </div>
+
+    {relatedDerivations.length > 0 && (
+      <div class="guide-deeper">
+        <h3>Dive into the math</h3>
+        <ul>
+          {relatedDerivations.map(d => (
+            <li><a href={`/derivations/${d}`}>{titleMap[d] || d}</a></li>
+          ))}
+        </ul>
+      </div>
+    )}
+
+    {relatedPredictions.length > 0 && (
+      <div class="guide-deeper">
+        <h3>Related predictions</h3>
+        <ul>
+          {relatedPredictions.map(p => (
+            <li><a href={`/predictions/${p}`}>{predictionTitleMap[p] || p}</a></li>
+          ))}
+        </ul>
+      </div>
+    )}
+
+    <GuideNav prev={prev} next={next} />
+  </article>
+</MainLayout>
+
+<style>
+  .guide-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-accent);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .guide-header {
+    margin-bottom: 2rem;
+  }
+  .guide-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+  }
+  .guide-question {
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  .guide-questions-addressed {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #f5f5f4;
+    border-radius: 6px;
+    font-size: 0.875rem;
+  }
+  .guide-questions-addressed h4 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: 0.5rem;
+  }
+  .guide-questions-addressed ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+  .guide-deeper {
+    margin: 2rem 0;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-surface);
+  }
+  .guide-deeper h3 {
+    font-size: 0.95rem;
+    margin: 0 0 0.5rem;
+    border: none;
+    padding: 0;
+  }
+  .guide-deeper ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+  .guide-deeper a {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+  .guide-deeper a:hover {
+    text-decoration: underline;
+  }
+</style>

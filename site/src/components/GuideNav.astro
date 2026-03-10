@@ -1,0 +1,71 @@
+---
+interface NavEntry {
+  slug: string
+  data: { title: string }
+}
+
+interface Props {
+  prev: NavEntry | null
+  next: NavEntry | null
+}
+
+const { prev, next } = Astro.props
+---
+
+<nav class="guide-nav" aria-label="Guide navigation">
+  {prev ? (
+    <a href={`/guide/${prev.slug}`} class="guide-nav-link guide-nav-prev">
+      <span class="guide-nav-direction">&larr; Previous</span>
+      <span class="guide-nav-title">{prev.data.title}</span>
+    </a>
+  ) : <div />}
+  {next ? (
+    <a href={`/guide/${next.slug}`} class="guide-nav-link guide-nav-next">
+      <span class="guide-nav-direction">Next &rarr;</span>
+      <span class="guide-nav-title">{next.data.title}</span>
+    </a>
+  ) : (
+    <a href="/guide/" class="guide-nav-link guide-nav-next">
+      <span class="guide-nav-direction">Back to overview &rarr;</span>
+      <span class="guide-nav-title">Guide Index</span>
+    </a>
+  )}
+</nav>
+
+<style>
+  .guide-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+  }
+  .guide-nav-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    flex: 1;
+    max-width: 48%;
+    transition: border-color 0.15s;
+  }
+  .guide-nav-link:hover {
+    border-color: var(--color-accent);
+  }
+  .guide-nav-prev { text-align: left; }
+  .guide-nav-next { text-align: right; }
+  .guide-nav-direction {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 0.04em;
+  }
+  .guide-nav-title {
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-top: 0.25rem;
+  }
+</style>

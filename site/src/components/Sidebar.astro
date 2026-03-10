@@ -10,6 +10,9 @@ const { currentPath } = Astro.props
 const sourceEntries = await getCollection('source')
 const derivationEntries = await getCollection('derivations')
 const predictionEntries = await getCollection('predictions')
+const guideEntries = await getCollection('guide')
+
+const sortedGuide = guideEntries.sort((a, b) => a.data.order - b.data.order)
 
 const sortedSource = sourceEntries.sort((a, b) => a.data.order - b.data.order)
 
@@ -59,6 +62,14 @@ function statusColor(status: string) {
   <a href="/map" aria-current={isActive('/map') ? 'page' : undefined}>Derivation Map</a>
   <a href="/postulates" aria-current={isActive('/postulates') ? 'page' : undefined}>Structural Postulates</a>
   <a href="/search" aria-current={isActive('/search') ? 'page' : undefined}>Search</a>
+
+  <h2>Guide</h2>
+  <a href="/guide/" aria-current={isActive('/guide/') ? 'page' : undefined}>Overview</a>
+  {sortedGuide.map(entry => (
+    <a href={`/guide/${entry.slug}`} aria-current={isActive(`/guide/${entry.slug}`) ? 'page' : undefined}>
+      {entry.data.order}. {entry.data.title}
+    </a>
+  ))}
 
   <h2>Derivations</h2>
   <a href="/derivations/" aria-current={isActive('/derivations/') ? 'page' : undefined}>Index</a>
