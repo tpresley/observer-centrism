@@ -11,6 +11,10 @@ const groups = {
   'Quantum': derivations.filter(d => d.data.tags.includes('quantum')),
   'Particles': derivations.filter(d => d.data.tags.includes('particles')),
   'Holography': derivations.filter(d => d.data.tags.includes('holography')),
+  'Gauge': derivations.filter(d => d.data.tags.includes('gauge')),
+  'Flavor': derivations.filter(d => d.data.tags.includes('flavor')),
+  'Cosmology': derivations.filter(d => d.data.tags.includes('cosmology')),
+  'Thermo Extensions': derivations.filter(d => d.data.tags.includes('thermo-ext')),
 }
 
 function statusClass(status: string) { return `status-badge status-${status}` }

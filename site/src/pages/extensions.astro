@@ -1,0 +1,273 @@
+---
+import MainLayout from '../components/layouts/MainLayout.astro'
+
+interface Target {
+  slug: string
+  title: string
+  group: string
+  viability: 'high' | 'medium'
+  sourceIds: string
+  oneLiner: string
+}
+
+const targets: Target[] = [
+  {
+    slug: 'gauge/electromagnetism',
+    title: 'Electromagnetism from Phase Coherence',
+    group: 'Gauge',
+    viability: 'high',
+    sourceIds: 'WP #11',
+    oneLiner: 'Local phase redundancy of U(1) observer loops → Maxwell equations and the electromagnetic gauge field',
+  },
+  {
+    slug: 'gauge/weak-interaction',
+    title: 'Weak Interaction from Quaternionic Structure',
+    group: 'Gauge',
+    viability: 'medium',
+    sourceIds: 'WP #12',
+    oneLiner: 'Extending phase coherence to three orthogonal channels in 3D → quaternionic structure → SU(2) gauge symmetry',
+  },
+  {
+    slug: 'gauge/color-force',
+    title: 'Color Force from Octonionic Structure',
+    group: 'Gauge',
+    viability: 'medium',
+    sourceIds: 'WP #13',
+    oneLiner: 'Division algebra hierarchy R→C→H→O → octonionic automorphism group G₂ → SU(3) color gauge symmetry',
+  },
+  {
+    slug: 'gauge/standard-model-group',
+    title: 'Standard Model Gauge Group',
+    group: 'Gauge',
+    viability: 'medium',
+    sourceIds: 'WP #14',
+    oneLiner: 'Hurwitz theorem (no division algebras beyond O) → U(1)×SU(2)×SU(3) is the complete gauge group',
+  },
+  {
+    slug: 'flavor/mixing-angles',
+    title: 'Flavor Mixing Angles (PMNS and CKM)',
+    group: 'Flavor',
+    viability: 'medium',
+    sourceIds: 'Papers #5–8, #11',
+    oneLiner: 'Discrete residual symmetries of the winding-axis geometry → neutrino and quark mixing matrices',
+  },
+  {
+    slug: 'cosmology/cosmological-constant',
+    title: 'Cosmological Constant',
+    group: 'Cosmology',
+    viability: 'medium',
+    sourceIds: 'WP #24',
+    oneLiner: 'Holographic self-consistency and coherence ground-state energy → value of Λ',
+  },
+  {
+    slug: 'cosmology/baryogenesis',
+    title: 'Baryogenesis',
+    group: 'Cosmology',
+    viability: 'medium',
+    sourceIds: 'WP #25',
+    oneLiner: 'Coherence-dual pair asymmetry via SU(2) gauge structure in early-universe dynamics → matter-antimatter imbalance',
+  },
+  {
+    slug: 'cosmology/coupling-constants',
+    title: 'Coupling Constant Relationships',
+    group: 'Cosmology',
+    viability: 'medium',
+    sourceIds: 'WP #28',
+    oneLiner: 'Division algebra norms + bootstrap fixed points → relationships between α_em, α_s, sin²θ_W',
+  },
+  {
+    slug: 'thermodynamics-ext/first-law',
+    title: 'Coherence First Law',
+    group: 'Thermo',
+    viability: 'high',
+    sourceIds: 'WP #19',
+    oneLiner: 'Explicit thermodynamic first law dU = δQ − δW in coherence variables from existing entropy and action results',
+  },
+  {
+    slug: 'thermodynamics-ext/fisher-metric',
+    title: 'Fisher Information Metric',
+    group: 'Thermo',
+    viability: 'medium',
+    sourceIds: 'WP #2',
+    oneLiner: "Čencov's theorem → Fisher metric as the unique natural geometry on the coherence state space",
+  },
+  {
+    slug: 'thermodynamics-ext/renormalization',
+    title: 'Renormalization Group from Coherence',
+    group: 'Thermo',
+    viability: 'medium',
+    sourceIds: 'Papers #16',
+    oneLiner: 'RG flow as coherence redistribution across scales, bootstrap fixed points as RG fixed points',
+  },
+]
+
+const highCount = targets.filter(t => t.viability === 'high').length
+const medCount = targets.filter(t => t.viability === 'medium').length
+---
+
+<MainLayout title="Extension Targets">
+  <h1>Extension Targets</h1>
+  <p>
+    These 11 derivation targets were identified by analyzing a
+    <a href="/whitepaper-analysis/">prior whitepaper</a> and
+    <a href="/papers-analysis/">four extension papers</a> from an earlier, less rigorous
+    version of the framework. Each target represents an idea that is <strong>not yet covered</strong>
+    by the current 28 rigorous derivations and is <strong>plausibly derivable</strong>
+    from the current axioms and derivation chain.
+  </p>
+  <p>
+    Each stub page contains enough context &mdash; the target statement, proposed approach,
+    key challenges, and success criteria &mdash; to attempt the derivation independently,
+    without reference to the original papers.
+  </p>
+
+  <div class="ext-stats">
+    <div class="ext-stat">
+      <span class="ext-stat-value">{targets.length}</span>
+      <span class="ext-stat-label">Targets</span>
+    </div>
+    <div class="ext-stat">
+      <span class="ext-stat-value">{highCount}</span>
+      <span class="ext-stat-label">High viability</span>
+    </div>
+    <div class="ext-stat">
+      <span class="ext-stat-value">{medCount}</span>
+      <span class="ext-stat-label">Medium viability</span>
+    </div>
+  </div>
+
+  <div class="ext-chain-note">
+    <strong>Dependency chain:</strong> The gauge derivations form a sequence
+    (Electromagnetism → Weak → Color → SM Group) that must be tackled in order.
+    Flavor mixing and baryogenesis depend on the weak interaction.
+    Coupling constants depend on the full gauge group.
+    The thermodynamic extensions are independent and can be tackled immediately.
+  </div>
+
+  <div class="ext-grid">
+    {targets.map((t, i) => (
+      <a href={`/derivations/${t.slug}`} class="ext-card">
+        <div class="ext-card-top">
+          <span class="ext-num">{i + 1}</span>
+          <span class={`ext-via ext-via-${t.viability}`}>{t.viability}</span>
+        </div>
+        <h3 class="ext-title">{t.title}</h3>
+        <div class="ext-group">{t.group}</div>
+        <p class="ext-desc">{t.oneLiner}</p>
+        <div class="ext-source">Source: {t.sourceIds}</div>
+      </a>
+    ))}
+  </div>
+</MainLayout>
+
+<style>
+  .ext-stats {
+    display: flex;
+    gap: 0.75rem;
+    margin: 1.25rem 0;
+  }
+  .ext-stat {
+    padding: 0.5rem 1rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    text-align: center;
+  }
+  .ext-stat-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    display: block;
+  }
+  .ext-stat-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 0.04em;
+  }
+
+  .ext-chain-note {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .ext-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+  @media (max-width: 700px) {
+    .ext-grid { grid-template-columns: 1fr; }
+  }
+
+  .ext-card {
+    display: block;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s;
+  }
+  .ext-card:hover {
+    border-color: #db2777;
+  }
+  .ext-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.35rem;
+  }
+  .ext-num {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    background: var(--color-border);
+    border-radius: 9999px;
+    width: 1.4rem;
+    height: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ext-via {
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.1rem 0.45rem;
+    border-radius: 9999px;
+    letter-spacing: 0.03em;
+  }
+  .ext-via-high { background: #dbeafe; color: #1e40af; }
+  .ext-via-medium { background: #e0e7ff; color: #4338ca; }
+
+  .ext-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0 0 0.15rem;
+    border: none;
+    padding: 0;
+  }
+  .ext-group {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 0.04em;
+    margin-bottom: 0.4rem;
+  }
+  .ext-desc {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--color-text);
+    margin: 0 0 0.35rem;
+  }
+  .ext-source {
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+  }
+</style>

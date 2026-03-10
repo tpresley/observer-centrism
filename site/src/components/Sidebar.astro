@@ -31,6 +31,10 @@ const derivationGroups = {
   'Quantum': derivationEntries.filter(d => d.data.tags.includes('quantum')),
   'Particles': derivationEntries.filter(d => d.data.tags.includes('particles')),
   'Holography': derivationEntries.filter(d => d.data.tags.includes('holography')),
+  'Gauge': derivationEntries.filter(d => d.data.tags.includes('gauge')),
+  'Flavor': derivationEntries.filter(d => d.data.tags.includes('flavor')),
+  'Cosmology': derivationEntries.filter(d => d.data.tags.includes('cosmology')),
+  'Thermo Extensions': derivationEntries.filter(d => d.data.tags.includes('thermo-ext')),
 }
 
 function statusIcon(status: string) {

@@ -6,16 +6,20 @@
 // ---------------------------------------------------------------------------
 
 const GROUP_COLORS = {
-  foundation: '#2563eb',
-  dynamics:   '#7c3aed',
-  geometry:   '#059669',
-  quantum:    '#dc2626',
-  particles:  '#ea580c',
-  holography: '#0891b2',
+  foundation:   '#2563eb',
+  dynamics:     '#7c3aed',
+  geometry:     '#059669',
+  quantum:      '#dc2626',
+  particles:    '#ea580c',
+  holography:   '#0891b2',
+  gauge:        '#db2777',
+  flavor:       '#9333ea',
+  cosmology:    '#0d9488',
+  'thermo-ext': '#78716c',
 }
 
 const STATUS_OPACITY = {
-  stub:        0.3,
+  stub:        0.4,
   draft:       0.6,
   provisional: 0.8,
   rigorous:    1.0,
@@ -156,6 +160,7 @@ function DependencyGraph({ state, props }) {
           if (!pos) return null
           const color = GROUP_COLORS[node.group] || '#888'
           const opacity = STATUS_OPACITY[node.status] || 0.5
+          const isStub = node.status === 'stub'
           const isHovered = hoveredId === node.id
           const isAncestor = highlighted.has(node.id)
           const ringColor = isHovered ? '#f59e0b' : (isAncestor ? '#fbbf24' : 'none')
@@ -189,7 +194,8 @@ function DependencyGraph({ state, props }) {
                   fill={color}
                   fillOpacity={opacity}
                   stroke={color}
-                  strokeWidth={1.5}
+                  strokeWidth={isStub ? 2 : 1.5}
+                  strokeDasharray={isStub ? '4 3' : 'none'}
                 />
                 {/* Label below */}
                 <text
