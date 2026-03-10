@@ -61,6 +61,12 @@ body {
   color: var(--color-accent);
 }
 
+.sidebar a[aria-current="page"] {
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
 .sidebar .site-title {
   font-size: 1.1rem;
   font-weight: 700;
@@ -190,6 +196,24 @@ body {
   color: var(--color-text-muted);
   display: block;
   margin-top: 0.2rem;
+}
+
+/* CoherenceVisualizer animations */
+.cv-dot1 { animation: cv-cw 3s linear infinite; }
+.cv-dot2 { animation: cv-ccw 3s linear infinite; }
+.cv-pulse { animation: cv-pulse 2s ease-in-out infinite; }
+
+@keyframes cv-cw  { to { transform: rotate(360deg); } }
+@keyframes cv-ccw { to { transform: rotate(-360deg); } }
+@keyframes cv-pulse {
+  0%, 100% { opacity: 0.2; }
+  50%      { opacity: 0.7; }
+}
+
+.cv-paused .cv-dot1,
+.cv-paused .cv-dot2,
+.cv-paused .cv-pulse {
+  animation-play-state: paused;
 }
 
 /* KaTeX overrides */

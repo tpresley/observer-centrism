@@ -248,8 +248,7 @@ DependencyGraph.intent = ({ DOM }) => ({
 
 DependencyGraph.model = {
   HOVER_NODE: (state, ev) => {
-    const target = ev.currentTarget || ev.target
-    const g = target.closest ? target.closest('.dep-node') : null
+    const g = ev.target && ev.target.closest ? ev.target.closest('.dep-node') : null
     if (!g) return { ...state, hoveredNode: null }
     const cls = Array.from(g.classList).find(c => c.startsWith('dep-node--'))
     const nodeId = cls ? cls.replace('dep-node--', '').replace(/--/g, '/') : null

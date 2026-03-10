@@ -160,8 +160,7 @@ ProofStepViewer.model = {
   TOGGLE_STEP: (state, ev) => {
     // Don't toggle if user clicked the anchor link
     if (ev.target && (ev.target.tagName === 'A' || ev.target.closest('.psv-step-link'))) return state
-    const target = ev.currentTarget || ev.target
-    const el = target.closest ? target.closest('.psv-step-toggle') : target
+    const el = ev.target && ev.target.closest ? ev.target.closest('.psv-step-toggle') : null
     if (!el) return state
     const cls = Array.from(el.classList).find(c => c.startsWith('psv-step-toggle--'))
     const idx = cls ? parseInt(cls.replace('psv-step-toggle--', ''), 10) : -1

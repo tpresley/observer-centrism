@@ -1,0 +1,142 @@
+[
+  {
+    "id": "loop-closure-s1",
+    "derivation": "axioms/loop-closure",
+    "derivationTitle": "Loop Closure",
+    "postulateId": "S1",
+    "shortName": "Smooth manifold structure",
+    "statement": "The state space \u03a3 carries a smooth manifold structure of finite dimension dim \u03a3 \u2265 1.",
+    "justification": "Required for calculus on the observer's state space. Without differentiable structure, the loop closure axiom cannot define smooth periodic orbits.",
+    "group": "foundation"
+  },
+  {
+    "id": "loop-closure-s2",
+    "derivation": "axioms/loop-closure",
+    "derivationTitle": "Loop Closure",
+    "postulateId": "S2",
+    "shortName": "Invariant Riemannian metric",
+    "statement": "A Riemannian metric g on \u03a3 that is G_O-invariant: \u03c6_t* g = g for all t.",
+    "justification": "Provides a notion of distance on the state space that is preserved by the observer's internal dynamics, enabling the definition of coherence cost as path length.",
+    "group": "foundation"
+  },
+  {
+    "id": "relational-invariants-s1",
+    "derivation": "interactions/relational-invariants",
+    "derivationTitle": "Relational Invariants",
+    "postulateId": "S1",
+    "shortName": "Symplectic structure",
+    "statement": "The joint state space \u03a3\u2081 \u00d7 \u03a3\u2082 carries a symplectic form \u03c9 compatible with the U(1) \u00d7 U(1) action of the constituent observers.",
+    "justification": "Symplectic structure is the minimal geometric setting for Noether's theorem, which is needed to define relational invariants as conserved quantities.",
+    "group": "dynamics"
+  },
+  {
+    "id": "action-planck-s1",
+    "derivation": "thermodynamics/action-planck",
+    "derivationTitle": "Action and Planck's Constant",
+    "postulateId": "S1",
+    "shortName": "Smooth coherence measure",
+    "statement": "The coherence measure C is at least C\u00b2 (twice continuously differentiable), with a positive-definite Hessian metric on state space.",
+    "justification": "Extends the Riemannian metric of Loop Closure S2 by requiring that coherence curvature itself defines a metric, enabling identification of coherence cost with the action functional.",
+    "group": "dynamics"
+  },
+  {
+    "id": "speed-of-light-s1",
+    "derivation": "spacetime/speed-of-light",
+    "derivationTitle": "Speed of Light",
+    "postulateId": "S1",
+    "shortName": "Pseudo-Riemannian structure",
+    "statement": "The coherence geometry (H, g) is a smooth pseudo-Riemannian manifold. The line element ds\u00b2 = g_\u03bc\u03bd dx\u03bc dx\u03bd is a non-degenerate quadratic form in coordinate differentials.",
+    "justification": "The individual observer state spaces are Riemannian (positive-definite), but the ambient geometry containing multiple observers must allow for both timelike and spacelike separations. Pseudo-Riemannian rules out Finsler geometry.",
+    "group": "geometry"
+  },
+  {
+    "id": "lorentz-invariance-s1",
+    "derivation": "spacetime/lorentz-invariance",
+    "derivationTitle": "Lorentz Invariance",
+    "postulateId": "S1",
+    "shortName": "Homogeneity",
+    "statement": "The coherence measure C and the metric g are invariant under spacetime translations x\u03bc \u2192 x\u03bc + a\u03bc.",
+    "justification": "Follows from the axioms' location-independence: coherence conservation and observer definitions do not reference absolute position, so the derived geometry inherits translation symmetry.",
+    "group": "geometry"
+  },
+  {
+    "id": "gravity-s1",
+    "derivation": "spacetime/gravity",
+    "derivationTitle": "Gravity",
+    "postulateId": "S1",
+    "shortName": "Metric\u2013density coupling",
+    "statement": "The metric g_\u03bc\u03bd is locally determined by the relational invariant density \u03c1_I, with curvature proportional to \u03c1_I.",
+    "justification": "Since observers curve the coherence geometry through their concentration, the metric must respond to observer density. This is the minimal local coupling assumption.",
+    "group": "geometry"
+  },
+  {
+    "id": "einstein-equations-s1",
+    "derivation": "spacetime/einstein-equations",
+    "derivationTitle": "Einstein Field Equations",
+    "postulateId": "S1",
+    "shortName": "Second-order locality",
+    "statement": "The self-consistency relation between curvature and coherence content involves at most second derivatives of the metric g_\u03bc\u03bd.",
+    "justification": "Restricts the field equation to depend on g, \u2202g, and \u2202\u00b2g only. Combined with d = 4, Lovelock's theorem uniquely determines the Einstein tensor as the geometric side of the equation.",
+    "group": "geometry"
+  },
+  {
+    "id": "born-rule-s1",
+    "derivation": "quantum/born-rule",
+    "derivationTitle": "Born Rule",
+    "postulateId": "S1",
+    "shortName": "Amplitude\u2013coherence identification",
+    "statement": "The coherence measure restricted to transition amplitudes satisfies C(|\u03c8\u27e9) = \u27e8\u03c8|\u03c8\u27e9 = \u03a3_k |\u03c8_k|\u00b2.",
+    "justification": "Bridges the abstract coherence framework and quantum mechanics: the coherence content of a quantum state equals its squared norm, making coherence conservation equivalent to unitarity.",
+    "group": "quantum"
+  },
+  {
+    "id": "preferred-basis-s1",
+    "derivation": "quantum/preferred-basis",
+    "derivationTitle": "Preferred Basis",
+    "postulateId": "S1",
+    "shortName": "Interaction\u2013invariant correspondence",
+    "statement": "Every Type III interaction generates a relational invariant whose operator representation is the conserved quantity associated with the interaction Hamiltonian via Noether's theorem.",
+    "justification": "Connects the framework's interaction types to quantum measurement: the measurement basis is determined by the conserved quantities of the observer\u2013system interaction, not by an external choice.",
+    "group": "quantum"
+  },
+  {
+    "id": "spin-statistics-s1",
+    "derivation": "particles/spin-statistics",
+    "derivationTitle": "Spin-Statistics Connection",
+    "postulateId": "S1",
+    "shortName": "Topological consistency",
+    "statement": "Transition amplitudes are single-valued on the universal cover of configuration space. The wave function is a section of a flat line bundle with holonomy Hom(\u03c0\u2081(Q), U(1)).",
+    "justification": "The standard Laidlaw\u2013DeWitt quantization condition: amplitudes must be consistent under particle exchange, which constrains the wave function to be either symmetric or antisymmetric in d = 3.",
+    "group": "particles"
+  },
+  {
+    "id": "mass-hierarchy-s1",
+    "derivation": "particles/mass-hierarchy",
+    "derivationTitle": "Mass Hierarchy",
+    "postulateId": "S1",
+    "shortName": "Tunneling\u2013crystallization correspondence",
+    "statement": "The formation of stable composite observers at each bootstrap level is mediated by coherence tunneling with WKB probability P ~ exp(\u2212V\u00b7a/\u0127).",
+    "justification": "The bootstrap hierarchy produces new composite observers at each level. Tunneling through coherence barriers provides the mechanism, and the exponential WKB suppression naturally generates the large mass ratios observed in the particle spectrum.",
+    "group": "particles"
+  },
+  {
+    "id": "three-generations-s1",
+    "derivation": "particles/three-generations",
+    "derivationTitle": "Three Generations",
+    "postulateId": "S1",
+    "shortName": "Generation\u2013axis correspondence",
+    "statement": "Each fermion generation corresponds to a class of half-integer winding loops classified by dominant alignment with one of three independent generators of so(3), partitioned by Voronoi decomposition of S\u00b2.",
+    "justification": "Since d = 3 spatial dimensions provide exactly three independent rotation axes, the half-integer winding loops of fermions naturally partition into three sectors, one per generation.",
+    "group": "particles"
+  },
+  {
+    "id": "area-scaling-s1",
+    "derivation": "holography/area-scaling",
+    "derivationTitle": "Area Scaling",
+    "postulateId": "S1",
+    "shortName": "Planck-scale resolution",
+    "statement": "The coherence geometry has a minimum resolvable scale \u2113_P = \u221a(\u0127G/c\u00b3) (the Planck length). Below \u2113_P, the coherence cost of loop closure exceeds available coherence for any observer.",
+    "justification": "Combines gravity (G), quantum mechanics (\u0127), and the speed of light (c) into a fundamental resolution limit. No observer loop can exist at sub-Planck scales, providing the UV cutoff that leads to holographic entropy bounds.",
+    "group": "holography"
+  }
+]

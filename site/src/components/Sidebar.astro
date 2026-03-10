@@ -1,11 +1,23 @@
 ---
 import { getCollection } from 'astro:content'
 
+interface Props {
+  currentPath: string
+}
+
+const { currentPath } = Astro.props
+
 const sourceEntries = await getCollection('source')
 const derivationEntries = await getCollection('derivations')
 const predictionEntries = await getCollection('predictions')
 
 const sortedSource = sourceEntries.sort((a, b) => a.data.order - b.data.order)
+
+/** Normalize trailing slashes and compare */
+function isActive(href: string): boolean {
+  const norm = (s: string) => s.replace(/\/+$/, '') || '/'
+  return norm(currentPath) === norm(href)
+}
 
 const derivationGroups = {
   'Foundation': derivationEntries.filter(d => d.data.tags.includes('foundation')),
@@ -41,23 +53,24 @@ function statusColor(status: string) {
   <div class="site-title">Observer-Centrism</div>
   <div class="site-subtitle">Physics from Three Axioms</div>
 
-  <a href="/">Home</a>
-  <a href="/map">Derivation Map</a>
-  <a href="/search">Search</a>
+  <a href="/" aria-current={isActive('/') ? 'page' : undefined}>Home</a>
+  <a href="/map" aria-current={isActive('/map') ? 'page' : undefined}>Derivation Map</a>
+  <a href="/postulates" aria-current={isActive('/postulates') ? 'page' : undefined}>Structural Postulates</a>
+  <a href="/search" aria-current={isActive('/search') ? 'page' : undefined}>Search</a>
 
   <h2>Source Document</h2>
   {sortedSource.map(entry => (
-    <a href={`/source/${entry.slug}`}>{entry.data.section}. {entry.data.title}</a>
+    <a href={`/source/${entry.slug}`} aria-current={isActive(`/source/${entry.slug}`) ? 'page' : undefined}>{entry.data.section}. {entry.data.title}</a>
   ))}
 
   <h2>Derivations</h2>
-  <a href="/derivations/">Index</a>
+  <a href="/derivations/" aria-current={isActive('/derivations/') ? 'page' : undefined}>Index</a>
   {Object.entries(derivationGroups).map(([group, entries]) => (
     entries.length > 0 && (
       <>
         <div class="sidebar-group-label">{group}</div>
         {entries.map(entry => (
-          <a href={`/derivations/${entry.slug}`}>
+          <a href={`/derivations/${entry.slug}`} aria-current={isActive(`/derivations/${entry.slug}`) ? 'page' : undefined}>
             <span style={`color: ${statusColor(entry.data.status)}`}>{statusIcon(entry.data.status)}</span>
             {' '}{entry.data.title}
           </a>
@@ -67,9 +80,9 @@ function statusColor(status: string) {
   ))}
 
   <h2>Predictions</h2>
-  <a href="/predictions/">Overview</a>
+  <a href="/predictions/" aria-current={isActive('/predictions/') ? 'page' : undefined}>Overview</a>
   {predictionEntries.map(entry => (
-    <a href={`/predictions/${entry.slug}`}>{entry.data.title}</a>
+    <a href={`/predictions/${entry.slug}`} aria-current={isActive(`/predictions/${entry.slug}`) ? 'page' : undefined}>{entry.data.title}</a>
   ))}
 </nav>
 

@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../components/layouts/MainLayout.astro'
+import CoherenceVisualizer from '../components/interactive/CoherenceVisualizer.jsx'
 ---
 
 <MainLayout title="Home">
@@ -11,6 +12,8 @@ import MainLayout from '../components/layouts/MainLayout.astro'
     the particle spectrum, holography, and the basis of experience
     from three axioms.
   </p>
+
+  <CoherenceVisualizer client:load />
 
   <div class="axiom-card">
     <h3>Axiom 1: Coherence Conservation</h3>
@@ -51,6 +54,7 @@ import MainLayout from '../components/layouts/MainLayout.astro'
     <li><a href="/source/01-introduction">Source Document</a> &mdash; the original framework description</li>
     <li><a href="/derivations/">Derivations</a> &mdash; rigorous proofs and formalizations</li>
     <li><a href="/predictions/">Predictions</a> &mdash; testable consequences unique to this framework</li>
+    <li><a href="/postulates">Structural Postulates</a> &mdash; assumptions beyond the three axioms</li>
     <li><a href="/map">Dependency Map</a> &mdash; interactive graph of the derivation chain</li>
     <li><a href="/search">Search</a> &mdash; full-text search across all content</li>
   </ul>

@@ -1,0 +1,150 @@
+---
+import MainLayout from '../components/layouts/MainLayout.astro'
+import postulatesData from '../data/structural-postulates.json'
+
+const groups = {
+  'Foundation': postulatesData.filter(p => p.group === 'foundation'),
+  'Dynamics': postulatesData.filter(p => p.group === 'dynamics'),
+  'Geometry': postulatesData.filter(p => p.group === 'geometry'),
+  'Quantum': postulatesData.filter(p => p.group === 'quantum'),
+  'Particles': postulatesData.filter(p => p.group === 'particles'),
+  'Holography': postulatesData.filter(p => p.group === 'holography'),
+}
+
+const withCount = postulatesData.length
+const derivationsWithCount = new Set(postulatesData.map(p => p.derivation)).size
+const derivationsWithoutCount = 28 - derivationsWithCount
+---
+
+<MainLayout title="Structural Postulates">
+  <h1>Structural Postulates</h1>
+  <p>
+    Each derivation that requires assumptions beyond the three axioms makes them
+    explicit as <strong>structural postulates</strong>. These specify the mathematical
+    setting in which the derivation operates &mdash; they are not derived from the
+    axioms, but they are motivated by the framework's structure. Fifteen of the
+    twenty-eight derivations require no additional assumptions at all.
+  </p>
+
+  <div class="sp-summary">
+    <div class="sp-stat">
+      <div class="sp-stat-value">{withCount}</div>
+      <div class="sp-stat-label">Postulates</div>
+    </div>
+    <div class="sp-stat">
+      <div class="sp-stat-value">{derivationsWithCount}</div>
+      <div class="sp-stat-label">Derivations with</div>
+    </div>
+    <div class="sp-stat">
+      <div class="sp-stat-value">{derivationsWithoutCount}</div>
+      <div class="sp-stat-label">Derivations without</div>
+    </div>
+  </div>
+
+  {Object.entries(groups).map(([group, postulates]) => (
+    postulates.length > 0 && (
+      <>
+        <h2>{group}</h2>
+        <div class="sp-cards">
+          {postulates.map(p => (
+            <div class="sp-card">
+              <div class="sp-card-header">
+                <span class="sp-badge">{p.postulateId}</span>
+                <span class="sp-name">{p.shortName}</span>
+              </div>
+              <p class="sp-statement">{p.statement}</p>
+              <p class="sp-justification">{p.justification}</p>
+              <a href={`/derivations/${p.derivation}`} class="sp-source">
+                {p.derivationTitle} &rarr;
+              </a>
+            </div>
+          ))}
+        </div>
+      </>
+    )
+  ))}
+</MainLayout>
+
+<style>
+  .sp-summary {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+    flex-wrap: wrap;
+  }
+  .sp-stat {
+    flex: 1;
+    min-width: 120px;
+    padding: 0.75rem 1rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    text-align: center;
+  }
+  .sp-stat-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 0.04em;
+  }
+  .sp-stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+  }
+  .sp-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .sp-card {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    background: var(--color-surface);
+  }
+  .sp-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  .sp-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.15rem 0.5rem;
+    border-radius: 9999px;
+    background: var(--color-accent-light);
+    color: var(--color-accent);
+    letter-spacing: 0.03em;
+    flex-shrink: 0;
+  }
+  .sp-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-text);
+  }
+  .sp-statement {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+  }
+  .sp-justification {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+  .sp-source {
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+  .sp-source:hover {
+    text-decoration: underline;
+  }
+</style>

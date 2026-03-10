@@ -306,28 +306,23 @@ PredictionTracker.intent = ({ DOM }) => ({
 
 PredictionTracker.model = {
   SET_FILTER: (state, ev) => {
-    // Prevent navigation if the click was on a link inside the card
     if (ev.target && ev.target.tagName === 'A') return state
-    const target = ev.currentTarget || ev.target
-    const btn = target.closest ? target.closest('.pt-filter-btn') : target
+    const btn = ev.target && ev.target.closest ? ev.target.closest('.pt-filter-btn') : null
     if (!btn) return state
     const cls = Array.from(btn.classList).find(c => c.startsWith('pt-filter-btn--'))
     const filter = cls ? cls.replace('pt-filter-btn--', '') : 'all'
     return { ...state, activeFilter: filter }
   },
   SET_SORT: (state, ev) => {
-    const target = ev.currentTarget || ev.target
-    const btn = target.closest ? target.closest('.pt-sort-btn') : target
+    const btn = ev.target && ev.target.closest ? ev.target.closest('.pt-sort-btn') : null
     if (!btn) return state
     const cls = Array.from(btn.classList).find(c => c.startsWith('pt-sort-btn--'))
     const sortBy = cls ? cls.replace('pt-sort-btn--', '') : 'distinctiveness'
     return { ...state, sortBy }
   },
   TOGGLE_CARD: (state, ev) => {
-    // Don't toggle if the user clicked a link
     if (ev.target && ev.target.tagName === 'A') return state
-    const target = ev.currentTarget || ev.target
-    const el = target.closest ? target.closest('.pt-card-toggle') : target
+    const el = ev.target && ev.target.closest ? ev.target.closest('.pt-card-toggle') : null
     if (!el) return state
     const cls = Array.from(el.classList).find(c => c.startsWith('pt-card-toggle--'))
     const slug = cls ? cls.replace('pt-card-toggle--', '') : null
