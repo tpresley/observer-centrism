@@ -28,7 +28,7 @@
     { "id": "holography/black-hole-entropy", "title": "Black Hole Entropy", "group": "holography", "status": "rigorous" },
     { "id": "holography/hawking-radiation", "title": "Hawking Radiation", "group": "holography", "status": "rigorous" },
     { "id": "holography/information-paradox", "title": "Information Paradox", "group": "holography", "status": "rigorous" },
-    { "id": "gauge/electromagnetism", "title": "Electromagnetism", "group": "gauge", "status": "stub" },
+    { "id": "gauge/electromagnetism", "title": "Electromagnetism", "group": "gauge", "status": "draft" },
     { "id": "gauge/weak-interaction", "title": "Weak Interaction", "group": "gauge", "status": "stub" },
     { "id": "gauge/color-force", "title": "Color Force", "group": "gauge", "status": "stub" },
     { "id": "gauge/standard-model-group", "title": "SM Gauge Group", "group": "gauge", "status": "stub" },
