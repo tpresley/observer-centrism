@@ -197,7 +197,7 @@ The connection to the bootstrap: the coherence at the octonionic level is "self-
 **Not addressed (deferred):**
 - Strong coupling constant $g_s$ (deferred to [Coupling Constants](/derivations/cosmology/coupling-constants))
 - Detailed quark representation content
-- Chiral symmetry breaking ($SU(N_f)_L \times SU(N_f)_R \to SU(N_f)_V$)
+- Chiral symmetry breaking ($SU(N_f)_L \times SU(N_f)_R \to SU(N_f)_V$). Note: the vector-like (non-chiral) coupling of $SU(3)$ to both chiralities is explained by [Chirality Selection](/derivations/gauge/chirality-selection) — the $\text{Stab}_{G_2}(\mathbb{H})$ reduction preserves the quaternionic orientation, so color transformations are chirality-blind.
 - Theta vacuum and the strong CP problem
 
 **Assessment:** Draft status. The core mathematical argument ($\mathbb{O} \to G_2 \to SU(3)$ via quaternionic subalgebra stabilizer) is rigorous and well-established in the mathematics literature. The connection to the framework (bootstrap ↔ Cayley-Dickson, S1) is explicit and well-motivated. The derivation falls short of provisional because: (1) the bootstrap–Cayley-Dickson mapping (S1) is a structural postulate rather than a theorem, (2) the confinement argument is informal, and (3) the symmetry-breaking mechanism for $G_2 \to SU(3)$ is proposed but not derived.

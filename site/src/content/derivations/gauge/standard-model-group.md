@@ -128,6 +128,7 @@ In the framework, anomaly cancellation is not a constraint imposed on the fermio
 | Three generations | $\dim SO(3) = 3$ ([Three Generations](/derivations/particles/three-generations)) |
 | Fermion quantum numbers | $\mathbb{C} \otimes \mathbb{O}$ representations |
 | Anomaly cancellation | Octonionic algebraic identity |
+| Chiral weak coupling | Quaternionic orientation lock ([Chirality Selection](/derivations/gauge/chirality-selection)) |
 | Charge quantization | $U(1)$ topology ([Electromagnetism](/derivations/gauge/electromagnetism), Thm 7.1) |
 | Spin-statistics connection | $\pi_1(SO(3)) = \mathbb{Z}_2$ ([Spin and Statistics](/derivations/particles/spin-statistics)) |
 | Mass hierarchy | Bootstrap tunneling ([Mass Hierarchy](/derivations/particles/mass-hierarchy)) |

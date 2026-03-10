@@ -2,7 +2,7 @@
 title: "Weak Interaction from Quaternionic Structure"
 status: "draft"
 dependsOn: ["gauge/electromagnetism", "dimensions/three-dimensions", "particles/spin-statistics"]
-enablesDerivation: ["gauge/standard-model-group", "flavor/mixing-angles", "cosmology/baryogenesis"]
+enablesDerivation: ["gauge/chirality-selection", "gauge/standard-model-group", "flavor/mixing-angles", "cosmology/baryogenesis"]
 tags: ["gauge"]
 summary: "In three spatial dimensions, maintaining phase coherence along three orthogonal axes forces quaternionic structure by Hurwitz's theorem. The unit quaternions form SU(2), yielding the weak gauge field, non-abelian field strength, and Yang-Mills equations. The Z₂ winding classes from spin-statistics provide the topological distinction between the two chiralities."
 rigorLevel: "semi-formal"
@@ -178,7 +178,7 @@ The weak $SU(2)_W$ is identified with $SU(2)_L$ — it acts only on the left-han
 
 The $\mathbb{Z}_2$ winding class from [Spin and Statistics](/derivations/particles/spin-statistics) distinguishes the two chiralities: a spinor is either in the $(1/2, 0)$ or $(0, 1/2)$ representation of $SU(2)_L \times SU(2)_R$. $\square$
 
-**Remark (Honest assessment).** Proposition 7.1 establishes that the *mathematical structure* for chirality exists — the Lorentz group's decomposition into left and right $SU(2)$'s. What it does *not* explain is *why* the weak interaction couples to $SU(2)_L$ rather than $SU(2)_R$ (or both). This left-right asymmetry is the deepest mystery of the weak interaction. The framework provides the structural setting (chirality is topologically well-defined) but does not yet derive the selection. This is the primary open gap preventing provisional status.
+**Remark (Honest assessment).** Proposition 7.1 establishes that the *mathematical structure* for chirality exists — the Lorentz group's decomposition into left and right $SU(2)$'s. The *selection* of one chirality over both is addressed in [Chirality Selection](/derivations/gauge/chirality-selection), which shows that non-commutativity of $\mathbb{H}$ combined with coherence conservation forces a global orientation lock — all quaternionically-coupled observers must share the same cyclic ordering $I \to J \to K$, producing maximal parity violation. The choice of $L$ vs. $R$ is spontaneous.
 
 ### Step 8: The Electroweak Connection
 
@@ -272,7 +272,7 @@ where $\psi_L = \frac{1}{2}(1 - \gamma_5)\psi$ is the left-handed projection.
 **Semi-formal (physically motivated, not fully proven):**
 - Theorem 2.1: The argument that non-commutativity of rotations forces quaternionic structure is physically compelling but relies on Structural Postulate S1 (normed division algebra property). Without S1, one could imagine more exotic algebraic structures. S1 is well-motivated but not derived from axioms.
 - Proposition 3.2: Local $SU(2)$ gauge invariance by the same localization argument as electromagnetism — inherits the same limitation (physical reasoning rather than mathematical theorem).
-- Proposition 7.1: The topological basis for chirality is rigorous; the *selection* of $SU(2)_L$ over $SU(2)_R$ is stated but not derived.
+- Proposition 7.1: The topological basis for chirality is rigorous; the *selection* of $SU(2)_L$ over $SU(2)_R$ is now addressed in [Chirality Selection](/derivations/gauge/chirality-selection) via the orientation-consistency theorem.
 - Proposition 8.1: The electroweak structure is presented but the mixing mechanism (Weinberg angle) is not derived.
 
 **Not addressed (deferred):**
@@ -282,11 +282,11 @@ where $\psi_L = \frac{1}{2}(1 - \gamma_5)\psi$ is the left-handed projection.
 - Massive $W^\pm$ and $Z^0$ bosons
 - CKM and PMNS mixing (deferred to [Flavor Mixing](/derivations/flavor/mixing-angles))
 
-**Assessment:** Draft status. The core argument (3D → quaternions → $SU(2)$ → Yang-Mills) is clean, well-motivated, and follows the same template as the electromagnetism derivation. The structural postulate S1 (normed division algebra) is explicit and physically justified. The derivation falls short of provisional because: (1) chirality selection ($L$ vs. $R$) is not derived, (2) electroweak symmetry breaking is not addressed, and (3) the Weinberg angle is a free parameter.
+**Assessment:** Draft status. The core argument (3D → quaternions → $SU(2)$ → Yang-Mills) is clean, well-motivated, and follows the same template as the electromagnetism derivation. The structural postulate S1 (normed division algebra) is explicit and physically justified. Chirality selection is now addressed by [Chirality Selection](/derivations/gauge/chirality-selection) (non-commutativity + coherence conservation → orientation lock). The derivation falls short of provisional because: (1) electroweak symmetry breaking is not addressed, and (2) the Weinberg angle is a free parameter.
 
 ## Open Gaps
 
-1. **Chirality selection**: Why does $SU(2)_W$ couple to left-handed spinors only? The framework provides the structural distinction ($SU(2)_L$ vs. $SU(2)_R$) but does not select between them. This is the deepest open problem in the weak interaction.
+1. **Chirality selection** *(partially resolved)*: Why does $SU(2)_W$ couple to left-handed spinors only? Addressed by [Chirality Selection](/derivations/gauge/chirality-selection): non-commutativity of $\mathbb{H}$ forces orientation consistency on quaternionic relational invariants, and coherence conservation propagates this globally. The choice of $L$ vs. $R$ is spontaneous. Remaining sub-gaps: anomaly cancellation from coherence conservation, and detailed CPT analysis.
 
 2. **Electroweak symmetry breaking**: The $W^\pm$ and $Z^0$ bosons are massive ($M_W \approx 80$ GeV, $M_Z \approx 91$ GeV), requiring spontaneous breaking of $SU(2)_L \times U(1)_Y \to U(1)_{em}$. The Higgs mechanism (or its coherence-framework analog) has not been derived.
 

@@ -49,7 +49,7 @@ Each sphaleron transition produces one fermion from each left-handed doublet. Wi
 
 ### Step 3: Sakharov Condition 2 — C and CP Violation
 
-**Proposition 3.1 (Maximal C violation from chirality).** *The chiral coupling of $SU(2)_L$ ([Weak Interaction](/derivations/gauge/weak-interaction), Step 7) maximally violates charge conjugation symmetry C.*
+**Proposition 3.1 (Maximal C violation from chirality).** *The chiral coupling of $SU(2)_L$ ([Weak Interaction](/derivations/gauge/weak-interaction), Step 7; [Chirality Selection](/derivations/gauge/chirality-selection)) maximally violates charge conjugation symmetry C.*
 
 *Proof.* Charge conjugation exchanges particles and antiparticles: $\mathcal{O} \leftrightarrow \bar{\mathcal{O}}$. Under C, a left-handed fermion becomes a left-handed antifermion. But $SU(2)_L$ couples only to left-handed fermions, not left-handed antifermions (which are right-handed particles). Therefore the C-conjugate process has a different $SU(2)_L$ coupling — C is violated.
 
