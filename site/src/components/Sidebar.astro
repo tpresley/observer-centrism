@@ -19,6 +19,8 @@ function isActive(href: string): boolean {
   return norm(currentPath) === norm(href)
 }
 
+const isSourcePage = currentPath.startsWith('/source/')
+
 const derivationGroups = {
   'Foundation': derivationEntries.filter(d => d.data.tags.includes('foundation')),
   'Dynamics': derivationEntries.filter(d => d.data.tags.includes('dynamics')),
@@ -58,11 +60,6 @@ function statusColor(status: string) {
   <a href="/postulates" aria-current={isActive('/postulates') ? 'page' : undefined}>Structural Postulates</a>
   <a href="/search" aria-current={isActive('/search') ? 'page' : undefined}>Search</a>
 
-  <h2>Source Document</h2>
-  {sortedSource.map(entry => (
-    <a href={`/source/${entry.slug}`} aria-current={isActive(`/source/${entry.slug}`) ? 'page' : undefined}>{entry.data.section}. {entry.data.title}</a>
-  ))}
-
   <h2>Derivations</h2>
   <a href="/derivations/" aria-current={isActive('/derivations/') ? 'page' : undefined}>Index</a>
   {Object.entries(derivationGroups).map(([group, entries]) => (
@@ -84,6 +81,13 @@ function statusColor(status: string) {
   {predictionEntries.map(entry => (
     <a href={`/predictions/${entry.slug}`} aria-current={isActive(`/predictions/${entry.slug}`) ? 'page' : undefined}>{entry.data.title}</a>
   ))}
+
+  <details class="sidebar-details" open={isSourcePage || undefined}>
+    <summary><h2>Source Document</h2></summary>
+    {sortedSource.map(entry => (
+      <a href={`/source/${entry.slug}`} aria-current={isActive(`/source/${entry.slug}`) ? 'page' : undefined}>{entry.data.section}. {entry.data.title}</a>
+    ))}
+  </details>
 </nav>
 
 <style>
@@ -93,5 +97,27 @@ function statusColor(status: string) {
     color: var(--color-text-muted);
     padding: 0.5rem 0.5rem 0.15rem;
     letter-spacing: 0.04em;
+  }
+  .sidebar-details {
+    margin: 0;
+  }
+  .sidebar-details summary {
+    cursor: pointer;
+    list-style: none;
+  }
+  .sidebar-details summary::-webkit-details-marker {
+    display: none;
+  }
+  .sidebar-details summary h2 {
+    display: inline;
+  }
+  .sidebar-details summary h2::after {
+    content: ' \25B6';
+    font-size: 0.5rem;
+    vertical-align: middle;
+    color: var(--color-text-muted);
+  }
+  .sidebar-details[open] summary h2::after {
+    content: ' \25BC';
   }
 </style>
