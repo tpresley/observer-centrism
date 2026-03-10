@@ -10,7 +10,7 @@ sourceSection: "13-predictions"
 
 ## Prediction
 
-The Standard Model gauge structure $SU(3) \times SU(2) \times U(1)$ is the direct output of the three-dimensional coherence geometry fixed point. No larger gauge group exists at higher energies. **Proton decay will not be observed.**
+The Standard Model gauge structure $SU(3) \times SU(2) \times U(1)$ is constrained by the three-dimensional coherence geometry fixed point. No larger gauge group exists at higher energies. **Proton decay will not be observed.**
 
 ## Derivation Sketch
 

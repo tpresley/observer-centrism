@@ -124,7 +124,7 @@ But (1) gives $P = f((\cos\theta + \sin\theta)^2/2)$, which varies with $\theta$
 
 *Proof.* We verify each component:
 
-**(i)** Each minimal observer has $U(1)$ phase ([Minimal Observer Structure](/derivations/minimal-observer/structure), Theorem 2.1). Transition amplitudes are sums of $U(1)$ phases (Definition 1.1): $\psi = \sum_\gamma e^{i\mathcal{S}[\gamma]/\hbar} \in \mathbb{C}$. The algebraic closure of finite sums of $U(1)$ elements under addition and scalar multiplication is $\mathbb{C}$.
+**(i)** Each minimal observer has $U(1)$ phase ([Minimal Observer Structure](/derivations/minimal-observer/structure), Proposition 3.1). Transition amplitudes are sums of $U(1)$ phases (Definition 1.1): $\psi = \sum_\gamma e^{i\mathcal{S}[\gamma]/\hbar} \in \mathbb{C}$. The algebraic closure of finite sums of $U(1)$ elements under addition and scalar multiplication is $\mathbb{C}$.
 
 **(ii)** For disjoint path sets $\Gamma_1, \Gamma_2$ in the interaction graph, $\psi_{\Gamma_1 \cup \Gamma_2} = \psi_{\Gamma_1} + \psi_{\Gamma_2}$ (additivity of sums over disjoint sets). Scalar multiplication by $\lambda \in \mathbb{C}$ corresponds to phase-shifting and rescaling. This gives the state space the structure of a vector space $V$ over $\mathbb{C}$.
 

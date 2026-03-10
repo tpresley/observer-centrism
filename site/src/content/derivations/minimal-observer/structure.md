@@ -2,7 +2,7 @@
 title: "Minimal Observer Structure"
 status: "rigorous"
 dependsOn: ["axioms/coherence-conservation", "axioms/observer-definition", "axioms/loop-closure"]
-enablesDerivation: ["minimal-observer/multiplicity", "interactions/three-types", "thermodynamics/time", "dimensions/three-dimensions"]
+enablesDerivation: ["minimal-observer/multiplicity", "thermodynamics/time", "dimensions/three-dimensions"]
 tags: ["foundation"]
 summary: "The simplest structure satisfying all three axioms is a U(1) phase oscillator with conserved charge — a Noether pair realized in the coherence geometry"
 rigorLevel: "formal"

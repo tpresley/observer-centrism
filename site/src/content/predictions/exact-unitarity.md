@@ -10,7 +10,7 @@ sourceSection: "13-predictions"
 
 ## Prediction
 
-Unitarity — the preservation of total quantum mechanical probability — is the exact statement of coherence conservation applied to quantum dynamics. It admits **no corrections, no exceptions, no scale at which it fails**. No objective collapse, no nonlinear Schrodinger corrections, no unitarity violation in black hole evaporation.
+Unitarity — the preservation of total quantum mechanical probability — is the exact statement of coherence conservation applied to quantum dynamics. It admits **no corrections, no exceptions, no scale at which it fails**. No objective collapse, no nonlinear Schrödinger corrections, no unitarity violation in black hole evaporation.
 
 ## Derivation Sketch
 

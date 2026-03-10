@@ -2,7 +2,7 @@
 title: "Three Interaction Types"
 status: "rigorous"
 dependsOn: ["minimal-observer/multiplicity"]
-enablesDerivation: ["interactions/relational-invariants", "thermodynamics/time", "thermodynamics/entropy"]
+enablesDerivation: ["interactions/relational-invariants", "thermodynamics/time"]
 tags: ["dynamics"]
 summary: "Exhaustive classification of observer interactions by invariant outcome: Passage (phase transfer), Fusion (reorganization), Resonance (new relational invariant)"
 rigorLevel: "formal"

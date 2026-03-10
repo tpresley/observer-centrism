@@ -1,5 +1,6 @@
 ---
 import MainLayout from './MainLayout.astro'
+import graphData from '../../data/dependency-graph.json'
 
 interface Props {
   title: string
@@ -12,6 +13,15 @@ interface Props {
 const { title, status, dependsOn = [], enablesDerivation = [], sourceSection } = Astro.props
 
 const statusClass = status ? `status-${status}` : ''
+
+const titleMap: Record<string, string> = {}
+for (const node of graphData.nodes) {
+  titleMap[node.id] = node.title
+}
+
+function getTitle(id: string): string {
+  return titleMap[id] || id
+}
 ---
 
 <MainLayout title={title}>
@@ -31,7 +41,7 @@ const statusClass = status ? `status-${status}` : ''
         <h4>Depends On</h4>
         <ul>
           {dependsOn.map(dep => (
-            <li><a href={`/derivations/${dep}`}>{dep}</a></li>
+            <li><a href={`/derivations/${dep}`}>{getTitle(dep)}</a></li>
           ))}
         </ul>
       </div>
@@ -44,7 +54,7 @@ const statusClass = status ? `status-${status}` : ''
         <h4>Enables</h4>
         <ul>
           {enablesDerivation.map(d => (
-            <li><a href={`/derivations/${d}`}>{d}</a></li>
+            <li><a href={`/derivations/${d}`}>{getTitle(d)}</a></li>
           ))}
         </ul>
       </div>

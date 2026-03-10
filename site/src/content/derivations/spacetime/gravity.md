@@ -1,7 +1,7 @@
 ---
 title: "Gravity as Coherence Geometry Curvature"
 status: "rigorous"
-dependsOn: ["interactions/relational-invariants", "spacetime/lorentz-invariance"]
+dependsOn: ["interactions/relational-invariants", "spacetime/lorentz-invariance", "dimensions/three-dimensions"]
 enablesDerivation: ["spacetime/einstein-equations", "holography/area-scaling"]
 tags: ["geometry"]
 summary: "Massive observers generate relational invariant density gradients; geodesics = minimum coherence cost paths; the equivalence principle is structural"
@@ -104,7 +104,7 @@ $$ds^2 = \left(1 - \frac{R_S}{r}\right) c^2 dt^2 - \left(1 - \frac{R_S}{r}\right
 
 *Verification.* Take $\mathcal{H} = (\mathbb{R}^{3,1}, g_S)$ where $g_S$ is the Schwarzschild metric (Theorem 5.1) with mass parameter $M$.
 
-- **Density**: The Kretschner scalar $K = R_{\mu\nu\rho\sigma} R^{\mu\nu\rho\sigma} = 48 G^2 M^2/(c^4 r^6)$ gives curvature $\propto M/r^2$ in the Newtonian regime, consistent with Proposition 1.2. $\checkmark$
+- **Density**: The Kretschmann scalar $K = R_{\mu\nu\rho\sigma} R^{\mu\nu\rho\sigma} = 48 G^2 M^2/(c^4 r^6)$ gives curvature $\propto M/r^2$ in the Newtonian regime, consistent with Proposition 1.2. $\checkmark$
 - **Redshift**: $g_{tt} = 1 - 2GM/(c^2 r)$, so $d\tau/dt = \sqrt{1 - 2GM/(c^2 r)}$ (Theorem 2.1). Confirmed by Pound-Rebka to $1\%$ and by GPS corrections to parts in $10^{13}$. $\checkmark$
 - **Geodesics**: The geodesic equation in the Schwarzschild metric reproduces Newtonian orbits with perihelion precession $\Delta\phi = 6\pi GM/(c^2 a(1-e^2))$, confirmed for Mercury. $\checkmark$
 - **Equivalence principles**: Geodesics depend only on $(g_{\mu\nu}, x^\mu)$, not on test particle properties (WEP). Riemann normal coordinates give $g_{\mu\nu}(p) = \eta_{\mu\nu}$ at any point (SEP). $\checkmark$

@@ -73,19 +73,19 @@ $$\boxed{M_J = \left(\frac{\pi \hbar^6 \rho_{\text{vir}}}{6 \, m_{DM}^6 G^3}\rig
 
 $$E_G = -\frac{3GM^2}{5R}$$
 
-**Quantum kinetic energy** (from loop closure pressure — each particle is confined to volume $\sim R^3/N$, giving momentum uncertainty $\Delta p \sim \hbar N^{1/3}/R$):
+**Quantum kinetic energy** (from loop closure pressure — dark matter is bosonic, so all $N$ particles occupy the same ground state with momentum uncertainty $\Delta p \sim \hbar/R$):
 
-$$E_Q = N \cdot \frac{(\hbar N^{1/3}/R)^2}{2m_{DM}} = \frac{\hbar^2 N^{5/3}}{2m_{DM} R^2} = \frac{\hbar^2 M^{5/3}}{2m_{DM}^{8/3} R^2}$$
+$$E_Q = N \cdot \frac{(\hbar/R)^2}{2m_{DM}} = \frac{N\hbar^2}{2m_{DM} R^2} = \frac{\hbar^2 M}{2m_{DM}^{2} R^2}$$
 
 Setting $|E_G| = E_Q$ gives the Jeans radius:
 
-$$R_J = \frac{5\hbar^2 M^{5/3}}{6 G M^2 m_{DM}^{8/3}} = \frac{5\hbar^2}{6 G m_{DM}^{8/3} M^{1/3}}$$
+$$R_J = \frac{5\hbar^2 M}{6 G M^2 m_{DM}^{2}} = \frac{5\hbar^2}{6 G m_{DM}^{2} M}$$
 
 Using $M = (4\pi/3)R_J^3 \rho_{\text{vir}}$ and solving for $M$:
 
-$$M^{4/3} = \frac{5\hbar^2}{6Gm_{DM}^{8/3}} \cdot \left(\frac{4\pi\rho_{\text{vir}}}{3}\right)^{1/3}$$
+$$M^{4/3} = \frac{5\hbar^2}{6Gm_{DM}^{2}} \cdot \left(\frac{4\pi\rho_{\text{vir}}}{3}\right)^{1/3}$$
 
-$$M_J = \left(\frac{5}{6}\right)^{3/4} \cdot \frac{\hbar^{3/2}}{G^{3/4} m_{DM}^2} \cdot \left(\frac{4\pi\rho_{\text{vir}}}{3}\right)^{1/4} \sim \frac{\hbar^{3/2} \rho_{\text{vir}}^{1/4}}{G^{3/4} m_{DM}^2}$$
+$$M_J = \left(\frac{5}{6}\right)^{3/4} \cdot \frac{\hbar^{3/2}}{G^{3/4} m_{DM}^{3/2}} \cdot \left(\frac{4\pi\rho_{\text{vir}}}{3}\right)^{1/4} \sim \frac{\hbar^{3/2} \rho_{\text{vir}}^{1/4}}{G^{3/4} m_{DM}^{3/2}}$$
 
 (absorbing numerical factors of order unity). $\square$
 
@@ -103,7 +103,7 @@ $$\rho_{\text{core}}(r) \approx \rho_0 \left[1 + c_1\left(\frac{r}{r_c}\right)^2
 
 *where $r_c \sim \lambda_{dB}/2$ is the core radius and $c_1 \approx 0.091$ is a numerical constant.*
 
-*Derivation sketch.* The dark matter in the core region satisfies the Schrödinger-Poisson system (the non-relativistic limit of the loop closure dynamics in a gravitational potential):
+*Derivation.* The dark matter in the core region satisfies the Schrödinger-Poisson system (the non-relativistic limit of the loop closure dynamics in a gravitational potential):
 
 $$i\hbar\frac{\partial\psi}{\partial t} = -\frac{\hbar^2}{2m_{DM}}\nabla^2\psi + m_{DM}\Phi\,\psi$$
 $$\nabla^2\Phi = 4\pi G m_{DM}|\psi|^2$$

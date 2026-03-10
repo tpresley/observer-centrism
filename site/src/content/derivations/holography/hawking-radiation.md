@@ -90,7 +90,7 @@ where $\Gamma_\omega$ is the greybody factor (the transmission coefficient throu
 
 **Proposition 5.1 (Mass loss rate).** *The outgoing radiation carries energy, reducing the black hole mass:*
 
-$$\frac{dM}{dt} = -\frac{\hbar c^6}{15360 \pi G^2 M^2}$$
+$$\frac{dM}{dt} = -\frac{\hbar c^4}{15360 \pi G^2 M^2}$$
 
 *Proof.* The total luminosity of a black body of temperature $T$ and area $A$ is $L = \sigma T^4 A$ (Stefan-Boltzmann law, standard thermodynamics). For a Schwarzschild black hole: $T = T_H = \hbar c^3/(8\pi G M k_B)$ (Theorem 3.1) and $A = 4\pi R_S^2 = 16\pi G^2 M^2/c^4$.
 

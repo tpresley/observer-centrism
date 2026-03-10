@@ -18,10 +18,10 @@ The discrete relational invariant network underlying continuum spacetime introdu
 
 | Quantity | Formula | Value |
 |---|---|---|
-| Position uncertainty (null, length $L$) | $\Delta x = \sqrt{\alpha_H \ell_P L}$ | $4 \times 10^{-16}$ m for $L = 4$ km |
+| Position uncertainty (null, length $L$) | $\Delta x = \sqrt{\alpha_H \ell_P L}$ | $4 \times 10^{-16}$ m for $L = 4$ km (at $\alpha_H = 1/4$) |
 | Strain power spectral density | $S_h = \alpha_H \ell_P / c$ | $\leq 5.4 \times 10^{-44}$ Hz$^{-1}$ |
 | Strain amplitude density | $\sqrt{S_h}$ | $\leq 7.3 \times 10^{-22}$ /√Hz |
-| Amplitude coefficient | $\alpha_H$ | $\lesssim 1$ (Holometer constraint) |
+| Amplitude coefficient | $\alpha_H$ | $\lesssim 0.5$ (Holometer constraint) |
 | Michelson cross-correlation | $\Gamma(\beta) = \cos\beta$ | Testable angular pattern |
 | Single-arm cross-correlation | $\gamma(\alpha) = \cos^2(\alpha/2)$ | Between arms at angle $\alpha$ |
 | Frequency spectrum | White (flat) for $f < c/(2L)$ | No frequency dependence |
@@ -311,17 +311,17 @@ The existing gravitational wave detector network can search for an isotropic sto
 
 ## Derivation Chain Status
 
-All steps in the derivation chain are now at **provisional** status:
+All steps in the derivation chain are now at **rigorous** status:
 
-1. ✅ [Coherence Conservation](/derivations/axioms/coherence-conservation) (Axiom 1)
-2. ✅ [Observer Definition](/derivations/axioms/observer-definition) (Axiom 2)
-3. ✅ [Loop Closure](/derivations/axioms/loop-closure) (Axiom 3)
-4. ✅ [Minimal Observer](/derivations/minimal-observer/structure) → discrete structure
-5. ✅ [Relational Invariants](/derivations/interactions/relational-invariants) → network
-6. ✅ [Time](/derivations/thermodynamics/time) → causal ordering
-7. ✅ [Speed of Light](/derivations/spacetime/speed-of-light) → null structure
-8. ✅ [Gravity](/derivations/spacetime/gravity) → Planck scale
-9. ✅ [Holographic Entropy Bound](/derivations/holography/area-scaling) → area scaling → holographic noise amplitude
+1. ✅ [Coherence Conservation](/derivations/axioms/coherence-conservation) (Axiom 1) — rigorous
+2. ✅ [Observer Definition](/derivations/axioms/observer-definition) (Axiom 2) — rigorous
+3. ✅ [Loop Closure](/derivations/axioms/loop-closure) (Axiom 3) — rigorous
+4. ✅ [Minimal Observer](/derivations/minimal-observer/structure) → discrete structure — rigorous
+5. ✅ [Relational Invariants](/derivations/interactions/relational-invariants) → network — rigorous
+6. ✅ [Time](/derivations/thermodynamics/time) → causal ordering — rigorous
+7. ✅ [Speed of Light](/derivations/spacetime/speed-of-light) → null structure — rigorous
+8. ✅ [Gravity](/derivations/spacetime/gravity) → Planck scale — rigorous
+9. ✅ [Holographic Entropy Bound](/derivations/holography/area-scaling) → area scaling → holographic noise amplitude — rigorous
 10. Causal set statistics → amplitude coefficient $\alpha_H$ (requires discrete theory)
 11. Null-direction preference → angular pattern $\Gamma(\beta) = \cos\beta$ (structural)
 

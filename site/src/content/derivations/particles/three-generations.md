@@ -1,7 +1,7 @@
 ---
 title: "Three Fermion Generations"
 status: "rigorous"
-dependsOn: ["dimensions/three-dimensions", "particles/spin-statistics"]
+dependsOn: ["dimensions/three-dimensions", "particles/spin-statistics", "particles/mass-hierarchy"]
 enablesDerivation: []
 tags: ["particles"]
 summary: "Three generations correspond to three independent winding directions in d=3 — the generation structure is topological"
@@ -104,11 +104,9 @@ $$V_{\text{CKM}} = U_{\text{up}}^\dagger \cdot U_{\text{down}}, \qquad V_{\text{
 
 *where $U_f$ is the rotation from the winding-axis basis to the mass eigenbasis for fermion type $f$. The mixing angles are geometric: they reflect the relative orientations of the winding axes for different fermion types in the coherence geometry.*
 
-**Proposition 5.3 (CP violation).** *The complex phase in the CKM matrix (and PMNS matrix) arises from the three-dimensionality of the winding space. Three independent axes in $\mathbb{R}^3$ have a unique orientation (handedness) specified by a single complex phase:*
+**Proposition 5.3 (CP violation).** *The complex phase in the CKM matrix (and PMNS matrix) arises from the three-dimensionality of the winding space. For two generations, the mixing matrix is a real $2 \times 2$ rotation — a single angle with no complex phase. For three generations, the $3 \times 3$ unitary mixing matrix has an irreducible complex phase $\delta_{\text{CP}}$ that cannot be removed by field redefinitions.*
 
-$$\delta_{\text{CP}} = \arg\det(\hat{n}_1, \hat{n}_2, \hat{n}_3)$$
-
-*For two generations, all mixing can be described by a single real angle (no CP violation). For three generations, a complex phase is geometrically unavoidable — this is why CP violation requires $\geq 3$ generations (Kobayashi-Maskawa mechanism).*
+*The phase appears in the Jarlskog invariant $J = \text{Im}(V_{us}V_{cb}V^*_{ub}V^*_{cs})$, which is nonzero whenever the three winding axis triples for up-type quarks $\{\hat{n}^u_k\}$ and down-type quarks $\{\hat{n}^d_k\}$ are not coplanar in the winding space. Since three independent axes in $\mathbb{R}^3$ generically span the full space, a nonzero $J$ (and hence CP violation) is geometrically unavoidable — this is why CP violation requires $\geq 3$ generations (Kobayashi-Maskawa mechanism).*
 
 ## Physical Identification
 
@@ -119,7 +117,7 @@ $$\delta_{\text{CP}} = \arg\det(\hat{n}_1, \hat{n}_2, \hat{n}_3)$$
 | Electroweak axis $\hat{n}_{\text{EW}}$ | Higgs field VEV direction |
 | Angular separation $\alpha_k$ | Yukawa coupling hierarchy |
 | Rotation between frames | CKM / PMNS mixing matrices |
-| $\arg\det(\hat{n}_1, \hat{n}_2, \hat{n}_3)$ | CP-violating phase $\delta$ |
+| Non-coplanarity of up/down winding triples | CP-violating phase $\delta$ |
 
 ### Consistency Model
 
@@ -158,7 +156,7 @@ $$\delta_{\text{CP}} = \arg\det(\hat{n}_1, \hat{n}_2, \hat{n}_3)$$
 
 ## Open Gaps
 
-1. **Specific mixing angles**: Deriving the CKM and PMNS matrix elements from the winding geometry would be a strong test of the framework. This requires the relative orientations of winding axes for each fermion type.
+1. **Specific mixing angles and CP phase**: Deriving the CKM and PMNS matrix elements — including the CP-violating phase $\delta \approx 69°$ — from the winding geometry would be a strong test of the framework. This requires the relative orientations of the up-type and down-type winding axis triples.
 2. **Quark vs. lepton mixing**: Why are quark mixing angles small but lepton mixing angles large? This should follow from the different winding geometries of quarks and leptons in the coherence geometry.
 3. **Neutrino mass mechanism**: Whether neutrinos are Dirac or Majorana fermions should be derivable from the winding structure — Majorana corresponds to a self-conjugate winding (like the self-conjugate observer of [Coherence-Dual Pairs](/derivations/minimal-observer/coherence-dual-pairs)).
 4. **Sterile neutrinos**: If right-handed neutrinos exist as a fourth "hidden" winding mode (not a fourth generation but a different chirality), their properties should be predictable.

@@ -16,6 +16,8 @@ lastUpdated: 2026-03-09
 
 ## Derivation
 
+**Structural postulates:** This derivation requires no new structural postulates beyond those already introduced: S1 from [Born Rule](/derivations/quantum/born-rule) (amplitude-coherence identification) and S1 from [Preferred Basis](/derivations/quantum/preferred-basis) (interaction-invariant correspondence). Measurement is a consequence of the existing framework.
+
 ### Step 1: The Pre-Measurement State
 
 **Definition 1.1.** Let $\mathcal{O}$ (the observer/measurer) and $S$ (the system) be two observers in the interaction graph $\mathcal{G}$ with no existing relational invariant for the observable in question.

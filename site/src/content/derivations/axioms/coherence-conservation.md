@@ -75,53 +75,27 @@ $$\mathcal{C}(S_1 : S_2) \equiv \mathcal{C}(S_1) + \mathcal{C}(S_2) - \mathcal{C
 
 $$\mathcal{C}(S_1 : S_2 \cup S_3) = \mathcal{C}(S_1 : S_2) + \mathcal{C}(S_1 : S_3) - \delta$$
 
-*where $\delta \geq 0$. Explicitly:*
+*where:*
 
-$$\delta = \mathcal{C}(S_1) + \mathcal{C}(S_2 \cup S_3) - \mathcal{C}(S_1 \cup S_2) - \mathcal{C}(S_1 \cup S_3) + \mathcal{C}(S_1 \cup S_2 \cup S_3)$$
+$$\delta = \mathcal{C}(S_1) + \mathcal{C}(S_2) + \mathcal{C}(S_3) - \mathcal{C}(S_1 \cup S_2) - \mathcal{C}(S_1 \cup S_3) - \mathcal{C}(S_2 \cup S_3) + \mathcal{C}(S_1 \cup S_2 \cup S_3)$$
 
-*Proof.* Expand each term using Definition 2.1.
+*The sign of $\delta$ is not determined by (C1)–(C5) alone.*
+
+*Proof.* Expand each relational coherence using Definition 2.1:
 
 $$\mathcal{C}(S_1 : S_2) = \mathcal{C}(S_1) + \mathcal{C}(S_2) - \mathcal{C}(S_1 \cup S_2)$$
 $$\mathcal{C}(S_1 : S_3) = \mathcal{C}(S_1) + \mathcal{C}(S_3) - \mathcal{C}(S_1 \cup S_3)$$
 $$\mathcal{C}(S_1 : S_2 \cup S_3) = \mathcal{C}(S_1) + \mathcal{C}(S_2 \cup S_3) - \mathcal{C}(S_1 \cup S_2 \cup S_3)$$
 
-Compute the right-hand side of the claimed identity:
+Computing $\mathcal{C}(S_1 : S_2) + \mathcal{C}(S_1 : S_3) - \mathcal{C}(S_1 : S_2 \cup S_3)$ directly:
 
-$$\mathcal{C}(S_1 : S_2) + \mathcal{C}(S_1 : S_3) = 2\mathcal{C}(S_1) + \mathcal{C}(S_2) + \mathcal{C}(S_3) - \mathcal{C}(S_1 \cup S_2) - \mathcal{C}(S_1 \cup S_3)$$
+$$\delta = \mathcal{C}(S_1) + \mathcal{C}(S_2) + \mathcal{C}(S_3) - \mathcal{C}(S_1 \cup S_2) - \mathcal{C}(S_1 \cup S_3) - \mathcal{C}(S_2 \cup S_3) + \mathcal{C}(S_1 \cup S_2 \cup S_3)$$
 
-Subtracting $\mathcal{C}(S_1 : S_2 \cup S_3)$:
+This is the alternating sum (or Möbius function) over the three-element partition, and the identity holds by construction. $\square$
 
-$$\delta = 2\mathcal{C}(S_1) + \mathcal{C}(S_2) + \mathcal{C}(S_3) - \mathcal{C}(S_1 \cup S_2) - \mathcal{C}(S_1 \cup S_3) - \mathcal{C}(S_1) - \mathcal{C}(S_2 \cup S_3) + \mathcal{C}(S_1 \cup S_2 \cup S_3)$$
+**Remark (Sign of $\delta$).** The correction term $\delta$ decomposes into two parts with opposite signs. Applying (C5) to $A = S_1 \cup S_2$, $B = S_1 \cup S_3$ gives $\mathcal{C}(S_1) - \mathcal{C}(S_1 \cup S_2) - \mathcal{C}(S_1 \cup S_3) + \mathcal{C}(S_1 \cup S_2 \cup S_3) \leq 0$, while (C4) gives $\mathcal{C}(S_2) + \mathcal{C}(S_3) - \mathcal{C}(S_2 \cup S_3) \geq 0$. Since $\delta$ is the sum of these, its sign is model-dependent.
 
-$$= \mathcal{C}(S_1) + \mathcal{C}(S_2) + \mathcal{C}(S_3) - \mathcal{C}(S_1 \cup S_2) - \mathcal{C}(S_1 \cup S_3) - \mathcal{C}(S_2 \cup S_3) + \mathcal{C}(S_1 \cup S_2 \cup S_3)$$
-
-This expression matches the alternating sum formula. To prove $\delta \geq 0$, apply (C5) to $A = S_1 \cup S_2$ and $B = S_1 \cup S_3$ (where $A \cup B = S_1 \cup S_2 \cup S_3$ and $A \cap B = S_1$ since $S_2, S_3$ are disjoint from each other and from $S_1$):
-
-$$\mathcal{C}(S_1 \cup S_2 \cup S_3) + \mathcal{C}(S_1) \leq \mathcal{C}(S_1 \cup S_2) + \mathcal{C}(S_1 \cup S_3)$$
-
-Rearranging: $\mathcal{C}(S_1 \cup S_2 \cup S_3) - \mathcal{C}(S_1 \cup S_2) - \mathcal{C}(S_1 \cup S_3) + \mathcal{C}(S_1) \leq 0$.
-
-Now by (C4) applied to $S_2, S_3$ (disjoint): $\mathcal{C}(S_2 \cup S_3) \leq \mathcal{C}(S_2) + \mathcal{C}(S_3)$, so $\mathcal{C}(S_2) + \mathcal{C}(S_3) - \mathcal{C}(S_2 \cup S_3) \geq 0$.
-
-Adding these two inequalities:
-
-$$\delta = [\mathcal{C}(S_1) - \mathcal{C}(S_1 \cup S_2) - \mathcal{C}(S_1 \cup S_3) + \mathcal{C}(S_1 \cup S_2 \cup S_3)] + [\mathcal{C}(S_2) + \mathcal{C}(S_3) - \mathcal{C}(S_2 \cup S_3)]$$
-
-The first bracket is $\leq 0$ and the second is $\geq 0$, so the sign of $\delta$ is not determined by this decomposition alone.
-
-**Correction.** We establish $\delta \geq 0$ directly. Apply (C5) to $A = S_1 \cup S_2$ and $B = S_3$. Since $S_1, S_2, S_3$ are pairwise disjoint, $A \cap B = \emptyset$, so:
-
-$$\mathcal{C}(S_1 \cup S_2 \cup S_3) + \mathcal{C}(\emptyset) \leq \mathcal{C}(S_1 \cup S_2) + \mathcal{C}(S_3)$$
-
-This gives $\mathcal{C}(S_1 \cup S_2 \cup S_3) \leq \mathcal{C}(S_1 \cup S_2) + \mathcal{C}(S_3)$, which is just subadditivity — weaker than what we need.
-
-**Resolution.** The non-negativity of $\delta$ requires additional structure beyond (C1)–(C5). Specifically, $\delta \geq 0$ holds when $\mathcal{C}$ satisfies the stronger condition of **supermodularity on the conditional**:
-
-$$\mathcal{C}(S_1 \cup S_2) + \mathcal{C}(S_1 \cup S_3) \leq \mathcal{C}(S_1) + \mathcal{C}(S_1 \cup S_2 \cup S_3) + \mathcal{C}(S_2 : S_3)$$
-
-This is satisfied by von Neumann entropy (where $\delta$ equals the conditional mutual information $I(S_2; S_3 | S_1) \geq 0$). In the general framework, the chain rule holds with $\delta$ real-valued, and the sign of $\delta$ carries physical meaning: $\delta > 0$ when $S_2$ and $S_3$ redundantly encode their relationship with $S_1$; $\delta < 0$ when they synergistically encode it.
-
-We therefore state the chain rule without assuming $\delta \geq 0$, and note that in the physical regime relevant to quantum mechanics (where $\mathcal{C}$ specializes to von Neumann entropy), $\delta \geq 0$ is guaranteed by strong subadditivity. $\square$
+In the physical regime where $\mathcal{C}$ specializes to von Neumann entropy, $\delta$ equals the conditional mutual information $I(S_2; S_3 | S_1) \geq 0$, guaranteed by strong subadditivity. In the general framework, the sign of $\delta$ carries physical meaning: $\delta > 0$ when $S_2$ and $S_3$ redundantly encode their relationship with $S_1$; $\delta < 0$ when they synergistically encode it.
 
 ### Step 3: Admissible Transformations and Conservation
 

@@ -151,7 +151,7 @@ At $v > c$: $\gamma$ becomes imaginary, and $ds^2 < 0$ (spacelike). The loop can
 - **Time reversal** $T$: $(t, \vec{x}) \mapsto (-t, \vec{x})$, $\det(\Lambda) = +1$, $\Lambda^0{}_0 < 0$
 - **$PT$**: $(t, \vec{x}) \mapsto (-t, -\vec{x})$, $\det(\Lambda) = -1$, $\Lambda^0{}_0 < 0$
 
-*Combined with charge conjugation $C$ from [Coherence-Dual Pairs](/derivations/minimal-observer/coherence-dual-pairs) (Proposition 6.1), these give the $CPT$ transformation. The CPT theorem — that $CPT$ is an exact symmetry — follows from the Lorentz invariance of the coherence geometry combined with the conjugate structure of observer pairs. The full proof (Lüders-Pauli theorem) additionally requires locality and the spin-statistics connection, derived in [Spin and Statistics](/derivations/particles/spin-statistics); this forward dependency is flagged as deferred.*
+*Combined with charge conjugation $C$ from [Coherence-Dual Pairs](/derivations/minimal-observer/coherence-dual-pairs) (Definition 6.1), these give the $CPT$ transformation. The CPT theorem — that $CPT$ is an exact symmetry — follows from the Lorentz invariance of the coherence geometry combined with the conjugate structure of observer pairs. The full proof (Lüders-Pauli theorem) additionally requires locality and the spin-statistics connection, derived in [Spin and Statistics](/derivations/particles/spin-statistics); this forward dependency is flagged as deferred.*
 
 ### Consistency Model
 

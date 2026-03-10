@@ -2,7 +2,7 @@
 title: "The Mass Hierarchy"
 status: "rigorous"
 dependsOn: ["interactions/bootstrap"]
-enablesDerivation: []
+enablesDerivation: ["particles/three-generations"]
 tags: ["particles"]
 summary: "Mass hierarchy as logarithmically organized crystallization scales — large ratios are exponentials of small coupling ratios, not fine-tuning"
 rigorLevel: "formal"

@@ -12,7 +12,7 @@ lastUpdated: 2026-03-09
 
 ## Statement
 
-**Theorem.** The loop closure condition requires an observer's cycle to close in both spatial and temporal projections simultaneously. This constraint fixes a universal ratio $c = L/T$ between spatial extent and temporal period for all observer loops, where $c$ is the phase propagation speed through the coherence geometry. The Minkowski metric signature $(-,+,+,+)$ emerges from the conjugate relationship between these projections. The speed of light is not an empirical constant — it is structurally determined by the coherence geometry.
+**Theorem.** The loop closure condition requires an observer's cycle to close in both spatial and temporal projections simultaneously. This constraint fixes a universal ratio $c = L/T$ between spatial extent and temporal period for all observer loops, where $c$ is the phase propagation speed through the coherence geometry. The Minkowski metric signature $(+,-,-,-)$ emerges from the conjugate relationship between these projections. The speed of light is not an empirical constant — it is structurally determined by the coherence geometry.
 
 ## Derivation
 
@@ -90,7 +90,7 @@ The total temporal displacement $\Delta t \geq \Delta\tau_{\text{total}}$ (with 
 
 ### Step 5: The Minkowski Metric
 
-**Theorem 5.1 (Minkowski signature from conjugate projections).** *The coherence geometry of observer loops has an indefinite metric of signature $(-,+,+,+)$.*
+**Theorem 5.1 (Minkowski signature from conjugate projections).** *The coherence geometry of observer loops has an indefinite metric of signature $(+,-,-,-)$.*
 
 *Proof.* Consider an observer $\mathcal{O}$ at rest in the coherence geometry. Its cycle has coherence cost:
 
@@ -129,14 +129,14 @@ $$c = \frac{\text{coherence distance per cycle}}{\text{coherence time per cycle}
 
 ### Consistency Model
 
-**Theorem 7.1.** *The $S^1$ minimal observer model of [Loop Closure](/derivations/axioms/loop-closure) (Theorem 7.1) extends to a $(1+1)$-dimensional Minkowski spacetime model satisfying all results of this derivation.*
+**Theorem 7.1.** *The $S^1$ minimal observer model of [Loop Closure](/derivations/axioms/loop-closure) (Theorem 8.1) extends to a $(1+1)$-dimensional Minkowski spacetime model satisfying all results of this derivation.*
 
 *Proof.* Let $\mathcal{O} = S^1$ with period $T_0$ and coherence cost $\hbar$ per cycle. Embed in $\mathbb{R}^{1,1}$ with metric $ds^2 = c^2 dt^2 - dx^2$ (S1).
 
 - **Spatial extent**: $L_0 = cT_0$ (Theorem 3.1). $\checkmark$
 - **Universality**: All $S^1$ loops share the same ratio $L/T = c$ because $c$ is a property of the ambient metric. $\checkmark$
 - **Finiteness**: $c > 0$ (non-trivial boundary $L_0 > 0$) and $c < \infty$ (non-zero period $T_0 > 0$). $\checkmark$
-- **Minkowski signature**: The metric $ds^2 = c^2 dt^2 - dx^2$ has signature $(-,+)$, with the minus sign reflecting the conjugacy of spatial and temporal projections. $\checkmark$
+- **Minkowski signature**: The metric $ds^2 = c^2 dt^2 - dx^2$ has signature $(+,-)$, with the minus sign on the spatial term reflecting the conjugacy of spatial and temporal projections. $\checkmark$
 - **Maximal speed**: A signal along a null path ($ds^2 = 0$) travels at $dx/dt = c$. No timelike path exceeds this. $\checkmark$
 - **Massless limit**: An observer with $T_0 \to 0$, $L_0 \to 0$ at fixed $L_0/T_0 = c$ traces a null worldline ($ds^2 = 0$). $\checkmark$ $\square$
 
@@ -167,7 +167,7 @@ $$c = \frac{\text{coherence distance per cycle}}{\text{coherence time per cycle}
 - S1 (pseudo-Riemannian structure): Promotes smooth metric from Loop Closure/Action-Planck to ambient geometry. Quadratic form justified by isotropy of coherence measure. This is a structural assumption, not derived from the three axioms.
 
 **Deferred / conjectural:**
-- The continuum limit from the discrete interaction graph $\mathcal{G}$ to the continuous Minkowski metric requires the Hauptvermutung of causal set theory ([Time](/derivations/thermodynamics/time), Proposition 7.1), which is an external conjecture. This is the same deferred element as in the time derivation.
+- The continuum limit from the discrete interaction graph $\mathcal{G}$ to the continuous Minkowski metric requires the Hauptvermutung of causal set theory ([Time as Phase Ordering](/derivations/thermodynamics/time), Proposition 7.1), which is an external conjecture. This is the same deferred element as in the time derivation.
 - Propositions 6.1–6.2: The structural determination of $c$ and massless observers are interpretive (no new mathematical content beyond $L = cT$ and its limiting case).
 
 **Assessment:** The derivation of $c$ as a universal phase propagation speed, the $L = cT$ constraint, the maximal signaling speed, and the Minkowski signature are rigorously established from the axioms and S1. The connected-component scope and continuum-limit dependence are clearly flagged.
