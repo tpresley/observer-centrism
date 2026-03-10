@@ -29,7 +29,7 @@
     { "id": "holography/hawking-radiation", "title": "Hawking Radiation", "group": "holography", "status": "rigorous" },
     { "id": "holography/information-paradox", "title": "Information Paradox", "group": "holography", "status": "rigorous" },
     { "id": "gauge/electromagnetism", "title": "Electromagnetism", "group": "gauge", "status": "rigorous" },
-    { "id": "gauge/weak-interaction", "title": "Weak Interaction", "group": "gauge", "status": "draft" },
+    { "id": "gauge/weak-interaction", "title": "Weak Interaction", "group": "gauge", "status": "rigorous" },
     { "id": "gauge/color-force", "title": "Color Force", "group": "gauge", "status": "draft" },
     { "id": "gauge/standard-model-group", "title": "SM Gauge Group", "group": "gauge", "status": "draft" },
     { "id": "flavor/mixing-angles", "title": "Flavor Mixing (PMNS/CKM)", "group": "flavor", "status": "draft" },
@@ -37,7 +37,7 @@
     { "id": "cosmology/baryogenesis", "title": "Baryogenesis", "group": "cosmology", "status": "draft" },
     { "id": "cosmology/coupling-constants", "title": "Coupling Constants", "group": "cosmology", "status": "draft" },
     { "id": "thermodynamics-ext/first-law", "title": "Coherence First Law", "group": "thermo-ext", "status": "rigorous" },
-    { "id": "thermodynamics-ext/fisher-metric", "title": "Fisher Information Metric", "group": "thermo-ext", "status": "draft" },
+    { "id": "thermodynamics-ext/fisher-metric", "title": "Fisher Information Metric", "group": "thermo-ext", "status": "rigorous" },
     { "id": "thermodynamics-ext/renormalization", "title": "Renormalization Group", "group": "thermo-ext", "status": "rigorous" },
     { "id": "thermodynamics-ext/distinguishability-conservation", "title": "Conservation of Distinguishability", "group": "thermo-ext", "status": "rigorous" },
     { "id": "gauge/chirality-selection", "title": "Chirality Selection", "group": "gauge", "status": "draft" }

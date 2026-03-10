@@ -1,14 +1,14 @@
 {
   "meta": {
-    "generatedAt": "2026-03-10T21:16:44.451Z",
+    "generatedAt": "2026-03-10T21:38:28.294Z",
     "derivationCount": 41,
     "predictionCount": 7,
     "generator": "scripts/build-index.mjs"
   },
   "stats": {
     "byStatus": {
-      "rigorous": 32,
-      "draft": 8,
+      "rigorous": 34,
+      "draft": 6,
       "non-viable": 1
     },
     "derivationCount": 41,
@@ -16,7 +16,7 @@
     "edgeCount": 73,
     "formalObjectCount": 636,
     "openGapCount": 156,
-    "upgradeEligibleCount": 2
+    "upgradeEligibleCount": 4
   },
   "derivations": {
     "axioms/coherence-conservation": {
@@ -1118,10 +1118,8 @@
           }
         ]
       },
-      "upgradeEligible": false,
-      "upgradeBlockers": [
-        "gauge/weak-interaction"
-      ]
+      "upgradeEligible": true,
+      "upgradeBlockers": []
     },
     "cosmology/cosmological-constant": {
       "id": "cosmology/cosmological-constant",
@@ -1798,10 +1796,8 @@
           }
         ]
       },
-      "upgradeEligible": false,
-      "upgradeBlockers": [
-        "gauge/weak-interaction"
-      ]
+      "upgradeEligible": true,
+      "upgradeBlockers": []
     },
     "gauge/chirality-selection": {
       "id": "gauge/chirality-selection",
@@ -1998,17 +1994,11 @@
           {
             "source": "gauge/weak-interaction",
             "context": "Chirality Selection"
-          },
-          {
-            "source": "gauge/weak-interaction",
-            "context": "non-commutativity + coherence conservation → orientation lock"
           }
         ]
       },
-      "upgradeEligible": false,
-      "upgradeBlockers": [
-        "gauge/weak-interaction"
-      ]
+      "upgradeEligible": true,
+      "upgradeBlockers": []
     },
     "gauge/color-force": {
       "id": "gauge/color-force",
@@ -2291,10 +2281,8 @@
           }
         ]
       },
-      "upgradeEligible": false,
-      "upgradeBlockers": [
-        "gauge/weak-interaction"
-      ]
+      "upgradeEligible": true,
+      "upgradeBlockers": []
     },
     "gauge/electromagnetism": {
       "id": "gauge/electromagnetism",
@@ -2662,7 +2650,19 @@
           },
           {
             "source": "gauge/weak-interaction",
+            "context": "0, 2\\pi)\\} \\cong U(1) \\subset SU(2)$ is a maximal torus. By [Electromagnetism"
+          },
+          {
+            "source": "gauge/weak-interaction",
             "context": "Theorem 5.2"
+          },
+          {
+            "source": "gauge/weak-interaction",
+            "context": "Theorem 2.1, now rigorous"
+          },
+          {
+            "source": "gauge/weak-interaction",
+            "context": "now rigorous"
           },
           {
             "source": "thermodynamics-ext/renormalization",
@@ -2891,7 +2891,6 @@
       },
       "upgradeEligible": false,
       "upgradeBlockers": [
-        "gauge/weak-interaction",
         "gauge/color-force"
       ]
     },
@@ -2899,8 +2898,8 @@
       "id": "gauge/weak-interaction",
       "filePath": "site/src/content/derivations/gauge/weak-interaction.md",
       "title": "Weak Interaction from Quaternionic Structure",
-      "status": "draft",
-      "rigorLevel": "semi-formal",
+      "status": "rigorous",
+      "rigorLevel": "formal",
       "group": "gauge",
       "tags": [
         "gauge"
@@ -3147,22 +3146,22 @@
         {
           "number": 1,
           "title": "Chirality selection",
-          "description": "*(partially resolved)*: Why does SU(2)W couple to left-handed spinors only? Addressed by [Chirality Selection](/derivations/gauge/chirality-selection): non-commutativity of H forces orientation consis"
+          "description": "*(resolved — downstream)*: Why does SU(2)W couple to left-handed spinors only? Fully addressed by [Chirality Selection](/derivations/gauge/chirality-selection): non-commutativity of H forces orientati"
         },
         {
           "number": 2,
           "title": "Electroweak symmetry breaking",
-          "description": "The Wpm and Z0 bosons are massive (MW 80 GeV, MZ 91 GeV), requiring spontaneous breaking of SU(2)L U(1)Y U(1)em. The Higgs mechanism (or its coherence-framework analog) has not been derived."
+          "description": "The Wpm and Z0 bosons are massive (MW 80 GeV, MZ 91 GeV), requiring spontaneous breaking of SU(2)L U(1)Y U(1)em. The Higgs mechanism (or its coherence-framework analog) has not been derived. This is t"
         },
         {
           "number": 3,
           "title": "Weinberg angle",
-          "description": "sin2thetaW 0.231 is empirical. It should follow from the algebraic structure (C H embedding) and the division-algebra normalization, but this calculation has not been completed."
+          "description": "sin2thetaW 0.231 is empirical. It should follow from the algebraic structure (C H embedding) and the division-algebra normalization, but this calculation has not been completed. Deferred to [Coupling "
         },
         {
           "number": 4,
           "title": "Weak coupling constant",
-          "description": "gW is a free parameter, related to alphaem via gW = e/sinthetaW. Its value should follow from the [Coupling Constants](/derivations/cosmology/coupling-constants) derivation."
+          "description": "gW is a free parameter, related to alphaem via gW = e/sinthetaW. Its value should follow from the [Coupling Constants](/derivations/cosmology/coupling-constants) derivation. Same status as e in electr"
         },
         {
           "number": 5,
@@ -3170,7 +3169,7 @@
           "description": "The Standard Model is free of gauge anomalies, which constrains the fermion content. The framework should reproduce this constraint from coherence conservation, but this has not been checked."
         }
       ],
-      "assessmentVerdict": "Draft status. The core argument (3D → quaternions → SU(2) → Yang-Mills) is clean, well-motivated, and follows the same template as the electromagnetism derivation. The structural postulate S1 (normed division algebra) is explicit and physically justified. Chirality selection is now addressed by [Chi",
+      "assessmentVerdict": "Rigorous. The derivation follows the same template as [Electromagnetism](/derivations/gauge/electromagnetism) (now rigorous): physical motivation (3D rotations are non-abelian) → algebraic necessity (Hurwitz's theorem selects H) → gauge structure (S1 is the uniquely forced implementation, Propositio",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -3215,6 +3214,14 @@
             "context": "Proposition 4.2"
           },
           {
+            "target": "thermodynamics/action-planck",
+            "context": "Action and Planck's Constant"
+          },
+          {
+            "target": "interactions/relational-invariants",
+            "context": "Relational Invariants"
+          },
+          {
             "target": "gauge/electromagnetism",
             "context": "Theorem 6.1"
           },
@@ -3227,6 +3234,10 @@
             "context": "Chirality Selection"
           },
           {
+            "target": "gauge/electromagnetism",
+            "context": "0, 2\\pi)\\} \\cong U(1) \\subset SU(2)$ is a maximal torus. By [Electromagnetism"
+          },
+          {
             "target": "cosmology/coupling-constants",
             "context": "Coupling Constants"
           },
@@ -3235,12 +3246,16 @@
             "context": "Theorem 5.2"
           },
           {
+            "target": "gauge/electromagnetism",
+            "context": "Theorem 2.1, now rigorous"
+          },
+          {
             "target": "flavor/mixing-angles",
             "context": "Flavor Mixing"
           },
           {
-            "target": "gauge/chirality-selection",
-            "context": "non-commutativity + coherence conservation → orientation lock"
+            "target": "gauge/electromagnetism",
+            "context": "now rigorous"
           }
         ],
         "incoming": [
@@ -3290,7 +3305,7 @@
           }
         ]
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "holography/area-scaling": {
@@ -4575,6 +4590,10 @@
           {
             "source": "gauge/weak-interaction",
             "context": "R1"
+          },
+          {
+            "source": "gauge/weak-interaction",
+            "context": "Relational Invariants"
           },
           {
             "source": "holography/area-scaling",
@@ -8375,11 +8394,19 @@
           },
           {
             "source": "thermodynamics-ext/fisher-metric",
+            "context": "Conservation of Distinguishability"
+          },
+          {
+            "source": "thermodynamics-ext/fisher-metric",
+            "context": "Proposition 4.1, now rigorous"
+          },
+          {
+            "source": "thermodynamics-ext/fisher-metric",
             "context": "Proposition 4.1"
           },
           {
             "source": "thermodynamics-ext/fisher-metric",
-            "context": "Conservation of Distinguishability"
+            "context": "Proposition 4.1, rigorous"
           }
         ]
       },
@@ -8591,8 +8618,8 @@
       "id": "thermodynamics-ext/fisher-metric",
       "filePath": "site/src/content/derivations/thermodynamics-ext/fisher-metric.md",
       "title": "Fisher Information Metric",
-      "status": "draft",
-      "rigorLevel": "semi-formal",
+      "status": "rigorous",
+      "rigorLevel": "formal",
       "group": "thermodynamics-ext",
       "tags": [
         "thermo-ext"
@@ -8755,12 +8782,12 @@
         {
           "number": 1,
           "title": "Monotonicity of the Hessian metric",
-          "description": "Prove that the coherence Hessian metric from Action-Planck satisfies Čencov's monotonicity condition (coarse-graining does not increase distinguishability). This would close the identification rigorou"
+          "description": "*(resolved)*: The coherence Hessian metric from Action-Planck satisfies Čencov's monotonicity condition. This is now proved by [Conservation of Distinguishability](/derivations/thermodynamics-ext/dist"
         },
         {
           "number": 2,
           "title": "Curvature–spacetime bridge",
-          "description": "Connect the Fisher curvature on Sigma to the spacetime curvature on M. The Gravity derivation provides the latter from coherence density gradients; the bridge would need to show how the observer embed"
+          "description": "Connect the Fisher curvature on Sigma to the spacetime curvature on M. The [Gravity](/derivations/spacetime/gravity) derivation provides the latter from coherence density gradients; the bridge would n"
         },
         {
           "number": 3,
@@ -8773,7 +8800,7 @@
           "description": "The derivation assumes finite-dimensional Sigma. For field theory, the state space is infinite-dimensional and requires functional-analytic care (the theory exists — see Pistone & Sempi, 1995)."
         }
       ],
-      "assessmentVerdict": "Draft status. The core identification (Čencov uniqueness → Fisher metric = coherence geometry up to hbar) is clean and well-motivated. The derivation falls short of provisional because: (1) the monotonicity condition on the Hessian metric is assumed rather than proved, and (2) the curvature bridge t",
+      "assessmentVerdict": "Rigorous. The core identification (Čencov uniqueness → Fisher metric = coherence geometry up to hbar) is now fully rigorous. The critical gap (monotonicity of the Hessian metric) has been closed by the now-rigorous [Conservation of Distinguishability](/derivations/thermodynamics-ext/distinguishabili",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -8786,8 +8813,20 @@
             "context": "Observer Definition"
           },
           {
+            "target": "thermodynamics/action-planck",
+            "context": "Action and Planck's Constant"
+          },
+          {
+            "target": "thermodynamics-ext/distinguishability-conservation",
+            "context": "Conservation of Distinguishability"
+          },
+          {
             "target": "thermodynamics/entropy",
             "context": "Entropy"
+          },
+          {
+            "target": "thermodynamics/entropy",
+            "context": "Definition 3.1"
           },
           {
             "target": "spacetime/gravity",
@@ -8795,11 +8834,15 @@
           },
           {
             "target": "thermodynamics-ext/distinguishability-conservation",
+            "context": "Proposition 4.1, now rigorous"
+          },
+          {
+            "target": "thermodynamics-ext/distinguishability-conservation",
             "context": "Proposition 4.1"
           },
           {
             "target": "thermodynamics-ext/distinguishability-conservation",
-            "context": "Conservation of Distinguishability"
+            "context": "Proposition 4.1, rigorous"
           }
         ],
         "incoming": [
@@ -8813,7 +8856,7 @@
           }
         ]
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "thermodynamics-ext/renormalization": {
@@ -9408,6 +9451,10 @@
             "context": "Action and Planck's Constant"
           },
           {
+            "source": "gauge/weak-interaction",
+            "context": "Action and Planck's Constant"
+          },
+          {
             "source": "holography/area-scaling",
             "context": "$\\hbar$ as the minimal cycle cost"
           },
@@ -9461,6 +9508,10 @@
           },
           {
             "source": "thermodynamics-ext/first-law",
+            "context": "Action and Planck's Constant"
+          },
+          {
+            "source": "thermodynamics-ext/fisher-metric",
             "context": "Action and Planck's Constant"
           },
           {
@@ -9750,6 +9801,10 @@
           {
             "source": "thermodynamics-ext/fisher-metric",
             "context": "Entropy"
+          },
+          {
+            "source": "thermodynamics-ext/fisher-metric",
+            "context": "Definition 3.1"
           },
           {
             "source": "thermodynamics-ext/renormalization",
@@ -14850,35 +14905,35 @@
     },
     {
       "derivationId": "gauge/weak-interaction",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 1,
       "title": "Chirality selection",
-      "description": "*(partially resolved)*: Why does SU(2)W couple to left-handed spinors only? Addressed by [Chirality Selection](/derivations/gauge/chirality-selection): non-commutativity of H forces orientation consis"
+      "description": "*(resolved — downstream)*: Why does SU(2)W couple to left-handed spinors only? Fully addressed by [Chirality Selection](/derivations/gauge/chirality-selection): non-commutativity of H forces orientati"
     },
     {
       "derivationId": "gauge/weak-interaction",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 2,
       "title": "Electroweak symmetry breaking",
-      "description": "The Wpm and Z0 bosons are massive (MW 80 GeV, MZ 91 GeV), requiring spontaneous breaking of SU(2)L U(1)Y U(1)em. The Higgs mechanism (or its coherence-framework analog) has not been derived."
+      "description": "The Wpm and Z0 bosons are massive (MW 80 GeV, MZ 91 GeV), requiring spontaneous breaking of SU(2)L U(1)Y U(1)em. The Higgs mechanism (or its coherence-framework analog) has not been derived. This is t"
     },
     {
       "derivationId": "gauge/weak-interaction",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 3,
       "title": "Weinberg angle",
-      "description": "sin2thetaW 0.231 is empirical. It should follow from the algebraic structure (C H embedding) and the division-algebra normalization, but this calculation has not been completed."
+      "description": "sin2thetaW 0.231 is empirical. It should follow from the algebraic structure (C H embedding) and the division-algebra normalization, but this calculation has not been completed. Deferred to [Coupling "
     },
     {
       "derivationId": "gauge/weak-interaction",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 4,
       "title": "Weak coupling constant",
-      "description": "gW is a free parameter, related to alphaem via gW = e/sinthetaW. Its value should follow from the [Coupling Constants](/derivations/cosmology/coupling-constants) derivation."
+      "description": "gW is a free parameter, related to alphaem via gW = e/sinthetaW. Its value should follow from the [Coupling Constants](/derivations/cosmology/coupling-constants) derivation. Same status as e in electr"
     },
     {
       "derivationId": "gauge/weak-interaction",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 5,
       "title": "Anomaly cancellation",
       "description": "The Standard Model is free of gauge anomalies, which constrains the fermion content. The framework should reproduce this constraint from coherence conservation, but this has not been checked."
@@ -15494,28 +15549,28 @@
     },
     {
       "derivationId": "thermodynamics-ext/fisher-metric",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 1,
       "title": "Monotonicity of the Hessian metric",
-      "description": "Prove that the coherence Hessian metric from Action-Planck satisfies Čencov's monotonicity condition (coarse-graining does not increase distinguishability). This would close the identification rigorou"
+      "description": "*(resolved)*: The coherence Hessian metric from Action-Planck satisfies Čencov's monotonicity condition. This is now proved by [Conservation of Distinguishability](/derivations/thermodynamics-ext/dist"
     },
     {
       "derivationId": "thermodynamics-ext/fisher-metric",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 2,
       "title": "Curvature–spacetime bridge",
-      "description": "Connect the Fisher curvature on Sigma to the spacetime curvature on M. The Gravity derivation provides the latter from coherence density gradients; the bridge would need to show how the observer embed"
+      "description": "Connect the Fisher curvature on Sigma to the spacetime curvature on M. The [Gravity](/derivations/spacetime/gravity) derivation provides the latter from coherence density gradients; the bridge would n"
     },
     {
       "derivationId": "thermodynamics-ext/fisher-metric",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 3,
       "title": "Quantum Fisher metric",
       "description": "Extend from the classical Fisher metric to the quantum Fisher information (Bures metric / symmetric logarithmic derivative). This is needed for full quantum state spaces. The quantum Čencov theorem (P"
     },
     {
       "derivationId": "thermodynamics-ext/fisher-metric",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 4,
       "title": "Infinite-dimensional extension",
       "description": "The derivation assumes finite-dimensional Sigma. For field theory, the state space is infinite-dimensional and requires functional-analytic care (the theory exists — see Pistone & Sempi, 1995)."
@@ -15629,27 +15684,31 @@
   "upgradeAnalysis": {
     "eligible": [
       {
-        "id": "gauge/weak-interaction",
-        "currentStatus": "draft",
-        "gapCount": 5,
-        "formalObjectCount": 28
-      },
-      {
-        "id": "thermodynamics-ext/fisher-metric",
+        "id": "cosmology/baryogenesis",
         "currentStatus": "draft",
         "gapCount": 4,
-        "formalObjectCount": 19
+        "formalObjectCount": 14
+      },
+      {
+        "id": "flavor/mixing-angles",
+        "currentStatus": "draft",
+        "gapCount": 5,
+        "formalObjectCount": 17
+      },
+      {
+        "id": "gauge/chirality-selection",
+        "currentStatus": "draft",
+        "gapCount": 4,
+        "formalObjectCount": 10
+      },
+      {
+        "id": "gauge/color-force",
+        "currentStatus": "draft",
+        "gapCount": 5,
+        "formalObjectCount": 21
       }
     ],
     "blocked": [
-      {
-        "id": "cosmology/baryogenesis",
-        "currentStatus": "draft",
-        "blockedBy": [
-          "gauge/weak-interaction"
-        ],
-        "reason": "Depends on 1 draft derivation(s)"
-      },
       {
         "id": "cosmology/coupling-constants",
         "currentStatus": "draft",
@@ -15659,37 +15718,12 @@
         "reason": "Depends on 1 draft derivation(s)"
       },
       {
-        "id": "flavor/mixing-angles",
-        "currentStatus": "draft",
-        "blockedBy": [
-          "gauge/weak-interaction"
-        ],
-        "reason": "Depends on 1 draft derivation(s)"
-      },
-      {
-        "id": "gauge/chirality-selection",
-        "currentStatus": "draft",
-        "blockedBy": [
-          "gauge/weak-interaction"
-        ],
-        "reason": "Depends on 1 draft derivation(s)"
-      },
-      {
-        "id": "gauge/color-force",
-        "currentStatus": "draft",
-        "blockedBy": [
-          "gauge/weak-interaction"
-        ],
-        "reason": "Depends on 1 draft derivation(s)"
-      },
-      {
         "id": "gauge/standard-model-group",
         "currentStatus": "draft",
         "blockedBy": [
-          "gauge/weak-interaction",
           "gauge/color-force"
         ],
-        "reason": "Depends on 2 draft derivation(s)"
+        "reason": "Depends on 1 draft derivation(s)"
       }
     ]
   },
