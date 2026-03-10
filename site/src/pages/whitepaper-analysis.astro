@@ -1,0 +1,598 @@
+---
+import MainLayout from '../components/layouts/MainLayout.astro'
+
+// Coverage status types
+type Coverage = 'covered' | 'partial' | 'not-covered'
+type Viability = 'high' | 'medium' | 'low' | 'not-viable'
+
+interface Idea {
+  id: number
+  name: string
+  wpSection: string
+  description: string
+  coverage: Coverage
+  coverageNotes: string
+  viability: Viability
+  viabilityNotes: string
+}
+
+const ideas: Idea[] = [
+  // --- Core Postulate & Logic ---
+  {
+    id: 1,
+    name: "KL divergence as fundamental variational principle",
+    wpSection: "Core Postulate (§1)",
+    description: "Observers minimize the Kullback-Leibler divergence D(q||p_θ) between their predictive model and empirical encounters. Persistence requires informational equilibrium.",
+    coverage: 'partial',
+    coverageNotes: "The current framework's Axiom 1 (coherence conservation) serves a similar structural role — both enforce self-consistency — but uses a subadditive measure on a σ-algebra rather than KL divergence. The specific information-theoretic machinery (predictive models, empirical distributions) is absent.",
+    viability: 'medium',
+    viabilityNotes: "The KL divergence could potentially be derived as a consequence of coherence conservation applied to statistical descriptions. The connection would run: coherence conservation → constraints on probability assignments → KL-like divergence as the unique measure of consistency. However, the current framework already achieves what KL minimization is intended to achieve (stable observers) through loop closure and coherence conservation, so this may be a parallel formulation rather than an extension."
+  },
+  {
+    id: 2,
+    name: "Fisher information metric as inference geometry",
+    wpSection: "Core Postulate (§1), Info Geometry (§2)",
+    description: "The second-order expansion of D_KL defines the Fisher information metric G_ij on the parameter manifold. This metric measures 'informational inertia' — how resistant a model is to being updated. Curvature in G corresponds to physical curvature.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework derives geometry from coherence density gradients and loop closure, not from information-theoretic metrics. The Fisher metric does not appear in any derivation.",
+    viability: 'medium',
+    viabilityNotes: "The Fisher metric is mathematically well-established (Čencov's theorem proves it is the unique Riemannian metric on statistical manifolds up to scaling). If the framework's coherence measure can be expressed as a statistical model, the Fisher metric would emerge naturally. The connection would strengthen the action-planck derivation's structural postulate S1 (smooth coherence measure). Worth pursuing as a mathematical deepening, but not required for existing results."
+  },
+  {
+    id: 3,
+    name: "Finite recursion depth postulate",
+    wpSection: "Core Postulate (§1)",
+    description: "An observer modeling itself modeling the world produces a recursion that must stabilize after finite depth L. The information exchanged between successive self-models converges: lim_{ℓ→L} ΔI_ℓ → 0. This bounded self-reference introduces natural quantization.",
+    coverage: 'partial',
+    coverageNotes: "Loop closure (Axiom 3) serves a structurally similar role — it requires that observer dynamics be cyclic/bounded. The bootstrap mechanism's ceiling bound (from finite total coherence) also limits recursion depth. But the specific formulation as 'finite depth of self-modeling' is not present.",
+    viability: 'medium',
+    viabilityNotes: "This could be reframed within the current framework as a consequence of finite coherence budget: an observer with coherence C can support at most a bounded number of self-referential layers before exhausting its budget. The connection to quantization (only discrete stable updates) is structurally similar to how loop closure produces discrete phase increments. Could add conceptual depth to the bootstrap mechanism's ceiling bound."
+  },
+  {
+    id: 4,
+    name: "Self-consistency hierarchy (closure levels)",
+    wpSection: "Core Postulate (§1)",
+    description: "Physics emerges through successive closure levels: informational → metric → gauge → spinorial → geometric → global. Each level is the logical completion of the previous one.",
+    coverage: 'covered',
+    coverageNotes: "The current framework has an analogous derivation chain: Foundation → Dynamics → Geometry → Quantum → Particles → Holography. The ordering differs and the current version's chain is more detailed (28 derivations vs. 6 closure levels), but the concept of successive structural necessities building on each other is the same.",
+    viability: 'high',
+    viabilityNotes: "Already absorbed. The current framework's dependency graph is the rigorous realization of this idea."
+  },
+  // --- Informational Geometry & OC Action ---
+  {
+    id: 5,
+    name: "Observer-Centric Action (unified variational principle)",
+    wpSection: "Info Geometry (§2)",
+    description: "S_OC = ∫d⁴x√(-g) [γ G^{ij} ∇_iθ ∇_jθ − L_KL]. A single action whose variation w.r.t. θ gives quantum dynamics and w.r.t. g_μν gives Einstein equations.",
+    coverage: 'partial',
+    coverageNotes: "The current framework derives Einstein equations (via Lovelock uniqueness) and quantum dynamics (via Born rule, preferred basis) separately. Both are derived from the same axioms, but not from a single explicit action functional. The action-planck derivation identifies action with coherence cost but does not write a unified Lagrangian.",
+    viability: 'medium',
+    viabilityNotes: "A unified action principle could potentially be constructed from the coherence cost formalism. The action-planck derivation's identification of S = coherence cost already provides the kernel. The challenge is that the current framework deliberately avoids assuming a specific Lagrangian form — it derives field equations from structural constraints (Lovelock theorem, etc.). Writing an explicit action would be a mathematical convenience rather than a conceptual advance, but could aid computation."
+  },
+  {
+    id: 6,
+    name: "γ parameter (informational density coupling)",
+    wpSection: "Info Geometry (§2), Scale Inv (§3)",
+    description: "A dimensionful parameter γ linking informational and geometric curvature. It measures the density of self-consistent information per unit spacetime volume.",
+    coverage: 'not-covered',
+    coverageNotes: "No direct analog in the current framework. The framework uses coherence as a primitive measure but does not introduce a separate coupling parameter between informational and geometric sectors.",
+    viability: 'low',
+    viabilityNotes: "The current framework achieves the coupling between information and geometry through the structural mechanism of coherence density gradients curving the coherence geometry (gravity derivation). Introducing γ as an additional parameter would add a degree of freedom the current framework does not need. The fixed-line invariant γV_cτ = ℏ is interesting but its specific dimensional analysis is tied to the whitepaper's particular action formulation."
+  },
+  {
+    id: 7,
+    name: "Fixed-line invariant γV_cτ = ℏ",
+    wpSection: "Info Geometry (§2), Scale Inv (§3)",
+    description: "Scale covariance of the OC action requires that informational density × causal volume × update interval = ℏ. This makes Planck's constant the 'bandwidth of reality' — the maximum coherent action per causal cell.",
+    coverage: 'partial',
+    coverageNotes: "The current framework derives ℏ as the coherence cost of one minimal observer cycle (action-planck derivation). The conceptual content — ℏ as a self-consistency constraint, not an empirical input — is shared. But the specific dimensional mechanism (γV_cτ) is different.",
+    viability: 'low',
+    viabilityNotes: "The current framework's derivation of ℏ from minimal cycle cost is cleaner and requires fewer assumptions. The γV_cτ formulation depends on the specific OC action and γ parameter, which are not part of the current framework. The insight that ℏ is not empirical but structural is already fully captured."
+  },
+  // --- Emergent Dynamics ---
+  {
+    id: 8,
+    name: "Informational field equation → Schrödinger equation",
+    wpSection: "Emergent Dynamics (§4)",
+    description: "Varying S_OC w.r.t. θ gives a covariant wave equation. In the nonrelativistic limit with θ = ψe^{-iω₀t}, this reduces to iℏ∂_tψ = -(ℏ²/2m)∇²ψ + Uψ. Quantum mechanics emerges as oscillatory self-correction dynamics.",
+    coverage: 'covered',
+    coverageNotes: "The current framework derives quantum mechanics differently — through the Born rule (uniqueness of |ψ|² as probability measure), preferred basis (from relational invariants), and measurement (as Type III interaction). The Schrödinger equation is recovered but arrives via a different route. The conceptual insight (QM as coherence dynamics) is shared.",
+    viability: 'high',
+    viabilityNotes: "Already absorbed via a different and arguably more rigorous mechanism. The current framework derives the Born rule from first principles rather than recovering the Schrödinger equation from a specific action. Both approaches converge on the same physics."
+  },
+  {
+    id: 9,
+    name: "Mass as informational inertia / update rate",
+    wpSection: "Emergent Dynamics (§4)",
+    description: "Mass is the curvature of the informational potential: m² = (1/γ)∂²L_KL/∂θ². Equivalently, m = ℏ/(τc²) — the slower an observer updates, the heavier it is.",
+    coverage: 'partial',
+    coverageNotes: "The current framework identifies mass as rest-cycle frequency: m = ℏω_rest/c². This is structurally similar to m = ℏ/(τc²) since ω_rest = 2π/τ. The interpretation differs — 'cycle frequency' vs. 'update rate' — but the mathematical content is equivalent.",
+    viability: 'high',
+    viabilityNotes: "Already essentially absorbed. The m = ℏω/c² identification in the current framework and m = ℏ/(τc²) in the whitepaper are the same relationship expressed differently. The 'informational inertia' interpretation adds a nice conceptual layer."
+  },
+  {
+    id: 10,
+    name: "QM and GR as dual informational invariances",
+    wpSection: "Emergent Dynamics (§4)",
+    description: "Quantum theory preserves phase coherence under amplitude re-descriptions. General relativity preserves geometric coherence under coordinate re-descriptions. Both are faces of one invariance: information invariance under admissible transformations.",
+    coverage: 'covered',
+    coverageNotes: "The current framework achieves this unification explicitly: both QM and GR are derived from the same three axioms. Coherence conservation (Axiom 1) underlies both unitarity (QM) and the divergence-free stress tensor (GR). The current version's unification is structural rather than stated as a symmetry principle.",
+    viability: 'high',
+    viabilityNotes: "Already absorbed. The current framework provides the derivation that makes this insight rigorous."
+  },
+  // --- Higher-Order Closures ---
+  {
+    id: 11,
+    name: "U(1) gauge symmetry from local phase redundancy",
+    wpSection: "Higher-Order Closures (§5)",
+    description: "Distinct observers describing the same exchange with different internal phases require a compensating connection A_μ. Covariant derivative D_μ = ∂_μ + iqA_μ and curvature F_μν reproduce the Maxwell-Dirac system. Electromagnetism is the minimal coherence rule for phase redundancy.",
+    coverage: 'partial',
+    coverageNotes: "The current framework derives U(1) phase structure from loop closure (the minimal observer is a U(1) oscillator) and charge from winding number. Electromagnetism as a gauge theory is implicit but the explicit derivation from local phase redundancy to Maxwell equations is not present in the current 28 derivations.",
+    viability: 'high',
+    viabilityNotes: "The current framework already has U(1) as the fundamental observer symmetry (loop closure → phase oscillator). Deriving electromagnetism as the gauge theory of this U(1) is a natural and likely rigorous extension. The whitepaper's derivation follows standard gauge theory construction but grounds it in observer coherence. This would be a strong addition to the derivation chain."
+  },
+  {
+    id: 12,
+    name: "Quaternionic structure → SU(2) → weak force / spin",
+    wpSection: "Higher-Order Closures (§5)",
+    description: "Maintaining coherence across three orthogonal inference channels requires quaternionic structure (I,J,K with I²=J²=K²=IJK=-1). Covariance under rotation of the triple introduces SU(2) connection, producing spinorial fields and the weak interaction.",
+    coverage: 'partial',
+    coverageNotes: "The current framework derives spin from Z₂ winding classes in 3D (spin-statistics derivation) and three generations from dim SO(3) = 3. The SU(2) weak gauge symmetry is not explicitly derived. The topological approach (winding classes) differs fundamentally from the algebraic approach (quaternions).",
+    viability: 'medium',
+    viabilityNotes: "The quaternionic derivation of SU(2) is elegant but the connection to the current framework's topological approach needs work. The frameworks are not contradictory — quaternions are the double cover of SO(3), and Z₂ winding is the fundamental group of SO(3). The challenge is that the whitepaper's mechanism is algebraic (extending number systems) while the current framework's is topological (winding classes). A synthesis might be possible but would require careful development."
+  },
+  {
+    id: 13,
+    name: "Octonionic structure → G₂ → SU(3) → color",
+    wpSection: "Higher-Order Closures (§5)",
+    description: "At a further closure level, coherence among quaternionic observers requires octonions. Fixing a preferred imaginary axis reduces the automorphism group G₂ to its stabilizer SU(3), matching the color gauge group. The 'triplicity' of octonionic modes matches three fermion families.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework does not derive SU(3) color symmetry or the Standard Model gauge group. The three-generations derivation uses a topological argument (dim SO(3) = 3) which differs from the octonionic triplicity argument.",
+    viability: 'medium',
+    viabilityNotes: "The octonion → SU(3) connection is mathematically established (G₂ is the automorphism group of octonions, SU(3) is a maximal subgroup). Several research programs (Furey, Dixon, Todorov) explore this connection seriously. Within the current framework, the challenge is justifying why coherence maintenance requires octonionic structure specifically. The framework's bootstrap mechanism might provide this — if the hierarchy of number systems (R → C → H → O) can be mapped to the bootstrap's hierarchy of relational invariants, the octonionic ceiling would emerge naturally. This is speculative but promising."
+  },
+  {
+    id: 14,
+    name: "Standard Model gauge group U(1)×SU(2)×SU(3) from division algebras",
+    wpSection: "Higher-Order Closures (§5)",
+    description: "The full SM gauge group arises as the complete set of informational calibrations consistent with finite self-reference: complex (U(1)), quaternionic (SU(2)), octonionic (SU(3)). No larger group exists because octonions are the last division algebra.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework does not derive the SM gauge group. It predicts no grand unification (no larger group above SM), which is consistent, but does not positively derive why the gauge group is what it is.",
+    viability: 'medium',
+    viabilityNotes: "The division algebra program (R, C, H, O → no further algebras by Hurwitz's theorem) is a genuine mathematical fact. Mapping it to the observer hierarchy would be a major achievement. The current framework's bootstrap mechanism provides a natural hierarchy (each level generates new structure) and the fact that this hierarchy terminates (finite coherence budget) might connect to the Hurwitz theorem's termination at octonions. This is one of the most promising ideas in the whitepaper for potential absorption."
+  },
+  {
+    id: 15,
+    name: "Hyperkähler geometry of internal inference",
+    wpSection: "Higher-Order Closures (§5)",
+    description: "The complex and quaternionic structures together define a hyperkähler manifold with three covariantly constant complex structures. Its SU(2)_R holonomy generates family degeneracy and weak-interaction mixing.",
+    coverage: 'not-covered',
+    coverageNotes: "No analog in the current framework. The framework does not use hyperkähler geometry or internal manifold structure.",
+    viability: 'low',
+    viabilityNotes: "Hyperkähler manifolds are well-studied in mathematical physics (they arise in N=2 SUSY, which the current framework explicitly predicts does not exist). The specific application to family mixing is speculative and the mathematical justification in the whitepaper is thin. The connection to the current framework's topological approach to generations is unclear. Would require significant development to be viable."
+  },
+  // --- Global Conservation ---
+  {
+    id: 16,
+    name: "Total coherence current (multi-sector)",
+    wpSection: "Global Conservation (§6)",
+    description: "Each closure level contributes a current J^μ (metric, gauge, spinorial, geometric). Their sum is divergence-free: ∇_μ J^μ_total = 0. All conservation laws are projections of this single continuity equation.",
+    coverage: 'covered',
+    coverageNotes: "The current framework's Axiom 1 (coherence conservation) directly states this: coherence is globally conserved. The derivation of energy conservation, charge conservation, probability conservation, and the second law all follow as consequences of Axiom 1 applied to different sectors.",
+    viability: 'high',
+    viabilityNotes: "Already absorbed as Axiom 1 and its consequences across the derivation chain."
+  },
+  {
+    id: 17,
+    name: "Gravitational coherence bandwidth / G from update rate",
+    wpSection: "Global Conservation (§6)",
+    description: "Functional renormalization gives 1/(16πG) = α_grav(c³/ℏ)(γτ²). Matching to observed G gives τ ~ 10⁻⁶ s (coherence length cτ ~ 1 km). Gravity's weakness reflects its low informational refresh rate.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework notes that whether G is derivable from ℏ and c remains an open question (Chapter 6 of source document). It does not derive G from an update rate or give a specific coherence timescale.",
+    viability: 'low',
+    viabilityNotes: "The specific numerical prediction (τ ~ 10⁻⁶ s) depends on the whitepaper's γ parameter and OC action, which are not part of the current framework. The conceptual insight (gravity is weak because it involves long-range coherence maintenance) is interesting and qualitatively consistent with the current framework's picture of gravity as a coherence density gradient effect. But the quantitative mechanism cannot be transferred without also importing the OC action formalism."
+  },
+  {
+    id: 18,
+    name: "Coherence H-theorem (entropy from coherence diffusion)",
+    wpSection: "Global Conservation (§6)",
+    description: "Under finite bandwidth, coherence diffuses irreversibly: Ṡ_C = ∫(∇μ_C)²/T_I dV ≥ 0. Time's arrow is the direction of net coherence redistribution. At global equilibrium (∇C = 0), time loses its direction.",
+    coverage: 'covered',
+    coverageNotes: "The current framework derives the second law from the bootstrap mechanism: Type III interactions continuously generate relational invariants, some falling outside any bounded observer's domain. This is structurally equivalent — entropy increases because coherence redistributes to places the observer cannot access — but the mathematical formulation differs.",
+    viability: 'high',
+    viabilityNotes: "Already absorbed via a different but compatible mechanism. The H-theorem form (gradient-driven diffusion) might offer an alternative proof of the second law within the current framework, complementing the existing bootstrap-based argument."
+  },
+  {
+    id: 19,
+    name: "Informational First Law (thermodynamic form)",
+    wpSection: "Global Conservation (§6)",
+    description: "dU = δQ − δW where U is internal coherence, Q is curvature work, W is flux loss. The analog of thermodynamic energy conservation expressed in coherence variables.",
+    coverage: 'partial',
+    coverageNotes: "The current framework's entropy derivation recovers the second law and connects to Boltzmann entropy under a uniform-coherence assumption. The explicit first-law form (dU = δQ − δW in coherence variables) is not stated.",
+    viability: 'high',
+    viabilityNotes: "This is a straightforward rewriting of existing results in thermodynamic notation. The current framework's coherence conservation + entropy derivation already contain all the ingredients. Stating it explicitly as a 'first law' would be a useful notational contribution."
+  },
+  // --- Predictions ---
+  {
+    id: 20,
+    name: "Inference-load time dilation",
+    wpSection: "Predictions (§7)",
+    description: "Systems performing rapid internal inference exhibit clock-rate slow-down: τ_eff = τ/√(1+(γ/γ₀)²). Detectable via synchronized optical-lattice clocks at 10⁻¹⁸ precision.",
+    coverage: 'not-covered',
+    coverageNotes: "No analog in the current framework's 7 predictions. The current framework's time dilation comes from standard Lorentz invariance (derived from loop closure), not from informational load.",
+    viability: 'not-viable',
+    viabilityNotes: "This prediction depends entirely on the γ parameter and the specific OC action formalism. The current framework derives time from phase ordering, not from informational processing rate. There is no mechanism within the current axioms that would produce inference-dependent time dilation. The prediction is not transferable."
+  },
+  {
+    id: 21,
+    name: "Spin-torsion coupling",
+    wpSection: "Predictions (§7)",
+    description: "The quaternionic Dirac equation predicts an axial contact interaction L_int = ½γτ²(ψ̄Γ^μΓ₅ψ)². Produces sub-ppm deviations in g-factors or short-range spin-spin interactions.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework does not predict torsion. Its Einstein equations derivation (via Lovelock theorem) produces the standard torsion-free equations.",
+    viability: 'low',
+    viabilityNotes: "Torsion requires Einstein-Cartan theory rather than standard GR. The current framework's use of Lovelock's uniqueness theorem specifically constrains to the standard Einstein equations. If the framework were extended to include spinorial contributions to the connection (which is conceivable given the spin-statistics derivation), torsion effects could arise, but this would require new derivations beyond the current chain."
+  },
+  {
+    id: 22,
+    name: "Universal minimal noise floor",
+    wpSection: "Predictions (§7)",
+    description: "Every coherent system shows S_min = ℏ/(2V_cτ) — a universal spectral-density limit. Testable with quantum-limited interferometers.",
+    coverage: 'partial',
+    coverageNotes: "The current framework's holographic noise prediction (S_h = 2α_H ℓ_P/c) is structurally similar — both predict irreducible noise from the discrete structure of spacetime. The whitepaper's version depends on V_c and τ; the current version depends on ℓ_P and has a specific angular correlation structure.",
+    viability: 'medium',
+    viabilityNotes: "The holographic noise prediction in the current framework is more developed (it has a derived angular correlation function Γ(β) = cos β). The whitepaper's 'minimal noise floor' lacks this angular structure but has a different parametric form. The two might represent different limits of the same underlying effect. Worth investigating whether the current framework's Planck-scale noise can be re-expressed in bandwidth terms."
+  },
+  {
+    id: 23,
+    name: "Vacuum coherence pressure",
+    wpSection: "Predictions (§7)",
+    description: "Residual vacuum pressure P_coh ≈ -ℏ/(4V_cτ) ~ 10⁻¹⁶ Pa from informational density. Searchable via Casimir-like offsets.",
+    coverage: 'not-covered',
+    coverageNotes: "No direct analog. The current framework does not predict a specific vacuum pressure distinct from standard Casimir effects.",
+    viability: 'low',
+    viabilityNotes: "The prediction depends on the whitepaper's γV_cτ formalism. The numerical value (~10⁻¹⁶ Pa) is very small and likely undetectable. The current framework's holographic noise prediction addresses a similar regime (Planck-scale effects) with a more specific and testable signature."
+  },
+  {
+    id: 24,
+    name: "Dark energy from coherence density",
+    wpSection: "Predictions (§7)",
+    description: "Average coherence density ρ_info ∝ τ⁻⁴ predicts a nearly constant cosmological energy density consistent with observed dark energy magnitude.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework notes the cosmological constant as an open question (§15.3 of source document). The Einstein equations derivation mentions the cosmological constant via Lovelock uniqueness but does not compute its value.",
+    viability: 'medium',
+    viabilityNotes: "If the framework's coherence geometry has a natural ground-state energy density, this could contribute to the cosmological constant. The self-consistency fixed-point structure (universe as its own observer, holographic self-encoding) might constrain Λ. The specific ρ ∝ τ⁻⁴ scaling depends on the whitepaper formalism, but the general idea — that the cosmological constant is a coherence self-consistency condition — is compatible with the current framework's open question about computing Λ."
+  },
+  {
+    id: 25,
+    name: "Baryogenesis from SU(2)_R precession",
+    wpSection: "Predictions (§7)",
+    description: "Early-universe holonomy in the quaternionic structure produces axial bias η_B ≈ 6×10⁻¹⁰, matching observed baryon asymmetry without extra fields. Testable via CMB B-mode polarization.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework does not address baryogenesis or matter-antimatter asymmetry. The coherence-dual pairs derivation shows that pairs crystallize symmetrically (equal and opposite), which makes baryogenesis an open question.",
+    viability: 'medium',
+    viabilityNotes: "The current framework's coherence-dual pairs crystallize symmetrically by construction, so explaining baryon asymmetry requires a symmetry-breaking mechanism. If the quaternionic/SU(2) gauge structure can be derived within the framework (see idea #12), then an asymmetry from early-universe dynamics of that structure is conceivable. However, reproducing η_B ≈ 6×10⁻¹⁰ quantitatively would require significant new derivations."
+  },
+  {
+    id: 26,
+    name: "Gravitational coherence window (f_c ~ 10⁵ Hz)",
+    wpSection: "Predictions (§7)",
+    description: "The predicted gravitational update timescale τ ~ 10⁻⁶ s implies a characteristic frequency band f_c ~ 10⁵ Hz where coherence-pressure noise might appear — the 'heartbeat of spacetime.'",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework's holographic noise prediction is broadband (white noise), not concentrated at a specific frequency. No update timescale τ is predicted.",
+    viability: 'not-viable',
+    viabilityNotes: "This depends on the whitepaper's specific τ ~ 10⁻⁶ s prediction from the gravitational coherence bandwidth calculation, which has no analog in the current framework. The current framework's Planck-scale noise prediction does not feature a characteristic frequency."
+  },
+  {
+    id: 27,
+    name: "Cross-domain coherence scaling",
+    wpSection: "Predictions (§7)",
+    description: "Identical scaling exponents dΣ/dt = AΣ^{1/2}t⁻¹ for coherence growth across physical, biological, and cognitive networks. Turbulence, neural synchronization, and technological complexity follow the same law.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework restricts its scope to physics. While the bootstrap mechanism describes hierarchical growth, it does not predict specific scaling laws applicable to biology or cognition.",
+    viability: 'low',
+    viabilityNotes: "The bootstrap mechanism's universal character (each level generates new structure) is suggestive, but extending it to biological and cognitive domains requires bridging assumptions not present in the current framework. The specific power law Σ ~ (t/t₀)² is not derivable from the three axioms without additional domain-specific modeling."
+  },
+  {
+    id: 28,
+    name: "Numerical Standard Model coupling constants",
+    wpSection: "Executive Summary",
+    description: "Numerical simulations reproducing Standard Model coupling constants within 1% from a single parameter.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework acknowledges that computing specific coupling constants is an open problem (§15 of source document).",
+    viability: 'medium',
+    viabilityNotes: "If the division algebra hierarchy (ideas #13-14) can be rigorously connected to the current framework's bootstrap mechanism, coupling constant relationships might emerge from the algebraic structure. The claim of 1% accuracy in the whitepaper should be treated cautiously — the specific mechanism was not detailed in the available text, and coupling constant predictions require renormalization group analysis that the current framework has not developed."
+  },
+  // --- Philosophical & Interpretive ---
+  {
+    id: 29,
+    name: "Existence = consistency of observation",
+    wpSection: "Philosophy (§8)",
+    description: "Ontological reversal: the world does not exist first and get observed later. Existence is what remains consistent under observation. Objects are stable patterns of coherence.",
+    coverage: 'covered',
+    coverageNotes: "The current framework's ontology is essentially this: observers are physical structures satisfying a structural criterion (Axiom 2), and all physical structure is built from observer loops and their relational invariants. The block universe (holography §10.5) is the complete coherence dependency graph — existence is the fixed-point solution of self-consistency.",
+    viability: 'high',
+    viabilityNotes: "Already absorbed as the framework's foundational philosophy."
+  },
+  {
+    id: 30,
+    name: "Epistemology as physics (truth = KL equilibrium)",
+    wpSection: "Philosophy (§8)",
+    description: "Truth is minimal KL divergence. Knowledge is stable local coherence. Error is curvature in informational space. Learning is gradient descent on divergence.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework does not formalize epistemological concepts in terms of the physics. Its treatment of knowledge and truth is limited to the observer definition (maintaining invariants = being a knower).",
+    viability: 'low',
+    viabilityNotes: "While conceptually appealing, this extends beyond the framework's scope. The current framework deliberately restricts itself to deriving physics from axioms. The epistemological mapping (truth = equilibrium, etc.) is an interpretive layer that does not produce new physical predictions or derivations. The KL-specific formulation depends on the whitepaper's information-theoretic machinery."
+  },
+  {
+    id: 31,
+    name: "Consciousness as meta-coherence / dynamical invariant",
+    wpSection: "Philosophy (§8)",
+    description: "Consciousness is the subjective manifestation of meta-coherence — an observer's model including itself. Agency emerges from simulating multiple coherent futures. Free will is the experiential texture of finite recursion exploring alternatives.",
+    coverage: 'covered',
+    coverageNotes: "The source document's Chapter 14 (Mind and Agency) covers this in detail: second-order observers maintain invariants over their own invariant structure. Experience is the inside view of second-order relational invariants. Agency is coarse-grained coherence-preserving observer dynamics. The treatment is structurally similar though the language differs.",
+    viability: 'high',
+    viabilityNotes: "Already absorbed in the source document's treatment of mind and agency."
+  },
+  {
+    id: 32,
+    name: "Ethics from coherence geometry",
+    wpSection: "Philosophy (§8)",
+    description: "Actions decreasing global informational curvature (enhancing mutual coherence) are 'good.' Actions increasing curvature (deception, destruction of information) are 'bad.' Ethics = optimization of shared persistence.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework does not address ethics or moral philosophy.",
+    viability: 'not-viable',
+    viabilityNotes: "This is a philosophical extrapolation, not a physical derivation. The framework's axioms concern conservation and structure, not normative claims. While the metaphor is evocative, 'increasing coherence = good' conflates a physical quantity with a value judgment. The framework does not provide machinery to make this connection rigorous."
+  },
+  {
+    id: 33,
+    name: "Informational redshift beyond GR",
+    wpSection: "Predictions (§7)",
+    description: "Frequency drift proportional to curvature gradient of coherence: Δν/ν ≈ (ℏ/2mc²)∫ΔR dl. May yield residuals in gravitational-redshift measurements beyond standard GR corrections.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework derives standard GR (Einstein equations via Lovelock theorem) and does not predict deviations from standard gravitational redshift.",
+    viability: 'low',
+    viabilityNotes: "The current framework's Einstein equations derivation arrives at exactly the standard equations (no corrections). Any deviation would contradict the Lovelock uniqueness argument used in the derivation. For this prediction to be viable, the framework would need a mechanism producing sub-leading corrections — potentially from the discrete relational invariant network at Planck scales — but this is beyond current development."
+  },
+  {
+    id: 34,
+    name: "Constraint-pressure waves in BECs",
+    wpSection: "Predictions (§7)",
+    description: "Coherence-acoustic dispersion ω² = c_σ²k² + ℏ²k⁴/4m² producing dual linear + quartic dispersion branches in Bose-Einstein condensates or nonlinear optical media.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework does not make predictions about BEC dispersion relations.",
+    viability: 'low',
+    viabilityNotes: "The Bogoliubov dispersion relation for BECs already has this form (ω² = c_s²k² + (ℏk²/2m)²) from standard quantum mechanics. The prediction in the whitepaper appears to rediscover a known result rather than predict a new effect. Within the current framework, BEC behavior would follow from the standard quantum mechanics that the framework derives, without additional prediction."
+  },
+  {
+    id: 35,
+    name: "Collective coherence in biological/neural networks",
+    wpSection: "Predictions (§7)",
+    description: "Frictionless information flow in phase-locked networks (biological, neural, computational) once mutual coherence saturates the invariant. Observable as anomalous synchronization efficiency.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework restricts its scope to fundamental physics and does not make predictions about biological systems.",
+    viability: 'low',
+    viabilityNotes: "While the bootstrap mechanism describes universal hierarchical structure, applying it to biological synchronization requires bridging multiple levels of description. The claim of 'frictionless information flow' in neural networks at coherence saturation is speculative and would require showing that biological systems can reach the relevant coherence threshold — which involves thermodynamics and noise at scales far above the Planck scale."
+  }
+]
+
+const coverageLabel = (c: Coverage) => {
+  switch(c) {
+    case 'covered': return 'Covered'
+    case 'partial': return 'Partial'
+    case 'not-covered': return 'Not covered'
+  }
+}
+
+const coverageClass = (c: Coverage) => `wa-cov-${c}`
+
+const viabilityLabel = (v: Viability) => {
+  switch(v) {
+    case 'high': return 'High'
+    case 'medium': return 'Medium'
+    case 'low': return 'Low'
+    case 'not-viable': return 'Not viable'
+  }
+}
+
+const viabilityClass = (v: Viability) => `wa-via-${v}`
+
+// Summary stats
+const covered = ideas.filter(i => i.coverage === 'covered').length
+const partial = ideas.filter(i => i.coverage === 'partial').length
+const notCovered = ideas.filter(i => i.coverage === 'not-covered').length
+const highViability = ideas.filter(i => i.viability === 'high').length
+const medViability = ideas.filter(i => i.viability === 'medium').length
+---
+
+<MainLayout title="Whitepaper Analysis">
+  <h1>Prior Whitepaper: Idea Analysis</h1>
+  <p>
+    An earlier version of the Observer-Centrism framework (dated October 2025) used a
+    different mathematical foundation &mdash; information geometry, KL divergence, and
+    a specific variational action &mdash; to pursue many of the same goals. That version
+    was less rigorous and likely contains logic and mathematical errors, but some of its
+    ideas may be worth pursuing within the current, more rigorous framework.
+  </p>
+  <p>
+    This page catalogs every distinct idea from that whitepaper, assesses whether it is
+    already covered by the current framework, and evaluates the viability of absorbing
+    ideas that are not yet covered. Viability is judged by whether an idea is
+    <em>plausibly derivable</em> from the current framework's axioms and derivation chain,
+    regardless of the logic used in the whitepaper.
+  </p>
+
+  <div class="wa-summary">
+    <div class="wa-stat">
+      <div class="wa-stat-value">{ideas.length}</div>
+      <div class="wa-stat-label">Ideas cataloged</div>
+    </div>
+    <div class="wa-stat">
+      <div class="wa-stat-value">{covered}</div>
+      <div class="wa-stat-label">Already covered</div>
+    </div>
+    <div class="wa-stat">
+      <div class="wa-stat-value">{partial}</div>
+      <div class="wa-stat-label">Partially covered</div>
+    </div>
+    <div class="wa-stat">
+      <div class="wa-stat-value">{notCovered}</div>
+      <div class="wa-stat-label">Not yet covered</div>
+    </div>
+    <div class="wa-stat">
+      <div class="wa-stat-value">{highViability + medViability}</div>
+      <div class="wa-stat-label">High/medium viability</div>
+    </div>
+  </div>
+
+  {ideas.map(idea => (
+    <div class="wa-card" id={`idea-${idea.id}`}>
+      <div class="wa-card-header">
+        <span class="wa-id">{idea.id}</span>
+        <h3 class="wa-name">{idea.name}</h3>
+        <div class="wa-badges">
+          <span class={`wa-badge ${coverageClass(idea.coverage)}`}>{coverageLabel(idea.coverage)}</span>
+          <span class={`wa-badge ${viabilityClass(idea.viability)}`}>{viabilityLabel(idea.viability)}</span>
+        </div>
+      </div>
+      <div class="wa-section-ref">{idea.wpSection}</div>
+      <p class="wa-description">{idea.description}</p>
+      <div class="wa-assessment">
+        <div class="wa-assessment-block">
+          <h4>Coverage in current framework</h4>
+          <p>{idea.coverageNotes}</p>
+        </div>
+        <div class="wa-assessment-block">
+          <h4>Viability for absorption</h4>
+          <p>{idea.viabilityNotes}</p>
+        </div>
+      </div>
+    </div>
+  ))}
+</MainLayout>
+
+<style>
+  .wa-summary {
+    display: flex;
+    gap: 0.75rem;
+    margin: 1.5rem 0 2rem;
+    flex-wrap: wrap;
+  }
+  .wa-stat {
+    flex: 1;
+    min-width: 100px;
+    padding: 0.75rem 1rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    text-align: center;
+  }
+  .wa-stat-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 0.04em;
+  }
+  .wa-stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+  }
+
+  .wa-card {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 0.75rem;
+    background: var(--color-surface);
+  }
+  .wa-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.25rem;
+  }
+  .wa-id {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    background: var(--color-border);
+    border-radius: 9999px;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+  .wa-name {
+    flex: 1;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0;
+    min-width: 200px;
+    border: none;
+    padding: 0;
+  }
+  .wa-badges {
+    display: flex;
+    gap: 0.4rem;
+    flex-shrink: 0;
+  }
+  .wa-badge {
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.15rem 0.5rem;
+    border-radius: 9999px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .wa-cov-covered { background: #dcfce7; color: #166534; }
+  .wa-cov-partial { background: #fef3c7; color: #92400e; }
+  .wa-cov-not-covered { background: #f3f4f6; color: #6b7280; }
+  .wa-via-high { background: #dbeafe; color: #1e40af; }
+  .wa-via-medium { background: #e0e7ff; color: #4338ca; }
+  .wa-via-low { background: #f3f4f6; color: #6b7280; }
+  .wa-via-not-viable { background: #fef2f2; color: #991b1b; }
+
+  .wa-section-ref {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.5rem;
+    margin-left: 2.25rem;
+  }
+  .wa-description {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+  .wa-assessment {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+  @media (max-width: 700px) {
+    .wa-assessment { grid-template-columns: 1fr; }
+  }
+  .wa-assessment-block {
+    background: #fafaf9;
+    border-radius: 6px;
+    padding: 0.75rem;
+  }
+  .wa-assessment-block h4 {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin: 0 0 0.35rem;
+    letter-spacing: 0.03em;
+  }
+  .wa-assessment-block p {
+    font-size: 0.8rem;
+    line-height: 1.55;
+    color: var(--color-text);
+    margin: 0;
+  }
+</style>
