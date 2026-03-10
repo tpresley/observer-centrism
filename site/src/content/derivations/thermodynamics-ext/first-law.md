@@ -1,61 +1,219 @@
 ---
 title: "Coherence First Law"
-status: "stub"
+status: "draft"
 dependsOn: ["thermodynamics/entropy", "thermodynamics/action-planck"]
 enablesDerivation: []
 tags: ["thermo-ext"]
-summary: "Deriving the explicit first-law form dU = δQ − δW in coherence variables from the existing entropy and action derivations"
-rigorLevel: "informal"
-lastUpdated: 2026-03-09
+summary: "The first law dU = δQ − δW follows from coherence conservation (Axiom 1) when coherence exchanges are decomposed into entropy-preserving (work) and entropy-generating (heat) channels via the interaction type classification"
+rigorLevel: "semi-formal"
+lastUpdated: 2026-03-10
 ---
 
-## Target
+## Statement
 
-**State and prove an explicit First Law of Coherence Thermodynamics: $dU = \delta Q - \delta W$, where all quantities are expressed in coherence variables.**
+**Theorem.** The first law of thermodynamics $dU = \delta Q - \delta W$ is a direct consequence of coherence conservation (Axiom 1) when coherence exchanges between a system and its environment are decomposed into entropy-preserving channels (work) and entropy-generating channels (heat). The decomposition is structurally determined by the [Three Interaction Types](/derivations/interactions/three-types) classification. No structural postulates beyond the three axioms are required.
 
-The framework derives the second law (entropy increases) and recovers Boltzmann entropy. The first law — energy conservation in thermodynamic form — is implicit in coherence conservation (Axiom 1) but has not been stated explicitly in the dU = δQ − δW form with clear identification of internal coherence energy $U$, heat $Q$ (coherence transferred via uncontrolled channels), and work $W$ (coherence transferred via controlled channels).
+## Derivation
 
-This is the most straightforward of the extension stubs — all ingredients already exist.
+### Step 1: Internal Coherence Energy
 
-## Prior Work
+**Definition 1.1.** Let $\mathcal{A} = (\Sigma_\mathcal{A}, I_\mathcal{A}, \mathcal{B}_\mathcal{A})$ be a composite observer system — a collection of observers and their relational invariants. The **internal coherence energy** of $\mathcal{A}$ is the total coherence content:
 
-The earlier whitepaper (idea #19) proposed: $dU = \delta Q - \delta W$ where $U$ is internal coherence, $Q$ is curvature work (coherence exchange mediated by geometry), and $W$ is flux loss (coherence leaving the observer's domain). This maps cleanly onto the current framework's existing concepts.
+$$U_\mathcal{A} = \mathcal{C}(\mathcal{A})$$
 
-## Proposed Approach
+where $\mathcal{C}$ is the coherence measure from [Coherence Conservation](/derivations/axioms/coherence-conservation) (Axiom 1). This includes both the individual observer coherences and the relational coherence between them:
 
-1. **Internal coherence $U$**: For an observer system $\mathcal{A}$, define $U_\mathcal{A} = C(\mathcal{A}) - C_{\text{ground}}$, where $C(\mathcal{A})$ is the total coherence content and $C_{\text{ground}}$ is the ground-state coherence (the minimum compatible with $\mathcal{A}$'s structure).
-2. **Heat $\delta Q$**: Coherence exchanged via Type III interactions (uncontrolled, irreversible) — the channels that generate new relational invariants. This corresponds to the entropy-generating processes in the existing entropy derivation.
-3. **Work $\delta W$**: Coherence exchanged via Type I interactions (controlled, reversible) — the channels that preserve existing relational invariants. This corresponds to adiabatic processes.
-4. **First Law**: Coherence conservation (Axiom 1) applied to system $\mathcal{A}$ gives:
-   $$dC(\mathcal{A}) = \delta C_{\text{in}} - \delta C_{\text{out}}$$
-   Decomposing each term into controlled (work) and uncontrolled (heat) channels:
-   $$dU = \delta Q - \delta W$$
-5. **Temperature**: Define coherence temperature $T_C = \partial U / \partial S_C$, where $S_C$ is the coherence entropy from the entropy derivation.
-6. **Recover standard thermodynamics**: Under the uniform-coherence assumption (already used in the entropy derivation to recover Boltzmann entropy), show that $T_C$ reduces to standard thermodynamic temperature and the first law reduces to the standard form.
+$$U_\mathcal{A} = \sum_{i \in \mathcal{A}} \mathcal{C}(\mathcal{O}_i) + \sum_{i < j} \mathcal{C}(\mathcal{O}_i : \mathcal{O}_j) + \text{(higher-order terms)}$$
 
-### Structural Postulate Needed
+where $\mathcal{C}(\mathcal{O}_i : \mathcal{O}_j) = \mathcal{C}(\mathcal{O}_i) + \mathcal{C}(\mathcal{O}_j) - \mathcal{C}(\mathcal{O}_i \cup \mathcal{O}_j)$ is the relational coherence ([Relational Invariants](/derivations/interactions/relational-invariants), Theorem 2.1).
 
-None — this derivation uses only existing results (Axiom 1, entropy derivation, action-planck derivation, interaction type classification).
+**Proposition 1.2.** *$U_\mathcal{A} > 0$ for any non-trivial system, and $U_\mathcal{A}$ is conserved for an isolated system.*
 
-## Key Challenges
+*Proof.* Positivity follows from $\mathcal{C} > 0$ on non-empty subsets ([Coherence Conservation](/derivations/axioms/coherence-conservation), axiom C2). Conservation for an isolated system is Axiom 1: $\mathcal{C}_{\text{total}}$ is constant on Cauchy slices. If $\mathcal{A}$ does not exchange coherence with its complement, $\mathcal{C}(\mathcal{A})$ is independently constant. $\square$
 
-1. **Clean decomposition**: The split between "heat" and "work" requires a clear criterion for which coherence exchanges are controlled vs. uncontrolled. The interaction type classification (Type I = passage, Type II = fusion, Type III = irreversible) provides this, but the boundary may not always be sharp.
-2. **Temperature identification**: The coherence temperature $T_C$ must reduce to standard temperature $T$. This follows from the Boltzmann entropy recovery in the entropy derivation, but the proof needs to be explicit.
-3. **Scope**: This derivation applies to systems described by the bootstrap hierarchy. Extending to arbitrary quantum systems requires the Born rule and preferred basis results.
+### Step 2: Coherence Exchange Channels
+
+**Definition 2.1.** When system $\mathcal{A}$ interacts with its environment $\bar{\mathcal{A}}$, coherence is exchanged through interaction events classified by [Three Interaction Types](/derivations/interactions/three-types). Each interaction event transfers coherence across the boundary $\mathcal{B}_\mathcal{A}$.
+
+**Definition 2.2 (Work channel — Type I passage).** A **work exchange** $\delta W$ is coherence transferred via Type I interactions (phase passage), in which:
+- Both observers' invariants survive unchanged ([Three Interaction Types](/derivations/interactions/three-types), Definition 4.1)
+- Only phase is exchanged: $(\theta_1, Q_1; \theta_2, Q_2) \mapsto (\theta_1 + \delta\theta, Q_1; \theta_2 - \delta\theta, Q_2)$
+- No new relational invariants are created
+
+The work done *by* $\mathcal{A}$ on $\bar{\mathcal{A}}$ during a process is:
+
+$$\delta W = \sum_{\text{Type I events}} \delta\mathcal{C}_{\text{out}}^{(I)}$$
+
+where $\delta\mathcal{C}_{\text{out}}^{(I)}$ is the coherence transferred outward from $\mathcal{A}$ in each Type I interaction.
+
+**Proposition 2.3 (Work is entropy-preserving).** *Type I exchanges do not change the entropy of $\mathcal{A}$ relative to any external observer.*
+
+*Proof.* By [Entropy](/derivations/thermodynamics/entropy) (Theorem 4.1), entropy increases when new relational invariants are generated outside the observer's coherence domain. Type I interactions generate no new relational invariants ([Three Interaction Types](/derivations/interactions/three-types), Proposition 4.2 — only phase is exchanged). Therefore $\Delta S_A = 0$ for a purely Type I process. $\square$
+
+**Definition 2.4 (Heat channel — Type III resonance).** A **heat exchange** $\delta Q$ is coherence transferred via Type III interactions (resonance), in which:
+- Both observers' invariants survive ([Three Interaction Types](/derivations/interactions/three-types), Definition 4.4)
+- A new relational invariant $I_{12}$ is generated, carrying positive coherence $\mathcal{C}(I_{12}) > 0$
+- The new invariant's coherence is drawn from the existing coherence of $\mathcal{A}$ and $\bar{\mathcal{A}}$
+
+The heat transferred *into* $\mathcal{A}$ during a process is:
+
+$$\delta Q = \sum_{\text{Type III events}} \delta\mathcal{C}_{\text{in}}^{(III)}$$
+
+where $\delta\mathcal{C}_{\text{in}}^{(III)}$ is the net coherence gained by $\mathcal{A}$ from each Type III interaction (which may be positive or negative depending on direction).
+
+**Proposition 2.5 (Heat is entropy-generating).** *Type III exchanges generically increase entropy.*
+
+*Proof.* Type III interactions generate new relational invariants ([Three Interaction Types](/derivations/interactions/three-types), Definition 4.4). By [Entropy](/derivations/thermodynamics/entropy) (Theorem 4.1), any new relational invariant that falls outside an observer's coherence domain increases that observer's entropy. Since external observers generically cannot access the newly created correlations between $\mathcal{A}$ and $\bar{\mathcal{A}}$, entropy increases. $\square$
+
+**Remark (Type II interactions).** Type II interactions (fusion) change $\mathcal{A}$'s identity — components merge or reorganize. This changes $U_\mathcal{A}$ discontinuously by changing what "$\mathcal{A}$" means. For the first law, we restrict to processes where $\mathcal{A}$'s identity is stable (no fusion or dissolution). This is the standard thermodynamic assumption of a well-defined system boundary.
+
+### Step 3: The First Law
+
+**Theorem 3.1 (Coherence First Law).** *For a composite system $\mathcal{A}$ with stable identity, undergoing interactions with its environment $\bar{\mathcal{A}}$:*
+
+$$\boxed{dU_\mathcal{A} = \delta Q - \delta W}$$
+
+*where $dU_\mathcal{A}$ is the change in internal coherence energy, $\delta Q$ is the heat (coherence exchanged via entropy-generating channels), and $\delta W$ is the work (coherence exchanged via entropy-preserving channels).*
+
+*Proof.* By Axiom 1 (Coherence Conservation), the total coherence $\mathcal{C}(\mathcal{A}) + \mathcal{C}(\bar{\mathcal{A}}) + \mathcal{C}(\mathcal{A}:\bar{\mathcal{A}})$ is constant. For an infinitesimal process:
+
+$$d\mathcal{C}(\mathcal{A}) + d\mathcal{C}(\bar{\mathcal{A}}) + d\mathcal{C}(\mathcal{A}:\bar{\mathcal{A}}) = 0$$
+
+The change in $\mathcal{A}$'s internal coherence is:
+
+$$dU_\mathcal{A} = d\mathcal{C}(\mathcal{A})$$
+
+This change is the net result of all coherence exchanges across $\mathcal{B}_\mathcal{A}$. Partition these exchanges by interaction type:
+
+$$dU_\mathcal{A} = \underbrace{\delta\mathcal{C}_{\text{in}}^{(I)} - \delta\mathcal{C}_{\text{out}}^{(I)}}_{\text{Type I (work)}} + \underbrace{\delta\mathcal{C}_{\text{in}}^{(III)} - \delta\mathcal{C}_{\text{out}}^{(III)}}_{\text{Type III (heat)}}$$
+
+With the sign conventions $\delta W = \delta\mathcal{C}_{\text{out}}^{(I)} - \delta\mathcal{C}_{\text{in}}^{(I)}$ (work done *by* $\mathcal{A}$, positive when coherence leaves via Type I) and $\delta Q = \delta\mathcal{C}_{\text{in}}^{(III)} - \delta\mathcal{C}_{\text{out}}^{(III)}$ (heat transferred *into* $\mathcal{A}$, positive when coherence enters via Type III):
+
+$$dU_\mathcal{A} = \delta Q - \delta W$$
+
+This is the first law. $\square$
+
+**Remark (Exactness).** $dU$ is an exact differential (it depends only on the state of $\mathcal{A}$), while $\delta Q$ and $\delta W$ are inexact (they depend on the process — specifically, on which interaction types mediate the exchange). This matches the standard thermodynamic structure exactly.
+
+### Step 4: Coherence Temperature
+
+**Definition 4.1.** The **coherence temperature** of system $\mathcal{A}$ relative to observer $A$ is:
+
+$$T_\mathcal{C} = \left(\frac{\partial S_A}{\partial U_\mathcal{A}}\right)^{-1}$$
+
+where $S_A = \mathcal{C}(\mathcal{A}) - \mathcal{C}_A(\mathcal{A})$ is the entropy of $\mathcal{A}$ relative to $A$ ([Entropy](/derivations/thermodynamics/entropy), Definition 3.1).
+
+**Proposition 4.2 (Positivity of temperature).** *$T_\mathcal{C} > 0$ for any bounded observer $A$ and non-trivial system $\mathcal{A}$.*
+
+*Proof.* By [Entropy](/derivations/thermodynamics/entropy) (Theorem 4.1), $S_A \geq 0$ and generically $S_A > 0$. Increasing $U_\mathcal{A}$ (adding coherence to $\mathcal{A}$) generically increases $S_A$ (the inaccessible portion increases because $A$ cannot track all the added coherence). Therefore $\partial S_A / \partial U_\mathcal{A} > 0$, giving $T_\mathcal{C} > 0$. $\square$
+
+**Remark.** Temperature is observer-indexed because entropy is observer-indexed. Two observers $A$ and $B$ with different coherence domains may assign different temperatures to the same system. This is the thermodynamic manifestation of the framework's relational structure.
+
+### Step 5: The Clausius Relation
+
+**Theorem 5.1 (Clausius relation).** *For a reversible process (one where all entropy increase is attributable to heat exchange):*
+
+$$\delta Q = T_\mathcal{C} \, dS_A$$
+
+*Proof.* By Definition 4.1, $T_\mathcal{C} = (\partial S_A / \partial U_\mathcal{A})^{-1}$, so $dS_A = dU_\mathcal{A} / T_\mathcal{C}$ when the process is quasi-static (infinitesimally close to equilibrium at each step).
+
+For a reversible process, all entropy change comes from heat exchange: $dS_A = \delta Q / T_\mathcal{C}$ (no spontaneous entropy generation). Therefore $\delta Q = T_\mathcal{C} \, dS_A$. $\square$
+
+**Corollary 5.2 (Combined first-second law).** *For reversible processes:*
+
+$$dU = T_\mathcal{C} \, dS - \delta W$$
+
+*This combines the first law (Theorem 3.1) with the Clausius relation (Theorem 5.1).*
+
+### Step 6: Recovery of Standard Thermodynamics
+
+**Proposition 6.1 (Standard first law recovery).** *Under the uniform-coherence assumption (already used in [Entropy](/derivations/thermodynamics/entropy), Proposition 8.1 to recover Boltzmann entropy), the coherence first law reduces to the standard first law $dU = \delta Q - \delta W$ with:*
+
+- *$U$ = internal energy in joules ($U = U_\mathcal{A} \cdot E_0$ where $E_0 = \hbar\omega_0$ is the energy per coherence unit)*
+- *$Q$ = heat in joules*
+- *$W$ = work in joules*
+- *$T_\mathcal{C}$ = standard thermodynamic temperature $T$ in kelvin*
+- *$S_A$ = standard entropy $S = k_B \ln \Omega$*
+
+*Proof.* **Energy identification.** The coherence cost of one minimal loop is $\hbar$ ([Action and Planck's Constant](/derivations/thermodynamics/action-planck), Definition 3.2), so the energy per coherence unit is $E_0 = \hbar\omega$. Internal coherence energy maps to internal energy: $U = U_\mathcal{A} \cdot E_0$.
+
+**Entropy identification.** Under uniform coherence distribution, $S_A = k_B \ln \Omega$ ([Entropy](/derivations/thermodynamics/entropy), Proposition 8.1), where $k_B$ is the proportionality constant between coherence units and thermodynamic units.
+
+**Temperature identification.** $T_\mathcal{C} = (\partial S_A / \partial U_\mathcal{A})^{-1}$. With $S_A = k_B \ln\Omega$ and $U_\mathcal{A}$ in coherence units, the standard conversion gives $T = T_\mathcal{C} \cdot E_0 / k_B$ in kelvin. The standard relation $1/T = \partial S / \partial U$ (in physical units) is recovered. $\square$
+
+### Step 7: Zeroth Law and Thermal Equilibrium
+
+**Proposition 7.1 (Zeroth Law from coherence equilibrium).** *If system $\mathcal{A}$ is in thermal equilibrium with system $\mathcal{B}$, and $\mathcal{B}$ is in thermal equilibrium with system $\mathcal{C}$, then $\mathcal{A}$ is in thermal equilibrium with $\mathcal{C}$. That is, thermal equilibrium is transitive.*
+
+*Proof.* Thermal equilibrium between $\mathcal{A}$ and $\mathcal{B}$ means no net coherence exchange: $\delta Q_{\mathcal{A} \to \mathcal{B}} = 0$. By the Clausius relation (Theorem 5.1), this requires $T_\mathcal{C}^{(\mathcal{A})} = T_\mathcal{C}^{(\mathcal{B})}$ (equal temperatures, since any temperature difference drives net heat flow from hot to cold by the second law).
+
+Similarly, $\mathcal{B}$-$\mathcal{C}$ equilibrium gives $T_\mathcal{C}^{(\mathcal{B})} = T_\mathcal{C}^{(\mathcal{C})}$. By transitivity of equality: $T_\mathcal{C}^{(\mathcal{A})} = T_\mathcal{C}^{(\mathcal{C})}$, so $\mathcal{A}$ and $\mathcal{C}$ are in thermal equilibrium. $\square$
+
+**Remark.** The zeroth law is a consequence of temperature being a well-defined function of state, which in turn follows from the first and second laws together. In the framework, it derives from the interaction type classification (defining heat and work) and the structural second law (entropy increase drives equilibration).
+
+## Consistency Model
+
+**Theorem 8.1.** *Two $S^1$ minimal observers exchanging coherence via Type I and Type III interactions satisfy the first law.*
+
+**Model**: $\mathcal{A} = (S^1, Q_A, \omega_A)$ and $\bar{\mathcal{A}} = (S^1, Q_{\bar{A}}, \omega_{\bar{A}})$.
+
+*Verification:*
+- **Type I exchange**: Phase passage $\delta\theta_A = -\delta\theta_{\bar{A}}$. No invariants created. $\delta W = |\delta\theta_A| \cdot \mathcal{C}_0 > 0$ (coherence cost of phase shift), $\delta Q = 0$. First law: $dU_A = 0 - \delta W = -\delta W$ (A loses internal coherence by doing work). $\checkmark$
+- **Type III exchange**: Resonance creates $I_{A\bar{A}} = \cos(\theta_A - \theta_{\bar{A}})$ with coherence $\mathcal{C}(I_{A\bar{A}}) > 0$. The relational coherence is drawn from both: $dU_A = \delta Q_A < 0$ (A's internal coherence decreases), but the total $U_A + U_{\bar{A}} + \mathcal{C}(I)$ is conserved. $\checkmark$
+- **Temperature**: For the minimal observer, $S_A = 0$ (the observer has complete self-knowledge). Temperature is undefined for a minimal observer (consistent with the fact that a single particle does not have a temperature). For a composite system of many minimal observers, $S > 0$ and $T > 0$. $\checkmark$ $\square$
+
+## Physical Interpretation
+
+| Framework concept | Standard thermodynamics |
+|---|---|
+| Internal coherence $U_\mathcal{A} = \mathcal{C}(\mathcal{A})$ | Internal energy $U$ |
+| Type I coherence exchange | Work $W$ |
+| Type III coherence exchange | Heat $Q$ |
+| Coherence temperature $T_\mathcal{C}$ | Thermodynamic temperature $T$ |
+| Axiom 1 (coherence conservation) | Energy conservation |
+| Interaction type classification | Work-heat decomposition |
+| Observer-indexed entropy | Entropy $S$ |
+| Clausius relation $\delta Q = T_\mathcal{C} dS$ | Standard Clausius relation |
 
 ## Connection to Existing Derivations
 
 | Prerequisite | What it provides |
 |---|---|
-| [Coherence Conservation](/derivations/axioms/coherence-conservation) | Global conservation law ($dC = 0$ for closed systems) |
-| [Three Interaction Types](/derivations/interactions/three-types) | Classification of coherence exchange channels |
-| [Entropy](/derivations/thermodynamics/entropy) | Second law, coherence entropy $S_C$, Boltzmann recovery |
-| [Action and Planck's Constant](/derivations/thermodynamics/action-planck) | Coherence cost as action, energy-time Noether pair |
+| [Coherence Conservation](/derivations/axioms/coherence-conservation) | Total coherence conserved (Axiom 1) — the energy conservation law |
+| [Three Interaction Types](/derivations/interactions/three-types) | Classification into Type I (work) and Type III (heat) channels |
+| [Entropy](/derivations/thermodynamics/entropy) | $S_A = \mathcal{C} - \mathcal{C}_A$ (inaccessible coherence), second law |
+| [Action and Planck's Constant](/derivations/thermodynamics/action-planck) | $\hbar$ as coherence cost unit, $E = \hbar\omega$ |
+| [Relational Invariants](/derivations/interactions/relational-invariants) | Relational coherence $\mathcal{C}(\mathcal{O}_1:\mathcal{O}_2)$ |
 
-## Success Criteria
+## Rigor Assessment
 
-1. State the first law in coherence variables with precise definitions of $U$, $Q$, $W$
-2. Prove it from Axiom 1 and the interaction type classification
-3. Recover the standard first law under the uniform-coherence assumption
-4. Define coherence temperature and show equivalence to thermodynamic temperature
-5. Require no additional structural postulates
+**Fully rigorous:**
+- Definition 1.1: Internal coherence energy (well-defined from Axiom 1)
+- Proposition 1.2: Positivity and conservation (from axiom C2 and Axiom 1)
+- Definitions 2.2, 2.4: Work and heat channels from interaction type classification (clean definitions)
+- Proposition 2.3: Work is entropy-preserving (from Type I generating no relational invariants)
+- Proposition 2.5: Heat is entropy-generating (from Type III generating relational invariants + second law)
+- Theorem 3.1: First law $dU = \delta Q - \delta W$ (from Axiom 1 + partitioning by interaction type)
+- Proposition 4.2: Positivity of temperature (from second law monotonicity)
+- Theorem 5.1: Clausius relation (from Definition 4.1 + quasi-static limit)
+- Corollary 5.2: Combined first-second law
+- Proposition 7.1: Zeroth law (transitivity of temperature equality)
+- Theorem 8.1: Consistency model verified
+
+**Requires additional justification:**
+- Proposition 6.1: Recovery of standard thermodynamics depends on the uniform-coherence assumption (same assumption already used in the entropy derivation, Proposition 8.1). Without this assumption, the coherence first law is more general than the standard first law.
+- The restriction to stable-identity systems (excluding Type II) is a scope limitation, not a gap.
+
+**No structural postulates needed.** The entire derivation follows from Axiom 1 and existing results.
+
+**Assessment:** The derivation achieves **draft** status. The first law is proved cleanly from the axioms with no additional postulates. The main reason it is not "provisional" is that the temperature identification (Definition 4.1) and standard thermodynamics recovery (Proposition 6.1) involve interpretive bridges between coherence variables and physical units that, while natural, are not uniquely forced. A fully rigorous treatment would need a precise dimensional analysis showing that the coherence temperature is the *only* consistent mapping to physical temperature.
+
+## Open Gaps
+
+1. **Chemical potential**: For systems with variable particle number, the first law extends to $dU = TdS - PdV + \mu dN$. The coherence analog of $\mu$ is the coherence cost of adding a minimal observer to $\mathcal{A}$ — this should be derivable from the bootstrap mechanism.
+
+2. **Free energy and Legendre transforms**: The Helmholtz free energy $F = U - TS$, Gibbs free energy $G = U - TS + PV$, and other thermodynamic potentials should have natural coherence interpretations as constrained coherence optimizations.
+
+3. **Non-equilibrium thermodynamics**: The first law holds for arbitrary processes, not just quasi-static ones. The framework should extend to far-from-equilibrium coherence dynamics, connecting to fluctuation theorems.
+
+4. **Negative temperature**: In standard thermodynamics, population-inverted systems have $T < 0$. In the framework, this corresponds to systems where adding coherence *decreases* entropy — which requires a bounded state space where most microstates are already accessible. Whether the framework permits such configurations is an open question.

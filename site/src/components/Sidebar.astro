@@ -43,6 +43,7 @@ function statusIcon(status: string) {
     case 'provisional': return '◐'
     case 'draft': return '○'
     case 'stub': return '·'
+    case 'non-viable': return '✗'
     default: return '·'
   }
 }
@@ -53,6 +54,7 @@ function statusColor(status: string) {
     case 'provisional': return 'var(--color-provisional)'
     case 'draft': return 'var(--color-draft)'
     case 'stub': return 'var(--color-stub)'
+    case 'non-viable': return 'var(--color-non-viable)'
     default: return 'var(--color-stub)'
   }
 }

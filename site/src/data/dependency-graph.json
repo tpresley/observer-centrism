@@ -33,11 +33,11 @@
     { "id": "gauge/color-force", "title": "Color Force", "group": "gauge", "status": "stub" },
     { "id": "gauge/standard-model-group", "title": "SM Gauge Group", "group": "gauge", "status": "stub" },
     { "id": "flavor/mixing-angles", "title": "Flavor Mixing (PMNS/CKM)", "group": "flavor", "status": "stub" },
-    { "id": "cosmology/cosmological-constant", "title": "Cosmological Constant", "group": "cosmology", "status": "stub" },
+    { "id": "cosmology/cosmological-constant", "title": "Cosmological Constant", "group": "cosmology", "status": "non-viable" },
     { "id": "cosmology/baryogenesis", "title": "Baryogenesis", "group": "cosmology", "status": "stub" },
     { "id": "cosmology/coupling-constants", "title": "Coupling Constants", "group": "cosmology", "status": "stub" },
-    { "id": "thermodynamics-ext/first-law", "title": "Coherence First Law", "group": "thermo-ext", "status": "stub" },
-    { "id": "thermodynamics-ext/fisher-metric", "title": "Fisher Information Metric", "group": "thermo-ext", "status": "stub" },
+    { "id": "thermodynamics-ext/first-law", "title": "Coherence First Law", "group": "thermo-ext", "status": "draft" },
+    { "id": "thermodynamics-ext/fisher-metric", "title": "Fisher Information Metric", "group": "thermo-ext", "status": "draft" },
     { "id": "thermodynamics-ext/renormalization", "title": "Renormalization Group", "group": "thermo-ext", "status": "stub" }
   ],
   "edges": [
@@ -106,6 +106,7 @@
     { "from": "thermodynamics/entropy", "to": "thermodynamics-ext/first-law" },
     { "from": "thermodynamics/action-planck", "to": "thermodynamics-ext/first-law" },
     { "from": "thermodynamics/action-planck", "to": "thermodynamics-ext/fisher-metric" },
+    { "from": "thermodynamics/entropy", "to": "thermodynamics-ext/fisher-metric" },
     { "from": "thermodynamics/entropy", "to": "thermodynamics-ext/renormalization" },
     { "from": "thermodynamics/action-planck", "to": "thermodynamics-ext/renormalization" }
   ]

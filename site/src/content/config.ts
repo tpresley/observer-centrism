@@ -14,7 +14,7 @@ const derivations = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
-    status: z.enum(['stub', 'draft', 'provisional', 'rigorous']),
+    status: z.enum(['stub', 'draft', 'provisional', 'rigorous', 'non-viable']),
     dependsOn: z.array(z.string()).default([]),
     enablesDerivation: z.array(z.string()).default([]),
     tags: z.array(z.string()).default([]),

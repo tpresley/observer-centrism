@@ -32,6 +32,7 @@ function statusClass(status: string) { return `status-badge status-${status}` }
     <span class="status-badge status-provisional">provisional</span>
     <span class="status-badge status-draft">draft</span>
     <span class="status-badge status-stub">stub</span>
+    <span class="status-badge status-non-viable">non-viable</span>
   </div>
 
   {Object.entries(groups).map(([group, entries]) => (

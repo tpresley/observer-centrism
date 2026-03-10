@@ -19,10 +19,11 @@ const GROUP_COLORS = {
 }
 
 const STATUS_OPACITY = {
-  stub:        0.4,
-  draft:       0.6,
-  provisional: 0.8,
-  rigorous:    1.0,
+  'non-viable': 0.3,
+  stub:         0.4,
+  draft:        0.6,
+  provisional:  0.8,
+  rigorous:     1.0,
 }
 
 // ---- pure helpers (no side-effects, used by both layout and render) --------
@@ -161,6 +162,7 @@ function DependencyGraph({ state, props }) {
           const color = GROUP_COLORS[node.group] || '#888'
           const opacity = STATUS_OPACITY[node.status] || 0.5
           const isStub = node.status === 'stub'
+          const isNonViable = node.status === 'non-viable'
           const isHovered = hoveredId === node.id
           const isAncestor = highlighted.has(node.id)
           const ringColor = isHovered ? '#f59e0b' : (isAncestor ? '#fbbf24' : 'none')
@@ -191,12 +193,37 @@ function DependencyGraph({ state, props }) {
                   cx={pos.x}
                   cy={pos.y}
                   r={nodeRadius}
-                  fill={color}
+                  fill={isNonViable ? '#888' : color}
                   fillOpacity={opacity}
-                  stroke={color}
-                  strokeWidth={isStub ? 2 : 1.5}
+                  stroke={isNonViable ? '#dc2626' : color}
+                  strokeWidth={isStub ? 2 : (isNonViable ? 2.5 : 1.5)}
                   strokeDasharray={isStub ? '4 3' : 'none'}
                 />
+                {/* X overlay for non-viable */}
+                {isNonViable && (
+                  <>
+                    <line
+                      x1={pos.x - nodeRadius * 0.45}
+                      y1={pos.y - nodeRadius * 0.45}
+                      x2={pos.x + nodeRadius * 0.45}
+                      y2={pos.y + nodeRadius * 0.45}
+                      stroke="#dc2626"
+                      strokeWidth={2.5}
+                      strokeLinecap="round"
+                      style={{ pointerEvents: 'none' }}
+                    />
+                    <line
+                      x1={pos.x + nodeRadius * 0.45}
+                      y1={pos.y - nodeRadius * 0.45}
+                      x2={pos.x - nodeRadius * 0.45}
+                      y2={pos.y + nodeRadius * 0.45}
+                      stroke="#dc2626"
+                      strokeWidth={2.5}
+                      strokeLinecap="round"
+                      style={{ pointerEvents: 'none' }}
+                    />
+                  </>
+                )}
                 {/* Label below */}
                 <text
                   x={pos.x}
