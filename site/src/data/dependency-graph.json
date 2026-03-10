@@ -38,7 +38,8 @@
     { "id": "cosmology/coupling-constants", "title": "Coupling Constants", "group": "cosmology", "status": "stub" },
     { "id": "thermodynamics-ext/first-law", "title": "Coherence First Law", "group": "thermo-ext", "status": "draft" },
     { "id": "thermodynamics-ext/fisher-metric", "title": "Fisher Information Metric", "group": "thermo-ext", "status": "draft" },
-    { "id": "thermodynamics-ext/renormalization", "title": "Renormalization Group", "group": "thermo-ext", "status": "stub" }
+    { "id": "thermodynamics-ext/renormalization", "title": "Renormalization Group", "group": "thermo-ext", "status": "stub" },
+    { "id": "thermodynamics-ext/distinguishability-conservation", "title": "Conservation of Distinguishability", "group": "thermo-ext", "status": "draft" }
   ],
   "edges": [
     { "from": "axioms/coherence-conservation", "to": "minimal-observer/structure" },
@@ -108,6 +109,8 @@
     { "from": "thermodynamics/action-planck", "to": "thermodynamics-ext/fisher-metric" },
     { "from": "thermodynamics/entropy", "to": "thermodynamics-ext/fisher-metric" },
     { "from": "thermodynamics/entropy", "to": "thermodynamics-ext/renormalization" },
-    { "from": "thermodynamics/action-planck", "to": "thermodynamics-ext/renormalization" }
+    { "from": "thermodynamics/action-planck", "to": "thermodynamics-ext/renormalization" },
+    { "from": "axioms/coherence-conservation", "to": "thermodynamics-ext/distinguishability-conservation" },
+    { "from": "thermodynamics-ext/distinguishability-conservation", "to": "thermodynamics-ext/fisher-metric" }
   ]
 }

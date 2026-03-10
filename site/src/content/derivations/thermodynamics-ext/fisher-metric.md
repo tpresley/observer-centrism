@@ -1,7 +1,7 @@
 ---
 title: "Fisher Information Metric"
 status: "draft"
-dependsOn: ["thermodynamics/action-planck", "thermodynamics/entropy"]
+dependsOn: ["thermodynamics/action-planck", "thermodynamics/entropy", "thermodynamics-ext/distinguishability-conservation"]
 enablesDerivation: ["thermodynamics-ext/renormalization"]
 tags: ["thermo-ext"]
 summary: "The Fisher information metric is the unique natural Riemannian geometry on the space of coherence states, identified with the Hessian metric of Action-Planck via Čencov's theorem"
@@ -163,7 +163,7 @@ $$S_A = \mathcal{C}(\Sigma \setminus \Sigma_A)$$
 - Theorem 7.1: Consistency model verified
 
 **Semi-formal (physically motivated, not fully proven):**
-- Proposition 4.1: The identification $g = \hbar G$ relies on *both* metrics being defined on the same manifold and the uniqueness argument closing. The normalization argument is clean for the minimal observer but the extension to composite observers requires showing the Hessian metric from Action-Planck satisfies Čencov's monotonicity condition — this is plausible but not proved here.
+- Proposition 4.1: The identification $g = \hbar G$ relies on *both* metrics being defined on the same manifold and the uniqueness argument closing. The normalization argument is clean for the minimal observer but the extension to composite observers requires showing the Hessian metric from Action-Planck satisfies Čencov's monotonicity condition — this is partially addressed by [Conservation of Distinguishability](/derivations/thermodynamics-ext/distinguishability-conservation) (Proposition 4.1), which derives monotonicity from Axiom 1a. The remaining formal gap is verifying the Hessian metric specifically (not just "the" coherence metric) satisfies all conditions.
 - Proposition 5.2: The Fisher-volume interpretation of entropy is suggestive but the precise relationship between coherence in the complement and Fisher volume needs more work.
 - Proposition 6.1: Standard result for exponential families, but the curvature-spacetime bridge is incomplete.
 
@@ -171,7 +171,7 @@ $$S_A = \mathcal{C}(\Sigma \setminus \Sigma_A)$$
 
 ## Open Gaps
 
-1. **Monotonicity of the Hessian metric**: Prove that the coherence Hessian metric from Action-Planck satisfies Čencov's monotonicity condition (coarse-graining does not increase distinguishability). This would close the identification rigorously.
+1. **Monotonicity of the Hessian metric**: Prove that the coherence Hessian metric from Action-Planck satisfies Čencov's monotonicity condition (coarse-graining does not increase distinguishability). This would close the identification rigorously. **Partially addressed** by [Conservation of Distinguishability](/derivations/thermodynamics-ext/distinguishability-conservation), Proposition 4.1: coherence conservation (Axiom 1a) implies that admissible transformations are isometries and coarse-grainings are contractions, which is precisely Čencov's monotonicity condition. The remaining gap is the formal verification that the Hessian metric (not just "some" metric) satisfies these conditions.
 2. **Curvature–spacetime bridge**: Connect the Fisher curvature on $\Sigma$ to the spacetime curvature on $\mathcal{M}$. The Gravity derivation provides the latter from coherence density gradients; the bridge would need to show how the observer embedding $\iota: \Sigma \to \mathcal{M}$ translates one curvature to the other.
 3. **Quantum Fisher metric**: Extend from the classical Fisher metric to the quantum Fisher information (Bures metric / symmetric logarithmic derivative). This is needed for full quantum state spaces. The quantum Čencov theorem (Petz, 1996) classifies monotone metrics but there is a family rather than a unique metric.
 4. **Infinite-dimensional extension**: The derivation assumes finite-dimensional $\Sigma$. For field theory, the state space is infinite-dimensional and requires functional-analytic care (the theory exists — see Pistone & Sempi, 1995).
