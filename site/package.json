@@ -12,6 +12,6 @@
     "astro-pagefind": "^1.8.5",
     "rehype-katex": "^7.0.0",
     "remark-math": "^6.0.0",
-    "sygnal": "file:../../sygnal"
+    "sygnal": "^4.4.0"
   }
 }
