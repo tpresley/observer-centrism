@@ -1,0 +1,612 @@
+---
+import MainLayout from '../components/layouts/MainLayout.astro'
+
+type Coverage = 'covered' | 'partial' | 'not-covered'
+type Viability = 'high' | 'medium' | 'low' | 'not-viable'
+
+interface Idea {
+  id: number
+  name: string
+  paperRef: string
+  description: string
+  coverage: Coverage
+  coverageNotes: string
+  viability: Viability
+  viabilityNotes: string
+}
+
+const ideas: Idea[] = [
+  // --- Paper 1: Self-Dual A₅ Geometry ---
+  {
+    id: 1,
+    name: "Source–flux duality of the quadratic OC action",
+    paperRef: "Self-Dual A₅ Geometry (§1–2)",
+    description: "The quadratic sector of the OC action admits an exact 0-form ↔ 2-form duality via a parent action with auxiliary 3-forms. Varying one way recovers the scalar action; varying the other gives a dual 2-form action. For the massless case, this is exact scalar–2-form duality.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework does not use a parent action formalism or construct duality transformations. The action-planck derivation identifies action with coherence cost but does not explore duality structure.",
+    viability: 'low',
+    viabilityNotes: "This duality is specific to the OC action S_OC with its Fisher metric kinetic term and KL potential — neither of which appear in the current framework. The current framework derives field equations from structural constraints (Lovelock, Noether) rather than from a specific Lagrangian, so there is no action whose duality structure could be analyzed. The mathematical technique (parent action with auxiliary forms) is standard in p-form gauge theory and could be applied if an explicit action were constructed, but that is not the current framework's approach."
+  },
+  {
+    id: 2,
+    name: "A₅ icosahedral–dodecahedral pair as discrete Hodge complex",
+    paperRef: "Self-Dual A₅ Geometry (§4), Plateau Equivalence (§4)",
+    description: "The icosahedron (12 vertices, 20 faces) and dodecahedron (20 vertices, 12 faces) form a minimal isotropic primal–dual pair on the 2-sphere. Their stiffness operators approximate the continuous Hodge star, with primal–dual energy matching to machine precision on the self-dual blend.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework does not use discrete geometry, Platonic solids, or discrete Hodge theory. Its geometry derives from smooth manifold structure (pseudo-Riemannian metrics, Lovelock theorem) and topology (winding classes, homotopy groups).",
+    viability: 'low',
+    viabilityNotes: "The A₅ discrete Hodge complex is a computational tool for discretizing the continuum OC action, not a fundamental structure. The current framework works with smooth geometry throughout and has no need for lattice discretization at the foundational level. The icosahedral symmetry group A₅ is interesting mathematically (it is the largest finite simple group with a faithful 3D representation), but connecting it to the current framework's topological approach would require showing why discrete approximation is physically meaningful rather than a numerical convenience."
+  },
+  {
+    id: 3,
+    name: "Massive 2-form dual and the duality gap",
+    paperRef: "Self-Dual A₅ Geometry (§2)",
+    description: "When the KL Hessian M² ≠ 0, the dual field becomes a massive 2-form rather than a gauge 2-form. The mass breaks the exact duality symmetry, creating a 'duality gap' proportional to M². The small icosa↔dodeca offsets in numerical runs quantify this gap.",
+    coverage: 'not-covered',
+    coverageNotes: "No analog in the current framework. The concepts of duality gap, massive p-forms, and parent-action structure are absent.",
+    viability: 'not-viable',
+    viabilityNotes: "This is a technical feature of the OC action's quadratic expansion — the M² term from the KL Hessian has no counterpart in the current framework. Without the OC action formalism, the concept of a 'duality gap' does not arise. The underlying mathematical structure (massive p-form gauge theory) is well-established but requires the specific Lagrangian that the current framework does not use."
+  },
+  {
+    id: 4,
+    name: "Gauge sector self-dual subspace (F = ±*F)",
+    paperRef: "Self-Dual A₅ Geometry (§5)",
+    description: "In 4D, the Yang-Mills action is invariant under F → *F. The OC non-Abelian projector flow reduces to this in the weak-field limit. The A₅ discretization naturally supports the self-dual subsector F = ±*F, and this connects to FRG plateau tightening.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework does not derive Yang-Mills theory or discuss self-dual gauge configurations. It derives Einstein equations via Lovelock but does not construct gauge field actions.",
+    viability: 'low',
+    viabilityNotes: "Self-dual gauge fields are important in mathematical physics (instantons, topological field theory). If the current framework were extended to derive gauge field dynamics from coherence structure (see whitepaper analysis idea #11 on U(1) gauge symmetry), self-duality could emerge as a natural feature of 4D gauge theory. But this requires first deriving gauge dynamics, which is itself an open extension."
+  },
+  // --- Paper 2: Neutrino Flavor Structure ---
+  {
+    id: 5,
+    name: "Fisher curvature difference as flavor-breaking tensor",
+    paperRef: "Neutrino Flavor (§2)",
+    description: "The domain-averaged Fisher curvatures K_ico and K_dod on the two dual geometries produce a fixed, geometry-determined breaking tensor D = K_ico − K_dod. Its direction is set by geometry alone (no free parameters), and it drives all lepton flavor mixing.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework does not address the origin of flavor mixing. The three-generations derivation explains why there are three families (dim SO(3) = 3) but does not derive mixing angles or the flavor-breaking mechanism.",
+    viability: 'medium',
+    viabilityNotes: "The concept of a geometry-determined flavor-breaking tensor is appealing — it would make mixing parameters derivable rather than empirical. Within the current framework, the three-generations derivation shows that generations correspond to independent winding axes in 3D. If these axes have slightly different coherence costs (analogous to the Fisher curvature difference), a breaking tensor could emerge. The challenge is that the current framework's winding-axis picture is topological, not geometric in the Fisher-metric sense, so the connection requires bridging two different mathematical languages."
+  },
+  {
+    id: 6,
+    name: "Residual discrete symmetries selecting PMNS bases",
+    paperRef: "Neutrino Flavor (§2)",
+    description: "An A₅ 5-fold residual symmetry R₅ selects the charged-lepton basis U_e, while a Klein pair (R₂ᵃ, R₂ᵇ) selects the neutrino basis U_ν. The PMNS matrix is then U_PMNS = U_e† U_ν. The specific residual subgroups determine which of the five discrete CP channels is realized.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework mentions that PMNS and CKM matrices arise as 'rotation matrices relating the winding-axis frame to the electroweak frame' (three-generations derivation, Prop 5.2), but does not derive which rotations or why specific discrete symmetries select the bases.",
+    viability: 'medium',
+    viabilityNotes: "Discrete flavor symmetries (A₅, S₄, A₄) are an active research area in neutrino physics. The current framework's three winding axes in SO(3) naturally give rise to an SO(3) ⊃ A₅ ⊃ Klein subgroup chain. If the coherence cost function on the space of winding configurations has A₅ symmetry (which is plausible given three dimensions and the uniqueness of A₅ as a non-abelian finite simple subgroup of SO(3)), residual symmetry selection could work within the framework. This is one of the more promising ideas for connecting to experiment."
+  },
+  {
+    id: 7,
+    name: "Single-parameter flavor breaking (κ scale)",
+    paperRef: "Neutrino Flavor (§2, §4.2)",
+    description: "A single continuous scale κ controls the breaking amplitude: M_ν = M_ν⁰ + κD'e^{iφ}. Successful fits have ⟨κ⟩/‖D‖ = 1.3 ± 0.4, meaning the breaking strength is order-unity in geometric units — no ad hoc hierarchy is needed.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework does not have an explicit mechanism for flavor symmetry breaking or a breaking parameter. Mass hierarchies come from exponential tunneling suppression in the bootstrap mechanism, which is a different structure.",
+    viability: 'medium',
+    viabilityNotes: "The idea that flavor breaking has a natural geometric scale (order-unity when measured against the breaking tensor norm) is attractive and avoids fine-tuning. Within the current framework, the mass hierarchy derivation already explains why masses span many orders of magnitude through exponential tunneling. If the flavor-breaking tensor D could be identified with a tunneling barrier anisotropy, κ would map to the tunneling rate — potentially connecting the two approaches. The order-unity naturalness claim would then follow from the bootstrap mechanism's fixed-point structure."
+  },
+  {
+    id: 8,
+    name: "Two-sector architecture for mixing angles",
+    paperRef: "Neutrino Flavor (§4.3)",
+    description: "Across the landscape: θ₁₃ ~ κ^{0.43} (breaking-controlled), while θ₁₂ and θ₂₃ are κ-independent and set purely by residual symmetry choice. This separates the 'small' reactor angle from the 'large' solar and atmospheric angles architecturally.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework notes that explaining why quark mixing is small while lepton mixing is large is an open problem (three-generations, Open Gaps). No mechanism for the mixing angle hierarchy is derived.",
+    viability: 'medium',
+    viabilityNotes: "The two-sector structure — some angles from symmetry, one from perturbative breaking — is a well-known pattern in discrete flavor symmetry models (tribimaximal mixing + reactor corrections). The power-law scaling θ₁₃ ~ κ^{0.43} is a specific numerical prediction that depends on the icosahedral geometry. Within the current framework, if the winding-axis structure generates A₅-like symmetry (see idea #6), a similar two-sector structure could emerge. The specific exponent 0.43 is tied to the Fisher geometry and would need re-derivation."
+  },
+  {
+    id: 9,
+    name: "Five discrete CP channels",
+    paperRef: "Neutrino Flavor (§4.5)",
+    description: "PDG-like fits cluster into five residual channels, each with a characteristic CP phase δ and Jarlskog invariant J. The channels have distinct basin shapes (curvature and width), making CP violation structure a discrete geometric property rather than a continuous parameter.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework does not address CP violation in the lepton sector. The CPT structure is deferred to later derivations in the coherence-dual-pairs derivation.",
+    viability: 'low',
+    viabilityNotes: "The five-channel structure depends heavily on the specific A₅ residual symmetry classification and the icosahedral Fisher geometry. While discrete CP predictions are experimentally testable (DUNE, Hyper-K will measure δ), the mechanism is deeply tied to the whitepaper's OC action formalism. Within the current framework, CP violation would need to emerge from the interaction of winding-axis rotations with the bootstrap hierarchy — a derivation that does not yet exist and would require substantial new development."
+  },
+  {
+    id: 10,
+    name: "Geometric preference for observed PMNS (top ~2%)",
+    paperRef: "Neutrino Flavor (§4.1)",
+    description: "Out of 600 configurations scanned (orientations × residuals), ~40% converge to viable flavor structures, and the observed PMNS pattern lies in the top ~2% — a geometrically preferred region, selective but not fine-tuned.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework does not compute a landscape of flavor configurations or assess the typicality of the observed mixing pattern.",
+    viability: 'low',
+    viabilityNotes: "The 'top 2%' claim is a landscape statistic that depends on the specific measure (which configurations to scan, how to weight orientations). Such landscape arguments are suggestive but not rigorous predictions — the measure problem is well-known in similar contexts (string landscape, multiverse). Within the current framework, a prediction of the PMNS matrix would be more valuable as a sharp derivation from axioms rather than a statistical preference over a landscape of possibilities."
+  },
+  {
+    id: 11,
+    name: "Quark sector extension (CKM from same geometry)",
+    paperRef: "Neutrino Flavor (§7.2)",
+    description: "Extending the residual symmetry strategy to the quark sector to derive CKM mixing alongside PMNS, using the same breaking tensor D and minimal symmetry seeds, potentially with a single κ up to sector-specific normalization.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework mentions CKM alongside PMNS as 'rotation matrices relating the winding-axis frame to the electroweak frame' but derives neither quantitatively.",
+    viability: 'medium',
+    viabilityNotes: "A unified geometric origin for both CKM and PMNS would be a major achievement. The current framework's three-generations derivation provides the structural basis (three winding axes → three generations in both quark and lepton sectors). The challenge is connecting this to specific mixing angles. If the flavor-breaking mechanism (ideas #5–8) can be derived within the framework, CKM extension would follow naturally. The fact that quark and lepton mixings have very different magnitudes (CKM nearly diagonal, PMNS nearly maximal) provides a strong constraint on any unified model."
+  },
+  // --- Paper 3: Complementarity and Coherence Conservation ---
+  {
+    id: 12,
+    name: "Predictivity–flexibility complementarity (CW ≈ const)",
+    paperRef: "Complementarity (§3–4)",
+    description: "In parameter space, the product of basin curvature (predictivity/stiffness) and basin width (flexibility/tolerance) is approximately constant. The quadratic regime gives CW² = 8 log₁₀F; when secondary variables are optimized, the envelope gives CW ≈ const ≈ 5.",
+    coverage: 'partial',
+    coverageNotes: "The current framework derives complementarity of quantum observables (preferred-basis derivation, Theorem 6.2 and Corollary 6.3: Robertson uncertainty from non-commuting relational invariants). This covers the quantum-mechanical Heisenberg uncertainty relation rigorously. However, the broader 'predictivity × flexibility = const' principle applied to parameter landscapes is not present.",
+    viability: 'medium',
+    viabilityNotes: "The framework's existing complementarity derivation covers quantum uncertainty from first principles. The broader claim — that any parameterized coherence landscape exhibits CW ≈ const — is a generalization that could potentially follow from the coherence conservation axiom applied to statistical descriptions. The quadratic CW² = const regime is essentially dimensional analysis (Gaussian basin has width ~ 1/√curvature), while the linear CW ≈ const regime requires the additional mechanism of secondary optimization. Within the current framework, this could manifest as a property of the bootstrap mechanism's fixed-point landscape."
+  },
+  {
+    id: 13,
+    name: "γV_cτ = ℏ as coherence bandwidth invariant",
+    paperRef: "Complementarity (§1, §5)",
+    description: "Planck's constant emerges as the fixed product of informational density (γ), causal-cell volume (V_c), and update interval (τ). This 'bandwidth of reality' constrains the total informational throughput per causal cell and is the root invariant from which both quantum uncertainty and landscape complementarity derive.",
+    coverage: 'partial',
+    coverageNotes: "The current framework derives ℏ as the coherence cost of one minimal observer cycle (action-planck derivation). The conceptual content — ℏ as a structural self-consistency constraint — is shared. But the specific dimensional mechanism (γ × V_c × τ) uses the whitepaper's informational density parameter γ, which has no counterpart.",
+    viability: 'low',
+    viabilityNotes: "Already analyzed in the whitepaper analysis (idea #7). The current framework's derivation of ℏ from minimal cycle cost is cleaner and does not require the γ parameter. The three-factor decomposition (γV_cτ) adds no new physical content beyond what the framework already captures. The 'bandwidth' interpretation is evocative but does not yield predictions beyond what ℏ = minimal coherence cost already provides."
+  },
+  {
+    id: 14,
+    name: "Heisenberg uncertainty as a special case of coherence conservation",
+    paperRef: "Complementarity (§5, §7.3)",
+    description: "Both Heisenberg's uncertainty relation (limiting joint precision in (x,p)) and OC complementarity (limiting joint optimization of scale and stiffness) are projections of d(Coherence) = 0. Heisenberg governs fluctuations of observables; OC complementarity governs fluctuations of descriptions.",
+    coverage: 'covered',
+    coverageNotes: "The current framework derives both uncertainty (preferred-basis, Cor 6.3) and complementarity (Theorem 6.2) from coherence conservation applied to non-commuting relational invariants. The unifying principle — that these are consequences of coherence conservation — is the same conceptual insight, though expressed in different mathematical language (relational invariants vs. Fisher curvature).",
+    viability: 'high',
+    viabilityNotes: "Already absorbed. The current framework's derivation is arguably more rigorous: it derives complementarity from the mathematical structure of relational invariants and Type III interactions, without assuming a specific action or information-theoretic metric. The whitepaper's contribution is the suggestive framing (Heisenberg as a special case of a universal conservation law), which the current framework realizes formally."
+  },
+  // --- Paper 4: Informational Plateau Equivalence ---
+  {
+    id: 15,
+    name: "Three equivalent plateau criteria for gauge coupling readout",
+    paperRef: "Plateau Equivalence (§3)",
+    description: "The scale k* where gauge couplings should be read off is uniquely determined by three equivalent conditions: (H) vanishing discrete Hodge commutator, (E) stationary anomalous dimension dη/d(ln k) = 0, and (S) minimum dimensionless slope |d(ln α)/d(ln k)|. Their equivalence is proved analytically.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework does not address running couplings, FRG flow, or the question of at what scale physical coupling constants should be extracted. Computing coupling constants is flagged as an open problem in the mass-hierarchy derivation.",
+    viability: 'low',
+    viabilityNotes: "The plateau equivalence theorem is elegant but presupposes the FRG framework, the OC background-field projector, and the A₅ discrete Hodge complex — none of which are part of the current framework. The conceptual insight (that coupling readout corresponds to a coherence-flux equilibrium) is compatible with the framework's philosophy, but the specific machinery cannot be transferred. If the framework were extended to derive running couplings from coherence dynamics (a major undertaking), the stationarity condition (E) could potentially be recovered as a natural readout point."
+  },
+  {
+    id: 16,
+    name: "FRG flow as radial coherence continuity",
+    paperRef: "Plateau Equivalence (§2)",
+    description: "The functional renormalization group (FRG) flow equation is reinterpreted as the radial (in ln k) expression of the OC coherence continuity law ∇_μJ^μ = 0. The anomalous dimension η measures coherence flux across scale shells, and dη/d(ln k) = 0 means zero divergence — a flux equilibrium.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework does not discuss RG flow or scale dependence of couplings. Its entropy derivation addresses irreversible coherence redistribution, but this is thermodynamic (second law), not RG-related.",
+    viability: 'medium',
+    viabilityNotes: "Reinterpreting RG flow as coherence flow across scales is conceptually aligned with the current framework. The framework's entropy derivation already identifies coherence redistribution to inaccessible domains as the mechanism for the second law. RG flow could be understood similarly: integrating out short-distance modes transfers coherence from UV to IR, and the 'running' of couplings tracks this redistribution. This reinterpretation would not produce new predictions but could provide a coherence-based foundation for the RG, potentially simplifying the derivation of scale-dependent physics."
+  },
+  {
+    id: 17,
+    name: "Parameter-free α_s(M_Z) from self-duality normalization",
+    paperRef: "Plateau Equivalence (§5)",
+    description: "At k*, the parent-action duality uniquely fixes the SU(3) projector normalization s* without external constants. Combined with BFG and fixed-coefficient RG running, this yields a parameter-free prediction of α_s(M_Z) that reportedly closes a 7% gap in the OC coupling pipeline.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework does not predict coupling constant values. The mass-hierarchy derivation explicitly flags computing coupling constants from coherence geometry as an open problem.",
+    viability: 'low',
+    viabilityNotes: "The parameter-free α_s claim depends on the entire OC pipeline: the OC action, A₅ discrete Hodge complex, FRG projector, and BFG formalism — none of which exist in the current framework. The conceptual goal (deriving α_s from first principles) is shared, but the mechanism cannot be transferred. The current framework would need to develop its own route to coupling constants, likely through the bootstrap mechanism's hierarchy of relational invariants and their associated coupling strengths."
+  },
+  {
+    id: 18,
+    name: "Discrete Hodge calculus and commutator–divergence identity",
+    paperRef: "Plateau Equivalence (§4)",
+    description: "Formal construction of discrete gradient, curl, Fisher-weighted Hodge stars, and stiffness operators on the A₅ primal–dual complex. The key result is the commutator–divergence identity: u⊤C_h u = Σ_cells (∇_h·J) V_cell, linking the Hodge commutator norm to the discrete divergence of coherence flux.",
+    coverage: 'not-covered',
+    coverageNotes: "No discrete calculus of any kind in the current framework. All geometry is smooth/continuous.",
+    viability: 'not-viable',
+    viabilityNotes: "This is computational infrastructure for the OC numerical pipeline, not a physical insight. The discrete Hodge calculus is a well-known technique in computational geometry (Whitney forms, discrete exterior calculus). Its application to the OC action is specific to that formalism and has no natural place in the current framework, which works entirely with smooth geometry and topological arguments."
+  },
+  {
+    id: 19,
+    name: "Plateau as fixed surface Σ* in coherence space",
+    paperRef: "Plateau Equivalence (§7)",
+    description: "The plateau scale defines a divergence-free hypersurface Σ* = {(θ,k) : ∇_μJ^μ_YM = 0} in the manifold of informational states. At this surface, primal-dual energies balance, the coherence potential satisfies a Laplace equation, and the total informational action per causal domain is extremal.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework does not construct a 'coherence space' manifold or identify special surfaces within it. Its approach is to derive physical laws as structural necessities from axioms, not as equilibrium conditions on an inference manifold.",
+    viability: 'low',
+    viabilityNotes: "The idea of a 'fixed surface' where coherence flux vanishes is conceptually interesting — it provides a geometric picture of why certain physical quantities are stable. The current framework's bootstrap mechanism has a similar flavor: each level of the hierarchy is a fixed point where coherence redistribution stabilizes. But the specific construction (coherence manifold with scale coordinates, Laplace-type potential, divergence-free surfaces) requires the OC action formalism. The qualitative insight (stable physics corresponds to extrema in some coherence landscape) is already implicit in the framework's bootstrap derivation."
+  },
+  {
+    id: 20,
+    name: "Cosmological selection of flavor alignment",
+    paperRef: "Neutrino Flavor (§7.3)",
+    description: "If orientation–residual alignment froze during the early universe, the selection dynamics could leave correlated imprints: selection temperature scales from FRG freeze-out, connections to baryogenesis via shared geometric phases, and stochastic gravitational-wave backgrounds if selection was first-order.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework does not address cosmological phase transitions or early-universe dynamics beyond noting the cosmological constant as an open question.",
+    viability: 'low',
+    viabilityNotes: "This is highly speculative even within the paper's own framework. It requires: (1) the flavor mechanism to be correct, (2) the alignment to be dynamical rather than fundamental, (3) the freeze-out to occur at accessible temperatures, and (4) the transition to produce observable relics. Each step introduces significant uncertainty. Within the current framework, early-universe dynamics would need the bootstrap hierarchy's formation sequence to be understood temporally, which is an open problem."
+  },
+  {
+    id: 21,
+    name: "Informational thermodynamics (C W ≈ const as conservation law)",
+    paperRef: "Complementarity (§7.2)",
+    description: "The law CW ≈ const parallels thermodynamic limits: increasing precision (curvature) reduces entropy (width), preserving total coherence as an invariant measure of 'informational energy.' This extends the current framework's entropy derivation to parameter inference spaces.",
+    coverage: 'partial',
+    coverageNotes: "The current framework derives the second law from the bootstrap mechanism (Type III interactions generate inaccessible relational invariants) and recovers Boltzmann entropy. The specific extension to parameter-space 'entropy' (identifying basin width with configurational freedom) is not present.",
+    viability: 'medium',
+    viabilityNotes: "The framework's entropy derivation already establishes that coherence redistribution drives thermodynamic behavior. The proposed extension — applying the same principle to the space of model parameters rather than physical states — is a natural generalization. The CW ≈ const law would follow if the coherence conservation axiom constrains not just physical state evolution but also the landscape of consistent descriptions. This could add theoretical depth to the existing entropy derivation without requiring new axioms."
+  },
+  {
+    id: 22,
+    name: "Unified gauge coupling prediction pipeline",
+    paperRef: "Plateau Equivalence (§5.5–5.7)",
+    description: "A complete algorithm: compute k* from plateau equivalence, fix SU(3) normalization from duality, RG-run to M_Z with fixed coefficients, report (α_s, α_{1,2}, sin²θ_W). The electroweak sector uses an internal OC estimator; SU(3) is fixed orthogonally by duality. Claims to reproduce EW sector and close the strong-coupling gap.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework does not predict any coupling constant values. This is explicitly flagged as an open problem.",
+    viability: 'low',
+    viabilityNotes: "The pipeline is impressive in ambition but depends entirely on OC-specific infrastructure (A₅ lattice, FRG projectors, parent-action duality, BFG formalism). None of these tools exist in the current framework. More importantly, the claimed predictions should be treated cautiously — coupling constant calculations from first principles would be revolutionary, and the specific numerical results have not been independently verified. The current framework's honest acknowledgment that coupling constants are an open problem is appropriate."
+  },
+  {
+    id: 23,
+    name: "Existence and uniqueness of plateau scale k* and normalization s*",
+    paperRef: "Plateau Equivalence (§6)",
+    description: "Under regularity assumptions (smooth FRG flow, convex Hodge commutator norm, self-dual weight balance, single active crossing), both k* and s* are proved to exist and be unique. Stability under perturbations is bounded by the Hessian eigenvalue.",
+    coverage: 'not-covered',
+    coverageNotes: "No analog — the current framework does not define quantities analogous to k* or s*.",
+    viability: 'not-viable',
+    viabilityNotes: "This is a regularity theorem for the OC-specific FRG pipeline. Its mathematical content (intermediate value theorem, monotonicity, convexity) is standard analysis applied to OC-specific objects. The theorem has no transferable content to the current framework because the objects it governs (Hodge commutator, FRG anomalous dimension, projector normalization) do not exist in the current framework."
+  },
+  {
+    id: 24,
+    name: "Coherence conservation across all closure levels",
+    paperRef: "Plateau Equivalence (§7.4, §8)",
+    description: "A hierarchy table connecting closure levels to conservation forms: informational (∇_iJ^i = 0 → quantum coherence), metric (∇_μJ^μ_geom = 0 → energy-momentum conservation), gauge (∇_μJ^μ_YM = 0 → RG plateau), global (d(Coherence) = 0 → universal law). The plateau is the junction where gauge-level conservation merges into the global invariant.",
+    coverage: 'covered',
+    coverageNotes: "The current framework's Axiom 1 (coherence conservation) is this global law. Its consequences at different levels — probability conservation (Born rule), energy-momentum conservation (Einstein equations via divergence-free stress tensor), charge conservation (Noether pairs from loop closure), and the second law (entropy as inaccessible coherence) — are all derived in the existing chain. The 'gauge closure level' (∇_μJ^μ_YM = 0) is not separately derived because gauge dynamics are not yet in the framework.",
+    viability: 'high',
+    viabilityNotes: "Already absorbed as the framework's foundational principle. The hierarchy table provides a nice summary of what coherence conservation implies at each level, and the current framework has rigorously derived the informational, metric, and thermodynamic entries. The gauge-level entry (coupling stationarity from coherence flux balance) would be a natural addition if gauge dynamics are ever derived within the framework."
+  },
+  {
+    id: 25,
+    name: "Vacuum energy stability from flux-free plateau",
+    paperRef: "Plateau Equivalence (§8.4)",
+    description: "On the divergence-free surface Σ*, net coherence flux into the vacuum vanishes, suppressing zero-point divergence. The cosmological constant corresponds to slight curvature of Σ* at cosmic scales — a global, slow drift of coherence driving accelerated expansion.",
+    coverage: 'not-covered',
+    coverageNotes: "The current framework notes the cosmological constant as an open question (Einstein equations derivation mentions it via Lovelock uniqueness but does not compute its value).",
+    viability: 'low',
+    viabilityNotes: "The idea that vacuum energy is controlled by a coherence-flux equilibrium is interesting but speculative. The claim that the divergence-free condition 'suppresses zero-point divergence' is not obviously true — the cosmological constant problem involves a 120-order-of-magnitude discrepancy that requires more than suppression of divergence at a particular scale. Within the current framework, a coherence-based resolution of the cosmological constant problem would likely come from the holographic bound (area scaling of entropy) constraining the total vacuum energy, which is a different mechanism."
+  },
+  {
+    id: 26,
+    name: "Explicit geometry-determined breaking tensor eigenstructure",
+    paperRef: "Neutrino Flavor (§4.6)",
+    description: "For a representative icosahedral orientation, the breaking tensor D is nearly diagonal with eigenvalues spanning a factor of ~5 (λ₁ ≈ 1.03×10⁻⁴, λ₂ ≈ 4.22×10⁻⁴, λ₃ ≈ 5.64×10⁻⁴). It has mild cylindrical degeneracy (λ₁ ≈ λ₂) and its scalar invariants are rotation-stable to ppm — a bona fide geometric tensor.",
+    coverage: 'not-covered',
+    coverageNotes: "No analog in the current framework. The breaking tensor concept requires the Fisher metric and icosahedral geometry.",
+    viability: 'low',
+    viabilityNotes: "The specific numerical eigenstructure of D depends entirely on the icosahedral Fisher geometry. While the qualitative feature (mild hierarchy among eigenvalues, approximate cylindrical symmetry) could be a useful constraint on any flavor model, the specific numbers are not transferable to the current framework. The 'nearly diagonal' structure and ppm-stable scalar invariants suggest genuine geometric content, but verifying whether an analog exists in the winding-axis picture would require constructing the coherence cost anisotropy on the space of winding configurations — a non-trivial calculation."
+  }
+]
+
+const coverageLabel = (c: Coverage) => {
+  switch(c) {
+    case 'covered': return 'Covered'
+    case 'partial': return 'Partial'
+    case 'not-covered': return 'Not covered'
+  }
+}
+
+const coverageClass = (c: Coverage) => `wa-cov-${c}`
+
+const viabilityLabel = (v: Viability) => {
+  switch(v) {
+    case 'high': return 'High'
+    case 'medium': return 'Medium'
+    case 'low': return 'Low'
+    case 'not-viable': return 'Not viable'
+  }
+}
+
+const viabilityClass = (v: Viability) => `wa-via-${v}`
+
+const covered = ideas.filter(i => i.coverage === 'covered').length
+const partial = ideas.filter(i => i.coverage === 'partial').length
+const notCovered = ideas.filter(i => i.coverage === 'not-covered').length
+const highViability = ideas.filter(i => i.viability === 'high').length
+const medViability = ideas.filter(i => i.viability === 'medium').length
+
+const papers = [
+  { short: "Paper 1", title: "The Observer-Centric Action and Self-Dual A₅ Geometry", date: "Oct 2025" },
+  { short: "Paper 2", title: "Neutrino Flavor Structure from Icosahedral–Dodecahedral Geometry", date: "Nov 2025" },
+  { short: "Paper 3", title: "Complementarity and Coherence Conservation in Observer-Centrism", date: "Oct 2025" },
+  { short: "Paper 4", title: "Informational Plateau Equivalence and the Conservation of Coherence Flow", date: "Nov 2025" },
+]
+---
+
+<MainLayout title="Extension Papers Analysis">
+  <h1>Extension Papers: Idea Analysis</h1>
+  <p>
+    Alongside the main whitepaper, four extension papers explored more speculative directions
+    within the earlier Observer-Centrism framework. These papers used the same foundation
+    &mdash; the OC action, Fisher information metric, A₅ icosahedral geometry, and functional
+    renormalization group &mdash; to address neutrino flavor structure, gauge coupling predictions,
+    self-duality, and a complementarity principle.
+  </p>
+  <p>
+    These papers are <strong>more speculative</strong> than the core whitepaper, and their
+    results depend heavily on the specific OC action formalism. This analysis catalogs their
+    distinct ideas, assesses coverage in the current rigorous framework, and evaluates viability
+    for absorption &mdash; judged, as before, by whether an idea is <em>plausibly derivable</em>
+    from the current axioms and derivation chain.
+  </p>
+
+  <div class="pa-papers">
+    <h3>Papers analyzed</h3>
+    <ol>
+      {papers.map(p => (
+        <li><strong>{p.title}</strong> <span class="pa-date">({p.date})</span></li>
+      ))}
+    </ol>
+  </div>
+
+  <div class="wa-summary">
+    <div class="wa-stat">
+      <div class="wa-stat-value">{ideas.length}</div>
+      <div class="wa-stat-label">Ideas cataloged</div>
+    </div>
+    <div class="wa-stat">
+      <div class="wa-stat-value">{covered}</div>
+      <div class="wa-stat-label">Already covered</div>
+    </div>
+    <div class="wa-stat">
+      <div class="wa-stat-value">{partial}</div>
+      <div class="wa-stat-label">Partially covered</div>
+    </div>
+    <div class="wa-stat">
+      <div class="wa-stat-value">{notCovered}</div>
+      <div class="wa-stat-label">Not yet covered</div>
+    </div>
+    <div class="wa-stat">
+      <div class="wa-stat-value">{highViability + medViability}</div>
+      <div class="wa-stat-label">High/medium viability</div>
+    </div>
+  </div>
+
+  <div class="pa-note">
+    <strong>Key observation:</strong> These papers are significantly more coupled to the
+    prior framework's specific formalism (OC action, Fisher metric, A₅ lattice, FRG projectors)
+    than the whitepaper's core ideas. Most of the machinery cannot be directly transferred.
+    The most promising transferable ideas are in the <strong>flavor physics</strong> domain
+    (ideas 5&ndash;11), where the conceptual structure &mdash; geometry-determined flavor breaking,
+    discrete residual symmetries, two-sector mixing architecture &mdash; could potentially be
+    re-derived using the current framework's winding-axis and bootstrap mechanisms.
+  </div>
+
+  {ideas.map(idea => (
+    <div class="wa-card" id={`idea-${idea.id}`}>
+      <div class="wa-card-header">
+        <span class="wa-id">{idea.id}</span>
+        <h3 class="wa-name">{idea.name}</h3>
+        <div class="wa-badges">
+          <span class={`wa-badge ${coverageClass(idea.coverage)}`}>{coverageLabel(idea.coverage)}</span>
+          <span class={`wa-badge ${viabilityClass(idea.viability)}`}>{viabilityLabel(idea.viability)}</span>
+        </div>
+      </div>
+      <div class="wa-section-ref">{idea.paperRef}</div>
+      <p class="wa-description">{idea.description}</p>
+      <div class="wa-assessment">
+        <div class="wa-assessment-block">
+          <h4>Coverage in current framework</h4>
+          <p>{idea.coverageNotes}</p>
+        </div>
+        <div class="wa-assessment-block">
+          <h4>Viability for absorption</h4>
+          <p>{idea.viabilityNotes}</p>
+        </div>
+      </div>
+    </div>
+  ))}
+
+  <div class="pa-summary-section">
+    <h2>Cross-Reference with Whitepaper Analysis</h2>
+    <p>
+      Several ideas in these papers overlap with or extend ideas already cataloged in the
+      <a href="/whitepaper-analysis/">whitepaper analysis</a>. Key connections:
+    </p>
+    <ul>
+      <li>
+        <strong>γV_cτ = ℏ</strong> (idea #13 here, idea #7 in whitepaper) &mdash; same
+        invariant, same assessment: already captured by the framework's action-planck derivation.
+      </li>
+      <li>
+        <strong>Coherence conservation hierarchy</strong> (idea #24 here, idea #16 in whitepaper)
+        &mdash; already absorbed as Axiom 1 and its consequences.
+      </li>
+      <li>
+        <strong>Gauge symmetry derivation</strong> (ideas #4, #15 here, idea #11 in whitepaper)
+        &mdash; deriving gauge dynamics from coherence remains the highest-priority open extension.
+      </li>
+      <li>
+        <strong>Coupling constants</strong> (ideas #17, #22 here, idea #28 in whitepaper)
+        &mdash; remains an open problem; the OC pipeline is too formalism-dependent to transfer.
+      </li>
+      <li>
+        <strong>Flavor physics</strong> (ideas #5&ndash;11 here, new) &mdash; the most
+        distinctive contribution of these papers, with moderate viability for absorption
+        via the winding-axis mechanism.
+      </li>
+    </ul>
+  </div>
+</MainLayout>
+
+<style>
+  .pa-papers {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin: 1.25rem 0;
+  }
+  .pa-papers h3 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin: 0 0 0.5rem;
+    letter-spacing: 0.04em;
+    border: none;
+    padding: 0;
+  }
+  .pa-papers ol {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-size: 0.85rem;
+    line-height: 1.7;
+  }
+  .pa-date {
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+  }
+
+  .pa-note {
+    background: #fffbeb;
+    border: 1px solid #fbbf24;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin: 1.25rem 0;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .pa-summary-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--color-border);
+  }
+  .pa-summary-section h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  .pa-summary-section ul {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    padding-left: 1.25rem;
+  }
+
+  .wa-summary {
+    display: flex;
+    gap: 0.75rem;
+    margin: 1.5rem 0 2rem;
+    flex-wrap: wrap;
+  }
+  .wa-stat {
+    flex: 1;
+    min-width: 100px;
+    padding: 0.75rem 1rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    text-align: center;
+  }
+  .wa-stat-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 0.04em;
+  }
+  .wa-stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+  }
+
+  .wa-card {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 0.75rem;
+    background: var(--color-surface);
+  }
+  .wa-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.25rem;
+  }
+  .wa-id {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    background: var(--color-border);
+    border-radius: 9999px;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+  .wa-name {
+    flex: 1;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0;
+    min-width: 200px;
+    border: none;
+    padding: 0;
+  }
+  .wa-badges {
+    display: flex;
+    gap: 0.4rem;
+    flex-shrink: 0;
+  }
+  .wa-badge {
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.15rem 0.5rem;
+    border-radius: 9999px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .wa-cov-covered { background: #dcfce7; color: #166534; }
+  .wa-cov-partial { background: #fef3c7; color: #92400e; }
+  .wa-cov-not-covered { background: #f3f4f6; color: #6b7280; }
+  .wa-via-high { background: #dbeafe; color: #1e40af; }
+  .wa-via-medium { background: #e0e7ff; color: #4338ca; }
+  .wa-via-low { background: #f3f4f6; color: #6b7280; }
+  .wa-via-not-viable { background: #fef2f2; color: #991b1b; }
+
+  .wa-section-ref {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.5rem;
+    margin-left: 2.25rem;
+  }
+  .wa-description {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+  .wa-assessment {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+  @media (max-width: 700px) {
+    .wa-assessment { grid-template-columns: 1fr; }
+  }
+  .wa-assessment-block {
+    background: #fafaf9;
+    border-radius: 6px;
+    padding: 0.75rem;
+  }
+  .wa-assessment-block h4 {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin: 0 0 0.35rem;
+    letter-spacing: 0.03em;
+  }
+  .wa-assessment-block p {
+    font-size: 0.8rem;
+    line-height: 1.55;
+    color: var(--color-text);
+    margin: 0;
+  }
+</style>
