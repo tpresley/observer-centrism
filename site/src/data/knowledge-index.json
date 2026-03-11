@@ -1,18 +1,19 @@
 {
   "meta": {
-    "generatedAt": "2026-03-11T04:17:19.518Z",
-    "derivationCount": 41,
-    "predictionCount": 7,
+    "generatedAt": "2026-03-11T08:42:32.093Z",
+    "derivationCount": 50,
+    "predictionCount": 8,
     "generator": "scripts/build-index.mjs"
   },
   "stats": {
     "byStatus": {
       "rigorous": 40,
-      "non-viable": 1
+      "non-viable": 1,
+      "stub": 9
     },
-    "derivationCount": 41,
-    "predictionCount": 7,
-    "edgeCount": 73,
+    "derivationCount": 50,
+    "predictionCount": 8,
+    "edgeCount": 88,
     "formalObjectCount": 636,
     "openGapCount": 156,
     "upgradeEligibleCount": 0,
@@ -1410,6 +1411,10 @@
             "context": "Coupling Constants"
           },
           {
+            "source": "interactions/bootstrap-division-algebras",
+            "context": "Coupling Constants"
+          },
+          {
             "source": "thermodynamics-ext/renormalization",
             "context": "Coupling Constants"
           }
@@ -1672,8 +1677,12 @@
         "particles/three-generations",
         "gauge/weak-interaction"
       ],
-      "enablesDerivation": [],
-      "dependedOnBy": [],
+      "enablesDerivation": [
+        "particles/neutrino-masses"
+      ],
+      "dependedOnBy": [
+        "particles/neutrino-masses"
+      ],
       "steps": [
         {
           "number": 1,
@@ -1878,6 +1887,10 @@
           {
             "source": "gauge/weak-interaction",
             "context": "Flavor Mixing"
+          },
+          {
+            "source": "particles/neutrino-masses",
+            "context": "Flavor Mixing"
           }
         ]
       },
@@ -1892,6 +1905,53 @@
           "Theorem 3.1",
           "Proposition 4.1"
         ]
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "foundation/coherence-lagrangian": {
+      "id": "foundation/coherence-lagrangian",
+      "filePath": "site/src/content/derivations/foundation/coherence-lagrangian.md",
+      "title": "Coherence Lagrangian",
+      "status": "stub",
+      "rigorLevel": "informal",
+      "group": "foundation",
+      "tags": [
+        "foundation",
+        "lagrangian"
+      ],
+      "summary": "Derive the unique coherence Lagrangian from the axioms. The Fisher information metric on the space of observer states provides the kinetic term; coherence conservation constrains the potential. This is the central missing mathematical piece that would connect the discrete axiom structure to continuum field theory.",
+      "lastUpdated": "2026-03-11",
+      "dependsOn": [
+        "thermodynamics/action-planck",
+        "thermodynamics-ext/fisher-metric"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [],
+      "formalObjects": [],
+      "structuralPostulates": [],
+      "openGaps": [],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "thermodynamics-ext/fisher-metric",
+            "context": "Fisher Information Metric"
+          },
+          {
+            "target": "thermodynamics/action-planck",
+            "context": "Action and Planck's Constant"
+          }
+        ],
+        "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -2146,10 +2206,14 @@
         "interactions/bootstrap"
       ],
       "enablesDerivation": [
-        "gauge/standard-model-group"
+        "gauge/standard-model-group",
+        "gauge/strong-cp",
+        "gauge/confinement"
       ],
       "dependedOnBy": [
-        "gauge/standard-model-group"
+        "gauge/confinement",
+        "gauge/standard-model-group",
+        "gauge/strong-cp"
       ],
       "steps": [
         {
@@ -2401,6 +2465,10 @@
             "context": "Proposition 3.2"
           },
           {
+            "source": "gauge/confinement",
+            "context": "Color Force"
+          },
+          {
             "source": "gauge/electromagnetism",
             "context": "Color Force"
           },
@@ -2409,7 +2477,15 @@
             "context": "Color Force"
           },
           {
+            "source": "gauge/strong-cp",
+            "context": "Color Force"
+          },
+          {
             "source": "gauge/weak-interaction",
+            "context": "Color Force"
+          },
+          {
+            "source": "interactions/bootstrap-division-algebras",
             "context": "Color Force"
           },
           {
@@ -2433,6 +2509,48 @@
           "Proposition 4.3",
           "Proposition 7.1"
         ]
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "gauge/confinement": {
+      "id": "gauge/confinement",
+      "filePath": "site/src/content/derivations/gauge/confinement.md",
+      "title": "Color Confinement",
+      "status": "stub",
+      "rigorLevel": "informal",
+      "group": "gauge",
+      "tags": [
+        "gauge",
+        "confinement"
+      ],
+      "summary": "Derive color confinement from the non-associativity of octonions. Only color-singlet combinations have well-defined long-range coherence transport because non-associative phases cancel only for singlet states, providing a first-principles explanation of quark confinement.",
+      "lastUpdated": "2026-03-11",
+      "dependsOn": [
+        "gauge/color-force"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [],
+      "formalObjects": [],
+      "structuralPostulates": [],
+      "openGaps": [],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "gauge/color-force",
+            "context": "Color Force"
+          }
+        ],
+        "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -2822,6 +2940,10 @@
             "context": "now rigorous"
           },
           {
+            "source": "interactions/bootstrap-division-algebras",
+            "context": "Electromagnetism"
+          },
+          {
             "source": "thermodynamics-ext/renormalization",
             "context": "locality of phase comparison"
           },
@@ -2830,6 +2952,53 @@
             "context": "Electromagnetism"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "gauge/electroweak-breaking": {
+      "id": "gauge/electroweak-breaking",
+      "filePath": "site/src/content/derivations/gauge/electroweak-breaking.md",
+      "title": "Electroweak Symmetry Breaking",
+      "status": "stub",
+      "rigorLevel": "informal",
+      "group": "gauge",
+      "tags": [
+        "gauge",
+        "symmetry-breaking"
+      ],
+      "summary": "Derive the breaking of SU(2)_L × U(1)_Y → U(1)_em as a coherence crystallization cascade at the electroweak scale. Identify the coherence-sector analog of the Higgs field and derive the W and Z boson masses from the crystallization dynamics.",
+      "lastUpdated": "2026-03-11",
+      "dependsOn": [
+        "gauge/standard-model-group",
+        "gauge/weak-interaction"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [],
+      "formalObjects": [],
+      "structuralPostulates": [],
+      "openGaps": [],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "gauge/standard-model-group",
+            "context": "Standard Model Gauge Group"
+          },
+          {
+            "target": "gauge/weak-interaction",
+            "context": "Weak Interaction"
+          }
+        ],
+        "incoming": []
       },
       "leanVerification": {
         "hasProofs": false,
@@ -2858,10 +3027,12 @@
         "gauge/color-force"
       ],
       "enablesDerivation": [
-        "cosmology/coupling-constants"
+        "cosmology/coupling-constants",
+        "gauge/electroweak-breaking"
       ],
       "dependedOnBy": [
-        "cosmology/coupling-constants"
+        "cosmology/coupling-constants",
+        "gauge/electroweak-breaking"
       ],
       "steps": [
         {
@@ -3053,6 +3224,14 @@
           {
             "source": "gauge/electromagnetism",
             "context": "full gauge structure"
+          },
+          {
+            "source": "gauge/electroweak-breaking",
+            "context": "Standard Model Gauge Group"
+          },
+          {
+            "source": "interactions/bootstrap-division-algebras",
+            "context": "Standard Model Gauge Group"
           }
         ]
       },
@@ -3071,6 +3250,48 @@
           "Theorem 3.1",
           "Proposition 4.1"
         ]
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "gauge/strong-cp": {
+      "id": "gauge/strong-cp",
+      "filePath": "site/src/content/derivations/gauge/strong-cp.md",
+      "title": "Strong CP Conservation",
+      "status": "stub",
+      "rigorLevel": "informal",
+      "group": "gauge",
+      "tags": [
+        "gauge",
+        "cp-violation"
+      ],
+      "summary": "Derive that the QCD vacuum angle theta is exactly zero from the octonionic structure of the color force. The non-associativity of octonions forbids the topological theta-term, explaining the absence of CP violation in strong interactions without requiring an axion.",
+      "lastUpdated": "2026-03-11",
+      "dependsOn": [
+        "gauge/color-force"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [],
+      "formalObjects": [],
+      "structuralPostulates": [],
+      "openGaps": [],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "gauge/color-force",
+            "context": "Color Force"
+          }
+        ],
+        "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -3096,13 +3317,15 @@
         "gauge/chirality-selection",
         "gauge/standard-model-group",
         "flavor/mixing-angles",
-        "cosmology/baryogenesis"
+        "cosmology/baryogenesis",
+        "gauge/electroweak-breaking"
       ],
       "dependedOnBy": [
         "cosmology/baryogenesis",
         "flavor/mixing-angles",
         "gauge/chirality-selection",
         "gauge/color-force",
+        "gauge/electroweak-breaking",
         "gauge/standard-model-group"
       ],
       "steps": [
@@ -3493,7 +3716,15 @@
             "context": "Weak Interaction"
           },
           {
+            "source": "gauge/electroweak-breaking",
+            "context": "Weak Interaction"
+          },
+          {
             "source": "gauge/standard-model-group",
+            "context": "Weak Interaction"
+          },
+          {
+            "source": "interactions/bootstrap-division-algebras",
             "context": "Weak Interaction"
           },
           {
@@ -3536,11 +3767,15 @@
         "thermodynamics/action-planck"
       ],
       "enablesDerivation": [
-        "holography/black-hole-entropy"
+        "holography/black-hole-entropy",
+        "spacetime/singularity-resolution",
+        "holography/causal-set-statistics"
       ],
       "dependedOnBy": [
         "cosmology/cosmological-constant",
-        "holography/black-hole-entropy"
+        "holography/black-hole-entropy",
+        "holography/causal-set-statistics",
+        "spacetime/singularity-resolution"
       ],
       "steps": [
         {
@@ -3728,6 +3963,14 @@
           {
             "source": "holography/black-hole-entropy",
             "context": "Theorem 5.2"
+          },
+          {
+            "source": "holography/causal-set-statistics",
+            "context": "Holographic Entropy Bound"
+          },
+          {
+            "source": "spacetime/singularity-resolution",
+            "context": "Holographic Entropy Bound"
           },
           {
             "source": "thermodynamics/entropy",
@@ -3944,6 +4187,54 @@
         "propositions": [
           "Proposition 5.1"
         ]
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "holography/causal-set-statistics": {
+      "id": "holography/causal-set-statistics",
+      "filePath": "site/src/content/derivations/holography/causal-set-statistics.md",
+      "title": "Causal Set Statistics",
+      "status": "stub",
+      "rigorLevel": "informal",
+      "group": "holography",
+      "tags": [
+        "holography",
+        "causal-sets",
+        "statistics"
+      ],
+      "summary": "Compute the statistical properties of the relational invariant network as a causal set. The Poisson-sprinkled causal set statistics simultaneously quantify the holographic noise amplitude coefficient alpha_H and the dark matter density fluctuation spectrum, providing a unified statistical foundation for both primary predictions.",
+      "lastUpdated": "2026-03-11",
+      "dependsOn": [
+        "holography/area-scaling",
+        "interactions/relational-invariants"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [],
+      "formalObjects": [],
+      "structuralPostulates": [],
+      "openGaps": [],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "holography/area-scaling",
+            "context": "Holographic Entropy Bound"
+          },
+          {
+            "target": "interactions/relational-invariants",
+            "context": "Relational Invariants"
+          }
+        ],
+        "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -4356,6 +4647,68 @@
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
+    "interactions/bootstrap-division-algebras": {
+      "id": "interactions/bootstrap-division-algebras",
+      "filePath": "site/src/content/derivations/interactions/bootstrap-division-algebras.md",
+      "title": "Bootstrap Division Algebras",
+      "status": "stub",
+      "rigorLevel": "informal",
+      "group": "interactions",
+      "tags": [
+        "interactions",
+        "division-algebras"
+      ],
+      "summary": "Prove that the bootstrap hierarchy mechanism forces the Cayley-Dickson doubling sequence R → C → H → O. If established, this eliminates the structural postulates about division algebras from the entire gauge chain, deriving the Standard Model gauge structure purely from the three axioms.",
+      "lastUpdated": "2026-03-11",
+      "dependsOn": [
+        "interactions/bootstrap"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [],
+      "formalObjects": [],
+      "structuralPostulates": [],
+      "openGaps": [],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap Mechanism"
+          },
+          {
+            "target": "gauge/electromagnetism",
+            "context": "Electromagnetism"
+          },
+          {
+            "target": "gauge/weak-interaction",
+            "context": "Weak Interaction"
+          },
+          {
+            "target": "gauge/color-force",
+            "context": "Color Force"
+          },
+          {
+            "target": "gauge/standard-model-group",
+            "context": "Standard Model Gauge Group"
+          },
+          {
+            "target": "cosmology/coupling-constants",
+            "context": "Coupling Constants"
+          }
+        ],
+        "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
     "interactions/bootstrap": {
       "id": "interactions/bootstrap",
       "filePath": "site/src/content/derivations/interactions/bootstrap.md",
@@ -4373,11 +4726,13 @@
       ],
       "enablesDerivation": [
         "spacetime/einstein-equations",
-        "particles/mass-hierarchy"
+        "particles/mass-hierarchy",
+        "interactions/bootstrap-division-algebras"
       ],
       "dependedOnBy": [
         "cosmology/coupling-constants",
         "gauge/color-force",
+        "interactions/bootstrap-division-algebras",
         "particles/mass-hierarchy",
         "spacetime/einstein-equations"
       ],
@@ -4570,6 +4925,10 @@
             "context": "Bootstrap Mechanism"
           },
           {
+            "source": "interactions/bootstrap-division-algebras",
+            "context": "Bootstrap Mechanism"
+          },
+          {
             "source": "interactions/relational-invariants",
             "context": "Bootstrap"
           },
@@ -4635,12 +4994,16 @@
         "interactions/bootstrap",
         "thermodynamics/entropy",
         "spacetime/gravity",
-        "quantum/born-rule"
+        "quantum/born-rule",
+        "quantum/entanglement",
+        "holography/causal-set-statistics"
       ],
       "dependedOnBy": [
         "gauge/chirality-selection",
+        "holography/causal-set-statistics",
         "interactions/bootstrap",
         "quantum/born-rule",
+        "quantum/entanglement",
         "spacetime/gravity",
         "thermodynamics/entropy"
       ],
@@ -4869,6 +5232,10 @@
             "context": "Relational Invariants"
           },
           {
+            "source": "holography/causal-set-statistics",
+            "context": "Relational Invariants"
+          },
+          {
             "source": "interactions/bootstrap",
             "context": "Theorem 2.1"
           },
@@ -4890,6 +5257,10 @@
           },
           {
             "source": "particles/spin-statistics",
+            "context": "Relational Invariants"
+          },
+          {
+            "source": "quantum/entanglement",
             "context": "Relational Invariants"
           },
           {
@@ -6142,6 +6513,53 @@
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
+    "particles/neutrino-masses": {
+      "id": "particles/neutrino-masses",
+      "filePath": "site/src/content/derivations/particles/neutrino-masses.md",
+      "title": "Neutrino Mass Mechanism",
+      "status": "stub",
+      "rigorLevel": "informal",
+      "group": "particles",
+      "tags": [
+        "particles",
+        "neutrinos"
+      ],
+      "summary": "Determine whether neutrinos are Dirac or Majorana particles from the winding structure of the observer loop. Self-conjugate windings would give Majorana masses; distinct windings give Dirac masses. The answer connects to leptogenesis, the mass hierarchy, and the PMNS mixing matrix structure.",
+      "lastUpdated": "2026-03-11",
+      "dependsOn": [
+        "particles/three-generations",
+        "flavor/mixing-angles"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [],
+      "formalObjects": [],
+      "structuralPostulates": [],
+      "openGaps": [],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "flavor/mixing-angles",
+            "context": "Flavor Mixing"
+          },
+          {
+            "target": "particles/three-generations",
+            "context": "Three Generations"
+          }
+        ],
+        "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
     "particles/pauli-exclusion": {
       "id": "particles/pauli-exclusion",
       "filePath": "site/src/content/derivations/particles/pauli-exclusion.md",
@@ -6552,9 +6970,12 @@
         "particles/spin-statistics",
         "particles/mass-hierarchy"
       ],
-      "enablesDerivation": [],
+      "enablesDerivation": [
+        "particles/neutrino-masses"
+      ],
       "dependedOnBy": [
-        "flavor/mixing-angles"
+        "flavor/mixing-angles",
+        "particles/neutrino-masses"
       ],
       "steps": [
         {
@@ -6743,6 +7164,10 @@
           {
             "source": "gauge/standard-model-group",
             "context": "Three Generations"
+          },
+          {
+            "source": "particles/neutrino-masses",
+            "context": "Three Generations"
           }
         ]
       },
@@ -6776,9 +7201,11 @@
         "thermodynamics/time"
       ],
       "enablesDerivation": [
-        "quantum/preferred-basis"
+        "quantum/preferred-basis",
+        "quantum/entanglement"
       ],
       "dependedOnBy": [
+        "quantum/entanglement",
         "quantum/preferred-basis"
       ],
       "steps": [
@@ -7006,6 +7433,10 @@
             "context": "Born Rule"
           },
           {
+            "source": "quantum/entanglement",
+            "context": "Born Rule"
+          },
+          {
             "source": "quantum/measurement",
             "context": "amplitude-coherence identification"
           },
@@ -7026,6 +7457,57 @@
             "context": "Born Rule"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "quantum/entanglement": {
+      "id": "quantum/entanglement",
+      "filePath": "site/src/content/derivations/quantum/entanglement.md",
+      "title": "Entanglement",
+      "status": "stub",
+      "rigorLevel": "informal",
+      "group": "quantum",
+      "tags": [
+        "quantum",
+        "information"
+      ],
+      "summary": "Formalize the mapping between relational invariants and quantum entanglement. Establish that the coherence of a relational invariant C(I_12) corresponds to entanglement entropy S = -Tr(rho_A ln rho_A), grounding the quantum information aspects of the framework.",
+      "lastUpdated": "2026-03-11",
+      "dependsOn": [
+        "interactions/relational-invariants",
+        "quantum/born-rule"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [],
+      "formalObjects": [],
+      "structuralPostulates": [],
+      "openGaps": [],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "thermodynamics-ext/distinguishability-conservation",
+            "context": "Conservation of Distinguishability"
+          },
+          {
+            "target": "interactions/relational-invariants",
+            "context": "Relational Invariants"
+          },
+          {
+            "target": "quantum/born-rule",
+            "context": "Born Rule"
+          }
+        ],
+        "incoming": []
       },
       "leanVerification": {
         "hasProofs": false,
@@ -7530,9 +8012,12 @@
         "interactions/bootstrap",
         "dimensions/three-dimensions"
       ],
-      "enablesDerivation": [],
+      "enablesDerivation": [
+        "spacetime/singularity-resolution"
+      ],
       "dependedOnBy": [
-        "cosmology/cosmological-constant"
+        "cosmology/cosmological-constant",
+        "spacetime/singularity-resolution"
       ],
       "steps": [
         {
@@ -7749,6 +8234,10 @@
           },
           {
             "source": "spacetime/gravity",
+            "context": "Einstein Field Equations"
+          },
+          {
+            "source": "spacetime/singularity-resolution",
             "context": "Einstein Field Equations"
           }
         ]
@@ -8307,6 +8796,53 @@
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
+    "spacetime/singularity-resolution": {
+      "id": "spacetime/singularity-resolution",
+      "filePath": "site/src/content/derivations/spacetime/singularity-resolution.md",
+      "title": "Singularity Resolution",
+      "status": "stub",
+      "rigorLevel": "informal",
+      "group": "spacetime",
+      "tags": [
+        "spacetime",
+        "quantum-gravity"
+      ],
+      "summary": "Show that singularities are resolved by the discrete relational invariant network underlying continuum spacetime. The minimum resolution scale from the holographic bound prevents infinite curvature, replacing classical singularities with Planck-density coherence cores.",
+      "lastUpdated": "2026-03-11",
+      "dependsOn": [
+        "spacetime/einstein-equations",
+        "holography/area-scaling"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [],
+      "formalObjects": [],
+      "structuralPostulates": [],
+      "openGaps": [],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "spacetime/einstein-equations",
+            "context": "Einstein Field Equations"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Holographic Entropy Bound"
+          }
+        ],
+        "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
     "spacetime/speed-of-light": {
       "id": "spacetime/speed-of-light",
       "filePath": "site/src/content/derivations/spacetime/speed-of-light.md",
@@ -8806,6 +9342,10 @@
             "context": "Theorem 6.1, no-deleting theorem"
           },
           {
+            "source": "quantum/entanglement",
+            "context": "Conservation of Distinguishability"
+          },
+          {
             "source": "thermodynamics-ext/fisher-metric",
             "context": "Conservation of Distinguishability"
           },
@@ -9057,9 +9597,12 @@
         "thermodynamics-ext/distinguishability-conservation"
       ],
       "enablesDerivation": [
-        "thermodynamics-ext/renormalization"
+        "thermodynamics-ext/renormalization",
+        "foundation/coherence-lagrangian"
       ],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "foundation/coherence-lagrangian"
+      ],
       "steps": [
         {
           "number": 1,
@@ -9271,6 +9814,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "foundation/coherence-lagrangian",
+            "context": "Fisher Information Metric"
+          },
           {
             "source": "thermodynamics-ext/distinguishability-conservation",
             "context": "Fisher Information Metric"
@@ -9600,9 +10147,11 @@
       ],
       "enablesDerivation": [
         "spacetime/speed-of-light",
-        "holography/area-scaling"
+        "holography/area-scaling",
+        "foundation/coherence-lagrangian"
       ],
       "dependedOnBy": [
+        "foundation/coherence-lagrangian",
         "holography/area-scaling",
         "spacetime/speed-of-light",
         "thermodynamics-ext/first-law",
@@ -9881,6 +10430,10 @@
           },
           {
             "source": "dimensions/three-dimensions",
+            "context": "Action and Planck's Constant"
+          },
+          {
+            "source": "foundation/coherence-lagrangian",
             "context": "Action and Planck's Constant"
           },
           {
@@ -10493,6 +11046,19 @@
     }
   },
   "predictions": {
+    "coupling-non-convergence": {
+      "id": "coupling-non-convergence",
+      "filePath": "site/src/content/predictions/coupling-non-convergence.md",
+      "title": "Gauge Coupling Non-Convergence",
+      "status": "qualitative",
+      "testability": "far-future",
+      "distinctiveness": "unique",
+      "dependsOn": [
+        "cosmology/coupling-constants",
+        "gauge/standard-model-group"
+      ],
+      "currentEvidence": "Current precision measurements of alpha_1, alpha_2, alpha_3 are consistent with non-convergence. The minimal SU(5) GUT prediction is already excluded by proton decay limits."
+    },
     "dark-matter-granularity": {
       "id": "dark-matter-granularity",
       "filePath": "site/src/content/predictions/dark-matter-granularity.md",

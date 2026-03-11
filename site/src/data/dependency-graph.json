@@ -40,7 +40,16 @@
     { "id": "thermodynamics-ext/fisher-metric", "title": "Fisher Information Metric", "group": "thermo-ext", "status": "rigorous" },
     { "id": "thermodynamics-ext/renormalization", "title": "Renormalization Group", "group": "thermo-ext", "status": "rigorous" },
     { "id": "thermodynamics-ext/distinguishability-conservation", "title": "Conservation of Distinguishability", "group": "thermo-ext", "status": "rigorous" },
-    { "id": "gauge/chirality-selection", "title": "Chirality Selection", "group": "gauge", "status": "rigorous" }
+    { "id": "gauge/chirality-selection", "title": "Chirality Selection", "group": "gauge", "status": "rigorous" },
+    { "id": "gauge/electroweak-breaking", "title": "Electroweak Symmetry Breaking", "group": "gauge", "status": "stub" },
+    { "id": "foundation/coherence-lagrangian", "title": "Coherence Lagrangian", "group": "foundation", "status": "stub" },
+    { "id": "interactions/bootstrap-division-algebras", "title": "Bootstrap → Division Algebras", "group": "dynamics", "status": "stub" },
+    { "id": "quantum/entanglement", "title": "Entanglement Structure", "group": "quantum", "status": "stub" },
+    { "id": "gauge/strong-cp", "title": "Strong CP Conservation", "group": "gauge", "status": "stub" },
+    { "id": "spacetime/singularity-resolution", "title": "Singularity Resolution", "group": "geometry", "status": "stub" },
+    { "id": "gauge/confinement", "title": "Color Confinement", "group": "gauge", "status": "stub" },
+    { "id": "holography/causal-set-statistics", "title": "Causal Set Statistics", "group": "holography", "status": "stub" },
+    { "id": "particles/neutrino-masses", "title": "Neutrino Mass Mechanism", "group": "particles", "status": "stub" }
   ],
   "edges": [
     { "from": "axioms/coherence-conservation", "to": "minimal-observer/structure" },
@@ -115,6 +124,21 @@
     { "from": "thermodynamics-ext/distinguishability-conservation", "to": "thermodynamics-ext/fisher-metric" },
     { "from": "gauge/weak-interaction", "to": "gauge/chirality-selection" },
     { "from": "interactions/relational-invariants", "to": "gauge/chirality-selection" },
-    { "from": "axioms/coherence-conservation", "to": "gauge/chirality-selection" }
+    { "from": "axioms/coherence-conservation", "to": "gauge/chirality-selection" },
+    { "from": "gauge/standard-model-group", "to": "gauge/electroweak-breaking" },
+    { "from": "gauge/weak-interaction", "to": "gauge/electroweak-breaking" },
+    { "from": "thermodynamics/action-planck", "to": "foundation/coherence-lagrangian" },
+    { "from": "thermodynamics-ext/fisher-metric", "to": "foundation/coherence-lagrangian" },
+    { "from": "interactions/bootstrap", "to": "interactions/bootstrap-division-algebras" },
+    { "from": "interactions/relational-invariants", "to": "quantum/entanglement" },
+    { "from": "quantum/born-rule", "to": "quantum/entanglement" },
+    { "from": "gauge/color-force", "to": "gauge/strong-cp" },
+    { "from": "spacetime/einstein-equations", "to": "spacetime/singularity-resolution" },
+    { "from": "holography/area-scaling", "to": "spacetime/singularity-resolution" },
+    { "from": "gauge/color-force", "to": "gauge/confinement" },
+    { "from": "holography/area-scaling", "to": "holography/causal-set-statistics" },
+    { "from": "interactions/relational-invariants", "to": "holography/causal-set-statistics" },
+    { "from": "particles/three-generations", "to": "particles/neutrino-masses" },
+    { "from": "flavor/mixing-angles", "to": "particles/neutrino-masses" }
   ]
 }

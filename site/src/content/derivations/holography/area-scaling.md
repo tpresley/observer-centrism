@@ -2,7 +2,7 @@
 title: "Holographic Entropy Bound"
 status: "rigorous"
 dependsOn: ["spacetime/gravity", "thermodynamics/action-planck"]
-enablesDerivation: ["holography/black-hole-entropy"]
+enablesDerivation: ["holography/black-hole-entropy", "spacetime/singularity-resolution", "holography/causal-set-statistics"]
 tags: ["holography"]
 summary: "S ≤ A/4ℓ²_P from boundary observer counting and coherence propagation constraints — two independent derivations"
 rigorLevel: "formal"

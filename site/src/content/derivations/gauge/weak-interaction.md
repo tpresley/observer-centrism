@@ -2,7 +2,7 @@
 title: "Weak Interaction from Quaternionic Structure"
 status: "rigorous"
 dependsOn: ["gauge/electromagnetism", "dimensions/three-dimensions", "particles/spin-statistics"]
-enablesDerivation: ["gauge/chirality-selection", "gauge/standard-model-group", "flavor/mixing-angles", "cosmology/baryogenesis"]
+enablesDerivation: ["gauge/chirality-selection", "gauge/standard-model-group", "flavor/mixing-angles", "cosmology/baryogenesis", "gauge/electroweak-breaking"]
 tags: ["gauge"]
 summary: "In three spatial dimensions, maintaining phase coherence along three orthogonal axes forces quaternionic structure by Hurwitz's theorem. The unit quaternions form SU(2), yielding the weak gauge field, non-abelian field strength, and Yang-Mills equations. The Z₂ winding classes from spin-statistics provide the topological distinction between the two chiralities."
 rigorLevel: "formal"

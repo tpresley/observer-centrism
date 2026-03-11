@@ -2,7 +2,7 @@
 title: "Relational Invariants and the Reverse Noether Mechanism"
 status: "rigorous"
 dependsOn: ["interactions/three-types"]
-enablesDerivation: ["interactions/bootstrap", "thermodynamics/entropy", "spacetime/gravity", "quantum/born-rule"]
+enablesDerivation: ["interactions/bootstrap", "thermodynamics/entropy", "spacetime/gravity", "quantum/born-rule", "quantum/entanglement", "holography/causal-set-statistics"]
 tags: ["dynamics"]
 summary: "Type III interactions generate genuinely new conserved quantities on the joint state space; by reverse Noether, each creates new symmetries and degrees of freedom"
 rigorLevel: "formal"

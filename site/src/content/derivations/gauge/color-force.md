@@ -2,7 +2,7 @@
 title: "Color Force from Octonionic Structure"
 status: "rigorous"
 dependsOn: ["gauge/weak-interaction", "interactions/bootstrap"]
-enablesDerivation: ["gauge/standard-model-group"]
+enablesDerivation: ["gauge/standard-model-group", "gauge/strong-cp", "gauge/confinement"]
 tags: ["gauge"]
 summary: "The next step in the division algebra hierarchy (H → O) forces octonionic structure at the third bootstrap level. The automorphism group G₂ reduces to SU(3) when a preferred quaternionic subalgebra is fixed by the electroweak structure, yielding the color gauge symmetry with 8 gluons, asymptotic freedom, and color confinement."
 rigorLevel: "formal"

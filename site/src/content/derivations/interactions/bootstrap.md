@@ -2,7 +2,7 @@
 title: "The Bootstrap Mechanism"
 status: "rigorous"
 dependsOn: ["interactions/relational-invariants"]
-enablesDerivation: ["spacetime/einstein-equations", "particles/mass-hierarchy"]
+enablesDerivation: ["spacetime/einstein-equations", "particles/mass-hierarchy", "interactions/bootstrap-division-algebras"]
 tags: ["dynamics"]
 summary: "Relational invariants are themselves observers, generating hierarchy through iterated interaction — complexity is necessary, not contingent"
 rigorLevel: "formal"
