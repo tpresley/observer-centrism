@@ -171,7 +171,7 @@ function DependencyGraph({ state, props }) {
           return (
             <a
               key={node.id}
-              href={`/derivations/${node.id}`}
+              href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/derivations/${node.id}`}
               className="dep-node-link"
             >
               <g

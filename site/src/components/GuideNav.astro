@@ -10,22 +10,23 @@ interface Props {
 }
 
 const { prev, next } = Astro.props
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 ---
 
 <nav class="guide-nav" aria-label="Guide navigation">
   {prev ? (
-    <a href={`/guide/${prev.slug}`} class="guide-nav-link guide-nav-prev">
+    <a href={`${base}/guide/${prev.slug}`} class="guide-nav-link guide-nav-prev">
       <span class="guide-nav-direction">&larr; Previous</span>
       <span class="guide-nav-title">{prev.data.title}</span>
     </a>
   ) : <div />}
   {next ? (
-    <a href={`/guide/${next.slug}`} class="guide-nav-link guide-nav-next">
+    <a href={`${base}/guide/${next.slug}`} class="guide-nav-link guide-nav-next">
       <span class="guide-nav-direction">Next &rarr;</span>
       <span class="guide-nav-title">{next.data.title}</span>
     </a>
   ) : (
-    <a href="/guide/" class="guide-nav-link guide-nav-next">
+    <a href={`${base}/guide/`} class="guide-nav-link guide-nav-next">
       <span class="guide-nav-direction">Back to overview &rarr;</span>
       <span class="guide-nav-title">Guide Index</span>
     </a>

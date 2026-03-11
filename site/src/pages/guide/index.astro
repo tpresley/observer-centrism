@@ -4,6 +4,7 @@ import MainLayout from '../../components/layouts/MainLayout.astro'
 
 const guideEntries = await getCollection('guide')
 const sorted = guideEntries.sort((a, b) => a.data.order - b.data.order)
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 ---
 
 <MainLayout title="Guide">
@@ -18,7 +19,7 @@ const sorted = guideEntries.sort((a, b) => a.data.order - b.data.order)
 
   <div class="guide-toc">
     {sorted.map(entry => (
-      <a href={`/guide/${entry.slug}`} class="guide-toc-card">
+      <a href={`${base}/guide/${entry.slug}`} class="guide-toc-card">
         <span class="guide-toc-number">{entry.data.order}</span>
         <div>
           <span class="guide-toc-title">{entry.data.title}</span>

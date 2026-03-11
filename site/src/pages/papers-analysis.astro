@@ -315,6 +315,7 @@ const papers = [
   { short: "Paper 3", title: "Complementarity and Coherence Conservation in Observer-Centrism", date: "Oct 2025" },
   { short: "Paper 4", title: "Informational Plateau Equivalence and the Conservation of Coherence Flow", date: "Nov 2025" },
 ]
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 ---
 
 <MainLayout title="Extension Papers Analysis">
@@ -405,7 +406,7 @@ const papers = [
     <h2>Cross-Reference with Whitepaper Analysis</h2>
     <p>
       Several ideas in these papers overlap with or extend ideas already cataloged in the
-      <a href="/whitepaper-analysis/">whitepaper analysis</a>. Key connections:
+      <a href={`${base}/whitepaper-analysis/`}>whitepaper analysis</a>. Key connections:
     </p>
     <ul>
       <li>

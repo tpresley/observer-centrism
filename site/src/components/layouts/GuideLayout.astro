@@ -19,6 +19,7 @@ const {
   title, subtitle, openingQuestion, physicsQuestions,
   relatedDerivations, relatedPredictions, prev, next
 } = Astro.props
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 
 const titleMap: Record<string, string> = {}
 for (const node of graphData.nodes) {
@@ -59,7 +60,7 @@ for (const entry of predictionEntries) {
         <h3>Dive into the math</h3>
         <ul>
           {relatedDerivations.map(d => (
-            <li><a href={`/derivations/${d}`}>{titleMap[d] || d}</a></li>
+            <li><a href={`${base}/derivations/${d}`}>{titleMap[d] || d}</a></li>
           ))}
         </ul>
       </div>
@@ -70,7 +71,7 @@ for (const entry of predictionEntries) {
         <h3>Related predictions</h3>
         <ul>
           {relatedPredictions.map(p => (
-            <li><a href={`/predictions/${p}`}>{predictionTitleMap[p] || p}</a></li>
+            <li><a href={`${base}/predictions/${p}`}>{predictionTitleMap[p] || p}</a></li>
           ))}
         </ul>
       </div>

@@ -1,6 +1,8 @@
 ---
 import MainLayout from '../components/layouts/MainLayout.astro'
 import CoherenceVisualizer from '../components/interactive/CoherenceVisualizer.jsx'
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 ---
 
 <MainLayout title="Home">
@@ -57,14 +59,14 @@ import CoherenceVisualizer from '../components/interactive/CoherenceVisualizer.j
   </p>
 
   <ul>
-    <li><a href="/guide/">Guide</a> &mdash; a narrative walkthrough of the framework</li>
-    <li><a href="/source/01-introduction">Source Document</a> &mdash; the original framework description</li>
-    <li><a href="/derivations/">Derivations</a> &mdash; rigorous proofs and formalizations</li>
-    <li><a href="/predictions/">Predictions</a> &mdash; testable consequences unique to this framework</li>
-    <li><a href="/postulates">Structural Postulates</a> &mdash; assumptions beyond the three axioms</li>
-    <li><a href="/extensions">Extension Targets</a> &mdash; 11 derivation stubs for future development</li>
-    <li><a href="/map">Dependency Map</a> &mdash; interactive graph of the derivation chain</li>
-    <li><a href="/search">Search</a> &mdash; full-text search across all content</li>
+    <li><a href={`${base}/guide/`}>Guide</a> &mdash; a narrative walkthrough of the framework</li>
+    <li><a href={`${base}/source/01-introduction`}>Source Document</a> &mdash; the original framework description</li>
+    <li><a href={`${base}/derivations/`}>Derivations</a> &mdash; rigorous proofs and formalizations</li>
+    <li><a href={`${base}/predictions/`}>Predictions</a> &mdash; testable consequences unique to this framework</li>
+    <li><a href={`${base}/postulates`}>Structural Postulates</a> &mdash; assumptions beyond the three axioms</li>
+    <li><a href={`${base}/extensions`}>Extension Targets</a> &mdash; 11 derivation stubs for future development</li>
+    <li><a href={`${base}/map`}>Dependency Map</a> &mdash; interactive graph of the derivation chain</li>
+    <li><a href={`${base}/search`}>Search</a> &mdash; full-text search across all content</li>
   </ul>
 </MainLayout>
 

@@ -18,6 +18,7 @@ const groups = {
 }
 
 function statusClass(status: string) { return `status-badge status-${status}` }
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 ---
 
 <MainLayout title="Derivations">
@@ -44,7 +45,7 @@ function statusClass(status: string) { return `status-badge status-${status}` }
             <li>
               <span class={statusClass(entry.data.status)}>{entry.data.status}</span>
               <div>
-                <a href={`/derivations/${entry.slug}`}>{entry.data.title}</a>
+                <a href={`${base}/derivations/${entry.slug}`}>{entry.data.title}</a>
                 <span class="summary">{entry.data.summary}</span>
               </div>
             </li>

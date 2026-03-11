@@ -183,7 +183,7 @@ function PredictionTracker({ state, props }) {
 
                 {/* Title */}
                 <a
-                  href={`/predictions/${pred.slug}`}
+                  href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/predictions/${pred.slug}`}
                   style={{
                     flex: '1', fontWeight: '600', fontSize: '0.95rem',
                     color: '#1e293b', textDecoration: 'none',

@@ -18,6 +18,7 @@ interface Props {
 }
 
 const { title, status, dependsOn = [], enablesDerivation = [], sourceSection, leanProofs = [] } = Astro.props
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 
 const statusClass = status ? `status-${status}` : ''
 
@@ -45,7 +46,7 @@ function getTitle(id: string): string {
         </span>
       )}
       {sourceSection && (
-        <a href={`/source/${sourceSection}`} class="source-link">
+        <a href={`${base}/source/${sourceSection}`} class="source-link">
           View in source document &rarr;
         </a>
       )}
@@ -56,7 +57,7 @@ function getTitle(id: string): string {
         <h4>Depends On</h4>
         <ul>
           {dependsOn.map(dep => (
-            <li><a href={`/derivations/${dep}`}>{getTitle(dep)}</a></li>
+            <li><a href={`${base}/derivations/${dep}`}>{getTitle(dep)}</a></li>
           ))}
         </ul>
       </div>
@@ -81,7 +82,7 @@ function getTitle(id: string): string {
                 ))}
               </ul>
               <a
-                href={`https://github.com/user/observer-centrism/blob/main/lean/${proof.module.replace(/\./g, '/')}.lean`}
+                href={`https://github.com/tpresley/observer-centrism/blob/main/lean/${proof.module.replace(/\./g, '/')}.lean`}
                 class="lean-source-link"
                 target="_blank"
                 rel="noopener"
@@ -101,7 +102,7 @@ function getTitle(id: string): string {
         <h4>Enables</h4>
         <ul>
           {enablesDerivation.map(d => (
-            <li><a href={`/derivations/${d}`}>{getTitle(d)}</a></li>
+            <li><a href={`${base}/derivations/${d}`}>{getTitle(d)}</a></li>
           ))}
         </ul>
       </div>

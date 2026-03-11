@@ -103,14 +103,15 @@ const targets: Target[] = [
 
 const highCount = targets.filter(t => t.viability === 'high').length
 const medCount = targets.filter(t => t.viability === 'medium').length
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 ---
 
 <MainLayout title="Extension Targets">
   <h1>Extension Targets</h1>
   <p>
     These 11 derivation targets were identified by analyzing a
-    <a href="/whitepaper-analysis/">prior whitepaper</a> and
-    <a href="/papers-analysis/">four extension papers</a> from an earlier, less rigorous
+    <a href={`${base}/whitepaper-analysis/`}>prior whitepaper</a> and
+    <a href={`${base}/papers-analysis/`}>four extension papers</a> from an earlier, less rigorous
     version of the framework. Each target represents an idea that is <strong>not yet covered</strong>
     by the current 28 rigorous derivations and is <strong>plausibly derivable</strong>
     from the current axioms and derivation chain.
@@ -146,7 +147,7 @@ const medCount = targets.filter(t => t.viability === 'medium').length
 
   <div class="ext-grid">
     {targets.map((t, i) => (
-      <a href={`/derivations/${t.slug}`} class="ext-card">
+      <a href={`${base}/derivations/${t.slug}`} class="ext-card">
         <div class="ext-card-top">
           <span class="ext-num">{i + 1}</span>
           <span class={`ext-via ext-via-${t.viability}`}>{t.viability}</span>

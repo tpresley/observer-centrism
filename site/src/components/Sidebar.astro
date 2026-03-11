@@ -6,6 +6,7 @@ interface Props {
 }
 
 const { currentPath } = Astro.props
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 
 const sourceEntries = await getCollection('source')
 const derivationEntries = await getCollection('derivations')
@@ -16,13 +17,16 @@ const sortedGuide = guideEntries.sort((a, b) => a.data.order - b.data.order)
 
 const sortedSource = sourceEntries.sort((a, b) => a.data.order - b.data.order)
 
+/** Strip base prefix from path for comparison */
+const pathWithoutBase = currentPath.startsWith(base) ? (currentPath.slice(base.length) || '/') : currentPath
+
 /** Normalize trailing slashes and compare */
 function isActive(href: string): boolean {
   const norm = (s: string) => s.replace(/\/+$/, '') || '/'
-  return norm(currentPath) === norm(href)
+  return norm(pathWithoutBase) === norm(href)
 }
 
-const isSourcePage = currentPath.startsWith('/source/')
+const isSourcePage = pathWithoutBase.startsWith('/source/')
 
 const derivationGroups = {
   'Foundation': derivationEntries.filter(d => d.data.tags.includes('foundation')),
@@ -64,27 +68,27 @@ function statusColor(status: string) {
   <div class="site-title">Observer-Centrism</div>
   <div class="site-subtitle">Physics from Three Axioms</div>
 
-  <a href="/" aria-current={isActive('/') ? 'page' : undefined}>Home</a>
-  <a href="/map" aria-current={isActive('/map') ? 'page' : undefined}>Derivation Map</a>
-  <a href="/postulates" aria-current={isActive('/postulates') ? 'page' : undefined}>Structural Postulates</a>
-  <a href="/search" aria-current={isActive('/search') ? 'page' : undefined}>Search</a>
+  <a href={`${base}/`} aria-current={isActive('/') ? 'page' : undefined}>Home</a>
+  <a href={`${base}/map`} aria-current={isActive('/map') ? 'page' : undefined}>Derivation Map</a>
+  <a href={`${base}/postulates`} aria-current={isActive('/postulates') ? 'page' : undefined}>Structural Postulates</a>
+  <a href={`${base}/search`} aria-current={isActive('/search') ? 'page' : undefined}>Search</a>
 
   <h2>Guide</h2>
-  <a href="/guide/" aria-current={isActive('/guide/') ? 'page' : undefined}>Overview</a>
+  <a href={`${base}/guide/`} aria-current={isActive('/guide/') ? 'page' : undefined}>Overview</a>
   {sortedGuide.map(entry => (
-    <a href={`/guide/${entry.slug}`} aria-current={isActive(`/guide/${entry.slug}`) ? 'page' : undefined}>
+    <a href={`${base}/guide/${entry.slug}`} aria-current={isActive(`/guide/${entry.slug}`) ? 'page' : undefined}>
       {entry.data.order}. {entry.data.title}
     </a>
   ))}
 
   <h2>Derivations</h2>
-  <a href="/derivations/" aria-current={isActive('/derivations/') ? 'page' : undefined}>Index</a>
+  <a href={`${base}/derivations/`} aria-current={isActive('/derivations/') ? 'page' : undefined}>Index</a>
   {Object.entries(derivationGroups).map(([group, entries]) => (
     entries.length > 0 && (
       <>
         <div class="sidebar-group-label">{group}</div>
         {entries.map(entry => (
-          <a href={`/derivations/${entry.slug}`} aria-current={isActive(`/derivations/${entry.slug}`) ? 'page' : undefined}>
+          <a href={`${base}/derivations/${entry.slug}`} aria-current={isActive(`/derivations/${entry.slug}`) ? 'page' : undefined}>
             <span style={`color: ${statusColor(entry.data.status)}`}>{statusIcon(entry.data.status)}</span>
             {' '}{entry.data.title}
           </a>
@@ -94,15 +98,15 @@ function statusColor(status: string) {
   ))}
 
   <h2>Predictions</h2>
-  <a href="/predictions/" aria-current={isActive('/predictions/') ? 'page' : undefined}>Overview</a>
+  <a href={`${base}/predictions/`} aria-current={isActive('/predictions/') ? 'page' : undefined}>Overview</a>
   {predictionEntries.map(entry => (
-    <a href={`/predictions/${entry.slug}`} aria-current={isActive(`/predictions/${entry.slug}`) ? 'page' : undefined}>{entry.data.title}</a>
+    <a href={`${base}/predictions/${entry.slug}`} aria-current={isActive(`/predictions/${entry.slug}`) ? 'page' : undefined}>{entry.data.title}</a>
   ))}
 
   <details class="sidebar-details" open={isSourcePage || undefined}>
     <summary><h2>Source Document</h2></summary>
     {sortedSource.map(entry => (
-      <a href={`/source/${entry.slug}`} aria-current={isActive(`/source/${entry.slug}`) ? 'page' : undefined}>{entry.data.section}. {entry.data.title}</a>
+      <a href={`${base}/source/${entry.slug}`} aria-current={isActive(`/source/${entry.slug}`) ? 'page' : undefined}>{entry.data.section}. {entry.data.title}</a>
     ))}
   </details>
 </nav>
