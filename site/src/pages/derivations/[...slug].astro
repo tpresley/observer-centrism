@@ -86,6 +86,7 @@ for (let i = 0; i < stepMatches.length; i++) {
   dependsOn={entry.data.dependsOn}
   enablesDerivation={entry.data.enablesDerivation}
   sourceSection={entry.data.sourceSection}
+  leanProofs={entry.data.leanProofs}
 >
   {steps.length >= 2 && (
     <ProofStepViewer client:load steps={steps} />

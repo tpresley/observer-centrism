@@ -2,15 +2,22 @@
 import MainLayout from './MainLayout.astro'
 import graphData from '../../data/dependency-graph.json'
 
+interface LeanProof {
+  module: string
+  proposition: string
+  theorems: string[]
+}
+
 interface Props {
   title: string
   status?: string
   dependsOn?: string[]
   enablesDerivation?: string[]
   sourceSection?: string
+  leanProofs?: LeanProof[]
 }
 
-const { title, status, dependsOn = [], enablesDerivation = [], sourceSection } = Astro.props
+const { title, status, dependsOn = [], enablesDerivation = [], sourceSection, leanProofs = [] } = Astro.props
 
 const statusClass = status ? `status-${status}` : ''
 
@@ -29,6 +36,14 @@ function getTitle(id: string): string {
     <header>
       <h1>{title}</h1>
       {status && <span class={`status-badge ${statusClass}`}>{status}</span>}
+      {leanProofs.length > 0 && (
+        <span class="lean-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          Lean verified
+        </span>
+      )}
       {sourceSection && (
         <a href={`/source/${sourceSection}`} class="source-link">
           View in source document &rarr;
@@ -45,6 +60,38 @@ function getTitle(id: string): string {
           ))}
         </ul>
       </div>
+    )}
+
+    {leanProofs.length > 0 && (
+      <details class="lean-proofs-section">
+        <summary>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          Machine-verified propositions ({leanProofs.length})
+        </summary>
+        <div class="lean-proofs-list">
+          {leanProofs.map(proof => (
+            <div class="lean-proof-item">
+              <strong>{proof.proposition}</strong>
+              <span class="lean-module">{proof.module}</span>
+              <ul class="lean-theorems">
+                {proof.theorems.map(t => (
+                  <li><code>{t}</code></li>
+                ))}
+              </ul>
+              <a
+                href={`https://github.com/user/observer-centrism/blob/main/lean/${proof.module.replace(/\./g, '/')}.lean`}
+                class="lean-source-link"
+                target="_blank"
+                rel="noopener"
+              >
+                View Lean source &rarr;
+              </a>
+            </div>
+          ))}
+        </div>
+      </details>
     )}
 
     <slot />

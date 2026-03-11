@@ -140,6 +140,105 @@ body {
 .status-stub { background: #f5f5f4; color: var(--color-stub); }
 .status-non-viable { background: #fef2f2; color: var(--color-non-viable); }
 
+.lean-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999px;
+  letter-spacing: 0.03em;
+  background: #dbeafe;
+  color: #1d4ed8;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.lean-proofs-section {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+
+.lean-proofs-section summary {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #1d4ed8;
+  list-style: none;
+}
+
+.lean-proofs-section summary::-webkit-details-marker { display: none; }
+
+.lean-proofs-section summary::before {
+  content: '▶';
+  font-size: 0.6rem;
+  transition: transform 0.2s;
+}
+
+.lean-proofs-section[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.lean-proofs-list {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #bfdbfe;
+}
+
+.lean-proof-item {
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #dbeafe;
+}
+
+.lean-proof-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.lean-module {
+  display: block;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: 0.15rem;
+}
+
+.lean-theorems {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.35rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.lean-theorems code {
+  font-size: 0.75rem;
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', monospace;
+}
+
+.lean-source-link {
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.lean-source-link:hover { text-decoration: underline; }
+
 .depends-on {
   margin: 1.5rem 0;
   padding: 1rem;

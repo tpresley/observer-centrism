@@ -1,22 +1,23 @@
 {
   "meta": {
-    "generatedAt": "2026-03-10T21:55:29.636Z",
+    "generatedAt": "2026-03-11T03:20:30.309Z",
     "derivationCount": 41,
     "predictionCount": 7,
     "generator": "scripts/build-index.mjs"
   },
   "stats": {
     "byStatus": {
-      "rigorous": 38,
-      "non-viable": 1,
-      "draft": 2
+      "rigorous": 40,
+      "non-viable": 1
     },
     "derivationCount": 41,
     "predictionCount": 7,
     "edgeCount": 73,
     "formalObjectCount": 636,
     "openGapCount": 156,
-    "upgradeEligibleCount": 1
+    "upgradeEligibleCount": 0,
+    "leanVerifiedCount": 2,
+    "leanTheoremCount": 15
   },
   "derivations": {
     "axioms/coherence-conservation": {
@@ -318,6 +319,12 @@
             "context": "Coherence Conservation"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -649,6 +656,12 @@
           }
         ]
       },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
@@ -926,6 +939,12 @@
           }
         ]
       },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
@@ -1134,6 +1153,12 @@
           }
         ]
       },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
@@ -1187,6 +1212,12 @@
         ],
         "incoming": []
       },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
@@ -1194,8 +1225,8 @@
       "id": "cosmology/coupling-constants",
       "filePath": "site/src/content/derivations/cosmology/coupling-constants.md",
       "title": "Coupling Constant Relationships",
-      "status": "draft",
-      "rigorLevel": "semi-formal",
+      "status": "rigorous",
+      "rigorLevel": "formal",
       "group": "cosmology",
       "tags": [
         "cosmology"
@@ -1306,31 +1337,31 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Precise algebraic normalization",
-          "description": "Resolve the ambiguity between sin2thetaW = 1/2 and 1/3 by determining the correct normalization convention from the framework's axioms. The key question: should the normalization use total dimensions "
+          "title": "Axiom-level derivation of S1",
+          "description": "The algebraic normalization gi2 = 4pi / dimR Ai is a structural postulate. Deriving it from the coherence axioms (e.g., showing that the canonical norm on Ai uniquely determines the coupling) would el"
         },
         {
           "number": 2,
-          "title": "Crystallization scales",
-          "description": "Derive the bootstrap crystallization scales Lambdai from the framework's axioms. These set the RG boundary conditions and determine the low-energy coupling values. The mass hierarchy derivation's expo"
+          "title": "Crystallization scales from bootstrap dynamics",
+          "description": "The bootstrap crystallization scales Lambdai set the RG boundary conditions. Deriving their values from the [Mass Hierarchy](/derivations/particles/mass-hierarchy) exponential tunneling mechanism woul"
         },
         {
           "number": 3,
           "title": "Two-loop precision",
-          "description": "Compute the two-loop RG running with threshold corrections to achieve < 1% precision in the coupling constant predictions. This is standard QFT technology once the boundary conditions and particle spe"
+          "description": "Computing the two-loop RG running with threshold corrections would achieve < 1% precision in alphaem and alphas predictions. This is standard QFT technology (Machacek & Vaughn 1984) once the boundary "
         },
         {
           "number": 4,
           "title": "Yukawa couplings",
-          "description": "The fermion masses are determined by Yukawa couplings to the Higgs field (or its framework analog). These are free parameters in the Standard Model but should be constrained by the division algebra st"
+          "description": "The fermion masses are free parameters in the Standard Model but should be constrained by the division algebra structure and the [Flavor Mixing](/derivations/flavor/mixing-angles) derivation. This req"
         },
         {
           "number": 5,
-          "title": "Experimental test",
-          "description": "The most distinctive prediction is the *non-convergence* of couplings — the three lines alphai-1(mu) should not meet at a single point. Improved measurements of alphas and sin2thetaW can test whether "
+          "title": "Experimental test of non-convergence",
+          "description": "The most distinctive prediction is non-convergence of couplings — the three curves alphai-1(mu) do not meet at a single point. Future precision measurements of alphas(MZ) and sin2thetaW(MZ), combined "
         }
       ],
-      "assessmentVerdict": "Draft status. The derivation provides a clean structural framework for understanding coupling constant relationships: algebraic normalization from division algebra dimensions, RG running from bootstrap fixed points, and the non-convergence prediction. The Weinberg angle and coupling constant estimat",
+      "assessmentVerdict": "Rigorous. This derivation introduces one new structural postulate (S1: algebraic normalization) and derives the coupling constant relationships: sin2thetaW = 1/3 at the algebraic scale, coupling ratios alpha1 : alpha2 : alpha3 = 4:2:1, and the non-convergence prediction. All proofs are complete. The",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -1339,8 +1370,16 @@
             "context": "Standard Model Gauge Group"
           },
           {
+            "target": "gauge/weak-interaction",
+            "context": "Weak Interaction"
+          },
+          {
             "target": "interactions/bootstrap",
             "context": "Bootstrap Mechanism"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
           },
           {
             "target": "flavor/mixing-angles",
@@ -1370,10 +1409,20 @@
           }
         ]
       },
+      "leanVerification": {
+        "hasProofs": true,
+        "proofCount": 7,
+        "modules": [
+          "ObserverCentrism.Cosmology.CouplingRatios",
+          "ObserverCentrism.Cosmology.CouplingRatios"
+        ],
+        "propositions": [
+          "Proposition 2.1",
+          "Theorem 1.1"
+        ]
+      },
       "upgradeEligible": false,
-      "upgradeBlockers": [
-        "gauge/standard-model-group"
-      ]
+      "upgradeBlockers": []
     },
     "dimensions/three-dimensions": {
       "id": "dimensions/three-dimensions",
@@ -1587,6 +1636,12 @@
             "context": "Three Spatial Dimensions"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -1816,6 +1871,12 @@
           }
         ]
       },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
@@ -2036,6 +2097,12 @@
             "context": "Chirality Selection"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -2328,6 +2395,12 @@
             "context": "Color Force"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -2726,6 +2799,12 @@
           }
         ]
       },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
@@ -2733,8 +2812,8 @@
       "id": "gauge/standard-model-group",
       "filePath": "site/src/content/derivations/gauge/standard-model-group.md",
       "title": "Standard Model Gauge Group from Division Algebras",
-      "status": "draft",
-      "rigorLevel": "semi-formal",
+      "status": "rigorous",
+      "rigorLevel": "formal",
       "group": "gauge",
       "tags": [
         "gauge"
@@ -2863,25 +2942,25 @@
         {
           "number": 1,
           "title": "Framework-intrinsic fermion representations",
-          "description": "Derive the SM fermion multiplets from the framework's axioms and bootstrap hierarchy, rather than citing the external Furey construction. This would require showing that the bootstrap at the octonioni"
+          "description": "The Cell(6) decomposition (Proposition 4.1) correctly reproduces SM quantum numbers using published mathematics, but the derivation from the framework's own bootstrap axioms — showing *why* the bootst"
         },
         {
           "number": 2,
-          "title": "Zero-divisor exclusion (rigorous)",
-          "description": "Prove that zero divisors in a phase algebra are incompatible with coherence conservation (Axiom 1). The argument should show that C(a) > 0 and C(b) > 0 but C(ab) = 0 contradicts subadditivity or anoth"
+          "title": "$SU(2)_L$ quantum numbers from $\\mathbb{C}\\ell(6)$",
+          "description": "The current algebraic construction cleanly produces U(1) SU(3) quantum numbers. Incorporating the SU(2)L weak isospin assignments requires combining the Cell(6) structure with the quaternionic chirali"
         },
         {
           "number": 3,
           "title": "Electroweak symmetry breaking",
-          "description": "The mechanism that breaks SU(2)L U(1)Y U(1)em (the Higgs mechanism) has not been derived. The framework should identify the coherence-sector analog of the Higgs field."
+          "description": "The mechanism that breaks SU(2)L U(1)Y U(1)em has not been derived. The framework should identify the coherence-sector analog of the Higgs field."
         },
         {
           "number": 4,
           "title": "Proton decay bound",
-          "description": "Compute the framework's prediction for the proton lifetime. If no GUT exists, the proton should be absolutely stable (or decay only through gravitational effects at sim 1045 years)."
+          "description": "The framework predicts absolute proton stability (no GUT bosons). A quantitative bound on the proton lifetime from residual gravitational or higher-order effects would sharpen this into a testable pre"
         }
       ],
-      "assessmentVerdict": "Draft status. The core argument (division algebra hierarchy → GSM = complete gauge group) is clean and built on rigorous mathematical foundations (Hurwitz's theorem, G2/SU(3) = S6, Clifford algebra representations). The derivation falls short of provisional because: (1) the fermion representation re",
+      "assessmentVerdict": "Rigorous. This derivation synthesizes three individually rigorous gauge derivations via a clean mathematical argument: the normed division algebra hierarchy (Hurwitz's theorem) uniquely determines GSM = U(1) SU(2) SU(3) as the complete gauge group. The zero-divisor exclusion is now grounded in the n",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -2906,12 +2985,16 @@
             "context": "Theorem 6.1, no-deleting"
           },
           {
-            "target": "particles/three-generations",
-            "context": "Three Generations"
+            "target": "thermodynamics-ext/distinguishability-conservation",
+            "context": "Theorem 6.1, no-deleting theorem"
           },
           {
             "target": "gauge/chirality-selection",
             "context": "Chirality Selection"
+          },
+          {
+            "target": "particles/three-generations",
+            "context": "Three Generations"
           },
           {
             "target": "particles/spin-statistics",
@@ -2941,7 +3024,19 @@
           }
         ]
       },
-      "upgradeEligible": true,
+      "leanVerification": {
+        "hasProofs": true,
+        "proofCount": 8,
+        "modules": [
+          "ObserverCentrism.Gauge.AnomalyCancellation",
+          "ObserverCentrism.Gauge.SedenionZeroDivisor"
+        ],
+        "propositions": [
+          "Proposition 5.1",
+          "Proposition 2.2"
+        ]
+      },
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "gauge/weak-interaction": {
@@ -3318,6 +3413,10 @@
             "context": "now rigorous"
           },
           {
+            "source": "cosmology/coupling-constants",
+            "context": "Weak Interaction"
+          },
+          {
             "source": "flavor/mixing-angles",
             "context": "Weak Interaction"
           },
@@ -3366,6 +3465,12 @@
             "context": "Weak Interaction"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -3586,6 +3691,12 @@
           }
         ]
       },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
@@ -3775,6 +3886,12 @@
             "context": "Theorem 3.1"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -3975,6 +4092,12 @@
           }
         ]
       },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
@@ -4159,6 +4282,12 @@
             "context": "Information Paradox"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -4413,6 +4542,12 @@
             "context": "Bootstrap"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -4715,6 +4850,12 @@
           }
         ]
       },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
@@ -4932,6 +5073,12 @@
             "context": "Three Types"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -5194,6 +5341,12 @@
           }
         ]
       },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
@@ -5438,6 +5591,12 @@
             "context": "Multiplicity"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -5691,6 +5850,12 @@
           }
         ]
       },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
@@ -5875,6 +6040,10 @@
         ],
         "incoming": [
           {
+            "source": "cosmology/coupling-constants",
+            "context": "Mass Hierarchy"
+          },
+          {
             "source": "flavor/mixing-angles",
             "context": "Mass Hierarchy"
           },
@@ -5899,6 +6068,12 @@
             "context": "Mass Hierarchy"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -6068,6 +6243,12 @@
           }
         ],
         "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -6266,6 +6447,12 @@
             "context": "forward dependency, honestly flagged"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -6480,6 +6667,12 @@
             "context": "Three Generations"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -6752,6 +6945,12 @@
           }
         ]
       },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
@@ -6991,6 +7190,12 @@
           }
         ]
       },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
@@ -7216,6 +7421,12 @@
             "context": "Preferred Basis"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -7459,6 +7670,12 @@
             "context": "Einstein Field Equations"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -7720,6 +7937,12 @@
             "context": "Gravity"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -7986,6 +8209,12 @@
             "context": "Lorentz Invariance"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -8256,6 +8485,12 @@
           }
         ]
       },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
@@ -8479,6 +8714,10 @@
             "context": "Theorem 6.1, no-deleting"
           },
           {
+            "source": "gauge/standard-model-group",
+            "context": "Theorem 6.1, no-deleting theorem"
+          },
+          {
             "source": "thermodynamics-ext/fisher-metric",
             "context": "Conservation of Distinguishability"
           },
@@ -8495,6 +8734,12 @@
             "context": "Proposition 4.1, rigorous"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -8696,6 +8941,12 @@
           }
         ],
         "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -8941,6 +9192,12 @@
             "context": "Proposition 4.1"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -9227,6 +9484,12 @@
             "context": "Renormalization Group"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -9614,6 +9877,12 @@
           }
         ]
       },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
@@ -9898,6 +10167,12 @@
           }
         ]
       },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
@@ -10118,6 +10393,12 @@
             "context": "Time"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -14774,38 +15055,38 @@
     },
     {
       "derivationId": "cosmology/coupling-constants",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 1,
-      "title": "Precise algebraic normalization",
-      "description": "Resolve the ambiguity between sin2thetaW = 1/2 and 1/3 by determining the correct normalization convention from the framework's axioms. The key question: should the normalization use total dimensions "
+      "title": "Axiom-level derivation of S1",
+      "description": "The algebraic normalization gi2 = 4pi / dimR Ai is a structural postulate. Deriving it from the coherence axioms (e.g., showing that the canonical norm on Ai uniquely determines the coupling) would el"
     },
     {
       "derivationId": "cosmology/coupling-constants",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 2,
-      "title": "Crystallization scales",
-      "description": "Derive the bootstrap crystallization scales Lambdai from the framework's axioms. These set the RG boundary conditions and determine the low-energy coupling values. The mass hierarchy derivation's expo"
+      "title": "Crystallization scales from bootstrap dynamics",
+      "description": "The bootstrap crystallization scales Lambdai set the RG boundary conditions. Deriving their values from the [Mass Hierarchy](/derivations/particles/mass-hierarchy) exponential tunneling mechanism woul"
     },
     {
       "derivationId": "cosmology/coupling-constants",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 3,
       "title": "Two-loop precision",
-      "description": "Compute the two-loop RG running with threshold corrections to achieve < 1% precision in the coupling constant predictions. This is standard QFT technology once the boundary conditions and particle spe"
+      "description": "Computing the two-loop RG running with threshold corrections would achieve < 1% precision in alphaem and alphas predictions. This is standard QFT technology (Machacek & Vaughn 1984) once the boundary "
     },
     {
       "derivationId": "cosmology/coupling-constants",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 4,
       "title": "Yukawa couplings",
-      "description": "The fermion masses are determined by Yukawa couplings to the Higgs field (or its framework analog). These are free parameters in the Standard Model but should be constrained by the division algebra st"
+      "description": "The fermion masses are free parameters in the Standard Model but should be constrained by the division algebra structure and the [Flavor Mixing](/derivations/flavor/mixing-angles) derivation. This req"
     },
     {
       "derivationId": "cosmology/coupling-constants",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 5,
-      "title": "Experimental test",
-      "description": "The most distinctive prediction is the *non-convergence* of couplings — the three lines alphai-1(mu) should not meet at a single point. Improved measurements of alphas and sin2thetaW can test whether "
+      "title": "Experimental test of non-convergence",
+      "description": "The most distinctive prediction is non-convergence of couplings — the three curves alphai-1(mu) do not meet at a single point. Future precision measurements of alphas(MZ) and sin2thetaW(MZ), combined "
     },
     {
       "derivationId": "dimensions/three-dimensions",
@@ -14963,31 +15244,31 @@
     },
     {
       "derivationId": "gauge/standard-model-group",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 1,
       "title": "Framework-intrinsic fermion representations",
-      "description": "Derive the SM fermion multiplets from the framework's axioms and bootstrap hierarchy, rather than citing the external Furey construction. This would require showing that the bootstrap at the octonioni"
+      "description": "The Cell(6) decomposition (Proposition 4.1) correctly reproduces SM quantum numbers using published mathematics, but the derivation from the framework's own bootstrap axioms — showing *why* the bootst"
     },
     {
       "derivationId": "gauge/standard-model-group",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 2,
-      "title": "Zero-divisor exclusion (rigorous)",
-      "description": "Prove that zero divisors in a phase algebra are incompatible with coherence conservation (Axiom 1). The argument should show that C(a) > 0 and C(b) > 0 but C(ab) = 0 contradicts subadditivity or anoth"
+      "title": "$SU(2)_L$ quantum numbers from $\\mathbb{C}\\ell(6)$",
+      "description": "The current algebraic construction cleanly produces U(1) SU(3) quantum numbers. Incorporating the SU(2)L weak isospin assignments requires combining the Cell(6) structure with the quaternionic chirali"
     },
     {
       "derivationId": "gauge/standard-model-group",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 3,
       "title": "Electroweak symmetry breaking",
-      "description": "The mechanism that breaks SU(2)L U(1)Y U(1)em (the Higgs mechanism) has not been derived. The framework should identify the coherence-sector analog of the Higgs field."
+      "description": "The mechanism that breaks SU(2)L U(1)Y U(1)em has not been derived. The framework should identify the coherence-sector analog of the Higgs field."
     },
     {
       "derivationId": "gauge/standard-model-group",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 4,
       "title": "Proton decay bound",
-      "description": "Compute the framework's prediction for the proton lifetime. If no GUT exists, the proton should be absolutely stable (or decay only through gravitational effects at sim 1045 years)."
+      "description": "The framework predicts absolute proton stability (no GUT bosons). A quantitative bound on the proton lifetime from residual gravitational or higher-order effects would sharpen this into a testable pre"
     },
     {
       "derivationId": "gauge/weak-interaction",
@@ -15768,24 +16049,8 @@
     }
   ],
   "upgradeAnalysis": {
-    "eligible": [
-      {
-        "id": "gauge/standard-model-group",
-        "currentStatus": "draft",
-        "gapCount": 4,
-        "formalObjectCount": 13
-      }
-    ],
-    "blocked": [
-      {
-        "id": "cosmology/coupling-constants",
-        "currentStatus": "draft",
-        "blockedBy": [
-          "gauge/standard-model-group"
-        ],
-        "reason": "Depends on 1 draft derivation(s)"
-      }
-    ]
+    "eligible": [],
+    "blocked": []
   },
   "warnings": []
 }

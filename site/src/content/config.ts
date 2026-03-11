@@ -22,6 +22,11 @@ const derivations = defineCollection({
     rigorLevel: z.enum(['informal', 'semi-formal', 'formal']),
     sourceSection: z.string().optional(),
     lastUpdated: z.date().optional(),
+    leanProofs: z.array(z.object({
+      module: z.string(),
+      proposition: z.string(),
+      theorems: z.array(z.string()),
+    })).default([]),
   }),
 })
 

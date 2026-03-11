@@ -115,6 +115,64 @@ function parseFrontmatter(content) {
   return { data, body }
 }
 
+/** Parse leanProofs from YAML frontmatter string (handles nested array of objects) */
+function parseLeanProofs(yamlStr) {
+  const proofs = []
+  // Find the leanProofs: section
+  const startMatch = yamlStr.match(/^leanProofs:\s*$/m)
+  if (!startMatch) return proofs
+
+  const startIdx = startMatch.index + startMatch[0].length
+  const lines = yamlStr.slice(startIdx).split('\n')
+
+  let current = null
+  let inTheorems = false
+
+  for (const line of lines) {
+    // Stop at next top-level key (no leading whitespace, has colon)
+    if (/^\S/.test(line) && line.includes(':')) break
+
+    const trimmed = line.trim()
+    if (!trimmed) continue
+
+    // New proof object: "  - module: ..."
+    const moduleMatch = trimmed.match(/^-\s+module:\s*"([^"]+)"/)
+    if (moduleMatch) {
+      if (current) proofs.push(current)
+      current = { module: moduleMatch[1], proposition: '', theorems: [] }
+      inTheorems = false
+      continue
+    }
+
+    if (!current) continue
+
+    // Proposition field
+    const propMatch = trimmed.match(/^proposition:\s*"([^"]+)"/)
+    if (propMatch) {
+      current.proposition = propMatch[1]
+      inTheorems = false
+      continue
+    }
+
+    // Theorems array start
+    if (trimmed === 'theorems:') {
+      inTheorems = true
+      continue
+    }
+
+    // Theorem item
+    if (inTheorems) {
+      const thmMatch = trimmed.match(/^-\s+"([^"]+)"/)
+      if (thmMatch) {
+        current.theorems.push(thmMatch[1])
+      }
+    }
+  }
+
+  if (current) proofs.push(current)
+  return proofs
+}
+
 /** Strip LaTeX for preview: remove $...$ wrappers and common commands */
 function stripLatex(text) {
   return text
@@ -262,6 +320,10 @@ function processDerivation(filePath) {
   const content = readFileSync(filePath, 'utf-8')
   const { data, body } = parseFrontmatter(content)
 
+  // Parse leanProofs separately (nested YAML the simple parser can't handle)
+  const fmMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---/)
+  const leanProofs = fmMatch ? parseLeanProofs(fmMatch[1]) : []
+
   // Derive id from path: site/src/content/derivations/axioms/foo.md → axioms/foo
   const relPath = relative(DERIVATIONS_DIR, filePath)
   const id = relPath.replace(/\.md$/, '')
@@ -287,6 +349,12 @@ function processDerivation(filePath) {
     assessmentVerdict: extractAssessmentVerdict(body),
     hasConsistencyModel: hasConsistencyModel(body),
     crossReferences: { outgoing: extractCrossReferences(body), incoming: [] },
+    leanVerification: {
+      hasProofs: leanProofs.length > 0,
+      proofCount: leanProofs.reduce((sum, p) => sum + p.theorems.length, 0),
+      modules: leanProofs.map(p => p.module),
+      propositions: leanProofs.map(p => p.proposition),
+    },
     upgradeEligible: false,  // computed later
     upgradeBlockers: [],     // computed later
   }
@@ -420,6 +488,9 @@ function main() {
     byStatus[d.status] = (byStatus[d.status] || 0) + 1
   }
 
+  const leanVerifiedCount = Object.values(derivations).filter(d => d.leanVerification.hasProofs).length
+  const leanTheoremCount = Object.values(derivations).reduce((sum, d) => sum + d.leanVerification.proofCount, 0)
+
   const stats = {
     byStatus,
     derivationCount: Object.keys(derivations).length,
@@ -428,6 +499,8 @@ function main() {
     formalObjectCount: allFormalObjects.length,
     openGapCount: allOpenGaps.length,
     upgradeEligibleCount: upgradeEligible.length,
+    leanVerifiedCount,
+    leanTheoremCount,
   }
 
   // ── Validation: cross-check graph nodes vs files ──
@@ -503,7 +576,13 @@ function main() {
       console.log(`    ✗ ${b.id} — blocked by: ${b.blockedBy.join(', ')}`)
     }
   }
-  console.log()
+  if (leanVerifiedCount > 0) {
+    console.log(`  Lean-verified derivations: ${leanVerifiedCount} (${leanTheoremCount} theorems)`)
+    for (const d of Object.values(derivations).filter(d => d.leanVerification.hasProofs)) {
+      console.log(`    ✓ ${d.id} (${d.leanVerification.proofCount} theorems: ${d.leanVerification.propositions.join(', ')})`)
+    }
+    console.log()
+  }
   if (warnings.length > 0) {
     console.log(`  ⚠ Warnings (${warnings.length}):`)
     for (const w of warnings) {
