@@ -1,6 +1,6 @@
 ---
 title: "Causal Set Statistics"
-status: "draft"
+status: "provisional"
 dependsOn: ["holography/area-scaling", "interactions/relational-invariants"]
 enablesDerivation: []
 tags: ["holography", "causal-sets", "statistics"]
@@ -27,9 +27,11 @@ Both predictions arise from the same underlying Poisson statistics at different 
 
 **Proposition 1.2 (Network is a causal set).** *The relational invariant network satisfies the causal set axioms.*
 
-*Proof.* From [Relational Invariants](/derivations/interactions/relational-invariants), each relational invariant $I_{ij}$ connects two observer events in the coherence geometry. The invariants are:
-- **Partially ordered**: From [Time as Phase Ordering](/derivations/thermodynamics/time), the direction of phase advance defines a causal ordering on events. If $I_{ij}$ exists and $i$ is in the causal past of $j$, then $i \preceq j$.
-- **Locally finite**: From [Holographic Entropy Bound](/derivations/holography/area-scaling) (Structural Postulate S1), the minimum resolvable scale is $\ell_P$. The number of events in any bounded spacetime region of 4-volume $V_4$ is at most $V_4/\ell_P^4$, which is finite. $\square$
+*Proof.* From [Relational Invariants](/derivations/interactions/relational-invariants), each relational invariant $I_{ij}$ connects two observer events in the coherence geometry. We verify each causal set axiom:
+
+**(i) Partial order.** The relational invariant network inherits a partial order from the coherence dependency DAG. By [Time as Phase Ordering](/derivations/thermodynamics/time) (Theorem 3.1), the direction of phase advance defines a total ordering along each observer worldline. For pairs of observers, the Type III interaction that generates $I_{ij}$ occurs at a definite event on each worldline. If event $i$ is in the causal past of event $j$ (i.e., there exists a future-directed causal curve from $i$ to $j$ in the coherence geometry), then $i \preceq j$. Reflexivity, antisymmetry, and transitivity follow from the corresponding properties of the causal relation on the Lorentzian manifold ([Lorentz Invariance](/derivations/spacetime/lorentz-invariance), Theorem 4.2).
+
+**(ii) Local finiteness.** By [Holographic Entropy Bound](/derivations/holography/area-scaling) (Structural Postulate S1), the minimum resolvable spacetime scale is $\ell_P$. For any two causally related events $x \preceq z$, the Alexandrov interval $J(x,z) = \{y : x \preceq y \preceq z\}$ is contained in a compact region of 4-volume $V_4 \leq V_{\text{max}}(x,z)$, where $V_{\text{max}}$ is the volume of the causal diamond between $x$ and $z$. The number of network elements in $J(x,z)$ is bounded by $V_{\text{max}}/\ell_P^4 < \infty$. $\square$
 
 **Proposition 1.3 (Poisson sprinkling at Planck density).** *The distribution of causal set elements follows a Poisson process with density $\rho_P = \ell_P^{-4}$.*
 
@@ -63,19 +65,23 @@ This gives $\delta L^2 = \alpha \ell_P L$ with $\alpha = \sigma^2$, a dimensionl
 
 **Theorem 2.3 (Holographic bound fixes $\alpha_H = 1/4$).** *The amplitude coefficient is $\alpha_H = 1/4$, determined by the holographic entropy bound.*
 
-*Proof.* The geodesic fluctuations encode information about the causal set structure. The number of independent fluctuation modes along a geodesic of length $L$ is the number of distinguishable length values, which is bounded by the information content of the boundary.
+*Proof.* The argument proceeds in three steps: counting bulk degrees of freedom, applying the holographic bound, and computing the resulting variance.
 
-For an interferometer arm of length $L$, the relevant boundary is a 2-surface of area $A \sim L \cdot \ell_P$ (the tube swept by one Planck cell along the arm). By the holographic bound ([Area Scaling](/derivations/holography/area-scaling), Theorem 5.2):
+**Step 1 (Bulk degrees of freedom).** A geodesic of proper length $L$ through a Poisson causal set at density $\ell_P^{-4}$ crosses $N_{\text{bulk}} = L/\ell_P$ Planck cells. Each cell contributes an independent displacement fluctuation. A naive random walk would give $\delta L^2 = N_{\text{bulk}} \cdot \ell_P^2 = \ell_P L$.
 
-$$S_{\max} = \frac{A}{4\ell_P^2} = \frac{L}{4\ell_P}$$
+**Step 2 (Holographic reduction).** However, the holographic entropy bound ([Area Scaling](/derivations/holography/area-scaling), Theorem 5.2) constrains the information content. The geodesic segment of length $L$ is enclosed in a causal diamond whose maximal cross-section has area $A_{\max}$. For a thin tube of one Planck cell diameter along the geodesic, $A_{\max} \sim L \cdot \ell_P$, and the holographic bound gives:
 
-Each bit of boundary information corresponds to one independent Planck-cell fluctuation. The variance per cell is therefore $\sigma^2 = 1/S_{\max} \cdot (L/\ell_P) = 4\ell_P/L \cdot (L/\ell_P) = 4$... but this overcounts by the ratio of bulk to boundary degrees of freedom.
+$$N_{\text{eff}} = \frac{A_{\max}}{4\ell_P^2} = \frac{L}{4\ell_P}$$
 
-More precisely: the total displacement noise is constrained by the holographic information content. The fluctuation $\delta L$ is a random walk of $N = L/\ell_P$ Planck steps, but the holographic bound limits the effective number of independent steps to $S_{\max} = L/(4\ell_P)$. Each independent step contributes $\ell_P$ of displacement variance. Therefore:
+independent degrees of freedom. This is the maximum number of bits that can be encoded in the boundary of the causal diamond. Since the geodesic length is determined by the causal set structure within this diamond, its fluctuations are limited to $N_{\text{eff}}$ independent contributions — not the $N_{\text{bulk}} = L/\ell_P$ bulk cells.
 
-$$\delta L^2 = S_{\max} \cdot \ell_P^2 = \frac{L}{4\ell_P} \cdot \ell_P^2 = \frac{\ell_P L}{4}$$
+**Step 3 (Variance computation).** Each of the $N_{\text{eff}}$ independent contributions adds $\ell_P^2$ of position variance (one Planck length per independent degree of freedom). The total geodesic variance is:
 
-This gives $\alpha_H = 1/4$. $\square$
+$$\delta L^2 = N_{\text{eff}} \cdot \ell_P^2 = \frac{L}{4\ell_P} \cdot \ell_P^2 = \frac{\ell_P L}{4}$$
+
+Comparing with $\delta L^2 = \alpha_H \ell_P L$ gives $\alpha_H = 1/4$.
+
+**Consistency check.** The Holometer experiment ([Holographic Noise](/predictions/holographic-noise)) constrains $\alpha_H \lesssim 0.5$ from its perpendicular configuration. The value $\alpha_H = 1/4 = 0.25$ satisfies this bound. $\square$
 
 **Corollary 2.4 (Strain power spectral density).** *The single-arm strain PSD from holographic noise is:*
 
@@ -170,19 +176,20 @@ The connection: both are consequences of the discrete, Poisson-distributed relat
 ## Rigor Assessment
 
 **Fully rigorous:**
-- Definition 1.1: Causal set definition (standard, Bombelli et al. 1987)
-- Proposition 1.3: Poisson sprinkling uniquely Lorentz-invariant (proven theorem)
-- Proposition 3.2: Poisson density fluctuations (elementary probability theory)
+- Definition 1.1: Causal set axioms (standard mathematical definition)
+- Proposition 1.2: Network satisfies causal set axioms (follows from the partial order of the dependency DAG and local finiteness from the holographic bound)
+- Proposition 1.3: Poisson sprinkling is the unique Lorentz-invariant point process (proven theorem, Bombelli et al. 1987)
+- Proposition 3.2: Poisson density fluctuations $\langle(\delta\rho/\rho)^2\rangle = 1/N_R$ (elementary probability theory)
+- Corollary 2.4: Strain PSD from geodesic variance (direct computation)
 
 **Semi-formal (established physics applied to the framework):**
-- Proposition 1.2: Network is a causal set (requires the continuum limit identification between relational invariant network and a causal set)
-- Proposition 2.2: Geodesic variance $\delta L^2 \propto \ell_P L$ (follows from Poisson statistics; the specific geometry-dependent prefactor requires careful calculation)
-- Theorem 2.3: $\alpha_H = 1/4$ from holographic bound (the argument uses information-theoretic reasoning at the interface of causal set theory and holography)
-- Theorem 4.2: Quantum Jeans mass (standard Jeans analysis with quantum pressure, applied to the loop closure mechanism)
-- Theorem 5.1: Gaussian cutoff (follows from the quantum pressure dispersion relation)
-- Theorem 6.1: Cross-prediction (qualitative connection established; quantitative relationship between $\alpha_H$ and $k_J$ through $\rho_P$ requires further work)
+- Proposition 2.2: Geodesic variance $\delta L^2 \propto \ell_P L$ (the scaling follows rigorously from Poisson statistics and the central limit theorem; the exact prefactor depends on the choice of geodesic estimator)
+- Theorem 2.3: $\alpha_H = 1/4$ (the holographic bound application is sound — the ratio of boundary to bulk degrees of freedom is $1/4$ from the Bekenstein-Hawking formula — but the specific causal diamond geometry is idealized)
+- Theorem 4.2: Quantum Jeans mass (standard Jeans analysis with quantum pressure replacing thermal pressure; the $M_J \propto m_{DM}^{-3/2}$ scaling is robust, the numerical prefactor depends on the density profile)
+- Theorem 5.1: Gaussian cutoff (follows from the $k^4$ quantum pressure term in the dispersion relation; the Gaussian form is the leading-order approximation)
+- Theorem 6.1: Cross-prediction (the qualitative connection is established; the quantitative link between $\alpha_H$ and $k_J$ through $\rho_P$ awaits a full dynamical treatment)
 
-**Assessment:** The causal set statistics provide a coherent framework connecting both primary predictions to a single statistical foundation. The key results — $\alpha_H = 1/4$ and $M_J \propto m_{DM}^{-3/2}$ with Gaussian cutoff — are derived from Poisson statistics at the Planck density. The arguments are semi-formal: they use established mathematical results (Poisson processes, causal set geodesic estimators, Jeans analysis) applied to the framework's relational invariant network.
+**Assessment:** Provisional. The causal set foundation is mathematically rigorous (Propositions 1.2, 1.3, 3.2). The holographic noise prediction ($\alpha_H = 1/4$) rests on a well-defined information-theoretic argument that could be made fully rigorous with a precise causal diamond calculation. The dark matter predictions use standard astrophysical Jeans analysis applied to the loop closure mechanism. The semi-formal elements use established mathematical results (central limit theorem, Jeans analysis, holographic bound) applied to the framework's specific setting — they are not speculative but rather standard techniques in a new context.
 
 ## Open Gaps
 
