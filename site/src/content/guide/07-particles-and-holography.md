@@ -22,6 +22,7 @@ relatedDerivations:
   - "holography/information-paradox"
   - "holography/causal-set-statistics"
   - "spacetime/singularity-resolution"
+  - "gauge/electroweak-breaking"
 relatedPredictions: []
 ---
 
@@ -81,6 +82,6 @@ Conservation holds globally. Inaccessibility is local. There is no paradox — t
 
 > **On solid ground:** The spin-statistics connection and Pauli exclusion follow rigorously from the winding class structure in three dimensions. The holographic entropy bound, black hole entropy formula, and Hawking radiation mechanism are all rigorous derivations. The information paradox resolution via observer-indexed coherence is structurally precise.
 
-> **Work in progress:** The three-generations argument relies on the generation-axis correspondence postulate, which is motivated but not derived. The mass hierarchy derivation requires a tunneling-crystallization correspondence postulate. Recent draft derivations extend the framework further: [neutrino masses](/derivations/particles/neutrino-masses) are derived as Majorana (self-conjugate windings) with a seesaw mechanism predicting normal mass ordering; [singularity resolution](/derivations/spacetime/singularity-resolution) shows how the discrete relational network bounds curvature and replaces the Big Bang with a coherence bounce; and [causal set statistics](/derivations/holography/causal-set-statistics) unifies the holographic noise and dark matter predictions from a single statistical foundation. These are at draft status — the structural arguments are complete but quantitative precision is still developing.
+> **Work in progress:** The three-generations argument relies on the generation-axis correspondence postulate, which is motivated but not derived. The mass hierarchy derivation requires a tunneling-crystallization correspondence postulate. Recent draft derivations extend the framework further: [neutrino masses](/derivations/particles/neutrino-masses) are derived as Majorana (self-conjugate windings) with a seesaw mechanism predicting normal mass ordering; [singularity resolution](/derivations/spacetime/singularity-resolution) shows how the discrete relational network bounds curvature and replaces the Big Bang with a coherence bounce; [causal set statistics](/derivations/holography/causal-set-statistics) unifies the holographic noise and dark matter predictions from a single statistical foundation; and [electroweak symmetry breaking](/derivations/gauge/electroweak-breaking) derives the Higgs mechanism as a coherence crystallization, generating W/Z boson masses and protecting the electroweak hierarchy without fine-tuning. These are at draft status — the structural arguments are complete but quantitative precision is still developing.
 
 With the derivation chain complete — from axioms through geometry, quantum mechanics, particles, and holography — the critical question is: can any of this be tested?

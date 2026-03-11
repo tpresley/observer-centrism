@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-11T22:57:01.497Z",
+    "generatedAt": "2026-03-11T23:18:16.955Z",
     "derivationCount": 50,
     "predictionCount": 9,
     "generator": "scripts/build-index.mjs"
@@ -9,15 +9,14 @@
     "byStatus": {
       "rigorous": 40,
       "non-viable": 1,
-      "stub": 3,
-      "draft": 6
+      "draft": 9
     },
     "derivationCount": 50,
     "predictionCount": 9,
     "edgeCount": 88,
-    "formalObjectCount": 707,
-    "openGapCount": 186,
-    "upgradeEligibleCount": 6,
+    "formalObjectCount": 741,
+    "openGapCount": 201,
+    "upgradeEligibleCount": 9,
     "leanVerifiedCount": 16,
     "leanTheoremCount": 64
   },
@@ -245,6 +244,10 @@
             "context": "Coherence Conservation"
           },
           {
+            "source": "foundation/coherence-lagrangian",
+            "context": "Coherence Conservation"
+          },
+          {
             "source": "gauge/electromagnetism",
             "context": "Axiom 1"
           },
@@ -255,6 +258,10 @@
           {
             "source": "holography/information-paradox",
             "context": "Coherence Conservation"
+          },
+          {
+            "source": "interactions/bootstrap-division-algebras",
+            "context": "Axiom 1"
           },
           {
             "source": "interactions/bootstrap",
@@ -1154,6 +1161,10 @@
         ],
         "incoming": [
           {
+            "source": "gauge/electroweak-breaking",
+            "context": "Baryogenesis"
+          },
+          {
             "source": "gauge/standard-model-group",
             "context": "Baryogenesis"
           },
@@ -1226,7 +1237,12 @@
             "context": "Action and Planck's Constant"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "foundation/coherence-lagrangian",
+            "context": "Cosmological Constant"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -1409,6 +1425,10 @@
           },
           {
             "source": "gauge/electromagnetism",
+            "context": "Coupling Constants"
+          },
+          {
+            "source": "gauge/electroweak-breaking",
             "context": "Coupling Constants"
           },
           {
@@ -1638,6 +1658,10 @@
           {
             "source": "gauge/weak-interaction",
             "context": "Proposition 3.1"
+          },
+          {
+            "source": "interactions/bootstrap-division-algebras",
+            "context": "0, 2\\pi)$ is naturally represented by a unit complex number $e^{i\\theta_{12}} \\i"
           },
           {
             "source": "particles/three-generations",
@@ -1930,14 +1954,14 @@
       "id": "foundation/coherence-lagrangian",
       "filePath": "site/src/content/derivations/foundation/coherence-lagrangian.md",
       "title": "Coherence Lagrangian",
-      "status": "stub",
-      "rigorLevel": "informal",
+      "status": "draft",
+      "rigorLevel": "semi-formal",
       "group": "foundation",
       "tags": [
         "foundation",
         "lagrangian"
       ],
-      "summary": "Derive the unique coherence Lagrangian from the axioms. The Fisher information metric on the space of observer states provides the kinetic term; coherence conservation constrains the potential. This is the central missing mathematical piece that would connect the discrete axiom structure to continuum field theory.",
+      "summary": "The coherence Lagrangian is constructed from two ingredients: the Fisher information metric provides the unique kinetic term (via Čencov's theorem), and coherence conservation constrains the potential. The resulting action principle S = ∫ℒ reproduces the Euler-Lagrange dynamics of the framework and connects the discrete axiom structure to continuum field theory.",
       "lastUpdated": "2026-03-11",
       "dependsOn": [
         "thermodynamics/action-planck",
@@ -1945,24 +1969,185 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [],
-      "steps": [],
-      "formalObjects": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The Kinetic Term from Fisher Information"
+        },
+        {
+          "number": 2,
+          "title": "The Potential Term from Coherence Conservation"
+        },
+        {
+          "number": 3,
+          "title": "The Full Coherence Lagrangian"
+        },
+        {
+          "number": 4,
+          "title": "Euler-Lagrange Equations"
+        },
+        {
+          "number": 5,
+          "title": "The Action Principle"
+        },
+        {
+          "number": 6,
+          "title": "Stress-Energy from Coherence"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1.",
+          "name": "",
+          "statementPreview": "From [Fisher Information Metric](/derivations/thermodynamics-ext/fisher-metric) (Proposition 4.1), the coherence geom..."
+        },
+        {
+          "type": "Theorem",
+          "id": "1.2",
+          "name": "Uniqueness of kinetic term",
+          "statementPreview": "The kinetic term of the coherence Lagrangian is the quadratic form defined by the Fisher information metric. This is ..."
+        },
+        {
+          "type": "Definition",
+          "id": "2.1.",
+          "name": "",
+          "statementPreview": "The potential term V(sigma) is a function on the observer state space that represents the coherence cost of the confi..."
+        },
+        {
+          "type": "Theorem",
+          "id": "2.2",
+          "name": "Potential structure from conservation",
+          "statementPreview": "Coherence conservation (Axiom 1) constrains the potential to satisfy:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "Coherence Lagrangian",
+          "statementPreview": "The coherence Lagrangian for a field phi on a spacetime manifold (M, gmunu) is:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Recovery of known dynamics",
+          "statementPreview": "The Euler-Lagrange equations of the coherence Lagrangian reproduce:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Coherence action",
+          "statementPreview": "The action S = d4x,-g,L satisfies the stationary action principle: physical trajectories are those for which delta S ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.2",
+          "name": "Path integral from coherence",
+          "statementPreview": "The quantum path integral*"
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Stress-energy tensor",
+          "statementPreview": "The stress-energy tensor is the variational derivative of the matter Lagrangian with respect to the metric:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "7.1.",
+          "name": "",
+          "statementPreview": "The Standard Model Lagrangian + Einstein-Hilbert gravity provides a consistency model.*"
+        }
+      ],
       "structuralPostulates": [],
-      "openGaps": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Uniqueness proof",
+          "description": "A complete proof that L is the *unique* Lagrangian consistent with all three axioms, not merely the simplest. This requires classifying all possible terms consistent with the derived symmetries."
+        },
+        {
+          "number": 2,
+          "title": "Cosmological constant",
+          "description": "The coherence potential allows a constant term V0 (the cosmological constant). Its value should be derivable from the coherence geometry but is not — this connects to the [Cosmological Constant](/deri"
+        },
+        {
+          "number": 3,
+          "title": "Path integral measure",
+          "description": "The functional integral measure Dphi is not rigorously defined. The coherence framework may provide a natural regularization via the discrete relational invariant network, but this is not yet formaliz"
+        },
+        {
+          "number": 4,
+          "title": "Higher-order corrections",
+          "description": "The quartic restriction (Theorem 2.2c) holds at tree level; loop corrections generate higher-dimensional operators suppressed by powers of the cutoff. The bootstrap hierarchy structure should organize"
+        },
+        {
+          "number": 5,
+          "title": "Fermion kinetic term",
+          "description": "The derivation focuses on scalar fields. Extending to spinor fields requires the Fisher metric on the spinor state space, which should connect to the Dirac Lagrangian psi(igammamu Dmu - m)psi."
+        }
+      ],
       "assessmentVerdict": "",
-      "hasConsistencyModel": false,
+      "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
+          {
+            "target": "thermodynamics-ext/fisher-metric",
+            "context": "Proposition 4.1"
+          },
+          {
+            "target": "thermodynamics/action-planck",
+            "context": "Action and Planck's Constant"
+          },
           {
             "target": "thermodynamics-ext/fisher-metric",
             "context": "Fisher Information Metric"
           },
           {
+            "target": "axioms/coherence-conservation",
+            "context": "Coherence Conservation"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap Mechanism"
+          },
+          {
+            "target": "gauge/electromagnetism",
+            "context": "Electromagnetism"
+          },
+          {
+            "target": "gauge/weak-interaction",
+            "context": "Weak Interaction"
+          },
+          {
+            "target": "gauge/color-force",
+            "context": "Color Force"
+          },
+          {
+            "target": "spacetime/einstein-equations",
+            "context": "Einstein Field Equations"
+          },
+          {
+            "target": "gauge/electromagnetism",
+            "context": "Theorem 6.1"
+          },
+          {
+            "target": "spacetime/einstein-equations",
+            "context": "Theorem 5.1"
+          },
+          {
             "target": "thermodynamics/action-planck",
-            "context": "Action and Planck's Constant"
+            "context": "Theorem 5.1"
+          },
+          {
+            "target": "cosmology/cosmological-constant",
+            "context": "Cosmological Constant"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "gauge/electroweak-breaking",
+            "context": "currently a stub"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -1970,7 +2155,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": false,
+      "upgradeEligible": true,
       "upgradeBlockers": []
     },
     "gauge/chirality-selection": {
@@ -2473,6 +2658,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "foundation/coherence-lagrangian",
+            "context": "Color Force"
+          },
           {
             "source": "gauge/chirality-selection",
             "context": "Color Force"
@@ -3024,6 +3213,14 @@
         ],
         "incoming": [
           {
+            "source": "foundation/coherence-lagrangian",
+            "context": "Electromagnetism"
+          },
+          {
+            "source": "foundation/coherence-lagrangian",
+            "context": "Theorem 6.1"
+          },
+          {
             "source": "gauge/color-force",
             "context": "Electromagnetism"
           },
@@ -3102,14 +3299,14 @@
       "id": "gauge/electroweak-breaking",
       "filePath": "site/src/content/derivations/gauge/electroweak-breaking.md",
       "title": "Electroweak Symmetry Breaking",
-      "status": "stub",
-      "rigorLevel": "informal",
+      "status": "draft",
+      "rigorLevel": "semi-formal",
       "group": "gauge",
       "tags": [
         "gauge",
         "symmetry-breaking"
       ],
-      "summary": "Derive the breaking of SU(2)_L × U(1)_Y → U(1)_em as a coherence crystallization cascade at the electroweak scale. Identify the coherence-sector analog of the Higgs field and derive the W and Z boson masses from the crystallization dynamics.",
+      "summary": "The electroweak symmetry SU(2)_L × U(1)_Y breaks to U(1)_em through coherence crystallization: the observer hierarchy develops a preferred direction in the quaternionic phase space at the electroweak scale, generating W/Z boson masses and Yukawa couplings. The Higgs field is the order parameter of this crystallization, and its mass is protected by the logarithmic hierarchy of bootstrap levels.",
       "lastUpdated": "2026-03-11",
       "dependsOn": [
         "gauge/standard-model-group",
@@ -3117,21 +3314,167 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [],
-      "steps": [],
-      "formalObjects": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The Crystallization Mechanism"
+        },
+        {
+          "number": 2,
+          "title": "The Higgs Field as Order Parameter"
+        },
+        {
+          "number": 3,
+          "title": "Gauge Boson Mass Spectrum"
+        },
+        {
+          "number": 4,
+          "title": "The Higgs Boson"
+        },
+        {
+          "number": 5,
+          "title": "Hierarchy Protection"
+        },
+        {
+          "number": 6,
+          "title": "Yukawa Couplings from Crystallization Orientation"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1.",
+          "name": "",
+          "statementPreview": "From [Weak Interaction](/derivations/gauge/weak-interaction) (Theorem 2.1), the weak gauge structure is SU(2)L, arisi..."
+        },
+        {
+          "type": "Definition",
+          "id": "1.2.",
+          "name": "",
+          "statementPreview": "A **coherence crystallization** is a spontaneous symmetry breaking in which the observer hierarchy develops a preferr..."
+        },
+        {
+          "type": "Theorem",
+          "id": "1.3",
+          "name": "Crystallization is energetically necessary",
+          "statementPreview": "At the electroweak scale, the full SU(2)L U(1)Y symmetric vacuum is unstable. The coherence cost of maintaining the s..."
+        },
+        {
+          "type": "Definition",
+          "id": "2.1.",
+          "name": "",
+          "statementPreview": "The **Higgs field** phi is the coherence order parameter of the electroweak crystallization. It is an SU(2)L doublet ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "Goldstone's theorem and gauge boson masses",
+          "statementPreview": "The crystallization breaks 3 of the 4 generators of SU(2)L U(1)Y. The 3 associated Goldstone bosons are absorbed by t..."
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "W and Z masses from crystallization",
+          "statementPreview": "The gauge boson masses are:*"
+        },
+        {
+          "type": "Corollary",
+          "id": "3.2",
+          "name": "Mass ratio",
+          "statementPreview": "mW/mZ = costhetaW. Experimentally: mW 80.4 GeV, mZ 91.2 GeV, giving costhetaW 0.882, hence sin2thetaW 0.223.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Higgs boson as radial mode",
+          "statementPreview": "The Higgs boson h is the radial fluctuation of the order parameter about the crystallized vacuum:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "5.1",
+          "name": "Higgs mass is protected by the bootstrap hierarchy",
+          "statementPreview": "The electroweak scale v 246 GeV is naturally separated from the Planck scale MP sim 1019 GeV by the logarithmic runni..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Fermion masses from crystallization",
+          "statementPreview": "Fermion masses arise from the coupling of fermionic winding modes to the crystallization order parameter (Yukawa coup..."
+        },
+        {
+          "type": "Theorem",
+          "id": "7.1.",
+          "name": "",
+          "statementPreview": "The Standard Model with the Higgs mechanism provides a consistency model.*"
+        }
+      ],
       "structuralPostulates": [],
-      "openGaps": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Electroweak scale derivation",
+          "description": "Computing v 246 GeV from the coherence Lagrangian and bootstrap hierarchy. This requires [Coherence Lagrangian](/derivations/foundation/coherence-lagrangian) (currently a stub)."
+        },
+        {
+          "number": 2,
+          "title": "Weinberg angle",
+          "description": "The value sin2thetaW 0.231 should be derivable from the relative strengths of SU(2)L and U(1)Y at the crystallization scale. This connects to [Coupling Constants](/derivations/cosmology/coupling-const"
+        },
+        {
+          "number": 3,
+          "title": "Higgs self-coupling",
+          "description": "The value lambda 0.13 (determining mh = 125 GeV) is not predicted — it depends on the shape of the coherence potential near the crystallization."
+        },
+        {
+          "number": 4,
+          "title": "Custodial symmetry",
+          "description": "The approximate SU(2) custodial symmetry protecting rho = mW2/(mZ2cos2thetaW) 1 should follow from the quaternionic structure but is not explicitly derived."
+        },
+        {
+          "number": 5,
+          "title": "Electroweak phase transition",
+          "description": "The cosmological electroweak phase transition (first-order vs. crossover) depends on the detailed dynamics of the crystallization, relevant for [Baryogenesis](/derivations/cosmology/baryogenesis)."
+        }
+      ],
       "assessmentVerdict": "",
-      "hasConsistencyModel": false,
+      "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
           {
-            "target": "gauge/standard-model-group",
-            "context": "Standard Model Gauge Group"
+            "target": "gauge/weak-interaction",
+            "context": "Theorem 2.1"
           },
           {
             "target": "gauge/weak-interaction",
             "context": "Weak Interaction"
+          },
+          {
+            "target": "particles/three-generations",
+            "context": "Three Generations"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap Mechanism"
+          },
+          {
+            "target": "particles/three-generations",
+            "context": "Theorem 4.2"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "target": "foundation/coherence-lagrangian",
+            "context": "currently a stub"
+          },
+          {
+            "target": "cosmology/coupling-constants",
+            "context": "Coupling Constants"
+          },
+          {
+            "target": "cosmology/baryogenesis",
+            "context": "Baryogenesis"
           }
         ],
         "incoming": []
@@ -3142,7 +3485,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": false,
+      "upgradeEligible": true,
       "upgradeBlockers": []
     },
     "gauge/standard-model-group": {
@@ -3362,12 +3705,12 @@
             "context": "full gauge structure"
           },
           {
-            "source": "gauge/electroweak-breaking",
+            "source": "interactions/bootstrap-division-algebras",
             "context": "Standard Model Gauge Group"
           },
           {
             "source": "interactions/bootstrap-division-algebras",
-            "context": "Standard Model Gauge Group"
+            "context": "Theorem 2.1"
           }
         ]
       },
@@ -3917,6 +4260,10 @@
             "context": "Weak Interaction"
           },
           {
+            "source": "foundation/coherence-lagrangian",
+            "context": "Weak Interaction"
+          },
+          {
             "source": "gauge/chirality-selection",
             "context": "Structural Postulate S1"
           },
@@ -3951,6 +4298,10 @@
           {
             "source": "gauge/electromagnetism",
             "context": "Weak Interaction"
+          },
+          {
+            "source": "gauge/electroweak-breaking",
+            "context": "Theorem 2.1"
           },
           {
             "source": "gauge/electroweak-breaking",
@@ -5068,33 +5419,167 @@
     "interactions/bootstrap-division-algebras": {
       "id": "interactions/bootstrap-division-algebras",
       "filePath": "site/src/content/derivations/interactions/bootstrap-division-algebras.md",
-      "title": "Bootstrap Division Algebras",
-      "status": "stub",
-      "rigorLevel": "informal",
+      "title": "Bootstrap → Division Algebras",
+      "status": "draft",
+      "rigorLevel": "semi-formal",
       "group": "interactions",
       "tags": [
         "interactions",
         "division-algebras"
       ],
-      "summary": "Prove that the bootstrap hierarchy mechanism forces the Cayley-Dickson doubling sequence R → C → H → O. If established, this eliminates the structural postulates about division algebras from the entire gauge chain, deriving the Standard Model gauge structure purely from the three axioms.",
+      "summary": "The bootstrap hierarchy forces the Cayley-Dickson doubling sequence R → C → H → O by requiring algebraic closure at each interaction level. Each bootstrap level demands a larger algebra to accommodate the new relational invariants, and the doubling terminates at O because sedenions have zero divisors that violate coherence conservation. If promoted to rigorous, this would eliminate the division algebra structural postulates from the entire gauge chain.",
       "lastUpdated": "2026-03-11",
       "dependsOn": [
         "interactions/bootstrap"
       ],
       "enablesDerivation": [],
       "dependedOnBy": [],
-      "steps": [],
-      "formalObjects": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Bootstrap Levels and Algebraic Structure"
+        },
+        {
+          "number": 2,
+          "title": "Why Doubling (Cayley-Dickson)"
+        },
+        {
+          "number": 3,
+          "title": "The Bootstrap Floor — Why $\\mathbb{R}$"
+        },
+        {
+          "number": 4,
+          "title": "Level 1 — Why $\\mathbb{C}$"
+        },
+        {
+          "number": 5,
+          "title": "Level 2 — Why $\\mathbb{H}$"
+        },
+        {
+          "number": 6,
+          "title": "Level 3 — Why $\\mathbb{O}$"
+        },
+        {
+          "number": 7,
+          "title": "The Bootstrap Ceiling — Why Not $\\mathbb{S}$"
+        },
+        {
+          "number": 8,
+          "title": "Properties Lost at Each Level"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1.",
+          "name": "",
+          "statementPreview": "From [Bootstrap Mechanism](/derivations/interactions/bootstrap) (Theorem 1.1), relational invariants are themselves o..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Each level needs new algebraic structure",
+          "statementPreview": "At each bootstrap level, the relational invariants involve interaction channels that cannot be expressed in the algeb..."
+        },
+        {
+          "type": "Definition",
+          "id": "2.1.",
+          "name": "",
+          "statementPreview": "The **Cayley-Dickson construction** takes an algebra A with conjugation a a and produces a new algebra A' = A Ae with..."
+        },
+        {
+          "type": "Theorem",
+          "id": "2.2",
+          "name": "Cayley-Dickson is the unique norm-preserving doubling",
+          "statementPreview": "The Cayley-Dickson construction is the unique way to double a normed algebra while preserving the norm product proper..."
+        },
+        {
+          "type": "Theorem",
+          "id": "2.3",
+          "name": "Bootstrap forces Cayley-Dickson doubling",
+          "statementPreview": "The bootstrap hierarchy forces Cayley-Dickson doubling at each level, because coherence conservation requires that th..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Level 0 is $\\mathbb{R}$",
+          "statementPreview": "The fundamental observer algebra is R — a single real coherence measure.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Pairwise interaction forces $\\mathbb{C}$",
+          "statementPreview": "The relational invariant of two interacting observers requires a complex algebra.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Triple interaction forces $\\mathbb{H}$",
+          "statementPreview": "The relational invariant of three mutually interacting observers requires a quaternionic algebra.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Quadruple interaction forces $\\mathbb{O}$",
+          "statementPreview": "The relational invariant of four mutually interacting observers requires an octonionic algebra.*"
+        },
+        {
+          "type": "Theorem",
+          "id": "7.1",
+          "name": "Sedenion obstruction",
+          "statementPreview": "The next Cayley-Dickson step O xrightarrowCD S (sedenions, dim 16) produces zero divisors, which violate coherence co..."
+        },
+        {
+          "type": "Corollary",
+          "id": "7.2",
+          "name": "Three forces and no more",
+          "statementPreview": "There are exactly three fundamental gauge interactions (electromagnetic, weak, strong), plus gravity. No fourth gauge..."
+        },
+        {
+          "type": "Proposition",
+          "id": "8.1",
+          "name": "Algebraic properties and physical consequences",
+          "statementPreview": "Each Cayley-Dickson doubling sacrifices one algebraic property, with direct physical consequences:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "9.1.",
+          "name": "",
+          "statementPreview": "The Cayley-Dickson sequence R C H O with the gauge correspondence C U(1), H SU(2), O SU(3) provides a cons"
+        }
+      ],
       "structuralPostulates": [],
-      "openGaps": [],
-      "assessmentVerdict": "",
-      "hasConsistencyModel": false,
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Norm = coherence proof",
+          "description": "Rigorously establish that the algebraic norm in the interaction algebra *must* equal the coherence measure. This is the key step needed to promote the derivation to rigorous status."
+        },
+        {
+          "number": 2,
+          "title": "Category-theoretic formulation",
+          "description": "A categorical framework (e.g., using the theory of composition algebras over monoidal categories) might make the Cayley-Dickson necessity transparent and provide the missing rigor."
+        },
+        {
+          "number": 3,
+          "title": "Level counting",
+          "description": "The derivation identifies 4 levels (R, C, H, O) with 4 types of interaction (identity, pairwise, triple, quadruple). Making precise the correspondence between \"number of interacting observers\" and \"Ca"
+        },
+        {
+          "number": 4,
+          "title": "Non-associativity and confinement",
+          "description": "The connection between octonionic non-associativity and color confinement (Proposition 8.1) is structural but not quantitative. A rigorous confinement proof from the octonionic structure would be a ma"
+        },
+        {
+          "number": 5,
+          "title": "Alternative algebras",
+          "description": "Could a non-Cayley-Dickson extension (e.g., Clifford algebras, Jordan algebras) serve as the interaction algebra at some level? Showing these are excluded by the coherence constraints would strengthen"
+        }
+      ],
+      "assessmentVerdict": "This derivation provides the *dynamical reason* for the division algebra sequence that was previously postulated. Promoting it to rigorous status would eliminate 5 structural postulates from the gauge chain — the single most impactful possible upgrade in the framework. The gap is specific and well-d",
+      "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
-          {
-            "target": "interactions/bootstrap",
-            "context": "Bootstrap Mechanism"
-          },
           {
             "target": "gauge/electromagnetism",
             "context": "Electromagnetism"
@@ -5114,6 +5599,34 @@
           {
             "target": "cosmology/coupling-constants",
             "context": "Coupling Constants"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Theorem 1.1"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Theorem 4.1"
+          },
+          {
+            "target": "axioms/coherence-conservation",
+            "context": "Axiom 1"
+          },
+          {
+            "target": "minimal-observer/structure",
+            "context": "Minimal Observer Structure"
+          },
+          {
+            "target": "dimensions/three-dimensions",
+            "context": "0, 2\\pi)$ is naturally represented by a unit complex number $e^{i\\theta_{12}} \\i"
+          },
+          {
+            "target": "gauge/standard-model-group",
+            "context": "Theorem 2.1"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap"
           }
         ],
         "incoming": []
@@ -5124,7 +5637,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": false,
+      "upgradeEligible": true,
       "upgradeBlockers": []
     },
     "interactions/bootstrap": {
@@ -5339,12 +5852,28 @@
             "context": "Bootstrap Mechanism"
           },
           {
+            "source": "foundation/coherence-lagrangian",
+            "context": "Bootstrap Mechanism"
+          },
+          {
             "source": "gauge/color-force",
             "context": "Bootstrap Mechanism"
           },
           {
-            "source": "interactions/bootstrap-division-algebras",
+            "source": "gauge/electroweak-breaking",
             "context": "Bootstrap Mechanism"
+          },
+          {
+            "source": "interactions/bootstrap-division-algebras",
+            "context": "Theorem 1.1"
+          },
+          {
+            "source": "interactions/bootstrap-division-algebras",
+            "context": "Theorem 4.1"
+          },
+          {
+            "source": "interactions/bootstrap-division-algebras",
+            "context": "Bootstrap"
           },
           {
             "source": "interactions/relational-invariants",
@@ -6682,6 +7211,10 @@
             "context": "0, 2\\pi)$ and conserved charge $Q$ ([Minimal Observer Structure"
           },
           {
+            "source": "interactions/bootstrap-division-algebras",
+            "context": "Minimal Observer Structure"
+          },
+          {
             "source": "interactions/bootstrap",
             "context": "Minimal Observer Structure"
           },
@@ -6918,6 +7451,10 @@
           },
           {
             "source": "flavor/mixing-angles",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "source": "gauge/electroweak-breaking",
             "context": "Mass Hierarchy"
           },
           {
@@ -7748,6 +8285,14 @@
           {
             "source": "flavor/mixing-angles",
             "context": "Three Generations"
+          },
+          {
+            "source": "gauge/electroweak-breaking",
+            "context": "Three Generations"
+          },
+          {
+            "source": "gauge/electroweak-breaking",
+            "context": "Theorem 4.2"
           },
           {
             "source": "gauge/standard-model-group",
@@ -8969,6 +9514,14 @@
           {
             "source": "cosmology/cosmological-constant",
             "context": "Einstein Field Equations"
+          },
+          {
+            "source": "foundation/coherence-lagrangian",
+            "context": "Einstein Field Equations"
+          },
+          {
+            "source": "foundation/coherence-lagrangian",
+            "context": "Theorem 5.1"
           },
           {
             "source": "gauge/electromagnetism",
@@ -10724,6 +11277,10 @@
         "incoming": [
           {
             "source": "foundation/coherence-lagrangian",
+            "context": "Proposition 4.1"
+          },
+          {
+            "source": "foundation/coherence-lagrangian",
             "context": "Fisher Information Metric"
           },
           {
@@ -11343,6 +11900,10 @@
           {
             "source": "foundation/coherence-lagrangian",
             "context": "Action and Planck's Constant"
+          },
+          {
+            "source": "foundation/coherence-lagrangian",
+            "context": "Theorem 5.1"
           },
           {
             "source": "gauge/electromagnetism",
@@ -12945,6 +13506,76 @@
       "fullRef": "flavor/mixing-angles:Proposition 5.1"
     },
     {
+      "derivationId": "foundation/coherence-lagrangian",
+      "type": "Definition",
+      "id": "1.1.",
+      "name": "",
+      "fullRef": "foundation/coherence-lagrangian:Definition 1.1."
+    },
+    {
+      "derivationId": "foundation/coherence-lagrangian",
+      "type": "Theorem",
+      "id": "1.2",
+      "name": "Uniqueness of kinetic term",
+      "fullRef": "foundation/coherence-lagrangian:Theorem 1.2"
+    },
+    {
+      "derivationId": "foundation/coherence-lagrangian",
+      "type": "Definition",
+      "id": "2.1.",
+      "name": "",
+      "fullRef": "foundation/coherence-lagrangian:Definition 2.1."
+    },
+    {
+      "derivationId": "foundation/coherence-lagrangian",
+      "type": "Theorem",
+      "id": "2.2",
+      "name": "Potential structure from conservation",
+      "fullRef": "foundation/coherence-lagrangian:Theorem 2.2"
+    },
+    {
+      "derivationId": "foundation/coherence-lagrangian",
+      "type": "Theorem",
+      "id": "3.1",
+      "name": "Coherence Lagrangian",
+      "fullRef": "foundation/coherence-lagrangian:Theorem 3.1"
+    },
+    {
+      "derivationId": "foundation/coherence-lagrangian",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Recovery of known dynamics",
+      "fullRef": "foundation/coherence-lagrangian:Proposition 4.1"
+    },
+    {
+      "derivationId": "foundation/coherence-lagrangian",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "Coherence action",
+      "fullRef": "foundation/coherence-lagrangian:Proposition 5.1"
+    },
+    {
+      "derivationId": "foundation/coherence-lagrangian",
+      "type": "Proposition",
+      "id": "5.2",
+      "name": "Path integral from coherence",
+      "fullRef": "foundation/coherence-lagrangian:Proposition 5.2"
+    },
+    {
+      "derivationId": "foundation/coherence-lagrangian",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "Stress-energy tensor",
+      "fullRef": "foundation/coherence-lagrangian:Proposition 6.1"
+    },
+    {
+      "derivationId": "foundation/coherence-lagrangian",
+      "type": "Theorem",
+      "id": "7.1.",
+      "name": "",
+      "fullRef": "foundation/coherence-lagrangian:Theorem 7.1."
+    },
+    {
       "derivationId": "gauge/chirality-selection",
       "type": "Definition",
       "id": "1.1",
@@ -13363,6 +13994,83 @@
       "id": "10.1.",
       "name": "",
       "fullRef": "gauge/electromagnetism:Theorem 10.1."
+    },
+    {
+      "derivationId": "gauge/electroweak-breaking",
+      "type": "Definition",
+      "id": "1.1.",
+      "name": "",
+      "fullRef": "gauge/electroweak-breaking:Definition 1.1."
+    },
+    {
+      "derivationId": "gauge/electroweak-breaking",
+      "type": "Definition",
+      "id": "1.2.",
+      "name": "",
+      "fullRef": "gauge/electroweak-breaking:Definition 1.2."
+    },
+    {
+      "derivationId": "gauge/electroweak-breaking",
+      "type": "Theorem",
+      "id": "1.3",
+      "name": "Crystallization is energetically necessary",
+      "fullRef": "gauge/electroweak-breaking:Theorem 1.3"
+    },
+    {
+      "derivationId": "gauge/electroweak-breaking",
+      "type": "Definition",
+      "id": "2.1.",
+      "name": "",
+      "fullRef": "gauge/electroweak-breaking:Definition 2.1."
+    },
+    {
+      "derivationId": "gauge/electroweak-breaking",
+      "type": "Proposition",
+      "id": "2.2",
+      "name": "Goldstone's theorem and gauge boson masses",
+      "fullRef": "gauge/electroweak-breaking:Proposition 2.2"
+    },
+    {
+      "derivationId": "gauge/electroweak-breaking",
+      "type": "Theorem",
+      "id": "3.1",
+      "name": "W and Z masses from crystallization",
+      "fullRef": "gauge/electroweak-breaking:Theorem 3.1"
+    },
+    {
+      "derivationId": "gauge/electroweak-breaking",
+      "type": "Corollary",
+      "id": "3.2",
+      "name": "Mass ratio",
+      "fullRef": "gauge/electroweak-breaking:Corollary 3.2"
+    },
+    {
+      "derivationId": "gauge/electroweak-breaking",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Higgs boson as radial mode",
+      "fullRef": "gauge/electroweak-breaking:Proposition 4.1"
+    },
+    {
+      "derivationId": "gauge/electroweak-breaking",
+      "type": "Theorem",
+      "id": "5.1",
+      "name": "Higgs mass is protected by the bootstrap hierarchy",
+      "fullRef": "gauge/electroweak-breaking:Theorem 5.1"
+    },
+    {
+      "derivationId": "gauge/electroweak-breaking",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "Fermion masses from crystallization",
+      "fullRef": "gauge/electroweak-breaking:Proposition 6.1"
+    },
+    {
+      "derivationId": "gauge/electroweak-breaking",
+      "type": "Theorem",
+      "id": "7.1.",
+      "name": "",
+      "fullRef": "gauge/electroweak-breaking:Theorem 7.1."
     },
     {
       "derivationId": "gauge/standard-model-group",
@@ -14147,6 +14855,97 @@
       "id": "8.1.",
       "name": "",
       "fullRef": "holography/information-paradox:Theorem 8.1."
+    },
+    {
+      "derivationId": "interactions/bootstrap-division-algebras",
+      "type": "Definition",
+      "id": "1.1.",
+      "name": "",
+      "fullRef": "interactions/bootstrap-division-algebras:Definition 1.1."
+    },
+    {
+      "derivationId": "interactions/bootstrap-division-algebras",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "Each level needs new algebraic structure",
+      "fullRef": "interactions/bootstrap-division-algebras:Proposition 1.2"
+    },
+    {
+      "derivationId": "interactions/bootstrap-division-algebras",
+      "type": "Definition",
+      "id": "2.1.",
+      "name": "",
+      "fullRef": "interactions/bootstrap-division-algebras:Definition 2.1."
+    },
+    {
+      "derivationId": "interactions/bootstrap-division-algebras",
+      "type": "Theorem",
+      "id": "2.2",
+      "name": "Cayley-Dickson is the unique norm-preserving doubling",
+      "fullRef": "interactions/bootstrap-division-algebras:Theorem 2.2"
+    },
+    {
+      "derivationId": "interactions/bootstrap-division-algebras",
+      "type": "Theorem",
+      "id": "2.3",
+      "name": "Bootstrap forces Cayley-Dickson doubling",
+      "fullRef": "interactions/bootstrap-division-algebras:Theorem 2.3"
+    },
+    {
+      "derivationId": "interactions/bootstrap-division-algebras",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Level 0 is $\\mathbb{R}$",
+      "fullRef": "interactions/bootstrap-division-algebras:Proposition 3.1"
+    },
+    {
+      "derivationId": "interactions/bootstrap-division-algebras",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Pairwise interaction forces $\\mathbb{C}$",
+      "fullRef": "interactions/bootstrap-division-algebras:Proposition 4.1"
+    },
+    {
+      "derivationId": "interactions/bootstrap-division-algebras",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "Triple interaction forces $\\mathbb{H}$",
+      "fullRef": "interactions/bootstrap-division-algebras:Proposition 5.1"
+    },
+    {
+      "derivationId": "interactions/bootstrap-division-algebras",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "Quadruple interaction forces $\\mathbb{O}$",
+      "fullRef": "interactions/bootstrap-division-algebras:Proposition 6.1"
+    },
+    {
+      "derivationId": "interactions/bootstrap-division-algebras",
+      "type": "Theorem",
+      "id": "7.1",
+      "name": "Sedenion obstruction",
+      "fullRef": "interactions/bootstrap-division-algebras:Theorem 7.1"
+    },
+    {
+      "derivationId": "interactions/bootstrap-division-algebras",
+      "type": "Corollary",
+      "id": "7.2",
+      "name": "Three forces and no more",
+      "fullRef": "interactions/bootstrap-division-algebras:Corollary 7.2"
+    },
+    {
+      "derivationId": "interactions/bootstrap-division-algebras",
+      "type": "Proposition",
+      "id": "8.1",
+      "name": "Algebraic properties and physical consequences",
+      "fullRef": "interactions/bootstrap-division-algebras:Proposition 8.1"
+    },
+    {
+      "derivationId": "interactions/bootstrap-division-algebras",
+      "type": "Theorem",
+      "id": "9.1.",
+      "name": "",
+      "fullRef": "interactions/bootstrap-division-algebras:Theorem 9.1."
     },
     {
       "derivationId": "interactions/bootstrap",
@@ -17224,6 +18023,41 @@
       "description": "The observation theta12CKM + theta12PMNS pi/4 may be accidental or may reflect a deeper geometric relationship between the quark and lepton sectors. The A5 framework should clarify this."
     },
     {
+      "derivationId": "foundation/coherence-lagrangian",
+      "derivationStatus": "draft",
+      "number": 1,
+      "title": "Uniqueness proof",
+      "description": "A complete proof that L is the *unique* Lagrangian consistent with all three axioms, not merely the simplest. This requires classifying all possible terms consistent with the derived symmetries."
+    },
+    {
+      "derivationId": "foundation/coherence-lagrangian",
+      "derivationStatus": "draft",
+      "number": 2,
+      "title": "Cosmological constant",
+      "description": "The coherence potential allows a constant term V0 (the cosmological constant). Its value should be derivable from the coherence geometry but is not — this connects to the [Cosmological Constant](/deri"
+    },
+    {
+      "derivationId": "foundation/coherence-lagrangian",
+      "derivationStatus": "draft",
+      "number": 3,
+      "title": "Path integral measure",
+      "description": "The functional integral measure Dphi is not rigorously defined. The coherence framework may provide a natural regularization via the discrete relational invariant network, but this is not yet formaliz"
+    },
+    {
+      "derivationId": "foundation/coherence-lagrangian",
+      "derivationStatus": "draft",
+      "number": 4,
+      "title": "Higher-order corrections",
+      "description": "The quartic restriction (Theorem 2.2c) holds at tree level; loop corrections generate higher-dimensional operators suppressed by powers of the cutoff. The bootstrap hierarchy structure should organize"
+    },
+    {
+      "derivationId": "foundation/coherence-lagrangian",
+      "derivationStatus": "draft",
+      "number": 5,
+      "title": "Fermion kinetic term",
+      "description": "The derivation focuses on scalar fields. Extending to spinor fields requires the Fisher metric on the spinor state space, which should connect to the Dirac Lagrangian psi(igammamu Dmu - m)psi."
+    },
+    {
       "derivationId": "gauge/chirality-selection",
       "derivationStatus": "rigorous",
       "number": 1,
@@ -17362,6 +18196,41 @@
       "number": 5,
       "title": "Localization rigor",
       "description": "*(resolved)*: The localization argument (Theorem 2.1) is now completed by Proposition 2.2 (the gauge-invariant observable algebra IS generated by Wilson loops and relational invariants) and Propositio"
+    },
+    {
+      "derivationId": "gauge/electroweak-breaking",
+      "derivationStatus": "draft",
+      "number": 1,
+      "title": "Electroweak scale derivation",
+      "description": "Computing v 246 GeV from the coherence Lagrangian and bootstrap hierarchy. This requires [Coherence Lagrangian](/derivations/foundation/coherence-lagrangian) (currently a stub)."
+    },
+    {
+      "derivationId": "gauge/electroweak-breaking",
+      "derivationStatus": "draft",
+      "number": 2,
+      "title": "Weinberg angle",
+      "description": "The value sin2thetaW 0.231 should be derivable from the relative strengths of SU(2)L and U(1)Y at the crystallization scale. This connects to [Coupling Constants](/derivations/cosmology/coupling-const"
+    },
+    {
+      "derivationId": "gauge/electroweak-breaking",
+      "derivationStatus": "draft",
+      "number": 3,
+      "title": "Higgs self-coupling",
+      "description": "The value lambda 0.13 (determining mh = 125 GeV) is not predicted — it depends on the shape of the coherence potential near the crystallization."
+    },
+    {
+      "derivationId": "gauge/electroweak-breaking",
+      "derivationStatus": "draft",
+      "number": 4,
+      "title": "Custodial symmetry",
+      "description": "The approximate SU(2) custodial symmetry protecting rho = mW2/(mZ2cos2thetaW) 1 should follow from the quaternionic structure but is not explicitly derived."
+    },
+    {
+      "derivationId": "gauge/electroweak-breaking",
+      "derivationStatus": "draft",
+      "number": 5,
+      "title": "Electroweak phase transition",
+      "description": "The cosmological electroweak phase transition (first-order vs. crossover) depends on the detailed dynamics of the crystallization, relevant for [Baryogenesis](/derivations/cosmology/baryogenesis)."
     },
     {
       "derivationId": "gauge/standard-model-group",
@@ -17628,6 +18497,41 @@
       "number": 5,
       "title": "Observational signatures",
       "description": "The information encoding in Hawking radiation correlations is in principle observable but requires collecting an astronomically large number of quanta. Are there more accessible signatures of the reso"
+    },
+    {
+      "derivationId": "interactions/bootstrap-division-algebras",
+      "derivationStatus": "draft",
+      "number": 1,
+      "title": "Norm = coherence proof",
+      "description": "Rigorously establish that the algebraic norm in the interaction algebra *must* equal the coherence measure. This is the key step needed to promote the derivation to rigorous status."
+    },
+    {
+      "derivationId": "interactions/bootstrap-division-algebras",
+      "derivationStatus": "draft",
+      "number": 2,
+      "title": "Category-theoretic formulation",
+      "description": "A categorical framework (e.g., using the theory of composition algebras over monoidal categories) might make the Cayley-Dickson necessity transparent and provide the missing rigor."
+    },
+    {
+      "derivationId": "interactions/bootstrap-division-algebras",
+      "derivationStatus": "draft",
+      "number": 3,
+      "title": "Level counting",
+      "description": "The derivation identifies 4 levels (R, C, H, O) with 4 types of interaction (identity, pairwise, triple, quadruple). Making precise the correspondence between \"number of interacting observers\" and \"Ca"
+    },
+    {
+      "derivationId": "interactions/bootstrap-division-algebras",
+      "derivationStatus": "draft",
+      "number": 4,
+      "title": "Non-associativity and confinement",
+      "description": "The connection between octonionic non-associativity and color confinement (Proposition 8.1) is structural but not quantitative. A rigorous confinement proof from the octonionic structure would be a ma"
+    },
+    {
+      "derivationId": "interactions/bootstrap-division-algebras",
+      "derivationStatus": "draft",
+      "number": 5,
+      "title": "Alternative algebras",
+      "description": "Could a non-Cayley-Dickson extension (e.g., Clifford algebras, Jordan algebras) serve as the interaction algebra at some level? Showing these are excluded by the coherence constraints would strengthen"
     },
     {
       "derivationId": "interactions/bootstrap",
@@ -18340,10 +19244,22 @@
   "upgradeAnalysis": {
     "eligible": [
       {
+        "id": "foundation/coherence-lagrangian",
+        "currentStatus": "draft",
+        "gapCount": 5,
+        "formalObjectCount": 10
+      },
+      {
         "id": "gauge/confinement",
         "currentStatus": "draft",
         "gapCount": 6,
         "formalObjectCount": 9
+      },
+      {
+        "id": "gauge/electroweak-breaking",
+        "currentStatus": "draft",
+        "gapCount": 5,
+        "formalObjectCount": 11
       },
       {
         "id": "gauge/strong-cp",
@@ -18356,6 +19272,12 @@
         "currentStatus": "draft",
         "gapCount": 5,
         "formalObjectCount": 14
+      },
+      {
+        "id": "interactions/bootstrap-division-algebras",
+        "currentStatus": "draft",
+        "gapCount": 5,
+        "formalObjectCount": 13
       },
       {
         "id": "particles/neutrino-masses",
