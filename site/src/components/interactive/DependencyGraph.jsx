@@ -18,6 +18,19 @@ const GROUP_COLORS = {
   'thermo-ext': '#78716c',
 }
 
+const GROUP_LABELS = {
+  foundation:   'Foundation',
+  dynamics:     'Dynamics',
+  geometry:     'Geometry',
+  quantum:      'Quantum',
+  particles:    'Particles',
+  holography:   'Holography',
+  gauge:        'Gauge',
+  flavor:       'Flavor',
+  cosmology:    'Cosmology',
+  'thermo-ext': 'Thermo Ext.',
+}
+
 const STATUS_OPACITY = {
   'non-viable': 0.3,
   stub:         0.4,
@@ -119,12 +132,27 @@ function layoutNodes(nodes, edges, width) {
 function DependencyGraph({ state, props }) {
   const nodes = props.nodes || []
   const edges = props.edges || []
-  const width = props.width || 900
+  const width = props.width || 1350
 
   const { positions, height, nodeRadius } = layoutNodes(nodes, edges, width)
   const parentMap = buildParentMap(edges)
   const hoveredId = state.hoveredNode
   const highlighted = hoveredId ? collectAncestors(hoveredId, parentMap) : new Set()
+
+  // Split edges into normal and highlighted for z-order control
+  const normalEdges = []
+  const highlightedEdges = []
+  edges.forEach((e, i) => {
+    const from = positions[e.from]
+    const to = positions[e.to]
+    if (!from || !to) return
+    const isHighlighted = highlighted.has(e.from) && highlighted.has(e.to)
+    if (isHighlighted) {
+      highlightedEdges.push({ e, i, from, to })
+    } else {
+      normalEdges.push({ e, i, from, to })
+    }
+  })
 
   return (
     <div className="dependency-graph-wrapper" style={{ position: 'relative' }}>
@@ -135,25 +163,31 @@ function DependencyGraph({ state, props }) {
         height={height}
         style={{ display: 'block', maxWidth: '100%', height: 'auto' }}
       >
-        {/* Edges */}
-        {edges.map((e, i) => {
-          const from = positions[e.from]
-          const to = positions[e.to]
-          if (!from || !to) return null
-          const isHighlighted = highlighted.has(e.from) && highlighted.has(e.to)
-          return (
-            <line
-              key={`edge-${i}`}
-              x1={from.x}
-              y1={from.y}
-              x2={to.x}
-              y2={to.y}
-              stroke={isHighlighted ? '#f59e0b' : '#555'}
-              strokeWidth={isHighlighted ? 2.5 : 1}
-              strokeOpacity={isHighlighted ? 1 : 0.3}
-            />
-          )
-        })}
+        {/* Non-highlighted edges (bottom layer) */}
+        {normalEdges.map(({ i, from, to }) => (
+          <line
+            key={`edge-${i}`}
+            x1={from.x}
+            y1={from.y}
+            x2={to.x}
+            y2={to.y}
+            stroke="#555"
+            style={{ strokeWidth: 1, strokeOpacity: 0.3 }}
+          />
+        ))}
+
+        {/* Highlighted edges (rendered on top of normal edges) */}
+        {highlightedEdges.map(({ i, from, to }) => (
+          <line
+            key={`edge-hl-${i}`}
+            x1={from.x}
+            y1={from.y}
+            x2={to.x}
+            y2={to.y}
+            stroke="#f59e0b"
+            style={{ strokeWidth: 3.5, strokeOpacity: 1 }}
+          />
+        ))}
 
         {/* Nodes */}
         {nodes.map(node => {
@@ -166,7 +200,12 @@ function DependencyGraph({ state, props }) {
           const isHovered = hoveredId === node.id
           const isAncestor = highlighted.has(node.id)
           const ringColor = isHovered ? '#f59e0b' : (isAncestor ? '#fbbf24' : 'none')
-          const ringWidth = isHovered ? 3 : (isAncestor ? 2 : 0)
+          const ringWidth = isHovered ? 4 : (isAncestor ? 2.5 : 0)
+
+          // Show full title when hovered, truncated otherwise
+          const displayTitle = isHovered
+            ? node.title
+            : (node.title.length > 18 ? node.title.slice(0, 16) + '...' : node.title)
 
           return (
             <a
@@ -185,7 +224,7 @@ function DependencyGraph({ state, props }) {
                     r={nodeRadius + 4}
                     fill="none"
                     stroke={ringColor}
-                    strokeWidth={ringWidth}
+                    style={{ strokeWidth: ringWidth }}
                   />
                 )}
                 {/* Main circle */}
@@ -194,10 +233,12 @@ function DependencyGraph({ state, props }) {
                   cy={pos.y}
                   r={nodeRadius}
                   fill={isNonViable ? '#888' : color}
-                  fillOpacity={opacity}
                   stroke={isNonViable ? '#dc2626' : color}
-                  strokeWidth={isStub ? 2 : (isNonViable ? 2.5 : 1.5)}
-                  strokeDasharray={isStub ? '4 3' : 'none'}
+                  style={{
+                    fillOpacity: opacity,
+                    strokeWidth: isStub ? 2 : (isNonViable ? 4 : 1.5),
+                    strokeDasharray: isStub ? '4 3' : 'none',
+                  }}
                 />
                 {/* X overlay for non-viable */}
                 {isNonViable && (
@@ -208,9 +249,7 @@ function DependencyGraph({ state, props }) {
                       x2={pos.x + nodeRadius * 0.45}
                       y2={pos.y + nodeRadius * 0.45}
                       stroke="#dc2626"
-                      strokeWidth={2.5}
-                      strokeLinecap="round"
-                      style={{ pointerEvents: 'none' }}
+                      style={{ strokeWidth: 3, strokeLinecap: 'round', pointerEvents: 'none' }}
                     />
                     <line
                       x1={pos.x + nodeRadius * 0.45}
@@ -218,22 +257,23 @@ function DependencyGraph({ state, props }) {
                       x2={pos.x - nodeRadius * 0.45}
                       y2={pos.y + nodeRadius * 0.45}
                       stroke="#dc2626"
-                      strokeWidth={2.5}
-                      strokeLinecap="round"
-                      style={{ pointerEvents: 'none' }}
+                      style={{ strokeWidth: 3, strokeLinecap: 'round', pointerEvents: 'none' }}
                     />
                   </>
                 )}
                 {/* Label below */}
                 <text
                   x={pos.x}
-                  y={pos.y + nodeRadius + 14}
-                  textAnchor="middle"
-                  fontSize="9"
-                  fill="#ccc"
-                  style={{ pointerEvents: 'none' }}
+                  y={pos.y + nodeRadius + 20}
+                  fill={isHovered ? '#1e293b' : '#888'}
+                  style={{
+                    fontSize: isHovered ? '20px' : '18px',
+                    pointerEvents: 'none',
+                    textAnchor: 'middle',
+                    fontWeight: isHovered ? 'bold' : 'normal',
+                  }}
                 >
-                  {node.title.length > 18 ? node.title.slice(0, 16) + '...' : node.title}
+                  {displayTitle}
                 </text>
               </g>
             </a>
@@ -241,29 +281,32 @@ function DependencyGraph({ state, props }) {
         })}
       </svg>
 
-      {/* Tooltip */}
-      {hoveredId && positions[hoveredId] && (
-        <div
-          className="dep-tooltip"
-          style={{
-            position: 'absolute',
-            left: `${positions[hoveredId].x}px`,
-            top: `${positions[hoveredId].y - nodeRadius - 28}px`,
-            transform: 'translateX(-50%)',
-            background: '#1e293b',
-            color: '#f1f5f9',
-            padding: '4px 10px',
-            borderRadius: '4px',
-            fontSize: '12px',
-            whiteSpace: 'nowrap',
-            pointerEvents: 'none',
-            zIndex: 10,
-            border: '1px solid #334155',
-          }}
-        >
-          {(nodes.find(n => n.id === hoveredId) || {}).title || hoveredId}
-        </div>
-      )}
+      {/* Legend */}
+      <div style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        gap: '0.75rem 1.5rem',
+        justifyContent: 'center',
+        padding: '1rem 0 0.5rem',
+        borderTop: '1px solid #e2e8f0',
+        marginTop: '0.5rem',
+      }}>
+        {Object.entries(GROUP_COLORS).map(([group, color]) => (
+          <div key={group} style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+            <span style={{
+              display: 'inline-block',
+              width: '12px',
+              height: '12px',
+              borderRadius: '50%',
+              backgroundColor: color,
+              flexShrink: 0,
+            }} />
+            <span style={{ fontSize: '0.8rem', color: '#555' }}>
+              {GROUP_LABELS[group] || group}
+            </span>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
