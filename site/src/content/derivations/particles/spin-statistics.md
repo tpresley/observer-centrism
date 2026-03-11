@@ -8,6 +8,23 @@ summary: "π₁(SO(3)) = Z₂ gives exactly two particle types: bosons (integer 
 rigorLevel: "formal"
 sourceSection: "09-spin-statistics"
 lastUpdated: 2026-03-09
+leanProofs:
+  - module: "ObserverCentrism.Particles.SpinStatistics"
+    proposition: "Proposition 3.1"
+    theorems:
+      - "dim_spin_half"
+      - "dim_spin_1"
+  - module: "ObserverCentrism.Particles.SpinStatistics"
+    proposition: "Proposition 3.2"
+    theorems:
+      - "integer_spin_sign"
+      - "half_integer_spin_sign"
+  - module: "ObserverCentrism.Particles.SpinStatistics"
+    proposition: "Theorem 6.1"
+    theorems:
+      - "dim_spin_0"
+      - "dim_spin_three_half"
+      - "dim_spin_2"
 ---
 
 ## Statement

@@ -8,6 +8,15 @@ summary: "Three generations correspond to three independent winding directions i
 rigorLevel: "formal"
 sourceSection: "11-mass-hierarchy"
 lastUpdated: 2026-03-09
+leanProofs:
+  - module: "ObserverCentrism.Particles.GenerationCounting"
+    proposition: "Proposition 5.3"
+    theorems:
+      - "ckm_total_params"
+      - "ckm_params_split"
+      - "cp_phases_two_gen"
+      - "cp_phases_three_gen"
+      - "ckm_three_gen_params"
 ---
 
 ## Statement

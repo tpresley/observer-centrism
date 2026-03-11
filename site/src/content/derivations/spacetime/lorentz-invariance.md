@@ -8,6 +8,16 @@ summary: "Lorentz contraction and time dilation as loop projection effects — t
 rigorLevel: "formal"
 sourceSection: "06-geometry"
 lastUpdated: 2026-03-09
+leanProofs:
+  - module: "ObserverCentrism.Dimensions.LieAlgebraDim"
+    proposition: "Theorem 4.2"
+    theorems:
+      - "dim_so_3_1"
+      - "lorentz_decomposition"
+  - module: "ObserverCentrism.Dimensions.LieAlgebraDim"
+    proposition: "Theorem 7.1"
+    theorems:
+      - "dim_poincare"
 ---
 
 ## Statement

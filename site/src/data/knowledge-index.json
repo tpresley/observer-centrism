@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-11T03:20:30.309Z",
+    "generatedAt": "2026-03-11T04:17:19.518Z",
     "derivationCount": 41,
     "predictionCount": 7,
     "generator": "scripts/build-index.mjs"
@@ -16,8 +16,8 @@
     "formalObjectCount": 636,
     "openGapCount": 156,
     "upgradeEligibleCount": 0,
-    "leanVerifiedCount": 2,
-    "leanTheoremCount": 15
+    "leanVerifiedCount": 16,
+    "leanTheoremCount": 64
   },
   "derivations": {
     "axioms/coherence-conservation": {
@@ -1154,10 +1154,16 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": false,
-        "proofCount": 0,
-        "modules": [],
-        "propositions": []
+        "hasProofs": true,
+        "proofCount": 4,
+        "modules": [
+          "ObserverCentrism.Particles.GenerationCounting",
+          "ObserverCentrism.Particles.GenerationCounting"
+        ],
+        "propositions": [
+          "Proposition 2.1",
+          "Proposition 3.2"
+        ]
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -1638,10 +1644,14 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": false,
-        "proofCount": 0,
-        "modules": [],
-        "propositions": []
+        "hasProofs": true,
+        "proofCount": 1,
+        "modules": [
+          "ObserverCentrism.Dimensions.LieAlgebraDim"
+        ],
+        "propositions": [
+          "Proposition 3.1"
+        ]
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -1872,10 +1882,16 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": false,
-        "proofCount": 0,
-        "modules": [],
-        "propositions": []
+        "hasProofs": true,
+        "proofCount": 5,
+        "modules": [
+          "ObserverCentrism.Flavor.A5Arithmetic",
+          "ObserverCentrism.Flavor.A5Arithmetic"
+        ],
+        "propositions": [
+          "Theorem 3.1",
+          "Proposition 4.1"
+        ]
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -2099,10 +2115,16 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": false,
-        "proofCount": 0,
-        "modules": [],
-        "propositions": []
+        "hasProofs": true,
+        "proofCount": 2,
+        "modules": [
+          "ObserverCentrism.Chirality.CPTOrientation",
+          "ObserverCentrism.Chirality.CPTOrientation"
+        ],
+        "propositions": [
+          "Proposition 6.1",
+          "Proposition 1.2"
+        ]
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -2397,10 +2419,20 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": false,
-        "proofCount": 0,
-        "modules": [],
-        "propositions": []
+        "hasProofs": true,
+        "proofCount": 6,
+        "modules": [
+          "ObserverCentrism.Dimensions.LieAlgebraDim",
+          "ObserverCentrism.Gauge.BosonCounting",
+          "ObserverCentrism.Gauge.BosonCounting",
+          "ObserverCentrism.Gauge.BetaFunction"
+        ],
+        "propositions": [
+          "Proposition 4.2",
+          "Theorem 3.1",
+          "Proposition 4.3",
+          "Proposition 7.1"
+        ]
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -3026,14 +3058,18 @@
       },
       "leanVerification": {
         "hasProofs": true,
-        "proofCount": 8,
+        "proofCount": 12,
         "modules": [
           "ObserverCentrism.Gauge.AnomalyCancellation",
-          "ObserverCentrism.Gauge.SedenionZeroDivisor"
+          "ObserverCentrism.Gauge.SedenionZeroDivisor",
+          "ObserverCentrism.Gauge.BosonCounting",
+          "ObserverCentrism.Gauge.BosonCounting"
         ],
         "propositions": [
           "Proposition 5.1",
-          "Proposition 2.2"
+          "Proposition 2.2",
+          "Theorem 3.1",
+          "Proposition 4.1"
         ]
       },
       "upgradeEligible": false,
@@ -3467,10 +3503,18 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": false,
-        "proofCount": 0,
-        "modules": [],
-        "propositions": []
+        "hasProofs": true,
+        "proofCount": 4,
+        "modules": [
+          "ObserverCentrism.Dimensions.LieAlgebraDim",
+          "ObserverCentrism.Gauge.BosonCounting",
+          "ObserverCentrism.Gauge.BosonCounting"
+        ],
+        "propositions": [
+          "Proposition 1.2",
+          "Proposition 9.3",
+          "Corollary 2.2"
+        ]
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -3692,10 +3736,14 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": false,
-        "proofCount": 0,
-        "modules": [],
-        "propositions": []
+        "hasProofs": true,
+        "proofCount": 1,
+        "modules": [
+          "ObserverCentrism.Holography.BlackHoleArithmetic"
+        ],
+        "propositions": [
+          "Theorem 7.1"
+        ]
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -3888,10 +3936,14 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": false,
-        "proofCount": 0,
-        "modules": [],
-        "propositions": []
+        "hasProofs": true,
+        "proofCount": 1,
+        "modules": [
+          "ObserverCentrism.Holography.BlackHoleArithmetic"
+        ],
+        "propositions": [
+          "Proposition 5.1"
+        ]
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -4093,10 +4145,18 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": false,
-        "proofCount": 0,
-        "modules": [],
-        "propositions": []
+        "hasProofs": true,
+        "proofCount": 3,
+        "modules": [
+          "ObserverCentrism.Holography.BlackHoleArithmetic",
+          "ObserverCentrism.Holography.BlackHoleArithmetic",
+          "ObserverCentrism.Holography.BlackHoleArithmetic"
+        ],
+        "propositions": [
+          "Theorem 3.1",
+          "Proposition 5.1",
+          "Corollary 5.2"
+        ]
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -4284,10 +4344,14 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": false,
-        "proofCount": 0,
-        "modules": [],
-        "propositions": []
+        "hasProofs": true,
+        "proofCount": 1,
+        "modules": [
+          "ObserverCentrism.Holography.BlackHoleArithmetic"
+        ],
+        "propositions": [
+          "Corollary 5.2"
+        ]
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -6245,10 +6309,16 @@
         "incoming": []
       },
       "leanVerification": {
-        "hasProofs": false,
-        "proofCount": 0,
-        "modules": [],
-        "propositions": []
+        "hasProofs": true,
+        "proofCount": 2,
+        "modules": [
+          "ObserverCentrism.Particles.SpinStatistics",
+          "ObserverCentrism.Particles.SpinStatistics"
+        ],
+        "propositions": [
+          "Theorem 4.1",
+          "Corollary 4.2"
+        ]
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -6449,10 +6519,18 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": false,
-        "proofCount": 0,
-        "modules": [],
-        "propositions": []
+        "hasProofs": true,
+        "proofCount": 7,
+        "modules": [
+          "ObserverCentrism.Particles.SpinStatistics",
+          "ObserverCentrism.Particles.SpinStatistics",
+          "ObserverCentrism.Particles.SpinStatistics"
+        ],
+        "propositions": [
+          "Proposition 3.1",
+          "Proposition 3.2",
+          "Theorem 6.1"
+        ]
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -6669,10 +6747,14 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": false,
-        "proofCount": 0,
-        "modules": [],
-        "propositions": []
+        "hasProofs": true,
+        "proofCount": 5,
+        "modules": [
+          "ObserverCentrism.Particles.GenerationCounting"
+        ],
+        "propositions": [
+          "Proposition 5.3"
+        ]
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -8211,10 +8293,16 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": false,
-        "proofCount": 0,
-        "modules": [],
-        "propositions": []
+        "hasProofs": true,
+        "proofCount": 3,
+        "modules": [
+          "ObserverCentrism.Dimensions.LieAlgebraDim",
+          "ObserverCentrism.Dimensions.LieAlgebraDim"
+        ],
+        "propositions": [
+          "Theorem 4.2",
+          "Theorem 7.1"
+        ]
       },
       "upgradeEligible": false,
       "upgradeBlockers": []

@@ -8,6 +8,11 @@ summary: "Bekenstein-Hawking formula S = A/4ℓ²_P as minimal loop counting on 
 rigorLevel: "formal"
 sourceSection: "10-holography"
 lastUpdated: 2026-03-09
+leanProofs:
+  - module: "ObserverCentrism.Holography.BlackHoleArithmetic"
+    proposition: "Proposition 5.1"
+    theorems:
+      - "bh_entropy_integration_coeff"
 ---
 
 ## Statement

@@ -8,6 +8,11 @@ summary: "Four independent structural conditions on observer boundaries converge
 rigorLevel: "formal"
 sourceSection: "08-three-dimensions"
 lastUpdated: 2026-03-09
+leanProofs:
+  - module: "ObserverCentrism.Dimensions.LieAlgebraDim"
+    proposition: "Proposition 3.1"
+    theorems:
+      - "dim_so_3"
 ---
 
 ## Statement

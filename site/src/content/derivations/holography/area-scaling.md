@@ -8,6 +8,11 @@ summary: "S ≤ A/4ℓ²_P from boundary observer counting and coherence propaga
 rigorLevel: "formal"
 sourceSection: "10-holography"
 lastUpdated: 2026-03-09
+leanProofs:
+  - module: "ObserverCentrism.Holography.BlackHoleArithmetic"
+    proposition: "Theorem 7.1"
+    theorems:
+      - "schwarzschild_area_coeff"
 ---
 
 ## Statement

@@ -7,6 +7,17 @@ tags: ["cosmology"]
 summary: "The observed matter-antimatter asymmetry arises because the three Sakharov conditions are structural consequences of the framework: SU(2) sphalerons violate baryon number, chiral gauge coupling provides C and CP violation, and the bootstrap hierarchy's sequential crystallization ensures departure from equilibrium"
 rigorLevel: "formal"
 lastUpdated: 2026-03-10
+leanProofs:
+  - module: "ObserverCentrism.Particles.GenerationCounting"
+    proposition: "Proposition 2.1"
+    theorems:
+      - "sphaleron_b_minus_l"
+  - module: "ObserverCentrism.Particles.GenerationCounting"
+    proposition: "Proposition 3.2"
+    theorems:
+      - "cp_phases_two_gen"
+      - "cp_phases_three_gen"
+      - "ckm_total_params"
 ---
 
 ## Statement

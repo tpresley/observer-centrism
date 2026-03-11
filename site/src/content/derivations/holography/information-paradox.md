@@ -8,6 +8,11 @@ summary: "Information is globally conserved (coherence conservation) but locally
 rigorLevel: "formal"
 sourceSection: "10-holography"
 lastUpdated: 2026-03-09
+leanProofs:
+  - module: "ObserverCentrism.Holography.BlackHoleArithmetic"
+    proposition: "Corollary 5.2"
+    theorems:
+      - "page_time_coeff"
 ---
 
 ## Statement
