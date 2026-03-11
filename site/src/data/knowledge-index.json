@@ -1,22 +1,23 @@
 {
   "meta": {
-    "generatedAt": "2026-03-11T20:29:09.266Z",
+    "generatedAt": "2026-03-11T20:49:32.102Z",
     "derivationCount": 50,
-    "predictionCount": 8,
+    "predictionCount": 9,
     "generator": "scripts/build-index.mjs"
   },
   "stats": {
     "byStatus": {
       "rigorous": 40,
       "non-viable": 1,
-      "stub": 9
+      "stub": 6,
+      "draft": 3
     },
     "derivationCount": 50,
-    "predictionCount": 8,
+    "predictionCount": 9,
     "edgeCount": 88,
-    "formalObjectCount": 636,
-    "openGapCount": 156,
-    "upgradeEligibleCount": 0,
+    "formalObjectCount": 669,
+    "openGapCount": 171,
+    "upgradeEligibleCount": 3,
     "leanVerifiedCount": 16,
     "leanTheoremCount": 64
   },
@@ -2481,6 +2482,10 @@
             "context": "Color Force"
           },
           {
+            "source": "gauge/strong-cp",
+            "context": "0, 2\\pi)$ is the vacuum angle.\n\n**Proposition 1.2 (CP violation by $\\theta$).** "
+          },
+          {
             "source": "gauge/weak-interaction",
             "context": "Color Force"
           },
@@ -2516,27 +2521,138 @@
     "gauge/confinement": {
       "id": "gauge/confinement",
       "filePath": "site/src/content/derivations/gauge/confinement.md",
-      "title": "Color Confinement",
-      "status": "stub",
-      "rigorLevel": "informal",
+      "title": "Color Confinement from Non-Associativity",
+      "status": "draft",
+      "rigorLevel": "semi-formal",
       "group": "gauge",
       "tags": [
         "gauge",
         "confinement"
       ],
-      "summary": "Derive color confinement from the non-associativity of octonions. Only color-singlet combinations have well-defined long-range coherence transport because non-associative phases cancel only for singlet states, providing a first-principles explanation of quark confinement.",
-      "lastUpdated": "2026-03-11",
+      "summary": "Quark confinement follows from the non-associativity of the octonion algebra underlying SU(3). Parallel transport of colored states accumulates path-bracketing ambiguity that grows with distance, while color-singlet states have well-defined transport because the SU(3)-singlet projection annihilates the associator.",
+      "lastUpdated": "2026-03-10",
       "dependsOn": [
         "gauge/color-force"
       ],
       "enablesDerivation": [],
       "dependedOnBy": [],
-      "steps": [],
-      "formalObjects": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The Confinement Problem"
+        },
+        {
+          "number": 2,
+          "title": "Non-Associative Phase Transport"
+        },
+        {
+          "number": 3,
+          "title": "Color-Singlet Escape"
+        },
+        {
+          "number": 4,
+          "title": "The Confining Mechanism"
+        },
+        {
+          "number": 5,
+          "title": "Asymptotic Freedom at Short Distances"
+        },
+        {
+          "number": 6,
+          "title": "The Deconfinement Transition"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Confinement",
+          "statementPreview": "Color confinement is the empirical fact that isolated quarks and gluons are never observed as free particles. All obs..."
+        },
+        {
+          "type": "Definition",
+          "id": "2.1",
+          "name": "Octonionic parallel transport",
+          "statementPreview": "In the color force derivation ([Color Force](/derivations/gauge/color-force)), the SU(3) gauge field Gmu is embedded ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "Bracketing ambiguity",
+          "statementPreview": "For a path gamma decomposed into n segments gamma = gamma1 circ gamma2 circ cdots circ gamman, the parallel transport..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.3",
+          "name": "Exponential growth of ambiguity",
+          "statementPreview": "For a path decomposed into n segments, the number of distinct bracketings is the Catalan number:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "Color singlets have well-defined transport",
+          "statementPreview": "Let |Phirangle be a color-singlet state — a state that transforms trivially under SU(3). Then the parallel transport ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Effective linear potential",
+          "statementPreview": "The bracketing ambiguity for colored states produces an effective confining potential that grows linearly with separa..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Short-distance associativity recovery",
+          "statementPreview": "At short distances r ll LambdaQCD-1, the non-associativity effects become subdominant and quarks behave as approximat..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Deconfinement at high temperature",
+          "statementPreview": "At temperatures T > Tc 170 MeV, the confining linear potential is screened and quarks move freely in a quark-gluon pl..."
+        },
+        {
+          "type": "Theorem",
+          "id": "7.1.",
+          "name": "",
+          "statementPreview": "The explicit octonionic algebra provides a consistency model for the confinement mechanism.*"
+        }
+      ],
       "structuralPostulates": [],
-      "openGaps": [],
-      "assessmentVerdict": "",
-      "hasConsistencyModel": false,
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Quantitative string tension",
+          "description": "Derive sigma in terms of framework parameters (gs, associator magnitude, Planck length)."
+        },
+        {
+          "number": 2,
+          "title": "Wilson loop criterion",
+          "description": "Show that the expectation value of the Wilson loop langle W(C) rangle sim e-sigma A(C) (area law) follows from the non-associative phase accumulation."
+        },
+        {
+          "number": 3,
+          "title": "Mass gap",
+          "description": "Connect the associator-based confinement mechanism to a rigorous lower bound on the glueball mass spectrum."
+        },
+        {
+          "number": 4,
+          "title": "Glueball spectrum",
+          "description": "Derive the masses of 0++, 2++, and other glueball states from the octonionic framework."
+        },
+        {
+          "number": 5,
+          "title": "Regge trajectories",
+          "description": "Show that the linear potential produces the observed linear relationship between hadron spin and mass squared: J sim alpha' M2."
+        },
+        {
+          "number": 6,
+          "title": "Lattice comparison",
+          "description": "Compare the non-associative confinement mechanism with lattice QCD results for the static quark potential and flux tube structure."
+        }
+      ],
+      "assessmentVerdict": "Draft. The core algebraic argument (Theorem 3.1) is rigorous. The confining potential (Proposition 4.1) is a structural argument at semi-formal level. Upgrade to provisional requires: (i) quantitative string tension from the associator magnitude, (ii) Wilson loop area law from the bracketing ambigui",
+      "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
           {
@@ -2552,7 +2668,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": false,
+      "upgradeEligible": true,
       "upgradeBlockers": []
     },
     "gauge/electromagnetism": {
@@ -3257,32 +3373,133 @@
     "gauge/strong-cp": {
       "id": "gauge/strong-cp",
       "filePath": "site/src/content/derivations/gauge/strong-cp.md",
-      "title": "Strong CP Conservation",
-      "status": "stub",
-      "rigorLevel": "informal",
+      "title": "Strong CP Conservation from Octonionic Structure",
+      "status": "draft",
+      "rigorLevel": "semi-formal",
       "group": "gauge",
       "tags": [
         "gauge",
         "cp-violation"
       ],
-      "summary": "Derive that the QCD vacuum angle theta is exactly zero from the octonionic structure of the color force. The non-associativity of octonions forbids the topological theta-term, explaining the absence of CP violation in strong interactions without requiring an axion.",
-      "lastUpdated": "2026-03-11",
+      "summary": "The QCD vacuum angle θ is exactly zero because the octonionic origin of SU(3) constrains the topological vacuum structure. Non-associativity of the octonions restricts the instanton tunneling that would generate a θ-term, resolving the strong CP problem without an axion.",
+      "lastUpdated": "2026-03-10",
       "dependsOn": [
         "gauge/color-force"
       ],
       "enablesDerivation": [],
       "dependedOnBy": [],
-      "steps": [],
-      "formalObjects": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The Strong CP Problem"
+        },
+        {
+          "number": 2,
+          "title": "Standard Approaches and Their Costs"
+        },
+        {
+          "number": 3,
+          "title": "Octonionic Resolution"
+        },
+        {
+          "number": 4,
+          "title": "The No-Axion Prediction"
+        },
+        {
+          "number": 5,
+          "title": "Consistency with Electroweak $\\theta$-Term"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "The $\\theta$-term",
+          "statementPreview": "In standard QCD, the most general gauge-invariant, Lorentz-invariant Lagrangian density includes a topological term:"
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "CP violation by $\\theta$",
+          "statementPreview": "The theta-term violates CP (charge-parity) symmetry for theta 0. Under CP: GamunuGamunu -GamunuGamunu, so Ltheta is C..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.3",
+          "name": "Experimental constraint",
+          "statementPreview": "The neutron electric dipole moment dn is proportional to theta: dn sim 10-16 theta e·cm. The experimental bound |dn| ..."
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "Octonionic vacuum uniqueness",
+          "statementPreview": "In the observer-centric framework, the SU(3) gauge symmetry arises from the octonionic stabilizer StabG2(H) cong SU(3..."
+        },
+        {
+          "type": "Corollary",
+          "id": "4.1",
+          "name": "No axion needed",
+          "statementPreview": "Since theta = 0 is forced by algebraic structure rather than dynamical relaxation, the Peccei-Quinn mechanism is unne..."
+        },
+        {
+          "type": "Corollary",
+          "id": "4.2",
+          "name": "No axion dark matter",
+          "statementPreview": "Models in which axions constitute dark matter (with fa sim 1010–1012 GeV) are excluded by the framework. Dark matter ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.3",
+          "name": "Experimental tests",
+          "statementPreview": "The no-axion prediction is falsifiable by current and near-future experiments:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Electroweak $\\theta$-term",
+          "statementPreview": "The electroweak sector also admits a topological term thetaW GW GW. In the Standard Model, thetaW is unphysical becau..."
+        },
+        {
+          "type": "Theorem",
+          "id": "6.1.",
+          "name": "",
+          "statementPreview": "The explicit octonionic algebra provides a consistency model.*"
+        }
+      ],
       "structuralPostulates": [],
-      "openGaps": [],
-      "assessmentVerdict": "",
-      "hasConsistencyModel": false,
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Topological rigidity proof",
+          "description": "Formalize the argument that octonionic gauge bundles admit only topologically trivial SU(3) connections. This may connect to the theory of G2-instantons on manifolds with G2 holonomy."
+        },
+        {
+          "number": 2,
+          "title": "Instanton moduli space",
+          "description": "Characterize the moduli space of SU(3) instantons within the G2 framework. If the moduli space is empty (or consists only of the trivial connection), the argument is complete."
+        },
+        {
+          "number": 3,
+          "title": "Non-perturbative effects",
+          "description": "Check whether other non-perturbative effects (monopoles, domain walls) are also constrained by the octonionic structure."
+        },
+        {
+          "number": 4,
+          "title": "Electroweak-strong unification",
+          "description": "The fact that thetaQCD = 0 from non-associativity and thetaW is unphysical from standard arguments suggests a deeper connection between the associative/non-associative split and the strong/electroweak"
+        }
+      ],
+      "assessmentVerdict": "Draft. The resolution strategy is well-motivated and the physical picture is clear: non-associativity of O obstructs the vacuum tunneling that would generate a theta-term. The main upgrade path to rigorous status is formalizing the topological argument (Step 3c) — showing rigorously that octonionic ",
+      "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
           {
             "target": "gauge/color-force",
             "context": "Color Force"
+          },
+          {
+            "target": "gauge/color-force",
+            "context": "0, 2\\pi)$ is the vacuum angle.\n\n**Proposition 1.2 (CP violation by $\\theta$).** "
           }
         ],
         "incoming": []
@@ -3293,7 +3510,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": false,
+      "upgradeEligible": true,
       "upgradeBlockers": []
     },
     "gauge/weak-interaction": {
@@ -3969,6 +4186,10 @@
             "context": "Holographic Entropy Bound"
           },
           {
+            "source": "quantum/entanglement",
+            "context": "Area Scaling"
+          },
+          {
             "source": "spacetime/singularity-resolution",
             "context": "Holographic Entropy Bound"
           },
@@ -4228,7 +4449,12 @@
             "context": "Relational Invariants"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "quantum/entanglement",
+            "context": "Causal Set Statistics"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -5264,6 +5490,14 @@
             "context": "Relational Invariants"
           },
           {
+            "source": "quantum/entanglement",
+            "context": "Theorem 4.1"
+          },
+          {
+            "source": "quantum/entanglement",
+            "context": "Theorem 2.1"
+          },
+          {
             "source": "quantum/preferred-basis",
             "context": "Relational Invariants"
           },
@@ -5481,6 +5715,10 @@
           },
           {
             "source": "quantum/born-rule",
+            "context": "Three Interaction Types"
+          },
+          {
+            "source": "quantum/entanglement",
             "context": "Three Interaction Types"
           },
           {
@@ -7470,34 +7708,168 @@
     "quantum/entanglement": {
       "id": "quantum/entanglement",
       "filePath": "site/src/content/derivations/quantum/entanglement.md",
-      "title": "Entanglement",
-      "status": "stub",
-      "rigorLevel": "informal",
+      "title": "Entanglement from Relational Invariants",
+      "status": "draft",
+      "rigorLevel": "semi-formal",
       "group": "quantum",
       "tags": [
         "quantum",
         "information"
       ],
-      "summary": "Formalize the mapping between relational invariants and quantum entanglement. Establish that the coherence of a relational invariant C(I_12) corresponds to entanglement entropy S = -Tr(rho_A ln rho_A), grounding the quantum information aspects of the framework.",
-      "lastUpdated": "2026-03-11",
+      "summary": "Quantum entanglement is the Hilbert-space image of relational invariants between observers. The coherence of a relational invariant equals the entanglement entropy, the no-cloning theorem follows from coherence conservation, and entanglement monogamy follows from coherence subadditivity.",
+      "lastUpdated": "2026-03-10",
       "dependsOn": [
         "interactions/relational-invariants",
         "quantum/born-rule"
       ],
       "enablesDerivation": [],
       "dependedOnBy": [],
-      "steps": [],
-      "formalObjects": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Relational Invariants in Hilbert Space"
+        },
+        {
+          "number": 2,
+          "title": "Coherence Equals Entanglement Entropy"
+        },
+        {
+          "number": 3,
+          "title": "No-Cloning from Coherence Conservation"
+        },
+        {
+          "number": 4,
+          "title": "Entanglement Monogamy from Coherence Subadditivity"
+        },
+        {
+          "number": 5,
+          "title": "Connection to ER=EPR"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Two-observer Hilbert space",
+          "statementPreview": "Let O1 and O2 be two observers with individual Hilbert spaces H1 and H2 (derived from their respective U(1) loop stru..."
+        },
+        {
+          "type": "Definition",
+          "id": "1.2",
+          "name": "Product vs. entangled states",
+          "statementPreview": "A state |Psirangle12 in H12 is a **product state** if |Psirangle12 = |psirangle1 |phirangle2 for some |psirangle1 in ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.3",
+          "name": "Relational invariants produce entangled states",
+          "statementPreview": "Let O1 and O2 interact via a Type III interaction ([Three Interaction Types](/derivations/interactions/three-types)),..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.4",
+          "name": "Schmidt decomposition from relational structure",
+          "statementPreview": "The joint state admits a Schmidt decomposition:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "2.1",
+          "name": "Coherence–entropy correspondence",
+          "statementPreview": "The coherence of the relational invariant I12 equals the von Neumann entanglement entropy of the reduced state:*"
+        },
+        {
+          "type": "Corollary",
+          "id": "2.2",
+          "name": "Entanglement measures",
+          "statementPreview": "The entanglement entropy S(rho1) satisfies:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "No-cloning theorem",
+          "statementPreview": "It is impossible to construct a physical process that copies an arbitrary unknown quantum state. That is, there exist..."
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "Monogamy of entanglement",
+          "statementPreview": "For three observers OA, OB, OC in a joint pure state |PsirangleABC:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Geometric realization of entanglement",
+          "statementPreview": "Relational invariants between spatially separated observers create coherence channels. By the [Einstein Equations](/d..."
+        },
+        {
+          "type": "Theorem",
+          "id": "6.1.",
+          "name": "",
+          "statementPreview": "The Bell state |Phi+rangle = 12(|00rangle + |11rangle) provides a consistency model for all results of this derivation.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "1.3",
+          "name": "",
+          "statementPreview": "(entanglement): |Phi+rangle |psirangle |phirangle for any single-qubit states. To see this: any product state $(a|0ra..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.4",
+          "name": "",
+          "statementPreview": "(Schmidt decomposition): |Phi+rangle = 12|0rangle|0rangle + 12|1rangle|1rangle is already in Schmidt form with lambda..."
+        },
+        {
+          "type": "Theorem",
+          "id": "2.1",
+          "name": "",
+          "statementPreview": "(coherence = entropy): rho1 = Tr2(|Phi+ranglelanglePhi+|) = 12(|0ranglelangle 0| + |1ranglelangle 1|) = 12I. Entangle..."
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "",
+          "statementPreview": "(no-cloning): Suppose U(|Phi+rangle |0rangle) = |Phi+rangle |Phi+rangle. The left side lives in (C2) 3 (dim 8); the r..."
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "",
+          "statementPreview": "(monogamy): For the GHZ state |GHZrangle = 12(|000rangle + |111rangle): rhoA = 12I (maximally mixed), S(rhoA) = ln 2...."
+        }
+      ],
       "structuralPostulates": [],
-      "openGaps": [],
-      "assessmentVerdict": "",
-      "hasConsistencyModel": false,
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Quantum teleportation",
+          "description": "Derive teleportation as coherence channel transfer — the relational invariant provides the channel, and classical communication provides the key to unlock it."
+        },
+        {
+          "number": 2,
+          "title": "Quantum error correction",
+          "description": "Explore whether coherence conservation imposes fundamental limits on or structures for quantum error-correcting codes."
+        },
+        {
+          "number": 3,
+          "title": "Holographic connection",
+          "description": "Make the ER=EPR sketch (Proposition 5.1) rigorous by connecting to the [Area Scaling](/derivations/holography/area-scaling) and [Causal Set Statistics](/derivations/holography/causal-set-statistics) d"
+        },
+        {
+          "number": 4,
+          "title": "Multipartite entanglement",
+          "description": "Extend beyond the bipartite case to full multipartite classification (W-states, cluster states, SLOCC classes)."
+        },
+        {
+          "number": 5,
+          "title": "Entanglement dynamics",
+          "description": "Derive entanglement growth under unitary evolution and the scrambling time from coherence dynamics."
+        }
+      ],
+      "assessmentVerdict": "Draft. The core results (entanglement from relational invariants, coherence = entropy, no-cloning, monogamy) are established at semi-formal rigor. The ER=EPR connection is a motivated sketch. No new structural postulates are required — the derivation builds entirely on the existing quantum and inter",
+      "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
-          {
-            "target": "thermodynamics-ext/distinguishability-conservation",
-            "context": "Conservation of Distinguishability"
-          },
           {
             "target": "interactions/relational-invariants",
             "context": "Relational Invariants"
@@ -7505,6 +7877,34 @@
           {
             "target": "quantum/born-rule",
             "context": "Born Rule"
+          },
+          {
+            "target": "interactions/three-types",
+            "context": "Three Interaction Types"
+          },
+          {
+            "target": "interactions/relational-invariants",
+            "context": "Theorem 4.1"
+          },
+          {
+            "target": "interactions/relational-invariants",
+            "context": "Theorem 2.1"
+          },
+          {
+            "target": "thermodynamics/entropy",
+            "context": "Entropy"
+          },
+          {
+            "target": "spacetime/einstein-equations",
+            "context": "Einstein Equations"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
+          },
+          {
+            "target": "holography/causal-set-statistics",
+            "context": "Causal Set Statistics"
           }
         ],
         "incoming": []
@@ -7515,7 +7915,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": false,
+      "upgradeEligible": true,
       "upgradeBlockers": []
     },
     "quantum/measurement": {
@@ -8231,6 +8631,10 @@
           {
             "source": "gauge/weak-interaction",
             "context": "Einstein Field Equations"
+          },
+          {
+            "source": "quantum/entanglement",
+            "context": "Einstein Equations"
           },
           {
             "source": "spacetime/gravity",
@@ -9340,10 +9744,6 @@
           {
             "source": "gauge/standard-model-group",
             "context": "Theorem 6.1, no-deleting theorem"
-          },
-          {
-            "source": "quantum/entanglement",
-            "context": "Conservation of Distinguishability"
           },
           {
             "source": "thermodynamics-ext/fisher-metric",
@@ -10771,6 +11171,10 @@
             "context": "Entropy"
           },
           {
+            "source": "quantum/entanglement",
+            "context": "Entropy"
+          },
+          {
             "source": "quantum/measurement",
             "context": "Definition 3.1"
           },
@@ -11112,6 +11516,18 @@
         "interactions/relational-invariants"
       ],
       "currentEvidence": "Holometer at Fermilab constrains the amplitude coefficient to α_H < 1; LISA Pathfinder demonstrated required sensitivity levels"
+    },
+    "no-axion": {
+      "id": "no-axion",
+      "filePath": "site/src/content/predictions/no-axion.md",
+      "title": "No QCD Axion",
+      "status": "qualitative",
+      "testability": "near-future",
+      "distinctiveness": "unique",
+      "dependsOn": [
+        "gauge/strong-cp"
+      ],
+      "currentEvidence": "No axion detected by ADMX, CASPEr, or other experiments to date; consistent with null prediction"
     },
     "no-fourth-generation": {
       "id": "no-fourth-generation",
@@ -12234,6 +12650,69 @@
       "fullRef": "gauge/color-force:Proposition 6.1"
     },
     {
+      "derivationId": "gauge/confinement",
+      "type": "Definition",
+      "id": "1.1",
+      "name": "Confinement",
+      "fullRef": "gauge/confinement:Definition 1.1"
+    },
+    {
+      "derivationId": "gauge/confinement",
+      "type": "Definition",
+      "id": "2.1",
+      "name": "Octonionic parallel transport",
+      "fullRef": "gauge/confinement:Definition 2.1"
+    },
+    {
+      "derivationId": "gauge/confinement",
+      "type": "Proposition",
+      "id": "2.2",
+      "name": "Bracketing ambiguity",
+      "fullRef": "gauge/confinement:Proposition 2.2"
+    },
+    {
+      "derivationId": "gauge/confinement",
+      "type": "Proposition",
+      "id": "2.3",
+      "name": "Exponential growth of ambiguity",
+      "fullRef": "gauge/confinement:Proposition 2.3"
+    },
+    {
+      "derivationId": "gauge/confinement",
+      "type": "Theorem",
+      "id": "3.1",
+      "name": "Color singlets have well-defined transport",
+      "fullRef": "gauge/confinement:Theorem 3.1"
+    },
+    {
+      "derivationId": "gauge/confinement",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Effective linear potential",
+      "fullRef": "gauge/confinement:Proposition 4.1"
+    },
+    {
+      "derivationId": "gauge/confinement",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "Short-distance associativity recovery",
+      "fullRef": "gauge/confinement:Proposition 5.1"
+    },
+    {
+      "derivationId": "gauge/confinement",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "Deconfinement at high temperature",
+      "fullRef": "gauge/confinement:Proposition 6.1"
+    },
+    {
+      "derivationId": "gauge/confinement",
+      "type": "Theorem",
+      "id": "7.1.",
+      "name": "",
+      "fullRef": "gauge/confinement:Theorem 7.1."
+    },
+    {
       "derivationId": "gauge/electromagnetism",
       "type": "Structural Postulate",
       "id": "S1",
@@ -12463,6 +12942,69 @@
       "id": "5.1",
       "name": "",
       "fullRef": "gauge/standard-model-group:Proposition 5.1"
+    },
+    {
+      "derivationId": "gauge/strong-cp",
+      "type": "Definition",
+      "id": "1.1",
+      "name": "The $\\theta$-term",
+      "fullRef": "gauge/strong-cp:Definition 1.1"
+    },
+    {
+      "derivationId": "gauge/strong-cp",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "CP violation by $\\theta$",
+      "fullRef": "gauge/strong-cp:Proposition 1.2"
+    },
+    {
+      "derivationId": "gauge/strong-cp",
+      "type": "Proposition",
+      "id": "1.3",
+      "name": "Experimental constraint",
+      "fullRef": "gauge/strong-cp:Proposition 1.3"
+    },
+    {
+      "derivationId": "gauge/strong-cp",
+      "type": "Theorem",
+      "id": "3.1",
+      "name": "Octonionic vacuum uniqueness",
+      "fullRef": "gauge/strong-cp:Theorem 3.1"
+    },
+    {
+      "derivationId": "gauge/strong-cp",
+      "type": "Corollary",
+      "id": "4.1",
+      "name": "No axion needed",
+      "fullRef": "gauge/strong-cp:Corollary 4.1"
+    },
+    {
+      "derivationId": "gauge/strong-cp",
+      "type": "Corollary",
+      "id": "4.2",
+      "name": "No axion dark matter",
+      "fullRef": "gauge/strong-cp:Corollary 4.2"
+    },
+    {
+      "derivationId": "gauge/strong-cp",
+      "type": "Proposition",
+      "id": "4.3",
+      "name": "Experimental tests",
+      "fullRef": "gauge/strong-cp:Proposition 4.3"
+    },
+    {
+      "derivationId": "gauge/strong-cp",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "Electroweak $\\theta$-term",
+      "fullRef": "gauge/strong-cp:Proposition 5.1"
+    },
+    {
+      "derivationId": "gauge/strong-cp",
+      "type": "Theorem",
+      "id": "6.1.",
+      "name": "",
+      "fullRef": "gauge/strong-cp:Theorem 6.1."
     },
     {
       "derivationId": "gauge/weak-interaction",
@@ -14017,6 +14559,111 @@
       "id": "10.1.",
       "name": "",
       "fullRef": "quantum/born-rule:Theorem 10.1."
+    },
+    {
+      "derivationId": "quantum/entanglement",
+      "type": "Definition",
+      "id": "1.1",
+      "name": "Two-observer Hilbert space",
+      "fullRef": "quantum/entanglement:Definition 1.1"
+    },
+    {
+      "derivationId": "quantum/entanglement",
+      "type": "Definition",
+      "id": "1.2",
+      "name": "Product vs. entangled states",
+      "fullRef": "quantum/entanglement:Definition 1.2"
+    },
+    {
+      "derivationId": "quantum/entanglement",
+      "type": "Proposition",
+      "id": "1.3",
+      "name": "Relational invariants produce entangled states",
+      "fullRef": "quantum/entanglement:Proposition 1.3"
+    },
+    {
+      "derivationId": "quantum/entanglement",
+      "type": "Proposition",
+      "id": "1.4",
+      "name": "Schmidt decomposition from relational structure",
+      "fullRef": "quantum/entanglement:Proposition 1.4"
+    },
+    {
+      "derivationId": "quantum/entanglement",
+      "type": "Theorem",
+      "id": "2.1",
+      "name": "Coherence–entropy correspondence",
+      "fullRef": "quantum/entanglement:Theorem 2.1"
+    },
+    {
+      "derivationId": "quantum/entanglement",
+      "type": "Corollary",
+      "id": "2.2",
+      "name": "Entanglement measures",
+      "fullRef": "quantum/entanglement:Corollary 2.2"
+    },
+    {
+      "derivationId": "quantum/entanglement",
+      "type": "Theorem",
+      "id": "3.1",
+      "name": "No-cloning theorem",
+      "fullRef": "quantum/entanglement:Theorem 3.1"
+    },
+    {
+      "derivationId": "quantum/entanglement",
+      "type": "Theorem",
+      "id": "4.1",
+      "name": "Monogamy of entanglement",
+      "fullRef": "quantum/entanglement:Theorem 4.1"
+    },
+    {
+      "derivationId": "quantum/entanglement",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "Geometric realization of entanglement",
+      "fullRef": "quantum/entanglement:Proposition 5.1"
+    },
+    {
+      "derivationId": "quantum/entanglement",
+      "type": "Theorem",
+      "id": "6.1.",
+      "name": "",
+      "fullRef": "quantum/entanglement:Theorem 6.1."
+    },
+    {
+      "derivationId": "quantum/entanglement",
+      "type": "Proposition",
+      "id": "1.3",
+      "name": "",
+      "fullRef": "quantum/entanglement:Proposition 1.3"
+    },
+    {
+      "derivationId": "quantum/entanglement",
+      "type": "Proposition",
+      "id": "1.4",
+      "name": "",
+      "fullRef": "quantum/entanglement:Proposition 1.4"
+    },
+    {
+      "derivationId": "quantum/entanglement",
+      "type": "Theorem",
+      "id": "2.1",
+      "name": "",
+      "fullRef": "quantum/entanglement:Theorem 2.1"
+    },
+    {
+      "derivationId": "quantum/entanglement",
+      "type": "Theorem",
+      "id": "3.1",
+      "name": "",
+      "fullRef": "quantum/entanglement:Theorem 3.1"
+    },
+    {
+      "derivationId": "quantum/entanglement",
+      "type": "Theorem",
+      "id": "4.1",
+      "name": "",
+      "fullRef": "quantum/entanglement:Theorem 4.1"
     },
     {
       "derivationId": "quantum/measurement",
@@ -15862,6 +16509,48 @@
       "description": "Derive the gluon propagator and self-coupling vertices from the octonionic product structure, confirming that they match the standard QCD Feynman rules."
     },
     {
+      "derivationId": "gauge/confinement",
+      "derivationStatus": "draft",
+      "number": 1,
+      "title": "Quantitative string tension",
+      "description": "Derive sigma in terms of framework parameters (gs, associator magnitude, Planck length)."
+    },
+    {
+      "derivationId": "gauge/confinement",
+      "derivationStatus": "draft",
+      "number": 2,
+      "title": "Wilson loop criterion",
+      "description": "Show that the expectation value of the Wilson loop langle W(C) rangle sim e-sigma A(C) (area law) follows from the non-associative phase accumulation."
+    },
+    {
+      "derivationId": "gauge/confinement",
+      "derivationStatus": "draft",
+      "number": 3,
+      "title": "Mass gap",
+      "description": "Connect the associator-based confinement mechanism to a rigorous lower bound on the glueball mass spectrum."
+    },
+    {
+      "derivationId": "gauge/confinement",
+      "derivationStatus": "draft",
+      "number": 4,
+      "title": "Glueball spectrum",
+      "description": "Derive the masses of 0++, 2++, and other glueball states from the octonionic framework."
+    },
+    {
+      "derivationId": "gauge/confinement",
+      "derivationStatus": "draft",
+      "number": 5,
+      "title": "Regge trajectories",
+      "description": "Show that the linear potential produces the observed linear relationship between hadron spin and mass squared: J sim alpha' M2."
+    },
+    {
+      "derivationId": "gauge/confinement",
+      "derivationStatus": "draft",
+      "number": 6,
+      "title": "Lattice comparison",
+      "description": "Compare the non-associative confinement mechanism with lattice QCD results for the static quark potential and flux tube structure."
+    },
+    {
       "derivationId": "gauge/electromagnetism",
       "derivationStatus": "rigorous",
       "number": 1,
@@ -15923,6 +16612,34 @@
       "number": 4,
       "title": "Proton decay bound",
       "description": "The framework predicts absolute proton stability (no GUT bosons). A quantitative bound on the proton lifetime from residual gravitational or higher-order effects would sharpen this into a testable pre"
+    },
+    {
+      "derivationId": "gauge/strong-cp",
+      "derivationStatus": "draft",
+      "number": 1,
+      "title": "Topological rigidity proof",
+      "description": "Formalize the argument that octonionic gauge bundles admit only topologically trivial SU(3) connections. This may connect to the theory of G2-instantons on manifolds with G2 holonomy."
+    },
+    {
+      "derivationId": "gauge/strong-cp",
+      "derivationStatus": "draft",
+      "number": 2,
+      "title": "Instanton moduli space",
+      "description": "Characterize the moduli space of SU(3) instantons within the G2 framework. If the moduli space is empty (or consists only of the trivial connection), the argument is complete."
+    },
+    {
+      "derivationId": "gauge/strong-cp",
+      "derivationStatus": "draft",
+      "number": 3,
+      "title": "Non-perturbative effects",
+      "description": "Check whether other non-perturbative effects (monopoles, domain walls) are also constrained by the octonionic structure."
+    },
+    {
+      "derivationId": "gauge/strong-cp",
+      "derivationStatus": "draft",
+      "number": 4,
+      "title": "Electroweak-strong unification",
+      "description": "The fact that thetaQCD = 0 from non-associativity and thetaW is unphysical from standard arguments suggests a deeper connection between the associative/non-associative split and the strong/electroweak"
     },
     {
       "derivationId": "gauge/weak-interaction",
@@ -16352,6 +17069,41 @@
       "description": "Generalized measurements (positive operator-valued measures) should follow from partial Type III interactions where the observer does not fully resolve the system's state."
     },
     {
+      "derivationId": "quantum/entanglement",
+      "derivationStatus": "draft",
+      "number": 1,
+      "title": "Quantum teleportation",
+      "description": "Derive teleportation as coherence channel transfer — the relational invariant provides the channel, and classical communication provides the key to unlock it."
+    },
+    {
+      "derivationId": "quantum/entanglement",
+      "derivationStatus": "draft",
+      "number": 2,
+      "title": "Quantum error correction",
+      "description": "Explore whether coherence conservation imposes fundamental limits on or structures for quantum error-correcting codes."
+    },
+    {
+      "derivationId": "quantum/entanglement",
+      "derivationStatus": "draft",
+      "number": 3,
+      "title": "Holographic connection",
+      "description": "Make the ER=EPR sketch (Proposition 5.1) rigorous by connecting to the [Area Scaling](/derivations/holography/area-scaling) and [Causal Set Statistics](/derivations/holography/causal-set-statistics) d"
+    },
+    {
+      "derivationId": "quantum/entanglement",
+      "derivationStatus": "draft",
+      "number": 4,
+      "title": "Multipartite entanglement",
+      "description": "Extend beyond the bipartite case to full multipartite classification (W-states, cluster states, SLOCC classes)."
+    },
+    {
+      "derivationId": "quantum/entanglement",
+      "derivationStatus": "draft",
+      "number": 5,
+      "title": "Entanglement dynamics",
+      "description": "Derive entanglement growth under unitary evolution and the scrambling time from coherence dynamics."
+    },
+    {
       "derivationId": "quantum/measurement",
       "derivationStatus": "rigorous",
       "number": 1,
@@ -16703,7 +17455,26 @@
     }
   ],
   "upgradeAnalysis": {
-    "eligible": [],
+    "eligible": [
+      {
+        "id": "gauge/confinement",
+        "currentStatus": "draft",
+        "gapCount": 6,
+        "formalObjectCount": 9
+      },
+      {
+        "id": "gauge/strong-cp",
+        "currentStatus": "draft",
+        "gapCount": 4,
+        "formalObjectCount": 9
+      },
+      {
+        "id": "quantum/entanglement",
+        "currentStatus": "draft",
+        "gapCount": 5,
+        "formalObjectCount": 15
+      }
+    ],
     "blocked": []
   },
   "warnings": []

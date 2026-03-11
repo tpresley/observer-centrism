@@ -1,6 +1,10 @@
 ---
 import MainLayout from '../components/layouts/MainLayout.astro'
 import postulatesData from '../data/structural-postulates.json'
+import { getCollection } from 'astro:content'
+
+const allDerivations = await getCollection('derivations')
+const totalDerivations = allDerivations.length
 
 const groups = {
   'Foundation': postulatesData.filter(p => p.group === 'foundation'),
@@ -8,12 +12,13 @@ const groups = {
   'Geometry': postulatesData.filter(p => p.group === 'geometry'),
   'Quantum': postulatesData.filter(p => p.group === 'quantum'),
   'Particles': postulatesData.filter(p => p.group === 'particles'),
+  'Gauge': postulatesData.filter(p => p.group === 'gauge'),
   'Holography': postulatesData.filter(p => p.group === 'holography'),
 }
 
 const withCount = postulatesData.length
 const derivationsWithCount = new Set(postulatesData.map(p => p.derivation)).size
-const derivationsWithoutCount = 28 - derivationsWithCount
+const derivationsWithoutCount = totalDerivations - derivationsWithCount
 const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 ---
 
@@ -23,8 +28,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '')
     Each derivation that requires assumptions beyond the three axioms makes them
     explicit as <strong>structural postulates</strong>. These specify the mathematical
     setting in which the derivation operates &mdash; they are not derived from the
-    axioms, but they are motivated by the framework's structure. Fifteen of the
-    twenty-eight derivations require no additional assumptions at all.
+    axioms, but they are motivated by the framework's structure. The majority of
+    derivations require no additional assumptions at all.
   </p>
 
   <div class="sp-summary">

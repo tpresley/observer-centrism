@@ -44,10 +44,10 @@
     { "id": "gauge/electroweak-breaking", "title": "Electroweak Symmetry Breaking", "group": "gauge", "status": "stub" },
     { "id": "foundation/coherence-lagrangian", "title": "Coherence Lagrangian", "group": "foundation", "status": "stub" },
     { "id": "interactions/bootstrap-division-algebras", "title": "Bootstrap → Division Algebras", "group": "dynamics", "status": "stub" },
-    { "id": "quantum/entanglement", "title": "Entanglement Structure", "group": "quantum", "status": "stub" },
-    { "id": "gauge/strong-cp", "title": "Strong CP Conservation", "group": "gauge", "status": "stub" },
+    { "id": "quantum/entanglement", "title": "Entanglement from Relational Invariants", "group": "quantum", "status": "draft" },
+    { "id": "gauge/strong-cp", "title": "Strong CP Conservation", "group": "gauge", "status": "draft" },
     { "id": "spacetime/singularity-resolution", "title": "Singularity Resolution", "group": "geometry", "status": "stub" },
-    { "id": "gauge/confinement", "title": "Color Confinement", "group": "gauge", "status": "stub" },
+    { "id": "gauge/confinement", "title": "Color Confinement", "group": "gauge", "status": "draft" },
     { "id": "holography/causal-set-statistics", "title": "Causal Set Statistics", "group": "holography", "status": "stub" },
     { "id": "particles/neutrino-masses", "title": "Neutrino Mass Mechanism", "group": "particles", "status": "stub" }
   ],
