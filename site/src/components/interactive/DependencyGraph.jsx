@@ -51,6 +51,126 @@ function buildParentMap(edges) {
   return parents
 }
 
+/** Build a lookup from node-id to its list of child ids. */
+function buildChildMap(edges) {
+  const children = {}
+  for (const e of edges) {
+    if (!children[e.from]) children[e.from] = []
+    children[e.from].push(e.to)
+  }
+  return children
+}
+
+/** Count edge crossings between all adjacent layer pairs. */
+function countCrossings(rows, depths, edges, maxDepth) {
+  let total = 0
+  for (let d = 0; d < maxDepth; d++) {
+    const upper = rows[d]
+    const lower = rows[d + 1]
+    if (!upper.length || !lower.length) continue
+    const upperPos = {}
+    upper.forEach((id, i) => { upperPos[id] = i })
+    const lowerPos = {}
+    lower.forEach((id, i) => { lowerPos[id] = i })
+
+    // Collect edges whose endpoints span exactly these two adjacent layers
+    const layerEdges = []
+    for (const e of edges) {
+      if (depths[e.from] === d && depths[e.to] === d + 1) {
+        layerEdges.push([upperPos[e.from], lowerPos[e.to]])
+      }
+    }
+
+    // Count inversions: each pair of edges with inverted order is a crossing
+    for (let i = 0; i < layerEdges.length; i++) {
+      for (let j = i + 1; j < layerEdges.length; j++) {
+        const [u1, l1] = layerEdges[i]
+        const [u2, l2] = layerEdges[j]
+        if ((u1 < u2 && l1 > l2) || (u1 > u2 && l1 < l2)) {
+          total++
+        }
+      }
+    }
+  }
+  return total
+}
+
+/** Reorder nodes within each layer to minimize edge crossings (barycenter heuristic). */
+function minimizeCrossings(rows, depths, edges, maxDepth) {
+  const parentMap = buildParentMap(edges)
+  const childMap = buildChildMap(edges)
+  const NUM_SWEEPS = 2
+
+  let bestRows = rows.map(r => [...r])
+  let bestCrossings = countCrossings(rows, depths, edges, maxDepth)
+
+  for (let sweep = 0; sweep < NUM_SWEEPS; sweep++) {
+    // Top-down: reorder each layer by average parent position in the layer above
+    for (let d = 1; d <= maxDepth; d++) {
+      const row = rows[d]
+      if (row.length <= 1) continue
+      const prevRow = rows[d - 1]
+      const prevPos = {}
+      prevRow.forEach((id, i) => { prevPos[id] = i })
+
+      const withBary = row.map((id, origIdx) => {
+        const parents = (parentMap[id] || []).filter(pid => depths[pid] === d - 1)
+        const bc = parents.length === 0
+          ? null
+          : parents.reduce((sum, pid) => sum + prevPos[pid], 0) / parents.length
+        return { id, bc, origIdx }
+      })
+
+      withBary.sort((a, b) => {
+        if (a.bc === null && b.bc === null) return a.origIdx - b.origIdx
+        if (a.bc === null) return 0
+        if (b.bc === null) return 0
+        return a.bc - b.bc
+      })
+
+      rows[d] = withBary.map(x => x.id)
+    }
+
+    // Bottom-up: reorder each layer by average child position in the layer below
+    for (let d = maxDepth - 1; d >= 0; d--) {
+      const row = rows[d]
+      if (row.length <= 1) continue
+      const nextRow = rows[d + 1]
+      const nextPos = {}
+      nextRow.forEach((id, i) => { nextPos[id] = i })
+
+      const withBary = row.map((id, origIdx) => {
+        const children = (childMap[id] || []).filter(cid => depths[cid] === d + 1)
+        const bc = children.length === 0
+          ? null
+          : children.reduce((sum, cid) => sum + nextPos[cid], 0) / children.length
+        return { id, bc, origIdx }
+      })
+
+      withBary.sort((a, b) => {
+        if (a.bc === null && b.bc === null) return a.origIdx - b.origIdx
+        if (a.bc === null) return 0
+        if (b.bc === null) return 0
+        return a.bc - b.bc
+      })
+
+      rows[d] = withBary.map(x => x.id)
+    }
+
+    // Keep the best ordering seen across sweeps
+    const currentCrossings = countCrossings(rows, depths, edges, maxDepth)
+    if (currentCrossings < bestCrossings) {
+      bestRows = rows.map(r => [...r])
+      bestCrossings = currentCrossings
+    }
+  }
+
+  // Restore best ordering
+  for (let d = 0; d <= maxDepth; d++) {
+    rows[d] = bestRows[d]
+  }
+}
+
 /** Compute the depth of every node (longest path from a root). */
 function computeDepths(nodes, edges) {
   const children = {}
@@ -106,6 +226,9 @@ function layoutNodes(nodes, edges, width) {
   const rows = []
   for (let d = 0; d <= maxDepth; d++) rows.push([])
   for (const n of nodes) rows[depths[n.id]].push(n.id)
+
+  // Reorder within layers to minimize edge crossings
+  minimizeCrossings(rows, depths, edges, maxDepth)
 
   const ROW_HEIGHT = 100
   const NODE_RADIUS = 22
