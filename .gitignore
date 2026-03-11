@@ -1,0 +1,7 @@
+.claude
+site/node_modules
+site/dist
+site/.astro
+lean/.lake
+lean/build
+lean/lake-packages
