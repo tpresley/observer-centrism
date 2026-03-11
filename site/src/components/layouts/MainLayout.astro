@@ -19,10 +19,35 @@ const { title } = Astro.props
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   <body>
+    <button class="menu-toggle" aria-label="Open navigation menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
     <Sidebar currentPath={Astro.url.pathname} />
+    <div class="sidebar-overlay"></div>
     <main class="main-content" data-pagefind-body>
       <slot />
     </main>
+    <script>
+      const toggle = document.querySelector('.menu-toggle');
+      const overlay = document.querySelector('.sidebar-overlay');
+      const sidebar = document.querySelector('.sidebar');
+
+      toggle?.addEventListener('click', () => {
+        document.body.classList.toggle('sidebar-open');
+      });
+      overlay?.addEventListener('click', () => {
+        document.body.classList.remove('sidebar-open');
+      });
+      sidebar?.addEventListener('click', (e) => {
+        if ((e.target as HTMLElement).closest('a')) {
+          document.body.classList.remove('sidebar-open');
+        }
+      });
+    </script>
   </body>
 </html>
 
