@@ -30,6 +30,12 @@ for (const node of graphData.nodes) {
 function getTitle(id: string): string {
   return titleMap[id] || id
 }
+
+function slugifyProp(prop: string): string {
+  return prop.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/, '')
+}
+
+const totalTheorems = leanProofs.reduce((sum, p) => sum + p.theorems.length, 0)
 ---
 
 <MainLayout title={title}>
@@ -42,7 +48,7 @@ function getTitle(id: string): string {
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
-          Lean verified
+          Lean 4 verified
         </span>
       )}
       {sourceSection && (
@@ -64,17 +70,30 @@ function getTitle(id: string): string {
     )}
 
     {leanProofs.length > 0 && (
-      <details class="lean-proofs-section">
+      <details class="lean-proofs-section" open>
         <summary>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
-          Machine-verified propositions ({leanProofs.length})
+          Lean 4 Verified &mdash; {leanProofs.length} {leanProofs.length === 1 ? 'proposition' : 'propositions'}, {totalTheorems} {totalTheorems === 1 ? 'theorem' : 'theorems'}
         </summary>
+        <p class="lean-explanation">
+          The propositions below have been independently checked in
+          <a href="https://lean-lang.org" target="_blank" rel="noopener">Lean 4</a>,
+          a proof assistant that mechanically verifies every logical step.
+          Click a proposition name to jump to it in the derivation.
+        </p>
         <div class="lean-proofs-list">
           {leanProofs.map(proof => (
             <div class="lean-proof-item">
-              <strong>{proof.proposition}</strong>
+              <div class="lean-proof-header">
+                <a href={`#lean-${slugifyProp(proof.proposition)}`} class="lean-prop-link">
+                  {proof.proposition}
+                </a>
+                <span class="lean-theorem-count">
+                  {proof.theorems.length} {proof.theorems.length === 1 ? 'theorem' : 'theorems'}
+                </span>
+              </div>
               <span class="lean-module">{proof.module}</span>
               <ul class="lean-theorems">
                 {proof.theorems.map(t => (
@@ -109,6 +128,40 @@ function getTitle(id: string): string {
     )}
   </article>
 </MainLayout>
+
+{leanProofs.length > 0 && (
+  <script define:vars={{ propositions: leanProofs.map(p => p.proposition) }}>
+    document.addEventListener('DOMContentLoaded', () => {
+      const article = document.querySelector('article')
+      if (!article) return
+
+      const strongs = article.querySelectorAll('strong')
+      const checkSvg = '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>'
+      const tagged = new Set()
+
+      for (const el of strongs) {
+        const text = el.textContent || ''
+        for (const prop of propositions) {
+          if (text.startsWith(prop) && !tagged.has(prop)) {
+            tagged.add(prop)
+
+            // Add id for anchor linking from the panel
+            const slug = prop.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/, '')
+            el.id = 'lean-' + slug
+
+            // Create and inject inline badge
+            const badge = document.createElement('span')
+            badge.className = 'lean-inline-badge'
+            badge.innerHTML = checkSvg + ' verified'
+            badge.title = prop + ' has been formally verified in Lean 4'
+            el.parentNode.insertBefore(badge, el.nextSibling)
+            break
+          }
+        }
+      }
+    })
+  </script>
+)}
 
 <style>
   header {

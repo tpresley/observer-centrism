@@ -1,0 +1,121 @@
+---
+import MainLayout from '../components/layouts/MainLayout.astro'
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+---
+
+<MainLayout title="Site Map">
+  <h1>Site Map</h1>
+  <p>Everything on this site, organized by section.</p>
+
+  <div class="sm-grid">
+    <div class="sm-section">
+      <h2>Explore</h2>
+      <a href={`${base}/guide/`} class="sm-link">
+        <strong>Guide</strong>
+        <span>A narrative walkthrough of the framework, from first principles to predictions.</span>
+      </a>
+      <a href={`${base}/map`} class="sm-link">
+        <strong>Derivation Map</strong>
+        <span>Interactive dependency graph showing how derivations connect axioms to predictions.</span>
+      </a>
+      <a href={`${base}/predictions/`} class="sm-link">
+        <strong>Predictions</strong>
+        <span>Testable consequences that distinguish this framework from existing theories.</span>
+      </a>
+    </div>
+
+    <div class="sm-section">
+      <h2>Reference</h2>
+      <a href={`${base}/derivations/`} class="sm-link">
+        <strong>Derivations Index</strong>
+        <span>All rigorous proofs and formalizations, organized by topic group.</span>
+      </a>
+      <a href={`${base}/postulates`} class="sm-link">
+        <strong>Structural Postulates</strong>
+        <span>Explicit assumptions beyond the three axioms, with justifications and usage.</span>
+      </a>
+      <a href={`${base}/extensions`} class="sm-link">
+        <strong>Extension Targets</strong>
+        <span>Derivation stubs identified from earlier work, ready for future development.</span>
+      </a>
+    </div>
+
+    <div class="sm-section">
+      <h2>Source Material</h2>
+      <a href={`${base}/source/01-introduction`} class="sm-link">
+        <strong>Source Document</strong>
+        <span>The original framework description, from introduction through open questions.</span>
+      </a>
+      <a href={`${base}/whitepaper-analysis`} class="sm-link">
+        <strong>Whitepaper Analysis</strong>
+        <span>Analysis of the original whitepaper identifying derivable claims.</span>
+      </a>
+      <a href={`${base}/papers-analysis`} class="sm-link">
+        <strong>Papers Analysis</strong>
+        <span>Analysis of four extension papers and their relationship to the axiom chain.</span>
+      </a>
+    </div>
+
+    <div class="sm-section">
+      <h2>Tools</h2>
+      <a href={`${base}/search`} class="sm-link">
+        <strong>Search</strong>
+        <span>Full-text search across all derivations, predictions, and source material.</span>
+      </a>
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+  .sm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 700px) {
+    .sm-grid { grid-template-columns: 1fr; }
+  }
+
+  .sm-section h2 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin: 0 0 0.75rem;
+    padding: 0;
+    border: none;
+  }
+
+  .sm-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-surface);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s;
+  }
+
+  .sm-link:hover {
+    border-color: var(--color-accent);
+  }
+
+  .sm-link strong {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--color-accent);
+    margin-bottom: 0.2rem;
+  }
+
+  .sm-link span {
+    display: block;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--color-text-muted);
+  }
+</style>

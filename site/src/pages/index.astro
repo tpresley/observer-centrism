@@ -1,87 +1,171 @@
 ---
 import MainLayout from '../components/layouts/MainLayout.astro'
-import CoherenceVisualizer from '../components/interactive/CoherenceVisualizer.jsx'
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 ---
 
 <MainLayout title="Home">
   <h1>Observer-Centrism</h1>
-  <p class="subtitle">A Framework for Physics, Mind, and Structure</p>
+  <p class="subtitle">Physics from Three Axioms</p>
 
   <p>
-    A derivation of quantum mechanics, general relativity, thermodynamics,
-    the particle spectrum, holography, and the basis of experience
-    from three axioms.
+    Why is science possible? Not in the philosophical sense &mdash; in the
+    structural sense. The universe is not merely describable by mathematics;
+    it is <em>unreasonably</em> well-described by it. Physical law has a
+    compressibility, a pattern-density, that demands explanation. Whatever the
+    universe fundamentally is, it must be the kind of thing that admits
+    observers capable of discovering its regularities.
+  </p>
+  <p>
+    That observation is usually treated as a curiosity. Observer-Centrism
+    treats it as a starting point &mdash; and shows that taking it seriously,
+    with mathematical precision, leads somewhere unexpected.
   </p>
 
-  <CoherenceVisualizer client:load />
-  <p class="viz-caption">
-    The minimal observer pair: two phase oscillators with opposite winding
-    numbers (+1, &minus;1), exchanging coherence while the total is conserved.
-    Each loop closes on itself &mdash; the simplest structure satisfying all
-    three axioms.
+  <h2>The Problem</h2>
+  <p>
+    Modern physics is built from four frameworks: quantum mechanics, general
+    relativity, the Standard Model, and thermodynamics. Each is spectacularly
+    successful in its domain. None is complete. They are mathematically
+    incompatible at the Planck scale. The Standard Model alone carries
+    nineteen free parameters &mdash; measured but unexplained. The
+    measurement problem, the origin of the arrow of time, and the hierarchy
+    of particle masses remain open after decades. These aren't loose ends.
+    They are symptoms of missing foundations.
+  </p>
+
+  <h2>The Claim</h2>
+  <p>
+    Observer-Centrism demonstrates that three axioms &mdash; conservation of
+    a primitive quantity, a structural definition of what counts as an
+    observer, and the requirement of dynamical stability &mdash; are
+    sufficient to derive quantum mechanics, general relativity, the Standard
+    Model gauge group, thermodynamics, holographic entropy bounds, and the
+    three-generation particle spectrum. Not as assumptions, but as
+    mathematical consequences.
+  </p>
+  <p>
+    The entire framework rests on three commitments:
   </p>
 
   <div class="axiom-card">
-    <h3>Axiom 1: Coherence Conservation</h3>
+    <h3>Axiom 1 &mdash; Coherence Conservation</h3>
     <p>
-      There exists a primitive quantity &mdash; coherence &mdash; that is globally
-      conserved. Coherence cannot be created from nothing, destroyed, or exported
-      to an external reservoir. The ontology is closed.
+      There exists a primitive quantity &mdash; <em>coherence</em> &mdash;
+      that is globally conserved. It cannot be created from nothing, destroyed,
+      or exported to an external reservoir. The ontology is closed.
     </p>
   </div>
 
   <div class="axiom-card">
-    <h3>Axiom 2: The Observer Definition</h3>
+    <h3>Axiom 2 &mdash; Observer Definition</h3>
     <p>
       Any structure that maintains at least one invariant quantity across
-      transformations, together with a distinction between transformations that
-      preserve that invariant (self) and those that threaten it (non-self),
-      qualifies as an observer.
+      transformations, together with a distinction between self-preserving and
+      self-threatening transformations, qualifies as an observer.
     </p>
   </div>
 
   <div class="axiom-card">
-    <h3>Axiom 3: Loop Closure</h3>
+    <h3>Axiom 3 &mdash; Loop Closure</h3>
     <p>
-      Observer dynamics must be closed loops. The internal dynamics of an observer
-      must be cyclic: the state must return, at least approximately, to its initial
-      configuration after a finite time.
+      Observer dynamics must be closed loops: the internal state returns,
+      at least approximately, to its initial configuration after a finite
+      time. Non-closing configurations dissipate.
     </p>
   </div>
 
-  <h2>This Site</h2>
+  <h2>What Follows</h2>
   <p>
-    This site houses the ongoing development of Observer-Centrism: rigorous
-    derivations from the axioms, exploration of the framework's structure,
-    and development of measurable predictions.
+    From these three axioms, a chain of 40 rigorous derivations produces the
+    major structures of known physics &mdash; each step following by
+    mathematical necessity from the steps before it. The Standard Model gauge
+    group U(1) &times; SU(2) &times; SU(3) emerges from the four normed
+    division algebras. Spacetime curvature follows from the relational
+    structure of interacting observers. The Born rule, Pauli exclusion, and
+    three generations of fermions all emerge without being assumed.
+  </p>
+  <p>
+    The framework also makes testable predictions that distinguish it from
+    existing theories: a specific angular signature in holographic noise
+    measurable with co-located interferometers, a granularity scale in dark
+    matter halos with a distinctive power-spectrum cutoff, and the
+    non-convergence of gauge couplings at any energy &mdash; contradicting
+    all grand unified theories.
   </p>
 
-  <ul>
-    <li><a href={`${base}/guide/`}>Guide</a> &mdash; a narrative walkthrough of the framework</li>
-    <li><a href={`${base}/source/01-introduction`}>Source Document</a> &mdash; the original framework description</li>
-    <li><a href={`${base}/derivations/`}>Derivations</a> &mdash; rigorous proofs and formalizations</li>
-    <li><a href={`${base}/predictions/`}>Predictions</a> &mdash; testable consequences unique to this framework</li>
-    <li><a href={`${base}/postulates`}>Structural Postulates</a> &mdash; assumptions beyond the three axioms</li>
-    <li><a href={`${base}/extensions`}>Extension Targets</a> &mdash; 11 derivation stubs for future development</li>
-    <li><a href={`${base}/map`}>Dependency Map</a> &mdash; interactive graph of the derivation chain</li>
-    <li><a href={`${base}/search`}>Search</a> &mdash; full-text search across all content</li>
-  </ul>
+  <div class="cta-grid">
+    <a href={`${base}/guide/`} class="cta-card">
+      <div class="cta-icon">&#9782;</div>
+      <h3>Read the Guide</h3>
+      <p>A narrative walkthrough of the framework, from first principles to predictions.</p>
+    </a>
+    <a href={`${base}/map`} class="cta-card">
+      <div class="cta-icon">&#9671;</div>
+      <h3>Explore the Map</h3>
+      <p>Interactive dependency graph showing how 50 derivations connect axioms to predictions.</p>
+    </a>
+    <a href={`${base}/predictions/`} class="cta-card">
+      <div class="cta-icon">&#9678;</div>
+      <h3>See the Predictions</h3>
+      <p>Testable consequences that distinguish this framework from current theoretical expectations.</p>
+    </a>
+  </div>
 </MainLayout>
 
 <style>
   .subtitle {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: var(--color-text-muted);
     margin-bottom: 1.5rem;
   }
-  .viz-caption {
-    font-size: 0.8rem;
-    color: var(--color-text-muted);
-    text-align: center;
+
+  .cta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  @media (max-width: 700px) {
+    .cta-grid { grid-template-columns: 1fr; }
+  }
+
+  .cta-card {
+    display: block;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  .cta-card:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+  }
+
+  .cta-card .cta-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-accent);
+  }
+
+  .cta-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 0.35rem;
+    color: var(--color-accent);
+    border: none;
+    padding: 0;
+  }
+
+  .cta-card p {
+    font-size: 0.85rem;
     line-height: 1.5;
-    margin: 0 auto 1.5rem;
-    max-width: 360px;
+    color: var(--color-text-muted);
+    margin: 0;
   }
 </style>
