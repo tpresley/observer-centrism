@@ -18,11 +18,13 @@ relatedPredictions:
   - "no-supersymmetry"
   - "exact-unitarity"
   - "great-desert"
+  - "coupling-non-convergence"
+  - "no-axion"
 ---
 
 The preceding chapters traced a derivation chain from three axioms through spacetime, quantum mechanics, the particle spectrum, and holography. The logical coherence of that chain matters — but it is not enough. A framework that only recovers what is already known, however elegantly, is philosophy. Physics requires predictions that can be tested and potentially falsified.
 
-Observer-Centrism makes seven predictions. Two are quantitative, with specific numbers attached. Five are qualitative "negative" predictions — things that should *not* happen if the framework is correct. Several are already consistent with existing data. Others await future experiments.
+Observer-Centrism makes nine predictions. Two are quantitative, with specific numbers attached. Seven are qualitative "negative" predictions — things that should *not* happen if the framework is correct. Several are already consistent with existing data. Others await future experiments.
 
 ## The Headline: Holographic Noise
 
@@ -46,9 +48,9 @@ The framework predicts a specific scaling for this minimum mass: $M_J \propto m_
 
 The prediction is consistent with observed suppressions of small-scale structure — the "missing satellites" problem in galaxy formation, where fewer small dark matter halos are observed than simulated. The framework predicts these are structural signatures of dark matter's loop closure scale.
 
-## Five Things That Should Not Happen
+## Seven Things That Should Not Happen
 
-Beyond the two quantitative predictions, the framework makes five qualitative predictions — all of which take the form "this will not be observed." Negative predictions are underappreciated in physics, but they are powerful: every null result that matches the prediction is evidence, and any positive result is falsification.
+Beyond the two quantitative predictions, the framework makes seven qualitative predictions — all of which take the form "this will not be observed." Negative predictions are underappreciated in physics, but they are powerful: every null result that matches the prediction is evidence, and any positive result is falsification.
 
 **No fourth fermion generation.** Three generations correspond to three independent rotation axes in three dimensions. A fourth would require a fourth axis, which does not exist. Current data from the LEP collider is consistent — precision measurements of the Z boson decay width constrain the number of light neutrinos to three.
 
@@ -59,6 +61,10 @@ Beyond the two quantitative predictions, the framework makes five qualitative pr
 **Exact unitarity.** Unitary evolution — the preservation of quantum mechanical probability — is coherence conservation applied to quantum dynamics. It admits no exceptions, no corrections, no scale at which it fails. No objective collapse, no nonlinear modifications to quantum mechanics, no violation in black hole evaporation. Precision tests with matter-wave interferometry probe this directly.
 
 **The great desert.** No new physics between the electroweak scale (~246 GeV) and the Planck scale (~$10^{19}$ GeV). No GUT scale, no intermediate symmetry breaking, no new particles in the vast energy desert between TeV and $10^{16}$ GeV. This is a strong prediction — falsifiable by future colliders discovering new particles at intermediate scales.
+
+**No gauge coupling unification.** The three Standard Model gauge couplings do not converge to a single unified coupling at any energy scale. There is no Grand Unification energy. The couplings are fixed by the division algebra structure at their respective crystallization scales. Minimal SU(5) GUT is already excluded by proton decay limits; the framework predicts all GUT models will fail.
+
+**No QCD axion.** The strong CP problem ($|\theta| < 10^{-10}$) is resolved by the octonionic structure of SU(3): non-associativity forces $\theta = 0$ exactly, without dynamical relaxation. No axion particle exists. The Peccei-Quinn mechanism is unnecessary. Axion search experiments (ADMX, CASPEr) will continue to find null results.
 
 ## What Counts as Falsification
 
@@ -80,7 +86,7 @@ Whether the fixed-point solution is unique — whether the axioms determine *one
 
 These are not deficiencies to be embarrassed about. They are the frontiers of an active program — the places where the framework's structural arguments point toward specific mathematical problems that need solving. The derivation chain from axioms to predictions is complete and rigorous. The frontier is in deepening the mathematical foundations and sharpening the quantitative predictions.
 
-> **On solid ground:** The holographic noise prediction is quantitative, with a specific angular correlation function that can be tested. The five negative predictions are all falsifiable. Several are already consistent with existing null results (no SUSY, no fourth generation, proton stability). The framework's predictions are genuine — they were derived from the axioms, not fitted to the data.
+> **On solid ground:** The holographic noise prediction is quantitative, with a specific angular correlation function that can be tested. The seven negative predictions are all falsifiable. Several are already consistent with existing null results (no SUSY, no fourth generation, proton stability, no axion). The framework's predictions are genuine — they were derived from the axioms, not fitted to the data.
 
 > **Work in progress:** The holographic noise amplitude depends on a parameter ($\alpha_H$) that is bounded but not precisely computed. The dark matter granularity prediction is semi-quantitative — it gives the scaling law but not the exact dark matter particle mass. Computing Standard Model parameters from first principles and proving the uniqueness of the cosmological fixed point are the major open problems.
 

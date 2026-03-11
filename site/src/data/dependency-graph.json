@@ -46,10 +46,10 @@
     { "id": "interactions/bootstrap-division-algebras", "title": "Bootstrap → Division Algebras", "group": "dynamics", "status": "stub" },
     { "id": "quantum/entanglement", "title": "Entanglement from Relational Invariants", "group": "quantum", "status": "draft" },
     { "id": "gauge/strong-cp", "title": "Strong CP Conservation", "group": "gauge", "status": "draft" },
-    { "id": "spacetime/singularity-resolution", "title": "Singularity Resolution", "group": "geometry", "status": "stub" },
+    { "id": "spacetime/singularity-resolution", "title": "Singularity Resolution", "group": "geometry", "status": "draft" },
     { "id": "gauge/confinement", "title": "Color Confinement", "group": "gauge", "status": "draft" },
-    { "id": "holography/causal-set-statistics", "title": "Causal Set Statistics", "group": "holography", "status": "stub" },
-    { "id": "particles/neutrino-masses", "title": "Neutrino Mass Mechanism", "group": "particles", "status": "stub" }
+    { "id": "holography/causal-set-statistics", "title": "Causal Set Statistics", "group": "holography", "status": "draft" },
+    { "id": "particles/neutrino-masses", "title": "Neutrino Mass Mechanism", "group": "particles", "status": "draft" }
   ],
   "edges": [
     { "from": "axioms/coherence-conservation", "to": "minimal-observer/structure" },

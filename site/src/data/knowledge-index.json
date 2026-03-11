@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-11T21:12:08.313Z",
+    "generatedAt": "2026-03-11T22:57:01.497Z",
     "derivationCount": 50,
     "predictionCount": 9,
     "generator": "scripts/build-index.mjs"
@@ -9,15 +9,15 @@
     "byStatus": {
       "rigorous": 40,
       "non-viable": 1,
-      "stub": 6,
-      "draft": 3
+      "stub": 3,
+      "draft": 6
     },
     "derivationCount": 50,
     "predictionCount": 9,
     "edgeCount": 88,
-    "formalObjectCount": 669,
-    "openGapCount": 171,
-    "upgradeEligibleCount": 3,
+    "formalObjectCount": 707,
+    "openGapCount": 186,
+    "upgradeEligibleCount": 6,
     "leanVerifiedCount": 16,
     "leanTheoremCount": 64
   },
@@ -601,6 +601,10 @@
             "context": "Loop Closure"
           },
           {
+            "source": "holography/causal-set-statistics",
+            "context": "Loop Closure"
+          },
+          {
             "source": "interactions/bootstrap",
             "context": "Loop Closure"
           },
@@ -1151,6 +1155,10 @@
         "incoming": [
           {
             "source": "gauge/standard-model-group",
+            "context": "Baryogenesis"
+          },
+          {
+            "source": "particles/neutrino-masses",
             "context": "Baryogenesis"
           }
         ]
@@ -1888,6 +1896,14 @@
           {
             "source": "gauge/weak-interaction",
             "context": "Flavor Mixing"
+          },
+          {
+            "source": "particles/neutrino-masses",
+            "context": "Proposition 5.1"
+          },
+          {
+            "source": "particles/neutrino-masses",
+            "context": "$A_5$ discrete symmetry"
           },
           {
             "source": "particles/neutrino-masses",
@@ -3060,6 +3076,10 @@
             "context": "Electromagnetism"
           },
           {
+            "source": "particles/neutrino-masses",
+            "context": "Electromagnetism"
+          },
+          {
             "source": "thermodynamics-ext/renormalization",
             "context": "locality of phase comparison"
           },
@@ -3945,6 +3965,10 @@
             "context": "Weak Interaction"
           },
           {
+            "source": "particles/neutrino-masses",
+            "context": "Weak Interaction"
+          },
+          {
             "source": "thermodynamics-ext/renormalization",
             "context": "Weak Interaction"
           }
@@ -4183,7 +4207,11 @@
           },
           {
             "source": "holography/causal-set-statistics",
-            "context": "Holographic Entropy Bound"
+            "context": "Structural Postulate S1"
+          },
+          {
+            "source": "holography/causal-set-statistics",
+            "context": "Area Scaling"
           },
           {
             "source": "quantum/entanglement",
@@ -4192,6 +4220,10 @@
           {
             "source": "spacetime/singularity-resolution",
             "context": "Holographic Entropy Bound"
+          },
+          {
+            "source": "spacetime/singularity-resolution",
+            "context": "Area Scaling"
           },
           {
             "source": "thermodynamics/entropy",
@@ -4416,15 +4448,15 @@
       "id": "holography/causal-set-statistics",
       "filePath": "site/src/content/derivations/holography/causal-set-statistics.md",
       "title": "Causal Set Statistics",
-      "status": "stub",
-      "rigorLevel": "informal",
+      "status": "draft",
+      "rigorLevel": "semi-formal",
       "group": "holography",
       "tags": [
         "holography",
         "causal-sets",
         "statistics"
       ],
-      "summary": "Compute the statistical properties of the relational invariant network as a causal set. The Poisson-sprinkled causal set statistics simultaneously quantify the holographic noise amplitude coefficient alpha_H and the dark matter density fluctuation spectrum, providing a unified statistical foundation for both primary predictions.",
+      "summary": "The relational invariant network as a Poisson-sprinkled causal set: derives the holographic noise amplitude α_H = 1/4, the dark matter density fluctuation spectrum, and the Gaussian cutoff in the matter power spectrum. Both primary predictions arise from a single statistical foundation.",
       "lastUpdated": "2026-03-11",
       "dependsOn": [
         "holography/area-scaling",
@@ -4432,21 +4464,173 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [],
-      "steps": [],
-      "formalObjects": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The Relational Invariant Network as a Causal Set"
+        },
+        {
+          "number": 2,
+          "title": "Geodesic Length Fluctuations and Holographic Noise"
+        },
+        {
+          "number": 3,
+          "title": "Dark Matter Density Fluctuations"
+        },
+        {
+          "number": 4,
+          "title": "The Quantum Jeans Scale from Loop Closure Pressure"
+        },
+        {
+          "number": 5,
+          "title": "Gaussian Cutoff in the Matter Power Spectrum"
+        },
+        {
+          "number": 6,
+          "title": "Unified Statistical Foundation"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1.",
+          "name": "",
+          "statementPreview": "A **causal set** (causet) is a locally finite partially ordered set (C, preceq): for any x, z in C, the interval y : ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Network is a causal set",
+          "statementPreview": "The relational invariant network satisfies the causal set axioms.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "1.3",
+          "name": "Poisson sprinkling at Planck density",
+          "statementPreview": "The distribution of causal set elements follows a Poisson process with density rhoP = ellP-4.*"
+        },
+        {
+          "type": "Definition",
+          "id": "2.1.",
+          "name": "",
+          "statementPreview": "The **geodesic length estimator** on a causal set approximates the proper distance L between two spacelike-separated ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "Geodesic variance",
+          "statementPreview": "For a Poisson-sprinkled causal set in flat spacetime, the variance of the geodesic length estimator for proper distan..."
+        },
+        {
+          "type": "Theorem",
+          "id": "2.3",
+          "name": "Holographic bound fixes $\\alpha_H = 1/4$",
+          "statementPreview": "The amplitude coefficient is alphaH = 1/4, determined by the holographic entropy bound.*"
+        },
+        {
+          "type": "Corollary",
+          "id": "2.4",
+          "name": "Strain power spectral density",
+          "statementPreview": "The single-arm strain PSD from holographic noise is:*"
+        },
+        {
+          "type": "Definition",
+          "id": "3.1.",
+          "name": "",
+          "statementPreview": "The **dark matter density field** rhoDM(mathbfx) at cosmological scales reflects the coherence structure of the relat..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Poisson density statistics",
+          "statementPreview": "The density fluctuations of the causal set at scale R have Poisson statistics:*"
+        },
+        {
+          "type": "Definition",
+          "id": "4.1.",
+          "name": "",
+          "statementPreview": "The **quantum Jeans mass** MJ is the minimum mass at which gravitational collapse can overcome the loop closure press..."
+        },
+        {
+          "type": "Theorem",
+          "id": "4.2",
+          "name": "Quantum Jeans scale",
+          "statementPreview": "The quantum Jeans mass for dark matter particles of mass mDM is:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "5.1",
+          "name": "Gaussian cutoff",
+          "statementPreview": "The matter power spectrum acquires a Gaussian cutoff at the quantum Jeans wavenumber kJ:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "6.1",
+          "name": "Cross-prediction",
+          "statementPreview": "Both primary predictions arise from the same Poisson causal set statistics at different scales:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "7.1.",
+          "name": "",
+          "statementPreview": "A Poisson-sprinkled causal set in 4D Minkowski spacetime provides a consistency model for both predictions.*"
+        }
+      ],
       "structuralPostulates": [],
-      "openGaps": [],
-      "assessmentVerdict": "",
-      "hasConsistencyModel": false,
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Rigorous geodesic estimator",
+          "description": "The geodesic variance calculation (Proposition 2.2) uses a simplified cell-counting argument. A rigorous derivation should use the Myrheim-Meyer dimension estimator or the Brightwell-Gregory longest-c"
+        },
+        {
+          "number": 2,
+          "title": "Non-flat corrections",
+          "description": "All calculations assume flat (Minkowski) background. The corrections from curvature — particularly near black holes or in the early universe — should modify both alphaH and the density fluctuation spe"
+        },
+        {
+          "number": 3,
+          "title": "Quantitative cross-prediction",
+          "description": "The qualitative link between holographic noise and dark matter granularity (Theorem 6.1) should be made quantitative: given alphaH, what is the predicted kJ? This requires computing how the sprinkling"
+        },
+        {
+          "number": 4,
+          "title": "Deriving Poisson from axioms",
+          "description": "Proposition 1.3 assumes Poisson sprinkling as the unique Lorentz-invariant distribution. Can this be derived from the three axioms, or is it an additional input?"
+        },
+        {
+          "number": 5,
+          "title": "Continuum limit",
+          "description": "The identification of the discrete relational invariant network with a Poisson causal set relies on a continuum limit that has not been rigorously constructed from the axioms."
+        }
+      ],
+      "assessmentVerdict": "The causal set statistics provide a coherent framework connecting both primary predictions to a single statistical foundation. The key results — alphaH = 1/4 and MJ propto mDM-3/2 with Gaussian cutoff — are derived from Poisson statistics at the Planck density. The arguments are semi-formal: they us",
+      "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
           {
-            "target": "holography/area-scaling",
-            "context": "Holographic Entropy Bound"
-          },
-          {
             "target": "interactions/relational-invariants",
             "context": "Relational Invariants"
+          },
+          {
+            "target": "thermodynamics/time",
+            "context": "Time as Phase Ordering"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Structural Postulate S1"
+          },
+          {
+            "target": "spacetime/lorentz-invariance",
+            "context": "Lorentz Invariance"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
           }
         ],
         "incoming": [
@@ -4462,7 +4646,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": false,
+      "upgradeEligible": true,
       "upgradeBlockers": []
     },
     "holography/hawking-radiation": {
@@ -4657,6 +4841,10 @@
           },
           {
             "source": "holography/information-paradox",
+            "context": "Hawking Radiation"
+          },
+          {
+            "source": "spacetime/singularity-resolution",
             "context": "Hawking Radiation"
           }
         ]
@@ -4857,6 +5045,10 @@
           {
             "source": "holography/hawking-radiation",
             "context": "Information Paradox"
+          },
+          {
+            "source": "spacetime/singularity-resolution",
+            "context": "Black Hole Information Paradox"
           }
         ]
       },
@@ -6005,6 +6197,10 @@
             "context": "Coherence-Dual Pairs"
           },
           {
+            "source": "particles/neutrino-masses",
+            "context": "Coherence-Dual Pairs"
+          },
+          {
             "source": "particles/three-generations",
             "context": "Coherence-Dual Pairs"
           },
@@ -6510,6 +6706,10 @@
             "context": "Minimal Observer Structure"
           },
           {
+            "source": "spacetime/singularity-resolution",
+            "context": "Minimal Observer Structure"
+          },
+          {
             "source": "spacetime/speed-of-light",
             "context": "Minimal Observer Structure"
           },
@@ -6755,14 +6955,14 @@
       "id": "particles/neutrino-masses",
       "filePath": "site/src/content/derivations/particles/neutrino-masses.md",
       "title": "Neutrino Mass Mechanism",
-      "status": "stub",
-      "rigorLevel": "informal",
+      "status": "draft",
+      "rigorLevel": "semi-formal",
       "group": "particles",
       "tags": [
         "particles",
         "neutrinos"
       ],
-      "summary": "Determine whether neutrinos are Dirac or Majorana particles from the winding structure of the observer loop. Self-conjugate windings would give Majorana masses; distinct windings give Dirac masses. The answer connects to leptogenesis, the mass hierarchy, and the PMNS mixing matrix structure.",
+      "summary": "Neutrino winding configurations are self-conjugate under the coherence-dual map, making neutrinos Majorana particles. Their mass smallness arises from a seesaw mechanism where the heavy scale is the electroweak crystallization energy, not a GUT scale. Predicts Majorana nature testable by neutrinoless double beta decay.",
       "lastUpdated": "2026-03-11",
       "dependsOn": [
         "particles/three-generations",
@@ -6770,21 +6970,171 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [],
-      "steps": [],
-      "formalObjects": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Winding Conjugation and the Dirac–Majorana Question"
+        },
+        {
+          "number": 2,
+          "title": "The Seesaw Mechanism from Winding Overlap"
+        },
+        {
+          "number": 3,
+          "title": "The Heavy Scale from Electroweak Crystallization"
+        },
+        {
+          "number": 4,
+          "title": "Neutrino Mass Scale"
+        },
+        {
+          "number": 5,
+          "title": "Mass Ordering"
+        },
+        {
+          "number": 6,
+          "title": "PMNS Matrix Structure"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1.",
+          "name": "",
+          "statementPreview": "From [Three Generations](/derivations/particles/three-generations), fermions are half-integer winding loops in SO(3)...."
+        },
+        {
+          "type": "Definition",
+          "id": "1.2.",
+          "name": "",
+          "statementPreview": "A fermion is **Dirac** if its winding configuration is distinct from its conjugate: D(nu) nu. A fermion is **Majorana..."
+        },
+        {
+          "type": "Theorem",
+          "id": "1.3",
+          "name": "Neutrinos are self-conjugate",
+          "statementPreview": "Neutrino winding configurations are self-conjugate under D, making neutrinos Majorana particles.*"
+        },
+        {
+          "type": "Corollary",
+          "id": "1.4",
+          "name": "Lepton number violation",
+          "statementPreview": "Majorana neutrinos violate lepton number by two units (Delta L = 2). This allows neutrinoless double beta decay: n + ..."
+        },
+        {
+          "type": "Definition",
+          "id": "2.1.",
+          "name": "",
+          "statementPreview": "A Majorana mass term couples the left-handed neutrino nuL to its own conjugate nuLc. The mass matrix in the (nuL, nuR..."
+        },
+        {
+          "type": "Theorem",
+          "id": "2.2",
+          "name": "Seesaw mass formula",
+          "statementPreview": "The light neutrino mass eigenvalue is:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "Heavy Majorana mass from crystallization",
+          "statementPreview": "The right-handed Majorana mass scale MR is set by the electroweak crystallization dynamics, not by a GUT scale:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Light neutrino masses",
+          "statementPreview": "With mD sim ynu v and MR sim yR v, the light neutrino mass is:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "5.1",
+          "name": "Normal mass ordering",
+          "statementPreview": "The neutrino mass ordering is normal: m1 < m2 < m3.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Large lepton mixing from mild hierarchy",
+          "statementPreview": "The large PMNS mixing angles (theta12 33°, theta23 49°) follow from the mild neutrino mass hierarchy.*"
+        },
+        {
+          "type": "Theorem",
+          "id": "7.1.",
+          "name": "",
+          "statementPreview": "The Standard Model with Majorana neutrinos and type-I seesaw provides a consistency model.*"
+        }
+      ],
       "structuralPostulates": [],
-      "openGaps": [],
-      "assessmentVerdict": "",
-      "hasConsistencyModel": false,
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Absolute mass scale",
+          "description": "The specific values of m1, m2, m3 are not predicted — only the ordering and approximate scale. Computing the individual masses requires the precise Yukawa couplings from the winding geometry."
+        },
+        {
+          "number": 2,
+          "title": "Majorana phases",
+          "description": "The PMNS matrix for Majorana neutrinos contains two additional CP-violating phases (alpha1, alpha2) beyond the Dirac phase delta. These should be computable from the A5 breaking pattern of [Flavor Mix"
+        },
+        {
+          "number": 3,
+          "title": "Sterile neutrinos",
+          "description": "The heavy right-handed neutrinos (MR sim v) could be produced at colliders (unlike GUT-scale seesaw where MR sim 1014 GeV). Collider signatures should be analyzed."
+        },
+        {
+          "number": 4,
+          "title": "Leptogenesis connection",
+          "description": "Majorana neutrinos enable leptogenesis as a baryogenesis mechanism. The connection to the [Baryogenesis](/derivations/cosmology/baryogenesis) derivation should be made explicit."
+        },
+        {
+          "number": 5,
+          "title": "Dirac limit test",
+          "description": "If experiments conclusively establish Dirac neutrinos (absence of 0nubetabeta), this derivation would be falsified — the self-conjugacy argument would need revision."
+        }
+      ],
+      "assessmentVerdict": "The derivation identifies neutrinos as Majorana particles from the self-conjugacy of their winding configurations, provides a seesaw mechanism with electroweak-scale MR, and predicts normal mass ordering. The central prediction — Majorana nature — is testable by neutrinoless double beta decay experi",
+      "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
+          {
+            "target": "particles/three-generations",
+            "context": "Three Generations"
+          },
+          {
+            "target": "minimal-observer/coherence-dual-pairs",
+            "context": "Coherence-Dual Pairs"
+          },
+          {
+            "target": "gauge/electromagnetism",
+            "context": "Electromagnetism"
+          },
+          {
+            "target": "gauge/weak-interaction",
+            "context": "Weak Interaction"
+          },
+          {
+            "target": "particles/three-generations",
+            "context": "Theorem 4.2"
+          },
+          {
+            "target": "flavor/mixing-angles",
+            "context": "Proposition 5.1"
+          },
+          {
+            "target": "particles/three-generations",
+            "context": "generation–axis correspondence"
+          },
+          {
+            "target": "flavor/mixing-angles",
+            "context": "$A_5$ discrete symmetry"
+          },
           {
             "target": "flavor/mixing-angles",
             "context": "Flavor Mixing"
           },
           {
-            "target": "particles/three-generations",
-            "context": "Three Generations"
+            "target": "cosmology/baryogenesis",
+            "context": "Baryogenesis"
           }
         ],
         "incoming": []
@@ -6795,7 +7145,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": false,
+      "upgradeEligible": true,
       "upgradeBlockers": []
     },
     "particles/pauli-exclusion": {
@@ -7406,6 +7756,14 @@
           {
             "source": "particles/neutrino-masses",
             "context": "Three Generations"
+          },
+          {
+            "source": "particles/neutrino-masses",
+            "context": "Theorem 4.2"
+          },
+          {
+            "source": "particles/neutrino-masses",
+            "context": "generation–axis correspondence"
           }
         ]
       },
@@ -9172,6 +9530,10 @@
             "context": "Lorentz Invariance"
           },
           {
+            "source": "holography/causal-set-statistics",
+            "context": "Lorentz Invariance"
+          },
+          {
             "source": "minimal-observer/coherence-dual-pairs",
             "context": "Lorentz Invariance"
           },
@@ -9204,14 +9566,14 @@
       "id": "spacetime/singularity-resolution",
       "filePath": "site/src/content/derivations/spacetime/singularity-resolution.md",
       "title": "Singularity Resolution",
-      "status": "stub",
-      "rigorLevel": "informal",
+      "status": "draft",
+      "rigorLevel": "semi-formal",
       "group": "spacetime",
       "tags": [
         "spacetime",
         "quantum-gravity"
       ],
-      "summary": "Show that singularities are resolved by the discrete relational invariant network underlying continuum spacetime. The minimum resolution scale from the holographic bound prevents infinite curvature, replacing classical singularities with Planck-density coherence cores.",
+      "summary": "The discrete relational invariant network resolves all classical singularities: the Planck-scale resolution limit bounds curvature, replacing the Big Bang with a coherence bounce and black hole singularities with regular Planck-density cores.",
       "lastUpdated": "2026-03-11",
       "dependsOn": [
         "spacetime/einstein-equations",
@@ -9219,12 +9581,142 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [],
-      "steps": [],
-      "formalObjects": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The Singularity Problem"
+        },
+        {
+          "number": 2,
+          "title": "The Minimum Resolution Scale"
+        },
+        {
+          "number": 3,
+          "title": "Curvature Bound"
+        },
+        {
+          "number": 4,
+          "title": "Big Bang Resolution — The Coherence Bounce"
+        },
+        {
+          "number": 5,
+          "title": "Black Hole Interior Resolution"
+        },
+        {
+          "number": 6,
+          "title": "The Trans-Planckian Problem"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1.",
+          "name": "",
+          "statementPreview": "A **singularity** in general relativity is a geodesic incompleteness: a timelike or null geodesic that cannot be exte..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Classical singularities are inevitable",
+          "statementPreview": "In classical GR with physically reasonable matter (rho 0, rho + 3p/c2 0), the Penrose-Hawking theorems guarantee sing..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.3",
+          "name": "Singularities signal framework breakdown",
+          "statementPreview": "The singularity theorems apply to the continuum Einstein equations. The framework's discrete relational invariant net..."
+        },
+        {
+          "type": "Theorem",
+          "id": "2.1",
+          "name": "Planck-scale cutoff",
+          "statementPreview": "The coherence geometry has a minimum resolvable scale ellP = hbar G/c3, below which no observer loop can close.*"
+        },
+        {
+          "type": "Corollary",
+          "id": "2.2",
+          "name": "Minimum spacetime volume",
+          "statementPreview": "The smallest 4-volume that can contain a single network element is ellP4. The maximum density of events is rhomax = e..."
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "Bounded curvature",
+          "statementPreview": "The curvature of the coherence geometry is bounded:*"
+        },
+        {
+          "type": "Corollary",
+          "id": "3.2",
+          "name": "Maximum energy density",
+          "statementPreview": "The energy density is bounded by the Planck density:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "Cosmological singularity resolution",
+          "statementPreview": "The classical Big Bang singularity (a(t) 0, rho ) is replaced by a coherence bounce at the Planck density.*"
+        },
+        {
+          "type": "Corollary",
+          "id": "4.2",
+          "name": "Bounce conditions",
+          "statementPreview": "At the bounce point (H = 0, rho = rhoP):*"
+        },
+        {
+          "type": "Theorem",
+          "id": "5.1",
+          "name": "Black hole singularity resolution",
+          "statementPreview": "The interior of a Schwarzschild black hole reaches a maximum curvature of order ellP-2 and transitions to a regular P..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.2",
+          "name": "Penrose-Hawking theorem evasion",
+          "statementPreview": "The singularity theorems are evaded because the effective energy condition is violated near the Planck density.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Trans-Planckian resolution",
+          "statementPreview": "The discreteness of the relational invariant network automatically resolves the trans-Planckian problem for Hawking r..."
+        },
+        {
+          "type": "Theorem",
+          "id": "7.1.",
+          "name": "",
+          "statementPreview": "The Planck star model (Rovelli & Vidotto, 2014) provides a consistency model for the singularity resolution mechanism.*"
+        }
+      ],
       "structuralPostulates": [],
-      "openGaps": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Exact correction term",
+          "description": "The modified Friedmann equation uses (1 - rho/rhoP) as the simplest form consistent with a bounce at rhoP. The exact correction should be derivable from the coherence Lagrangian, which is itself a stu"
+        },
+        {
+          "number": 2,
+          "title": "Black hole end state",
+          "description": "Does a Planck-density core eventually re-expand (Planck star), remain static (remnant), or evaporate completely? The answer depends on the dynamics at rho sim rhoP and the interaction between Hawking "
+        },
+        {
+          "number": 3,
+          "title": "Observational signatures",
+          "description": "The bounce may produce observable signatures in the CMB (pre-bounce perturbations surviving through the bounce). The spectrum of these perturbations — scale-invariant, blue-tilted, or otherwise — depe"
+        },
+        {
+          "number": 4,
+          "title": "De Sitter core structure",
+          "description": "The regular interior likely approaches a de Sitter geometry (constant positive curvature) near rmin. Deriving this from the framework would connect singularity resolution to the cosmological constant."
+        },
+        {
+          "number": 5,
+          "title": "Information preservation",
+          "description": "Singularity resolution removes the classical information loss mechanism (information destroyed at the singularity). This should connect to the [Black Hole Information Paradox](/derivations/holography/"
+        }
+      ],
       "assessmentVerdict": "",
-      "hasConsistencyModel": false,
+      "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
           {
@@ -9234,6 +9726,22 @@
           {
             "target": "holography/area-scaling",
             "context": "Holographic Entropy Bound"
+          },
+          {
+            "target": "minimal-observer/structure",
+            "context": "Minimal Observer Structure"
+          },
+          {
+            "target": "holography/hawking-radiation",
+            "context": "Hawking Radiation"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
+          },
+          {
+            "target": "holography/information-paradox",
+            "context": "Black Hole Information Paradox"
           }
         ],
         "incoming": []
@@ -9244,7 +9752,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": false,
+      "upgradeEligible": true,
       "upgradeBlockers": []
     },
     "spacetime/speed-of-light": {
@@ -11406,6 +11914,10 @@
             "context": "Time as Phase Ordering"
           },
           {
+            "source": "holography/causal-set-statistics",
+            "context": "Time as Phase Ordering"
+          },
+          {
             "source": "quantum/born-rule",
             "context": "Time as Phase Ordering"
           },
@@ -13364,6 +13876,104 @@
       "fullRef": "holography/black-hole-entropy:Theorem 7.1."
     },
     {
+      "derivationId": "holography/causal-set-statistics",
+      "type": "Definition",
+      "id": "1.1.",
+      "name": "",
+      "fullRef": "holography/causal-set-statistics:Definition 1.1."
+    },
+    {
+      "derivationId": "holography/causal-set-statistics",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "Network is a causal set",
+      "fullRef": "holography/causal-set-statistics:Proposition 1.2"
+    },
+    {
+      "derivationId": "holography/causal-set-statistics",
+      "type": "Proposition",
+      "id": "1.3",
+      "name": "Poisson sprinkling at Planck density",
+      "fullRef": "holography/causal-set-statistics:Proposition 1.3"
+    },
+    {
+      "derivationId": "holography/causal-set-statistics",
+      "type": "Definition",
+      "id": "2.1.",
+      "name": "",
+      "fullRef": "holography/causal-set-statistics:Definition 2.1."
+    },
+    {
+      "derivationId": "holography/causal-set-statistics",
+      "type": "Proposition",
+      "id": "2.2",
+      "name": "Geodesic variance",
+      "fullRef": "holography/causal-set-statistics:Proposition 2.2"
+    },
+    {
+      "derivationId": "holography/causal-set-statistics",
+      "type": "Theorem",
+      "id": "2.3",
+      "name": "Holographic bound fixes $\\alpha_H = 1/4$",
+      "fullRef": "holography/causal-set-statistics:Theorem 2.3"
+    },
+    {
+      "derivationId": "holography/causal-set-statistics",
+      "type": "Corollary",
+      "id": "2.4",
+      "name": "Strain power spectral density",
+      "fullRef": "holography/causal-set-statistics:Corollary 2.4"
+    },
+    {
+      "derivationId": "holography/causal-set-statistics",
+      "type": "Definition",
+      "id": "3.1.",
+      "name": "",
+      "fullRef": "holography/causal-set-statistics:Definition 3.1."
+    },
+    {
+      "derivationId": "holography/causal-set-statistics",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "Poisson density statistics",
+      "fullRef": "holography/causal-set-statistics:Proposition 3.2"
+    },
+    {
+      "derivationId": "holography/causal-set-statistics",
+      "type": "Definition",
+      "id": "4.1.",
+      "name": "",
+      "fullRef": "holography/causal-set-statistics:Definition 4.1."
+    },
+    {
+      "derivationId": "holography/causal-set-statistics",
+      "type": "Theorem",
+      "id": "4.2",
+      "name": "Quantum Jeans scale",
+      "fullRef": "holography/causal-set-statistics:Theorem 4.2"
+    },
+    {
+      "derivationId": "holography/causal-set-statistics",
+      "type": "Theorem",
+      "id": "5.1",
+      "name": "Gaussian cutoff",
+      "fullRef": "holography/causal-set-statistics:Theorem 5.1"
+    },
+    {
+      "derivationId": "holography/causal-set-statistics",
+      "type": "Theorem",
+      "id": "6.1",
+      "name": "Cross-prediction",
+      "fullRef": "holography/causal-set-statistics:Theorem 6.1"
+    },
+    {
+      "derivationId": "holography/causal-set-statistics",
+      "type": "Theorem",
+      "id": "7.1.",
+      "name": "",
+      "fullRef": "holography/causal-set-statistics:Theorem 7.1."
+    },
+    {
       "derivationId": "holography/hawking-radiation",
       "type": "Definition",
       "id": "1.1.",
@@ -14181,6 +14791,83 @@
       "id": "7.1.",
       "name": "",
       "fullRef": "particles/mass-hierarchy:Theorem 7.1."
+    },
+    {
+      "derivationId": "particles/neutrino-masses",
+      "type": "Definition",
+      "id": "1.1.",
+      "name": "",
+      "fullRef": "particles/neutrino-masses:Definition 1.1."
+    },
+    {
+      "derivationId": "particles/neutrino-masses",
+      "type": "Definition",
+      "id": "1.2.",
+      "name": "",
+      "fullRef": "particles/neutrino-masses:Definition 1.2."
+    },
+    {
+      "derivationId": "particles/neutrino-masses",
+      "type": "Theorem",
+      "id": "1.3",
+      "name": "Neutrinos are self-conjugate",
+      "fullRef": "particles/neutrino-masses:Theorem 1.3"
+    },
+    {
+      "derivationId": "particles/neutrino-masses",
+      "type": "Corollary",
+      "id": "1.4",
+      "name": "Lepton number violation",
+      "fullRef": "particles/neutrino-masses:Corollary 1.4"
+    },
+    {
+      "derivationId": "particles/neutrino-masses",
+      "type": "Definition",
+      "id": "2.1.",
+      "name": "",
+      "fullRef": "particles/neutrino-masses:Definition 2.1."
+    },
+    {
+      "derivationId": "particles/neutrino-masses",
+      "type": "Theorem",
+      "id": "2.2",
+      "name": "Seesaw mass formula",
+      "fullRef": "particles/neutrino-masses:Theorem 2.2"
+    },
+    {
+      "derivationId": "particles/neutrino-masses",
+      "type": "Theorem",
+      "id": "3.1",
+      "name": "Heavy Majorana mass from crystallization",
+      "fullRef": "particles/neutrino-masses:Theorem 3.1"
+    },
+    {
+      "derivationId": "particles/neutrino-masses",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Light neutrino masses",
+      "fullRef": "particles/neutrino-masses:Proposition 4.1"
+    },
+    {
+      "derivationId": "particles/neutrino-masses",
+      "type": "Theorem",
+      "id": "5.1",
+      "name": "Normal mass ordering",
+      "fullRef": "particles/neutrino-masses:Theorem 5.1"
+    },
+    {
+      "derivationId": "particles/neutrino-masses",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "Large lepton mixing from mild hierarchy",
+      "fullRef": "particles/neutrino-masses:Proposition 6.1"
+    },
+    {
+      "derivationId": "particles/neutrino-masses",
+      "type": "Theorem",
+      "id": "7.1.",
+      "name": "",
+      "fullRef": "particles/neutrino-masses:Theorem 7.1."
     },
     {
       "derivationId": "particles/pauli-exclusion",
@@ -15252,6 +15939,97 @@
       "id": "9.1.",
       "name": "",
       "fullRef": "spacetime/lorentz-invariance:Theorem 9.1."
+    },
+    {
+      "derivationId": "spacetime/singularity-resolution",
+      "type": "Definition",
+      "id": "1.1.",
+      "name": "",
+      "fullRef": "spacetime/singularity-resolution:Definition 1.1."
+    },
+    {
+      "derivationId": "spacetime/singularity-resolution",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "Classical singularities are inevitable",
+      "fullRef": "spacetime/singularity-resolution:Proposition 1.2"
+    },
+    {
+      "derivationId": "spacetime/singularity-resolution",
+      "type": "Proposition",
+      "id": "1.3",
+      "name": "Singularities signal framework breakdown",
+      "fullRef": "spacetime/singularity-resolution:Proposition 1.3"
+    },
+    {
+      "derivationId": "spacetime/singularity-resolution",
+      "type": "Theorem",
+      "id": "2.1",
+      "name": "Planck-scale cutoff",
+      "fullRef": "spacetime/singularity-resolution:Theorem 2.1"
+    },
+    {
+      "derivationId": "spacetime/singularity-resolution",
+      "type": "Corollary",
+      "id": "2.2",
+      "name": "Minimum spacetime volume",
+      "fullRef": "spacetime/singularity-resolution:Corollary 2.2"
+    },
+    {
+      "derivationId": "spacetime/singularity-resolution",
+      "type": "Theorem",
+      "id": "3.1",
+      "name": "Bounded curvature",
+      "fullRef": "spacetime/singularity-resolution:Theorem 3.1"
+    },
+    {
+      "derivationId": "spacetime/singularity-resolution",
+      "type": "Corollary",
+      "id": "3.2",
+      "name": "Maximum energy density",
+      "fullRef": "spacetime/singularity-resolution:Corollary 3.2"
+    },
+    {
+      "derivationId": "spacetime/singularity-resolution",
+      "type": "Theorem",
+      "id": "4.1",
+      "name": "Cosmological singularity resolution",
+      "fullRef": "spacetime/singularity-resolution:Theorem 4.1"
+    },
+    {
+      "derivationId": "spacetime/singularity-resolution",
+      "type": "Corollary",
+      "id": "4.2",
+      "name": "Bounce conditions",
+      "fullRef": "spacetime/singularity-resolution:Corollary 4.2"
+    },
+    {
+      "derivationId": "spacetime/singularity-resolution",
+      "type": "Theorem",
+      "id": "5.1",
+      "name": "Black hole singularity resolution",
+      "fullRef": "spacetime/singularity-resolution:Theorem 5.1"
+    },
+    {
+      "derivationId": "spacetime/singularity-resolution",
+      "type": "Proposition",
+      "id": "5.2",
+      "name": "Penrose-Hawking theorem evasion",
+      "fullRef": "spacetime/singularity-resolution:Proposition 5.2"
+    },
+    {
+      "derivationId": "spacetime/singularity-resolution",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "Trans-Planckian resolution",
+      "fullRef": "spacetime/singularity-resolution:Proposition 6.1"
+    },
+    {
+      "derivationId": "spacetime/singularity-resolution",
+      "type": "Theorem",
+      "id": "7.1.",
+      "name": "",
+      "fullRef": "spacetime/singularity-resolution:Theorem 7.1."
     },
     {
       "derivationId": "spacetime/speed-of-light",
@@ -16747,6 +17525,41 @@
       "description": "Extremal black holes have TH = 0 but S > 0. The framework should explain this: the horizon still supports minimal observer loops (nonzero entropy) but thermal radiation is suppressed."
     },
     {
+      "derivationId": "holography/causal-set-statistics",
+      "derivationStatus": "draft",
+      "number": 1,
+      "title": "Rigorous geodesic estimator",
+      "description": "The geodesic variance calculation (Proposition 2.2) uses a simplified cell-counting argument. A rigorous derivation should use the Myrheim-Meyer dimension estimator or the Brightwell-Gregory longest-c"
+    },
+    {
+      "derivationId": "holography/causal-set-statistics",
+      "derivationStatus": "draft",
+      "number": 2,
+      "title": "Non-flat corrections",
+      "description": "All calculations assume flat (Minkowski) background. The corrections from curvature — particularly near black holes or in the early universe — should modify both alphaH and the density fluctuation spe"
+    },
+    {
+      "derivationId": "holography/causal-set-statistics",
+      "derivationStatus": "draft",
+      "number": 3,
+      "title": "Quantitative cross-prediction",
+      "description": "The qualitative link between holographic noise and dark matter granularity (Theorem 6.1) should be made quantitative: given alphaH, what is the predicted kJ? This requires computing how the sprinkling"
+    },
+    {
+      "derivationId": "holography/causal-set-statistics",
+      "derivationStatus": "draft",
+      "number": 4,
+      "title": "Deriving Poisson from axioms",
+      "description": "Proposition 1.3 assumes Poisson sprinkling as the unique Lorentz-invariant distribution. Can this be derived from the three axioms, or is it an additional input?"
+    },
+    {
+      "derivationId": "holography/causal-set-statistics",
+      "derivationStatus": "draft",
+      "number": 5,
+      "title": "Continuum limit",
+      "description": "The identification of the discrete relational invariant network with a Poisson causal set relies on a continuum limit that has not been rigorously constructed from the axioms."
+    },
+    {
       "derivationId": "holography/hawking-radiation",
       "derivationStatus": "rigorous",
       "number": 1,
@@ -16969,6 +17782,41 @@
       "number": 4,
       "title": "Cosmological constant",
       "description": "The vacuum energy (cosmological constant) is anomalously small (sim 10-122 in Planck units). Whether the crystallization framework can explain this extreme hierarchy is an open challenge."
+    },
+    {
+      "derivationId": "particles/neutrino-masses",
+      "derivationStatus": "draft",
+      "number": 1,
+      "title": "Absolute mass scale",
+      "description": "The specific values of m1, m2, m3 are not predicted — only the ordering and approximate scale. Computing the individual masses requires the precise Yukawa couplings from the winding geometry."
+    },
+    {
+      "derivationId": "particles/neutrino-masses",
+      "derivationStatus": "draft",
+      "number": 2,
+      "title": "Majorana phases",
+      "description": "The PMNS matrix for Majorana neutrinos contains two additional CP-violating phases (alpha1, alpha2) beyond the Dirac phase delta. These should be computable from the A5 breaking pattern of [Flavor Mix"
+    },
+    {
+      "derivationId": "particles/neutrino-masses",
+      "derivationStatus": "draft",
+      "number": 3,
+      "title": "Sterile neutrinos",
+      "description": "The heavy right-handed neutrinos (MR sim v) could be produced at colliders (unlike GUT-scale seesaw where MR sim 1014 GeV). Collider signatures should be analyzed."
+    },
+    {
+      "derivationId": "particles/neutrino-masses",
+      "derivationStatus": "draft",
+      "number": 4,
+      "title": "Leptogenesis connection",
+      "description": "Majorana neutrinos enable leptogenesis as a baryogenesis mechanism. The connection to the [Baryogenesis](/derivations/cosmology/baryogenesis) derivation should be made explicit."
+    },
+    {
+      "derivationId": "particles/neutrino-masses",
+      "derivationStatus": "draft",
+      "number": 5,
+      "title": "Dirac limit test",
+      "description": "If experiments conclusively establish Dirac neutrinos (absence of 0nubetabeta), this derivation would be falsified — the self-conjugacy argument would need revision."
     },
     {
       "derivationId": "particles/pauli-exclusion",
@@ -17237,6 +18085,41 @@
       "description": "The framework predicts exact Lorentz invariance at the level of the coherence geometry. Any observed Lorentz violation would require the coherence geometry to deviate from exact Minkowski form — a sha"
     },
     {
+      "derivationId": "spacetime/singularity-resolution",
+      "derivationStatus": "draft",
+      "number": 1,
+      "title": "Exact correction term",
+      "description": "The modified Friedmann equation uses (1 - rho/rhoP) as the simplest form consistent with a bounce at rhoP. The exact correction should be derivable from the coherence Lagrangian, which is itself a stu"
+    },
+    {
+      "derivationId": "spacetime/singularity-resolution",
+      "derivationStatus": "draft",
+      "number": 2,
+      "title": "Black hole end state",
+      "description": "Does a Planck-density core eventually re-expand (Planck star), remain static (remnant), or evaporate completely? The answer depends on the dynamics at rho sim rhoP and the interaction between Hawking "
+    },
+    {
+      "derivationId": "spacetime/singularity-resolution",
+      "derivationStatus": "draft",
+      "number": 3,
+      "title": "Observational signatures",
+      "description": "The bounce may produce observable signatures in the CMB (pre-bounce perturbations surviving through the bounce). The spectrum of these perturbations — scale-invariant, blue-tilted, or otherwise — depe"
+    },
+    {
+      "derivationId": "spacetime/singularity-resolution",
+      "derivationStatus": "draft",
+      "number": 4,
+      "title": "De Sitter core structure",
+      "description": "The regular interior likely approaches a de Sitter geometry (constant positive curvature) near rmin. Deriving this from the framework would connect singularity resolution to the cosmological constant."
+    },
+    {
+      "derivationId": "spacetime/singularity-resolution",
+      "derivationStatus": "draft",
+      "number": 5,
+      "title": "Information preservation",
+      "description": "Singularity resolution removes the classical information loss mechanism (information destroyed at the singularity). This should connect to the [Black Hole Information Paradox](/derivations/holography/"
+    },
+    {
       "derivationId": "spacetime/speed-of-light",
       "derivationStatus": "rigorous",
       "number": 1,
@@ -17469,10 +18352,28 @@
         "formalObjectCount": 9
       },
       {
+        "id": "holography/causal-set-statistics",
+        "currentStatus": "draft",
+        "gapCount": 5,
+        "formalObjectCount": 14
+      },
+      {
+        "id": "particles/neutrino-masses",
+        "currentStatus": "draft",
+        "gapCount": 5,
+        "formalObjectCount": 11
+      },
+      {
         "id": "quantum/entanglement",
         "currentStatus": "draft",
         "gapCount": 5,
         "formalObjectCount": 15
+      },
+      {
+        "id": "spacetime/singularity-resolution",
+        "currentStatus": "draft",
+        "gapCount": 5,
+        "formalObjectCount": 13
       }
     ],
     "blocked": []
