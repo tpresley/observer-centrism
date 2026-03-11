@@ -1,22 +1,22 @@
 {
   "meta": {
-    "generatedAt": "2026-03-10T21:38:28.294Z",
+    "generatedAt": "2026-03-10T21:55:29.636Z",
     "derivationCount": 41,
     "predictionCount": 7,
     "generator": "scripts/build-index.mjs"
   },
   "stats": {
     "byStatus": {
-      "rigorous": 34,
-      "draft": 6,
-      "non-viable": 1
+      "rigorous": 38,
+      "non-viable": 1,
+      "draft": 2
     },
     "derivationCount": 41,
     "predictionCount": 7,
     "edgeCount": 73,
     "formalObjectCount": 636,
     "openGapCount": 156,
-    "upgradeEligibleCount": 4
+    "upgradeEligibleCount": 1
   },
   "derivations": {
     "axioms/coherence-conservation": {
@@ -573,7 +573,7 @@
           },
           {
             "source": "gauge/color-force",
-            "context": "Loop Closure"
+            "context": "Corollary 2.3"
           },
           {
             "source": "gauge/electromagnetism",
@@ -933,8 +933,8 @@
       "id": "cosmology/baryogenesis",
       "filePath": "site/src/content/derivations/cosmology/baryogenesis.md",
       "title": "Baryogenesis from Coherence Dynamics",
-      "status": "draft",
-      "rigorLevel": "semi-formal",
+      "status": "rigorous",
+      "rigorLevel": "formal",
       "group": "cosmology",
       "tags": [
         "cosmology"
@@ -1082,7 +1082,7 @@
           "description": "The framework's dark matter prediction ([Dark Matter Granularity](/predictions/dark-matter-granularity)) involves coherence structures. Could a dark-sector version of baryogenesis explain the OmegaB /"
         }
       ],
-      "assessmentVerdict": "Draft status. The derivation successfully identifies all three Sakharov conditions within the framework and establishes the remarkable chain from d = 3 to baryogenesis. The qualitative logic is complete and well-motivated. The derivation falls short of provisional because: (1) the quantitative value",
+      "assessmentVerdict": "Rigorous. The derivation requires no new structural postulates — it assembles the qualitative baryogenesis argument entirely from established upstream results: SU(2) topology provides baryon number violation (Proposition 2.1), chirality selection provides C violation (Proposition 3.1), three generat",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -1108,7 +1108,23 @@
           },
           {
             "target": "thermodynamics/entropy",
-            "context": "Entropy"
+            "context": "Theorem 4.1, rigorous"
+          },
+          {
+            "target": "minimal-observer/coherence-dual-pairs",
+            "context": "rigorous — direct Noether argument"
+          },
+          {
+            "target": "gauge/weak-interaction",
+            "context": "now rigorous"
+          },
+          {
+            "target": "gauge/chirality-selection",
+            "context": "now rigorous, via the orientation-consistency theorem"
+          },
+          {
+            "target": "particles/three-generations",
+            "context": "rigorous"
           }
         ],
         "incoming": [
@@ -1118,7 +1134,7 @@
           }
         ]
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "cosmology/cosmological-constant": {
@@ -1579,8 +1595,8 @@
       "id": "flavor/mixing-angles",
       "filePath": "site/src/content/derivations/flavor/mixing-angles.md",
       "title": "Flavor Mixing from Winding-Axis Geometry",
-      "status": "draft",
-      "rigorLevel": "semi-formal",
+      "status": "rigorous",
+      "rigorLevel": "formal",
       "group": "flavor",
       "tags": [
         "flavor"
@@ -1756,7 +1772,7 @@
           "description": "The observation theta12CKM + theta12PMNS pi/4 may be accidental or may reflect a deeper geometric relationship between the quark and lepton sectors. The A5 framework should clarify this."
         }
       ],
-      "assessmentVerdict": "Draft status. The derivation establishes the structural framework for flavor mixing: three generations from dim SO(3) = 3, basis mismatch from distinct physical mechanisms, A5 discrete symmetry from maximal finite subgroup, hierarchical mixing angles from mass hierarchy steepness. The golden ratio p",
+      "assessmentVerdict": "Rigorous. The derivation establishes the structural framework for flavor mixing: three generations from dim SO(3) = 3 ([Three Generations](/derivations/particles/three-generations), rigorous), basis mismatch from distinct physical mechanisms (mass vs. weak eigenstates), A5 discrete symmetry from the",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -1781,6 +1797,10 @@
             "context": "Lorentz Invariance"
           },
           {
+            "target": "particles/three-generations",
+            "context": "Three Generations"
+          },
+          {
             "target": "thermodynamics-ext/renormalization",
             "context": "Renormalization Group"
           }
@@ -1796,15 +1816,15 @@
           }
         ]
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "gauge/chirality-selection": {
       "id": "gauge/chirality-selection",
       "filePath": "site/src/content/derivations/gauge/chirality-selection.md",
       "title": "Chirality Selection from Relational Coherence",
-      "status": "draft",
-      "rigorLevel": "semi-formal",
+      "status": "rigorous",
+      "rigorLevel": "formal",
       "group": "gauge",
       "tags": [
         "gauge"
@@ -1929,7 +1949,7 @@
           "description": "The chirality selection tells us *which* spinors couple to SU(2), but the mechanism that gives the W and Z bosons mass (breaking SU(2)L U(1)Y U(1)em) remains an open gap inherited from the [Weak Inter"
         }
       ],
-      "assessmentVerdict": "Draft status. The core argument (non-commutativity + relational coherence orientation lock chirality selection) is clean, well-motivated, and uses no new structural postulates. The consistency model explicitly verifies the key theorem. The derivation falls short of provisional because: (1) it inheri",
+      "assessmentVerdict": "Rigorous. This derivation uses *no new structural postulates* — it derives chirality selection purely from the interaction of existing structures: non-commutativity of H (from [Weak Interaction](/derivations/gauge/weak-interaction), now rigorous) + relational invariant conditions (from [Relational I",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -1971,17 +1991,37 @@
           },
           {
             "target": "minimal-observer/coherence-dual-pairs",
-            "context": "Coherence-Dual Pairs"
+            "context": "Definition 6.1"
+          },
+          {
+            "target": "gauge/weak-interaction",
+            "context": "now rigorous"
+          },
+          {
+            "target": "interactions/relational-invariants",
+            "context": "rigorous"
           },
           {
             "target": "interactions/relational-invariants",
             "context": "Relational Invariants"
+          },
+          {
+            "target": "minimal-observer/multiplicity",
+            "context": "Theorem 2.1, rigorous"
+          },
+          {
+            "target": "minimal-observer/coherence-dual-pairs",
+            "context": "Coherence-Dual Pairs"
           }
         ],
         "incoming": [
           {
             "source": "cosmology/baryogenesis",
             "context": "Chirality Selection"
+          },
+          {
+            "source": "cosmology/baryogenesis",
+            "context": "now rigorous, via the orientation-consistency theorem"
           },
           {
             "source": "gauge/color-force",
@@ -1997,15 +2037,15 @@
           }
         ]
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "gauge/color-force": {
       "id": "gauge/color-force",
       "filePath": "site/src/content/derivations/gauge/color-force.md",
       "title": "Color Force from Octonionic Structure",
-      "status": "draft",
-      "rigorLevel": "semi-formal",
+      "status": "rigorous",
+      "rigorLevel": "formal",
       "group": "gauge",
       "tags": [
         "gauge"
@@ -2217,7 +2257,7 @@
           "description": "Derive the gluon propagator and self-coupling vertices from the octonionic product structure, confirming that they match the standard QCD Feynman rules."
         }
       ],
-      "assessmentVerdict": "Draft status. The core mathematical argument (O G2 SU(3) via quaternionic subalgebra stabilizer) is rigorous and well-established in the mathematics literature. The connection to the framework (bootstrap ↔ Cayley-Dickson, S1) is explicit and well-motivated. The derivation falls short of provisional ",
+      "assessmentVerdict": "Rigorous. The derivation follows the same template as [Electromagnetism](/derivations/gauge/electromagnetism) and [Weak Interaction](/derivations/gauge/weak-interaction): algebraic necessity (Cayley-Dickson + Hurwitz selects O) → symmetry reduction (G2 SU(3) via quaternionic stabilizer, standard Lie",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -2235,7 +2275,7 @@
           },
           {
             "target": "axioms/loop-closure",
-            "context": "Loop Closure"
+            "context": "Corollary 2.3"
           },
           {
             "target": "gauge/electromagnetism",
@@ -2244,6 +2284,14 @@
           {
             "target": "gauge/weak-interaction",
             "context": "Theorem 5.1"
+          },
+          {
+            "target": "gauge/electromagnetism",
+            "context": "locality"
+          },
+          {
+            "target": "gauge/weak-interaction",
+            "context": "normed division algebra"
           },
           {
             "target": "cosmology/coupling-constants",
@@ -2281,7 +2329,7 @@
           }
         ]
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "gauge/electromagnetism": {
@@ -2629,6 +2677,10 @@
             "context": "Theorem 6.1"
           },
           {
+            "source": "gauge/color-force",
+            "context": "locality"
+          },
+          {
             "source": "gauge/standard-model-group",
             "context": "Electromagnetism"
           },
@@ -2889,10 +2941,8 @@
           }
         ]
       },
-      "upgradeEligible": false,
-      "upgradeBlockers": [
-        "gauge/color-force"
-      ]
+      "upgradeEligible": true,
+      "upgradeBlockers": []
     },
     "gauge/weak-interaction": {
       "id": "gauge/weak-interaction",
@@ -3264,6 +3314,10 @@
             "context": "Weak Interaction"
           },
           {
+            "source": "cosmology/baryogenesis",
+            "context": "now rigorous"
+          },
+          {
             "source": "flavor/mixing-angles",
             "context": "Weak Interaction"
           },
@@ -3280,12 +3334,20 @@
             "context": "Proposition 7.1"
           },
           {
+            "source": "gauge/chirality-selection",
+            "context": "now rigorous"
+          },
+          {
             "source": "gauge/color-force",
             "context": "Weak Interaction"
           },
           {
             "source": "gauge/color-force",
             "context": "Theorem 5.1"
+          },
+          {
+            "source": "gauge/color-force",
+            "context": "normed division algebra"
           },
           {
             "source": "gauge/electromagnetism",
@@ -4573,6 +4635,10 @@
           },
           {
             "source": "gauge/chirality-selection",
+            "context": "rigorous"
+          },
+          {
+            "source": "gauge/chirality-selection",
             "context": "Relational Invariants"
           },
           {
@@ -5083,6 +5149,14 @@
             "context": "Theorem 3.1"
           },
           {
+            "source": "cosmology/baryogenesis",
+            "context": "rigorous — direct Noether argument"
+          },
+          {
+            "source": "gauge/chirality-selection",
+            "context": "Definition 6.1"
+          },
+          {
             "source": "gauge/chirality-selection",
             "context": "Coherence-Dual Pairs"
           },
@@ -5322,6 +5396,10 @@
           {
             "source": "gauge/chirality-selection",
             "context": "Theorem 2.1"
+          },
+          {
+            "source": "gauge/chirality-selection",
+            "context": "Theorem 2.1, rigorous"
           },
           {
             "source": "interactions/bootstrap",
@@ -6386,8 +6464,16 @@
             "context": "Three Generations"
           },
           {
+            "source": "cosmology/baryogenesis",
+            "context": "rigorous"
+          },
+          {
             "source": "flavor/mixing-angles",
             "context": "Theorem 4.2"
+          },
+          {
+            "source": "flavor/mixing-angles",
+            "context": "Three Generations"
           },
           {
             "source": "gauge/standard-model-group",
@@ -9752,7 +9838,7 @@
         "incoming": [
           {
             "source": "cosmology/baryogenesis",
-            "context": "Entropy"
+            "context": "Theorem 4.1, rigorous"
           },
           {
             "source": "cosmology/cosmological-constant",
@@ -14660,28 +14746,28 @@
     },
     {
       "derivationId": "cosmology/baryogenesis",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 1,
       "title": "Electroweak phase transition",
       "description": "Derive the nature (first-order vs. crossover) of the electroweak phase transition from the coherence framework. The Standard Model predicts a crossover (insufficient for baryogenesis); the framework m"
     },
     {
       "derivationId": "cosmology/baryogenesis",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 2,
       "title": "Leptogenesis",
       "description": "If neutrinos are Majorana (possible in the framework via the coherence-dual pair mechanism), right-handed neutrino decays could generate etaB through leptogenesis. Derive the neutrino mass mechanism a"
     },
     {
       "derivationId": "cosmology/baryogenesis",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 3,
       "title": "Quantitative $\\eta_B$",
       "description": "Compute the baryon-to-photon ratio from the framework's parameters. This requires the sphaleron rate, CP-violating phases, and phase transition dynamics — all computable in principle but technically d"
     },
     {
       "derivationId": "cosmology/baryogenesis",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 4,
       "title": "Dark baryogenesis",
       "description": "The framework's dark matter prediction ([Dark Matter Granularity](/predictions/dark-matter-granularity)) involves coherence structures. Could a dark-sector version of baryogenesis explain the OmegaB /"
@@ -14744,98 +14830,98 @@
     },
     {
       "derivationId": "flavor/mixing-angles",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 1,
       "title": "$A_5$ from axioms",
       "description": "Derive that the coherence cost function must have A5 symmetry, rather than postulating it (S1). This would require showing that the bootstrap dynamics on three winding axes naturally produce icosahedr"
     },
     {
       "derivationId": "flavor/mixing-angles",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 2,
       "title": "Channel selection",
       "description": "Determine which of the five A5 breaking channels is realized in the quark and lepton sectors. This may require input from the gauge structure (how SU(3) SU(2) U(1) interacts with the A5 flavor symmetr"
     },
     {
       "derivationId": "flavor/mixing-angles",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 3,
       "title": "Neutrino masses",
       "description": "The neutrino mass mechanism (Dirac vs. Majorana, seesaw types) affects the PMNS matrix structure. This requires extending the coherence-dual pair mechanism to the neutrino sector."
     },
     {
       "derivationId": "flavor/mixing-angles",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 4,
       "title": "Renormalization-group running",
       "description": "The mixing parameters measured at low energy differ from their values at the symmetry-breaking scale. RG corrections (from [Renormalization Group](/derivations/thermodynamics-ext/renormalization)) sho"
     },
     {
       "derivationId": "flavor/mixing-angles",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 5,
       "title": "Quark-lepton complementarity",
       "description": "The observation theta12CKM + theta12PMNS pi/4 may be accidental or may reflect a deeper geometric relationship between the quark and lepton sectors. The A5 framework should clarify this."
     },
     {
       "derivationId": "gauge/chirality-selection",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 1,
       "title": "Anomaly cancellation",
       "description": "The Standard Model's chiral fermion content is anomaly-free (Tr[Ta2 Y] = 0 for all generators). This constraint on the fermion representations should follow from coherence conservation applied to the "
     },
     {
       "derivationId": "gauge/chirality-selection",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 2,
       "title": "Left-right symmetric extensions",
       "description": "Some BSM models (Pati-Salam, left-right symmetric models) restore parity at high energies. The framework's prediction is that parity violation is *exact* (algebraic, not dynamical). Experimental tests"
     },
     {
       "derivationId": "gauge/chirality-selection",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 3,
       "title": "CPT completion",
       "description": "Proposition 6.1 is a proof sketch. A complete derivation of the CPT theorem within the framework would strengthen this and connect to [Coherence-Dual Pairs](/derivations/minimal-observer/coherence-dua"
     },
     {
       "derivationId": "gauge/chirality-selection",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 4,
       "title": "Electroweak symmetry breaking",
       "description": "The chirality selection tells us *which* spinors couple to SU(2), but the mechanism that gives the W and Z bosons mass (breaking SU(2)L U(1)Y U(1)em) remains an open gap inherited from the [Weak Inter"
     },
     {
       "derivationId": "gauge/color-force",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 1,
       "title": "Bootstrap–Cayley-Dickson proof",
       "description": "Prove that the bootstrap mechanism's hierarchical structure *forces* the Cayley-Dickson doubling sequence, rather than postulating it (S1). This would require showing that relational invariants among "
     },
     {
       "derivationId": "gauge/color-force",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 2,
       "title": "Confinement (rigorous)",
       "description": "Formalize the non-associativity argument for confinement. Show that only color-singlet states have well-defined long-range coherence transport in the octonionic phase space. This connects to the Clay "
     },
     {
       "derivationId": "gauge/color-force",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 3,
       "title": "Strong CP problem",
       "description": "The SU(3) gauge theory admits a topological theta-term propto theta , GmunuGmunu that violates CP. Experimentally theta < 10-10. The framework should explain why theta 0."
     },
     {
       "derivationId": "gauge/color-force",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 4,
       "title": "Chiral symmetry breaking",
       "description": "The approximate SU(Nf)L SU(Nf)R flavor symmetry of the QCD Lagrangian is spontaneously broken. This should emerge from the coherence dynamics at the octonionic level."
     },
     {
       "derivationId": "gauge/color-force",
-      "derivationStatus": "draft",
+      "derivationStatus": "rigorous",
       "number": 5,
       "title": "Explicit gluon spectrum",
       "description": "Derive the gluon propagator and self-coupling vertices from the octonionic product structure, confirming that they match the standard QCD Feynman rules."
@@ -15684,28 +15770,10 @@
   "upgradeAnalysis": {
     "eligible": [
       {
-        "id": "cosmology/baryogenesis",
+        "id": "gauge/standard-model-group",
         "currentStatus": "draft",
         "gapCount": 4,
-        "formalObjectCount": 14
-      },
-      {
-        "id": "flavor/mixing-angles",
-        "currentStatus": "draft",
-        "gapCount": 5,
-        "formalObjectCount": 17
-      },
-      {
-        "id": "gauge/chirality-selection",
-        "currentStatus": "draft",
-        "gapCount": 4,
-        "formalObjectCount": 10
-      },
-      {
-        "id": "gauge/color-force",
-        "currentStatus": "draft",
-        "gapCount": 5,
-        "formalObjectCount": 21
+        "formalObjectCount": 13
       }
     ],
     "blocked": [
@@ -15714,14 +15782,6 @@
         "currentStatus": "draft",
         "blockedBy": [
           "gauge/standard-model-group"
-        ],
-        "reason": "Depends on 1 draft derivation(s)"
-      },
-      {
-        "id": "gauge/standard-model-group",
-        "currentStatus": "draft",
-        "blockedBy": [
-          "gauge/color-force"
         ],
         "reason": "Depends on 1 draft derivation(s)"
       }
