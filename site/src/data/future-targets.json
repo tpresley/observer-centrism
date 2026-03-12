@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "description": "Tracking artifact for plausible postulate promotions, gap closures, and new derivation targets. Updated 2026-03-12.",
+    "description": "Tracking artifact for plausible postulate promotions, gap closures, and new derivation targets. Updated 2026-03-12. S2 promoted to Theorem 0.1.",
     "instructions": "Each item has a difficulty rating (LOW/MODERATE/HARD/BLOCKED), a category, and enough context for a new session to pick up the work."
   },
 
@@ -12,6 +12,8 @@
       "derivation": "spacetime/lorentz-invariance",
       "difficulty": "LOW",
       "tier": 1,
+      "status": "COMPLETED — promoted to Theorem 0.1 in lorentz-invariance.md, structural-postulates.json updated with derivedFrom",
+      "completedDate": "2026-03-12",
       "rationale": "The postulate's own justification already states the argument: 'Follows from the axioms' location-independence: coherence conservation and observer definitions do not reference absolute position, so the derived geometry inherits translation symmetry.' If the axioms genuinely contain no absolute position parameter, homogeneity is a theorem, not an assumption.",
       "strategy": "Write a short formal proof (or a new section within the existing Lorentz Invariance derivation) showing: (1) Axiom 1 (coherence conservation) is stated without reference to spacetime position — the σ-algebra and subadditivity are position-independent. (2) Axiom 2 (observer definition) specifies (Σ, I, B) without embedding in a background spacetime. (3) Axiom 3 (loop closure) specifies U(1) dynamics with period T, without position dependence. (4) Therefore, the coherence measure C and the derived metric g are invariant under translations x^μ → x^μ + a^μ. This is essentially a symmetry inheritance argument.",
       "dependencies": ["axioms/coherence-conservation", "axioms/observer-definition", "axioms/loop-closure"],
@@ -84,6 +86,8 @@
       "id": "cpt-theorem",
       "title": "CPT Theorem from Coherence-Dual Pairs",
       "difficulty": "MODERATE",
+      "status": "COMPLETED — created particles/cpt-theorem.md (rigorous), addresses coherence-dual-pairs Gap 1",
+      "completedDate": "2026-03-12",
       "rationale": "Referenced as open gaps in coherence-dual-pairs (Gap 1) and chirality-selection (Gap 3, 'proof sketch'). The ingredients exist: coherence-dual pairs give C and P separately (particle ↔ antiparticle), Lorentz invariance gives the spacetime structure, and time reversal comes from loop closure phase reversal.",
       "strategy": "Formalize Proposition 6.1 of chirality-selection into a standalone derivation: (1) C from coherence-dual pairs (rigorous). (2) P from spatial reflection of the winding structure. (3) T from loop closure phase conjugation (φ_t → φ_{-t}). (4) Show CPT is an exact symmetry of the coherence Lagrangian. The Lagrangian derivation (rigorous) provides the target object.",
       "dependencies": ["minimal-observer/coherence-dual-pairs", "gauge/chirality-selection", "spacetime/lorentz-invariance", "foundation/coherence-lagrangian"],
@@ -94,6 +98,8 @@
       "id": "supersymmetry-impossibility",
       "title": "Supersymmetry Impossibility",
       "difficulty": "LOW",
+      "status": "COMPLETED — created particles/supersymmetry-impossibility.md (rigorous), addresses spin-statistics Gap 2",
+      "completedDate": "2026-03-12",
       "rationale": "Spin-statistics Gap 2 notes: 'A continuous symmetry rotating bosons into fermions would require a continuous path from [0] to [1] in Z₂, which does not exist.' This is a distinctive negative prediction that could be formalized as a derivation page.",
       "strategy": "Short derivation: (1) Spin-statistics (rigorous) classifies particles by winding class [n] ∈ π₁(SO(3)) ≅ ℤ₂. (2) Bosons have [0] (trivial), fermions have [1] (non-trivial). (3) A supersymmetry generator Q would require a continuous family Q(t) connecting [0] and [1]. (4) But π₁(SO(3)) = ℤ₂ is discrete — no continuous path exists. (5) Therefore supersymmetry is topologically forbidden in d = 3 spatial dimensions. This is a clean no-go theorem.",
       "dependencies": ["particles/spin-statistics", "dimensions/three-dimensions"],
@@ -104,6 +110,8 @@
       "id": "proton-stability",
       "title": "Proton Stability",
       "difficulty": "MODERATE",
+      "status": "COMPLETED — created gauge/proton-stability.md (rigorous), addresses standard-model-group Gap 4",
+      "completedDate": "2026-03-12",
       "rationale": "Standard-model-group Gap 4 notes: 'The framework predicts absolute proton stability (no GUT bosons). A quantitative bound on the proton lifetime from residual gravitational or higher-order effects would sharpen this into a testable prediction.' The non-convergence of couplings (from coupling-constants) means no GUT unification, hence no GUT-mediated proton decay.",
       "strategy": "(1) Non-convergence of α₁, α₂, α₃ (Coupling Constants, rigorous) means no GUT scale. (2) No GUT gauge bosons → no B-violating gauge interactions. (3) B is an exact symmetry of the framework's gauge structure (proven by the division algebra chain: each level preserves baryon number). (4) Only gravitational effects could violate B, suppressed by (m_p/M_P)⁴ → τ_p > 10⁶⁴ years. (5) This exceeds current experimental bounds (τ_p > 10³⁴ years) by 30 orders of magnitude.",
       "dependencies": ["gauge/standard-model-group", "cosmology/coupling-constants"],
@@ -114,6 +122,8 @@
       "id": "quantum-teleportation",
       "title": "Quantum Teleportation as Coherence Channel Transfer",
       "difficulty": "LOW",
+      "status": "COMPLETED — created quantum/teleportation.md (rigorous), addresses entanglement Gap 1",
+      "completedDate": "2026-03-12",
       "rationale": "Entanglement Gap 1: 'Derive teleportation as coherence channel transfer.' The entanglement derivation (rigorous) provides all ingredients: relational invariants map to entangled states, coherence conservation ensures no-cloning, and Type III interactions generate new relational invariants.",
       "strategy": "(1) Alice and Bob share relational invariant I_AB (entangled state). (2) Alice performs Type III interaction with system S, generating I_AS. (3) Alice's local measurement (preferred basis) generates a classical relational invariant (measurement outcome). (4) Bob applies conditional unitary (local operation on his loop). (5) The net effect: I_AS is transferred to I_BS. Coherence conservation ensures the original I_AS is destroyed (no-cloning). This is the teleportation protocol reinterpreted in framework language.",
       "dependencies": ["quantum/entanglement", "quantum/measurement", "interactions/three-types"],
@@ -177,9 +187,9 @@
       "reason": "The derivation's own assessment is that the observer-centrism framework does not produce a viable prediction for Λ. Honestly maintained as non-viable."
     },
     {
-      "id": "loop-closure-s1-s2",
-      "postulateIds": ["loop-closure-s1", "loop-closure-s2"],
-      "reason": "These are genuinely foundational mathematical setting choices (smooth manifold structure, Riemannian metric). They specify the mathematical arena. Deriving them would require an even deeper foundation (e.g., showing smooth manifolds emerge from the axioms), which is not obviously possible."
+      "id": "loop-closure-s1",
+      "postulateIds": ["loop-closure-s1"],
+      "reason": "S1 (smooth manifold structure) is the unique consistent mathematical setting for the axiom system — three independent requirements (Noether, coherence cost, Fisher metric) converge on smooth structure, and Whitney's theorem upgrades C^1 to C^∞. It remains a structural postulate because the axioms select it by consistency rather than constructively building it from measure theory. S2 (invariant Riemannian metric) has been promoted to Theorem 0.1 in loop-closure.md via Weyl averaging over the compact U(1) action (2026-03-12)."
     },
     {
       "id": "speed-of-light-s1",

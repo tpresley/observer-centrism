@@ -2,7 +2,7 @@
 title: "Spin and Statistics from Winding Classes"
 status: "rigorous"
 dependsOn: ["dimensions/three-dimensions"]
-enablesDerivation: ["particles/pauli-exclusion", "particles/three-generations"]
+enablesDerivation: ["particles/pauli-exclusion", "particles/three-generations", "particles/supersymmetry-impossibility", "particles/cpt-theorem"]
 tags: ["particles"]
 summary: "π₁(SO(3)) = Z₂ gives exactly two particle types: bosons (integer winding) and fermions (half-integer) — the spin-statistics connection is the direct topological statement"
 rigorLevel: "formal"

@@ -16,8 +16,10 @@
     "postulateId": "S2",
     "shortName": "Invariant Riemannian metric",
     "statement": "A Riemannian metric g on \u03a3 that is G_O-invariant: \u03c6_t* g = g for all t.",
-    "justification": "Provides a notion of distance on the state space that is preserved by the observer's internal dynamics, enabling the definition of coherence cost as path length.",
-    "group": "foundation"
+    "justification": "Now a theorem (Theorem 0.1): any smooth compact manifold admits a Riemannian metric (partition of unity), and Weyl averaging over the compact U(1) action produces a G_O-invariant metric. Replaces the former structural postulate.",
+    "group": "foundation",
+    "derivedFrom": "axioms/loop-closure",
+    "derivedFromTitle": "Loop Closure"
   },
   {
     "id": "relational-invariants-s1",
@@ -57,7 +59,9 @@
     "shortName": "Homogeneity",
     "statement": "The coherence measure C and the metric g are invariant under spacetime translations x\u03bc \u2192 x\u03bc + a\u03bc.",
     "justification": "Follows from the axioms' location-independence: coherence conservation and observer definitions do not reference absolute position, so the derived geometry inherits translation symmetry.",
-    "group": "geometry"
+    "group": "geometry",
+    "derivedFrom": "spacetime/lorentz-invariance",
+    "derivedFromTitle": "Lorentz Invariance"
   },
   {
     "id": "gravity-s1",

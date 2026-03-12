@@ -1,21 +1,21 @@
 {
   "meta": {
-    "generatedAt": "2026-03-12T09:09:58.237Z",
-    "derivationCount": 55,
+    "generatedAt": "2026-03-12T23:23:03.072Z",
+    "derivationCount": 59,
     "predictionCount": 10,
     "generator": "scripts/build-index.mjs"
   },
   "stats": {
     "byStatus": {
-      "rigorous": 53,
+      "rigorous": 57,
       "non-viable": 1,
       "provisional": 1
     },
-    "derivationCount": 55,
+    "derivationCount": 59,
     "predictionCount": 10,
-    "edgeCount": 107,
-    "formalObjectCount": 793,
-    "openGapCount": 200,
+    "edgeCount": 118,
+    "formalObjectCount": 862,
+    "openGapCount": 212,
     "upgradeEligibleCount": 0,
     "leanVerifiedCount": 16,
     "leanTheoremCount": 64
@@ -311,7 +311,7 @@
           },
           {
             "source": "spacetime/lorentz-invariance",
-            "context": "Coherence Conservation"
+            "context": "Axiom 1"
           },
           {
             "source": "thermodynamics-ext/distinguishability-conservation",
@@ -359,7 +359,7 @@
         "foundation"
       ],
       "summary": "Formalization of cyclic dynamics as a Noether pair (U(1) symmetry ↔ conserved charge), with Lyapunov stability and approximate closure giving a precise persistence criterion",
-      "lastUpdated": "2026-03-08",
+      "lastUpdated": "2026-03-12",
       "dependsOn": [
         "axioms/coherence-conservation",
         "axioms/observer-definition"
@@ -413,6 +413,12 @@
           "statementPreview": "The internal dynamics of every observer are cyclic: the state returns to its initial configuration after a finite per..."
         },
         {
+          "type": "Theorem",
+          "id": "0.1",
+          "name": "Invariant Riemannian metric",
+          "statementPreview": "Given S1, the state space Sigma carries a GO-invariant Riemannian metric g with phit* g = g for all t.*"
+        },
+        {
           "type": "Definition",
           "id": "1.1",
           "name": "Internal dynamics",
@@ -464,7 +470,7 @@
           "type": "Definition",
           "id": "4.1",
           "name": "Lyapunov stability",
-          "statementPreview": "Using the geodesic distance d induced by the Riemannian metric g from (S2), the observer loop gammaO is **Lyapunov st..."
+          "statementPreview": "Using the geodesic distance d induced by the Riemannian metric g (Theorem 0.1), the observer loop gammaO is **Lyapuno..."
         },
         {
           "type": "Definition",
@@ -506,7 +512,7 @@
           "type": "Definition",
           "id": "6.1",
           "name": "Coherence cost / action",
-          "statementPreview": "Using the Riemannian metric g from (S2) and the coherence measure C from Axiom 1, the **coherence cost** of an observ..."
+          "statementPreview": "Using the Riemannian metric g (Theorem 0.1) and the coherence measure C from Axiom 1, the **coherence cost** of an ob..."
         },
         {
           "type": "Proposition",
@@ -536,7 +542,7 @@
           "type": "Theorem",
           "id": "8.1.",
           "name": "",
-          "statementPreview": "The loop closure axiom with structural postulates (S1–S2) is consistent: there exists a concrete model satisfying all..."
+          "statementPreview": "The loop closure axiom with structural postulate S1 (and its consequence, Theorem 0.1) is consistent: there exists a ..."
         },
         {
           "type": "Axiom",
@@ -570,6 +576,14 @@
           {
             "target": "axioms/observer-definition",
             "context": "Observer Definition"
+          },
+          {
+            "target": "thermodynamics-ext/fisher-metric",
+            "context": "Fisher Metric"
+          },
+          {
+            "target": "thermodynamics-ext/fisher-metric",
+            "context": "Fisher Information Metric"
           },
           {
             "target": "axioms/coherence-conservation",
@@ -646,8 +660,16 @@
             "context": "0, T)\\}$ is isomorphic to $\\mathbb{R}/T\\mathbb{Z} \\cong U(1)$. Hence $U(1) \\hook"
           },
           {
+            "source": "particles/cpt-theorem",
+            "context": "Loop Closure"
+          },
+          {
             "source": "quantum/born-rule",
             "context": "Loop Closure"
+          },
+          {
+            "source": "spacetime/lorentz-invariance",
+            "context": "Axiom 3"
           },
           {
             "source": "spacetime/lorentz-invariance",
@@ -664,10 +686,6 @@
           {
             "source": "thermodynamics-ext/renormalization",
             "context": "Loop Closure"
-          },
-          {
-            "source": "thermodynamics/action-planck",
-            "context": "which provides a $G_\\mathcal{O}$-invariant Riemannian metric on $\\Sigma$"
           },
           {
             "source": "thermodynamics/action-planck",
@@ -943,7 +961,7 @@
           },
           {
             "source": "spacetime/lorentz-invariance",
-            "context": "Observer Definition"
+            "context": "Axiom 2"
           },
           {
             "source": "spacetime/speed-of-light",
@@ -1298,9 +1316,11 @@
         "particles/mass-hierarchy"
       ],
       "enablesDerivation": [
-        "gauge/weinberg-angle"
+        "gauge/weinberg-angle",
+        "gauge/proton-stability"
       ],
       "dependedOnBy": [
+        "gauge/proton-stability",
         "gauge/weinberg-angle"
       ],
       "steps": [
@@ -1461,6 +1481,10 @@
           {
             "source": "gauge/electroweak-breaking",
             "context": "Coupling Constants"
+          },
+          {
+            "source": "gauge/proton-stability",
+            "context": "Coupling Constant Relationships"
           },
           {
             "source": "gauge/standard-model-group",
@@ -1677,11 +1701,13 @@
         "particles/spin-statistics",
         "particles/three-generations",
         "spacetime/gravity",
-        "spacetime/einstein-equations"
+        "spacetime/einstein-equations",
+        "particles/supersymmetry-impossibility"
       ],
       "dependedOnBy": [
         "gauge/weak-interaction",
         "particles/spin-statistics",
+        "particles/supersymmetry-impossibility",
         "particles/three-generations",
         "spacetime/einstein-equations",
         "spacetime/gravity"
@@ -1859,6 +1885,14 @@
           {
             "source": "interactions/bootstrap-division-algebras",
             "context": "0, 2\\pi)$ is naturally represented by a unit complex number $e^{i\\theta_{12}} \\i"
+          },
+          {
+            "source": "particles/cpt-theorem",
+            "context": "Three Spatial Dimensions"
+          },
+          {
+            "source": "particles/supersymmetry-impossibility",
+            "context": "Three Spatial Dimensions"
           },
           {
             "source": "particles/three-generations",
@@ -2170,8 +2204,12 @@
         "thermodynamics/action-planck",
         "thermodynamics-ext/fisher-metric"
       ],
-      "enablesDerivation": [],
-      "dependedOnBy": [],
+      "enablesDerivation": [
+        "particles/cpt-theorem"
+      ],
+      "dependedOnBy": [
+        "particles/cpt-theorem"
+      ],
       "steps": [
         {
           "number": 1,
@@ -2352,6 +2390,10 @@
         "incoming": [
           {
             "source": "gauge/electroweak-breaking",
+            "context": "Coherence Lagrangian"
+          },
+          {
+            "source": "particles/cpt-theorem",
             "context": "Coherence Lagrangian"
           },
           {
@@ -2858,6 +2900,10 @@
           },
           {
             "source": "gauge/weinberg-angle",
+            "context": "Chirality Selection"
+          },
+          {
+            "source": "particles/cpt-theorem",
             "context": "Chirality Selection"
           }
         ]
@@ -4042,6 +4088,194 @@
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
+    "gauge/proton-stability": {
+      "id": "gauge/proton-stability",
+      "filePath": "site/src/content/derivations/gauge/proton-stability.md",
+      "title": "Proton Stability from Gauge Non-Unification",
+      "status": "rigorous",
+      "rigorLevel": "formal",
+      "group": "gauge",
+      "tags": [
+        "gauge"
+      ],
+      "summary": "The framework predicts absolute proton stability: the division algebra hierarchy forbids grand unification, eliminating GUT-mediated proton decay. Baryon number is an exact symmetry, and the predicted lifetime exceeds 10⁶⁴ years.",
+      "lastUpdated": "2026-03-12",
+      "dependsOn": [
+        "gauge/standard-model-group",
+        "cosmology/coupling-constants"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "No Grand Unified Group"
+        },
+        {
+          "number": 2,
+          "title": "Non-Convergence of Coupling Constants"
+        },
+        {
+          "number": 3,
+          "title": "Baryon Number as an Exact Symmetry"
+        },
+        {
+          "number": 4,
+          "title": "Gravitational Bounds on Baryon Number Violation"
+        },
+        {
+          "number": 5,
+          "title": "Comparison with Grand Unified Theories"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Theorem",
+          "id": "1.1",
+          "name": "Gauge group completeness",
+          "statementPreview": "The Standard Model gauge group GSM = U(1) SU(2) SU(3) is the unique and complete gauge group consistent with the fram..."
+        },
+        {
+          "type": "Corollary",
+          "id": "1.2",
+          "name": "No GUT gauge bosons",
+          "statementPreview": "In Grand Unified Theories (SU(5), SO(10), E6), the unification group contains gauge bosons (X, Y bosons in SU(5)) tha..."
+        },
+        {
+          "type": "Theorem",
+          "id": "2.1",
+          "name": "Coupling constants do not unify",
+          "statementPreview": "The three gauge coupling constants alpha1(mu), alpha2(mu), alpha3(mu), evolved under the renormalization group with S..."
+        },
+        {
+          "type": "Corollary",
+          "id": "2.2",
+          "name": "No proton decay from threshold effects",
+          "statementPreview": "Even allowing for threshold corrections at the crystallization scales, the coupling constants remain separated. The m..."
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "Exact baryon number conservation",
+          "statementPreview": "Baryon number B is an exact symmetry of the framework's gauge structure — not merely an accidental symmetry of the St..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Non-perturbative effects",
+          "statementPreview": "The only known B-violating processes in the Standard Model are non-perturbative electroweak sphalerons, which violate..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Gravitational $B$ violation",
+          "statementPreview": "The only possible source of proton decay in the framework is through non-perturbative gravitational effects (virtual ..."
+        },
+        {
+          "type": "Corollary",
+          "id": "4.2",
+          "name": "Observational prediction",
+          "statementPreview": "The framework predicts:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "GUT predictions vs. framework",
+          "statementPreview": "The framework's prediction of absolute proton stability contrasts sharply with GUT predictions:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.2",
+          "name": "Falsifiability",
+          "statementPreview": "The prediction of absolute proton stability is falsifiable: observation of proton decay at any rate would refute the ..."
+        },
+        {
+          "type": "Theorem",
+          "id": "6.1.",
+          "name": "",
+          "statementPreview": "The observed stability of the proton, combined with the null results from proton decay experiments, provides a consis..."
+        },
+        {
+          "type": "Theorem",
+          "id": "1.1",
+          "name": "",
+          "statementPreview": "(no GUT group): The Standard Model gauge group U(1) SU(2) SU(3) is the observed gauge structure; no additional gauge ..."
+        },
+        {
+          "type": "Theorem",
+          "id": "2.1",
+          "name": "",
+          "statementPreview": "(non-convergence): The measured coupling constants at MZ (alpha1-1 59, alpha2-1 30, alpha3-1 8.5), when extrapolated ..."
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "",
+          "statementPreview": "(exact B conservation): No baryon-number-violating process has ever been observed. checkmark"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "",
+          "statementPreview": "(gravitational bound): The current experimental bound taup > 1034 years is consistent with the prediction taup > 1064..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "",
+          "statementPreview": "(GUT comparison): The minimal SU(5) prediction is already ruled out, consistent with the framework's prediction of no..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Neutron-antineutron oscillation",
+          "description": "While proton decay is forbidden, neutron-antineutron oscillation (Delta B = 2) might occur through non-perturbative effects. The framework should determine whether B violation by 2 units (without lept"
+        },
+        {
+          "number": 2,
+          "title": "Black hole baryon number",
+          "description": "When a proton falls into a black hole, is baryon number preserved? The information paradox resolution ([Information Paradox](/derivations/holography/information-paradox)) suggests yes (no information "
+        },
+        {
+          "number": 3,
+          "title": "Quantitative gravitational amplitude",
+          "description": "The estimate taup sim 1064 years is parametric. A precise calculation would require the non-perturbative gravitational path integral, which is not available. The causal set statistics ([Causal Set Sta"
+        }
+      ],
+      "assessmentVerdict": "Rigorous. The prediction of absolute proton stability follows from two rigorous upstream results: the Hurwitz ceiling on gauge groups and the non-convergence of coupling constants. The gravitational bound is a standard dimensional estimate, not a precision calculation. The prediction is sharper than",
+      "hasConsistencyModel": true,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "gauge/standard-model-group",
+            "context": "Standard Model Gauge Group"
+          },
+          {
+            "target": "cosmology/coupling-constants",
+            "context": "Coupling Constant Relationships"
+          },
+          {
+            "target": "holography/information-paradox",
+            "context": "Information Paradox"
+          },
+          {
+            "target": "holography/causal-set-statistics",
+            "context": "Causal Set Statistics"
+          }
+        ],
+        "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
     "gauge/standard-model-group": {
       "id": "gauge/standard-model-group",
       "filePath": "site/src/content/derivations/gauge/standard-model-group.md",
@@ -4062,12 +4296,14 @@
       "enablesDerivation": [
         "cosmology/coupling-constants",
         "gauge/electroweak-breaking",
-        "gauge/anomaly-cancellation"
+        "gauge/anomaly-cancellation",
+        "gauge/proton-stability"
       ],
       "dependedOnBy": [
         "cosmology/coupling-constants",
         "gauge/anomaly-cancellation",
-        "gauge/electroweak-breaking"
+        "gauge/electroweak-breaking",
+        "gauge/proton-stability"
       ],
       "steps": [
         {
@@ -4267,6 +4503,10 @@
           {
             "source": "gauge/electromagnetism",
             "context": "full gauge structure"
+          },
+          {
+            "source": "gauge/proton-stability",
+            "context": "Standard Model Gauge Group"
           },
           {
             "source": "interactions/bootstrap-division-algebras",
@@ -5738,6 +5978,10 @@
         ],
         "incoming": [
           {
+            "source": "gauge/proton-stability",
+            "context": "Causal Set Statistics"
+          },
+          {
             "source": "holography/er-epr",
             "context": "Proposition 2.1, rigorous"
           },
@@ -6338,6 +6582,10 @@
         "incoming": [
           {
             "source": "cosmology/cosmological-constant",
+            "context": "Information Paradox"
+          },
+          {
+            "source": "gauge/proton-stability",
             "context": "Information Paradox"
           },
           {
@@ -7260,10 +7508,12 @@
       ],
       "enablesDerivation": [
         "interactions/relational-invariants",
-        "thermodynamics/time"
+        "thermodynamics/time",
+        "quantum/teleportation"
       ],
       "dependedOnBy": [
         "interactions/relational-invariants",
+        "quantum/teleportation",
         "thermodynamics/time"
       ],
       "steps": [
@@ -7449,6 +7699,10 @@
             "context": "Three Interaction Types"
           },
           {
+            "source": "quantum/teleportation",
+            "context": "Three Interaction Types"
+          },
+          {
             "source": "spacetime/speed-of-light",
             "context": "Three Interaction Types"
           },
@@ -7491,11 +7745,13 @@
         "minimal-observer/multiplicity"
       ],
       "enablesDerivation": [
-        "holography/hawking-radiation"
+        "holography/hawking-radiation",
+        "particles/cpt-theorem"
       ],
       "dependedOnBy": [
         "cosmology/baryogenesis",
-        "holography/hawking-radiation"
+        "holography/hawking-radiation",
+        "particles/cpt-theorem"
       ],
       "steps": [
         {
@@ -7722,6 +7978,14 @@
           {
             "source": "minimal-observer/structure",
             "context": "Coherence-Dual Pairs"
+          },
+          {
+            "source": "particles/cpt-theorem",
+            "context": "Coherence-Dual Pairs"
+          },
+          {
+            "source": "particles/cpt-theorem",
+            "context": "Proposition 6.2"
           },
           {
             "source": "particles/neutrino-masses",
@@ -8247,6 +8511,247 @@
           {
             "source": "thermodynamics/time",
             "context": "Minimal Observer Structure"
+          }
+        ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "particles/cpt-theorem": {
+      "id": "particles/cpt-theorem",
+      "filePath": "site/src/content/derivations/particles/cpt-theorem.md",
+      "title": "CPT Theorem from Coherence Structure",
+      "status": "rigorous",
+      "rigorLevel": "formal",
+      "group": "particles",
+      "tags": [
+        "particles"
+      ],
+      "summary": "CPT invariance is a structural theorem of the framework: C from coherence-dual pairs, P from spatial reflection of the winding structure, T from loop closure phase reversal — their composition is an exact symmetry of the coherence Lagrangian",
+      "lastUpdated": "2026-03-12",
+      "dependsOn": [
+        "minimal-observer/coherence-dual-pairs",
+        "spacetime/lorentz-invariance",
+        "particles/spin-statistics",
+        "foundation/coherence-lagrangian"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Charge Conjugation from Coherence-Dual Pairs"
+        },
+        {
+          "number": 2,
+          "title": "Parity from Spatial Reflection of the Winding Structure"
+        },
+        {
+          "number": 3,
+          "title": "Time Reversal from Loop Closure Phase Conjugation"
+        },
+        {
+          "number": 4,
+          "title": "The CPT Composition"
+        },
+        {
+          "number": 5,
+          "title": "Connection to the Spin-Statistics-CPT Triad"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Charge conjugation",
+          "statementPreview": "The charge conjugation operator C is the exchange map on coherence-dual pairs ([Coherence-Dual Pairs](/derivations/mi..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Properties of $C$",
+          "statementPreview": "From [Coherence-Dual Pairs](/derivations/minimal-observer/coherence-dual-pairs) (Proposition 6.2):*"
+        },
+        {
+          "type": "Definition",
+          "id": "2.1",
+          "name": "Parity transformation",
+          "statementPreview": "The parity operator P is the spatial reflection of the observer's winding structure. In d = 3 spatial dimensions ([Th..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "Parity and spin",
+          "statementPreview": "P acts on the spin winding class [n] in pi1(SO(3)) = Z2 ([Spin and Statistics](/derivations/particles/spin-statistics..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.3",
+          "name": "Parity of the coherence Lagrangian",
+          "statementPreview": "The coherence Lagrangian L ([Coherence Lagrangian](/derivations/foundation/coherence-lagrangian)) contains both parit..."
+        },
+        {
+          "type": "Definition",
+          "id": "3.1",
+          "name": "Time reversal",
+          "statementPreview": "The time reversal operator T reverses the direction of the loop closure phase evolution ([Loop Closure](/derivations/..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Properties of $T$",
+          "statementPreview": "T is an anti-unitary operator on the Hilbert space:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.3",
+          "name": "Time reversal of the coherence Lagrangian",
+          "statementPreview": "T alone is not a symmetry of L. The weak interaction violates T independently (through complex phases in the CKM matr..."
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "CPT is an exact symmetry",
+          "statementPreview": "The combined transformation Theta = CPT is an exact symmetry of the coherence Lagrangian L:*"
+        },
+        {
+          "type": "Corollary",
+          "id": "4.2",
+          "name": "CPT implies equal masses and lifetimes",
+          "statementPreview": "For any particle and its antiparticle: the masses are equal (m = m), the lifetimes are equal (tau = tau), and the mag..."
+        },
+        {
+          "type": "Corollary",
+          "id": "4.3",
+          "name": "Individual C, P, T can be violated",
+          "statementPreview": "The theorem establishes that CPT is exact, but does not require C, P, T, CP, or CT to be individually conserved. The ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "The three pillars",
+          "statementPreview": "The framework derives the three foundational theorems of relativistic quantum field theory from a common axiomatic ro..."
+        },
+        {
+          "type": "Theorem",
+          "id": "6.1.",
+          "name": "",
+          "statementPreview": "The electron-positron system provides a consistency model for all results of this derivation.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "",
+          "statementPreview": "(C): C maps e- e+, reversing charge -e +e, preserving mass me and spin 1/2. checkmark"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "",
+          "statementPreview": "(P): P maps a left-handed e- to a right-handed e-, preserving the winding class [1] in pi1(SO(3)). checkmark"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "",
+          "statementPreview": "(T): T maps e-(t) e-(-t) (anti-unitary), with T2 = -1 (Kramers degeneracy verified for spin-1/2). checkmark"
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "",
+          "statementPreview": "(CPT): The QED Lagrangian L = psi(igammamu Dmu - m)psi - 14FmunuFmunu is CPT-invariant. checkmark"
+        },
+        {
+          "type": "Corollary",
+          "id": "4.2",
+          "name": "",
+          "statementPreview": ": me- = me+ = 0.511 MeV (measured to < 10-8 relative precision). checkmark"
+        },
+        {
+          "type": "Corollary",
+          "id": "4.3",
+          "name": "",
+          "statementPreview": ": P is violated in weak decays of electrons (observed in Wu experiment, 1957). CP is violated in the kaon system (obs..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "CP violation mechanism",
+          "description": "While the theorem allows individual CP violation (Corollary 4.3), the framework should derive the specific mechanism — complex phases in the CKM and PMNS matrices — from the flavor structure ([Three G"
+        },
+        {
+          "number": 2,
+          "title": "CPT tests",
+          "description": "The prediction m = m and tau = tau can be tested with increasing precision. Current best tests: |mK - mK|/mK < 10-18 (kaon system), |qp + qp|/e < 10-12 (proton-antiproton charge ratio). Any violation "
+        },
+        {
+          "number": 3,
+          "title": "Gravitational CPT",
+          "description": "Does CPT extend to the gravitational sector? The coherence Lagrangian includes gravity ([Einstein Equations](/derivations/spacetime/einstein-equations)), so the theorem formally applies. However, the "
+        }
+      ],
+      "assessmentVerdict": "Rigorous. The CPT theorem is derived by constructing each discrete symmetry from the framework's structure (C from coherence-dual pairs, P from spatial reflection, T from loop closure phase reversal) and showing their composition is an exact symmetry of the coherence Lagrangian. The formal backbone ",
+      "hasConsistencyModel": true,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "minimal-observer/coherence-dual-pairs",
+            "context": "Coherence-Dual Pairs"
+          },
+          {
+            "target": "minimal-observer/coherence-dual-pairs",
+            "context": "Proposition 6.2"
+          },
+          {
+            "target": "dimensions/three-dimensions",
+            "context": "Three Spatial Dimensions"
+          },
+          {
+            "target": "particles/spin-statistics",
+            "context": "Spin and Statistics"
+          },
+          {
+            "target": "foundation/coherence-lagrangian",
+            "context": "Coherence Lagrangian"
+          },
+          {
+            "target": "gauge/chirality-selection",
+            "context": "Chirality Selection"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/lorentz-invariance",
+            "context": "Lorentz Invariance"
+          },
+          {
+            "target": "particles/supersymmetry-impossibility",
+            "context": "Supersymmetry Impossibility"
+          },
+          {
+            "target": "flavor/three-generations",
+            "context": "Three Generations"
+          },
+          {
+            "target": "spacetime/einstein-equations",
+            "context": "Einstein Equations"
+          }
+        ],
+        "incoming": [
+          {
+            "source": "spacetime/lorentz-invariance",
+            "context": "CPT Theorem"
           }
         ]
       },
@@ -8902,11 +9407,15 @@
       ],
       "enablesDerivation": [
         "particles/pauli-exclusion",
-        "particles/three-generations"
+        "particles/three-generations",
+        "particles/supersymmetry-impossibility",
+        "particles/cpt-theorem"
       ],
       "dependedOnBy": [
         "gauge/weak-interaction",
+        "particles/cpt-theorem",
         "particles/pauli-exclusion",
+        "particles/supersymmetry-impossibility",
         "particles/three-generations"
       ],
       "steps": [
@@ -9059,12 +9568,28 @@
             "context": "Spin and Statistics"
           },
           {
+            "source": "particles/cpt-theorem",
+            "context": "Spin and Statistics"
+          },
+          {
             "source": "particles/pauli-exclusion",
             "context": "Spin and Statistics"
           },
           {
             "source": "particles/pauli-exclusion",
             "context": "Theorem 3.3 + Proposition 4.1"
+          },
+          {
+            "source": "particles/supersymmetry-impossibility",
+            "context": "Proposition 1.2 and Theorem 3.3"
+          },
+          {
+            "source": "particles/supersymmetry-impossibility",
+            "context": "Spin and Statistics"
+          },
+          {
+            "source": "particles/supersymmetry-impossibility",
+            "context": "which uses S1, topological consistency"
           },
           {
             "source": "particles/three-generations",
@@ -9093,6 +9618,171 @@
           "Proposition 3.2",
           "Theorem 6.1"
         ]
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "particles/supersymmetry-impossibility": {
+      "id": "particles/supersymmetry-impossibility",
+      "filePath": "site/src/content/derivations/particles/supersymmetry-impossibility.md",
+      "title": "Supersymmetry Impossibility",
+      "status": "rigorous",
+      "rigorLevel": "formal",
+      "group": "particles",
+      "tags": [
+        "particles"
+      ],
+      "summary": "Supersymmetry is topologically forbidden in d = 3 spatial dimensions: the discrete Z₂ classification of particle statistics admits no continuous interpolation between bosons and fermions",
+      "lastUpdated": "2026-03-12",
+      "dependsOn": [
+        "particles/spin-statistics",
+        "dimensions/three-dimensions"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The Topological Classification"
+        },
+        {
+          "number": 2,
+          "title": "No-Go Theorem for Supersymmetry"
+        },
+        {
+          "number": 3,
+          "title": "Comparison with Standard No-Go Theorems"
+        },
+        {
+          "number": 4,
+          "title": "Dimensional Dependence"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Winding classes",
+          "statementPreview": "From [Spin and Statistics](/derivations/particles/spin-statistics) (Proposition 1.2 and Theorem 3.3), all observer lo..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Discreteness of the classification",
+          "statementPreview": "The group Z2 = [0], [1] is discrete and totally disconnected: there is no continuous path from [0] to [1].*"
+        },
+        {
+          "type": "Theorem",
+          "id": "2.1",
+          "name": "Supersymmetry impossibility",
+          "statementPreview": "There exists no continuous symmetry generator Q such that Q: Vs Vs pm 1/2 — mapping states of spin s (class [0] or [1..."
+        },
+        {
+          "type": "Corollary",
+          "id": "2.2",
+          "name": "No superpartners",
+          "statementPreview": "No boson has a fermionic superpartner, and no fermion has a bosonic superpartner, at any energy scale. This is a topo..."
+        },
+        {
+          "type": "Corollary",
+          "id": "2.3",
+          "name": "No Lie superalgebra realization",
+          "statementPreview": "The graded Lie algebra structure of supersymmetry — Qalpha, Qdotbeta = 2sigmamualphadotbeta Pmu — has no realization ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Relation to Coleman-Mandula and Haag-Łopuszański-Sohnius",
+          "statementPreview": "The standard no-go theorem for bosonic symmetries (Coleman-Mandula, 1967) forbids non-trivial mixing of internal and ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Supersymmetry requires $\\pi_1 \\neq \\mathbb{Z}_2$",
+          "statementPreview": "In spatial dimensions where pi1(SO(d)) is not Z2, the no-go theorem does not apply:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "5.1.",
+          "name": "",
+          "statementPreview": "Standard quantum field theory in 3+1 dimensions, restricted to the observed particle spectrum (no superpartners), is ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "",
+          "statementPreview": "(Z2 is discrete): Topological fact. checkmark"
+        },
+        {
+          "type": "Theorem",
+          "id": "2.1",
+          "name": "",
+          "statementPreview": "(no continuous Q): No superpartners have been observed at the LHC up to sim 2 TeV, consistent with their non-existenc..."
+        },
+        {
+          "type": "Corollary",
+          "id": "2.2",
+          "name": "",
+          "statementPreview": "(no superpartners at any energy): The LHC null results, combined with the topological nature of the argument, are con..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "",
+          "statementPreview": "(stronger than HLS): The framework's prediction is falsifiable — discovery of any superpartner would refute it. No su..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Experimental sharpening",
+          "description": "The prediction is that no superpartner exists at *any* energy scale, not merely above the current LHC reach. Future colliders testing higher energies provide continued tests."
+        },
+        {
+          "number": 2,
+          "title": "Emergent approximate SUSY",
+          "description": "Could an approximate algebraic relation between bosonic and fermionic sectors arise dynamically, even though exact SUSY is forbidden? Such an \"accidental SUSY\" would be broken by construction and migh"
+        },
+        {
+          "number": 3,
+          "title": "Supergravity and string theory",
+          "description": "In approaches where supersymmetry is a mathematical framework (string theory, supergravity), does the topological no-go theorem constrain which mathematical structures have physical realizations?"
+        }
+      ],
+      "assessmentVerdict": "Rigorous. The core argument — Theorem 2.1 — is a short topological proof: pi1(SO(3)) = Z2 is discrete, so no continuous symmetry can interpolate between its two elements. This is a stronger no-go theorem than the standard Coleman-Mandula/HLS results because it operates at the topological level rathe",
+      "hasConsistencyModel": true,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "particles/spin-statistics",
+            "context": "Proposition 1.2 and Theorem 3.3"
+          },
+          {
+            "target": "particles/spin-statistics",
+            "context": "Spin and Statistics"
+          },
+          {
+            "target": "dimensions/three-dimensions",
+            "context": "Three Spatial Dimensions"
+          },
+          {
+            "target": "particles/spin-statistics",
+            "context": "which uses S1, topological consistency"
+          }
+        ],
+        "incoming": [
+          {
+            "source": "particles/cpt-theorem",
+            "context": "Supersymmetry Impossibility"
+          }
+        ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -9657,10 +10347,12 @@
         "quantum/born-rule"
       ],
       "enablesDerivation": [
-        "holography/er-epr"
+        "holography/er-epr",
+        "quantum/teleportation"
       ],
       "dependedOnBy": [
-        "holography/er-epr"
+        "holography/er-epr",
+        "quantum/teleportation"
       ],
       "steps": [
         {
@@ -9847,6 +10539,10 @@
           {
             "source": "holography/er-epr",
             "context": "rigorous"
+          },
+          {
+            "source": "quantum/teleportation",
+            "context": "Entanglement"
           }
         ]
       },
@@ -9874,8 +10570,12 @@
       "dependsOn": [
         "quantum/preferred-basis"
       ],
-      "enablesDerivation": [],
-      "dependedOnBy": [],
+      "enablesDerivation": [
+        "quantum/teleportation"
+      ],
+      "dependedOnBy": [
+        "quantum/teleportation"
+      ],
       "steps": [
         {
           "number": 1,
@@ -10092,6 +10792,14 @@
           {
             "source": "quantum/born-rule",
             "context": "Measurement Problem"
+          },
+          {
+            "source": "quantum/teleportation",
+            "context": "Measurement"
+          },
+          {
+            "source": "quantum/teleportation",
+            "context": "Theorem 2.2"
           }
         ]
       },
@@ -10326,6 +11034,230 @@
             "context": "Preferred Basis"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "quantum/teleportation": {
+      "id": "quantum/teleportation",
+      "filePath": "site/src/content/derivations/quantum/teleportation.md",
+      "title": "Quantum Teleportation as Coherence Channel Transfer",
+      "status": "rigorous",
+      "rigorLevel": "formal",
+      "group": "quantum",
+      "tags": [
+        "quantum",
+        "information"
+      ],
+      "summary": "Quantum teleportation is the transfer of a relational invariant from one observer pair to another via an intermediate measurement and classical communication. Coherence conservation ensures no-cloning: the original relational invariant is destroyed in the process.",
+      "lastUpdated": "2026-03-12",
+      "dependsOn": [
+        "quantum/entanglement",
+        "quantum/measurement",
+        "interactions/three-types"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The Setup — Three Observers and Their Relational Invariants"
+        },
+        {
+          "number": 2,
+          "title": "Alice's Bell Measurement — A Type III Interaction"
+        },
+        {
+          "number": 3,
+          "title": "Coherence Redistribution"
+        },
+        {
+          "number": 4,
+          "title": "Bob's Correction — Completing the Transfer"
+        },
+        {
+          "number": 5,
+          "title": "Relational Invariant Transfer — Summary"
+        },
+        {
+          "number": 6,
+          "title": "Generalizations"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Teleportation configuration",
+          "statementPreview": "The teleportation protocol involves three observers:"
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Hilbert space description",
+          "statementPreview": "In the Hilbert space picture ([Entanglement](/derivations/quantum/entanglement), Step 1), the initial state is:*"
+        },
+        {
+          "type": "Definition",
+          "id": "2.1",
+          "name": "Bell measurement",
+          "statementPreview": "Alice performs a joint measurement on S and her half of the entangled pair A. This is a Type III interaction ([Three ..."
+        },
+        {
+          "type": "Theorem",
+          "id": "2.2",
+          "name": "Bell basis expansion",
+          "statementPreview": "The initial state, rewritten in the Bell basis for the (S, A) subsystem, is:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.3",
+          "name": "Measurement generates a classical relational invariant",
+          "statementPreview": "Alice's Bell measurement is a Type III interaction that generates a relational invariant IA,(S,A) between Alice and t..."
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "Post-measurement state",
+          "statementPreview": "After Alice obtains outcome k, Bob's conditional state is:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Coherence accounting",
+          "statementPreview": "The coherence budget before and after Alice's measurement:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "Teleportation completion",
+          "statementPreview": "Upon receiving Alice's classical measurement outcome (2 bits), Bob applies the corresponding Pauli correction:*"
+        },
+        {
+          "type": "Corollary",
+          "id": "4.2",
+          "name": "Classical communication is necessary",
+          "statementPreview": "Without Alice's 2-bit classical message, Bob cannot determine which correction to apply. His unconditional state (ave..."
+        },
+        {
+          "type": "Theorem",
+          "id": "5.1",
+          "name": "Teleportation as coherence channel transfer",
+          "statementPreview": "The net effect of the teleportation protocol on the relational invariant structure is:*"
+        },
+        {
+          "type": "Corollary",
+          "id": "5.2",
+          "name": "Teleportation fidelity",
+          "statementPreview": "The teleportation is exact: IBS encodes exactly the same coherence distribution as IAS. The fidelity F = |langlepsi|p..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Higher-dimensional teleportation",
+          "statementPreview": "The protocol generalizes to d-dimensional systems. A maximally entangled state |PhirangleAB = 1dsumk=0d-1 |krangle|kr..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.2",
+          "name": "Entanglement swapping as iterated transfer",
+          "statementPreview": "Entanglement swapping — creating entanglement between two parties who have never interacted — is an immediate consequ..."
+        },
+        {
+          "type": "Theorem",
+          "id": "7.1.",
+          "name": "",
+          "statementPreview": "The standard quantum circuit for teleportation provides a consistency model for all results of this derivation.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "",
+          "statementPreview": ": Initial state |Psiinitrangle = 13(|0rangle + 2|1rangle) 12(|00rangle + |11rangle)AB. checkmark"
+        },
+        {
+          "type": "Theorem",
+          "id": "2.2",
+          "name": "",
+          "statementPreview": ": Bell basis expansion verified by direct calculation (6-term → 4-term regrouping). checkmark"
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "",
+          "statementPreview": ": If Alice measures |Psi+rangle, Bob's state is 13|1rangle + 23|0rangle = sigmax|psirangle. checkmark"
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "",
+          "statementPreview": ": Bob applies sigmax: sigmax(23|0rangle + 13|1rangle) = 13|0rangle + 23|1rangle = |psirangle. checkmark"
+        },
+        {
+          "type": "Corollary",
+          "id": "4.2",
+          "name": "",
+          "statementPreview": ": Without classical communication, rhoB = 12mathbf1 (maximally mixed). Confirmed: Tr(rhoB |psiranglelanglepsi|) = 12 ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "",
+          "statementPreview": ": Coherence accounting: initial entanglement ln 2 + state coherence -13ln13 - 23ln23 = post-measurement classical inf..."
+        },
+        {
+          "type": "Theorem",
+          "id": "5.1",
+          "name": "",
+          "statementPreview": ": After the protocol, Alice–Bob entanglement is consumed (verified: the (A,B) subsystem is in a product state), and B..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Quantum key distribution",
+          "description": "The teleportation channel can be repurposed for quantum key distribution (BB84, E91). Derive the security of QKD from coherence conservation — specifically, that any eavesdropper must create a relatio"
+        },
+        {
+          "number": 2,
+          "title": "Continuous-variable teleportation",
+          "description": "Extend from qubits to continuous-variable systems (Braunstein-Kimble protocol). The relational invariants become continuous, and the Bell measurement becomes a homodyne detection. The coherence accoun"
+        },
+        {
+          "number": 3,
+          "title": "Teleportation as a resource theory",
+          "description": "Formalize the resource-theoretic aspects: entanglement as the resource, classical communication as the catalyst, and coherence conservation as the resource monotone. This connects to the broader resou"
+        }
+      ],
+      "assessmentVerdict": "Rigorous. The teleportation protocol is a direct synthesis of entanglement (relational invariants between observers), measurement (Type III interaction generating classical relational invariants), and coherence conservation (no cloning, resource consumption). Every step is either a standard quantum ",
+      "hasConsistencyModel": true,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "quantum/entanglement",
+            "context": "Entanglement"
+          },
+          {
+            "target": "quantum/measurement",
+            "context": "Measurement"
+          },
+          {
+            "target": "interactions/three-types",
+            "context": "Three Interaction Types"
+          },
+          {
+            "target": "quantum/measurement",
+            "context": "Theorem 2.2"
+          }
+        ],
+        "incoming": []
       },
       "leanVerification": {
         "hasProofs": false,
@@ -10594,6 +11526,10 @@
           {
             "source": "holography/er-epr",
             "context": "rigorous"
+          },
+          {
+            "source": "particles/cpt-theorem",
+            "context": "Einstein Equations"
           },
           {
             "source": "quantum/entanglement",
@@ -10909,10 +11845,12 @@
         "spacetime/speed-of-light"
       ],
       "enablesDerivation": [
-        "spacetime/gravity"
+        "spacetime/gravity",
+        "particles/cpt-theorem"
       ],
       "dependedOnBy": [
         "gauge/electromagnetism",
+        "particles/cpt-theorem",
         "spacetime/gravity"
       ],
       "steps": [
@@ -10951,10 +11889,10 @@
       ],
       "formalObjects": [
         {
-          "type": "Structural Postulate",
-          "id": "S1",
-          "name": "Homogeneity",
-          "statementPreview": "The coherence geometry (H, g) is homogeneous: the coherence measure C and the metric g are invariant under spacetime ..."
+          "type": "Theorem",
+          "id": "0.1",
+          "name": "Homogeneity — now a theorem",
+          "statementPreview": "The coherence geometry (H, g) is homogeneous in vacuum: the coherence measure C and the metric g are invariant under ..."
         },
         {
           "type": "Definition",
@@ -11065,12 +12003,7 @@
           "statementPreview": "Two S1 observers in (1+1)-dimensional Minkowski space (R1,1, eta) satisfy all results of this derivation.*"
         }
       ],
-      "structuralPostulates": [
-        {
-          "id": "S1",
-          "name": "Homogeneity"
-        }
-      ],
+      "structuralPostulates": [],
       "openGaps": [
         {
           "number": 1,
@@ -11088,21 +12021,25 @@
           "description": "The framework predicts exact Lorentz invariance at the level of the coherence geometry. Any observed Lorentz violation would require the coherence geometry to deviate from exact Minkowski form — a sha"
         }
       ],
-      "assessmentVerdict": "The Lorentz group is rigorously derived as the isometry group of the Minkowski metric (from [Speed of Light](/derivations/spacetime/speed-of-light)). Time dilation, length contraction, the speed limit, and the Poincaré extension are standard consequences. The homogeneity assumption is now stated as ",
+      "assessmentVerdict": "The Lorentz group is rigorously derived as the isometry group of the Minkowski metric (from [Speed of Light](/derivations/spacetime/speed-of-light)). Time dilation, length contraction, the speed limit, and the Poincaré extension are standard consequences. Homogeneity (formerly S1) is now a theorem d",
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
           {
             "target": "axioms/coherence-conservation",
-            "context": "Coherence Conservation"
+            "context": "Axiom 1"
           },
           {
             "target": "axioms/observer-definition",
-            "context": "Observer Definition"
+            "context": "Axiom 2"
           },
           {
             "target": "axioms/loop-closure",
-            "context": "Loop Closure"
+            "context": "Axiom 3"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
           },
           {
             "target": "spacetime/speed-of-light",
@@ -11113,8 +12050,8 @@
             "context": "Action and Planck's Constant"
           },
           {
-            "target": "spacetime/speed-of-light",
-            "context": "Speed of Light"
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
           },
           {
             "target": "minimal-observer/coherence-dual-pairs",
@@ -11127,6 +12064,10 @@
           {
             "target": "particles/spin-statistics",
             "context": "forward dependency, honestly flagged"
+          },
+          {
+            "target": "particles/cpt-theorem",
+            "context": "CPT Theorem"
           },
           {
             "target": "spacetime/gravity",
@@ -11148,6 +12089,10 @@
           },
           {
             "source": "minimal-observer/coherence-dual-pairs",
+            "context": "Lorentz Invariance"
+          },
+          {
+            "source": "particles/cpt-theorem",
             "context": "Lorentz Invariance"
           },
           {
@@ -11631,11 +12576,11 @@
           },
           {
             "source": "spacetime/lorentz-invariance",
-            "context": "Theorem 5.1"
+            "context": "Speed of Light"
           },
           {
             "source": "spacetime/lorentz-invariance",
-            "context": "Speed of Light"
+            "context": "Theorem 5.1"
           },
           {
             "source": "thermodynamics-ext/renormalization",
@@ -12353,6 +13298,14 @@
         ],
         "incoming": [
           {
+            "source": "axioms/loop-closure",
+            "context": "Fisher Metric"
+          },
+          {
+            "source": "axioms/loop-closure",
+            "context": "Fisher Information Metric"
+          },
+          {
             "source": "foundation/coherence-lagrangian",
             "context": "Proposition 4.1"
           },
@@ -12918,7 +13871,7 @@
         "outgoing": [
           {
             "target": "axioms/loop-closure",
-            "context": "which provides a $G_\\mathcal{O}$-invariant Riemannian metric on $\\Sigma$"
+            "context": "Loop Closure"
           },
           {
             "target": "axioms/coherence-conservation",
@@ -12931,10 +13884,6 @@
           {
             "target": "minimal-observer/structure",
             "context": "Minimal Observer Structure"
-          },
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
           },
           {
             "target": "spacetime/speed-of-light",
@@ -13894,6 +14843,13 @@
       "id": "3",
       "name": "Loop Closure",
       "fullRef": "axioms/loop-closure:Axiom 3"
+    },
+    {
+      "derivationId": "axioms/loop-closure",
+      "type": "Theorem",
+      "id": "0.1",
+      "name": "Invariant Riemannian metric",
+      "fullRef": "axioms/loop-closure:Theorem 0.1"
     },
     {
       "derivationId": "axioms/loop-closure",
@@ -15399,6 +16355,118 @@
       "id": "7.1.",
       "name": "",
       "fullRef": "gauge/electroweak-breaking:Theorem 7.1."
+    },
+    {
+      "derivationId": "gauge/proton-stability",
+      "type": "Theorem",
+      "id": "1.1",
+      "name": "Gauge group completeness",
+      "fullRef": "gauge/proton-stability:Theorem 1.1"
+    },
+    {
+      "derivationId": "gauge/proton-stability",
+      "type": "Corollary",
+      "id": "1.2",
+      "name": "No GUT gauge bosons",
+      "fullRef": "gauge/proton-stability:Corollary 1.2"
+    },
+    {
+      "derivationId": "gauge/proton-stability",
+      "type": "Theorem",
+      "id": "2.1",
+      "name": "Coupling constants do not unify",
+      "fullRef": "gauge/proton-stability:Theorem 2.1"
+    },
+    {
+      "derivationId": "gauge/proton-stability",
+      "type": "Corollary",
+      "id": "2.2",
+      "name": "No proton decay from threshold effects",
+      "fullRef": "gauge/proton-stability:Corollary 2.2"
+    },
+    {
+      "derivationId": "gauge/proton-stability",
+      "type": "Theorem",
+      "id": "3.1",
+      "name": "Exact baryon number conservation",
+      "fullRef": "gauge/proton-stability:Theorem 3.1"
+    },
+    {
+      "derivationId": "gauge/proton-stability",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "Non-perturbative effects",
+      "fullRef": "gauge/proton-stability:Proposition 3.2"
+    },
+    {
+      "derivationId": "gauge/proton-stability",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Gravitational $B$ violation",
+      "fullRef": "gauge/proton-stability:Proposition 4.1"
+    },
+    {
+      "derivationId": "gauge/proton-stability",
+      "type": "Corollary",
+      "id": "4.2",
+      "name": "Observational prediction",
+      "fullRef": "gauge/proton-stability:Corollary 4.2"
+    },
+    {
+      "derivationId": "gauge/proton-stability",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "GUT predictions vs. framework",
+      "fullRef": "gauge/proton-stability:Proposition 5.1"
+    },
+    {
+      "derivationId": "gauge/proton-stability",
+      "type": "Proposition",
+      "id": "5.2",
+      "name": "Falsifiability",
+      "fullRef": "gauge/proton-stability:Proposition 5.2"
+    },
+    {
+      "derivationId": "gauge/proton-stability",
+      "type": "Theorem",
+      "id": "6.1.",
+      "name": "",
+      "fullRef": "gauge/proton-stability:Theorem 6.1."
+    },
+    {
+      "derivationId": "gauge/proton-stability",
+      "type": "Theorem",
+      "id": "1.1",
+      "name": "",
+      "fullRef": "gauge/proton-stability:Theorem 1.1"
+    },
+    {
+      "derivationId": "gauge/proton-stability",
+      "type": "Theorem",
+      "id": "2.1",
+      "name": "",
+      "fullRef": "gauge/proton-stability:Theorem 2.1"
+    },
+    {
+      "derivationId": "gauge/proton-stability",
+      "type": "Theorem",
+      "id": "3.1",
+      "name": "",
+      "fullRef": "gauge/proton-stability:Theorem 3.1"
+    },
+    {
+      "derivationId": "gauge/proton-stability",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "",
+      "fullRef": "gauge/proton-stability:Proposition 4.1"
+    },
+    {
+      "derivationId": "gauge/proton-stability",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "",
+      "fullRef": "gauge/proton-stability:Proposition 5.1"
     },
     {
       "derivationId": "gauge/standard-model-group",
@@ -16976,6 +18044,139 @@
       "fullRef": "minimal-observer/structure:Theorem 9.1."
     },
     {
+      "derivationId": "particles/cpt-theorem",
+      "type": "Definition",
+      "id": "1.1",
+      "name": "Charge conjugation",
+      "fullRef": "particles/cpt-theorem:Definition 1.1"
+    },
+    {
+      "derivationId": "particles/cpt-theorem",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "Properties of $C$",
+      "fullRef": "particles/cpt-theorem:Proposition 1.2"
+    },
+    {
+      "derivationId": "particles/cpt-theorem",
+      "type": "Definition",
+      "id": "2.1",
+      "name": "Parity transformation",
+      "fullRef": "particles/cpt-theorem:Definition 2.1"
+    },
+    {
+      "derivationId": "particles/cpt-theorem",
+      "type": "Proposition",
+      "id": "2.2",
+      "name": "Parity and spin",
+      "fullRef": "particles/cpt-theorem:Proposition 2.2"
+    },
+    {
+      "derivationId": "particles/cpt-theorem",
+      "type": "Proposition",
+      "id": "2.3",
+      "name": "Parity of the coherence Lagrangian",
+      "fullRef": "particles/cpt-theorem:Proposition 2.3"
+    },
+    {
+      "derivationId": "particles/cpt-theorem",
+      "type": "Definition",
+      "id": "3.1",
+      "name": "Time reversal",
+      "fullRef": "particles/cpt-theorem:Definition 3.1"
+    },
+    {
+      "derivationId": "particles/cpt-theorem",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "Properties of $T$",
+      "fullRef": "particles/cpt-theorem:Proposition 3.2"
+    },
+    {
+      "derivationId": "particles/cpt-theorem",
+      "type": "Proposition",
+      "id": "3.3",
+      "name": "Time reversal of the coherence Lagrangian",
+      "fullRef": "particles/cpt-theorem:Proposition 3.3"
+    },
+    {
+      "derivationId": "particles/cpt-theorem",
+      "type": "Theorem",
+      "id": "4.1",
+      "name": "CPT is an exact symmetry",
+      "fullRef": "particles/cpt-theorem:Theorem 4.1"
+    },
+    {
+      "derivationId": "particles/cpt-theorem",
+      "type": "Corollary",
+      "id": "4.2",
+      "name": "CPT implies equal masses and lifetimes",
+      "fullRef": "particles/cpt-theorem:Corollary 4.2"
+    },
+    {
+      "derivationId": "particles/cpt-theorem",
+      "type": "Corollary",
+      "id": "4.3",
+      "name": "Individual C, P, T can be violated",
+      "fullRef": "particles/cpt-theorem:Corollary 4.3"
+    },
+    {
+      "derivationId": "particles/cpt-theorem",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "The three pillars",
+      "fullRef": "particles/cpt-theorem:Proposition 5.1"
+    },
+    {
+      "derivationId": "particles/cpt-theorem",
+      "type": "Theorem",
+      "id": "6.1.",
+      "name": "",
+      "fullRef": "particles/cpt-theorem:Theorem 6.1."
+    },
+    {
+      "derivationId": "particles/cpt-theorem",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "",
+      "fullRef": "particles/cpt-theorem:Proposition 1.2"
+    },
+    {
+      "derivationId": "particles/cpt-theorem",
+      "type": "Proposition",
+      "id": "2.2",
+      "name": "",
+      "fullRef": "particles/cpt-theorem:Proposition 2.2"
+    },
+    {
+      "derivationId": "particles/cpt-theorem",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "",
+      "fullRef": "particles/cpt-theorem:Proposition 3.2"
+    },
+    {
+      "derivationId": "particles/cpt-theorem",
+      "type": "Theorem",
+      "id": "4.1",
+      "name": "",
+      "fullRef": "particles/cpt-theorem:Theorem 4.1"
+    },
+    {
+      "derivationId": "particles/cpt-theorem",
+      "type": "Corollary",
+      "id": "4.2",
+      "name": "",
+      "fullRef": "particles/cpt-theorem:Corollary 4.2"
+    },
+    {
+      "derivationId": "particles/cpt-theorem",
+      "type": "Corollary",
+      "id": "4.3",
+      "name": "",
+      "fullRef": "particles/cpt-theorem:Corollary 4.3"
+    },
+    {
       "derivationId": "particles/mass-hierarchy",
       "type": "Structural Postulate",
       "id": "S1",
@@ -17303,6 +18504,90 @@
       "id": "7.1.",
       "name": "",
       "fullRef": "particles/spin-statistics:Theorem 7.1."
+    },
+    {
+      "derivationId": "particles/supersymmetry-impossibility",
+      "type": "Definition",
+      "id": "1.1",
+      "name": "Winding classes",
+      "fullRef": "particles/supersymmetry-impossibility:Definition 1.1"
+    },
+    {
+      "derivationId": "particles/supersymmetry-impossibility",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "Discreteness of the classification",
+      "fullRef": "particles/supersymmetry-impossibility:Proposition 1.2"
+    },
+    {
+      "derivationId": "particles/supersymmetry-impossibility",
+      "type": "Theorem",
+      "id": "2.1",
+      "name": "Supersymmetry impossibility",
+      "fullRef": "particles/supersymmetry-impossibility:Theorem 2.1"
+    },
+    {
+      "derivationId": "particles/supersymmetry-impossibility",
+      "type": "Corollary",
+      "id": "2.2",
+      "name": "No superpartners",
+      "fullRef": "particles/supersymmetry-impossibility:Corollary 2.2"
+    },
+    {
+      "derivationId": "particles/supersymmetry-impossibility",
+      "type": "Corollary",
+      "id": "2.3",
+      "name": "No Lie superalgebra realization",
+      "fullRef": "particles/supersymmetry-impossibility:Corollary 2.3"
+    },
+    {
+      "derivationId": "particles/supersymmetry-impossibility",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Relation to Coleman-Mandula and Haag-Łopuszański-Sohnius",
+      "fullRef": "particles/supersymmetry-impossibility:Proposition 3.1"
+    },
+    {
+      "derivationId": "particles/supersymmetry-impossibility",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Supersymmetry requires $\\pi_1 \\neq \\mathbb{Z}_2$",
+      "fullRef": "particles/supersymmetry-impossibility:Proposition 4.1"
+    },
+    {
+      "derivationId": "particles/supersymmetry-impossibility",
+      "type": "Theorem",
+      "id": "5.1.",
+      "name": "",
+      "fullRef": "particles/supersymmetry-impossibility:Theorem 5.1."
+    },
+    {
+      "derivationId": "particles/supersymmetry-impossibility",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "",
+      "fullRef": "particles/supersymmetry-impossibility:Proposition 1.2"
+    },
+    {
+      "derivationId": "particles/supersymmetry-impossibility",
+      "type": "Theorem",
+      "id": "2.1",
+      "name": "",
+      "fullRef": "particles/supersymmetry-impossibility:Theorem 2.1"
+    },
+    {
+      "derivationId": "particles/supersymmetry-impossibility",
+      "type": "Corollary",
+      "id": "2.2",
+      "name": "",
+      "fullRef": "particles/supersymmetry-impossibility:Corollary 2.2"
+    },
+    {
+      "derivationId": "particles/supersymmetry-impossibility",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "",
+      "fullRef": "particles/supersymmetry-impossibility:Proposition 3.1"
     },
     {
       "derivationId": "particles/three-generations",
@@ -17858,6 +19143,153 @@
       "fullRef": "quantum/preferred-basis:Theorem 9.1."
     },
     {
+      "derivationId": "quantum/teleportation",
+      "type": "Definition",
+      "id": "1.1",
+      "name": "Teleportation configuration",
+      "fullRef": "quantum/teleportation:Definition 1.1"
+    },
+    {
+      "derivationId": "quantum/teleportation",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "Hilbert space description",
+      "fullRef": "quantum/teleportation:Proposition 1.2"
+    },
+    {
+      "derivationId": "quantum/teleportation",
+      "type": "Definition",
+      "id": "2.1",
+      "name": "Bell measurement",
+      "fullRef": "quantum/teleportation:Definition 2.1"
+    },
+    {
+      "derivationId": "quantum/teleportation",
+      "type": "Theorem",
+      "id": "2.2",
+      "name": "Bell basis expansion",
+      "fullRef": "quantum/teleportation:Theorem 2.2"
+    },
+    {
+      "derivationId": "quantum/teleportation",
+      "type": "Proposition",
+      "id": "2.3",
+      "name": "Measurement generates a classical relational invariant",
+      "fullRef": "quantum/teleportation:Proposition 2.3"
+    },
+    {
+      "derivationId": "quantum/teleportation",
+      "type": "Theorem",
+      "id": "3.1",
+      "name": "Post-measurement state",
+      "fullRef": "quantum/teleportation:Theorem 3.1"
+    },
+    {
+      "derivationId": "quantum/teleportation",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "Coherence accounting",
+      "fullRef": "quantum/teleportation:Proposition 3.2"
+    },
+    {
+      "derivationId": "quantum/teleportation",
+      "type": "Theorem",
+      "id": "4.1",
+      "name": "Teleportation completion",
+      "fullRef": "quantum/teleportation:Theorem 4.1"
+    },
+    {
+      "derivationId": "quantum/teleportation",
+      "type": "Corollary",
+      "id": "4.2",
+      "name": "Classical communication is necessary",
+      "fullRef": "quantum/teleportation:Corollary 4.2"
+    },
+    {
+      "derivationId": "quantum/teleportation",
+      "type": "Theorem",
+      "id": "5.1",
+      "name": "Teleportation as coherence channel transfer",
+      "fullRef": "quantum/teleportation:Theorem 5.1"
+    },
+    {
+      "derivationId": "quantum/teleportation",
+      "type": "Corollary",
+      "id": "5.2",
+      "name": "Teleportation fidelity",
+      "fullRef": "quantum/teleportation:Corollary 5.2"
+    },
+    {
+      "derivationId": "quantum/teleportation",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "Higher-dimensional teleportation",
+      "fullRef": "quantum/teleportation:Proposition 6.1"
+    },
+    {
+      "derivationId": "quantum/teleportation",
+      "type": "Proposition",
+      "id": "6.2",
+      "name": "Entanglement swapping as iterated transfer",
+      "fullRef": "quantum/teleportation:Proposition 6.2"
+    },
+    {
+      "derivationId": "quantum/teleportation",
+      "type": "Theorem",
+      "id": "7.1.",
+      "name": "",
+      "fullRef": "quantum/teleportation:Theorem 7.1."
+    },
+    {
+      "derivationId": "quantum/teleportation",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "",
+      "fullRef": "quantum/teleportation:Proposition 1.2"
+    },
+    {
+      "derivationId": "quantum/teleportation",
+      "type": "Theorem",
+      "id": "2.2",
+      "name": "",
+      "fullRef": "quantum/teleportation:Theorem 2.2"
+    },
+    {
+      "derivationId": "quantum/teleportation",
+      "type": "Theorem",
+      "id": "3.1",
+      "name": "",
+      "fullRef": "quantum/teleportation:Theorem 3.1"
+    },
+    {
+      "derivationId": "quantum/teleportation",
+      "type": "Theorem",
+      "id": "4.1",
+      "name": "",
+      "fullRef": "quantum/teleportation:Theorem 4.1"
+    },
+    {
+      "derivationId": "quantum/teleportation",
+      "type": "Corollary",
+      "id": "4.2",
+      "name": "",
+      "fullRef": "quantum/teleportation:Corollary 4.2"
+    },
+    {
+      "derivationId": "quantum/teleportation",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "",
+      "fullRef": "quantum/teleportation:Proposition 3.2"
+    },
+    {
+      "derivationId": "quantum/teleportation",
+      "type": "Theorem",
+      "id": "5.1",
+      "name": "",
+      "fullRef": "quantum/teleportation:Theorem 5.1"
+    },
+    {
       "derivationId": "spacetime/einstein-equations",
       "type": "Structural Postulate",
       "id": "S1",
@@ -18069,10 +19501,10 @@
     },
     {
       "derivationId": "spacetime/lorentz-invariance",
-      "type": "Structural Postulate",
-      "id": "S1",
-      "name": "Homogeneity",
-      "fullRef": "spacetime/lorentz-invariance:Structural Postulate S1"
+      "type": "Theorem",
+      "id": "0.1",
+      "name": "Homogeneity — now a theorem",
+      "fullRef": "spacetime/lorentz-invariance:Theorem 0.1"
     },
     {
       "derivationId": "spacetime/lorentz-invariance",
@@ -19694,6 +21126,27 @@
       "description": "The cosmological electroweak phase transition (first-order vs. crossover) depends on the detailed dynamics of the crystallization, relevant for [Baryogenesis](/derivations/cosmology/baryogenesis)."
     },
     {
+      "derivationId": "gauge/proton-stability",
+      "derivationStatus": "rigorous",
+      "number": 1,
+      "title": "Neutron-antineutron oscillation",
+      "description": "While proton decay is forbidden, neutron-antineutron oscillation (Delta B = 2) might occur through non-perturbative effects. The framework should determine whether B violation by 2 units (without lept"
+    },
+    {
+      "derivationId": "gauge/proton-stability",
+      "derivationStatus": "rigorous",
+      "number": 2,
+      "title": "Black hole baryon number",
+      "description": "When a proton falls into a black hole, is baryon number preserved? The information paradox resolution ([Information Paradox](/derivations/holography/information-paradox)) suggests yes (no information "
+    },
+    {
+      "derivationId": "gauge/proton-stability",
+      "derivationStatus": "rigorous",
+      "number": 3,
+      "title": "Quantitative gravitational amplitude",
+      "description": "The estimate taup sim 1064 years is parametric. A precise calculation would require the non-perturbative gravitational path integral, which is not available. The causal set statistics ([Causal Set Sta"
+    },
+    {
       "derivationId": "gauge/standard-model-group",
       "derivationStatus": "rigorous",
       "number": 1,
@@ -20114,6 +21567,27 @@
       "description": "For every observer with charge QO, there exists a conjugate with charge -QO (the U(1) representation and its dual). These are coherence-dual pairs — the framework's antiparticles. Developed in [Cohere"
     },
     {
+      "derivationId": "particles/cpt-theorem",
+      "derivationStatus": "rigorous",
+      "number": 1,
+      "title": "CP violation mechanism",
+      "description": "While the theorem allows individual CP violation (Corollary 4.3), the framework should derive the specific mechanism — complex phases in the CKM and PMNS matrices — from the flavor structure ([Three G"
+    },
+    {
+      "derivationId": "particles/cpt-theorem",
+      "derivationStatus": "rigorous",
+      "number": 2,
+      "title": "CPT tests",
+      "description": "The prediction m = m and tau = tau can be tested with increasing precision. Current best tests: |mK - mK|/mK < 10-18 (kaon system), |qp + qp|/e < 10-12 (proton-antiproton charge ratio). Any violation "
+    },
+    {
+      "derivationId": "particles/cpt-theorem",
+      "derivationStatus": "rigorous",
+      "number": 3,
+      "title": "Gravitational CPT",
+      "description": "Does CPT extend to the gravitational sector? The coherence Lagrangian includes gravity ([Einstein Equations](/derivations/spacetime/einstein-equations)), so the theorem formally applies. However, the "
+    },
+    {
       "derivationId": "particles/mass-hierarchy",
       "derivationStatus": "rigorous",
       "number": 1,
@@ -20217,6 +21691,27 @@
       "number": 3,
       "title": "Higher-spin particles",
       "description": "Which spin values are realized at each level of the bootstrap hierarchy? Spin-1 gauge bosons and spin-2 gravitons should emerge at specific levels — this connects to the gauge structure derivation."
+    },
+    {
+      "derivationId": "particles/supersymmetry-impossibility",
+      "derivationStatus": "rigorous",
+      "number": 1,
+      "title": "Experimental sharpening",
+      "description": "The prediction is that no superpartner exists at *any* energy scale, not merely above the current LHC reach. Future colliders testing higher energies provide continued tests."
+    },
+    {
+      "derivationId": "particles/supersymmetry-impossibility",
+      "derivationStatus": "rigorous",
+      "number": 2,
+      "title": "Emergent approximate SUSY",
+      "description": "Could an approximate algebraic relation between bosonic and fermionic sectors arise dynamically, even though exact SUSY is forbidden? Such an \"accidental SUSY\" would be broken by construction and migh"
+    },
+    {
+      "derivationId": "particles/supersymmetry-impossibility",
+      "derivationStatus": "rigorous",
+      "number": 3,
+      "title": "Supergravity and string theory",
+      "description": "In approaches where supersymmetry is a mathematical framework (string theory, supergravity), does the topological no-go theorem constrain which mathematical structures have physical realizations?"
     },
     {
       "derivationId": "particles/three-generations",
@@ -20364,6 +21859,27 @@
       "number": 4,
       "title": "Weak measurements",
       "description": "For partial (weak) Type III interactions, the relational invariant is not fully generated, and the system is left in a superposition of eigenstates with small disturbance. This should connect to the w"
+    },
+    {
+      "derivationId": "quantum/teleportation",
+      "derivationStatus": "rigorous",
+      "number": 1,
+      "title": "Quantum key distribution",
+      "description": "The teleportation channel can be repurposed for quantum key distribution (BB84, E91). Derive the security of QKD from coherence conservation — specifically, that any eavesdropper must create a relatio"
+    },
+    {
+      "derivationId": "quantum/teleportation",
+      "derivationStatus": "rigorous",
+      "number": 2,
+      "title": "Continuous-variable teleportation",
+      "description": "Extend from qubits to continuous-variable systems (Braunstein-Kimble protocol). The relational invariants become continuous, and the Bell measurement becomes a homodyne detection. The coherence accoun"
+    },
+    {
+      "derivationId": "quantum/teleportation",
+      "derivationStatus": "rigorous",
+      "number": 3,
+      "title": "Teleportation as a resource theory",
+      "description": "Formalize the resource-theoretic aspects: entanglement as the resource, classical communication as the catalyst, and coherence conservation as the resource monotone. This connects to the broader resou"
     },
     {
       "derivationId": "spacetime/einstein-equations",

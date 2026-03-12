@@ -54,7 +54,11 @@
     { "id": "gauge/weinberg-angle", "title": "Weinberg Angle", "group": "gauge", "status": "rigorous" },
     { "id": "cosmology/leptogenesis", "title": "Leptogenesis", "group": "cosmology", "status": "rigorous" },
     { "id": "gauge/chiral-symmetry-breaking", "title": "Chiral Symmetry Breaking", "group": "gauge", "status": "provisional" },
-    { "id": "holography/er-epr", "title": "ER=EPR Formalization", "group": "holography", "status": "rigorous" }
+    { "id": "holography/er-epr", "title": "ER=EPR Formalization", "group": "holography", "status": "rigorous" },
+    { "id": "particles/supersymmetry-impossibility", "title": "Supersymmetry Impossibility", "group": "particles", "status": "rigorous" },
+    { "id": "quantum/teleportation", "title": "Quantum Teleportation", "group": "quantum", "status": "rigorous" },
+    { "id": "particles/cpt-theorem", "title": "CPT Theorem", "group": "particles", "status": "rigorous" },
+    { "id": "gauge/proton-stability", "title": "Proton Stability", "group": "gauge", "status": "rigorous" }
   ],
   "edges": [
     { "from": "axioms/coherence-conservation", "to": "axioms/observer-definition" },
@@ -163,6 +167,17 @@
     { "from": "quantum/entanglement", "to": "holography/er-epr" },
     { "from": "holography/area-scaling", "to": "holography/er-epr" },
     { "from": "holography/causal-set-statistics", "to": "holography/er-epr" },
-    { "from": "spacetime/einstein-equations", "to": "holography/er-epr" }
+    { "from": "spacetime/einstein-equations", "to": "holography/er-epr" },
+    { "from": "particles/spin-statistics", "to": "particles/supersymmetry-impossibility" },
+    { "from": "dimensions/three-dimensions", "to": "particles/supersymmetry-impossibility" },
+    { "from": "quantum/entanglement", "to": "quantum/teleportation" },
+    { "from": "quantum/measurement", "to": "quantum/teleportation" },
+    { "from": "interactions/three-types", "to": "quantum/teleportation" },
+    { "from": "minimal-observer/coherence-dual-pairs", "to": "particles/cpt-theorem" },
+    { "from": "spacetime/lorentz-invariance", "to": "particles/cpt-theorem" },
+    { "from": "particles/spin-statistics", "to": "particles/cpt-theorem" },
+    { "from": "foundation/coherence-lagrangian", "to": "particles/cpt-theorem" },
+    { "from": "gauge/standard-model-group", "to": "gauge/proton-stability" },
+    { "from": "cosmology/coupling-constants", "to": "gauge/proton-stability" }
   ]
 }

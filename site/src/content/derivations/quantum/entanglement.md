@@ -2,7 +2,7 @@
 title: "Entanglement from Relational Invariants"
 status: "rigorous"
 dependsOn: ["interactions/relational-invariants", "quantum/born-rule"]
-enablesDerivation: ["holography/er-epr"]
+enablesDerivation: ["holography/er-epr", "quantum/teleportation"]
 tags: ["quantum", "information"]
 summary: "Quantum entanglement is the Hilbert-space image of relational invariants between observers. The coherence of a relational invariant equals the entanglement entropy, the no-cloning theorem follows from coherence conservation, and entanglement monogamy follows from coherence subadditivity."
 rigorLevel: "formal"

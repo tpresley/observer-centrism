@@ -2,7 +2,7 @@
 title: "Measurement as Relational Invariant Generation"
 status: "rigorous"
 dependsOn: ["quantum/preferred-basis"]
-enablesDerivation: []
+enablesDerivation: ["quantum/teleportation"]
 tags: ["quantum"]
 summary: "Measurement = Type III interaction generating relational invariants; 'collapse' is the creation of new relational structure, not the destruction of superposition"
 rigorLevel: "formal"

@@ -2,7 +2,7 @@
 title: "Coherence Lagrangian"
 status: "rigorous"
 dependsOn: ["thermodynamics/action-planck", "thermodynamics-ext/fisher-metric"]
-enablesDerivation: []
+enablesDerivation: ["particles/cpt-theorem"]
 tags: ["foundation", "lagrangian"]
 summary: "The coherence Lagrangian is constructed from two ingredients: the Fisher information metric provides the unique kinetic term (via Čencov's theorem), and coherence conservation constrains the potential. The resulting action principle S = ∫ℒ reproduces the Euler-Lagrange dynamics of the framework and connects the discrete axiom structure to continuum field theory."
 rigorLevel: "formal"

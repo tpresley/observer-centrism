@@ -16,9 +16,9 @@ lastUpdated: 2026-03-09
 
 ## Structural Postulate
 
-**S1 (Smooth coherence measure).** The coherence measure $\mathcal{C}$, restricted to any observer state space $\Sigma$, is at least $C^2$ (twice continuously differentiable). This extends the structural postulate S2 of [Loop Closure](/derivations/axioms/loop-closure) (which provides a $G_\mathcal{O}$-invariant Riemannian metric on $\Sigma$) by requiring that the Hessian of $\mathcal{C}$ itself yields a positive-definite metric on the physical state space.
+**S1 (Smooth coherence measure).** The coherence measure $\mathcal{C}$, restricted to any observer state space $\Sigma$, is at least $C^2$ (twice continuously differentiable). This extends [Loop Closure](/derivations/axioms/loop-closure) Theorem 0.1 (which provides a $G_\mathcal{O}$-invariant Riemannian metric on $\Sigma$ via Weyl averaging) by requiring that the Hessian of $\mathcal{C}$ itself yields a positive-definite metric on the physical state space.
 
-**Remark.** The $G_\mathcal{O}$-invariant metric from Loop Closure (S2) and the Hessian metric from $\mathcal{C}$ are structurally related: both measure the cost of motion on $\Sigma$. The postulate is that they agree — i.e., the natural metric on $\Sigma$ is the one induced by the coherence measure. This is a uniqueness assumption that restricts the framework to a single geometric structure on state space.
+**Remark.** The $G_\mathcal{O}$-invariant metric from Loop Closure (Theorem 0.1) and the Hessian metric from $\mathcal{C}$ are structurally related: both measure the cost of motion on $\Sigma$. The postulate is that they agree — i.e., the natural metric on $\Sigma$ is the one induced by the coherence measure. This is a uniqueness assumption that restricts the framework to a single geometric structure on state space.
 
 ## Derivation
 

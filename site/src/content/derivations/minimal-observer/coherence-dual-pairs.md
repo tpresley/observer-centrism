@@ -2,7 +2,7 @@
 title: "Coherence-Dual Pairs"
 status: "rigorous"
 dependsOn: ["minimal-observer/multiplicity"]
-enablesDerivation: ["holography/hawking-radiation"]
+enablesDerivation: ["holography/hawking-radiation", "particles/cpt-theorem"]
 tags: ["foundation"]
 summary: "The minimal crystallization event produces a conjugate pair with equal mass and opposite charges — particle-antiparticle structure"
 rigorLevel: "formal"

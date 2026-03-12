@@ -7,7 +7,7 @@ tags: ["foundation"]
 summary: "Formalization of cyclic dynamics as a Noether pair (U(1) symmetry ↔ conserved charge), with Lyapunov stability and approximate closure giving a precise persistence criterion"
 rigorLevel: "formal"
 sourceSection: "02-axioms"
-lastUpdated: 2026-03-08
+lastUpdated: 2026-03-12
 ---
 
 ## Statement
@@ -16,13 +16,34 @@ lastUpdated: 2026-03-08
 
 ## Structural Postulate
 
-**Postulate (Smooth metric structure).** The state space $\Sigma$ of an observer $\mathcal{O} = (\Sigma, I, \mathcal{B})$ (Axiom 2) carries:
+**Postulate (Smooth manifold structure).** The state space $\Sigma$ of an observer $\mathcal{O} = (\Sigma, I, \mathcal{B})$ (Axiom 2) carries:
 
 (S1) A smooth manifold structure (of finite dimension $\dim \Sigma \geq 1$)
 
-(S2) A Riemannian metric $g$ on $\Sigma$ that is $G_\mathcal{O}$-invariant: $\phi_t^* g = g$ for all $t$
+**Remark (Selection argument for S1).** S1 is not an arbitrary mathematical convenience — it is the unique consistent mathematical setting for the axiom system. Three independent requirements converge on smooth manifold structure:
 
-**Remark (Status of S1–S2).** These are structural postulates — they specify the mathematical setting in which Axiom 3 operates, analogous to the topology postulate in [Observer Definition](/derivations/axioms/observer-definition). They are *not* derived from Axioms 1–2. The smooth structure is required for Noether's theorem (Step 3), and the metric for Lyapunov stability (Step 4) and the coherence cost integral (Step 6). The $G_\mathcal{O}$-invariance of $g$ ensures that the dynamics preserves geometric quantities (distances, volumes) on $\Sigma$, consistent with Hamiltonian phase flow.
+1. **Noether's theorem** (Step 3, [Observer Definition](/derivations/axioms/observer-definition) Theorem 5.1) requires a Lie group acting smoothly on a smooth manifold. Without differentiability, there is no Lie algebra, no moment map, and no conserved charges.
+2. **Coherence cost** (Step 6) requires the velocity $\dot{\phi}_t$ along the observer loop, which presupposes at least $C^1$ differentiability of the dynamics $\phi_t: \Sigma \to \Sigma$.
+3. **Fisher information metric** ([Fisher Metric](/derivations/thermodynamics-ext/fisher-metric)) requires the coherence measure $\mathcal{C}$ to be at least $C^2$ on $\Sigma$ for the Hessian metric to be well-defined.
+
+Any state space satisfying all three requirements is at least a $C^1$ manifold. By Whitney's theorem (1936), every $C^1$ manifold admits a unique compatible $C^\infty$ structure. S1 is therefore not an arbitrary choice but the unique mathematical setting in which all three axioms can operate simultaneously. It remains a structural postulate because the axioms do not constructively build smooth structure from the measure-theoretic foundation of Axiom 1 — they *select* it by consistency.
+
+**Theorem 0.1 (Invariant Riemannian metric).** *Given S1, the state space $\Sigma$ carries a $G_\mathcal{O}$-invariant Riemannian metric $g$ with $\phi_t^* g = g$ for all $t$.*
+
+*Proof.* **Step (a): Existence of a Riemannian metric.** Since $\Sigma$ is a smooth manifold (S1) and is compact (O1 from [Observer Definition](/derivations/axioms/observer-definition)), it admits a Riemannian metric $g_0$. (Standard result: every smooth manifold admits a Riemannian metric, constructed via a partition of unity subordinate to an atlas. Compactness ensures a finite partition suffices.)
+
+**Step (b): Weyl averaging.** The dynamics $\phi_t$ generates a $U(1)$ action on $\Sigma$ (Corollary 2.3), and $U(1)$ is compact. Define the averaged metric:
+
+$$g(\sigma)(v, w) = \int_{U(1)} (\phi_\theta^* g_0)(\sigma)(v, w) \, d\mu(\theta)$$
+
+where $\mu$ is the normalized Haar measure on $U(1)$ and $\phi_\theta = \phi_{\theta T_\mathcal{O}/2\pi}$.
+
+- **$g$ is Riemannian**: For any non-zero $v \in T_\sigma\Sigma$, $(\phi_\theta^* g_0)(v, v) = g_0(d\phi_\theta(v), d\phi_\theta(v)) > 0$ since $g_0$ is positive-definite and $d\phi_\theta$ is a linear isomorphism. The integral of positive functions with respect to a probability measure is positive. So $g(v, v) > 0$ for all $v \neq 0$.
+- **$g$ is $G_\mathcal{O}$-invariant**: For any $\phi_s$ in the $U(1)$ action, $(\phi_s^* g)(v, w) = \int_{U(1)} ((\phi_\theta \circ \phi_s)^* g_0)(v, w) \, d\mu(\theta) = g(v, w)$ by translation-invariance of Haar measure on $U(1)$. $\square$
+
+**Remark (Canonical choice).** Theorem 0.1 establishes existence using an arbitrary initial metric. The [Fisher Information Metric](/derivations/thermodynamics-ext/fisher-metric) provides a *canonical* choice: the unique (up to scale) Riemannian metric on $\Sigma$ invariant under sufficient statistics (Čencov's theorem). Since the Fisher metric is already $U(1)$-invariant when $\mathcal{C}$ is constant along orbits (which holds by invariant preservation), it provides a distinguished $G_\mathcal{O}$-invariant metric without averaging.
+
+**Remark (Former Postulate S2).** This result replaces the former structural postulate S2, which assumed the existence of a $G_\mathcal{O}$-invariant Riemannian metric. The metric is a consequence of S1 together with the compactness of $\Sigma$ (O1) and the $U(1)$ symmetry of Axiom 3. It is not an independent input.
 
 ## Formalization
 
@@ -96,7 +117,7 @@ $$\rho: U(1) \to \text{Diff}(\Sigma), \quad e^{i\theta} \mapsto \phi_{\theta T_\
 
 ### Step 4: Stability — Lyapunov Formulation
 
-**Definition 4.1 (Lyapunov stability).** Using the geodesic distance $d$ induced by the Riemannian metric $g$ from (S2), the observer loop $\gamma_\mathcal{O}$ is **Lyapunov stable** if for every $\epsilon > 0$, there exists $\delta > 0$ such that:
+**Definition 4.1 (Lyapunov stability).** Using the geodesic distance $d$ induced by the Riemannian metric $g$ (Theorem 0.1), the observer loop $\gamma_\mathcal{O}$ is **Lyapunov stable** if for every $\epsilon > 0$, there exists $\delta > 0$ such that:
 
 $$d(\sigma, \gamma_\mathcal{O}) < \delta \implies d(\phi_t(\sigma), \gamma_\mathcal{O}) < \epsilon \quad \forall t \geq 0$$
 
@@ -142,7 +163,7 @@ Once $N\epsilon \geq D_\mathcal{B}$, the drift may carry the state to $\partial\
 
 ### Step 6: The Coherence Cost of a Loop
 
-**Definition 6.1 (Coherence cost / action).** Using the Riemannian metric $g$ from (S2) and the coherence measure $\mathcal{C}$ from Axiom 1, the **coherence cost** of an observer loop is:
+**Definition 6.1 (Coherence cost / action).** Using the Riemannian metric $g$ (Theorem 0.1) and the coherence measure $\mathcal{C}$ from Axiom 1, the **coherence cost** of an observer loop is:
 
 $$S_\mathcal{O} = \int_0^{T_\mathcal{O}} \mathcal{C}(\phi_t(\sigma_0)) \sqrt{g(\dot{\phi}_t, \dot{\phi}_t)} \, dt$$
 
@@ -170,7 +191,7 @@ The infimum $S_{\min} = \inf_\mathcal{O} S_\mathcal{O}$ over all observers satis
 
 *Proof.* Substituting constants into Definition 6.1: $S_\mathcal{O} = \int_0^{T_\mathcal{O}} \mathcal{C}(\Sigma) \cdot v \, dt = \mathcal{C}(\Sigma) \cdot v \cdot T_\mathcal{O}$. $\square$
 
-**Remark (Constancy justification).** The constancy of $\mathcal{C}$ along the loop holds when $\mathcal{C}$ depends only on the invariant $I$ (which is conserved along the flow). Constant speed is guaranteed by $G_\mathcal{O}$-invariance of the metric (S2): since $\phi_t$ is an isometry, $|\dot{\phi}_{t+s}(\sigma_0)|_g = |\dot{\phi}_s(\sigma_0)|_g$ for all $t$, so the speed is constant for a $U(1)$ orbit.
+**Remark (Constancy justification).** The constancy of $\mathcal{C}$ along the loop holds when $\mathcal{C}$ depends only on the invariant $I$ (which is conserved along the flow). Constant speed is guaranteed by $G_\mathcal{O}$-invariance of the metric (Theorem 0.1): since $\phi_t$ is an isometry, $|\dot{\phi}_{t+s}(\sigma_0)|_g = |\dot{\phi}_s(\sigma_0)|_g$ for all $t$, so the speed is constant for a $U(1)$ orbit.
 
 **Corollary 7.3 (Planck-Einstein relation).** *Defining $E_\mathcal{O} = S_\mathcal{O}/T_\mathcal{O}$ as the energy (action per period), and using $S_{\min} = \hbar$ (cf. [Action and Planck's Constant](/derivations/thermodynamics/action-planck)):*
 
@@ -182,13 +203,13 @@ $$E_\mathcal{O} = \frac{S_\mathcal{O}}{T_\mathcal{O}} = \frac{\hbar}{T_\mathcal{
 
 ## Consistency Model
 
-**Theorem 8.1.** *The loop closure axiom with structural postulates (S1–S2) is consistent: there exists a concrete model satisfying all conditions.*
+**Theorem 8.1.** *The loop closure axiom with structural postulate S1 (and its consequence, Theorem 0.1) is consistent: there exists a concrete model satisfying all conditions.*
 
 **Model**: $\Sigma = S^1$ (unit circle), $g = d\theta^2$ (standard metric), $\mathcal{H} = \mathbb{R}^2 \supset S^1$, $I(\theta) = 1$ (constant — the radius), $\mathcal{B} = S^1$ (the circle as self/non-self boundary), $\phi_t(\theta) = \theta + 2\pi t/T$ (rigid rotation with period $T > 0$), $\mathcal{C}(\theta) = c_0 > 0$ (constant).
 
 *Verification:*
 - **(S1)**: $S^1$ is a smooth 1-manifold. ✓
-- **(S2)**: $d\theta^2$ is $\phi_t$-invariant (rotation is an isometry). ✓
+- **Thm 0.1**: $d\theta^2$ is $\phi_t$-invariant (rotation is an isometry) — consistent with the Weyl-averaged metric, which for this model equals $d\theta^2$. ✓
 - **Def 1.1**: $\phi$ is a smooth homomorphism $\mathbb{R} \to \text{Isom}(S^1)$, preserves $I \equiv 1$. ✓
 - **Axiom 3**: $\phi_T(\theta) = \theta + 2\pi = \theta$, with $T_\mathcal{O} = T$. ✓
 - **Prop 1.2**: $T > 0$ is the minimal period. ✓
@@ -220,9 +241,11 @@ $$E_\mathcal{O} = \frac{S_\mathcal{O}}{T_\mathcal{O}} = \frac{\hbar}{T_\mathcal{
 - Proposition 6.2: Positive coherence cost (complete proof from non-degeneracy + positivity)
 - Theorem 8.1: Consistency model fully verified
 
-**Structural postulates (not derived, stated explicitly):**
-- (S1) Smooth manifold structure on $\Sigma$
-- (S2) $G_\mathcal{O}$-invariant Riemannian metric on $\Sigma$
+**Newly proved (this derivation):**
+- Theorem 0.1: $G_\mathcal{O}$-invariant Riemannian metric exists on $\Sigma$ (from S1 + compactness + Weyl averaging; replaces former Postulate S2)
+
+**Structural postulate (not derived, stated explicitly):**
+- (S1) Smooth manifold structure on $\Sigma$ (with selection argument: unique consistent choice, but not constructively derived)
 - Symplectic structure for Theorem 3.1 (additional assumption, stated in theorem)
 
 **Deferred to later derivations:**

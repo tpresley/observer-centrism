@@ -2,7 +2,7 @@
 title: "Lorentz Invariance"
 status: "rigorous"
 dependsOn: ["spacetime/speed-of-light"]
-enablesDerivation: ["spacetime/gravity"]
+enablesDerivation: ["spacetime/gravity", "particles/cpt-theorem"]
 tags: ["geometry"]
 summary: "Lorentz contraction and time dilation as loop projection effects — the Lorentz group is the symmetry group of loop closure in the coherence geometry"
 rigorLevel: "formal"
@@ -26,11 +26,23 @@ leanProofs:
 
 ## Derivation
 
-### Structural Postulate
+### Homogeneity (Formerly Structural Postulate S1)
 
-**Structural Postulate S1 (Homogeneity).** The coherence geometry $(\mathcal{H}, g)$ is homogeneous: the coherence measure $\mathcal{C}$ and the metric $g$ are invariant under spacetime translations $x^\mu \mapsto x^\mu + a^\mu$.
+**Theorem 0.1 (Homogeneity — now a theorem).** *The coherence geometry $(\mathcal{H}, g)$ is homogeneous in vacuum: the coherence measure $\mathcal{C}$ and the metric $g$ are invariant under spacetime translations $x^\mu \mapsto x^\mu + a^\mu$.*
 
-**Remark.** Homogeneity expresses the principle that the coherence geometry is defined by the relational structure of the observer network, not by absolute position. Since the axioms ([Coherence Conservation](/derivations/axioms/coherence-conservation), [Observer Definition](/derivations/axioms/observer-definition), [Loop Closure](/derivations/axioms/loop-closure)) make no reference to absolute location, the coherence geometry they generate cannot depend on location either. Formally: if $(g_{\mu\nu}(x), \mathcal{C}(x))$ is a solution of the framework's consistency conditions, so is $(g_{\mu\nu}(x + a), \mathcal{C}(x + a))$ for any constant $a^\mu$. Uniqueness of the flat-space solution then gives $g_{\mu\nu}(x) = g_{\mu\nu}(x + a)$ for all $a$. In curved spacetime (with matter present), homogeneity holds locally but is broken globally by the matter distribution — the Poincaré group becomes the local symmetry group, as in general relativity.
+*Proof.* The three axioms make no reference to absolute spacetime position:
+
+1. **Coherence Conservation** ([Axiom 1](/derivations/axioms/coherence-conservation)): The subadditive measure $\mathcal{C}$ is defined on a $\sigma$-algebra of subsystems and conserved on Cauchy slices of the dependency DAG. The axiom's statement — $\mathcal{C}(S_1 \cup S_2) \leq \mathcal{C}(S_1) + \mathcal{C}(S_2)$ with conservation $\mathcal{C}(\Sigma_{\text{slice}}) = C_0$ — contains no position parameter $x^\mu$.
+
+2. **Observer Definition** ([Axiom 2](/derivations/axioms/observer-definition)): An observer is a triple $(\Sigma, I, \mathcal{B})$ — state space, Noether invariant, self/non-self boundary. None of these reference a background location; they are defined relationally.
+
+3. **Loop Closure** ([Axiom 3](/derivations/axioms/loop-closure)): The $U(1)$ phase dynamics $\phi_t: \Sigma \to \Sigma$ with period $T$ and Lyapunov stability are properties of the loop itself, independent of where the loop is embedded.
+
+Since no axiom contains an absolute position parameter, the framework's consistency conditions are translation-invariant: if $(g_{\mu\nu}(x), \mathcal{C}(x))$ is a vacuum solution, so is $(g_{\mu\nu}(x + a), \mathcal{C}(x + a))$ for any constant $a^\mu$. But the vacuum (zero observer density) has a unique solution — the flat Minkowski metric $\eta_{\mu\nu}$ (from [Speed of Light](/derivations/spacetime/speed-of-light), Theorem 5.1), which is the unique maximally symmetric metric of signature $(3,1)$. Therefore $g_{\mu\nu}(x) = g_{\mu\nu}(x + a) = \eta_{\mu\nu}$ for all $a$.
+
+In curved spacetime (with matter present), homogeneity holds locally but is broken globally by the matter distribution — the Poincaré group becomes the local symmetry group, as in general relativity. $\square$
+
+**Remark.** This was originally stated as Structural Postulate S1. The proof above shows it follows from the axioms' position-independence, requiring no additional assumption. The postulate is now a theorem.
 
 ### Step 1: The Minkowski Geometry of Loops
 
@@ -199,14 +211,14 @@ At $v > c$: $\gamma$ becomes imaginary, and $ds^2 < 0$ (spacelike). The loop can
 - Proposition 7.2: Noether charges from Poincaré generators (standard Noether's theorem)
 - Theorem 9.1: Consistency model verified on $S^1$ in $\mathbb{R}^{1,1}$
 
-**Structural postulate:**
-- S1 (Homogeneity): Translation-invariance of the coherence geometry. Justified by the axioms' independence from absolute location, but stated as a structural postulate rather than derived. Broken globally by matter distribution (local symmetry only, as in GR).
+**Now a theorem (formerly structural postulate):**
+- S1 (Homogeneity): Translation-invariance of the coherence geometry. Originally stated as a structural postulate, now derived as Theorem 0.1 from the axioms' position-independence plus uniqueness of the Minkowski vacuum. Broken globally by matter distribution (local symmetry only, as in GR).
 
 **Deferred to later derivations:**
-- Proposition 8.1: CPT theorem requires locality + spin-statistics connection from [Spin and Statistics](/derivations/particles/spin-statistics) (forward dependency, honestly flagged)
+- Proposition 8.1: CPT theorem requires locality + spin-statistics connection from [Spin and Statistics](/derivations/particles/spin-statistics) (forward dependency, honestly flagged). See [CPT Theorem](/derivations/particles/cpt-theorem) for the full derivation.
 - Proposition 2.2: Structural interpretation of time dilation as loop projection (interpretive, no new mathematical content)
 
-**Assessment:** The Lorentz group is rigorously derived as the isometry group of the Minkowski metric (from [Speed of Light](/derivations/spacetime/speed-of-light)). Time dilation, length contraction, the speed limit, and the Poincaré extension are standard consequences. The homogeneity assumption is now stated as a structural postulate (S1) with a justification from the axioms' location-independence. The CPT forward dependency is honestly flagged.
+**Assessment:** The Lorentz group is rigorously derived as the isometry group of the Minkowski metric (from [Speed of Light](/derivations/spacetime/speed-of-light)). Time dilation, length contraction, the speed limit, and the Poincaré extension are standard consequences. Homogeneity (formerly S1) is now a theorem derived from the axioms' position-independence — this derivation requires **no structural postulates**. The CPT forward dependency is honestly flagged.
 
 ## Open Gaps
 

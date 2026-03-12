@@ -2,7 +2,7 @@
 title: "Three Spatial Dimensions Are Uniquely Stable"
 status: "rigorous"
 dependsOn: ["minimal-observer/structure", "axioms/observer-definition"]
-enablesDerivation: ["particles/spin-statistics", "particles/three-generations", "spacetime/gravity", "spacetime/einstein-equations"]
+enablesDerivation: ["particles/spin-statistics", "particles/three-generations", "spacetime/gravity", "spacetime/einstein-equations", "particles/supersymmetry-impossibility"]
 tags: ["geometry"]
 summary: "Four independent structural conditions on observer boundaries converge uniquely on d=3 — dimensionality is derived, not postulated"
 rigorLevel: "formal"
