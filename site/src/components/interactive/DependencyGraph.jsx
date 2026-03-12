@@ -5,6 +5,8 @@
 // Hover highlights the ancestor chain; click navigates to the derivation page.
 // ---------------------------------------------------------------------------
 
+const BASE_URL = (import.meta.env.BASE_URL || '/').replace(/\/$/, '')
+
 const GROUP_COLORS = {
   foundation:   '#2563eb',
   dynamics:     '#7c3aed',
@@ -402,13 +404,10 @@ function DependencyGraph({ state, props }) {
             : (node.title.length > 18 ? node.title.slice(0, 16) + '...' : node.title)
 
           return (
-            <a
-              key={node.id}
-              href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/derivations/${node.id}`}
-              className="dep-node-link"
-            >
               <g
+                key={node.id}
                 className={`dep-node dep-node--${node.id.replace(/\//g, '--')}`}
+                style={{ cursor: 'pointer' }}
               >
                 {/* Highlight ring */}
                 {ringWidth > 0 && (
@@ -472,7 +471,6 @@ function DependencyGraph({ state, props }) {
                   {displayTitle}
                 </text>
               </g>
-            </a>
           )
         })}
       </svg>
@@ -509,30 +507,29 @@ function DependencyGraph({ state, props }) {
 
 // ---- Sygnal wiring ---------------------------------------------------------
 
-// Track touch timing so we can suppress the synthetic mouseenter that follows a tap
-let lastTouchTime = 0
-
 DependencyGraph.initialState = {
   hoveredNode: null,
 }
 
 DependencyGraph.intent = ({ DOM }) => ({
-  HOVER_NODE:  DOM.select('.dep-node').events('mouseenter')
-                 .filter(() => Date.now() - lastTouchTime > 500),
-  LEAVE_NODE:  DOM.select('.dep-node').events('mouseleave'),
-  TOUCH_NODE:  DOM.select('.dep-node').events('touchstart')
-                 .map(ev => { lastTouchTime = Date.now(); return ev }),
-  TAP_NODE:    DOM.select('.dep-node-link').events('click'),
+  // pointerover/pointerout bubble (unlike pointerenter/pointerleave),
+  // which is required for Sygnal's delegated event handling.
+  // pointerType === 'mouse' filters out touch-generated events.
+  HOVER_NODE:  DOM.select('.dep-node').events('pointerover')
+                 .filter(ev => ev.pointerType === 'mouse'),
+  LEAVE_NODE:  DOM.select('.dep-node').events('pointerout')
+                 .filter(ev => ev.pointerType === 'mouse'),
+  TAP_NODE:    DOM.select('.dep-node').events('click'),
   TAP_BG:      DOM.select('.dependency-graph-svg').events('click'),
 })
 
 DependencyGraph.model = {
-  TOUCH_NODE: (state) => state,
   HOVER_NODE: (state, ev) => {
     const g = ev.target && ev.target.closest ? ev.target.closest('.dep-node') : null
-    if (!g) return { ...state, hoveredNode: null }
+    if (!g) return state
     const cls = Array.from(g.classList).find(c => c.startsWith('dep-node--'))
     const nodeId = cls ? cls.replace('dep-node--', '').replace(/--/g, '/') : null
+    if (state.hoveredNode === nodeId) return state // still within same node group
     return { ...state, hoveredNode: nodeId }
   },
   TAP_NODE: (state, ev) => {
@@ -541,13 +538,21 @@ DependencyGraph.model = {
     const cls = Array.from(g.classList).find(c => c.startsWith('dep-node--'))
     const nodeId = cls ? cls.replace('dep-node--', '').replace(/--/g, '/') : null
     if (!nodeId) return state
-    // Already hovered (second tap) or keyboard Enter → let <a> navigate normally
-    if (state.hoveredNode === nodeId || ev.detail === 0) return state
-    // First tap on un-hovered node → prevent navigation, just show the chain
-    ev.preventDefault()
+    // Already hovered (second tap / desktop click-after-hover) → navigate
+    if (state.hoveredNode === nodeId) {
+      window.location.href = `${BASE_URL}/derivations/${nodeId}`
+      return state
+    }
+    // First tap on un-hovered node → just show the chain
     return { ...state, hoveredNode: nodeId }
   },
-  LEAVE_NODE: (state) => {
+  LEAVE_NODE: (state, ev) => {
+    // pointerout fires for child transitions within the same <g> —
+    // only clear hover when the pointer truly leaves the node group
+    const leaving = ev.target && ev.target.closest ? ev.target.closest('.dep-node') : null
+    const entering = ev.relatedTarget && ev.relatedTarget.closest
+      ? ev.relatedTarget.closest('.dep-node') : null
+    if (leaving && leaving === entering) return state
     return { ...state, hoveredNode: null }
   },
   TAP_BG: (state, ev) => {

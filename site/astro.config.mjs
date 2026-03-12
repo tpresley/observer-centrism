@@ -14,4 +14,14 @@ export default defineConfig({
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatex],
   },
+  vite: {
+    build: {
+      minify: 'terser',
+      terserOptions: {
+        mangle: {
+          reserved: ['Fragment'],
+        },
+      },
+    },
+  },
 })
