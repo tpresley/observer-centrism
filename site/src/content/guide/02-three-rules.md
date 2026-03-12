@@ -55,7 +55,7 @@ Complete honesty requires a caveat. While 38 of the framework's 55 derivations r
 
 The distinction matters. The framework is not claiming that three axioms are literally sufficient for all of physics with zero additional input. It is claiming that three axioms provide the *physical* content — the "why" — while the structural postulates provide the *mathematical* setting — the "how." Whether that distinction holds up is something readers can evaluate derivation by derivation.
 
-> **On solid ground:** The three axioms are precisely stated, independent, and their sufficiency is tested across 40 rigorous derivations covering the span from quantum mechanics to general relativity to the information paradox. Thirty-four derivations require no additional assumptions whatsoever.
+> **On solid ground:** The three axioms are precisely stated, independent, and their sufficiency is tested across 40 rigorous derivations covering the span from quantum mechanics to general relativity to the information paradox. Thirty-eight derivations require no additional assumptions whatsoever.
 
 > **Work in progress:** The structural postulates — assumptions about smoothness, symplectic structure, Riemannian geometry — are motivated but not derived. Whether they can eventually be derived from the axioms, or whether they represent genuinely independent input, is an open question and an active area of development.
 

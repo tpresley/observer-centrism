@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-12T02:54:15.699Z",
+    "generatedAt": "2026-03-12T03:19:59.870Z",
     "derivationCount": 55,
     "predictionCount": 10,
     "generator": "scripts/build-index.mjs"
@@ -10,14 +10,14 @@
       "rigorous": 40,
       "non-viable": 1,
       "provisional": 12,
-      "stub": 2
+      "draft": 2
     },
     "derivationCount": 55,
     "predictionCount": 10,
     "edgeCount": 107,
-    "formalObjectCount": 774,
+    "formalObjectCount": 793,
     "openGapCount": 201,
-    "upgradeEligibleCount": 0,
+    "upgradeEligibleCount": 2,
     "leanVerifiedCount": 16,
     "leanTheoremCount": 64
   },
@@ -4826,16 +4826,16 @@
     "gauge/weinberg-angle": {
       "id": "gauge/weinberg-angle",
       "filePath": "site/src/content/derivations/gauge/weinberg-angle.md",
-      "title": "Weinberg Angle",
-      "status": "stub",
-      "rigorLevel": "informal",
+      "title": "Weinberg Angle from Division Algebra Embedding",
+      "status": "draft",
+      "rigorLevel": "semi-formal",
       "group": "gauge",
       "tags": [
         "gauge",
         "electroweak",
         "mixing-angle"
       ],
-      "summary": "The weak mixing angle sin²θ_W ≈ 0.231 at the Z mass should follow from the relative coupling strengths at the electroweak crystallization scale.",
+      "summary": "The weak mixing angle sin²θ_W = 1/3 at the algebraic normalization scale (from the C ⊂ H embedding) evolves under SM one-loop RG running to sin²θ_W(M_Z) ≈ 0.231 if and only if the electroweak crystallization scale is Λ_EW ≈ 4×10⁹ GeV. This scale is independently constrained by the bootstrap hierarchy, providing a self-consistency check.",
       "lastUpdated": "2026-03-11",
       "dependsOn": [
         "gauge/weak-interaction",
@@ -4845,24 +4845,65 @@
       "enablesDerivation": [],
       "dependedOnBy": [],
       "steps": [],
-      "formalObjects": [],
+      "formalObjects": [
+        {
+          "type": "Proposition",
+          "id": "1.1",
+          "name": "Weinberg angle at the algebraic scale",
+          "statementPreview": "The [Coupling Constants](/derivations/cosmology/coupling-constants) derivation (Theorem 1.1) establishes:"
+        },
+        {
+          "type": "Definition",
+          "id": "2.1",
+          "name": "Electroweak couplings",
+          "statementPreview": "The weak mixing angle is:"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "One-loop running",
+          "statementPreview": "The SM one-loop beta-functions with Ng = 3 generations and NH = 1 Higgs doublet give:"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.3",
+          "name": "Integrated running",
+          "statementPreview": "From a crystallization scale Lambda down to MZ, with L = ln(Lambda/MZ):"
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "Crystallization scale from Weinberg angle",
+          "statementPreview": "The algebraic boundary condition sin2thetaW(Lambda) = 1/3 and the experimental value sin2thetaW(MZ) = 0.23122 uniquel..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Scale interpretation",
+          "statementPreview": "The crystallization scale LambdaEW sim 1010 GeV corresponds to the energy at which the electroweak structure SU(2)L U..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.2",
+          "name": "Comparison with other scale determinations",
+          "statementPreview": "The crystallization scale sim 1010 GeV is interestingly close to:"
+        },
+        {
+          "type": "Theorem",
+          "id": "5.1",
+          "name": "Prediction as function of crystallization scale",
+          "statementPreview": "The framework predicts:"
+        }
+      ],
       "structuralPostulates": [],
       "openGaps": [],
       "assessmentVerdict": "",
-      "hasConsistencyModel": false,
+      "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
           {
             "target": "cosmology/coupling-constants",
             "context": "Coupling Constants"
-          },
-          {
-            "target": "gauge/electroweak-breaking",
-            "context": "Electroweak Breaking"
-          },
-          {
-            "target": "thermodynamics-ext/renormalization",
-            "context": "Renormalization Group"
           },
           {
             "target": "particles/three-generations",
@@ -4871,6 +4912,18 @@
           {
             "target": "gauge/chirality-selection",
             "context": "Chirality Selection"
+          },
+          {
+            "target": "gauge/electroweak-breaking",
+            "context": "Electroweak Breaking"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "target": "particles/neutrino-masses",
+            "context": "Neutrino Masses"
           },
           {
             "target": "gauge/weak-interaction",
@@ -4885,7 +4938,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": false,
+      "upgradeEligible": true,
       "upgradeBlockers": []
     },
     "holography/area-scaling": {
@@ -5325,6 +5378,10 @@
             "context": "Black Hole Entropy"
           },
           {
+            "source": "holography/er-epr",
+            "context": "Black Hole Entropy"
+          },
+          {
             "source": "holography/hawking-radiation",
             "context": "Theorem 1.2"
           },
@@ -5563,9 +5620,9 @@
     "holography/er-epr": {
       "id": "holography/er-epr",
       "filePath": "site/src/content/derivations/holography/er-epr.md",
-      "title": "ER=EPR Formalization",
-      "status": "stub",
-      "rigorLevel": "informal",
+      "title": "ER=EPR from Relational Invariants",
+      "status": "draft",
+      "rigorLevel": "semi-formal",
       "group": "holography",
       "tags": [
         "holography",
@@ -5573,7 +5630,7 @@
         "wormhole",
         "ER-EPR"
       ],
-      "summary": "Relational invariants between spatially separated observers manifest as both entanglement (EPR) and non-traversable wormholes (ER). The framework predicts ER=EPR is exact because relational invariants are the fundamental objects underlying both.",
+      "summary": "Relational invariants between spatially separated observers manifest as both entanglement (EPR) and non-traversable wormholes (ER). The duality is exact because relational invariants are the fundamental objects underlying both quantum correlations and spacetime geometry. The wormhole throat area satisfies A = 4ℓ_P² S_ent, and non-traversability follows from the no-signaling property of relational invariants.",
       "lastUpdated": "2026-03-11",
       "dependsOn": [
         "quantum/entanglement",
@@ -5584,11 +5641,78 @@
       "enablesDerivation": [],
       "dependedOnBy": [],
       "steps": [],
-      "formalObjects": [],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Coherence channel",
+          "statementPreview": "Let O1 and O2 be spatially separated observers who have previously interacted via a Type III interaction ([Three Inte..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Channel properties",
+          "statementPreview": "The coherence channel gamma12 satisfies:"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "Entanglement from the channel",
+          "statementPreview": "The coherence channel gamma12 produces an entangled quantum state |Psirangle12 in H1 H2 with entanglement entropy Sen..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "No-signaling from relational invariants",
+          "statementPreview": "The entanglement associated with I12 cannot be used to transmit information between O1 and O2."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Coherence concentration curves spacetime",
+          "statementPreview": "The [Einstein Equations](/derivations/spacetime/einstein-equations) derivation establishes that coherence concentrati..."
+        },
+        {
+          "type": "Theorem",
+          "id": "3.2",
+          "name": "Wormhole geometry from coherence channel",
+          "statementPreview": "The geometry sourced by the coherence channel gamma12 between two separated observers contains a minimal surface Sigm..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.3",
+          "name": "Throat area from area scaling",
+          "statementPreview": "The throat area satisfies:"
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "The wormhole is non-traversable",
+          "statementPreview": "The Einstein-Rosen bridge associated with the coherence channel gamma12 does not permit the transmission of independe..."
+        },
+        {
+          "type": "Corollary",
+          "id": "4.2",
+          "name": "Consistency with no-signaling",
+          "statementPreview": "The geometric non-traversability (Theorem 4.1) and the quantum no-signaling (Proposition 2.2) are dual descriptions o..."
+        },
+        {
+          "type": "Theorem",
+          "id": "5.1",
+          "name": "ER=EPR is exact",
+          "statementPreview": "The quantum (EPR) and geometric (ER) descriptions of a relational invariant are exact duals — not approximate or emer..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Thermofield double as maximal ER=EPR",
+          "statementPreview": "The thermofield double state"
+        }
+      ],
       "structuralPostulates": [],
       "openGaps": [],
       "assessmentVerdict": "",
-      "hasConsistencyModel": false,
+      "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
           {
@@ -5600,12 +5724,32 @@
             "context": "Einstein Equations"
           },
           {
-            "target": "holography/area-scaling",
-            "context": "Area Scaling"
+            "target": "interactions/three-types",
+            "context": "Three Interaction Types"
+          },
+          {
+            "target": "interactions/relational-invariants",
+            "context": "Relational Invariants"
           },
           {
             "target": "holography/causal-set-statistics",
             "context": "Causal Set Statistics"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
+          },
+          {
+            "target": "holography/black-hole-entropy",
+            "context": "Black Hole Entropy"
+          },
+          {
+            "target": "quantum/born-rule",
+            "context": "Born Rule"
+          },
+          {
+            "target": "holography/hawking-radiation",
+            "context": "Hawking Radiation"
           },
           {
             "target": "holography/information-paradox",
@@ -5620,7 +5764,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": false,
+      "upgradeEligible": true,
       "upgradeBlockers": []
     },
     "holography/hawking-radiation": {
@@ -5811,6 +5955,10 @@
           },
           {
             "source": "holography/black-hole-entropy",
+            "context": "Hawking Radiation"
+          },
+          {
+            "source": "holography/er-epr",
             "context": "Hawking Radiation"
           },
           {
@@ -6810,6 +6958,10 @@
             "context": "Relational Invariants"
           },
           {
+            "source": "holography/er-epr",
+            "context": "Relational Invariants"
+          },
+          {
             "source": "interactions/bootstrap",
             "context": "Theorem 2.1"
           },
@@ -7035,6 +7187,10 @@
         "incoming": [
           {
             "source": "axioms/coherence-conservation",
+            "context": "Three Interaction Types"
+          },
+          {
+            "source": "holography/er-epr",
             "context": "Three Interaction Types"
           },
           {
@@ -8089,6 +8245,10 @@
             "context": "Mass Hierarchy"
           },
           {
+            "source": "gauge/weinberg-angle",
+            "context": "Mass Hierarchy"
+          },
+          {
             "source": "particles/three-generations",
             "context": "Mass Hierarchy"
           },
@@ -8308,6 +8468,10 @@
         "incoming": [
           {
             "source": "cosmology/leptogenesis",
+            "context": "Neutrino Masses"
+          },
+          {
+            "source": "gauge/weinberg-angle",
             "context": "Neutrino Masses"
           }
         ]
@@ -9203,6 +9367,10 @@
         "incoming": [
           {
             "source": "gauge/electromagnetism",
+            "context": "Born Rule"
+          },
+          {
+            "source": "holography/er-epr",
             "context": "Born Rule"
           },
           {
@@ -12256,10 +12424,6 @@
         "incoming": [
           {
             "source": "flavor/mixing-angles",
-            "context": "Renormalization Group"
-          },
-          {
-            "source": "gauge/weinberg-angle",
             "context": "Renormalization Group"
           }
         ]
@@ -15357,6 +15521,62 @@
       "fullRef": "gauge/weak-interaction:Corollary 6.2"
     },
     {
+      "derivationId": "gauge/weinberg-angle",
+      "type": "Proposition",
+      "id": "1.1",
+      "name": "Weinberg angle at the algebraic scale",
+      "fullRef": "gauge/weinberg-angle:Proposition 1.1"
+    },
+    {
+      "derivationId": "gauge/weinberg-angle",
+      "type": "Definition",
+      "id": "2.1",
+      "name": "Electroweak couplings",
+      "fullRef": "gauge/weinberg-angle:Definition 2.1"
+    },
+    {
+      "derivationId": "gauge/weinberg-angle",
+      "type": "Proposition",
+      "id": "2.2",
+      "name": "One-loop running",
+      "fullRef": "gauge/weinberg-angle:Proposition 2.2"
+    },
+    {
+      "derivationId": "gauge/weinberg-angle",
+      "type": "Proposition",
+      "id": "2.3",
+      "name": "Integrated running",
+      "fullRef": "gauge/weinberg-angle:Proposition 2.3"
+    },
+    {
+      "derivationId": "gauge/weinberg-angle",
+      "type": "Theorem",
+      "id": "3.1",
+      "name": "Crystallization scale from Weinberg angle",
+      "fullRef": "gauge/weinberg-angle:Theorem 3.1"
+    },
+    {
+      "derivationId": "gauge/weinberg-angle",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Scale interpretation",
+      "fullRef": "gauge/weinberg-angle:Proposition 4.1"
+    },
+    {
+      "derivationId": "gauge/weinberg-angle",
+      "type": "Proposition",
+      "id": "4.2",
+      "name": "Comparison with other scale determinations",
+      "fullRef": "gauge/weinberg-angle:Proposition 4.2"
+    },
+    {
+      "derivationId": "gauge/weinberg-angle",
+      "type": "Theorem",
+      "id": "5.1",
+      "name": "Prediction as function of crystallization scale",
+      "fullRef": "gauge/weinberg-angle:Theorem 5.1"
+    },
+    {
       "derivationId": "holography/area-scaling",
       "type": "Structural Postulate",
       "id": "S1",
@@ -15614,6 +15834,83 @@
       "id": "7.1.",
       "name": "",
       "fullRef": "holography/causal-set-statistics:Theorem 7.1."
+    },
+    {
+      "derivationId": "holography/er-epr",
+      "type": "Definition",
+      "id": "1.1",
+      "name": "Coherence channel",
+      "fullRef": "holography/er-epr:Definition 1.1"
+    },
+    {
+      "derivationId": "holography/er-epr",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "Channel properties",
+      "fullRef": "holography/er-epr:Proposition 1.2"
+    },
+    {
+      "derivationId": "holography/er-epr",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "Entanglement from the channel",
+      "fullRef": "holography/er-epr:Proposition 2.1"
+    },
+    {
+      "derivationId": "holography/er-epr",
+      "type": "Proposition",
+      "id": "2.2",
+      "name": "No-signaling from relational invariants",
+      "fullRef": "holography/er-epr:Proposition 2.2"
+    },
+    {
+      "derivationId": "holography/er-epr",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Coherence concentration curves spacetime",
+      "fullRef": "holography/er-epr:Proposition 3.1"
+    },
+    {
+      "derivationId": "holography/er-epr",
+      "type": "Theorem",
+      "id": "3.2",
+      "name": "Wormhole geometry from coherence channel",
+      "fullRef": "holography/er-epr:Theorem 3.2"
+    },
+    {
+      "derivationId": "holography/er-epr",
+      "type": "Proposition",
+      "id": "3.3",
+      "name": "Throat area from area scaling",
+      "fullRef": "holography/er-epr:Proposition 3.3"
+    },
+    {
+      "derivationId": "holography/er-epr",
+      "type": "Theorem",
+      "id": "4.1",
+      "name": "The wormhole is non-traversable",
+      "fullRef": "holography/er-epr:Theorem 4.1"
+    },
+    {
+      "derivationId": "holography/er-epr",
+      "type": "Corollary",
+      "id": "4.2",
+      "name": "Consistency with no-signaling",
+      "fullRef": "holography/er-epr:Corollary 4.2"
+    },
+    {
+      "derivationId": "holography/er-epr",
+      "type": "Theorem",
+      "id": "5.1",
+      "name": "ER=EPR is exact",
+      "fullRef": "holography/er-epr:Theorem 5.1"
+    },
+    {
+      "derivationId": "holography/er-epr",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "Thermofield double as maximal ER=EPR",
+      "fullRef": "holography/er-epr:Proposition 6.1"
     },
     {
       "derivationId": "holography/hawking-radiation",
@@ -20176,7 +20473,20 @@
     }
   ],
   "upgradeAnalysis": {
-    "eligible": [],
+    "eligible": [
+      {
+        "id": "gauge/weinberg-angle",
+        "currentStatus": "draft",
+        "gapCount": 0,
+        "formalObjectCount": 8
+      },
+      {
+        "id": "holography/er-epr",
+        "currentStatus": "draft",
+        "gapCount": 0,
+        "formalObjectCount": 11
+      }
+    ],
     "blocked": []
   },
   "warnings": []

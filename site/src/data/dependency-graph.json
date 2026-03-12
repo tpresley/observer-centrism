@@ -51,10 +51,10 @@
     { "id": "holography/causal-set-statistics", "title": "Causal Set Statistics", "group": "holography", "status": "provisional" },
     { "id": "particles/neutrino-masses", "title": "Neutrino Mass Mechanism", "group": "particles", "status": "provisional" },
     { "id": "gauge/anomaly-cancellation", "title": "Anomaly Cancellation", "group": "gauge", "status": "provisional" },
-    { "id": "gauge/weinberg-angle", "title": "Weinberg Angle", "group": "gauge", "status": "stub" },
+    { "id": "gauge/weinberg-angle", "title": "Weinberg Angle", "group": "gauge", "status": "draft" },
     { "id": "cosmology/leptogenesis", "title": "Leptogenesis", "group": "cosmology", "status": "provisional" },
     { "id": "gauge/chiral-symmetry-breaking", "title": "Chiral Symmetry Breaking", "group": "gauge", "status": "provisional" },
-    { "id": "holography/er-epr", "title": "ER=EPR Formalization", "group": "holography", "status": "stub" }
+    { "id": "holography/er-epr", "title": "ER=EPR Formalization", "group": "holography", "status": "draft" }
   ],
   "edges": [
     { "from": "axioms/coherence-conservation", "to": "axioms/observer-definition" },
