@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-03-12T01:48:02.156Z",
+    "generatedAt": "2026-03-12T02:16:07.876Z",
     "derivationCount": 50,
-    "predictionCount": 9,
+    "predictionCount": 10,
     "generator": "scripts/build-index.mjs"
   },
   "stats": {
@@ -12,8 +12,8 @@
       "provisional": 9
     },
     "derivationCount": 50,
-    "predictionCount": 9,
-    "edgeCount": 88,
+    "predictionCount": 10,
+    "edgeCount": 92,
     "formalObjectCount": 741,
     "openGapCount": 201,
     "upgradeEligibleCount": 0,
@@ -698,6 +698,7 @@
         "axioms/coherence-conservation"
       ],
       "enablesDerivation": [
+        "axioms/loop-closure",
         "minimal-observer/structure",
         "minimal-observer/multiplicity",
         "dimensions/three-dimensions"
@@ -12556,7 +12557,8 @@
       "distinctiveness": "unique",
       "dependsOn": [
         "cosmology/coupling-constants",
-        "gauge/standard-model-group"
+        "gauge/standard-model-group",
+        "interactions/bootstrap-division-algebras"
       ],
       "currentEvidence": "Current precision measurements of alpha_1, alpha_2, alpha_3 are consistent with non-convergence. The minimal SU(5) GUT prediction is already excluded by proton decay limits."
     },
@@ -12570,7 +12572,8 @@
       "dependsOn": [
         "minimal-observer/structure",
         "axioms/loop-closure",
-        "particles/mass-hierarchy"
+        "particles/mass-hierarchy",
+        "holography/causal-set-statistics"
       ],
       "currentEvidence": "Missing satellites problem and small-scale structure suppression in dwarf galaxies are consistent; Lyman-alpha forest constrains the free-streaming length"
     },
@@ -12596,7 +12599,9 @@
       "distinctiveness": "generic",
       "dependsOn": [
         "particles/mass-hierarchy",
-        "interactions/bootstrap"
+        "interactions/bootstrap",
+        "interactions/bootstrap-division-algebras",
+        "gauge/electroweak-breaking"
       ],
       "currentEvidence": "No new particles found at LHC beyond the Standard Model"
     },
@@ -12610,9 +12615,24 @@
       "dependsOn": [
         "holography/area-scaling",
         "spacetime/gravity",
-        "interactions/relational-invariants"
+        "interactions/relational-invariants",
+        "holography/causal-set-statistics"
       ],
       "currentEvidence": "Holometer at Fermilab constrains the amplitude coefficient to α_H < 1; LISA Pathfinder demonstrated required sensitivity levels"
+    },
+    "neutrino-nature": {
+      "id": "neutrino-nature",
+      "filePath": "site/src/content/predictions/neutrino-nature.md",
+      "title": "Neutrino Mass Ordering and Majorana Nature",
+      "status": "qualitative",
+      "testability": "near-future",
+      "distinctiveness": "shared",
+      "dependsOn": [
+        "particles/neutrino-masses",
+        "particles/three-generations",
+        "flavor/mixing-angles"
+      ],
+      "currentEvidence": "NOvA and T2K combined data show mild (~2σ) preference for normal ordering; neutrinoless double-beta decay not yet observed, consistent with normal-ordering Majorana prediction of |m_ββ| ~ 1-5 meV"
     },
     "no-axion": {
       "id": "no-axion",
@@ -12622,7 +12642,8 @@
       "testability": "near-future",
       "distinctiveness": "unique",
       "dependsOn": [
-        "gauge/strong-cp"
+        "gauge/strong-cp",
+        "interactions/bootstrap-division-algebras"
       ],
       "currentEvidence": "No axion detected by ADMX, CASPEr, or other experiments to date; consistent with null prediction"
     },

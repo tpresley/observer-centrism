@@ -2,7 +2,7 @@
 title: "Dark Matter Granularity"
 status: "semi-quantitative"
 testability: "near-future"
-dependsOn: ["minimal-observer/structure", "axioms/loop-closure", "particles/mass-hierarchy"]
+dependsOn: ["minimal-observer/structure", "axioms/loop-closure", "particles/mass-hierarchy", "holography/causal-set-statistics"]
 currentEvidence: "Missing satellites problem and small-scale structure suppression in dwarf galaxies are consistent; Lyman-alpha forest constrains the free-streaming length"
 distinctiveness: "unique"
 sourceSection: "13-predictions"

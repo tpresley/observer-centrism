@@ -52,6 +52,9 @@
     { "id": "particles/neutrino-masses", "title": "Neutrino Mass Mechanism", "group": "particles", "status": "provisional" }
   ],
   "edges": [
+    { "from": "axioms/coherence-conservation", "to": "axioms/observer-definition" },
+    { "from": "axioms/coherence-conservation", "to": "axioms/loop-closure" },
+    { "from": "axioms/observer-definition", "to": "axioms/loop-closure" },
     { "from": "axioms/coherence-conservation", "to": "minimal-observer/structure" },
     { "from": "axioms/observer-definition", "to": "minimal-observer/structure" },
     { "from": "axioms/loop-closure", "to": "minimal-observer/structure" },
@@ -80,6 +83,7 @@
     { "from": "axioms/observer-definition", "to": "dimensions/three-dimensions" },
     { "from": "dimensions/three-dimensions", "to": "particles/spin-statistics" },
     { "from": "particles/spin-statistics", "to": "particles/pauli-exclusion" },
+    { "from": "dimensions/three-dimensions", "to": "particles/three-generations" },
     { "from": "particles/spin-statistics", "to": "particles/three-generations" },
     { "from": "particles/mass-hierarchy", "to": "particles/three-generations" },
     { "from": "interactions/bootstrap", "to": "particles/mass-hierarchy" },

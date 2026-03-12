@@ -2,7 +2,7 @@
 title: "The Great Desert"
 status: "qualitative"
 testability: "far-future"
-dependsOn: ["particles/mass-hierarchy", "interactions/bootstrap"]
+dependsOn: ["particles/mass-hierarchy", "interactions/bootstrap", "interactions/bootstrap-division-algebras", "gauge/electroweak-breaking"]
 currentEvidence: "No new particles found at LHC beyond the Standard Model"
 distinctiveness: "generic"
 sourceSection: "13-predictions"

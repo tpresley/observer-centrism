@@ -2,7 +2,7 @@
 title: "The Observer Definition"
 status: "rigorous"
 dependsOn: ["axioms/coherence-conservation"]
-enablesDerivation: ["minimal-observer/structure", "minimal-observer/multiplicity", "dimensions/three-dimensions"]
+enablesDerivation: ["axioms/loop-closure", "minimal-observer/structure", "minimal-observer/multiplicity", "dimensions/three-dimensions"]
 tags: ["foundation"]
 summary: "Formalization of the observer as a triple (Σ, I, B) — state space, invariant, and self/non-self boundary — with topological structure, non-triviality conditions, and observer category"
 rigorLevel: "formal"

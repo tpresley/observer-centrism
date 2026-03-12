@@ -20,6 +20,7 @@ relatedPredictions:
   - "great-desert"
   - "coupling-non-convergence"
   - "no-axion"
+  - "neutrino-nature"
 ---
 
 The preceding chapters traced a derivation chain from three axioms through spacetime, quantum mechanics, the particle spectrum, and holography. The logical coherence of that chain matters — but it is not enough. A framework that only recovers what is already known, however elegantly, is philosophy. Physics requires predictions that can be tested and potentially falsified.
@@ -66,11 +67,13 @@ Beyond the two quantitative predictions, the framework makes seven qualitative p
 
 **No QCD axion.** The strong CP problem ($|\theta| < 10^{-10}$) is resolved by the octonionic structure of SU(3): non-associativity forces $\theta = 0$ exactly, without dynamical relaxation. No axion particle exists. The Peccei-Quinn mechanism is unnecessary. Axion search experiments (ADMX, CASPEr) will continue to find null results.
 
+**Normal neutrino mass ordering and Majorana nature.** Neutrinos are Majorana particles (their own antiparticles), following from the pseudo-real representation structure of $SU(2)_L$. The mass ordering is normal ($m_1 < m_2 < m_3$), following from the same universal winding-axis hierarchy that orders charged fermion masses. JUNO is expected to determine the ordering; next-generation $0\nu\beta\beta$ experiments (LEGEND-1000, nEXO) will test the Majorana prediction.
+
 ## What Counts as Falsification
 
 A framework should make clear what would disprove it. For Observer-Centrism:
 
-The discovery of a fourth fermion generation would directly contradict the three-dimensions derivation. The discovery of supersymmetric particles would contradict the topological argument against continuous winding-class bridges. Evidence of proton decay would contradict the absence of grand unification. Any violation of unitarity would contradict coherence conservation itself — the most fundamental axiom.
+The discovery of a fourth fermion generation would directly contradict the three-dimensions derivation. The discovery of supersymmetric particles would contradict the topological argument against continuous winding-class bridges. Evidence of proton decay would contradict the absence of grand unification. A confirmed inverted neutrino mass ordering would falsify the universal winding-axis hierarchy. Any violation of unitarity would contradict coherence conservation itself — the most fundamental axiom.
 
 The holographic noise prediction is more nuanced. A null result at sufficient sensitivity (a factor of ~10 below the predicted amplitude) would rule out the framework's specific noise model. A detection with the wrong angular dependence would falsify the specific causal structure prediction.
 
@@ -86,7 +89,7 @@ Whether the fixed-point solution is unique — whether the axioms determine *one
 
 These are not deficiencies to be embarrassed about. They are the frontiers of an active program — the places where the framework's structural arguments point toward specific mathematical problems that need solving. The derivation chain from axioms to predictions is complete and rigorous. The frontier is in deepening the mathematical foundations and sharpening the quantitative predictions.
 
-> **On solid ground:** The holographic noise prediction is quantitative, with a specific angular correlation function that can be tested. The seven negative predictions are all falsifiable. Several are already consistent with existing null results (no SUSY, no fourth generation, proton stability, no axion). The framework's predictions are genuine — they were derived from the axioms, not fitted to the data.
+> **On solid ground:** The holographic noise prediction is quantitative, with a specific angular correlation function that can be tested. The negative predictions are all falsifiable, and several are already consistent with existing null results (no SUSY, no fourth generation, proton stability, no axion). The neutrino predictions (normal ordering, Majorana nature) are testable by JUNO and next-generation $0\nu\beta\beta$ experiments within the decade. The framework's predictions are genuine — they were derived from the axioms, not fitted to the data.
 
 > **Work in progress:** The holographic noise amplitude depends on a parameter ($\alpha_H$) that is bounded but not precisely computed. The dark matter granularity prediction is semi-quantitative — it gives the scaling law but not the exact dark matter particle mass. Computing Standard Model parameters from first principles and proving the uniqueness of the cosmological fixed point are the major open problems.
 
