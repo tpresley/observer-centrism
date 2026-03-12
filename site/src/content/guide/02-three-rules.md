@@ -51,7 +51,7 @@ The axioms are also independent. You can have conservation without observers (a 
 
 ## Structural Postulates
 
-Complete honesty requires a caveat. While 34 of the framework's 50 derivations require nothing beyond these three axioms, the remaining 16 require additional assumptions — called [structural postulates](/postulates). These are not arbitrary additions; they specify the mathematical setting (smooth manifolds, symplectic structure, pseudo-Riemannian geometry) in which the derivation operates. They are motivated by the framework's structure but not derived from the three axioms alone.
+Complete honesty requires a caveat. While 38 of the framework's 55 derivations require nothing beyond these three axioms, the remaining 17 require additional assumptions — called [structural postulates](/postulates). These are not arbitrary additions; they specify the mathematical setting (smooth manifolds, symplectic structure, pseudo-Riemannian geometry) in which the derivation operates. They are motivated by the framework's structure but not derived from the three axioms alone.
 
 The distinction matters. The framework is not claiming that three axioms are literally sufficient for all of physics with zero additional input. It is claiming that three axioms provide the *physical* content — the "why" — while the structural postulates provide the *mathematical* setting — the "how." Whether that distinction holds up is something readers can evaluate derivation by derivation.
 

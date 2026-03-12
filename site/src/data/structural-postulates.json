@@ -180,6 +180,16 @@
     "group": "particles"
   },
   {
+    "id": "chiral-symmetry-breaking-s1",
+    "derivation": "gauge/chiral-symmetry-breaking",
+    "derivationTitle": "Chiral Symmetry Breaking",
+    "postulateId": "S1",
+    "shortName": "Vacuum coherence minimization",
+    "statement": "In the confining phase, the vacuum state minimizes the total coherence cost subject to the constraint that all asymptotic states are color singlets.",
+    "justification": "Extends the bootstrap self-consistency principle to the non-perturbative regime: the vacuum should be the state of minimal coherence cost, generalizing the perturbative requirement to the confining phase.",
+    "group": "gauge"
+  },
+  {
     "id": "area-scaling-s1",
     "derivation": "holography/area-scaling",
     "derivationTitle": "Area Scaling",

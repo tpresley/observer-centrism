@@ -50,10 +50,10 @@
     { "id": "gauge/confinement", "title": "Color Confinement", "group": "gauge", "status": "provisional" },
     { "id": "holography/causal-set-statistics", "title": "Causal Set Statistics", "group": "holography", "status": "provisional" },
     { "id": "particles/neutrino-masses", "title": "Neutrino Mass Mechanism", "group": "particles", "status": "provisional" },
-    { "id": "gauge/anomaly-cancellation", "title": "Anomaly Cancellation", "group": "gauge", "status": "stub" },
+    { "id": "gauge/anomaly-cancellation", "title": "Anomaly Cancellation", "group": "gauge", "status": "draft" },
     { "id": "gauge/weinberg-angle", "title": "Weinberg Angle", "group": "gauge", "status": "stub" },
-    { "id": "cosmology/leptogenesis", "title": "Leptogenesis", "group": "cosmology", "status": "stub" },
-    { "id": "gauge/chiral-symmetry-breaking", "title": "Chiral Symmetry Breaking", "group": "gauge", "status": "stub" },
+    { "id": "cosmology/leptogenesis", "title": "Leptogenesis", "group": "cosmology", "status": "draft" },
+    { "id": "gauge/chiral-symmetry-breaking", "title": "Chiral Symmetry Breaking", "group": "gauge", "status": "draft" },
     { "id": "holography/er-epr", "title": "ER=EPR Formalization", "group": "holography", "status": "stub" }
   ],
   "edges": [
