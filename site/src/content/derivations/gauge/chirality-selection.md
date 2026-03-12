@@ -39,7 +39,7 @@ leanProofs:
 ## Structural Postulates
 
 No new structural postulates are required. The derivation uses only:
-- The quaternionic structure from [Weak Interaction](/derivations/gauge/weak-interaction) (Structural Postulate S1)
+- The quaternionic structure from [Weak Interaction](/derivations/gauge/weak-interaction) (originally Structural Postulate S1, now a [theorem](/derivations/interactions/bootstrap-division-algebras))
 - The relational invariant construction from [Relational Invariants](/derivations/interactions/relational-invariants) (Structural Postulate S1)
 - Coherence conservation (Axiom 1)
 

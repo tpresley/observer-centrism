@@ -107,7 +107,9 @@
     "shortName": "Algebraic completeness of phase structure",
     "statement": "The observer\u2019s phase algebra \ud835\udcb6 forms a normed division algebra over \u211d: for all a, b \u2208 \ud835\udcb6, |ab| = |a| \u00b7 |b|. Combined with three independent imaginary units (one per spatial axis), this selects \ud835\udcb6 = \u210d (quaternions).",
     "justification": "Packages three physical requirements: (i) bilinearity of phase composition, (ii) norm-preservation from coherence conservation, (iii) invertibility of phase transformations. With exactly three imaginary units, Hurwitz\u2019s theorem uniquely selects the quaternions.",
-    "group": "gauge"
+    "group": "gauge",
+    "derivedFrom": "interactions/bootstrap-division-algebras",
+    "derivedFromTitle": "Bootstrap \u2192 Division Algebras"
   },
   {
     "id": "weak-interaction-s2",
@@ -126,8 +128,10 @@
     "postulateId": "S1",
     "shortName": "Algebraic saturation at each bootstrap level",
     "statement": "Each level of the bootstrap hierarchy saturates the phase algebra to the next normed division algebra via the Cayley-Dickson construction: \u211d \u2192 \u2102 \u2192 \u210d \u2192 \ud835\udd46. Hurwitz\u2019s theorem terminates the sequence at \ud835\udd46.",
-    "justification": "Extends the algebraic completeness postulate (Weak Interaction S1) to the full bootstrap hierarchy. The pattern \u2014 each bootstrap level doubles the algebra \u2014 is postulated; deriving it from axioms alone is an open problem (Bootstrap \u2192 Division Algebras).",
-    "group": "gauge"
+    "justification": "Extends the algebraic completeness postulate (Weak Interaction S1) to the full bootstrap hierarchy. Now derived as a theorem: Bootstrap \u2192 Division Algebras proves that coherence conservation forces Cayley-Dickson doubling at each level.",
+    "group": "gauge",
+    "derivedFrom": "interactions/bootstrap-division-algebras",
+    "derivedFromTitle": "Bootstrap \u2192 Division Algebras"
   },
   {
     "id": "born-rule-s1",

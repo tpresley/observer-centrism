@@ -31,6 +31,8 @@ leanProofs:
 
 **Structural Postulate S1 (Algebraic completeness of phase structure).** The observer's phase algebra $\mathcal{A}$ forms a normed division algebra over $\mathbb{R}$: for all $a, b \in \mathcal{A}$, $|ab| = |a| \cdot |b|$ (the norm is multiplicative). Combined with the requirement of three independent imaginary units (one per spatial axis), this selects $\mathcal{A} = \mathbb{H}$.
 
+> **Now a theorem.** This postulate has been derived from the three axioms in [Bootstrap → Division Algebras](/derivations/interactions/bootstrap-division-algebras) (Theorem 2.3): the bootstrap mechanism forces Cayley-Dickson doubling at each hierarchy level because coherence conservation requires norm-preserving composition. At the second bootstrap level (triple interactions in $d=3$), this uniquely produces $\mathbb{H}$.
+
 **Remark.** This postulate packages three physical requirements: (i) phase composition is bilinear (linearity of quantum mechanics), (ii) phase composition preserves coherence (the norm condition, from Axiom 1), and (iii) every non-zero phase has an inverse (dynamics are reversible). These three conditions define a normed division algebra. The postulate's content is that the phase algebra respects these properties — it is the gauge-theory analog of S1 in [Electromagnetism](/derivations/gauge/electromagnetism) (locality of phase comparison), now applied to a richer algebraic structure.
 
 **Structural Postulate S2 (Minimal non-abelian gauge dynamics).** The self-consistency condition for the $SU(2)$ gauge connection involves at most second derivatives of $W^a_\mu$ — equivalently, at most first derivatives of the field strength $W^a_{\mu\nu}$.

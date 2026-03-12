@@ -16,7 +16,9 @@ const groups = {
   'Holography': postulatesData.filter(p => p.group === 'holography'),
 }
 
-const withCount = postulatesData.length
+const totalCount = postulatesData.length
+const derivedCount = postulatesData.filter(p => p.derivedFrom).length
+const activeCount = totalCount - derivedCount
 const derivationsWithCount = new Set(postulatesData.map(p => p.derivation)).size
 const derivationsWithoutCount = totalDerivations - derivationsWithCount
 const base = import.meta.env.BASE_URL.replace(/\/$/, '')
@@ -31,12 +33,25 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '')
     axioms, but they are motivated by the framework's structure. The majority of
     derivations require no additional assumptions at all.
   </p>
+  {derivedCount > 0 && (
+    <p class="sp-derived-note">
+      <strong>{derivedCount}</strong> postulate{derivedCount > 1 ? 's' : ''} originally
+      introduced as assumptions {derivedCount > 1 ? 'have' : 'has'} since been <strong>derived
+      as theorems</strong> from earlier results, reducing the framework's independent assumptions.
+    </p>
+  )}
 
   <div class="sp-summary">
     <div class="sp-stat">
-      <div class="sp-stat-value">{withCount}</div>
-      <div class="sp-stat-label">Postulates</div>
+      <div class="sp-stat-value">{activeCount}</div>
+      <div class="sp-stat-label">Active postulates</div>
     </div>
+    {derivedCount > 0 && (
+      <div class="sp-stat sp-stat-derived">
+        <div class="sp-stat-value">{derivedCount}</div>
+        <div class="sp-stat-label">Now theorems</div>
+      </div>
+    )}
     <div class="sp-stat">
       <div class="sp-stat-value">{derivationsWithCount}</div>
       <div class="sp-stat-label">Derivations with</div>
@@ -53,16 +68,26 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '')
         <h2>{group}</h2>
         <div class="sp-cards">
           {postulates.map(p => (
-            <div class="sp-card">
+            <div class={`sp-card${p.derivedFrom ? ' sp-card-derived' : ''}`}>
               <div class="sp-card-header">
-                <span class="sp-badge">{p.postulateId}</span>
+                <span class={`sp-badge${p.derivedFrom ? ' sp-badge-derived' : ''}`}>{p.postulateId}</span>
                 <span class="sp-name">{p.shortName}</span>
+                {p.derivedFrom && (
+                  <span class="sp-derived-tag">Now a theorem</span>
+                )}
               </div>
               <p class="sp-statement">{p.statement}</p>
               <p class="sp-justification">{p.justification}</p>
-              <a href={`${base}/derivations/${p.derivation}`} class="sp-source">
-                {p.derivationTitle} &rarr;
-              </a>
+              <div class="sp-card-footer">
+                <a href={`${base}/derivations/${p.derivation}`} class="sp-source">
+                  {p.derivationTitle} &rarr;
+                </a>
+                {p.derivedFrom && (
+                  <a href={`${base}/derivations/${p.derivedFrom}`} class="sp-derived-link">
+                    Derived in: {p.derivedFromTitle} &rarr;
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>
@@ -150,7 +175,50 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '')
     color: var(--color-accent);
     text-decoration: none;
   }
-  .sp-source:hover {
+  .sp-source:hover,
+  .sp-derived-link:hover {
     text-decoration: underline;
+  }
+  .sp-derived-note {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+    background: color-mix(in srgb, #22c55e 8%, transparent);
+    border-left: 3px solid #22c55e;
+    border-radius: 4px;
+  }
+  .sp-stat-derived .sp-stat-value {
+    color: #22c55e;
+  }
+  .sp-card-derived {
+    border-color: #22c55e40;
+    background: color-mix(in srgb, #22c55e 4%, var(--color-surface));
+  }
+  .sp-badge-derived {
+    background: color-mix(in srgb, #22c55e 15%, transparent);
+    color: #22c55e;
+    text-decoration: line-through;
+  }
+  .sp-derived-tag {
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.1rem 0.4rem;
+    border-radius: 9999px;
+    background: color-mix(in srgb, #22c55e 15%, transparent);
+    color: #22c55e;
+    letter-spacing: 0.03em;
+    flex-shrink: 0;
+  }
+  .sp-card-footer {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .sp-derived-link {
+    font-size: 0.8rem;
+    color: #22c55e;
+    text-decoration: none;
   }
 </style>

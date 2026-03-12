@@ -43,6 +43,8 @@ leanProofs:
 | 2 (triple interactions) | $\mathbb{H}$ | $SU(2)$ |
 | 3 (quadruple interactions) | $\mathbb{O}$ | $G_2 \to SU(3)$ |
 
+> **Now a theorem.** This postulate has been derived from the three axioms in [Bootstrap → Division Algebras](/derivations/interactions/bootstrap-division-algebras) (Theorems 2.2–2.3, 7.1): coherence conservation forces norm-preserving composition ($|ab| = |a||b|$), Hurwitz's theorem makes Cayley-Dickson the unique such doubling, and the sedenion zero-divisor obstruction terminates the sequence at $\mathbb{O}$.
+
 **Remark.** The Cayley-Dickson construction builds each algebra from the previous: $\mathbb{C} = \mathbb{R} \oplus \mathbb{R}i$, $\mathbb{H} = \mathbb{C} \oplus \mathbb{C}j$, $\mathbb{O} = \mathbb{H} \oplus \mathbb{H}\ell$. At each step, the algebra doubles in dimension but loses an algebraic property: $\mathbb{R}$ is ordered, $\mathbb{C}$ is not; $\mathbb{C}$ is commutative, $\mathbb{H}$ is not; $\mathbb{H}$ is associative, $\mathbb{O}$ is not. The physical content: higher bootstrap levels require richer algebraic structure, and the progressive loss of algebraic properties constrains how the gauge interactions work.
 
 **Structural Postulate S2 (Minimal gauge dynamics).** The self-consistency condition for the $SU(3)$ gauge connection involves at most second derivatives of the gauge potential. Identical to S2 of [Electromagnetism](/derivations/gauge/electromagnetism) and [Weak Interaction](/derivations/gauge/weak-interaction).
