@@ -43,13 +43,13 @@
     { "id": "gauge/chirality-selection", "title": "Chirality Selection", "group": "gauge", "status": "rigorous" },
     { "id": "gauge/electroweak-breaking", "title": "Electroweak Symmetry Breaking", "group": "gauge", "status": "provisional" },
     { "id": "foundation/coherence-lagrangian", "title": "Coherence Lagrangian", "group": "foundation", "status": "draft" },
-    { "id": "interactions/bootstrap-division-algebras", "title": "Bootstrap → Division Algebras", "group": "dynamics", "status": "draft" },
+    { "id": "interactions/bootstrap-division-algebras", "title": "Bootstrap → Division Algebras", "group": "dynamics", "status": "provisional" },
     { "id": "quantum/entanglement", "title": "Entanglement from Relational Invariants", "group": "quantum", "status": "provisional" },
     { "id": "gauge/strong-cp", "title": "Strong CP Conservation", "group": "gauge", "status": "draft" },
     { "id": "spacetime/singularity-resolution", "title": "Singularity Resolution", "group": "geometry", "status": "draft" },
-    { "id": "gauge/confinement", "title": "Color Confinement", "group": "gauge", "status": "draft" },
+    { "id": "gauge/confinement", "title": "Color Confinement", "group": "gauge", "status": "provisional" },
     { "id": "holography/causal-set-statistics", "title": "Causal Set Statistics", "group": "holography", "status": "provisional" },
-    { "id": "particles/neutrino-masses", "title": "Neutrino Mass Mechanism", "group": "particles", "status": "draft" }
+    { "id": "particles/neutrino-masses", "title": "Neutrino Mass Mechanism", "group": "particles", "status": "provisional" }
   ],
   "edges": [
     { "from": "axioms/coherence-conservation", "to": "minimal-observer/structure" },

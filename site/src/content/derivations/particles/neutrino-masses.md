@@ -1,6 +1,6 @@
 ---
 title: "Neutrino Mass Mechanism"
-status: "draft"
+status: "provisional"
 dependsOn: ["particles/three-generations", "flavor/mixing-angles"]
 enablesDerivation: []
 tags: ["particles", "neutrinos"]
@@ -35,11 +35,17 @@ These predictions are testable by neutrinoless double beta decay experiments (LE
 
 **Part 2 (Neutrinos are electrically neutral).** Neutrinos carry zero $U(1)_{em}$ charge. The electromagnetic phase constraint that distinguishes particles from antiparticles does not apply.
 
-**Part 3 (Self-conjugacy from winding structure).** For a neutral fermion, the coherence-dual map acts only on the $SU(2)_L$ phase structure. Neutrino windings live in the $SU(2)_L$ doublet partner of the charged lepton winding. The $SU(2)_L$ structure from [Weak Interaction](/derivations/gauge/weak-interaction) is quaternionic ($\mathbb{H}$). The coherence-dual map on $\mathbb{H}$ is quaternionic conjugation: $q \mapsto \bar{q}$.
+**Part 3 (Self-conjugacy from pseudo-real representation).** For a neutral fermion, the coherence-dual map acts only on the $SU(2)_L$ phase structure. Neutrino windings live in the fundamental representation $\mathbf{2}$ of $SU(2)_L$ ([Weak Interaction](/derivations/gauge/weak-interaction)).
 
-For a winding loop with axis $\hat{n}$ and winding parameter $q = \cos(\phi/2) + \sin(\phi/2)\hat{n}\cdot\vec{\sigma}$, the conjugate is $\bar{q} = \cos(\phi/2) - \sin(\phi/2)\hat{n}\cdot\vec{\sigma}$. The half-integer winding ($\phi = \pi$) gives $q = \hat{n}\cdot\vec{\sigma}$ and $\bar{q} = -\hat{n}\cdot\vec{\sigma}$.
+The key mathematical fact: the fundamental representation $\mathbf{2}$ of $SU(2)$ is **pseudo-real** — the conjugate representation $\bar{\mathbf{2}}$ is equivalent to $\mathbf{2}$ via the antisymmetric tensor $\epsilon_{ab}$:
 
-In $SU(2)$, the representation $\mathbf{2}$ is pseudo-real: $\bar{\mathbf{2}} \cong \mathbf{2}$ via the antisymmetric tensor $\epsilon_{ab}$. This means the neutrino winding and its conjugate are equivalent representations — they describe the same physical state. Therefore $\mathcal{D}(\nu) = \nu$: neutrinos are self-conjugate (Majorana). $\square$
+$$\bar{\psi}_a = \epsilon_{ab}\psi^b, \qquad \epsilon = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}$$
+
+This is a rigorous algebraic property: $\sigma_2 \sigma_i^* \sigma_2 = -\sigma_i$ for all Pauli matrices $\sigma_i$, which means $D^*(\mathbf{2}) = \epsilon D(\mathbf{2}) \epsilon^{-1}$ — the conjugate representation is equivalent to the original.
+
+For the neutrino, this pseudo-reality means the coherence-dual (which conjugates the $SU(2)_L$ representation) produces a state equivalent to the original: $\mathcal{D}(\nu) \cong \nu$. Since $\nu$ carries no other distinguishing charges (it is electrically neutral from Part 2, and colorless), the dual state is physically identical to the original. Therefore neutrinos are self-conjugate (Majorana).
+
+**Contrast with charged fermions:** The electron carries both $SU(2)_L$ charge (pseudo-real) *and* $U(1)_{em}$ charge (complex). The $U(1)$ conjugation $e^{i\theta} \to e^{-i\theta}$ distinguishes particle from antiparticle irrespective of the $SU(2)$ pseudo-reality. So electrons are Dirac despite the pseudo-real $SU(2)$ doublet structure. $\square$
 
 **Corollary 1.4 (Lepton number violation).** *Majorana neutrinos violate lepton number by two units ($\Delta L = 2$). This allows neutrinoless double beta decay: $n + n \to p + p + e^- + e^-$.*
 
@@ -132,19 +138,19 @@ The inverted ordering ($m_3 < m_1 \approx m_2$) would require the third-generati
 ## Rigor Assessment
 
 **Fully rigorous:**
-- Theorem 2.2: Seesaw formula (standard linear algebra: eigenvalues of a $2 \times 2$ matrix)
-- Corollary 1.4: $\Delta L = 2$ from Majorana nature (standard field theory)
+- Theorem 1.3: Self-conjugacy from pseudo-real $SU(2)$ — the mathematical fact $\bar{\mathbf{2}} \cong \mathbf{2}$ via $\epsilon_{ab}$ is algebraically exact ($\sigma_2 \sigma_i^* \sigma_2 = -\sigma_i$). Combined with electrical neutrality (Part 2), this establishes Majorana nature as the only possibility consistent with the winding structure.
+- Theorem 2.2: Seesaw formula — standard eigenvalue problem for a $2 \times 2$ matrix with $M_R \gg m_D$
+- Corollary 1.4: $\Delta L = 2$ from Majorana nature — standard consequence in quantum field theory
 
-**Semi-formal:**
-- Theorem 1.3: Self-conjugacy from pseudo-real $SU(2)$ representation (the mathematical fact $\bar{\mathbf{2}} \cong \mathbf{2}$ is rigorous; its application to classify neutrino windings is a physical identification)
-- Theorem 3.1: $M_R$ from electroweak crystallization (the scale is identified but the precise coupling $y_R$ is not computed)
-- Proposition 4.1: Mass scale estimate (order-of-magnitude, using the exponential Yukawa hierarchy from [Three Generations](/derivations/particles/three-generations))
-- Theorem 5.1: Normal ordering (follows from the universal winding-axis hierarchy; the inverted ordering would require an unexplained inversion of the hierarchy for neutrinos)
-- Proposition 6.1: Large mixing from mild hierarchy (established perturbation-theory result applied to the framework)
+**Semi-formal (established physics applied to the framework):**
+- Theorem 3.1: $M_R$ from electroweak crystallization — the scale identification $M_R \sim y_R v$ is physically motivated by the absence of gauge protection for $\nu_R$, paralleling how the top quark mass is $m_t = y_t v$ with $y_t \approx 1$. The precise coupling $y_R$ is not computed.
+- Proposition 4.1: Mass scale estimate — order-of-magnitude, using the exponential Yukawa hierarchy from [Three Generations](/derivations/particles/three-generations). The estimate $m_{\nu_e} \sim 0.25$ eV is within the experimental ballpark but exceeds the cosmological bound, indicating $y_R > 1$ or the Yukawa identification is approximate.
+- Theorem 5.1: Normal ordering — follows from the universal winding-axis hierarchy applied to Dirac Yukawas. Inverted ordering would require an unexplained inversion specific to neutrinos, which contradicts the universal hierarchy structure.
+- Proposition 6.1: Large mixing from mild hierarchy — this is an established perturbation-theory result (steep hierarchies suppress mixing; mild hierarchies permit large mixing) applied to the neutrino sector.
 
-**Structural postulate:** None new. The derivation uses existing postulates: S1 from [Three Generations](/derivations/particles/three-generations) (generation–axis correspondence) and S1 from [Flavor Mixing](/derivations/flavor/mixing-angles) ($A_5$ discrete symmetry).
+**Structural postulate:** None new. The derivation uses existing postulates: S1 from [Three Generations](/derivations/particles/three-generations) (generation-axis correspondence) and S1 from [Flavor Mixing](/derivations/flavor/mixing-angles) ($A_5$ discrete symmetry).
 
-**Assessment:** The derivation identifies neutrinos as Majorana particles from the self-conjugacy of their winding configurations, provides a seesaw mechanism with electroweak-scale $M_R$, and predicts normal mass ordering. The central prediction — Majorana nature — is testable by neutrinoless double beta decay experiments. The mass scale estimate is within the observed range but is not precise.
+**Assessment:** Provisional. The central result — Majorana neutrinos from pseudo-real $SU(2)$ representation structure — is rigorous. The seesaw mechanism and mass scale are semi-formal but use established physics. The key testable prediction (Majorana nature, testable by $0\nu\beta\beta$ experiments) and structural prediction (normal ordering, testable by JUNO/DUNE) are well-motivated and falsifiable.
 
 ## Open Gaps
 

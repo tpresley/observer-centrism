@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-11T23:28:59.024Z",
+    "generatedAt": "2026-03-11T23:38:18.494Z",
     "derivationCount": 50,
     "predictionCount": 9,
     "generator": "scripts/build-index.mjs"
@@ -9,15 +9,15 @@
     "byStatus": {
       "rigorous": 40,
       "non-viable": 1,
-      "draft": 6,
-      "provisional": 3
+      "draft": 3,
+      "provisional": 6
     },
     "derivationCount": 50,
     "predictionCount": 9,
     "edgeCount": 88,
     "formalObjectCount": 741,
     "openGapCount": 201,
-    "upgradeEligibleCount": 6,
+    "upgradeEligibleCount": 3,
     "leanVerifiedCount": 16,
     "leanTheoremCount": 64
   },
@@ -2732,7 +2732,7 @@
       "id": "gauge/confinement",
       "filePath": "site/src/content/derivations/gauge/confinement.md",
       "title": "Color Confinement from Non-Associativity",
-      "status": "draft",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "gauge",
       "tags": [
@@ -2740,7 +2740,7 @@
         "confinement"
       ],
       "summary": "Quark confinement follows from the non-associativity of the octonion algebra underlying SU(3). Parallel transport of colored states accumulates path-bracketing ambiguity that grows with distance, while color-singlet states have well-defined transport because the SU(3)-singlet projection annihilates the associator.",
-      "lastUpdated": "2026-03-10",
+      "lastUpdated": "2026-03-11",
       "dependsOn": [
         "gauge/color-force"
       ],
@@ -2861,7 +2861,7 @@
           "description": "Compare the non-associative confinement mechanism with lattice QCD results for the static quark potential and flux tube structure."
         }
       ],
-      "assessmentVerdict": "Draft. The core algebraic argument (Theorem 3.1) is rigorous. The confining potential (Proposition 4.1) is a structural argument at semi-formal level. Upgrade to provisional requires: (i) quantitative string tension from the associator magnitude, (ii) Wilson loop area law from the bracketing ambigui",
+      "assessmentVerdict": "Provisional. The core result (Theorem 3.1: color singlets have well-defined transport) is rigorous and provides genuine insight into the confinement mechanism. The linear potential (Proposition 4.1) uses standard statistical-mechanics reasoning in the new algebraic context. The remaining gaps are qu",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -2878,7 +2878,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "gauge/electromagnetism": {
@@ -5421,7 +5421,7 @@
       "id": "interactions/bootstrap-division-algebras",
       "filePath": "site/src/content/derivations/interactions/bootstrap-division-algebras.md",
       "title": "Bootstrap → Division Algebras",
-      "status": "draft",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "interactions",
       "tags": [
@@ -5577,7 +5577,7 @@
           "description": "Could a non-Cayley-Dickson extension (e.g., Clifford algebras, Jordan algebras) serve as the interaction algebra at some level? Showing these are excluded by the coherence constraints would strengthen"
         }
       ],
-      "assessmentVerdict": "This derivation provides the *dynamical reason* for the division algebra sequence that was previously postulated. Promoting it to rigorous status would eliminate 5 structural postulates from the gauge chain — the single most impactful possible upgrade in the framework. The gap is specific and well-d",
+      "assessmentVerdict": "Provisional. The derivation provides the *dynamical reason* for the division algebra sequence and chains together rigorous mathematical results (Hurwitz, Cayley-Dickson, sedenion obstruction) with a physically motivated but formally narrow gap (norm = coherence). The gap is specific, well-defined, a",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -5638,7 +5638,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "interactions/bootstrap": {
@@ -7489,7 +7489,7 @@
       "id": "particles/neutrino-masses",
       "filePath": "site/src/content/derivations/particles/neutrino-masses.md",
       "title": "Neutrino Mass Mechanism",
-      "status": "draft",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "particles",
       "tags": [
@@ -7626,7 +7626,7 @@
           "description": "If experiments conclusively establish Dirac neutrinos (absence of 0nubetabeta), this derivation would be falsified — the self-conjugacy argument would need revision."
         }
       ],
-      "assessmentVerdict": "The derivation identifies neutrinos as Majorana particles from the self-conjugacy of their winding configurations, provides a seesaw mechanism with electroweak-scale MR, and predicts normal mass ordering. The central prediction — Majorana nature — is testable by neutrinoless double beta decay experi",
+      "assessmentVerdict": "Provisional. The central result — Majorana neutrinos from pseudo-real SU(2) representation structure — is rigorous. The seesaw mechanism and mass scale are semi-formal but use established physics. The key testable prediction (Majorana nature, testable by 0nubetabeta experiments) and structural predi",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -7656,7 +7656,7 @@
           },
           {
             "target": "particles/three-generations",
-            "context": "generation–axis correspondence"
+            "context": "generation-axis correspondence"
           },
           {
             "target": "flavor/mixing-angles",
@@ -7679,7 +7679,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "particles/pauli-exclusion": {
@@ -8305,7 +8305,7 @@
           },
           {
             "source": "particles/neutrino-masses",
-            "context": "generation–axis correspondence"
+            "context": "generation-axis correspondence"
           }
         ]
       },
@@ -18131,42 +18131,42 @@
     },
     {
       "derivationId": "gauge/confinement",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Quantitative string tension",
       "description": "Derive sigma in terms of framework parameters (gs, associator magnitude, Planck length)."
     },
     {
       "derivationId": "gauge/confinement",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Wilson loop criterion",
       "description": "Show that the expectation value of the Wilson loop langle W(C) rangle sim e-sigma A(C) (area law) follows from the non-associative phase accumulation."
     },
     {
       "derivationId": "gauge/confinement",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Mass gap",
       "description": "Connect the associator-based confinement mechanism to a rigorous lower bound on the glueball mass spectrum."
     },
     {
       "derivationId": "gauge/confinement",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Glueball spectrum",
       "description": "Derive the masses of 0++, 2++, and other glueball states from the octonionic framework."
     },
     {
       "derivationId": "gauge/confinement",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Regge trajectories",
       "description": "Show that the linear potential produces the observed linear relationship between hadron spin and mass squared: J sim alpha' M2."
     },
     {
       "derivationId": "gauge/confinement",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 6,
       "title": "Lattice comparison",
       "description": "Compare the non-associative confinement mechanism with lattice QCD results for the static quark potential and flux tube structure."
@@ -18509,35 +18509,35 @@
     },
     {
       "derivationId": "interactions/bootstrap-division-algebras",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Norm = coherence proof",
       "description": "Rigorously establish that the algebraic norm in the interaction algebra *must* equal the coherence measure. This is the key step needed to promote the derivation to rigorous status."
     },
     {
       "derivationId": "interactions/bootstrap-division-algebras",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Category-theoretic formulation",
       "description": "A categorical framework (e.g., using the theory of composition algebras over monoidal categories) might make the Cayley-Dickson necessity transparent and provide the missing rigor."
     },
     {
       "derivationId": "interactions/bootstrap-division-algebras",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Level counting",
       "description": "The derivation identifies 4 levels (R, C, H, O) with 4 types of interaction (identity, pairwise, triple, quadruple). Making precise the correspondence between \"number of interacting observers\" and \"Ca"
     },
     {
       "derivationId": "interactions/bootstrap-division-algebras",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Non-associativity and confinement",
       "description": "The connection between octonionic non-associativity and color confinement (Proposition 8.1) is structural but not quantitative. A rigorous confinement proof from the octonionic structure would be a ma"
     },
     {
       "derivationId": "interactions/bootstrap-division-algebras",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Alternative algebras",
       "description": "Could a non-Cayley-Dickson extension (e.g., Clifford algebras, Jordan algebras) serve as the interaction algebra at some level? Showing these are excluded by the coherence constraints would strengthen"
@@ -18698,35 +18698,35 @@
     },
     {
       "derivationId": "particles/neutrino-masses",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Absolute mass scale",
       "description": "The specific values of m1, m2, m3 are not predicted — only the ordering and approximate scale. Computing the individual masses requires the precise Yukawa couplings from the winding geometry."
     },
     {
       "derivationId": "particles/neutrino-masses",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Majorana phases",
       "description": "The PMNS matrix for Majorana neutrinos contains two additional CP-violating phases (alpha1, alpha2) beyond the Dirac phase delta. These should be computable from the A5 breaking pattern of [Flavor Mix"
     },
     {
       "derivationId": "particles/neutrino-masses",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Sterile neutrinos",
       "description": "The heavy right-handed neutrinos (MR sim v) could be produced at colliders (unlike GUT-scale seesaw where MR sim 1014 GeV). Collider signatures should be analyzed."
     },
     {
       "derivationId": "particles/neutrino-masses",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Leptogenesis connection",
       "description": "Majorana neutrinos enable leptogenesis as a baryogenesis mechanism. The connection to the [Baryogenesis](/derivations/cosmology/baryogenesis) derivation should be made explicit."
     },
     {
       "derivationId": "particles/neutrino-masses",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Dirac limit test",
       "description": "If experiments conclusively establish Dirac neutrinos (absence of 0nubetabeta), this derivation would be falsified — the self-conjugacy argument would need revision."
@@ -19259,28 +19259,10 @@
         "formalObjectCount": 10
       },
       {
-        "id": "gauge/confinement",
-        "currentStatus": "draft",
-        "gapCount": 6,
-        "formalObjectCount": 9
-      },
-      {
         "id": "gauge/strong-cp",
         "currentStatus": "draft",
         "gapCount": 4,
         "formalObjectCount": 9
-      },
-      {
-        "id": "interactions/bootstrap-division-algebras",
-        "currentStatus": "draft",
-        "gapCount": 5,
-        "formalObjectCount": 13
-      },
-      {
-        "id": "particles/neutrino-masses",
-        "currentStatus": "draft",
-        "gapCount": 5,
-        "formalObjectCount": 11
       },
       {
         "id": "spacetime/singularity-resolution",

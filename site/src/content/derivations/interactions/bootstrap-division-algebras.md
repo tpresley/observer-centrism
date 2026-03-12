@@ -1,6 +1,6 @@
 ---
 title: "Bootstrap → Division Algebras"
-status: "draft"
+status: "provisional"
 dependsOn: ["interactions/bootstrap"]
 enablesDerivation: []
 tags: ["interactions", "division-algebras"]
@@ -60,11 +60,11 @@ Any other doubling procedure either fails to preserve the norm or produces an al
 
 *Proof.* The argument has three parts.
 
-**Part 1 (Coherence as norm).** From [Coherence Conservation](/derivations/axioms/coherence-conservation) (Axiom 1), coherence is a conserved, non-negative quantity. When two observers interact to form a relational invariant, the coherence of the compound system must satisfy $C(I_{12}) \leq C(O_1) + C(O_2)$ (subadditivity). In the algebraic representation, coherence is represented by the norm: $C \sim |a|^2$ for an algebraic element $a$.
+**Part 1 (Coherence as norm).** From [Coherence Conservation](/derivations/axioms/coherence-conservation) (Axiom 1), coherence is a conserved, non-negative, real-valued quantity. In the algebraic representation of observer states, each state $a$ in the interaction algebra has a coherence content $\mathcal{C}(a)$. The coherence function must satisfy: (i) $\mathcal{C}(a) \geq 0$ with equality iff $a = 0$, (ii) $\mathcal{C}(\lambda a) = |\lambda|^2 \mathcal{C}(a)$ for scalars $\lambda$ (homogeneity), (iii) $\mathcal{C}(a + b) \leq \mathcal{C}(a) + \mathcal{C}(b)$ (subadditivity). These are exactly the axioms of a squared norm: $\mathcal{C}(a) = |a|^2$.
 
-**Part 2 (Norm preservation required).** For the relational invariant $I_{12} \sim a \cdot b$ to conserve coherence, the product must satisfy $|ab| = |a||b|$ — the norm of the product equals the product of the norms. This is the composition algebra property.
+**Part 2 (Norm preservation required).** When observers interact to form a relational invariant, the interaction product $a \cdot b$ must satisfy coherence conservation. The strongest constraint comes from considering a product of two unit-coherence states: the result must also have unit coherence (since the interaction is a Type III process that preserves total coherence). This gives $|ab| = |a||b|$ — the composition algebra property. If $|ab| < |a||b|$, coherence is lost; if $|ab| > |a||b|$, coherence is created. Both violate Axiom 1.
 
-**Part 3 (Cayley-Dickson is forced).** By Theorem 2.2, the Cayley-Dickson construction is the unique doubling that preserves this property. Therefore, each bootstrap level — requiring a larger algebra (Proposition 1.2) with norm preservation (Part 2) — must produce the next Cayley-Dickson algebra.
+**Part 3 (Cayley-Dickson is forced).** By Theorem 2.2 (Hurwitz), the Cayley-Dickson construction is the unique norm-preserving doubling of composition algebras. Since each bootstrap level requires: (a) a strictly larger algebra (Proposition 1.2, from irreducibility), and (b) the composition property $|ab| = |a||b|$ (Part 2, from coherence conservation), the only possibility at each level is the next Cayley-Dickson algebra.
 
 The sequence is: fundamental observers use $\mathbb{R}$ (real coherence measure). Pairwise interactions require $\mathbb{C}$ (complex phase — this is the $U(1)$ phase of [Electromagnetism](/derivations/gauge/electromagnetism)). Triple interactions require $\mathbb{H}$ (quaternionic phase — the $SU(2)$ of [Weak Interaction](/derivations/gauge/weak-interaction)). Quadruple interactions require $\mathbb{O}$ (octonionic phase — the $SU(3)$ of [Color Force](/derivations/gauge/color-force)). $\square$
 
@@ -159,9 +159,9 @@ Therefore the sedenion algebra is inconsistent with coherence conservation. The 
 - Theorem 2.3: Bootstrap forces Cayley-Dickson (the key step — the argument that coherence conservation requires the composition algebra property is physically motivated and structurally sound, but a purely deductive proof would require showing that no other algebraic extension is possible)
 - Propositions 4.1–6.1: Specific level identifications (the correspondence between bootstrap levels and division algebras is physically identified, not derived from a formal classification)
 
-**Key structural gap:** The central claim — that the bootstrap hierarchy *forces* the Cayley-Dickson doubling — is semi-formal. The argument is: (1) each level needs a larger algebra (rigorous, from irreducibility), (2) the norm must be preserved (rigorous, from coherence conservation), (3) therefore Cayley-Dickson is the unique choice (rigorous, from Hurwitz). The gap is in step (2): the identification of the algebraic norm with the coherence measure is a physical identification, not a mathematical derivation. If this identification can be made rigorous, the entire argument becomes rigorous, and **all division algebra structural postulates (S1)** in the gauge sector become theorems.
+**Key structural gap:** The central claim (Theorem 2.3) chains three steps: (1) each level needs a larger algebra (rigorous, from irreducibility), (2) the norm must be preserved (semi-formal: the coherence axioms — positivity, homogeneity, subadditivity — uniquely determine a squared norm, and coherence conservation under interaction requires composition; this is the step that needs full formalization), (3) Cayley-Dickson is the unique norm-preserving doubling (rigorous, Hurwitz 1898). The gap is narrow: step (2) requires showing that the coherence axioms on the interaction algebra force $|ab| = |a||b|$ rather than merely $|ab| \leq |a||b|$. If this is established, the entire chain becomes rigorous and **all division algebra structural postulates (S1)** in the gauge sector become theorems.
 
-**Assessment:** This derivation provides the *dynamical reason* for the division algebra sequence that was previously postulated. Promoting it to rigorous status would eliminate 5 structural postulates from the gauge chain — the single most impactful possible upgrade in the framework. The gap is specific and well-defined: rigorously establishing that coherence conservation implies the composition algebra property for the interaction algebra.
+**Assessment:** Provisional. The derivation provides the *dynamical reason* for the division algebra sequence and chains together rigorous mathematical results (Hurwitz, Cayley-Dickson, sedenion obstruction) with a physically motivated but formally narrow gap (norm = coherence). The gap is specific, well-defined, and high-leverage: closing it would eliminate 5 structural postulates from the gauge chain — the single most impactful possible upgrade in the framework.
 
 ## Open Gaps
 
