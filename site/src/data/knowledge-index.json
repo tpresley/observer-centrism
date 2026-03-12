@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-12T03:19:59.870Z",
+    "generatedAt": "2026-03-12T03:42:19.366Z",
     "derivationCount": 55,
     "predictionCount": 10,
     "generator": "scripts/build-index.mjs"
@@ -9,15 +9,14 @@
     "byStatus": {
       "rigorous": 40,
       "non-viable": 1,
-      "provisional": 12,
-      "draft": 2
+      "provisional": 14
     },
     "derivationCount": 55,
     "predictionCount": 10,
     "edgeCount": 107,
     "formalObjectCount": 793,
     "openGapCount": 201,
-    "upgradeEligibleCount": 2,
+    "upgradeEligibleCount": 0,
     "leanVerifiedCount": 16,
     "leanTheoremCount": 64
   },
@@ -4827,7 +4826,7 @@
       "id": "gauge/weinberg-angle",
       "filePath": "site/src/content/derivations/gauge/weinberg-angle.md",
       "title": "Weinberg Angle from Division Algebra Embedding",
-      "status": "draft",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "gauge",
       "tags": [
@@ -4880,19 +4879,19 @@
           "type": "Proposition",
           "id": "4.1",
           "name": "Scale interpretation",
-          "statementPreview": "The crystallization scale LambdaEW sim 1010 GeV corresponds to the energy at which the electroweak structure SU(2)L U..."
+          "statementPreview": "The crystallization scale LambdaEW sim 1010 GeV is consistent with the bootstrap hierarchy in two respects:"
         },
         {
           "type": "Proposition",
           "id": "4.2",
-          "name": "Comparison with other scale determinations",
-          "statementPreview": "The crystallization scale sim 1010 GeV is interestingly close to:"
+          "name": "Cross-checks with other scales",
+          "statementPreview": "The crystallization scale LambdaEW sim 1010 GeV admits several cross-checks:"
         },
         {
           "type": "Theorem",
           "id": "5.1",
           "name": "Prediction as function of crystallization scale",
-          "statementPreview": "The framework predicts:"
+          "statementPreview": "At one-loop, sin2thetaW(MZ) is determined by L = ln(LambdaEW/MZ) via the system:"
         }
       ],
       "structuralPostulates": [],
@@ -4922,10 +4921,6 @@
             "context": "Mass Hierarchy"
           },
           {
-            "target": "particles/neutrino-masses",
-            "context": "Neutrino Masses"
-          },
-          {
             "target": "gauge/weak-interaction",
             "context": "Weak Interaction"
           }
@@ -4938,7 +4933,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "holography/area-scaling": {
@@ -5600,6 +5595,10 @@
         "incoming": [
           {
             "source": "holography/er-epr",
+            "context": "Proposition 2.1"
+          },
+          {
+            "source": "holography/er-epr",
             "context": "Causal Set Statistics"
           },
           {
@@ -5621,7 +5620,7 @@
       "id": "holography/er-epr",
       "filePath": "site/src/content/derivations/holography/er-epr.md",
       "title": "ER=EPR from Relational Invariants",
-      "status": "draft",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "holography",
       "tags": [
@@ -5733,6 +5732,10 @@
           },
           {
             "target": "holography/causal-set-statistics",
+            "context": "Proposition 2.1"
+          },
+          {
+            "target": "holography/causal-set-statistics",
             "context": "Causal Set Statistics"
           },
           {
@@ -5764,7 +5767,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "holography/hawking-radiation": {
@@ -8468,10 +8471,6 @@
         "incoming": [
           {
             "source": "cosmology/leptogenesis",
-            "context": "Neutrino Masses"
-          },
-          {
-            "source": "gauge/weinberg-angle",
             "context": "Neutrino Masses"
           }
         ]
@@ -15566,7 +15565,7 @@
       "derivationId": "gauge/weinberg-angle",
       "type": "Proposition",
       "id": "4.2",
-      "name": "Comparison with other scale determinations",
+      "name": "Cross-checks with other scales",
       "fullRef": "gauge/weinberg-angle:Proposition 4.2"
     },
     {
@@ -20473,20 +20472,7 @@
     }
   ],
   "upgradeAnalysis": {
-    "eligible": [
-      {
-        "id": "gauge/weinberg-angle",
-        "currentStatus": "draft",
-        "gapCount": 0,
-        "formalObjectCount": 8
-      },
-      {
-        "id": "holography/er-epr",
-        "currentStatus": "draft",
-        "gapCount": 0,
-        "formalObjectCount": 11
-      }
-    ],
+    "eligible": [],
     "blocked": []
   },
   "warnings": []
