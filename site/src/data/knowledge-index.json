@@ -1,20 +1,20 @@
 {
   "meta": {
-    "generatedAt": "2026-03-12T03:42:19.366Z",
+    "generatedAt": "2026-03-12T04:30:31.571Z",
     "derivationCount": 55,
     "predictionCount": 10,
     "generator": "scripts/build-index.mjs"
   },
   "stats": {
     "byStatus": {
-      "rigorous": 40,
+      "rigorous": 43,
       "non-viable": 1,
-      "provisional": 14
+      "provisional": 11
     },
     "derivationCount": 55,
     "predictionCount": 10,
     "edgeCount": 107,
-    "formalObjectCount": 793,
+    "formalObjectCount": 792,
     "openGapCount": 201,
     "upgradeEligibleCount": 0,
     "leanVerifiedCount": 16,
@@ -247,6 +247,10 @@
           },
           {
             "source": "foundation/coherence-lagrangian",
+            "context": "Coherence Conservation"
+          },
+          {
+            "source": "gauge/anomaly-cancellation",
             "context": "Coherence Conservation"
           },
           {
@@ -2356,8 +2360,8 @@
       "id": "gauge/anomaly-cancellation",
       "filePath": "site/src/content/derivations/gauge/anomaly-cancellation.md",
       "title": "Anomaly Cancellation from Coherence Conservation",
-      "status": "provisional",
-      "rigorLevel": "semi-formal",
+      "status": "rigorous",
+      "rigorLevel": "formal",
       "group": "gauge",
       "tags": [
         "gauge",
@@ -2365,7 +2369,7 @@
         "fermion-content"
       ],
       "summary": "Coherence conservation requires the quantum partition function to be gauge-invariant under all large gauge transformations, which is precisely the anomaly-freedom condition. The chirality-selected fermion representations from the division-algebra decomposition C⊗O ≅ Cℓ(6) automatically satisfy all four independent anomaly cancellation conditions, generation by generation.",
-      "lastUpdated": "2026-03-11",
+      "lastUpdated": "2026-03-12",
       "dependsOn": [
         "gauge/chirality-selection",
         "gauge/standard-model-group",
@@ -2433,8 +2437,16 @@
             "context": "SM Gauge Group"
           },
           {
-            "target": "thermodynamics-ext/fisher-metric",
-            "context": "Fisher Information Metric"
+            "target": "axioms/coherence-conservation",
+            "context": "Coherence Conservation"
+          },
+          {
+            "target": "interactions/relational-invariants",
+            "context": "Relational Invariants"
+          },
+          {
+            "target": "thermodynamics/action-planck",
+            "context": "Action and Planck's Constant"
           },
           {
             "target": "particles/three-generations",
@@ -3172,15 +3184,15 @@
       "id": "gauge/confinement",
       "filePath": "site/src/content/derivations/gauge/confinement.md",
       "title": "Color Confinement from Non-Associativity",
-      "status": "provisional",
-      "rigorLevel": "semi-formal",
+      "status": "rigorous",
+      "rigorLevel": "formal",
       "group": "gauge",
       "tags": [
         "gauge",
         "confinement"
       ],
       "summary": "Quark confinement follows from the non-associativity of the octonion algebra underlying SU(3). Parallel transport of colored states accumulates path-bracketing ambiguity that grows with distance, while color-singlet states have well-defined transport because the SU(3)-singlet projection annihilates the associator.",
-      "lastUpdated": "2026-03-11",
+      "lastUpdated": "2026-03-12",
       "dependsOn": [
         "gauge/color-force"
       ],
@@ -3263,7 +3275,7 @@
           "type": "Proposition",
           "id": "6.1",
           "name": "Deconfinement at high temperature",
-          "statementPreview": "At temperatures T > Tc 170 MeV, the confining linear potential is screened and quarks move freely in a quark-gluon pl..."
+          "statementPreview": "At temperatures T > Tc, the confining linear potential is screened and quarks move freely in a quark-gluon plasma. In..."
         },
         {
           "type": "Theorem",
@@ -3305,7 +3317,7 @@
           "description": "Compare the non-associative confinement mechanism with lattice QCD results for the static quark potential and flux tube structure."
         }
       ],
-      "assessmentVerdict": "Provisional. The core result (Theorem 3.1: color singlets have well-defined transport) is rigorous and provides genuine insight into the confinement mechanism. The linear potential (Proposition 4.1) uses standard statistical-mechanics reasoning in the new algebraic context. The remaining gaps are qu",
+      "assessmentVerdict": "Rigorous. The core results (Theorem 3.1, Propositions 2.2–2.3, 4.1, 5.1) have complete proofs, with the linear potential now derived via the random-walk-on-groups framework and asymptotic freedom via explicit segment counting. The deconfinement transition (Proposition 6.1) uses standard thermal QCD ",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -5759,7 +5771,12 @@
             "context": "Information Paradox"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "quantum/entanglement",
+            "context": "ER=EPR"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -6909,6 +6926,10 @@
             "context": "Relational Invariants"
           },
           {
+            "source": "gauge/anomaly-cancellation",
+            "context": "Relational Invariants"
+          },
+          {
             "source": "gauge/chirality-selection",
             "context": "Structural Postulate S1"
           },
@@ -6995,10 +7016,6 @@
           {
             "source": "quantum/entanglement",
             "context": "Theorem 4.1"
-          },
-          {
-            "source": "quantum/entanglement",
-            "context": "Theorem 2.1"
           },
           {
             "source": "quantum/preferred-basis",
@@ -9423,15 +9440,15 @@
       "id": "quantum/entanglement",
       "filePath": "site/src/content/derivations/quantum/entanglement.md",
       "title": "Entanglement from Relational Invariants",
-      "status": "provisional",
-      "rigorLevel": "semi-formal",
+      "status": "rigorous",
+      "rigorLevel": "formal",
       "group": "quantum",
       "tags": [
         "quantum",
         "information"
       ],
       "summary": "Quantum entanglement is the Hilbert-space image of relational invariants between observers. The coherence of a relational invariant equals the entanglement entropy, the no-cloning theorem follows from coherence conservation, and entanglement monogamy follows from coherence subadditivity.",
-      "lastUpdated": "2026-03-11",
+      "lastUpdated": "2026-03-12",
       "dependsOn": [
         "interactions/relational-invariants",
         "quantum/born-rule"
@@ -9461,7 +9478,7 @@
         },
         {
           "number": 5,
-          "title": "Connection to ER=EPR"
+          "title": "Connection to ER=EPR (Forward Reference)"
         }
       ],
       "formalObjects": [
@@ -9512,12 +9529,6 @@
           "id": "4.1",
           "name": "Monogamy of entanglement",
           "statementPreview": "For three observers OA, OB, OC in a joint pure state |PsirangleABC:*"
-        },
-        {
-          "type": "Proposition",
-          "id": "5.1",
-          "name": "Geometric realization of entanglement",
-          "statementPreview": "Relational invariants between spatially separated observers create coherence channels. By the [Einstein Equations](/d..."
         },
         {
           "type": "Theorem",
@@ -9584,7 +9595,7 @@
           "description": "Derive entanglement growth under unitary evolution and the scrambling time from coherence dynamics."
         }
       ],
-      "assessmentVerdict": "Provisional. The core results (Propositions 1.3–1.4, Theorems 2.1, 3.1, 4.1) are established with proofs that combine rigorous mathematical results with the framework's axioms. The semi-formal elements (Theorems 2.1 and 4.1) use established mathematical uniqueness theorems (von Neumann's entropy uni",
+      "assessmentVerdict": "Rigorous. All numbered results (Propositions 1.3–1.4, Theorems 2.1, 3.1, 4.1, Corollary 2.2, Theorem 6.1) have complete proofs combining the coherence axioms with established mathematical theorems (SVD, Shannon–Khinchin uniqueness, Lieb-Ruskai strong subadditivity, CKW). No new structural postulates",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -9605,24 +9616,16 @@
             "context": "Theorem 4.1"
           },
           {
-            "target": "interactions/relational-invariants",
-            "context": "Theorem 2.1"
-          },
-          {
-            "target": "thermodynamics/entropy",
-            "context": "Entropy"
-          },
-          {
-            "target": "thermodynamics/entropy",
-            "context": "Theorem 2.1"
-          },
-          {
             "target": "axioms/coherence-conservation",
             "context": "Coherence Conservation"
           },
           {
             "target": "spacetime/einstein-equations",
             "context": "Einstein Equations"
+          },
+          {
+            "target": "holography/er-epr",
+            "context": "ER=EPR"
           },
           {
             "target": "holography/area-scaling",
@@ -12122,10 +12125,6 @@
             "context": "Fisher Information Metric"
           },
           {
-            "source": "gauge/anomaly-cancellation",
-            "context": "Fisher Information Metric"
-          },
-          {
             "source": "thermodynamics-ext/distinguishability-conservation",
             "context": "Fisher Information Metric"
           },
@@ -12748,6 +12747,10 @@
             "context": "Theorem 5.1"
           },
           {
+            "source": "gauge/anomaly-cancellation",
+            "context": "Action and Planck's Constant"
+          },
+          {
             "source": "gauge/electromagnetism",
             "context": "Action and Planck's Constant"
           },
@@ -13080,14 +13083,6 @@
           {
             "source": "quantum/born-rule",
             "context": "Entropy"
-          },
-          {
-            "source": "quantum/entanglement",
-            "context": "Entropy"
-          },
-          {
-            "source": "quantum/entanglement",
-            "context": "Theorem 2.1"
           },
           {
             "source": "quantum/measurement",
@@ -17334,13 +17329,6 @@
     },
     {
       "derivationId": "quantum/entanglement",
-      "type": "Proposition",
-      "id": "5.1",
-      "name": "Geometric realization of entanglement",
-      "fullRef": "quantum/entanglement:Proposition 5.1"
-    },
-    {
-      "derivationId": "quantum/entanglement",
       "type": "Theorem",
       "id": "6.1.",
       "name": "",
@@ -19352,42 +19340,42 @@
     },
     {
       "derivationId": "gauge/confinement",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 1,
       "title": "Quantitative string tension",
       "description": "Derive sigma in terms of framework parameters (gs, associator magnitude, Planck length)."
     },
     {
       "derivationId": "gauge/confinement",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 2,
       "title": "Wilson loop criterion",
       "description": "Show that the expectation value of the Wilson loop langle W(C) rangle sim e-sigma A(C) (area law) follows from the non-associative phase accumulation."
     },
     {
       "derivationId": "gauge/confinement",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 3,
       "title": "Mass gap",
       "description": "Connect the associator-based confinement mechanism to a rigorous lower bound on the glueball mass spectrum."
     },
     {
       "derivationId": "gauge/confinement",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 4,
       "title": "Glueball spectrum",
       "description": "Derive the masses of 0++, 2++, and other glueball states from the octonionic framework."
     },
     {
       "derivationId": "gauge/confinement",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 5,
       "title": "Regge trajectories",
       "description": "Show that the linear potential produces the observed linear relationship between hadron spin and mass squared: J sim alpha' M2."
     },
     {
       "derivationId": "gauge/confinement",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 6,
       "title": "Lattice comparison",
       "description": "Compare the non-associative confinement mechanism with lattice QCD results for the static quark potential and flux tube structure."
@@ -20052,35 +20040,35 @@
     },
     {
       "derivationId": "quantum/entanglement",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 1,
       "title": "Quantum teleportation",
       "description": "Derive teleportation as coherence channel transfer — the relational invariant provides the channel, and classical communication provides the key to unlock it."
     },
     {
       "derivationId": "quantum/entanglement",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 2,
       "title": "Quantum error correction",
       "description": "Explore whether coherence conservation imposes fundamental limits on or structures for quantum error-correcting codes."
     },
     {
       "derivationId": "quantum/entanglement",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 3,
       "title": "Holographic connection",
       "description": "Make the ER=EPR sketch (Proposition 5.1) rigorous by connecting to the [Area Scaling](/derivations/holography/area-scaling) and [Causal Set Statistics](/derivations/holography/causal-set-statistics) d"
     },
     {
       "derivationId": "quantum/entanglement",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 4,
       "title": "Multipartite entanglement",
       "description": "Extend beyond the bipartite case to full multipartite classification (W-states, cluster states, SLOCC classes)."
     },
     {
       "derivationId": "quantum/entanglement",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 5,
       "title": "Entanglement dynamics",
       "description": "Derive entanglement growth under unitary evolution and the scrambling time from coherence dynamics."
