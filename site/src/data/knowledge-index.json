@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-11T23:38:18.494Z",
+    "generatedAt": "2026-03-12T01:48:02.156Z",
     "derivationCount": 50,
     "predictionCount": 9,
     "generator": "scripts/build-index.mjs"
@@ -9,15 +9,14 @@
     "byStatus": {
       "rigorous": 40,
       "non-viable": 1,
-      "draft": 3,
-      "provisional": 6
+      "provisional": 9
     },
     "derivationCount": 50,
     "predictionCount": 9,
     "edgeCount": 88,
     "formalObjectCount": 741,
     "openGapCount": 201,
-    "upgradeEligibleCount": 3,
+    "upgradeEligibleCount": 0,
     "leanVerifiedCount": 16,
     "leanTheoremCount": 64
   },
@@ -1661,6 +1660,10 @@
         ],
         "incoming": [
           {
+            "source": "foundation/coherence-lagrangian",
+            "context": "Three Spatial Dimensions"
+          },
+          {
             "source": "gauge/weak-interaction",
             "context": "Proposition 3.1"
           },
@@ -1959,7 +1962,7 @@
       "id": "foundation/coherence-lagrangian",
       "filePath": "site/src/content/derivations/foundation/coherence-lagrangian.md",
       "title": "Coherence Lagrangian",
-      "status": "draft",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "foundation",
       "tags": [
@@ -2090,7 +2093,7 @@
           "description": "The derivation focuses on scalar fields. Extending to spinor fields requires the Fisher metric on the spinor state space, which should connect to the Dirac Lagrangian psi(igammamu Dmu - m)psi."
         }
       ],
-      "assessmentVerdict": "",
+      "assessmentVerdict": "Provisional. The Lagrangian is assembled from individually unique sectors (each rigorously derived in its own derivation), with the assembly itself now justified by explicit cross-term enumeration. The remaining gaps — the bootstrap-renormalizability connection and the path integral measure — are ei",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -2109,6 +2112,10 @@
           {
             "target": "axioms/coherence-conservation",
             "context": "Coherence Conservation"
+          },
+          {
+            "target": "dimensions/three-dimensions",
+            "context": "Three Spatial Dimensions"
           },
           {
             "target": "interactions/bootstrap",
@@ -2151,6 +2158,10 @@
           {
             "source": "gauge/electroweak-breaking",
             "context": "Coherence Lagrangian"
+          },
+          {
+            "source": "spacetime/singularity-resolution",
+            "context": "Coherence Lagrangian"
           }
         ]
       },
@@ -2160,7 +2171,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "gauge/chirality-selection": {
@@ -3738,7 +3749,7 @@
       "id": "gauge/strong-cp",
       "filePath": "site/src/content/derivations/gauge/strong-cp.md",
       "title": "Strong CP Conservation from Octonionic Structure",
-      "status": "draft",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "gauge",
       "tags": [
@@ -3746,7 +3757,7 @@
         "cp-violation"
       ],
       "summary": "The QCD vacuum angle θ is exactly zero because the octonionic origin of SU(3) constrains the topological vacuum structure. Non-associativity of the octonions restricts the instanton tunneling that would generate a θ-term, resolving the strong CP problem without an axion.",
-      "lastUpdated": "2026-03-10",
+      "lastUpdated": "2026-03-11",
       "dependsOn": [
         "gauge/color-force"
       ],
@@ -3853,7 +3864,7 @@
           "description": "The fact that thetaQCD = 0 from non-associativity and thetaW is unphysical from standard arguments suggests a deeper connection between the associative/non-associative split and the strong/electroweak"
         }
       ],
-      "assessmentVerdict": "Draft. The resolution strategy is well-motivated and the physical picture is clear: non-associativity of O obstructs the vacuum tunneling that would generate a theta-term. The main upgrade path to rigorous status is formalizing the topological argument (Step 3c) — showing rigorously that octonionic ",
+      "assessmentVerdict": "Provisional. The resolution strategy is well-motivated: non-associativity of O obstructs the Chern-Simons cubic term that generates instanton winding, while the associative H permits (but renders unphysical) the weak theta-term. The argument is now tightened with explicit homotopy-theoretic backing ",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -3874,7 +3885,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "gauge/weak-interaction": {
@@ -10124,7 +10135,7 @@
       "id": "spacetime/singularity-resolution",
       "filePath": "site/src/content/derivations/spacetime/singularity-resolution.md",
       "title": "Singularity Resolution",
-      "status": "draft",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "spacetime",
       "tags": [
@@ -10249,8 +10260,8 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Exact correction term",
-          "description": "The modified Friedmann equation uses (1 - rho/rhoP) as the simplest form consistent with a bounce at rhoP. The exact correction should be derivable from the coherence Lagrangian, which is itself a stu"
+          "title": "Higher-order corrections",
+          "description": "The modified Friedmann equation uses (1 - rho/rhoP) as the leading-order correction. The exact form, including sub-leading terms, should be derivable from the coherence Lagrangian ([Coherence Lagrangi"
         },
         {
           "number": 2,
@@ -10273,7 +10284,7 @@
           "description": "Singularity resolution removes the classical information loss mechanism (information destroyed at the singularity). This should connect to the [Black Hole Information Paradox](/derivations/holography/"
         }
       ],
-      "assessmentVerdict": "",
+      "assessmentVerdict": "Provisional. The structural mechanism for singularity resolution — bounded curvature from a minimum length scale, leading to bounces rather than singularities — is now well-supported by explicit arguments at each step. The main limitation is that this is an effective description: the modified Friedm",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -10298,6 +10309,10 @@
             "context": "Area Scaling"
           },
           {
+            "target": "foundation/coherence-lagrangian",
+            "context": "Coherence Lagrangian"
+          },
+          {
             "target": "holography/information-paradox",
             "context": "Black Hole Information Paradox"
           }
@@ -10310,7 +10325,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "spacetime/speed-of-light": {
@@ -18033,35 +18048,35 @@
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Uniqueness proof",
       "description": "A complete proof that L is the *unique* Lagrangian consistent with all three axioms, not merely the simplest. This requires classifying all possible terms consistent with the derived symmetries."
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Cosmological constant",
       "description": "The coherence potential allows a constant term V0 (the cosmological constant). Its value should be derivable from the coherence geometry but is not — this connects to the [Cosmological Constant](/deri"
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Path integral measure",
       "description": "The functional integral measure Dphi is not rigorously defined. The coherence framework may provide a natural regularization via the discrete relational invariant network, but this is not yet formaliz"
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Higher-order corrections",
       "description": "The quartic restriction (Theorem 2.2c) holds at tree level; loop corrections generate higher-dimensional operators suppressed by powers of the cutoff. The bootstrap hierarchy structure should organize"
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Fermion kinetic term",
       "description": "The derivation focuses on scalar fields. Extending to spinor fields requires the Fisher metric on the spinor state space, which should connect to the Dirac Lagrangian psi(igammamu Dmu - m)psi."
@@ -18271,28 +18286,28 @@
     },
     {
       "derivationId": "gauge/strong-cp",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Topological rigidity proof",
       "description": "Formalize the argument that octonionic gauge bundles admit only topologically trivial SU(3) connections. This may connect to the theory of G2-instantons on manifolds with G2 holonomy."
     },
     {
       "derivationId": "gauge/strong-cp",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Instanton moduli space",
       "description": "Characterize the moduli space of SU(3) instantons within the G2 framework. If the moduli space is empty (or consists only of the trivial connection), the argument is complete."
     },
     {
       "derivationId": "gauge/strong-cp",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Non-perturbative effects",
       "description": "Check whether other non-perturbative effects (monopoles, domain walls) are also constrained by the octonionic structure."
     },
     {
       "derivationId": "gauge/strong-cp",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Electroweak-strong unification",
       "description": "The fact that thetaQCD = 0 from non-associativity and thetaW is unphysical from standard arguments suggests a deeper connection between the associative/non-associative split and the strong/electroweak"
@@ -18999,35 +19014,35 @@
     },
     {
       "derivationId": "spacetime/singularity-resolution",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 1,
-      "title": "Exact correction term",
-      "description": "The modified Friedmann equation uses (1 - rho/rhoP) as the simplest form consistent with a bounce at rhoP. The exact correction should be derivable from the coherence Lagrangian, which is itself a stu"
+      "title": "Higher-order corrections",
+      "description": "The modified Friedmann equation uses (1 - rho/rhoP) as the leading-order correction. The exact form, including sub-leading terms, should be derivable from the coherence Lagrangian ([Coherence Lagrangi"
     },
     {
       "derivationId": "spacetime/singularity-resolution",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Black hole end state",
       "description": "Does a Planck-density core eventually re-expand (Planck star), remain static (remnant), or evaporate completely? The answer depends on the dynamics at rho sim rhoP and the interaction between Hawking "
     },
     {
       "derivationId": "spacetime/singularity-resolution",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Observational signatures",
       "description": "The bounce may produce observable signatures in the CMB (pre-bounce perturbations surviving through the bounce). The spectrum of these perturbations — scale-invariant, blue-tilted, or otherwise — depe"
     },
     {
       "derivationId": "spacetime/singularity-resolution",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "De Sitter core structure",
       "description": "The regular interior likely approaches a de Sitter geometry (constant positive curvature) near rmin. Deriving this from the framework would connect singularity resolution to the cosmological constant."
     },
     {
       "derivationId": "spacetime/singularity-resolution",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Information preservation",
       "description": "Singularity resolution removes the classical information loss mechanism (information destroyed at the singularity). This should connect to the [Black Hole Information Paradox](/derivations/holography/"
@@ -19251,26 +19266,7 @@
     }
   ],
   "upgradeAnalysis": {
-    "eligible": [
-      {
-        "id": "foundation/coherence-lagrangian",
-        "currentStatus": "draft",
-        "gapCount": 5,
-        "formalObjectCount": 10
-      },
-      {
-        "id": "gauge/strong-cp",
-        "currentStatus": "draft",
-        "gapCount": 4,
-        "formalObjectCount": 9
-      },
-      {
-        "id": "spacetime/singularity-resolution",
-        "currentStatus": "draft",
-        "gapCount": 5,
-        "formalObjectCount": 13
-      }
-    ],
+    "eligible": [],
     "blocked": []
   },
   "warnings": []
