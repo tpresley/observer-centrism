@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-12T02:43:30.791Z",
+    "generatedAt": "2026-03-12T02:54:15.699Z",
     "derivationCount": 55,
     "predictionCount": 10,
     "generator": "scripts/build-index.mjs"
@@ -9,8 +9,7 @@
     "byStatus": {
       "rigorous": 40,
       "non-viable": 1,
-      "draft": 3,
-      "provisional": 9,
+      "provisional": 12,
       "stub": 2
     },
     "derivationCount": 55,
@@ -18,7 +17,7 @@
     "edgeCount": 107,
     "formalObjectCount": 774,
     "openGapCount": 201,
-    "upgradeEligibleCount": 3,
+    "upgradeEligibleCount": 0,
     "leanVerifiedCount": 16,
     "leanTheoremCount": 64
   },
@@ -1497,7 +1496,7 @@
       "id": "cosmology/leptogenesis",
       "filePath": "site/src/content/derivations/cosmology/leptogenesis.md",
       "title": "Leptogenesis from Majorana Neutrino Decays",
-      "status": "draft",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "cosmology",
       "tags": [
@@ -1593,7 +1592,7 @@
           "type": "Proposition",
           "id": "6.2",
           "name": "Electroweak-scale leptogenesis is viable",
-          "statementPreview": "With resonant enhancement (Proposition 3.3):"
+          "statementPreview": "With resonant enhancement (Proposition 3.3), the baryon asymmetry is estimated for two benchmark scenarios:"
         },
         {
           "type": "Corollary",
@@ -1639,7 +1638,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "dimensions/three-dimensions": {
@@ -2358,7 +2357,7 @@
       "id": "gauge/anomaly-cancellation",
       "filePath": "site/src/content/derivations/gauge/anomaly-cancellation.md",
       "title": "Anomaly Cancellation from Coherence Conservation",
-      "status": "draft",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "gauge",
       "tags": [
@@ -2435,6 +2434,10 @@
             "context": "SM Gauge Group"
           },
           {
+            "target": "thermodynamics-ext/fisher-metric",
+            "context": "Fisher Information Metric"
+          },
+          {
             "target": "particles/three-generations",
             "context": "Three Generations"
           },
@@ -2451,14 +2454,14 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "gauge/chiral-symmetry-breaking": {
       "id": "gauge/chiral-symmetry-breaking",
       "filePath": "site/src/content/derivations/gauge/chiral-symmetry-breaking.md",
       "title": "Chiral Symmetry Breaking from Octonionic Confinement",
-      "status": "draft",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "gauge",
       "tags": [
@@ -2580,7 +2583,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "gauge/chirality-selection": {
@@ -11952,6 +11955,10 @@
             "context": "Fisher Information Metric"
           },
           {
+            "source": "gauge/anomaly-cancellation",
+            "context": "Fisher Information Metric"
+          },
+          {
             "source": "thermodynamics-ext/distinguishability-conservation",
             "context": "Fisher Information Metric"
           },
@@ -20169,26 +20176,7 @@
     }
   ],
   "upgradeAnalysis": {
-    "eligible": [
-      {
-        "id": "cosmology/leptogenesis",
-        "currentStatus": "draft",
-        "gapCount": 0,
-        "formalObjectCount": 15
-      },
-      {
-        "id": "gauge/anomaly-cancellation",
-        "currentStatus": "draft",
-        "gapCount": 0,
-        "formalObjectCount": 7
-      },
-      {
-        "id": "gauge/chiral-symmetry-breaking",
-        "currentStatus": "draft",
-        "gapCount": 0,
-        "formalObjectCount": 11
-      }
-    ],
+    "eligible": [],
     "blocked": []
   },
   "warnings": []

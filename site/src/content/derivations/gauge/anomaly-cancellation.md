@@ -1,6 +1,6 @@
 ---
 title: "Anomaly Cancellation from Coherence Conservation"
-status: "draft"
+status: "provisional"
 dependsOn: ["gauge/chirality-selection", "gauge/standard-model-group", "axioms/coherence-conservation"]
 enablesDerivation: []
 tags: ["gauge", "anomaly", "fermion-content"]
@@ -24,9 +24,15 @@ where $\Gamma[g, A]$ is the anomalous phase functional.
 
 **Theorem 1.2 (Coherence conservation requires anomaly freedom).** Let $(\mathcal{H}, \mathcal{A}, \mathcal{C})$ be a coherence space satisfying Axiom 1 (coherence conservation). If the coherence measure $\mathcal{C}$ is quantized via a path integral with gauge field $A$, then $\Gamma[g, A] = 0$ for all gauge transformations $g$.
 
-*Proof.* Coherence conservation on a Cauchy slice $\Sigma$ requires that the total coherence $\mathcal{C}(\Sigma)$ is invariant under all transformations that preserve the DAG structure. Gauge transformations are precisely such transformations — they relabel the internal degrees of freedom without altering the relational invariant content. If $\Gamma \neq 0$, then the partition function (and hence the coherence measure computed from it) depends on the gauge representative, violating the gauge-invariance of coherence. Since coherence conservation is an axiom, the anomaly phase must vanish identically. $\square$
+*Proof.* The argument proceeds in three steps.
 
-**Remark.** This is the framework-intrinsic version of the standard argument that anomalous gauge theories are inconsistent. The difference is that the consistency requirement here follows from Axiom 1 rather than from an external consistency demand.
+**Step 1 (Gauge invariance of coherence).** Coherence conservation (Axiom 1) states that the coherence measure $\mathcal{C}$ is a gauge-invariant functional: $\mathcal{C}[\Phi^g] = \mathcal{C}[\Phi]$ for any gauge transformation $g$, because gauge transformations relabel internal degrees of freedom without altering the relational invariant content (they preserve the DAG structure and all Noether invariants $I_\alpha$).
+
+**Step 2 (Partition function as coherence generator).** The coherence measure on a field configuration is computed from the path integral partition function via $\mathcal{C}[\Phi] = -\partial_\beta \ln \mathcal{Z}[\beta, \Phi]\big|_{\beta=1}$, where $\beta$ is the coherence inverse temperature ([Fisher Information Metric](/derivations/thermodynamics-ext/fisher-metric)). If $\mathcal{Z}[A^g] = \mathcal{Z}[A] \cdot e^{i\Gamma[g,A]}$ with $\Gamma \neq 0$, then $\ln \mathcal{Z}$ acquires a gauge-dependent imaginary part, and the derived coherence measure becomes gauge-dependent: $\mathcal{C}[A^g] \neq \mathcal{C}[A]$.
+
+**Step 3 (Contradiction).** Gauge-dependent coherence contradicts Step 1. Therefore $\Gamma[g, A] = 0$ for all $g$, and the theory is anomaly-free. $\square$
+
+**Remark.** This is the framework-intrinsic version of the standard argument that anomalous gauge theories are inconsistent. The difference is that the consistency requirement here follows from Axiom 1 (coherence conservation as an exact conservation law on Cauchy slices of the DAG) rather than from an external demand for unitarity or renormalizability. The three-step structure makes explicit that the anomaly-freedom condition is not merely analogous to coherence conservation but is a direct consequence of it, mediated by the path-integral formulation of the coherence measure.
 
 ## 2. Fermion Content from Division-Algebra Decomposition
 
@@ -102,15 +108,19 @@ $$\sum_L Y - \sum_R Y = 0 - 0 = 0 \quad \checkmark$$
 
 **Theorem 5.1 (Anomaly freedom is automatic, not tuned).** The vanishing of all anomaly traces is a consequence of the $\mathbb{C}\ell(6)$ algebraic structure and chirality selection — it cannot be deformed.
 
-*Proof sketch.* The fermion representations are fixed by two inputs:
+*Proof.* The fermion representations are fixed by two rigid algebraic inputs with no continuous deformation parameters:
 
-1. **$\mathbb{C} \otimes \mathbb{O} \cong \mathbb{C}\ell(6)$** determines the $U(1)_Y \times SU(3)_C$ quantum numbers (Proposition 4.1 of [SM Gauge Group](/derivations/gauge/standard-model-group)). There are no free parameters in the minimal left ideal decomposition — the hypercharges are algebraically determined.
+**Input 1: $\mathbb{C} \otimes \mathbb{O} \cong \mathbb{C}\ell(6)$ determines color and hypercharge.** The minimal left ideal of $\mathbb{C}\ell(6)$ is an 8-dimensional complex vector space. Its decomposition under the $SU(3)$ automorphism subgroup of $G_2 = \text{Aut}(\mathbb{O})$ is uniquely:
 
-2. **Chirality selection** determines which representations are left-handed doublets vs. right-handed singlets under $SU(2)_L$ (Theorem 3.1 of [Chirality Selection](/derivations/gauge/chirality-selection)). The orientation lock is binary with no continuous deformation.
+$$\mathbf{8}_\mathbb{C} = (\mathbf{1})_0 \oplus (\bar{\mathbf{3}})_{1/3} \oplus (\mathbf{3})_{-2/3} \oplus (\mathbf{1})_1$$
 
-Since neither input has adjustable parameters, the anomaly traces are fixed numbers. The fact that they vanish is a property of the division-algebra structure of $\mathbb{R}, \mathbb{C}, \mathbb{H}, \mathbb{O}$ — ultimately traceable to Hurwitz's theorem. $\square$
+The subscripts (hypercharges) are eigenvalues of the $U(1)$ generator $Q_{B-L} = \frac{1}{3}\sum_{k=1}^3 a_k^\dagger a_k$ acting on the Fock space of three creation operators $a_k^\dagger$ corresponding to the three complex directions in $\mathbb{C} \otimes \text{Im}(\mathbb{O})/\mathbb{H}$. These eigenvalues are $\{0, 1/3, -2/3, 1\}$ — determined by the integer eigenvalues of the number operator $n_k \in \{0,1\}$ and the Grassmann nature of the $a_k^\dagger$. No continuous parameter can alter them.
 
-**Remark.** This explains why the Standard Model fermion content "happens" to be anomaly-free: it is the unique content compatible with the four normed division algebras and coherence conservation. Any other fermion content would either violate the Hurwitz ceiling (no fifth gauge factor exists) or violate chirality selection (non-chiral couplings would require a fifth division algebra).
+**Input 2: Chirality selection determines $SU(2)_L$ assignment.** The [Chirality Selection](/derivations/gauge/chirality-selection) derivation (Theorem 3.1) establishes that the quaternionic factor $\mathbb{H}$ in $\mathbb{R} \otimes \mathbb{C} \otimes \mathbb{H} \otimes \mathbb{O}$ produces $SU(2)_L$ acting exclusively on left-handed fields. This is a discrete choice — the orientation of the $\mathbb{H}$ action relative to the Lorentz chirality operator — with no continuous deformation.
+
+**Rigidity.** The combined representation content (Definition 2.1) depends on: (a) Hurwitz's theorem (exactly four normed division algebras $\mathbb{R}, \mathbb{C}, \mathbb{H}, \mathbb{O}$), (b) the $\mathbb{C}\ell(6)$ isomorphism (a theorem of Clifford algebra theory), and (c) the orientation lock (a $\mathbb{Z}_2$ choice, fixed by chirality selection). None of these admits a continuous parameter. The anomaly traces (Theorem 3.1) are therefore fixed rational numbers, and their vanishing is a theorem about the algebra of octonions — not a fine-tuning. $\square$
+
+**Remark.** This explains why the Standard Model fermion content "happens" to be anomaly-free: it is the unique content compatible with the four normed division algebras and coherence conservation. Deforming any hypercharge assignment would require modifying the $U(1)$ eigenvalues of the $\mathbb{C}\ell(6)$ number operator, which are integer-valued and hence rigid. Adding or removing representations would change the $\mathbb{C}\ell(6)$ ideal dimension, which is fixed at $2^3 = 8$ by the three complex directions in the octonions.
 
 ## Consistency Model
 
@@ -128,15 +138,15 @@ where $\eta_f = +1$ for left-handed and $-1$ for right-handed fermions, and $T_a
 
 | Result | Status | Notes |
 |---|---|---|
-| Theorem 1.2 (coherence → anomaly freedom) | Semi-formal | Standard argument reframed; the mapping from Axiom 1 to partition-function invariance is structural but not axiomatically derived |
+| Theorem 1.2 (coherence → anomaly freedom) | Semi-formal | Three-step argument is explicit but Step 2 (coherence as partition-function derivative) relies on the Fisher metric formulation |
 | Proposition 2.2 (hypercharge quantization) | Rigorous | Follows from published $\mathbb{C}\ell(6)$ decomposition (Furey, 2016; Stoica, 2018) |
 | Theorem 3.1 (anomaly traces vanish) | Rigorous | Pure arithmetic on fixed representations |
 | Proposition 4.1 (generation independence) | Rigorous | Immediate from identical representations |
-| Theorem 5.1 (structural necessity) | Semi-formal | Depends on uniqueness of $\mathbb{C}\ell(6)$ ideal; deformation argument is qualitative |
+| Theorem 5.1 (structural necessity) | Semi-formal | Rigidity argument now explicit; depends on Hurwitz's theorem and $\mathbb{C}\ell(6)$ number-operator eigenvalue discreteness |
 
 ## Open Gaps
 
-**Gap 1.** Theorem 1.2 maps coherence conservation to anomaly freedom at the level of structural analogy. A fully rigorous proof would need to construct the partition function from the coherence measure and show that $\Gamma[g, A] \neq 0$ leads to a contradiction with Axiom 1's conservation law on Cauchy slices.
+**Gap 1.** Theorem 1.2 now provides an explicit three-step proof, but Step 2 relies on the coherence-as-partition-function-derivative identification from the Fisher metric derivation. A fully rigorous proof would axiomatically construct this identification from the coherence measure alone, without invoking the path integral formulation as an intermediate.
 
 **Gap 2.** The fermion representations (Definition 2.1) rely on the $\mathbb{C} \otimes \mathbb{O} \cong \mathbb{C}\ell(6)$ identification, which is a published mathematical result applied to the framework. A fully intrinsic derivation would construct the fermion representations directly from the bootstrap mechanism without invoking Clifford algebra theory.
 

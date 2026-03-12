@@ -25,7 +25,7 @@ relatedPredictions:
 
 The preceding chapters traced a derivation chain from three axioms through spacetime, quantum mechanics, the particle spectrum, and holography. The logical coherence of that chain matters — but it is not enough. A framework that only recovers what is already known, however elegantly, is philosophy. Physics requires predictions that can be tested and potentially falsified.
 
-Observer-Centrism makes nine predictions. Two are quantitative, with specific numbers attached. Seven are qualitative "negative" predictions — things that should *not* happen if the framework is correct. Several are already consistent with existing data. Others await future experiments.
+Observer-Centrism makes ten predictions. Two are quantitative, with specific numbers attached. Eight are qualitative "negative" predictions — things that should *not* happen if the framework is correct. Several are already consistent with existing data. Others await future experiments.
 
 ## The Headline: Holographic Noise
 
@@ -49,9 +49,9 @@ The framework predicts a specific scaling for this minimum mass: $M_J \propto m_
 
 The prediction is consistent with observed suppressions of small-scale structure — the "missing satellites" problem in galaxy formation, where fewer small dark matter halos are observed than simulated. The framework predicts these are structural signatures of dark matter's loop closure scale.
 
-## Seven Things That Should Not Happen
+## Eight Things That Should Not Happen
 
-Beyond the two quantitative predictions, the framework makes seven qualitative predictions — all of which take the form "this will not be observed." Negative predictions are underappreciated in physics, but they are powerful: every null result that matches the prediction is evidence, and any positive result is falsification.
+Beyond the two quantitative predictions, the framework makes eight qualitative predictions — all of which take the form "this will not be observed" or "this specific structure will be found." Negative predictions are underappreciated in physics, but they are powerful: every null result that matches the prediction is evidence, and any positive result is falsification.
 
 **No fourth fermion generation.** Three generations correspond to three independent rotation axes in three dimensions. A fourth would require a fourth axis, which does not exist. Current data from the LEP collider is consistent — precision measurements of the Z boson decay width constrain the number of light neutrinos to three.
 
