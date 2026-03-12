@@ -171,11 +171,17 @@ function minimizeCrossings(rows, depths, edges, maxDepth) {
   }
 }
 
-/** Compute the depth of every node (longest path from a root). */
-function computeDepths(nodes, edges) {
+/** Compute the depth of every node (longest path from a root).
+ *  axiomIds — set of node ids to pin at depth 0 (their inter-edges are ignored). */
+function computeDepths(nodes, edges, axiomIds) {
+  // Filter out axiom-to-axiom edges so all axioms collapse to depth 0
+  const effectiveEdges = axiomIds && axiomIds.size > 0
+    ? edges.filter(e => !(axiomIds.has(e.from) && axiomIds.has(e.to)))
+    : edges
+
   const children = {}
-  const parentMap = buildParentMap(edges)
-  for (const e of edges) {
+  const parentMap = buildParentMap(effectiveEdges)
+  for (const e of effectiveEdges) {
     if (!children[e.from]) children[e.from] = []
     children[e.from].push(e.to)
   }
@@ -217,9 +223,25 @@ function collectAncestors(nodeId, parentMap) {
   return visited
 }
 
+/** Collect all descendant ids (transitive children) for a given node. */
+function collectDescendants(nodeId, childMap) {
+  const visited = new Set()
+  const stack = [nodeId]
+  while (stack.length) {
+    const cur = stack.pop()
+    if (visited.has(cur)) continue
+    visited.add(cur)
+    for (const cid of (childMap[cur] || [])) {
+      stack.push(cid)
+    }
+  }
+  return visited
+}
+
 /** Lay out nodes into { id -> {x,y} } positions. */
 function layoutNodes(nodes, edges, width) {
-  const depths = computeDepths(nodes, edges)
+  const axiomIds = new Set(nodes.filter(n => n.id.startsWith('axioms/')).map(n => n.id))
+  const depths = computeDepths(nodes, edges, axiomIds)
   const maxDepth = Math.max(0, ...Object.values(depths))
 
   // Group node ids by depth row
@@ -232,7 +254,7 @@ function layoutNodes(nodes, edges, width) {
 
   const ROW_HEIGHT = 100
   const NODE_RADIUS = 22
-  const TOP_PAD = 50
+  const TOP_PAD = 70          // extra room for axiom box header
   const positions = {}
 
   for (let d = 0; d <= maxDepth; d++) {
@@ -247,7 +269,7 @@ function layoutNodes(nodes, edges, width) {
     }
   }
 
-  return { positions, height: TOP_PAD + (maxDepth + 1) * ROW_HEIGHT + TOP_PAD, nodeRadius: NODE_RADIUS }
+  return { positions, height: TOP_PAD + (maxDepth + 1) * ROW_HEIGHT + TOP_PAD, nodeRadius: NODE_RADIUS, axiomIds }
 }
 
 // ---- Component -------------------------------------------------------------
@@ -257,10 +279,15 @@ function DependencyGraph({ state, props }) {
   const edges = props.edges || []
   const width = props.width || 1350
 
-  const { positions, height, nodeRadius } = layoutNodes(nodes, edges, width)
+  const { positions, height, nodeRadius, axiomIds } = layoutNodes(nodes, edges, width)
   const parentMap = buildParentMap(edges)
+  const childMap = buildChildMap(edges)
   const hoveredId = state.hoveredNode
-  const highlighted = hoveredId ? collectAncestors(hoveredId, parentMap) : new Set()
+  const ancestors = hoveredId ? collectAncestors(hoveredId, parentMap) : new Set()
+  const descendants = hoveredId ? collectDescendants(hoveredId, childMap) : new Set()
+  const chainNodes = hoveredId
+    ? new Set([...ancestors, ...descendants])
+    : null
 
   // Split edges into normal and highlighted for z-order control
   const normalEdges = []
@@ -269,13 +296,26 @@ function DependencyGraph({ state, props }) {
     const from = positions[e.from]
     const to = positions[e.to]
     if (!from || !to) return
-    const isHighlighted = highlighted.has(e.from) && highlighted.has(e.to)
-    if (isHighlighted) {
+    const isChainEdge = (ancestors.has(e.from) && ancestors.has(e.to))
+      || (descendants.has(e.from) && descendants.has(e.to))
+    if (isChainEdge) {
       highlightedEdges.push({ e, i, from, to })
     } else {
       normalEdges.push({ e, i, from, to })
     }
   })
+
+  // Compute axiom box bounds
+  const axiomPositions = nodes
+    .filter(n => axiomIds.has(n.id))
+    .map(n => positions[n.id])
+    .filter(Boolean)
+  const axiomBox = axiomPositions.length > 0 ? {
+    x: Math.min(...axiomPositions.map(p => p.x)) - nodeRadius - 110,
+    y: Math.min(...axiomPositions.map(p => p.y)) - nodeRadius - 30,
+    x2: Math.max(...axiomPositions.map(p => p.x)) + nodeRadius + 110,
+    y2: Math.max(...axiomPositions.map(p => p.y)) + nodeRadius + 36,
+  } : null
 
   return (
     <div className="dependency-graph-wrapper" style={{ position: 'relative' }}>
@@ -286,6 +326,37 @@ function DependencyGraph({ state, props }) {
         height={height}
         style={{ display: 'block', maxWidth: '100%', height: 'auto' }}
       >
+        {/* Axiom box */}
+        {axiomBox && (
+          <>
+            <rect
+              x={axiomBox.x}
+              y={axiomBox.y}
+              width={axiomBox.x2 - axiomBox.x}
+              height={axiomBox.y2 - axiomBox.y}
+              rx={12}
+              ry={12}
+              fill="#eff6ff"
+              stroke="#93c5fd"
+              style={{ strokeWidth: 1.5 }}
+            />
+            <text
+              x={(axiomBox.x + axiomBox.x2) / 2}
+              y={axiomBox.y + 18}
+              fill="#3b82f6"
+              style={{
+                fontSize: '13px',
+                fontWeight: 600,
+                textAnchor: 'middle',
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+              }}
+            >
+              Axioms
+            </text>
+          </>
+        )}
+
         {/* Non-highlighted edges (bottom layer) */}
         {normalEdges.map(({ i, from, to }) => (
           <line
@@ -321,9 +392,9 @@ function DependencyGraph({ state, props }) {
           const isStub = node.status === 'stub'
           const isNonViable = node.status === 'non-viable'
           const isHovered = hoveredId === node.id
-          const isAncestor = highlighted.has(node.id)
-          const ringColor = isHovered ? '#f59e0b' : (isAncestor ? '#fbbf24' : 'none')
-          const ringWidth = isHovered ? 4 : (isAncestor ? 2.5 : 0)
+          const inChain = chainNodes && chainNodes.has(node.id) && !isHovered
+          const ringColor = isHovered ? '#f59e0b' : (inChain ? '#fbbf24' : 'none')
+          const ringWidth = isHovered ? 4 : (inChain ? 2.5 : 0)
 
           // Show full title when hovered, truncated otherwise
           const displayTitle = isHovered
@@ -384,7 +455,7 @@ function DependencyGraph({ state, props }) {
                     />
                   </>
                 )}
-                {/* Label below */}
+                {/* Label below — hidden for nodes outside the dependency chain on hover */}
                 <text
                   x={pos.x}
                   y={pos.y + nodeRadius + 20}
@@ -394,6 +465,8 @@ function DependencyGraph({ state, props }) {
                     pointerEvents: 'none',
                     textAnchor: 'middle',
                     fontWeight: isHovered ? 'bold' : 'normal',
+                    opacity: (!chainNodes || chainNodes.has(node.id)) ? 1 : 0,
+                    transition: 'opacity 0.2s ease',
                   }}
                 >
                   {displayTitle}
@@ -436,16 +509,25 @@ function DependencyGraph({ state, props }) {
 
 // ---- Sygnal wiring ---------------------------------------------------------
 
+// Track touch timing so we can suppress the synthetic mouseenter that follows a tap
+let lastTouchTime = 0
+
 DependencyGraph.initialState = {
   hoveredNode: null,
 }
 
 DependencyGraph.intent = ({ DOM }) => ({
-  HOVER_NODE:  DOM.select('.dep-node').events('mouseenter'),
+  HOVER_NODE:  DOM.select('.dep-node').events('mouseenter')
+                 .filter(() => Date.now() - lastTouchTime > 500),
   LEAVE_NODE:  DOM.select('.dep-node').events('mouseleave'),
+  TOUCH_NODE:  DOM.select('.dep-node').events('touchstart')
+                 .map(ev => { lastTouchTime = Date.now(); return ev }),
+  TAP_NODE:    DOM.select('.dep-node-link').events('click'),
+  TAP_BG:      DOM.select('.dependency-graph-svg').events('click'),
 })
 
 DependencyGraph.model = {
+  TOUCH_NODE: (state) => state,
   HOVER_NODE: (state, ev) => {
     const g = ev.target && ev.target.closest ? ev.target.closest('.dep-node') : null
     if (!g) return { ...state, hoveredNode: null }
@@ -453,7 +535,24 @@ DependencyGraph.model = {
     const nodeId = cls ? cls.replace('dep-node--', '').replace(/--/g, '/') : null
     return { ...state, hoveredNode: nodeId }
   },
+  TAP_NODE: (state, ev) => {
+    const g = ev.target && ev.target.closest ? ev.target.closest('.dep-node') : null
+    if (!g) return state
+    const cls = Array.from(g.classList).find(c => c.startsWith('dep-node--'))
+    const nodeId = cls ? cls.replace('dep-node--', '').replace(/--/g, '/') : null
+    if (!nodeId) return state
+    // Already hovered (second tap) or keyboard Enter → let <a> navigate normally
+    if (state.hoveredNode === nodeId || ev.detail === 0) return state
+    // First tap on un-hovered node → prevent navigation, just show the chain
+    ev.preventDefault()
+    return { ...state, hoveredNode: nodeId }
+  },
   LEAVE_NODE: (state) => {
+    return { ...state, hoveredNode: null }
+  },
+  TAP_BG: (state, ev) => {
+    // Tap on empty SVG space clears hover (important on touch devices)
+    if (ev.target.closest && ev.target.closest('.dep-node')) return state
     return { ...state, hoveredNode: null }
   },
 }
