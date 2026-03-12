@@ -2,7 +2,7 @@
 title: "Coupling Constant Relationships"
 status: "rigorous"
 dependsOn: ["gauge/standard-model-group", "interactions/bootstrap", "particles/mass-hierarchy"]
-enablesDerivation: []
+enablesDerivation: ["gauge/weinberg-angle"]
 tags: ["cosmology"]
 summary: "The division algebra structure constrains coupling constant ratios: the Weinberg angle follows from the C ⊂ H embedding, the relative gauge coupling strengths from algebraic normalization, and the RG running from bootstrap fixed points. The framework predicts that the three couplings do not converge to a single GUT point."
 rigorLevel: "formal"

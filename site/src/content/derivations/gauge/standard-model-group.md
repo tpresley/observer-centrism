@@ -2,7 +2,7 @@
 title: "Standard Model Gauge Group from Division Algebras"
 status: "rigorous"
 dependsOn: ["gauge/electromagnetism", "gauge/weak-interaction", "gauge/color-force"]
-enablesDerivation: ["cosmology/coupling-constants", "gauge/electroweak-breaking"]
+enablesDerivation: ["cosmology/coupling-constants", "gauge/electroweak-breaking", "gauge/anomaly-cancellation"]
 tags: ["gauge"]
 summary: "The Standard Model gauge group U(1)×SU(2)×SU(3) is the unique and complete gauge group consistent with the framework: it arises from the four normed division algebras (R, C, H, O), and Hurwitz's theorem proves no further extension is possible. The product structure is fundamental — no grand unified group exists."
 rigorLevel: "formal"

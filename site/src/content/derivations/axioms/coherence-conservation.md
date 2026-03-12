@@ -2,7 +2,7 @@
 title: "Coherence Conservation"
 status: "rigorous"
 dependsOn: []
-enablesDerivation: ["axioms/observer-definition", "axioms/loop-closure", "minimal-observer/structure", "holography/information-paradox"]
+enablesDerivation: ["axioms/observer-definition", "axioms/loop-closure", "minimal-observer/structure", "holography/information-paradox", "gauge/anomaly-cancellation"]
 tags: ["foundation"]
 summary: "Formalization of the primitive conserved quantity as a subadditive measure on a directed acyclic graph, with conservation stated graph-theoretically without presupposing time"
 rigorLevel: "formal"

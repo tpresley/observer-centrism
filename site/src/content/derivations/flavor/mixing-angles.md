@@ -2,7 +2,7 @@
 title: "Flavor Mixing from Winding-Axis Geometry"
 status: "rigorous"
 dependsOn: ["particles/three-generations", "gauge/weak-interaction"]
-enablesDerivation: ["particles/neutrino-masses"]
+enablesDerivation: ["particles/neutrino-masses", "cosmology/leptogenesis"]
 tags: ["flavor"]
 summary: "The three winding axes that generate three particle generations define distinct mass and weak-interaction eigenbases. The mismatch between these bases — parameterized by the CKM (quark) and PMNS (lepton) mixing matrices — arises from the geometry of the coherence cost function on SO(3), with discrete residual symmetries selecting the preferred bases"
 rigorLevel: "formal"

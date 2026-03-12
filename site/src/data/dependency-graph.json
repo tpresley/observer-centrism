@@ -49,7 +49,12 @@
     { "id": "spacetime/singularity-resolution", "title": "Singularity Resolution", "group": "geometry", "status": "provisional" },
     { "id": "gauge/confinement", "title": "Color Confinement", "group": "gauge", "status": "provisional" },
     { "id": "holography/causal-set-statistics", "title": "Causal Set Statistics", "group": "holography", "status": "provisional" },
-    { "id": "particles/neutrino-masses", "title": "Neutrino Mass Mechanism", "group": "particles", "status": "provisional" }
+    { "id": "particles/neutrino-masses", "title": "Neutrino Mass Mechanism", "group": "particles", "status": "provisional" },
+    { "id": "gauge/anomaly-cancellation", "title": "Anomaly Cancellation", "group": "gauge", "status": "stub" },
+    { "id": "gauge/weinberg-angle", "title": "Weinberg Angle", "group": "gauge", "status": "stub" },
+    { "id": "cosmology/leptogenesis", "title": "Leptogenesis", "group": "cosmology", "status": "stub" },
+    { "id": "gauge/chiral-symmetry-breaking", "title": "Chiral Symmetry Breaking", "group": "gauge", "status": "stub" },
+    { "id": "holography/er-epr", "title": "ER=EPR Formalization", "group": "holography", "status": "stub" }
   ],
   "edges": [
     { "from": "axioms/coherence-conservation", "to": "axioms/observer-definition" },
@@ -143,6 +148,21 @@
     { "from": "holography/area-scaling", "to": "holography/causal-set-statistics" },
     { "from": "interactions/relational-invariants", "to": "holography/causal-set-statistics" },
     { "from": "particles/three-generations", "to": "particles/neutrino-masses" },
-    { "from": "flavor/mixing-angles", "to": "particles/neutrino-masses" }
+    { "from": "flavor/mixing-angles", "to": "particles/neutrino-masses" },
+    { "from": "gauge/chirality-selection", "to": "gauge/anomaly-cancellation" },
+    { "from": "gauge/standard-model-group", "to": "gauge/anomaly-cancellation" },
+    { "from": "axioms/coherence-conservation", "to": "gauge/anomaly-cancellation" },
+    { "from": "gauge/weak-interaction", "to": "gauge/weinberg-angle" },
+    { "from": "gauge/electroweak-breaking", "to": "gauge/weinberg-angle" },
+    { "from": "cosmology/coupling-constants", "to": "gauge/weinberg-angle" },
+    { "from": "cosmology/baryogenesis", "to": "cosmology/leptogenesis" },
+    { "from": "particles/neutrino-masses", "to": "cosmology/leptogenesis" },
+    { "from": "flavor/mixing-angles", "to": "cosmology/leptogenesis" },
+    { "from": "gauge/color-force", "to": "gauge/chiral-symmetry-breaking" },
+    { "from": "gauge/confinement", "to": "gauge/chiral-symmetry-breaking" },
+    { "from": "quantum/entanglement", "to": "holography/er-epr" },
+    { "from": "holography/area-scaling", "to": "holography/er-epr" },
+    { "from": "holography/causal-set-statistics", "to": "holography/er-epr" },
+    { "from": "spacetime/einstein-equations", "to": "holography/er-epr" }
   ]
 }

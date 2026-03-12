@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-03-12T02:16:07.876Z",
-    "derivationCount": 50,
+    "generatedAt": "2026-03-12T02:28:08.979Z",
+    "derivationCount": 55,
     "predictionCount": 10,
     "generator": "scripts/build-index.mjs"
   },
@@ -9,11 +9,12 @@
     "byStatus": {
       "rigorous": 40,
       "non-viable": 1,
+      "stub": 5,
       "provisional": 9
     },
-    "derivationCount": 50,
+    "derivationCount": 55,
     "predictionCount": 10,
-    "edgeCount": 92,
+    "edgeCount": 107,
     "formalObjectCount": 741,
     "openGapCount": 201,
     "upgradeEligibleCount": 0,
@@ -38,11 +39,13 @@
         "axioms/observer-definition",
         "axioms/loop-closure",
         "minimal-observer/structure",
-        "holography/information-paradox"
+        "holography/information-paradox",
+        "gauge/anomaly-cancellation"
       ],
       "dependedOnBy": [
         "axioms/loop-closure",
         "axioms/observer-definition",
+        "gauge/anomaly-cancellation",
         "gauge/chirality-selection",
         "holography/information-paradox",
         "minimal-observer/structure",
@@ -245,6 +248,10 @@
           },
           {
             "source": "foundation/coherence-lagrangian",
+            "context": "Coherence Conservation"
+          },
+          {
+            "source": "gauge/anomaly-cancellation",
             "context": "Coherence Conservation"
           },
           {
@@ -982,8 +989,12 @@
         "minimal-observer/coherence-dual-pairs",
         "gauge/weak-interaction"
       ],
-      "enablesDerivation": [],
-      "dependedOnBy": [],
+      "enablesDerivation": [
+        "cosmology/leptogenesis"
+      ],
+      "dependedOnBy": [
+        "cosmology/leptogenesis"
+      ],
       "steps": [
         {
           "number": 1,
@@ -1166,6 +1177,10 @@
         ],
         "incoming": [
           {
+            "source": "cosmology/leptogenesis",
+            "context": "Baryogenesis"
+          },
+          {
             "source": "gauge/electroweak-breaking",
             "context": "Baryogenesis"
           },
@@ -1275,8 +1290,12 @@
         "interactions/bootstrap",
         "particles/mass-hierarchy"
       ],
-      "enablesDerivation": [],
-      "dependedOnBy": [],
+      "enablesDerivation": [
+        "gauge/weinberg-angle"
+      ],
+      "dependedOnBy": [
+        "gauge/weinberg-angle"
+      ],
       "steps": [
         {
           "number": 1,
@@ -1445,6 +1464,10 @@
             "context": "Coupling Constants"
           },
           {
+            "source": "gauge/weinberg-angle",
+            "context": "Coupling Constants"
+          },
+          {
             "source": "interactions/bootstrap-division-algebras",
             "context": "Coupling Constants"
           },
@@ -1465,6 +1488,60 @@
           "Proposition 2.1",
           "Theorem 1.1"
         ]
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "cosmology/leptogenesis": {
+      "id": "cosmology/leptogenesis",
+      "filePath": "site/src/content/derivations/cosmology/leptogenesis.md",
+      "title": "Leptogenesis",
+      "status": "stub",
+      "rigorLevel": "informal",
+      "group": "cosmology",
+      "tags": [
+        "cosmology",
+        "baryogenesis",
+        "neutrino",
+        "cp-violation"
+      ],
+      "summary": "If neutrinos are Majorana particles (as the framework predicts), heavy right-handed neutrino decays generate a lepton asymmetry that sphalerons convert to the observed baryon asymmetry.",
+      "lastUpdated": "2026-03-11",
+      "dependsOn": [
+        "cosmology/baryogenesis",
+        "particles/neutrino-masses",
+        "flavor/mixing-angles"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [],
+      "formalObjects": [],
+      "structuralPostulates": [],
+      "openGaps": [],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "particles/neutrino-masses",
+            "context": "Neutrino Masses"
+          },
+          {
+            "target": "flavor/mixing-angles",
+            "context": "Mixing Angles"
+          },
+          {
+            "target": "cosmology/baryogenesis",
+            "context": "Baryogenesis"
+          }
+        ],
+        "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -1720,9 +1797,11 @@
         "gauge/weak-interaction"
       ],
       "enablesDerivation": [
-        "particles/neutrino-masses"
+        "particles/neutrino-masses",
+        "cosmology/leptogenesis"
       ],
       "dependedOnBy": [
+        "cosmology/leptogenesis",
         "particles/neutrino-masses"
       ],
       "steps": [
@@ -1925,6 +2004,10 @@
           {
             "source": "cosmology/coupling-constants",
             "context": "Flavor Mixing"
+          },
+          {
+            "source": "cosmology/leptogenesis",
+            "context": "Mixing Angles"
           },
           {
             "source": "gauge/weak-interaction",
@@ -2175,6 +2258,124 @@
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
+    "gauge/anomaly-cancellation": {
+      "id": "gauge/anomaly-cancellation",
+      "filePath": "site/src/content/derivations/gauge/anomaly-cancellation.md",
+      "title": "Anomaly Cancellation",
+      "status": "stub",
+      "rigorLevel": "informal",
+      "group": "gauge",
+      "tags": [
+        "gauge",
+        "anomaly",
+        "fermion-content"
+      ],
+      "summary": "The Standard Model's chiral fermion content is anomaly-free. This constraint should follow from coherence conservation applied to the chirality-selected gauge group.",
+      "lastUpdated": "2026-03-11",
+      "dependsOn": [
+        "gauge/chirality-selection",
+        "gauge/standard-model-group",
+        "axioms/coherence-conservation"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [],
+      "formalObjects": [],
+      "structuralPostulates": [],
+      "openGaps": [],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "gauge/chirality-selection",
+            "context": "Chirality Selection"
+          },
+          {
+            "target": "particles/three-generations",
+            "context": "Three Generations"
+          },
+          {
+            "target": "gauge/standard-model-group",
+            "context": "SM Gauge Group"
+          },
+          {
+            "target": "axioms/coherence-conservation",
+            "context": "Coherence Conservation"
+          },
+          {
+            "target": "gauge/weak-interaction",
+            "context": "Weak Interaction"
+          }
+        ],
+        "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "gauge/chiral-symmetry-breaking": {
+      "id": "gauge/chiral-symmetry-breaking",
+      "filePath": "site/src/content/derivations/gauge/chiral-symmetry-breaking.md",
+      "title": "Chiral Symmetry Breaking",
+      "status": "stub",
+      "rigorLevel": "informal",
+      "group": "gauge",
+      "tags": [
+        "gauge",
+        "QCD",
+        "chiral",
+        "symmetry-breaking"
+      ],
+      "summary": "The approximate SU(N_f)_L × SU(N_f)_R chiral symmetry of QCD is spontaneously broken to SU(N_f)_V, producing pseudo-Goldstone bosons (pions). This should emerge from coherence dynamics at the octonionic level.",
+      "lastUpdated": "2026-03-11",
+      "dependsOn": [
+        "gauge/color-force",
+        "gauge/confinement"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [],
+      "formalObjects": [],
+      "structuralPostulates": [],
+      "openGaps": [],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "gauge/color-force",
+            "context": "Color Force"
+          },
+          {
+            "target": "gauge/confinement",
+            "context": "Confinement"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "target": "gauge/strong-cp",
+            "context": "Strong CP"
+          }
+        ],
+        "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
     "gauge/chirality-selection": {
       "id": "gauge/chirality-selection",
       "filePath": "site/src/content/derivations/gauge/chirality-selection.md",
@@ -2192,8 +2393,12 @@
         "interactions/relational-invariants",
         "axioms/coherence-conservation"
       ],
-      "enablesDerivation": [],
-      "dependedOnBy": [],
+      "enablesDerivation": [
+        "gauge/anomaly-cancellation"
+      ],
+      "dependedOnBy": [
+        "gauge/anomaly-cancellation"
+      ],
       "steps": [
         {
           "number": 1,
@@ -2380,6 +2585,10 @@
             "context": "now rigorous, via the orientation-consistency theorem"
           },
           {
+            "source": "gauge/anomaly-cancellation",
+            "context": "Chirality Selection"
+          },
+          {
             "source": "gauge/color-force",
             "context": "Chirality Selection"
           },
@@ -2389,6 +2598,10 @@
           },
           {
             "source": "gauge/weak-interaction",
+            "context": "Chirality Selection"
+          },
+          {
+            "source": "gauge/weinberg-angle",
             "context": "Chirality Selection"
           }
         ]
@@ -2427,9 +2640,11 @@
       "enablesDerivation": [
         "gauge/standard-model-group",
         "gauge/strong-cp",
-        "gauge/confinement"
+        "gauge/confinement",
+        "gauge/chiral-symmetry-breaking"
       ],
       "dependedOnBy": [
+        "gauge/chiral-symmetry-breaking",
         "gauge/confinement",
         "gauge/standard-model-group",
         "gauge/strong-cp"
@@ -2680,6 +2895,10 @@
             "context": "Color Force"
           },
           {
+            "source": "gauge/chiral-symmetry-breaking",
+            "context": "Color Force"
+          },
+          {
             "source": "gauge/chirality-selection",
             "context": "Color Force"
           },
@@ -2756,8 +2975,12 @@
       "dependsOn": [
         "gauge/color-force"
       ],
-      "enablesDerivation": [],
-      "dependedOnBy": [],
+      "enablesDerivation": [
+        "gauge/chiral-symmetry-breaking"
+      ],
+      "dependedOnBy": [
+        "gauge/chiral-symmetry-breaking"
+      ],
       "steps": [
         {
           "number": 1,
@@ -2882,7 +3105,12 @@
             "context": "Color Force"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "gauge/chiral-symmetry-breaking",
+            "context": "Confinement"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -3329,8 +3557,12 @@
         "gauge/standard-model-group",
         "gauge/weak-interaction"
       ],
-      "enablesDerivation": [],
-      "dependedOnBy": [],
+      "enablesDerivation": [
+        "gauge/weinberg-angle"
+      ],
+      "dependedOnBy": [
+        "gauge/weinberg-angle"
+      ],
       "steps": [
         {
           "number": 1,
@@ -3490,7 +3722,12 @@
             "context": "Baryogenesis"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "gauge/weinberg-angle",
+            "context": "Electroweak Breaking"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -3520,10 +3757,12 @@
       ],
       "enablesDerivation": [
         "cosmology/coupling-constants",
-        "gauge/electroweak-breaking"
+        "gauge/electroweak-breaking",
+        "gauge/anomaly-cancellation"
       ],
       "dependedOnBy": [
         "cosmology/coupling-constants",
+        "gauge/anomaly-cancellation",
         "gauge/electroweak-breaking"
       ],
       "steps": [
@@ -3714,6 +3953,10 @@
             "context": "Standard Model Gauge Group"
           },
           {
+            "source": "gauge/anomaly-cancellation",
+            "context": "SM Gauge Group"
+          },
+          {
             "source": "gauge/electromagnetism",
             "context": "full gauge structure"
           },
@@ -3878,7 +4121,12 @@
             "context": "0, 2\\pi)$ is the vacuum angle.\n\n**Proposition 1.2 (CP violation by $\\theta$).** "
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "gauge/chiral-symmetry-breaking",
+            "context": "Strong CP"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -3911,7 +4159,8 @@
         "gauge/standard-model-group",
         "flavor/mixing-angles",
         "cosmology/baryogenesis",
-        "gauge/electroweak-breaking"
+        "gauge/electroweak-breaking",
+        "gauge/weinberg-angle"
       ],
       "dependedOnBy": [
         "cosmology/baryogenesis",
@@ -3919,7 +4168,8 @@
         "gauge/chirality-selection",
         "gauge/color-force",
         "gauge/electroweak-breaking",
-        "gauge/standard-model-group"
+        "gauge/standard-model-group",
+        "gauge/weinberg-angle"
       ],
       "steps": [
         {
@@ -4277,6 +4527,10 @@
             "context": "Weak Interaction"
           },
           {
+            "source": "gauge/anomaly-cancellation",
+            "context": "Weak Interaction"
+          },
+          {
             "source": "gauge/chirality-selection",
             "context": "Structural Postulate S1"
           },
@@ -4325,6 +4579,10 @@
             "context": "Weak Interaction"
           },
           {
+            "source": "gauge/weinberg-angle",
+            "context": "Weak Interaction"
+          },
+          {
             "source": "interactions/bootstrap-division-algebras",
             "context": "Weak Interaction"
           },
@@ -4355,6 +4613,71 @@
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
+    "gauge/weinberg-angle": {
+      "id": "gauge/weinberg-angle",
+      "filePath": "site/src/content/derivations/gauge/weinberg-angle.md",
+      "title": "Weinberg Angle",
+      "status": "stub",
+      "rigorLevel": "informal",
+      "group": "gauge",
+      "tags": [
+        "gauge",
+        "electroweak",
+        "mixing-angle"
+      ],
+      "summary": "The weak mixing angle sin²θ_W ≈ 0.231 at the Z mass should follow from the relative coupling strengths at the electroweak crystallization scale.",
+      "lastUpdated": "2026-03-11",
+      "dependsOn": [
+        "gauge/weak-interaction",
+        "gauge/electroweak-breaking",
+        "cosmology/coupling-constants"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [],
+      "formalObjects": [],
+      "structuralPostulates": [],
+      "openGaps": [],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "cosmology/coupling-constants",
+            "context": "Coupling Constants"
+          },
+          {
+            "target": "gauge/electroweak-breaking",
+            "context": "Electroweak Breaking"
+          },
+          {
+            "target": "thermodynamics-ext/renormalization",
+            "context": "Renormalization Group"
+          },
+          {
+            "target": "particles/three-generations",
+            "context": "Three Generations"
+          },
+          {
+            "target": "gauge/chirality-selection",
+            "context": "Chirality Selection"
+          },
+          {
+            "target": "gauge/weak-interaction",
+            "context": "Weak Interaction"
+          }
+        ],
+        "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
     "holography/area-scaling": {
       "id": "holography/area-scaling",
       "filePath": "site/src/content/derivations/holography/area-scaling.md",
@@ -4374,12 +4697,14 @@
       "enablesDerivation": [
         "holography/black-hole-entropy",
         "spacetime/singularity-resolution",
-        "holography/causal-set-statistics"
+        "holography/causal-set-statistics",
+        "holography/er-epr"
       ],
       "dependedOnBy": [
         "cosmology/cosmological-constant",
         "holography/black-hole-entropy",
         "holography/causal-set-statistics",
+        "holography/er-epr",
         "spacetime/singularity-resolution"
       ],
       "steps": [
@@ -4575,6 +4900,10 @@
           },
           {
             "source": "holography/causal-set-statistics",
+            "context": "Area Scaling"
+          },
+          {
+            "source": "holography/er-epr",
             "context": "Area Scaling"
           },
           {
@@ -4826,8 +5155,12 @@
         "holography/area-scaling",
         "interactions/relational-invariants"
       ],
-      "enablesDerivation": [],
-      "dependedOnBy": [],
+      "enablesDerivation": [
+        "holography/er-epr"
+      ],
+      "dependedOnBy": [
+        "holography/er-epr"
+      ],
       "steps": [
         {
           "number": 1,
@@ -4999,10 +5332,77 @@
         ],
         "incoming": [
           {
+            "source": "holography/er-epr",
+            "context": "Causal Set Statistics"
+          },
+          {
             "source": "quantum/entanglement",
             "context": "Causal Set Statistics"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "holography/er-epr": {
+      "id": "holography/er-epr",
+      "filePath": "site/src/content/derivations/holography/er-epr.md",
+      "title": "ER=EPR Formalization",
+      "status": "stub",
+      "rigorLevel": "informal",
+      "group": "holography",
+      "tags": [
+        "holography",
+        "entanglement",
+        "wormhole",
+        "ER-EPR"
+      ],
+      "summary": "Relational invariants between spatially separated observers manifest as both entanglement (EPR) and non-traversable wormholes (ER). The framework predicts ER=EPR is exact because relational invariants are the fundamental objects underlying both.",
+      "lastUpdated": "2026-03-11",
+      "dependsOn": [
+        "quantum/entanglement",
+        "holography/area-scaling",
+        "holography/causal-set-statistics",
+        "spacetime/einstein-equations"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [],
+      "formalObjects": [],
+      "structuralPostulates": [],
+      "openGaps": [],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "quantum/entanglement",
+            "context": "Entanglement"
+          },
+          {
+            "target": "spacetime/einstein-equations",
+            "context": "Einstein Equations"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
+          },
+          {
+            "target": "holography/causal-set-statistics",
+            "context": "Causal Set Statistics"
+          },
+          {
+            "target": "holography/information-paradox",
+            "context": "Information Paradox"
+          }
+        ],
+        "incoming": []
       },
       "leanVerification": {
         "hasProofs": false,
@@ -5404,6 +5804,10 @@
         "incoming": [
           {
             "source": "cosmology/cosmological-constant",
+            "context": "Information Paradox"
+          },
+          {
+            "source": "holography/er-epr",
             "context": "Information Paradox"
           },
           {
@@ -7467,6 +7871,10 @@
             "context": "Mass Hierarchy"
           },
           {
+            "source": "gauge/chiral-symmetry-breaking",
+            "context": "Mass Hierarchy"
+          },
+          {
             "source": "gauge/standard-model-group",
             "context": "Mass Hierarchy"
           },
@@ -7514,8 +7922,12 @@
         "particles/three-generations",
         "flavor/mixing-angles"
       ],
-      "enablesDerivation": [],
-      "dependedOnBy": [],
+      "enablesDerivation": [
+        "cosmology/leptogenesis"
+      ],
+      "dependedOnBy": [
+        "cosmology/leptogenesis"
+      ],
       "steps": [
         {
           "number": 1,
@@ -7683,7 +8095,12 @@
             "context": "Baryogenesis"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "cosmology/leptogenesis",
+            "context": "Neutrino Masses"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -8296,6 +8713,10 @@
             "context": "Three Generations"
           },
           {
+            "source": "gauge/anomaly-cancellation",
+            "context": "Three Generations"
+          },
+          {
             "source": "gauge/electroweak-breaking",
             "context": "Three Generations"
           },
@@ -8305,6 +8726,10 @@
           },
           {
             "source": "gauge/standard-model-group",
+            "context": "Three Generations"
+          },
+          {
+            "source": "gauge/weinberg-angle",
             "context": "Three Generations"
           },
           {
@@ -8634,8 +9059,12 @@
         "interactions/relational-invariants",
         "quantum/born-rule"
       ],
-      "enablesDerivation": [],
-      "dependedOnBy": [],
+      "enablesDerivation": [
+        "holography/er-epr"
+      ],
+      "dependedOnBy": [
+        "holography/er-epr"
+      ],
       "steps": [
         {
           "number": 1,
@@ -8827,7 +9256,12 @@
             "context": "Causal Set Statistics"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "holography/er-epr",
+            "context": "Entanglement"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -9333,10 +9767,12 @@
         "dimensions/three-dimensions"
       ],
       "enablesDerivation": [
-        "spacetime/singularity-resolution"
+        "spacetime/singularity-resolution",
+        "holography/er-epr"
       ],
       "dependedOnBy": [
         "cosmology/cosmological-constant",
+        "holography/er-epr",
         "spacetime/singularity-resolution"
       ],
       "steps": [
@@ -9559,6 +9995,10 @@
           {
             "source": "gauge/weak-interaction",
             "context": "Einstein Field Equations"
+          },
+          {
+            "source": "holography/er-epr",
+            "context": "Einstein Equations"
           },
           {
             "source": "quantum/entanglement",
@@ -11602,6 +12042,10 @@
         "incoming": [
           {
             "source": "flavor/mixing-angles",
+            "context": "Renormalization Group"
+          },
+          {
+            "source": "gauge/weinberg-angle",
             "context": "Renormalization Group"
           }
         ]

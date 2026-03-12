@@ -2,7 +2,7 @@
 title: "Causal Set Statistics"
 status: "provisional"
 dependsOn: ["holography/area-scaling", "interactions/relational-invariants"]
-enablesDerivation: []
+enablesDerivation: ["holography/er-epr"]
 tags: ["holography", "causal-sets", "statistics"]
 summary: "The relational invariant network as a Poisson-sprinkled causal set: derives the holographic noise amplitude α_H = 1/4, the dark matter density fluctuation spectrum, and the Gaussian cutoff in the matter power spectrum. Both primary predictions arise from a single statistical foundation."
 rigorLevel: "semi-formal"

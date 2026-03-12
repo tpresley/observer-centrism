@@ -2,7 +2,7 @@
 title: "Baryogenesis from Coherence Dynamics"
 status: "rigorous"
 dependsOn: ["minimal-observer/coherence-dual-pairs", "gauge/weak-interaction"]
-enablesDerivation: []
+enablesDerivation: ["cosmology/leptogenesis"]
 tags: ["cosmology"]
 summary: "The observed matter-antimatter asymmetry arises because the three Sakharov conditions are structural consequences of the framework: SU(2) sphalerons violate baryon number, chiral gauge coupling provides C and CP violation, and the bootstrap hierarchy's sequential crystallization ensures departure from equilibrium"
 rigorLevel: "formal"

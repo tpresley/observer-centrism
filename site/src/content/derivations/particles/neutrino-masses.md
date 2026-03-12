@@ -2,7 +2,7 @@
 title: "Neutrino Mass Mechanism"
 status: "provisional"
 dependsOn: ["particles/three-generations", "flavor/mixing-angles"]
-enablesDerivation: []
+enablesDerivation: ["cosmology/leptogenesis"]
 tags: ["particles", "neutrinos"]
 summary: "Neutrino winding configurations are self-conjugate under the coherence-dual map, making neutrinos Majorana particles. Their mass smallness arises from a seesaw mechanism where the heavy scale is the electroweak crystallization energy, not a GUT scale. Predicts Majorana nature testable by neutrinoless double beta decay."
 rigorLevel: "semi-formal"
