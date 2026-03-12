@@ -1,0 +1,293 @@
+---
+import MainLayout from '../components/layouts/MainLayout.astro'
+import knowledgeIndex from '../data/knowledge-index.json'
+import katex from 'katex'
+
+const allGaps = (knowledgeIndex as any).allOpenGaps as Array<{
+  derivationId: string
+  derivationStatus: string
+  number: number
+  title: string
+  description: string
+}>
+const derivationsMap = (knowledgeIndex as any).derivations as Record<string, { title: string; status: string }>
+
+/** Render inline $...$ math with KaTeX and convert basic markdown to HTML. */
+function renderInline(text: string): string {
+  // KaTeX: $...$ → rendered math
+  let out = text.replace(/\$([^$]+)\$/g, (_m, tex) => {
+    try { return katex.renderToString(tex, { throwOnError: false }) }
+    catch { return tex }
+  })
+  // Markdown links: [text](url) → <a>
+  out = out.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
+  // Bold: **text** → <strong>
+  out = out.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+  // Italic: *text* → <em>  (after bold, so **...** doesn't match)
+  out = out.replace(/\*([^*]+)\*/g, '<em>$1</em>')
+  return out
+}
+
+// Group gaps by derivation, preserving order
+const gapsByDerivation = new Map<string, typeof allGaps>()
+for (const gap of allGaps) {
+  const list = gapsByDerivation.get(gap.derivationId) || []
+  list.push(gap)
+  gapsByDerivation.set(gap.derivationId, list)
+}
+
+// Build per-derivation entries with title and group
+const derivationEntries = [...gapsByDerivation.entries()].map(([id, gaps]) => ({
+  id,
+  title: derivationsMap[id]?.title || id.split('/').pop() || id,
+  status: derivationsMap[id]?.status || gaps[0].derivationStatus,
+  group: id.split('/')[0],
+  gaps,
+}))
+
+// Group display names and order
+const GROUP_ORDER = [
+  'axioms', 'foundation', 'minimal-observer', 'interactions',
+  'thermodynamics', 'dimensions', 'spacetime', 'quantum',
+  'particles', 'gauge', 'holography', 'flavor',
+  'cosmology', 'thermodynamics-ext',
+]
+
+const GROUP_NAMES: Record<string, string> = {
+  'axioms': 'Axioms',
+  'foundation': 'Foundation',
+  'minimal-observer': 'Minimal Observer',
+  'interactions': 'Interactions',
+  'thermodynamics': 'Thermodynamics',
+  'dimensions': 'Dimensions',
+  'spacetime': 'Spacetime',
+  'quantum': 'Quantum',
+  'particles': 'Particles',
+  'gauge': 'Gauge',
+  'holography': 'Holography',
+  'flavor': 'Flavor',
+  'cosmology': 'Cosmology',
+  'thermodynamics-ext': 'Thermo Extensions',
+}
+
+// Build grouped structure
+const groups = new Map<string, typeof derivationEntries>()
+for (const g of GROUP_ORDER) {
+  const entries = derivationEntries.filter(d => d.group === g)
+  if (entries.length > 0) groups.set(g, entries)
+}
+
+// Stats
+const totalGaps = allGaps.length
+const derivationsWithGaps = gapsByDerivation.size
+const rigorousGaps = allGaps.filter(g => g.derivationStatus === 'rigorous').length
+const provisionalGaps = allGaps.filter(g => g.derivationStatus === 'provisional').length
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+
+function statusIcon(status: string) {
+  switch(status) {
+    case 'rigorous': return '●'
+    case 'provisional': return '◐'
+    case 'draft': return '○'
+    case 'stub': return '·'
+    case 'non-viable': return '✗'
+    default: return '·'
+  }
+}
+
+function statusColor(status: string) {
+  switch(status) {
+    case 'rigorous': return 'var(--color-rigorous)'
+    case 'provisional': return 'var(--color-provisional)'
+    case 'draft': return 'var(--color-draft)'
+    case 'stub': return 'var(--color-stub)'
+    case 'non-viable': return 'var(--color-non-viable)'
+    default: return 'var(--color-stub)'
+  }
+}
+---
+
+<MainLayout title="Open Gaps">
+  <h1>Open Gaps</h1>
+  <p>
+    Every derivation documents its <strong>open gaps</strong> &mdash; questions, limitations,
+    and potential extensions that remain unresolved. These range from foundational mathematical
+    questions to opportunities for sharpening existing results. Gaps are not failures; they are
+    an honest inventory of where the framework's arguments can be strengthened.
+  </p>
+
+  <div class="og-summary">
+    <div class="og-stat">
+      <div class="og-stat-value">{totalGaps}</div>
+      <div class="og-stat-label">Open gaps</div>
+    </div>
+    <div class="og-stat">
+      <div class="og-stat-value">{derivationsWithGaps}</div>
+      <div class="og-stat-label">Derivations with gaps</div>
+    </div>
+    <div class="og-stat">
+      <div class="og-stat-value">{rigorousGaps}</div>
+      <div class="og-stat-label">In rigorous derivations</div>
+    </div>
+    {provisionalGaps > 0 && (
+      <div class="og-stat og-stat-provisional">
+        <div class="og-stat-value">{provisionalGaps}</div>
+        <div class="og-stat-label">In provisional derivations</div>
+      </div>
+    )}
+  </div>
+
+  {[...groups.entries()].map(([groupKey, entries]) => (
+    <>
+      <h2>{GROUP_NAMES[groupKey] || groupKey}</h2>
+      <div class="og-cards">
+        {entries.map(entry => (
+          <div class="og-card">
+            <div class="og-card-header">
+              <span class="og-status" style={`color: ${statusColor(entry.status)}`}>
+                {statusIcon(entry.status)}
+              </span>
+              <a href={`${base}/derivations/${entry.id}`} class="og-derivation-title">
+                {entry.title}
+              </a>
+              <span class="og-gap-count">{entry.gaps.length} gap{entry.gaps.length > 1 ? 's' : ''}</span>
+            </div>
+            <div class="og-gap-list">
+              {entry.gaps.map(gap => (
+                <div class="og-gap">
+                  <div class="og-gap-header">
+                    <span class="og-gap-badge">Gap {gap.number}</span>
+                    <span class="og-gap-title" set:html={renderInline(gap.title)} />
+                  </div>
+                  <p class="og-gap-desc" set:html={renderInline(gap.description)} />
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
+  ))}
+</MainLayout>
+
+<style>
+  .og-summary {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+    flex-wrap: wrap;
+  }
+  .og-stat {
+    flex: 1;
+    min-width: 120px;
+    padding: 0.75rem 1rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    text-align: center;
+  }
+  .og-stat-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 0.04em;
+  }
+  .og-stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+  }
+  .og-stat-provisional .og-stat-value {
+    color: var(--color-provisional, #f59e0b);
+  }
+  .og-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .og-card {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    background: var(--color-surface);
+  }
+  .og-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .og-status {
+    font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+  .og-derivation-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    flex-grow: 1;
+  }
+  .og-derivation-title:hover {
+    text-decoration: underline;
+  }
+  .og-gap-count {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.1rem 0.5rem;
+    border-radius: 9999px;
+    background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+    color: var(--color-text-muted);
+    letter-spacing: 0.03em;
+    flex-shrink: 0;
+  }
+  .og-gap-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .og-gap {
+    padding: 0.5rem 0.75rem;
+    background: color-mix(in srgb, var(--color-border) 30%, transparent);
+    border-radius: 6px;
+  }
+  .og-gap-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+  .og-gap-badge {
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.1rem 0.4rem;
+    border-radius: 9999px;
+    background: color-mix(in srgb, #f59e0b 15%, transparent);
+    color: #d97706;
+    letter-spacing: 0.03em;
+    flex-shrink: 0;
+  }
+  .og-gap-title {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--color-text);
+  }
+  .og-gap-desc {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+  .og-gap-desc a {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+  .og-gap-desc a:hover {
+    text-decoration: underline;
+  }
+</style>
