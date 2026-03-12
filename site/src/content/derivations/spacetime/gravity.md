@@ -137,5 +137,5 @@ $$ds^2 = \left(1 - \frac{R_S}{r}\right) c^2 dt^2 - \left(1 - \frac{R_S}{r}\right
 ## Open Gaps
 
 1. **Deriving $G$**: Is $G$ derivable from $\hbar$ and $c$, leaving the framework with zero free parameters?
-2. **Planck scale**: The continuum metric fails at $r \sim \ell_P$. The discrete network should resolve the $r = 0$ singularity.
-3. **Strong-field regime**: Black hole interiors and singularity resolution require the full discrete theory.
+2. **Planck scale** *(partially resolved — downstream)*: The singularity at $r = 0$ is addressed by [Singularity Resolution](/derivations/spacetime/singularity-resolution), which establishes curvature bounds at Planck density and coherence bounces via a model-independent argument. The detailed sub-Planck discrete structure remains open.
+3. **Strong-field regime** *(partially resolved — downstream)*: Black hole singularities are resolved by [Singularity Resolution](/derivations/spacetime/singularity-resolution) (regular cores). Full discrete theory for interior dynamics remains open.

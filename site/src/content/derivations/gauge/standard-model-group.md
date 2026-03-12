@@ -243,6 +243,6 @@ $$U(1) \subset SU(2) = \text{unit}(\mathbb{H}) \quad \text{and} \quad SU(3) = \t
 
 2. **$SU(2)_L$ quantum numbers from $\mathbb{C}\ell(6)$**: The current algebraic construction cleanly produces $U(1) \times SU(3)$ quantum numbers. Incorporating the $SU(2)_L$ weak isospin assignments requires combining the $\mathbb{C}\ell(6)$ structure with the quaternionic chirality mechanism from [Chirality Selection](/derivations/gauge/chirality-selection). The full $U(1) \times SU(2) \times SU(3)$ decomposition within a single algebraic framework remains to be completed.
 
-3. **Electroweak symmetry breaking**: The mechanism that breaks $SU(2)_L \times U(1)_Y \to U(1)_{em}$ has not been derived. The framework should identify the coherence-sector analog of the Higgs field.
+3. **Electroweak symmetry breaking** *(resolved — downstream)*: Fully addressed by [Electroweak Symmetry Breaking](/derivations/gauge/electroweak-breaking), which derives the Coleman-Weinberg mechanism from the coherence Lagrangian with dimensional transmutation hierarchy protection.
 
 4. **Proton decay bound**: The framework predicts absolute proton stability (no GUT bosons). A quantitative bound on the proton lifetime from residual gravitational or higher-order effects would sharpen this into a testable prediction.

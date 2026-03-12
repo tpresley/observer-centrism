@@ -333,10 +333,10 @@ where $\psi_L = \frac{1}{2}(1 - \gamma_5)\psi$ is the left-handed projection.
 
 1. **Chirality selection** *(resolved — downstream)*: Why does $SU(2)_W$ couple to left-handed spinors only? Fully addressed by [Chirality Selection](/derivations/gauge/chirality-selection): non-commutativity of $\mathbb{H}$ forces orientation consistency on quaternionic relational invariants, and coherence conservation propagates this globally. The choice of $L$ vs. $R$ is spontaneous. This is a downstream derivation, not a gap in the weak-interaction derivation itself.
 
-2. **Electroweak symmetry breaking**: The $W^\pm$ and $Z^0$ bosons are massive ($M_W \approx 80$ GeV, $M_Z \approx 91$ GeV), requiring spontaneous breaking of $SU(2)_L \times U(1)_Y \to U(1)_{em}$. The Higgs mechanism (or its coherence-framework analog) has not been derived. This is the primary open problem for the gauge sector.
+2. **Electroweak symmetry breaking** *(resolved — downstream)*: Fully addressed by [Electroweak Symmetry Breaking](/derivations/gauge/electroweak-breaking), which derives the Coleman-Weinberg mechanism from the coherence Lagrangian with dimensional transmutation hierarchy protection.
 
-3. **Weinberg angle**: $\sin^2\theta_W \approx 0.231$ is empirical. It should follow from the algebraic structure ($\mathbb{C} \subset \mathbb{H}$ embedding) and the division-algebra normalization, but this calculation has not been completed. Deferred to [Coupling Constants](/derivations/cosmology/coupling-constants).
+3. **Weinberg angle** *(resolved — downstream)*: Fully addressed by [Weinberg Angle](/derivations/gauge/weinberg-angle), which determines $\sin^2\theta_W(M_Z) = 0.231$ from the $\mathbb{C} \subset \mathbb{H}$ algebraic boundary condition via exact one-loop RG running.
 
 4. **Weak coupling constant**: $g_W$ is a free parameter, related to $\alpha_{em}$ via $g_W = e/\sin\theta_W$. Its value should follow from the [Coupling Constants](/derivations/cosmology/coupling-constants) derivation. Same status as $e$ in electromagnetism and $G$ in gravity.
 
-5. **Anomaly cancellation**: The Standard Model is free of gauge anomalies, which constrains the fermion content. The framework should reproduce this constraint from coherence conservation, but this has not been checked.
+5. **Anomaly cancellation** *(resolved — downstream)*: Fully addressed by [Anomaly Cancellation](/derivations/gauge/anomaly-cancellation), which shows the chirality-selected fermion content automatically satisfies all four independent anomaly conditions.

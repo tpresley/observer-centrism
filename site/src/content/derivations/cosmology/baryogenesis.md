@@ -200,7 +200,7 @@ $$d = 3 \xrightarrow{\text{Three Dims}} \dim SO(3) = 3 \xrightarrow{\text{Three 
 
 1. **Electroweak phase transition**: Derive the nature (first-order vs. crossover) of the electroweak phase transition from the coherence framework. The Standard Model predicts a crossover (insufficient for baryogenesis); the framework may predict differently.
 
-2. **Leptogenesis**: If neutrinos are Majorana (possible in the framework via the coherence-dual pair mechanism), right-handed neutrino decays could generate $\eta_B$ through leptogenesis. Derive the neutrino mass mechanism and the lepton CP phases.
+2. **Leptogenesis** *(resolved — downstream)*: Fully addressed by [Neutrino Masses](/derivations/particles/neutrino-masses) (Majorana mechanism from pseudo-real $SU(2)$ representations) and [Leptogenesis](/derivations/cosmology/leptogenesis) (electroweak-scale resonant leptogenesis with framework-predicted parameters).
 
 3. **Quantitative $\eta_B$**: Compute the baryon-to-photon ratio from the framework's parameters. This requires the sphaleron rate, CP-violating phases, and phase transition dynamics — all computable in principle but technically demanding.
 

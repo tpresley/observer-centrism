@@ -220,10 +220,10 @@ In the language of this derivation: the orientation constraint (Theorem 2.1) app
 
 ## Open Gaps
 
-1. **Anomaly cancellation**: The Standard Model's chiral fermion content is anomaly-free ($\text{Tr}[T_a^2 Y] = 0$ for all generators). This constraint on the fermion representations should follow from coherence conservation applied to the chirality-selected gauge group, but the calculation has not been performed.
+1. **Anomaly cancellation** *(resolved — downstream)*: Fully addressed by [Anomaly Cancellation](/derivations/gauge/anomaly-cancellation), which proves that the chirality-selected fermion content automatically satisfies all four independent anomaly conditions ($SU(3)^2 U(1)$, $SU(2)^2 U(1)$, $U(1)^3$, and gravitational $U(1)$), with rigidity from fermionic idempotency.
 
 2. **Left-right symmetric extensions**: Some BSM models (Pati-Salam, left-right symmetric models) restore parity at high energies. The framework's prediction is that parity violation is *exact* (algebraic, not dynamical). Experimental tests at higher energies can distinguish these scenarios.
 
 3. **CPT completion**: Proposition 6.1 is a proof sketch. A complete derivation of the CPT theorem within the framework would strengthen this and connect to [Coherence-Dual Pairs](/derivations/minimal-observer/coherence-dual-pairs).
 
-4. **Electroweak symmetry breaking**: The chirality selection tells us *which* spinors couple to $SU(2)$, but the mechanism that gives the $W$ and $Z$ bosons mass (breaking $SU(2)_L \times U(1)_Y \to U(1)_{em}$) remains an open gap inherited from the [Weak Interaction](/derivations/gauge/weak-interaction) derivation.
+4. **Electroweak symmetry breaking** *(resolved — downstream)*: Fully addressed by [Electroweak Symmetry Breaking](/derivations/gauge/electroweak-breaking), which derives the Coleman-Weinberg mechanism from the coherence Lagrangian.

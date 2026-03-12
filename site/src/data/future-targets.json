@@ -1,0 +1,210 @@
+{
+  "_meta": {
+    "description": "Tracking artifact for plausible postulate promotions, gap closures, and new derivation targets. Updated 2026-03-12.",
+    "instructions": "Each item has a difficulty rating (LOW/MODERATE/HARD/BLOCKED), a category, and enough context for a new session to pick up the work."
+  },
+
+  "postulatePromotions": [
+    {
+      "id": "lorentz-invariance-s1",
+      "postulateId": "S1",
+      "shortName": "Homogeneity",
+      "derivation": "spacetime/lorentz-invariance",
+      "difficulty": "LOW",
+      "tier": 1,
+      "rationale": "The postulate's own justification already states the argument: 'Follows from the axioms' location-independence: coherence conservation and observer definitions do not reference absolute position, so the derived geometry inherits translation symmetry.' If the axioms genuinely contain no absolute position parameter, homogeneity is a theorem, not an assumption.",
+      "strategy": "Write a short formal proof (or a new section within the existing Lorentz Invariance derivation) showing: (1) Axiom 1 (coherence conservation) is stated without reference to spacetime position — the σ-algebra and subadditivity are position-independent. (2) Axiom 2 (observer definition) specifies (Σ, I, B) without embedding in a background spacetime. (3) Axiom 3 (loop closure) specifies U(1) dynamics with period T, without position dependence. (4) Therefore, the coherence measure C and the derived metric g are invariant under translations x^μ → x^μ + a^μ. This is essentially a symmetry inheritance argument.",
+      "dependencies": ["axioms/coherence-conservation", "axioms/observer-definition", "axioms/loop-closure"],
+      "impact": "Reduces active postulates from 18 to 17. Strengthens the 'three axioms suffice' narrative."
+    },
+    {
+      "id": "action-planck-s1",
+      "postulateId": "S1",
+      "shortName": "Smooth coherence measure",
+      "derivation": "thermodynamics/action-planck",
+      "difficulty": "MODERATE",
+      "tier": 1,
+      "rationale": "This postulate says C is C² with positive-definite Hessian. The Fisher Information Metric derivation (rigorous) already proves the coherence Hessian is a metric via Čencov's uniqueness theorem. If the Fisher metric argument can be shown to produce a C² coherence measure with positive-definite Hessian from the Loop Closure S2 Riemannian metric, this postulate becomes redundant.",
+      "strategy": "Show: (1) Loop Closure S2 provides a Riemannian metric g on Σ. (2) Fisher metric derivation proves the coherence Hessian H_ij = ∂²C/∂σ^i∂σ^j is a metric (Čencov uniqueness). (3) For H to be a metric, C must be at least C² (otherwise the Hessian doesn't exist) and H must be positive-definite. (4) Therefore S1 follows from S2 + Fisher metric. Key subtlety: does Čencov require C² as input, or does it produce it as output?",
+      "dependencies": ["axioms/loop-closure", "thermodynamics-ext/fisher-metric"],
+      "impact": "Reduces active postulates. Tightens the thermodynamics-foundation connection."
+    },
+    {
+      "id": "gravity-s1",
+      "postulateId": "S1",
+      "shortName": "Metric–density coupling",
+      "derivation": "spacetime/gravity",
+      "difficulty": "MODERATE",
+      "tier": 1,
+      "rationale": "The justification says: 'Since observers curve the coherence geometry through their concentration, the metric must respond to observer density. This is the minimal local coupling assumption.' The 'must respond' language suggests this follows from coherence conservation. If the metric is determined by the coherence distribution (as the entire geometric chain argues), then metric-density coupling is a consequence, not an input.",
+      "strategy": "Argument: (1) The coherence geometry (Speed of Light S1) has a pseudo-Riemannian metric g. (2) Coherence conservation (Axiom 1) requires the total coherence on Cauchy slices to be conserved. (3) If the metric were independent of the coherence density ρ_I, then redistributing observers (changing ρ_I) would leave the geometry unchanged — but the path lengths in g determine coherence costs, so coherence conservation would be violated unless g responds to ρ_I. (4) Therefore g must be locally determined by ρ_I. The hard part: making step (3) rigorous — showing that a position-independent metric actually leads to inconsistency.",
+      "dependencies": ["spacetime/speed-of-light", "axioms/coherence-conservation"],
+      "impact": "Reduces active postulates. Connects gravity more tightly to axioms."
+    },
+    {
+      "id": "relational-invariants-s1",
+      "postulateId": "S1",
+      "shortName": "Symplectic structure",
+      "derivation": "interactions/relational-invariants",
+      "difficulty": "HARD",
+      "tier": 2,
+      "rationale": "Symplectic structure is the minimal geometric setting for Noether's theorem. The loop closure axiom provides U(1) actions on each observer's state space. On the joint space Σ₁ × Σ₂, the two U(1) actions, combined with the Riemannian structure from Loop Closure S2, might naturally induce a symplectic form via the Kähler construction (Riemannian + complex structure → symplectic).",
+      "strategy": "Attempt: (1) Each observer has U(1) action φ_t on Σ. This defines a vector field V on Σ. (2) With the Riemannian metric g (S2), define ω(X,Y) = g(JX, Y) where J is the almost-complex structure from the U(1) action. (3) Show ω is closed (dω = 0) and non-degenerate, hence symplectic. Key difficulty: this works on individual observer spaces (which are even-dimensional by the U(1) action), but the joint space needs the product symplectic form. Also: does the U(1) action define a genuine complex structure, or only an almost-complex structure?",
+      "dependencies": ["axioms/loop-closure", "axioms/loop-closure"],
+      "impact": "Would eliminate a dynamics postulate. Strengthens the axiom-to-Noether chain."
+    },
+    {
+      "id": "second-order-locality-family",
+      "postulateIds": ["einstein-equations-s1", "electromagnetism-s2", "weak-interaction-s2"],
+      "shortNames": ["Second-order locality", "Minimal gauge dynamics", "Minimal non-abelian gauge dynamics"],
+      "derivations": ["spacetime/einstein-equations", "gauge/electromagnetism", "gauge/weak-interaction"],
+      "difficulty": "HARD",
+      "tier": 2,
+      "rationale": "All three share identical motivation: 'Higher-derivative equations would couple the field to non-local coherence information, violating the principle that the interaction graph determines dynamics locally.' If interaction-graph locality can be formalized as a theorem from the causal set structure, all three postulates fall simultaneously. This would eliminate 3 postulates at once.",
+      "strategy": "The argument would need: (1) Define 'local' precisely in terms of the causal set: field equations at a point p depend only on causal set elements within a bounded causal diamond of p. (2) Show that nth-order derivatives require information from n-step neighbors in the causal set. (3) Show that the Planck-scale discreteness means only 1st and 2nd derivatives are accessible within a single Planck cell. (4) Therefore field equations are at most second-order. This is speculative — it requires developing the discrete calculus on causal sets more carefully.",
+      "dependencies": ["holography/causal-set-statistics", "holography/area-scaling"],
+      "impact": "Eliminates 3 postulates simultaneously. Major structural simplification."
+    },
+    {
+      "id": "born-rule-s1",
+      "postulateId": "S1",
+      "shortName": "Amplitude–coherence identification",
+      "derivation": "quantum/born-rule",
+      "difficulty": "HARD",
+      "tier": 3,
+      "rationale": "This bridges the abstract coherence framework and quantum mechanics: C(|ψ⟩) = ⟨ψ|ψ⟩. The Fisher metric derivation identifies the coherence Hessian as the Fisher information metric, and the entanglement derivation maps coherence to von Neumann entropy. If the Hilbert space norm can be shown to be the unique norm compatible with coherence conservation, this postulate would be derived.",
+      "strategy": "Requires showing: (1) The coherence measure C restricted to pure states must be a quadratic form (from subadditivity + conservation). (2) Quadratic form on a vector space = inner product = Hilbert space norm. (3) Therefore C(|ψ⟩) = ⟨ψ|ψ⟩. Step (1) is the hard part — Gleason's theorem gives this for d ≥ 3, but the derivation should ideally work from coherence axioms alone.",
+      "dependencies": ["axioms/coherence-conservation", "quantum/born-rule"],
+      "impact": "Would derive the quantum formalism from coherence. Extremely high impact but very difficult."
+    }
+  ],
+
+  "newDerivationTargets": [
+    {
+      "id": "cpt-theorem",
+      "title": "CPT Theorem from Coherence-Dual Pairs",
+      "difficulty": "MODERATE",
+      "rationale": "Referenced as open gaps in coherence-dual-pairs (Gap 1) and chirality-selection (Gap 3, 'proof sketch'). The ingredients exist: coherence-dual pairs give C and P separately (particle ↔ antiparticle), Lorentz invariance gives the spacetime structure, and time reversal comes from loop closure phase reversal.",
+      "strategy": "Formalize Proposition 6.1 of chirality-selection into a standalone derivation: (1) C from coherence-dual pairs (rigorous). (2) P from spatial reflection of the winding structure. (3) T from loop closure phase conjugation (φ_t → φ_{-t}). (4) Show CPT is an exact symmetry of the coherence Lagrangian. The Lagrangian derivation (rigorous) provides the target object.",
+      "dependencies": ["minimal-observer/coherence-dual-pairs", "gauge/chirality-selection", "spacetime/lorentz-invariance", "foundation/coherence-lagrangian"],
+      "addressesGaps": ["minimal-observer/coherence-dual-pairs Gap 1", "gauge/chirality-selection Gap 3"],
+      "impact": "New derivation page. Resolves 2 open gaps. Strengthens particle physics sector."
+    },
+    {
+      "id": "supersymmetry-impossibility",
+      "title": "Supersymmetry Impossibility",
+      "difficulty": "LOW",
+      "rationale": "Spin-statistics Gap 2 notes: 'A continuous symmetry rotating bosons into fermions would require a continuous path from [0] to [1] in Z₂, which does not exist.' This is a distinctive negative prediction that could be formalized as a derivation page.",
+      "strategy": "Short derivation: (1) Spin-statistics (rigorous) classifies particles by winding class [n] ∈ π₁(SO(3)) ≅ ℤ₂. (2) Bosons have [0] (trivial), fermions have [1] (non-trivial). (3) A supersymmetry generator Q would require a continuous family Q(t) connecting [0] and [1]. (4) But π₁(SO(3)) = ℤ₂ is discrete — no continuous path exists. (5) Therefore supersymmetry is topologically forbidden in d = 3 spatial dimensions. This is a clean no-go theorem.",
+      "dependencies": ["particles/spin-statistics", "dimensions/three-dimensions"],
+      "addressesGaps": ["particles/spin-statistics Gap 2"],
+      "impact": "New derivation. Distinctive negative prediction (no SUSY partners at any energy). Testable by LHC absence of superpartners."
+    },
+    {
+      "id": "proton-stability",
+      "title": "Proton Stability",
+      "difficulty": "MODERATE",
+      "rationale": "Standard-model-group Gap 4 notes: 'The framework predicts absolute proton stability (no GUT bosons). A quantitative bound on the proton lifetime from residual gravitational or higher-order effects would sharpen this into a testable prediction.' The non-convergence of couplings (from coupling-constants) means no GUT unification, hence no GUT-mediated proton decay.",
+      "strategy": "(1) Non-convergence of α₁, α₂, α₃ (Coupling Constants, rigorous) means no GUT scale. (2) No GUT gauge bosons → no B-violating gauge interactions. (3) B is an exact symmetry of the framework's gauge structure (proven by the division algebra chain: each level preserves baryon number). (4) Only gravitational effects could violate B, suppressed by (m_p/M_P)⁴ → τ_p > 10⁶⁴ years. (5) This exceeds current experimental bounds (τ_p > 10³⁴ years) by 30 orders of magnitude.",
+      "dependencies": ["gauge/standard-model-group", "cosmology/coupling-constants"],
+      "addressesGaps": ["gauge/standard-model-group Gap 4"],
+      "impact": "New prediction page + possible derivation page. Distinctive prediction (absolute stability vs. GUT decay)."
+    },
+    {
+      "id": "quantum-teleportation",
+      "title": "Quantum Teleportation as Coherence Channel Transfer",
+      "difficulty": "LOW",
+      "rationale": "Entanglement Gap 1: 'Derive teleportation as coherence channel transfer.' The entanglement derivation (rigorous) provides all ingredients: relational invariants map to entangled states, coherence conservation ensures no-cloning, and Type III interactions generate new relational invariants.",
+      "strategy": "(1) Alice and Bob share relational invariant I_AB (entangled state). (2) Alice performs Type III interaction with system S, generating I_AS. (3) Alice's local measurement (preferred basis) generates a classical relational invariant (measurement outcome). (4) Bob applies conditional unitary (local operation on his loop). (5) The net effect: I_AS is transferred to I_BS. Coherence conservation ensures the original I_AS is destroyed (no-cloning). This is the teleportation protocol reinterpreted in framework language.",
+      "dependencies": ["quantum/entanglement", "quantum/measurement", "interactions/three-types"],
+      "addressesGaps": ["quantum/entanglement Gap 1"],
+      "impact": "New derivation page. Demonstrates framework can reproduce quantum information protocols."
+    }
+  ],
+
+  "gapClusters": [
+    {
+      "id": "deriving-G",
+      "title": "Deriving Newton's Constant",
+      "difficulty": "BLOCKED",
+      "gaps": ["spacetime/gravity Gap 1", "spacetime/einstein-equations Gap 2", "thermodynamics/action-planck Gap 3"],
+      "rationale": "Three independent gaps all ask: is G derivable from ℏ and c? If yes, the framework has zero free gravitational parameters. This is the 'zero free parameters' question.",
+      "strategy": "Requires showing that the coherence geometry's curvature scale is set by the Planck length ℓ_P = √(ℏG/c³), and that ℓ_P is determined by the loop closure period T₀ of the minimal observer. If T₀ is computable from the axioms, then G = ℏ/T₀²c (schematically). Currently no clear path.",
+      "status": "No clear path. Research direction."
+    },
+    {
+      "id": "cosmological-constant",
+      "title": "Cosmological Constant",
+      "difficulty": "BLOCKED",
+      "gaps": ["spacetime/einstein-equations Gap 1", "particles/mass-hierarchy Gap 4", "foundation/coherence-lagrangian Gap 2"],
+      "rationale": "Three gaps reference the Λ problem. The cosmological-constant derivation is already marked non-viable. No framework approach has produced a viable prediction.",
+      "status": "Blocked. The cosmological-constant derivation honestly assesses its own failure. No plausible path known."
+    },
+    {
+      "id": "quantitative-eta-B",
+      "title": "Quantitative Baryon Asymmetry",
+      "difficulty": "HARD",
+      "gaps": ["cosmology/baryogenesis Gap 3", "cosmology/leptogenesis Gap 2"],
+      "rationale": "Both baryogenesis and leptogenesis have rigorous qualitative arguments but cannot compute the exact baryon-to-photon ratio η_B without solving coupled Boltzmann equations with framework-specific Yukawa textures.",
+      "strategy": "Numerical computation: solve the resonant leptogenesis Boltzmann equations with the framework's predicted parameters (Majorana masses ~ v, PMNS phases). This is computationally feasible but requires careful treatment of washout processes.",
+      "status": "Feasible but technically demanding. Research direction."
+    },
+    {
+      "id": "alpha-1-4-first-principles",
+      "title": "Holographic Coefficient α_H = 1/4 from First Principles",
+      "difficulty": "HARD",
+      "gaps": ["holography/area-scaling Gap 1", "holography/black-hole-entropy Gap 1"],
+      "rationale": "Both area-scaling and black-hole-entropy note that the factor 1/4 is obtained via the Schwarzschild consistency model rather than from pure coherence geometry. A first-principles derivation would strengthen the holographic sector.",
+      "strategy": "The causal-set-statistics derivation already obtains α_H = 1/4 from Poisson sprinkling statistics (rigorous). The question is whether this can be pushed upstream to area-scaling without invoking the Schwarzschild solution. One approach: use the Planck-scale resolution postulate (S1) directly — each ℓ_P² cell contributes exactly 1 bit of coherence capacity, giving S = A/(4ℓ_P²) by definition of ℓ_P.",
+      "status": "Plausible but requires careful argument."
+    },
+    {
+      "id": "resolved-gaps-already-marked",
+      "title": "Gaps already marked *(resolved)* in derivation files",
+      "note": "These gaps appear in open gap sections but are tagged as resolved: weak-interaction Gap 1 (chirality), electromagnetism Gap 5 (localization), distinguishability-conservation Gap 1 (product-space). They inflate the gap count in the knowledge index. A future cleanup could remove these entirely or move them to an 'Addressed Gaps' section."
+    }
+  ],
+
+  "permanentlyOpen": [
+    {
+      "id": "chiral-symmetry-breaking",
+      "title": "Chiral Symmetry Breaking (provisional status)",
+      "reason": "Gap 1 is equivalent to the Yang-Mills mass gap — a Clay Millennium Problem. Unless the mass gap is solved, this derivation stays at provisional."
+    },
+    {
+      "id": "cosmological-constant",
+      "title": "Cosmological Constant (non-viable status)",
+      "reason": "The derivation's own assessment is that the observer-centrism framework does not produce a viable prediction for Λ. Honestly maintained as non-viable."
+    },
+    {
+      "id": "loop-closure-s1-s2",
+      "postulateIds": ["loop-closure-s1", "loop-closure-s2"],
+      "reason": "These are genuinely foundational mathematical setting choices (smooth manifold structure, Riemannian metric). They specify the mathematical arena. Deriving them would require an even deeper foundation (e.g., showing smooth manifolds emerge from the axioms), which is not obviously possible."
+    },
+    {
+      "id": "speed-of-light-s1",
+      "postulateId": "speed-of-light-s1",
+      "reason": "The transition from positive-definite (Riemannian, single observer) to indefinite (pseudo-Riemannian, multiple observers) requires the choice of signature. This is a genuine input about how time differs from space."
+    },
+    {
+      "id": "area-scaling-s1",
+      "postulateId": "area-scaling-s1",
+      "reason": "Planck-scale resolution is the UV cutoff. While motivated by the convergence of ℏ, G, and c, it is a genuine physical input about the discreteness of the coherence geometry."
+    },
+    {
+      "id": "particles-postulates",
+      "postulateIds": ["spin-statistics-s1", "mass-hierarchy-s1", "three-generations-s1"],
+      "reason": "These are mechanism-level inputs: topological consistency (Laidlaw-DeWitt quantization), tunneling-crystallization correspondence, and generation-axis correspondence. Each specifies how the abstract framework connects to the particle content. Deriving them would require a much deeper understanding of the bootstrap dynamics."
+    },
+    {
+      "id": "quantum-postulates",
+      "postulateIds": ["born-rule-s1", "preferred-basis-s1"],
+      "reason": "These bridge the coherence framework and quantum mechanics. Born Rule S1 (amplitude-coherence identification) is the deepest — it could in principle be derivable (see postulatePromotions) but this is extremely difficult. Preferred Basis S1 connects interactions to measurement bases."
+    },
+    {
+      "id": "chiral-symmetry-breaking-s1",
+      "postulateId": "chiral-symmetry-breaking-s1",
+      "reason": "Vacuum coherence minimization. Lives in the sole provisional derivation; its status is tied to the mass gap problem."
+    }
+  ]
+}

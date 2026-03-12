@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-12T08:41:49.469Z",
+    "generatedAt": "2026-03-12T09:09:58.237Z",
     "derivationCount": 55,
     "predictionCount": 10,
     "generator": "scripts/build-index.mjs"
@@ -1116,7 +1116,7 @@
         {
           "number": 2,
           "title": "Leptogenesis",
-          "description": "If neutrinos are Majorana (possible in the framework via the coherence-dual pair mechanism), right-handed neutrino decays could generate etaB through leptogenesis. Derive the neutrino mass mechanism a"
+          "description": "*(resolved — downstream)*: Fully addressed by [Neutrino Masses](/derivations/particles/neutrino-masses) (Majorana mechanism from pseudo-real SU(2) representations) and [Leptogenesis](/derivations/cosm"
         },
         {
           "number": 3,
@@ -1172,6 +1172,14 @@
           {
             "target": "particles/three-generations",
             "context": "rigorous"
+          },
+          {
+            "target": "particles/neutrino-masses",
+            "context": "Majorana mechanism from pseudo-real $SU(2"
+          },
+          {
+            "target": "cosmology/leptogenesis",
+            "context": "electroweak-scale resonant leptogenesis with framework-predicted parameters"
           }
         ],
         "incoming": [
@@ -1189,10 +1197,6 @@
           },
           {
             "source": "gauge/standard-model-group",
-            "context": "Baryogenesis"
-          },
-          {
-            "source": "particles/neutrino-masses",
             "context": "Baryogenesis"
           }
         ]
@@ -1633,7 +1637,16 @@
             "context": "Baryogenesis"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "cosmology/baryogenesis",
+            "context": "electroweak-scale resonant leptogenesis with framework-predicted parameters"
+          },
+          {
+            "source": "particles/neutrino-masses",
+            "context": "Leptogenesis"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -2457,7 +2470,16 @@
             "context": "Weak Interaction"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "gauge/chirality-selection",
+            "context": "Anomaly Cancellation"
+          },
+          {
+            "source": "gauge/weak-interaction",
+            "context": "Anomaly Cancellation"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -2586,7 +2608,12 @@
             "context": "Color Force"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "gauge/color-force",
+            "context": "provisional"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -2713,7 +2740,7 @@
         {
           "number": 1,
           "title": "Anomaly cancellation",
-          "description": "The Standard Model's chiral fermion content is anomaly-free (Tr[Ta2 Y] = 0 for all generators). This constraint on the fermion representations should follow from coherence conservation applied to the "
+          "description": "*(resolved — downstream)*: Fully addressed by [Anomaly Cancellation](/derivations/gauge/anomaly-cancellation), which proves that the chirality-selected fermion content automatically satisfies all four"
         },
         {
           "number": 2,
@@ -2728,7 +2755,7 @@
         {
           "number": 4,
           "title": "Electroweak symmetry breaking",
-          "description": "The chirality selection tells us *which* spinors couple to SU(2), but the mechanism that gives the W and Z bosons mass (breaking SU(2)L U(1)Y U(1)em) remains an open gap inherited from the [Weak Inter"
+          "description": "*(resolved — downstream)*: Fully addressed by [Electroweak Symmetry Breaking](/derivations/gauge/electroweak-breaking), which derives the Coleman-Weinberg mechanism from the coherence Lagrangian."
         }
       ],
       "assessmentVerdict": "Rigorous. This derivation uses *no new structural postulates* — it derives chirality selection purely from the interaction of existing structures: non-commutativity of H (from [Weak Interaction](/derivations/gauge/weak-interaction), now rigorous) + relational invariant conditions (from [Relational I",
@@ -2792,8 +2819,16 @@
             "context": "Theorem 2.1, rigorous"
           },
           {
+            "target": "gauge/anomaly-cancellation",
+            "context": "Anomaly Cancellation"
+          },
+          {
             "target": "minimal-observer/coherence-dual-pairs",
             "context": "Coherence-Dual Pairs"
+          },
+          {
+            "target": "gauge/electroweak-breaking",
+            "context": "Electroweak Symmetry Breaking"
           }
         ],
         "incoming": [
@@ -3042,22 +3077,22 @@
         {
           "number": 1,
           "title": "Bootstrap–Cayley-Dickson proof",
-          "description": "Prove that the bootstrap mechanism's hierarchical structure *forces* the Cayley-Dickson doubling sequence, rather than postulating it (S1). This would require showing that relational invariants among "
+          "description": "*(resolved — downstream)*: Fully addressed by [Bootstrap → Division Algebras](/derivations/interactions/bootstrap-division-algebras), which proves the Cayley-Dickson doubling sequence is forced by coh"
         },
         {
           "number": 2,
-          "title": "Confinement (rigorous)",
-          "description": "Formalize the non-associativity argument for confinement. Show that only color-singlet states have well-defined long-range coherence transport in the octonionic phase space. This connects to the Clay "
+          "title": "Confinement",
+          "description": "*(resolved — downstream)*: Fully addressed by [Color Confinement](/derivations/gauge/confinement), which derives the linear potential from a random-walk-on-groups argument for non-associative phase tr"
         },
         {
           "number": 3,
           "title": "Strong CP problem",
-          "description": "The SU(3) gauge theory admits a topological theta-term propto theta , GmunuGmunu that violates CP. Experimentally theta < 10-10. The framework should explain why theta 0."
+          "description": "*(resolved — downstream)*: Fully addressed by [Strong CP Conservation](/derivations/gauge/strong-cp), which shows the rigid octonionic structure of SU(3) forces theta = 0 via algebraic completeness an"
         },
         {
           "number": 4,
           "title": "Chiral symmetry breaking",
-          "description": "The approximate SU(Nf)L SU(Nf)R flavor symmetry of the QCD Lagrangian is spontaneously broken. This should emerge from the coherence dynamics at the octonionic level."
+          "description": "*(partially resolved — downstream)*: Addressed by [Chiral Symmetry Breaking](/derivations/gauge/chiral-symmetry-breaking) (provisional), which derives the QCD chiral condensate from coherence minimiza"
         },
         {
           "number": 5,
@@ -3112,6 +3147,22 @@
           {
             "target": "gauge/chirality-selection",
             "context": "Chirality Selection"
+          },
+          {
+            "target": "interactions/bootstrap-division-algebras",
+            "context": "Bootstrap → Division Algebras"
+          },
+          {
+            "target": "gauge/confinement",
+            "context": "Color Confinement"
+          },
+          {
+            "target": "gauge/strong-cp",
+            "context": "Strong CP Conservation"
+          },
+          {
+            "target": "gauge/chiral-symmetry-breaking",
+            "context": "provisional"
           }
         ],
         "incoming": [
@@ -3342,6 +3393,10 @@
           {
             "source": "gauge/chiral-symmetry-breaking",
             "context": "Confinement"
+          },
+          {
+            "source": "gauge/color-force",
+            "context": "Color Confinement"
           }
         ]
       },
@@ -3957,6 +4012,18 @@
         ],
         "incoming": [
           {
+            "source": "gauge/chirality-selection",
+            "context": "Electroweak Symmetry Breaking"
+          },
+          {
+            "source": "gauge/standard-model-group",
+            "context": "Electroweak Symmetry Breaking"
+          },
+          {
+            "source": "gauge/weak-interaction",
+            "context": "Electroweak Symmetry Breaking"
+          },
+          {
             "source": "gauge/weinberg-angle",
             "context": "Electroweak Breaking"
           },
@@ -4123,7 +4190,7 @@
         {
           "number": 3,
           "title": "Electroweak symmetry breaking",
-          "description": "The mechanism that breaks SU(2)L U(1)Y U(1)em has not been derived. The framework should identify the coherence-sector analog of the Higgs field."
+          "description": "*(resolved — downstream)*: Fully addressed by [Electroweak Symmetry Breaking](/derivations/gauge/electroweak-breaking), which derives the Coleman-Weinberg mechanism from the coherence Lagrangian with "
         },
         {
           "number": 4,
@@ -4182,6 +4249,10 @@
           {
             "target": "cosmology/coupling-constants",
             "context": "Coupling Constants"
+          },
+          {
+            "target": "gauge/electroweak-breaking",
+            "context": "Electroweak Symmetry Breaking"
           }
         ],
         "incoming": [
@@ -4366,6 +4437,10 @@
           {
             "source": "gauge/chiral-symmetry-breaking",
             "context": "Strong CP"
+          },
+          {
+            "source": "gauge/color-force",
+            "context": "Strong CP Conservation"
           }
         ]
       },
@@ -4639,12 +4714,12 @@
         {
           "number": 2,
           "title": "Electroweak symmetry breaking",
-          "description": "The Wpm and Z0 bosons are massive (MW 80 GeV, MZ 91 GeV), requiring spontaneous breaking of SU(2)L U(1)Y U(1)em. The Higgs mechanism (or its coherence-framework analog) has not been derived. This is t"
+          "description": "*(resolved — downstream)*: Fully addressed by [Electroweak Symmetry Breaking](/derivations/gauge/electroweak-breaking), which derives the Coleman-Weinberg mechanism from the coherence Lagrangian with "
         },
         {
           "number": 3,
           "title": "Weinberg angle",
-          "description": "sin2thetaW 0.231 is empirical. It should follow from the algebraic structure (C H embedding) and the division-algebra normalization, but this calculation has not been completed. Deferred to [Coupling "
+          "description": "*(resolved — downstream)*: Fully addressed by [Weinberg Angle](/derivations/gauge/weinberg-angle), which determines sin2thetaW(MZ) = 0.231 from the C H algebraic boundary condition via exact one-loop "
         },
         {
           "number": 4,
@@ -4654,7 +4729,7 @@
         {
           "number": 5,
           "title": "Anomaly cancellation",
-          "description": "The Standard Model is free of gauge anomalies, which constrains the fermion content. The framework should reproduce this constraint from coherence conservation, but this has not been checked."
+          "description": "*(resolved — downstream)*: Fully addressed by [Anomaly Cancellation](/derivations/gauge/anomaly-cancellation), which shows the chirality-selected fermion content automatically satisfies all four indep"
         }
       ],
       "assessmentVerdict": "Rigorous. The derivation follows the same template as [Electromagnetism](/derivations/gauge/electromagnetism) (now rigorous): physical motivation (3D rotations are non-abelian) → algebraic necessity (Hurwitz's theorem selects H) → gauge structure (S1 is the uniquely forced implementation, Propositio",
@@ -4748,6 +4823,18 @@
           {
             "target": "gauge/electromagnetism",
             "context": "now rigorous"
+          },
+          {
+            "target": "gauge/electroweak-breaking",
+            "context": "Electroweak Symmetry Breaking"
+          },
+          {
+            "target": "gauge/weinberg-angle",
+            "context": "Weinberg Angle"
+          },
+          {
+            "target": "gauge/anomaly-cancellation",
+            "context": "Anomaly Cancellation"
           }
         ],
         "incoming": [
@@ -4969,7 +5056,12 @@
             "context": "Weak Interaction"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "gauge/weak-interaction",
+            "context": "Weinberg Angle"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -5829,6 +5921,10 @@
         ],
         "incoming": [
           {
+            "source": "holography/information-paradox",
+            "context": "ER=EPR from Relational Invariants"
+          },
+          {
             "source": "quantum/entanglement",
             "context": "ER=EPR"
           }
@@ -6206,7 +6302,7 @@
         {
           "number": 4,
           "title": "ER=EPR connection",
-          "description": "The Maldacena-Susskind conjecture (ER=EPR) — that entangled particles are connected by non-traversable wormholes — has a natural interpretation in the framework: relational invariants between coherenc"
+          "description": "*(resolved — downstream)*: Fully addressed by [ER=EPR from Relational Invariants](/derivations/holography/er-epr), which rigorously establishes that relational invariants produce both entanglement (EP"
         },
         {
           "number": 5,
@@ -6233,6 +6329,10 @@
           {
             "target": "spacetime/gravity",
             "context": "Gravity"
+          },
+          {
+            "target": "holography/er-epr",
+            "context": "ER=EPR from Relational Invariants"
           }
         ],
         "incoming": [
@@ -6506,6 +6606,10 @@
           {
             "source": "gauge/color-force",
             "context": "Theorems 2.2–2.3, 7.1"
+          },
+          {
+            "source": "gauge/color-force",
+            "context": "Bootstrap → Division Algebras"
           },
           {
             "source": "gauge/strong-cp",
@@ -7624,10 +7728,6 @@
             "context": "Coherence-Dual Pairs"
           },
           {
-            "source": "particles/three-generations",
-            "context": "Coherence-Dual Pairs"
-          },
-          {
             "source": "spacetime/lorentz-invariance",
             "context": "Definition 6.1"
           }
@@ -8523,7 +8623,7 @@
         {
           "number": 4,
           "title": "Leptogenesis connection",
-          "description": "Majorana neutrinos enable leptogenesis as a baryogenesis mechanism. The connection to the [Baryogenesis](/derivations/cosmology/baryogenesis) derivation should be made explicit."
+          "description": "*(resolved — downstream)*: Fully addressed by [Leptogenesis](/derivations/cosmology/leptogenesis), which establishes the viability of electroweak-scale resonant leptogenesis using framework-predicted "
         },
         {
           "number": 5,
@@ -8576,13 +8676,21 @@
             "context": "Flavor Mixing"
           },
           {
-            "target": "cosmology/baryogenesis",
-            "context": "Baryogenesis"
+            "target": "cosmology/leptogenesis",
+            "context": "Leptogenesis"
           }
         ],
         "incoming": [
           {
+            "source": "cosmology/baryogenesis",
+            "context": "Majorana mechanism from pseudo-real $SU(2"
+          },
+          {
             "source": "cosmology/leptogenesis",
+            "context": "Neutrino Masses"
+          },
+          {
+            "source": "particles/three-generations",
             "context": "Neutrino Masses"
           }
         ]
@@ -9147,7 +9255,7 @@
         {
           "number": 3,
           "title": "Neutrino mass mechanism",
-          "description": "Whether neutrinos are Dirac or Majorana fermions should be derivable from the winding structure — Majorana corresponds to a self-conjugate winding (like the self-conjugate observer of [Coherence-Dual "
+          "description": "*(resolved — downstream)*: Fully addressed by [Neutrino Masses](/derivations/particles/neutrino-masses), which establishes Majorana nature from the pseudo-real SU(2) representation — the self-conjugac"
         },
         {
           "number": 4,
@@ -9176,8 +9284,8 @@
             "context": "Theorem 3.1, via S1"
           },
           {
-            "target": "minimal-observer/coherence-dual-pairs",
-            "context": "Coherence-Dual Pairs"
+            "target": "particles/neutrino-masses",
+            "context": "Neutrino Masses"
           }
         ],
         "incoming": [
@@ -10396,7 +10504,7 @@
         {
           "number": 3,
           "title": "Singularity resolution",
-          "description": "The Einstein equations predict singularities (Penrose-Hawking theorems). The framework's discrete relational invariant network should resolve these at the Planck scale, where the continuum approximati"
+          "description": "*(resolved — downstream)*: Fully addressed by [Singularity Resolution](/derivations/spacetime/singularity-resolution), which establishes curvature bounds at Planck density via the holographic entropy "
         },
         {
           "number": 4,
@@ -10440,6 +10548,10 @@
           {
             "target": "interactions/bootstrap",
             "context": "Bootstrap"
+          },
+          {
+            "target": "spacetime/singularity-resolution",
+            "context": "Singularity Resolution"
           }
         ],
         "incoming": [
@@ -10664,12 +10776,12 @@
         {
           "number": 2,
           "title": "Planck scale",
-          "description": "The continuum metric fails at r sim ellP. The discrete network should resolve the r = 0 singularity."
+          "description": "*(partially resolved — downstream)*: The singularity at r = 0 is addressed by [Singularity Resolution](/derivations/spacetime/singularity-resolution), which establishes curvature bounds at Planck dens"
         },
         {
           "number": 3,
           "title": "Strong-field regime",
-          "description": "Black hole interiors and singularity resolution require the full discrete theory."
+          "description": "*(partially resolved — downstream)*: Black hole singularities are resolved by [Singularity Resolution](/derivations/spacetime/singularity-resolution) (regular cores). Full discrete theory for interior"
         }
       ],
       "assessmentVerdict": "The derivation of gravity as coherence geometry curvature is rigorous given S1 (metric–density coupling). The inverse-square law, equivalence principles, geodesic equation, and Schwarzschild metric are established by standard mathematical results (Gauss's law, Riemannian geometry, Birkhoff's theorem",
@@ -10699,6 +10811,14 @@
           {
             "target": "thermodynamics/action-planck",
             "context": "Theorem 5.1"
+          },
+          {
+            "target": "spacetime/singularity-resolution",
+            "context": "Singularity Resolution"
+          },
+          {
+            "target": "spacetime/singularity-resolution",
+            "context": "regular cores"
           }
         ],
         "incoming": [
@@ -11241,7 +11361,20 @@
             "context": "Black Hole Information Paradox"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "spacetime/einstein-equations",
+            "context": "Singularity Resolution"
+          },
+          {
+            "source": "spacetime/gravity",
+            "context": "Singularity Resolution"
+          },
+          {
+            "source": "spacetime/gravity",
+            "context": "regular cores"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -19243,7 +19376,7 @@
       "derivationStatus": "rigorous",
       "number": 2,
       "title": "Leptogenesis",
-      "description": "If neutrinos are Majorana (possible in the framework via the coherence-dual pair mechanism), right-handed neutrino decays could generate etaB through leptogenesis. Derive the neutrino mass mechanism a"
+      "description": "*(resolved — downstream)*: Fully addressed by [Neutrino Masses](/derivations/particles/neutrino-masses) (Majorana mechanism from pseudo-real SU(2) representations) and [Leptogenesis](/derivations/cosm"
     },
     {
       "derivationId": "cosmology/baryogenesis",
@@ -19390,7 +19523,7 @@
       "derivationStatus": "rigorous",
       "number": 1,
       "title": "Anomaly cancellation",
-      "description": "The Standard Model's chiral fermion content is anomaly-free (Tr[Ta2 Y] = 0 for all generators). This constraint on the fermion representations should follow from coherence conservation applied to the "
+      "description": "*(resolved — downstream)*: Fully addressed by [Anomaly Cancellation](/derivations/gauge/anomaly-cancellation), which proves that the chirality-selected fermion content automatically satisfies all four"
     },
     {
       "derivationId": "gauge/chirality-selection",
@@ -19411,35 +19544,35 @@
       "derivationStatus": "rigorous",
       "number": 4,
       "title": "Electroweak symmetry breaking",
-      "description": "The chirality selection tells us *which* spinors couple to SU(2), but the mechanism that gives the W and Z bosons mass (breaking SU(2)L U(1)Y U(1)em) remains an open gap inherited from the [Weak Inter"
+      "description": "*(resolved — downstream)*: Fully addressed by [Electroweak Symmetry Breaking](/derivations/gauge/electroweak-breaking), which derives the Coleman-Weinberg mechanism from the coherence Lagrangian."
     },
     {
       "derivationId": "gauge/color-force",
       "derivationStatus": "rigorous",
       "number": 1,
       "title": "Bootstrap–Cayley-Dickson proof",
-      "description": "Prove that the bootstrap mechanism's hierarchical structure *forces* the Cayley-Dickson doubling sequence, rather than postulating it (S1). This would require showing that relational invariants among "
+      "description": "*(resolved — downstream)*: Fully addressed by [Bootstrap → Division Algebras](/derivations/interactions/bootstrap-division-algebras), which proves the Cayley-Dickson doubling sequence is forced by coh"
     },
     {
       "derivationId": "gauge/color-force",
       "derivationStatus": "rigorous",
       "number": 2,
-      "title": "Confinement (rigorous)",
-      "description": "Formalize the non-associativity argument for confinement. Show that only color-singlet states have well-defined long-range coherence transport in the octonionic phase space. This connects to the Clay "
+      "title": "Confinement",
+      "description": "*(resolved — downstream)*: Fully addressed by [Color Confinement](/derivations/gauge/confinement), which derives the linear potential from a random-walk-on-groups argument for non-associative phase tr"
     },
     {
       "derivationId": "gauge/color-force",
       "derivationStatus": "rigorous",
       "number": 3,
       "title": "Strong CP problem",
-      "description": "The SU(3) gauge theory admits a topological theta-term propto theta , GmunuGmunu that violates CP. Experimentally theta < 10-10. The framework should explain why theta 0."
+      "description": "*(resolved — downstream)*: Fully addressed by [Strong CP Conservation](/derivations/gauge/strong-cp), which shows the rigid octonionic structure of SU(3) forces theta = 0 via algebraic completeness an"
     },
     {
       "derivationId": "gauge/color-force",
       "derivationStatus": "rigorous",
       "number": 4,
       "title": "Chiral symmetry breaking",
-      "description": "The approximate SU(Nf)L SU(Nf)R flavor symmetry of the QCD Lagrangian is spontaneously broken. This should emerge from the coherence dynamics at the octonionic level."
+      "description": "*(partially resolved — downstream)*: Addressed by [Chiral Symmetry Breaking](/derivations/gauge/chiral-symmetry-breaking) (provisional), which derives the QCD chiral condensate from coherence minimiza"
     },
     {
       "derivationId": "gauge/color-force",
@@ -19579,7 +19712,7 @@
       "derivationStatus": "rigorous",
       "number": 3,
       "title": "Electroweak symmetry breaking",
-      "description": "The mechanism that breaks SU(2)L U(1)Y U(1)em has not been derived. The framework should identify the coherence-sector analog of the Higgs field."
+      "description": "*(resolved — downstream)*: Fully addressed by [Electroweak Symmetry Breaking](/derivations/gauge/electroweak-breaking), which derives the Coleman-Weinberg mechanism from the coherence Lagrangian with "
     },
     {
       "derivationId": "gauge/standard-model-group",
@@ -19628,14 +19761,14 @@
       "derivationStatus": "rigorous",
       "number": 2,
       "title": "Electroweak symmetry breaking",
-      "description": "The Wpm and Z0 bosons are massive (MW 80 GeV, MZ 91 GeV), requiring spontaneous breaking of SU(2)L U(1)Y U(1)em. The Higgs mechanism (or its coherence-framework analog) has not been derived. This is t"
+      "description": "*(resolved — downstream)*: Fully addressed by [Electroweak Symmetry Breaking](/derivations/gauge/electroweak-breaking), which derives the Coleman-Weinberg mechanism from the coherence Lagrangian with "
     },
     {
       "derivationId": "gauge/weak-interaction",
       "derivationStatus": "rigorous",
       "number": 3,
       "title": "Weinberg angle",
-      "description": "sin2thetaW 0.231 is empirical. It should follow from the algebraic structure (C H embedding) and the division-algebra normalization, but this calculation has not been completed. Deferred to [Coupling "
+      "description": "*(resolved — downstream)*: Fully addressed by [Weinberg Angle](/derivations/gauge/weinberg-angle), which determines sin2thetaW(MZ) = 0.231 from the C H algebraic boundary condition via exact one-loop "
     },
     {
       "derivationId": "gauge/weak-interaction",
@@ -19649,7 +19782,7 @@
       "derivationStatus": "rigorous",
       "number": 5,
       "title": "Anomaly cancellation",
-      "description": "The Standard Model is free of gauge anomalies, which constrains the fermion content. The framework should reproduce this constraint from coherence conservation, but this has not been checked."
+      "description": "*(resolved — downstream)*: Fully addressed by [Anomaly Cancellation](/derivations/gauge/anomaly-cancellation), which shows the chirality-selected fermion content automatically satisfies all four indep"
     },
     {
       "derivationId": "holography/area-scaling",
@@ -19817,7 +19950,7 @@
       "derivationStatus": "rigorous",
       "number": 4,
       "title": "ER=EPR connection",
-      "description": "The Maldacena-Susskind conjecture (ER=EPR) — that entangled particles are connected by non-traversable wormholes — has a natural interpretation in the framework: relational invariants between coherenc"
+      "description": "*(resolved — downstream)*: Fully addressed by [ER=EPR from Relational Invariants](/derivations/holography/er-epr), which rigorously establishes that relational invariants produce both entanglement (EP"
     },
     {
       "derivationId": "holography/information-paradox",
@@ -20034,7 +20167,7 @@
       "derivationStatus": "rigorous",
       "number": 4,
       "title": "Leptogenesis connection",
-      "description": "Majorana neutrinos enable leptogenesis as a baryogenesis mechanism. The connection to the [Baryogenesis](/derivations/cosmology/baryogenesis) derivation should be made explicit."
+      "description": "*(resolved — downstream)*: Fully addressed by [Leptogenesis](/derivations/cosmology/leptogenesis), which establishes the viability of electroweak-scale resonant leptogenesis using framework-predicted "
     },
     {
       "derivationId": "particles/neutrino-masses",
@@ -20104,7 +20237,7 @@
       "derivationStatus": "rigorous",
       "number": 3,
       "title": "Neutrino mass mechanism",
-      "description": "Whether neutrinos are Dirac or Majorana fermions should be derivable from the winding structure — Majorana corresponds to a self-conjugate winding (like the self-conjugate observer of [Coherence-Dual "
+      "description": "*(resolved — downstream)*: Fully addressed by [Neutrino Masses](/derivations/particles/neutrino-masses), which establishes Majorana nature from the pseudo-real SU(2) representation — the self-conjugac"
     },
     {
       "derivationId": "particles/three-generations",
@@ -20251,7 +20384,7 @@
       "derivationStatus": "rigorous",
       "number": 3,
       "title": "Singularity resolution",
-      "description": "The Einstein equations predict singularities (Penrose-Hawking theorems). The framework's discrete relational invariant network should resolve these at the Planck scale, where the continuum approximati"
+      "description": "*(resolved — downstream)*: Fully addressed by [Singularity Resolution](/derivations/spacetime/singularity-resolution), which establishes curvature bounds at Planck density via the holographic entropy "
     },
     {
       "derivationId": "spacetime/einstein-equations",
@@ -20279,14 +20412,14 @@
       "derivationStatus": "rigorous",
       "number": 2,
       "title": "Planck scale",
-      "description": "The continuum metric fails at r sim ellP. The discrete network should resolve the r = 0 singularity."
+      "description": "*(partially resolved — downstream)*: The singularity at r = 0 is addressed by [Singularity Resolution](/derivations/spacetime/singularity-resolution), which establishes curvature bounds at Planck dens"
     },
     {
       "derivationId": "spacetime/gravity",
       "derivationStatus": "rigorous",
       "number": 3,
       "title": "Strong-field regime",
-      "description": "Black hole interiors and singularity resolution require the full discrete theory."
+      "description": "*(partially resolved — downstream)*: Black hole singularities are resolved by [Singularity Resolution](/derivations/spacetime/singularity-resolution) (regular cores). Full discrete theory for interior"
     },
     {
       "derivationId": "spacetime/lorentz-invariance",
