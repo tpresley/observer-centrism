@@ -5,3 +5,4 @@ site/.astro
 lean/.lake
 lean/build
 lean/lake-packages
+knowledge.db
