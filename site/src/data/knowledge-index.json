@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-13T21:14:19.518Z",
+    "generatedAt": "2026-03-13T21:30:37.679Z",
     "derivationCount": 60,
     "predictionCount": 10,
     "generator": "scripts/build-index.mjs"
@@ -15,7 +15,7 @@
     "predictionCount": 10,
     "edgeCount": 127,
     "formalObjectCount": 883,
-    "openGapCount": 199,
+    "openGapCount": 198,
     "upgradeEligibleCount": 0,
     "leanVerifiedCount": 16,
     "leanTheoremCount": 64
@@ -5905,6 +5905,10 @@
             "context": "rigorous"
           },
           {
+            "source": "holography/hawking-radiation",
+            "context": "Holographic Entropy Bound"
+          },
+          {
             "source": "quantum/entanglement",
             "context": "Area Scaling"
           },
@@ -6685,31 +6689,26 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Trans-Planckian problem",
-          "description": "Modes near the horizon are blue-shifted to trans-Planckian frequencies. The discrete relational network should provide a natural cutoff, replacing the trans-Planckian modes with discrete loop structur"
-        },
-        {
-          "number": 2,
           "title": "Greybody factors",
           "description": "The actual spectrum deviates from perfect thermal due to the potential barrier. These corrections should be derivable from the coherence geometry."
         },
         {
-          "number": 3,
+          "number": 2,
           "title": "End state",
           "description": "What happens at the endpoint of evaporation? A Planck-mass remnant? Complete evaporation? The answer depends on the discrete structure at the Planck scale."
         },
         {
-          "number": 4,
+          "number": 3,
           "title": "Species counting",
           "description": "The total luminosity depends on the number of particle species that can be emitted. The framework should predict this from the bootstrap hierarchy."
         },
         {
-          "number": 5,
+          "number": 4,
           "title": "Rotating and charged black holes",
           "description": "The Hawking temperature for Kerr (TH = hbarkappa/(2pi c kB) with modified kappa) and Reissner-Nordström black holes should follow from the same loop-breaking mechanism applied to the modified horizon "
         }
       ],
-      "assessmentVerdict": "The Hawking radiation derivation is rigorous. The core mechanism — broken loops at horizons producing coherence-dual pairs — is forced by Axioms 1 + 3. The temperature, spectrum, and evaporation dynamics match established semiclassical results. The main open elements are the trans-Planckian problem ",
+      "assessmentVerdict": "The Hawking radiation derivation is rigorous. The core mechanism — broken loops at horizons producing coherence-dual pairs — is forced by Axioms 1 + 3. The temperature, spectrum, and evaporation dynamics match established semiclassical results. The trans-Planckian problem is structurally resolved by",
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
@@ -6732,6 +6731,14 @@
           {
             "target": "spacetime/gravity",
             "context": "Gravity"
+          },
+          {
+            "target": "spacetime/singularity-resolution",
+            "context": "Singularity Resolution"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Holographic Entropy Bound"
           }
         ],
         "incoming": [
@@ -12727,6 +12734,10 @@
           {
             "source": "cosmology/observer-loop-viability",
             "context": "Theorem 4.1, step v"
+          },
+          {
+            "source": "holography/hawking-radiation",
+            "context": "Singularity Resolution"
           },
           {
             "source": "spacetime/einstein-equations",
@@ -21870,34 +21881,27 @@
       "derivationId": "holography/hawking-radiation",
       "derivationStatus": "rigorous",
       "number": 1,
-      "title": "Trans-Planckian problem",
-      "description": "Modes near the horizon are blue-shifted to trans-Planckian frequencies. The discrete relational network should provide a natural cutoff, replacing the trans-Planckian modes with discrete loop structur"
-    },
-    {
-      "derivationId": "holography/hawking-radiation",
-      "derivationStatus": "rigorous",
-      "number": 2,
       "title": "Greybody factors",
       "description": "The actual spectrum deviates from perfect thermal due to the potential barrier. These corrections should be derivable from the coherence geometry."
     },
     {
       "derivationId": "holography/hawking-radiation",
       "derivationStatus": "rigorous",
-      "number": 3,
+      "number": 2,
       "title": "End state",
       "description": "What happens at the endpoint of evaporation? A Planck-mass remnant? Complete evaporation? The answer depends on the discrete structure at the Planck scale."
     },
     {
       "derivationId": "holography/hawking-radiation",
       "derivationStatus": "rigorous",
-      "number": 4,
+      "number": 3,
       "title": "Species counting",
       "description": "The total luminosity depends on the number of particle species that can be emitted. The framework should predict this from the bootstrap hierarchy."
     },
     {
       "derivationId": "holography/hawking-radiation",
       "derivationStatus": "rigorous",
-      "number": 5,
+      "number": 4,
       "title": "Rotating and charged black holes",
       "description": "The Hawking temperature for Kerr (TH = hbarkappa/(2pi c kB) with modified kappa) and Reissner-Nordström black holes should follow from the same loop-breaking mechanism applied to the modified horizon "
     },

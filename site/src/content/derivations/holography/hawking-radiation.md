@@ -35,7 +35,7 @@ Classically, nothing escapes a black hole. But quantum effects change the pictur
 
 **Why this matters.** Hawking radiation connects gravity, quantum mechanics, and thermodynamics in a single phenomenon. It directly sets up the black hole information paradox: if the radiation is purely thermal, where did the information about what fell in go?
 
-**An honest caveat.** The quantitative results (temperature, evaporation rate) match the standard semiclassical calculation, but the framework does not yet resolve the trans-Planckian problem -- the behavior of modes blue-shifted to energies beyond the Planck scale near the horizon.
+**An honest caveat.** The quantitative results (temperature, evaporation rate) match the standard semiclassical calculation. The trans-Planckian problem -- modes blue-shifted to super-Planckian energies near the horizon -- is structurally resolved by the framework's Planck-scale cutoff (no observer loops can close below the Planck length), and the loop-breaking derivation here never requires tracing modes into the trans-Planckian regime. The remaining open elements are the greybody factors and the endpoint of evaporation.
 
 ## Statement
 
@@ -184,15 +184,17 @@ In the framework: acceleration creates an apparent (Rindler) horizon for the acc
 - The greybody factors $\Gamma_\omega$ depend on the effective potential barrier computed from the Schwarzschild metric — standard GR input, not derived from the coherence geometry.
 
 **Open assumptions:**
-- The trans-Planckian problem (modes blue-shifted to super-Planckian frequencies near the horizon) is unresolved. The discrete framework should provide a natural cutoff, but the mechanism is not specified.
 - The energy source for Hawking radiation ("extracted from the gravitational field") follows from the standard Penrose process / negative-energy partner interpretation.
 
-**Assessment:** The Hawking radiation derivation is rigorous. The core mechanism — broken loops at horizons producing coherence-dual pairs — is forced by Axioms 1 + 3. The temperature, spectrum, and evaporation dynamics match established semiclassical results. The main open elements are the trans-Planckian problem and the greybody factors.
+**Trans-Planckian resolution:** The trans-Planckian problem is structurally resolved by two independent features of the framework:
+- **(i) Planck-scale cutoff.** No observer loop can close below $\ell_P$ ([Singularity Resolution](/derivations/spacetime/singularity-resolution), Theorem 2.1; [Holographic Entropy Bound](/derivations/holography/area-scaling), S1). The highest frequency in the discrete relational network is $\omega_{\max} = c/\ell_P$. Modes are not blueshifted beyond this — they are absorbed into the Planck-density structure of the near-horizon region.
+- **(ii) Derivation independence.** The loop-breaking mechanism (Theorem 2.1 above) derives Hawking radiation from pair production at the horizon, without ever tracing modes back through the trans-Planckian regime. The Hawking temperature depends on the macroscopic surface gravity, not on UV physics. This is confirmed by the insensitivity of the Unruh effect to the UV completion (Jacobson, 1991; Unruh, 1995) and explicit dispersive calculations (Corley & Jacobson, 1996; Brout et al., 1995). See [Singularity Resolution](/derivations/spacetime/singularity-resolution), Proposition 6.1 for the full argument.
+
+**Assessment:** The Hawking radiation derivation is rigorous. The core mechanism — broken loops at horizons producing coherence-dual pairs — is forced by Axioms 1 + 3. The temperature, spectrum, and evaporation dynamics match established semiclassical results. The trans-Planckian problem is structurally resolved by the Planck-scale cutoff and the derivation-independence of the Hawking temperature. The main remaining open elements are the greybody factors and the evaporation endpoint.
 
 ## Open Gaps
 
-1. **Trans-Planckian problem**: Modes near the horizon are blue-shifted to trans-Planckian frequencies. The discrete relational network should provide a natural cutoff, replacing the trans-Planckian modes with discrete loop structures.
-2. **Greybody factors**: The actual spectrum deviates from perfect thermal due to the potential barrier. These corrections should be derivable from the coherence geometry.
-3. **End state**: What happens at the endpoint of evaporation? A Planck-mass remnant? Complete evaporation? The answer depends on the discrete structure at the Planck scale.
-4. **Species counting**: The total luminosity depends on the number of particle species that can be emitted. The framework should predict this from the bootstrap hierarchy.
-5. **Rotating and charged black holes**: The Hawking temperature for Kerr ($T_H = \hbar\kappa/(2\pi c k_B)$ with modified $\kappa$) and Reissner-Nordström black holes should follow from the same loop-breaking mechanism applied to the modified horizon geometry.
+1. **Greybody factors**: The actual spectrum deviates from perfect thermal due to the potential barrier. These corrections should be derivable from the coherence geometry.
+2. **End state**: What happens at the endpoint of evaporation? A Planck-mass remnant? Complete evaporation? The answer depends on the discrete structure at the Planck scale.
+3. **Species counting**: The total luminosity depends on the number of particle species that can be emitted. The framework should predict this from the bootstrap hierarchy.
+4. **Rotating and charged black holes**: The Hawking temperature for Kerr ($T_H = \hbar\kappa/(2\pi c k_B)$ with modified $\kappa$) and Reissner-Nordström black holes should follow from the same loop-breaking mechanism applied to the modified horizon geometry.
