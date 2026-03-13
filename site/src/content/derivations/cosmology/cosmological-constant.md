@@ -2,11 +2,11 @@
 title: "Cosmological Constant"
 status: "non-viable"
 dependsOn: ["spacetime/einstein-equations", "holography/area-scaling"]
-enablesDerivation: []
+enablesDerivation: ["cosmology/observer-loop-viability"]
 tags: ["cosmology", "blocked"]
-summary: "Non-viable: the cosmological constant cannot be derived from the current framework — it depends on cosmological initial conditions that are boundary data, not derivable quantities"
+summary: "Non-viable: the cosmological constant cannot be derived from the current framework — it depends on cosmological initial conditions that are boundary data, not derivable quantities. However, the ontic/epistemic status of 'initial conditions' is murkier than this suggests, and observer-existence constraints may narrow the space of viable solutions."
 rigorLevel: "informal"
-lastUpdated: 2026-03-10
+lastUpdated: 2026-03-12
 ---
 
 ## Status: Non-Viable
@@ -59,6 +59,32 @@ These are **boundary data** in the framework — they specify which solution of 
 
 This is analogous to how Newton's laws determine $F = ma$ but do not predict where any particular planet is — that requires initial conditions.
 
+### The ontic/epistemic tension
+
+The above analysis treats "initial conditions" as straightforwardly ontic — fixed properties of the universe that the axioms cannot reach. But the framework's own logic complicates this picture:
+
+1. **$\mathcal{C}_{\text{total}}$ is ontic but epistemically inaccessible.** The total coherence is conserved on every Cauchy slice (Axiom 1), making it an objective property of the DAG. But every physical observer is bounded ([Entropy](/derivations/thermodynamics/entropy), Proposition 2.4): $\mathcal{D}_A(\tau) \subsetneq V$ for all $\tau$. No observer within the universe can measure $\mathcal{C}_{\text{total}}$ — it is a theoretical construct that transcends any observer's coherence domain.
+
+2. **The horizon size is observer-relative.** In de Sitter space, different observers have different cosmological horizons centered on different positions. The "horizon size" that enters the $\Lambda$ discussion is not a single ontic fact but an observer-indexed quantity.
+
+3. **The matter/radiation content is observer-indexed.** The matter content "within the horizon" depends on which observer's horizon and which coherence domain is being summed over.
+
+So the "boundary data" that determine $\Lambda$ are a mix: $\mathcal{C}_{\text{total}}$ is ontic but inaccessible; the horizon size and accessible content are genuinely observer-relative. The statement "the value of $\Lambda$ depends on initial conditions" is less clean than it first appears — the "initial conditions" themselves are partly observer-projected quantities.
+
+This does **not** make $\Lambda$ observer-relative. $\Lambda$ enters the Einstein equations as a geometric constant shared by all observers in the same spacetime. But it means the relationship between $\Lambda$ and the quantities it supposedly "depends on" is tangled: $\Lambda$ determines the horizon, the horizon determines the accessible coherence domain, the coherence domain determines the observer's effective description of the universe, and that description is what we call "the initial conditions." The arrow of explanation is not one-directional.
+
+### The self-consistency loop
+
+This tangle creates a self-referential structure:
+
+$$\Lambda \;\to\; R_H \sim 1/\sqrt{\Lambda} \;\to\; \mathcal{D}_A \;\to\; \text{"initial conditions" as seen by } A \;\to\; \Lambda$$
+
+Route 2 (above) tried to exploit this loop but collapsed into dimensional analysis. The reason is that self-consistency of observer projections *within* a given solution does not obviously select *between* solutions. The framework guarantees that every solution of the Einstein equations (for any $\Lambda$) is internally self-consistent — every observer within that solution has a coherent set of relational invariants, entropy assignments, and descriptions. Self-consistency alone does not pick out a unique $\Lambda$.
+
+However, a stronger constraint might: not just self-consistency of observer *descriptions*, but self-consistency of observer *existence*. The axioms require that observers satisfy specific structural conditions (Axiom 2: state space, Noether invariant, self/non-self boundary; Axiom 3: loop closure with Lyapunov stability). Whether these conditions can be satisfied depends on the spacetime they inhabit — and the spacetime depends on $\Lambda$. If only certain values of $\Lambda$ are compatible with DAGs satisfying all three axioms, this would constrain the solution space.
+
+This is distinct from anthropic reasoning: it is not "observers like us must exist" but "the axioms require observer structures that may not be realizable for arbitrary $\Lambda$." Whether this constraint has any teeth — whether it actually excludes any values — is unknown and would require a detailed analysis of which spacetimes support observer loops satisfying Axiom 3.
+
 ## What the Framework *Can* Say About $\Lambda$
 
 1. **Existence**: $\Lambda$ is the unique dimension-0 term in the gravitational action, guaranteed by Lovelock's theorem. ✓ (Already derived)
@@ -74,12 +100,14 @@ This is analogous to how Newton's laws determine $F = ma$ but do not predict whe
 | [Holographic Entropy Bound](/derivations/holography/area-scaling) | $S \leq A/(4\ell_P^2)$ |
 | [Information Paradox](/derivations/holography/information-paradox) | Universe as self-consistent observer |
 | [Action and Planck's Constant](/derivations/thermodynamics/action-planck) | Minimal cycle cost |
+| [Entropy](/derivations/thermodynamics/entropy) | Observer-indexed entropy; bounded observer theorem (Prop. 2.4) |
 
 ## What Would Unblock This
 
 A derivation of $\Lambda$ would require one of:
 1. **A principle that fixes cosmological initial conditions** — something beyond the three axioms that constrains the total coherence budget and horizon size. This would be a fourth axiom or a cosmological selection principle.
-2. **A dynamical mechanism** — showing that $\Lambda$ is not a free parameter but is driven to its observed value by some attractor in the coherence dynamics. This would require understanding the framework's cosmological solutions in detail.
-3. **A statistical argument** — showing that the observed value is typical in some ensemble of coherence-consistent universes. This would require a theory of the ensemble itself.
+2. **A dynamical attractor** — showing that $\Lambda$ is not a free parameter but is driven to its observed value by an attractor in the coherence dynamics. The self-consistency loop (§Root Cause, above) hints at this: the coherence dynamics, constrained by observer self-consistency, might have a fixed point in solution space that selects $\Lambda$. This would require understanding the framework's cosmological solutions in detail.
+3. **An observer-existence constraint** — showing that the structural requirements of Axioms 2 and 3 (observer loops must close with Lyapunov stability) restrict which spacetimes can host valid DAGs, and that this restriction constrains $\Lambda$. This is not anthropic selection ("observers like us") but axiomatic selection ("observer structures satisfying the axioms"). No analysis of this constraint currently exists.
+4. **A statistical argument** — showing that the observed value is typical in some ensemble of coherence-consistent universes. This would require a theory of the ensemble itself.
 
-None of these are currently available within the framework.
+None of these are currently available within the framework. Routes 2 and 3 are the most natural to the framework's internal logic but the least developed.

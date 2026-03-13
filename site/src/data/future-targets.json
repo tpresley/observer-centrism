@@ -131,6 +131,40 @@
       "dependencies": ["quantum/entanglement", "quantum/measurement", "interactions/three-types"],
       "addressesGaps": ["quantum/entanglement Gap 1"],
       "impact": "New derivation page. Demonstrates framework can reproduce quantum information protocols."
+    },
+    {
+      "id": "observer-loop-viability",
+      "title": "Observer Loop Viability Bounds",
+      "difficulty": "HARD",
+      "status": "CREATED — stub at cosmology/observer-loop-viability.md",
+      "createdDate": "2026-03-12",
+      "rationale": "The cosmological constant derivation (non-viable) identifies Route 3: observer-existence constraints may restrict which spacetimes host valid DAGs. The axioms require observer loops with Lyapunov stability (Axiom 3), which may not be achievable for arbitrary Λ. Even a Planck-scale upper bound establishes the principle that axioms constrain solutions, not just dynamics. A sign prediction (Λ > 0) would be a real result.",
+      "strategy": "(1) Formalize Lyapunov stability in de Sitter spacetime — coherence at observer boundary redshifts at rate H = √(Λ/3). (2) Derive viability condition: coherence refreshed per cycle > coherence lost to expansion. (3) Analyze Λ < 0 (AdS): observer loops must survive Planck-density bounce — can Noether invariant I be preserved? (4) Sign argument: structural arrow (growing DAG) requires expanding geometry → Λ ≥ 0; cosmological arrow stability → Λ > 0.",
+      "dependencies": ["spacetime/singularity-resolution", "holography/area-scaling", "minimal-observer/structure", "axioms/loop-closure"],
+      "addressesGaps": ["cosmology/cosmological-constant Route 3"],
+      "impact": "Constrains Λ from axioms. Even partial results (sign prediction) upgrade cosmological constant page. Establishes axiom-to-solution-space principle."
+    },
+    {
+      "id": "cosmological-arrow",
+      "title": "Cosmological Arrow without Initial Conditions",
+      "difficulty": "MODERATE-HARD",
+      "status": "Future target — addresses thermodynamics/time Gap 3",
+      "rationale": "The structural arrow of time (increasing relational invariant depth) is already derived without initial conditions. But the cosmological arrow (expansion) is flagged as potentially requiring boundary conditions (time Gap 3). If a growing DAG needs increasing 'room' in the coherence geometry (Planck-density bound prevents packing), the structural arrow implies expansion. This would link the arrow of time to Λ > 0 and potentially give the sign of Λ.",
+      "strategy": "(1) Show that monotonically increasing relational invariant count requires monotonically increasing 4-volume (from Planck-density bound, singularity-resolution Corollary 2.2). (2) Increasing 4-volume in an FRW spacetime means expansion: da/dt > 0. (3) Eternal expansion requires Λ > 0 (Λ = 0 decelerates to zero, Λ < 0 recollapses). This gives the sign prediction. Key subtlety: does the DAG growth rate actually require eternal expansion, or just initial expansion?",
+      "dependencies": ["thermodynamics/time", "spacetime/singularity-resolution", "foundation/coherence-lagrangian"],
+      "addressesGaps": ["thermodynamics/time Gap 3"],
+      "impact": "Sign of Λ from structural arrow. Resolves time Gap 3. Connects thermodynamics to cosmology without initial conditions."
+    },
+    {
+      "id": "de-sitter-core-lambda",
+      "title": "De Sitter Core ↔ Asymptotic Λ Connection",
+      "difficulty": "HARD",
+      "status": "Future target — addresses singularity-resolution Gap 4",
+      "rationale": "The coherence bounce replaces the Big Bang with a Planck-density core that should approach de Sitter geometry (constant positive curvature). If the de Sitter radius of the bounce core is related to the asymptotic Λ, this connects quantum gravity to dark energy. The self-consistency loop (Λ → R_H → D_A → 'initial conditions' → Λ) might have a concrete realization through the bounce: the Planck-density initial state sets the coherence budget, which determines the horizon, which determines Λ.",
+      "strategy": "(1) Show the bounce core approaches de Sitter geometry with curvature ~ ℓ_P^{-2} (from curvature bound, Theorem 3.1). (2) The core has effective Λ_core ~ ℓ_P^{-2}. (3) During expansion, Λ_eff must decrease from Λ_core to the asymptotic Λ_obs. (4) If Λ is truly constant (Lovelock), the 'decrease' is reinterpreted as the matter content diluting — Λ was always the asymptotic value, and the core's high curvature was matter-dominated. (5) The self-consistency condition: the total coherence budget set at the bounce must be compatible with the asymptotic Λ through the Friedmann equations.",
+      "dependencies": ["spacetime/singularity-resolution", "spacetime/einstein-equations", "holography/area-scaling"],
+      "addressesGaps": ["spacetime/singularity-resolution Gap 4"],
+      "impact": "Connects bounce to dark energy. Makes the self-consistency loop concrete."
     }
   ],
 
@@ -147,10 +181,11 @@
     {
       "id": "cosmological-constant",
       "title": "Cosmological Constant",
-      "difficulty": "BLOCKED",
-      "gaps": ["spacetime/einstein-equations Gap 1", "particles/mass-hierarchy Gap 4", "foundation/coherence-lagrangian Gap 2"],
-      "rationale": "Three gaps reference the Λ problem. The cosmological-constant derivation is already marked non-viable. No framework approach has produced a viable prediction.",
-      "status": "Blocked. The cosmological-constant derivation honestly assesses its own failure. No plausible path known."
+      "difficulty": "BLOCKED (value) / HARD (sign and bounds)",
+      "gaps": ["spacetime/einstein-equations Gap 1", "particles/mass-hierarchy Gap 4", "foundation/coherence-lagrangian Gap 2", "thermodynamics/time Gap 3", "spacetime/singularity-resolution Gap 4"],
+      "rationale": "Five gaps reference the Λ problem or connect to it. The cosmological-constant derivation is non-viable for computing the value, but three new directions may yield partial results: (1) observer-loop-viability (stub created) may give an upper bound and/or sign prediction, (2) cosmological arrow (time Gap 3) may link expansion to the structural arrow and predict Λ > 0, (3) de Sitter core connection (singularity-resolution Gap 4) may make the self-consistency loop concrete.",
+      "relatedDerivations": ["cosmology/observer-loop-viability", "cosmology/cosmological-constant"],
+      "status": "Value blocked. Sign and bounds are active research targets (observer-loop-viability stub created 2026-03-12)."
     },
     {
       "id": "quantitative-eta-B",
@@ -186,8 +221,8 @@
     },
     {
       "id": "cosmological-constant",
-      "title": "Cosmological Constant (non-viable status)",
-      "reason": "The derivation's own assessment is that the observer-centrism framework does not produce a viable prediction for Λ. Honestly maintained as non-viable."
+      "title": "Cosmological Constant (non-viable for value; sign/bounds open)",
+      "reason": "The derivation's own assessment is that the value of Λ cannot be derived — it depends on initial conditions whose ontic/epistemic status is murkier than initially stated (see §Root Cause). Honestly maintained as non-viable for the value. However, the sign and upper bounds may be derivable via observer-loop-viability (stub created 2026-03-12) and the cosmological arrow argument."
     },
     {
       "id": "loop-closure-s1",

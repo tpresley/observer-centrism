@@ -58,7 +58,8 @@
     { "id": "particles/supersymmetry-impossibility", "title": "Supersymmetry Impossibility", "group": "particles", "status": "rigorous" },
     { "id": "quantum/teleportation", "title": "Quantum Teleportation", "group": "quantum", "status": "rigorous" },
     { "id": "particles/cpt-theorem", "title": "CPT Theorem", "group": "particles", "status": "rigorous" },
-    { "id": "gauge/proton-stability", "title": "Proton Stability", "group": "gauge", "status": "rigorous" }
+    { "id": "gauge/proton-stability", "title": "Proton Stability", "group": "gauge", "status": "rigorous" },
+    { "id": "cosmology/observer-loop-viability", "title": "Observer Loop Viability Bounds", "group": "cosmology", "status": "stub" }
   ],
   "edges": [
     { "from": "axioms/coherence-conservation", "to": "axioms/observer-definition" },
@@ -178,6 +179,10 @@
     { "from": "particles/spin-statistics", "to": "particles/cpt-theorem" },
     { "from": "foundation/coherence-lagrangian", "to": "particles/cpt-theorem" },
     { "from": "gauge/standard-model-group", "to": "gauge/proton-stability" },
-    { "from": "cosmology/coupling-constants", "to": "gauge/proton-stability" }
+    { "from": "cosmology/coupling-constants", "to": "gauge/proton-stability" },
+    { "from": "spacetime/singularity-resolution", "to": "cosmology/observer-loop-viability" },
+    { "from": "holography/area-scaling", "to": "cosmology/observer-loop-viability" },
+    { "from": "minimal-observer/structure", "to": "cosmology/observer-loop-viability" },
+    { "from": "axioms/loop-closure", "to": "cosmology/observer-loop-viability" }
   ]
 }

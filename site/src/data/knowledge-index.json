@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-03-13T03:39:11.703Z",
-    "derivationCount": 59,
+    "generatedAt": "2026-03-13T05:06:53.623Z",
+    "derivationCount": 60,
     "predictionCount": 10,
     "generator": "scripts/build-index.mjs"
   },
@@ -9,13 +9,14 @@
     "byStatus": {
       "rigorous": 57,
       "non-viable": 1,
+      "stub": 1,
       "provisional": 1
     },
-    "derivationCount": 59,
+    "derivationCount": 60,
     "predictionCount": 10,
-    "edgeCount": 118,
+    "edgeCount": 122,
     "formalObjectCount": 862,
-    "openGapCount": 192,
+    "openGapCount": 195,
     "upgradeEligibleCount": 0,
     "leanVerifiedCount": 16,
     "leanTheoremCount": 64
@@ -374,6 +375,7 @@
         "spacetime/speed-of-light"
       ],
       "dependedOnBy": [
+        "cosmology/observer-loop-viability",
         "gauge/electromagnetism",
         "minimal-observer/structure",
         "spacetime/speed-of-light",
@@ -609,6 +611,10 @@
         "incoming": [
           {
             "source": "axioms/observer-definition",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
             "context": "Loop Closure"
           },
           {
@@ -1248,13 +1254,15 @@
         "cosmology",
         "blocked"
       ],
-      "summary": "Non-viable: the cosmological constant cannot be derived from the current framework — it depends on cosmological initial conditions that are boundary data, not derivable quantities",
-      "lastUpdated": "2026-03-10",
+      "summary": "Non-viable: the cosmological constant cannot be derived from the current framework — it depends on cosmological initial conditions that are boundary data, not derivable quantities. However, the ontic/epistemic status of 'initial conditions' is murkier than this suggests, and observer-existence constraints may narrow the space of viable solutions.",
+      "lastUpdated": "2026-03-12",
       "dependsOn": [
         "spacetime/einstein-equations",
         "holography/area-scaling"
       ],
-      "enablesDerivation": [],
+      "enablesDerivation": [
+        "cosmology/observer-loop-viability"
+      ],
       "dependedOnBy": [],
       "steps": [],
       "formalObjects": [],
@@ -1286,6 +1294,14 @@
           }
         ],
         "incoming": [
+          {
+            "source": "cosmology/observer-loop-viability",
+            "context": "§Root Cause: The self-consistency loop"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
+            "context": "Cosmological Constant"
+          },
           {
             "source": "foundation/coherence-lagrangian",
             "context": "Cosmological Constant"
@@ -1674,6 +1690,99 @@
             "context": "Leptogenesis"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "cosmology/observer-loop-viability": {
+      "id": "cosmology/observer-loop-viability",
+      "filePath": "site/src/content/derivations/cosmology/observer-loop-viability.md",
+      "title": "Observer Loop Viability Bounds",
+      "status": "stub",
+      "rigorLevel": "informal",
+      "group": "cosmology",
+      "tags": [
+        "cosmology",
+        "quantum-gravity"
+      ],
+      "summary": "Investigate whether the structural requirements of Axioms 2 and 3 (observer loops must close with Lyapunov stability) restrict which spacetimes can host valid observer DAGs, yielding constraints on the cosmological constant and potentially its sign",
+      "lastUpdated": "2026-03-12",
+      "dependsOn": [
+        "spacetime/singularity-resolution",
+        "holography/area-scaling",
+        "minimal-observer/structure",
+        "axioms/loop-closure"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [],
+      "formalObjects": [],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Lyapunov stability in expanding spacetime",
+          "description": "The existing loop closure analysis assumes flat or slowly-varying backgrounds. Extending to de Sitter requires explicit treatment of cosmological expansion effects on phase cycling."
+        },
+        {
+          "number": 2,
+          "title": "Observer survival through bounce",
+          "description": "Whether the Noether invariant I (Axiom 2) can be preserved through a Planck-density bounce is an open question that connects to the black hole information paradox resolution."
+        },
+        {
+          "number": 3,
+          "title": "Environmental coherence reservoir",
+          "description": "The \"observer needs a thermal bath\" argument for a tighter bound needs formalization — how much environment does Axiom 2's boundary B require?"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "cosmology/cosmological-constant",
+            "context": "§Root Cause: The self-consistency loop"
+          },
+          {
+            "target": "cosmology/cosmological-constant",
+            "context": "Cosmological Constant"
+          },
+          {
+            "target": "minimal-observer/structure",
+            "context": "Minimal Observer Structure"
+          },
+          {
+            "target": "spacetime/singularity-resolution",
+            "context": "Singularity Resolution"
+          },
+          {
+            "target": "thermodynamics/time",
+            "context": "Gap 3"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Holographic Entropy Bound"
+          },
+          {
+            "target": "thermodynamics/entropy",
+            "context": "Entropy"
+          },
+          {
+            "target": "thermodynamics/time",
+            "context": "Time as Phase Ordering"
+          }
+        ],
+        "incoming": []
       },
       "leanVerification": {
         "hasProofs": false,
@@ -5283,6 +5392,7 @@
       ],
       "dependedOnBy": [
         "cosmology/cosmological-constant",
+        "cosmology/observer-loop-viability",
         "holography/black-hole-entropy",
         "holography/causal-set-statistics",
         "holography/er-epr",
@@ -5465,6 +5575,10 @@
         "incoming": [
           {
             "source": "cosmology/cosmological-constant",
+            "context": "Holographic Entropy Bound"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
             "context": "Holographic Entropy Bound"
           },
           {
@@ -8214,6 +8328,7 @@
         "dimensions/three-dimensions"
       ],
       "dependedOnBy": [
+        "cosmology/observer-loop-viability",
         "dimensions/three-dimensions",
         "minimal-observer/multiplicity",
         "thermodynamics/time"
@@ -8380,6 +8495,10 @@
         "incoming": [
           {
             "source": "axioms/loop-closure",
+            "context": "Minimal Observer Structure"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
             "context": "Minimal Observer Structure"
           },
           {
@@ -12072,7 +12191,9 @@
         "holography/area-scaling"
       ],
       "enablesDerivation": [],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "cosmology/observer-loop-viability"
+      ],
       "steps": [
         {
           "number": 1,
@@ -12241,6 +12362,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "cosmology/observer-loop-viability",
+            "context": "Singularity Resolution"
+          },
           {
             "source": "spacetime/einstein-equations",
             "context": "Singularity Resolution"
@@ -14178,6 +14303,10 @@
             "context": "Entropy"
           },
           {
+            "source": "cosmology/observer-loop-viability",
+            "context": "Entropy"
+          },
+          {
             "source": "holography/area-scaling",
             "context": "Entropy as Inaccessible Coherence"
           },
@@ -14418,6 +14547,14 @@
         "incoming": [
           {
             "source": "axioms/coherence-conservation",
+            "context": "Time as Phase Ordering"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
+            "context": "Gap 3"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
             "context": "Time as Phase Ordering"
           },
           {
@@ -20777,6 +20914,27 @@
       "number": 5,
       "title": "Experimental test of non-convergence",
       "description": "The most distinctive prediction is non-convergence of couplings — the three curves alphai-1(mu) do not meet at a single point. Future precision measurements of alphas(MZ) and sin2thetaW(MZ), combined "
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "derivationStatus": "stub",
+      "number": 1,
+      "title": "Lyapunov stability in expanding spacetime",
+      "description": "The existing loop closure analysis assumes flat or slowly-varying backgrounds. Extending to de Sitter requires explicit treatment of cosmological expansion effects on phase cycling."
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "derivationStatus": "stub",
+      "number": 2,
+      "title": "Observer survival through bounce",
+      "description": "Whether the Noether invariant I (Axiom 2) can be preserved through a Planck-density bounce is an open question that connects to the black hole information paradox resolution."
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "derivationStatus": "stub",
+      "number": 3,
+      "title": "Environmental coherence reservoir",
+      "description": "The \"observer needs a thermal bath\" argument for a tighter bound needs formalization — how much environment does Axiom 2's boundary B require?"
     },
     {
       "derivationId": "dimensions/three-dimensions",
