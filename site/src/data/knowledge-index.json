@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-13T09:47:56.333Z",
+    "generatedAt": "2026-03-13T21:14:19.518Z",
     "derivationCount": 60,
     "predictionCount": 10,
     "generator": "scripts/build-index.mjs"
@@ -5782,8 +5782,8 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Deriving $\\alpha = 1/4$ from first principles",
-          "description": "The factor of 1/4 should be derivable purely from the coherence geometry without invoking the Schwarzschild solution. This likely requires the full mathematical formalization of the coherence Lagrangi"
+          "title": "A direct combinatorial route to $\\alpha = 1/4$",
+          "description": "The coefficient is currently established by the gravitational stability argument (Theorem 5.1), which uses the Schwarzschild geometry — itself derived from the axioms through the Einstein equations ch"
         },
         {
           "number": 2,
@@ -6042,8 +6042,8 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "The factor of $1/4$ from first principles.",
-          "description": "A purely combinatorial derivation from the coherence geometry, without invoking the Schwarzschild solution or Hawking temperature, would be stronger."
+          "title": "The factor of $1/4$ via a direct combinatorial route.",
+          "description": "The coefficient is currently established through the derivation chain: gravitational stability fixes the effective area per bit to 4ellP2 ([Holographic Entropy Bound](/derivations/holography/area-scal"
         },
         {
           "number": 2,
@@ -21765,8 +21765,8 @@
       "derivationId": "holography/area-scaling",
       "derivationStatus": "rigorous",
       "number": 1,
-      "title": "Deriving $\\alpha = 1/4$ from first principles",
-      "description": "The factor of 1/4 should be derivable purely from the coherence geometry without invoking the Schwarzschild solution. This likely requires the full mathematical formalization of the coherence Lagrangi"
+      "title": "A direct combinatorial route to $\\alpha = 1/4$",
+      "description": "The coefficient is currently established by the gravitational stability argument (Theorem 5.1), which uses the Schwarzschild geometry — itself derived from the axioms through the Einstein equations ch"
     },
     {
       "derivationId": "holography/area-scaling",
@@ -21800,8 +21800,8 @@
       "derivationId": "holography/black-hole-entropy",
       "derivationStatus": "rigorous",
       "number": 1,
-      "title": "The factor of $1/4$ from first principles.",
-      "description": "A purely combinatorial derivation from the coherence geometry, without invoking the Schwarzschild solution or Hawking temperature, would be stronger."
+      "title": "The factor of $1/4$ via a direct combinatorial route.",
+      "description": "The coefficient is currently established through the derivation chain: gravitational stability fixes the effective area per bit to 4ellP2 ([Holographic Entropy Bound](/derivations/holography/area-scal"
     },
     {
       "derivationId": "holography/black-hole-entropy",

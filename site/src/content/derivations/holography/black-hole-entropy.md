@@ -27,7 +27,7 @@ The Bekenstein-Hawking entropy formula is one of the most important results in t
 
 **Why this matters.** This provides a universal microstate-counting explanation that does not depend on a specific quantum gravity program (strings, loops, etc.). It also reveals that black hole entropy is observer-relative: an infalling observer, whose coherence domain extends into the interior, assigns a different (lower) entropy.
 
-**An honest caveat.** The derivation inherits the Planck-scale resolution postulate from the holographic entropy bound. A purely combinatorial derivation of the factor of one quarter, without invoking the Schwarzschild geometry, remains an open goal.
+**An honest caveat.** The derivation inherits the Planck-scale resolution postulate from the holographic entropy bound. The factor of one quarter is established through the derivation chain (gravitational stability in the holographic bound, confirmed by thermodynamic integration), but a purely combinatorial derivation from the coherence geometry alone — without routing through the Schwarzschild solution — remains an open goal.
 
 ## Statement
 
@@ -178,7 +178,7 @@ Key differences from standard approaches:
 
 ## Open Gaps
 
-1. **The factor of $1/4$ from first principles.** A purely combinatorial derivation from the coherence geometry, without invoking the Schwarzschild solution or Hawking temperature, would be stronger.
+1. **The factor of $1/4$ via a direct combinatorial route.** The coefficient is currently established through the derivation chain: gravitational stability fixes the effective area per bit to $4\ell_P^2$ ([Holographic Entropy Bound](/derivations/holography/area-scaling), Theorem 5.1), and thermodynamic integration independently confirms it (Proposition 5.1 above). Both routes use the Schwarzschild geometry, which is itself derived from the axioms. A purely combinatorial derivation from the coherence geometry alone — without routing through specific spacetime solutions — would provide a more direct connection to the axioms.
 2. **Interior structure.** What is the coherence structure inside the horizon? The discrete relational network should provide a model avoiding the classical singularity.
 3. **Rotating and charged black holes.** The framework should reproduce $S = A/(4\ell_P^2)$ for Kerr and Reissner-Nordström black holes, explaining why the result depends only on area regardless of spin or charge.
 4. **Entanglement entropy connection.** The mapping between relational invariant coherence $\mathcal{C}(I_{12})$ and entanglement entropy $S_E = -\text{Tr}(\rho \ln \rho)$ needs formalization.

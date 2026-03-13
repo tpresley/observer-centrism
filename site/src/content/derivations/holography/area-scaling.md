@@ -191,7 +191,7 @@ A key difference: in the framework, the holographic bound is not a statement abo
 
 ## Open Gaps
 
-1. **Deriving $\alpha = 1/4$ from first principles**: The factor of $1/4$ should be derivable purely from the coherence geometry without invoking the Schwarzschild solution. This likely requires the full mathematical formalization of the coherence Lagrangian.
+1. **A direct combinatorial route to $\alpha = 1/4$**: The coefficient is currently established by the gravitational stability argument (Theorem 5.1), which uses the Schwarzschild geometry — itself derived from the axioms through the Einstein equations chain. A purely combinatorial derivation from the coherence geometry alone, without routing through specific spacetime solutions, would provide a more direct connection. This likely requires the full mathematical formalization of the coherence Lagrangian.
 2. **Covariant generalization**: The derivation assumes a spatial region at a moment of time. A covariant formulation would bound the entropy on arbitrary spacelike surfaces — connecting to the Bousso covariant entropy bound.
 3. **Sub-Planckian structure**: The derivation assumes nothing meaningful happens below $\ell_P$. If the coherence geometry has sub-Planckian structure, the counting argument needs modification.
 4. **Dynamical boundaries**: For time-dependent regions (e.g., expanding cosmological horizons), the channel capacity argument must be adapted. The entropy bound should track the apparent horizon, not the event horizon.
