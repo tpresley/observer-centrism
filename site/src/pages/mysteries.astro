@@ -1,0 +1,378 @@
+---
+import MainLayout from '../components/layouts/MainLayout.astro'
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+
+interface Mystery {
+  title: string
+  question: string
+  answer: string
+  status: 'resolved' | 'open'
+  derivations: { id: string; title: string }[]
+  prediction?: { id: string; title: string }
+}
+
+const mysteries: Mystery[] = [
+  {
+    title: 'Why Three Generations of Matter?',
+    question: 'Why does matter come in three identical copies of increasing mass — electron, muon, tau — with no fourth family?',
+    answer: 'Three generations map to three independent winding axes in d = 3 spatial dimensions. Each axis supports one half-integer winding mode, partitioned by Voronoi decomposition of S\u00B2. A fourth generation is topologically forbidden.',
+    status: 'resolved',
+    derivations: [
+      { id: 'particles/three-generations', title: 'Three Generations' },
+      { id: 'dimensions/three-dimensions', title: 'Three Dimensions' },
+    ],
+    prediction: { id: 'no-fourth-generation', title: 'No Fourth Generation' },
+  },
+  {
+    title: 'Why These Particular Forces?',
+    question: 'Why does nature use the gauge group U(1) \u00D7 SU(2) \u00D7 SU(3) — and not some other combination?',
+    answer: 'The four normed division algebras (\u211D, \u2102, \u210D, \u2134) are forced by the bootstrap mechanism via Cayley\u2013Dickson doubling. Hurwitz\u2019s theorem terminates the sequence at the octonions (sedenions have zero divisors, violating coherence conservation). The Standard Model gauge group is the unique result.',
+    status: 'resolved',
+    derivations: [
+      { id: 'gauge/standard-model-group', title: 'SM Gauge Group' },
+      { id: 'interactions/bootstrap-division-algebras', title: 'Bootstrap \u2192 Division Algebras' },
+      { id: 'gauge/electromagnetism', title: 'Electromagnetism' },
+      { id: 'gauge/weak-interaction', title: 'Weak Interaction' },
+      { id: 'gauge/color-force', title: 'Color Force' },
+    ],
+    prediction: { id: 'coupling-non-convergence', title: 'Coupling Non-Convergence' },
+  },
+  {
+    title: 'The Measurement Problem',
+    question: 'What happens during quantum measurement? Why does the wave function appear to "collapse"?',
+    answer: 'Measurement is a Type III interaction that generates new relational invariants. "Collapse" is the creation of new relational structure between observer and system, not the destruction of superposition. The preferred measurement basis is determined by which invariants the interaction generates \u2014 no separate collapse postulate is needed.',
+    status: 'resolved',
+    derivations: [
+      { id: 'quantum/measurement', title: 'Measurement Problem' },
+      { id: 'quantum/preferred-basis', title: 'Preferred Basis' },
+      { id: 'quantum/born-rule', title: 'Born Rule' },
+    ],
+    prediction: { id: 'exact-unitarity', title: 'Exact Unitarity at All Scales' },
+  },
+  {
+    title: 'The Hierarchy Problem',
+    question: 'Why is the Higgs mass 17 orders of magnitude below the Planck scale? Is there extraordinary fine-tuning?',
+    answer: 'The mass hierarchy arises from logarithmically organized crystallization scales in the bootstrap mechanism. Large mass ratios are exponentials of small coupling ratios, not fine-tuning. The Higgs mass is protected by the bootstrap hierarchy\u2019s logarithmic structure.',
+    status: 'resolved',
+    derivations: [
+      { id: 'particles/mass-hierarchy', title: 'Mass Hierarchy' },
+      { id: 'gauge/electroweak-breaking', title: 'Electroweak Breaking' },
+    ],
+  },
+  {
+    title: 'Matter\u2013Antimatter Asymmetry',
+    question: 'Why is the universe made of matter rather than equal parts matter and antimatter?',
+    answer: 'The three Sakharov conditions are structural consequences: SU(2) sphalerons violate baryon number, chiral gauge coupling provides C and CP violation, and sequential bootstrap crystallization ensures departure from thermal equilibrium. The specific mechanism is leptogenesis via Majorana neutrino decays.',
+    status: 'resolved',
+    derivations: [
+      { id: 'cosmology/baryogenesis', title: 'Baryogenesis' },
+      { id: 'cosmology/leptogenesis', title: 'Leptogenesis' },
+    ],
+    prediction: { id: 'neutrino-nature', title: 'Majorana Neutrinos' },
+  },
+  {
+    title: 'Dark Matter',
+    question: 'What is dark matter? Why does it interact gravitationally but not electromagnetically?',
+    answer: 'The relational invariant network, modeled as a Poisson-sprinkled causal set, predicts dark matter density fluctuations with a quantum Jeans mass from loop closure pressure \u2014 not thermal free-streaming. The power spectrum has a distinctive Gaussian cutoff distinguishable from warm or fuzzy dark matter.',
+    status: 'resolved',
+    derivations: [
+      { id: 'holography/causal-set-statistics', title: 'Causal Set Statistics' },
+      { id: 'particles/mass-hierarchy', title: 'Mass Hierarchy' },
+    ],
+    prediction: { id: 'dark-matter-granularity', title: 'Dark Matter Granularity' },
+  },
+  {
+    title: 'Dark Energy',
+    question: 'Why is the expansion of the universe accelerating? What sets the cosmological constant\u2019s tiny value?',
+    answer: 'The framework derives the existence of a cosmological constant (via Lovelock\u2019s theorem) and explains why there is no vacuum catastrophe (coherence is fundamentally finite). However, the value depends on cosmological initial conditions \u2014 boundary data the axioms do not constrain. This is the one mystery the framework honestly cannot resolve.',
+    status: 'open',
+    derivations: [
+      { id: 'cosmology/cosmological-constant', title: 'Cosmological Constant' },
+      { id: 'spacetime/einstein-equations', title: 'Einstein Equations' },
+    ],
+  },
+  {
+    title: 'The Arrow of Time',
+    question: 'Why does time flow in one direction when the fundamental laws are time-symmetric?',
+    answer: 'Time is the partial ordering on the interaction graph induced by directed phase transfer. Coherence transfer has strictly positive cost, making the interaction graph a directed acyclic graph. The arrow of time is not a boundary condition but a structural consequence \u2014 the second law follows from bounded observation.',
+    status: 'resolved',
+    derivations: [
+      { id: 'thermodynamics/time', title: 'Time as Phase Ordering' },
+      { id: 'thermodynamics/entropy', title: 'Entropy' },
+    ],
+  },
+  {
+    title: 'The Black Hole Information Paradox',
+    question: 'Is information destroyed when matter falls into a black hole and it evaporates?',
+    answer: 'Information (coherence) is globally conserved but locally inaccessible. The paradox dissolves when entropy is recognized as observer-indexed. Hawking radiation arises from coherence-dual pair production at the horizon, and the ER=EPR duality is exact \u2014 relational invariants underlie both quantum correlations and spacetime geometry.',
+    status: 'resolved',
+    derivations: [
+      { id: 'holography/information-paradox', title: 'Information Paradox' },
+      { id: 'holography/er-epr', title: 'ER=EPR Formalization' },
+      { id: 'holography/hawking-radiation', title: 'Hawking Radiation' },
+      { id: 'holography/black-hole-entropy', title: 'Black Hole Entropy' },
+    ],
+    prediction: { id: 'holographic-noise', title: 'Holographic Noise' },
+  },
+  {
+    title: 'Why Quantum Mechanics?',
+    question: 'Why is nature described by complex amplitudes and probability = |amplitude|\u00B2? Could the rules be different?',
+    answer: 'The Born rule is the unique probability measure consistent with coherence conservation and U(1) phase structure. Unitarity, no-cloning, and no-deleting follow from conservation of distinguishability. Quantum mechanics is not postulated but emerges as the unique consistent framework for observers with loop closure and coherence conservation.',
+    status: 'resolved',
+    derivations: [
+      { id: 'quantum/born-rule', title: 'Born Rule' },
+      { id: 'thermodynamics-ext/distinguishability-conservation', title: 'Conservation of Distinguishability' },
+      { id: 'quantum/entanglement', title: 'Entanglement' },
+    ],
+    prediction: { id: 'exact-unitarity', title: 'Exact Unitarity' },
+  },
+  {
+    title: 'Quantum Gravity',
+    question: 'How do you reconcile quantum mechanics with general relativity at the Planck scale?',
+    answer: 'Gravity is coherence geometry curvature: the metric responds to relational invariant density (a theorem, not a postulate). The Einstein equations are self-consistency conditions. At the Planck scale, the discrete relational network resolves all classical singularities \u2014 the Big Bang becomes a coherence bounce, black hole singularities become regular cores.',
+    status: 'resolved',
+    derivations: [
+      { id: 'spacetime/gravity', title: 'Gravity' },
+      { id: 'spacetime/einstein-equations', title: 'Einstein Equations' },
+      { id: 'spacetime/singularity-resolution', title: 'Singularity Resolution' },
+      { id: 'holography/area-scaling', title: 'Holographic Entropy Bound' },
+    ],
+    prediction: { id: 'holographic-noise', title: 'Holographic Noise' },
+  },
+  {
+    title: 'The Fine-Tuning Problem',
+    question: 'Why do the constants of nature appear exquisitely tuned for complexity? Are they free parameters?',
+    answer: 'The apparent free parameters are constrained by algebraic structure. Coupling constant ratios follow from algebraic normalization of the division algebras. The Weinberg angle is fixed by the \u2102 \u2282 \u210D embedding. The mass hierarchy is logarithmically organized. There is nothing to fine-tune because the parameters are structurally determined.',
+    status: 'resolved',
+    derivations: [
+      { id: 'cosmology/coupling-constants', title: 'Coupling Constants' },
+      { id: 'gauge/weinberg-angle', title: 'Weinberg Angle' },
+      { id: 'particles/mass-hierarchy', title: 'Mass Hierarchy' },
+      { id: 'thermodynamics-ext/renormalization', title: 'Renormalization Group' },
+    ],
+    prediction: { id: 'coupling-non-convergence', title: 'Coupling Non-Convergence' },
+  },
+  {
+    title: 'The Strong CP Problem',
+    question: 'Why is the QCD vacuum angle \u03B8 effectively zero, when nothing in the Standard Model requires it?',
+    answer: 'The octonionic origin of SU(3) constrains the topological vacuum structure. Non-associativity of the octonions restricts the instanton tunneling that would generate a \u03B8-term, forcing \u03B8 = 0 exactly. No axion is needed.',
+    status: 'resolved',
+    derivations: [
+      { id: 'gauge/strong-cp', title: 'Strong CP Conservation' },
+      { id: 'interactions/bootstrap-division-algebras', title: 'Bootstrap \u2192 Division Algebras' },
+    ],
+    prediction: { id: 'no-axion', title: 'No QCD Axion' },
+  },
+  {
+    title: 'Why 3+1 Dimensions?',
+    question: 'Why does space have three dimensions and time have one? Could it be different?',
+    answer: 'Four independent structural conditions on observer boundaries converge uniquely on d = 3: stable orbits, non-trivial topology, the fundamental group condition \u03C0\u2081(SO(d)) = \u2124\u2082, and Hodge duality. The single time dimension follows from the interaction graph\u2019s partial ordering being inherently one-dimensional.',
+    status: 'resolved',
+    derivations: [
+      { id: 'dimensions/three-dimensions', title: 'Three Dimensions' },
+      { id: 'thermodynamics/time', title: 'Time as Phase Ordering' },
+    ],
+  },
+  {
+    title: 'Why Something Rather Than Nothing?',
+    question: 'Why does anything exist at all? Could there be a universe with no matter?',
+    answer: 'A single isolated observer has zero coherence content and is structurally impossible. The axioms are inconsistent with a vacuum (zero observers). At least two mutually defining observers must coexist \u2014 a non-empty universe is the only consistent state.',
+    status: 'resolved',
+    derivations: [
+      { id: 'minimal-observer/multiplicity', title: 'Multiplicity Is Necessary' },
+      { id: 'minimal-observer/coherence-dual-pairs', title: 'Coherence-Dual Pairs' },
+    ],
+  },
+]
+
+const resolvedCount = mysteries.filter(m => m.status === 'resolved').length
+const openCount = mysteries.filter(m => m.status === 'open').length
+---
+
+<MainLayout title="Mysteries of Physics">
+  <h1>Mysteries of Physics</h1>
+  <p>
+    The deepest open questions in fundamental physics &mdash; and what
+    three axioms have to say about each one. Every answer links to its
+    full derivation chain.
+  </p>
+
+  <div class="my-summary">
+    <div class="my-stat my-stat-resolved">
+      <div class="my-stat-value">{resolvedCount}</div>
+      <div class="my-stat-label">Resolved</div>
+    </div>
+    <div class="my-stat my-stat-open">
+      <div class="my-stat-value">{openCount}</div>
+      <div class="my-stat-label">Open</div>
+    </div>
+  </div>
+
+  <div class="my-cards">
+    {mysteries.map(m => (
+      <div class={`my-card ${m.status === 'open' ? 'my-card-open' : ''}`}>
+        <div class="my-card-header">
+          <span class={`my-badge my-badge-${m.status}`}>
+            {m.status === 'resolved' ? 'Resolved' : 'Open'}
+          </span>
+          <h2 class="my-title">{m.title}</h2>
+        </div>
+        <p class="my-question">{m.question}</p>
+        <p class="my-answer">{m.answer}</p>
+        <div class="my-links">
+          {m.derivations.map(d => (
+            <a href={`${base}/derivations/${d.id}`} class="my-deriv-link">
+              {d.title}
+            </a>
+          ))}
+          {m.prediction && (
+            <a href={`${base}/predictions/${m.prediction.id}`} class="my-pred-link">
+              Prediction: {m.prediction.title}
+            </a>
+          )}
+        </div>
+      </div>
+    ))}
+  </div>
+</MainLayout>
+
+<style>
+  .my-summary {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .my-stat {
+    flex: 0;
+    min-width: 100px;
+    padding: 0.75rem 1.25rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    text-align: center;
+  }
+  .my-stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .my-stat-resolved .my-stat-value {
+    color: var(--color-rigorous);
+  }
+  .my-stat-open .my-stat-value {
+    color: var(--color-non-viable);
+  }
+  .my-stat-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 0.04em;
+  }
+
+  .my-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .my-card {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    background: var(--color-surface);
+  }
+  .my-card-open {
+    border-color: color-mix(in srgb, var(--color-non-viable) 30%, var(--color-border));
+  }
+
+  .my-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .my-badge {
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.15rem 0.5rem;
+    border-radius: 9999px;
+    flex-shrink: 0;
+  }
+  .my-badge-resolved {
+    background: color-mix(in srgb, var(--color-rigorous) 12%, transparent);
+    color: var(--color-rigorous);
+  }
+  .my-badge-open {
+    background: color-mix(in srgb, var(--color-non-viable) 12%, transparent);
+    color: var(--color-non-viable);
+  }
+
+  .my-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: var(--color-text);
+  }
+
+  .my-question {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0 0 0.6rem;
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  .my-answer {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0 0 0.75rem;
+    color: var(--color-text);
+  }
+
+  .my-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .my-deriv-link,
+  .my-pred-link {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+
+  .my-deriv-link {
+    background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+    color: var(--color-accent);
+  }
+  .my-deriv-link:hover {
+    background: color-mix(in srgb, var(--color-accent) 20%, transparent);
+  }
+
+  .my-pred-link {
+    background: color-mix(in srgb, var(--color-rigorous) 10%, transparent);
+    color: var(--color-rigorous);
+  }
+  .my-pred-link:hover {
+    background: color-mix(in srgb, var(--color-rigorous) 20%, transparent);
+  }
+
+  @media (max-width: 768px) {
+    .my-card {
+      padding: 1rem 1.15rem;
+    }
+    .my-title {
+      font-size: 0.95rem;
+    }
+  }
+</style>
