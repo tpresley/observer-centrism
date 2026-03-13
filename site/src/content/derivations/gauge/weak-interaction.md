@@ -23,6 +23,26 @@ leanProofs:
       - "hurwitz_imaginary_units"
 ---
 
+## Overview
+
+This derivation addresses the question: **why does the weak nuclear force exist, and why does it only affect left-handed particles?**
+
+Electromagnetism arises from a single phase channel -- one direction in which an observer's internal clock can wind. But we live in three spatial dimensions, which means observers must maintain coherence along three independent axes simultaneously. This changes everything.
+
+**The argument.** The derivation builds on a century-old mathematical result:
+
+- Three spatial dimensions mean three independent phase channels -- one per axis of rotation.
+- These channels cannot operate independently, because rotations in three dimensions do not commute (rotating around one axis then another gives a different result than the reverse order).
+- This non-commutativity forces the phase algebra to be the quaternions -- a four-dimensional number system discovered in 1843 that extends the complex numbers. Hurwitz's theorem (1898) proves the quaternions are the unique algebra with these properties.
+- The symmetry group of the unit quaternions is SU(2), which is precisely the gauge group of the weak interaction. The same localization argument that produces electromagnetism then yields the weak gauge field and its Yang-Mills equations.
+- The quaternionic structure also connects to spin: SU(2) is the double cover of the rotation group SO(3), unifying the weak force and spinor physics at their algebraic root.
+
+**The result.** The weak SU(2) gauge symmetry, its three gauge bosons, their self-interaction, and the Yang-Mills field equations all follow from the requirement of three-dimensional phase coherence. The framework also provides the structural basis for chirality (why the weak force distinguishes handedness) through the two winding classes of the rotation group.
+
+**Why this matters.** The weak force is not an arbitrary addition to physics but an algebraic necessity of living in three spatial dimensions. The same Hurwitz theorem that selects quaternions here also constrains the entire gauge hierarchy, placing a ceiling on how many forces can exist.
+
+**An honest caveat.** This derivation establishes the gauge structure but not the symmetry breaking that gives W and Z bosons their masses (that requires electroweak breaking). The weak coupling constant and Weinberg angle remain free parameters at this stage.
+
 ## Statement
 
 **Theorem.** In three spatial dimensions, the requirement that observers maintain phase coherence simultaneously along three orthogonal axes forces the phase algebra to be quaternionic ($\mathbb{H}$). The group of unit quaternions is $SU(2)$, which by the same localization argument as [Electromagnetism](/derivations/gauge/electromagnetism) (Theorem 2.1) introduces a local $SU(2)$ gauge connection $W^a_\mu$ ($a = 1, 2, 3$). The curvature of this connection is the weak field strength $W^a_{\mu\nu}$, and the field equations are the Yang-Mills equations — uniquely determined by Lorentz covariance, gauge invariance, and second-order locality. The $\mathbb{Z}_2$ winding classes from [Spin and Statistics](/derivations/particles/spin-statistics) provide a topological distinction between left- and right-handed spinors, giving the structural basis for chiral coupling.

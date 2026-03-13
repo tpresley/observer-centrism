@@ -10,6 +10,26 @@ sourceSection: "02-axioms"
 lastUpdated: 2026-03-08
 ---
 
+## Overview
+
+This derivation answers a deceptively simple question: **what is an observer?**
+
+Most physical theories either leave "observer" undefined or restrict it to conscious beings with measuring devices. This axiom takes a different approach: an observer is defined purely by what it does, not what it is made of. The definition applies equally to an electron, a cell, and a galaxy.
+
+**The argument.** An observer is any system that simultaneously maintains three things:
+
+- A **state space** -- the set of internal configurations it can occupy. This is its "inner life," the range of states available to it.
+- A **conserved invariant** -- a quantity that persists unchanged as the observer's internal state evolves. This is its identity, the thing that makes it the same observer over time.
+- A **self/non-self boundary** -- a partition between transformations that preserve the observer's identity and those that threaten it. This is what separates the observer from everything else.
+
+The definition also requires non-triviality: the symmetry group cannot be trivial (the observer must have real internal structure), threats must exist (nothing is immune to everything), and the invariant must carry genuine information (not just a constant).
+
+**The result.** Observers form a mathematical category, meaning they can be compared, composed, and classified using the tools of abstract algebra. An observer morphism is a structure-preserving map between two observers that respects both their invariants and their symmetries.
+
+**Why this matters.** By making "observer" a precise mathematical object rather than a vague philosophical concept, everything that follows -- dynamics, interactions, spacetime, particles -- can be derived rather than assumed. The framework applies at every scale because the definition is structural, not material.
+
+**An honest caveat.** Calling this triple an "observer" is a deliberate choice to emphasize the framework's perspective, but nothing in the mathematics requires consciousness or awareness. The formal definition is closer to "persistent self-distinguishing system" than to anything colloquial.
+
 ## Statement
 
 **Axiom 2 (Observer Definition).** An observer is any structure $\mathcal{O} = (\Sigma, I, \mathcal{B})$ in the coherence space $(\mathcal{H}, \mathcal{A}, \mathcal{C})$ that simultaneously maintains an invariant, draws a self/non-self distinction, and satisfies non-triviality conditions. This is a functional definition — it specifies what observers *do*, not what they are made of.

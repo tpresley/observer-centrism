@@ -10,6 +10,25 @@ sourceSection: "06-geometry"
 lastUpdated: 2026-03-12
 ---
 
+## Overview
+
+This derivation answers a question that has puzzled physicists since Newton: **what is gravity, really?**
+
+Newton described gravity as a force pulling masses together. Einstein reframed it as the curvature of spacetime. This derivation goes further: it shows why spacetime curves in the first place. The answer is that gravity is the geometric expression of non-uniform coherence distribution.
+
+**The argument.** The coherence measure defines a metric — a way of measuring distances and times — via the Fisher information geometry. When observers are present, the coherence structure changes locally, and this change is reflected in the spacetime metric. The derivation establishes:
+
+- A massive observer creates a gradient in the relational invariant density around it, falling off as the inverse square of distance (a consequence of flux conservation in three spatial dimensions).
+- This density gradient curves the coherence geometry, modifying how loops close at different positions. Clocks tick slower in stronger gravitational fields because the coherence cost per cycle changes.
+- Physical trajectories follow geodesics — paths of minimum coherence cost — which curve toward regions of higher density. This is what we experience as gravitational attraction.
+- The equivalence principle (all objects fall the same way regardless of composition) is structural: geodesics depend only on the geometry, not on the properties of the object following them.
+
+**The result.** Gravity is not a force and not an independent postulate. It is the inevitable geometric consequence of observers curving the coherence geometry they inhabit. The Schwarzschild metric (describing gravity around a spherical mass) emerges as the unique spherically symmetric vacuum solution.
+
+**Why this matters.** The metric-density coupling — the fact that matter curves spacetime — was originally stated as a structural postulate of the framework. It has since been promoted to a theorem, derived from the action duality linking spacetime geometry to the coherence Hessian. This derivation now requires no structural postulates.
+
+**An honest caveat.** The coupling constant (Newton's gravitational constant G) remains an empirical parameter. Whether it can be derived from the framework's other constants is an open question.
+
 ## Statement
 
 **Theorem.** A massive observer generates a relational invariant density gradient in the surrounding coherence geometry. This gradient curves the geometry: the local loop closure condition is modified, geodesics (paths of minimum coherence cost) curve toward higher density, and the equivalence principle follows structurally. The Schwarzschild metric is the unique spherically symmetric vacuum solution.

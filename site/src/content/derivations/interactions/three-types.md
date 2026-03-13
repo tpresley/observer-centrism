@@ -10,6 +10,24 @@ sourceSection: "04-interaction-bootstrap"
 lastUpdated: 2026-03-09
 ---
 
+## Overview
+
+This derivation answers a classification question: **when two observers interact, what are the possible outcomes?**
+
+In standard physics, interactions are categorized by force type (electromagnetic, weak, strong, gravitational). Here, the classification is more fundamental -- it is based on what happens to the conserved quantities (invariants) of the two observers involved, regardless of which force mediates the interaction.
+
+**The argument.** The derivation constructs an exhaustive decision tree:
+
+- After an interaction, each observer's invariant either survives or is destroyed. This gives a two-by-two table of possibilities.
+- Coherence conservation eliminates the cases where invariants are destroyed without replacement -- the coherence must go somewhere.
+- The surviving cases split into exactly three types based on what changes in the joint system: (1) only phase is exchanged, (2) the observers merge into a composite, or (3) both observers persist but a new relational invariant is created between them.
+
+**The result.** Every interaction between two observers falls into exactly one of three types: Passage (phase transfer, like scattering), Fusion (merging into a bound state), or Resonance (creating a new relational structure, like entanglement). No fourth type exists. The classification is exhaustive and the types are mutually exclusive.
+
+**Why this matters.** This three-way classification is the kinematic foundation for the entire interaction chain. The bootstrap mechanism (which generates complexity) depends specifically on Type III (Resonance) interactions. The proof that all three types are necessary prevents the universe from being trivially static.
+
+**An honest caveat.** This classification tells you *what can happen*, not *how often* or *at what energy*. The dynamics -- which type occurs and with what probability -- requires the Born rule and the full quantum formalism, which are derived elsewhere.
+
 ## Statement
 
 **Theorem.** When two observers interact, the outcome is fully classified by what happens to each observer's invariant. There are exactly **three** physically distinct interaction types: Passage (Type I), Fusion (Type II), and Resonance (Type III). This classification is exhaustive — no other interaction type exists.

@@ -10,6 +10,26 @@ sourceSection: "12-quantum-mechanics"
 lastUpdated: 2026-03-12
 ---
 
+## Overview
+
+This derivation addresses one of quantum mechanics' most famous puzzles: **what is entanglement, really, and why does it violate Bell inequalities?**
+
+Entanglement -- the phenomenon Einstein called "spooky action at a distance" -- describes quantum correlations between separated particles that are stronger than any classical explanation allows. Standard quantum mechanics treats entanglement as a feature of the formalism (states in a tensor product space that cannot be factored), but offers no deeper explanation for why nature works this way.
+
+**The argument.** The framework reframes entanglement as shared coherence between observers:
+
+- When two observers interact, they can form a "relational invariant" -- a conserved quantity that depends on both of them jointly and cannot be split into separate contributions.
+- In the Hilbert space language (derived from the Born rule), this joint dependence is precisely what makes a quantum state entangled rather than separable.
+- The amount of shared coherence exactly equals the entanglement entropy -- the standard measure of how entangled two systems are.
+- The no-cloning theorem follows because cloning would require creating coherence from nothing, violating conservation.
+- Entanglement monogamy (sharing entanglement with one partner limits what you can share with another) follows from the subadditivity of coherence -- there is only so much coherence to go around.
+
+**The result.** Entanglement is the Hilbert-space expression of shared coherence between observers. It is not mysterious action at a distance but the natural consequence of two observers sharing a conserved resource that cannot be divided into independent pieces.
+
+**Why this matters.** By grounding entanglement in coherence conservation, the framework explains not just what entanglement is but why it has the specific properties it does -- monogamy, no-cloning, and the entropy measure all emerge from a single underlying principle.
+
+**An honest caveat.** The identification of relational coherence with von Neumann entropy relies on the Shannon-Khinchin uniqueness theorem, which pins down the functional form. The deeper question of why coherence satisfies these axioms is answered by the foundational axioms themselves, but the chain of reasoning is long.
+
 ## Statement
 
 **Theorem.** Relational invariants between observers ([Relational Invariants](/derivations/interactions/relational-invariants)) map to entangled quantum states in the tensor product Hilbert space derived from coherence conservation ([Born Rule](/derivations/quantum/born-rule)). The coherence measure of the relational invariant equals the von Neumann entanglement entropy of the reduced state. The no-cloning theorem and entanglement monogamy follow as direct consequences of coherence conservation (Axiom 1) and coherence subadditivity.

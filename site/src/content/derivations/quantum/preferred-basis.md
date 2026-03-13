@@ -10,6 +10,24 @@ sourceSection: "12-quantum-mechanics"
 lastUpdated: 2026-03-09
 ---
 
+## Overview
+
+This derivation confronts a foundational puzzle in quantum mechanics: **what determines which measurement outcomes are possible in a given experiment?**
+
+Quantum mechanics tells us how to compute probabilities via the Born rule, but the rule only works once you know the measurement basis -- the set of possible outcomes. A spin can be measured along any axis, and each choice gives different probabilities. The theory itself does not say which axis is "the" measurement axis. This is the preferred basis problem, and it sits at the heart of the measurement problem.
+
+**The approach.** The framework resolves this by tying the measurement basis to the specific physical interaction between observer and system:
+
+- Every measurement interaction generates a conserved quantity -- a relational invariant -- that encodes what the observer learns about the system.
+- This conserved quantity, being a self-adjoint operator, has a unique set of eigenstates (by the spectral theorem).
+- The measurement outcomes are exactly these eigenstates: the states in which the conserved quantity takes a definite value.
+
+**The result.** The measurement basis is not a property of the system alone but of the observer-system interaction. Different experimental setups generate different conserved quantities, hence different bases. Complementarity (the impossibility of simultaneously measuring position and momentum, for example) arises because different interactions can generate non-commuting conserved quantities. Environmental decoherence is recovered as the macroscopic limit where many interactions collectively select a unique classical basis.
+
+**Why this matters.** The preferred basis problem is one of the core obstacles to a complete interpretation of quantum mechanics. This derivation resolves it structurally: the basis is determined by the physics of the interaction, not by an ad hoc choice or an appeal to consciousness. The framework also sharpens decoherence -- standard decoherence describes approximate suppression of interference, while here the basis selection is exact.
+
+**An honest caveat.** The derivation relies on a structural postulate identifying the framework's abstract relational invariants with the conserved quantities of the interaction Hamiltonian. This identification is physically natural but not derived from the axioms alone.
+
 ## Statement
 
 **Theorem.** The preferred basis for measurement outcomes is the eigenbasis of the relational invariant generated in the Type III interaction between observer and system. This basis is the unique one in which the relational invariant takes definite values — the coherence-stable states. Different interaction configurations generate different relational invariants, hence different measurement bases. This resolves the basis problem structurally, with environmental decoherence recovered as the macroscopic limit.

@@ -23,6 +23,20 @@ leanProofs:
       - "evaporation_coeff"
 ---
 
+## Overview
+
+This derivation addresses a remarkable prediction: **why do black holes radiate, and why is the radiation thermal?**
+
+Classically, nothing escapes a black hole. But quantum effects change the picture. The event horizon tears apart virtual observer loops that straddle the boundary -- one half falls in, the other escapes outward as radiation. This is Hawking radiation, and here it is derived as a direct consequence of the framework's axioms rather than from quantum field theory in curved spacetime.
+
+**The argument.** The horizon prevents any observer loop from closing across it. The loop closure axiom demands that every loop must close, and coherence conservation forbids the coherence from simply vanishing. The only consistent resolution is pair production: the broken loop splits into two independent loops, one completing its cycle inside the horizon and the other outside. The outgoing member is the Hawking quantum. Because the horizon is a maximum-entropy surface, the radiation emerges with a thermal (Planck) spectrum at a temperature set by the horizon's surface gravity.
+
+**The result.** The Hawking temperature is inversely proportional to the black hole's mass -- smaller black holes burn hotter. A solar-mass black hole radiates at a temperature billions of times colder than the cosmic microwave background, making it undetectable in practice. Over immense timescales, the radiation carries away energy and the black hole slowly evaporates.
+
+**Why this matters.** Hawking radiation connects gravity, quantum mechanics, and thermodynamics in a single phenomenon. It directly sets up the black hole information paradox: if the radiation is purely thermal, where did the information about what fell in go?
+
+**An honest caveat.** The quantitative results (temperature, evaporation rate) match the standard semiclassical calculation, but the framework does not yet resolve the trans-Planckian problem -- the behavior of modes blue-shifted to energies beyond the Planck scale near the horizon.
+
 ## Statement
 
 **Theorem.** Minimal observer loops straddling a black hole horizon cannot close — the horizon prevents the outward-directed part of the loop from returning. The loop closure axiom (Axiom 3) and coherence conservation (Axiom 1) together force a resolution: a coherence-dual pair is produced at the horizon. One member falls inward; the other propagates outward as Hawking radiation. The outgoing radiation has a thermal (Planck) spectrum at the Hawking temperature $T_H = \hbar\kappa/(2\pi c k_B)$, where $\kappa$ is the surface gravity. The thermal character follows from the maximal-entropy nature of the horizon state.

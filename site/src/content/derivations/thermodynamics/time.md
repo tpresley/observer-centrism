@@ -10,6 +10,25 @@ sourceSection: "05-time-entropy-action"
 lastUpdated: 2026-03-09
 ---
 
+## Overview
+
+This derivation addresses a foundational question: **is time a built-in feature of reality, or does it emerge from something deeper?**
+
+In standard physics, time is either a background stage on which events play out (Newton) or a component of a geometric structure called spacetime (Einstein). Either way, it is assumed, not explained. Here, time is derived. It falls out of the axioms without being put in.
+
+**The approach.** Every observer cycles periodically through its internal states, like a tiny clock. When observers interact, they transfer phase to one another along directed connections -- and that direction cannot be reversed, because reversing it would violate the positivity of coherence cost. These directed connections form a network of events, and the ordering relationships within that network constitute time.
+
+- Phase transfer between events is always forward (positive cost prevents backward flow).
+- The resulting event network has no loops -- it is a directed acyclic graph.
+- The "before and after" relation on this graph is a partial order, which is exactly what time is operationally.
+- Different observers trace different paths through the graph, giving rise to observer-dependent time rates.
+
+**The result.** Time is a partial ordering on interaction events, not a pre-existing parameter. The arrow of time points in the direction of increasing relational structure -- a structural fact, not a statistical tendency.
+
+**Why this matters.** This dissolves the long-standing puzzle of why time has a direction. The arrow of time is not about entropy or initial conditions -- it is built into the causal architecture of the observer network itself.
+
+**An honest caveat.** The connection from this discrete partial order to the smooth spacetime of general relativity relies on a conjecture from causal set theory (the Hauptvermutung) that is well-supported but not fully proved.
+
 ## Statement
 
 **Theorem.** Time is not a background parameter. It is the **partial order** on interaction events induced by directed phase transfer across the observer network. The arrow of time is the direction of relational invariant accumulation — a structural consequence of coherence conservation, not a statistical tendency.

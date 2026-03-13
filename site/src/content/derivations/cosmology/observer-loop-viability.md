@@ -9,6 +9,24 @@ rigorLevel: "semi-formal"
 lastUpdated: 2026-03-13
 ---
 
+## Overview
+
+This derivation asks a surprisingly deep question: **which universes can actually contain observers?**
+
+The framework's axioms require that observers have specific structural properties -- a state space, a conserved quantity, a boundary between self and non-self, and a stable phase loop. Not every spacetime can support structures satisfying these requirements. This derivation works out what the axioms demand of the cosmological constant, the parameter controlling the large-scale fate of the universe.
+
+**The approach.** Three results follow from the axioms:
+
+- An observer must physically fit within the causally accessible region of spacetime. In a universe with too large a cosmological constant, the horizon shrinks below the Planck length, and no observer -- not even the simplest possible one -- can exist. This gives a Planck-scale upper bound.
+- In a universe with a negative cosmological constant, space eventually recollapses to Planck density. At that point, all observer structures are destroyed: there is no phase space for loop closure, no gradient to distinguish self from non-self, and the effective pressure diverges. Since the framework says coherence can only reside in observer structures (there is no background reservoir), destroying all observers violates coherence conservation. The recollapse is axiomatically forbidden.
+- The 120-order gap between the Planck-scale bound and the observed value is reframed through the second law of thermodynamics: the horizon entropy dominates the coherence budget in an old universe, and the ratio of structural coherence to total coherence is simply the matter fraction of the universe -- a thermodynamic inevitability, not a fine-tuned coincidence.
+
+**The result.** The cosmological constant must be non-negative. The Planck-scale upper bound establishes the principle that the axioms constrain which solutions of Einstein's equations are physically realized. The hierarchy is qualitatively explained by entropy growth.
+
+**Why this matters.** This is not anthropic reasoning ("observers like us must exist"). It is axiomatic selection: the mathematical requirements of the three axioms exclude certain spacetimes entirely. The sign prediction is a genuine, falsifiable consequence of coherence conservation.
+
+**An honest caveat.** The upper bound is 120 orders of magnitude above the observed value -- it establishes a principle, not a tight constraint. Closing the quantitative gap requires understanding the minimum coherence content needed for stable observer loops, which remains the key open question.
+
 ## Statement
 
 **Theorem (Observer-Loop Viability Bounds).** The three axioms constrain which spacetimes can host observer triples. Specifically:

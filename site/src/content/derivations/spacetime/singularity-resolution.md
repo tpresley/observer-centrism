@@ -9,6 +9,25 @@ rigorLevel: "formal"
 lastUpdated: 2026-03-12
 ---
 
+## Overview
+
+This derivation confronts one of the most dramatic predictions of general relativity: **do singularities — points of infinite density and curvature — actually exist?**
+
+Classical general relativity predicts that singularities are unavoidable. The Penrose-Hawking theorems prove that under very general conditions, spacetime must contain points where curvature becomes infinite and the laws of physics break down. The Big Bang is one such singularity; the center of every black hole is another. This derivation shows that the framework resolves all of them.
+
+**The argument.** The resolution rests on a single key fact: the discrete structure of the relational invariant network imposes a minimum length scale (the Planck length), below which no observer loop can close. This leads to a chain of consequences:
+
+- Curvature is bounded. Since curvature is computed from second derivatives of the metric, and derivatives on a discrete network become finite differences with a minimum step size, curvature cannot exceed a Planck-scale maximum.
+- The Penrose-Hawking singularity theorems are evaded by contraposition. If curvature is bounded, the theorems' conclusion (infinite curvature) is false. Therefore, at least one premise must fail. The premise that fails is the energy condition: near Planck density, loop closure pressure generates an effective repulsive force that violates the assumptions driving singularity formation.
+- The Big Bang is replaced by a bounce. In a contracting universe approaching Planck density, the repulsive pressure halts contraction and initiates expansion. The universe did not emerge from nothing — it bounced from a prior contracting phase.
+- Black hole interiors reach maximum density at a finite radius, forming a regular core rather than a point of infinite curvature.
+
+**The result.** Singularities do not form. The Big Bang was a bounce at Planck density, and black holes have regular interiors with bounded curvature. The leading-order modified cosmological equations agree with those independently derived in loop quantum cosmology.
+
+**Why this matters.** Singularity resolution is often discussed speculatively, but this derivation achieves it through a model-independent logical argument: bounded curvature plus the Penrose-Hawking theorems, via pure contraposition, force the energy conditions to fail near Planck density. No specific model of quantum gravity is assumed.
+
+**An honest caveat.** The qualitative conclusion (no singularities, bounces occur) is robust, but the detailed structure of the bounce and the black hole interior depend on higher-order corrections that have not yet been derived from the framework's coherence Lagrangian.
+
 ## Statement
 
 **Theorem.** The framework's discrete spacetime structure resolves all classical singularities by providing a natural minimum length scale. Specifically:

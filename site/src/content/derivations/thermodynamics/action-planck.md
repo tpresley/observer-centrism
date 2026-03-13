@@ -10,6 +10,27 @@ sourceSection: "05-time-entropy-action"
 lastUpdated: 2026-03-09
 ---
 
+## Overview
+
+This derivation answers a foundational question in physics: **why is there a smallest unit of action, and why does it have the value it does?**
+
+Planck's constant is the tiny number that separates classical from quantum physics. It sets the scale at which energy comes in discrete packets, particles behave as waves, and the uncertainty principle kicks in. In standard physics, it is a measured constant with no deeper explanation -- a number we read off experiments.
+
+**The argument.** The framework derives Planck's constant from the geometry of observer loops:
+
+- Every observer maintains itself by cycling through its states, and this cycling costs coherence -- the "action" of the cycle.
+- The simplest possible observer (a single phase oscillator on a circle) has a minimum cycle cost, determined by the geometry of the coherence space. This minimum cost is Planck's constant.
+- No observer can complete a cycle for less than this cost, because the circle is not contractible -- you cannot shrink a loop around it to nothing.
+- The Planck-Einstein relation (energy equals frequency times Planck's constant) follows directly: the coherence allocated to an observer, divided by its cycle time, gives its frequency.
+- The principle of stationary action (the backbone of classical mechanics) emerges from constructive interference of coherence phases along paths.
+- The Heisenberg uncertainty principle follows from the Fourier relationship between phase and charge on the observer's loop.
+
+**The result.** Planck's constant is the coherence cost of the minimal observer's cycle -- the irreducible price of existence for the simplest possible self-maintaining system. It is not a free parameter but a structural feature of the coherence geometry.
+
+**Why this matters.** This connects the abstract axiom of loop closure to the physical constant that governs all of quantum mechanics. The quantum of action, the stationary action principle, and the uncertainty principle all emerge from a single geometric fact about observer loops.
+
+**An honest caveat.** The derivation requires one structural postulate: that the coherence measure is smooth enough to define a well-behaved metric on state space. Computing the numerical value of Planck's constant from first principles remains an open problem.
+
 ## Statement
 
 **Theorem.** Action is the coherence cost of a transformation in the coherence geometry. Planck's constant $\hbar$ is the minimum coherence cost of one observer cycle — the irreducible quantum of action, fixed by the compactness of the minimal observer's state space. The principle of stationary action and the Heisenberg uncertainty principle both follow from this identification.

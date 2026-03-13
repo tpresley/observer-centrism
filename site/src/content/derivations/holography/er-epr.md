@@ -10,6 +10,25 @@ sourceSection: "10-holography"
 lastUpdated: 2026-03-12
 ---
 
+## Overview
+
+This derivation establishes a deep unification: **are quantum entanglement and wormholes the same thing?**
+
+The ER=EPR conjecture, proposed by Maldacena and Susskind in 2013, suggests that every pair of entangled particles is connected by a tiny wormhole (Einstein-Rosen bridge). Here this is not a conjecture but a theorem -- both phenomena are different descriptions of the same underlying object, the relational invariant connecting two observers.
+
+**The argument.** When two observers interact and then separate, they share a relational invariant -- a conserved correlation that persists regardless of distance. This single object has two faces:
+
+- **The quantum face (EPR).** The relational invariant maps to an entangled quantum state. Its coherence content equals the entanglement entropy.
+- **The geometric face (ER).** The same coherence, concentrated along the channel between the observers, curves spacetime through the Einstein equations, producing a non-traversable wormhole whose throat area is exactly four Planck areas times the entanglement entropy.
+
+The wormhole cannot be used to send messages, for the same reason that entanglement cannot: the throat is exactly saturated by the coherence it carries, leaving no room for independent signals.
+
+**The result.** ER=EPR is exact, not approximate. Entanglement entropy equals throat area (in Planck units divided by four). No-signaling and non-traversability are dual expressions of the same constraint. Entanglement monogamy translates directly into topological constraints on wormhole branching.
+
+**Why this matters.** This unifies the quantum and gravitational descriptions of correlated systems. It provides the structural backbone for the information paradox resolution and connects to the holographic noise prediction.
+
+**An honest caveat.** One row of the correspondence table -- the identification of Schmidt coefficients with the quasi-normal mode spectrum of the wormhole throat -- remains conjectural, motivated by AdS/CFT but not yet derived within the framework.
+
 ## Statement
 
 **Theorem (ER=EPR Correspondence).** For any two observers $\mathcal{O}_1, \mathcal{O}_2$ sharing a relational invariant $I_{12}$, the coherence channel associated with $I_{12}$ has dual descriptions:

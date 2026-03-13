@@ -15,6 +15,23 @@ leanProofs:
       - "schwarzschild_area_coeff"
 ---
 
+## Overview
+
+This derivation answers a striking question: **why does the maximum information a region can hold scale with its surface area, not its volume?**
+
+In everyday experience, the amount of stuff you can pack into a box grows with its volume. But at the fundamental level, there is a hard limit on how much information any region can contain, and that limit is set by the area of the region's boundary, measured in tiny Planck-scale tiles. This is the holographic principle, and here it is derived rather than assumed.
+
+**The argument.** Two independent lines of reasoning converge on the same result:
+
+- **Boundary counting.** An external observer can only learn about a region's interior through signals crossing the boundary. Each crossing requires a minimal observer loop occupying one Planck-scale tile. Each tile carries exactly one bit. So the boundary area, measured in Planck units, caps the total information.
+- **Channel capacity plus gravitational stability.** The boundary has a maximum rate at which it can transmit information outward. Requiring that the region not collapse into a black hole during readout pins down the precise coefficient: one bit per four Planck areas.
+
+**The result.** Maximum entropy equals the boundary area divided by four Planck areas. Black holes saturate this bound -- they are the densest possible information stores.
+
+**Why this matters.** This is the foundation for the entire holography chain: black hole entropy, Hawking radiation, the information paradox, and the holographic noise prediction all rest on this bound.
+
+**An honest caveat.** The derivation relies on one structural postulate (that the Planck length is the actual resolution limit of the coherence geometry), which is dimensionally unique but not constructively derived from the axioms alone.
+
 ## Statement
 
 **Theorem.** The maximum entropy of a spatial region bounded by area $A$ is:

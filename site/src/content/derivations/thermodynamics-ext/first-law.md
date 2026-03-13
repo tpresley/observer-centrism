@@ -9,6 +9,24 @@ rigorLevel: "formal"
 lastUpdated: 2026-03-10
 ---
 
+## Overview
+
+This derivation shows that the first law of thermodynamics -- **energy is conserved** -- is not a separate physical principle but a direct consequence of coherence conservation.
+
+The first law states that changes in a system's internal energy equal the heat added minus the work done. It is one of the most tested and trusted laws in all of science. But thermodynamics textbooks typically present it as an empirical generalization. Here it is derived from a single axiom.
+
+**The approach.** The derivation identifies energy with coherence and decomposes energy exchange into two channels based on the framework's interaction classification:
+
+- Work corresponds to Type I interactions (phase passage), where coherence is transferred without creating new correlations. These exchanges preserve entropy.
+- Heat corresponds to Type III interactions (resonance), where new relational invariants are generated. These exchanges generically increase entropy.
+- Total coherence is conserved (Axiom 1), so the change in internal coherence equals what comes in as heat minus what goes out as work.
+
+**The result.** The first law follows as an accounting identity once coherence conservation and the interaction type decomposition are in place. The derivation also recovers the zeroth law (transitivity of thermal equilibrium), the Clausius relation connecting heat and entropy, and standard thermodynamic temperature -- all without additional postulates.
+
+**Why this matters.** Energy conservation is often treated as a foundational assumption. Showing it follows from a deeper principle (coherence conservation) unifies energy conservation with information-theoretic constraints and reveals the structural origin of the work-heat distinction.
+
+**An honest caveat.** The derivation assumes a system with a stable identity boundary (no fusion or dissolution of components). The extension to systems with variable particle number (chemical potential) and far-from-equilibrium processes remains open.
+
 ## Statement
 
 **Theorem.** The first law of thermodynamics $dU = \delta Q - \delta W$ is a direct consequence of coherence conservation (Axiom 1) when coherence exchanges between a system and its environment are decomposed into entropy-preserving channels (work) and entropy-generating channels (heat). The decomposition is structurally determined by the [Three Interaction Types](/derivations/interactions/three-types) classification. No structural postulates beyond the three axioms are required.

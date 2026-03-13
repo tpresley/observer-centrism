@@ -19,6 +19,24 @@ leanProofs:
       - "wedge_self_zero"
 ---
 
+## Overview
+
+This derivation answers a deceptively simple question: **why can't two identical electrons occupy the same quantum state?**
+
+The Pauli exclusion principle is one of the most consequential rules in physics. It explains why atoms have shell structure, why the periodic table exists, why matter is rigid rather than collapsing, and why white dwarf stars can resist gravitational collapse. In standard quantum mechanics, the principle is either postulated directly or derived from quantum field theory. Here it emerges from pure algebra.
+
+**The approach.** The argument is short and decisive:
+
+- From the spin-statistics derivation, identical fermions (particles with half-integer spin) have wavefunctions that pick up a minus sign when two particles are exchanged.
+- If two fermions are in the same state, swapping them changes nothing -- the state is identical before and after.
+- But antisymmetry demands a minus sign. A quantity that equals both itself and its own negative must be zero.
+
+**The result.** The exclusion principle is not an independent law but an algebraic identity: antisymmetry plus same-state exchange equals zero. The derivation extends to show that at most d identical fermions can coexist in a d-dimensional state space, producing atomic shell structure and degeneracy pressure.
+
+**Why this matters.** The stability of all ordinary matter -- atoms, molecules, stars -- rests on this single algebraic fact. The derivation shows that this stability is not a contingent feature of our universe's laws but a necessary consequence of the topological classification of particle types in three spatial dimensions.
+
+**An honest caveat.** The algebraic core is a tautology of linear algebra. The substantive physics enters through the upstream spin-statistics connection, which establishes the antisymmetry. This derivation packages the consequence; the heavy lifting is in the spin-statistics derivation.
+
 ## Statement
 
 **Theorem.** Two identical fermions cannot occupy the same quantum state. This is not an additional postulate but an algebraic consequence of the antisymmetry of fermionic relational invariants (from [Spin and Statistics](/derivations/particles/spin-statistics)): if $I_{12}$ is antisymmetric under exchange and the exchange is trivial (same state), then $I_{12} = 0$ — the configuration is coherence-forbidden.

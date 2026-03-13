@@ -10,6 +10,25 @@ sourceSection: "02-axioms"
 lastUpdated: 2026-03-08
 ---
 
+## Overview
+
+This derivation answers a foundational question: **what is the most primitive thing that must be true for observers to exist at all?**
+
+Before we can talk about what observers are or how they behave, we need a conserved quantity -- something that cannot be created from nothing or destroyed into nothing. Without such a quantity, the entire framework has no ground to stand on. We call this quantity "coherence."
+
+**The argument.** Coherence is formalized as a kind of bookkeeping system with specific rules:
+
+- Every subsystem carries a non-negative amount of coherence (you cannot have negative existence).
+- The total coherence across all of reality is fixed -- it never increases or decreases.
+- Combining two systems gives you at most the sum of their individual coherences, never more. This "subadditivity" means there is no free coherence to be gained by merging.
+- Conservation holds across every "slice" of the causal dependency graph -- a time-free statement that does not presuppose a clock.
+
+**The result.** Coherence behaves like a conserved currency of existence. Observers can redistribute it through interactions, but the total ledger always balances. When two systems share coherence beyond what simple addition would predict, that excess is "relational coherence" -- the irreducible connection between them.
+
+**Why this matters.** This axiom plays the role that energy conservation plays in standard physics, but for a more primitive quantity. Everything downstream -- observer identity, dynamics, interactions, and eventually all of physics -- is built on this conservation law.
+
+**An honest caveat.** The word "coherence" is doing heavy lifting here. The formal object is a subadditive measure on a mathematical structure called a sigma-algebra, with conservation stated on directed acyclic graphs. The intuition of a "conserved currency" is helpful but cannot capture the full algebraic content, particularly the distinction between subadditivity and strong subadditivity.
+
 ## Statement
 
 **Axiom 1 (Coherence Conservation).** There exists a primitive quantity $\mathcal{C}$, called **coherence**, defined on the partitions of a coherence space $\mathcal{H}$. The total coherence is globally conserved: it is invariant under all admissible transformations and constant across all slices of the dependency graph. Coherence cannot be created, destroyed, or exported — the ontology is closed.

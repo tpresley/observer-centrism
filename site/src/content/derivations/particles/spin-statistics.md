@@ -27,6 +27,24 @@ leanProofs:
       - "dim_spin_2"
 ---
 
+## Overview
+
+This derivation answers a question that puzzled physicists for decades: **why are there exactly two kinds of particles, and why does a particle's spin determine its collective behavior?**
+
+Every known particle is either a boson (like photons, which can pile up in the same state) or a fermion (like electrons, which refuse to share). Bosons always have integer spin (0, 1, 2...) while fermions always have half-integer spin (1/2, 3/2...). Standard physics proves this connection using the full machinery of quantum field theory, but the deep reason remains obscure.
+
+**The argument.** The framework traces both properties to a single topological fact about three-dimensional space:
+
+- An observer's orientation loop in 3D space belongs to one of exactly two topological classes, because the rotation group SO(3) has a two-element fundamental group. A loop either can or cannot be continuously shrunk to a point.
+- Swapping two identical particles is topologically the same as rotating one around the other by a full turn. This means the swap phase is determined by the same two-class structure.
+- The representations of the rotation group split along exactly the same line: integer spin corresponds to contractible loops, half-integer spin to non-contractible ones.
+
+**The result.** Spin and statistics are two names for the same topological invariant. The "connection" between them is literally the identity map on a two-element set. In two dimensions, the topology is different (the fundamental group is infinite), and the derivation correctly predicts anyons -- particles with fractional statistics, as observed in the fractional quantum Hall effect.
+
+**Why this matters.** The spin-statistics theorem is usually presented as a deep consequence of relativistic quantum field theory. Here it becomes a transparent statement about the topology of three-dimensional rotations, directly rooted in the observer loop structure.
+
+**An honest caveat.** The non-technical summary omits the representation theory and configuration-space topology that make the argument precise. The word "topological" is doing heavy lifting -- the full derivation requires algebraic topology (fundamental groups, covering spaces) and Lie group representation theory.
+
 ## Statement
 
 **Theorem.** In three spatial dimensions, there are exactly two topological classes of observer loop, determined by $\pi_1(SO(3)) = \mathbb{Z}_2$. These two classes correspond to the two exchange statistics (symmetric and antisymmetric) and to the two spin classes (integer and half-integer). The spin-statistics connection is the identification of these two descriptions of the same topological invariant.

@@ -18,6 +18,25 @@ leanProofs:
       - "quaternion_noncommutativity"
 ---
 
+## Overview
+
+This derivation addresses one of the most striking puzzles in particle physics: **why does the weak force only act on left-handed particles?**
+
+Every other force in nature treats left-handed and right-handed particles identically. The weak force's maximal parity violation -- discovered in 1957 and still unexplained in the Standard Model -- is simply built in by hand. Here it is derived as an inevitable consequence of quaternionic algebra.
+
+**The argument.** The derivation uses no new assumptions beyond what is already established:
+
+- Quaternion multiplication has an inherent handedness. The rule "I times J equals K" defines a cyclic ordering of the three imaginary units. The opposite ordering gives "I times J equals negative K." Unlike complex numbers, where swapping the sign of i is harmless, these two quaternionic orientations are genuinely distinct -- non-commutativity makes the ordering matter.
+- For two observers to share a well-defined quaternionic relationship (a relational invariant), they must agree on this cyclic ordering. Mismatched orientations produce exactly zero quaternionic coherence -- not a small amount, but precisely zero.
+- Once any pair of observers locks in an orientation through their first quaternionic interaction, coherence conservation propagates this choice through the entire network. Every subsequently interacting observer must adopt the same convention. The choice is spontaneous (either orientation works equally well) but once made, it is universal and permanent.
+- This universal orientation selects one of the two copies of SU(2) in the Lorentz group decomposition -- corresponding to exactly one chirality of spinors.
+
+**The result.** The weak force couples to exactly one chirality, with the parity violation being maximal (exactly zero coupling to the other handedness). Meanwhile, electromagnetism remains vector-like because complex numbers are commutative, and the strong force remains vector-like because its SU(3) symmetry operates orthogonally to the quaternionic orientation.
+
+**Why this matters.** Parity violation is not an arbitrary feature of nature but an algebraic inevitability of non-commutative phase structure. The framework predicts it is exact at all energies -- there is no high-energy scale at which parity is restored, contrary to some beyond-Standard-Model proposals.
+
+**An honest caveat.** The derivation predicts that one chirality is selected but not which one (left versus right). The choice of "left" is spontaneous, like a coin flip at the birth of the universe. A CPT-conjugate universe would have right-handed weak interactions.
+
 ## Statement
 
 **Theorem.** The weak interaction couples to exactly one chirality (left-handed fermions in nature's convention) as a structural consequence of three facts:

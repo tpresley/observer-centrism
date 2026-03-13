@@ -9,6 +9,26 @@ rigorLevel: "formal"
 lastUpdated: 2026-03-10
 ---
 
+## Overview
+
+This derivation reveals a single principle hiding behind several seemingly independent laws of physics: **the total ability to tell things apart is conserved.**
+
+Unitarity (reversible dynamics), the no-cloning theorem (you cannot copy an unknown quantum state), the no-deleting theorem (you cannot erase an unknown quantum state), and the second law of thermodynamics (entropy increases) appear to be separate results from different areas of physics. This derivation shows they are all facets of one structural fact: coherence conservation preserves all measures of distinguishability between states.
+
+**The approach.** The argument builds from a single observation:
+
+- If an admissible (coherence-preserving) transformation cannot change any coherence value, then it cannot change any quantity derived from coherence values -- including every measure of how different two states are.
+- This immediately forces dynamics to be isometric (distance-preserving), which is unitarity.
+- Cloning would create correlations where none existed, increasing relational coherence in violation of conservation. So cloning is impossible.
+- Deleting would destroy correlations, decreasing relational coherence. So deleting is impossible.
+- For a bounded observer who cannot track all correlations, distinguishability monotonically degrades -- which is the second law.
+
+**The result.** Distinguishability is a conserved resource: it can be transferred but never created or destroyed by reversible processes, and it can only be lost (never gained) by irreversible ones. This also uniquely determines the geometry of state space to be the Fisher information metric, via a classical uniqueness theorem.
+
+**Why this matters.** Unifying unitarity, no-cloning, no-deleting, and the second law under one principle reveals a deep structural economy. These are not independent facts about nature but necessary consequences of a single conservation law applied to different settings.
+
+**An honest caveat.** The derivation shows that these results follow from coherence conservation, but the non-technical summary obscures the mathematical precision. In particular, the distinction between global conservation (exact, for reversible processes) and local degradation (the second law, for bounded observers) is subtle and important.
+
 ## Statement
 
 **Theorem.** Conservation of coherence (Axiom 1) implies conservation of distinguishability: every admissible transformation preserves all coherence-derived measures of difference between subsystems. This single principle entails:

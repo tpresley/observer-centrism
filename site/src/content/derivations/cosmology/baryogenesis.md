@@ -20,6 +20,24 @@ leanProofs:
       - "ckm_total_params"
 ---
 
+## Overview
+
+This derivation addresses a fundamental puzzle: **why is there any matter at all?**
+
+The Big Bang should have produced equal amounts of matter and antimatter, which would have annihilated each other completely, leaving nothing but radiation. Yet the universe is overwhelmingly made of matter. Explaining this asymmetry requires three conditions (identified by Sakharov in 1967): a process that violates the balance between matter and antimatter, a difference between the laws governing matter and antimatter, and a departure from thermal equilibrium so the asymmetry is not erased.
+
+**The argument.** Rather than introducing new physics, this derivation shows that all three Sakharov conditions are already consequences of previously derived results in the framework:
+
+- Baryon number violation comes from the topology of the weak force (the same quaternionic structure that gives rise to the weak interaction).
+- The matter/antimatter asymmetry in the laws of physics (C and CP violation) comes from the chiral nature of the weak force and, crucially, from the fact that there are exactly three generations of particles -- itself a consequence of space having three dimensions.
+- Departure from equilibrium comes from cosmological phase transitions driven by the bootstrap hierarchy.
+
+**The result.** A nonzero baryon asymmetry is a structural prediction of three-dimensional space: the chain runs from three spatial dimensions to three particle generations to CP violation to matter dominance. In a two-dimensional universe, there would be perfect matter-antimatter symmetry.
+
+**Why this matters.** The existence of matter is not an accident or a free parameter -- it is traced back to the dimensionality of space through a fully derived logical chain, with no new assumptions required.
+
+**An honest caveat.** The derivation is qualitatively rigorous, but the Standard Model mechanism alone produces far too little asymmetry (by about eight orders of magnitude). The quantitative shortfall is a known problem shared by all Standard Model baryogenesis approaches, and is addressed separately by the leptogenesis derivation.
+
 ## Statement
 
 **Theorem.** The observed baryon asymmetry of the universe $\eta_B \equiv n_B/n_\gamma \approx 6 \times 10^{-10}$ arises from three conditions (Sakharov, 1967), all of which are structural consequences of the framework:

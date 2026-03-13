@@ -10,6 +10,25 @@ sourceSection: "03-minimal-observer"
 lastUpdated: 2026-03-09
 ---
 
+## Overview
+
+This derivation answers a surprisingly deep question: **why does every particle in nature have an antiparticle?**
+
+The existence of antimatter is one of the most striking facts about physics. Every known particle -- the electron, the proton, every quark -- has a mirror-image partner with the same mass but opposite charge. When a particle meets its antiparticle, they annihilate. This pattern is universal, and standard physics treats it as an empirical discovery confirmed by experiment.
+
+**The argument.** The framework shows that antimatter is not an empirical surprise but a mathematical inevitability:
+
+- The multiplicity theorem (derived earlier) proves that observers must arise in pairs -- you cannot create just one from nothing.
+- Both members of the pair live in the same local geometry, so they must have the same internal frequency, and therefore the same mass.
+- Coherence conservation forces their charges to sum to zero -- if one carries charge +Q, the other must carry -Q.
+- Each member of the pair is the other's existential threat: the unique structure that could destroy the other's stability.
+
+**The result.** Every observer type necessarily has a conjugate "anti-type" with equal mass and opposite charges. This is exactly the particle-antiparticle structure observed in nature, derived here from the axioms rather than assumed.
+
+**Why this matters.** Antimatter becomes a structural theorem rather than a contingent fact. The derivation also explains why truly neutral particles (like the photon) are their own antiparticles: they carry zero charge, so their conjugate is identical to themselves.
+
+**An honest caveat.** This derivation establishes the qualitative structure -- equal masses, opposite charges, mutual annihilation -- but quantitative details like annihilation cross-sections require the full spacetime and interaction machinery developed in later derivations.
+
 ## Statement
 
 **Theorem.** The minimal observer pair — the simplest configuration satisfying all three axioms with non-trivial coherence content — has a specific structure forced by the axioms: both observers have equal rest frequency (hence equal mass), carry conjugate charges summing to zero, and coexist in stable mutual tension. This structure is precisely **particle-antiparticle pair production**.

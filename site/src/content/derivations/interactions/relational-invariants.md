@@ -10,6 +10,25 @@ sourceSection: "04-interaction-bootstrap"
 lastUpdated: 2026-03-09
 ---
 
+## Overview
+
+This derivation answers a central question about how complexity arises: **when two observers interact, what new structure is created?**
+
+In standard physics, conserved quantities like energy and momentum are associated with symmetries of the laws of nature (Noether's theorem). But this only runs one direction: symmetry implies conservation. This derivation runs the logic in reverse. When two observers interact and generate a new conserved quantity -- a "relational invariant" -- that new conserved quantity automatically creates a new symmetry and a new degree of freedom.
+
+**The approach.**
+
+- A relational invariant is a conserved quantity on the joint state space of two observers that cannot be reduced to a property of either one alone. Think of it as an irreducible relationship.
+- By the converse of Noether's theorem (rigorously established in symplectic geometry), every new conserved quantity generates a new continuous symmetry.
+- Each new symmetry creates a new degree of freedom, expanding the state space.
+- This expanded state space enables further interactions, seeding a cascade of growing complexity.
+
+**The result.** Every interaction that generates a relational invariant enlarges the symmetry group and state space of the joint system. The chain -- interaction produces invariant, invariant produces symmetry, symmetry produces new degree of freedom, new degree of freedom enables further interaction -- is the engine that drives the bootstrap from simple observers to the full structure of physics. Quantum entanglement is the paradigmatic example of a relational invariant.
+
+**Why this matters.** This mechanism explains how structure accumulates. It is not put in by hand -- it is generated dynamically through interactions, with each step creating the conditions for the next.
+
+**An honest caveat.** The derivation requires a structural postulate that the joint state space carries a symplectic form (the mathematical structure needed for the converse Noether theorem to apply). This is physically well-motivated but not derived from the three axioms alone.
+
 ## Statement
 
 **Theorem.** Type III interactions generate **relational invariants** — conserved quantities on the joint state space that are irreducible to properties of either component. By the converse of Noether's theorem, each new invariant corresponds to a new continuous symmetry, and each new symmetry licenses new degrees of freedom. This **reverse Noether mechanism** is how the framework generates structure from interactions.

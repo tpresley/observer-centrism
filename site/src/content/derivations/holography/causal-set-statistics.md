@@ -9,6 +9,23 @@ rigorLevel: "formal"
 lastUpdated: 2026-03-12
 ---
 
+## Overview
+
+This derivation addresses a deep question about the microstructure of reality: **what are the statistical properties of the discrete network underlying spacetime?**
+
+At the Planck scale, spacetime is not the smooth continuum we experience in everyday life. It is a discrete network of causal relations — events connected by cause-and-effect links. This derivation establishes the statistical character of that network and shows that two of the framework's primary experimental predictions flow from the same statistical source.
+
+**The argument.** The relational invariant network satisfies the mathematical axioms of a causal set — a discrete structure encoding "which events can influence which." The distribution of elements in this network must be Lorentz-invariant (no preferred reference frame at the Planck scale), and the unique distribution with this property is a Poisson process — a completely random sprinkling at the Planck density. From this single statistical fact, two predictions emerge:
+
+- **Holographic noise.** Random fluctuations in the number of causal elements along a path produce geodesic length uncertainty scaling as the square root of the path length times the Planck length. The holographic entropy bound fixes the amplitude coefficient to exactly one-quarter, yielding a precise prediction for the strain noise that a sufficiently sensitive interferometer would detect.
+- **Dark matter granularity.** The same Poisson fluctuations, at cosmological scales, impose a minimum mass scale for dark matter structure. Below this quantum Jeans mass, loop closure pressure prevents gravitational collapse. The resulting cutoff in the matter power spectrum has a distinctive Gaussian shape, steeper than the power-law cutoff predicted by warm dark matter models.
+
+**The result.** Both primary predictions of the framework — holographic noise and dark matter granularity — arise from the same Poisson statistics of the causal set, observed at different scales. The holographic noise amplitude is uniquely determined to be one-quarter, and the dark matter cutoff follows a Gaussian profile with a characteristic mass scaling as the dark matter particle mass to the negative three-halves power.
+
+**Why this matters.** This is the derivation that connects the framework's most abstract structures (Planck-scale causal networks) to its most concrete experimental predictions (interferometer noise spectra and galaxy formation thresholds). The fact that two seemingly unrelated predictions share a single statistical origin is a strong internal consistency check.
+
+**An honest caveat.** The qualitative cross-prediction linking holographic noise and dark matter granularity through their common Poisson origin is established, but the precise quantitative relationship between the two observables awaits a full dynamical treatment of the observer network.
+
 ## Statement
 
 **Theorem.** The relational invariant network, treated as a Poisson-sprinkled causal set at the Planck density, provides a unified statistical foundation for both primary predictions of the framework:

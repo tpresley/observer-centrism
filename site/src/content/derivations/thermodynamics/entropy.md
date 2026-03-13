@@ -10,6 +10,25 @@ sourceSection: "05-time-entropy-action"
 lastUpdated: 2026-03-09
 ---
 
+## Overview
+
+This derivation answers a question that has puzzled physicists since Boltzmann: **why does entropy always increase?**
+
+The standard account treats entropy increase as a statistical tendency -- overwhelmingly likely but not guaranteed, and requiring special initial conditions (the "past hypothesis") to get started. This derivation replaces that entire apparatus with a structural theorem that needs no statistics and no special initial conditions.
+
+**The approach.** Entropy is redefined as the coherence an observer cannot access. Every observer is bounded -- it can only "see" a finite portion of the universe's total coherence structure. Meanwhile, the universe continuously generates new relational structure beyond any observer's reach.
+
+- Total coherence is conserved (nothing is created or destroyed).
+- Every observer has a finite causal reach -- it cannot access everything.
+- New structure is constantly being generated throughout the universe, including in regions the observer cannot reach.
+- Therefore the gap between total coherence and accessible coherence can only grow.
+
+**The result.** Entropy increase is not a statistical tendency but a structural theorem: bounded observation plus conservation guarantees that inaccessible coherence never decreases. Crucially, the entropy of the entire universe relative to itself is always zero -- the second law is a statement about limited observers, not about the cosmos.
+
+**Why this matters.** This resolves the Loschmidt paradox (why entropy increases despite time-reversible dynamics) by locating the asymmetry in the observer's bounded perspective, not in the underlying laws. It also explains why different observers can assign different entropies to the same system -- entropy is fundamentally observer-relative.
+
+**An honest caveat.** The recovery of the standard Boltzmann formula requires an additional assumption of uniform coherence distribution, which is a special case of the more general framework.
+
 ## Statement
 
 **Theorem.** Entropy is observer-indexed: the entropy of a system $S$ relative to observer $A$ is the coherence of $S$ that lies outside $A$'s coherence domain. The second law of thermodynamics — $dS_A/d\tau \geq 0$ — follows from two structural facts: (1) coherence is globally conserved (Axiom 1), and (2) every physical observer is bounded (its coherence domain is a proper subset of the universe). No statistical assumptions, ergodic hypotheses, or special initial conditions are required.

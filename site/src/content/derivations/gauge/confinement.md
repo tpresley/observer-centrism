@@ -10,6 +10,23 @@ sourceSection: "08-gauge-sector"
 lastUpdated: 2026-03-12
 ---
 
+## Overview
+
+This derivation answers a deceptively simple question: **why are quarks never found alone?**
+
+Every experiment ever conducted has confirmed that quarks -- the building blocks of protons and neutrons -- are permanently trapped inside composite particles called hadrons. You can smash protons together at enormous energies, but you never knock a lone quark free. In the standard treatment, this "confinement" is observed in simulations but has no analytical proof (it is one of the Clay Millennium Prize problems).
+
+**The argument.** The framework traces confinement to the non-associativity of the octonion algebra -- the same mathematical structure that gives rise to the strong force. Non-associativity means that the order in which you group multiplications matters: (a times b) times c is not the same as a times (b times c). When a colored quark tries to travel through space, its quantum phase must be computed by chaining together many small transport steps, and the number of ambiguous groupings grows exponentially with distance. This "bracketing ambiguity" randomizes the quark's phase, making long-distance propagation impossible.
+
+- Color-neutral combinations (like a quark-antiquark pair or three quarks together) escape this problem because the singlet projection kills the ambiguity exactly.
+- At short distances, fewer than three segments are involved, so the ambiguity vanishes -- recovering the known phenomenon of asymptotic freedom.
+
+**The result.** Colored states experience an effective confining potential that grows linearly with separation, while color-neutral hadrons propagate freely. This matches the qualitative behavior seen in lattice simulations.
+
+**Why this matters.** Confinement explains why nuclear matter exists in the form it does -- why we see protons and neutrons rather than a soup of free quarks. The framework provides a structural reason rooted in the algebra of octonions, rather than leaving it as a brute computational fact.
+
+**An honest caveat.** This is a structural explanation for why confinement occurs, not a proof of the Yang-Mills mass gap. The quantitative string tension (how strong the confining force is) is characterized but not computed from first principles.
+
 ## Statement
 
 **Theorem.** The non-associativity of the octonion algebra $\mathbb{O}$, from which the color gauge group $SU(3)$ is derived ([Color Force](/derivations/gauge/color-force)), provides a structural mechanism for quark confinement. Colored states cannot be consistently transported over large distances because the octonionic parallel transport depends on how the path is decomposed into segments (the bracketing problem). Color-singlet states evade this obstruction because the invariant tensors of $SU(3)$ project out the associator. The result: only color-singlet hadrons — mesons ($q\bar{q}$), baryons ($qqq$), and their generalizations — can propagate as asymptotic states.

@@ -21,6 +21,25 @@ leanProofs:
       - "a5_conjugacy_class_sizes"
 ---
 
+## Overview
+
+This derivation addresses a long-standing puzzle in particle physics: **why do quarks and leptons "mix" between generations, and why do they mix by such different amounts?**
+
+In the Standard Model, the CKM matrix (quarks) and PMNS matrix (leptons) describe how the particles that feel the weak force are mixtures of the particles with definite masses. The mixing angles are measured experimentally but not explained. Here, the argument traces them to the geometry of the icosahedron.
+
+**The argument.** The derivation connects several geometric facts:
+
+- Three particle generations correspond to three independent rotation axes in three-dimensional space. The mass basis and the weak-interaction basis are determined by different physical mechanisms, so they generically point in different directions.
+- The coherence cost function on the space of three-axis configurations has a discrete symmetry. The largest non-abelian simple finite symmetry group consistent with three dimensions is the icosahedral group (60 rotations of the icosahedron).
+- When the mass hierarchy breaks this symmetry, different residual subgroups select the mass and weak bases. The mismatch between these residual symmetries determines the mixing matrix.
+- The icosahedron's geometry is governed by the golden ratio, which enters the prediction for the solar neutrino mixing angle.
+
+**The result.** Neutrinos mix strongly (large angles) because their masses are nearly degenerate -- the mass basis is "soft" and easily rotated by the weak interaction. Quarks mix weakly (small angles) because their masses span five orders of magnitude -- the mass basis is "rigid." The solar neutrino mixing angle is predicted near 31.7 degrees, compared to the observed 33.4 degrees.
+
+**Why this matters.** If the icosahedral symmetry is correct, the CP-violating phase in the PMNS matrix takes one of five discrete values rather than being a continuous free parameter. This is directly testable by the DUNE and Hyper-Kamiokande experiments.
+
+**An honest caveat.** The golden ratio prediction for the solar angle is about 2 degrees below the experimental value, and the specific choice of icosahedral symmetry is a structural postulate (S1) not yet derived from the axioms alone.
+
 ## Statement
 
 **Theorem.** The flavor mixing matrices (CKM for quarks, PMNS for leptons) arise from the geometric mismatch between two natural bases on the space of three particle generations:

@@ -19,6 +19,24 @@ leanProofs:
       - "ckm_three_gen_params"
 ---
 
+## Overview
+
+This derivation answers one of the oldest unanswered questions in particle physics: **why are there exactly three families of matter particles?**
+
+Nature organizes its fundamental fermions into three nearly identical copies -- called generations -- that differ only in mass. The electron, muon, and tau are the same particle in every respect except weight. Quarks follow the same pattern: up/charm/top and down/strange/bottom. The Standard Model accommodates three generations but offers no explanation for why the number is three rather than two, four, or seventeen.
+
+**The approach.** The framework traces the answer to the geometry of three-dimensional space:
+
+- Fermions are observer loops classified by their winding direction in the rotation group of three-dimensional space.
+- The rotation group in three dimensions has exactly three independent generators -- three independent axes of rotation.
+- Each generation corresponds to loops predominantly wound around one of these three axes. A fourth generation would require a fourth independent rotation axis, which does not exist.
+
+**The result.** The number of generations equals three because space has three dimensions. The mass hierarchy between generations arises from differing alignments between each generation's winding axis and the electroweak symmetry-breaking direction. The third generation is heaviest because it is most aligned. CP violation (the asymmetry between matter and antimatter processes) is geometrically unavoidable with three generations and impossible with fewer than three.
+
+**Why this matters.** The prediction is confirmed by precision measurements at LEP, which established exactly three light neutrino species. It also explains why CP violation requires at least three generations (the Kobayashi-Maskawa mechanism), connecting the generation count to the matter-antimatter asymmetry of the universe.
+
+**An honest caveat.** The identification of generations with dominant winding axes is a structural postulate -- it bridges the mathematical fact that the rotation algebra is three-dimensional with the physical observation of three particle families. The specific mixing angles and CP-violating phase are not yet computed from the winding geometry.
+
 ## Statement
 
 **Theorem.** The number of fermion generations equals the number of independent generators of $SO(3)$, which is $3$. Each generation corresponds to a class of half-integer winding loops whose dominant winding is aligned with one of the three independent rotation axes. The mass hierarchy between generations arises from the relative alignment between each generation's winding direction and the electroweak crystallization axis. There is no fourth generation.

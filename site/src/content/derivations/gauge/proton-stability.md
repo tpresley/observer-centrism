@@ -9,6 +9,23 @@ rigorLevel: "formal"
 lastUpdated: 2026-03-12
 ---
 
+## Overview
+
+This derivation addresses a question with profound consequences for the fate of matter: **will protons last forever?**
+
+Grand Unified Theories predict that protons should eventually decay, converting quarks into leptons through exotic gauge bosons. Massive experiments (Super-Kamiokande, with 50,000 tons of ultra-pure water monitored for decades) have searched for this decay and found nothing. The framework explains why.
+
+**The argument.** The proof rests on two structural pillars:
+
+- The division algebra hierarchy terminates at the octonions (Hurwitz's theorem). Since each gauge force arises from a specific division algebra, there is no "fifth algebra" that could generate a Grand Unified group containing the Standard Model. The three gauge factors are fundamental, not pieces of a larger whole. No gauge boson exists that could convert quarks into leptons.
+- The three coupling constants, when evolved to high energies using standard renormalization group equations, do not converge to a single value. There is no unification point, confirming that the product structure of the gauge group is exact rather than approximate.
+
+**The result.** Baryon number is an exact symmetry of the gauge structure. The only conceivable source of proton decay is through non-perturbative gravitational effects (virtual black holes), which are suppressed to give a proton lifetime exceeding ten to the sixty-fourth power years -- thirty orders of magnitude beyond current experimental reach.
+
+**Why this matters.** This is a sharp, falsifiable prediction. If any experiment ever observes proton decay, the framework's gauge structure is wrong. Conversely, continued null results from Hyper-Kamiokande and DUNE would progressively rule out Grand Unified Theories while remaining consistent with the framework.
+
+**An honest caveat.** The gravitational proton lifetime estimate is an order-of-magnitude calculation based on dimensional analysis. The precise value depends on unknown non-perturbative gravitational amplitudes, but the parametric scaling is robust. The prediction of absolute stability (up to gravitational effects) is the important structural claim.
+
 ## Statement
 
 **Theorem.** The proton is absolutely stable in the observer-centric framework. Baryon number $B$ is an exact symmetry of the gauge structure — not merely an accidental symmetry that could be violated at high energies. The proof rests on two pillars: (1) the Standard Model gauge group $U(1) \times SU(2) \times SU(3)$ is the complete gauge group (Hurwitz ceiling), with no embedding into a simple GUT group, and (2) the coupling constants do not converge to a single value at any energy scale. Therefore no gauge boson exists that could mediate $B$-violating transitions. The only possible $B$ violation comes from non-perturbative gravitational effects, suppressed by $(m_p/M_P)^4$, giving a predicted proton lifetime $\tau_p > 10^{64}$ years.

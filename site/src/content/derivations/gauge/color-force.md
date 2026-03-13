@@ -28,6 +28,26 @@ leanProofs:
       - "asymptotic_freedom_bound"
 ---
 
+## Overview
+
+This derivation answers the question: **where does the strong nuclear force come from, and why are quarks confined?**
+
+Electromagnetism uses complex numbers (two-dimensional). The weak force uses quaternions (four-dimensional). The pattern continues: the next level of the bootstrap hierarchy -- where groups of observers interact with already-interacting groups -- requires an eight-dimensional algebra. By Hurwitz's theorem, there is exactly one candidate: the octonions.
+
+**The argument.** The derivation follows a forced algebraic path:
+
+- The bootstrap hierarchy's third level demands a phase algebra beyond quaternions. The Cayley-Dickson construction (which builds each algebra by doubling the previous one) produces the octonions -- an eight-dimensional, non-associative algebra.
+- The symmetry group of the octonions is an exceptional group called G2 (14-dimensional). But the electroweak structure has already selected a preferred quaternionic subalgebra inside the octonions. The residual symmetry that preserves this chosen subalgebra is exactly SU(3) -- the color gauge group.
+- The same gauge-field machinery that produced Maxwell's equations and the weak Yang-Mills equations now produces eight gluon fields with self-interaction.
+- Crucially, the octonions are non-associative: the order in which you group multiplications matters. This means that transporting a "colored" phase along a path gives ambiguous results that depend on how the path is decomposed. Color-neutral combinations (like protons) evade this ambiguity. This is the algebraic root of confinement.
+- Hurwitz's theorem proves that no normed division algebra exists beyond the octonions, so no fourth gauge force can arise. The tower terminates here.
+
+**The result.** SU(3) color symmetry, eight gluon fields, asymptotic freedom, and a structural explanation for color confinement all emerge from the octonionic level of the division algebra hierarchy.
+
+**Why this matters.** The strong force is not independent from electromagnetism and the weak force -- all three are facets of a single algebraic structure (the octonions), progressively reduced by the electroweak symmetry. And the impossibility of a fourth force is a theorem, not an observation.
+
+**An honest caveat.** The confinement argument is structural (non-associativity obstructs colored-state transport) but does not constitute a rigorous proof of dynamical confinement or the mass gap -- that remains one of the Clay Millennium Prize problems. The strong coupling constant is a free parameter.
+
 ## Statement
 
 **Theorem.** The bootstrap hierarchy's third level requires an algebraic structure beyond quaternions. By the Cayley-Dickson construction and Hurwitz's theorem, the unique next step is the octonion algebra $\mathbb{O}$. The automorphism group of $\mathbb{O}$ is the exceptional Lie group $G_2$. When the electroweak structure selects a preferred quaternionic subalgebra $\mathbb{H} \subset \mathbb{O}$, the residual symmetry is the stabilizer $\text{Stab}_{G_2}(\mathbb{H}) \cong SU(3)$ — the color gauge group of the strong interaction. The resulting Yang-Mills equations for $SU(3)$ describe eight gluon fields with self-interaction, asymptotic freedom, and color confinement.

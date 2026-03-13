@@ -10,6 +10,25 @@ sourceSection: "12-quantum-mechanics"
 lastUpdated: 2026-03-09
 ---
 
+## Overview
+
+This derivation tackles one of the deepest puzzles in quantum mechanics: **why is probability equal to the square of the amplitude?**
+
+The Born rule -- the prescription that probability equals amplitude-squared -- is one of the most successful rules in all of physics, but in standard quantum mechanics it is simply postulated. No explanation is given for why nature squares the amplitude rather than cubing it or taking its absolute value. This derivation shows the squaring rule is the only possibility consistent with three structural constraints that follow from the axioms.
+
+**The argument.**
+
+- Probabilities cannot depend on the absolute phase of a quantum state (phase covariance), because only relationships between observers are physically real.
+- Probabilities must sum to one (normalization), because coherence is conserved.
+- Probabilities must be consistent when a measurement is broken into two stages (composition), because the interaction network has a well-defined structure.
+- These three constraints force a unique answer: probability equals amplitude-squared. No other function works.
+
+**The result.** The Born rule is not an additional postulate -- it is the unique probability assignment compatible with coherence conservation and the phase structure of observers. The derivation also shows that the Hilbert space structure of quantum mechanics (complex vector spaces with inner products) is itself forced by these same constraints.
+
+**Why this matters.** This removes the Born rule from the list of independent axioms of quantum mechanics, replacing it with a consequence of deeper principles. It also connects to Gleason's theorem, an independent mathematical result that confirms the uniqueness from a different direction.
+
+**An honest caveat.** The derivation requires a structural postulate identifying the coherence measure with the squared norm of Hilbert space. This identification is strongly motivated but not derived from the three axioms alone.
+
 ## Statement
 
 **Theorem.** The Born rule — $P(k) = |\psi_k|^2 = |\langle k | \psi \rangle|^2$ — is the **unique** probability assignment compatible with three constraints derived from the axioms: normalization (from coherence conservation), phase covariance (from the $U(1)$ loop structure), and the composition rule (from the interaction graph). Furthermore, the Hilbert space structure of the state space is itself forced by coherence conservation on $U(1)$-structured observers.

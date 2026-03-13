@@ -10,6 +10,24 @@ sourceSection: "13-cosmology"
 lastUpdated: 2026-03-12
 ---
 
+## Overview
+
+This derivation answers the question left open by baryogenesis: **if the standard mechanism produces far too little matter-antimatter asymmetry, what makes up the difference?**
+
+The baryogenesis derivation shows that all three Sakharov conditions are satisfied, but the CP violation from the quark mixing matrix alone falls short by eight orders of magnitude. This is not a framework-specific problem -- it is a well-known shortfall in all Standard Model baryogenesis scenarios. Leptogenesis resolves it.
+
+**The approach.** The framework predicts that neutrinos are Majorana particles (their own antiparticles), a consequence of the weak force's pseudo-real group structure. Heavy right-handed Majorana neutrinos, predicted at the electroweak scale, decay asymmetrically into matter and antimatter leptons thanks to CP-violating phases in the neutrino mixing matrix. This lepton asymmetry is then partially converted into a baryon asymmetry by sphaleron processes (the same topological transitions from the baryogenesis derivation).
+
+- The heavy neutrinos are predicted to have a compressed mass spectrum near the electroweak scale -- much lower than the conventional assumption of grand-unification-scale masses.
+- This compressed spectrum triggers resonant enhancement of the CP asymmetry, which can boost it by many orders of magnitude.
+- The sphaleron conversion factor (28/79) redistributes the lepton asymmetry into baryons.
+
+**The result.** Resonant leptogenesis at the electroweak scale comfortably produces the observed baryon-to-photon ratio of about six parts in ten billion. The mechanism is roughly one hundred million to one trillion times more efficient than CKM-only baryogenesis.
+
+**Why this matters.** The heavy Majorana neutrinos are predicted to be light enough for collider detection, making this a testable prediction. Same-sign dilepton signatures at the LHC and connections to neutrinoless double beta decay provide independent experimental cross-checks.
+
+**An honest caveat.** The derivation establishes that the observed asymmetry lies within the accessible parameter space, but does not pin down a unique predicted value. The precise prediction depends on the heavy neutrino mass splittings, which the framework constrains but does not fully determine.
+
 ## Statement
 
 **Theorem (Leptogenesis).** The Majorana neutrino mass mechanism ([Neutrino Masses](/derivations/particles/neutrino-masses)) combined with the PMNS CP phases ([Mixing Angles](/derivations/flavor/mixing-angles)) generates a baryon asymmetry through leptogenesis:

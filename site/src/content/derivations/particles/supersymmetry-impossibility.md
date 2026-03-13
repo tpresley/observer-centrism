@@ -9,6 +9,24 @@ rigorLevel: "formal"
 lastUpdated: 2026-03-12
 ---
 
+## Overview
+
+This derivation addresses a major open question in theoretical physics: **does supersymmetry exist in nature?**
+
+Supersymmetry (SUSY) posits that every boson has a fermionic partner and vice versa. It has been the leading candidate for physics beyond the Standard Model for decades, motivating enormous experimental efforts at the LHC. Despite extensive searches, no superpartners have been found. This derivation argues they never will be -- not because they are too heavy to detect, but because supersymmetry is topologically forbidden.
+
+**The approach.** The argument is topological rather than algebraic, which makes it stronger than previous no-go theorems:
+
+- In three spatial dimensions, particles come in exactly two types -- bosons and fermions -- classified by a discrete topological invariant with only two values.
+- A supersymmetry generator would need to continuously interpolate between these two types.
+- But a discrete invariant cannot be changed continuously. There is no path connecting the two classes, just as there is no way to continuously deform a coffee mug into a sphere without tearing.
+
+**The result.** No superpartner exists at any energy scale. This is not a dynamical statement about symmetry breaking but a topological impossibility -- it holds non-perturbatively and independently of energy, coupling constants, or any other details.
+
+**Why this matters.** Standard no-go theorems (Coleman-Mandula) actually allow supersymmetry as a special exception. This derivation closes that exception by operating at a deeper level: when particle types are classified topologically rather than algebraically, even graded symmetry algebras cannot bridge the gap. The prediction is starkly falsifiable -- any confirmed superpartner would refute it.
+
+**An honest caveat.** The argument depends on the framework's identification of spin as a topological invariant (homotopy class) rather than an algebraic quantum number (representation label). In the standard formulation, where spin is algebraic, supersymmetry remains mathematically consistent. The disagreement is about whether the physical classification is topological or algebraic.
+
 ## Statement
 
 **Theorem.** In $d = 3$ spatial dimensions, no continuous symmetry can relate bosons to fermions. Supersymmetry — a symmetry generator $Q$ mapping bosonic states to fermionic states and vice versa — is topologically forbidden. The two particle classes (integer spin and half-integer spin) are separated by a discrete topological invariant $\pi_1(SO(3)) = \mathbb{Z}_2$ that admits no continuous interpolation.

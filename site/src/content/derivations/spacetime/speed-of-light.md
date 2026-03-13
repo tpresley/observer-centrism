@@ -10,6 +10,26 @@ sourceSection: "06-geometry"
 lastUpdated: 2026-03-09
 ---
 
+## Overview
+
+This derivation answers a deceptively simple question: **why is there a maximum speed in the universe, and why is it the speed of light?**
+
+The speed of light is one of the most precisely measured constants in physics and one of the strangest. Nothing with mass can reach it, massless things must travel at exactly that speed, and it is the same for all observers regardless of their motion. In standard physics, this is postulated (Einstein's second postulate of special relativity) and confirmed by experiment, but not explained.
+
+**The argument.** The framework derives the speed of light from the loop closure condition:
+
+- Every observer's cycle must close in both time and space simultaneously -- the same phase loop that advances the observer through one temporal period also propagates through space.
+- This simultaneous closure fixes a ratio between spatial extent and temporal period: the distance covered in one cycle divided by the time of one cycle. That ratio is the speed of light.
+- The ratio must be the same for all observers, because if two observers had different phase propagation speeds, phase exchange between them would require the underlying geometry to be multivalued -- a contradiction.
+- The speed is finite because zero speed would mean no spatial extent (contradicting the requirement for boundaries) and infinite speed would mean zero cycle time (contradicting the positive cost of each cycle).
+- The Minkowski metric -- the geometry of special relativity with its characteristic sign difference between space and time -- emerges because increasing spatial traversal at fixed coherence cost necessarily decreases temporal traversal. Space and time compete for the same budget.
+
+**The result.** The speed of light is the universal phase propagation speed through the coherence geometry, structurally fixed by loop closure. It is not an arbitrary speed limit but the rate at which coherence information propagates through the observer network. The Minkowski metric of special relativity follows as a consequence.
+
+**Why this matters.** Special relativity's foundational constant is derived rather than postulated. The derivation also reveals that space and time are not independent dimensions but two projections of a single loop closure geometry, connected by the speed of light.
+
+**An honest caveat.** The derivation requires a structural postulate that the coherence geometry is pseudo-Riemannian (a smooth metric with a well-behaved quadratic form). The continuum limit from the discrete interaction graph to continuous spacetime relies on a standard conjecture in causal set theory.
+
 ## Statement
 
 **Theorem.** The loop closure condition requires an observer's cycle to close in both spatial and temporal projections simultaneously. This constraint fixes a universal ratio $c = L/T$ between spatial extent and temporal period for all observer loops, where $c$ is the phase propagation speed through the coherence geometry. The Minkowski metric signature $(+,-,-,-)$ emerges from the conjugate relationship between these projections. The speed of light is not an empirical constant — it is structurally determined by the coherence geometry.

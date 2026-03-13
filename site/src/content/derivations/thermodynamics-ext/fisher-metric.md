@@ -9,6 +9,24 @@ rigorLevel: "formal"
 lastUpdated: 2026-03-10
 ---
 
+## Overview
+
+This derivation answers a question about the geometry of knowledge: **what is the natural way to measure "distance" between observer states?**
+
+When an observer is in one state versus another, those states may be easy or hard to tell apart based on their observable consequences. This notion of distinguishability defines a geometry on the space of all possible states -- a precise mathematical structure that determines how "far apart" two states are in terms of how well they can be discriminated.
+
+**The approach.**
+
+- Each observer state produces a distribution of interaction outcomes. The state space, together with these distributions, forms what mathematicians call a statistical manifold.
+- On any statistical manifold, there is a natural distance measure called the Fisher information metric. A celebrated theorem by Cencov (1972) proves this is the unique metric (up to an overall scale) that respects a basic principle: coarse-graining (losing information) can never make two states appear more distinguishable than they actually are.
+- The derivation shows that the coherence geometry from earlier in the framework satisfies exactly this uniqueness condition, and that the scaling constant turns out to be Planck's constant.
+
+**The result.** The geometry of observer state space is uniquely determined by the requirement that information loss cannot create spurious distinguishability. This geometry is the Fisher information metric, scaled by Planck's constant. Action (the quantity minimized in physics) equals Planck's constant times the information-geometric distance traveled. The same geometry underlies the Fubini-Study metric of quantum mechanics.
+
+**Why this matters.** This reveals Planck's constant as a bridge between information geometry and physics -- it converts information-theoretic distance into physical action. It also explains why the specific geometry of quantum state space is what it is: it is the only geometry consistent with coherence conservation.
+
+**An honest caveat.** The structural postulate that observer states satisfy certain regularity conditions for information geometry is strongly motivated by the Born rule but not independently derived. Also, connecting the Fisher curvature on state space to the curvature of physical spacetime remains an open research direction.
+
 ## Statement
 
 **Theorem.** The space of coherence states of an observer forms a statistical manifold. By Čencov's theorem, the Fisher information metric is the unique (up to a single positive constant) Riemannian metric on this manifold that is invariant under sufficient statistics. This metric coincides with the Hessian metric $g$ of the Action-Planck derivation (Structural Postulate S1), with the scaling constant fixed as $\hbar$.

@@ -9,6 +9,26 @@ rigorLevel: "formal"
 lastUpdated: 2026-03-10
 ---
 
+## Overview
+
+This derivation answers a foundational question: **where does electromagnetism come from?**
+
+In the standard approach, Maxwell's equations are taken as given. Here they are derived from something more primitive: the phase structure of observers. Every observer in this framework cycles through an internal phase, like a clock hand sweeping around a dial. This phase is described by the simplest kind of rotation -- a circle, or what mathematicians call U(1).
+
+**The argument.** The derivation proceeds through a chain of forced steps:
+
+- Each observer has its own internal phase, but physics depends only on phase *differences* between observers (absolute phase is meaningless).
+- Because signals travel at finite speed, observers at different locations cannot coordinate their phase conventions. Each must choose independently.
+- This local freedom in phase choice is precisely what physicists call a "gauge symmetry." Maintaining consistency despite this freedom requires a new field -- the electromagnetic potential.
+- The curvature of this potential (how much phase transport depends on the path taken) is the electromagnetic field itself.
+- A uniqueness argument then forces Maxwell's equations as the only consistent dynamics, paralleling how Einstein's equations are uniquely forced for gravity.
+
+**The result.** All four Maxwell equations, charge quantization (why charge comes in discrete units), and the Lorentz force law emerge from observer phase structure, finite signal speed, and coherence conservation.
+
+**Why this matters.** Electromagnetism is not an independent postulate but a necessary consequence of how observers relate to each other across spacetime. The same logical template -- local symmetry forces a gauge connection whose curvature obeys uniquely determined field equations -- recurs for the weak and strong forces.
+
+**An honest caveat.** The coupling constant (how strong the electromagnetic force is) remains a free parameter. The derivation also relies on two structural postulates about the geometric language connecting phases, which are well-motivated but not derived from the axioms alone.
+
 ## Statement
 
 **Theorem.** The $U(1)$ phase symmetry of each observer ([Loop Closure](/derivations/axioms/loop-closure), Axiom 3) cannot be globally synchronized: finite signal propagation ([Speed of Light](/derivations/spacetime/speed-of-light)) and the relational nature of physics ([Relational Invariants](/derivations/interactions/relational-invariants)) imply that each observer's phase convention is independent. Maintaining phase coherence across spacetime requires a connection $A_\mu$ on a principal $U(1)$ bundle. The curvature $F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu$ is the electromagnetic field. Maxwell's equations follow from coherence conservation (Axiom 1) and a Lovelock-type uniqueness argument for gauge field dynamics in $3+1$ dimensions. Electric charge is the winding number of the observer loop, already quantized by the topological structure of [Coherence-Dual Pairs](/derivations/minimal-observer/coherence-dual-pairs).

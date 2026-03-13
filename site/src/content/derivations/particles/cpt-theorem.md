@@ -9,6 +9,25 @@ rigorLevel: "formal"
 lastUpdated: 2026-03-12
 ---
 
+## Overview
+
+This derivation addresses a foundational question in particle physics: **why is the combined operation of swapping matter with antimatter, flipping left and right, and reversing time always a symmetry of nature -- even when each operation individually is not?**
+
+Nature violates parity (the weak force distinguishes left from right), violates charge conjugation (the weak force treats matter and antimatter differently), and even violates their combination CP (observed in kaon and B-meson decays). Yet the triple combination CPT has never been observed to fail, and the most precise tests confirm it to extraordinary accuracy.
+
+**The argument.** The framework constructs each of the three discrete symmetries from its own structural ingredients, then shows their combination is forced:
+
+- Charge conjugation (C) comes from the coherence-dual pair structure: every observer has a mirror image with reversed internal charges but identical mass and dynamics.
+- Parity (P) comes from spatial reflection of the observer's winding structure in three dimensions. It flips handedness but preserves the topological classification of particles.
+- Time reversal (T) comes from reversing the direction of the loop closure phase -- running the observer's internal clock backward, which amounts to complex conjugation of the phase factor.
+- Individually, C, P, and T can each fail to be symmetries (and do, in the weak interaction). But their combination CPT preserves every structural element of the coherence Lagrangian: what one transformation breaks, the others repair.
+
+**The result.** CPT invariance is a structural theorem, not an empirical accident. It follows from three properties of the coherence Lagrangian -- locality, Lorentz invariance, and the spin-statistics connection -- all of which are themselves derived from the axioms. The theorem guarantees that every particle and its antiparticle have exactly equal masses and lifetimes.
+
+**Why this matters.** CPT invariance is one of the deepest results in quantum field theory. By deriving it from the framework's axioms rather than assuming it, the derivation demonstrates that the framework reproduces -- and structurally explains -- a cornerstone of modern physics.
+
+**An honest caveat.** The full argument relies on the Jost-Luders-Pauli theorem, a standard but technically demanding result. The overview simplifies how the three transformations "compensate" each other, particularly regarding the interplay of chirality, complex phases, and anti-unitarity in the weak sector.
+
 ## Statement
 
 **Theorem.** The combined transformation $CPT$ — charge conjugation ($C$), parity ($P$), and time reversal ($T$) — is an exact symmetry of the coherence Lagrangian. Each individual transformation is derived from the framework's structure: $C$ from coherence-dual pairs, $P$ from spatial reflection of the observer winding structure, and $T$ from reversal of the loop closure phase. Their composition $CPT$ is the unique discrete symmetry that preserves the complete observer structure, and the coherence Lagrangian is invariant under it.

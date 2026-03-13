@@ -9,6 +9,24 @@ rigorLevel: "formal"
 lastUpdated: 2026-03-10
 ---
 
+## Overview
+
+This derivation answers a question that transformed twentieth-century physics: **why do the fundamental constants of nature appear to change depending on the energy scale at which you measure them?**
+
+The renormalization group is one of the deepest ideas in theoretical physics. It explains why the strength of the electromagnetic force, for instance, is slightly different when measured at the energy of an atom versus the energy of a particle collider. Physicists describe this as "running" of coupling constants. The standard treatment is technically powerful but conceptually opaque -- it involves regulating infinities and absorbing them into redefined parameters.
+
+**The approach.** The framework reinterprets renormalization as coherence redistribution across scales:
+
+- The total coherence of a system can be decomposed by frequency scale. An observer who can only resolve low frequencies sees a subset of the full coherence structure.
+- Lowering the resolution cutoff does not destroy high-frequency coherence -- it repackages it into effective low-frequency parameters. This is the Wilsonian insight, now grounded in coherence conservation.
+- The exact flow equation governing how effective parameters change with scale is derived from the coherence action, paralleling the Wetterich-Morris equation of functional renormalization.
+
+**The result.** Fixed points of the coherence flow correspond to levels of the bootstrap hierarchy. The monotonic decrease of a c-function along the flow (generalizing Zamolodchikov's c-theorem) follows from the second law -- it is the scale-dependent version of entropy increase. Coherence conservation also forbids Landau poles (divergences in coupling constants at finite energy), suggesting the framework is ultraviolet-complete.
+
+**Why this matters.** Renormalization is usually presented as a computational technique for handling infinities. This derivation reveals it as a structural consequence of how a conserved quantity (coherence) appears different at different resolutions. The connection between the c-theorem and the second law unifies two seemingly unrelated monotonicity results.
+
+**An honest caveat.** The derivation establishes the general structure of the renormalization group flow and its constraints, but does not compute specific beta functions for known gauge theories. Those require the detailed gauge and matter content from other derivations in the framework.
+
 ## Statement
 
 **Theorem.** The renormalization group (RG) emerges as the scale-dependent coarse-graining of the coherence measure. Integrating out coherence modes above a cutoff scale $k$ defines a scale-dependent effective coherence $\mathcal{C}_k$. Coherence conservation (Axiom 1) constrains the flow: what is lost from the UV must reappear as effective couplings at scale $k$. The resulting flow equation is the coherence analog of the Wetterink-Morris exact RG equation. Fixed points of this flow correspond to levels of the bootstrap hierarchy, and the monotonic decrease of the c-function along RG flow is a consequence of the second law of thermodynamics (entropy as inaccessible coherence).

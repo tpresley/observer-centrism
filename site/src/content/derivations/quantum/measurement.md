@@ -10,6 +10,25 @@ sourceSection: "12-quantum-mechanics"
 lastUpdated: 2026-03-09
 ---
 
+## Overview
+
+This derivation addresses the most notorious problem in quantum mechanics: **what actually happens during a measurement?**
+
+The "measurement problem" has haunted physics for nearly a century. In standard quantum mechanics, a system exists in a superposition of possibilities until it is measured, at which point it "collapses" to a single definite outcome. But the theory never explains what collapse is, what triggers it, or why it happens. This has spawned competing interpretations -- many worlds, hidden variables, consciousness-based collapse -- none of which is universally accepted.
+
+**The approach.** Measurement is identified as a specific kind of interaction (Type III) that creates a new relational invariant between observer and system. No special physics is invoked.
+
+- Before measurement, no relational invariant links observer to system for the quantity being measured. The system is described by a superposition relative to that observer.
+- The measurement interaction creates a correlation -- a relational invariant -- that locks observer and system states together.
+- From the observer's perspective, this looks like collapse to a definite outcome. From a third party who has not interacted with either, the joint system remains in a superposition.
+- Both descriptions are simultaneously correct. There is no contradiction because "the state of the system" is always relative to a particular observer's relational invariants.
+
+**The result.** Collapse is not a mysterious non-physical process -- it is the creation of new relational structure, governed by the same coherence-conserving dynamics as everything else. The process is local, unitary on the joint state space, and irreversible. Different observers have different but compatible descriptions. The Wigner's friend paradox is resolved without contradiction.
+
+**Why this matters.** This dissolves the measurement problem without introducing extra postulates, branching universes, or hidden variables. Measurement is ordinary physics -- coherence dynamics across observer boundaries.
+
+**An honest caveat.** The question of what determines the specific outcome in a single trial is addressed structurally (the information exists in the full coherence geometry but is inaccessible to any bounded observer), which is an interpretive position rather than a mathematical theorem.
+
 ## Statement
 
 **Theorem.** Measurement is a Type III interaction that generates a relational invariant between observer and system. What is called "collapse" is the transition from a state with no shared relational invariant to a state with a definite one — the creation of new relational structure, governed by the same coherence-conserving dynamics as all other interactions. The process is local, unitary on the joint state space, and irreversible. The apparent non-unitarity arises from describing the system relative to a single observer. The measurement problem is dissolved: there is no collapse postulate, no branching, no hidden variables.

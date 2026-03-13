@@ -10,6 +10,26 @@ sourceSection: "11-mass-hierarchy"
 lastUpdated: 2026-03-12
 ---
 
+## Overview
+
+This derivation addresses the question: **why do the W and Z bosons have mass while the photon does not?**
+
+The electroweak symmetry group, SU(2) x U(1), treats all its gauge bosons as massless. Yet three of the four electroweak bosons (W+, W-, and Z) are among the heaviest known particles. Something must break the symmetry. In the Standard Model, this is accomplished by the Higgs mechanism, but the Higgs potential is put in by hand. Here, the breaking is derived as an energetic inevitability.
+
+**The argument.** The derivation shows that the symmetric vacuum is unstable:
+
+- At the electroweak scale, quantum corrections from fermions (especially the top quark, the heaviest known fermion) and gauge bosons modify the energy landscape of the vacuum. The fermionic contributions dominate and drive the symmetric state to be a local maximum rather than a minimum.
+- The vacuum "crystallizes" -- the observer hierarchy develops a preferred direction in its quaternionic phase space, much as a cooling ferromagnet spontaneously picks a magnetization axis. This breaks three of the four symmetry generators.
+- The three broken symmetry directions become the longitudinal polarizations of the W and Z bosons, giving them mass. The unbroken direction corresponds to electromagnetism, leaving the photon massless. This is the Higgs mechanism, but motivated by the coherence framework rather than assumed.
+- The Higgs boson itself is the radial fluctuation around this crystallized state -- the "stiffness" of the vacuum against being pushed away from its preferred orientation.
+- The large hierarchy between the electroweak scale (246 GeV) and the Planck scale is explained by dimensional transmutation across bootstrap levels, the same mechanism that naturally generates the QCD scale without fine-tuning.
+
+**The result.** The W and Z boson masses, the massless photon, the Higgs boson, and fermion masses via Yukawa couplings all follow from the crystallization of the quaternionic vacuum. The framework also explains why no new particles appear at the TeV scale -- the hierarchy is protected by the bootstrap structure, not by supersymmetry.
+
+**Why this matters.** Electroweak symmetry breaking is not an ad hoc mechanism but a thermodynamic inevitability: the symmetric vacuum costs more coherence to maintain than the broken one. The 2012 discovery of the Higgs boson at 125 GeV confirmed the basic picture.
+
+**An honest caveat.** The precise value of the electroweak scale (246 GeV), the Higgs self-coupling, and the Weinberg angle are not predicted from first principles -- they require input from experiment or from the full renormalization group flow of the coherence Lagrangian, which is not yet completed.
+
 ## Statement
 
 **Theorem.** The electroweak symmetry $SU(2)_L \times U(1)_Y$ spontaneously breaks to $U(1)_{em}$ through a coherence crystallization mechanism:

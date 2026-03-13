@@ -20,6 +20,24 @@ leanProofs:
       - "dim_poincare"
 ---
 
+## Overview
+
+This derivation answers a foundational question: **why does special relativity hold?**
+
+In standard physics, Lorentz invariance is simply postulated — Einstein's second postulate says the laws of physics look the same for all observers moving at constant velocity. Time dilation, length contraction, and the cosmic speed limit are consequences of that assumption. Here, none of it is assumed. It is derived.
+
+**The argument.** Coherence conservation requires that the coherence measure is preserved when you change reference frames. Combined with two previously derived results — a finite maximum signal speed and the isotropy of space — the only transformations that preserve this structure are the Lorentz transformations. The derivation proceeds by showing:
+
+- Time dilation and length contraction are the same geometric effect: a tilted observer loop projects differently onto different coordinate axes, like a rod held at an angle casting different shadows on perpendicular walls.
+- The speed limit follows from topology, not energy: at light speed, the observer's cycle period becomes infinite and the loop can never close. The observer simply ceases to exist as an observer.
+- The full ten-parameter Poincare symmetry group emerges, yielding the familiar conserved quantities: energy, momentum, and angular momentum.
+
+**The result.** Special relativity is not a separate law of nature. It is the unique symmetry group of the coherence geometry, forced by coherence conservation and the existence of a maximum signal speed.
+
+**Why this matters.** This is one of the derivations that requires no structural postulates at all — even the assumption of spatial homogeneity, originally stated as a postulate, turns out to be provable from the axioms. Special relativity emerges purely from the framework's three axioms.
+
+**An honest caveat.** The geometric picture of "tilted loops" is a helpful analogy but inevitably simplifies the underlying mathematical structure. The actual derivation works with the Minkowski metric and its isometry group — precise mathematical objects that the informal language only approximates.
+
 ## Statement
 
 **Theorem.** The Lorentz group $SO(3,1)$ is the isometry group of the coherence geometry's Minkowski metric. Lorentz contraction and time dilation are a single geometric effect — the projection of a tilted observer loop onto different coordinate axes. The constraint $|v| < c$ for massive observers is a topological requirement of loop closure, not an energy limitation. The full Poincaré group $ISO(3,1)$ emerges as the symmetry group of the coherence geometry when homogeneity is included.

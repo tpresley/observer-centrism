@@ -9,6 +9,25 @@ rigorLevel: "formal"
 lastUpdated: 2026-03-12
 ---
 
+## Overview
+
+This derivation addresses the question: **how can a quantum state be transferred between distant parties without physically sending it, and why does this not allow faster-than-light communication?**
+
+Quantum teleportation -- experimentally demonstrated many times since 1997 -- allows Alice to transmit an unknown quantum state to Bob using only a shared entangled pair and a classical message. The state is destroyed at Alice's end and recreated at Bob's, with perfect fidelity. Standard quantum mechanics describes how teleportation works but leaves the "why" somewhat opaque.
+
+**The argument.** The framework recasts teleportation as a structured redistribution of coherence across three observers:
+
+- Alice and Bob share a pre-existing relational invariant (their entangled resource). Alice also holds the unknown state, encoded as a separate relational invariant with the system.
+- Alice performs a joint measurement on her system and her half of the entangled pair. This measurement consumes both her relational invariants -- the one with the system and the one with Bob -- producing a classical outcome (two bits of information).
+- Bob's particle is now in a state that differs from the original by a known, simple correction. Once Alice sends him the two classical bits, he applies the correction and recovers the original state exactly.
+- Coherence conservation enforces every constraint: the original state must be destroyed (no cloning), the entangled resource must be consumed (one-time use), and without the classical message Bob's state carries no information (no faster-than-light signaling).
+
+**The result.** Teleportation is a coherence channel transfer -- the relational invariant moves from one observer pair to another, with the entangled state serving as the channel and classical communication as the key. No new physics is invoked; it is a direct consequence of entanglement, measurement, and coherence conservation.
+
+**Why this matters.** Teleportation is often presented as one of quantum mechanics' most counterintuitive phenomena. The coherence framework shows it is structurally inevitable once you have entanglement and conservation -- there is nothing mysterious about it beyond the unfamiliarity of the underlying rules.
+
+**An honest caveat.** The overview omits the detailed algebraic manipulations (Bell basis expansion, Pauli corrections) that make the protocol precise. The explanation also focuses on the simplest case of a single qubit; the generalization to higher-dimensional systems is straightforward but technically richer.
+
 ## Statement
 
 **Theorem.** Quantum teleportation — the transfer of an unknown quantum state from Alice to Bob using a shared entangled state and classical communication — is a coherence channel transfer in the observer-centric framework. The relational invariant $I_{AS}$ between Alice and a system $S$ is transferred to a relational invariant $I_{BS}$ between Bob and $S$, mediated by the pre-existing relational invariant $I_{AB}$ (the entangled resource). Coherence conservation (Axiom 1) guarantees that the original $I_{AS}$ is destroyed and $I_{AB}$ is consumed: no cloning occurs and the entanglement resource is depleted.

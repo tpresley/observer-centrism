@@ -9,6 +9,25 @@ rigorLevel: "informal"
 lastUpdated: 2026-03-12
 ---
 
+## Overview
+
+This derivation confronts one of the hardest problems in physics: **can the value of the cosmological constant be calculated from first principles?**
+
+The cosmological constant controls the accelerating expansion of the universe. Quantum field theory notoriously predicts a value 120 orders of magnitude too large. This derivation honestly assesses whether the framework's axioms can do better -- and concludes that they cannot derive the numerical value.
+
+**The approach.** Two routes were attempted and both failed:
+
+- A holographic constraint argument turned out to be circular -- it inverts the entropy bound rather than independently predicting anything.
+- A "universe as observer" self-reference argument collapsed into dimensional analysis dressed up as a derivation.
+
+The root cause is that the cosmological constant depends on cosmological initial conditions (the total coherence budget, the horizon size) that are boundary data, not quantities the axioms can determine. This is analogous to how Newton's laws tell you that F = ma but cannot tell you where any particular planet is.
+
+**The result.** The framework *can* say several things: that the cosmological constant exists (via Lovelock's theorem), that it is non-negative, that it is constant in time, and that the naive vacuum energy catastrophe does not arise. But the specific numerical value is not derivable. The 120-order hierarchy is reframed -- via the observer-loop-viability derivation -- as a consequence of the second law of thermodynamics, not a coincidence.
+
+**Why this matters.** Marking this as non-viable is itself a contribution. It prevents false claims, maps exactly where the framework's explanatory power ends, and identifies what *would* be needed to make progress (a principle that fixes initial conditions, or a dynamical attractor in coherence space).
+
+**An honest caveat.** The boundary between "initial conditions" and "derivable quantities" is murkier than it first appears. The framework's own logic creates a self-referential loop between the cosmological constant, the horizon, and observer descriptions -- a tangle that remains unresolved.
+
 ## Status: Non-Viable
 
 > **This derivation target has been assessed as not feasible within the current framework.** Both proposed routes were analyzed and found to be either circular or reducible to dimensional analysis. The cosmological constant depends on cosmological initial conditions (horizon size, total entropy) that the framework treats as boundary data, not derivable quantities. See the full assessment below.

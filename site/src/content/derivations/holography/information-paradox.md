@@ -15,6 +15,23 @@ leanProofs:
       - "page_time_coeff"
 ---
 
+## Overview
+
+This derivation addresses one of the deepest puzzles in theoretical physics: **is information destroyed when a black hole evaporates?**
+
+The standard paradox runs as follows. A black hole forms from a known quantum state, emits thermal radiation that carries no information about what fell in, and eventually disappears entirely. If the radiation is truly random, the original information is gone -- violating a foundational principle of quantum mechanics (unitarity). Physicists have debated this for fifty years.
+
+**The argument.** The resolution rests on two pillars:
+
+- **Coherence conservation is absolute.** The first axiom of the framework guarantees that total information is never created or destroyed. The information about the interior is not lost; it is encoded in subtle correlations between the many quanta of Hawking radiation. No single quantum carries meaningful information, but the joint pattern across all of them does.
+- **Entropy is observer-relative.** An observer collecting radiation one quantum at a time sees only thermal noise -- apparent information loss. An observer with access to the complete radiation and the ability to measure multi-particle correlations sees a pure quantum state throughout. The paradox arises from treating entropy as observer-independent.
+
+**The result.** The entanglement entropy of the radiation follows the Page curve: it rises during early evaporation, peaks at the Page time (roughly halfway through), and falls back to zero when the black hole is gone. No firewall at the horizon and no stable remnant are required.
+
+**Why this matters.** This resolves the paradox without invoking speculative new physics. The key insight -- that "is information lost?" is not a meaningful question without specifying which observer is asking -- reframes the debate entirely.
+
+**An honest caveat.** The explicit quantum error-correcting code that maps interior degrees of freedom to radiation correlations is described structurally but not constructed in computational detail. The connection to the island formula and entanglement wedge reconstruction remains to be formalized.
+
 ## Statement
 
 **Theorem.** The black hole information paradox is resolved by the observer-indexed structure of entropy. Coherence is globally conserved (Axiom 1) — information is never destroyed. The information about the black hole interior is encoded in correlations between successive Hawking quanta (inter-quantum relational invariants). The apparent paradox arises from conflating observer-indexed entropy (which increases for individual external observers collecting thermal radiation) with absolute information loss (which does not occur). The Page curve — the entanglement entropy of the radiation rising then falling — follows from coherence conservation. No firewall or stable remnant is required.

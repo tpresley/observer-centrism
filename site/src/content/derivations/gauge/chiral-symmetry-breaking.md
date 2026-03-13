@@ -10,6 +10,24 @@ sourceSection: "08-gauge-sector"
 lastUpdated: 2026-03-11
 ---
 
+## Overview
+
+This derivation addresses a foundational question about nuclear physics: **why do quarks behave as though they are hundreds of times heavier than their actual masses?**
+
+The "bare" up and down quarks are extraordinarily light -- a few thousandths of a proton mass. Yet inside protons and neutrons, they act as if they carry roughly a third of the proton mass each. This discrepancy arises because the strong force spontaneously breaks a symmetry called chiral symmetry, generating a quark condensate that fills the vacuum and gives quarks an effective "constituent" mass.
+
+**The argument.** The derivation connects chiral symmetry breaking to the confinement mechanism:
+
+- The confining potential (from octonionic non-associativity) creates a strongly attractive channel for quark-antiquark pairs in the color-singlet configuration -- precisely the channel where the associator vanishes.
+- Coherence minimization selects the vacuum state that exploits this attraction, producing a nonzero quark condensate that breaks the left-right (chiral) symmetry down to the diagonal subgroup.
+- The broken symmetry generators produce light particles -- the pions -- whose masses are proportional to the square root of the quark masses, explaining why pions are so much lighter than other hadrons.
+
+**The result.** The vacuum spontaneously breaks chiral symmetry, producing three pions (for two light quark flavors) as pseudo-Goldstone bosons. The predicted pion mass of about 135 MeV matches observation, as does the condensate scale of about 250 MeV.
+
+**Why this matters.** Chiral symmetry breaking explains the origin of most visible mass in the universe. Nearly all the mass of protons, neutrons, and therefore ordinary matter comes not from the Higgs mechanism but from this strong-interaction effect.
+
+**An honest caveat.** This is the one derivation in the gauge sector that is likely to remain permanently provisional. A fully rigorous proof that the condensate forms would be equivalent to solving the Yang-Mills mass gap problem -- one of the Clay Millennium Prize problems in mathematics. The derivation uses standard gap-equation methods and is well-supported by lattice simulations, but the final step is not mathematically proven.
+
 ## Statement
 
 **Theorem (Chiral Symmetry Breaking).** In the confining phase of the octonionic gauge theory ([Confinement](/derivations/gauge/confinement)), the vacuum state spontaneously breaks the chiral flavor symmetry:

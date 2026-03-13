@@ -9,6 +9,23 @@ rigorLevel: "formal"
 lastUpdated: 2026-03-12
 ---
 
+## Overview
+
+This derivation tackles a question at the frontier of particle physics: **why do neutrinos have mass at all, and why is it so extraordinarily small?**
+
+Neutrinos were long thought to be massless, but oscillation experiments proved they have tiny but nonzero masses -- at least a million times lighter than the electron. The Standard Model has no built-in explanation for this smallness. Two deep questions remain open experimentally: whether neutrinos are their own antiparticle (Majorana particles), and whether the mass ordering is "normal" (lightest to heaviest matching the electron-muon-tau pattern).
+
+**The approach.** The framework derives answers to both questions from the mathematical structure of the weak force.
+
+- Neutrinos carry no electric charge, so the mechanism that distinguishes particles from antiparticles for electrons and quarks does not apply. The weak force representation has a special algebraic property (pseudo-reality) that makes neutral particles identical to their own conjugates. This forces neutrinos to be Majorana particles.
+- The smallness of neutrino mass follows from the seesaw mechanism: the light mass is the square of a small coupling divided by a heavy scale. The heavy scale is set by electroweak physics, not by a hypothetical ultra-high-energy unification scale.
+
+**The result.** Neutrinos are Majorana (their own antiparticle), their masses follow the normal ordering, and the heavy partner mass sits near the electroweak scale -- potentially accessible to collider experiments.
+
+**Why this matters.** Each of the three predictions is directly testable: Majorana nature by neutrinoless double beta decay experiments, the mass ordering by JUNO and DUNE, and the heavy partner mass by collider searches. Confirmation or refutation would sharply constrain the framework.
+
+**An honest caveat.** The derivation correctly identifies the parametric structure, but the precise neutrino masses depend on a winding-geometry overlap coefficient that is not computed from first principles.
+
 ## Statement
 
 **Theorem.** The observer loop winding structure determines the neutrino mass mechanism:

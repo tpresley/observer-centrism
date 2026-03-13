@@ -10,6 +10,25 @@ sourceSection: "02-axioms"
 lastUpdated: 2026-03-12
 ---
 
+## Overview
+
+This derivation answers the question: **what does it take for an observer to persist?**
+
+Having a conserved quantity (Axiom 1) and a self-maintaining identity (Axiom 2) is not enough. An observer that gradually runs down and stops is not really an observer -- it must actively sustain itself. This axiom requires that every observer's internal dynamics cycle back to where they started, completing a loop in a finite time.
+
+**The argument.** The requirement of self-renewal forces a precise mathematical structure:
+
+- The observer's internal state must return to its starting configuration after some period. A system that drifts without returning eventually crosses its own boundary and dissolves.
+- This periodicity is equivalent to a specific symmetry -- the circle symmetry familiar from oscillation and rotation. The mathematics of "going around and coming back" is the same whether the loop is literal or abstract.
+- Stability matters: the loop must be robust against small perturbations. An unstable loop will drift away from its cycle and eventually break apart.
+- Approximate closure is allowed but has a cost -- each imperfect cycle accumulates drift, giving the observer a finite lifetime proportional to how tightly the loop closes.
+
+**The result.** Every persistent observer has a natural frequency (how fast its loop cycles), a coherence cost (the minimum resources needed to complete one cycle), and a conserved charge paired with its cyclic symmetry. Exact closure gives infinite persistence; approximate closure gives a finite but potentially very long lifetime.
+
+**Why this matters.** This is the axiom that connects the abstract notion of an observer to physics. Periodicity gives rise to frequency, frequency gives rise to energy (via the Planck-Einstein relation derived later), and the requirement of a minimum coherence cost per cycle is what ultimately produces Planck's constant. The wave-like behavior of quantum mechanics traces back to this simple requirement: to exist is to oscillate.
+
+**An honest caveat.** The formal machinery involves Lie group actions, symplectic geometry, and moment maps. The intuition that "existence requires self-renewal" is genuinely the core idea, but the precise relationship between loop closure and conserved charges relies on Noether's theorem in a way that non-technical language can only gesture at.
+
 ## Statement
 
 **Axiom 3 (Loop Closure).** The internal dynamics of every observer are cyclic: the state returns to its initial configuration after a finite period. A loop that does not close eventually dissipates its invariant and dissolves. Loop closure is not an additional constraint — it is what makes an observer *persistent* in the sense of Axiom 2.

@@ -10,6 +10,23 @@ sourceSection: "11-mass-hierarchy"
 lastUpdated: 2026-03-09
 ---
 
+## Overview
+
+This derivation addresses a longstanding puzzle in particle physics: **why do elementary particles have such wildly different masses?**
+
+The top quark is roughly 340,000 times heavier than the electron, and the electron is billions of times heavier than the lightest neutrinos. In the Standard Model, these mass ratios are simply free parameters -- numbers plugged in by hand. The "hierarchy problem" asks whether these enormous ratios require an unlikely fine-tuning of nature's constants, or whether there is a structural explanation.
+
+**The approach.** The framework derives mass ratios from the bootstrap hierarchy -- the nested levels of self-consistent observer structures. Each level represents a stable "crystallization" of coherence at a characteristic energy scale. The key mechanism is dimensional transmutation: the ratio between adjacent levels is an exponential of a modest number, not a large number itself.
+
+- A small coupling constant in the exponent produces an enormous mass ratio -- the same mechanism that explains why the proton is much lighter than the energy scale of its constituent interactions.
+- Each level is self-protecting: corrections from higher levels are automatically suppressed by the same exponential factor that created the separation.
+
+**The result.** Large mass hierarchies are logarithmically natural -- they are exponentials of small coupling ratios, not fine-tuned coincidences. No supersymmetry or other protective mechanism is required. The framework also predicts a "great desert" with no new particles between the electroweak and unification scales.
+
+**Why this matters.** The hierarchy problem has driven decades of theoretical work, much of it focused on supersymmetry as the solution. This derivation offers a structural alternative where the hierarchy is a natural consequence of how observer loops organize at different scales.
+
+**An honest caveat.** The qualitative structure (exponential separation, self-protection) is robust, but the specific particle masses and coupling constants remain empirical inputs. Computing exact masses from the coherence geometry is an open problem.
+
 ## Statement
 
 **Theorem.** The mass hierarchy — the wide separation between particle mass scales — arises from exponential crystallization in the bootstrap hierarchy. Each level of the hierarchy introduces a new crystallization scale separated from adjacent levels by a factor $\sim e^{-c/g}$, where $g$ is the coupling constant governing interactions at that level. Large mass ratios are therefore exponentials of small coupling ratios — logarithmically natural, not fine-tuned. The hierarchy is self-protecting: inter-level corrections are suppressed by the same exponential factor that separates the scales.

@@ -10,6 +10,23 @@ sourceSection: "08-gauge-sector"
 lastUpdated: 2026-03-12
 ---
 
+## Overview
+
+This derivation answers a precise quantitative question: **why does the electroweak mixing angle have the value it does?**
+
+The Weinberg angle is a fundamental parameter that controls how the electromagnetic and weak forces mix together. Its measured value (about 0.231 at the Z boson mass) determines the relative strengths of these two forces. In the Standard Model, it is simply measured from experiment with no deeper explanation.
+
+**The argument.** The framework determines this angle through two steps:
+
+- At a high "crystallization" energy scale, the mixing angle is fixed at exactly one-third by the division algebra structure. This value comes from a ratio of dimensions: the complex numbers contribute one imaginary direction (giving rise to the electromagnetic force), while the quaternions contribute three imaginary directions (giving rise to the weak force). The ratio 1/3 is the algebraic boundary condition.
+- From that high scale down to the Z boson mass, standard renormalization group equations evolve the angle to its observed low-energy value. The particle content driving this evolution is itself determined by the framework (three generations of fermions, one Higgs doublet).
+
+**The result.** Matching the predicted value to the measured 0.231 uniquely determines the crystallization scale at roughly ten billion GeV -- a physically sensible intermediate energy, well below the Planck scale and in the perturbative regime. The framework thus converts the Weinberg angle from a free parameter into a derived quantity.
+
+**Why this matters.** This is one of the framework's quantitative tests. The algebraic boundary condition is rigid (not adjustable), so the entire prediction depends on whether standard physics correctly connects the high-energy starting point to the low-energy measurement. The result is more accurate than the classic Grand Unified Theory prediction, which overshoots the observed value.
+
+**An honest caveat.** The crystallization scale is currently determined by requiring consistency with the measured Weinberg angle, rather than being independently predicted. An independent derivation of this scale from the bootstrap hierarchy would convert the consistency check into a genuine prediction.
+
 ## Statement
 
 **Theorem (Weinberg Angle).** The weak mixing angle at the $Z$-boson mass is determined by two framework inputs:

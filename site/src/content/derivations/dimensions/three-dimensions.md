@@ -15,6 +15,25 @@ leanProofs:
       - "dim_so_3"
 ---
 
+## Overview
+
+This derivation tackles one of the oldest questions in physics: **why does space have exactly three dimensions?**
+
+We take three-dimensionality for granted, but there is no obvious reason why the universe could not have had two spatial dimensions, or four, or ten. String theory famously requires ten. Most frameworks simply assume three dimensions as an input. This derivation shows that three is the unique number consistent with the existence of observers.
+
+**The argument.** Four independent structural conditions, each drawing on a different branch of mathematics, converge on a single answer:
+
+- **Selective permeability** (eliminates one dimension). An observer must have a boundary that can selectively admit some interactions while blocking others. In one dimension, a boundary is just a pair of points, which cannot support any filtering mechanism.
+- **Finite winding classification** (eliminates two dimensions). The bootstrap mechanism requires that the number of fundamental particle types is finite. This demands that the rotation group have a finite fundamental group. In two dimensions, the rotation group has an infinite fundamental group, producing infinitely many topologically distinct particle types that prevent the bootstrap from stabilizing.
+- **Unique smooth structure** (eliminates four dimensions). Observer loop closure requires a unique notion of "smooth." Four-dimensional space is the only dimension with non-unique smooth structures — it admits uncountably many inequivalent ways of defining smoothness, making loop closure ambiguous. (This condition is supplementary; four dimensions are independently eliminated by the next condition.)
+- **Orbital stability** (eliminates four and higher dimensions). Stable bound orbits — essential for composite observers like atoms — exist only in three or fewer spatial dimensions. In four or more dimensions, the gravitational potential falls off too steeply for orbits to be stable against small perturbations.
+
+**The result.** Three spatial dimensions is the unique value that passes all four independent tests. No other number of dimensions simultaneously permits selective boundaries, finite particle classification, unambiguous smoothness, and stable bound structures.
+
+**Why this matters.** The four conditions use entirely different mathematical tools — topology, homotopy theory, differential topology, and classical analysis. Their convergence on a single number is not an artifact of applying one method four times; it is a genuine structural coincidence that the framework explains.
+
+**An honest caveat.** This derivation establishes the number of spatial dimensions but treats the single time dimension as following from the partial ordering structure of phase advance, which is argued but not yet elevated to a full theorem.
+
 ## Statement
 
 **Theorem.** The spatial dimensionality $d = 3$ is the unique value consistent with the simultaneous structural requirements on observer boundaries. Four independent conditions — selective permeability, finite winding classification, smooth boundary structure, and hierarchy stability — each independently constrain $d$, and their intersection is $\{3\}$.

@@ -10,6 +10,23 @@ sourceSection: "08-gauge-sector"
 lastUpdated: 2026-03-12
 ---
 
+## Overview
+
+This derivation addresses a long-standing puzzle: **why does the strong nuclear force respect the symmetry between matter and antimatter?**
+
+The equations governing the strong force contain a parameter (the "theta angle") that could, in principle, take any value between zero and two-pi. A nonzero value would produce measurable violations of CP symmetry -- the combined symmetry of swapping particles with antiparticles and reflecting space. Experiments constrain this parameter to be smaller than one part in ten billion, but the standard theory offers no explanation for why it should be so small. This is the strong CP problem.
+
+**The argument.** The framework resolves this problem without introducing any new particles. Two converging lines of reasoning force the theta angle to be exactly zero:
+
+- The octonionic algebra that generates the strong force has a rigid, discrete multiplication structure (the Fano plane). It contains no continuous free parameter that could correspond to a nonzero theta angle. The only algebraically distinguished value is zero, which happens to be the CP-preserving point.
+- The non-associativity of the octonions provides the physical mechanism: it obstructs the instanton tunneling processes that would generate a nonzero theta angle. In contrast, the quaternionic algebra underlying the weak force is associative and permits its own theta term -- but that term is unobservable for independent reasons.
+
+**The result.** The strong CP parameter is exactly zero. No axion particle is needed, and the framework predicts that all axion searches will return null results.
+
+**Why this matters.** The strong CP problem has motivated decades of experimental searches for the axion. This derivation offers a structural resolution and a falsifiable counter-prediction: if an axion is discovered, the framework's resolution of the strong CP problem is wrong.
+
+**An honest caveat.** The algebraic argument is rigorous, but the detailed instanton obstruction mechanism (the explicit computation of the octonionic Chern-Simons functional) remains at the level of a well-motivated structural argument rather than a fully explicit calculation.
+
 ## Statement
 
 **Theorem.** The strong CP problem — why the QCD vacuum angle $\theta$ satisfies $|\theta| < 10^{-10}$ despite no known symmetry reason — is resolved by the octonionic origin of $SU(3)$. The non-associative structure of $\mathbb{O}$ constrains the $SU(3)$ vacuum topology in a way that forces $\theta = 0$ exactly. No axion field or Peccei-Quinn symmetry is needed.

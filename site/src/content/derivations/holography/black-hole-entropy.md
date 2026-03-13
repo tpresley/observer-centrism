@@ -15,6 +15,20 @@ leanProofs:
       - "bh_entropy_integration_coeff"
 ---
 
+## Overview
+
+This derivation answers a foundational question in quantum gravity: **why does a black hole's entropy equal one quarter of its horizon area in Planck units?**
+
+The Bekenstein-Hawking entropy formula is one of the most important results in theoretical physics, connecting thermodynamics, gravity, and quantum mechanics. Most approaches treat it as a semi-classical result or derive it only for special cases. Here it follows from the observer-centric framework as a counting problem.
+
+**The argument.** A black hole's event horizon is a one-way barrier in the coherence geometry -- no observer loop can close across it from outside to inside. This means every external observer is completely cut off from the interior. The entropy is then the total interior coherence, which an outsider can only access through the boundary. The horizon is tiled by the smallest possible observer loops, one per Planck cell, each contributing exactly one bit of inaccessible information (present or absent). The black hole is the configuration that packs these tiles as densely as possible, saturating the holographic entropy bound.
+
+**The result.** Black hole entropy equals the horizon area divided by four Planck areas, with no free parameters or tuning. The factor of four is fixed by gravitational stability, not introduced by hand.
+
+**Why this matters.** This provides a universal microstate-counting explanation that does not depend on a specific quantum gravity program (strings, loops, etc.). It also reveals that black hole entropy is observer-relative: an infalling observer, whose coherence domain extends into the interior, assigns a different (lower) entropy.
+
+**An honest caveat.** The derivation inherits the Planck-scale resolution postulate from the holographic entropy bound. A purely combinatorial derivation of the factor of one quarter, without invoking the Schwarzschild geometry, remains an open goal.
+
 ## Statement
 
 **Theorem.** The Bekenstein-Hawking entropy of a black hole with event horizon area $A$ is:

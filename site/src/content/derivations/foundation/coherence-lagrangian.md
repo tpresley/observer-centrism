@@ -10,6 +10,26 @@ sourceSection: "05-time-entropy-action"
 lastUpdated: 2026-03-12
 ---
 
+## Overview
+
+This derivation addresses a central question in theoretical physics: **is the fundamental action principle of the universe uniquely determined, or does it contain arbitrary choices?**
+
+In standard physics, the Lagrangian (the function that encodes all dynamics) is written down with various terms and coupling constants that are measured experimentally but not explained. Here, the argument is that every piece of the Lagrangian is uniquely forced by the three axioms, with no free parameters.
+
+**The argument.** The Lagrangian is assembled from four sectors, each uniquely determined:
+
+- The kinetic term (how fields change in space and time) is fixed by a mathematical uniqueness theorem: the Fisher information metric is the *only* metric consistent with coarse-graining invariance.
+- The potential term (the energy cost of field configurations) is constrained to at most quartic power by two independent arguments: dimensional analysis in four spacetime dimensions, and the requirement that the bootstrap hierarchy maintains scale separation.
+- The gauge sector (forces between particles) is fixed by Lorentz and gauge invariance.
+- The gravitational sector is fixed by diffeomorphism invariance to be the Einstein-Hilbert action.
+- Cross-terms between sectors are excluded by a complete enumeration argument.
+
+**The result.** The coherence Lagrangian is the unique action principle consistent with all three axioms. Its equations of motion reproduce the known equations of physics: the Klein-Gordon, Maxwell, Yang-Mills, Einstein, and Schrodinger equations.
+
+**Why this matters.** If correct, this means the laws of physics are not contingent choices but necessary consequences of self-consistent observation. The Lagrangian is not "designed" -- it is the only one that works.
+
+**An honest caveat.** The derivation focuses on scalar fields; extending rigorously to spinor fields (fermions) requires additional work. The path integral measure also inherits the standard mathematical ambiguity shared by all continuum quantum field theories.
+
 ## Statement
 
 **Theorem.** The coherence Lagrangian $\mathcal{L}$ is uniquely determined (up to boundary terms) by the three axioms:
