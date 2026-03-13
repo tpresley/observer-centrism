@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-13T09:04:44.838Z",
+    "generatedAt": "2026-03-13T09:32:50.749Z",
     "derivationCount": 60,
     "predictionCount": 10,
     "generator": "scripts/build-index.mjs"
@@ -14,7 +14,7 @@
     "derivationCount": 60,
     "predictionCount": 10,
     "edgeCount": 127,
-    "formalObjectCount": 882,
+    "formalObjectCount": 883,
     "openGapCount": 199,
     "upgradeEligibleCount": 0,
     "leanVerifiedCount": 16,
@@ -1289,7 +1289,7 @@
           },
           {
             "target": "cosmology/observer-loop-viability",
-            "context": "Step 7"
+            "context": "Proposition 7.5"
           },
           {
             "target": "holography/area-scaling",
@@ -1894,6 +1894,12 @@
           "id": "7.4",
           "name": "Self-consistency equation",
           "statementPreview": "The IR geometry's capacity, encoded by Lambda, must be consistent with the total coherence budget after the bootstrap..."
+        },
+        {
+          "type": "Proposition",
+          "id": "7.5",
+          "name": "The hierarchy is the second law",
+          "statementPreview": "The self-consistency equation (Proposition 7.4) is the entropy decomposition ([Entropy](/derivations/thermodynamics/e..."
         }
       ],
       "structuralPostulates": [],
@@ -1925,8 +1931,8 @@
         },
         {
           "number": 6,
-          "title": "Geometry functor and cross-level consistency",
-          "description": "The hierarchical coherence argument (Step 7) requires formalizing a geometry functor G: mathbfObs mathbfGeom that maps each observer's epistemic horizon to an effective geometry, compatible with the b"
+          "title": "Geometry functor and quantitative $\\Lambda$",
+          "description": "The entropy identification (Proposition 7.5) explains the hierarchy qualitatively via the second law. A *quantitative* prediction of Lambda requires formalizing a geometry functor G: mathbfObs mathbfG"
         }
       ],
       "assessmentVerdict": "Provisional. The Planck-scale upper bound (Theorem 2.1) is essentially rigorous. The sign prediction (Theorem 5.4) follows logically from coherence conservation + the framework's coherence ontology + bounce dissolution — the weakest link is the semi-formal character of Theorem 4.1 (bounce dissolutio",
@@ -2006,16 +2012,16 @@
             "context": "Renormalization Group"
           },
           {
+            "target": "cosmology/cosmological-constant",
+            "context": "Cosmological Constant"
+          },
+          {
             "target": "interactions/bootstrap-division-algebras",
             "context": "Bootstrap → Division Algebras"
           },
           {
             "target": "particles/mass-hierarchy",
             "context": "Mass Hierarchy"
-          },
-          {
-            "target": "cosmology/cosmological-constant",
-            "context": "Cosmological Constant"
           },
           {
             "target": "holography/er-epr",
@@ -2045,7 +2051,7 @@
           },
           {
             "source": "cosmology/cosmological-constant",
-            "context": "Step 7"
+            "context": "Proposition 7.5"
           },
           {
             "source": "cosmology/cosmological-constant",
@@ -16007,6 +16013,13 @@
       "fullRef": "cosmology/observer-loop-viability:Proposition 7.4"
     },
     {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Proposition",
+      "id": "7.5",
+      "name": "The hierarchy is the second law",
+      "fullRef": "cosmology/observer-loop-viability:Proposition 7.5"
+    },
+    {
       "derivationId": "dimensions/three-dimensions",
       "type": "Definition",
       "id": "1.1.",
@@ -21458,8 +21471,8 @@
       "derivationId": "cosmology/observer-loop-viability",
       "derivationStatus": "provisional",
       "number": 6,
-      "title": "Geometry functor and cross-level consistency",
-      "description": "The hierarchical coherence argument (Step 7) requires formalizing a geometry functor G: mathbfObs mathbfGeom that maps each observer's epistemic horizon to an effective geometry, compatible with the b"
+      "title": "Geometry functor and quantitative $\\Lambda$",
+      "description": "The entropy identification (Proposition 7.5) explains the hierarchy qualitatively via the second law. A *quantitative* prediction of Lambda requires formalizing a geometry functor G: mathbfObs mathbfG"
     },
     {
       "derivationId": "dimensions/three-dimensions",
