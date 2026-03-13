@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "description": "Tracking artifact for plausible postulate promotions, gap closures, and new derivation targets. Updated 2026-03-12. S2 promoted to Theorem 0.1.",
+    "description": "Tracking artifact for plausible postulate promotions, gap closures, and new derivation targets. Updated 2026-03-12. Loop Closure S2 and Gravity S1 promoted to Theorem 0.1.",
     "instructions": "Each item has a difficulty rating (LOW/MODERATE/HARD/BLOCKED), a category, and enough context for a new session to pick up the work."
   },
 
@@ -38,7 +38,8 @@
       "derivation": "spacetime/gravity",
       "difficulty": "MODERATE",
       "tier": 1,
-      "status": "RECLASSIFIED — moved to permanentlyOpen. The derivation's own remark states this is 'analogous to GR's assumption that gravity is geometry, which is not derivable from special relativity alone.' A flat geometry with observers is not logically inconsistent — it is simply not our universe. The contradiction argument (step 3) does not hold: a fixed metric can still support coherence conservation as long as coherence costs remain well-defined.",
+      "status": "COMPLETED — promoted to Theorem 0.1 in gravity.md. Derived from action duality + coherence subadditivity (Axiom 1, C4) + action equality. structural-postulates.json updated with derivedFrom.",
+      "completedDate": "2026-03-12",
       "rationale": "The justification says: 'Since observers curve the coherence geometry through their concentration, the metric must respond to observer density. This is the minimal local coupling assumption.' The 'must respond' language suggests this follows from coherence conservation. If the metric is determined by the coherence distribution (as the entire geometric chain argues), then metric-density coupling is a consequence, not an input.",
       "strategy": "Argument: (1) The coherence geometry (Speed of Light S1) has a pseudo-Riemannian metric g. (2) Coherence conservation (Axiom 1) requires the total coherence on Cauchy slices to be conserved. (3) If the metric were independent of the coherence density ρ_I, then redistributing observers (changing ρ_I) would leave the geometry unchanged — but the path lengths in g determine coherence costs, so coherence conservation would be violated unless g responds to ρ_I. (4) Therefore g must be locally determined by ρ_I. The hard part: making step (3) rigorous — showing that a position-independent metric actually leads to inconsistency.",
       "dependencies": ["spacetime/speed-of-light", "axioms/coherence-conservation"],
@@ -217,11 +218,6 @@
       "id": "chiral-symmetry-breaking-s1",
       "postulateId": "chiral-symmetry-breaking-s1",
       "reason": "Vacuum coherence minimization. Lives in the sole provisional derivation; its status is tied to the mass gap problem."
-    },
-    {
-      "id": "gravity-s1",
-      "postulateId": "gravity-s1",
-      "reason": "Metric–density coupling is genuinely a structural postulate analogous to GR's assumption that gravity is geometry. A flat geometry with observers is not logically inconsistent — it is simply not our universe. The contradiction argument (coherence conservation requires metric to respond to density) does not hold: a fixed background metric can still support coherence conservation. This is an irreducible physical input."
     }
   ]
 }

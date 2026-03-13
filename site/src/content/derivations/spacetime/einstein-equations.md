@@ -20,7 +20,7 @@ lastUpdated: 2026-03-09
 
 **Structural Postulate S1 (Second-order locality).** The self-consistency relation between the curvature of $(\mathcal{H}, g)$ and the coherence content that generates it involves at most second derivatives of the metric $g_{\mu\nu}$. That is, the geometric side of the field equation depends on $g_{\mu\nu}$, $\partial_\alpha g_{\mu\nu}$, and $\partial_\alpha \partial_\beta g_{\mu\nu}$, but not on higher derivatives.
 
-**Remark.** This postulate reflects the locality of the relational invariant density: the curvature at a point $p$ is determined by the coherence content in an infinitesimal neighborhood of $p$ (via [Gravity](/derivations/spacetime/gravity), S1). Higher-derivative theories (involving $\partial^3 g$ or beyond) would couple curvature to non-local coherence information, violating the principle that the interaction graph determines geometry locally. In standard physics, second-order locality is equivalent to the requirement that the field equations are a well-posed initial value problem (Choquet-Bruhat, 1952).
+**Remark.** This postulate reflects the locality of the relational invariant density: the curvature at a point $p$ is determined by the coherence content in an infinitesimal neighborhood of $p$ (via [Gravity](/derivations/spacetime/gravity), Theorem 0.1). Higher-derivative theories (involving $\partial^3 g$ or beyond) would couple curvature to non-local coherence information, violating the principle that the interaction graph determines geometry locally. In standard physics, second-order locality is equivalent to the requirement that the field equations are a well-posed initial value problem (Choquet-Bruhat, 1952).
 
 ### Step 1: The Self-Consistency Requirement
 
@@ -110,7 +110,7 @@ $$\text{observers} \xrightarrow{\text{relational invariants}} \text{density} \xr
 
 *Proof.* The bootstrap ([Bootstrap Mechanism](/derivations/interactions/bootstrap), Theorem 1.1) establishes that relational invariants are themselves observers: they satisfy the observer definition and participate in further interactions. This self-referential structure has a geometric analogue:
 
-1. **Observers generate curvature**: By [Gravity](/derivations/spacetime/gravity) (S1), the relational invariant density $\rho_I$ curves the coherence geometry.
+1. **Observers generate curvature**: By [Gravity](/derivations/spacetime/gravity) (Theorem 0.1), the relational invariant density $\rho_I$ curves the coherence geometry.
 2. **Curvature determines trajectories**: By [Gravity](/derivations/spacetime/gravity) (Theorem 3.1), physical paths are geodesics of the curved metric.
 3. **Trajectories determine observer distribution**: The energy-momentum tensor $T_{\mu\nu}$ (Definition 2.1) encodes the distribution of observers following these geodesics.
 4. **Distribution generates curvature**: The Einstein equations (Theorem 5.1) relate $T_{\mu\nu}$ back to the curvature.

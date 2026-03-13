@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-13T00:21:22.690Z",
+    "generatedAt": "2026-03-13T02:32:10.520Z",
     "derivationCount": 59,
     "predictionCount": 10,
     "generator": "scripts/build-index.mjs"
@@ -304,6 +304,10 @@
           {
             "source": "spacetime/einstein-equations",
             "context": "Axiom 1"
+          },
+          {
+            "source": "spacetime/gravity",
+            "context": "Axiom 1, C4"
           },
           {
             "source": "spacetime/gravity",
@@ -665,6 +669,10 @@
           },
           {
             "source": "quantum/born-rule",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "spacetime/gravity",
             "context": "Loop Closure"
           },
           {
@@ -7068,10 +7076,6 @@
             "context": "Bootstrap"
           },
           {
-            "source": "spacetime/gravity",
-            "context": "Bootstrap"
-          },
-          {
             "source": "thermodynamics-ext/renormalization",
             "context": "Bootstrap Mechanism"
           },
@@ -11390,7 +11394,7 @@
           },
           {
             "target": "spacetime/gravity",
-            "context": "S1"
+            "context": "Theorem 0.1"
           },
           {
             "target": "spacetime/gravity",
@@ -11484,7 +11488,7 @@
         "geometry"
       ],
       "summary": "Massive observers generate relational invariant density gradients; geodesics = minimum coherence cost paths; the equivalence principle is structural",
-      "lastUpdated": "2026-03-09",
+      "lastUpdated": "2026-03-12",
       "dependsOn": [
         "interactions/relational-invariants",
         "spacetime/lorentz-invariance",
@@ -11526,10 +11530,10 @@
       ],
       "formalObjects": [
         {
-          "type": "Structural Postulate",
-          "id": "S1",
+          "type": "Theorem",
+          "id": "0.1",
           "name": "Metric–density coupling",
-          "statementPreview": "The coherence geometry (H, g) is a smooth pseudo-Riemannian manifold whose metric gmunu is locally determined by the ..."
+          "statementPreview": "The spacetime metric gmunu on the coherence geometry (H, g) cannot be independent of the relational invariant density..."
         },
         {
           "type": "Definition",
@@ -11616,12 +11620,7 @@
           "statementPreview": "The Schwarzschild spacetime provides a consistency model for all results of this derivation.*"
         }
       ],
-      "structuralPostulates": [
-        {
-          "id": "S1",
-          "name": "Metric–density coupling"
-        }
-      ],
+      "structuralPostulates": [],
       "openGaps": [
         {
           "number": 1,
@@ -11639,17 +11638,29 @@
           "description": "*(partially resolved — downstream)*: Black hole singularities are resolved by [Singularity Resolution](/derivations/spacetime/singularity-resolution) (regular cores). Full discrete theory for interior"
         }
       ],
-      "assessmentVerdict": "The derivation of gravity as coherence geometry curvature is rigorous given S1 (metric–density coupling). The inverse-square law, equivalence principles, geodesic equation, and Schwarzschild metric are established by standard mathematical results (Gauss's law, Riemannian geometry, Birkhoff's theorem",
+      "assessmentVerdict": "The derivation of gravity as coherence geometry curvature is rigorous. Metric–density coupling (Theorem 0.1) is now derived from the geometric chain and coherence subadditivity, eliminating the former structural postulate. The inverse-square law, equivalence principles, geodesic equation, and Schwar",
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
           {
-            "target": "spacetime/einstein-equations",
-            "context": "Einstein Field Equations"
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
           },
           {
-            "target": "interactions/bootstrap",
-            "context": "Bootstrap"
+            "target": "thermodynamics/action-planck",
+            "context": "Action and Planck's Constant"
+          },
+          {
+            "target": "axioms/coherence-conservation",
+            "context": "Axiom 1, C4"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/einstein-equations",
+            "context": "Einstein Field Equations"
           },
           {
             "target": "axioms/coherence-conservation",
@@ -11723,7 +11734,7 @@
           },
           {
             "source": "spacetime/einstein-equations",
-            "context": "S1"
+            "context": "Theorem 0.1"
           },
           {
             "source": "spacetime/einstein-equations",
@@ -12491,6 +12502,10 @@
           },
           {
             "source": "particles/mass-hierarchy",
+            "context": "Speed of Light"
+          },
+          {
+            "source": "spacetime/gravity",
             "context": "Speed of Light"
           },
           {
@@ -13874,6 +13889,10 @@
           },
           {
             "source": "quantum/born-rule",
+            "context": "Action and Planck's Constant"
+          },
+          {
+            "source": "spacetime/gravity",
             "context": "Action and Planck's Constant"
           },
           {
@@ -19297,10 +19316,10 @@
     },
     {
       "derivationId": "spacetime/gravity",
-      "type": "Structural Postulate",
-      "id": "S1",
+      "type": "Theorem",
+      "id": "0.1",
       "name": "Metric–density coupling",
-      "fullRef": "spacetime/gravity:Structural Postulate S1"
+      "fullRef": "spacetime/gravity:Theorem 0.1"
     },
     {
       "derivationId": "spacetime/gravity",

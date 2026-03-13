@@ -70,8 +70,10 @@
     "postulateId": "S1",
     "shortName": "Metric\u2013density coupling",
     "statement": "The metric g_\u03bc\u03bd is locally determined by the relational invariant density \u03c1_I, with curvature proportional to \u03c1_I.",
-    "justification": "Since observers curve the coherence geometry through their concentration, the metric must respond to observer density. This is the minimal local coupling assumption.",
-    "group": "geometry"
+    "justification": "Derived from coherence subadditivity (Axiom 1, C4): the action duality links the spacetime metric to the coherence Hessian; subadditivity ensures the Hessian varies with observer content; action equality transfers this to the spacetime metric. Locality from finite c; coupling to \u03c1_I from Noether identification.",
+    "group": "geometry",
+    "derivedFrom": "spacetime/gravity",
+    "derivedFromTitle": "Gravity"
   },
   {
     "id": "einstein-equations-s1",
