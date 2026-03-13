@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-13T22:11:59.810Z",
+    "generatedAt": "2026-03-13T23:26:12.908Z",
     "derivationCount": 60,
     "predictionCount": 10,
     "generator": "scripts/build-index.mjs"
@@ -15,7 +15,7 @@
     "predictionCount": 10,
     "edgeCount": 127,
     "formalObjectCount": 883,
-    "openGapCount": 198,
+    "openGapCount": 197,
     "upgradeEligibleCount": 0,
     "leanVerifiedCount": 16,
     "leanTheoremCount": 64
@@ -1539,6 +1539,10 @@
           {
             "source": "thermodynamics-ext/renormalization",
             "context": "Coupling Constants"
+          },
+          {
+            "source": "thermodynamics-ext/renormalization",
+            "context": "Proposition 3.1"
           }
         ]
       },
@@ -3632,6 +3636,14 @@
           {
             "source": "thermodynamics-ext/renormalization",
             "context": "Color Force"
+          },
+          {
+            "source": "thermodynamics-ext/renormalization",
+            "context": "Proposition 7.1, Lean-verified"
+          },
+          {
+            "source": "thermodynamics-ext/renormalization",
+            "context": "Proposition 7.1"
           }
         ]
       },
@@ -3808,6 +3820,10 @@
           {
             "source": "gauge/color-force",
             "context": "Color Confinement"
+          },
+          {
+            "source": "thermodynamics-ext/renormalization",
+            "context": "Confinement"
           }
         ]
       },
@@ -13972,21 +13988,16 @@
         },
         {
           "number": 2,
-          "title": "Specific $\\beta$-functions",
-          "description": "Recover the one-loop beta-function coefficients for U(1), SU(2), and SU(3) gauge theories from the coherence spectral density. This requires the gauge structure from [Electromagnetism](/derivations/ga"
+          "title": "$\\beta$-functions from the coherence spectral density",
+          "description": "The one-loop beta-function coefficients for U(1), SU(2), and SU(3) are established by standard methods in the framework's downstream derivations ([Color Force](/derivations/gauge/color-force) Proposit"
         },
         {
           "number": 3,
-          "title": "Asymptotic freedom",
-          "description": "Show that the SU(3) coherence flow has the property beta0 < 0 (coupling decreases at high energy). This is the defining feature of QCD and should follow from the gauge structure combined with the c-th"
-        },
-        {
-          "number": 4,
           "title": "Non-perturbative effects",
           "description": "The coherence flow equation (Theorem 3.2) is exact, but extracting non-perturbative physics (confinement, instantons, solitons) requires solving the full functional equation. Connect to the [Mass Hier"
         },
         {
-          "number": 5,
+          "number": 4,
           "title": "Coherence spectral density from first principles",
           "description": "Derive rhoC(omega) from the axioms and the particle content, rather than postulating its existence (S1). This would make the scale decomposition a theorem rather than a postulate."
         }
@@ -13995,6 +14006,14 @@
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
+          {
+            "target": "gauge/color-force",
+            "context": "Color Force"
+          },
+          {
+            "target": "cosmology/coupling-constants",
+            "context": "Coupling Constants"
+          },
           {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
@@ -14040,12 +14059,16 @@
             "context": "Entropy"
           },
           {
-            "target": "cosmology/coupling-constants",
-            "context": "Coupling Constants"
-          },
-          {
             "target": "gauge/electromagnetism",
             "context": "locality of phase comparison"
+          },
+          {
+            "target": "gauge/color-force",
+            "context": "Proposition 7.1, Lean-verified"
+          },
+          {
+            "target": "cosmology/coupling-constants",
+            "context": "Proposition 3.1"
           },
           {
             "target": "gauge/electromagnetism",
@@ -14057,7 +14080,11 @@
           },
           {
             "target": "gauge/color-force",
-            "context": "Color Force"
+            "context": "Proposition 7.1"
+          },
+          {
+            "target": "gauge/confinement",
+            "context": "Confinement"
           }
         ],
         "incoming": [
@@ -22641,27 +22668,20 @@
       "derivationId": "thermodynamics-ext/renormalization",
       "derivationStatus": "rigorous",
       "number": 2,
-      "title": "Specific $\\beta$-functions",
-      "description": "Recover the one-loop beta-function coefficients for U(1), SU(2), and SU(3) gauge theories from the coherence spectral density. This requires the gauge structure from [Electromagnetism](/derivations/ga"
+      "title": "$\\beta$-functions from the coherence spectral density",
+      "description": "The one-loop beta-function coefficients for U(1), SU(2), and SU(3) are established by standard methods in the framework's downstream derivations ([Color Force](/derivations/gauge/color-force) Proposit"
     },
     {
       "derivationId": "thermodynamics-ext/renormalization",
       "derivationStatus": "rigorous",
       "number": 3,
-      "title": "Asymptotic freedom",
-      "description": "Show that the SU(3) coherence flow has the property beta0 < 0 (coupling decreases at high energy). This is the defining feature of QCD and should follow from the gauge structure combined with the c-th"
-    },
-    {
-      "derivationId": "thermodynamics-ext/renormalization",
-      "derivationStatus": "rigorous",
-      "number": 4,
       "title": "Non-perturbative effects",
       "description": "The coherence flow equation (Theorem 3.2) is exact, but extracting non-perturbative physics (confinement, instantons, solitons) requires solving the full functional equation. Connect to the [Mass Hier"
     },
     {
       "derivationId": "thermodynamics-ext/renormalization",
       "derivationStatus": "rigorous",
-      "number": 5,
+      "number": 4,
       "title": "Coherence spectral density from first principles",
       "description": "Derive rhoC(omega) from the axioms and the particle content, rather than postulating its existence (S1). This would make the scale decomposition a theorem rather than a postulate."
     },

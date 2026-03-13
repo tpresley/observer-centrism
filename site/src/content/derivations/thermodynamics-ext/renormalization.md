@@ -25,7 +25,7 @@ The renormalization group is one of the deepest ideas in theoretical physics. It
 
 **Why this matters.** Renormalization is usually presented as a computational technique for handling infinities. This derivation reveals it as a structural consequence of how a conserved quantity (coherence) appears different at different resolutions. The connection between the c-theorem and the second law unifies two seemingly unrelated monotonicity results.
 
-**An honest caveat.** The derivation establishes the general structure of the renormalization group flow and its constraints, but does not compute specific beta functions for known gauge theories. Those require the detailed gauge and matter content from other derivations in the framework.
+**An honest caveat.** The derivation establishes the general structure of the renormalization group flow and its constraints. The specific beta functions for the Standard Model gauge groups have been computed by standard methods in downstream derivations ([Color Force](/derivations/gauge/color-force), [Coupling Constants](/derivations/cosmology/coupling-constants)), but have not yet been derived directly from the coherence spectral density — the more ambitious goal of showing that standard perturbative results are consequences of coherence conservation.
 
 ## Statement
 
@@ -192,7 +192,7 @@ $$\int_0^\infty \rho_\mathcal{C}(\omega) \, d\omega = \mathcal{C}(S) < \infty$$
 
 *This implies that the effective couplings cannot diverge at any finite scale — there are no Landau poles.*
 
-*Proof.* A Landau pole occurs when an effective coupling $g_i(k) \to \infty$ at some finite $k = k_L$. In the coherence framework, couplings are relational invariants ([Relational Invariants](/derivations/interactions/relational-invariants)), which are bounded by the total coherence: $|g_i| \leq f(\mathcal{C}(S))$ for some function $f$ determined by the structure of the invariant (Proposition 6.2 of Relational Invariants: bounded on compact sets of the total coherence).
+*Proof.* A Landau pole occurs when an effective coupling $g_i(k) \to \infty$ at some finite $k = k_L$. In the coherence framework, couplings are relational invariants ([Relational Invariants](/derivations/interactions/relational-invariants)), which are bounded by the total coherence: $|g_i| \leq f(\mathcal{C}(S))$ for some function $f$ determined by the structure of the invariant. This follows from Axiom 1 (finite total coherence) and the definition of relational invariants as continuous functions on compact state spaces (Relational Invariants, Definition 1.1): a continuous function on a compact domain attains its supremum.
 
 Since $\mathcal{C}(S)$ is finite and conserved, $g_i(k)$ is bounded at every scale. The coupling may grow as $k$ increases, but it must remain finite. $\square$
 
@@ -232,7 +232,7 @@ Since $\mathcal{C}(S)$ is finite and conserved, $g_i(k)$ is bounded at every sca
 
 - **Proposition 6.1**: The total coherence $C_0$ is finite. The "coupling" (the single relational invariant $I_{12} = \cos(\theta_1 - \theta_2)$) is bounded: $|I_{12}| \leq 1 < \infty$ at all scales. ✓ $\square$
 
-**Remark (Limitations of the minimal model).** The minimal observer has a trivial RG flow (one scale, one step). A richer consistency check would use the bootstrap hierarchy with multiple levels — each level contributing a peak in $\rho_\mathcal{C}(\omega)$ at a different frequency. The RG flow would then exhibit crossovers between fixed points, corresponding to transitions between bootstrap levels. This requires the full gauge structure and is deferred to [Coupling Constants](/derivations/cosmology/coupling-constants).
+**Remark (Limitations of the minimal model).** The minimal observer has a trivial RG flow (one scale, one step). A richer consistency check would use the bootstrap hierarchy with multiple levels — each level contributing a peak in $\rho_\mathcal{C}(\omega)$ at a different frequency. The RG flow would then exhibit crossovers between fixed points, corresponding to transitions between bootstrap levels. The [Coupling Constants](/derivations/cosmology/coupling-constants) derivation now provides this multi-level structure (three bootstrap levels with crystallization scales $\Lambda_1, \Lambda_2, \Lambda_3$, RG running between them, and explicit $\beta$-function coefficients), but uses the standard RG machinery rather than the coherence spectral density formalism developed here. Constructing the explicit multi-peak $\rho_\mathcal{C}(\omega)$ that reproduces the Coupling Constants results remains an open direction (see Open Gap 2).
 
 ## Rigor Assessment
 
@@ -249,21 +249,23 @@ Since $\mathcal{C}(S)$ is finite and conserved, $g_i(k)$ is bounded at every sca
 **Structural postulate (explicitly stated):**
 - S1 (Scale decomposition of coherence): The coherence measure admits a spectral decomposition by frequency. Motivated by the $U(1)$ phase dynamics of [Loop Closure](/derivations/axioms/loop-closure) — oscillators have well-defined frequencies, providing a natural scale ordering. Same logical status as S1 of [Electromagnetism](/derivations/gauge/electromagnetism) (locality of phase comparison).
 
-**Not addressed (deferred to downstream derivations):**
-- Specific $\beta$-function coefficients for known gauge theories (requires gauge structure from [Electromagnetism](/derivations/gauge/electromagnetism), [Weak Interaction](/derivations/gauge/weak-interaction))
-- Asymptotic freedom of QCD (requires [Color Force](/derivations/gauge/color-force))
-- Non-perturbative effects (confinement, instantons)
+**Addressed downstream (not part of the general framework, but established in the derivation chain):**
+- Specific $\beta$-function coefficients — established by standard methods in [Color Force](/derivations/gauge/color-force) (Proposition 7.1, Lean-verified) and [Coupling Constants](/derivations/cosmology/coupling-constants) (Proposition 3.1). The gauge structures from [Electromagnetism](/derivations/gauge/electromagnetism), [Weak Interaction](/derivations/gauge/weak-interaction), and [Color Force](/derivations/gauge/color-force) are all rigorous. Deriving the coefficients from the coherence spectral density remains open (Open Gap 2).
+- Asymptotic freedom of QCD — established in [Color Force](/derivations/gauge/color-force) (Proposition 7.1): $\beta_0 = 7 > 0$ for $SU(3)$ with $N_f = 6$, Lean-verified.
+- Non-perturbative effects (confinement, instantons) — confinement addressed in [Confinement](/derivations/gauge/confinement) via non-associative phase transport, but not yet derived from the coherence flow equation (Theorem 3.2).
 
-**Assessment:** Rigorous. The complete framework — scale-dependent coherence conservation (Proposition 1.3), exact flow equation (Theorem 2.1), Wetterich-Morris functional equation (Theorem 3.2), bootstrap-RG correspondence (Theorem 4.1), c-theorem (Theorem 5.2), and UV completeness (Proposition 6.1) — is established with full proofs. The structural postulate S1 is explicit and well-motivated. The consistency model verifies all results. The deferred items (specific $\beta$-functions, asymptotic freedom) concern applications to particular gauge theories, not the general framework itself.
+**Assessment:** Rigorous. The complete framework — scale-dependent coherence conservation (Proposition 1.3), exact flow equation (Theorem 2.1), Wetterich-Morris functional equation (Theorem 3.2), bootstrap-RG correspondence (Theorem 4.1), c-theorem (Theorem 5.2), and UV completeness (Proposition 6.1) — is established with full proofs. The structural postulate S1 is explicit and well-motivated. The consistency model verifies all results. The principal applications (specific $\beta$-functions, asymptotic freedom) have been established downstream by standard methods; the remaining open direction is deriving these from the coherence framework's own machinery (spectral density and c-theorem).
 
 ## Open Gaps
 
 1. **Bootstrap–RG correspondence (formal proof)**: Prove that bootstrap stability (invariant couplings under the addition of relational observers) implies $\beta_i = 0$ in the coherence flow. This would make Theorem 4.1 rigorous.
 
-2. **Specific $\beta$-functions**: Recover the one-loop $\beta$-function coefficients for $U(1)$, $SU(2)$, and $SU(3)$ gauge theories from the coherence spectral density. This requires the gauge structure from [Electromagnetism](/derivations/gauge/electromagnetism) and [Weak Interaction](/derivations/gauge/weak-interaction).
+2. **$\beta$-functions from the coherence spectral density**: The one-loop $\beta$-function coefficients for $U(1)$, $SU(2)$, and $SU(3)$ are established by standard methods in the framework's downstream derivations ([Color Force](/derivations/gauge/color-force) Proposition 7.1; [Coupling Constants](/derivations/cosmology/coupling-constants) Proposition 3.1). The more ambitious goal remains open: recover these coefficients directly from the coherence spectral density $\rho_\mathcal{C}(\omega)$ and the coherence flow equation (Theorem 2.1), which would demonstrate that the standard perturbative results are consequences of coherence conservation.
 
-3. **Asymptotic freedom**: Show that the $SU(3)$ coherence flow has the property $\beta_0 < 0$ (coupling decreases at high energy). This is the defining feature of QCD and should follow from the gauge structure combined with the c-theorem.
+3. **Non-perturbative effects**: The coherence flow equation (Theorem 3.2) is exact, but extracting non-perturbative physics (confinement, instantons, solitons) requires solving the full functional equation. Connect to the [Mass Hierarchy](/derivations/particles/mass-hierarchy) tunneling mechanism.
 
-4. **Non-perturbative effects**: The coherence flow equation (Theorem 3.2) is exact, but extracting non-perturbative physics (confinement, instantons, solitons) requires solving the full functional equation. Connect to the [Mass Hierarchy](/derivations/particles/mass-hierarchy) tunneling mechanism.
+4. **Coherence spectral density from first principles**: Derive $\rho_\mathcal{C}(\omega)$ from the axioms and the particle content, rather than postulating its existence (S1). This would make the scale decomposition a theorem rather than a postulate.
 
-5. **Coherence spectral density from first principles**: Derive $\rho_\mathcal{C}(\omega)$ from the axioms and the particle content, rather than postulating its existence (S1). This would make the scale decomposition a theorem rather than a postulate.
+## Addressed Gaps
+
+1. **Asymptotic freedom of QCD** — Addressed by [Color Force](/derivations/gauge/color-force) (Proposition 7.1, Lean-verified): the one-loop $\beta$-function for $SU(3)$ with $N_f = 6$ gives $\beta_0 = 7 > 0$, confirming asymptotic freedom. The computation uses the standard Gross-Wilczek-Politzer method; deriving it from the coherence c-theorem (Theorem 5.2) alone remains an open direction (see Open Gap 2).
