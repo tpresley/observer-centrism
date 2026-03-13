@@ -1,0 +1,261 @@
+---
+import MainLayout from '../components/layouts/MainLayout.astro'
+import knowledgeIndex from '../data/knowledge-index.json'
+import postulatesData from '../data/structural-postulates.json'
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+
+const stats = (knowledgeIndex as any).stats as {
+  byStatus: Record<string, number>
+  derivationCount: number
+  predictionCount: number
+  openGapCount: number
+  leanVerifiedCount: number
+  leanTheoremCount: number
+  formalObjectCount: number
+}
+
+const totalPostulates = (postulatesData as any[]).length
+const derivedPostulates = (postulatesData as any[]).filter(p => p.derivedFrom).length
+const activePostulates = totalPostulates - derivedPostulates
+
+const rigorousCount = stats.byStatus.rigorous || 0
+const provisionalCount = stats.byStatus.provisional || 0
+const nonViableCount = stats.byStatus['non-viable'] || 0
+---
+
+<MainLayout title="Note to Researchers">
+  <article class="researcher-note">
+    <h1>Note to Researchers</h1>
+
+    <p class="lead">
+      Observer-Centrism is a theoretical framework that attempts to derive the known
+      laws of physics from three axioms about what it means to be an observer. It is
+      ambitious, evolving, and committed to radical transparency about what works
+      and what doesn't.
+    </p>
+
+    <h2>What you'll find here</h2>
+
+    <p>
+      This site presents a chain of <strong>{stats.derivationCount} derivations</strong> tracing
+      from three axioms &mdash; coherence conservation, observer definition, and loop
+      closure &mdash; through the fundamental structures of physics: spacetime geometry,
+      quantum mechanics, the Standard Model gauge groups, particle properties, and
+      cosmological structure.
+    </p>
+
+    <p>
+      Each derivation is a formal argument that begins with the axioms (and any
+      explicitly declared additional assumptions) and arrives at a specific physical
+      result. Of these {stats.derivationCount} derivations,
+      <strong>{rigorousCount} are assessed as rigorous</strong>,
+      {provisionalCount > 0 && <>{provisionalCount} as provisional, </>}
+      and <strong>{nonViableCount} as non-viable</strong>.
+      The framework also makes <strong>{stats.predictionCount} testable predictions</strong>,
+      several of which are accessible to current or near-future experiments.
+    </p>
+
+    <p>
+      {stats.leanVerifiedCount > 0 && <>
+        Select derivations have been mechanically verified in
+        <a href="https://lean-lang.org/">Lean 4</a>,
+        with {stats.leanTheoremCount} theorems checked by a proof assistant
+        across {stats.leanVerifiedCount} derivation files.
+      </>}
+    </p>
+
+    <h2>What's honestly open</h2>
+
+    <p>
+      The framework does not pretend to be complete. Every derivation documents its own
+      weaknesses, and the site catalogs these systematically:
+    </p>
+
+    <ul>
+      <li>
+        <strong><a href={`${base}/postulates`}>{activePostulates} structural postulates</a></strong>
+        &mdash; assumptions beyond the three axioms that specific derivations require.
+        These are explicitly declared, not hidden.
+        {derivedPostulates > 0 && <>
+          {' '}{derivedPostulates} postulates originally introduced as assumptions have since
+          been <strong>derived as theorems</strong>, reducing the framework's independent assumptions.
+          The remaining {activePostulates} are active targets for future work.
+        </>}
+      </li>
+      <li>
+        <strong><a href={`${base}/open-gaps`}>{stats.openGapCount} open gaps</a></strong> &mdash;
+        specific logical steps, missing bounds, or incomplete arguments cataloged across
+        the derivation chain. These range from straightforward tightening exercises to deep
+        open problems in mathematical physics.
+      </li>
+      <li>
+        <strong>{nonViableCount} non-viable derivation</strong> &mdash; the attempt to derive the
+        value of the cosmological constant. The site keeps this derivation with an honest
+        assessment of why it fails, what the root causes are, and what would be needed to
+        make progress. Failed attempts are documented rather than deleted.
+      </li>
+      <li>
+        <strong>1 derivation tied to a Clay Millennium Problem</strong> &mdash; the chiral
+        symmetry breaking derivation depends on the Yang-Mills mass gap, which is one of the
+        seven Millennium Prize Problems. This derivation will likely remain provisional until
+        that problem is solved.
+      </li>
+    </ul>
+
+    <h2>The status system</h2>
+
+    <p>
+      Every derivation carries a status reflecting the strength of its logical chain:
+    </p>
+
+    <ul class="status-list">
+      <li><span class="status-dot" style="color: var(--color-rigorous)">●</span> <strong>Rigorous</strong> &mdash; all steps formally justified, no unresolved gaps in the main argument</li>
+      <li><span class="status-dot" style="color: var(--color-provisional)">◐</span> <strong>Provisional</strong> &mdash; main structure is sound but some steps rely on conjectures or semi-formal arguments</li>
+      <li><span class="status-dot" style="color: var(--color-draft)">○</span> <strong>Draft</strong> &mdash; argument sketched but significant gaps remain</li>
+      <li><span class="status-dot" style="color: var(--color-stub)">·</span> <strong>Stub</strong> &mdash; placeholder with direction but little formal content</li>
+      <li><span class="status-dot" style="color: var(--color-non-viable)">✗</span> <strong>Non-viable</strong> &mdash; approach assessed as fundamentally blocked; kept for honesty</li>
+    </ul>
+
+    <p>
+      This system exists because transparency about the state of each argument matters more
+      than presenting a polished facade. A framework that hides its weaknesses cannot be
+      improved; one that catalogs them invites collaboration.
+    </p>
+
+    <h2>Where to start</h2>
+
+    <p>
+      The site offers several entry points depending on your interests:
+    </p>
+
+    <ul>
+      <li>
+        <strong><a href={`${base}/open-gaps`}>Open Gaps</a></strong> &mdash; the most direct
+        path to research opportunities. Each gap identifies a specific problem, the derivation
+        it belongs to, and what would be needed to close it.
+      </li>
+      <li>
+        <strong><a href={`${base}/postulates`}>Structural Postulates</a></strong> &mdash;
+        the framework's declared assumptions beyond the three axioms. Promoting a postulate
+        to a theorem (by deriving it from earlier results) strengthens the entire downstream
+        derivation chain.
+      </li>
+      <li>
+        <strong><a href={`${base}/map`}>Derivation Map</a></strong> &mdash; an interactive
+        dependency graph showing how derivations connect. Hover to highlight ancestors;
+        click to navigate.
+      </li>
+      <li>
+        <strong><a href={`${base}/predictions/`}>Predictions</a></strong> &mdash; testable
+        consequences of the framework, including holographic noise signatures and dark
+        matter granularity, with experimental status tracking.
+      </li>
+      <li>
+        <strong>Overview tabs</strong> &mdash; every derivation page defaults to a non-technical
+        overview explaining what the derivation addresses and how the argument works, before
+        the formal mathematics. Switch to the "Derivation" tab for the full formal content.
+      </li>
+    </ul>
+
+    <h2>The spirit of this project</h2>
+
+    <p>
+      Observer-Centrism does not claim to be the final theory of physics. It is an attempt
+      to see how far three carefully chosen axioms about observers can reach &mdash; and to be
+      scrupulously honest about every assumption, gap, and failure encountered along the way.
+    </p>
+
+    <p>
+      The framework already presents a coherent picture of much of fundamental physics: from
+      quantum mechanics and the Standard Model gauge structure to spacetime geometry and
+      cosmological constraints. But "coherent picture" is not the same as "proven correct."
+      Many areas remain where the arguments are incomplete, the assumptions are not yet
+      justified, or the derivation chain requires serious mathematical work to solidify.
+    </p>
+
+    <p>
+      These are not embarrassments to be concealed &mdash; they are invitations. The open gaps,
+      active structural postulates, and provisional derivations represent specific, well-defined
+      problems where progress is possible. Some may require new mathematical tools. Some may
+      require rethinking assumptions. Some may reveal that a particular derivation path is
+      non-viable, in which case that finding will be documented just as honestly as any success.
+    </p>
+
+    <p>
+      If you find errors, we want to know. If you can close a gap, the framework gets stronger.
+      If you can show that an approach is fundamentally blocked, that too is a contribution.
+      The goal is not to defend a theory but to follow the logic wherever it leads.
+    </p>
+  </article>
+</MainLayout>
+
+<style>
+  .researcher-note {
+    max-width: 720px;
+  }
+
+  .lead {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+  }
+
+  .researcher-note h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.35rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.5rem;
+  }
+
+  .researcher-note h2:first-of-type {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .researcher-note p {
+    margin-bottom: 1rem;
+    line-height: 1.75;
+  }
+
+  .researcher-note ul {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+  }
+
+  .researcher-note ul li {
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+  }
+
+  .status-list {
+    list-style: none;
+    padding-left: 0.5rem;
+  }
+
+  .status-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+
+  .status-dot {
+    font-size: 1rem;
+    flex-shrink: 0;
+    width: 1.2rem;
+    text-align: center;
+  }
+
+  .researcher-note a {
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+
+  .researcher-note a:hover {
+    border-bottom-color: var(--color-accent);
+  }
+</style>
