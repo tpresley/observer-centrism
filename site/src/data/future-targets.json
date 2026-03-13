@@ -136,7 +136,7 @@
       "id": "observer-loop-viability",
       "title": "Observer Loop Viability Bounds",
       "difficulty": "HARD",
-      "status": "DRAFT — Planck-scale upper bound (Thm 2.1), bounce dissolution (Thm 7.1), partial order discontinuity at bounce (Prop 8.1), epistemic horizons (Prop 6.3–6.4), hierarchical coherence suppression mechanism (Step 10). Key open gaps: minimum non-self coherence (Gap 2), geometry functor formalization (Gap 6).",
+      "status": "PROVISIONAL — Planck-scale upper bound (Thm 2.1), sign prediction Λ ≥ 0 (Thm 5.4), bounce dissolution (Thm 4.1), coherence ontology excludes bounce (Thm 5.2), Type II fusion reinforcement (Prop 5.3), epistemic horizons (Prop 1.5–1.6), hierarchical coherence suppression mechanism (Step 7). Key open gaps: sharpening to Λ > 0 (Gap 3), minimum non-self coherence (Gap 2), geometry functor formalization (Gap 6).",
       "createdDate": "2026-03-12",
       "rationale": "The cosmological constant derivation (non-viable) identifies Route 3: observer-existence constraints may restrict which spacetimes host valid DAGs. The axioms require observer loops with Lyapunov stability (Axiom 3), which may not be achievable for arbitrary Λ. Even a Planck-scale upper bound establishes the principle that axioms constrain solutions, not just dynamics. A sign prediction (Λ > 0) would be a real result.",
       "strategy": "(1) Formalize Lyapunov stability in de Sitter spacetime — coherence at observer boundary redshifts at rate H = √(Λ/3). (2) Derive viability condition: coherence refreshed per cycle > coherence lost to expansion. (3) Analyze Λ < 0 (AdS): observer loops must survive Planck-density bounce — can Noether invariant I be preserved? (4) Sign argument: structural arrow (growing DAG) requires expanding geometry → Λ ≥ 0; cosmological arrow stability → Λ > 0.",
@@ -148,7 +148,7 @@
       "id": "hierarchical-geometry",
       "title": "Hierarchical Geometry Functor",
       "difficulty": "HARD",
-      "status": "Future target — formalizes observer-loop-viability Step 10 and Gap 6",
+      "status": "Future target — formalizes observer-loop-viability Step 7 and Gap 6",
       "rationale": "The observer hierarchy (bootstrap) generates observers at every scale. Each observer sees an effective geometry through its epistemic horizon (holographic bound). ER=EPR says relational invariants create geometry. Cross-level consistency (functoriality of the bootstrap map R on the geometry) constrains the allowed geometries. This may connect the total coherence C₀, the bootstrap structure, and Λ via a self-consistency condition. Formalizing this requires promoting R to a functor on morphisms (bootstrap.md Gap 4) and defining the geometry functor G: Obs → Geom.",
       "strategy": "(1) Promote R to full functor on Obs morphisms (naturality of level-set construction). (2) Define G: Obs → Geom mapping each observer's boundary area to an effective local geometry via ER=EPR. (3) Show G ∘ R is consistent (functoriality across levels): geometry at level n+1 restricted to scale λ_n reduces to geometry at level n. (4) Prove that this consistency constrains the relationship between C₀, Σ Δc_n, and Λ. (5) Compute Σ Δc_n from the known bootstrap structure (division algebra chain, mass hierarchy tunneling factors).",
       "dependencies": ["interactions/bootstrap", "holography/er-epr", "thermodynamics-ext/renormalization", "holography/area-scaling", "cosmology/observer-loop-viability"],
@@ -194,9 +194,9 @@
       "title": "Cosmological Constant",
       "difficulty": "BLOCKED (value) / HARD (sign, bounds, and hierarchy mechanism)",
       "gaps": ["spacetime/einstein-equations Gap 1", "particles/mass-hierarchy Gap 4", "foundation/coherence-lagrangian Gap 2", "thermodynamics/time Gap 3", "spacetime/singularity-resolution Gap 4", "cosmology/observer-loop-viability Gap 6"],
-      "rationale": "Six gaps reference the Λ problem or connect to it. The cosmological-constant derivation is non-viable for computing the value, but four directions are active: (1) observer-loop-viability (draft) establishes a Planck-scale upper bound and proves bounce dissolution, (2) hierarchical coherence suppression (Step 10) identifies a mechanism connecting bootstrap, c-theorem, and ER=EPR to a self-consistency condition for Λ — needs the geometry functor (Gap 6), (3) cosmological arrow (time Gap 3) may predict Λ > 0, (4) de Sitter core connection (singularity-resolution Gap 4) may make the self-consistency loop concrete.",
+      "rationale": "Six gaps reference the Λ problem or connect to it. The cosmological-constant derivation is non-viable for computing the value, but four directions are active: (1) observer-loop-viability (provisional) establishes a Planck-scale upper bound and predicts Λ ≥ 0 (sign prediction via coherence conservation), (2) hierarchical coherence suppression (Step 7) identifies a mechanism connecting bootstrap, c-theorem, and ER=EPR to a self-consistency condition for Λ — needs the geometry functor (Gap 6), (3) cosmological arrow (time Gap 3) may sharpen to Λ > 0, (4) de Sitter core connection (singularity-resolution Gap 4) may make the self-consistency loop concrete.",
       "relatedDerivations": ["cosmology/observer-loop-viability", "cosmology/cosmological-constant", "interactions/bootstrap", "thermodynamics-ext/renormalization", "holography/er-epr"],
-      "status": "Value blocked. Upper bound established at Planck scale. Hierarchical mechanism identified (Step 10) — reframes hierarchy as question about C₀. Sign and geometry functor formalization are active targets."
+      "status": "Value blocked. Upper bound established at Planck scale. Sign prediction Λ ≥ 0 established (Thm 5.4). Hierarchical mechanism identified (Step 7) — reframes hierarchy as question about C₀. Sharpening to Λ > 0 and geometry functor formalization are active targets."
     },
     {
       "id": "quantitative-eta-B",
@@ -233,7 +233,7 @@
     {
       "id": "cosmological-constant",
       "title": "Cosmological Constant (non-viable for value; sign/bounds/hierarchy mechanism open)",
-      "reason": "The derivation's own assessment is that the value of Λ cannot be derived — it depends on initial conditions whose ontic/epistemic status is murkier than initially stated (see §Root Cause). Honestly maintained as non-viable for the value. The Planck-scale upper bound has been established (observer-loop-viability Thm 2.1). A hierarchical coherence suppression mechanism (Step 10) reframes the 120-order hierarchy: the bootstrap absorbs coherence at each level (c-theorem), and a self-consistency condition relates C₀, structural absorption, and Λ. The hard question becomes 'why is C₀ large in Planck units?' — a single number rather than a coincidence. Formalizing this requires the geometry functor (Gap 6)."
+      "reason": "The derivation's own assessment is that the value of Λ cannot be derived — it depends on initial conditions whose ontic/epistemic status is murkier than initially stated (see §Root Cause). Honestly maintained as non-viable for the value. The sign prediction Λ ≥ 0 (observer-loop-viability Thm 5.4) and Planck-scale upper bound (Thm 2.1) are established. A hierarchical coherence suppression mechanism (Step 7) reframes the 120-order hierarchy: the bootstrap absorbs coherence at each level (c-theorem), and a self-consistency condition relates C₀, structural absorption, and Λ. The hard question becomes 'why is C₀ large in Planck units?' — a single number rather than a coincidence. Formalizing this requires the geometry functor (Gap 6)."
     },
     {
       "id": "loop-closure-s1",

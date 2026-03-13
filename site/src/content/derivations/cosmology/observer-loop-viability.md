@@ -1,29 +1,27 @@
 ---
 title: "Observer Loop Viability Bounds"
-status: "draft"
-dependsOn: ["spacetime/singularity-resolution", "holography/area-scaling", "minimal-observer/structure", "axioms/loop-closure", "minimal-observer/multiplicity", "thermodynamics/entropy", "interactions/bootstrap", "thermodynamics-ext/renormalization", "holography/er-epr"]
+status: "provisional"
+dependsOn: ["spacetime/singularity-resolution", "holography/area-scaling", "minimal-observer/structure", "axioms/loop-closure", "minimal-observer/multiplicity", "thermodynamics/entropy", "thermodynamics/time", "interactions/bootstrap", "interactions/relational-invariants", "interactions/three-types", "thermodynamics-ext/renormalization", "holography/er-epr"]
 enablesDerivation: []
 tags: ["cosmology", "quantum-gravity"]
-summary: "The structural requirements of Axioms 2 and 3 yield a Planck-scale upper bound on |Λ|: observer loops cannot close if the cosmological horizon is sub-Planckian. Observer loops cannot survive Planck-density bounces (Λ < 0 cosmologies), but the axioms do not exclude Λ < 0 because observers can re-form between bounces. The sign of Λ is not constrained by the current axioms alone."
+summary: "The three axioms constrain which spacetimes can host observer triples. The Planck-scale upper bound (Λ < 3/ℓ_P²) follows from geometric viability. The sign prediction (Λ ≥ 0) follows from coherence conservation: a Λ < 0 bounce destroys all observer structures, leaving coherence with no valid carrier — violating Axiom 1."
 rigorLevel: "semi-formal"
-lastUpdated: 2026-03-12
+lastUpdated: 2026-03-13
 ---
 
 ## Statement
 
-**Theorem 1 (Planck-scale viability bound).** In de Sitter spacetime with cosmological constant $\Lambda > 0$, observer triples $(\Sigma, I, \mathcal{B})$ satisfying Axioms 2 and 3 can exist only if:
+**Theorem (Observer-Loop Viability Bounds).** The three axioms constrain which spacetimes can host observer triples. Specifically:
 
-$$\boxed{\Lambda < \frac{3}{\ell_P^2} \approx 3.7 \times 10^{66}\;\text{cm}^{-2}}$$
+1. **Planck-scale upper bound.** In de Sitter spacetime with $\Lambda > 0$, observer triples $(\Sigma, I, \mathcal{B})$ satisfying Axioms 2 and 3 can exist only if $\Lambda < 3/\ell_P^2 \approx 3.7 \times 10^{66}\;\text{cm}^{-2}$. This is 120 orders of magnitude above the observed value $\Lambda_{\text{obs}} \sim 10^{-56}\;\text{cm}^{-2}$.
 
-This upper bound is 120 orders of magnitude above the observed value $\Lambda_{\text{obs}} \sim 10^{-56}\;\text{cm}^{-2}$.
+2. **Bounce dissolution.** In a $\Lambda < 0$ FRW cosmology, the recollapse bounce at Planck density destroys all observer triples. No observer loop can close when the available phase space vanishes. New triples form after the bounce with new Noether invariants.
 
-**Theorem 2 (Bounce dissolution).** In a $\Lambda < 0$ FRW cosmology, the recollapse bounce at Planck density ($\rho = \rho_P$) destroys all observer triples. No observer loop can close when the available phase space vanishes. New observer triples form after the bounce with new Noether invariants.
-
-**Proposition 3 (No sign constraint).** The current axioms do not exclude $\Lambda < 0$. Observers exist during the expanding and contracting phases between bounces. The bounce is a discontinuity in the interaction graph where no observers exist and time is undefined (Proposition 8.1); the axioms are inapplicable during the bounce but are satisfied within each epoch. The sign of $\Lambda$ is not determined.
+3. **Sign prediction.** The axioms predict $\Lambda \geq 0$. A $\Lambda < 0$ cosmology requires a Planck-density bounce, which destroys all observer structures. Since coherence exists only in observer state spaces and relational invariants (the framework's coherence ontology), the bounce leaves coherence with no valid carrier — violating Axiom 1 (coherence conservation). The recollapse is axiomatically prohibited.
 
 ## Derivation
 
-### Step 1: Observer Viability in de Sitter Space
+### Step 1: Observer Viability and Horizon Distinctions
 
 **Definition 1.1.** A spacetime is **observer-viable** if it admits at least one pair of observer triples $(\Sigma_i, I_i, \mathcal{B}_i)$ for $i = 1, 2$ satisfying:
 - Axiom 2: each has a state space $\Sigma_i$, Noether invariant $I_i$, and self/non-self boundary $\mathcal{B}_i$
@@ -44,6 +42,29 @@ $$ds^2 = -\left(1 - \frac{r^2}{R_H^2}\right)c^2\,dt^2 + \left(1 - \frac{r^2}{R_H
 
 This metric is time-independent. The static patch is the maximal region causally accessible to the observer at $r = 0$.
 
+**Definition 1.3.** The **causal horizon** of an observer in de Sitter space is the cosmological horizon at $R_H = \sqrt{3/\Lambda}$ — the boundary of the region from which signals can reach the observer. This is a geometric property of the spacetime, identical for all comoving observers.
+
+**Definition 1.4.** The **epistemic horizon** of observer $A$ is the maximum information content accessible through $A$'s boundary $\mathcal{B}_A$. By [Holographic Entropy Bound](/derivations/holography/area-scaling) (Theorem 3.2), this is:
+
+$$\mathcal{I}_A^{\max} = \frac{A_{\mathcal{B}}}{4\,\ell_P^2}$$
+
+where $A_{\mathcal{B}}$ is the area of $A$'s self/non-self boundary. The epistemic horizon is observer-indexed: it depends on the observer's state space $\Sigma_A$ and spatial extent.
+
+**Proposition 1.5 (Epistemic horizons are observer-specific).** *Different observers have vastly different epistemic horizons, determined by their spatial extent $\ell_A \sim \lambda_C = \hbar/(m_A c)$ ([Minimal Observer Structure](/derivations/minimal-observer/structure), Proposition 7.1):*
+
+| Observer | Mass | $\lambda_C$ | $A_{\mathcal{B}} \sim \lambda_C^2$ | $\mathcal{I}_A^{\max}$ |
+|---|---|---|---|---|
+| Planck-mass | $m_P$ | $\ell_P$ | $\ell_P^2$ | $\sim 1$ bit |
+| Electron | $m_e$ | $10^{22}\;\ell_P$ | $10^{44}\;\ell_P^2$ | $\sim 10^{43}$ bits |
+| Proton | $m_p$ | $10^{19}\;\ell_P$ | $10^{38}\;\ell_P^2$ | $\sim 10^{37}$ bits |
+| *Cosmological horizon* | — | $R_H \sim 10^{61}\;\ell_P$ | $10^{122}\;\ell_P^2$ | $\sim 10^{122}$ bits |
+
+*A Planck-mass observer's epistemic horizon is barely one bit — the minimum for multiplicity. An electron's epistemic horizon is $\sim 10^{43}$ bits, 79 orders of magnitude smaller than the cosmological horizon. Each observer "sees" a different effective universe, limited by its own state space.*
+
+**Proposition 1.6 (Viability uses the causal horizon; tightening uses the epistemic horizon).** *The viability bound (Theorem 2.1) correctly uses the causal horizon $R_H$: the observer must fit within the causally accessible region, regardless of its epistemic capacity. But the hierarchy question (Step 6) depends on the epistemic horizon: the observer accesses non-self coherence through its boundary $\mathcal{B}_A$, not through the cosmological horizon $R_H$. The relevant constraint for Lyapunov stability is how much non-self coherence the observer can process through $A_{\mathcal{B}}$.*
+
+**Remark.** This distinction resolves an apparent puzzle: why does the geometric bound use the cosmological horizon when the framework says everything is observer-indexed? The answer is that the geometric bound asks a *minimal* question (can ANY observer fit?), which is a geometric constraint on the spacetime itself. The observer-indexing enters when we ask *which* observers can exist and *what they can access* — questions that depend on the epistemic horizon.
+
 ### Step 2: The Geometric Upper Bound
 
 **Theorem 2.1 (Geometric bound).** *If $\Lambda > 3/\ell_P^2$, no observer triple can exist in de Sitter spacetime.*
@@ -60,7 +81,7 @@ $$\Lambda < \frac{3}{\ell_P^2}$$
 
 If $\Lambda \geq 3/\ell_P^2$, the horizon radius is at most $\ell_P$. No observer — not even the minimal $U(1)$ oscillator on $S^1$ — fits within the static patch. No relational invariant crossings through $\mathcal{B}$ can occur, so no observer triple satisfying Axiom 2 can form. $\square$
 
-### Step 3: The Holographic Budget Bound
+### Step 3: The Holographic Budget Bound and Local Stability
 
 **Proposition 3.1 (Coherence budget).** *The multiplicity requirement, combined with the holographic entropy bound, independently gives the same Planck-scale upper bound on $\Lambda$.*
 
@@ -76,64 +97,11 @@ $$A_{\mathcal{B}} \geq 4\ell_P^2 \implies \ell_O \geq 2\ell_P$$
 
 where $\ell_O$ is the observer's linear extent. Two such observers within the static patch require $R_H > 2\ell_P$, giving $\Lambda < 3/(4\ell_P^2)$ — the same Planck-scale order as the geometric bound. $\square$
 
-### Step 4: Local Stability in the Static Patch
+**Remark (Local stability and cosmological redshift).** Two secondary checks confirm that the bound is not tightened by local effects. First, the static patch metric (Definition 1.2) is time-independent ($\partial_t g_{\mu\nu} = 0$), so the Lyapunov stability of observer loops is unaffected by $\Lambda$: if a loop closes with Lyapunov stability in Minkowski space, it closes in the static de Sitter patch at $r \ll R_H$. Observers can persist indefinitely — the cosmological expansion does not introduce approximate-closure drift ([Loop Closure](/derivations/axioms/loop-closure), Definition 5.1) for observers at fixed static-patch positions. Second, the redshift between co-located observers separated by $\sim\ell_P$ is $z \approx \Lambda\ell_P^2/6 \sim 10^{-122}$ for the observed $\Lambda$ — negligible. The multiplicity constraint introduces no tightening beyond the geometric bound.
 
-**Proposition 4.1 (Time-independent local dynamics).** *In the static de Sitter patch, the local dynamics of an observer at $r \ll R_H$ is time-independent. The Lyapunov stability of the observer's loop closure is not directly affected by $\Lambda$.*
+### Step 4: Bounce Dissolution in $\Lambda < 0$ Cosmologies
 
-*Proof.* The static patch metric (Definition 1.2) is explicitly time-independent: $\partial_t g_{\mu\nu} = 0$. An observer at $r = 0$ experiences a Minkowski-like geometry (the metric reduces to $ds^2 = -c^2 dt^2 + dr^2 + r^2 d\Omega^2$ at $r = 0$).
-
-The observer's loop closure ([Loop Closure](/derivations/axioms/loop-closure), Definition 3.1) is a dynamical system $\dot{\sigma} = F(\sigma)$ on the state space $\Sigma$. In the static patch, $F$ is time-independent, so the standard Lyapunov stability analysis applies without modification. If the loop closes with Lyapunov stability in Minkowski space, it closes with Lyapunov stability in the static de Sitter patch at $r \ll R_H$. $\square$
-
-**Corollary 4.2 (Indefinite observer lifetime in de Sitter).** *For $\Lambda < 3/\ell_P^2$, an observer pair can persist indefinitely within the static patch. The cosmological expansion does not introduce an approximate-closure drift (in the sense of [Loop Closure](/derivations/axioms/loop-closure), Definition 5.1) for observers at fixed positions in the static patch.*
-
-*Proof.* In static coordinates, both observers are at fixed positions $r_1, r_2 < R_H$. The metric is time-independent, and the Type III interactions between them across their shared boundary are time-independent. The loop closure is exact ($\varepsilon = 0$ in [Loop Closure](/derivations/axioms/loop-closure), Definition 5.1), and the observer lifetime $N_{\max} = \lfloor D_{\mathcal{B}}/\varepsilon \rfloor \to \infty$ ([Loop Closure](/derivations/axioms/loop-closure), Proposition 5.2). $\square$
-
-**Remark.** The "expansion" of the de Sitter universe is a coordinate effect in the comoving frame. For the observer's local physics, the static patch provides the correct description. The expansion manifests as a horizon at $R_H$, beyond which the observer has no causal access — but it does not perturb the observer's own loop closure. This is a standard result of de Sitter physics reinterpreted in the framework's language.
-
-### Step 5: Cosmological Redshift and Far-Field Interactions
-
-**Proposition 5.1 (Redshift of non-self interactions).** *Type III interactions between an observer at $r = 0$ and a non-self observer at radial coordinate $r$ in the static patch are redshifted by the factor:*
-
-$$z(r) = \frac{1}{\sqrt{1 - r^2/R_H^2}} - 1$$
-
-*For $r \to R_H$, the redshift diverges: $z \to \infty$. Interactions with non-self observers near the horizon are exponentially suppressed.*
-
-*Proof.* The redshift factor between static observers at $r_1 = 0$ and $r_2 = r$ in the de Sitter static patch is determined by the ratio of the metric components: $1 + z = \sqrt{g_{tt}(r_1)/g_{tt}(r_2)} = 1/\sqrt{1 - r^2/R_H^2}$. A phase signal emitted at frequency $\omega$ from the non-self observer at $r$ arrives at the central observer at frequency $\omega/(1+z)$. The effective rate of Type III interactions is reduced by this factor. $\square$
-
-**Corollary 5.2 (Multiplicity within a sub-horizon region).** *The multiplicity requirement (Definition 1.1) is satisfied as long as the non-self observer is within a sub-horizon region $r < R_H$. Since the minimum separation is $\ell_P \ll R_H$ (when $\Lambda \ll 3/\ell_P^2$), the redshift between the pair is negligible for the observed $\Lambda$:*
-
-$$z(\ell_P) = \frac{1}{\sqrt{1 - \Lambda\,\ell_P^2/3}} - 1 \approx \frac{\Lambda\,\ell_P^2}{6} \sim 10^{-122}$$
-
-*The multiplicity constraint introduces no tightening beyond the geometric bound.*
-
-### Step 6: Causal Horizons vs. Epistemic Horizons
-
-**Definition 6.1.** The **causal horizon** of an observer in de Sitter space is the cosmological horizon at $R_H = \sqrt{3/\Lambda}$ — the boundary of the region from which signals can reach the observer. This is a geometric property of the spacetime, identical for all comoving observers.
-
-**Definition 6.2.** The **epistemic horizon** of observer $A$ is the maximum information content accessible through $A$'s boundary $\mathcal{B}_A$. By [Holographic Entropy Bound](/derivations/holography/area-scaling) (Theorem 3.2), this is:
-
-$$\mathcal{I}_A^{\max} = \frac{A_{\mathcal{B}}}{4\,\ell_P^2}$$
-
-where $A_{\mathcal{B}}$ is the area of $A$'s self/non-self boundary. The epistemic horizon is observer-indexed: it depends on the observer's state space $\Sigma_A$ and spatial extent.
-
-**Proposition 6.3 (Epistemic horizons are observer-specific).** *Different observers have vastly different epistemic horizons, determined by their spatial extent $\ell_A \sim \lambda_C = \hbar/(m_A c)$ ([Minimal Observer Structure](/derivations/minimal-observer/structure), Proposition 7.1):*
-
-| Observer | Mass | $\lambda_C$ | $A_{\mathcal{B}} \sim \lambda_C^2$ | $\mathcal{I}_A^{\max}$ |
-|---|---|---|---|---|
-| Planck-mass | $m_P$ | $\ell_P$ | $\ell_P^2$ | $\sim 1$ bit |
-| Electron | $m_e$ | $10^{22}\;\ell_P$ | $10^{44}\;\ell_P^2$ | $\sim 10^{43}$ bits |
-| Proton | $m_p$ | $10^{19}\;\ell_P$ | $10^{38}\;\ell_P^2$ | $\sim 10^{37}$ bits |
-| *Cosmological horizon* | — | $R_H \sim 10^{61}\;\ell_P$ | $10^{122}\;\ell_P^2$ | $\sim 10^{122}$ bits |
-
-*A Planck-mass observer's epistemic horizon is barely one bit — the minimum for multiplicity. An electron's epistemic horizon is $\sim 10^{43}$ bits, 79 orders of magnitude smaller than the cosmological horizon. Each observer "sees" a different effective universe, limited by its own state space.*
-
-**Proposition 6.4 (Viability uses the causal horizon; tightening uses the epistemic horizon).** *The viability bound (Theorem 2.1) correctly uses the causal horizon $R_H$: the observer must fit within the causally accessible region, regardless of its epistemic capacity. But the tightening question (Step 9, Proposition 9.2 below) depends on the epistemic horizon: the observer accesses non-self coherence through its boundary $\mathcal{B}_A$, not through the cosmological horizon $R_H$. The relevant constraint for Lyapunov stability is how much non-self coherence the observer can process through $A_{\mathcal{B}}$.*
-
-**Remark.** This distinction resolves an apparent puzzle: why does the geometric bound use the cosmological horizon when the framework says everything is observer-indexed? The answer is that the geometric bound asks a *minimal* question (can ANY observer fit?), which is a geometric constraint on the spacetime itself. The observer-indexing enters when we ask *which* observers can exist and *what they can access* — questions that depend on the epistemic horizon.
-
-### Step 7: Bounce Dissolution in $\Lambda < 0$ Cosmologies
-
-**Theorem 7.1 (Observer dissolution at Planck density).** *At the Planck-density bounce of a $\Lambda < 0$ FRW cosmology, all observer triples dissolve: no observer loop can close.*
+**Theorem 4.1 (Observer dissolution at Planck density).** *At the Planck-density bounce of a $\Lambda < 0$ FRW cosmology, all observer triples dissolve: no observer loop can close.*
 
 *Proof.* By [Singularity Resolution](/derivations/spacetime/singularity-resolution) (Theorem 4.1), the recollapse of a $\Lambda < 0$ universe produces a bounce at $\rho = \rho_P$ rather than a singularity. At the bounce, the modified Friedmann equation gives $H = 0$ via $H^2 = (8\pi G/3)\rho(1 - \rho/\rho_P) = 0$.
 
@@ -149,47 +117,55 @@ $$p_{\text{eff}} = p - \rho c^2 \frac{\rho/\rho_P}{1 - \rho/\rho_P} \to -\infty$
 
 This overwhelms the observer's internal dynamics. The observer's state is pushed beyond the boundary of its connected component in the coherence geometry ($\partial O$ in [Loop Closure](/derivations/axioms/loop-closure), Proposition 4.3), and the Noether invariant $I$ is no longer preserved. $\square$
 
-**Proposition 7.2 (Re-formation after bounce).** *After the bounce, the universe expands and $\rho$ drops below $\rho_P$. New observer triples can form with new Noether invariants $I' \neq I$. There is no continuity of observer identity through the bounce.*
+**Proposition 4.2 (Re-formation after bounce).** *After the bounce, the universe expands and $\rho$ drops below $\rho_P$. New observer triples can form with new Noether invariants $I' \neq I$. There is no continuity of observer identity through the bounce.*
 
 *Proof.* As $\rho$ decreases from $\rho_P$, the available phase space $(1 - \rho/\rho_P) > 0$ reopens. The coherence geometry develops structure: spatial variation in coherence density allows self/non-self boundaries to form. New minimal observer loops ([Minimal Observer Structure](/derivations/minimal-observer/structure)) can close once the available phase space is sufficient to support the minimum coherence cost $S_{\min} = \hbar$ ([Loop Closure](/derivations/axioms/loop-closure), Proposition 6.2).
 
-The new observers have new Noether invariants because: the Noether invariant $I$ of the pre-bounce observers was not preserved through the bounce (Theorem 7.1, step iii). The conservation of $I$ is tied to the observer's loop closure symmetry, which was broken. Post-bounce observers arise from fresh symmetry-breaking of the expanding coherence geometry and have independent invariants. $\square$
+The new observers have new Noether invariants because: the Noether invariant $I$ of the pre-bounce observers was not preserved through the bounce (Theorem 4.1, step iii). The conservation of $I$ is tied to the observer's loop closure symmetry, which was broken. Post-bounce observers arise from fresh symmetry-breaking of the expanding coherence geometry and have independent invariants. $\square$
 
-### Step 8: Sign Constraint Assessment
+### Step 5: Sign Constraint from Coherence Conservation
 
-**Proposition 8.1 (No time during the bounce).** *At the Planck-density bounce, no observers exist (Theorem 7.1). By [Time as Phase Ordering](/derivations/thermodynamics/time) (Proposition 8.1), a universe with no observers has no interaction graph and no partial order. Therefore time does not exist during the bounce — not in the sense that time passes but is unmeasured, but in the framework's sense that the ordering structure constituting time has no elements.*
+**Proposition 5.1 (Coherence ontology).** *In the framework, coherence $\mathcal{C}$ is a measure on the $\sigma$-algebra of observer events (Axiom 1). By construction, coherence resides in exactly two forms:*
 
-*Proof.* Time is the partial order $(V, \preceq)$ on the interaction graph $\mathcal{G}$ ([Time as Phase Ordering](/derivations/thermodynamics/time), Theorem 4.2). The vertices of $\mathcal{G}$ are interaction events between observers (Definition 1.1 of [Time as Phase Ordering](/derivations/thermodynamics/time)). At $\rho = \rho_P$, no observer triples exist (Theorem 7.1), so no interactions between observers can occur, and $\mathcal{G}$ has no vertices in the bounce region. The partial order has a **discontinuity**: pre-bounce events form one connected component, post-bounce events form another, with no directed path connecting them through the bounce. $\square$
+**(i)** *Observer state-space coherence $\mathcal{C}(\Sigma_i)$ — the coherence content of an individual observer's state space.*
 
-**Corollary 8.2 (Pre- and post-bounce epochs are not temporal continuations).** *The pre-bounce and post-bounce epochs are not connected by time. They are connected by relational invariant persistence — the relational invariants generated before the bounce are permanent ([Relational Invariants](/derivations/interactions/relational-invariants), Proposition 6.1) and are inherited by post-bounce observers. This is informational continuity, not temporal continuity.*
+**(ii)** *Relational coherence $\mathcal{C}(I_{ij})$ — the coherence of relational invariants between observers ([Relational Invariants](/derivations/interactions/relational-invariants), Proposition 6.1).*
 
-**Proposition 8.3 (Coherence conservation does not span the bounce).** *Axiom 1 (Coherence Conservation) requires conservation on Cauchy slices of the relational invariant graph. A Cauchy slice is a maximal antichain — a set of events intersecting every maximal chain. If the interaction graph has a discontinuity (no events during the bounce), no Cauchy slice spans the gap. Therefore Axiom 1 does not guarantee coherence conservation across the bounce.*
+*There is no third substrate. The framework has no "bath," "vacuum reservoir," or non-observer carrier for coherence. This is not an additional assumption — it follows from the framework's ontology: the $\sigma$-algebra on which $\mathcal{C}$ is defined consists of observer events, so $\mathcal{C}$ is undefined on non-observer structures.*
 
-*Remark.* The effective description (Einstein equations + singularity resolution) is continuous through the bounce — the modified Friedmann equation smoothly transitions through $H = 0$. But the effective description is a continuum approximation valid at scales $\gg \ell_P$. At the fundamental level of the interaction graph, the bounce is a discontinuity that the axioms do not bridge. The "bounce duration $\sim t_P$" is a feature of the effective description, not of the fundamental partial order.
+**Theorem 5.2 (Coherence conservation excludes the bounce).** *If a $\Lambda < 0$ FRW cosmology undergoes a Planck-density bounce, coherence conservation (Axiom 1) is violated. Therefore the bounce is axiomatically prohibited.*
 
-**Proposition 8.4 (Axioms do not exclude $\Lambda < 0$).** *Despite the complications above, the three axioms do not exclude $\Lambda < 0$ cosmologies.*
+*Proof.* Consider the last pre-bounce Cauchy slice $\Sigma_{\text{pre}}$, where $\rho < \rho_P$ and observer structures still exist. On $\Sigma_{\text{pre}}$:
 
-*Proof.* In a $\Lambda < 0$ FRW cosmology with bounces, each epoch between bounces is a connected component of the interaction graph. Within each epoch:
+$$\mathcal{C}_0 = \sum_i \mathcal{C}(\Sigma_i) + \sum_{i < j} \mathcal{C}(I_{ij}) > 0$$
 
-**(i) Axiom 1** is satisfied: coherence is conserved on Cauchy slices within the epoch. $\checkmark$
+where the sums run over all observer triples and their relational invariants. $\mathcal{C}_0 > 0$ by multiplicity ([Multiplicity](/derivations/minimal-observer/multiplicity), Theorem 2.1).
 
-**(ii) Axiom 2** is satisfied: observer triples exist during the expanding and contracting phases. $\checkmark$
+At the bounce ($\rho = \rho_P$), all observer triples dissolve (Theorem 4.1): no state spaces $\Sigma_i$ exist, and no relational invariants $I_{ij}$ are instantiated. By Proposition 5.1, the only carriers for coherence are observer state spaces and relational invariants. With none present, $\mathcal{C}_0$ has no valid carrier.
 
-**(iii) Axiom 3** is satisfied: observer loops close with Lyapunov stability during each epoch. $\checkmark$
+Axiom 1 requires $\mathcal{C}$ to be conserved on every Cauchy slice. But the Cauchy slice at $\rho = \rho_P$ has $\mathcal{C} = 0$ (no carriers), while the pre-bounce slice has $\mathcal{C}_0 > 0$. This violates Axiom 1. $\square$
 
-The bounce itself is outside the axioms' domain of application — the partial order has no events there, and the axioms have no domain to constrain. The axioms are neither satisfied nor violated during the bounce; they are simply inapplicable. $\square$
+**Proposition 5.3 (Type II fusion reinforces the prohibition).** *During contraction toward Planck density, gravitational collapse produces Type II fusion ([Three Interaction Types](/derivations/interactions/three-types), Definition 4.3): individual observer state spaces merge into non-product composite spaces, with coherence preserved: $\mathcal{C}(\Sigma_{12}) = \mathcal{C}(\Sigma_1 \cup \Sigma_2)$. This concentrates coherence into composite observer structures rather than dispersing it.*
 
-**Remark.** The $\Lambda < 0$ case is nevertheless epistemically distinctive. No observer can describe the "cycle" of a bouncing cosmology, because: (1) no observer survives through the bounce (Theorem 7.1); (2) no time connects the epochs (Proposition 8.1); (3) coherence conservation is not guaranteed across the bounce (Proposition 8.3). Each epoch is, from any observer's perspective, a self-contained universe. The "cyclic" nature of the cosmology is a feature of the effective description that no observer within the framework can verify.
+*Argument.* As the scale factor $a(t) \to 0$ in a $\Lambda < 0$ FRW cosmology, observers are compressed together. When their boundaries overlap, they undergo Type II fusion — the same mechanism by which black holes form from the perspective of external observers ([Information Paradox](/derivations/holography/information-paradox), Theorem 2.1). Fusion preserves coherence: it does not destroy or disperse it but locks it into composite structures.
 
-A sign constraint ($\Lambda > 0$) might follow from the cosmological arrow ([Time as Phase Ordering](/derivations/thermodynamics/time), Gap 3): if the structural arrow (increasing relational invariant depth) requires monotonically growing "room" in the coherence geometry, this would imply expansion and thus $\Lambda > 0$. However, this connection is not established — the structural arrow is a property of the interaction graph, not of the spatial geometry, and new relational invariants can be generated even in contracting spacetimes. The cosmological arrow remains an open gap.
+The approach to $\rho_P$ therefore goes through a sequence of fusions, each of which moves coherence *further into* observer structures, not out of them. Dissolution at $\rho_P$ would require simultaneously un-fusing all composite structures and relocating $\mathcal{C}_0$ to a non-observer substrate — but no such substrate exists (Proposition 5.1). This provides an independent, dynamical route to the same conclusion as Theorem 5.2. $\square$
 
-### Step 9: The Hierarchy Question
+**Theorem 5.4 (Sign prediction).** *The three axioms predict $\Lambda \geq 0$.*
 
-**Proposition 9.1 (The bound does not explain the hierarchy).** *The Planck-scale bound $\Lambda < 3/\ell_P^2$ is 120 orders of magnitude above the observed value $\Lambda_{\text{obs}} \sim 10^{-122}\;\ell_P^{-2}$. The framework does not explain this hierarchy from the three axioms alone.*
+*Proof.* A $\Lambda < 0$ FRW cosmology necessarily recollapses to Planck density (standard cosmology: $\Lambda < 0 \implies$ recollapse). By [Singularity Resolution](/derivations/spacetime/singularity-resolution) (Theorem 4.1), the recollapse produces a bounce rather than a singularity. But by Theorem 5.2, the bounce violates coherence conservation (Axiom 1). Therefore $\Lambda < 0$ is incompatible with the axioms, and $\Lambda \geq 0$. $\square$
+
+**Remark (Cosmic censorship connection).** The sign prediction parallels the Penrose cosmic censorship conjecture. Both assert that singularities (or their Planck-density analogs) are never "naked" — they cannot exist where coherence-bearing structures would be destroyed without recourse. In the framework, the prohibition is not imposed but derived: coherence conservation provides the mechanism.
+
+**Remark ($\Lambda = 0$ and $\Lambda > 0$).** The result $\Lambda \geq 0$ does not distinguish between $\Lambda = 0$ (Minkowski at late times) and $\Lambda > 0$ (de Sitter). $\Lambda = 0$ is a measure-zero point in the solution space but is not axiomatically excluded. Whether the structural arrow of time ([Time as Phase Ordering](/derivations/thermodynamics/time), Gap 3) can sharpen the inequality to $\Lambda > 0$ remains an open question (Gap 3 below).
+
+### Step 6: The Hierarchy Question
+
+**Proposition 6.1 (The bound does not explain the hierarchy).** *The Planck-scale bound $\Lambda < 3/\ell_P^2$ is 120 orders of magnitude above the observed value $\Lambda_{\text{obs}} \sim 10^{-122}\;\ell_P^{-2}$. The framework does not explain this hierarchy from the three axioms alone.*
 
 The bound constrains which solutions of the Einstein equations can host observer DAGs, but it constrains far too weakly. This is an inherent limitation: the axioms place structural requirements on observers (minimum spatial extent, coherence content, Lyapunov stability) that set Planck-scale thresholds. The 120-order hierarchy between $\ell_P$ and $R_H^{\text{obs}}$ is not explained.
 
-**Proposition 9.2 (Conditions for a tighter bound).** *A sub-Planck bound on $\Lambda$ would require showing that the minimum non-self coherence content needed to sustain Lyapunov-stable loops is much larger than Planck-scale — i.e., that $\mathcal{C}_{\min}^{\text{non-self}} \gg 1$ (in Planck units).*
+**Proposition 6.2 (Conditions for a tighter bound).** *A sub-Planck bound on $\Lambda$ would require showing that the minimum non-self coherence content needed to sustain Lyapunov-stable loops is much larger than Planck-scale — i.e., that $\mathcal{C}_{\min}^{\text{non-self}} \gg 1$ (in Planck units).*
 
 *Argument.* By the holographic budget (Proposition 3.1), the viability condition is:
 
@@ -203,23 +179,23 @@ $$\Lambda \leq \frac{3\pi}{\mathcal{C}_{\min}^{\text{non-self}}\,\ell_P^2}$$
 
 For $\mathcal{C}_{\min}^{\text{non-self}} \sim 10^{120}$, this would give $\Lambda \sim 10^{-120}\;\ell_P^{-2}$ — the right order. But this requires a specific, large value of $\mathcal{C}_{\min}^{\text{non-self}}$ that is not determined by the current axioms. The multiplicity theorem ([Multiplicity](/derivations/minimal-observer/multiplicity)) establishes that the non-self side must contain at least one other observer (not zero), but does not bound the minimum coherence content of the non-self side beyond $\mathcal{C} > 0$.
 
-Whether there exists a mechanism within the framework that forces $\mathcal{C}_{\min}^{\text{non-self}} \gg 1$ — perhaps from the stability of the observer DAG as a whole, or from the requirement that the structural arrow of time can be sustained — is the key open question. $\square$
+Investigating this question requires understanding how coherence distributes across observer scales — which connects to the epistemic horizon distinction (Definition 1.4) and the bootstrap hierarchy. $\square$
 
-### Step 10: Hierarchical Coherence Suppression (Mechanism Sketch)
+### Step 7: Hierarchical Coherence Suppression (Mechanism Sketch)
 
 The bootstrap hierarchy, the coherence renormalization group, and the ER=EPR correspondence together suggest a mechanism that could address the hierarchy question. This step sketches the argument; formalizing it is a major open target.
 
-**Definition 10.1 (Bootstrap filtration).** The observer category $\mathbf{Obs}$ has a natural filtration by bootstrap level ([Bootstrap Mechanism](/derivations/interactions/bootstrap), Corollary 2.2):
+**Definition 7.1 (Bootstrap filtration).** The observer category $\mathbf{Obs}$ has a natural filtration by bootstrap level ([Bootstrap Mechanism](/derivations/interactions/bootstrap), Corollary 2.2):
 
 $$\mathbf{Obs}_0 \subset \mathbf{Obs}_1 \subset \mathbf{Obs}_2 \subset \cdots$$
 
-where $\mathbf{Obs}_0$ contains minimal observers and $\mathbf{Obs}_{n+1}$ includes relational observers formed from $\mathbf{Obs}_n$ via the bootstrap map $\mathcal{R}$ ([Bootstrap Mechanism](/derivations/interactions/bootstrap), Proposition 5.1). Each level $n$ has a characteristic scale $\lambda_n$ and epistemic horizon $\mathcal{I}_n^{\max} = A_n/(4\ell_P^2)$ (Step 6, Proposition 6.3).
+where $\mathbf{Obs}_0$ contains minimal observers and $\mathbf{Obs}_{n+1}$ includes relational observers formed from $\mathbf{Obs}_n$ via the bootstrap map $\mathcal{R}$ ([Bootstrap Mechanism](/derivations/interactions/bootstrap), Proposition 5.1). Each level $n$ has a characteristic scale $\lambda_n$ and epistemic horizon $\mathcal{I}_n^{\max} = A_n/(4\ell_P^2)$ (Proposition 1.5).
 
-**Proposition 10.1 (Cross-level geometric consistency).** *A complex observer $C$ at level $n+1$ is composed of sub-observers $\{A_i\}$ at level $n$, bound by relational invariants $\{I_{ij}\}$. By [ER=EPR](/derivations/holography/er-epr) (Theorem 3.2), each relational invariant $I_{ij}$ creates geometric structure — a wormhole throat with area $A_{\text{ER}} = 4\ell_P^2 S_{\text{ent}}(I_{ij})$. The aggregate geometry at level $n+1$ (constructed from these connections) restricted to scale $\lambda_n$ must be compatible with the geometry at level $n$.*
+**Proposition 7.2 (Cross-level geometric consistency).** *A complex observer $C$ at level $n+1$ is composed of sub-observers $\{A_i\}$ at level $n$, bound by relational invariants $\{I_{ij}\}$. By [ER=EPR](/derivations/holography/er-epr) (Theorem 3.2), each relational invariant $I_{ij}$ creates geometric structure — a wormhole throat with area $A_{\text{ER}} = 4\ell_P^2 S_{\text{ent}}(I_{ij})$. The aggregate geometry at level $n+1$ (constructed from these connections) restricted to scale $\lambda_n$ must be compatible with the geometry at level $n$.*
 
 *Argument.* The geometry an observer "sees" is constructed from its relational invariants with other observers (ER=EPR). Sub-observer $A_i$'s geometry $G_n$ is built from its relational invariants at level $n$. Composite $C$'s geometry $G_{n+1}$ is built from relational invariants at level $n+1$, which include the binding invariants $\{I_{ij}\}$ connecting the $A_i$. By the ontological irreducibility of higher levels ([Bootstrap Mechanism](/derivations/interactions/bootstrap), Corollary 4.2), $G_{n+1}$ contains genuinely new geometric structure not present in $G_n$. But at scale $\lambda_n$, the new geometry must reduce to $G_n$ — otherwise the sub-observers' epistemic descriptions would be inconsistent with the composite's. This reduction is precisely the coherence RG flow between fixed points ([Renormalization Group](/derivations/thermodynamics-ext/renormalization), Theorem 4.1). $\square$
 
-**Proposition 10.2 (Coherence absorption at bootstrap levels).** *Each bootstrap level (RG fixed point) absorbs coherence into stable relational invariants. By the c-theorem ([Renormalization Group](/derivations/thermodynamics-ext/renormalization), Theorem 5.2), the accessible coherence $c(k) = \mathcal{C}_{>k}$ is monotonically non-increasing under IR flow: $dc/d(\ln k) \leq 0$. At each fixed point, coherence is locked into the geometric structure of that level (ER=EPR: $A_{\text{ER}} = 4\ell_P^2 S_{\text{ent}}$), reducing the coherence available at larger scales.*
+**Proposition 7.3 (Coherence absorption at bootstrap levels).** *Each bootstrap level (RG fixed point) absorbs coherence into stable relational invariants. By the c-theorem ([Renormalization Group](/derivations/thermodynamics-ext/renormalization), Theorem 5.2), the accessible coherence $c(k) = \mathcal{C}_{>k}$ is monotonically non-increasing under IR flow: $dc/d(\ln k) \leq 0$. At each fixed point, coherence is locked into the geometric structure of that level (ER=EPR: $A_{\text{ER}} = 4\ell_P^2 S_{\text{ent}}$), reducing the coherence available at larger scales.*
 
 *Argument.* When relational invariants form at level $n$, their coherence content $\mathcal{C}(I_{ij})$ is locked into wormhole throat geometry at scale $\lambda_n$. This coherence does not contribute to the effective vacuum energy at the IR scale — it is "spent" on structure at scale $\lambda_n$. The c-theorem guarantees that the through-coherence (coherence available to source larger-scale geometry) strictly decreases at each level. After $N$ levels, the residual coherence at the IR is:
 
@@ -227,33 +203,21 @@ $$c_{\text{IR}} \leq c_{\text{UV}} - \sum_{n=0}^{N} \Delta c_n$$
 
 where $\Delta c_n > 0$ is the coherence absorbed at level $n$. The total number of levels is bounded by $N \leq C_0/\hbar$ ([Bootstrap Mechanism](/derivations/interactions/bootstrap), Proposition 6.2). $\square$
 
-**Proposition 10.3 (Residual coherence and the effective $\Lambda$).** *The cosmological constant, as a property of the IR geometry, is sourced by the residual coherence that has not been absorbed by any bootstrap level. If the coherence absorption across all levels is nearly complete, the residual — and hence $\Lambda$ — is strongly suppressed relative to the Planck scale.*
+**Proposition 7.4 (Self-consistency equation).** *The IR geometry's capacity, encoded by $\Lambda$, must be consistent with the total coherence budget after the bootstrap hierarchy has formed.*
 
-*Argument.* In the holographic budget (Proposition 3.1), the effective $\Lambda$ is related to the coherence content of the cosmological horizon:
-
-$$S_H = \frac{3\pi}{\Lambda\,\ell_P^2}$$
-
-The horizon entropy $S_H$ counts the total degrees of freedom within the static patch. If the vast majority of the total coherence $C_0$ is locked into bootstrap structure (particles, atoms, molecules, etc.) via the c-theorem's monotonic flow, then $S_H \sim c_{\text{IR}} \ll C_0$, giving:
-
-$$\Lambda \sim \frac{3\pi}{c_{\text{IR}}\,\ell_P^2} \gg \Lambda_{\text{Planck}}$$
-
-Wait — this gives $\Lambda$ too *large*, not too small. The argument inverts: if $S_H$ counts accessible IR coherence, then a large $S_H$ (small $\Lambda$) means the IR has *more* accessible coherence, not less.
-
-The correct framing is not that $\Lambda$ is sourced by the residual coherence, but that **the IR geometry's capacity (encoded by $\Lambda$) must be consistent with the coherence budget after the bootstrap hierarchy has formed**. The self-consistency condition is:
-
-$$\text{(total coherence)} = \text{(coherence in bootstrap structure)} + \text{(coherence accessible through } R_H\text{)}$$
+*Argument.* The total coherence $C_0$ decomposes into structural coherence (locked into bootstrap levels) and horizon coherence (accessible through the cosmological horizon):
 
 $$C_0 = \sum_{n=0}^{N}\Delta c_n + \frac{A_H}{4\ell_P^2} = \sum_{n=0}^{N}\Delta c_n + \frac{3\pi}{\Lambda\,\ell_P^2}$$
 
-Solving for $\Lambda$:
+The first term is the coherence locked into particles, atoms, molecules, and all other stable relational invariant structure via the c-theorem's monotonic flow. The second term is the horizon entropy $S_H$, counting the degrees of freedom within the static patch that are *not* locked into structure. Solving for $\Lambda$:
 
 $$\Lambda = \frac{3\pi}{\left(C_0 - \sum_{n}\Delta c_n\right)\ell_P^2}$$
 
 If nearly all the coherence is locked into structure ($\sum \Delta c_n \to C_0$), then $\Lambda \to \infty$ (no room for a horizon). If very little is locked ($\sum \Delta c_n \to 0$), then $\Lambda \sim 3\pi/(C_0\,\ell_P^2)$ — minimum $\Lambda$, maximum horizon.
 
-**The observed universe** has $S_H \sim 10^{122}$, meaning the horizon coherence vastly exceeds the structural coherence (matter content). This means $\sum \Delta c_n \ll C_0$ — the bootstrap hierarchy absorbs a tiny fraction of the total coherence. The hierarchy question becomes: **why does the bootstrap absorb so little?**
+**The observed universe** has $S_H \sim 10^{122}$, meaning the horizon coherence vastly exceeds the structural coherence (matter content). This means $\sum \Delta c_n \ll C_0$ — the bootstrap hierarchy absorbs a tiny fraction of the total coherence. The hierarchy question becomes: **why does the bootstrap absorb so little?** $\square$
 
-**Remark (Reframing the hierarchy question).** The hierarchical coherence argument does not directly solve the cosmological constant problem, but it *reframes* it in framework-native terms. Instead of asking "why is $\Lambda$ so small?" (which compares to the Planck scale), the question becomes "why does the bootstrap hierarchy absorb such a small fraction of $C_0$?" This is answerable in principle: the bootstrap ceiling ([Bootstrap Mechanism](/derivations/interactions/bootstrap), Proposition 6.2) gives $N \leq C_0/\hbar$, but the *actual* number of stable levels is determined by the structure of the division algebra chain ([Bootstrap → Division Algebras](/derivations/interactions/bootstrap-division-algebras)) and the mass hierarchy tunneling factors ([Mass Hierarchy](/derivations/particles/mass-hierarchy)). The absorbed fraction is:
+**Remark (Reframing the hierarchy).** The self-consistency equation does not solve the cosmological constant problem, but it *reframes* it in framework-native terms. Instead of asking "why is $\Lambda$ so small?" (which compares to the Planck scale), the question becomes "why does the bootstrap hierarchy absorb such a small fraction of $C_0$?" This is answerable in principle: the bootstrap ceiling ([Bootstrap Mechanism](/derivations/interactions/bootstrap), Proposition 6.2) gives $N \leq C_0/\hbar$, but the *actual* number of stable levels is determined by the structure of the division algebra chain ([Bootstrap → Division Algebras](/derivations/interactions/bootstrap-division-algebras)) and the mass hierarchy tunneling factors ([Mass Hierarchy](/derivations/particles/mass-hierarchy)). The absorbed fraction is:
 
 $$\frac{\sum \Delta c_n}{C_0} = \frac{\text{structural coherence (matter)}}{\text{total coherence}} \sim \frac{\rho_{\text{matter}}}{\rho_{\text{total}}} \sim \Omega_m \approx 0.3$$
 
@@ -268,9 +232,10 @@ The observed universe has $\Lambda_{\text{obs}} \sim 10^{-122}\;\ell_P^{-2}$, gi
 - **Geometric bound**: $R_H \sim 10^{61}\,\ell_P \gg \ell_P$. $\checkmark$
 - **Holographic budget**: $S_H = 3\pi/(\Lambda_{\text{obs}}\,\ell_P^2) \sim 10^{122}$ bits — vastly exceeds the coherence requirement for two minimal observers. $\checkmark$
 - **Cosmological redshift**: For observers separated by $\ell_P$, the redshift is $z \sim 10^{-122}$ — negligible. $\checkmark$
+- **Sign**: $\Lambda_{\text{obs}} > 0$, consistent with the sign prediction $\Lambda \geq 0$. $\checkmark$
 - **Static patch lifetime**: The static patch metric is time-independent, and observers can persist indefinitely. $\checkmark$
 
-The framework is consistent with the observed cosmological constant, but it does not explain why $\Lambda$ takes its observed value.
+The framework is consistent with the observed cosmological constant, predicts its sign correctly, but does not explain why $\Lambda$ takes its observed value.
 
 ## Comparison with Anthropic Reasoning
 
@@ -288,31 +253,32 @@ The anthropic bound is $\sim 10^{120}$ times tighter because it requires complex
 
 **Rigorous:**
 - Theorem 2.1 (geometric bound): follows from the Planck-scale cutoff ([Area Scaling](/derivations/holography/area-scaling) S1) and the de Sitter horizon radius. The argument is dimensional but the conclusion is exact.
-- Corollary 4.2 (indefinite lifetime): follows from the time-independence of the static de Sitter metric — standard GR.
+- Local stability (Remark in Step 3): follows from the time-independence of the static de Sitter metric — standard GR.
 
 **Semi-formal:**
 - Proposition 3.1 (holographic budget): uses the holographic entropy bound (rigorous) applied to the de Sitter horizon. The application to the multiplicity requirement involves interpreting the bound as a coherence budget, which is semi-formal (the holographic bound is proved for static boundaries; the de Sitter horizon is static in the static patch, so this applies, but the connection between the entropy bound and the coherence budget for *interior* observers involves assumptions from [Entropy](/derivations/thermodynamics/entropy) that are not explicitly formalized for cosmological horizons).
-- Proposition 6.3 (epistemic horizons): the observer-specific information capacity follows rigorously from the holographic bound applied to the observer's boundary. The table entries are standard dimensional analysis.
-- Theorem 7.1 (bounce dissolution): the conclusion follows from the singularity resolution (rigorous), but the identification of "zero available phase space" with "no loop closure" involves a physical argument (step i) that is not reduced to a formal theorem. Step ii (no distinguishable boundary) is a physical argument about the homogeneity at Planck density. Step iii (divergent pressure) follows rigorously from the effective Friedmann equation.
-- Proposition 8.1 (no time during bounce): follows directly from [Time as Phase Ordering](/derivations/thermodynamics/time) (Proposition 8.1) combined with Theorem 7.1 (no observers at the bounce). The argument is logically rigorous given the upstream derivations.
-- Proposition 8.3 (coherence conservation gap): the observation that no Cauchy slice spans the discontinuity is a logical consequence of the DAG structure. This is a novel result that deserves further investigation.
-- Proposition 8.4 (axioms don't exclude $\Lambda < 0$): the argument that the axioms are satisfied within each epoch and inapplicable during the bounce is logically sound.
+- Proposition 1.5 (epistemic horizons): the observer-specific information capacity follows rigorously from the holographic bound applied to the observer's boundary. The table entries are standard dimensional analysis.
+- Theorem 4.1 (bounce dissolution): the conclusion follows from the singularity resolution (rigorous), but the identification of "zero available phase space" with "no loop closure" involves a physical argument (step i) that is not reduced to a formal theorem. Step ii (no distinguishable boundary) is a physical argument about the homogeneity at Planck density. Step iii (divergent pressure) follows rigorously from the effective Friedmann equation.
+- Proposition 5.1 (coherence ontology): definitional — follows directly from the framework's construction. Coherence is a measure on the σ-algebra of observer events; it is undefined on non-observer structures by definition.
+- Theorem 5.2 (coherence conservation excludes the bounce): logically rigorous given Theorem 4.1 and Proposition 5.1. The argument is a straightforward contradiction: Axiom 1 requires conservation, Proposition 5.1 identifies the only carriers, Theorem 4.1 destroys all carriers.
+- Proposition 5.3 (Type II fusion reinforcement): semi-formal. The gravitational fusion dynamics are well-established via the information paradox resolution (rigorous), but the claim that the approach to $\rho_P$ goes "entirely through fusion" is a physical argument, not a formal proof.
+- Theorem 5.4 (sign prediction): follows rigorously from Theorem 5.2 combined with standard cosmology ($\Lambda < 0$ implies recollapse to Planck density).
 
 **Conjectural / open:**
-- Proposition 9.2 (conditions for tighter bound): the key open question. No mechanism is known within the framework to force $\mathcal{C}_{\min}^{\text{non-self}} \gg 1$.
-- The sign prediction ($\Lambda > 0$ from the cosmological arrow) is flagged as an open gap, not a result.
-- Step 10 (hierarchical coherence suppression): a mechanism sketch connecting bootstrap, c-theorem, and ER=EPR. Propositions 10.1–10.3 are physically motivated arguments, not formal proofs. The self-consistency equation relating $C_0$, bootstrap absorption, and $\Lambda$ is the most concrete result, but it reframes the hierarchy question rather than solving it: the 120-order hierarchy becomes the question of why $C_0$ is large in Planck units.
+- Proposition 6.2 (conditions for tighter bound): the key open question. No mechanism is known within the framework to force $\mathcal{C}_{\min}^{\text{non-self}} \gg 1$.
+- The sign prediction ($\Lambda \geq 0$) is established (Theorem 5.4). Sharpening to $\Lambda > 0$ via the cosmological arrow remains open.
+- Step 7 (hierarchical coherence suppression): a mechanism sketch connecting bootstrap, c-theorem, and ER=EPR. Propositions 7.2–7.4 are physically motivated arguments, not formal proofs. The self-consistency equation relating $C_0$, bootstrap absorption, and $\Lambda$ is the most concrete result, but it reframes the hierarchy question rather than solving it: the 120-order hierarchy becomes the question of why $C_0$ is large in Planck units.
 
-**Assessment:** Draft. The Planck-scale upper bound (Theorem 2.1) is the strongest result — essentially rigorous given the upstream derivations. The epistemic horizon distinction (Step 6) clarifies which horizon enters which argument. The bounce analysis (Steps 7–8) is significantly strengthened by properly handling the partial order discontinuity: the bounce is not a brief temporal interval but a gap in the interaction graph where time itself is undefined (Proposition 8.1), coherence conservation is not guaranteed (Proposition 8.3), and the pre/post-bounce epochs are informationally but not temporally connected (Corollary 8.2). The hierarchical coherence argument (Step 10) identifies a mechanism for addressing the hierarchy through the bootstrap structure but is currently at the sketch level. The sign question and hierarchy question are honestly assessed as open.
+**Assessment:** Provisional. The Planck-scale upper bound (Theorem 2.1) is essentially rigorous. The sign prediction (Theorem 5.4) follows logically from coherence conservation + the framework's coherence ontology + bounce dissolution — the weakest link is the semi-formal character of Theorem 4.1 (bounce dissolution), whose physical arguments (zero phase space, no boundary, divergent pressure) are individually compelling but not reduced to a single formal theorem. The epistemic horizon distinction (Step 1) clarifies which horizon enters which argument. The hierarchical coherence argument (Step 7) identifies a mechanism for addressing the 120-order hierarchy through the bootstrap structure but is currently at the sketch level. The hierarchy question is honestly assessed as open.
 
 ## Open Gaps
 
 1. **Dynamical holographic bound**: The holographic entropy bound ([Area Scaling](/derivations/holography/area-scaling)) is proved for static boundaries. Extending it to the de Sitter cosmological horizon (which is static in the static patch but time-dependent in comoving coordinates) requires the covariant Bousso bound, which is not yet derived in the framework ([Area Scaling](/derivations/holography/area-scaling), Gap 4).
-2. **Minimum non-self coherence**: The key gap blocking a tighter bound. What is the minimum coherence content of the non-self side of $\mathcal{B}$ required for Lyapunov-stable loop closure? The multiplicity theorem establishes $\mathcal{C}^{\text{non-self}} > 0$ but does not quantify the minimum. The hierarchical coherence argument (Step 10) suggests this connects to the bootstrap structure: a complex observer requires sub-observers at every level of the hierarchy, each absorbing coherence. Whether this quantitatively constrains $\mathcal{C}_{\min}^{\text{non-self}}$ depends on formalizing the geometry functor (Gap 6).
-3. **Sign from the cosmological arrow**: Does the structural arrow of time (monotonically increasing relational invariant depth) require spatial expansion? This connects to [Time as Phase Ordering](/derivations/thermodynamics/time), Gap 3. A positive result would predict $\Lambda > 0$, upgrading the [Cosmological Constant](/derivations/cosmology/cosmological-constant) assessment (item 2) from $\times$ to $\checkmark$.
-4. **Coherence conservation across the bounce**: Proposition 8.3 shows that Axiom 1 does not span the bounce discontinuity — no Cauchy slice connects the pre- and post-bounce epochs. Whether a generalized conservation principle extends across the partial order gap is open. This connects to the persistence of relational invariants through observer-free intervals ([Relational Invariants](/derivations/interactions/relational-invariants), Proposition 6.1) and to whether the effective description's smooth transition through $H = 0$ has a fundamental counterpart.
+2. **Minimum non-self coherence**: The key gap blocking a tighter bound. What is the minimum coherence content of the non-self side of $\mathcal{B}$ required for Lyapunov-stable loop closure? The multiplicity theorem establishes $\mathcal{C}^{\text{non-self}} > 0$ but does not quantify the minimum. The hierarchical coherence argument (Step 7) suggests this connects to the bootstrap structure: a complex observer requires sub-observers at every level of the hierarchy, each absorbing coherence. Whether this quantitatively constrains $\mathcal{C}_{\min}^{\text{non-self}}$ depends on formalizing the geometry functor (Gap 6).
+3. **Sharpening to $\Lambda > 0$**: The sign prediction $\Lambda \geq 0$ (Theorem 5.4) does not distinguish $\Lambda = 0$ from $\Lambda > 0$. Does the structural arrow of time (monotonically increasing relational invariant depth) require eternal expansion, which would give $\Lambda > 0$? This connects to [Time as Phase Ordering](/derivations/thermodynamics/time), Gap 3.
+4. **Bounce prohibition scope**: Theorem 5.2 prohibits the Planck-density bounce in $\Lambda < 0$ FRW cosmologies via coherence conservation. Does the same argument extend to *all* global recollapse scenarios, including anisotropic cosmologies (Bianchi models) or cosmologies with exotic matter violating standard energy conditions? The argument should generalize to any scenario where $\rho \to \rho_P$ globally, but cosmologies with localized collapse (e.g., black holes forming within an expanding universe) are not affected — the bounce is local, not global, and external observers preserve coherence.
 5. **Gibbons-Hawking stability**: The de Sitter horizon radiates at the Gibbons-Hawking temperature $T_{GH} = \hbar H/(2\pi k_B)$. Whether this thermal background destabilizes observer loops depends on the detailed interaction between GH radiation and the observer's loop closure — specifically, whether photon absorption changes the observer's Noether invariant $I$. For a minimal $U(1)$ oscillator, phase perturbations are Lyapunov-stable (the oscillator is neutrally stable on $S^1$), but energy-changing interactions (Type III absorption of GH quanta) could disrupt the invariant. A mass-dependent viability condition $mc^2 > k_B T_{GH}$ would give $\Lambda < 12\pi^2 m^2 c^2/\hbar^2$, which tightens the bound for light observers but remains Planck-scale for the minimal observer ($m = m_P$).
-6. **Geometry functor and cross-level consistency**: The hierarchical coherence argument (Step 10) requires formalizing a geometry functor $G: \mathbf{Obs} \to \mathbf{Geom}$ that maps each observer's epistemic horizon to an effective geometry, compatible with the bootstrap map $\mathcal{R}$. This requires promoting $\mathcal{R}$ to a full functor on morphisms ([Bootstrap Mechanism](/derivations/interactions/bootstrap), §Remark after Proposition 5.1) and proving that functoriality constrains the relationship between $C_0$, the bootstrap structure, and $\Lambda$. Connects to [ER=EPR](/derivations/holography/er-epr) (geometry from relational invariants) and [Renormalization Group](/derivations/thermodynamics-ext/renormalization) (c-theorem, fixed-point structure).
+6. **Geometry functor and cross-level consistency**: The hierarchical coherence argument (Step 7) requires formalizing a geometry functor $G: \mathbf{Obs} \to \mathbf{Geom}$ that maps each observer's epistemic horizon to an effective geometry, compatible with the bootstrap map $\mathcal{R}$. This requires promoting $\mathcal{R}$ to a full functor on morphisms ([Bootstrap Mechanism](/derivations/interactions/bootstrap), §Remark after Proposition 5.1) and proving that functoriality constrains the relationship between $C_0$, the bootstrap structure, and $\Lambda$. Connects to [ER=EPR](/derivations/holography/er-epr) (geometry from relational invariants) and [Renormalization Group](/derivations/thermodynamics-ext/renormalization) (c-theorem, fixed-point structure).
 
 ## Dependencies
 
@@ -328,11 +294,14 @@ The anthropic bound is $\sim 10^{120}$ times tighter because it requires complex
 | [Bootstrap Mechanism](/derivations/interactions/bootstrap) | Hierarchy levels (Cor 2.2), necessity (Thm 3.1), irreducibility (Cor 4.2), ceiling $N \leq C_0/\hbar$ (Prop 6.2), bootstrap map $\mathcal{R}$ (Prop 5.1) |
 | [Renormalization Group](/derivations/thermodynamics-ext/renormalization) | c-theorem (Thm 5.2), bootstrap=RG fixed points (Thm 4.1), coherence flow equation (Thm 3.2) |
 | [ER=EPR](/derivations/holography/er-epr) | Geometry from relational invariants (Thm 3.2), throat area $A = 4\ell_P^2 S_{\text{ent}}$ (Prop 3.3) |
+| [Relational Invariants](/derivations/interactions/relational-invariants) | Permanence of relational invariants (Prop 6.1), irreversibility (Prop 6.2) |
+| [Three Interaction Types](/derivations/interactions/three-types) | Type II Fusion: state spaces merge, coherence preserved (Def 4.3) |
+| [Time as Phase Ordering](/derivations/thermodynamics/time) | Partial order on interaction graph (Thm 4.2), no observers → no time (Prop 8.1) |
 
 ## Connection to Cosmological Constant
 
 This derivation addresses [Cosmological Constant](/derivations/cosmology/cosmological-constant), Route 3 ("An observer-existence constraint"). Results:
 
 - **Upper bound on $|\Lambda|$**: Established at Planck scale (Theorem 2.1). This establishes the principle that the axioms constrain the solution space of the Einstein equations — not just the dynamics, but the allowed solutions. Even at Planck scale, this is a nontrivial result: the axioms have physical content beyond determining equations of motion.
-- **Sign prediction**: Not achieved. The axioms do not exclude $\Lambda < 0$ (Proposition 8.4). A sign prediction would require either the cosmological arrow (Gap 3) or an independent argument.
-- **Hierarchy**: Not yet explained, but a mechanism is identified (Step 10). The bootstrap hierarchy, combined with the c-theorem and ER=EPR, suggests that $\Lambda$ is determined by a self-consistency condition relating the total coherence $C_0$, the coherence absorbed into bootstrap structure, and the horizon entropy. This reframes the hierarchy from a Planck-scale comparison to a cosmological question about $C_0$. Formalizing this requires the geometry functor (Gap 6).
+- **Sign prediction**: Achieved. The axioms predict $\Lambda \geq 0$ (Theorem 5.4). A $\Lambda < 0$ cosmology requires a bounce that violates coherence conservation (Theorem 5.2). Sharpening to $\Lambda > 0$ remains open (Gap 3).
+- **Hierarchy**: Not yet explained, but a mechanism is identified (Step 7). The bootstrap hierarchy, combined with the c-theorem and ER=EPR, suggests that $\Lambda$ is determined by a self-consistency condition relating the total coherence $C_0$, the coherence absorbed into bootstrap structure, and the horizon entropy. This reframes the hierarchy from a Planck-scale comparison to a cosmological question about $C_0$. Formalizing this requires the geometry functor (Gap 6).
