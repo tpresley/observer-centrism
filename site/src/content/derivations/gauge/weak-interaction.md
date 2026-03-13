@@ -331,12 +331,11 @@ where $\psi_L = \frac{1}{2}(1 - \gamma_5)\psi$ is the left-handed projection.
 
 ## Open Gaps
 
-1. **Chirality selection** *(resolved — downstream)*: Why does $SU(2)_W$ couple to left-handed spinors only? Fully addressed by [Chirality Selection](/derivations/gauge/chirality-selection): non-commutativity of $\mathbb{H}$ forces orientation consistency on quaternionic relational invariants, and coherence conservation propagates this globally. The choice of $L$ vs. $R$ is spontaneous. This is a downstream derivation, not a gap in the weak-interaction derivation itself.
+1. **Weak coupling constant**: $g_W$ is a free parameter, related to $\alpha_{em}$ via $g_W = e/\sin\theta_W$. Its value should follow from the [Coupling Constants](/derivations/cosmology/coupling-constants) derivation. Same status as $e$ in electromagnetism and $G$ in gravity.
 
-2. **Electroweak symmetry breaking** *(resolved — downstream)*: Fully addressed by [Electroweak Symmetry Breaking](/derivations/gauge/electroweak-breaking), which derives the Coleman-Weinberg mechanism from the coherence Lagrangian with dimensional transmutation hierarchy protection.
+## Addressed Gaps
 
-3. **Weinberg angle** *(resolved — downstream)*: Fully addressed by [Weinberg Angle](/derivations/gauge/weinberg-angle), which determines $\sin^2\theta_W(M_Z) = 0.231$ from the $\mathbb{C} \subset \mathbb{H}$ algebraic boundary condition via exact one-loop RG running.
-
-4. **Weak coupling constant**: $g_W$ is a free parameter, related to $\alpha_{em}$ via $g_W = e/\sin\theta_W$. Its value should follow from the [Coupling Constants](/derivations/cosmology/coupling-constants) derivation. Same status as $e$ in electromagnetism and $G$ in gravity.
-
-5. **Anomaly cancellation** *(resolved — downstream)*: Fully addressed by [Anomaly Cancellation](/derivations/gauge/anomaly-cancellation), which shows the chirality-selected fermion content automatically satisfies all four independent anomaly conditions.
+1. **Chirality selection** — Addressed by [Chirality Selection](/derivations/gauge/chirality-selection): non-commutativity of $\mathbb{H}$ forces orientation consistency on quaternionic relational invariants.
+2. **Electroweak symmetry breaking** — Addressed by [Electroweak Symmetry Breaking](/derivations/gauge/electroweak-breaking): Coleman-Weinberg mechanism from the coherence Lagrangian.
+3. **Weinberg angle** — Addressed by [Weinberg Angle](/derivations/gauge/weinberg-angle): $\sin^2\theta_W(M_Z) = 0.231$ from the $\mathbb{C} \subset \mathbb{H}$ algebraic boundary condition.
+4. **Anomaly cancellation** — Addressed by [Anomaly Cancellation](/derivations/gauge/anomaly-cancellation): chirality-selected fermion content satisfies all four anomaly conditions.

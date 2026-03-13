@@ -222,6 +222,6 @@ At $v > c$: $\gamma$ becomes imaginary, and $ds^2 < 0$ (spacelike). The loop can
 
 ## Open Gaps
 
-1. **Acceleration**: This derivation covers inertial (constant velocity) observers. Accelerated observers require curved coherence geometry — connecting to [Gravity](/derivations/spacetime/gravity). The equivalence principle (acceleration ≈ gravity locally) should follow from the indistinguishability of loop tilt and geometry curvature.
+1. **Acceleration** *(partially resolved — downstream)*: This derivation covers inertial (constant velocity) observers. Accelerated observers require curved coherence geometry — connecting to [Gravity](/derivations/spacetime/gravity), which establishes the strong equivalence principle (Theorem 4.3) and derives geodesic deviation from coherence curvature (Theorem 4.1). The remaining gap is the explicit construction of the accelerated observer's loop tilt and showing its equivalence to curvature at the loop level.
 2. **Thomas precession**: A boost followed by a boost in a different direction includes a rotation (Wigner rotation). This should correspond to a geometric phase in the observer loop — a Berry phase from the loop's trajectory through boost space.
 3. **Lorentz violation tests**: The framework predicts exact Lorentz invariance at the level of the coherence geometry. Any observed Lorentz violation would require the coherence geometry to deviate from exact Minkowski form — a sharp experimental test.

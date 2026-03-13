@@ -229,12 +229,12 @@ which decreases as $Q^2 \to \infty$ (short distances) and increases as $Q^2 \to 
 
 ## Open Gaps
 
-1. **Bootstrap–Cayley-Dickson proof** *(resolved — downstream)*: Fully addressed by [Bootstrap → Division Algebras](/derivations/interactions/bootstrap-division-algebras), which proves the Cayley-Dickson doubling sequence is forced by coherence conservation (unit-coherence interactions are isometries → composition property → Hurwitz's theorem). Color Force S1 is now a theorem.
+1. **Chiral symmetry breaking** *(partially resolved — downstream)*: Addressed by [Chiral Symmetry Breaking](/derivations/gauge/chiral-symmetry-breaking) (provisional), which derives the QCD chiral condensate from coherence minimization in the confining phase. Full rigor blocked by the Yang-Mills mass gap (Clay Millennium Problem).
 
-2. **Confinement** *(resolved — downstream)*: Fully addressed by [Color Confinement](/derivations/gauge/confinement), which derives the linear potential from a random-walk-on-groups argument for non-associative phase transport in the octonionic algebra.
+2. **Explicit gluon spectrum**: Derive the gluon propagator and self-coupling vertices from the octonionic product structure, confirming that they match the standard QCD Feynman rules.
 
-3. **Strong CP problem** *(resolved — downstream)*: Fully addressed by [Strong CP Conservation](/derivations/gauge/strong-cp), which shows the rigid octonionic structure of $SU(3)$ forces $\theta = 0$ via algebraic completeness and associator obstruction.
+## Addressed Gaps
 
-4. **Chiral symmetry breaking** *(partially resolved — downstream)*: Addressed by [Chiral Symmetry Breaking](/derivations/gauge/chiral-symmetry-breaking) (provisional), which derives the QCD chiral condensate from coherence minimization in the confining phase. Full rigor blocked by the Yang-Mills mass gap (Clay Millennium Problem).
-
-5. **Explicit gluon spectrum**: Derive the gluon propagator and self-coupling vertices from the octonionic product structure, confirming that they match the standard QCD Feynman rules.
+1. **Bootstrap–Cayley-Dickson proof** — Addressed by [Bootstrap → Division Algebras](/derivations/interactions/bootstrap-division-algebras): Cayley-Dickson doubling forced by coherence conservation. Color Force S1 is now a theorem.
+2. **Confinement** — Addressed by [Color Confinement](/derivations/gauge/confinement): linear potential from non-associative phase transport.
+3. **Strong CP problem** — Addressed by [Strong CP Conservation](/derivations/gauge/strong-cp): octonionic rigidity forces $\theta = 0$.

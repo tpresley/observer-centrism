@@ -169,7 +169,7 @@ $$S_\mathcal{O} = \int_0^{T_\mathcal{O}} \mathcal{C}(\phi_t(\sigma_0)) \sqrt{g(\
 
 where $\dot{\phi}_t = \frac{d}{dt}\phi_t(\sigma_0)$ is the velocity along the loop.
 
-**Remark (Structural dependence).** This integral requires both the metric $g$ from (S2) and the coherence measure $\mathcal{C}$ from Axiom 1 restricted to $\Sigma$. Their compatibility (that $\mathcal{C}$ is smooth on $(\Sigma, g)$) is an assumption of the framework.
+**Remark (Structural dependence).** This integral requires both the metric $g$ from (Theorem 0.1) and the coherence measure $\mathcal{C}$ from Axiom 1 restricted to $\Sigma$. Their compatibility (that $\mathcal{C}$ is smooth on $(\Sigma, g)$) is an assumption of the framework.
 
 **Proposition 6.2 (Positive minimum).** *The coherence cost satisfies $S_\mathcal{O} > 0$ for every observer. There exists a positive lower bound $S_{\min} > 0$.*
 

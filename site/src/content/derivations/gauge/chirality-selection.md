@@ -220,10 +220,10 @@ In the language of this derivation: the orientation constraint (Theorem 2.1) app
 
 ## Open Gaps
 
-1. **Anomaly cancellation** *(resolved — downstream)*: Fully addressed by [Anomaly Cancellation](/derivations/gauge/anomaly-cancellation), which proves that the chirality-selected fermion content automatically satisfies all four independent anomaly conditions ($SU(3)^2 U(1)$, $SU(2)^2 U(1)$, $U(1)^3$, and gravitational $U(1)$), with rigidity from fermionic idempotency.
+1. **Left-right symmetric extensions**: Some BSM models (Pati-Salam, left-right symmetric models) restore parity at high energies. The framework's prediction is that parity violation is *exact* (algebraic, not dynamical). Experimental tests at higher energies can distinguish these scenarios.
 
-2. **Left-right symmetric extensions**: Some BSM models (Pati-Salam, left-right symmetric models) restore parity at high energies. The framework's prediction is that parity violation is *exact* (algebraic, not dynamical). Experimental tests at higher energies can distinguish these scenarios.
+## Addressed Gaps
 
-3. **CPT completion**: Proposition 6.1 is a proof sketch. A complete derivation of the CPT theorem within the framework would strengthen this and connect to [Coherence-Dual Pairs](/derivations/minimal-observer/coherence-dual-pairs).
-
-4. **Electroweak symmetry breaking** *(resolved — downstream)*: Fully addressed by [Electroweak Symmetry Breaking](/derivations/gauge/electroweak-breaking), which derives the Coleman-Weinberg mechanism from the coherence Lagrangian.
+1. **Anomaly cancellation** — Addressed by [Anomaly Cancellation](/derivations/gauge/anomaly-cancellation): chirality-selected fermion content satisfies all four anomaly conditions.
+2. **CPT completion** — Addressed by [CPT Theorem](/derivations/particles/cpt-theorem): full derivation of CPT as exact symmetry from coherence-dual pairs + Lorentz invariance + spin-statistics.
+3. **Electroweak symmetry breaking** — Addressed by [Electroweak Symmetry Breaking](/derivations/gauge/electroweak-breaking): Coleman-Weinberg mechanism from the coherence Lagrangian.

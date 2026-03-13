@@ -237,12 +237,14 @@ since $\mathcal{C}(S) > 0$ (axiom C2) and $dS_A/d\tau \geq 0$ (second law). Equa
 
 ## Open Gaps
 
+1. **Čencov verification**: Complete the formal verification that the coherence Hessian metric from [Action and Planck's Constant](/derivations/thermodynamics/action-planck) satisfies Čencov's monotonicity conditions under all Markov maps. This would close Open Gap #1 of the [Fisher Information Metric](/derivations/thermodynamics-ext/fisher-metric) derivation.
+
+2. **Quantum extension**: Extend from the classical Čencov theorem (unique monotone metric) to the quantum Petz classification (family of monotone metrics). In the quantum case, the monotone metrics form a family parameterized by an operator-monotone function $f$; the symmetric logarithmic derivative (SLD) metric and the right logarithmic derivative (RLD) metric are extremal cases. Conservation of distinguishability should select among these.
+
+3. **Landauer's principle**: The monotonicity direction (Proposition 3.2) implies that erasing information has a minimum thermodynamic cost. Quantify this: the coherence cost of reducing distinguishability by $\Delta D$ should be at least $k_B T \ln 2$ per bit, recovering Landauer's bound.
+
+4. **No-broadcasting**: Generalize no-cloning from pure states to mixed states. Broadcasting (approximately copying) a mixed state is possible classically but impossible quantumly for non-commuting states. The coherence framework should distinguish these cases based on the structure of the relational coherence.
+
+## Addressed Gaps
+
 1. **Product-space coherence decomposition** *(resolved)*: Axiomatized in Definition 5.0: additivity for independent subsystems (from the definition of coherence independence) and subadditivity (C4) for correlated subsystems. This closes the formalization gap for the no-cloning/no-deleting proofs.
-
-2. **Čencov verification**: Complete the formal verification that the coherence Hessian metric from [Action and Planck's Constant](/derivations/thermodynamics/action-planck) satisfies Čencov's monotonicity conditions under all Markov maps. This would close Open Gap #1 of the [Fisher Information Metric](/derivations/thermodynamics-ext/fisher-metric) derivation.
-
-3. **Quantum extension**: Extend from the classical Čencov theorem (unique monotone metric) to the quantum Petz classification (family of monotone metrics). In the quantum case, the monotone metrics form a family parameterized by an operator-monotone function $f$; the symmetric logarithmic derivative (SLD) metric and the right logarithmic derivative (RLD) metric are extremal cases. Conservation of distinguishability should select among these.
-
-4. **Landauer's principle**: The monotonicity direction (Proposition 3.2) implies that erasing information has a minimum thermodynamic cost. Quantify this: the coherence cost of reducing distinguishability by $\Delta D$ should be at least $k_B T \ln 2$ per bit, recovering Landauer's bound.
-
-5. **No-broadcasting**: Generalize no-cloning from pure states to mixed states. Broadcasting (approximately copying) a mixed state is possible classically but impossible quantumly for non-commuting states. The coherence framework should distinguish these cases based on the structure of the relational coherence.

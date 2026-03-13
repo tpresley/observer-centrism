@@ -171,5 +171,8 @@ The ordering of $m_{\nu_k}$ depends on $y_{\nu_k}^2 / y_{R,k}$. If $y_{R,k}$ is 
 1. **Absolute mass scale**: The specific values of $m_1$, $m_2$, $m_3$ are not predicted — only the ordering and approximate scale. Computing the individual masses requires the precise Yukawa couplings from the winding geometry.
 2. **Majorana phases**: The PMNS matrix for Majorana neutrinos contains two additional CP-violating phases ($\alpha_1$, $\alpha_2$) beyond the Dirac phase $\delta$. These should be computable from the $A_5$ breaking pattern of [Flavor Mixing](/derivations/flavor/mixing-angles).
 3. **Sterile neutrinos**: The heavy right-handed neutrinos ($M_R \sim v$) could be produced at colliders (unlike GUT-scale seesaw where $M_R \sim 10^{14}$ GeV). Collider signatures should be analyzed.
-4. **Leptogenesis connection** *(resolved — downstream)*: Fully addressed by [Leptogenesis](/derivations/cosmology/leptogenesis), which establishes the viability of electroweak-scale resonant leptogenesis using framework-predicted Majorana neutrinos and PMNS CP phases.
-5. **Dirac limit test**: If experiments conclusively establish Dirac neutrinos (absence of $0\nu\beta\beta$), this derivation would be falsified — the self-conjugacy argument would need revision.
+4. **Dirac limit test**: If experiments conclusively establish Dirac neutrinos (absence of $0\nu\beta\beta$), this derivation would be falsified — the self-conjugacy argument would need revision.
+
+## Addressed Gaps
+
+1. **Leptogenesis connection** *(resolved — downstream)*: Fully addressed by [Leptogenesis](/derivations/cosmology/leptogenesis), which establishes the viability of electroweak-scale resonant leptogenesis using framework-predicted Majorana neutrinos and PMNS CP phases.

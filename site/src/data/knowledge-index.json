@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-12T23:23:03.072Z",
+    "generatedAt": "2026-03-13T00:21:22.690Z",
     "derivationCount": 59,
     "predictionCount": 10,
     "generator": "scripts/build-index.mjs"
@@ -15,7 +15,7 @@
     "predictionCount": 10,
     "edgeCount": 118,
     "formalObjectCount": 862,
-    "openGapCount": 212,
+    "openGapCount": 192,
     "upgradeEligibleCount": 0,
     "leanVerifiedCount": 16,
     "leanTheoremCount": 64
@@ -1133,16 +1133,11 @@
         },
         {
           "number": 2,
-          "title": "Leptogenesis",
-          "description": "*(resolved — downstream)*: Fully addressed by [Neutrino Masses](/derivations/particles/neutrino-masses) (Majorana mechanism from pseudo-real SU(2) representations) and [Leptogenesis](/derivations/cosm"
-        },
-        {
-          "number": 3,
           "title": "Quantitative $\\eta_B$",
           "description": "Compute the baryon-to-photon ratio from the framework's parameters. This requires the sphaleron rate, CP-violating phases, and phase transition dynamics — all computable in principle but technically d"
         },
         {
-          "number": 4,
+          "number": 3,
           "title": "Dark baryogenesis",
           "description": "The framework's dark matter prediction ([Dark Matter Granularity](/predictions/dark-matter-granularity)) involves coherence structures. Could a dark-sector version of baryogenesis explain the OmegaB /"
         }
@@ -1193,11 +1188,11 @@
           },
           {
             "target": "particles/neutrino-masses",
-            "context": "Majorana mechanism from pseudo-real $SU(2"
+            "context": "Majorana mechanism"
           },
           {
             "target": "cosmology/leptogenesis",
-            "context": "electroweak-scale resonant leptogenesis with framework-predicted parameters"
+            "context": "electroweak-scale resonant leptogenesis"
           }
         ],
         "incoming": [
@@ -1664,7 +1659,7 @@
         "incoming": [
           {
             "source": "cosmology/baryogenesis",
-            "context": "electroweak-scale resonant leptogenesis with framework-predicted parameters"
+            "context": "electroweak-scale resonant leptogenesis"
           },
           {
             "source": "particles/neutrino-masses",
@@ -2781,23 +2776,8 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Anomaly cancellation",
-          "description": "*(resolved — downstream)*: Fully addressed by [Anomaly Cancellation](/derivations/gauge/anomaly-cancellation), which proves that the chirality-selected fermion content automatically satisfies all four"
-        },
-        {
-          "number": 2,
           "title": "Left-right symmetric extensions",
           "description": "Some BSM models (Pati-Salam, left-right symmetric models) restore parity at high energies. The framework's prediction is that parity violation is *exact* (algebraic, not dynamical). Experimental tests"
-        },
-        {
-          "number": 3,
-          "title": "CPT completion",
-          "description": "Proposition 6.1 is a proof sketch. A complete derivation of the CPT theorem within the framework would strengthen this and connect to [Coherence-Dual Pairs](/derivations/minimal-observer/coherence-dua"
-        },
-        {
-          "number": 4,
-          "title": "Electroweak symmetry breaking",
-          "description": "*(resolved — downstream)*: Fully addressed by [Electroweak Symmetry Breaking](/derivations/gauge/electroweak-breaking), which derives the Coleman-Weinberg mechanism from the coherence Lagrangian."
         }
       ],
       "assessmentVerdict": "Rigorous. This derivation uses *no new structural postulates* — it derives chirality selection purely from the interaction of existing structures: non-commutativity of H (from [Weak Interaction](/derivations/gauge/weak-interaction), now rigorous) + relational invariant conditions (from [Relational I",
@@ -2865,8 +2845,8 @@
             "context": "Anomaly Cancellation"
           },
           {
-            "target": "minimal-observer/coherence-dual-pairs",
-            "context": "Coherence-Dual Pairs"
+            "target": "particles/cpt-theorem",
+            "context": "CPT Theorem"
           },
           {
             "target": "gauge/electroweak-breaking",
@@ -3122,26 +3102,11 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Bootstrap–Cayley-Dickson proof",
-          "description": "*(resolved — downstream)*: Fully addressed by [Bootstrap → Division Algebras](/derivations/interactions/bootstrap-division-algebras), which proves the Cayley-Dickson doubling sequence is forced by coh"
-        },
-        {
-          "number": 2,
-          "title": "Confinement",
-          "description": "*(resolved — downstream)*: Fully addressed by [Color Confinement](/derivations/gauge/confinement), which derives the linear potential from a random-walk-on-groups argument for non-associative phase tr"
-        },
-        {
-          "number": 3,
-          "title": "Strong CP problem",
-          "description": "*(resolved — downstream)*: Fully addressed by [Strong CP Conservation](/derivations/gauge/strong-cp), which shows the rigid octonionic structure of SU(3) forces theta = 0 via algebraic completeness an"
-        },
-        {
-          "number": 4,
           "title": "Chiral symmetry breaking",
           "description": "*(partially resolved — downstream)*: Addressed by [Chiral Symmetry Breaking](/derivations/gauge/chiral-symmetry-breaking) (provisional), which derives the QCD chiral condensate from coherence minimiza"
         },
         {
-          "number": 5,
+          "number": 2,
           "title": "Explicit gluon spectrum",
           "description": "Derive the gluon propagator and self-coupling vertices from the octonionic product structure, confirming that they match the standard QCD Feynman rules."
         }
@@ -3195,6 +3160,10 @@
             "context": "Chirality Selection"
           },
           {
+            "target": "gauge/chiral-symmetry-breaking",
+            "context": "provisional"
+          },
+          {
             "target": "interactions/bootstrap-division-algebras",
             "context": "Bootstrap → Division Algebras"
           },
@@ -3205,10 +3174,6 @@
           {
             "target": "gauge/strong-cp",
             "context": "Strong CP Conservation"
-          },
-          {
-            "target": "gauge/chiral-symmetry-breaking",
-            "context": "provisional"
           }
         ],
         "incoming": [
@@ -3670,11 +3635,6 @@
           "number": 4,
           "title": "Non-abelian extension",
           "description": "The weak and color forces require extending from U(1) to SU(2) and SU(3). The proposed route — through the division algebra hierarchy R C H O — is the subject of the [Weak Interaction](/derivations/ga"
-        },
-        {
-          "number": 5,
-          "title": "Localization rigor",
-          "description": "*(resolved)*: The localization argument (Theorem 2.1) is now completed by Proposition 2.2 (the gauge-invariant observable algebra IS generated by Wilson loops and relational invariants) and Propositio"
         }
       ],
       "assessmentVerdict": "Rigorous. The complete logical chain from axioms + structural postulates to all four Maxwell equations, charge quantization, and the Lorentz force law is established with full proofs. Every theorem has a complete proof; the consistency model verifies all results. The structural postulates S1 and S2 ",
@@ -4265,7 +4225,12 @@
             "context": "Causal Set Statistics"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "gauge/standard-model-group",
+            "context": "Proton Stability"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -4422,16 +4387,6 @@
           "number": 2,
           "title": "$SU(2)_L$ quantum numbers from $\\mathbb{C}\\ell(6)$",
           "description": "The current algebraic construction cleanly produces U(1) SU(3) quantum numbers. Incorporating the SU(2)L weak isospin assignments requires combining the Cell(6) structure with the quaternionic chirali"
-        },
-        {
-          "number": 3,
-          "title": "Electroweak symmetry breaking",
-          "description": "*(resolved — downstream)*: Fully addressed by [Electroweak Symmetry Breaking](/derivations/gauge/electroweak-breaking), which derives the Coleman-Weinberg mechanism from the coherence Lagrangian with "
-        },
-        {
-          "number": 4,
-          "title": "Proton decay bound",
-          "description": "The framework predicts absolute proton stability (no GUT bosons). A quantitative bound on the proton lifetime from residual gravitational or higher-order effects would sharpen this into a testable pre"
         }
       ],
       "assessmentVerdict": "Rigorous. This derivation synthesizes three individually rigorous gauge derivations via a clean mathematical argument: the normed division algebra hierarchy (Hurwitz's theorem) uniquely determines GSM = U(1) SU(2) SU(3) as the complete gauge group. The zero-divisor exclusion is now grounded in the n",
@@ -4489,6 +4444,10 @@
           {
             "target": "gauge/electroweak-breaking",
             "context": "Electroweak Symmetry Breaking"
+          },
+          {
+            "target": "gauge/proton-stability",
+            "context": "Proton Stability"
           }
         ],
         "incoming": [
@@ -4948,28 +4907,8 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Chirality selection",
-          "description": "*(resolved — downstream)*: Why does SU(2)W couple to left-handed spinors only? Fully addressed by [Chirality Selection](/derivations/gauge/chirality-selection): non-commutativity of H forces orientati"
-        },
-        {
-          "number": 2,
-          "title": "Electroweak symmetry breaking",
-          "description": "*(resolved — downstream)*: Fully addressed by [Electroweak Symmetry Breaking](/derivations/gauge/electroweak-breaking), which derives the Coleman-Weinberg mechanism from the coherence Lagrangian with "
-        },
-        {
-          "number": 3,
-          "title": "Weinberg angle",
-          "description": "*(resolved — downstream)*: Fully addressed by [Weinberg Angle](/derivations/gauge/weinberg-angle), which determines sin2thetaW(MZ) = 0.231 from the C H algebraic boundary condition via exact one-loop "
-        },
-        {
-          "number": 4,
           "title": "Weak coupling constant",
           "description": "gW is a free parameter, related to alphaem via gW = e/sinthetaW. Its value should follow from the [Coupling Constants](/derivations/cosmology/coupling-constants) derivation. Same status as e in electr"
-        },
-        {
-          "number": 5,
-          "title": "Anomaly cancellation",
-          "description": "*(resolved — downstream)*: Fully addressed by [Anomaly Cancellation](/derivations/gauge/anomaly-cancellation), which shows the chirality-selected fermion content automatically satisfies all four indep"
         }
       ],
       "assessmentVerdict": "Rigorous. The derivation follows the same template as [Electromagnetism](/derivations/gauge/electromagnetism) (now rigorous): physical motivation (3D rotations are non-abelian) → algebraic necessity (Hurwitz's theorem selects H) → gauge structure (S1 is the uniquely forced implementation, Propositio",
@@ -6545,11 +6484,6 @@
         },
         {
           "number": 4,
-          "title": "ER=EPR connection",
-          "description": "*(resolved — downstream)*: Fully addressed by [ER=EPR from Relational Invariants](/derivations/holography/er-epr), which rigorously establishes that relational invariants produce both entanglement (EP"
-        },
-        {
-          "number": 5,
           "title": "Observational signatures",
           "description": "The information encoding in Hawking radiation correlations is in principle observable but requires collecting an astronomically large number of quanta. Are there more accessible signatures of the reso"
         }
@@ -7952,10 +7886,6 @@
             "context": "Definition 6.1"
           },
           {
-            "source": "gauge/chirality-selection",
-            "context": "Coherence-Dual Pairs"
-          },
-          {
             "source": "gauge/electromagnetism",
             "context": "Coherence-Dual Pairs"
           },
@@ -8750,6 +8680,10 @@
         ],
         "incoming": [
           {
+            "source": "gauge/chirality-selection",
+            "context": "CPT Theorem"
+          },
+          {
             "source": "spacetime/lorentz-invariance",
             "context": "CPT Theorem"
           }
@@ -9127,11 +9061,6 @@
         },
         {
           "number": 4,
-          "title": "Leptogenesis connection",
-          "description": "*(resolved — downstream)*: Fully addressed by [Leptogenesis](/derivations/cosmology/leptogenesis), which establishes the viability of electroweak-scale resonant leptogenesis using framework-predicted "
-        },
-        {
-          "number": 5,
           "title": "Dirac limit test",
           "description": "If experiments conclusively establish Dirac neutrinos (absence of 0nubetabeta), this derivation would be falsified — the self-conjugacy argument would need revision."
         }
@@ -9188,7 +9117,7 @@
         "incoming": [
           {
             "source": "cosmology/baryogenesis",
-            "context": "Majorana mechanism from pseudo-real $SU(2"
+            "context": "Majorana mechanism"
           },
           {
             "source": "cosmology/leptogenesis",
@@ -9944,11 +9873,6 @@
         },
         {
           "number": 3,
-          "title": "Neutrino mass mechanism",
-          "description": "*(resolved — downstream)*: Fully addressed by [Neutrino Masses](/derivations/particles/neutrino-masses), which establishes Majorana nature from the pseudo-real SU(2) representation — the self-conjugac"
-        },
-        {
-          "number": 4,
           "title": "Sterile neutrinos",
           "description": "If right-handed neutrinos exist as a fourth \"hidden\" winding mode (not a fourth generation but a different chirality), their properties should be predictable."
         }
@@ -11435,16 +11359,11 @@
         },
         {
           "number": 3,
-          "title": "Singularity resolution",
-          "description": "*(resolved — downstream)*: Fully addressed by [Singularity Resolution](/derivations/spacetime/singularity-resolution), which establishes curvature bounds at Planck density via the holographic entropy "
-        },
-        {
-          "number": 4,
           "title": "Quantum gravity",
           "description": "The full quantum treatment requires quantizing the coherence geometry itself. The Einstein equations are the classical (continuum) limit; the discrete relational network is the quantum substrate."
         },
         {
-          "number": 5,
+          "number": 4,
           "title": "$T_{\\mu\\nu}$ from the observer network",
           "description": "Constructing the energy-momentum tensor explicitly from the relational invariant density and observer distribution would close the self-consistency loop at the formal level."
         }
@@ -12008,7 +11927,7 @@
         {
           "number": 1,
           "title": "Acceleration",
-          "description": "This derivation covers inertial (constant velocity) observers. Accelerated observers require curved coherence geometry — connecting to [Gravity](/derivations/spacetime/gravity). The equivalence princi"
+          "description": "*(partially resolved — downstream)*: This derivation covers inertial (constant velocity) observers. Accelerated observers require curved coherence geometry — connecting to [Gravity](/derivations/space"
         },
         {
           "number": 2,
@@ -12770,26 +12689,21 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Product-space coherence decomposition",
-          "description": "*(resolved)*: Axiomatized in Definition 5.0: additivity for independent subsystems (from the definition of coherence independence) and subadditivity (C4) for correlated subsystems. This closes the for"
-        },
-        {
-          "number": 2,
           "title": "Čencov verification",
           "description": "Complete the formal verification that the coherence Hessian metric from [Action and Planck's Constant](/derivations/thermodynamics/action-planck) satisfies Čencov's monotonicity conditions under all M"
         },
         {
-          "number": 3,
+          "number": 2,
           "title": "Quantum extension",
           "description": "Extend from the classical Čencov theorem (unique monotone metric) to the quantum Petz classification (family of monotone metrics). In the quantum case, the monotone metrics form a family parameterized"
         },
         {
-          "number": 4,
+          "number": 3,
           "title": "Landauer's principle",
           "description": "The monotonicity direction (Proposition 3.2) implies that erasing information has a minimum thermodynamic cost. Quantify this: the coherence cost of reducing distinguishability by Delta D should be at"
         },
         {
-          "number": 5,
+          "number": 4,
           "title": "No-broadcasting",
           "description": "Generalize no-cloning from pure states to mixed states. Broadcasting (approximately copying) a mixed state is possible classically but impossible quantumly for non-commuting states. The coherence fram"
         }
@@ -12839,10 +12753,6 @@
           {
             "source": "thermodynamics-ext/fisher-metric",
             "context": "Proposition 4.1"
-          },
-          {
-            "source": "thermodynamics-ext/fisher-metric",
-            "context": "Proposition 4.1, rigorous"
           }
         ]
       },
@@ -13232,21 +13142,16 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Monotonicity of the Hessian metric",
-          "description": "*(resolved)*: The coherence Hessian metric from Action-Planck satisfies Čencov's monotonicity condition. This is now proved by [Conservation of Distinguishability](/derivations/thermodynamics-ext/dist"
-        },
-        {
-          "number": 2,
           "title": "Curvature–spacetime bridge",
           "description": "Connect the Fisher curvature on Sigma to the spacetime curvature on M. The [Gravity](/derivations/spacetime/gravity) derivation provides the latter from coherence density gradients; the bridge would n"
         },
         {
-          "number": 3,
+          "number": 2,
           "title": "Quantum Fisher metric",
           "description": "Extend from the classical Fisher metric to the quantum Fisher information (Bures metric / symmetric logarithmic derivative). This is needed for full quantum state spaces. The quantum Čencov theorem (P"
         },
         {
-          "number": 4,
+          "number": 3,
           "title": "Infinite-dimensional extension",
           "description": "The derivation assumes finite-dimensional Sigma. For field theory, the state space is infinite-dimensional and requires functional-analytic care (the theory exists — see Pistone & Sempi, 1995)."
         }
@@ -13290,10 +13195,6 @@
           {
             "target": "thermodynamics-ext/distinguishability-conservation",
             "context": "Proposition 4.1"
-          },
-          {
-            "target": "thermodynamics-ext/distinguishability-conservation",
-            "context": "Proposition 4.1, rigorous"
           }
         ],
         "incoming": [
@@ -20807,20 +20708,13 @@
       "derivationId": "cosmology/baryogenesis",
       "derivationStatus": "rigorous",
       "number": 2,
-      "title": "Leptogenesis",
-      "description": "*(resolved — downstream)*: Fully addressed by [Neutrino Masses](/derivations/particles/neutrino-masses) (Majorana mechanism from pseudo-real SU(2) representations) and [Leptogenesis](/derivations/cosm"
-    },
-    {
-      "derivationId": "cosmology/baryogenesis",
-      "derivationStatus": "rigorous",
-      "number": 3,
       "title": "Quantitative $\\eta_B$",
       "description": "Compute the baryon-to-photon ratio from the framework's parameters. This requires the sphaleron rate, CP-violating phases, and phase transition dynamics — all computable in principle but technically d"
     },
     {
       "derivationId": "cosmology/baryogenesis",
       "derivationStatus": "rigorous",
-      "number": 4,
+      "number": 3,
       "title": "Dark baryogenesis",
       "description": "The framework's dark matter prediction ([Dark Matter Granularity](/predictions/dark-matter-granularity)) involves coherence structures. Could a dark-sector version of baryogenesis explain the OmegaB /"
     },
@@ -20954,62 +20848,20 @@
       "derivationId": "gauge/chirality-selection",
       "derivationStatus": "rigorous",
       "number": 1,
-      "title": "Anomaly cancellation",
-      "description": "*(resolved — downstream)*: Fully addressed by [Anomaly Cancellation](/derivations/gauge/anomaly-cancellation), which proves that the chirality-selected fermion content automatically satisfies all four"
-    },
-    {
-      "derivationId": "gauge/chirality-selection",
-      "derivationStatus": "rigorous",
-      "number": 2,
       "title": "Left-right symmetric extensions",
       "description": "Some BSM models (Pati-Salam, left-right symmetric models) restore parity at high energies. The framework's prediction is that parity violation is *exact* (algebraic, not dynamical). Experimental tests"
-    },
-    {
-      "derivationId": "gauge/chirality-selection",
-      "derivationStatus": "rigorous",
-      "number": 3,
-      "title": "CPT completion",
-      "description": "Proposition 6.1 is a proof sketch. A complete derivation of the CPT theorem within the framework would strengthen this and connect to [Coherence-Dual Pairs](/derivations/minimal-observer/coherence-dua"
-    },
-    {
-      "derivationId": "gauge/chirality-selection",
-      "derivationStatus": "rigorous",
-      "number": 4,
-      "title": "Electroweak symmetry breaking",
-      "description": "*(resolved — downstream)*: Fully addressed by [Electroweak Symmetry Breaking](/derivations/gauge/electroweak-breaking), which derives the Coleman-Weinberg mechanism from the coherence Lagrangian."
     },
     {
       "derivationId": "gauge/color-force",
       "derivationStatus": "rigorous",
       "number": 1,
-      "title": "Bootstrap–Cayley-Dickson proof",
-      "description": "*(resolved — downstream)*: Fully addressed by [Bootstrap → Division Algebras](/derivations/interactions/bootstrap-division-algebras), which proves the Cayley-Dickson doubling sequence is forced by coh"
-    },
-    {
-      "derivationId": "gauge/color-force",
-      "derivationStatus": "rigorous",
-      "number": 2,
-      "title": "Confinement",
-      "description": "*(resolved — downstream)*: Fully addressed by [Color Confinement](/derivations/gauge/confinement), which derives the linear potential from a random-walk-on-groups argument for non-associative phase tr"
-    },
-    {
-      "derivationId": "gauge/color-force",
-      "derivationStatus": "rigorous",
-      "number": 3,
-      "title": "Strong CP problem",
-      "description": "*(resolved — downstream)*: Fully addressed by [Strong CP Conservation](/derivations/gauge/strong-cp), which shows the rigid octonionic structure of SU(3) forces theta = 0 via algebraic completeness an"
-    },
-    {
-      "derivationId": "gauge/color-force",
-      "derivationStatus": "rigorous",
-      "number": 4,
       "title": "Chiral symmetry breaking",
       "description": "*(partially resolved — downstream)*: Addressed by [Chiral Symmetry Breaking](/derivations/gauge/chiral-symmetry-breaking) (provisional), which derives the QCD chiral condensate from coherence minimiza"
     },
     {
       "derivationId": "gauge/color-force",
       "derivationStatus": "rigorous",
-      "number": 5,
+      "number": 2,
       "title": "Explicit gluon spectrum",
       "description": "Derive the gluon propagator and self-coupling vertices from the octonionic product structure, confirming that they match the standard QCD Feynman rules."
     },
@@ -21084,13 +20936,6 @@
       "description": "The weak and color forces require extending from U(1) to SU(2) and SU(3). The proposed route — through the division algebra hierarchy R C H O — is the subject of the [Weak Interaction](/derivations/ga"
     },
     {
-      "derivationId": "gauge/electromagnetism",
-      "derivationStatus": "rigorous",
-      "number": 5,
-      "title": "Localization rigor",
-      "description": "*(resolved)*: The localization argument (Theorem 2.1) is now completed by Proposition 2.2 (the gauge-invariant observable algebra IS generated by Wilson loops and relational invariants) and Propositio"
-    },
-    {
       "derivationId": "gauge/electroweak-breaking",
       "derivationStatus": "rigorous",
       "number": 1,
@@ -21161,20 +21006,6 @@
       "description": "The current algebraic construction cleanly produces U(1) SU(3) quantum numbers. Incorporating the SU(2)L weak isospin assignments requires combining the Cell(6) structure with the quaternionic chirali"
     },
     {
-      "derivationId": "gauge/standard-model-group",
-      "derivationStatus": "rigorous",
-      "number": 3,
-      "title": "Electroweak symmetry breaking",
-      "description": "*(resolved — downstream)*: Fully addressed by [Electroweak Symmetry Breaking](/derivations/gauge/electroweak-breaking), which derives the Coleman-Weinberg mechanism from the coherence Lagrangian with "
-    },
-    {
-      "derivationId": "gauge/standard-model-group",
-      "derivationStatus": "rigorous",
-      "number": 4,
-      "title": "Proton decay bound",
-      "description": "The framework predicts absolute proton stability (no GUT bosons). A quantitative bound on the proton lifetime from residual gravitational or higher-order effects would sharpen this into a testable pre"
-    },
-    {
       "derivationId": "gauge/strong-cp",
       "derivationStatus": "rigorous",
       "number": 1,
@@ -21206,36 +21037,8 @@
       "derivationId": "gauge/weak-interaction",
       "derivationStatus": "rigorous",
       "number": 1,
-      "title": "Chirality selection",
-      "description": "*(resolved — downstream)*: Why does SU(2)W couple to left-handed spinors only? Fully addressed by [Chirality Selection](/derivations/gauge/chirality-selection): non-commutativity of H forces orientati"
-    },
-    {
-      "derivationId": "gauge/weak-interaction",
-      "derivationStatus": "rigorous",
-      "number": 2,
-      "title": "Electroweak symmetry breaking",
-      "description": "*(resolved — downstream)*: Fully addressed by [Electroweak Symmetry Breaking](/derivations/gauge/electroweak-breaking), which derives the Coleman-Weinberg mechanism from the coherence Lagrangian with "
-    },
-    {
-      "derivationId": "gauge/weak-interaction",
-      "derivationStatus": "rigorous",
-      "number": 3,
-      "title": "Weinberg angle",
-      "description": "*(resolved — downstream)*: Fully addressed by [Weinberg Angle](/derivations/gauge/weinberg-angle), which determines sin2thetaW(MZ) = 0.231 from the C H algebraic boundary condition via exact one-loop "
-    },
-    {
-      "derivationId": "gauge/weak-interaction",
-      "derivationStatus": "rigorous",
-      "number": 4,
       "title": "Weak coupling constant",
       "description": "gW is a free parameter, related to alphaem via gW = e/sinthetaW. Its value should follow from the [Coupling Constants](/derivations/cosmology/coupling-constants) derivation. Same status as e in electr"
-    },
-    {
-      "derivationId": "gauge/weak-interaction",
-      "derivationStatus": "rigorous",
-      "number": 5,
-      "title": "Anomaly cancellation",
-      "description": "*(resolved — downstream)*: Fully addressed by [Anomaly Cancellation](/derivations/gauge/anomaly-cancellation), which shows the chirality-selected fermion content automatically satisfies all four indep"
     },
     {
       "derivationId": "holography/area-scaling",
@@ -21402,13 +21205,6 @@
       "derivationId": "holography/information-paradox",
       "derivationStatus": "rigorous",
       "number": 4,
-      "title": "ER=EPR connection",
-      "description": "*(resolved — downstream)*: Fully addressed by [ER=EPR from Relational Invariants](/derivations/holography/er-epr), which rigorously establishes that relational invariants produce both entanglement (EP"
-    },
-    {
-      "derivationId": "holography/information-paradox",
-      "derivationStatus": "rigorous",
-      "number": 5,
       "title": "Observational signatures",
       "description": "The information encoding in Hawking radiation correlations is in principle observable but requires collecting an astronomically large number of quanta. Are there more accessible signatures of the reso"
     },
@@ -21640,13 +21436,6 @@
       "derivationId": "particles/neutrino-masses",
       "derivationStatus": "rigorous",
       "number": 4,
-      "title": "Leptogenesis connection",
-      "description": "*(resolved — downstream)*: Fully addressed by [Leptogenesis](/derivations/cosmology/leptogenesis), which establishes the viability of electroweak-scale resonant leptogenesis using framework-predicted "
-    },
-    {
-      "derivationId": "particles/neutrino-masses",
-      "derivationStatus": "rigorous",
-      "number": 5,
       "title": "Dirac limit test",
       "description": "If experiments conclusively establish Dirac neutrinos (absence of 0nubetabeta), this derivation would be falsified — the self-conjugacy argument would need revision."
     },
@@ -21731,13 +21520,6 @@
       "derivationId": "particles/three-generations",
       "derivationStatus": "rigorous",
       "number": 3,
-      "title": "Neutrino mass mechanism",
-      "description": "*(resolved — downstream)*: Fully addressed by [Neutrino Masses](/derivations/particles/neutrino-masses), which establishes Majorana nature from the pseudo-real SU(2) representation — the self-conjugac"
-    },
-    {
-      "derivationId": "particles/three-generations",
-      "derivationStatus": "rigorous",
-      "number": 4,
       "title": "Sterile neutrinos",
       "description": "If right-handed neutrinos exist as a fourth \"hidden\" winding mode (not a fourth generation but a different chirality), their properties should be predictable."
     },
@@ -21899,20 +21681,13 @@
       "derivationId": "spacetime/einstein-equations",
       "derivationStatus": "rigorous",
       "number": 3,
-      "title": "Singularity resolution",
-      "description": "*(resolved — downstream)*: Fully addressed by [Singularity Resolution](/derivations/spacetime/singularity-resolution), which establishes curvature bounds at Planck density via the holographic entropy "
-    },
-    {
-      "derivationId": "spacetime/einstein-equations",
-      "derivationStatus": "rigorous",
-      "number": 4,
       "title": "Quantum gravity",
       "description": "The full quantum treatment requires quantizing the coherence geometry itself. The Einstein equations are the classical (continuum) limit; the discrete relational network is the quantum substrate."
     },
     {
       "derivationId": "spacetime/einstein-equations",
       "derivationStatus": "rigorous",
-      "number": 5,
+      "number": 4,
       "title": "$T_{\\mu\\nu}$ from the observer network",
       "description": "Constructing the energy-momentum tensor explicitly from the relational invariant density and observer distribution would close the self-consistency loop at the formal level."
     },
@@ -21942,7 +21717,7 @@
       "derivationStatus": "rigorous",
       "number": 1,
       "title": "Acceleration",
-      "description": "This derivation covers inertial (constant velocity) observers. Accelerated observers require curved coherence geometry — connecting to [Gravity](/derivations/spacetime/gravity). The equivalence princi"
+      "description": "*(partially resolved — downstream)*: This derivation covers inertial (constant velocity) observers. Accelerated observers require curved coherence geometry — connecting to [Gravity](/derivations/space"
     },
     {
       "derivationId": "spacetime/lorentz-invariance",
@@ -22018,34 +21793,27 @@
       "derivationId": "thermodynamics-ext/distinguishability-conservation",
       "derivationStatus": "rigorous",
       "number": 1,
-      "title": "Product-space coherence decomposition",
-      "description": "*(resolved)*: Axiomatized in Definition 5.0: additivity for independent subsystems (from the definition of coherence independence) and subadditivity (C4) for correlated subsystems. This closes the for"
-    },
-    {
-      "derivationId": "thermodynamics-ext/distinguishability-conservation",
-      "derivationStatus": "rigorous",
-      "number": 2,
       "title": "Čencov verification",
       "description": "Complete the formal verification that the coherence Hessian metric from [Action and Planck's Constant](/derivations/thermodynamics/action-planck) satisfies Čencov's monotonicity conditions under all M"
     },
     {
       "derivationId": "thermodynamics-ext/distinguishability-conservation",
       "derivationStatus": "rigorous",
-      "number": 3,
+      "number": 2,
       "title": "Quantum extension",
       "description": "Extend from the classical Čencov theorem (unique monotone metric) to the quantum Petz classification (family of monotone metrics). In the quantum case, the monotone metrics form a family parameterized"
     },
     {
       "derivationId": "thermodynamics-ext/distinguishability-conservation",
       "derivationStatus": "rigorous",
-      "number": 4,
+      "number": 3,
       "title": "Landauer's principle",
       "description": "The monotonicity direction (Proposition 3.2) implies that erasing information has a minimum thermodynamic cost. Quantify this: the coherence cost of reducing distinguishability by Delta D should be at"
     },
     {
       "derivationId": "thermodynamics-ext/distinguishability-conservation",
       "derivationStatus": "rigorous",
-      "number": 5,
+      "number": 4,
       "title": "No-broadcasting",
       "description": "Generalize no-cloning from pure states to mixed states. Broadcasting (approximately copying) a mixed state is possible classically but impossible quantumly for non-commuting states. The coherence fram"
     },
@@ -22081,27 +21849,20 @@
       "derivationId": "thermodynamics-ext/fisher-metric",
       "derivationStatus": "rigorous",
       "number": 1,
-      "title": "Monotonicity of the Hessian metric",
-      "description": "*(resolved)*: The coherence Hessian metric from Action-Planck satisfies Čencov's monotonicity condition. This is now proved by [Conservation of Distinguishability](/derivations/thermodynamics-ext/dist"
-    },
-    {
-      "derivationId": "thermodynamics-ext/fisher-metric",
-      "derivationStatus": "rigorous",
-      "number": 2,
       "title": "Curvature–spacetime bridge",
       "description": "Connect the Fisher curvature on Sigma to the spacetime curvature on M. The [Gravity](/derivations/spacetime/gravity) derivation provides the latter from coherence density gradients; the bridge would n"
     },
     {
       "derivationId": "thermodynamics-ext/fisher-metric",
       "derivationStatus": "rigorous",
-      "number": 3,
+      "number": 2,
       "title": "Quantum Fisher metric",
       "description": "Extend from the classical Fisher metric to the quantum Fisher information (Bures metric / symmetric logarithmic derivative). This is needed for full quantum state spaces. The quantum Čencov theorem (P"
     },
     {
       "derivationId": "thermodynamics-ext/fisher-metric",
       "derivationStatus": "rigorous",
-      "number": 4,
+      "number": 3,
       "title": "Infinite-dimensional extension",
       "description": "The derivation assumes finite-dimensional Sigma. For field theory, the state space is infinite-dimensional and requires functional-analytic care (the theory exists — see Pistone & Sempi, 1995)."
     },
