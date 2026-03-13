@@ -151,6 +151,7 @@ function latexToText(text: string): string {
 // Extract proof steps from the markdown body
 // Look for h3 headings that follow the "Step N: Title" pattern
 const body = entry.body || ''
+const hasOverview = /^##\s+Overview\s*$/m.test(body)
 const stepRegex = /^###\s+Step\s+\d+[:\s]+(.+)$/gm
 const stepMatches: { title: string; index: number; length: number }[] = []
 
@@ -220,6 +221,7 @@ for (let i = 0; i < stepMatches.length; i++) {
   enablesDerivation={entry.data.enablesDerivation}
   sourceSection={entry.data.sourceSection}
   leanProofs={entry.data.leanProofs}
+  hasOverview={hasOverview}
 >
   {steps.length >= 2 && (
     <ProofStepViewer client:load steps={steps} />

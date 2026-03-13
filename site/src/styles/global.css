@@ -296,6 +296,44 @@ body {
   flex-shrink: 0;
 }
 
+/* ── Derivation overview/derivation tabs ── */
+.derivation-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--color-border);
+  margin: 1.5rem 0 0;
+}
+
+.derivation-tab {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+  font-family: inherit;
+}
+
+.derivation-tab:hover {
+  color: var(--color-text);
+}
+
+.derivation-tab--active {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+  font-weight: 600;
+}
+
+.derivation-panel > h2:first-child {
+  border-top: none;
+  margin-top: 1rem;
+  padding-top: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -461,6 +499,11 @@ html {
 
   .main-content h3 {
     font-size: 1rem;
+  }
+
+  .derivation-tab {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
   }
 
   pre {
