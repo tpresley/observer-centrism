@@ -59,7 +59,7 @@
     { "id": "quantum/teleportation", "title": "Quantum Teleportation", "group": "quantum", "status": "rigorous" },
     { "id": "particles/cpt-theorem", "title": "CPT Theorem", "group": "particles", "status": "rigorous" },
     { "id": "gauge/proton-stability", "title": "Proton Stability", "group": "gauge", "status": "rigorous" },
-    { "id": "cosmology/observer-loop-viability", "title": "Observer Loop Viability Bounds", "group": "cosmology", "status": "stub" }
+    { "id": "cosmology/observer-loop-viability", "title": "Observer Loop Viability Bounds", "group": "cosmology", "status": "draft" }
   ],
   "edges": [
     { "from": "axioms/coherence-conservation", "to": "axioms/observer-definition" },
@@ -183,6 +183,11 @@
     { "from": "spacetime/singularity-resolution", "to": "cosmology/observer-loop-viability" },
     { "from": "holography/area-scaling", "to": "cosmology/observer-loop-viability" },
     { "from": "minimal-observer/structure", "to": "cosmology/observer-loop-viability" },
-    { "from": "axioms/loop-closure", "to": "cosmology/observer-loop-viability" }
+    { "from": "axioms/loop-closure", "to": "cosmology/observer-loop-viability" },
+    { "from": "minimal-observer/multiplicity", "to": "cosmology/observer-loop-viability" },
+    { "from": "thermodynamics/entropy", "to": "cosmology/observer-loop-viability" },
+    { "from": "interactions/bootstrap", "to": "cosmology/observer-loop-viability" },
+    { "from": "thermodynamics-ext/renormalization", "to": "cosmology/observer-loop-viability" },
+    { "from": "holography/er-epr", "to": "cosmology/observer-loop-viability" }
   ]
 }

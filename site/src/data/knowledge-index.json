@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-13T05:06:53.623Z",
+    "generatedAt": "2026-03-13T07:33:15.619Z",
     "derivationCount": 60,
     "predictionCount": 10,
     "generator": "scripts/build-index.mjs"
@@ -9,15 +9,15 @@
     "byStatus": {
       "rigorous": 57,
       "non-viable": 1,
-      "stub": 1,
+      "draft": 1,
       "provisional": 1
     },
     "derivationCount": 60,
     "predictionCount": 10,
-    "edgeCount": 122,
-    "formalObjectCount": 862,
-    "openGapCount": 195,
-    "upgradeEligibleCount": 0,
+    "edgeCount": 127,
+    "formalObjectCount": 889,
+    "openGapCount": 199,
+    "upgradeEligibleCount": 1,
     "leanVerifiedCount": 16,
     "leanTheoremCount": 64
   },
@@ -1281,6 +1281,14 @@
             "context": "Einstein Field Equations"
           },
           {
+            "target": "cosmology/observer-loop-viability",
+            "context": "Theorem 2.1"
+          },
+          {
+            "target": "cosmology/observer-loop-viability",
+            "context": "Step 10"
+          },
+          {
             "target": "holography/area-scaling",
             "context": "Holographic Entropy Bound"
           },
@@ -1291,13 +1299,17 @@
           {
             "target": "thermodynamics/action-planck",
             "context": "Action and Planck's Constant"
+          },
+          {
+            "target": "cosmology/observer-loop-viability",
+            "context": "draft"
+          },
+          {
+            "target": "cosmology/observer-loop-viability",
+            "context": "Observer Loop Viability Bounds"
           }
         ],
         "incoming": [
-          {
-            "source": "cosmology/observer-loop-viability",
-            "context": "§Root Cause: The self-consistency loop"
-          },
           {
             "source": "cosmology/observer-loop-viability",
             "context": "Cosmological Constant"
@@ -1704,66 +1716,290 @@
       "id": "cosmology/observer-loop-viability",
       "filePath": "site/src/content/derivations/cosmology/observer-loop-viability.md",
       "title": "Observer Loop Viability Bounds",
-      "status": "stub",
-      "rigorLevel": "informal",
+      "status": "draft",
+      "rigorLevel": "semi-formal",
       "group": "cosmology",
       "tags": [
         "cosmology",
         "quantum-gravity"
       ],
-      "summary": "Investigate whether the structural requirements of Axioms 2 and 3 (observer loops must close with Lyapunov stability) restrict which spacetimes can host valid observer DAGs, yielding constraints on the cosmological constant and potentially its sign",
+      "summary": "The structural requirements of Axioms 2 and 3 yield a Planck-scale upper bound on |Λ|: observer loops cannot close if the cosmological horizon is sub-Planckian. Observer loops cannot survive Planck-density bounces (Λ < 0 cosmologies), but the axioms do not exclude Λ < 0 because observers can re-form between bounces. The sign of Λ is not constrained by the current axioms alone.",
       "lastUpdated": "2026-03-12",
       "dependsOn": [
         "spacetime/singularity-resolution",
         "holography/area-scaling",
         "minimal-observer/structure",
-        "axioms/loop-closure"
+        "axioms/loop-closure",
+        "minimal-observer/multiplicity",
+        "thermodynamics/entropy",
+        "interactions/bootstrap",
+        "thermodynamics-ext/renormalization",
+        "holography/er-epr"
       ],
       "enablesDerivation": [],
       "dependedOnBy": [],
-      "steps": [],
-      "formalObjects": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Observer Viability in de Sitter Space"
+        },
+        {
+          "number": 2,
+          "title": "The Geometric Upper Bound"
+        },
+        {
+          "number": 3,
+          "title": "The Holographic Budget Bound"
+        },
+        {
+          "number": 4,
+          "title": "Local Stability in the Static Patch"
+        },
+        {
+          "number": 5,
+          "title": "Cosmological Redshift and Far-Field Interactions"
+        },
+        {
+          "number": 6,
+          "title": "Causal Horizons vs. Epistemic Horizons"
+        },
+        {
+          "number": 7,
+          "title": "Bounce Dissolution in $\\Lambda < 0$ Cosmologies"
+        },
+        {
+          "number": 8,
+          "title": "Sign Constraint Assessment"
+        },
+        {
+          "number": 9,
+          "title": "The Hierarchy Question"
+        },
+        {
+          "number": 10,
+          "title": "Hierarchical Coherence Suppression (Mechanism Sketch)"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Theorem",
+          "id": "1",
+          "name": "Planck-scale viability bound",
+          "statementPreview": "In de Sitter spacetime with cosmological constant Lambda > 0, observer triples (Sigma, I, B) satisfying Axioms 2 and ..."
+        },
+        {
+          "type": "Theorem",
+          "id": "2",
+          "name": "Bounce dissolution",
+          "statementPreview": "In a Lambda < 0 FRW cosmology, the recollapse bounce at Planck density (rho = rhoP) destroys all observer triples. No..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3",
+          "name": "No sign constraint",
+          "statementPreview": "The current axioms do not exclude Lambda < 0. Observers exist during the expanding and contracting phases between bou..."
+        },
+        {
+          "type": "Definition",
+          "id": "1.1.",
+          "name": "",
+          "statementPreview": "A spacetime is **observer-viable** if it admits at least one pair of observer triples (Sigmai, Ii, Bi) for i = 1, 2 s..."
+        },
+        {
+          "type": "Definition",
+          "id": "1.2.",
+          "name": "",
+          "statementPreview": "In de Sitter spacetime with cosmological constant Lambda > 0, the **cosmological horizon** of a comoving observer has..."
+        },
+        {
+          "type": "Theorem",
+          "id": "2.1",
+          "name": "Geometric bound",
+          "statementPreview": "If Lambda > 3/ellP2, no observer triple can exist in de Sitter spacetime.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Coherence budget",
+          "statementPreview": "The multiplicity requirement, combined with the holographic entropy bound, independently gives the same Planck-scale ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Time-independent local dynamics",
+          "statementPreview": "In the static de Sitter patch, the local dynamics of an observer at r ll RH is time-independent. The Lyapunov stabili..."
+        },
+        {
+          "type": "Corollary",
+          "id": "4.2",
+          "name": "Indefinite observer lifetime in de Sitter",
+          "statementPreview": "For Lambda < 3/ellP2, an observer pair can persist indefinitely within the static patch. The cosmological expansion d..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Redshift of non-self interactions",
+          "statementPreview": "Type III interactions between an observer at r = 0 and a non-self observer at radial coordinate r in the static patch..."
+        },
+        {
+          "type": "Corollary",
+          "id": "5.2",
+          "name": "Multiplicity within a sub-horizon region",
+          "statementPreview": "The multiplicity requirement (Definition 1.1) is satisfied as long as the non-self observer is within a sub-horizon r..."
+        },
+        {
+          "type": "Definition",
+          "id": "6.1.",
+          "name": "",
+          "statementPreview": "The **causal horizon** of an observer in de Sitter space is the cosmological horizon at RH = 3/Lambda — the boundary ..."
+        },
+        {
+          "type": "Definition",
+          "id": "6.2.",
+          "name": "",
+          "statementPreview": "The **epistemic horizon** of observer A is the maximum information content accessible through A's boundary BA. By [Ho..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.3",
+          "name": "Epistemic horizons are observer-specific",
+          "statementPreview": "Different observers have vastly different epistemic horizons, determined by their spatial extent ellA sim lambdaC = h..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.4",
+          "name": "Viability uses the causal horizon; tightening uses the epistemic horizon",
+          "statementPreview": "The viability bound (Theorem 2.1) correctly uses the causal horizon RH: the observer must fit within the causally acc..."
+        },
+        {
+          "type": "Theorem",
+          "id": "7.1",
+          "name": "Observer dissolution at Planck density",
+          "statementPreview": "At the Planck-density bounce of a Lambda < 0 FRW cosmology, all observer triples dissolve: no observer loop can close.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "7.2",
+          "name": "Re-formation after bounce",
+          "statementPreview": "After the bounce, the universe expands and rho drops below rhoP. New observer triples can form with new Noether invar..."
+        },
+        {
+          "type": "Proposition",
+          "id": "8.1",
+          "name": "No time during the bounce",
+          "statementPreview": "At the Planck-density bounce, no observers exist (Theorem 7.1). By [Time as Phase Ordering](/derivations/thermodynami..."
+        },
+        {
+          "type": "Corollary",
+          "id": "8.2",
+          "name": "Pre- and post-bounce epochs are not temporal continuations",
+          "statementPreview": "The pre-bounce and post-bounce epochs are not connected by time. They are connected by relational invariant persisten..."
+        },
+        {
+          "type": "Proposition",
+          "id": "8.3",
+          "name": "Coherence conservation does not span the bounce",
+          "statementPreview": "Axiom 1 (Coherence Conservation) requires conservation on Cauchy slices of the relational invariant graph. A Cauchy s..."
+        },
+        {
+          "type": "Proposition",
+          "id": "8.4",
+          "name": "Axioms do not exclude $\\Lambda < 0$",
+          "statementPreview": "Despite the complications above, the three axioms do not exclude Lambda < 0 cosmologies.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "9.1",
+          "name": "The bound does not explain the hierarchy",
+          "statementPreview": "The Planck-scale bound Lambda < 3/ellP2 is 120 orders of magnitude above the observed value Lambdaobs sim 10-122;ellP..."
+        },
+        {
+          "type": "Proposition",
+          "id": "9.2",
+          "name": "Conditions for a tighter bound",
+          "statementPreview": "A sub-Planck bound on Lambda would require showing that the minimum non-self coherence content needed to sustain Lyap..."
+        },
+        {
+          "type": "Definition",
+          "id": "10.1",
+          "name": "Bootstrap filtration",
+          "statementPreview": "The observer category mathbfObs has a natural filtration by bootstrap level ([Bootstrap Mechanism](/derivations/inter..."
+        },
+        {
+          "type": "Proposition",
+          "id": "10.1",
+          "name": "Cross-level geometric consistency",
+          "statementPreview": "A complex observer C at level n+1 is composed of sub-observers Ai at level n, bound by relational invariants Iij. By ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "10.2",
+          "name": "Coherence absorption at bootstrap levels",
+          "statementPreview": "Each bootstrap level (RG fixed point) absorbs coherence into stable relational invariants. By the c-theorem ([Renorma..."
+        },
+        {
+          "type": "Proposition",
+          "id": "10.3",
+          "name": "Residual coherence and the effective $\\Lambda$",
+          "statementPreview": "The cosmological constant, as a property of the IR geometry, is sourced by the residual coherence that has not been a..."
+        }
+      ],
       "structuralPostulates": [],
       "openGaps": [
         {
           "number": 1,
-          "title": "Lyapunov stability in expanding spacetime",
-          "description": "The existing loop closure analysis assumes flat or slowly-varying backgrounds. Extending to de Sitter requires explicit treatment of cosmological expansion effects on phase cycling."
+          "title": "Dynamical holographic bound",
+          "description": "The holographic entropy bound ([Area Scaling](/derivations/holography/area-scaling)) is proved for static boundaries. Extending it to the de Sitter cosmological horizon (which is static in the static "
         },
         {
           "number": 2,
-          "title": "Observer survival through bounce",
-          "description": "Whether the Noether invariant I (Axiom 2) can be preserved through a Planck-density bounce is an open question that connects to the black hole information paradox resolution."
+          "title": "Minimum non-self coherence",
+          "description": "The key gap blocking a tighter bound. What is the minimum coherence content of the non-self side of B required for Lyapunov-stable loop closure? The multiplicity theorem establishes Cnon-self > 0 but "
         },
         {
           "number": 3,
-          "title": "Environmental coherence reservoir",
-          "description": "The \"observer needs a thermal bath\" argument for a tighter bound needs formalization — how much environment does Axiom 2's boundary B require?"
+          "title": "Sign from the cosmological arrow",
+          "description": "Does the structural arrow of time (monotonically increasing relational invariant depth) require spatial expansion? This connects to [Time as Phase Ordering](/derivations/thermodynamics/time), Gap 3. A"
+        },
+        {
+          "number": 4,
+          "title": "Coherence conservation across the bounce",
+          "description": "Proposition 8.3 shows that Axiom 1 does not span the bounce discontinuity — no Cauchy slice connects the pre- and post-bounce epochs. Whether a generalized conservation principle extends across the pa"
+        },
+        {
+          "number": 5,
+          "title": "Gibbons-Hawking stability",
+          "description": "The de Sitter horizon radiates at the Gibbons-Hawking temperature TGH = hbar H/(2pi kB). Whether this thermal background destabilizes observer loops depends on the detailed interaction between GH radi"
+        },
+        {
+          "number": 6,
+          "title": "Geometry functor and cross-level consistency",
+          "description": "The hierarchical coherence argument (Step 10) requires formalizing a geometry functor G: mathbfObs mathbfGeom that maps each observer's epistemic horizon to an effective geometry, compatible with the "
         }
       ],
-      "assessmentVerdict": "",
+      "assessmentVerdict": "Draft. The Planck-scale upper bound (Theorem 2.1) is the strongest result — essentially rigorous given the upstream derivations. The epistemic horizon distinction (Step 6) clarifies which horizon enters which argument. The bounce analysis (Steps 7–8) is significantly strengthened by properly handlin",
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
           {
-            "target": "cosmology/cosmological-constant",
-            "context": "§Root Cause: The self-consistency loop"
-          },
-          {
-            "target": "cosmology/cosmological-constant",
-            "context": "Cosmological Constant"
+            "target": "minimal-observer/multiplicity",
+            "context": "Multiplicity"
           },
           {
             "target": "minimal-observer/structure",
             "context": "Minimal Observer Structure"
           },
           {
-            "target": "spacetime/singularity-resolution",
-            "context": "Singularity Resolution"
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
           },
           {
-            "target": "thermodynamics/time",
-            "context": "Gap 3"
+            "target": "holography/area-scaling",
+            "context": "Theorem 5.2"
+          },
+          {
+            "target": "thermodynamics/entropy",
+            "context": "Entropy"
           },
           {
             "target": "axioms/loop-closure",
@@ -1771,18 +2007,99 @@
           },
           {
             "target": "holography/area-scaling",
-            "context": "Holographic Entropy Bound"
+            "context": "Theorem 3.2"
           },
           {
-            "target": "thermodynamics/entropy",
-            "context": "Entropy"
+            "target": "spacetime/singularity-resolution",
+            "context": "Theorem 4.1"
+          },
+          {
+            "target": "spacetime/singularity-resolution",
+            "context": "Theorem 4.1, step iv"
+          },
+          {
+            "target": "spacetime/singularity-resolution",
+            "context": "Singularity Resolution"
+          },
+          {
+            "target": "spacetime/singularity-resolution",
+            "context": "Theorem 4.1, step v"
+          },
+          {
+            "target": "thermodynamics/time",
+            "context": "Proposition 8.1"
           },
           {
             "target": "thermodynamics/time",
             "context": "Time as Phase Ordering"
+          },
+          {
+            "target": "interactions/relational-invariants",
+            "context": "Relational Invariants"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap Mechanism"
+          },
+          {
+            "target": "holography/er-epr",
+            "context": "Theorem 3.2"
+          },
+          {
+            "target": "thermodynamics-ext/renormalization",
+            "context": "Renormalization Group"
+          },
+          {
+            "target": "interactions/bootstrap-division-algebras",
+            "context": "Bootstrap → Division Algebras"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "target": "cosmology/cosmological-constant",
+            "context": "Cosmological Constant"
+          },
+          {
+            "target": "holography/er-epr",
+            "context": "geometry from relational invariants"
+          },
+          {
+            "target": "thermodynamics-ext/renormalization",
+            "context": "c-theorem, fixed-point structure"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Holographic Entropy Bound"
+          },
+          {
+            "target": "holography/er-epr",
+            "context": "ER=EPR"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "cosmology/cosmological-constant",
+            "context": "Theorem 2.1"
+          },
+          {
+            "source": "cosmology/cosmological-constant",
+            "context": "Step 10"
+          },
+          {
+            "source": "cosmology/cosmological-constant",
+            "context": "draft"
+          },
+          {
+            "source": "cosmology/cosmological-constant",
+            "context": "Observer Loop Viability Bounds"
+          },
+          {
+            "source": "interactions/bootstrap",
+            "context": "Step 10, Gap 6"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -1790,7 +2107,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": false,
+      "upgradeEligible": true,
       "upgradeBlockers": []
     },
     "dimensions/three-dimensions": {
@@ -5579,6 +5896,18 @@
           },
           {
             "source": "cosmology/observer-loop-viability",
+            "context": "Area Scaling"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
+            "context": "Theorem 5.2"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
+            "context": "Theorem 3.2"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
             "context": "Holographic Entropy Bound"
           },
           {
@@ -6091,7 +6420,9 @@
         "spacetime/einstein-equations"
       ],
       "enablesDerivation": [],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "cosmology/observer-loop-viability"
+      ],
       "steps": [],
       "formalObjects": [
         {
@@ -6225,6 +6556,18 @@
           }
         ],
         "incoming": [
+          {
+            "source": "cosmology/observer-loop-viability",
+            "context": "Theorem 3.2"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
+            "context": "geometry from relational invariants"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
+            "context": "ER=EPR"
+          },
           {
             "source": "holography/information-paradox",
             "context": "ER=EPR from Relational Invariants"
@@ -6908,6 +7251,10 @@
         ],
         "incoming": [
           {
+            "source": "cosmology/observer-loop-viability",
+            "context": "Bootstrap → Division Algebras"
+          },
+          {
             "source": "gauge/color-force",
             "context": "Theorems 2.2–2.3, 7.1"
           },
@@ -6956,6 +7303,7 @@
       ],
       "dependedOnBy": [
         "cosmology/coupling-constants",
+        "cosmology/observer-loop-viability",
         "gauge/color-force",
         "interactions/bootstrap-division-algebras",
         "particles/mass-hierarchy",
@@ -7065,6 +7413,11 @@
           "number": 3,
           "title": "The fixed-point equation",
           "description": "The universe as its own observer (maintaining self-consistency) is the fixed point of the bootstrap functor R. Formalizing this as U = R(U, U) (a reflexive domain equation) is a major target connectin"
+        },
+        {
+          "number": 4,
+          "title": "Geometry functor from the bootstrap map",
+          "description": "Promoting R to a full functor on morphisms (§Remark after Proposition 5.1) would enable a **geometry functor** G: mathbfObs mathbfGeom mapping each observer's epistemic horizon to an effective geometr"
         }
       ],
       "assessmentVerdict": "The core results — relational invariants are observers (Theorem 1.1), the hierarchy is closed under iteration (Proposition 2.1), and the hierarchy is necessary (Theorem 3.1) — are rigorously established from the axioms and dependencies. The incommensurate-period case and necessity argument are now c",
@@ -7122,6 +7475,10 @@
           {
             "target": "thermodynamics/action-planck",
             "context": "Action and Planck's Constant"
+          },
+          {
+            "target": "cosmology/observer-loop-viability",
+            "context": "Step 10, Gap 6"
           }
         ],
         "incoming": [
@@ -7131,6 +7488,10 @@
           },
           {
             "source": "cosmology/coupling-constants",
+            "context": "Bootstrap Mechanism"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
             "context": "Bootstrap Mechanism"
           },
           {
@@ -7418,6 +7779,10 @@
         "incoming": [
           {
             "source": "axioms/observer-definition",
+            "context": "Relational Invariants"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
             "context": "Relational Invariants"
           },
           {
@@ -8075,6 +8440,7 @@
         "interactions/three-types"
       ],
       "dependedOnBy": [
+        "cosmology/observer-loop-viability",
         "interactions/three-types",
         "minimal-observer/coherence-dual-pairs"
       ],
@@ -8250,6 +8616,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "cosmology/observer-loop-viability",
+            "context": "Multiplicity"
+          },
           {
             "source": "gauge/chirality-selection",
             "context": "Theorem 2.1"
@@ -9003,6 +9373,10 @@
         "incoming": [
           {
             "source": "cosmology/coupling-constants",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
             "context": "Mass Hierarchy"
           },
           {
@@ -12364,7 +12738,19 @@
         "incoming": [
           {
             "source": "cosmology/observer-loop-viability",
+            "context": "Theorem 4.1"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
+            "context": "Theorem 4.1, step iv"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
             "context": "Singularity Resolution"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
+            "context": "Theorem 4.1, step v"
           },
           {
             "source": "spacetime/einstein-equations",
@@ -13396,7 +13782,9 @@
       "enablesDerivation": [
         "cosmology/coupling-constants"
       ],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "cosmology/observer-loop-viability"
+      ],
       "steps": [
         {
           "number": 1,
@@ -13654,6 +14042,14 @@
           }
         ],
         "incoming": [
+          {
+            "source": "cosmology/observer-loop-viability",
+            "context": "Renormalization Group"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
+            "context": "c-theorem, fixed-point structure"
+          },
           {
             "source": "flavor/mixing-angles",
             "context": "Renormalization Group"
@@ -14093,6 +14489,7 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
+        "cosmology/observer-loop-viability",
         "thermodynamics-ext/first-law",
         "thermodynamics-ext/fisher-metric",
         "thermodynamics-ext/renormalization"
@@ -14551,7 +14948,7 @@
           },
           {
             "source": "cosmology/observer-loop-viability",
-            "context": "Gap 3"
+            "context": "Proposition 8.1"
           },
           {
             "source": "cosmology/observer-loop-viability",
@@ -15501,6 +15898,195 @@
       "id": "7.2",
       "name": "Connection to $0\\nu\\beta\\beta$",
       "fullRef": "cosmology/leptogenesis:Corollary 7.2"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Theorem",
+      "id": "1",
+      "name": "Planck-scale viability bound",
+      "fullRef": "cosmology/observer-loop-viability:Theorem 1"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Theorem",
+      "id": "2",
+      "name": "Bounce dissolution",
+      "fullRef": "cosmology/observer-loop-viability:Theorem 2"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Proposition",
+      "id": "3",
+      "name": "No sign constraint",
+      "fullRef": "cosmology/observer-loop-viability:Proposition 3"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Definition",
+      "id": "1.1.",
+      "name": "",
+      "fullRef": "cosmology/observer-loop-viability:Definition 1.1."
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Definition",
+      "id": "1.2.",
+      "name": "",
+      "fullRef": "cosmology/observer-loop-viability:Definition 1.2."
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Theorem",
+      "id": "2.1",
+      "name": "Geometric bound",
+      "fullRef": "cosmology/observer-loop-viability:Theorem 2.1"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Coherence budget",
+      "fullRef": "cosmology/observer-loop-viability:Proposition 3.1"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Time-independent local dynamics",
+      "fullRef": "cosmology/observer-loop-viability:Proposition 4.1"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Corollary",
+      "id": "4.2",
+      "name": "Indefinite observer lifetime in de Sitter",
+      "fullRef": "cosmology/observer-loop-viability:Corollary 4.2"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "Redshift of non-self interactions",
+      "fullRef": "cosmology/observer-loop-viability:Proposition 5.1"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Corollary",
+      "id": "5.2",
+      "name": "Multiplicity within a sub-horizon region",
+      "fullRef": "cosmology/observer-loop-viability:Corollary 5.2"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Definition",
+      "id": "6.1.",
+      "name": "",
+      "fullRef": "cosmology/observer-loop-viability:Definition 6.1."
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Definition",
+      "id": "6.2.",
+      "name": "",
+      "fullRef": "cosmology/observer-loop-viability:Definition 6.2."
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Proposition",
+      "id": "6.3",
+      "name": "Epistemic horizons are observer-specific",
+      "fullRef": "cosmology/observer-loop-viability:Proposition 6.3"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Proposition",
+      "id": "6.4",
+      "name": "Viability uses the causal horizon; tightening uses the epistemic horizon",
+      "fullRef": "cosmology/observer-loop-viability:Proposition 6.4"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Theorem",
+      "id": "7.1",
+      "name": "Observer dissolution at Planck density",
+      "fullRef": "cosmology/observer-loop-viability:Theorem 7.1"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Proposition",
+      "id": "7.2",
+      "name": "Re-formation after bounce",
+      "fullRef": "cosmology/observer-loop-viability:Proposition 7.2"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Proposition",
+      "id": "8.1",
+      "name": "No time during the bounce",
+      "fullRef": "cosmology/observer-loop-viability:Proposition 8.1"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Corollary",
+      "id": "8.2",
+      "name": "Pre- and post-bounce epochs are not temporal continuations",
+      "fullRef": "cosmology/observer-loop-viability:Corollary 8.2"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Proposition",
+      "id": "8.3",
+      "name": "Coherence conservation does not span the bounce",
+      "fullRef": "cosmology/observer-loop-viability:Proposition 8.3"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Proposition",
+      "id": "8.4",
+      "name": "Axioms do not exclude $\\Lambda < 0$",
+      "fullRef": "cosmology/observer-loop-viability:Proposition 8.4"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Proposition",
+      "id": "9.1",
+      "name": "The bound does not explain the hierarchy",
+      "fullRef": "cosmology/observer-loop-viability:Proposition 9.1"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Proposition",
+      "id": "9.2",
+      "name": "Conditions for a tighter bound",
+      "fullRef": "cosmology/observer-loop-viability:Proposition 9.2"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Definition",
+      "id": "10.1",
+      "name": "Bootstrap filtration",
+      "fullRef": "cosmology/observer-loop-viability:Definition 10.1"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Proposition",
+      "id": "10.1",
+      "name": "Cross-level geometric consistency",
+      "fullRef": "cosmology/observer-loop-viability:Proposition 10.1"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Proposition",
+      "id": "10.2",
+      "name": "Coherence absorption at bootstrap levels",
+      "fullRef": "cosmology/observer-loop-viability:Proposition 10.2"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Proposition",
+      "id": "10.3",
+      "name": "Residual coherence and the effective $\\Lambda$",
+      "fullRef": "cosmology/observer-loop-viability:Proposition 10.3"
     },
     {
       "derivationId": "dimensions/three-dimensions",
@@ -20917,24 +21503,45 @@
     },
     {
       "derivationId": "cosmology/observer-loop-viability",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 1,
-      "title": "Lyapunov stability in expanding spacetime",
-      "description": "The existing loop closure analysis assumes flat or slowly-varying backgrounds. Extending to de Sitter requires explicit treatment of cosmological expansion effects on phase cycling."
+      "title": "Dynamical holographic bound",
+      "description": "The holographic entropy bound ([Area Scaling](/derivations/holography/area-scaling)) is proved for static boundaries. Extending it to the de Sitter cosmological horizon (which is static in the static "
     },
     {
       "derivationId": "cosmology/observer-loop-viability",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 2,
-      "title": "Observer survival through bounce",
-      "description": "Whether the Noether invariant I (Axiom 2) can be preserved through a Planck-density bounce is an open question that connects to the black hole information paradox resolution."
+      "title": "Minimum non-self coherence",
+      "description": "The key gap blocking a tighter bound. What is the minimum coherence content of the non-self side of B required for Lyapunov-stable loop closure? The multiplicity theorem establishes Cnon-self > 0 but "
     },
     {
       "derivationId": "cosmology/observer-loop-viability",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 3,
-      "title": "Environmental coherence reservoir",
-      "description": "The \"observer needs a thermal bath\" argument for a tighter bound needs formalization — how much environment does Axiom 2's boundary B require?"
+      "title": "Sign from the cosmological arrow",
+      "description": "Does the structural arrow of time (monotonically increasing relational invariant depth) require spatial expansion? This connects to [Time as Phase Ordering](/derivations/thermodynamics/time), Gap 3. A"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "derivationStatus": "draft",
+      "number": 4,
+      "title": "Coherence conservation across the bounce",
+      "description": "Proposition 8.3 shows that Axiom 1 does not span the bounce discontinuity — no Cauchy slice connects the pre- and post-bounce epochs. Whether a generalized conservation principle extends across the pa"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "derivationStatus": "draft",
+      "number": 5,
+      "title": "Gibbons-Hawking stability",
+      "description": "The de Sitter horizon radiates at the Gibbons-Hawking temperature TGH = hbar H/(2pi kB). Whether this thermal background destabilizes observer loops depends on the detailed interaction between GH radi"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "derivationStatus": "draft",
+      "number": 6,
+      "title": "Geometry functor and cross-level consistency",
+      "description": "The hierarchical coherence argument (Step 10) requires formalizing a geometry functor G: mathbfObs mathbfGeom that maps each observer's epistemic horizon to an effective geometry, compatible with the "
     },
     {
       "derivationId": "dimensions/three-dimensions",
@@ -21439,6 +22046,13 @@
       "number": 3,
       "title": "The fixed-point equation",
       "description": "The universe as its own observer (maintaining self-consistency) is the fixed point of the bootstrap functor R. Formalizing this as U = R(U, U) (a reflexive domain equation) is a major target connectin"
+    },
+    {
+      "derivationId": "interactions/bootstrap",
+      "derivationStatus": "rigorous",
+      "number": 4,
+      "title": "Geometry functor from the bootstrap map",
+      "description": "Promoting R to a full functor on morphisms (§Remark after Proposition 5.1) would enable a **geometry functor** G: mathbfObs mathbfGeom mapping each observer's epistemic horizon to an effective geometr"
     },
     {
       "derivationId": "interactions/relational-invariants",
@@ -22156,7 +22770,14 @@
     }
   ],
   "upgradeAnalysis": {
-    "eligible": [],
+    "eligible": [
+      {
+        "id": "cosmology/observer-loop-viability",
+        "currentStatus": "draft",
+        "gapCount": 6,
+        "formalObjectCount": 27
+      }
+    ],
     "blocked": []
   },
   "warnings": []
