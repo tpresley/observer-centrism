@@ -166,6 +166,6 @@ By the Jost-Lüders-Pauli theorem (1957), any Lagrangian satisfying (1)-(3) is C
 
 ## Open Gaps
 
-1. **CP violation mechanism**: While the theorem allows individual $CP$ violation (Corollary 4.3), the framework should derive the specific mechanism — complex phases in the CKM and PMNS matrices — from the flavor structure ([Three Generations](/derivations/flavor/three-generations)).
+1. **CP violation mechanism**: While the theorem allows individual $CP$ violation (Corollary 4.3), the framework should derive the specific mechanism — complex phases in the CKM and PMNS matrices — from the flavor structure ([Three Generations](/derivations/particles/three-generations)).
 2. **CPT tests**: The prediction $m = \bar{m}$ and $\tau = \bar{\tau}$ can be tested with increasing precision. Current best tests: $|m_K - m_{\bar{K}}|/m_K < 10^{-18}$ (kaon system), $|q_p + q_{\bar{p}}|/e < 10^{-12}$ (proton-antiproton charge ratio). Any violation would falsify the framework.
 3. **Gravitational CPT**: Does CPT extend to the gravitational sector? The coherence Lagrangian includes gravity ([Einstein Equations](/derivations/spacetime/einstein-equations)), so the theorem formally applies. However, the non-perturbative gravitational regime (black holes, cosmology) may reveal subtleties — particularly regarding the information paradox and black hole evaporation.

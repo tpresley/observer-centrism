@@ -2,7 +2,7 @@
 title: "No Supersymmetric Partners"
 status: "qualitative"
 testability: "currently-tested"
-dependsOn: ["dimensions/three-dimensions", "particles/spin-statistics"]
+dependsOn: ["particles/supersymmetry-impossibility", "dimensions/three-dimensions", "particles/spin-statistics"]
 currentEvidence: "LHC has found no evidence of superpartners to TeV energy scales"
 distinctiveness: "shared"
 sourceSection: "13-predictions"
