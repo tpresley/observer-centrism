@@ -15,8 +15,6 @@ leanProofs:
   - module: "ObserverCentrism.Particles.GenerationCounting"
     proposition: "Proposition 3.2"
     theorems:
-      - "cp_phases_two_gen"
-      - "cp_phases_three_gen"
       - "ckm_total_params"
 ---
 

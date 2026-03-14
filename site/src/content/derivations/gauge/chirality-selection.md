@@ -7,15 +7,6 @@ tags: ["gauge"]
 summary: "Non-commutativity of the quaternion algebra forces a global orientation on all quaternionically-coupled observers: the cyclic ordering I→J→K must be consistent across any relational invariant. Coherence conservation propagates this orientation constraint to every observer in the interaction graph, producing a universal chirality selection. The result is maximal parity violation — SU(2) couples to exactly one chirality — while U(1) (commutative) and SU(3) (orientation inherited) remain vector-like."
 rigorLevel: "formal"
 lastUpdated: 2026-03-10
-leanProofs:
-  - module: "ObserverCentrism.Chirality.CPTOrientation"
-    proposition: "Proposition 6.1"
-    theorems:
-      - "cpt_preserves_orientation"
-  - module: "ObserverCentrism.Chirality.CPTOrientation"
-    proposition: "Proposition 1.2"
-    theorems:
-      - "quaternion_noncommutativity"
 ---
 
 ## Overview

@@ -7,18 +7,6 @@ tags: ["flavor"]
 summary: "The three winding axes that generate three particle generations define distinct mass and weak-interaction eigenbases. The mismatch between these bases — parameterized by the CKM (quark) and PMNS (lepton) mixing matrices — arises from the geometry of the coherence cost function on SO(3), with discrete residual symmetries selecting the preferred bases"
 rigorLevel: "formal"
 lastUpdated: 2026-03-10
-leanProofs:
-  - module: "ObserverCentrism.Flavor.A5Arithmetic"
-    proposition: "Theorem 3.1"
-    theorems:
-      - "a4_order"
-      - "s4_order"
-      - "a5_order"
-  - module: "ObserverCentrism.Flavor.A5Arithmetic"
-    proposition: "Proposition 4.1"
-    theorems:
-      - "a5_irrep_sum_of_squares"
-      - "a5_conjugacy_class_sizes"
 ---
 
 ## Overview

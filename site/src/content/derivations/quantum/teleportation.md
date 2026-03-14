@@ -6,7 +6,13 @@ enablesDerivation: []
 tags: ["quantum", "information"]
 summary: "Quantum teleportation is the transfer of a relational invariant from one observer pair to another via an intermediate measurement and classical communication. Coherence conservation ensures no-cloning: the original relational invariant is destroyed in the process."
 rigorLevel: "formal"
-lastUpdated: 2026-03-12
+lastUpdated: 2026-03-13
+leanProofs:
+  - module: "ObserverCentrism.Quantum.BellBasis"
+    proposition: "Theorem 2.2"
+    theorems:
+      - "bell_matrix_det"
+      - "bell_expansion"
 ---
 
 ## Overview

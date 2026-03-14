@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-14T00:18:01.224Z",
+    "generatedAt": "2026-03-14T01:26:45.328Z",
     "derivationCount": 60,
     "predictionCount": 10,
     "generator": "scripts/build-index.mjs"
@@ -17,8 +17,8 @@
     "formalObjectCount": 885,
     "openGapCount": 197,
     "upgradeEligibleCount": 0,
-    "leanVerifiedCount": 16,
-    "leanTheoremCount": 64
+    "leanVerifiedCount": 8,
+    "leanTheoremCount": 24
   },
   "derivations": {
     "axioms/coherence-conservation": {
@@ -1250,7 +1250,7 @@
       },
       "leanVerification": {
         "hasProofs": true,
-        "proofCount": 4,
+        "proofCount": 2,
         "modules": [
           "ObserverCentrism.Particles.GenerationCounting",
           "ObserverCentrism.Particles.GenerationCounting"
@@ -1568,16 +1568,10 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": true,
-        "proofCount": 7,
-        "modules": [
-          "ObserverCentrism.Cosmology.CouplingRatios",
-          "ObserverCentrism.Cosmology.CouplingRatios"
-        ],
-        "propositions": [
-          "Proposition 2.1",
-          "Theorem 1.1"
-        ]
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -2333,14 +2327,10 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": true,
-        "proofCount": 1,
-        "modules": [
-          "ObserverCentrism.Dimensions.LieAlgebraDim"
-        ],
-        "propositions": [
-          "Proposition 3.1"
-        ]
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -2593,16 +2583,10 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": true,
-        "proofCount": 5,
-        "modules": [
-          "ObserverCentrism.Flavor.A5Arithmetic",
-          "ObserverCentrism.Flavor.A5Arithmetic"
-        ],
-        "propositions": [
-          "Theorem 3.1",
-          "Proposition 4.1"
-        ]
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -3314,16 +3298,10 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": true,
-        "proofCount": 2,
-        "modules": [
-          "ObserverCentrism.Chirality.CPTOrientation",
-          "ObserverCentrism.Chirality.CPTOrientation"
-        ],
-        "propositions": [
-          "Proposition 6.1",
-          "Proposition 1.2"
-        ]
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -3669,20 +3647,10 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": true,
-        "proofCount": 6,
-        "modules": [
-          "ObserverCentrism.Dimensions.LieAlgebraDim",
-          "ObserverCentrism.Gauge.BosonCounting",
-          "ObserverCentrism.Gauge.BosonCounting",
-          "ObserverCentrism.Gauge.BetaFunction"
-        ],
-        "propositions": [
-          "Proposition 4.2",
-          "Theorem 3.1",
-          "Proposition 4.3",
-          "Proposition 7.1"
-        ]
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -4928,18 +4896,14 @@
       },
       "leanVerification": {
         "hasProofs": true,
-        "proofCount": 12,
+        "proofCount": 8,
         "modules": [
           "ObserverCentrism.Gauge.AnomalyCancellation",
-          "ObserverCentrism.Gauge.SedenionZeroDivisor",
-          "ObserverCentrism.Gauge.BosonCounting",
-          "ObserverCentrism.Gauge.BosonCounting"
+          "ObserverCentrism.Gauge.SedenionZeroDivisor"
         ],
         "propositions": [
           "Proposition 5.1",
-          "Proposition 2.2",
-          "Theorem 3.1",
-          "Proposition 4.1"
+          "Proposition 2.2"
         ]
       },
       "upgradeEligible": false,
@@ -5581,18 +5545,10 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": true,
-        "proofCount": 4,
-        "modules": [
-          "ObserverCentrism.Dimensions.LieAlgebraDim",
-          "ObserverCentrism.Gauge.BosonCounting",
-          "ObserverCentrism.Gauge.BosonCounting"
-        ],
-        "propositions": [
-          "Proposition 1.2",
-          "Proposition 9.3",
-          "Corollary 2.2"
-        ]
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -6000,14 +5956,10 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": true,
-        "proofCount": 1,
-        "modules": [
-          "ObserverCentrism.Holography.BlackHoleArithmetic"
-        ],
-        "propositions": [
-          "Theorem 7.1"
-        ]
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -6200,14 +6152,10 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": true,
-        "proofCount": 1,
-        "modules": [
-          "ObserverCentrism.Holography.BlackHoleArithmetic"
-        ],
-        "propositions": [
-          "Proposition 5.1"
-        ]
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -6838,18 +6786,10 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": true,
-        "proofCount": 3,
-        "modules": [
-          "ObserverCentrism.Holography.BlackHoleArithmetic",
-          "ObserverCentrism.Holography.BlackHoleArithmetic",
-          "ObserverCentrism.Holography.BlackHoleArithmetic"
-        ],
-        "propositions": [
-          "Theorem 3.1",
-          "Proposition 5.1",
-          "Corollary 5.2"
-        ]
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -7052,14 +6992,10 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": true,
-        "proofCount": 1,
-        "modules": [
-          "ObserverCentrism.Holography.BlackHoleArithmetic"
-        ],
-        "propositions": [
-          "Corollary 5.2"
-        ]
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -7076,7 +7012,7 @@
         "division-algebras"
       ],
       "summary": "The bootstrap hierarchy forces the Cayley-Dickson doubling sequence R → C → H → O by requiring algebraic closure at each interaction level. Each bootstrap level demands a larger algebra to accommodate the new relational invariants, and the doubling terminates at O because sedenions have zero divisors that violate coherence conservation. This eliminates Structural Postulate S1 from Weak Interaction (algebraic completeness) and Color Force (algebraic saturation), promoting them from assumptions to theorems.",
-      "lastUpdated": "2026-03-12",
+      "lastUpdated": "2026-03-13",
       "dependsOn": [
         "interactions/bootstrap"
       ],
@@ -7323,10 +7259,16 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": false,
-        "proofCount": 0,
-        "modules": [],
-        "propositions": []
+        "hasProofs": true,
+        "proofCount": 6,
+        "modules": [
+          "ObserverCentrism.Algebra.HurwitzNormed",
+          "ObserverCentrism.Gauge.SedenionNonDivision"
+        ],
+        "propositions": [
+          "Theorem 1.2",
+          "Theorem 7.1"
+        ]
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -9859,14 +9801,12 @@
       },
       "leanVerification": {
         "hasProofs": true,
-        "proofCount": 2,
+        "proofCount": 1,
         "modules": [
-          "ObserverCentrism.Particles.SpinStatistics",
           "ObserverCentrism.Particles.SpinStatistics"
         ],
         "propositions": [
-          "Theorem 4.1",
-          "Corollary 4.2"
+          "Theorem 4.1"
         ]
       },
       "upgradeEligible": false,
@@ -10089,16 +10029,12 @@
       },
       "leanVerification": {
         "hasProofs": true,
-        "proofCount": 7,
+        "proofCount": 2,
         "modules": [
-          "ObserverCentrism.Particles.SpinStatistics",
-          "ObserverCentrism.Particles.SpinStatistics",
           "ObserverCentrism.Particles.SpinStatistics"
         ],
         "propositions": [
-          "Proposition 3.1",
-          "Proposition 3.2",
-          "Theorem 6.1"
+          "Proposition 3.2"
         ]
       },
       "upgradeEligible": false,
@@ -10512,7 +10448,7 @@
       },
       "leanVerification": {
         "hasProofs": true,
-        "proofCount": 5,
+        "proofCount": 2,
         "modules": [
           "ObserverCentrism.Particles.GenerationCounting"
         ],
@@ -10822,7 +10758,7 @@
         "information"
       ],
       "summary": "Quantum entanglement is the Hilbert-space image of relational invariants between observers. The coherence of a relational invariant equals the entanglement entropy, the no-cloning theorem follows from coherence conservation, and entanglement monogamy follows from coherence subadditivity.",
-      "lastUpdated": "2026-03-12",
+      "lastUpdated": "2026-03-13",
       "dependsOn": [
         "interactions/relational-invariants",
         "quantum/born-rule"
@@ -11028,10 +10964,14 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": false,
-        "proofCount": 0,
-        "modules": [],
-        "propositions": []
+        "hasProofs": true,
+        "proofCount": 1,
+        "modules": [
+          "ObserverCentrism.Quantum.NoCloning"
+        ],
+        "propositions": [
+          "Theorem 3.1"
+        ]
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -11537,7 +11477,7 @@
         "information"
       ],
       "summary": "Quantum teleportation is the transfer of a relational invariant from one observer pair to another via an intermediate measurement and classical communication. Coherence conservation ensures no-cloning: the original relational invariant is destroyed in the process.",
-      "lastUpdated": "2026-03-12",
+      "lastUpdated": "2026-03-13",
       "dependsOn": [
         "quantum/entanglement",
         "quantum/measurement",
@@ -11741,10 +11681,14 @@
         "incoming": []
       },
       "leanVerification": {
-        "hasProofs": false,
-        "proofCount": 0,
-        "modules": [],
-        "propositions": []
+        "hasProofs": true,
+        "proofCount": 2,
+        "modules": [
+          "ObserverCentrism.Quantum.BellBasis"
+        ],
+        "propositions": [
+          "Theorem 2.2"
+        ]
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
@@ -12589,16 +12533,10 @@
         ]
       },
       "leanVerification": {
-        "hasProofs": true,
-        "proofCount": 3,
-        "modules": [
-          "ObserverCentrism.Dimensions.LieAlgebraDim",
-          "ObserverCentrism.Dimensions.LieAlgebraDim"
-        ],
-        "propositions": [
-          "Theorem 4.2",
-          "Theorem 7.1"
-        ]
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
       },
       "upgradeEligible": false,
       "upgradeBlockers": []

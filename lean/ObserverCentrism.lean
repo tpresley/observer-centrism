@@ -4,32 +4,25 @@
 
   Machine-verified mathematical claims from the observer-centrism derivations.
   See lean/README.md for documentation.
+
+  Every proof here verifies a non-trivial mathematical claim — not arithmetic
+  that a human could check at a glance, but structural results where mechanical
+  verification adds genuine confidence.
 -/
 
--- Algebra infrastructure
+-- Algebra infrastructure and Hurwitz theory
 import ObserverCentrism.Algebra.CayleyDickson
+import ObserverCentrism.Algebra.HurwitzNormed
 
--- Gauge theory
+-- Gauge theory: division algebra obstructions and anomaly cancellation
 import ObserverCentrism.Gauge.AnomalyCancellation
 import ObserverCentrism.Gauge.SedenionZeroDivisor
-import ObserverCentrism.Gauge.BetaFunction
-import ObserverCentrism.Gauge.BosonCounting
+import ObserverCentrism.Gauge.SedenionNonDivision
 
--- Cosmology
-import ObserverCentrism.Cosmology.CouplingRatios
+-- Quantum mechanics: no-cloning and Bell basis
+import ObserverCentrism.Quantum.NoCloning
+import ObserverCentrism.Quantum.BellBasis
 
--- Dimensions and spacetime
-import ObserverCentrism.Dimensions.LieAlgebraDim
-
--- Particles
+-- Particles: spin-statistics core and generation counting
 import ObserverCentrism.Particles.GenerationCounting
 import ObserverCentrism.Particles.SpinStatistics
-
--- Holography
-import ObserverCentrism.Holography.BlackHoleArithmetic
-
--- Flavor
-import ObserverCentrism.Flavor.A5Arithmetic
-
--- Chirality
-import ObserverCentrism.Chirality.CPTOrientation

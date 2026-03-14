@@ -7,20 +7,6 @@ tags: ["gauge"]
 summary: "In three spatial dimensions, maintaining phase coherence along three orthogonal axes forces quaternionic structure by Hurwitz's theorem. The unit quaternions form SU(2), yielding the weak gauge field, non-abelian field strength, and Yang-Mills equations. The Z₂ winding classes from spin-statistics provide the topological distinction between the two chiralities."
 rigorLevel: "formal"
 lastUpdated: 2026-03-10
-leanProofs:
-  - module: "ObserverCentrism.Dimensions.LieAlgebraDim"
-    proposition: "Proposition 1.2"
-    theorems:
-      - "dim_so_3"
-      - "dim_su_2"
-  - module: "ObserverCentrism.Gauge.BosonCounting"
-    proposition: "Proposition 9.3"
-    theorems:
-      - "electroweak_bosons"
-  - module: "ObserverCentrism.Gauge.BosonCounting"
-    proposition: "Corollary 2.2"
-    theorems:
-      - "hurwitz_imaginary_units"
 ---
 
 ## Overview

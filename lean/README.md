@@ -4,13 +4,15 @@ Machine-verified mathematical claims from the [Observer-Centrism](../site/) deri
 
 ## What "Lean Verified" Means
 
-Each Lean file in this project formalizes one or more specific mathematical claims made in the derivation markdown files. When Lean's type-checker accepts a theorem, it provides a machine-checkable proof that the claim is correct — no human review required, no possibility of arithmetic error.
+Each Lean file in this project formalizes one or more specific mathematical claims made in the derivation markdown files. When Lean's type-checker accepts a theorem, it provides a machine-checkable proof that the claim is correct — no human review required, no possibility of error in the verified portion.
 
 ### What IS verified
 
-- Specific numerical identities (e.g., anomaly cancellation sums equal zero)
-- Algebraic facts (e.g., the sedenion zero divisor product is zero)
-- Dimensional calculations (e.g., coupling constant ratios from algebra dimensions)
+- **Structural algebraic facts**: the sedenion zero divisor, non-division-algebra status, norm-composition failure
+- **Universal identities**: the quaternion composition property (Euler's four-square identity), CKM parameter formulas for all N
+- **Impossibility results**: no-cloning theorem, Pauli exclusion core
+- **Linear algebra**: Bell basis completeness and determinant
+- **Consistency conditions**: all four anomaly cancellation identities with fractional hypercharges
 
 ### What is NOT verified
 
@@ -45,12 +47,27 @@ If `lake build` exits with code 0, all proofs are verified.
 
 ## Project Structure
 
-| Module | Derivation | Proposition | What it verifies |
-|--------|-----------|-------------|-----------------|
-| `Gauge.AnomalyCancellation` | gauge/standard-model-group | Prop 5.1 | All four anomaly cancellation conditions (U(1)³, SU(3)²×U(1), SU(2)²×U(1), gravity) are exact rational identities |
-| `Gauge.SedenionZeroDivisor` | gauge/standard-model-group | Prop 2.2 | The sedenion product (e₃+e₁₀)(e₆-e₁₅) = 0, proving zero divisors exist beyond the octonions |
-| `Algebra.CayleyDickson` | (infrastructure) | — | Cayley-Dickson doubling construction: ℝ → ℂ → ℍ → 𝕆 → 𝕊 with explicit multiplication |
-| `Cosmology.CouplingRatios` | cosmology/coupling-constants | Prop 2.1 + Thm 1.1 | Coupling ratios α₁:α₂:α₃ = 4:2:1 and Weinberg angle sin²θ_W = 1/3 from division algebra dimensions |
+| Module | Derivation | What it verifies |
+|--------|-----------|-----------------|
+| `Algebra.CayleyDickson` | (infrastructure) | Cayley-Dickson doubling ℝ → ℂ → ℍ → 𝕆 → 𝕊 with explicit multiplication tables |
+| `Algebra.HurwitzNormed` | bootstrap-division-algebras Thm 1.2 | Quaternion composition property (Euler's four-square identity), sedenion norm-composition failure, Hurwitz dimension constraint |
+| `Gauge.SedenionZeroDivisor` | standard-model-group Prop 2.2 | (e₃+e₁₀)(e₆-e₁₅) = 0 in the sedenions, with both factors nonzero |
+| `Gauge.SedenionNonDivision` | bootstrap-division-algebras Thm 7.1 | Sedenions are not a division algebra (formal conclusion from zero divisor) |
+| `Gauge.AnomalyCancellation` | standard-model-group Prop 5.1 | All four anomaly conditions (U(1)³, SU(3)²×U(1), SU(2)²×U(1), gravity) cancel with exact rational hypercharges |
+| `Quantum.NoCloning` | entanglement Thm 3.1 | No linear map can clone arbitrary quantum states (linearity + cloning → contradiction on superposition) |
+| `Quantum.BellBasis` | teleportation Thm 2.2 | Bell states form a basis for ℚ⁴ (det ≠ 0) with explicit expansion coefficients |
+| `Particles.SpinStatistics` | pauli-exclusion Thm 4.1, spin-statistics Prop 3.2 | Pauli exclusion core (x = -x → x = 0), boson/fermion sign rules |
+| `Particles.GenerationCounting` | three-generations Prop 5.3, baryogenesis Prop 3.2 | CKM parameter identities for all N (universal, not point-evaluated) |
+
+## Design Principles
+
+Every proof in this project satisfies at least one of:
+
+1. **Structural**: Proves a universal algebraic identity or impossibility result (e.g., no-cloning, quaternion composition)
+2. **Computational**: Verifies a computation too complex for confident hand-checking (e.g., 16-component sedenion product, multi-term anomaly sums)
+3. **Foundational**: Establishes a mathematical fact that anchors a significant portion of the derivation chain (e.g., sedenions are not a division algebra → gauge hierarchy terminates)
+
+We deliberately exclude trivial arithmetic (e.g., `3+1=4`, `8/2=4`) that a human would never get wrong. The goal is verification depth, not proof count.
 
 ## Adding New Proofs
 
@@ -69,26 +86,17 @@ leanProofs:
 
 5. Run `node scripts/lean-status.mjs` to verify the cross-reference
 
-## Verification Tiers
+## Future Targets
 
-### Tier 1: Pure Computations (current)
-Rational arithmetic identities and dimensional calculations. Verified by `norm_num` (Lean's numeric normalization tactic). These are the simplest proofs with the highest confidence-to-effort ratio.
-
-### Tier 2: Established Algebra (planned)
-- Hurwitz's theorem (classification of normed division algebras)
 - Homotopy groups: π₁(SO(3)) = ℤ₂, π₃(SU(2)) = ℤ
-- G₂ stabilizer: Stab_{G₂}(ℍ) ≅ SU(3)
-
-### Tier 3: Representation Theory (future)
+- G₂ stabilizer identification: Stab_{G₂}(ℍ) ≅ SU(3)
 - ℂ ⊗ 𝕆 ≅ Cl(6) isomorphism
 - A₅ representation theory for flavor mixing
-
-### Tier 4: Meta-Level (future)
-- Dependency DAG consistency verification
+- Axiom structures as Lean types (coherence space, observer triple)
 
 ## Dependencies
 
 - **Lean 4**: Version specified in `lean-toolchain`
-- **Mathlib4**: Lean's standard mathematics library (provides `norm_num`, rational arithmetic, etc.)
+- **Mathlib4**: Lean's standard mathematics library (provides `norm_num`, `ring`, rational arithmetic, matrix theory, etc.)
 
 The `lake-manifest.json` file locks exact dependency versions (analogous to `package-lock.json`).

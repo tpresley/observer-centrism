@@ -14,9 +14,6 @@ leanProofs:
     theorems:
       - "ckm_total_params"
       - "ckm_params_split"
-      - "cp_phases_two_gen"
-      - "cp_phases_three_gen"
-      - "ckm_three_gen_params"
 ---
 
 ## Overview

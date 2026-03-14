@@ -7,25 +7,6 @@ tags: ["gauge"]
 summary: "The next step in the division algebra hierarchy (H → O) forces octonionic structure at the third bootstrap level. The automorphism group G₂ reduces to SU(3) when a preferred quaternionic subalgebra is fixed by the electroweak structure, yielding the color gauge symmetry with 8 gluons, asymptotic freedom, and color confinement."
 rigorLevel: "formal"
 lastUpdated: 2026-03-10
-leanProofs:
-  - module: "ObserverCentrism.Dimensions.LieAlgebraDim"
-    proposition: "Proposition 4.2"
-    theorems:
-      - "dim_su_3"
-  - module: "ObserverCentrism.Gauge.BosonCounting"
-    proposition: "Theorem 3.1"
-    theorems:
-      - "g2_stabilizer_dim"
-  - module: "ObserverCentrism.Gauge.BosonCounting"
-    proposition: "Proposition 4.3"
-    theorems:
-      - "su3_tensor_decomp_dim"
-  - module: "ObserverCentrism.Gauge.BetaFunction"
-    proposition: "Proposition 7.1"
-    theorems:
-      - "beta_0_qcd"
-      - "beta_0_positive"
-      - "asymptotic_freedom_bound"
 ---
 
 ## Overview

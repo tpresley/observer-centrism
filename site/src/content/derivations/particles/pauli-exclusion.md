@@ -13,10 +13,6 @@ leanProofs:
     proposition: "Theorem 4.1"
     theorems:
       - "pauli_exclusion_core"
-  - module: "ObserverCentrism.Particles.SpinStatistics"
-    proposition: "Corollary 4.2"
-    theorems:
-      - "wedge_self_zero"
 ---
 
 ## Overview

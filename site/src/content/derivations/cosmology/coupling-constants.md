@@ -7,20 +7,6 @@ tags: ["cosmology"]
 summary: "The division algebra structure constrains coupling constant ratios: the Weinberg angle follows from the C ⊂ H embedding, the relative gauge coupling strengths from algebraic normalization, and the RG running from bootstrap fixed points. The framework predicts that the three couplings do not converge to a single GUT point."
 rigorLevel: "formal"
 lastUpdated: 2026-03-10
-leanProofs:
-  - module: "ObserverCentrism.Cosmology.CouplingRatios"
-    proposition: "Proposition 2.1"
-    theorems:
-      - "coupling_ratio_12"
-      - "coupling_ratio_13"
-      - "coupling_ratio_23"
-      - "alpha_1"
-      - "alpha_2"
-      - "alpha_3"
-  - module: "ObserverCentrism.Cosmology.CouplingRatios"
-    proposition: "Theorem 1.1"
-    theorems:
-      - "weinberg_angle_algebraic"
 ---
 
 ## Overview

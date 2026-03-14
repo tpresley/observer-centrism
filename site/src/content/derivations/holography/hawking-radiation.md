@@ -8,19 +8,6 @@ summary: "Loop closure at horizons forces coherence-dual pair production — one
 rigorLevel: "formal"
 sourceSection: "10-holography"
 lastUpdated: 2026-03-09
-leanProofs:
-  - module: "ObserverCentrism.Holography.BlackHoleArithmetic"
-    proposition: "Theorem 3.1"
-    theorems:
-      - "hawking_temp_coeff"
-  - module: "ObserverCentrism.Holography.BlackHoleArithmetic"
-    proposition: "Proposition 5.1"
-    theorems:
-      - "stefan_boltzmann_coeff"
-  - module: "ObserverCentrism.Holography.BlackHoleArithmetic"
-    proposition: "Corollary 5.2"
-    theorems:
-      - "evaporation_coeff"
 ---
 
 ## Overview

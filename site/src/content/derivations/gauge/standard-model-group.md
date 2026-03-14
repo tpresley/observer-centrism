@@ -22,16 +22,6 @@ leanProofs:
       - "sedenion_zero_divisor"
       - "factor1_nonzero"
       - "factor2_nonzero"
-  - module: "ObserverCentrism.Gauge.BosonCounting"
-    proposition: "Theorem 3.1"
-    theorems:
-      - "sm_gauge_bosons"
-      - "gut_dimension_exclusion"
-  - module: "ObserverCentrism.Gauge.BosonCounting"
-    proposition: "Proposition 4.1"
-    theorems:
-      - "cl6_ideal_dim"
-      - "cl6_decomp_dim"
 ---
 
 ## Overview
