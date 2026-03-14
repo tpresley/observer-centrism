@@ -3,7 +3,7 @@ title: "Cayley-Dickson vs Clifford Relationship"
 status: "provisional"
 gaStructure: "Cl(6)"
 targetDerivation: "interactions/bootstrap-division-algebras"
-dependsOn: ["overview"]
+dependsOn: []
 tags: ["division-algebras", "clifford-algebras", "geometric-algebra"]
 summary: "The parallel between Cayley-Dickson doubling and Clifford algebra construction illuminates why the gauge hierarchy terminates and why C tensor O = Cl(6)"
 priority: "high"

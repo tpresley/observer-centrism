@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-14T04:16:32.014Z",
+    "generatedAt": "2026-03-14T05:28:27.124Z",
     "derivationCount": 60,
     "predictionCount": 10,
     "gaPageCount": 12,
@@ -15337,19 +15337,122 @@
     "electromagnetism": {
       "id": "electromagnetism",
       "filePath": "site/src/content/geometric-algebra/electromagnetism.md",
-      "title": "Maxwell Equations as nabla F = J",
-      "status": "stub",
+      "title": "Maxwell Equations as ∇F = J",
+      "status": "provisional",
       "gaStructure": "Cl(1,3)",
       "targetDerivation": "gauge/electromagnetism",
       "priority": "high",
-      "summary": "The electromagnetic field F = E + iB as a single STA bivector compresses Maxwell's four equations into one: nabla F = J",
+      "summary": "The electromagnetic field F = E + IB as a single STA bivector compresses Maxwell's four equations into one: ∇F = J",
       "tags": [
         "spacetime-algebra",
         "gauge-theory",
         "geometric-algebra"
       ],
       "lastUpdated": "2026-03-13",
-      "formalObjects": [],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Faraday bivector",
+          "statementPreview": "The electromagnetic field is a grade-2 element (bivector) of Cl(1,3):"
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Observer-dependent decomposition",
+          "statementPreview": "Relative to a timelike unit vector e0 (an observer's rest frame), F decomposes uniquely as:"
+        },
+        {
+          "type": "Definition",
+          "id": "2.1",
+          "name": "STA vector derivative",
+          "statementPreview": "The spacetime vector derivative is:"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "The vector derivative splits into divergence and curl",
+          "statementPreview": "For any bivector field F:"
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "Maxwell's equation in STA",
+          "statementPreview": "All four of Maxwell's equations are contained in the single equation:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Charge conservation from grade consistency",
+          "statementPreview": "The equation F = J automatically implies charge conservation J = 0.*"
+        },
+        {
+          "type": "Definition",
+          "id": "4.1",
+          "name": "STA gauge potential",
+          "statementPreview": "The electromagnetic potential is a spacetime vector:"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.2",
+          "name": "Gauge freedom in STA",
+          "statementPreview": "Under a gauge transformation A A + chi for any scalar chi:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.3",
+          "name": "Bianchi identity is automatic",
+          "statementPreview": "wedge F = wedge ( wedge A) = 0 identically (the outer product is nilpotent). The sourceless Maxwell equations are not..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Duality as pseudoscalar multiplication",
+          "statementPreview": "The Hodge dual of the Faraday bivector is:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.2",
+          "name": "General duality rotation",
+          "statementPreview": "A continuous duality rotation F FeIalpha = Fcosalpha + FIsinalpha mixes mathbfE and mathbfB smoothly. Maxwell's equat..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Lorentz force in STA — recast of Theorem 8.1",
+          "statementPreview": "The force on a charge q with proper velocity v = dotx is:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "7.1",
+          "name": "Gauge potential as STA vector",
+          "statementPreview": "The connection A = Amu emu is a spacetime vector. Under gauge transformation:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "7.2",
+          "name": "Holonomy as rotor",
+          "statementPreview": "The phase accumulated around a closed spacetime loop gamma is:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "8.1",
+          "name": "STA uniqueness",
+          "statementPreview": "In STA, the uniqueness argument simplifies to: seek a vector-valued equation F = J where the left side is a Lorentz v..."
+        },
+        {
+          "type": "Proposition",
+          "id": "9.1",
+          "name": "Wave equation — recast of Proposition 9.1",
+          "statementPreview": "In vacuum (J = 0), F = 0 implies:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "9.2",
+          "name": "Plane wave solutions",
+          "statementPreview": "A monochromatic plane wave in STA takes the form:*"
+        }
+      ],
       "openGaps": [],
       "crossReferences": [
         {
@@ -15608,7 +15711,7 @@
       "id": "spin-statistics",
       "filePath": "site/src/content/geometric-algebra/spin-statistics.md",
       "title": "Spin-Statistics via Cl(3,0) Rotors",
-      "status": "stub",
+      "status": "provisional",
       "gaStructure": "Cl(3,0)",
       "targetDerivation": "particles/spin-statistics",
       "priority": "high",
@@ -15619,12 +15722,107 @@
         "geometric-algebra"
       ],
       "lastUpdated": "2026-03-13",
-      "formalObjects": [],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Euclidean Clifford algebra",
+          "statementPreview": "The algebra Cl(3,0) is generated by three orthonormal basis vectors e1, e2, e3 satisfying"
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Grade structure",
+          "statementPreview": "Cl(3,0) has dimension 23 = 8, decomposing by grade:"
+        },
+        {
+          "type": "Proposition",
+          "id": "1.3",
+          "name": "Bivector properties",
+          "statementPreview": "All three basis bivectors square to -1:"
+        },
+        {
+          "type": "Corollary",
+          "id": "1.4",
+          "name": "Quaternion isomorphism",
+          "statementPreview": "Cl+(3,0) cong H, the quaternion algebra, under i leftrightarrow -e23, j leftrightarrow -e31, k leftrightarrow -e12."
+        },
+        {
+          "type": "Definition",
+          "id": "2.1",
+          "name": "Spatial rotor",
+          "statementPreview": "A *rotor* in Cl(3,0) is an even-grade element R in Cl+(3,0) satisfying the normalization RR = 1. The set of all rotor..."
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "Double cover map",
+          "statementPreview": "The sandwich product rho: R [v RvR] defines a 2-to-1 group homomorphism rho: Spin(3) SO(3) with kernel +1, -1.*"
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "The 2π rotation",
+          "statementPreview": "A rotation by 2pi about any axis n is represented by the rotor R(2pi) = -1:*"
+        },
+        {
+          "type": "Corollary",
+          "id": "4.2",
+          "name": "Two rotation classes",
+          "statementPreview": "There are exactly two classes of rotor corresponding to each rotation:"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Exchange operator",
+          "statementPreview": "The exchange of two identical particles at positions mathbfr1 and mathbfr2 in R3 is topologically equivalent to a pi ..."
+        },
+        {
+          "type": "Theorem",
+          "id": "5.2",
+          "name": "Spin-statistics from rotor algebra",
+          "statementPreview": "The exchange phase is determined by the action of Rexchange2 = -1 on the observer's state:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Spinors without matrices",
+          "statementPreview": "A spin-1/2 object (spinor) in Cl(3,0) is an element of a minimal left ideal:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "6.2",
+          "name": "Integer spin from bivectors",
+          "statementPreview": "Spin-1 objects are vectors in R3, which transform under the double-sided action v RvR. This is the adjoint representa..."
+        },
+        {
+          "type": "Proposition",
+          "id": "7.1",
+          "name": "Dimension dependence — recast of Proposition 5.1",
+          "statementPreview": "The spin-statistics connection depends on spatial dimension through the Clifford algebra:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "8.1",
+          "name": "Spatial rotors embed in spacetime rotors",
+          "statementPreview": "The spatial rotor group Spin(3) Cl+(3,0) embeds as a subgroup of the spacetime rotor group Spin+(1,3) Cl+(1,3) via th..."
+        },
+        {
+          "type": "Proposition",
+          "id": "8.2",
+          "name": "Loop closure and rotor periodicity",
+          "statementPreview": "The rotor path R(theta) = e-Btheta/2 for theta in [0, 4pi] is a U(1) loop in Spin(3), isomorphic to the observer's ph..."
+        }
+      ],
       "openGaps": [],
       "crossReferences": [
         {
           "target": "particles/spin-statistics",
           "context": "status: rigorous"
+        },
+        {
+          "target": "gauge/weak-interaction",
+          "context": "Weak Interaction"
         }
       ]
     },
@@ -15656,8 +15854,8 @@
   "gaStats": {
     "pageCount": 12,
     "byStatus": {
-      "stub": 9,
-      "provisional": 2,
+      "stub": 7,
+      "provisional": 4,
       "draft": 1
     },
     "byPriority": {

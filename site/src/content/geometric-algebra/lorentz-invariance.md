@@ -3,7 +3,7 @@ title: "Lorentz Group via STA Rotors"
 status: "provisional"
 gaStructure: "Cl(1,3)"
 targetDerivation: "spacetime/lorentz-invariance"
-dependsOn: ["overview"]
+dependsOn: []
 tags: ["spacetime-algebra", "rotors", "geometric-algebra"]
 summary: "Spacetime Algebra Cl(1,3) unifies boosts and rotations as rotors in the even subalgebra, making Lorentz invariance algebraically manifest"
 priority: "high"
