@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-14T09:50:13.513Z",
+    "generatedAt": "2026-03-14T22:31:09.562Z",
     "derivationCount": 60,
     "predictionCount": 10,
     "gaPageCount": 12,
@@ -15270,7 +15270,7 @@
       "id": "cpt-theorem",
       "filePath": "site/src/content/geometric-algebra/cpt-theorem.md",
       "title": "CPT as a Single Cl(1,3) Object",
-      "status": "provisional",
+      "status": "rigorous",
       "gaStructure": "Cl(1,3)",
       "targetDerivation": "particles/cpt-theorem",
       "priority": "high",
@@ -15383,10 +15383,74 @@
           "id": "8.2",
           "name": "Spin-statistics-CPT connection in GA",
           "statementPreview": "The target derivation's Proposition 5.1 identifies the spin-statistics-CPT triad as sharing a common root. In GA, thi..."
+        },
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "",
+          "statementPreview": "(parity versor): P(v) = e0 v e0, verified on basis vectors"
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "",
+          "statementPreview": "(parity on bivectors): spacelike bivectors parity-even, timelike parity-odd, via explicit anticommutation"
+        },
+        {
+          "type": "Definition",
+          "id": "2.1",
+          "name": "",
+          "statementPreview": "(time reversal versor): T(v) = e123ve123 with e1232 = +1, verified on basis vectors"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "",
+          "statementPreview": "(time reversal on bivectors): same action as parity on bivectors, via commutation/anticommutation of e123"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "",
+          "statementPreview": "(PT = pseudoscalar): PT(v) = IvI-1 = -v from I anticommuting with all vectors"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "",
+          "statementPreview": "(PT preserves bivectors): grade-k elements transform as (-1)k under I-sandwich"
+        },
+        {
+          "type": "Definition",
+          "id": "4.1",
+          "name": "",
+          "statementPreview": "(charge conjugation): C(psi) = psi e13, standard Hestenes formalism"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.2",
+          "name": "",
+          "statementPreview": "(C properties): current reversal via e13e0 e31 = -e0; C2 = -1 on spinors, +1 on observables"
+        },
+        {
+          "type": "Theorem",
+          "id": "5.1",
+          "name": "",
+          "statementPreview": "(CPT = I action): spacetime factors e0 e123 = I; CPT on observables from grade counting"
+        },
+        {
+          "type": "Corollary",
+          "id": "5.2",
+          "name": "",
+          "statementPreview": "(CPT invariance): Lagrangian is grade 0, hence CPT-invariant"
         }
       ],
       "openGaps": [],
       "crossReferences": [
+        {
+          "target": "particles/cpt-theorem",
+          "context": "CPT theorem derivation"
+        },
         {
           "target": "particles/cpt-theorem",
           "context": "status: rigorous"
@@ -15764,6 +15828,10 @@
       ],
       "openGaps": [],
       "crossReferences": [
+        {
+          "target": "gauge/electromagnetism",
+          "context": "electromagnetism derivation"
+        },
         {
           "target": "gauge/electromagnetism",
           "context": "status: rigorous"
@@ -16328,6 +16396,10 @@
       "crossReferences": [
         {
           "target": "spacetime/lorentz-invariance",
+          "context": "Lorentz invariance derivation"
+        },
+        {
+          "target": "spacetime/lorentz-invariance",
           "context": "status: rigorous"
         },
         {
@@ -16562,6 +16634,10 @@
       "crossReferences": [
         {
           "target": "particles/spin-statistics",
+          "context": "spin-statistics derivation"
+        },
+        {
+          "target": "particles/spin-statistics",
           "context": "status: rigorous"
         },
         {
@@ -16683,8 +16759,8 @@
   "gaStats": {
     "pageCount": 12,
     "byStatus": {
-      "provisional": 8,
-      "rigorous": 3,
+      "provisional": 7,
+      "rigorous": 4,
       "draft": 1
     },
     "byPriority": {

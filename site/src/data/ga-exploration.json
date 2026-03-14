@@ -4,7 +4,7 @@
     "created": "2026-03-13",
     "lastUpdated": "2026-03-13",
     "assessmentRound": 1,
-    "assessmentNotes": "Post-upgrade assessment: all 11 candidates upgraded from stub to provisional. Electromagnetism, lorentz-invariance, and spin-statistics upgraded to rigorous (Rounds 1-3). Working-note comments fixed across spin-statistics, cpt-theorem, weak-interaction, chirality-selection. Sign error fixed in lorentz-invariance Proposition 4.1 proof. Sign error fixed in spin-statistics Theorem 3.1 kernel proof (commutation pattern of e₁ with bivectors). Logical inconsistency fixed in spin-statistics Theorem 5.2 single-sided proof (replaced flawed η²=-1 reasoning with direct holonomy argument)."
+    "assessmentNotes": "Post-upgrade assessment: all 11 candidates upgraded from stub to provisional. Electromagnetism, lorentz-invariance, spin-statistics, and cpt-theorem upgraded to rigorous (Rounds 1-4). Working-note comments fixed across spin-statistics, cpt-theorem, weak-interaction, chirality-selection. Sign error fixed in lorentz-invariance Proposition 4.1 proof. Sign error fixed in spin-statistics Theorem 3.1 kernel proof. Logical inconsistency fixed in spin-statistics Theorem 5.2. Round 4 (cpt-theorem): fixed e₁₂₃²=−1→+1 error in Definition 2.1, extra minus in Proposition 3.1 PT formula, two working-note self-corrections (Propositions 2.2 and 4.2), sloppy intermediate step in Proposition 1.2."
   },
   "candidates": [
     {
@@ -71,7 +71,7 @@
       "priority": "high",
       "targetDerivation": "particles/cpt-theorem",
       "gaStructure": "Cl(1,3)",
-      "status": "provisional",
+      "status": "rigorous",
       "steps": 8,
       "group": "STA Core",
       "rationale": "P, T, C map to specific Cl(1,3) operations. CPT becomes a single algebraic element (the pseudoscalar I = e₀₁₂₃) whose commutativity with even-grade elements is immediate.",
@@ -374,7 +374,8 @@
     {
       "tier": 2,
       "pages": ["cpt-theorem", "chirality-selection", "weak-interaction", "gravity"],
-      "rationale": "Core GA results well-established; framework-specific connections (coherence loop, pseudoscalar triple role) need tighter formalization but are not speculative."
+      "rationale": "Core GA results well-established; framework-specific connections (coherence loop, pseudoscalar triple role) need tighter formalization but are not speculative.",
+      "completed": ["cpt-theorem"]
     },
     {
       "tier": 3,

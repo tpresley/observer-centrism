@@ -12,6 +12,9 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props
 const { Content } = await entry.render()
+
+const body = entry.body || ''
+const hasOverview = /^##\s+Overview\s*$/m.test(body)
 ---
 
 <GALayout
@@ -20,6 +23,7 @@ const { Content } = await entry.render()
   gaStructure={entry.data.gaStructure}
   targetDerivation={entry.data.targetDerivation}
   priority={entry.data.priority}
+  hasOverview={hasOverview}
 >
   <Content />
 </GALayout>

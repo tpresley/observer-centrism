@@ -10,6 +10,21 @@ priority: "high"
 lastUpdated: 2026-03-13
 ---
 
+## Overview
+
+This page re-examines the framework's [Lorentz invariance derivation](/derivations/spacetime/lorentz-invariance) through **Spacetime Algebra** (the Clifford algebra Cl(1,3)), where boosts and rotations are unified into a single type of transformation called a *rotor*.
+
+**What changes.** In the standard derivation, rotations and boosts are introduced separately -- three rotation generators $J_i$ and three boost generators $K_i$ -- then assembled into the Lorentz group through their commutation relations. In Spacetime Algebra, both are special cases of one formula: $R = e^{-B\theta/2}$, where $B$ is an oriented plane (a *bivector*). If $B$ is a spatial plane, the rotor generates a rotation; if $B$ involves the time direction, it generates a boost. The difference between rotating and boosting is *the signature of the plane*, nothing more. This collapses two derivation steps into one and makes Thomas precession -- a notoriously subtle effect where successive boosts in different directions produce an unexpected rotation -- fall out of a single multiplication.
+
+**What stays the same.** The physics is identical -- time dilation, length contraction, the speed limit, and the Poincaré group are all reproduced exactly. The derivation chain (loop closure $\to$ Minkowski geometry $\to$ Lorentz transformations) is unchanged. What GA provides is structural clarity: why boosts and rotations are related, why composing boosts gives a rotation, and why the speed limit exists all become visible properties of the algebra.
+
+**Key insights for non-experts:**
+
+- **One formula for all Lorentz transformations.** Instead of separate treatments of rotations and boosts, both are $R = e^{-B\theta/2}$ for different choices of plane $B$. The unification is algebraic, not notational.
+- **Thomas precession in one line.** Composing a boost along $x$ with a boost along $y$ produces a spatial rotation because the product of two timelike planes is a spacelike plane: $e_{02}e_{01} = e_{12}$. This three-symbol equation replaces a page-long computation.
+- **The double cover is built in.** A $2\pi$ rotation gives $R = -1$, not $+1$ -- you need $4\pi$ to get back to where you started. This sign flip, which is the algebraic root of fermion behavior, is visible in the algebra without constructing $\mathrm{SU}(2)$ separately.
+- **The speed limit from topology.** Rotations trace closed loops (periodic, like a clock); boosts trace open curves (unbounded, like an accelerator). The speed limit is the statement that the boost direction never closes -- rapidity goes to infinity while velocity approaches $c$.
+
 ## Connection to Framework Derivation
 
 **Target**: [Lorentz Invariance](/derivations/spacetime/lorentz-invariance) (status: rigorous)

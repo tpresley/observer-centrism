@@ -8,9 +8,10 @@ interface Props {
   gaStructure?: string
   targetDerivation?: string
   priority?: string
+  hasOverview?: boolean
 }
 
-const { title, status, gaStructure, targetDerivation, priority } = Astro.props
+const { title, status, gaStructure, targetDerivation, priority, hasOverview } = Astro.props
 const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 
 const statusClass = status ? `status-${status}` : ''
@@ -48,6 +49,150 @@ function getTitle(id: string): string {
     <slot />
   </article>
 </MainLayout>
+
+{hasOverview && (
+  <script is:inline>
+    (function initGATabs() {
+      const article = document.querySelector('article')
+      if (!article) {
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initGATabs)
+        }
+        return
+      }
+
+      const overviewH2 = article.querySelector('h2#overview')
+      if (!overviewH2) return
+
+      const children = Array.from(article.children)
+
+      // Slot content starts after structural elements (banner, header, ga-target, scripts/styles)
+      let slotStart = 0
+      for (let i = 0; i < children.length; i++) {
+        const el = children[i]
+        const isStructural = (
+          el.tagName === 'HEADER' ||
+          el.classList.contains('ga-banner') ||
+          el.classList.contains('ga-target') ||
+          el.tagName === 'STYLE' ||
+          el.tagName === 'SCRIPT'
+        )
+        if (isStructural) {
+          slotStart = i + 1
+        } else {
+          break
+        }
+      }
+
+      const slotElements = children.slice(slotStart)
+      if (slotElements.length === 0) return
+
+      // Partition into overview and derivation (GA analysis) content
+      const overviewNodes = []
+      const derivationNodes = []
+      let inOverview = false
+
+      for (const el of slotElements) {
+        if (el === overviewH2) {
+          inOverview = true
+          overviewNodes.push(el)
+          continue
+        }
+        if (inOverview && el.tagName === 'H2') {
+          inOverview = false
+          derivationNodes.push(el)
+          continue
+        }
+        if (inOverview) {
+          overviewNodes.push(el)
+        } else {
+          derivationNodes.push(el)
+        }
+      }
+
+      if (overviewNodes.length === 0) return
+
+      // Build tab bar
+      const tabBar = document.createElement('div')
+      tabBar.className = 'derivation-tabs'
+      tabBar.setAttribute('role', 'tablist')
+
+      const tabOverview = document.createElement('button')
+      tabOverview.className = 'derivation-tab derivation-tab--active'
+      tabOverview.setAttribute('role', 'tab')
+      tabOverview.setAttribute('aria-selected', 'true')
+      tabOverview.setAttribute('id', 'tab-overview')
+      tabOverview.setAttribute('aria-controls', 'panel-overview')
+      tabOverview.textContent = 'Overview'
+
+      const tabDerivation = document.createElement('button')
+      tabDerivation.className = 'derivation-tab'
+      tabDerivation.setAttribute('role', 'tab')
+      tabDerivation.setAttribute('aria-selected', 'false')
+      tabDerivation.setAttribute('id', 'tab-derivation')
+      tabDerivation.setAttribute('aria-controls', 'panel-derivation')
+      tabDerivation.textContent = 'Derivation'
+
+      tabBar.appendChild(tabOverview)
+      tabBar.appendChild(tabDerivation)
+
+      // Build panels
+      const panelOverview = document.createElement('div')
+      panelOverview.className = 'derivation-panel derivation-panel--active'
+      panelOverview.setAttribute('role', 'tabpanel')
+      panelOverview.setAttribute('id', 'panel-overview')
+      panelOverview.setAttribute('aria-labelledby', 'tab-overview')
+
+      const panelDerivation = document.createElement('div')
+      panelDerivation.className = 'derivation-panel'
+      panelDerivation.setAttribute('role', 'tabpanel')
+      panelDerivation.setAttribute('id', 'panel-derivation')
+      panelDerivation.setAttribute('aria-labelledby', 'tab-derivation')
+      panelDerivation.hidden = true
+
+      for (const node of overviewNodes) panelOverview.appendChild(node)
+      for (const node of derivationNodes) panelDerivation.appendChild(node)
+
+      article.appendChild(tabBar)
+      article.appendChild(panelOverview)
+      article.appendChild(panelDerivation)
+
+      // Tab switching
+      function switchTab(activeId) {
+        const isOverview = activeId === 'overview'
+        tabOverview.classList.toggle('derivation-tab--active', isOverview)
+        tabOverview.setAttribute('aria-selected', String(isOverview))
+        tabDerivation.classList.toggle('derivation-tab--active', !isOverview)
+        tabDerivation.setAttribute('aria-selected', String(!isOverview))
+        panelOverview.classList.toggle('derivation-panel--active', isOverview)
+        panelOverview.hidden = !isOverview
+        panelDerivation.classList.toggle('derivation-panel--active', !isOverview)
+        panelDerivation.hidden = isOverview
+      }
+
+      tabOverview.addEventListener('click', function() { switchTab('overview') })
+      tabDerivation.addEventListener('click', function() { switchTab('derivation') })
+
+      // Handle URL hash targeting
+      function handleHash() {
+        var hash = window.location.hash
+        if (!hash) return
+        var target = document.getElementById(hash.slice(1))
+        if (!target) return
+        if (panelDerivation.contains(target)) {
+          switchTab('derivation')
+          requestAnimationFrame(function() { target.scrollIntoView({ behavior: 'smooth' }) })
+        } else if (panelOverview.contains(target)) {
+          switchTab('overview')
+          requestAnimationFrame(function() { target.scrollIntoView({ behavior: 'smooth' }) })
+        }
+      }
+
+      handleHash()
+      window.addEventListener('hashchange', handleHash)
+    })()
+  </script>
+)}
 
 <style>
   .ga-banner {

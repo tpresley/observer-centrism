@@ -10,6 +10,25 @@ priority: "high"
 lastUpdated: 2026-03-13
 ---
 
+## Overview
+
+This page re-examines the framework's [electromagnetism derivation](/derivations/gauge/electromagnetism) through **Spacetime Algebra** (the Clifford algebra Cl(1,3)), where the electromagnetic field is a single algebraic object rather than an antisymmetric matrix of components.
+
+**What changes.** In standard physics, electromagnetism is described by four coupled partial differential equations (Maxwell's equations) and the field is a 4x4 antisymmetric tensor $F_{\mu\nu}$ with six independent components. In Spacetime Algebra, the electric and magnetic fields merge into a single *bivector* $F = E + IB$, and all four Maxwell equations compress to one:
+
+$$\nabla F = J$$
+
+This is not shorthand -- it is a single equation whose vector part gives the two sourced equations ($\nabla \cdot E = \rho$ and $\nabla \times B = J + \partial_t E$) and whose trivector part gives the two sourceless equations ($\nabla \cdot B = 0$ and $\nabla \times E = -\partial_t B$). The split into "sourced" and "sourceless" is the split into different *grades* of the geometric product.
+
+**What stays the same.** The physics is identical -- no new predictions. The derivation chain (observer phases $\to$ local gauge symmetry $\to$ connection $\to$ curvature $\to$ field equations) is unchanged. What GA provides is structural transparency: why there are exactly four Maxwell equations, why charge is conserved, and why electromagnetic duality ($E \leftrightarrow B$) exists all become consequences of grade structure in a single algebra.
+
+**Key insights for non-experts:**
+
+- **One equation instead of four.** Maxwell's equations are not four independent laws but one algebraic identity split across grades. The GA formulation makes this visible.
+- **Duality is multiplication by a constant.** The mysterious symmetry between electric and magnetic fields ($E \to B$, $B \to -E$) is simply $F \to IF$, where $I$ is the oriented unit 4-volume. No separate postulate needed.
+- **Charge conservation is automatic.** In component notation, showing $\partial_\mu J^\mu = 0$ requires a separate calculation. In GA, applying $\nabla$ twice to $\nabla F = J$ gives $\nabla^2 F = \nabla J$, and the grade structure forces $\nabla \cdot J = 0$ identically.
+- **Magnetic monopoles are excluded by construction.** Since $F = \nabla \wedge A$ (the field is the "curl" of the potential), the identity $\nabla \wedge F = \nabla \wedge \nabla \wedge A = 0$ follows algebraically. Monopoles would require $\nabla \wedge F \neq 0$.
+
 ## Connection to Framework Derivation
 
 **Target**: [Electromagnetism](/derivations/gauge/electromagnetism) (status: rigorous)
