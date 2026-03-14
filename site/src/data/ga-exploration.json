@@ -1,0 +1,147 @@
+{
+  "_meta": {
+    "description": "Tracking artifact for Geometric Algebra exploration of Observer-Centrism derivations",
+    "created": "2026-03-13",
+    "lastUpdated": "2026-03-13"
+  },
+  "candidates": [
+    {
+      "id": "spin-statistics",
+      "title": "Spin-Statistics via Cl(3,0) Rotors",
+      "priority": "high",
+      "targetDerivation": "particles/spin-statistics",
+      "gaStructure": "Cl(3,0)",
+      "status": "stub",
+      "rationale": "SU(2)/SO(3) double cover is transparent via Cl(3,0) rotors. The existing derivation uses pi_1(SO(3)) = Z_2 and SU(2) representation theory; GA makes rotors and the double cover algebraically explicit.",
+      "gaInsight": "Rotors R in Cl+(3,0) are isomorphic to SU(2). Since R and -R produce the same rotation, the double cover is visible. The spin-statistics connection (integer vs half-integer spin) maps to even/odd grade structure.",
+      "existingGAReferences": []
+    },
+    {
+      "id": "lorentz-invariance",
+      "title": "Lorentz Group via STA Rotors",
+      "priority": "high",
+      "targetDerivation": "spacetime/lorentz-invariance",
+      "gaStructure": "Cl(1,3)",
+      "status": "stub",
+      "rationale": "Spacetime Algebra = Cl(1,3) was designed for this. Rotors unify boosts and rotations into a single algebraic object — both are elements of the even subalgebra differing only in the grade-2 element used.",
+      "gaInsight": "Every Lorentz transformation is a rotor R = exp(-B theta/2) where B is a bivector. Spacelike B gives rotations, timelike B gives boosts. Time dilation and length contraction emerge from rotor action on basis vectors.",
+      "existingGAReferences": []
+    },
+    {
+      "id": "cpt-theorem",
+      "title": "CPT as a Single Cl(1,3) Object",
+      "priority": "high",
+      "targetDerivation": "particles/cpt-theorem",
+      "gaStructure": "Cl(1,3)",
+      "status": "stub",
+      "rationale": "P, T, C map to specific Cl(1,3) operations. CPT becomes a single algebraic element (the pseudoscalar I = e0123) whose commutativity with even-grade elements is immediate.",
+      "gaInsight": "In STA: P = spatial inversion (e0 reflection), T = time reversal (e123), C = spinor conjugation. CPT = I = e0123 (unit pseudoscalar). CPT invariance becomes: the pseudoscalar commutes with all even-grade physics.",
+      "existingGAReferences": []
+    },
+    {
+      "id": "electromagnetism",
+      "title": "Maxwell Equations as nabla F = J",
+      "priority": "high",
+      "targetDerivation": "gauge/electromagnetism",
+      "gaStructure": "Cl(1,3)",
+      "status": "stub",
+      "rationale": "The electromagnetic field F = E + iB is a bivector in STA. Maxwell's four equations compress to a single equation nabla F = J. Charge quantization maps to quantized bivector rotations.",
+      "gaInsight": "The electromagnetic field tensor F_{mu nu} is naturally a grade-2 element (bivector). The vector derivative nabla acting on F splits into divergence and curl parts, recovering all four Maxwell equations from one expression.",
+      "existingGAReferences": []
+    },
+    {
+      "id": "weak-interaction",
+      "title": "Weak Interaction via H = Cl+(3,0)",
+      "priority": "high",
+      "targetDerivation": "gauge/weak-interaction",
+      "gaStructure": "Cl+(3,0)",
+      "status": "stub",
+      "rationale": "The quaternion algebra H is isomorphic to Cl+(3,0). The three imaginary units I, J, K correspond to bivectors e23, e31, e12. SU(2) gauge transformations are rotor transformations in the even subalgebra.",
+      "gaInsight": "Non-commutativity of the weak interaction reduces to the non-commutativity of bivector products in Cl(3,0). The quaternionic closure of the derivation's Theorem 2.1 becomes: the geometric product of different bivectors does not commute.",
+      "existingGAReferences": []
+    },
+    {
+      "id": "chirality-selection",
+      "title": "Chirality as Grade Structure",
+      "priority": "high",
+      "targetDerivation": "gauge/chirality-selection",
+      "gaStructure": "Cl(1,3)",
+      "status": "stub",
+      "rationale": "GA makes chirality explicit through grade structure. Left/right projectors (1 +/- gamma_5)/2 become (1 +/- I)/2 where I is the pseudoscalar. Chirality selection is grade-projection selection.",
+      "gaInsight": "The pseudoscalar I = e0123 defines chirality: it splits spinors into left-handed (eigenvalue +1) and right-handed (eigenvalue -1) components. The weak interaction coupling only to left-handed fermions becomes: it couples only to one eigenspace of I.",
+      "existingGAReferences": []
+    },
+    {
+      "id": "division-algebras",
+      "title": "Cayley-Dickson vs Clifford Relationship",
+      "priority": "high",
+      "targetDerivation": "interactions/bootstrap-division-algebras",
+      "gaStructure": "Cl(6)",
+      "status": "stub",
+      "rationale": "GA explains why the associativity ceiling terminates at O. The isomorphism C tensor O = Cl(6) is already referenced in anomaly-cancellation and standard-model-group. The Cayley-Dickson construction parallels Clifford doubling but diverges at step 4.",
+      "gaInsight": "Clifford algebras are always associative. Cayley-Dickson algebras lose associativity at the octonions. This divergence illuminates bootstrap-division-algebras Gap 4 and explains why the gauge hierarchy terminates.",
+      "existingGAReferences": [
+        "gauge/anomaly-cancellation (line 150): C tensor O = Cl(6)",
+        "gauge/standard-model-group (line 136): Cl(6) has natural U(1) x SU(3) action",
+        "interactions/bootstrap-division-algebras (line 215): Open gap on Clifford algebras"
+      ]
+    },
+    {
+      "id": "entanglement",
+      "title": "Entanglement via Rotor Pairs",
+      "priority": "moderate",
+      "targetDerivation": "quantum/entanglement",
+      "gaStructure": "Cl(3,0) x Cl(3,0)",
+      "status": "stub",
+      "rationale": "Entangled states correspond to non-factorizable elements in the product algebra. No-cloning follows from GA product rules. Entanglement monogamy maps to bivector sharing constraints.",
+      "gaInsight": "Two-particle entanglement is represented by a non-separable element in the product algebra. The no-cloning theorem has a clean GA interpretation: cloning would require duplicating a rotor, violating the geometric product structure.",
+      "existingGAReferences": []
+    },
+    {
+      "id": "er-epr",
+      "title": "ER=EPR via STA Geometry",
+      "priority": "moderate",
+      "targetDerivation": "holography/er-epr",
+      "gaStructure": "Cl(1,3)",
+      "status": "stub",
+      "rationale": "STA provides natural geometric language for wormhole throat geometry. The duality between EPR (bivector entanglement) and ER (rotor-generated curvature) becomes transparent in Cl(1,3).",
+      "gaInsight": "The throat geometry of an Einstein-Rosen bridge has a natural STA description as a minimal bivector surface. The ER=EPR duality maps to a structural equivalence between entanglement (algebraic) and topology (geometric) in the same algebra.",
+      "existingGAReferences": []
+    },
+    {
+      "id": "gravity",
+      "title": "Gravity in STA: Gauge Theory Gravity",
+      "priority": "moderate",
+      "targetDerivation": "spacetime/gravity",
+      "gaStructure": "Cl(1,3)",
+      "status": "stub",
+      "rationale": "Gauge theory gravity (Lasenby, Doran, Gull) reformulates GR in flat-space STA with position and rotation gauge fields. Geodesics become rotor equations.",
+      "gaInsight": "In gauge theory gravity, the gravitational field is described by two gauge fields in flat STA background. The equivalence principle becomes a gauge symmetry statement. Gravitational redshift (Theorem 2.1) has a clean rotor derivation.",
+      "existingGAReferences": []
+    },
+    {
+      "id": "einstein-equations",
+      "title": "Einstein Equations in STA Form",
+      "priority": "moderate",
+      "targetDerivation": "spacetime/einstein-equations",
+      "gaStructure": "Cl(1,3)",
+      "status": "stub",
+      "rationale": "The Riemann tensor as a bivector-to-bivector mapping; Einstein equations as G(a) = kT(a) where G and T are linear functions on vectors. Lovelock uniqueness restated in GA language.",
+      "gaInsight": "The Riemann tensor R(B) maps bivectors to bivectors. The Einstein equation operates on vectors rather than index-laden tensors. Lovelock's uniqueness theorem (existing Theorem 3.2) gains a clean GA proof.",
+      "existingGAReferences": []
+    }
+  ],
+  "groupings": {
+    "STA Core": ["lorentz-invariance", "cpt-theorem", "electromagnetism"],
+    "Rotors & Topology": ["spin-statistics", "weak-interaction", "chirality-selection"],
+    "Algebra Bridge": ["division-algebras"],
+    "Applications": ["entanglement", "er-epr", "gravity", "einstein-equations"]
+  },
+  "filteredOut": [
+    { "derivation": "quantum/born-rule", "reason": "More about probability theory (Gleason's theorem) than geometry" },
+    { "derivation": "quantum/measurement", "reason": "Core content is relational, not geometrical" },
+    { "derivation": "quantum/preferred-basis", "reason": "Algebraic rather than geometric" },
+    { "derivation": "thermodynamics/*", "reason": "Coherence accounting, not spacetime geometry" },
+    { "derivation": "cosmology/*", "reason": "Mostly coherence accounting with spacetime as background" }
+  ]
+}

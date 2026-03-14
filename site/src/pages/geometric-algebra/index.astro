@@ -1,0 +1,253 @@
+---
+import { getCollection } from 'astro:content'
+import MainLayout from '../../components/layouts/MainLayout.astro'
+
+const gaEntries = await getCollection('geometric-algebra')
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+
+const overview = gaEntries.find(e => e.slug === 'overview')
+const topics = gaEntries.filter(e => e.slug !== 'overview')
+
+// Group by category
+const GROUP_ORDER = ['STA Core', 'Rotors & Topology', 'Algebra Bridge', 'Applications']
+
+const STA_CORE = new Set(['lorentz-invariance', 'cpt-theorem', 'electromagnetism'])
+const ROTORS_TOPOLOGY = new Set(['spin-statistics', 'weak-interaction', 'chirality-selection'])
+const ALGEBRA_BRIDGE = new Set(['division-algebras'])
+const APPLICATIONS = new Set(['entanglement', 'er-epr', 'gravity', 'einstein-equations'])
+
+function getGroup(slug: string): string {
+  if (STA_CORE.has(slug)) return 'STA Core'
+  if (ROTORS_TOPOLOGY.has(slug)) return 'Rotors & Topology'
+  if (ALGEBRA_BRIDGE.has(slug)) return 'Algebra Bridge'
+  if (APPLICATIONS.has(slug)) return 'Applications'
+  return 'Other'
+}
+
+const groups = new Map<string, typeof topics>()
+for (const g of GROUP_ORDER) {
+  const entries = topics.filter(e => getGroup(e.slug) === g)
+  if (entries.length > 0) groups.set(g, entries)
+}
+
+// Stats
+const byStatus: Record<string, number> = {}
+for (const t of topics) {
+  byStatus[t.data.status] = (byStatus[t.data.status] || 0) + 1
+}
+const highCount = topics.filter(t => t.data.priority === 'high').length
+const modCount = topics.filter(t => t.data.priority === 'moderate').length
+
+function statusIcon(status: string) {
+  switch(status) {
+    case 'rigorous': return '\u25CF'
+    case 'provisional': return '\u25D0'
+    case 'draft': return '\u25CB'
+    case 'stub': return '\u00B7'
+    case 'non-viable': return '\u2717'
+    default: return '\u00B7'
+  }
+}
+
+function statusColor(status: string) {
+  switch(status) {
+    case 'rigorous': return 'var(--color-rigorous)'
+    case 'provisional': return 'var(--color-provisional)'
+    case 'draft': return 'var(--color-draft)'
+    case 'stub': return 'var(--color-stub)'
+    case 'non-viable': return 'var(--color-non-viable)'
+    default: return 'var(--color-stub)'
+  }
+}
+---
+
+<MainLayout title="Geometric Algebra Exploration">
+  <h1>Geometric Algebra Exploration</h1>
+  <p>
+    This section explores how Geometric (Clifford) Algebra illuminates the framework's
+    derivations. These pages are <strong>supplementary analyses</strong> that recast existing
+    derivations in GA language &mdash; they do not replace or modify the core derivation chain.
+  </p>
+
+  <div class="ga-stats">
+    <div class="ga-stat">
+      <div class="ga-stat-value">{topics.length}</div>
+      <div class="ga-stat-label">Topics</div>
+    </div>
+    <div class="ga-stat">
+      <div class="ga-stat-value">{highCount}</div>
+      <div class="ga-stat-label">High priority</div>
+    </div>
+    <div class="ga-stat">
+      <div class="ga-stat-value">{modCount}</div>
+      <div class="ga-stat-label">Moderate priority</div>
+    </div>
+    {Object.entries(byStatus).map(([status, count]) => (
+      <div class="ga-stat">
+        <div class="ga-stat-value" style={`color: ${statusColor(status)}`}>{count}</div>
+        <div class="ga-stat-label">{status}</div>
+      </div>
+    ))}
+  </div>
+
+  {overview && (
+    <div class="ga-overview-card">
+      <a href={`${base}/geometric-algebra/overview`}>
+        <strong>Read the Overview</strong>
+        <span>{overview.data.summary}</span>
+      </a>
+    </div>
+  )}
+
+  {[...groups.entries()].map(([groupName, entries]) => (
+    <>
+      <h2>{groupName}</h2>
+      <div class="ga-topic-list">
+        {entries.map(entry => (
+          <div class="ga-topic">
+            <div class="ga-topic-header">
+              <span class="ga-topic-status" style={`color: ${statusColor(entry.data.status)}`}>
+                {statusIcon(entry.data.status)}
+              </span>
+              <a href={`${base}/geometric-algebra/${entry.slug}`} class="ga-topic-title">
+                {entry.data.title}
+              </a>
+              <span class="ga-topic-algebra">{entry.data.gaStructure}</span>
+              <span class={`ga-topic-priority ga-pri-${entry.data.priority}`}>
+                {entry.data.priority}
+              </span>
+            </div>
+            <div class="ga-topic-summary">{entry.data.summary}</div>
+          </div>
+        ))}
+      </div>
+    </>
+  ))}
+</MainLayout>
+
+<style>
+  .ga-stats {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+    flex-wrap: wrap;
+  }
+  .ga-stat {
+    flex: 1;
+    min-width: 90px;
+    padding: 0.75rem 1rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    text-align: center;
+  }
+  .ga-stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+  }
+  .ga-stat-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 0.04em;
+  }
+  .ga-overview-card {
+    margin-bottom: 2rem;
+  }
+  .ga-overview-card a {
+    display: block;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--color-border);
+    border-left: 4px solid #7c3aed;
+    border-radius: 8px;
+    background: var(--color-surface);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s;
+  }
+  .ga-overview-card a:hover {
+    border-color: #7c3aed;
+  }
+  .ga-overview-card strong {
+    display: block;
+    color: var(--color-accent);
+    margin-bottom: 0.25rem;
+  }
+  .ga-overview-card span {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+  .ga-topic-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  .ga-topic {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    background: var(--color-surface);
+  }
+  .ga-topic-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+  }
+  .ga-topic-status {
+    font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+  .ga-topic-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    flex-grow: 1;
+  }
+  .ga-topic-title:hover {
+    text-decoration: underline;
+  }
+  .ga-topic-algebra {
+    font-size: 0.65rem;
+    font-weight: 700;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    padding: 0.1rem 0.4rem;
+    border-radius: 9999px;
+    background: color-mix(in srgb, #7c3aed 10%, transparent);
+    color: #7c3aed;
+    letter-spacing: 0.02em;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .ga-topic-priority {
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.1rem 0.4rem;
+    border-radius: 9999px;
+    letter-spacing: 0.03em;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .ga-pri-high {
+    color: #16a34a;
+    background: color-mix(in srgb, #16a34a 10%, transparent);
+  }
+  .ga-pri-moderate {
+    color: #ca8a04;
+    background: color-mix(in srgb, #ca8a04 10%, transparent);
+  }
+  .ga-pri-low {
+    color: var(--color-text-muted);
+    background: color-mix(in srgb, var(--color-border) 50%, transparent);
+  }
+  .ga-topic-summary {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    padding-left: 1.3rem;
+  }
+</style>

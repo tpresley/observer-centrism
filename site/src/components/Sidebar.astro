@@ -12,6 +12,7 @@ const sourceEntries = await getCollection('source')
 const derivationEntries = await getCollection('derivations')
 const predictionEntries = await getCollection('predictions')
 const guideEntries = await getCollection('guide')
+const gaEntries = await getCollection('geometric-algebra')
 
 const sortedGuide = guideEntries.sort((a, b) => a.data.order - b.data.order)
 
@@ -27,6 +28,28 @@ function isActive(href: string): boolean {
 }
 
 const isSourcePage = pathWithoutBase.startsWith('/source/')
+const isGAPage = pathWithoutBase.startsWith('/geometric-algebra/')
+
+const gaTopics = gaEntries.filter(e => e.slug !== 'overview')
+const GA_GROUP_ORDER = ['STA Core', 'Rotors & Topology', 'Algebra Bridge', 'Applications']
+const STA_CORE = new Set(['lorentz-invariance', 'cpt-theorem', 'electromagnetism'])
+const ROTORS_TOPOLOGY = new Set(['spin-statistics', 'weak-interaction', 'chirality-selection'])
+const ALGEBRA_BRIDGE = new Set(['division-algebras'])
+const APPLICATIONS = new Set(['entanglement', 'er-epr', 'gravity', 'einstein-equations'])
+
+function gaGroup(slug: string): string {
+  if (STA_CORE.has(slug)) return 'STA Core'
+  if (ROTORS_TOPOLOGY.has(slug)) return 'Rotors & Topology'
+  if (ALGEBRA_BRIDGE.has(slug)) return 'Algebra Bridge'
+  if (APPLICATIONS.has(slug)) return 'Applications'
+  return 'Other'
+}
+
+const gaGroups = new Map<string, typeof gaTopics>()
+for (const g of GA_GROUP_ORDER) {
+  const entries = gaTopics.filter(e => gaGroup(e.slug) === g)
+  if (entries.length > 0) gaGroups.set(g, entries)
+}
 
 const derivationGroups = {
   'Foundation': derivationEntries.filter(d => d.data.tags.includes('foundation')),
@@ -137,6 +160,22 @@ function statusColor(status: string) {
   {predictionEntries.map(entry => (
     <a href={`${base}/predictions/${entry.slug}`} aria-current={isActive(`/predictions/${entry.slug}`) ? 'page' : undefined}>{entry.data.title}</a>
   ))}
+
+  <details class="sidebar-details" open={isGAPage || undefined}>
+    <summary><h2>GA Exploration</h2></summary>
+    <a href={`${base}/geometric-algebra/`} aria-current={isActive('/geometric-algebra/') ? 'page' : undefined}>Overview</a>
+    {[...gaGroups.entries()].map(([groupName, entries]) => (
+      <>
+        <div class="sidebar-group-label">{groupName}</div>
+        {entries.map(entry => (
+          <a href={`${base}/geometric-algebra/${entry.slug}`} aria-current={isActive(`/geometric-algebra/${entry.slug}`) ? 'page' : undefined}>
+            <span style={`color: ${statusColor(entry.data.status)}`}>{statusIcon(entry.data.status)}</span>
+            {' '}{entry.data.title}
+          </a>
+        ))}
+      </>
+    ))}
+  </details>
 
   <details class="sidebar-details" open={isSourcePage || undefined}>
     <summary><h2>Source Document</h2></summary>

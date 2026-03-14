@@ -56,4 +56,18 @@ const guide = defineCollection({
   }),
 })
 
-export const collections = { source, derivations, predictions, guide }
+const geometricAlgebra = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    status: z.enum(['stub', 'draft', 'provisional', 'rigorous', 'non-viable']),
+    gaStructure: z.string(),
+    targetDerivation: z.string().optional(),
+    tags: z.array(z.string()).default([]),
+    summary: z.string(),
+    priority: z.enum(['high', 'moderate', 'low']).default('moderate'),
+    lastUpdated: z.date().optional(),
+  }),
+})
+
+export const collections = { source, derivations, predictions, guide, 'geometric-algebra': geometricAlgebra }

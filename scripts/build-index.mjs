@@ -20,6 +20,7 @@ import { execSync } from 'child_process'
 const ROOT = new URL('..', import.meta.url).pathname.replace(/\/$/, '')
 const DERIVATIONS_DIR = join(ROOT, 'site/src/content/derivations')
 const PREDICTIONS_DIR = join(ROOT, 'site/src/content/predictions')
+const GA_DIR = join(ROOT, 'site/src/content/geometric-algebra')
 const GRAPH_PATH = join(ROOT, 'site/src/data/dependency-graph.json')
 const POSTULATES_PATH = join(ROOT, 'site/src/data/structural-postulates.json')
 const OUTPUT_PATH = join(ROOT, 'site/src/data/knowledge-index.json')
@@ -384,6 +385,31 @@ function processPrediction(filePath) {
   }
 }
 
+// ─── Process a Single GA Page ────────────────────────────────────────────────────
+
+function processGAPage(filePath) {
+  const content = readFileSync(filePath, 'utf-8')
+  const { data, body } = parseFrontmatter(content)
+
+  const id = basename(filePath, '.md')
+
+  return {
+    id,
+    filePath: relative(ROOT, filePath),
+    title: data.title || id,
+    status: data.status || 'stub',
+    gaStructure: data.gaStructure || '',
+    targetDerivation: data.targetDerivation || null,
+    priority: data.priority || 'moderate',
+    summary: data.summary || '',
+    tags: data.tags || [],
+    lastUpdated: data.lastUpdated || null,
+    formalObjects: extractFormalObjects(body),
+    openGaps: extractOpenGaps(body),
+    crossReferences: extractCrossReferences(body),
+  }
+}
+
 // ─── SQLite Knowledge Database ──────────────────────────────────────────────────
 
 /** Escape a string for SQL single-quoted literals */
@@ -488,6 +514,18 @@ CREATE TABLE lean_proofs (
   proposition TEXT,
   theorem_name TEXT
 );
+
+CREATE TABLE ga_pages (
+  id TEXT PRIMARY KEY,
+  title TEXT NOT NULL,
+  status TEXT NOT NULL,
+  ga_structure TEXT,
+  target_derivation TEXT,
+  priority TEXT,
+  summary TEXT,
+  last_updated TEXT,
+  file_path TEXT
+);
 `)
 
   // ── Views ──
@@ -513,6 +551,9 @@ CREATE VIEW v_gaps_by_group AS
   SELECT d.group_name, COUNT(g.number) as gap_count
   FROM derivations d JOIN gaps g ON d.id = g.derivation_id
   GROUP BY d.group_name ORDER BY gap_count DESC;
+
+CREATE VIEW v_ga_status_summary AS
+  SELECT status, COUNT(*) as count FROM ga_pages GROUP BY status ORDER BY count DESC;
 `)
 
   // ── Insert derivations ──
@@ -582,6 +623,13 @@ CREATE VIEW v_gaps_by_group AS
     }
   }
 
+  // ── Insert GA pages ──
+  if (index.gaPages) {
+    for (const ga of Object.values(index.gaPages)) {
+      lines.push(`INSERT INTO ga_pages VALUES ('${esc(ga.id)}','${esc(ga.title)}','${esc(ga.status)}','${esc(ga.gaStructure)}','${esc(ga.targetDerivation)}','${esc(ga.priority)}','${esc(ga.summary)}','${esc(ga.lastUpdated)}','${esc(ga.filePath)}');`)
+    }
+  }
+
   // ── Write and execute ──
   const sqlContent = lines.join('\n')
 
@@ -627,6 +675,16 @@ function main() {
   for (const f of predictionFiles) {
     const p = processPrediction(f)
     predictions[p.id] = p
+  }
+
+  // ── Process GA pages (separate from main derivations) ──
+  const gaPages = {}
+  if (existsSync(GA_DIR)) {
+    const gaFiles = collectMdFiles(GA_DIR)
+    for (const f of gaFiles) {
+      const ga = processGAPage(f)
+      gaPages[ga.id] = ga
+    }
   }
 
   // ── Compute reverse dependencies (dependedOnBy) ──
@@ -715,6 +773,21 @@ function main() {
   const leanVerifiedCount = Object.values(derivations).filter(d => d.leanVerification.hasProofs).length
   const leanTheoremCount = Object.values(derivations).reduce((sum, d) => sum + d.leanVerification.proofCount, 0)
 
+  // ── Compute GA stats (separate from main derivation stats) ──
+  const gaByStatus = {}
+  for (const ga of Object.values(gaPages)) {
+    gaByStatus[ga.status] = (gaByStatus[ga.status] || 0) + 1
+  }
+  const gaStats = {
+    pageCount: Object.keys(gaPages).length,
+    byStatus: gaByStatus,
+    byPriority: {
+      high: Object.values(gaPages).filter(ga => ga.priority === 'high').length,
+      moderate: Object.values(gaPages).filter(ga => ga.priority === 'moderate').length,
+      low: Object.values(gaPages).filter(ga => ga.priority === 'low').length,
+    },
+  }
+
   const stats = {
     byStatus,
     derivationCount: Object.keys(derivations).length,
@@ -757,11 +830,14 @@ function main() {
       generatedAt: new Date().toISOString(),
       derivationCount: stats.derivationCount,
       predictionCount: stats.predictionCount,
+      gaPageCount: gaStats.pageCount,
       generator: 'scripts/build-index.mjs',
     },
     stats,
     derivations,
     predictions,
+    gaPages,
+    gaStats,
     allFormalObjects,
     allOpenGaps,
     upgradeAnalysis: {
@@ -813,6 +889,15 @@ function main() {
     for (const d of Object.values(derivations).filter(d => d.leanVerification.hasProofs)) {
       console.log(`    ✓ ${d.id} (${d.leanVerification.proofCount} theorems: ${d.leanVerification.propositions.join(', ')})`)
     }
+    console.log()
+  }
+  if (gaStats.pageCount > 0) {
+    console.log(`  GA Exploration pages: ${gaStats.pageCount}`)
+    console.log('  GA status breakdown:')
+    for (const [status, count] of Object.entries(gaByStatus).sort((a, b) => b[1] - a[1])) {
+      console.log(`    ${status.padEnd(15)} ${count}`)
+    }
+    console.log(`  GA priority: ${gaStats.byPriority.high} high, ${gaStats.byPriority.moderate} moderate, ${gaStats.byPriority.low} low`)
     console.log()
   }
   if (warnings.length > 0) {
