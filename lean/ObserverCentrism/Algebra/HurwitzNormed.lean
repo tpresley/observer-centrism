@@ -2,7 +2,7 @@
   Hurwitz's Theorem (Finite Version)
   ===================================
 
-  Formalizes: Theorem 1.2 of interactions/bootstrap-division-algebras
+  Formalizes: Proposition 1.2 of interactions/bootstrap-division-algebras
               Theorem 1.2 of gauge/color-force (Hurwitz ceiling)
 
   Hurwitz's theorem (1898): The only normed division algebras over ℝ
@@ -108,7 +108,7 @@ theorem sedenion_not_composition :
 
 /-- The Hurwitz dimensions: the normed division algebras ℝ, ℂ, ℍ, 𝕆
     have dimensions that are precisely the powers of 2 up to 8.
-    (bootstrap-division-algebras Theorem 1.2) -/
+    (bootstrap-division-algebras Proposition 1.2) -/
 theorem hurwitz_dimensions :
     ({1, 2, 4, 8} : Set ℕ) = {2 ^ 0, 2 ^ 1, 2 ^ 2, 2 ^ 3} := by
   ext n; simp

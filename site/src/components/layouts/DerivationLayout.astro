@@ -76,13 +76,13 @@ const totalTheorems = leanProofs.reduce((sum, p) => sum + p.theorems.length, 0)
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
-          Lean 4 Verified &mdash; {leanProofs.length} {leanProofs.length === 1 ? 'proposition' : 'propositions'}, {totalTheorems} {totalTheorems === 1 ? 'theorem' : 'theorems'}
+          Lean 4 Verified &mdash; {leanProofs.length} {leanProofs.length === 1 ? 'result' : 'results'}, {totalTheorems} Lean {totalTheorems === 1 ? 'theorem' : 'theorems'}
         </summary>
         <p class="lean-explanation">
-          The propositions below have been independently checked in
+          The results below have been independently checked in
           <a href="https://lean-lang.org" target="_blank" rel="noopener">Lean 4</a>,
           a proof assistant that mechanically verifies every logical step.
-          Click a proposition name to jump to it in the derivation.
+          Click a result name to jump to it in the derivation.
         </p>
         <div class="lean-proofs-list">
           {leanProofs.map(proof => (
@@ -92,7 +92,7 @@ const totalTheorems = leanProofs.reduce((sum, p) => sum + p.theorems.length, 0)
                   {proof.proposition}
                 </a>
                 <span class="lean-theorem-count">
-                  {proof.theorems.length} {proof.theorems.length === 1 ? 'theorem' : 'theorems'}
+                  {proof.theorems.length} Lean {proof.theorems.length === 1 ? 'theorem' : 'theorems'}
                 </span>
               </div>
               <span class="lean-module">{proof.module}</span>

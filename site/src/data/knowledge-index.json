@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-14T02:13:38.571Z",
+    "generatedAt": "2026-03-14T02:34:15.308Z",
     "derivationCount": 60,
     "predictionCount": 10,
     "generator": "scripts/build-index.mjs"
@@ -7266,7 +7266,7 @@
           "ObserverCentrism.Gauge.SedenionNonDivision"
         ],
         "propositions": [
-          "Theorem 1.2",
+          "Proposition 1.2",
           "Theorem 7.1"
         ]
       },

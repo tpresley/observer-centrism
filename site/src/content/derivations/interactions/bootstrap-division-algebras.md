@@ -10,7 +10,7 @@ sourceSection: "07-observer-hierarchy"
 lastUpdated: 2026-03-13
 leanProofs:
   - module: "ObserverCentrism.Algebra.HurwitzNormed"
-    proposition: "Theorem 1.2"
+    proposition: "Proposition 1.2"
     theorems:
       - "quat_composition"
       - "sedenion_not_composition"
