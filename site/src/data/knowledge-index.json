@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-14T05:28:27.124Z",
+    "generatedAt": "2026-03-14T07:43:54.577Z",
     "derivationCount": 60,
     "predictionCount": 10,
     "gaPageCount": 12,
@@ -15161,7 +15161,7 @@
       "id": "chirality-selection",
       "filePath": "site/src/content/geometric-algebra/chirality-selection.md",
       "title": "Chirality as Grade Structure",
-      "status": "stub",
+      "status": "provisional",
       "gaStructure": "Cl(1,3)",
       "targetDerivation": "gauge/chirality-selection",
       "priority": "high",
@@ -15172,7 +15172,92 @@
         "geometric-algebra"
       ],
       "lastUpdated": "2026-03-13",
-      "formalObjects": [],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Chirality operator in STA",
+          "statementPreview": "The *chirality operator* in the Spacetime Algebra is the pseudoscalar:"
+        },
+        {
+          "type": "Definition",
+          "id": "1.2",
+          "name": "Chirality projectors",
+          "statementPreview": "The left and right chirality projectors are:"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "Self-dual and anti-self-dual bivectors",
+          "statementPreview": "The pseudoscalar I acts on bivectors by the Hodge dual: B IB. Since I2 = -1 on bivectors, the eigenvalues of I-action..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "Lorentz algebra decomposition",
+          "statementPreview": "The two eigenspaces form independent Lie subalgebras under the commutator bracket:"
+        },
+        {
+          "type": "Definition",
+          "id": "3.1",
+          "name": "Dirac spinor in STA",
+          "statementPreview": "In the Hestenes formalism, a Dirac spinor is an even multivector psi in Cl+(1,3). The even subalgebra is 8-dimensiona..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Chiral decomposition of the even subalgebra",
+          "statementPreview": "The pseudoscalar I splits Cl+(1,3) into two invariant subspaces under right-multiplication:"
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "Parity exchanges chirality",
+          "statementPreview": "The parity operation P acts on the pseudoscalar as P(I) = -I (from [CPT as a Single Cl(1,3) Object](/geometric-algebr..."
+        },
+        {
+          "type": "Corollary",
+          "id": "4.2",
+          "name": "Parity violation from eigenspace selection",
+          "statementPreview": "If a gauge interaction couples only to the left eigenspace of I (only to spinors psiL satisfying psiL I = -ipsiL), th..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.3",
+          "name": "Time reversal also exchanges chirality",
+          "statementPreview": "From the CPT analysis: T(I) = -I as well. Therefore T also swaps PL leftrightarrow PR. But PT(I) = I, so the combined..."
+        },
+        {
+          "type": "Theorem",
+          "id": "5.1",
+          "name": "Orientation ↔ pseudoscalar eigenspace",
+          "statementPreview": "The target derivation's quaternionic orientation O+ (IJ = K) corresponds to the self-dual eigenspace Lambda2+ of I, a..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Gauge coupling to one eigenspace",
+          "statementPreview": "The target derivation's Theorem 2.1 shows that quaternionic relational invariants require shared orientation. In STA,..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.2",
+          "name": "Maximal violation is exact zero",
+          "statementPreview": "The coupling of Wmua to psiR vanishes exactly — not as an approximation, but as an algebraic identity:"
+        },
+        {
+          "type": "Proposition",
+          "id": "7.1",
+          "name": "Mass terms mix chiralities",
+          "statementPreview": "A Dirac mass term in STA takes the form:"
+        },
+        {
+          "type": "Proposition",
+          "id": "7.2",
+          "name": "Why mass requires electroweak breaking — GA perspective",
+          "statementPreview": "The weak SU(2) gauge symmetry acts only on psiL (Proposition 6.1). A bare mass term mpsiLpsiR is *not gauge invariant..."
+        }
+      ],
       "openGaps": [],
       "crossReferences": [
         {
@@ -15185,7 +15270,7 @@
       "id": "cpt-theorem",
       "filePath": "site/src/content/geometric-algebra/cpt-theorem.md",
       "title": "CPT as a Single Cl(1,3) Object",
-      "status": "stub",
+      "status": "provisional",
       "gaStructure": "Cl(1,3)",
       "targetDerivation": "particles/cpt-theorem",
       "priority": "high",
@@ -15196,7 +15281,110 @@
         "geometric-algebra"
       ],
       "lastUpdated": "2026-03-13",
-      "formalObjects": [],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Parity versor",
+          "statementPreview": "The parity transformation P acts on a spacetime vector v = vmu emu by:"
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Parity on bivectors",
+          "statementPreview": "P extends to arbitrary multivectors via the *grade automorphism* A e0 A e0 (the hat involution restricted to spatial ..."
+        },
+        {
+          "type": "Definition",
+          "id": "2.1",
+          "name": "Time reversal versor",
+          "statementPreview": "Time reversal T acts on a spacetime vector v by:"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "Time reversal on bivectors",
+          "statementPreview": "- Spacelike bivectors: T(ejk) = ejk. Spatial bivectors are **T-even**."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "PT = pseudoscalar action",
+          "statementPreview": "The combined parity-time operation PT acts on any spacetime vector v as:"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "PT preserves bivectors",
+          "statementPreview": "Since PT(v) = -v for all vectors, the action on a bivector B = v wedge w is:"
+        },
+        {
+          "type": "Definition",
+          "id": "4.1",
+          "name": "Charge conjugation in STA",
+          "statementPreview": "For a Dirac spinor represented in STA as an even multivector psi in Cl+(1,3) (following the Hestenes spinor formalism..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.2",
+          "name": "Properties of $C$ in STA",
+          "statementPreview": "- C reverses the U(1) phase: if psi = rho1/2 eIbeta/2 R (Hestenes canonical form, where R is a rotor, rho is a densit..."
+        },
+        {
+          "type": "Theorem",
+          "id": "5.1",
+          "name": "CPT = $I$ action",
+          "statementPreview": "The combined CPT operation on a Dirac spinor psi in Cl+(1,3) is equivalent to left-multiplication by the pseudoscalar..."
+        },
+        {
+          "type": "Corollary",
+          "id": "5.2",
+          "name": "CPT invariance of even-grade observables",
+          "statementPreview": "Physical observables in the coherence Lagrangian fall into two classes under CPT:"
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Chirality and the pseudoscalar",
+          "statementPreview": "The chirality projectors in STA are:"
+        },
+        {
+          "type": "Proposition",
+          "id": "6.2",
+          "name": "Parity exchanges chirality",
+          "statementPreview": "The parity operation P (acting via e0) does not commute with the chirality projectors:"
+        },
+        {
+          "type": "Proposition",
+          "id": "6.3",
+          "name": "Individual violation pattern",
+          "statementPreview": "In GA terms:"
+        },
+        {
+          "type": "Proposition",
+          "id": "7.1",
+          "name": "Triple role of $I$",
+          "statementPreview": "The pseudoscalar I = e0123 plays three distinct roles in the framework, all unified by its algebraic identity:"
+        },
+        {
+          "type": "Proposition",
+          "id": "7.2",
+          "name": "Which property of $I$ matters — resolving Open Question 1",
+          "statementPreview": "Three algebraic properties of I = e0123 are relevant:"
+        },
+        {
+          "type": "Proposition",
+          "id": "8.1",
+          "name": "Equal masses in GA",
+          "statementPreview": "The target derivation's Corollary 4.2 — equal masses and lifetimes for particle-antiparticle pairs — has a clean GA r..."
+        },
+        {
+          "type": "Proposition",
+          "id": "8.2",
+          "name": "Spin-statistics-CPT connection in GA",
+          "statementPreview": "The target derivation's Proposition 5.1 identifies the spin-statistics-CPT triad as sharing a common root. In GA, thi..."
+        }
+      ],
       "openGaps": [],
       "crossReferences": [
         {
@@ -15513,7 +15701,7 @@
       "id": "gravity",
       "filePath": "site/src/content/geometric-algebra/gravity.md",
       "title": "Gravity in STA: Gauge Theory Gravity",
-      "status": "stub",
+      "status": "provisional",
       "gaStructure": "Cl(1,3)",
       "targetDerivation": "spacetime/gravity",
       "priority": "moderate",
@@ -15524,12 +15712,107 @@
         "geometric-algebra"
       ],
       "lastUpdated": "2026-03-13",
-      "formalObjects": [],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Position gauge field",
+          "statementPreview": "The *position gauge field* underlineh(a; x) is a linear function that maps a flat-space vector a at position x to the..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Position gauge symmetry",
+          "statementPreview": "The physical content is unchanged under *position gauge transformations*:"
+        },
+        {
+          "type": "Definition",
+          "id": "2.1",
+          "name": "Rotation gauge field",
+          "statementPreview": "The *rotation gauge field* Omega(a; x) is a *bivector-valued* linear function of vectors. Given a direction a, Omega(..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "Rotation gauge symmetry",
+          "statementPreview": "Under a local Lorentz rotation by rotor R(x):"
+        },
+        {
+          "type": "Definition",
+          "id": "3.1",
+          "name": "Riemann bivector",
+          "statementPreview": "The *Riemann curvature* in GTG is a bivector-valued function of bivectors:"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Curvature as a bivector-to-bivector map",
+          "statementPreview": "R is a linear map from the 6-dimensional bivector space to itself. In Cl(1,3), it is a 6 6 matrix on the bivector alg..."
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "Geodesic rotor equation",
+          "statementPreview": "A freely falling observer carries a rotor R(tau) (encoding its frame orientation relative to the background STA frame..."
+        },
+        {
+          "type": "Corollary",
+          "id": "4.2",
+          "name": "Position recovery",
+          "statementPreview": "The position along the geodesic is recovered by integrating the velocity:"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.3",
+          "name": "Equivalence principle via gauge freedom",
+          "statementPreview": "The target derivation's Theorem 4.3 (strong equivalence principle) states that curved geometry is locally indistingui..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Metric-density coupling in GTG language",
+          "statementPreview": "The target derivation's action duality equates the spacetime action integral gmunu dxmu dxnu with the state-space coh..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Redshift as rotor mismatch",
+          "statementPreview": "The target derivation's Theorem 2.1 gives the gravitational redshift dtau(r)/dtau() = 1 - 2GM/(c2 r). In GTG, this ha..."
+        },
+        {
+          "type": "Proposition",
+          "id": "7.1",
+          "name": "Schwarzschild gauge fields",
+          "statementPreview": "The Schwarzschild solution (target derivation's Theorem 5.1) translates to GTG as follows. In the *Newtonian gauge* (..."
+        },
+        {
+          "type": "Proposition",
+          "id": "7.2",
+          "name": "Horizon regularity in GTG",
+          "statementPreview": "In the standard Schwarzschild coordinates, gtt = 0 at r = RS, creating a coordinate singularity. In the GTG Newtonian..."
+        },
+        {
+          "type": "Proposition",
+          "id": "8.1",
+          "name": "Linearized GTG",
+          "statementPreview": "The target derivation's Proposition 6.1 states that rapid changes in relational invariant density propagate as gravit..."
+        },
+        {
+          "type": "Proposition",
+          "id": "8.2",
+          "name": "Wave equation",
+          "statementPreview": "At linear order, the gauge-field perturbation satisfies a wave equation on flat STA:"
+        }
+      ],
       "openGaps": [],
       "crossReferences": [
         {
           "target": "spacetime/gravity",
-          "context": "Gravity as Coherence Geometry Curvature"
+          "context": "status: rigorous"
+        },
+        {
+          "target": "spacetime/speed-of-light",
+          "context": "Speed of Light"
         }
       ]
     },
@@ -15854,8 +16137,8 @@
   "gaStats": {
     "pageCount": 12,
     "byStatus": {
-      "stub": 7,
-      "provisional": 4,
+      "provisional": 7,
+      "stub": 4,
       "draft": 1
     },
     "byPriority": {
