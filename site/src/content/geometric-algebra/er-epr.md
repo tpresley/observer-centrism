@@ -3,6 +3,7 @@ title: "ER=EPR via STA Geometry"
 status: "stub"
 gaStructure: "Cl(1,3)"
 targetDerivation: "holography/er-epr"
+dependsOn: ["lorentz-invariance"]
 tags: ["spacetime-algebra", "holography", "geometric-algebra"]
 summary: "The ER=EPR duality expressed in Spacetime Algebra, where entanglement (algebraic bivector correlations) maps to wormhole topology (geometric rotor structure)"
 priority: "moderate"

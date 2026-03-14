@@ -3,6 +3,7 @@ title: "CPT as a Single Cl(1,3) Object"
 status: "stub"
 gaStructure: "Cl(1,3)"
 targetDerivation: "particles/cpt-theorem"
+dependsOn: ["lorentz-invariance"]
 tags: ["spacetime-algebra", "discrete-symmetries", "geometric-algebra"]
 summary: "C, P, and T map to specific Cl(1,3) operations whose composition is the pseudoscalar I = e0123, making CPT invariance algebraically immediate"
 priority: "high"

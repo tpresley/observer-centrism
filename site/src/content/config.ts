@@ -63,6 +63,7 @@ const geometricAlgebra = defineCollection({
     status: z.enum(['stub', 'draft', 'provisional', 'rigorous', 'non-viable']),
     gaStructure: z.string(),
     targetDerivation: z.string().optional(),
+    dependsOn: z.array(z.string()).default([]),
     tags: z.array(z.string()).default([]),
     summary: z.string(),
     priority: z.enum(['high', 'moderate', 'low']).default('moderate'),

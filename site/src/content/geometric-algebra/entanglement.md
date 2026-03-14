@@ -3,6 +3,7 @@ title: "Entanglement via Rotor Pairs"
 status: "stub"
 gaStructure: "Cl(3,0) x Cl(3,0)"
 targetDerivation: "quantum/entanglement"
+dependsOn: ["spin-statistics"]
 tags: ["rotors", "quantum", "geometric-algebra"]
 summary: "Entangled states as non-factorizable elements in the product Clifford algebra, with no-cloning following from the geometric product structure"
 priority: "moderate"

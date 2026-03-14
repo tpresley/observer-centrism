@@ -3,6 +3,7 @@ title: "Maxwell Equations as nabla F = J"
 status: "stub"
 gaStructure: "Cl(1,3)"
 targetDerivation: "gauge/electromagnetism"
+dependsOn: ["lorentz-invariance"]
 tags: ["spacetime-algebra", "gauge-theory", "geometric-algebra"]
 summary: "The electromagnetic field F = E + iB as a single STA bivector compresses Maxwell's four equations into one: nabla F = J"
 priority: "high"

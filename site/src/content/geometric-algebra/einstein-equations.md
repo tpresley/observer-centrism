@@ -3,6 +3,7 @@ title: "Einstein Equations in STA Form"
 status: "stub"
 gaStructure: "Cl(1,3)"
 targetDerivation: "spacetime/einstein-equations"
+dependsOn: ["gravity"]
 tags: ["spacetime-algebra", "gravity", "geometric-algebra"]
 summary: "The Riemann tensor as a bivector-to-bivector linear mapping and the Einstein field equations as G(a) = kT(a) in index-free STA notation"
 priority: "moderate"

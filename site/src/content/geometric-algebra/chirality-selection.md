@@ -3,6 +3,7 @@ title: "Chirality as Grade Structure"
 status: "stub"
 gaStructure: "Cl(1,3)"
 targetDerivation: "gauge/chirality-selection"
+dependsOn: ["lorentz-invariance"]
 tags: ["spacetime-algebra", "chirality", "geometric-algebra"]
 summary: "The pseudoscalar I = e0123 defines chirality projection, making the weak interaction's left-handedness a statement about grade eigenspaces"
 priority: "high"

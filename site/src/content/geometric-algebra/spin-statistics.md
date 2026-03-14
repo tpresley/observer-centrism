@@ -3,6 +3,7 @@ title: "Spin-Statistics via Cl(3,0) Rotors"
 status: "stub"
 gaStructure: "Cl(3,0)"
 targetDerivation: "particles/spin-statistics"
+dependsOn: ["overview"]
 tags: ["rotors", "topology", "geometric-algebra"]
 summary: "The SU(2)/SO(3) double cover becomes algebraically transparent through Cl(3,0) rotors, illuminating why spin determines statistics"
 priority: "high"

@@ -3,6 +3,7 @@ title: "Gravity in STA: Gauge Theory Gravity"
 status: "stub"
 gaStructure: "Cl(1,3)"
 targetDerivation: "spacetime/gravity"
+dependsOn: ["lorentz-invariance"]
 tags: ["spacetime-algebra", "gauge-theory", "geometric-algebra"]
 summary: "Gauge theory gravity reformulates GR in flat-space STA with position and rotation gauge fields, recasting the framework's gravitational derivation as rotor equations"
 priority: "moderate"

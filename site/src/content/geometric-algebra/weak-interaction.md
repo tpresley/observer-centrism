@@ -3,6 +3,7 @@ title: "Weak Interaction via H = Cl+(3,0)"
 status: "stub"
 gaStructure: "Cl+(3,0)"
 targetDerivation: "gauge/weak-interaction"
+dependsOn: ["spin-statistics"]
 tags: ["rotors", "gauge-theory", "geometric-algebra"]
 summary: "The quaternion algebra of the weak interaction is isomorphic to the even subalgebra of Cl(3,0), with I, J, K corresponding to bivectors e23, e31, e12"
 priority: "high"
