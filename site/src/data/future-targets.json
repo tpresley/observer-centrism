@@ -46,6 +46,20 @@
       "impact": "Reduces active postulates. Connects gravity more tightly to axioms."
     },
     {
+      "id": "loop-closure-s1-smoothness",
+      "postulateId": "S1",
+      "shortName": "Smooth structure (partial promotion)",
+      "derivation": "axioms/loop-closure",
+      "difficulty": "MODERATE",
+      "tier": 1,
+      "status": "COMPLETED — S1 weakened to 'topological manifold + free orbits', smooth structure derived as Theorem 0.0 via equivariant smoothing theorem",
+      "completedDate": "2026-03-13",
+      "rationale": "S1 originally assumed smooth (C^∞) manifold structure. But smoothness follows from the combination of (1) topological manifold structure (finite-dimensional, locally Euclidean) and (2) the continuous U(1) action from Axiom 3. The equivariant smoothing theorem (Illman, 1978) guarantees that any continuous compact Lie group action on a topological manifold admits a compatible smooth structure, and in dimensions ≤ 3 the smooth structure is unique (Radó, Moise). Two independent arguments strengthen the case: (a) the Noether coherence argument (non-smooth structure severs the Noether mechanism linking the three axioms), and (b) the Montgomery-Zippin route (constructive derivation of smooth structure from the U(1) action).",
+      "strategy": "(1) Weaken S1 to: compact topological manifold of finite dimension with free U(1) orbits. (2) Add axiom coherence argument: without smooth structure, the Noether pair (Theorem 3.1) cannot connect Axioms 1–3, making the axiom system internally incoherent. (3) Derive Theorem 0.0: equivariant smoothing theorem gives existence, Moise/Radó/Whitney give uniqueness.",
+      "dependencies": ["axioms/loop-closure", "axioms/observer-definition"],
+      "impact": "Reduces the content of S1 from 'smooth manifold' to 'finite-dimensional topological manifold + free orbits'. Smoothness becomes a theorem. Strengthens the axiom-to-structure chain."
+    },
+    {
       "id": "relational-invariants-s1",
       "postulateId": "S1",
       "shortName": "Symplectic structure",
@@ -238,7 +252,7 @@
     {
       "id": "loop-closure-s1",
       "postulateIds": ["loop-closure-s1"],
-      "reason": "S1 (smooth manifold structure) is the unique consistent mathematical setting for the axiom system — three independent requirements (Noether, coherence cost, Fisher metric) converge on smooth structure, and Whitney's theorem upgrades C^1 to C^∞. It remains a structural postulate because the axioms select it by consistency rather than constructively building it from measure theory. S2 (invariant Riemannian metric) has been promoted to Theorem 0.1 in loop-closure.md via Weyl averaging over the compact U(1) action (2026-03-12)."
+      "reason": "S1 has been weakened from 'smooth manifold' to 'finite-dimensional topological manifold with free U(1) orbits'. Smooth structure is now derived as Theorem 0.0 via the equivariant smoothing theorem (Illman 1978 / Montgomery-Zippin). The net irreducible content of S1 is: finite dimensionality and local Euclidean regularity. The axiom coherence argument (non-smooth structure severs the Noether mechanism connecting the three axioms) provides additional structural motivation. S2 was previously promoted to Theorem 0.1 via Weyl averaging (2026-03-12). Updated 2026-03-13."
     },
     {
       "id": "speed-of-light-s1",

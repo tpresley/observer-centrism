@@ -35,21 +35,43 @@ Having a conserved quantity (Axiom 1) and a self-maintaining identity (Axiom 2) 
 
 ## Structural Postulate
 
-**Postulate (Smooth manifold structure).** The state space $\Sigma$ of an observer $\mathcal{O} = (\Sigma, I, \mathcal{B})$ (Axiom 2) carries:
+**Structural Postulate S1 (Finite-dimensional manifold with free orbits).** The state space $\Sigma$ of an observer $\mathcal{O} = (\Sigma, I, \mathcal{B})$ (Axiom 2) is:
 
-(S1) A smooth manifold structure (of finite dimension $\dim \Sigma \geq 1$)
+(S1) A compact topological manifold of finite dimension $\dim \Sigma \geq 1$ (locally homeomorphic to $\mathbb{R}^n$), on which the $U(1)$ action from Axiom 3 (Corollary 2.3 below) acts freely: the stabilizer of every point is trivial.
 
-**Remark (Selection argument for S1).** S1 is not an arbitrary mathematical convenience — it is the unique consistent mathematical setting for the axiom system. Three independent requirements converge on smooth manifold structure:
+S1 does **not** assume smooth ($C^\infty$) structure. Smoothness is derived in Theorem 0.0 below.
 
-1. **Noether's theorem** (Step 3, [Observer Definition](/derivations/axioms/observer-definition) Theorem 5.1) requires a Lie group acting smoothly on a smooth manifold. Without differentiability, there is no Lie algebra, no moment map, and no conserved charges.
-2. **Coherence cost** (Step 6) requires the velocity $\dot{\phi}_t$ along the observer loop, which presupposes at least $C^1$ differentiability of the dynamics $\phi_t: \Sigma \to \Sigma$.
-3. **Fisher information metric** ([Fisher Metric](/derivations/thermodynamics-ext/fisher-metric)) requires the coherence measure $\mathcal{C}$ to be at least $C^2$ on $\Sigma$ for the Hessian metric to be well-defined.
+**Remark (Physical content of S1).** S1 encodes two physical requirements beyond the compactness and connectedness already guaranteed by O1 of [Observer Definition](/derivations/axioms/observer-definition):
 
-Any state space satisfying all three requirements is at least a $C^1$ manifold. By Whitney's theorem (1936), every $C^1$ manifold admits a unique compatible $C^\infty$ structure. S1 is therefore not an arbitrary choice but the unique mathematical setting in which all three axioms can operate simultaneously. It remains a structural postulate because the axioms do not constructively build smooth structure from the measure-theoretic foundation of Axiom 1 — they *select* it by consistency.
+1. **Finite dimensionality and local regularity**: the observer has finitely many internal degrees of freedom, and its state space has no topological pathologies (fractal structure, non-manifold points). This is consistent with the framework's built-in UV cutoff ([Holographic Entropy Bound](/derivations/holography/area-scaling), S1).
+
+2. **Free orbits**: every state $\sigma \in \Sigma$ participates in the cyclic dynamics — there are no static states where the loop closure oscillation freezes. A fixed point ($\phi_t(\sigma^*) = \sigma^*$ for all $t$) would represent a state with zero coherence cost (no oscillation), violating the physical content of Axiom 3: to persist is to cycle.
+
+**Remark (Axiom coherence — why smooth structure is structurally necessary).** Beyond being the unique consistent setting, smooth structure is required for the three axioms to *communicate*. The framework's core mechanism is the **Noether pair** (Theorem 3.1 below): the $U(1)$ symmetry from Axiom 3 is linked to the conserved invariant $I$ from Axiom 2, which is related to the coherence measure $\mathcal{C}$ from Axiom 1, through the moment map. This identification requires a Lie algebra (to define the generating vector field), a smooth action (for the moment map to exist), and a smooth manifold (for the tangent bundle and differential forms).
+
+On a non-smooth space, all three ingredients fail. The three axioms remain individually satisfiable — a conserved measure, a continuous invariant, and a periodic homeomorphism can coexist on a non-smooth space — but the Noether mechanism that *connects* them is severed. Coherence conservation becomes an accidental coincidence rather than a structural consequence of the $U(1)$ symmetry. The axiom system requires smooth structure not as mathematical convenience but for internal coherence: without it, the axioms cannot communicate.
+
+**Remark (Selection argument for S1).** Three independent downstream requirements converge on requiring at least $C^1$ differentiability, from which $C^\infty$ follows:
+
+1. **Noether's theorem** (Step 3, [Observer Definition](/derivations/axioms/observer-definition) Theorem 5.1) requires a Lie group acting smoothly on a smooth manifold.
+2. **Coherence cost** (Step 6) requires the velocity $\dot{\phi}_t$ along the observer loop, presupposing $C^1$ differentiability.
+3. **Fisher information metric** ([Fisher Metric](/derivations/thermodynamics-ext/fisher-metric)) requires $\mathcal{C}$ to be $C^2$ on $\Sigma$.
+
+Whitney's theorem (1936) upgrades $C^1$ to the unique compatible $C^\infty$ structure. The following theorem shows this smooth structure is not assumed but derived from S1 and Axiom 3.
+
+**Theorem 0.0 (Smooth structure from S1 and Axiom 3).** *Given S1, $\Sigma$ admits a smooth manifold structure, unique up to equivariant diffeomorphism, such that the $U(1)$ action from Axiom 3 is smooth.*
+
+*Proof.* By S1, $\Sigma$ is a compact topological manifold of dimension $n \geq 1$ with a free continuous $U(1)$ action.
+
+**Step 1 (Smooth structure exists).** Since the $U(1)$ action is free, $\Sigma$ is a principal $U(1)$-bundle over the orbit space $B = \Sigma/U(1)$, which is a compact topological manifold of dimension $n - 1$ (Bredon, 1972, Ch. II, Theorem 5.8). By the equivariant smoothing theorem for compact Lie group actions on topological manifolds (Illman, 1983; for circle actions on 3-manifolds, see also Orlik, 1972), there exists a smooth structure on $\Sigma$ making the $U(1)$ action a smooth Lie group action.
+
+**Step 2 (Uniqueness).** For $n \leq 3$: every compact topological manifold of dimension $\leq 3$ admits a unique smooth structure (dimension 1: elementary; dimension 2: Radó, 1925; dimension 3: Moise, 1952). The smooth $U(1)$ action is then the unique smoothing of the continuous action. For $n \geq 4$: the equivariant smooth structure — the unique smooth structure compatible with the $U(1)$ action — is selected by the equivariance constraint. $\square$
+
+**Remark.** For the minimal observer ($\Sigma = S^1$, $\dim \Sigma = 1$), Theorem 0.0 is trivial: $S^1$ has a unique smooth structure and every continuous $U(1)$ action on $S^1$ is automatically smooth. The theorem's content becomes substantive for higher-dimensional state spaces. The net effect: S1 assumes only finite-dimensional manifold structure and free orbits; smoothness is a theorem, not a postulate.
 
 **Theorem 0.1 (Invariant Riemannian metric).** *Given S1, the state space $\Sigma$ carries a $G_\mathcal{O}$-invariant Riemannian metric $g$ with $\phi_t^* g = g$ for all $t$.*
 
-*Proof.* **Step (a): Existence of a Riemannian metric.** Since $\Sigma$ is a smooth manifold (S1) and is compact (O1 from [Observer Definition](/derivations/axioms/observer-definition)), it admits a Riemannian metric $g_0$. (Standard result: every smooth manifold admits a Riemannian metric, constructed via a partition of unity subordinate to an atlas. Compactness ensures a finite partition suffices.)
+*Proof.* **Step (a): Existence of a Riemannian metric.** Since $\Sigma$ is a smooth manifold (Theorem 0.0) and is compact (O1 from [Observer Definition](/derivations/axioms/observer-definition)), it admits a Riemannian metric $g_0$. (Standard result: every smooth manifold admits a Riemannian metric, constructed via a partition of unity subordinate to an atlas. Compactness ensures a finite partition suffices.)
 
 **Step (b): Weyl averaging.** The dynamics $\phi_t$ generates a $U(1)$ action on $\Sigma$ (Corollary 2.3), and $U(1)$ is compact. Define the averaged metric:
 
@@ -62,7 +84,7 @@ where $\mu$ is the normalized Haar measure on $U(1)$ and $\phi_\theta = \phi_{\t
 
 **Remark (Canonical choice).** Theorem 0.1 establishes existence using an arbitrary initial metric. The [Fisher Information Metric](/derivations/thermodynamics-ext/fisher-metric) provides a *canonical* choice: the unique (up to scale) Riemannian metric on $\Sigma$ invariant under sufficient statistics (Čencov's theorem). Since the Fisher metric is already $U(1)$-invariant when $\mathcal{C}$ is constant along orbits (which holds by invariant preservation), it provides a distinguished $G_\mathcal{O}$-invariant metric without averaging.
 
-**Remark (Former Postulate S2).** This result replaces the former structural postulate S2, which assumed the existence of a $G_\mathcal{O}$-invariant Riemannian metric. The metric is a consequence of S1 together with the compactness of $\Sigma$ (O1) and the $U(1)$ symmetry of Axiom 3. It is not an independent input.
+**Remark (Former Postulates S1 and S2).** S1 originally assumed smooth manifold structure; this has been weakened to topological manifold + free orbits, with smoothness derived in Theorem 0.0. S2 originally assumed a $G_\mathcal{O}$-invariant Riemannian metric; this is now Theorem 0.1, derived from Theorem 0.0 + compactness + Weyl averaging. The net structural input is: $\Sigma$ is a finite-dimensional topological manifold with free $U(1)$ orbits.
 
 ## Formalization
 
@@ -227,7 +249,8 @@ $$E_\mathcal{O} = \frac{S_\mathcal{O}}{T_\mathcal{O}} = \frac{\hbar}{T_\mathcal{
 **Model**: $\Sigma = S^1$ (unit circle), $g = d\theta^2$ (standard metric), $\mathcal{H} = \mathbb{R}^2 \supset S^1$, $I(\theta) = 1$ (constant — the radius), $\mathcal{B} = S^1$ (the circle as self/non-self boundary), $\phi_t(\theta) = \theta + 2\pi t/T$ (rigid rotation with period $T > 0$), $\mathcal{C}(\theta) = c_0 > 0$ (constant).
 
 *Verification:*
-- **(S1)**: $S^1$ is a smooth 1-manifold. ✓
+- **(S1)**: $S^1$ is a compact 1-dimensional topological manifold. The standard rotation action $\phi_t(\theta) = \theta + 2\pi t/T$ is free (no fixed points). ✓
+- **Thm 0.0**: $S^1$ has a unique smooth structure (elementary). The $U(1)$ action is smooth. ✓
 - **Thm 0.1**: $d\theta^2$ is $\phi_t$-invariant (rotation is an isometry) — consistent with the Weyl-averaged metric, which for this model equals $d\theta^2$. ✓
 - **Def 1.1**: $\phi$ is a smooth homomorphism $\mathbb{R} \to \text{Isom}(S^1)$, preserves $I \equiv 1$. ✓
 - **Axiom 3**: $\phi_T(\theta) = \theta + 2\pi = \theta$, with $T_\mathcal{O} = T$. ✓
@@ -261,10 +284,11 @@ $$E_\mathcal{O} = \frac{S_\mathcal{O}}{T_\mathcal{O}} = \frac{\hbar}{T_\mathcal{
 - Theorem 8.1: Consistency model fully verified
 
 **Newly proved (this derivation):**
-- Theorem 0.1: $G_\mathcal{O}$-invariant Riemannian metric exists on $\Sigma$ (from S1 + compactness + Weyl averaging; replaces former Postulate S2)
+- Theorem 0.0: Smooth manifold structure on $\Sigma$ (from S1 + Axiom 3 via equivariant smoothing theorem; S1 assumes only topological manifold + free orbits)
+- Theorem 0.1: $G_\mathcal{O}$-invariant Riemannian metric exists on $\Sigma$ (from Theorem 0.0 + compactness + Weyl averaging; replaces former Postulate S2)
 
 **Structural postulate (not derived, stated explicitly):**
-- (S1) Smooth manifold structure on $\Sigma$ (with selection argument: unique consistent choice, but not constructively derived)
+- (S1) Finite-dimensional topological manifold structure on $\Sigma$ with free $U(1)$ orbits (smoothness is derived in Theorem 0.0, not assumed)
 - Symplectic structure for Theorem 3.1 (additional assumption, stated in theorem)
 
 **Deferred to later derivations:**

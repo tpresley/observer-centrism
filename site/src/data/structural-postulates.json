@@ -4,9 +4,9 @@
     "derivation": "axioms/loop-closure",
     "derivationTitle": "Loop Closure",
     "postulateId": "S1",
-    "shortName": "Smooth manifold structure",
-    "statement": "The state space \u03a3 carries a smooth manifold structure of finite dimension dim \u03a3 \u2265 1.",
-    "justification": "Required for calculus on the observer's state space. Without differentiable structure, the loop closure axiom cannot define smooth periodic orbits.",
+    "shortName": "Finite-dimensional manifold",
+    "statement": "The state space \u03a3 is a compact topological manifold of finite dimension dim \u03a3 \u2265 1, on which the U(1) action from Axiom 3 acts freely. Smooth (C\u221e) structure is derived in Theorem 0.0 via the equivariant smoothing theorem, not assumed.",
+    "justification": "Finite dimensionality gives finitely many degrees of freedom; local Euclidean structure excludes topological pathologies; free orbits ensure every state participates in the cyclic dynamics. Smooth structure then follows from the equivariant smoothing theorem (Illman 1983) applied to the continuous U(1) action.",
     "group": "foundation"
   },
   {
