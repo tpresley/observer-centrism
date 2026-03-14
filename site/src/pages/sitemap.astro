@@ -10,10 +10,26 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 
   <div class="sm-grid">
     <div class="sm-section">
-      <h2>Explore</h2>
+      <h2>Start Here</h2>
+      <a href={`${base}/note-to-researchers`} class="sm-link">
+        <strong>Note to Researchers</strong>
+        <span>What this framework is, what's honestly open, and where to begin.</span>
+      </a>
+      <a href={`${base}/mysteries`} class="sm-link">
+        <strong>Mysteries of Physics</strong>
+        <span>Fundamental questions in physics and how the framework addresses each one.</span>
+      </a>
       <a href={`${base}/guide/`} class="sm-link">
         <strong>Guide</strong>
-        <span>A narrative walkthrough of the framework, from first principles to predictions.</span>
+        <span>A narrative walkthrough from first principles to predictions.</span>
+      </a>
+    </div>
+
+    <div class="sm-section">
+      <h2>Framework Structure</h2>
+      <a href={`${base}/derivations/`} class="sm-link">
+        <strong>Derivations Index</strong>
+        <span>All derivations organized by topic group, with status and dependency information.</span>
       </a>
       <a href={`${base}/map`} class="sm-link">
         <strong>Derivation Map</strong>
@@ -26,18 +42,18 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '')
     </div>
 
     <div class="sm-section">
-      <h2>Reference</h2>
-      <a href={`${base}/derivations/`} class="sm-link">
-        <strong>Derivations Index</strong>
-        <span>All rigorous proofs and formalizations, organized by topic group.</span>
+      <h2>Inventories</h2>
+      <a href={`${base}/theorems`} class="sm-link">
+        <strong>Theorems</strong>
+        <span>All named theorems proved across the derivation chain, with Lean 4 verification badges.</span>
       </a>
       <a href={`${base}/postulates`} class="sm-link">
         <strong>Structural Postulates</strong>
-        <span>Explicit assumptions beyond the three axioms, with justifications and usage.</span>
+        <span>Explicit assumptions beyond the three axioms, with justifications and derivation status.</span>
       </a>
-      <a href={`${base}/extensions`} class="sm-link">
-        <strong>Extension Targets</strong>
-        <span>Derivation stubs identified from earlier work, ready for future development.</span>
+      <a href={`${base}/open-gaps`} class="sm-link">
+        <strong>Open Gaps</strong>
+        <span>Unresolved questions, limitations, and potential extensions cataloged across all derivations.</span>
       </a>
     </div>
 
@@ -54,6 +70,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '')
       <a href={`${base}/papers-analysis`} class="sm-link">
         <strong>Papers Analysis</strong>
         <span>Analysis of four extension papers and their relationship to the axiom chain.</span>
+      </a>
+      <a href={`${base}/extensions`} class="sm-link">
+        <strong>Extension Targets</strong>
+        <span>Derivation targets identified from the original whitepaper and extension papers.</span>
       </a>
     </div>
 

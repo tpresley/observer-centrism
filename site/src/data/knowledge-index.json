@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-13T23:26:12.908Z",
+    "generatedAt": "2026-03-14T00:18:01.224Z",
     "derivationCount": 60,
     "predictionCount": 10,
     "generator": "scripts/build-index.mjs"
@@ -14,7 +14,7 @@
     "derivationCount": 60,
     "predictionCount": 10,
     "edgeCount": 127,
-    "formalObjectCount": 883,
+    "formalObjectCount": 885,
     "openGapCount": 197,
     "upgradeEligibleCount": 0,
     "leanVerifiedCount": 16,
@@ -418,6 +418,18 @@
           "statementPreview": "The internal dynamics of every observer are cyclic: the state returns to its initial configuration after a finite per..."
         },
         {
+          "type": "Structural Postulate",
+          "id": "S1",
+          "name": "Finite-dimensional manifold with free orbits",
+          "statementPreview": "The state space Sigma of an observer O = (Sigma, I, B) (Axiom 2) is:"
+        },
+        {
+          "type": "Theorem",
+          "id": "0.0",
+          "name": "Smooth structure from S1 and Axiom 3",
+          "statementPreview": "Given S1, Sigma admits a smooth manifold structure, unique up to equivariant diffeomorphism, such that the U(1) actio..."
+        },
+        {
           "type": "Theorem",
           "id": "0.1",
           "name": "Invariant Riemannian metric",
@@ -556,7 +568,12 @@
           "statementPreview": ": phiT(theta) = theta + 2pi = theta, with TO = T. ✓"
         }
       ],
-      "structuralPostulates": [],
+      "structuralPostulates": [
+        {
+          "id": "S1",
+          "name": "Finite-dimensional manifold with free orbits"
+        }
+      ],
       "openGaps": [
         {
           "number": 1,
@@ -581,6 +598,10 @@
           {
             "target": "axioms/observer-definition",
             "context": "Observer Definition"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Holographic Entropy Bound"
           },
           {
             "target": "thermodynamics-ext/fisher-metric",
@@ -5904,6 +5925,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "axioms/loop-closure",
+            "context": "Holographic Entropy Bound"
+          },
           {
             "source": "cosmology/cosmological-constant",
             "context": "Holographic Entropy Bound"
@@ -15346,6 +15371,20 @@
       "id": "3",
       "name": "Loop Closure",
       "fullRef": "axioms/loop-closure:Axiom 3"
+    },
+    {
+      "derivationId": "axioms/loop-closure",
+      "type": "Structural Postulate",
+      "id": "S1",
+      "name": "Finite-dimensional manifold with free orbits",
+      "fullRef": "axioms/loop-closure:Structural Postulate S1"
+    },
+    {
+      "derivationId": "axioms/loop-closure",
+      "type": "Theorem",
+      "id": "0.0",
+      "name": "Smooth structure from S1 and Axiom 3",
+      "fullRef": "axioms/loop-closure:Theorem 0.0"
     },
     {
       "derivationId": "axioms/loop-closure",

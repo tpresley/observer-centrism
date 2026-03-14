@@ -1,0 +1,301 @@
+---
+import MainLayout from '../components/layouts/MainLayout.astro'
+import knowledgeIndex from '../data/knowledge-index.json'
+
+const allFormalObjects = (knowledgeIndex as any).allFormalObjects as Array<{
+  derivationId: string
+  type: string
+  id: string
+  name: string
+  fullRef: string
+}>
+const derivationsMap = (knowledgeIndex as any).derivations as Record<string, {
+  title: string
+  status: string
+  leanVerification?: { hasProofs: boolean; proofCount: number; propositions: string[] }
+}>
+
+// Collect all named theorems
+const namedTheorems = allFormalObjects
+  .filter(o => o.type === 'Theorem' && o.name)
+  .map(t => {
+    const deriv = derivationsMap[t.derivationId]
+    // Check if this specific theorem has Lean verification
+    const leanVerified = deriv?.leanVerification?.hasProofs
+      && deriv.leanVerification.propositions.some(p => p === `Theorem ${t.id}`)
+    return {
+      ...t,
+      derivationTitle: deriv?.title || t.derivationId.split('/').pop() || t.derivationId,
+      derivationStatus: deriv?.status || 'stub',
+      group: t.derivationId.split('/')[0],
+      leanVerified,
+    }
+  })
+
+// Group by derivation domain
+const GROUP_ORDER = [
+  'axioms', 'foundation', 'minimal-observer', 'interactions',
+  'thermodynamics', 'dimensions', 'spacetime', 'quantum',
+  'particles', 'gauge', 'holography', 'flavor',
+  'cosmology', 'thermodynamics-ext',
+]
+
+const GROUP_NAMES: Record<string, string> = {
+  'axioms': 'Axioms',
+  'foundation': 'Foundation',
+  'minimal-observer': 'Minimal Observer',
+  'interactions': 'Interactions',
+  'thermodynamics': 'Thermodynamics',
+  'dimensions': 'Dimensions',
+  'spacetime': 'Spacetime',
+  'quantum': 'Quantum',
+  'particles': 'Particles',
+  'gauge': 'Gauge',
+  'holography': 'Holography',
+  'flavor': 'Flavor',
+  'cosmology': 'Cosmology',
+  'thermodynamics-ext': 'Thermo Extensions',
+}
+
+// Group theorems by domain → derivation
+type TheoremEntry = typeof namedTheorems[number]
+type DerivationBlock = {
+  derivationId: string
+  derivationTitle: string
+  derivationStatus: string
+  theorems: TheoremEntry[]
+}
+
+const groups = new Map<string, DerivationBlock[]>()
+for (const g of GROUP_ORDER) {
+  const groupTheorems = namedTheorems.filter(t => t.group === g)
+  if (groupTheorems.length === 0) continue
+  // Sub-group by derivation
+  const byDeriv = new Map<string, TheoremEntry[]>()
+  for (const t of groupTheorems) {
+    const list = byDeriv.get(t.derivationId) || []
+    list.push(t)
+    byDeriv.set(t.derivationId, list)
+  }
+  const blocks: DerivationBlock[] = [...byDeriv.entries()].map(([id, theorems]) => ({
+    derivationId: id,
+    derivationTitle: theorems[0].derivationTitle,
+    derivationStatus: theorems[0].derivationStatus,
+    theorems,
+  }))
+  groups.set(g, blocks)
+}
+
+// Stats
+const totalNamed = namedTheorems.length
+const totalDerivations = new Set(namedTheorems.map(t => t.derivationId)).size
+const totalGroups = groups.size
+const leanVerifiedCount = namedTheorems.filter(t => t.leanVerified).length
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+
+function statusIcon(status: string) {
+  switch(status) {
+    case 'rigorous': return '●'
+    case 'provisional': return '◐'
+    case 'draft': return '○'
+    case 'stub': return '·'
+    case 'non-viable': return '✗'
+    default: return '·'
+  }
+}
+
+function statusColor(status: string) {
+  switch(status) {
+    case 'rigorous': return 'var(--color-rigorous)'
+    case 'provisional': return 'var(--color-provisional)'
+    case 'draft': return 'var(--color-draft)'
+    case 'stub': return 'var(--color-stub)'
+    case 'non-viable': return 'var(--color-non-viable)'
+    default: return 'var(--color-stub)'
+  }
+}
+---
+
+<MainLayout title="Theorems">
+  <h1>Theorems</h1>
+  <p>
+    The framework's derivations prove <strong>{totalNamed} named theorems</strong> across
+    {totalDerivations} derivations. Each theorem traces back to the three axioms (and any
+    declared <a href={`${base}/postulates`}>structural postulates</a>), with proof steps
+    available on each derivation page.
+  </p>
+
+  <div class="th-summary">
+    <div class="th-stat">
+      <div class="th-stat-value">{totalNamed}</div>
+      <div class="th-stat-label">Named theorems</div>
+    </div>
+    <div class="th-stat">
+      <div class="th-stat-value">{totalDerivations}</div>
+      <div class="th-stat-label">Derivations</div>
+    </div>
+    <div class="th-stat">
+      <div class="th-stat-value">{totalGroups}</div>
+      <div class="th-stat-label">Domain groups</div>
+    </div>
+    {leanVerifiedCount > 0 && (
+      <div class="th-stat th-stat-lean">
+        <div class="th-stat-value">{leanVerifiedCount}</div>
+        <div class="th-stat-label">Lean 4 verified</div>
+      </div>
+    )}
+  </div>
+
+  {[...groups.entries()].map(([groupKey, blocks]) => (
+    <>
+      <h2>{GROUP_NAMES[groupKey] || groupKey}</h2>
+      <div class="th-cards">
+        {blocks.map(block => (
+          <div class="th-card">
+            <div class="th-card-header">
+              <span class="th-status" style={`color: ${statusColor(block.derivationStatus)}`}>
+                {statusIcon(block.derivationStatus)}
+              </span>
+              <a href={`${base}/derivations/${block.derivationId}`} class="th-derivation-title">
+                {block.derivationTitle}
+              </a>
+              <span class="th-theorem-count">
+                {block.theorems.length} theorem{block.theorems.length > 1 ? 's' : ''}
+              </span>
+            </div>
+            <div class="th-theorem-list">
+              {block.theorems.map(t => (
+                <div class="th-theorem">
+                  <span class="th-theorem-badge">Thm {t.id}</span>
+                  <span class="th-theorem-name">{t.name}</span>
+                  {t.leanVerified && (
+                    <span class="th-lean-badge" title="Mechanically verified in Lean 4">Lean 4</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
+  ))}
+</MainLayout>
+
+<style>
+  .th-summary {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+    flex-wrap: wrap;
+  }
+  .th-stat {
+    flex: 1;
+    min-width: 120px;
+    padding: 0.75rem 1rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    text-align: center;
+  }
+  .th-stat-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 0.04em;
+  }
+  .th-stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+  }
+  .th-stat-lean .th-stat-value {
+    color: #3b82f6;
+  }
+  .th-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .th-card {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    background: var(--color-surface);
+  }
+  .th-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .th-status {
+    font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+  .th-derivation-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    flex-grow: 1;
+  }
+  .th-derivation-title:hover {
+    text-decoration: underline;
+  }
+  .th-theorem-count {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.1rem 0.5rem;
+    border-radius: 9999px;
+    background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+    color: var(--color-text-muted);
+    letter-spacing: 0.03em;
+    flex-shrink: 0;
+  }
+  .th-theorem-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .th-theorem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.75rem;
+    background: color-mix(in srgb, var(--color-border) 30%, transparent);
+    border-radius: 6px;
+  }
+  .th-theorem-badge {
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.1rem 0.4rem;
+    border-radius: 9999px;
+    background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+    color: var(--color-accent);
+    letter-spacing: 0.03em;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .th-theorem-name {
+    font-size: 0.85rem;
+    color: var(--color-text);
+    flex-grow: 1;
+  }
+  .th-lean-badge {
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.1rem 0.4rem;
+    border-radius: 9999px;
+    background: color-mix(in srgb, #3b82f6 15%, transparent);
+    color: #3b82f6;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+</style>
