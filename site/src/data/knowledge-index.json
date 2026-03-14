@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-14T07:43:54.577Z",
+    "generatedAt": "2026-03-14T08:38:46.608Z",
     "derivationCount": 60,
     "predictionCount": 10,
     "gaPageCount": 12,
@@ -15502,7 +15502,7 @@
       "id": "einstein-equations",
       "filePath": "site/src/content/geometric-algebra/einstein-equations.md",
       "title": "Einstein Equations in STA Form",
-      "status": "stub",
+      "status": "provisional",
       "gaStructure": "Cl(1,3)",
       "targetDerivation": "spacetime/einstein-equations",
       "priority": "moderate",
@@ -15513,12 +15513,103 @@
         "geometric-algebra"
       ],
       "lastUpdated": "2026-03-13",
-      "formalObjects": [],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Riemann bivector map",
+          "statementPreview": "The *Riemann curvature* R(B) is a linear function from bivectors to bivectors:"
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Symmetries of $\\mathcal{R}$",
+          "statementPreview": "The Riemann bivector map satisfies:"
+        },
+        {
+          "type": "Definition",
+          "id": "2.1",
+          "name": "Ricci extraction",
+          "statementPreview": "The *Ricci function* R(a) is obtained by contracting one argument of the Riemann map:"
+        },
+        {
+          "type": "Definition",
+          "id": "2.2",
+          "name": "Scalar curvature",
+          "statementPreview": "The *Ricci scalar* is the further contraction:"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.3",
+          "name": "Irreducible decomposition",
+          "statementPreview": "The Riemann bivector map decomposes as:"
+        },
+        {
+          "type": "Definition",
+          "id": "3.1",
+          "name": "Einstein function",
+          "statementPreview": "The *Einstein function* G(a) is the vector-valued linear function of vectors:"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Properties of $\\mathcal{G}$",
+          "statementPreview": "- *Symmetry*: a G(b) = b G(a) for all vectors a, b (corresponding to Gmunu = Gnumu)."
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "Bianchi identity as divergence-freedom",
+          "statementPreview": "The Einstein function is covariantly divergence-free:"
+        },
+        {
+          "type": "Theorem",
+          "id": "5.1",
+          "name": "Lovelock uniqueness, STA form",
+          "statementPreview": "In Cl(1,3) (corresponding to 3+1 spacetime dimensions), the most general vector-valued linear function E(a) satisfying:"
+        },
+        {
+          "type": "Theorem",
+          "id": "6.1",
+          "name": "Einstein field equations in STA",
+          "statementPreview": "The self-consistency condition of the coherence geometry is:"
+        },
+        {
+          "type": "Proposition",
+          "id": "6.2",
+          "name": "Conservation compatibility",
+          "statementPreview": "The equation is consistent because both sides are divergence-free:"
+        },
+        {
+          "type": "Proposition",
+          "id": "7.1",
+          "name": "GTG field equations",
+          "statementPreview": "In GTG, the field equations are conditions on the gauge fields underlineh(a) and Omega(a):"
+        },
+        {
+          "type": "Proposition",
+          "id": "7.2",
+          "name": "GTG vs. standard: structural comparison",
+          "statementPreview": "| Feature | Standard GR | STA (covariant) | GTG (flat background) |"
+        },
+        {
+          "type": "Proposition",
+          "id": "8.1",
+          "name": "Self-consistency as a rotor equation",
+          "statementPreview": "The target derivation's Proposition 1.2 describes the self-consistency loop: geometry → geodesics → observer distribu..."
+        },
+        {
+          "type": "Proposition",
+          "id": "8.2",
+          "name": "Vacuum fixed point",
+          "statementPreview": "For T(a) = 0 (vacuum), the field equations reduce to:"
+        }
+      ],
       "openGaps": [],
       "crossReferences": [
         {
           "target": "spacetime/einstein-equations",
-          "context": "Einstein Field Equations as Fixed-Point Conditions"
+          "context": "status: rigorous"
         }
       ]
     },
@@ -15653,23 +15744,132 @@
       "id": "entanglement",
       "filePath": "site/src/content/geometric-algebra/entanglement.md",
       "title": "Entanglement via Rotor Pairs",
-      "status": "stub",
-      "gaStructure": "Cl(3,0) x Cl(3,0)",
+      "status": "provisional",
+      "gaStructure": "Cl(3,0) ⊗ Cl(3,0)",
       "targetDerivation": "quantum/entanglement",
       "priority": "moderate",
-      "summary": "Entangled states as non-factorizable elements in the product Clifford algebra, with no-cloning following from the geometric product structure",
+      "summary": "Entangled states as non-factorizable elements in the product Clifford algebra, with Bell states, spin correlations, no-cloning, and monogamy all expressed through the geometric product structure",
       "tags": [
         "rotors",
         "quantum",
         "geometric-algebra"
       ],
       "lastUpdated": "2026-03-13",
-      "formalObjects": [],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Two-particle Clifford algebra",
+          "statementPreview": "The two-particle algebra is the tensor product"
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Dimension and structure",
+          "statementPreview": "A12 has dimension 8 8 = 64. A basis is given by all products GammaI(1) GammaJ(2) where GammaI ranges over the 8 basis..."
+        },
+        {
+          "type": "Definition",
+          "id": "2.1",
+          "name": "Single-particle spinor ideal",
+          "statementPreview": "Following [Spin-Statistics](/geometric-algebra/spin-statistics) (Proposition 6.1), a spinor for particle a is an elem..."
+        },
+        {
+          "type": "Definition",
+          "id": "2.2",
+          "name": "Two-particle spinor space",
+          "statementPreview": "The two-particle spinor space is the product ideal"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.3",
+          "name": "Rotor action on product states",
+          "statementPreview": "A local rotation on particle a acts by left multiplication with rotor Ra in Spin(3):"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Bell basis in Clifford form",
+          "statementPreview": "The four Bell states, forming a maximally entangled basis for S12, have explicit Clifford representations:"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Singlet state and antisymmetry",
+          "statementPreview": "The singlet |Psi-rangle is the unique state (up to phase) that is antisymmetric under particle exchange and has zero ..."
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "Singlet correlation function",
+          "statementPreview": "For the singlet state |Psi-rangle, the spin correlation between measurements along directions a (particle 1) and b (p..."
+        },
+        {
+          "type": "Corollary",
+          "id": "4.2",
+          "name": "Bell inequality violation",
+          "statementPreview": "The CHSH quantity for the singlet is:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "5.1",
+          "name": "Entanglement criterion in the product algebra",
+          "statementPreview": "A two-particle state Psi in S12 is entangled if and only if its coefficient matrix (the 2 2 matrix C where Psi = sumi..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.2",
+          "name": "Geometric invariant of entanglement",
+          "statementPreview": "The entanglement of Psi is encoded in the scalar part of the \"partial reverse\":*"
+        },
+        {
+          "type": "Theorem",
+          "id": "6.1",
+          "name": "No-cloning in the product algebra",
+          "statementPreview": "There exists no rotor R in Spin(3) Spin(3) (nor any even-grade element preserving the spinor normalization) such that:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "6.2",
+          "name": "Coherence-conservation parallel",
+          "statementPreview": "The no-cloning theorem also follows from the coherence accounting of the target derivation (Theorem 3.1). In Clifford..."
+        },
+        {
+          "type": "Theorem",
+          "id": "7.1",
+          "name": "Monogamy in the three-particle product algebra",
+          "statementPreview": "For three particles in the product algebra A123 = Cl(3,0) 3, the entanglement of particle A with particles B and C sa..."
+        },
+        {
+          "type": "Corollary",
+          "id": "7.2",
+          "name": "CKW inequality for qubits",
+          "statementPreview": "For qubit systems (each particle modeled by Cl(3,0) with its 2-dimensional spinor ideal), the tangle tau = C2 (square..."
+        },
+        {
+          "type": "Definition",
+          "id": "8.1",
+          "name": "Partial reversion",
+          "statementPreview": "For a two-particle state Psi in S12, the *partial reversion over particle 2* is the operation"
+        },
+        {
+          "type": "Proposition",
+          "id": "8.2",
+          "name": "Scalar part as trace",
+          "statementPreview": "The scalar part langle rangle0 of a Clifford algebra element plays the role of the trace:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "8.3",
+          "name": "Entropy from the Clifford spectrum",
+          "statementPreview": "The von Neumann entropy of the reduced density element is:*"
+        }
+      ],
       "openGaps": [],
       "crossReferences": [
         {
           "target": "quantum/entanglement",
-          "context": "Entanglement from Relational Invariants"
+          "context": "status: rigorous"
         }
       ]
     },
@@ -15677,23 +15877,140 @@
       "id": "er-epr",
       "filePath": "site/src/content/geometric-algebra/er-epr.md",
       "title": "ER=EPR via STA Geometry",
-      "status": "stub",
+      "status": "provisional",
       "gaStructure": "Cl(1,3)",
       "targetDerivation": "holography/er-epr",
       "priority": "moderate",
-      "summary": "The ER=EPR duality expressed in Spacetime Algebra, where entanglement (algebraic bivector correlations) maps to wormhole topology (geometric rotor structure)",
+      "summary": "The ER=EPR duality expressed in Spacetime Algebra, where entanglement (algebraic bivector correlations) maps to wormhole topology (geometric rotor structure), with the throat as a minimal bivector surface in GTG",
       "tags": [
         "spacetime-algebra",
         "holography",
         "geometric-algebra"
       ],
       "lastUpdated": "2026-03-13",
-      "formalObjects": [],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Wormhole in GTG",
+          "statementPreview": "In Gauge Theory Gravity ([Gravity in STA](/geometric-algebra/gravity)), spacetime is flat Cl(1,3), and gravity is enc..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Eternal Schwarzschild bridge in STA",
+          "statementPreview": "The maximally extended Schwarzschild geometry — the simplest Einstein-Rosen bridge — has the Gullstrand-Painlevé form..."
+        },
+        {
+          "type": "Definition",
+          "id": "2.1",
+          "name": "Directed surface element in STA",
+          "statementPreview": "A 2-surface Sigma embedded in spacetime has a directed surface element — a bivector — at each point:"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "Physical area in GTG",
+          "statementPreview": "In GTG, the physical surface element is obtained by applying the position gauge:*"
+        },
+        {
+          "type": "Definition",
+          "id": "3.1",
+          "name": "Minimal surface in STA",
+          "statementPreview": "A spacelike 2-surface Sigmamin in the wormhole geometry is a **minimal surface** (throat) if it extremizes the area f..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Extrinsic curvature in STA",
+          "statementPreview": "The extrinsic curvature of Sigma is encoded in the rotation gauge. For a unit normal n to Sigma, the extrinsic curvat..."
+        },
+        {
+          "type": "Theorem",
+          "id": "3.3",
+          "name": "Throat area formula in STA",
+          "statementPreview": "For the wormhole associated with a relational invariant I12 (target derivation, Theorem 3.2), the throat is the minim..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Causal classification in STA",
+          "statementPreview": "In Cl(1,3), the causal character of a vector v is determined by its square:"
+        },
+        {
+          "type": "Theorem",
+          "id": "4.2",
+          "name": "Horizon as causal boundary in GTG",
+          "statementPreview": "At the wormhole horizon, the position gauge transforms the coordinate timelike direction into a null direction:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "4.3",
+          "name": "Non-traversability from area-coherence saturation",
+          "statementPreview": "The Einstein-Rosen bridge associated with a relational invariant I12 is non-traversable: no independent causal signal..."
+        },
+        {
+          "type": "Theorem",
+          "id": "5.1",
+          "name": "Dual bivector descriptions",
+          "statementPreview": "The ER=EPR correspondence maps algebraic structure in the product Clifford algebra to geometric structure in Spacetim..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.2",
+          "name": "Bivector content determines both sides",
+          "statementPreview": "The entanglement entropy (EPR) and the throat area (ER) are both functions of the grade-2 content of the relational i..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Monogamy → topology constraints in STA",
+          "statementPreview": "Entanglement monogamy ([Entanglement](/derivations/quantum/entanglement), Theorem 4.1) translates to constraints on w..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.2",
+          "name": "GHZ state → three-boundary wormhole",
+          "statementPreview": "The GHZ state |GHZrangle = 12(|000rangle + |111rangle), which has vanishing pairwise tangle tau(A:B) = tau(A:C) = 0 b..."
+        },
+        {
+          "type": "Definition",
+          "id": "7.1",
+          "name": "Thermofield double in STA",
+          "statementPreview": "The thermofield double (TFD) state"
+        },
+        {
+          "type": "Proposition",
+          "id": "7.2",
+          "name": "Surface gravity from the rotation gauge",
+          "statementPreview": "The temperature of the TFD/black hole is determined by the surface gravity kappa at the horizon, which in GTG is extr..."
+        },
+        {
+          "type": "Proposition",
+          "id": "7.3",
+          "name": "Bekenstein-Hawking from ER=EPR",
+          "statementPreview": "The thermal entropy of the TFD equals the Bekenstein-Hawking entropy:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "8.1",
+          "name": "ER=EPR in GA language",
+          "statementPreview": "The exact correspondence between the EPR and ER descriptions of a relational invariant I12 (target derivation, Theore..."
+        }
+      ],
       "openGaps": [],
       "crossReferences": [
         {
           "target": "holography/er-epr",
-          "context": "ER=EPR from Relational Invariants"
+          "context": "status: rigorous"
+        },
+        {
+          "target": "holography/causal-set-statistics",
+          "context": "Causal Set Statistics"
+        },
+        {
+          "target": "quantum/entanglement",
+          "context": "Entanglement"
         }
       ]
     },
@@ -16113,7 +16430,7 @@
       "id": "weak-interaction",
       "filePath": "site/src/content/geometric-algebra/weak-interaction.md",
       "title": "Weak Interaction via H = Cl+(3,0)",
-      "status": "stub",
+      "status": "provisional",
       "gaStructure": "Cl+(3,0)",
       "targetDerivation": "gauge/weak-interaction",
       "priority": "high",
@@ -16124,7 +16441,92 @@
         "geometric-algebra"
       ],
       "lastUpdated": "2026-03-13",
-      "formalObjects": [],
+      "formalObjects": [
+        {
+          "type": "Theorem",
+          "id": "1.1",
+          "name": "Quaternion-bivector correspondence",
+          "statementPreview": "The even subalgebra Cl+(3,0) is isomorphic to the quaternion algebra H via the map:"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "Unit quaternions = rotors",
+          "statementPreview": "The group of unit quaternions q in H : |q| = 1 cong SU(2) is precisely the rotor group of Cl(3,0):"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "Isospin rotation as rotor",
+          "statementPreview": "A weak isospin rotation by angle theta about isospin direction n = (n1, n2, n3) is the rotor:"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Self-interaction from non-commutativity",
+          "statementPreview": "The target derivation's Proposition 4.3 shows that the weak gauge bosons self-interact because quaternions are non-co..."
+        },
+        {
+          "type": "Definition",
+          "id": "4.1",
+          "name": "Bivector-valued gauge potential",
+          "statementPreview": "The SU(2) gauge potential, in Cl+(3,0) language, is a bivector-valued 1-form:"
+        },
+        {
+          "type": "Definition",
+          "id": "4.2",
+          "name": "Gauge-covariant derivative",
+          "statementPreview": "The covariant derivative acting on an isospin doublet psi is:"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.3",
+          "name": "Gauge transformation",
+          "statementPreview": "Under a local isospin rotation psi R(x)psi, the gauge potential transforms as:"
+        },
+        {
+          "type": "Definition",
+          "id": "5.1",
+          "name": "Weak field strength in Clifford form",
+          "statementPreview": "The gauge field strength is the bivector-valued 2-form:"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.2",
+          "name": "Gauge covariance",
+          "statementPreview": "Under R(x):"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.3",
+          "name": "Yang-Mills Lagrangian in Clifford form",
+          "statementPreview": "The gauge-invariant Yang-Mills Lagrangian is:"
+        },
+        {
+          "type": "Theorem",
+          "id": "6.1",
+          "name": "Cayley-Dickson = Clifford dimension increase",
+          "statementPreview": "The target derivation's Corollary 2.2 shows the gauge hierarchy arising from Cayley-Dickson doubling: R C H O. In Cli..."
+        },
+        {
+          "type": "Proposition",
+          "id": "7.2",
+          "name": "Weinberg mixing as bivector rotation",
+          "statementPreview": "The electroweak mixing between Wmu3 (coupled to e12) and Bmu (coupled to BY) defines the physical Z and gamma bosons...."
+        },
+        {
+          "type": "Proposition",
+          "id": "8.1",
+          "name": "Wilson loop in Clifford language",
+          "statementPreview": "The target derivation's Proposition 3.2a introduces Wilson loops as the gauge-invariant observables. In Cl+(3,0), the..."
+        },
+        {
+          "type": "Proposition",
+          "id": "8.2",
+          "name": "Gauge-invariant observable",
+          "statementPreview": "The trace tr(Rgamma) = 2Re(Rgamma) = 2langle Rgammarangle0 (the scalar part of the rotor) is gauge-invariant. For a r..."
+        }
+      ],
       "openGaps": [],
       "crossReferences": [
         {
@@ -16137,8 +16539,7 @@
   "gaStats": {
     "pageCount": 12,
     "byStatus": {
-      "provisional": 7,
-      "stub": 4,
+      "provisional": 11,
       "draft": 1
     },
     "byPriority": {
