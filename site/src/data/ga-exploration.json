@@ -2,9 +2,9 @@
   "_meta": {
     "description": "Tracking artifact for Geometric Algebra exploration of Observer-Centrism derivations",
     "created": "2026-03-13",
-    "lastUpdated": "2026-03-13",
+    "lastUpdated": "2026-03-14",
     "assessmentRound": 1,
-    "assessmentNotes": "Post-upgrade assessment: all 11 candidates upgraded from stub to provisional. Electromagnetism, lorentz-invariance, spin-statistics, and cpt-theorem upgraded to rigorous (Rounds 1-4). Working-note comments fixed across spin-statistics, cpt-theorem, weak-interaction, chirality-selection. Sign error fixed in lorentz-invariance Proposition 4.1 proof. Sign error fixed in spin-statistics Theorem 3.1 kernel proof. Logical inconsistency fixed in spin-statistics Theorem 5.2. Round 4 (cpt-theorem): fixed e₁₂₃²=−1→+1 error in Definition 2.1, extra minus in Proposition 3.1 PT formula, two working-note self-corrections (Propositions 2.2 and 4.2), sloppy intermediate step in Proposition 1.2."
+    "assessmentNotes": "Post-upgrade assessment: all 11 candidates upgraded from stub to provisional. Electromagnetism, lorentz-invariance, spin-statistics, and cpt-theorem upgraded to rigorous (Rounds 1-4). Working-note comments fixed across spin-statistics, cpt-theorem, weak-interaction, chirality-selection. Sign error fixed in lorentz-invariance Proposition 4.1 proof. Sign error fixed in spin-statistics Theorem 3.1 kernel proof. Logical inconsistency fixed in spin-statistics Theorem 5.2. Round 4 (cpt-theorem): fixed e\u2081\u2082\u2083\u00b2=\u22121\u2192+1 error in Definition 2.1, extra minus in Proposition 3.1 PT formula, two working-note self-corrections (Propositions 2.2 and 4.2), sloppy intermediate step in Proposition 1.2. Round 5 (chirality-selection): fixed self-dual eigenvalue convention (IB=+iB not -iB for self-dual), swapped L/R labels on chirality conditions in Prop 3.2, fixed Definition 1.2 projectors (stated correct form upfront), tightened Prop 6.2 proof with centrality argument and explicit N_k^+ P_R = 0 computation, fixed Hodge dual sign in Remark after Prop 2.2."
   },
   "candidates": [
     {
@@ -16,52 +16,62 @@
       "status": "rigorous",
       "steps": 9,
       "group": "STA Core",
-      "rationale": "STA was designed for this. Rotors unify boosts and rotations into a single algebraic object — both are elements of the even subalgebra differing only in the grade-2 element used.",
+      "rationale": "STA was designed for this. Rotors unify boosts and rotations into a single algebraic object \u2014 both are elements of the even subalgebra differing only in the grade-2 element used.",
       "assessment": {
         "valueRating": "highest",
         "genuineInsights": [
-          "Boosts and rotations unified as exp(-Bθ/2) — only the bivector B differs (timelike vs spacelike)",
-          "Thomas precession automatic: composition of boosts e₀₂ and e₀₁ contains spatial rotation e₁₂ as algebraic necessity",
+          "Boosts and rotations unified as exp(-B\u03b8/2) \u2014 only the bivector B differs (timelike vs spacelike)",
+          "Thomas precession automatic: composition of boosts e\u2080\u2082 and e\u2080\u2081 contains spatial rotation e\u2081\u2082 as algebraic necessity",
           "Double cover intrinsic: R and -R give same transformation, no need for separate SU(2) construction",
-          "Loop closure parallel: rotor periodicity R(4π) = +1 mirrors the observer loop axiom"
+          "Loop closure parallel: rotor periodicity R(4\u03c0) = +1 mirrors the observer loop axiom"
         ],
         "limitations": [
           "Time dilation and length contraction derivations not computationally shorter",
-          "Physical predictions identical — no new testable content"
+          "Physical predictions identical \u2014 no new testable content"
         ],
-        "additionalPromise": "Foundational for 6+ other GA pages. Best candidate for rigorous upgrade — all results are standard STA (Hestenes, Doran-Lasenby). Step 9 (Poincaré group via translations) could connect to gauge theory gravity. The rotor periodicity ↔ loop closure parallel is unique to this framework.",
+        "additionalPromise": "Foundational for 6+ other GA pages. Best candidate for rigorous upgrade \u2014 all results are standard STA (Hestenes, Doran-Lasenby). Step 9 (Poincar\u00e9 group via translations) could connect to gauge theory gravity. The rotor periodicity \u2194 loop closure parallel is unique to this framework.",
         "rigorousUpgradeReadiness": "high",
-        "crossReferences": ["cpt-theorem", "electromagnetism", "gravity", "einstein-equations", "chirality-selection", "er-epr"]
+        "crossReferences": [
+          "cpt-theorem",
+          "electromagnetism",
+          "gravity",
+          "einstein-equations",
+          "chirality-selection",
+          "er-epr"
+        ]
       },
       "existingGAReferences": []
     },
     {
       "id": "electromagnetism",
-      "title": "Maxwell Equations as ∇F = J",
+      "title": "Maxwell Equations as \u2207F = J",
       "priority": "high",
       "targetDerivation": "gauge/electromagnetism",
       "gaStructure": "Cl(1,3)",
       "status": "rigorous",
       "steps": 9,
       "group": "STA Core",
-      "rationale": "The electromagnetic field F = E + IB is a bivector in STA. Maxwell's four equations compress to a single equation ∇F = J. Charge quantization maps to quantized bivector rotations.",
+      "rationale": "The electromagnetic field F = E + IB is a bivector in STA. Maxwell's four equations compress to a single equation \u2207F = J. Charge quantization maps to quantized bivector rotations.",
       "assessment": {
         "valueRating": "highest",
         "genuineInsights": [
-          "Four Maxwell equations → one: ∇F = J, with ∇·F = J (grade-1) and ∇∧F = 0 (grade-3) automatic",
-          "Charge conservation as grade consistency: ∇·J = 0 follows from ∇²F having no grade-0 part",
-          "Uniqueness argument in one line: ∇F = J with F = ∇∧A forces Maxwell structure",
-          "Electromagnetic duality = multiplication by pseudoscalar I: F → IF swaps E and B",
-          "Magnetic monopole exclusion from gauge structure: F = ∇∧A forces ∇∧F = 0"
+          "Four Maxwell equations \u2192 one: \u2207F = J, with \u2207\u00b7F = J (grade-1) and \u2207\u2227F = 0 (grade-3) automatic",
+          "Charge conservation as grade consistency: \u2207\u00b7J = 0 follows from \u2207\u00b2F having no grade-0 part",
+          "Uniqueness argument in one line: \u2207F = J with F = \u2207\u2227A forces Maxwell structure",
+          "Electromagnetic duality = multiplication by pseudoscalar I: F \u2192 IF swaps E and B",
+          "Magnetic monopole exclusion from gauge structure: F = \u2207\u2227A forces \u2207\u2227F = 0"
         ],
         "limitations": [
           "No new physics beyond standard Maxwell theory",
           "Coupling constant e still requires separate derivation",
           "Wave solutions not computationally shorter"
         ],
-        "additionalPromise": "Most pedagogically powerful GA page. The ∇F = J compression is the single most compelling GA result. Could serve as the showcase example for the overview page. All results are textbook STA — very ready for rigorous upgrade.",
+        "additionalPromise": "Most pedagogically powerful GA page. The \u2207F = J compression is the single most compelling GA result. Could serve as the showcase example for the overview page. All results are textbook STA \u2014 very ready for rigorous upgrade.",
         "rigorousUpgradeReadiness": "high",
-        "crossReferences": ["lorentz-invariance", "chirality-selection"]
+        "crossReferences": [
+          "lorentz-invariance",
+          "chirality-selection"
+        ]
       },
       "existingGAReferences": []
     },
@@ -74,24 +84,28 @@
       "status": "rigorous",
       "steps": 8,
       "group": "STA Core",
-      "rationale": "P, T, C map to specific Cl(1,3) operations. CPT becomes a single algebraic element (the pseudoscalar I = e₀₁₂₃) whose commutativity with even-grade elements is immediate.",
+      "rationale": "P, T, C map to specific Cl(1,3) operations. CPT becomes a single algebraic element (the pseudoscalar I = e\u2080\u2081\u2082\u2083) whose commutativity with even-grade elements is immediate.",
       "assessment": {
         "valueRating": "highest",
         "genuineInsights": [
-          "CPT = pseudoscalar I = e₀₁₂₃: the combined operation is a single algebraic object",
+          "CPT = pseudoscalar I = e\u2080\u2081\u2082\u2083: the combined operation is a single algebraic object",
           "CPT invariance = I commutes with all even-grade physics (one line proof)",
-          "Violation pattern: P(I) = -I in odd dimensions → parity violation is the pseudoscalar being odd-grade",
+          "Violation pattern: P(I) = -I in odd dimensions \u2192 parity violation is the pseudoscalar being odd-grade",
           "Pseudoscalar's triple role unified: oriented volume element, PT operator, and chirality operator are the same object",
-          "Spin-statistics-CPT connection via even subalgebra: CPT preserving Cl⁺(1,3) links to spin-statistics"
+          "Spin-statistics-CPT connection via even subalgebra: CPT preserving Cl\u207a(1,3) links to spin-statistics"
         ],
         "limitations": [
           "Charge conjugation (C) construction not simpler than standard approach",
-          "Full Jost-Lüders-Pauli theorem still needed for rigorous completeness",
+          "Full Jost-L\u00fcders-Pauli theorem still needed for rigorous completeness",
           "Individual C, P, T violations require additional structure beyond I"
         ],
         "additionalPromise": "The pseudoscalar as CPT is a genuine conceptual unification. The connection to chirality-selection (same object I appears in both) creates the strongest cross-page link in the GA section. Could yield a unified CPT-chirality page at rigorous level.",
         "rigorousUpgradeReadiness": "moderate-high",
-        "crossReferences": ["chirality-selection", "spin-statistics", "lorentz-invariance"]
+        "crossReferences": [
+          "chirality-selection",
+          "spin-statistics",
+          "lorentz-invariance"
+        ]
       },
       "existingGAReferences": []
     },
@@ -101,18 +115,18 @@
       "priority": "high",
       "targetDerivation": "gauge/chirality-selection",
       "gaStructure": "Cl(1,3)",
-      "status": "provisional",
+      "status": "rigorous",
       "steps": 8,
       "group": "Rotors & Topology",
-      "rationale": "GA makes chirality explicit through grade structure. Left/right projectors (1 ± γ₅)/2 become (1 ± I)/2 where I is the pseudoscalar. Chirality selection is grade-projection selection.",
+      "rationale": "GA makes chirality explicit through grade structure. Left/right projectors (1 \u00b1 \u03b3\u2085)/2 become (1 \u00b1 I)/2 where I is the pseudoscalar. Chirality selection is grade-projection selection.",
       "assessment": {
         "valueRating": "highest",
         "genuineInsights": [
           "Chirality from one object: the pseudoscalar I defines the chiral split",
-          "Parity violation in one line: P(I) = -I, so parity maps left ↔ right projectors",
+          "Parity violation in one line: P(I) = -I, so parity maps left \u2194 right projectors",
           "Mass-chirality connection: Dirac mass term mixes left and right = mixes I eigenspaces",
           "Grade structure pattern across gauge hierarchy: U(1) grade-0, SU(2) grade-1 (bivectors), SU(3) grade-2",
-          "d = 3+1 minimality: the only dimension where I² = -1 (needed for projectors) AND non-abelian gauge groups exist"
+          "d = 3+1 minimality: the only dimension where I\u00b2 = -1 (needed for projectors) AND non-abelian gauge groups exist"
         ],
         "limitations": [
           "Quaternionic orientation argument from target derivation still needed",
@@ -121,7 +135,12 @@
         ],
         "additionalPromise": "The d = 3+1 minimality result (Step 8) is potentially the most framework-relevant GA insight: it provides a dimensional selection argument from Clifford algebra structure alone. Combined with CPT page (same pseudoscalar), these two pages together make a strong case for GA's structural value. The grade pattern across the gauge hierarchy deserves deeper exploration.",
         "rigorousUpgradeReadiness": "moderate-high",
-        "crossReferences": ["cpt-theorem", "weak-interaction", "division-algebras", "lorentz-invariance"]
+        "crossReferences": [
+          "cpt-theorem",
+          "weak-interaction",
+          "division-algebras",
+          "lorentz-invariance"
+        ]
       },
       "existingGAReferences": []
     },
@@ -134,14 +153,14 @@
       "status": "provisional",
       "steps": 9,
       "group": "Algebra Bridge",
-      "rationale": "GA explains why the associativity ceiling terminates at O. The isomorphism C⊗O ≅ Cl(6) is already referenced in anomaly-cancellation and standard-model-group. The Cayley-Dickson construction parallels Clifford doubling but diverges at step 4.",
+      "rationale": "GA explains why the associativity ceiling terminates at O. The isomorphism C\u2297O \u2245 Cl(6) is already referenced in anomaly-cancellation and standard-model-group. The Cayley-Dickson construction parallels Clifford doubling but diverges at step 4.",
       "assessment": {
         "valueRating": "highest",
         "genuineInsights": [
-          "Associativity relocation: octonion non-associativity → grade-3 associator elements of Cl(6), making it tractable",
-          "C⊗O ≅ Cl(6) with physical motivation for complexification (quantum mechanics requires C)",
+          "Associativity relocation: octonion non-associativity \u2192 grade-3 associator elements of Cl(6), making it tractable",
+          "C\u2297O \u2245 Cl(6) with physical motivation for complexification (quantum mechanics requires C)",
           "Fermion quantum numbers emerge from Cl(6) grading structure",
-          "Dual termination mechanisms: Cayley-Dickson loses associativity, Clifford loses division — same wall, two perspectives",
+          "Dual termination mechanisms: Cayley-Dickson loses associativity, Clifford loses division \u2014 same wall, two perspectives",
           "Partial resolution of bootstrap Gap 4: Clifford associativity explains why the gauge hierarchy terminates"
         ],
         "limitations": [
@@ -149,13 +168,16 @@
           "Three generations still unexplained by Cl(6) alone",
           "Full Clifford-to-Standard-Model functor not constructed"
         ],
-        "additionalPromise": "The most structurally novel page — it directly addresses an open gap in the core derivation chain (bootstrap Gap 4). The associativity relocation idea (non-associativity becomes grade-3 structure in an associative algebra) is a genuine mathematical insight that could strengthen the bootstrap derivation itself. This page has the highest potential to feed back into the main derivation chain.",
+        "additionalPromise": "The most structurally novel page \u2014 it directly addresses an open gap in the core derivation chain (bootstrap Gap 4). The associativity relocation idea (non-associativity becomes grade-3 structure in an associative algebra) is a genuine mathematical insight that could strengthen the bootstrap derivation itself. This page has the highest potential to feed back into the main derivation chain.",
         "rigorousUpgradeReadiness": "moderate",
-        "crossReferences": ["weak-interaction", "chirality-selection"]
+        "crossReferences": [
+          "weak-interaction",
+          "chirality-selection"
+        ]
       },
       "existingGAReferences": [
-        "gauge/anomaly-cancellation (line 150): C⊗O = Cl(6)",
-        "gauge/standard-model-group (line 136): Cl(6) has natural U(1) × SU(3) action",
+        "gauge/anomaly-cancellation (line 150): C\u2297O = Cl(6)",
+        "gauge/standard-model-group (line 136): Cl(6) has natural U(1) \u00d7 SU(3) action",
         "interactions/bootstrap-division-algebras (line 215): Open gap on Clifford algebras"
       ]
     },
@@ -168,55 +190,63 @@
       "status": "rigorous",
       "steps": 8,
       "group": "Rotors & Topology",
-      "rationale": "SU(2)/SO(3) double cover is transparent via Cl(3,0) rotors. The existing derivation uses π₁(SO(3)) = ℤ₂ and SU(2) representation theory; GA makes rotors and the double cover algebraically explicit.",
+      "rationale": "SU(2)/SO(3) double cover is transparent via Cl(3,0) rotors. The existing derivation uses \u03c0\u2081(SO(3)) = \u2124\u2082 and SU(2) representation theory; GA makes rotors and the double cover algebraically explicit.",
       "assessment": {
         "valueRating": "strong",
         "genuineInsights": [
-          "SU(2) is built into Cl⁺(3,0): no separate construction needed",
-          "2π sign flip in one line: exp(-Bπ) = -1 for any unit bivector B",
-          "Particle exchange is B² = -1: the exchange operator squares to -1 for half-integer spin",
+          "SU(2) is built into Cl\u207a(3,0): no separate construction needed",
+          "2\u03c0 sign flip in one line: exp(-B\u03c0) = -1 for any unit bivector B",
+          "Particle exchange is B\u00b2 = -1: the exchange operator squares to -1 for half-integer spin",
           "Single-sided vs double-sided rotor action distinguishes spinors from vectors",
           "Dimension dependence from bivector counting: n(n-1)/2 bivectors in Cl(n,0)",
-          "Spinors as minimal left ideals — no matrix representation needed"
+          "Spinors as minimal left ideals \u2014 no matrix representation needed"
         ],
         "limitations": [
-          "Topological argument (π₁(SO(3)) = ℤ₂) still required for the connection to statistics",
+          "Topological argument (\u03c0\u2081(SO(3)) = \u2124\u2082) still required for the connection to statistics",
           "Structural postulate S1 unchanged by GA treatment",
           "Berry phase argument not computationally simpler"
         ],
-        "additionalPromise": "Strong pedagogical value. The spinors-as-ideals construction is well-established in GA literature. Ready for rigorous upgrade — all results are standard Clifford algebra theory. Foundation for entanglement page.",
+        "additionalPromise": "Strong pedagogical value. The spinors-as-ideals construction is well-established in GA literature. Ready for rigorous upgrade \u2014 all results are standard Clifford algebra theory. Foundation for entanglement page.",
         "rigorousUpgradeReadiness": "high",
-        "crossReferences": ["weak-interaction", "entanglement", "cpt-theorem"]
+        "crossReferences": [
+          "weak-interaction",
+          "entanglement",
+          "cpt-theorem"
+        ]
       },
       "existingGAReferences": []
     },
     {
       "id": "weak-interaction",
-      "title": "Weak Interaction via H ≅ Cl⁺(3,0)",
+      "title": "Weak Interaction via H \u2245 Cl\u207a(3,0)",
       "priority": "high",
       "targetDerivation": "gauge/weak-interaction",
       "gaStructure": "Cl+(3,0)",
       "status": "provisional",
       "steps": 8,
       "group": "Rotors & Topology",
-      "rationale": "The quaternion algebra H is isomorphic to Cl⁺(3,0). The three imaginary units I, J, K correspond to bivectors e₂₃, e₃₁, e₁₂. SU(2) gauge transformations are rotor transformations in the even subalgebra.",
+      "rationale": "The quaternion algebra H is isomorphic to Cl\u207a(3,0). The three imaginary units I, J, K correspond to bivectors e\u2082\u2083, e\u2083\u2081, e\u2081\u2082. SU(2) gauge transformations are rotor transformations in the even subalgebra.",
       "assessment": {
         "valueRating": "strong",
         "genuineInsights": [
-          "H ≅ Cl⁺(3,0) makes quaternions concrete: {i,j,k} → {e₂₃, e₃₁, e₁₂}",
-          "Gauge transformations are rotor conjugation: ψ → RψR̃",
+          "H \u2245 Cl\u207a(3,0) makes quaternions concrete: {i,j,k} \u2192 {e\u2082\u2083, e\u2083\u2081, e\u2081\u2082}",
+          "Gauge transformations are rotor conjugation: \u03c8 \u2192 R\u03c8R\u0303",
           "Self-interaction from one product: the geometric product of different bivectors is non-commutative, forcing non-abelian structure",
-          "Bootstrap doubling = adding a dimension: R → C → H corresponds to Cl(0) → Cl(1) → Cl⁺(3,0)",
-          "Weak interaction and spin share the same algebra — deep structural connection"
+          "Bootstrap doubling = adding a dimension: R \u2192 C \u2192 H corresponds to Cl(0) \u2192 Cl(1) \u2192 Cl\u207a(3,0)",
+          "Weak interaction and spin share the same algebra \u2014 deep structural connection"
         ],
         "limitations": [
-          "Localization argument (S1 → global → local gauge) unchanged",
+          "Localization argument (S1 \u2192 global \u2192 local gauge) unchanged",
           "Yang-Mills uniqueness argument unchanged",
           "Parity violation still requires chirality argument (separate page)"
         ],
-        "additionalPromise": "The doubling-as-dimension-extension insight connects to division-algebras page. The shared-algebra observation (weak = spin) deserves deeper exploration — could this constrain the weak coupling? Moderate promise for framework feedback. Rigorous upgrade feasible with standard results.",
+        "additionalPromise": "The doubling-as-dimension-extension insight connects to division-algebras page. The shared-algebra observation (weak = spin) deserves deeper exploration \u2014 could this constrain the weak coupling? Moderate promise for framework feedback. Rigorous upgrade feasible with standard results.",
         "rigorousUpgradeReadiness": "moderate-high",
-        "crossReferences": ["spin-statistics", "chirality-selection", "division-algebras"]
+        "crossReferences": [
+          "spin-statistics",
+          "chirality-selection",
+          "division-algebras"
+        ]
       },
       "existingGAReferences": []
     },
@@ -233,12 +263,12 @@
       "assessment": {
         "valueRating": "strong",
         "genuineInsights": [
-          "Geodesic equation simplification: second-order → first-order rotor equation dR/dτ = ½Ω(v)R",
-          "Curvature as bivector-valued function R(B) — linear map on bivectors, not rank-4 tensor",
+          "Geodesic equation simplification: second-order \u2192 first-order rotor equation dR/d\u03c4 = \u00bd\u03a9(v)R",
+          "Curvature as bivector-valued function R(B) \u2014 linear map on bivectors, not rank-4 tensor",
           "Equivalence principle = gauge invariance: position gauge (diffeomorphisms) + rotation gauge (local Lorentz)",
           "Gravity as gauge theory on flat STA: no curved manifold needed, matches framework ontology",
           "Natural horizon regularity: STA is flat, so horizon is a coordinate feature, not a singularity of the algebra",
-          "Clean separation of metric (h-function) and connection (Ω-function)"
+          "Clean separation of metric (h-function) and connection (\u03a9-function)"
         ],
         "limitations": [
           "Schwarzschild solution computation not shorter than standard",
@@ -247,7 +277,11 @@
         ],
         "additionalPromise": "The flat-background ontology strongly aligns with the framework's causal-set-on-Minkowski picture. The GTG formalism is mature (Doran-Lasenby 2003) and well-suited for rigorous treatment. Foundation for einstein-equations and er-epr pages.",
         "rigorousUpgradeReadiness": "moderate-high",
-        "crossReferences": ["einstein-equations", "er-epr", "lorentz-invariance"]
+        "crossReferences": [
+          "einstein-equations",
+          "er-epr",
+          "lorentz-invariance"
+        ]
       },
       "existingGAReferences": []
     },
@@ -260,24 +294,27 @@
       "status": "provisional",
       "steps": 8,
       "group": "Applications",
-      "rationale": "The Riemann tensor as a bivector-to-bivector mapping; Einstein equations as G(a) = κT(a) where G and T are linear functions on vectors. Lovelock uniqueness restated in GA language.",
+      "rationale": "The Riemann tensor as a bivector-to-bivector mapping; Einstein equations as G(a) = \u03baT(a) where G and T are linear functions on vectors. Lovelock uniqueness restated in GA language.",
       "assessment": {
         "valueRating": "moderate",
         "genuineInsights": [
           "Complete index elimination: Riemann tensor R(B), Ricci R(a), scalar R are all functions, not index arrays",
-          "Riemann as linear map on bivectors: R: ⋀²→⋀² makes symmetries obvious",
-          "Bianchi identity from one operation: ∂_a ∧ R(a∧b) = 0",
+          "Riemann as linear map on bivectors: R: \u22c0\u00b2\u2192\u22c0\u00b2 makes symmetries obvious",
+          "Bianchi identity from one operation: \u2202_a \u2227 R(a\u2227b) = 0",
           "Curvature decomposition (Weyl + Ricci + scalar) is linear algebra on bivector space",
-          "Fixed-point loop: rotor self-consistency equation (R determines Ω determines R) mirrors coherence loop"
+          "Fixed-point loop: rotor self-consistency equation (R determines \u03a9 determines R) mirrors coherence loop"
         ],
         "limitations": [
           "Lovelock theorem same complexity as standard proof",
           "Newtonian limit derivation equivalent effort",
           "No computational advantage for solution-finding"
         ],
-        "additionalPromise": "Lowest independent value of the STA pages — mostly notational improvement over standard GR. However, the fixed-point loop insight (Step 8) connecting to the framework's coherence loop is genuinely novel and framework-specific. Best treated as a companion to the gravity page rather than standalone.",
+        "additionalPromise": "Lowest independent value of the STA pages \u2014 mostly notational improvement over standard GR. However, the fixed-point loop insight (Step 8) connecting to the framework's coherence loop is genuinely novel and framework-specific. Best treated as a companion to the gravity page rather than standalone.",
         "rigorousUpgradeReadiness": "moderate",
-        "crossReferences": ["gravity", "lorentz-invariance"]
+        "crossReferences": [
+          "gravity",
+          "lorentz-invariance"
+        ]
       },
       "existingGAReferences": []
     },
@@ -286,7 +323,7 @@
       "title": "Entanglement via Rotor Pairs",
       "priority": "moderate",
       "targetDerivation": "quantum/entanglement",
-      "gaStructure": "Cl(3,0) ⊗ Cl(3,0)",
+      "gaStructure": "Cl(3,0) \u2297 Cl(3,0)",
       "status": "provisional",
       "steps": 8,
       "group": "Applications",
@@ -295,21 +332,24 @@
         "valueRating": "moderate",
         "genuineInsights": [
           "Bell states as explicit Clifford product-ideal elements: concrete algebraic objects, not abstract kets",
-          "Spin correlations from geometric product: E(â,b̂) = -â·b̂ as scalar part of rotor product",
+          "Spin correlations from geometric product: E(\u00e2,b\u0302) = -\u00e2\u00b7b\u0302 as scalar part of rotor product",
           "Non-factorizability is algebraic rank: entanglement = rank > 1 in product algebra",
           "Partial reversion replaces partial trace: grade-selective reversion on one factor",
           "Monogamy as finite bivector budget: 3 bivectors in Cl(3,0) constrains sharing",
-          "No-cloning from linearity vs quadraticity: cloning would need f(αψ) = αf(ψ) but clone map is quadratic"
+          "No-cloning from linearity vs quadraticity: cloning would need f(\u03b1\u03c8) = \u03b1f(\u03c8) but clone map is quadratic"
         ],
         "limitations": [
           "No new entropy measure: Shannon-Khinchin axioms force von Neumann form regardless of algebra",
           "No-cloning proof not simpler than standard (linearity argument is the same)",
-          "Product algebra formalism less common in GA literature — fewer established results to draw on",
+          "Product algebra formalism less common in GA literature \u2014 fewer established results to draw on",
           "CHSH/Tsirelson bounds same derivation effort"
         ],
         "additionalPromise": "The bivector budget picture for monogamy is the most original contribution. Could connect to the ER=EPR page (shared bivectors = shared geometry). The product algebra formalism is less developed in the GA literature, so there's room for genuinely new mathematical results, but also more risk of unstable foundations.",
         "rigorousUpgradeReadiness": "moderate-low",
-        "crossReferences": ["spin-statistics", "er-epr"]
+        "crossReferences": [
+          "spin-statistics",
+          "er-epr"
+        ]
       },
       "existingGAReferences": []
     },
@@ -327,64 +367,119 @@
         "valueRating": "moderate",
         "genuineInsights": [
           "Wormholes on flat background: GTG places ER bridges in flat STA, avoiding manifold topology change",
-          "Throat as minimal bivector surface: area = ∫|h̲⁻¹(dS)| with orientation from bivector direction",
-          "Horizon from position gauge: (h̲⁻¹(e₀))² = 0 at r = 2M — coordinate time becomes null",
-          "Grade-2 unification: both entanglement (Cl(3,0)² bivectors) and curvature (Cl(1,3) bivectors) are grade-2 phenomena",
-          "Surface gravity from rotation gauge: κ = lim[r→2M] |Ω(e₀)·(e₀∧eᵣ)| gives Hawking temperature"
+          "Throat as minimal bivector surface: area = \u222b|h\u0332\u207b\u00b9(dS)| with orientation from bivector direction",
+          "Horizon from position gauge: (h\u0332\u207b\u00b9(e\u2080))\u00b2 = 0 at r = 2M \u2014 coordinate time becomes null",
+          "Grade-2 unification: both entanglement (Cl(3,0)\u00b2 bivectors) and curvature (Cl(1,3) bivectors) are grade-2 phenomena",
+          "Surface gravity from rotation gauge: \u03ba = lim[r\u21922M] |\u03a9(e\u2080)\u00b7(e\u2080\u2227e\u1d63)| gives Hawking temperature"
         ],
         "limitations": [
-          "Two distinct algebras (Cl(1,3) for spacetime, Cl(3,0)² for entanglement) — not unified into one",
-          "Schmidt ↔ quasi-normal mode correspondence (Row 5 of Theorem 5.1) remains conjectural",
+          "Two distinct algebras (Cl(1,3) for spacetime, Cl(3,0)\u00b2 for entanglement) \u2014 not unified into one",
+          "Schmidt \u2194 quasi-normal mode correspondence (Row 5 of Theorem 5.1) remains conjectural",
           "No new predictions beyond the target derivation"
         ],
-        "additionalPromise": "The bivector-grade correspondence (entanglement and curvature share grade structure) is suggestive but not a proof. The two-algebra problem is the central unsolved challenge. If Cl(1,3) ⊗ Cl(3,0) could be embedded in a single larger algebra (perhaps Cl(4,3)?), it could provide a genuinely new perspective on ER=EPR. Speculative but potentially high-payoff.",
+        "additionalPromise": "The bivector-grade correspondence (entanglement and curvature share grade structure) is suggestive but not a proof. The two-algebra problem is the central unsolved challenge. If Cl(1,3) \u2297 Cl(3,0) could be embedded in a single larger algebra (perhaps Cl(4,3)?), it could provide a genuinely new perspective on ER=EPR. Speculative but potentially high-payoff.",
         "rigorousUpgradeReadiness": "low",
-        "crossReferences": ["gravity", "entanglement", "lorentz-invariance", "einstein-equations"]
+        "crossReferences": [
+          "gravity",
+          "entanglement",
+          "lorentz-invariance",
+          "einstein-equations"
+        ]
       },
       "existingGAReferences": []
     }
   ],
   "groupings": {
-    "STA Core": ["lorentz-invariance", "cpt-theorem", "electromagnetism"],
-    "Rotors & Topology": ["spin-statistics", "weak-interaction", "chirality-selection"],
-    "Algebra Bridge": ["division-algebras"],
-    "Applications": ["entanglement", "er-epr", "gravity", "einstein-equations"]
+    "STA Core": [
+      "lorentz-invariance",
+      "cpt-theorem",
+      "electromagnetism"
+    ],
+    "Rotors & Topology": [
+      "spin-statistics",
+      "weak-interaction",
+      "chirality-selection"
+    ],
+    "Algebra Bridge": [
+      "division-algebras"
+    ],
+    "Applications": [
+      "entanglement",
+      "er-epr",
+      "gravity",
+      "einstein-equations"
+    ]
   },
   "valueTiers": {
     "highest": {
-      "pages": ["lorentz-invariance", "electromagnetism", "cpt-theorem", "chirality-selection", "division-algebras"],
+      "pages": [
+        "lorentz-invariance",
+        "electromagnetism",
+        "cpt-theorem",
+        "chirality-selection",
+        "division-algebras"
+      ],
       "rationale": "Genuine structural insights beyond notation. These pages reveal mathematical structure that is invisible or obscured in the standard formalism. Each provides at least one result that is genuinely simpler or more illuminating in GA."
     },
     "strong": {
-      "pages": ["spin-statistics", "weak-interaction", "gravity"],
+      "pages": [
+        "spin-statistics",
+        "weak-interaction",
+        "gravity"
+      ],
       "rationale": "Real structural insights with moderate computational benefit. The GA treatment makes key structures more explicit (rotors, gauge fields) but the core derivation logic is unchanged."
     },
     "moderate": {
-      "pages": ["einstein-equations", "entanglement", "er-epr"],
+      "pages": [
+        "einstein-equations",
+        "entanglement",
+        "er-epr"
+      ],
       "rationale": "Primarily notational improvement with occasional structural insights. The underlying mathematics is equivalent but expressed differently. Each has 1-2 genuinely novel observations but these don't yet constitute independent results."
     }
   },
   "rigorousUpgradePriority": [
     {
       "tier": 1,
-      "pages": ["lorentz-invariance", "spin-statistics"],
+      "pages": [
+        "lorentz-invariance",
+        "spin-statistics"
+      ],
       "rationale": "All results are textbook STA/Clifford algebra (Hestenes 1966, Doran-Lasenby 2003). Every step can be cited to established literature. Minimal gap-closing needed.",
-      "completed": ["electromagnetism", "lorentz-invariance", "spin-statistics"]
+      "completed": [
+        "electromagnetism",
+        "lorentz-invariance",
+        "spin-statistics"
+      ]
     },
     {
       "tier": 2,
-      "pages": ["cpt-theorem", "chirality-selection", "weak-interaction", "gravity"],
+      "pages": [
+        "cpt-theorem",
+        "chirality-selection",
+        "weak-interaction",
+        "gravity"
+      ],
       "rationale": "Core GA results well-established; framework-specific connections (coherence loop, pseudoscalar triple role) need tighter formalization but are not speculative.",
-      "completed": ["cpt-theorem"]
+      "completed": [
+        "cpt-theorem",
+        "chirality-selection"
+      ]
     },
     {
       "tier": 3,
-      "pages": ["division-algebras", "einstein-equations"],
+      "pages": [
+        "division-algebras",
+        "einstein-equations"
+      ],
       "rationale": "Division-algebras: highest framework-feedback potential but associativity relocation argument needs more mathematical development. Einstein-equations: mostly notation, could piggyback on gravity upgrade."
     },
     {
       "tier": 4,
-      "pages": ["entanglement", "er-epr"],
+      "pages": [
+        "entanglement",
+        "er-epr"
+      ],
       "rationale": "Product algebra formalism less established in GA literature. ER=EPR two-algebra problem is genuinely unsolved. These are the most speculative pages with highest risk but also highest potential for novel results."
     }
   ],
@@ -394,13 +489,13 @@
       {
         "page": "division-algebras",
         "target": "interactions/bootstrap-division-algebras Gap 4",
-        "mechanism": "Associativity relocation: O non-associativity → Cl(6) grade-3 elements. Could tighten the termination argument.",
+        "mechanism": "Associativity relocation: O non-associativity \u2192 Cl(6) grade-3 elements. Could tighten the termination argument.",
         "strength": "high"
       },
       {
         "page": "chirality-selection",
         "target": "gauge/chirality-selection dimensional argument",
-        "mechanism": "d = 3+1 minimality from I² = -1 requirement. Could strengthen the dimension-selection step.",
+        "mechanism": "d = 3+1 minimality from I\u00b2 = -1 requirement. Could strengthen the dimension-selection step.",
         "strength": "moderate-high"
       },
       {
@@ -419,35 +514,60 @@
   },
   "openQuestions": [
     {
-      "question": "Can Cl(1,3) and Cl(3,0)² be embedded in a single larger Clifford algebra to unify the ER=EPR correspondence?",
-      "pages": ["er-epr", "entanglement"],
+      "question": "Can Cl(1,3) and Cl(3,0)\u00b2 be embedded in a single larger Clifford algebra to unify the ER=EPR correspondence?",
+      "pages": [
+        "er-epr",
+        "entanglement"
+      ],
       "difficulty": "hard",
       "novelty": "high"
     },
     {
-      "question": "Does the grade pattern (U(1)→SU(2)→SU(3) as grade 0→1→2) have a rigorous algebraic basis or is it numerological?",
-      "pages": ["chirality-selection", "division-algebras"],
+      "question": "Does the grade pattern (U(1)\u2192SU(2)\u2192SU(3) as grade 0\u21921\u21922) have a rigorous algebraic basis or is it numerological?",
+      "pages": [
+        "chirality-selection",
+        "division-algebras"
+      ],
       "difficulty": "moderate",
       "novelty": "high"
     },
     {
-      "question": "Can the bivector budget (monogamy) be made quantitative — does the number of bivectors in Cl(3,0) yield the exact monogamy inequality?",
-      "pages": ["entanglement"],
+      "question": "Can the bivector budget (monogamy) be made quantitative \u2014 does the number of bivectors in Cl(3,0) yield the exact monogamy inequality?",
+      "pages": [
+        "entanglement"
+      ],
       "difficulty": "moderate",
       "novelty": "moderate"
     },
     {
-      "question": "Does the rotor periodicity ↔ loop closure parallel extend to a formal homomorphism between the STA rotor group and the observer loop structure?",
-      "pages": ["lorentz-invariance"],
+      "question": "Does the rotor periodicity \u2194 loop closure parallel extend to a formal homomorphism between the STA rotor group and the observer loop structure?",
+      "pages": [
+        "lorentz-invariance"
+      ],
       "difficulty": "moderate",
       "novelty": "high"
     }
   ],
   "filteredOut": [
-    { "derivation": "quantum/born-rule", "reason": "More about probability theory (Gleason's theorem) than geometry" },
-    { "derivation": "quantum/measurement", "reason": "Core content is relational, not geometrical" },
-    { "derivation": "quantum/preferred-basis", "reason": "Algebraic rather than geometric" },
-    { "derivation": "thermodynamics/*", "reason": "Coherence accounting, not spacetime geometry" },
-    { "derivation": "cosmology/*", "reason": "Mostly coherence accounting with spacetime as background" }
+    {
+      "derivation": "quantum/born-rule",
+      "reason": "More about probability theory (Gleason's theorem) than geometry"
+    },
+    {
+      "derivation": "quantum/measurement",
+      "reason": "Core content is relational, not geometrical"
+    },
+    {
+      "derivation": "quantum/preferred-basis",
+      "reason": "Algebraic rather than geometric"
+    },
+    {
+      "derivation": "thermodynamics/*",
+      "reason": "Coherence accounting, not spacetime geometry"
+    },
+    {
+      "derivation": "cosmology/*",
+      "reason": "Mostly coherence accounting with spacetime as background"
+    }
   ]
 }

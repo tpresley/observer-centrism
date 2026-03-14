@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-14T22:31:09.562Z",
+    "generatedAt": "2026-03-14T23:06:32.720Z",
     "derivationCount": 60,
     "predictionCount": 10,
     "gaPageCount": 12,
@@ -15161,7 +15161,7 @@
       "id": "chirality-selection",
       "filePath": "site/src/content/geometric-algebra/chirality-selection.md",
       "title": "Chirality as Grade Structure",
-      "status": "provisional",
+      "status": "rigorous",
       "gaStructure": "Cl(1,3)",
       "targetDerivation": "gauge/chirality-selection",
       "priority": "high",
@@ -15171,7 +15171,7 @@
         "chirality",
         "geometric-algebra"
       ],
-      "lastUpdated": "2026-03-13",
+      "lastUpdated": "2026-03-14",
       "formalObjects": [
         {
           "type": "Definition",
@@ -15183,13 +15183,13 @@
           "type": "Definition",
           "id": "1.2",
           "name": "Chirality projectors",
-          "statementPreview": "The left and right chirality projectors are:"
+          "statementPreview": "Since I2 = -1, the pseudoscalar I itself does not square to +1 and cannot directly define idempotent projectors. The ..."
         },
         {
           "type": "Proposition",
           "id": "2.1",
           "name": "Self-dual and anti-self-dual bivectors",
-          "statementPreview": "The pseudoscalar I acts on bivectors by the Hodge dual: B IB. Since I2 = -1 on bivectors, the eigenvalues of I-action..."
+          "statementPreview": "The pseudoscalar I acts on bivectors by the Hodge dual: B IB. Since I commutes with all even-grade elements and I2 = ..."
         },
         {
           "type": "Proposition",
@@ -15207,7 +15207,7 @@
           "type": "Proposition",
           "id": "3.2",
           "name": "Chiral decomposition of the even subalgebra",
-          "statementPreview": "The pseudoscalar I splits Cl+(1,3) into two invariant subspaces under right-multiplication:"
+          "statementPreview": "Since I commutes with all even elements (Ipsi = psi I for psi in Cl+(1,3)), the projectors PL and PR are *central* in..."
         },
         {
           "type": "Theorem",
@@ -15256,10 +15256,56 @@
           "id": "7.2",
           "name": "Why mass requires electroweak breaking — GA perspective",
           "statementPreview": "The weak SU(2) gauge symmetry acts only on psiL (Proposition 6.1). A bare mass term mpsiLpsiR is *not gauge invariant..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "",
+          "statementPreview": "(self-dual/anti-self-dual split): Hodge dual eigenvalues pm i from I2 = -1; explicit self-dual combinations constructed"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "",
+          "statementPreview": "(Lorentz algebra decomposition): mathfrakso(1,3) C cong mathfraksu(2)L mathfraksu(2)R via complexified generators Nkp..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "",
+          "statementPreview": "(chiral decomposition): centrality of PL,R in the complexified even subalgebra; chirality conditions from gamma5 eige..."
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "",
+          "statementPreview": "(parity exchanges chirality): P(I) = -I from three anticommutations; projector swap follows"
+        },
+        {
+          "type": "Theorem",
+          "id": "5.1",
+          "name": "",
+          "statementPreview": "(orientation–chirality bridge): O+ leftrightarrow Lambda2+ leftrightarrow L, connecting the target derivation's quate..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "",
+          "statementPreview": "(gauge coupling): covariant derivative uses self-dual bivectors Nk+ as gauge generators"
+        },
+        {
+          "type": "Proposition",
+          "id": "6.2",
+          "name": "",
+          "statementPreview": "(exact vanishing): Nk+ PR = 0 by explicit computation (Hodge dual relations IJk = -Kk, IKk = Jk); centrality of PR gi..."
         }
       ],
       "openGaps": [],
       "crossReferences": [
+        {
+          "target": "gauge/chirality-selection",
+          "context": "chirality selection derivation"
+        },
         {
           "target": "gauge/chirality-selection",
           "context": "status: rigorous"
@@ -16759,8 +16805,8 @@
   "gaStats": {
     "pageCount": 12,
     "byStatus": {
-      "provisional": 7,
-      "rigorous": 4,
+      "rigorous": 5,
+      "provisional": 6,
       "draft": 1
     },
     "byPriority": {
