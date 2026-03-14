@@ -26,24 +26,14 @@ open ObserverCentrism.Algebra.CayleyDickson
 open ObserverCentrism.Gauge.SedenionZeroDivisor
 
 /-- A division algebra property: for all a b, if a * b = 0 then a = 0 or b = 0. -/
-def IsDivisionLike (mul : α → α → α) (zero : α) : Prop :=
+def IsDivisionLike {α : Type*} (mul : α → α → α) (zero : α) : Prop :=
   ∀ a b, mul a b = zero → a = zero ∨ b = zero
 
 /-- factor1 is not the zero sedenion (it has a nonzero component). -/
-theorem factor1_ne_zero : factor1 ≠ sedZero := by
-  intro h
-  have := congrFun h ⟨3, by omega⟩
-  simp [sedZero] at this
-  have := factor1_nonzero
-  linarith
+theorem factor1_ne_zero : factor1 ≠ sedZero := by native_decide
 
 /-- factor2 is not the zero sedenion (it has a nonzero component). -/
-theorem factor2_ne_zero : factor2 ≠ sedZero := by
-  intro h
-  have := congrFun h ⟨6, by omega⟩
-  simp [sedZero] at this
-  have := factor2_nonzero
-  linarith
+theorem factor2_ne_zero : factor2 ≠ sedZero := by native_decide
 
 /-- The sedenions are NOT a division algebra.
     There exist nonzero sedenions whose product is zero.

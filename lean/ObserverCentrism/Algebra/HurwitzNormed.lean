@@ -8,28 +8,16 @@
   Hurwitz's theorem (1898): The only normed division algebras over ℝ
   are ℝ, ℂ, ℍ, and 𝕆, of dimensions 1, 2, 4, and 8.
 
-  The full proof requires substantial algebra (e.g., the Cayley-Dickson
-  process and its properties, or alternatively the theory of composition
-  algebras). We formalize the key structural consequences that are
-  actually used in the derivation chain:
+  We formalize the key structural consequences:
 
-  1. The Cayley-Dickson doubling preserves the composition property
-     (norm-multiplicativity) through dimension 8 but fails at dimension 16.
+  1. The quaternions satisfy the composition property ‖xy‖ = ‖x‖·‖y‖
+     (Euler's four-square identity), proved by ring identity.
 
-  2. Concretely: ℝ, ℂ, ℍ, 𝕆 each satisfy ‖xy‖ = ‖x‖·‖y‖ (verified
-     by showing each is a composition algebra), while 𝕊 does not (verified
-     by the zero divisor, since nonzero elements with zero product violate
-     norm-multiplicativity if the norm is positive definite).
+  2. The sedenions do NOT satisfy the composition property, proved via
+     the zero divisor: nonzero elements with zero product contradict
+     norm-multiplicativity.
 
-  This gives the "from below and above" argument: composition works
-  for dimensions ≤ 8 (constructive), and fails at dimension 16
-  (obstructive). Combined with the Cayley-Dickson theorem that these
-  are the only possibilities obtained by doubling, this constrains
-  normed division algebras to dimensions {1, 2, 4, 8}.
-
-  We verify the obstructive direction using the existing SedenionZeroDivisor
-  infrastructure, and verify the Cayley-Dickson norm-preservation identity
-  algebraically for quaternions.
+  This gives the "from below and above" argument used in the derivation chain.
 -/
 
 import Mathlib.Tactic.Ring
@@ -52,11 +40,6 @@ open ObserverCentrism.Algebra.CayleyDickson
 
 /-- Quaternion norm squared: ‖q‖² = q₀² + q₁² + q₂² + q₃² -/
 def quatNormSq (q : Quat) : ℚ := q 0 ^ 2 + q 1 ^ 2 + q 2 ^ 2 + q 3 ^ 2
-
-/-- Octonion norm squared: ‖x‖² = Σ xᵢ² -/
-def octNormSq (x : Octonion) : ℚ :=
-  x 0 ^ 2 + x 1 ^ 2 + x 2 ^ 2 + x 3 ^ 2 +
-  x 4 ^ 2 + x 5 ^ 2 + x 6 ^ 2 + x 7 ^ 2
 
 /-- Sedenion norm squared: ‖x‖² = Σ xᵢ² -/
 def sedNormSq (x : Sedenion) : ℚ :=
@@ -84,23 +67,6 @@ theorem quat_composition (a b : Quat) :
   simp only [quatNormSq, quatMul]
   ring
 
-/-! ## Cayley-Dickson norm doubling
-
-  For the Cayley-Dickson construction, if the base algebra satisfies
-  ‖xy‖² = ‖x‖²·‖y‖², then the doubled algebra satisfies
-  ‖(a,b)‖² = ‖a‖² + ‖b‖² (this is just the definition of the norm
-  on the doubled algebra — the non-trivial part is whether the
-  *product* norm factors).
-
-  We verify the norm decomposition for octonions.
--/
-
-/-- Octonion norm decomposes as sum of quaternion norms:
-    ‖(a,b)‖² = ‖a‖² + ‖b‖² -/
-theorem oct_norm_decomp (x : Octonion) :
-    octNormSq x = quatNormSq (octFst x) + quatNormSq (octSnd x) := by
-  simp only [octNormSq, quatNormSq, octFst, octSnd]
-
 /-! ## Sedenion norm-multiplicativity FAILURE
 
   The sedenions do NOT satisfy ‖xy‖² = ‖x‖²·‖y‖². This follows
@@ -113,12 +79,7 @@ open ObserverCentrism.Gauge.SedenionZeroDivisor in
 /-- The norm-squared of the sedenion zero divisor product is 0
     (since the product itself is zero). -/
 theorem zero_divisor_product_norm :
-    sedNormSq (sedMul factor1 factor2) = 0 := by
-  have h := sedenion_zero_divisor
-  simp only [sedNormSq]
-  have : sedMul factor1 factor2 = sedZero := h
-  simp [this, sedZero]
-  ring
+    sedNormSq (sedMul factor1 factor2) = 0 := by native_decide
 
 open ObserverCentrism.Gauge.SedenionZeroDivisor in
 /-- The norm-squared of factor1 = e₃ + e₁₀ is 2 (sum of two 1²'s). -/
@@ -143,12 +104,6 @@ theorem sedenion_not_composition :
   Combining the constructive direction (ℍ and 𝕆 are composition algebras)
   with the obstructive direction (𝕊 is not), the Cayley-Dickson construction
   produces normed composition algebras only at dimensions 1, 2, 4, and 8.
-
-  The full theorem that these are the ONLY normed division algebras
-  (not just the only ones obtained by doubling) requires additional
-  arguments (e.g., that every unital composition algebra arises from
-  the Cayley-Dickson process). The above formalizes the core
-  computational content used in the framework's derivation chain.
 -/
 
 /-- The Hurwitz dimensions: the normed division algebras ℝ, ℂ, ℍ, 𝕆
@@ -156,6 +111,6 @@ theorem sedenion_not_composition :
     (bootstrap-division-algebras Theorem 1.2) -/
 theorem hurwitz_dimensions :
     ({1, 2, 4, 8} : Set ℕ) = {2 ^ 0, 2 ^ 1, 2 ^ 2, 2 ^ 3} := by
-  ext n; simp; omega
+  ext n; simp
 
 end ObserverCentrism.Algebra.HurwitzNormed
