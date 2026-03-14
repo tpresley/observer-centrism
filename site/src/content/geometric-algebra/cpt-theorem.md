@@ -68,33 +68,11 @@ $$PT(v) = -IvI^{-1}$$
 
 where $I^{-1} = -I$ (since $I^2 = -1$).
 
-*Proof.* From Step 1, $P(v) = e_0 v e_0$. From Step 2, $T(v) = -e_{123} v (-e_{123}) = e_{123} v e_{123}^{-1}$. Composing:
+*Proof.* The pseudoscalar $I = e_{0123}$ anticommutes with every basis vector $e_\mu$: each $e_\mu$ commutes with itself and anticommutes with the remaining three factors in $I$, giving $Ie_\mu = (-1)^3 e_\mu I = -e_\mu I$. By linearity, $Iv = -vI$ for any vector $v$.
 
-$$PT(v) = e_{123}(e_0 v e_0) e_{123}^{-1} = (e_{123} e_0) v (e_0 e_{123}^{-1})$$
+Therefore $IvI^{-1} = (-vI)I^{-1} = -v$. This is total spacetime inversion: $PT(v) = IvI^{-1} = -v$.
 
-Now $e_{123} e_0 = e_1 e_2 e_3 e_0 = (-1)^3 e_0 e_1 e_2 e_3 = -I$ (three anticommutations). And $e_0 e_{123}^{-1} = e_0 (-e_{123}) = -e_0 e_{123} = -(-1)^3 e_{123} e_0 = e_{123} e_0$... Let us compute directly:
-
-$$PT(v) = e_0 (e_{123} v e_{123}^{-1}) e_0$$
-
-Wait — the order matters. $P$ is applied first to the vector, then $T$: $PT(v) = T(P(v)) = -e_{123}(e_0 v e_0)(-e_{123})$. Using $e_{123} e_0 = -e_0 e_{123} = -I$ and $e_0(-e_{123}) = e_0 e_{123}^{-1} \cdot (-1) = I^{-1} \cdot (-1)$:
-
-More directly: $PT$ sends $e_0 \mapsto -e_0$ and $e_k \mapsto -e_k$ (both $P$ and $T$ flip different components). Therefore $PT(v) = -v$ for any vector $v$. This is implemented by:
-
-$$PT(v) = -IvI^{-1} = IvI \quad (\text{since } I^{-1} = -I)$$
-
-Verification: $IvI = e_{0123} v e_{0123}$. For $v = e_0$: $I e_0 I = e_{0123} e_0 e_{0123} = e_{0123}^2 e_0 \cdot (\text{commutation signs})$. Since $e_0$ anticommutes with $I$ ($I = e_0 e_{123}$, so $e_0 I = e_0^2 e_{123} = e_{123}$ and $I e_0 = e_0 e_{123} e_0 = -e_{123}$), we get $I e_0 I = -e_{123} I = -e_{123} e_0 e_{123} = -e_0 e_{123}^2 \cdot (\text{signs}) = e_0$...
-
-Let us use the clean approach. For any vector $v$ in $\operatorname{Cl}(1,3)$, $Iv = -vI$ (the pseudoscalar anticommutes with all vectors in 4D, since $I$ has grade 4 and anticommutes with grade-1 elements when the dimension is even). Therefore:
-
-$$-IvI^{-1} = -I v (-I) = IvI = -vI \cdot I = -v I^2 = -v(-1) = v$$
-
-This gives $+v$, not $-v$. So the sign convention needs care. The correct implementation is:
-
-$$PT(v) = -v = IvI^{-1} = Iv(-I) = -IvI$$
-
-since $IvI = -Iv(-I) = I(-vI) = -I v I$... Let us just verify the commutation: $I e_\mu = e_{0123} e_\mu$. Since $e_\mu$ anticommutes with exactly three of the four basis vectors in $I$ and commutes with itself, we get $e_{0123} e_\mu = (-1)^3 e_\mu e_{0123} = -e_\mu I$. So $Iv = -vI$ for any vector $v$.
-
-Then $IvI^{-1} = (-vI)I^{-1} = -v$. So $PT(v) = IvI^{-1} = -v$. $\checkmark$ $\square$
+We verify this matches the composition of $P$ and $T$. Parity preserves $e_0$ and flips $e_k$; time reversal flips $e_0$ and preserves $e_k$. Their composition flips all four basis vectors: $PT(e_\mu) = -e_\mu$ for all $\mu$, confirming $PT(v) = -v$. $\square$
 
 **Proposition 3.2 (PT preserves bivectors).** Since $PT(v) = -v$ for all vectors, the action on a bivector $B = v \wedge w$ is:
 

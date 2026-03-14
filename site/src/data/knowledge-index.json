@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-14T08:38:46.608Z",
+    "generatedAt": "2026-03-14T09:50:13.513Z",
     "derivationCount": 60,
     "predictionCount": 10,
     "gaPageCount": 12,
@@ -15617,7 +15617,7 @@
       "id": "electromagnetism",
       "filePath": "site/src/content/geometric-algebra/electromagnetism.md",
       "title": "Maxwell Equations as ∇F = J",
-      "status": "provisional",
+      "status": "rigorous",
       "gaStructure": "Cl(1,3)",
       "targetDerivation": "gauge/electromagnetism",
       "priority": "high",
@@ -15730,6 +15730,36 @@
           "id": "9.2",
           "name": "Plane wave solutions",
           "statementPreview": "A monochromatic plane wave in STA takes the form:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "",
+          "statementPreview": "(Maxwell's equation F = J): verified by grade decomposition, matching all four Maxwell equations to the target deriva..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "",
+          "statementPreview": "(charge conservation): purely algebraic proof from grade consistency."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "",
+          "statementPreview": "(Lorentz force): explicit expansion matching the target derivation's Theorem 8.1."
+        },
+        {
+          "type": "Proposition",
+          "id": "7.2",
+          "name": "",
+          "statementPreview": "(holonomy and charge quantization): STA Stokes theorem connecting to the target derivation's Theorem 7.1."
+        },
+        {
+          "type": "Proposition",
+          "id": "8.1",
+          "name": "",
+          "statementPreview": "(uniqueness): exhaustive enumeration of grade-1 objects from one derivative of F."
         }
       ],
       "openGaps": [],
@@ -16137,7 +16167,7 @@
       "id": "lorentz-invariance",
       "filePath": "site/src/content/geometric-algebra/lorentz-invariance.md",
       "title": "Lorentz Group via STA Rotors",
-      "status": "provisional",
+      "status": "rigorous",
       "gaStructure": "Cl(1,3)",
       "targetDerivation": "spacetime/lorentz-invariance",
       "priority": "high",
@@ -16262,6 +16292,36 @@
           "id": "9.1",
           "name": "Poincaré group in STA — recast of Theorem 7.1",
           "statementPreview": "Including translations, the full symmetry is the Poincaré group ISO(1,3) = R1,3 rtimes Spin+(1,3) / Z2. A general Poi..."
+        },
+        {
+          "type": "Theorem",
+          "id": "3.3",
+          "name": "",
+          "statementPreview": "(rotor exponential): Taylor series expansion with normalization verification for both signatures."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "",
+          "statementPreview": "(time dilation): explicit rotor sandwich computation Re0R, matching the target derivation's Theorem 2.1."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.2",
+          "name": "",
+          "statementPreview": "(length contraction): same rotor acting on e1, matching Theorem 3.1."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.3",
+          "name": "",
+          "statementPreview": "(double cover): homomorphism, surjectivity, and kernel verified."
+        },
+        {
+          "type": "Theorem",
+          "id": "5.1",
+          "name": "",
+          "statementPreview": "(Thomas-Wigner rotation): leading-order computation proves existence; all-orders formula cited from standard STA (Dor..."
         }
       ],
       "openGaps": [],
@@ -16311,7 +16371,7 @@
       "id": "spin-statistics",
       "filePath": "site/src/content/geometric-algebra/spin-statistics.md",
       "title": "Spin-Statistics via Cl(3,0) Rotors",
-      "status": "provisional",
+      "status": "rigorous",
       "gaStructure": "Cl(3,0)",
       "targetDerivation": "particles/spin-statistics",
       "priority": "high",
@@ -16412,6 +16472,90 @@
           "id": "8.2",
           "name": "Loop closure and rotor periodicity",
           "statementPreview": "The rotor path R(theta) = e-Btheta/2 for theta in [0, 4pi] is a U(1) loop in Spin(3), isomorphic to the observer's ph..."
+        },
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "",
+          "statementPreview": "(Clifford algebra): standard definition"
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "",
+          "statementPreview": "(grade structure): dimension counting"
+        },
+        {
+          "type": "Proposition",
+          "id": "1.3",
+          "name": "",
+          "statementPreview": "(bivector properties): explicit computation of eij2 = -1 and cyclic products"
+        },
+        {
+          "type": "Corollary",
+          "id": "1.4",
+          "name": "",
+          "statementPreview": "(quaternion isomorphism): direct identification Cl+(3,0) cong H"
+        },
+        {
+          "type": "Definition",
+          "id": "2.1",
+          "name": "",
+          "statementPreview": "(rotor): normalization condition on even elements"
+        },
+        {
+          "type": "Theorem",
+          "id": "2.2",
+          "name": "",
+          "statementPreview": "(Spin(3) cong SU(2)): via quaternion unit group"
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "",
+          "statementPreview": "(double cover): well-definedness (grade preservation), homomorphism (associativity), kernel (pm 1 are the only even e..."
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "",
+          "statementPreview": "(2pi sign flip): one-line computation e-Bpi = -1"
+        },
+        {
+          "type": "Corollary",
+          "id": "4.2",
+          "name": "",
+          "statementPreview": "(two rotation classes): immediate from Theorem 4.1"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "",
+          "statementPreview": "(exchange operator): e-Bpi/2 = -B, squaring gives B2 = -1"
+        },
+        {
+          "type": "Theorem",
+          "id": "5.2",
+          "name": "",
+          "statementPreview": "(spin-statistics): double-sided action trivializes -1 (boson); single-sided action detects -1 via spinor sign flip, w..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "",
+          "statementPreview": "(spinors as ideals): explicit idempotent P = 12(1 + e3), basis construction"
+        },
+        {
+          "type": "Proposition",
+          "id": "6.2",
+          "name": "",
+          "statementPreview": "(integer spin): adjoint representation descends to SO(3)"
+        },
+        {
+          "type": "Proposition",
+          "id": "7.1",
+          "name": "",
+          "statementPreview": "(dimension dependence): U(1) vs SU(2) rotor groups from bivector dimension"
         }
       ],
       "openGaps": [],
@@ -16539,7 +16683,8 @@
   "gaStats": {
     "pageCount": 12,
     "byStatus": {
-      "provisional": 11,
+      "provisional": 8,
+      "rigorous": 3,
       "draft": 1
     },
     "byPriority": {

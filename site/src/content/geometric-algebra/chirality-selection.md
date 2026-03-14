@@ -34,27 +34,13 @@ These satisfy the projector algebra:
 
 $$P_L^2 = P_L, \quad P_R^2 = P_R, \quad P_L P_R = 0, \quad P_L + P_R = 1$$
 
-*Proof.* $P_L^2 = \frac{1}{4}(1 - I)^2 = \frac{1}{4}(1 - 2I + I^2) = \frac{1}{4}(1 - 2I - 1) = \frac{1}{2}(-2I) \cdot \frac{1}{2}$... Let us compute carefully:
-
-$(1 - I)^2 = 1 - 2I + I^2 = 1 - 2I + (-1) = -2I$
-
-This does not equal $2(1 - I)$. The issue is that $P_L$ and $P_R$ as defined are projectors only when acting on objects for which $I$ has eigenvalue $\pm 1$, or when we use the *right-multiplication* convention. In STA, chirality acts on spinors $\psi \in \operatorname{Cl}^+(1,3)$ by right-multiplication:
-
-$$\psi_L = \psi P_L = \frac{1}{2}\psi(1 - I), \qquad \psi_R = \psi P_R = \frac{1}{2}\psi(1 + I)$$
-
-The projector property then uses $P_L^2 = \frac{1}{4}(1-I)(1-I) = \frac{1}{4}(1 - 2I - 1) = -\frac{I}{2} \cdot ...$
-
-Actually, the correct projectors in $\operatorname{Cl}(1,3)$ use the fact that $I^2 = -1$, so the eigenvalues of $I$ are $\pm i$ in a complexified setting. The *real* STA projectors are:
-
-$$P_{\pm} = \frac{1}{2}(1 \mp Ie_3)$$
-
-where $e_3$ is a chosen spatial direction, or more precisely, chirality in the real STA formalism acts through the combination $I\hat{s}$ where $\hat{s}$ is the spin axis. However, for conceptual clarity and connection to the standard formalism, we work with the complexified projectors:
+*Proof.* Since $I^2 = -1$ in $\operatorname{Cl}(1,3)$, the naive projectors $\frac{1}{2}(1 \pm I)$ do not satisfy idempotence: $(1-I)^2 = 1 - 2I + I^2 = -2I \neq 2(1-I)$. The resolution is that the physical chirality projectors require complexification. Defining $\gamma_5 = iI$ (where $i$ is the scalar imaginary), we have $(iI)^2 = -I^2 = +1$, and the correct projectors are:
 
 $$P_L = \frac{1}{2}(1 - iI), \qquad P_R = \frac{1}{2}(1 + iI)$$
 
-where $iI$ has eigenvalue $\pm 1$ (since $(iI)^2 = -I^2 = 1$). These satisfy $P_L^2 = P_L$, $P_R^2 = P_R$, $P_LP_R = 0$. $\square$
+These satisfy idempotence: $P_L^2 = \frac{1}{4}(1 - 2iI + (iI)^2) = \frac{1}{4}(1 - 2iI + 1) = \frac{1}{2}(1 - iI) = P_L$. Similarly $P_R^2 = P_R$, and $P_LP_R = \frac{1}{4}(1 - iI)(1 + iI) = \frac{1}{4}(1 - (iI)^2) = 0$.
 
-**Remark (Convention).** In much of the GA literature (Doran, Lasenby, Hestenes), the Dirac equation is formulated entirely in the real STA without complexification, and chirality is handled through the spin plane bivector $i\sigma_3 = e_{12}$ rather than through $\gamma_5$. We adopt the complexified convention here to maintain direct contact with the target derivation's notation and standard QFT. The physical content is identical.
+In the real STA formalism (Doran, Lasenby, Hestenes), the Dirac equation avoids complexification entirely: chirality acts through the spin-plane bivector $e_{12}$ rather than $\gamma_5$, with the real projector $\frac{1}{2}(1 \mp e_{12}e_3) = \frac{1}{2}(1 \mp Ie_0)$. We adopt the complexified convention to maintain direct contact with the target derivation's notation and standard QFT. The physical content is identical. $\square$
 
 ## Step 2: Bivector Decomposition and Chirality
 
@@ -82,19 +68,17 @@ $$\mathfrak{so}(1,3) \otimes \mathbb{C} \;\cong\; \mathfrak{su}(2)_L \oplus \mat
 
 The self-dual bivectors generate $\mathfrak{su}(2)_L$ and the anti-self-dual bivectors generate $\mathfrak{su}(2)_R$.
 
-*Proof.* From [Lorentz Group via STA Rotors](/geometric-algebra/lorentz-invariance) (Proposition 2.2), the six bivectors $\{e_{23}, e_{31}, e_{12}, e_{01}, e_{02}, e_{03}\}$ generate $\mathfrak{so}(1,3)$ with commutation relations $[J_i, J_j] = 2\epsilon_{ijk}J_k$, $[J_i, K_j] = 2\epsilon_{ijk}K_k$, $[K_i, K_j] = -2\epsilon_{ijk}J_k$.
+*Proof.* From [Lorentz Group via STA Rotors](/geometric-algebra/lorentz-invariance) (Proposition 2.2), the six bivectors $\{J_k, K_k\}$ satisfy $[J_j, J_k] = 2\epsilon_{jkl}J_l$, $[J_j, K_k] = 2\epsilon_{jkl}K_l$, $[K_j, K_k] = -2\epsilon_{jkl}J_l$.
 
-Define $N_k^{\pm} = \frac{1}{2}(J_k \pm iK_k) = \frac{1}{2}(e_{jl} \pm ie_{0k})$ (with cyclic $j,l$). Then:
+Define complexified generators $N_k^{\pm} = \frac{1}{2}(J_k \pm iK_k)$. Expanding the commutator:
 
-$$[N_j^+, N_k^+] = \frac{1}{4}([J_j, J_k] + i[J_j, K_k] + i[K_j, J_k] - [K_j, K_k])$$
-$$= \frac{1}{4}(2\epsilon_{jkl}J_l + 2i\epsilon_{jkl}K_l - 2i\epsilon_{jkl}K_l + 2\epsilon_{jkl}J_l) = \epsilon_{jkl}J_l$$
+$$[N_j^+, N_k^+] = \frac{1}{4}\bigl([J_j,J_k] + i[J_j,K_k] + i[K_j,J_k] - [K_j,K_k]\bigr)$$
 
-Wait — let us be more careful. $[N_j^+, N_k^+] = \frac{1}{4}(2\epsilon_{jkl}J_l + 2i\epsilon_{jkl}K_l + 2i\epsilon_{kjl}K_l + 2\epsilon_{jkl}J_l)$. Using $\epsilon_{kjl} = -\epsilon_{jkl}$: $= \frac{1}{4}(4\epsilon_{jkl}J_l + 0) = \epsilon_{jkl}J_l$... This also doesn't close. The standard result is $[N_j^+, N_k^+] = \epsilon_{jkl}N_l^+$, which follows from the computation:
+Substituting: $[K_j, J_k] = -[J_k, K_j] = -2\epsilon_{kjl}K_l = 2\epsilon_{jkl}K_l$ (using antisymmetry of $\epsilon$). Therefore:
 
-$$[N_j^+, N_k^+] = \frac{1}{4}([J_j + iK_j, J_k + iK_k]) = \frac{1}{4}([J_j,J_k] + i[K_j,J_k] + i[J_j,K_k] - [K_j,K_k])$$
-$$= \frac{1}{4}(2\epsilon_{jkl}J_l - 2i\epsilon_{kjl}K_l + 2i\epsilon_{jkl}K_l + 2\epsilon_{jkl}J_l) = \frac{1}{4}(4\epsilon_{jkl}J_l + 4i\epsilon_{jkl}K_l) = \epsilon_{jkl}N_l^+$$
+$$= \frac{1}{4}\bigl(2\epsilon_{jkl}J_l + 2i\epsilon_{jkl}K_l + 2i\epsilon_{jkl}K_l + 2\epsilon_{jkl}J_l\bigr) = \frac{1}{4}\bigl(4\epsilon_{jkl}J_l + 4i\epsilon_{jkl}K_l\bigr) = \epsilon_{jkl}(J_l + iK_l) = 2\epsilon_{jkl}N_l^+$$
 
-This gives $\mathfrak{su}(2)$ commutation relations. Similarly for $N^-$, and $[N^+, N^-] = 0$. $\square$
+This gives $\mathfrak{su}(2)$ commutation relations (the factor of 2 matches the $[J,J]$ normalization). Similarly $[N_j^-, N_k^-] = 2\epsilon_{jkl}N_l^-$. For the cross-bracket: $[N_j^+, N_k^-] = \frac{1}{4}([J_j,J_k] - i[J_j,K_k] + i[K_j,J_k] + [K_j,K_k]) = \frac{1}{4}(2\epsilon_{jkl}J_l - 2\epsilon_{jkl}J_l) = 0$, since the $K$-terms and $J$-terms each cancel. $\square$
 
 **Remark (The key connection).** The target derivation's Proposition 4.1 states that the quaternionic orientation $\mathcal{O}^{\pm}$ corresponds to the chirality of spinors via $\mathfrak{su}(2)_L \oplus \mathfrak{su}(2)_R$. In STA, this decomposition is the *self-dual/anti-self-dual split of the bivector algebra induced by the pseudoscalar*. The quaternionic orientation $\mathcal{O}^+$ ($IJ = K$) maps to the self-dual sector $\Lambda^2_+$ (where the Hodge dual acts as $-i$), and $\mathcal{O}^-$ ($IJ = -K$) maps to $\Lambda^2_-$. The pseudoscalar $I = e_{0123}$ *is* the algebraic object that distinguishes the two orientations.
 

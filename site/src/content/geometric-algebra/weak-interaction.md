@@ -32,31 +32,17 @@ $$e_{23}^2 = e_2 e_3 e_2 e_3 = -e_2 e_2 e_3 e_3 = -(+1)(+1) = -1$$
 
 Similarly $e_{31}^2 = e_{12}^2 = -1$. All three basis bivectors square to $-1$, matching $\mathbf{i}^2 = \mathbf{j}^2 = \mathbf{k}^2 = -1$.
 
-For the cross products:
-
-$$e_{23} \cdot e_{31} = e_2 e_3 e_3 e_1 = e_2(+1)e_1 = e_2 e_1 = -e_{12}$$
-
-Wait — let us compute more carefully: $e_{23}e_{31} = e_2 e_3 e_3 e_1 = e_2 \cdot 1 \cdot e_1 = e_{21} = -e_{12}$. But we need $\mathbf{i}\mathbf{j} = \mathbf{k}$, not $-\mathbf{k}$.
-
-The sign depends on the identification convention. With the standard GA convention $e_{ij} = e_i \wedge e_j = e_i e_j$ for $i < j$, we use:
-
-$$\mathbf{i} = -e_{23}, \quad \mathbf{j} = -e_{31}, \quad \mathbf{k} = -e_{12}$$
-
-or equivalently $\mathbf{i} = e_{32}$, $\mathbf{j} = e_{13}$, $\mathbf{k} = e_{21}$. Then:
-
-$$e_{32} e_{13} = e_3 e_2 e_1 e_3 = -e_3 e_1 e_2 e_3 = -e_3 e_1 \cdot 1 = ... $$
-
-The cleanest approach: define $I_k = e_i e_j$ where $(i,j,k)$ is a cyclic permutation of $(1,2,3)$. Then:
+For the products, define the bivector basis $I_k = e_i e_j$ where $(i,j,k)$ is a cyclic permutation of $(1,2,3)$:
 
 $$I_1 = e_{23}, \quad I_2 = e_{31}, \quad I_3 = e_{12}$$
 
-and $I_1 I_2 = e_{23}e_{31} = e_2 e_3 e_3 e_1 = e_{21} = -e_{12} = -I_3$. So $I_1 I_2 = -I_3$.
+Then $I_1 I_2 = e_{23}e_{31} = e_2 e_3 e_3 e_1 = e_{21} = -e_{12} = -I_3$, and cyclically. So the bivector products satisfy $I_j I_k = -\epsilon_{jkl} I_l$.
 
-This matches $\mathbf{i}\mathbf{j} = \mathbf{k}$ under the identification $\mathbf{i} = -I_1$, $\mathbf{j} = -I_2$, $\mathbf{k} = -I_3$:
+This matches the quaternion multiplication $\mathbf{i}\mathbf{j} = \mathbf{k}$ under the sign-absorbing identification $\mathbf{i} = -I_1 = -e_{23}$, $\mathbf{j} = -I_2 = -e_{31}$, $\mathbf{k} = -I_3 = -e_{12}$:
 
 $$\mathbf{i}\mathbf{j} = (-I_1)(-I_2) = I_1 I_2 = -I_3 = \mathbf{k} \;\checkmark$$
 
-Alternatively (and more commonly in the GA literature), one uses $\mathbf{i} = I_1$, $\mathbf{j} = I_2$, $\mathbf{k} = I_3$ with the convention $\mathbf{i}\mathbf{j} = -\mathbf{k}$ (the *opposite* quaternion orientation). Both orientations give a valid quaternion algebra — they differ by conjugation $q \mapsto \bar{q}$, which is exactly the orientation freedom discussed in the target derivation (Step 1, Definition 1.1). The spontaneous choice of orientation (Corollary 3.2 of the target) becomes the choice of sign in the bivector-quaternion identification.
+The opposite convention $\mathbf{i} = I_1$, $\mathbf{j} = I_2$, $\mathbf{k} = I_3$ (with $\mathbf{i}\mathbf{j} = -\mathbf{k}$) is equally valid — the two choices differ by quaternion conjugation $q \mapsto \bar{q}$, which is exactly the orientation freedom of the target derivation (Step 1, Definition 1.1). The spontaneous choice of orientation (Corollary 3.2 of the target) becomes the choice of sign in the bivector-quaternion identification.
 
 The algebra isomorphism holds for either sign convention. $\square$
 
