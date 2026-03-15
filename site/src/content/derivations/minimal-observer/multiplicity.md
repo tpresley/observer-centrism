@@ -16,22 +16,22 @@ This derivation answers a deceptively simple question: **can the universe contai
 
 In standard physics, there is no principled reason why a single particle or entity could not exist alone. But observer-centrism reveals a structural impossibility. An observer is defined by what it preserves against threats from the outside. A lone observer has no outside -- nothing that could threaten its identity -- so it preserves nothing, carries no charge, and is structurally indistinguishable from emptiness.
 
-**The argument.**
+**The argument.** The derivation proceeds through three levels, each using a successively stronger condition of Axiom 1:
 
 - An observer's coherence content (roughly, its "substance") is positive only when there exist external transformations that could disrupt it.
-- A lone observer fills the entire coherence space, so every transformation is internal. There is nothing external, nothing to defend against.
-- Therefore a lone observer has zero coherence -- it is vacuous.
-- Any observer with positive coherence must have a complement that also carries positive coherence, and that complement must itself be an observer.
+- A lone observer fills the entire coherence space, so every transformation is internal. There is nothing external, nothing to defend against. Therefore a lone observer has zero coherence — it is vacuous. *(Uses conservation, C2.)*
+- Any observer with positive coherence must have a complement that also carries positive coherence, and that complement must itself be an observer. Observers must come in pairs at minimum — each defines the other by serving as the other's potential destroyer. *(Uses subadditivity, C4.)*
+- But pairs are not enough. Strong subadditivity (C5) is vacuous on a two-observer universe — it constrains nothing. Since the framework needs C5 non-trivially (it distinguishes quantum from classical coherence), at least three observers are required. The bootstrap then propagates this into a full network. *(Uses strong subadditivity, C5.)*
 
-**The result.** Observers must come in pairs at minimum. Each defines the other by serving as the other's potential destroyer. This is the structural origin of particle-antiparticle pair creation. The derivation also shows that composite structures (like entangled pairs) do not trigger further pair creation -- their multiplicity requirement is already satisfied by pre-existing partners.
+**The result.** The observer structure is necessarily a network — not a lone entity, not a pair, not even a small cluster. The conditions of Axiom 1 are layered: conservation forbids solitude, subadditivity forces pairs, and strong subadditivity forces a network whose topology must be boundaryless (see [Bootstrap Mechanism](/derivations/interactions/bootstrap), Corollary 7.3). This is the structural origin of particle-antiparticle pair creation (pairs are necessary) and of the richness of physics (pairs are not sufficient). Composite structures like entangled pairs do not trigger further pair creation — their multiplicity requirement is already satisfied by pre-existing partners.
 
-**Why this matters.** This theorem is the reason physics involves interaction. Without multiplicity, there would be no "between" -- no measurement, no entanglement, no forces. The entire structure of physics descends from the impossibility of solitude.
+**Why this matters.** This theorem is the reason physics involves interaction — and not just one interaction, but a web of them. Without multiplicity, there would be no "between" — no measurement, no entanglement, no forces. Without the network, there would be no quantum mechanics (C5 would be vacuous) and no gauge structure. The entire structure of physics descends from the impossibility of solitude.
 
 **An honest caveat.** The step from "positive coherence in the complement" to "the complement contains an observer" relies on a universality assumption about the observer definition that is physically motivated but not proved from the axioms alone.
 
 ## Statement
 
-**Theorem.** The coherence space cannot contain exactly one observer. Any non-trivial observer requires at least one other structure capable of sourcing non-self transformations, and that structure itself satisfies the observer definition. The minimum configuration is a **mutually defining pair**. Furthermore, composite observers formed from relational invariants do not require additional duals — the multiplicity requirement is satisfied by the pre-existing structure of the constituents.
+**Theorem.** The coherence space cannot contain exactly one observer (conservation, C2), nor exactly two (strong subadditivity, C5). Any non-trivial observer requires at least one other structure capable of sourcing non-self transformations, and that structure itself satisfies the observer definition. The minimum *local* configuration is a **mutually defining pair**, but the full coherence algebra requires at least three independent subsystems, and the bootstrap propagates this into a network. Composite observers formed from relational invariants do not require additional duals — the multiplicity requirement is satisfied by the pre-existing structure of the constituents.
 
 ## Derivation
 
@@ -174,12 +174,20 @@ If the universe contained only two observers, C5 would be vacuous (Proposition 7
 
 ## Physical Interpretation
 
-The multiplicity theorem has a direct physical reading: **pair creation is structurally necessary**.
+The multiplicity theorem has two physical readings at different scales:
+
+**Pair creation is structurally necessary** (Steps 2–6):
 
 - The vacuum cannot produce a single particle — it must produce at least a pair
 - Every fundamental process that creates particles creates them in pairs (particle-antiparticle)
 - Conservation laws (charge, lepton number, baryon number) that enforce pair production are consequences of the structural impossibility of a lone observer
 - Entanglement and bound-state formation do **not** trigger further pair creation — relational invariants are self-conjugate (Theorem 6.3, Proposition 6.4)
+
+**The observer network is structurally necessary** (Step 7):
+
+- A universe of isolated pairs would have no quantum mechanics — strong subadditivity (C5) would be vacuous, collapsing the quantum–classical distinction
+- The full gauge structure (division algebras, Standard Model group) requires the interaction richness that only a network provides
+- The network must be boundaryless — either infinite or finite and compact — since boundary observers would lack the interaction partners that C5 demands
 
 The mutual definition structure maps to:
 - **Particle-antiparticle pairs**: Each is the other's dissolution operator (annihilation)
@@ -188,7 +196,9 @@ The mutual definition structure maps to:
 
 ## Consistency Model
 
-**Theorem 7.1.** *The multiplicity theorem is realized by a pair of $U(1)$ phase oscillators in a product coherence space.*
+**Theorem 7.1.** *The multiplicity theorem (Steps 1–6: single observer is vacuous, pairs are necessary, composites inherit duals) is realized by a pair of $U(1)$ phase oscillators in a product coherence space.*
+
+**Remark.** This model validates Steps 1–6 (pair necessity). A consistency model for the full network result (Step 7) requires at least three oscillators with non-trivial C5 instances — the minimal such model is the bootstrap fixed point itself (see [Bootstrap Mechanism](/derivations/interactions/bootstrap), Conjectures 7.1–7.2).
 
 **Model**: $\mathcal{H} = S^1 \times S^1$, with $\mathcal{O}_1 = (S^1 \times \{0\}, I_1, \mathcal{B}_1)$ and $\mathcal{O}_2 = (\{0\} \times S^1, I_2, \mathcal{B}_2)$, coherence $\mathcal{C}(\mathcal{O}_1) = \mathcal{C}(\mathcal{O}_2) = q > 0$, total $C_0 = 2q - \delta$ for some $0 \leq \delta < 2q$ (relational coherence $\delta$).
 
@@ -214,8 +224,6 @@ The mutual definition structure maps to:
 - Proposition 6.4: Relational invariants are self-conjugate (symmetry of relational coherence under label exchange)
 - Corollary 6.5: No infinite regress (induction on composite level)
 - Theorem 7.1: Consistency model fully verified
-
-**Fully rigorous (continued):**
 - Proposition 7.1: C5 vacuous on pairs (direct verification — no non-trivial triples exist)
 - Theorem 7.2: Pairs insufficient (C5 required non-trivially by derivation chain)
 
