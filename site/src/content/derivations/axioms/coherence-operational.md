@@ -155,6 +155,8 @@ To fix $\alpha$, we invoke the Born rule's composition constraint (B3): the prob
 
 Therefore $f(x) = x$ and $F(\psi) = \sum_k |\psi_k|^2 = \langle\psi|\psi\rangle$. $\square$
 
+**Remark (No circularity).** Step (c) cites [Born Rule](/derivations/quantum/born-rule) Theorem 6.1, which derives $f(x) = x$ from the composition structure B3, normalization, and continuity. Crucially, that derivation does *not* use Structural Postulate S1 (the identification $\mathcal{C}(|\psi\rangle) = \langle\psi|\psi\rangle$) — it works entirely with probabilities and amplitudes, never invoking the coherence functional. So the logical flow is acyclic: the Born rule derivation independently establishes $f(x) = x$; Theorem 4.1 here uses that result to determine the coherence functional; and Corollary 4.2 then promotes S1 from assumption to theorem. Each step relies only on what precedes it, not on S1 itself.
+
 **Corollary 4.2 (S1 is a theorem).** *The Structural Postulate S1 of [Born Rule](/derivations/quantum/born-rule) — the identification $\mathcal{C}(|\psi\rangle) = \langle\psi|\psi\rangle$ — follows from Axiom 1 (conditions C1–C5), U(1) phase symmetry (Axiom 3), and the composition structure of the interaction graph. It is the unique coherence functional satisfying conditions (F1)–(F5).*
 
 **Remark.** The five conditions (F1)–(F5) are not new assumptions. Each traces to an existing axiom:
