@@ -183,6 +183,8 @@ By the Jost-Lüders-Pauli theorem (1957), any Lagrangian satisfying (1)-(3) is C
 
 **Assessment:** Rigorous. The CPT theorem is derived by constructing each discrete symmetry from the framework's structure ($C$ from coherence-dual pairs, $P$ from spatial reflection, $T$ from loop closure phase reversal) and showing their composition is an exact symmetry of the coherence Lagrangian. The formal backbone is the Jost-Lüders-Pauli theorem, whose three premises (locality, Lorentz invariance, spin-statistics) are all derived from the axioms elsewhere in the framework. No new structural postulates are required.
 
+**Remark (GA perspective).** The [GA: CPT Theorem](/geometric-algebra/cpt-theorem) exploration shows that in $\operatorname{Cl}(1,3)$, all three discrete symmetries and the chirality projectors are controlled by a single algebraic object: the pseudoscalar $I = e_{0123}$. The pseudoscalar simultaneously serves as the oriented 4-volume element, the $PT$ operator ($PT(v) = IvI^{-1} = -v$), and the chirality operator (projectors $(1 \pm I)/2$). The pattern of individual symmetry violation reduces to one sign computation: $P$ and $T$ each send $I \to -I$ (swapping chirality), but $PT$ sends $I \to I$ (two sign flips cancel). This makes the connection between chirality selection (Proposition 2.3) and CPT invariance (Theorem 4.1) algebraically manifest — they are both consequences of the pseudoscalar's grade parity under each operation.
+
 ## Open Gaps
 
 1. **CP violation mechanism**: While the theorem allows individual $CP$ violation (Corollary 4.3), the framework should derive the specific mechanism — complex phases in the CKM and PMNS matrices — from the flavor structure ([Three Generations](/derivations/particles/three-generations)).
