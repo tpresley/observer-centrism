@@ -85,7 +85,7 @@ These four postulates, combined with the axioms, uniquely determine $G_{SM}$.
 
 **Theorem 2.1 (No fourth gauge factor).** *Hurwitz's theorem (1898): the only normed division algebras over $\mathbb{R}$ are $\mathbb{R}$, $\mathbb{C}$, $\mathbb{H}$, and $\mathbb{O}$. Therefore the gauge hierarchy terminates at $SU(3)$ — no fourth non-trivial gauge factor exists.*
 
-*Proof reference.* The theorem was proved by Hurwitz in 1898. Modern proofs use the theory of composition algebras (see Springer & Veldkamp, *Octonions, Jordan Algebras, and Exceptional Groups*, 2000). The proof shows that the norm condition $|ab| = |a||b|$ restricts the algebra dimension to $\{1, 2, 4, 8\}$.
+*Proof reference.* The theorem was proved by Hurwitz in 1898. Modern proofs use the theory of composition algebras (see [Springer & Veldkamp, 2000]). The proof shows that the norm condition $|ab| = |a||b|$ restricts the algebra dimension to $\{1, 2, 4, 8\}$.
 
 The physical consequence: the Cayley-Dickson construction beyond $\mathbb{O}$ produces the sedenions $\mathbb{S}$ (dim 16), trigintaduonions (dim 32), etc. — none of which are division algebras. $\square$
 
@@ -121,7 +121,7 @@ The product structure follows because these three constructions are algebraicall
 
 **No simple group $G \supset G_{SM}$ arises** because:
 - A simple group containing $U(1) \times SU(2) \times SU(3)$ would require a single algebraic structure encompassing all three. But the three arise from *different algebraic operations* on the division algebra tower.
-- The smallest simple group containing $G_{SM}$ is $SU(5)$ (Georgi-Glashow, 1974). But $SU(5)$ requires a 5-dimensional fundamental representation, which would correspond to a 10-dimensional normed division algebra — but no such algebra exists (Hurwitz). $\square$
+- The smallest simple group containing $G_{SM}$ is $SU(5)$ [Georgi-Glashow, 1974]. But $SU(5)$ requires a 5-dimensional fundamental representation, which would correspond to a 10-dimensional normed division algebra — but no such algebra exists (Hurwitz). $\square$
 
 **Corollary 3.2 (No grand unification).** *The framework predicts that proton decay mediated by GUT gauge bosons does not occur. The predicted proton lifetime from GUT models ($\tau_p \sim 10^{34-36}$ years in $SU(5)$) has been excluded by Super-Kamiokande ($\tau_p > 1.6 \times 10^{34}$ years for $p \to e^+\pi^0$). The framework is consistent with the non-observation of proton decay.*
 
@@ -131,7 +131,7 @@ The product structure follows because these three constructions are algebraicall
 
 *Proof.* The argument proceeds in three parts.
 
-**(1) Algebraic isomorphism $\mathbb{C} \otimes \mathbb{O} \cong \mathbb{C}\ell(6)$.** The octonions $\mathbb{O}$ have 7 imaginary units $e_1, \ldots, e_7$. Complexifying gives $\mathbb{C} \otimes \mathbb{O}$, a 16-dimensional $\mathbb{C}$-algebra. Define operators $\alpha_k = \frac{1}{2}(e_k + i \, e_{k+3})$ for $k = 1, 2, 3$ (choosing an appropriate index convention tied to the quaternionic subalgebra $\mathbb{H} = \text{span}(1, e_1, e_2, e_3)$). These operators satisfy the Clifford algebra relations $\{\alpha_j, \alpha_k^\dagger\} = \delta_{jk}$, establishing $\mathbb{C} \otimes \mathbb{O} \cong \mathbb{C}\ell(6)$. This isomorphism is a standard result in algebra (see Dixon, 1994; Furey, 2016).
+**(1) Algebraic isomorphism $\mathbb{C} \otimes \mathbb{O} \cong \mathbb{C}\ell(6)$.** The octonions $\mathbb{O}$ have 7 imaginary units $e_1, \ldots, e_7$. Complexifying gives $\mathbb{C} \otimes \mathbb{O}$, a 16-dimensional $\mathbb{C}$-algebra. Define operators $\alpha_k = \frac{1}{2}(e_k + i \, e_{k+3})$ for $k = 1, 2, 3$ (choosing an appropriate index convention tied to the quaternionic subalgebra $\mathbb{H} = \text{span}(1, e_1, e_2, e_3)$). These operators satisfy the Clifford algebra relations $\{\alpha_j, \alpha_k^\dagger\} = \delta_{jk}$, establishing $\mathbb{C} \otimes \mathbb{O} \cong \mathbb{C}\ell(6)$. This isomorphism is a standard result in algebra (see [Dixon, 1994]; [Furey, 2016]).
 
 **(2) Symmetry decomposition.** The algebra $\mathbb{C}\ell(6)$ has a natural $U(1) \times SU(3)$ action:
 - $U(1)$ acts by complex phase rotation on the $\mathbb{C}$ factor (this is the electromagnetic $U(1)$ from [Electromagnetism](/derivations/gauge/electromagnetism))
@@ -145,7 +145,7 @@ These are exactly the quantum numbers $(Y, \text{color})$ of one chirality of on
 
 **(3) Completeness.** Combining both chiralities produces the full 16-component set matching one generation of SM fermions (8 left-handed Weyl spinors + 8 right-handed). The hypercharge assignments are fixed by the algebraic structure — there is no free parameter. $\square$
 
-**Remark (Honest assessment).** The $\mathbb{C} \otimes \mathbb{O} \cong \mathbb{C}\ell(6)$ construction (Dixon 1994, Furey 2016) is rigorous mathematics that correctly reproduces the $U(1) \times SU(3)$ quantum numbers. Two limitations remain: (a) the $SU(2)_L$ weak quantum numbers require the full $\mathbb{C}\ell(6)$ action combined with the quaternionic chirality structure from [Chirality Selection](/derivations/gauge/chirality-selection), and the precise mechanism is not yet formalized, and (b) the three-generation structure comes from a separate derivation ([Three Generations](/derivations/particles/three-generations)) rather than from the algebraic construction itself.
+**Remark (Honest assessment).** The $\mathbb{C} \otimes \mathbb{O} \cong \mathbb{C}\ell(6)$ construction [Dixon, 1994]; [Furey, 2016] is rigorous mathematics that correctly reproduces the $U(1) \times SU(3)$ quantum numbers. Two limitations remain: (a) the $SU(2)_L$ weak quantum numbers require the full $\mathbb{C}\ell(6)$ action combined with the quaternionic chirality structure from [Chirality Selection](/derivations/gauge/chirality-selection), and the precise mechanism is not yet formalized, and (b) the three-generation structure comes from a separate derivation ([Three Generations](/derivations/particles/three-generations)) rather than from the algebraic construction itself.
 
 
 ### Step 5: Anomaly Cancellation
@@ -230,10 +230,10 @@ $$U(1) \subset SU(2) = \text{unit}(\mathbb{H}) \quad \text{and} \quad SU(3) = \t
 **Fully rigorous (no new structural postulates):**
 - Theorem 1.1: Summary of gauge hierarchy — synthesis of three rigorous upstream derivations (Electromagnetism, Weak Interaction, Color Force)
 - Theorem 2.1: Hurwitz's theorem (1898, classical result in pure mathematics)
-- Proposition 2.2: Sedenion zero-divisor exclusion — explicit zero divisor (Moreno 1998) + coherence conservation argument via no-deleting theorem (Conservation of Distinguishability, Theorem 6.1)
+- Proposition 2.2: Sedenion zero-divisor exclusion — explicit zero divisor [Moreno, 1998] + coherence conservation argument via no-deleting theorem (Conservation of Distinguishability, Theorem 6.1)
 - Theorem 3.1: Product structure from algebraic independence of three constructions at different levels of the Cayley-Dickson hierarchy
 - Corollary 3.2: No grand unification — logical consequence of Hurwitz ceiling + product structure
-- Proposition 4.1: Fermion representations from $\mathbb{C} \otimes \mathbb{O} \cong \mathbb{C}\ell(6)$ — rigorous algebra (Dixon 1994, Furey 2016) producing exactly the SM quantum numbers. Honest assessment of limitations included.
+- Proposition 4.1: Fermion representations from $\mathbb{C} \otimes \mathbb{O} \cong \mathbb{C}\ell(6)$ — rigorous algebra [Dixon, 1994]; [Furey, 2016] producing exactly the SM quantum numbers. Honest assessment of limitations included.
 - Proposition 5.1: Anomaly cancellation — all four independent conditions verified by explicit computation with algebraically-determined hypercharges
 - Theorem 6.1: Complete SM structure summary — synthesizes all preceding results
 - Theorem 7.1: Consistency model verified
@@ -256,3 +256,10 @@ $$U(1) \subset SU(2) = \text{unit}(\mathbb{H}) \quad \text{and} \quad SU(3) = \t
 
 1. **Electroweak symmetry breaking** — Addressed by [Electroweak Symmetry Breaking](/derivations/gauge/electroweak-breaking): Coleman-Weinberg mechanism from coherence Lagrangian with dimensional transmutation.
 2. **Proton decay bound** — Addressed by [Proton Stability](/derivations/gauge/proton-stability): no GUT bosons from Hurwitz ceiling, baryon number exact, $\tau_p > 10^{64}$ years.
+
+<!-- References -->
+[Georgi-Glashow, 1974]: /references#georgi-glashow-1974
+[Dixon, 1994]: /references#dixon-1994
+[Moreno, 1998]: /references#moreno-1998
+[Springer & Veldkamp, 2000]: /references#springer-veldkamp-2000
+[Furey, 2016]: /references#furey-2016

@@ -120,7 +120,7 @@ with equality if and only if $\pi$ does not merge any configurations that distin
 
 Combining Parts 1 and 2: $\pi_*\mathcal{C}(S_1' : S_2') = \mathcal{C}(\pi^{-1}(S_1') : \pi^{-1}(S_2')) \leq \mathcal{C}(S_1 : S_2)$. $\square$
 
-**Remark.** On the statistical manifold of observer states, this monotonicity is equivalent to the data processing inequality for the Fisher distance: $d_G(\pi(\sigma_1), \pi(\sigma_2)) \leq d_G(\sigma_1, \sigma_2)$ for any Markov map $\pi$ (Amari & Nagaoka, 2000, §2.4). The coherence-framework proof above derives this from axiom C4 alone, without requiring the full information-geometric apparatus.
+**Remark.** On the statistical manifold of observer states, this monotonicity is equivalent to the data processing inequality for the Fisher distance: $d_G(\pi(\sigma_1), \pi(\sigma_2)) \leq d_G(\sigma_1, \sigma_2)$ for any Markov map $\pi$ [Amari & Nagaoka, 2000]. The coherence-framework proof above derives this from axiom C4 alone, without requiring the full information-geometric apparatus.
 
 **Remark (Bilateral vs. unilateral).** Conservation of distinguishability has two faces:
 - **Bilateral** (Theorem 2.1): Invertible (admissible) transformations preserve distinguishability exactly. This is the framework's version of unitarity.
@@ -170,7 +170,7 @@ because the slots are maximally correlated: knowing slot 2 determines slot 1. By
 
 By Corollary 2.2, admissible transformations preserve relational coherence. Therefore $0 = \mathcal{C}(\text{slot 1} : \text{slot 2})\big|_{\text{before}} = \mathcal{C}(\text{slot 1} : \text{slot 2})\big|_{\text{after}} > 0$, a contradiction. $\square$
 
-**Remark.** The standard quantum no-cloning theorem (Wootters & Zurek, 1982; Dieks, 1982) derives from unitarity and linearity. In the framework, unitarity *is* coherence conservation (Theorem 2.1), and the proof above replaces linearity with the subadditivity of coherence — a weaker and more fundamental assumption. The no-cloning theorem is therefore deeper than quantum mechanics: it holds for any coherence-conserving dynamics, whether or not the dynamics has a Hilbert space formulation.
+**Remark.** The standard quantum no-cloning theorem [Wootters & Zurek, 1982]; [Dieks, 1982] derives from unitarity and linearity. In the framework, unitarity *is* coherence conservation (Theorem 2.1), and the proof above replaces linearity with the subadditivity of coherence — a weaker and more fundamental assumption. The no-cloning theorem is therefore deeper than quantum mechanics: it holds for any coherence-conserving dynamics, whether or not the dynamics has a Hilbert space formulation.
 
 ### Step 6: No-Deleting Theorem
 
@@ -268,3 +268,8 @@ since $\mathcal{C}(S) > 0$ (axiom C2) and $dS_A/d\tau \geq 0$ (second law). Equa
 ## Addressed Gaps
 
 1. **Product-space coherence decomposition** *(resolved)*: Axiomatized in Definition 5.0: additivity for independent subsystems (from the definition of coherence independence) and subadditivity (C4) for correlated subsystems. This closes the formalization gap for the no-cloning/no-deleting proofs.
+
+<!-- References -->
+[Dieks, 1982]: /references#dieks-1982
+[Wootters & Zurek, 1982]: /references#wootters-zurek-1982
+[Amari & Nagaoka, 2000]: /references#amari-nagaoka-2000

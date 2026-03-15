@@ -165,7 +165,7 @@ By the Jost-Lüders-Pauli theorem (1957), any Lagrangian satisfying (1)-(3) is C
 - **Proposition 3.2** ($T$): $T$ maps $e^-(t) \to e^-(-t)$ (anti-unitary), with $T^2 = -1$ (Kramers degeneracy verified for spin-$1/2$). $\checkmark$
 - **Theorem 4.1** ($CPT$): The QED Lagrangian $\mathcal{L} = \bar{\psi}(i\gamma^\mu D_\mu - m)\psi - \frac{1}{4}F_{\mu\nu}F^{\mu\nu}$ is CPT-invariant. $\checkmark$
 - **Corollary 4.2**: $m_{e^-} = m_{e^+} = 0.511$ MeV (measured to $< 10^{-8}$ relative precision). $\checkmark$
-- **Corollary 4.3**: $P$ is violated in weak decays of electrons (observed in Wu experiment, 1957). $CP$ is violated in the kaon system (observed, 1964). Both are consistent with exact $CPT$. $\checkmark$ $\square$
+- **Corollary 4.3**: $P$ is violated in weak decays of electrons [Wu, 1957]. $CP$ is violated in the kaon system (observed, 1964). Both are consistent with exact $CPT$. $\checkmark$ $\square$
 
 ## Rigor Assessment
 
@@ -190,3 +190,6 @@ By the Jost-Lüders-Pauli theorem (1957), any Lagrangian satisfying (1)-(3) is C
 1. **CP violation mechanism**: While the theorem allows individual $CP$ violation (Corollary 4.3), the framework should derive the specific mechanism — complex phases in the CKM and PMNS matrices — from the flavor structure ([Three Generations](/derivations/particles/three-generations)).
 2. **CPT tests**: The prediction $m = \bar{m}$ and $\tau = \bar{\tau}$ can be tested with increasing precision. Current best tests: $|m_K - m_{\bar{K}}|/m_K < 10^{-18}$ (kaon system), $|q_p + q_{\bar{p}}|/e < 10^{-12}$ (proton-antiproton charge ratio). Any violation would falsify the framework.
 3. **Gravitational CPT**: Does CPT extend to the gravitational sector? The coherence Lagrangian includes gravity ([Einstein Equations](/derivations/spacetime/einstein-equations)), so the theorem formally applies. However, the non-perturbative gravitational regime (black holes, cosmology) may reveal subtleties — particularly regarding the information paradox and black hole evaporation.
+
+<!-- References -->
+[Wu, 1957]: /references#wu-1957

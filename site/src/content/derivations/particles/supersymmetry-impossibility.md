@@ -71,7 +71,7 @@ This defines a continuous path $t \mapsto [Q(t) \cdot \gamma]$ from $[0]$ to $[1
 
 ### Step 3: Comparison with Standard No-Go Theorems
 
-**Proposition 3.1 (Relation to Coleman-Mandula and Haag-Łopuszański-Sohnius).** *The standard no-go theorem for bosonic symmetries (Coleman-Mandula, 1967) forbids non-trivial mixing of internal and spacetime symmetries, but explicitly allows supersymmetry as a graded extension (Haag-Łopuszański-Sohnius, 1975). The present no-go theorem is stronger: it forbids supersymmetry itself.*
+**Proposition 3.1 (Relation to Coleman-Mandula and Haag-Łopuszański-Sohnius).** *The standard no-go theorem for bosonic symmetries [Coleman-Mandula, 1967] forbids non-trivial mixing of internal and spacetime symmetries, but explicitly allows supersymmetry as a graded extension [Haag-Łopuszański-Sohnius, 1975]. The present no-go theorem is stronger: it forbids supersymmetry itself.*
 
 *Proof.* The Coleman-Mandula theorem assumes Lie group symmetries and derives that the only symmetry of the S-matrix is $\text{Poincaré} \times \text{internal}$. The HLS extension shows that graded Lie algebras (superalgebras) evade this restriction. Both results are algebraic, operating within the space of possible symmetry structures.
 
@@ -124,3 +124,7 @@ The key distinction: in the standard framework, spin is a representation label (
 2. **Emergent approximate SUSY**: Could an approximate algebraic relation between bosonic and fermionic sectors arise dynamically, even though exact SUSY is forbidden? Such an "accidental SUSY" would be broken by construction and might explain near-degeneracies if observed.
 
 3. **Supergravity and string theory**: In approaches where supersymmetry is a mathematical framework (string theory, supergravity), does the topological no-go theorem constrain which mathematical structures have physical realizations?
+
+<!-- References -->
+[Coleman-Mandula, 1967]: /references#coleman-mandula-1967
+[Haag-Łopuszański-Sohnius, 1975]: /references#haag-łopuszański-sohnius-1975

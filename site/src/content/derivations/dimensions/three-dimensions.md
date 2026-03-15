@@ -89,9 +89,9 @@ For $d \geq 3$: $|\pi_1(SO(d))| = |\mathbb{Z}_2| = 2$. Two fundamental types (co
 - **Donaldson (1983)**: Constraints on smooth structures from gauge theory — certain intersection forms that are topologically realizable are not smoothly realizable
 - The gap between Freedman's topological classification and Donaldson's smooth constraints produces exotic smooth structures on $\mathbb{R}^4$
 
-For $d \leq 3$: Smooth structures are unique by the classical theory of low-dimensional manifolds (Moise, 1952: every topological 3-manifold admits a unique smooth structure).
+For $d \leq 3$: Smooth structures are unique by the classical theory of low-dimensional manifolds [Moise, 1952].
 
-For $d \geq 5$: The $h$-cobordism theorem (Smale, 1961) implies that $\mathbb{R}^d$ admits a unique smooth structure. $\square$
+For $d \geq 5$: The $h$-cobordism theorem [Smale, 1961] implies that $\mathbb{R}^d$ admits a unique smooth structure. $\square$
 
 **Proposition 4.2.** *Exotic smooth structures on $\mathbb{R}^4$ are incompatible with uniqueness of the observer loop closure condition.*
 
@@ -184,7 +184,7 @@ No two conditions share a proof technique. Their convergence on a single value i
 *Verification:*
 - **Condition 1 (Permeability)**: Boundaries are 2-manifolds (surfaces in $\mathbb{R}^3$) with $C^\infty(S^2)$ infinite-dimensional. Selective filtration possible. $\checkmark$
 - **Condition 2 (Finite winding)**: $\pi_1(SO(3)) = \mathbb{Z}_2$. Two fundamental types: integer spin (winding 0) and half-integer spin (winding 1). $\checkmark$
-- **Condition 3 (Smooth structure)**: $\mathbb{R}^3$ has a unique smooth structure (Moise, 1952). $\checkmark$
+- **Condition 3 (Smooth structure)**: $\mathbb{R}^3$ has a unique smooth structure [Moise, 1952]. $\checkmark$
 - **Condition 4 (Stability)**: Effective potential $V_{\text{eff}}(r) = \ell^2/(2mr^2) - k/r$ has $V_{\text{eff}}''(r_0) = k/r_0^3 > 0$. Stable circular orbits exist. Bertrand's theorem gives closed orbits. $\checkmark$
 
 *Moreover, no other $d$ satisfies all four simultaneously (Theorem 6.1).* $\square$
@@ -193,7 +193,7 @@ No two conditions share a proof technique. Their convergence on a single value i
 
 | Approach | Mechanism | Status |
 |---|---|---|
-| Anthropic (Tegmark, 1997) | PDEs for physics require 3+1 for stable atoms | Uses $d = 3$ consequences, not $d = 3$ derivation |
+| Anthropic [Tegmark, 1997] | PDEs for physics require 3+1 for stable atoms | Uses $d = 3$ consequences, not $d = 3$ derivation |
 | String theory | Compactification from $d = 10$ or $d = 11$ | Requires choosing a Calabi-Yau; no uniqueness |
 | Causal set theory | $d$ emergent from causal structure | No convergence argument; $d$ is input |
 | **Observer-centrism** | **Four independent conditions converge** | **$d = 3$ derived from axioms** |
@@ -222,3 +222,8 @@ No two conditions share a proof technique. Their convergence on a single value i
 2. **Compactification**: Could extra dimensions exist but be compactified at scales below $\ell_P$? The framework's conditions apply to the *effective* dimensionality experienced by observers. If compact dimensions are below the minimal observer scale, they play no role in boundary structure. This should be formalized.
 
 3. **The $3 + 1 = 4$ coincidence**: The total spacetime dimension is 4 — the unique dimension with exotic smooth structures. The spatial dimension is 3 — the unique dimension where this exotic pathology is *absent*. Whether this is coincidence or structural is an open question of considerable depth.
+
+<!-- References -->
+[Moise, 1952]: /references#moise-1952
+[Smale, 1961]: /references#smale-1961
+[Tegmark, 1997]: /references#tegmark-1997

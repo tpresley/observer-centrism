@@ -131,7 +131,7 @@ where $A[\gamma^*]$ is a slowly varying prefactor. The physical trajectory is se
 
 $$\Delta\theta \cdot \Delta Q \geq \frac{1}{2}$$
 
-*Proof.* The $U(1)$ loop structure gives a Fourier-conjugate pair. The phase $\theta$ is the position on the circle $S^1$. The charge $Q$ corresponds to the Fourier mode number (the "cycle count" or angular momentum quantum number). By the classical uncertainty relation for Fourier-conjugate variables on $S^1$ (a standard result in harmonic analysis — see Folland & Sitaram, 1997):
+*Proof.* The $U(1)$ loop structure gives a Fourier-conjugate pair. The phase $\theta$ is the position on the circle $S^1$. The charge $Q$ corresponds to the Fourier mode number (the "cycle count" or angular momentum quantum number). By the classical uncertainty relation for Fourier-conjugate variables on $S^1$ [Folland & Sitaram, 1997]:
 
 $$\Delta\theta \cdot \Delta n \geq \frac{1}{2}$$
 
@@ -213,3 +213,6 @@ $$\hbar = \min_{\gamma \in \Lambda(\Sigma_{\min})} \oint \mathcal{L} \, dt = 2\p
 1. **Constructing $\mathcal{L}$ from first principles**: The coherence Lagrangian should be uniquely derivable from $\mathcal{C}$ and the observer structure. The Fisher information metric is a natural candidate. This is the key missing link between the abstract framework and concrete dynamics.
 2. **Quantization of energy levels**: The existence of a minimum action quantum $\hbar$ implies that admissible observer cycles have quantized action $n\hbar$ for $n \in \mathbb{Z}_{\geq 1}$. This should connect to the quantization of energy levels in bound systems.
 3. **$\hbar$, $c$, and $G$**: The relationship between $\hbar$ (coherence cost quantum), $c$ (phase propagation speed from [Speed of Light](/derivations/spacetime/speed-of-light)), and $G$ (gravitational coupling) determines whether the framework has zero, one, or two free parameters.
+
+<!-- References -->
+[Folland & Sitaram, 1997]: /references#folland-sitaram-1997

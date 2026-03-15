@@ -115,7 +115,7 @@ $$t_{\text{Page}} \sim \frac{t_{\text{evap}}}{2} \sim \frac{2560\pi G^2 M^3}{\hb
 
 ### Step 6: No Firewall
 
-**Theorem 6.1 (No firewall).** *The framework rejects the firewall hypothesis (AMPS, 2012).*
+**Theorem 6.1 (No firewall).** *The framework rejects the firewall hypothesis [AMPS, 2012].*
 
 *Proof.* The firewall argument claims that unitarity requires breaking the entanglement between a late Hawking quantum and the interior, creating a "wall" of high-energy quanta at the horizon. In the framework:
 
@@ -154,7 +154,7 @@ A stable remnant would be a black hole with $M \sim M_P$ storing all information
 
 **Theorem 8.1.** *The Page model (random unitary evolution of a bipartite system) provides a consistency model for the information paradox resolution.*
 
-*Verification.* Take a bipartite system $H = H_{\text{BH}} \otimes H_{\text{rad}}$ evolving under random unitary dynamics (Page, 1993).
+*Verification.* Take a bipartite system $H = H_{\text{BH}} \otimes H_{\text{rad}}$ evolving under random unitary dynamics [Page, 1993].
 
 - **No information loss** (Theorem 2.1): The total state $|\Psi\rangle \in H$ remains pure throughout the evolution. $\checkmark$
 - **Thermal radiation** (Theorem 4.1, $\mathcal{O}_A$): An observer measuring individual radiation quanta sees a thermal mixed state $\rho_{\text{rad}} = \text{Tr}_{\text{BH}}|\Psi\rangle\langle\Psi|$ with $S(\rho_{\text{rad}}) > 0$. $\checkmark$
@@ -178,7 +178,7 @@ A stable remnant would be a black hole with $M \sim M_P$ storing all information
 - Proposition 7.1: No remnant required (information transferred to radiation by Page time)
 
 **Open elements:**
-- The explicit quantum error-correcting code mapping interior degrees of freedom to radiation correlations is structural, not computational. Connection to the island formula (Almheiri et al., 2019) and entanglement wedge reconstruction would strengthen the derivation.
+- The explicit quantum error-correcting code mapping interior degrees of freedom to radiation correlations is structural, not computational. Connection to the island formula [Almheiri et al., 2019] and entanglement wedge reconstruction would strengthen the derivation.
 - The typicality assumption in Theorem 5.1 (Hawking radiation + BH system is in a typical pure state) is well-motivated by the maximum entropy at the horizon but not proved from first principles.
 - The AMPS resolution (Theorem 6.1(ii)) invokes observer-indexing conceptually. Formal development — showing that the relational invariants for infalling and external observers are structurally distinct — would complete the argument.
 - The evaporation endpoint depends on the discrete Planck-scale structure, which is not yet developed.
@@ -187,11 +187,18 @@ A stable remnant would be a black hole with $M \sim M_P$ storing all information
 
 ## Open Gaps
 
-1. **Scrambling time**: How quickly does the black hole interior become encoded in the Hawking radiation? The scrambling time $t_s \sim (M/M_P)^2 \cdot t_P \cdot \log(S_{BH})$ (Sekino-Susskind, 2008) should be derivable from the rate of relational invariant propagation through the interior network.
-2. **Quantum error correction**: The encoding of interior information in radiation correlations should be formalizable as a quantum error-correcting code (Almheiri-Dong-Harlow, 2015). The relational invariant structure should map onto the code subspace.
+1. **Scrambling time**: How quickly does the black hole interior become encoded in the Hawking radiation? The scrambling time $t_s \sim (M/M_P)^2 \cdot t_P \cdot \log(S_{BH})$ [Sekino-Susskind, 2008] should be derivable from the rate of relational invariant propagation through the interior network.
+2. **Quantum error correction**: The encoding of interior information in radiation correlations should be formalizable as a quantum error-correcting code [Almheiri-Dong-Harlow, 2015]. The relational invariant structure should map onto the code subspace.
 3. **Island formula**: The island formula for entropy ($S = \min \text{ext}[A(\partial I)/(4G\hbar) + S_{\text{matter}}(I \cup R)]$) should be derivable from the coherence domain structure, with "islands" corresponding to regions where the external observer's coherence domain extends inside the horizon through the radiation correlations.
 4. **Observational signatures**: The information encoding in Hawking radiation correlations is in principle observable but requires collecting an astronomically large number of quanta. Are there more accessible signatures of the resolution — for example, in analog black hole experiments?
 
 ## Addressed Gaps
 
 1. **ER=EPR connection** *(resolved — downstream)*: Fully addressed by [ER=EPR from Relational Invariants](/derivations/holography/er-epr), which rigorously establishes that relational invariants produce both entanglement (EPR) and non-traversable wormholes (ER) as dual descriptions, with throat area–entropy equality $A = 4\ell_P^2 S_{\text{ent}}$ and non-traversability from area-coherence saturation.
+
+<!-- References -->
+[Page, 1993]: /references#page-1993
+[Sekino-Susskind, 2008]: /references#sekino-susskind-2008
+[AMPS, 2012]: /references#amps-2012
+[Almheiri-Dong-Harlow, 2015]: /references#almheiri-dong-harlow-2015
+[Almheiri et al., 2019]: /references#almheiri-2019

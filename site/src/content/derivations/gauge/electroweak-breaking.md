@@ -53,7 +53,7 @@ The electroweak symmetry group, SU(2) x U(1), treats all its gauge bosons as mas
 
 **Part 1 (Coherence potential structure).** The observer hierarchy at the electroweak scale involves fermionic winding modes ([Three Generations](/derivations/particles/three-generations)) carrying $SU(2)_L \times U(1)_Y$ charges. The coherence cost of the vacuum state receives quantum corrections from these modes. In the unbroken phase ($\phi = 0$), all fermions are massless — gauge invariance forbids explicit mass terms for chiral fermions, since $SU(2)_L$ acts only on left-handed fields ([Weak Interaction](/derivations/gauge/weak-interaction), Theorem 2.1).
 
-**Part 2 (Instability of symmetric vacuum).** The effective potential receives one-loop corrections from all particles coupling to $\phi$. The Coleman-Weinberg one-loop effective potential (Coleman & Weinberg, 1973) is:
+**Part 2 (Instability of symmetric vacuum).** The effective potential receives one-loop corrections from all particles coupling to $\phi$. The Coleman-Weinberg one-loop effective potential [Coleman & Weinberg, 1973] is:
 
 $$V_{\text{1-loop}}(\phi) = \frac{1}{64\pi^2}\sum_i (-1)^{2s_i}(2s_i+1) n_i \, m_i(\phi)^4 \left[\ln\frac{m_i(\phi)^2}{\Lambda^2} - c_i\right]$$
 
@@ -201,3 +201,6 @@ replaces the forbidden mass term. When $\phi \to \langle\phi\rangle = (0, v/\sqr
 3. **Higgs self-coupling**: The value $\lambda \approx 0.13$ (determining $m_h = 125$ GeV) is not predicted — it depends on the shape of the coherence potential near the crystallization.
 4. **Custodial symmetry**: The approximate $SU(2)$ custodial symmetry protecting $\rho = m_W^2/(m_Z^2\cos^2\theta_W) \approx 1$ should follow from the quaternionic structure but is not explicitly derived.
 5. **Electroweak phase transition**: The cosmological electroweak phase transition (first-order vs. crossover) depends on the detailed dynamics of the crystallization, relevant for [Baryogenesis](/derivations/cosmology/baryogenesis).
+
+<!-- References -->
+[Coleman & Weinberg, 1973]: /references#coleman-weinberg-1973

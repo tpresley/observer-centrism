@@ -184,4 +184,7 @@ The measurement basis is the simultaneous eigenbasis of the maximal commuting se
 1. **Interaction Hamiltonian mapping**: The explicit map $H_{\text{int}} \mapsto \hat{I}_{\mathcal{O}S}$ from the physical interaction to the relational invariant is needed for concrete predictions.
 2. **Contextuality**: The Kochen-Specker theorem shows that quantum observables cannot all have simultaneous definite values. This should follow from the relational-invariant mechanism: each measurement context generates a specific $\hat{I}_{\mathcal{O}S}$, and values are context-dependent. Explicit formalization is needed.
 3. **Continuous observables**: Extension to position, momentum, and other continuous-spectrum observables via spectral measures.
-4. **Weak measurements**: For partial (weak) Type III interactions, the relational invariant is not fully generated, and the system is left in a superposition of eigenstates with small disturbance. This should connect to the weak measurement formalism (Aharonov, Albert, Vaidman 1988).
+4. **Weak measurements**: For partial (weak) Type III interactions, the relational invariant is not fully generated, and the system is left in a superposition of eigenstates with small disturbance. This should connect to the weak measurement formalism [Aharonov, Albert, Vaidman, 1988].
+
+<!-- References -->
+[Aharonov, Albert, Vaidman, 1988]: /references#aharonov-albert-vaidman-1988

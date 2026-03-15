@@ -40,7 +40,7 @@ Lovelock's uniqueness theorem (1971) then proves that in four spacetime dimensio
 
 **Structural Postulate S1 (Second-order locality).** The self-consistency relation between the curvature of $(\mathcal{H}, g)$ and the coherence content that generates it involves at most second derivatives of the metric $g_{\mu\nu}$. That is, the geometric side of the field equation depends on $g_{\mu\nu}$, $\partial_\alpha g_{\mu\nu}$, and $\partial_\alpha \partial_\beta g_{\mu\nu}$, but not on higher derivatives.
 
-**Remark.** This postulate reflects the locality of the relational invariant density: the curvature at a point $p$ is determined by the coherence content in an infinitesimal neighborhood of $p$ (via [Gravity](/derivations/spacetime/gravity), Theorem 0.1). Higher-derivative theories (involving $\partial^3 g$ or beyond) would couple curvature to non-local coherence information, violating the principle that the interaction graph determines geometry locally. In standard physics, second-order locality is equivalent to the requirement that the field equations are a well-posed initial value problem (Choquet-Bruhat, 1952).
+**Remark.** This postulate reflects the locality of the relational invariant density: the curvature at a point $p$ is determined by the coherence content in an infinitesimal neighborhood of $p$ (via [Gravity](/derivations/spacetime/gravity), Theorem 0.1). Higher-derivative theories (involving $\partial^3 g$ or beyond) would couple curvature to non-local coherence information, violating the principle that the interaction graph determines geometry locally. In standard physics, second-order locality is equivalent to the requirement that the field equations are a well-posed initial value problem [Choquet-Bruhat, 1952].
 
 ### Step 1: The Self-Consistency Requirement
 
@@ -90,7 +90,7 @@ $$\nabla_\mu G^{\mu\nu} = 0$$
 
 ### Step 4: Uniqueness — Lovelock's Theorem
 
-**Theorem 4.1 (Lovelock, 1971).** *In $n = 4$ spacetime dimensions (from [Three Spatial Dimensions](/derivations/dimensions/three-dimensions)), the most general symmetric, divergence-free rank-2 tensor that is constructed from $g_{\mu\nu}$ and its first and second derivatives is:*
+**Theorem 4.1 [Lovelock, 1971].** *In $n = 4$ spacetime dimensions (from [Three Spatial Dimensions](/derivations/dimensions/three-dimensions)), the most general symmetric, divergence-free rank-2 tensor that is constructed from $g_{\mu\nu}$ and its first and second derivatives is:*
 
 $$\mathcal{E}_{\mu\nu} = \alpha \, G_{\mu\nu} + \Lambda \, g_{\mu\nu}$$
 
@@ -213,3 +213,7 @@ These are the $(0,0)$ and trace components of the Einstein equations. The self-c
 ## Addressed Gaps
 
 1. **Singularity resolution** — Addressed by [Singularity Resolution](/derivations/spacetime/singularity-resolution): curvature bounds at Planck density, coherence bounces and regular cores via contraposition of Penrose-Hawking theorems.
+
+<!-- References -->
+[Choquet-Bruhat, 1952]: /references#choquet-bruhat-1952
+[Lovelock, 1971]: /references#lovelock-1971

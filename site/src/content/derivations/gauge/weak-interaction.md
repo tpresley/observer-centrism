@@ -120,7 +120,7 @@ for arbitrary smooth $g: \mathcal{M} \to SU(2)$. The smoothness of $g$ follows f
 
 *All such observables are invariant under $\psi(x) \to g(x)\psi(x)$ for arbitrary smooth $g: \mathcal{M} \to SU(2)$.*
 
-*Proof.* Wilson loop traces are gauge-invariant because $\text{tr}(g \cdot \mathcal{P}\exp(\cdots) \cdot g^{-1}) = \text{tr}(\mathcal{P}\exp(\cdots))$ by the cyclic property of the trace. Relational invariants are gauge-invariant by the non-abelian version of Proposition 1.2 (they depend only on gauge-invariant combinations of quaternionic phases). Together, these generate all gauge-invariant observables — the non-abelian generalization of the Giles reconstruction theorem (Giles, 1981). The trace is necessary (unlike the $U(1)$ case) because the non-abelian holonomy transforms by conjugation. $\square$
+*Proof.* Wilson loop traces are gauge-invariant because $\text{tr}(g \cdot \mathcal{P}\exp(\cdots) \cdot g^{-1}) = \text{tr}(\mathcal{P}\exp(\cdots))$ by the cyclic property of the trace. Relational invariants are gauge-invariant by the non-abelian version of Proposition 1.2 (they depend only on gauge-invariant combinations of quaternionic phases). Together, these generate all gauge-invariant observables — the non-abelian generalization of the Giles reconstruction theorem [Giles, 1981]. The trace is necessary (unlike the $U(1)$ case) because the non-abelian holonomy transforms by conjugation. $\square$
 
 **Proposition 3.2b (Uniqueness of the non-abelian gauge implementation).** *The principal $SU(2)$ bundle with connection (S1) is the unique smooth differential-geometric structure that simultaneously:*
 
@@ -345,3 +345,6 @@ where $\psi_L = \frac{1}{2}(1 - \gamma_5)\psi$ is the left-handed projection.
 2. **Electroweak symmetry breaking** — Addressed by [Electroweak Symmetry Breaking](/derivations/gauge/electroweak-breaking): Coleman-Weinberg mechanism from the coherence Lagrangian.
 3. **Weinberg angle** — Addressed by [Weinberg Angle](/derivations/gauge/weinberg-angle): $\sin^2\theta_W(M_Z) = 0.231$ from the $\mathbb{C} \subset \mathbb{H}$ algebraic boundary condition.
 4. **Anomaly cancellation** — Addressed by [Anomaly Cancellation](/derivations/gauge/anomaly-cancellation): chirality-selected fermion content satisfies all four anomaly conditions.
+
+<!-- References -->
+[Giles, 1981]: /references#giles-1981

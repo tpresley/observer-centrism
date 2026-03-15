@@ -85,7 +85,7 @@ $$g^{T(p)}_{ij}(\theta) \leq g^p_{ij}(\theta)$$
 
 in the sense of positive-definite ordering. That is, coarse-graining (information loss) does not increase distinguishability.
 
-**Theorem 3.1 (Čencov, 1972/1982).** *On the manifold of probability distributions over a finite sample space, the Fisher information metric is the unique (up to a positive multiplicative constant $\lambda > 0$) Riemannian metric that is monotone under Markov maps.*
+**Theorem 3.1 [Čencov, 1972].** *On the manifold of probability distributions over a finite sample space, the Fisher information metric is the unique (up to a positive multiplicative constant $\lambda > 0$) Riemannian metric that is monotone under Markov maps.*
 
 *Proof reference.* The original proof is in Čencov (1982, *Statistical Decision Rules and Optimal Inference*). Modern treatments appear in Amari & Nagaoka (2000, *Methods of Information Geometry*, Theorem 2.6). The key insight is that monotonicity under all sufficient statistics is an extremely strong constraint — it forces the metric to be proportional to the Fisher metric. $\square$
 
@@ -168,7 +168,7 @@ where the last equality follows from differentiating the normalization condition
 
 $$R^{(0)}_{ijkl} = \frac{1}{4}(C_{ikm}G^{mn}C_{jln} - C_{ilm}G^{mn}C_{jkn})$$
 
-**Step 3 (Constant curvature for the normal family).** For the $n$-dimensional normal family $N(\mu, \Sigma)$ parameterized by mean and covariance, the Fisher manifold on the covariance parameters is isometric to the symmetric space $GL(n)/O(n)$, which for the half-space parameterization gives the hyperbolic geometry $\mathbb{H}^{n(n+1)/2}$. For the univariate case $(n=1)$, the Fisher manifold of $N(\mu, \sigma^2)$ is the Poincar\'e half-plane with constant sectional curvature $\kappa = -1/2$ (Rao, 1945; Amari & Nagaoka, 2000, Example 2.3). $\square$
+**Step 3 (Constant curvature for the normal family).** For the $n$-dimensional normal family $N(\mu, \Sigma)$ parameterized by mean and covariance, the Fisher manifold on the covariance parameters is isometric to the symmetric space $GL(n)/O(n)$, which for the half-space parameterization gives the hyperbolic geometry $\mathbb{H}^{n(n+1)/2}$. For the univariate case $(n=1)$, the Fisher manifold of $N(\mu, \sigma^2)$ is the Poincar\'e half-plane with constant sectional curvature $\kappa = -1/2$ [Rao, 1945]; [Amari & Nagaoka, 2000]. $\square$
 
 **Remark (Honest assessment of curvature–spacetime bridge).** The earlier framework claimed a direct correspondence between Fisher curvature on state space and physical spacetime curvature. In the current rigorous framework, spacetime curvature arises from coherence density gradients ([Gravity](/derivations/spacetime/gravity)), while Fisher curvature arises from the statistical structure of the state manifold. These are geometries on *different spaces* ($\Sigma$ vs. $\mathcal{M}$). A complete bridge would require showing how the Fisher geometry on $\Sigma$ induces, via the observer embedding in spacetime, the metric on $\mathcal{M}$. This remains an open problem and is the primary reason this derivation does not achieve provisional status.
 
@@ -202,13 +202,13 @@ $$R^{(0)}_{ijkl} = \frac{1}{4}(C_{ikm}G^{mn}C_{jln} - C_{ilm}G^{mn}C_{jkn})$$
 - Proposition 1.1: Statistical manifold structure (from O1 + S1 + injectivity — standard information geometry)
 - Proposition 2.1: KL divergence expansion, Fisher matrix emergence (standard Taylor expansion + normalization identities)
 - Corollary 2.2: Positive definiteness (from non-degeneracy of the parameterization)
-- Theorem 3.1: Čencov's theorem (published, peer-reviewed: Čencov 1982, Amari & Nagaoka 2000)
+- Theorem 3.1: Čencov's theorem [Čencov, 1982]; [Amari & Nagaoka, 2000]
 - Corollary 3.2: Uniqueness on coherence manifold (direct application of Theorem 3.1)
 - Proposition 4.1: Metric identification $g = \hbar G$. The previously flagged monotonicity gap is now closed: [Conservation of Distinguishability](/derivations/thermodynamics-ext/distinguishability-conservation) (Proposition 4.1, now rigorous) proves that Axiom 1 implies Čencov's monotonicity condition on the coherence-derived metric. The Hessian metric inherits monotonicity because it is derived from $\mathcal{C}$ (which is preserved by admissible transformations and contracted by coarse-grainings). The normalization $\lambda = \hbar$ follows from the Action-Planck minimum cycle cost.
 - Corollary 4.2: Coherence cost as Fisher arc length (direct consequence of Proposition 4.1)
 - Proposition 5.1: Dual role of $\hbar$ (restatement of the identification)
 - Proposition 5.2: Entropy as Fisher volume (follows from the entropy definition and metric identification)
-- Proposition 6.1: Fisher curvature for exponential families (standard result: Rao 1945, Amari & Nagaoka 2000)
+- Proposition 6.1: Fisher curvature for exponential families [Rao, 1945]; [Amari & Nagaoka, 2000]
 - Theorem 7.1: Consistency model verified
 
 **Open research directions (not gaps in the derivation logic):**
@@ -221,9 +221,17 @@ $$R^{(0)}_{ijkl} = \frac{1}{4}(C_{ikm}G^{mn}C_{jln} - C_{ilm}G^{mn}C_{jkn})$$
 ## Open Gaps
 
 1. **Curvature–spacetime bridge**: Connect the Fisher curvature on $\Sigma$ to the spacetime curvature on $\mathcal{M}$. The [Gravity](/derivations/spacetime/gravity) derivation provides the latter from coherence density gradients; the bridge would need to show how the observer embedding $\iota: \Sigma \to \mathcal{M}$ translates one curvature to the other. This is a research direction, not a derivation gap.
-2. **Quantum Fisher metric**: Extend from the classical Fisher metric to the quantum Fisher information (Bures metric / symmetric logarithmic derivative). This is needed for full quantum state spaces. The quantum Čencov theorem (Petz, 1996) classifies monotone metrics but there is a family rather than a unique metric.
-3. **Infinite-dimensional extension**: The derivation assumes finite-dimensional $\Sigma$. For field theory, the state space is infinite-dimensional and requires functional-analytic care (the theory exists — see Pistone & Sempi, 1995).
+2. **Quantum Fisher metric**: Extend from the classical Fisher metric to the quantum Fisher information (Bures metric / symmetric logarithmic derivative). This is needed for full quantum state spaces. The quantum Čencov theorem [Petz, 1996] classifies monotone metrics but there is a family rather than a unique metric.
+3. **Infinite-dimensional extension**: The derivation assumes finite-dimensional $\Sigma$. For field theory, the state space is infinite-dimensional and requires functional-analytic care [Pistone & Sempi, 1995].
 
 ## Addressed Gaps
 
 1. **Monotonicity of the Hessian metric** — Proved by [Conservation of Distinguishability](/derivations/thermodynamics-ext/distinguishability-conservation) (Proposition 4.1): Axiom 1a → isometries → Čencov monotonicity. The identification $g = \hbar G$ is fully rigorous.
+
+<!-- References -->
+[Rao, 1945]: /references#rao-1945
+[Čencov, 1972]: /references#čencov-1972
+[Čencov, 1982]: /references#čencov-1982
+[Pistone & Sempi, 1995]: /references#pistone-sempi-1995
+[Petz, 1996]: /references#petz-1996
+[Amari & Nagaoka, 2000]: /references#amari-nagaoka-2000

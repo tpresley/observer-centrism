@@ -101,7 +101,7 @@ $$V(r) \sim \sigma r \quad \text{for} \quad r \gg \Lambda_{\text{QCD}}^{-1}$$
 
 **Step 4a (Random-walk phase model).** At each junction between segments $i$ and $i+1$, the non-associative ambiguity introduces a phase rotation $\delta\phi_i$ on the color state. The associator $[U_i, U_{i+1}, U_{i+2}]$ at each triple of segments contributes a rotation in the $\mathbf{3} \oplus \bar{\mathbf{3}}$ color subspace with magnitude $|\delta\phi_i| \leq \|[a,b,c]\|_{\max} \equiv \delta$, where $\delta$ is the maximal associator norm (a fixed property of $\mathbb{O}$; for unit octonions, $\delta = 2$ since $\|[e_i, e_j, e_k]\| = 2$ for non-associative triples).
 
-**Step 4b (Central limit theorem on $SU(3)$).** Since the segments are correlated only over the correlation length $a$, the phase contributions $\{\delta\phi_i\}$ from well-separated junctions are approximately independent. By the central limit theorem on compact groups (Diaconis, 1988), the distribution of the composed holonomy after $n$ independent random perturbations converges to the Haar measure on $SU(3)$ as $n \to \infty$. The overlap of the transported state with the initial color state decays as:
+**Step 4b (Central limit theorem on $SU(3)$).** Since the segments are correlated only over the correlation length $a$, the phase contributions $\{\delta\phi_i\}$ from well-separated junctions are approximately independent. By the central limit theorem on compact groups [Diaconis, 1988], the distribution of the composed holonomy after $n$ independent random perturbations converges to the Haar measure on $SU(3)$ as $n \to \infty$. The overlap of the transported state with the initial color state decays as:
 
 $$|\langle c_0 | U_n \cdots U_1 | c_0 \rangle|^2 \xrightarrow{n \to \infty} \frac{1}{\dim(\mathbf{3})} = \frac{1}{3}$$
 
@@ -117,7 +117,7 @@ $$V(r) = -\frac{1}{r} \ln |A(r)|^2 \xrightarrow{r \gg a n_0} \frac{1}{a n_0} \cd
 
 where $\sigma = 1/(a \cdot n_0)$ is the string tension. The linearity of $V(r)$ at large $r$ follows from the extensive (linear-in-$n$) nature of the random walk: the phase mixing per segment is constant, so the total decoherence is proportional to the number of segments, which is proportional to $r$.
 
-**Remark (Scope).** This argument rigorously establishes the qualitative behavior $V(r) \propto r$ at large $r$ from the non-associativity of $\mathbb{O}$, using the standard random-walk-on-groups framework (Diaconis & Shahshahani, 1987). It does not compute the string tension $\sigma$ quantitatively — that would require specifying $a$ and $n_0$ in terms of $g_s$ and the octonionic associator magnitude, which is a non-perturbative calculation. The lattice QCD value $\sigma \approx (440\text{ MeV})^2$ provides an empirical benchmark. $\square$
+**Remark (Scope).** This argument rigorously establishes the qualitative behavior $V(r) \propto r$ at large $r$ from the non-associativity of $\mathbb{O}$, using the standard random-walk-on-groups framework [Diaconis & Shahshahani, 1987]. It does not compute the string tension $\sigma$ quantitatively — that would require specifying $a$ and $n_0$ in terms of $g_s$ and the octonionic associator magnitude, which is a non-perturbative calculation. The lattice QCD value $\sigma \approx (440\text{ MeV})^2$ provides an empirical benchmark. $\square$
 
 ### Step 5: Asymptotic Freedom at Short Distances
 
@@ -175,7 +175,7 @@ The crossover $\lambda_D \sim a$ defines the deconfinement temperature $T_c \sim
 - Theorem 3.1: Color-singlet transport is well-defined. The argument combines: (i) $G_2 \supset SU(3)$ representation theory ($\mathbf{7} \to \mathbf{3} \oplus \bar{\mathbf{3}} \oplus \mathbf{1}$), (ii) associativity of $\mathbb{H}$ (the $\mathbf{1}$ lives in the quaternionic subalgebra), (iii) singlet projection annihilates the associator. Each step is algebraically exact.
 - Proposition 2.2: Non-associative bracketing ambiguity — direct property of $\mathbb{O}$, verified in the consistency model
 - Proposition 2.3: Catalan number growth of bracketings — standard combinatorics
-- Proposition 4.1: Linear potential from phase decoherence — the proof now uses the central limit theorem on compact groups (Diaconis & Shahshahani, 1987) to establish exponential decay of colored transport amplitude, giving $V(r) \propto r$ rigorously. The string tension $\sigma$ is characterized in terms of the random-walk mixing number but not computed quantitatively.
+- Proposition 4.1: Linear potential from phase decoherence — the proof now uses the central limit theorem on compact groups [Diaconis & Shahshahani, 1987] to establish exponential decay of colored transport amplitude, giving $V(r) \propto r$ rigorously. The string tension $\sigma$ is characterized in terms of the random-walk mixing number but not computed quantitatively.
 - Proposition 5.1: Asymptotic freedom recovery — established by counting: the trilinear associator requires $\geq 3$ segments, so short-distance transport is identically associative. Connected to the perturbative result via $O(g_s^3 a^3)$ suppression of non-associative corrections at weak coupling.
 - Theorem 7.1: Consistency model — explicit octonionic computation with Fano plane multiplication
 
@@ -194,3 +194,7 @@ The crossover $\lambda_D \sim a$ defines the deconfinement temperature $T_c \sim
 4. **Glueball spectrum**: Derive the masses of $0^{++}$, $2^{++}$, and other glueball states from the octonionic framework.
 5. **Regge trajectories**: Show that the linear potential produces the observed linear relationship between hadron spin and mass squared: $J \sim \alpha' M^2$.
 6. **Lattice comparison**: Compare the non-associative confinement mechanism with lattice QCD results for the static quark potential and flux tube structure.
+
+<!-- References -->
+[Diaconis & Shahshahani, 1987]: /references#diaconis-shahshahani-1987
+[Diaconis, 1988]: /references#diaconis-1988

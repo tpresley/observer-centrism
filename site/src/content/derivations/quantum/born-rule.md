@@ -129,7 +129,7 @@ But (1) gives $P = f((\cos\theta + \sin\theta)^2/2)$, which varies with $\theta$
 
 **Extension to all $d \geq 2$**: For any $d$-dimensional system, embed a 2-dimensional subsystem by setting $\psi_j = 0$ for $j \geq 3$. The normalization constraint becomes $f(|\psi_1|^2) + f(|\psi_2|^2) + (d-2)f(0) = 1$ with $|\psi_1|^2 + |\psi_2|^2 = 1$. Since $P(k) \geq 0$ for all $k$ and the zero-amplitude outcome must have zero probability (no coherence flows through a closed channel), $f(0) = 0$. The constraint reduces to $f(|\psi_1|^2) + f(|\psi_2|^2) = 1$ on $|\psi_1|^2 + |\psi_2|^2 = 1$ — identical to the $d = 2$ case. Case 1 then forces $f(x) = x$ for all $d$.
 
-**Functional equation confirmation** (Aczél, 1966): The constraint $\sum_{k=1}^d f(x_k) = 1$ on the simplex $\{x_k \geq 0 : \sum x_k = 1\}$ with $f(0) = 0$ and $f$ measurable is a Cauchy functional equation on the simplex. The unique continuous solution is $f(x) = x$ (Aczél's theorem). This confirms the uniqueness rigorously for all dimensions.
+**Functional equation confirmation** [Aczél, 1966]: The constraint $\sum_{k=1}^d f(x_k) = 1$ on the simplex $\{x_k \geq 0 : \sum x_k = 1\}$ with $f(0) = 0$ and $f$ measurable is a Cauchy functional equation on the simplex. The unique continuous solution is $f(x) = x$ (Aczél's theorem). This confirms the uniqueness rigorously for all dimensions.
 
 **Remark on interference.** If $f(x) = x$, then Eq. (1) gives $P = |\sum_b \psi(c|b)\psi(b|a)|^2$ while Eq. (2) gives $P = \sum_b |\psi(b|a)|^2 |\psi(c|b)|^2$. These differ due to cross-terms — quantum interference. The resolution is that (2) applies when the intermediate measurement actually occurs (the relational invariant $I_{\mathcal{O}b}$ is recorded, destroying coherence between branches), while (1) applies when no intermediate measurement occurs (coherence between branches is preserved). This distinction is formalized in [Measurement Problem](/derivations/quantum/measurement). $\square$
 
@@ -213,3 +213,6 @@ $$\text{Axioms} \to U(1) \text{ loops} \to \mathbb{C}\text{-amplitudes} \to \tex
 2. **Continuous observables**: Extension to continuous spectra ($dP = |\psi(x)|^2 dx$) follows from the same arguments in the continuum limit, using the measure-theoretic version of coherence conservation.
 3. **Mixed states**: For mixed states $\rho = \sum_i p_i |\psi_i\rangle\langle\psi_i|$, the Born rule generalizes to $P(k) = \text{Tr}(\rho |k\rangle\langle k|)$. This should follow from the [Entropy](/derivations/thermodynamics/entropy) derivation, where mixed states arise from inaccessible coherence.
 4. **POVMs**: Generalized measurements (positive operator-valued measures) should follow from partial Type III interactions where the observer does not fully resolve the system's state.
+
+<!-- References -->
+[Aczél, 1966]: /references#aczél-1966

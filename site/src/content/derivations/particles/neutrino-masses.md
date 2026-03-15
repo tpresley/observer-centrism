@@ -102,7 +102,7 @@ $$M_R = y_R \cdot v$$
 
 where $y_R$ parameterizes the strength of this overlap. This is the standard dimension-5 Weinberg operator $\frac{y_R}{v}(\overline{L}\tilde{H})^2$ evaluated at tree level, with the cutoff at $\Lambda = v$ rather than a GUT scale.
 
-**Step 3c (Coupling bound).** The value of $y_R$ is constrained by perturbativity ($y_R < 4\pi$) and by the neutrino mass phenomenology. From Theorem 2.2, $m_\nu \approx m_D^2/(y_R v)$. With $m_D \sim y_\nu v$ and the cosmological bound $\sum m_\nu < 0.12$ eV (Planck 2018), we require $y_R \gtrsim y_\nu^2 v / (0.04\;\text{eV})$. For $y_\nu \sim 10^{-6}$: $y_R \gtrsim (10^{-12} \times 246\;\text{GeV})/(0.04\;\text{eV}) \sim 6$. This constrains $y_R \sim O(1{-}10)$, placing $M_R$ in the range $10^2{-}10^3$ GeV — at the electroweak scale, not a GUT scale.
+**Step 3c (Coupling bound).** The value of $y_R$ is constrained by perturbativity ($y_R < 4\pi$) and by the neutrino mass phenomenology. From Theorem 2.2, $m_\nu \approx m_D^2/(y_R v)$. With $m_D \sim y_\nu v$ and the cosmological bound $\sum m_\nu < 0.12$ eV [Planck, 2018], we require $y_R \gtrsim y_\nu^2 v / (0.04\;\text{eV})$. For $y_\nu \sim 10^{-6}$: $y_R \gtrsim (10^{-12} \times 246\;\text{GeV})/(0.04\;\text{eV}) \sim 6$. This constrains $y_R \sim O(1{-}10)$, placing $M_R$ in the range $10^2{-}10^3$ GeV — at the electroweak scale, not a GUT scale.
 
 The absence of a GUT-scale $M_R$ is a structural consequence of the framework: the winding hierarchy ([Electroweak Breaking](/derivations/gauge/electroweak-breaking), Theorem 5.1) protects the electroweak scale via dimensional transmutation, and no new high-energy scale exists between $v$ and the Planck scale in the bootstrap hierarchy. $\square$
 
@@ -122,7 +122,7 @@ $$m_\nu = \frac{y_\nu^2}{y_R} v$$
 
 $$m_{\nu_e} = \frac{y_{\nu_e}^2}{y_R} v = \frac{(10^{-6})^2}{y_R} \times 246\;\text{GeV} = \frac{0.25\;\text{eV}}{y_R}$$
 
-**Step 4c (Phenomenological constraint).** Oscillation data give $\Delta m^2_{21} \approx 7.5 \times 10^{-5}$ eV$^2$ and $\Delta m^2_{31} \approx 2.5 \times 10^{-3}$ eV$^2$, implying $m_3 \gtrsim 0.05$ eV for normal ordering. The cosmological bound $\sum m_\nu < 0.12$ eV (Planck 2018) constrains $m_1 \lesssim 0.02$ eV. Using $y_{\nu_e} \sim y_e \sim 10^{-6}$, the requirement $m_{\nu_1} \lesssim 0.02$ eV gives $y_R \gtrsim 12$. For the third generation, $y_{\nu_\tau} \sim y_\tau \sim 10^{-2}$, so $m_{\nu_3} = y_\tau^2 v / y_R \approx 2.5\;\text{GeV}/y_R$. The requirement $m_{\nu_3} \sim 0.05$ eV gives $y_R \sim 5 \times 10^{10}$ — far too large.
+**Step 4c (Phenomenological constraint).** Oscillation data give $\Delta m^2_{21} \approx 7.5 \times 10^{-5}$ eV$^2$ and $\Delta m^2_{31} \approx 2.5 \times 10^{-3}$ eV$^2$, implying $m_3 \gtrsim 0.05$ eV for normal ordering. The cosmological bound $\sum m_\nu < 0.12$ eV [Planck, 2018] constrains $m_1 \lesssim 0.02$ eV. Using $y_{\nu_e} \sim y_e \sim 10^{-6}$, the requirement $m_{\nu_1} \lesssim 0.02$ eV gives $y_R \gtrsim 12$. For the third generation, $y_{\nu_\tau} \sim y_\tau \sim 10^{-2}$, so $m_{\nu_3} = y_\tau^2 v / y_R \approx 2.5\;\text{GeV}/y_R$. The requirement $m_{\nu_3} \sim 0.05$ eV gives $y_R \sim 5 \times 10^{10}$ — far too large.
 
 This tension reveals that the naive identification $y_{\nu_k} \sim y_{e_k}$ is too crude: the neutrino Dirac Yukawas must be significantly smaller than the charged lepton Yukawas, by a factor $\epsilon_\nu \sim 10^{-4}{-}10^{-5}$. Physically, this reflects the fact that the $\nu_R$ winding mode, being a complete gauge singlet, has a much weaker overlap with the electroweak crystallization than the charged lepton winding. With $y_{\nu_k} = \epsilon_\nu \cdot y_{e_k}$ and $y_R \sim O(1)$:
 
@@ -193,3 +193,6 @@ The ordering of $m_{\nu_k}$ depends on $y_{\nu_k}^2 / y_{R,k}$. If $y_{R,k}$ is 
 ## Addressed Gaps
 
 1. **Leptogenesis connection** *(resolved — downstream)*: Fully addressed by [Leptogenesis](/derivations/cosmology/leptogenesis), which establishes the viability of electroweak-scale resonant leptogenesis using framework-predicted Majorana neutrinos and PMNS CP phases.
+
+<!-- References -->
+[Planck, 2018]: /references#planck-2018

@@ -43,7 +43,7 @@ where $G^a_{\mu\nu}$ is the gluon field strength ([Color Force](/derivations/gau
 
 **Proposition 1.2 (CP violation by $\theta$).** *The $\theta$-term violates CP (charge-parity) symmetry for $\theta \neq 0$. Under CP: $G^a_{\mu\nu}\tilde{G}^{a\mu\nu} \to -G^a_{\mu\nu}\tilde{G}^{a\mu\nu}$, so $\mathcal{L}_\theta$ is CP-odd.*
 
-**Proposition 1.3 (Experimental constraint).** *The neutron electric dipole moment $d_n$ is proportional to $\theta$: $d_n \sim 10^{-16} \theta$ e·cm. The experimental bound $|d_n| < 1.8 \times 10^{-26}$ e·cm (Abel et al., 2020) gives:*
+**Proposition 1.3 (Experimental constraint).** *The neutron electric dipole moment $d_n$ is proportional to $\theta$: $d_n \sim 10^{-16} \theta$ e·cm. The experimental bound $|d_n| < 1.8 \times 10^{-26}$ e·cm [Abel et al., 2020] gives:*
 
 $$|\theta| < 10^{-10}$$
 
@@ -51,7 +51,7 @@ $$|\theta| < 10^{-10}$$
 
 ### Step 2: Standard Approaches and Their Costs
 
-**Remark (Peccei-Quinn solution).** The dominant proposal (Peccei & Quinn, 1977) promotes $\theta$ to a dynamical field — the axion $a(x)$ — via a new $U(1)_{PQ}$ symmetry that is spontaneously broken. The axion potential dynamically relaxes $\theta_{\text{eff}} = \theta + a/f_a$ to zero. The cost: a new particle (the axion) with a new symmetry-breaking scale $f_a$ and a new coupling to gluons. Axion searches (ADMX, CASPEr, IAXO, ABRACADABRA) are ongoing.
+**Remark (Peccei-Quinn solution).** The dominant proposal [Peccei & Quinn, 1977] promotes $\theta$ to a dynamical field — the axion $a(x)$ — via a new $U(1)_{PQ}$ symmetry that is spontaneously broken. The axion potential dynamically relaxes $\theta_{\text{eff}} = \theta + a/f_a$ to zero. The cost: a new particle (the axion) with a new symmetry-breaking scale $f_a$ and a new coupling to gluons. Axion searches (ADMX, CASPEr, IAXO, ABRACADABRA) are ongoing.
 
 **Remark (Nelson-Barr solution).** CP is imposed as a fundamental symmetry at high energies and broken spontaneously. The cost: additional Higgs fields and fine-tuning requirements.
 
@@ -144,7 +144,7 @@ Therefore the only dynamically accessible vacuum sector is $\nu = 0$, giving $\t
 
 **Fully rigorous:**
 - Proposition 1.2: CP violation by $\theta$-term — standard QFT result
-- Proposition 1.3: Experimental constraint — established measurement (Abel et al., 2020)
+- Proposition 1.3: Experimental constraint — established measurement [Abel et al., 2020]
 - Theorem 3.1, Step 3a: Standard QCD vacuum structure ($\pi_3(SU(3)) \cong \mathbb{Z}$)
 - Theorem 3.1, Step 3b: Topological facts about $\iota_*: \pi_3(SU(3)) \to \pi_3(G_2)$ — follows from the fibration $G_2/SU(3) \cong S^6$ and the long exact homotopy sequence
 - Theorem 3.1, Step 3c, Argument I: Algebraic completeness — the Fano plane is rigid (no continuous deformations), so no continuous parameter $\theta$ has an algebraic origin. Combined with 't Hooft naturalness ($\theta = 0$ enhances CP symmetry, making it the technically natural value), this forces $\theta = 0$.
@@ -164,3 +164,7 @@ Therefore the only dynamically accessible vacuum sector is $\nu = 0$, giving $\t
 3. **Non-perturbative effects**: Check whether other non-perturbative effects (monopoles, domain walls) are also constrained by the octonionic structure.
 
 4. **Electroweak-strong unification**: The fact that $\theta_{\text{QCD}} = 0$ from non-associativity and $\theta_W$ is unphysical from standard arguments suggests a deeper connection between the associative/non-associative split and the strong/electroweak divide.
+
+<!-- References -->
+[Peccei & Quinn, 1977]: /references#peccei-quinn-1977
+[Abel et al., 2020]: /references#abel-2020

@@ -150,7 +150,7 @@ for any three subsystems $A, B, C$. By the coherence-entropy correspondence (The
 
 $$S(\rho_{ABC}) + S(\rho_B) \leq S(\rho_{AB}) + S(\rho_{BC})$$
 
-This is precisely the strong subadditivity of von Neumann entropy (Lieb & Ruskai, 1973). The framework derives this inequality from the coherence axioms rather than from the operator-algebraic properties of the trace.
+This is precisely the strong subadditivity of von Neumann entropy [Lieb & Ruskai, 1973]. The framework derives this inequality from the coherence axioms rather than from the operator-algebraic properties of the trace.
 
 **Step 2 (Monogamy for pure states).** For a pure state $|\Psi\rangle_{ABC}$, $S(\rho_{ABC}) = 0$ and $S(\rho_{BC}) = S(\rho_A)$ (purification duality: the entropy of a subsystem equals the entropy of its complement for a pure total state). Substituting into the strong subadditivity inequality:
 
@@ -172,7 +172,7 @@ This is the Coffman-Kundu-Wootters inequality (2000). The general entropy-based 
 
 ### Step 5: Connection to ER=EPR (Forward Reference)
 
-**Remark 5.1 (Geometric realization of entanglement).** Relational invariants between spatially separated observers create coherence channels. By the [Einstein Equations](/derivations/spacetime/einstein-equations) derivation, coherence concentration curves spacetime geometry. The coherence channel associated with a relational invariant $I_{12}$ between distant observers is expected to manifest geometrically as a non-traversable wormhole (Einstein-Rosen bridge), providing the framework's version of the ER=EPR conjecture (Maldacena & Susskind, 2013). The key observation: the entanglement entropy $S(\rho_1) = \mathcal{C}(I_{12})$ determines the cross-sectional area of the ER bridge via the Ryu-Takayanagi formula $S = A/(4G_N)$. In the coherence framework, both entanglement entropy and geometric area are different descriptions of the same underlying quantity — relational coherence.
+**Remark 5.1 (Geometric realization of entanglement).** Relational invariants between spatially separated observers create coherence channels. By the [Einstein Equations](/derivations/spacetime/einstein-equations) derivation, coherence concentration curves spacetime geometry. The coherence channel associated with a relational invariant $I_{12}$ between distant observers is expected to manifest geometrically as a non-traversable wormhole (Einstein-Rosen bridge), providing the framework's version of the ER=EPR conjecture [Maldacena & Susskind, 2013]. The key observation: the entanglement entropy $S(\rho_1) = \mathcal{C}(I_{12})$ determines the cross-sectional area of the ER bridge via the Ryu-Takayanagi formula $S = A/(4G_N)$. In the coherence framework, both entanglement entropy and geometric area are different descriptions of the same underlying quantity — relational coherence.
 
 This connection is developed in the [ER=EPR](/derivations/holography/er-epr) derivation, which requires the holographic machinery of [Area Scaling](/derivations/holography/area-scaling) and [Causal Set Statistics](/derivations/holography/causal-set-statistics). It is stated here as a forward reference, not as a result of the present derivation.
 
@@ -215,3 +215,7 @@ This connection is developed in the [ER=EPR](/derivations/holography/er-epr) der
 3. **Holographic connection**: Make the ER=EPR sketch (Proposition 5.1) rigorous by connecting to the [Area Scaling](/derivations/holography/area-scaling) and [Causal Set Statistics](/derivations/holography/causal-set-statistics) derivations.
 4. **Multipartite entanglement**: Extend beyond the bipartite case to full multipartite classification (W-states, cluster states, SLOCC classes).
 5. **Entanglement dynamics**: Derive entanglement growth under unitary evolution and the scrambling time from coherence dynamics.
+
+<!-- References -->
+[Lieb & Ruskai, 1973]: /references#lieb-ruskai-1973
+[Maldacena & Susskind, 2013]: /references#maldacena-susskind-2013

@@ -27,7 +27,7 @@ Axiom 1 ([Coherence Conservation](/derivations/axioms/coherence-conservation)) d
 
 **Why this matters.** This removes the worry that "coherence" is doing enormous conceptual work without clear content. The content is quantum information theory. The axioms are not ad hoc — they are the axioms of quantum entropy, discovered independently by Lieb and Ruskai.
 
-**Why "coherence" and not "entropy"?** If the conditions of Axiom 1 match the axioms of quantum entropy, why introduce a new name? Because Axiom 1 is *stronger* than entropy conservation alone. Conservation (C2) says the total is constant under admissible evolution — that is unitarity, and entropy has it. But subadditivity (C4) and strong subadditivity (C5) constrain how subsystem values relate to each other: they are compositional axioms about structure, not just a statement about a conserved total. Von Neumann entropy happens to satisfy them (Araki–Lieb 1970, Lieb–Ruskai 1973), but those are deep *theorems*, not part of entropy's definition. Moreover, the inner product $\langle\psi|\psi\rangle$ (Theorem 4.1 below) is also a realization of the same axioms, and no one would call it entropy. "Coherence" names the abstract structure — positive, subadditive, conserved — that entropy, inner products, and phase space volumes share. The abstraction earns its own name because it is the load-bearing primitive: the derivation chain runs from C1–C5, not from any single realization.
+**Why "coherence" and not "entropy"?** If the conditions of Axiom 1 match the axioms of quantum entropy, why introduce a new name? Because Axiom 1 is *stronger* than entropy conservation alone. Conservation (C2) says the total is constant under admissible evolution — that is unitarity, and entropy has it. But subadditivity (C4) and strong subadditivity (C5) constrain how subsystem values relate to each other: they are compositional axioms about structure, not just a statement about a conserved total. Von Neumann entropy happens to satisfy them [Araki–Lieb, 1970]; [Lieb–Ruskai, 1973], but those are deep *theorems*, not part of entropy's definition. Moreover, the inner product $\langle\psi|\psi\rangle$ (Theorem 4.1 below) is also a realization of the same axioms, and no one would call it entropy. "Coherence" names the abstract structure — positive, subadditive, conserved — that entropy, inner products, and phase space volumes share. The abstraction earns its own name because it is the load-bearing primitive: the derivation chain runs from C1–C5, not from any single realization.
 
 **An honest caveat.** The convergence establishes structural isomorphism — the same mathematical axioms, the same derived quantities. It does not establish ontological identity: whether coherence *is* entropy, or whether both are aspects of something deeper, remains a philosophical question the framework does not attempt to settle.
 
@@ -53,7 +53,7 @@ Axiom 1 ([Coherence Conservation](/derivations/axioms/coherence-conservation)) d
 
 $$S(\rho_{AB}) \leq S(\rho_A) + S(\rho_B)$$
 
-This is the quantum subadditivity theorem (proved by Araki and Lieb, 1970). Equality holds iff $\rho_{AB} = \rho_A \otimes \rho_B$ (the subsystems are uncorrelated). $\checkmark$
+This is the quantum subadditivity theorem [Araki & Lieb, 1970]. Equality holds iff $\rho_{AB} = \rho_A \otimes \rho_B$ (the subsystems are uncorrelated). $\checkmark$
 
 **(C5) Strong subadditivity.** For any subsystems $A, B, C$ (not necessarily disjoint, with natural identification of overlapping tensor factors):
 
@@ -95,11 +95,11 @@ This is the Lieb–Ruskai theorem (1973), one of the deepest results in quantum 
 
 **(i) Information capacity.** $\mathcal{C}(S) = S(\rho_S)$ quantifies the information carried by $S$ about the rest of the system. It equals the maximum number of bits that could be extracted from $S$ by an optimal measurement, given knowledge of the global state.
 
-**(ii) Entanglement witness.** For a bipartite pure state $|\psi_{AB}\rangle$, $\mathcal{C}(A) = \mathcal{C}(B) = S(\rho_A)$ equals the entanglement entropy — the unique measure of bipartite entanglement for pure states (by the theorem of Bennett, Bernstein, Popescu, and Schumacher, 1996).
+**(ii) Entanglement witness.** For a bipartite pure state $|\psi_{AB}\rangle$, $\mathcal{C}(A) = \mathcal{C}(B) = S(\rho_A)$ equals the entanglement entropy — the unique measure of bipartite entanglement for pure states [Bennett, Bernstein, Popescu, Schumacher, 1996].
 
 **(iii) Compression limit.** By Schumacher's quantum noiseless coding theorem (1995), $\mathcal{C}(S) = S(\rho_S)$ equals the minimum number of qubits per copy needed to faithfully represent the state of $S$ in the asymptotic limit.
 
-**Proposition 3.2 (Operational relational coherence).** *Relational coherence $\mathcal{C}(A:B) = I(A:B)$ quantifies the total correlations (both classical and quantum) between $A$ and $B$. It equals the cost in bits of erasing all correlations between $A$ and $B$ while preserving the individual states $\rho_A$ and $\rho_B$ (Groisman, Popescu, and Winter, 2005).*
+**Proposition 3.2 (Operational relational coherence).** *Relational coherence $\mathcal{C}(A:B) = I(A:B)$ quantifies the total correlations (both classical and quantum) between $A$ and $B$. It equals the cost in bits of erasing all correlations between $A$ and $B$ while preserving the individual states $\rho_A$ and $\rho_B$ [Groisman, Popescu, Winter, 2005].*
 
 **Proposition 3.3 (Operational conservation).** *Coherence conservation ($\mathcal{C}(\mathcal{H}) = C_0$ under admissible transformations) is operationally equivalent to:*
 
@@ -137,7 +137,7 @@ Setting $r = |a|^2$, $s = |b|^2$: $f(rs) = f(r)f(s)$ for all $r, s \geq 0$. This
 
 **Step (b): Continuous solution.** By (F4), $f$ is continuous. By (F5), $f \not\equiv 0$. From $f(0) = f(0 \cdot r) = f(0)f(r)$ for all $r$: either $f(0) = 0$ or $f \equiv f(0)$ (constant). If $f$ is constant, say $f(r) = c$ for all $r$, then $f(rs) = c$ but $f(r)f(s) = c^2$, so $c = c^2$, giving $c = 0$ or $c = 1$. The case $c = 0$ contradicts (F5). The case $c = 1$ gives $F(\psi) = d$ (dimension) for all states — independent of the state. This contradicts (F3) for systems of different dimensions: $F(\psi \otimes \phi) = d_1 d_2$ but $F(\psi) \cdot F(\phi) = d_1 \cdot d_2$, which is consistent, but checking (F2) with $d = 2$: $F(\psi) = f(|\psi_1|^2) + f(|\psi_2|^2) = 2$ for all states, while $F(\psi)$ should vary with $|\psi_1|^2$. So $f$ cannot be the constant function 1 on $[0,\infty)$ while satisfying the simplex constraint from normalization.
 
-More directly: the unique continuous solution to $f(rs) = f(r)f(s)$ on $\mathbb{R}_{>0}$ with $f \not\equiv 0$ is $f(r) = r^\alpha$ for some $\alpha \in \mathbb{R}$ (Aczél and Dhombres, 1989, Theorem 2). Since $f \geq 0$ (by F2 and F1) and $f(1) = f(1)^2$ gives $f(1) = 1$ (using $f \not\equiv 0$), we have $f(r) = r^\alpha$ with $\alpha$ to be determined.
+More directly: the unique continuous solution to $f(rs) = f(r)f(s)$ on $\mathbb{R}_{>0}$ with $f \not\equiv 0$ is $f(r) = r^\alpha$ for some $\alpha \in \mathbb{R}$ [Aczél & Dhombres, 1989]. Since $f \geq 0$ (by F2 and F1) and $f(1) = f(1)^2$ gives $f(1) = 1$ (using $f \not\equiv 0$), we have $f(r) = r^\alpha$ with $\alpha$ to be determined.
 
 **Step (c): Normalization determines $\alpha$.** For normalized quantum states ($\sum_k |\psi_k|^2 = 1$), the total coherence should be a constant (coherence of a single-system state is fixed). With $f(r) = r^\alpha$:
 
@@ -211,11 +211,11 @@ For the Bell state model, working with the pure state to verify axiom structure:
 ## Rigor Assessment
 
 **Fully rigorous (established mathematics):**
-- Theorem 1.1: Von Neumann entropy satisfies Axiom 1 (Araki–Lieb 1970 for C4; Lieb–Ruskai 1973 for C5)
+- Theorem 1.1: Von Neumann entropy satisfies Axiom 1 [Araki–Lieb, 1970]; [Lieb–Ruskai, 1973]
 - Theorem 2.1: Dictionary (definitions match by construction)
-- Definition 3.1: Operational interpretations (Schumacher 1995, Bennett et al. 1996, Groisman et al. 2005)
+- Definition 3.1: Operational interpretations [Schumacher, 1995]; [Bennett et al., 1996]; [Groisman et al., 2005]
 - Proposition 5.1: Classical limit (Shannon entropy properties)
-- Theorem 4.1 Steps (a)–(b): Cauchy multiplicative equation uniqueness (Aczél and Dhombres 1989)
+- Theorem 4.1 Steps (a)–(b): Cauchy multiplicative equation uniqueness [Aczél & Dhombres, 1989]
 
 **Rigorous given axioms:**
 - Theorem 4.1 Step (c): $\alpha = 1$ from composition constraint (invokes Born Rule Theorem 6.1)
@@ -232,3 +232,14 @@ For the Bell state model, working with the pure state to verify axiom structure:
 1. **Quantitative $C_0$**: The total coherence $C_0 = S(\rho_{\text{total}})$ depends on the global state. Whether $C_0$ is a free parameter or determined by self-consistency (the bootstrap fixed point) remains open — see [Bootstrap Mechanism](/derivations/interactions/bootstrap) Gap 3.
 2. **Rényi generalization**: Axiom 1 is also satisfied by Rényi entropies $S_\alpha(\rho) = (1-\alpha)^{-1}\log\text{Tr}(\rho^\alpha)$ for $\alpha \in (0,1)$ (strong subadditivity holds in this range). Whether the framework selects von Neumann ($\alpha = 1$) over other Rényi orders, or whether this is a free choice, is open.
 3. **Algebraic vs. measure-theoretic coherence**: The σ-algebra formulation (Axiom 1, conditions C1–C5) and the Hilbert space formulation ($\mathcal{C} = \langle\psi|\psi\rangle$) operate at different levels. The former concerns subsystem structure; the latter concerns state-level properties. A unified formulation treating both as aspects of a single categorical structure (a functor from subsystem inclusions to coherence values) would strengthen the convergence.
+
+<!-- References -->
+[Araki & Lieb, 1970]: /references#araki-lieb-1970
+[Araki–Lieb, 1970]: /references#araki-lieb-1970
+[Lieb–Ruskai, 1973]: /references#lieb-ruskai-1973
+[Aczél & Dhombres, 1989]: /references#aczél-dhombres-1989
+[Schumacher, 1995]: /references#schumacher-1995
+[Bennett et al., 1996]: /references#bennett-1996
+[Bennett, Bernstein, Popescu, Schumacher, 1996]: /references#bennett-bernstein-popescu-schumacher-1996
+[Groisman et al., 2005]: /references#groisman-2005
+[Groisman, Popescu, Winter, 2005]: /references#groisman-popescu-winter-2005

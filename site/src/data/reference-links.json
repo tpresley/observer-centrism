@@ -1,0 +1,375 @@
+{
+  "_comment": "Curated external links for academic references. NOT overwritten by build scripts. Update via /update-references skill.",
+  "hurwitz-1898": {
+    "title": "Über die Composition der quadratischen Formen von beliebig vielen Variablen",
+    "url": "https://doi.org/10.1007/BF02403043"
+  },
+  "klein-1884": {
+    "title": "Vorlesungen über das Ikosaeder",
+    "url": "https://doi.org/10.1007/978-3-0348-8594-2"
+  },
+  "cartan-1914": {
+    "title": "Les groupes réels simples, finis et continus",
+    "url": "https://doi.org/10.24033/asens.735"
+  },
+  "whitney-1936": {
+    "title": "Differentiable Manifolds",
+    "url": "https://doi.org/10.2307/1968482"
+  },
+  "pauli-1940": {
+    "title": "The Connection Between Spin and Statistics",
+    "url": "https://doi.org/10.1103/PhysRev.58.716"
+  },
+  "rao-1945": {
+    "title": "Information and the Accuracy Attainable in the Estimation of Statistical Parameters",
+    "url": "https://doi.org/10.1007/978-1-4612-0919-5_16"
+  },
+  "moise-1952": {
+    "title": "Affine Structures in 3-Manifolds, V. The Triangulation Theorem and Hauptvermutung",
+    "url": "https://doi.org/10.2307/1969769"
+  },
+  "choquet-bruhat-1952": {
+    "title": "Théorème d'existence pour certains systèmes d'équations aux dérivées partielles non linéaires",
+    "url": "https://doi.org/10.1007/BF02392131"
+  },
+  "gleason-1957": {
+    "title": "Measures on the Closed Subspaces of a Hilbert Space",
+    "url": "https://doi.org/10.1512/iumj.1957.6.56050"
+  },
+  "smale-1961": {
+    "title": "Generalized Poincaré's Conjecture in Dimensions Greater than Four",
+    "url": "https://doi.org/10.2307/1970239"
+  },
+  "penrose-1965": {
+    "title": "Gravitational Collapse and Space-Time Singularities",
+    "url": "https://doi.org/10.1103/PhysRevLett.14.57"
+  },
+  "sakharov-1967": {
+    "title": "Violation of CP Invariance, C Asymmetry, and Baryon Asymmetry of the Universe",
+    "url": "https://doi.org/10.1070/PU1991v034n05ABEH002497"
+  },
+  "hawking-1967": {
+    "title": "The Occurrence of Singularities in Cosmology. III. Causality and Singularities",
+    "url": "https://doi.org/10.1098/rspa.1967.0017"
+  },
+  "aczel-1966": {
+    "title": "Lectures on Functional Equations and Their Applications",
+    "url": "https://doi.org/10.1016/s0076-5392(09)x6011-0"
+  },
+  "coleman-mandula-1967": {
+    "title": "All Possible Symmetries of the S Matrix",
+    "url": "https://doi.org/10.1103/PhysRev.159.1251"
+  },
+  "araki-lieb-1970": {
+    "title": "Entropy Inequalities",
+    "url": "https://doi.org/10.1007/BF01646092"
+  },
+  "laidlaw-dewitt-1971": {
+    "title": "Feynman Functional Integrals for Systems of Indistinguishable Particles",
+    "url": "https://doi.org/10.1103/PhysRevD.3.1375"
+  },
+  "lovelock-1971": {
+    "title": "The Einstein Tensor and Its Generalizations",
+    "url": "https://doi.org/10.1063/1.1665613"
+  },
+  "bredon-1972": {
+    "title": "Introduction to Compact Transformation Groups",
+    "url": "https://doi.org/10.1016/S0079-8169(08)60640-1"
+  },
+  "orlik-1972": {
+    "title": "Seifert Manifolds",
+    "url": "https://doi.org/10.1007/BFb0060329"
+  },
+  "coleman-weinberg-1973": {
+    "title": "Radiative Corrections as the Origin of Spontaneous Symmetry Breaking",
+    "url": "https://doi.org/10.1103/PhysRevD.7.1888"
+  },
+  "gross-wilczek-1973": {
+    "title": "Ultraviolet Behavior of Non-Abelian Gauge Theories",
+    "url": "https://doi.org/10.1103/PhysRevLett.30.1343"
+  },
+  "politzer-1973": {
+    "title": "Reliable Perturbative Results for Strong Interactions?",
+    "url": "https://doi.org/10.1103/PhysRevLett.30.1346"
+  },
+  "lieb-ruskai-1973": {
+    "title": "Proof of the Strong Subadditivity of Quantum-Mechanical Entropy",
+    "url": "https://doi.org/10.1063/1.1666274"
+  },
+  "bertrand-1873": {
+    "title": "Théorème relatif au mouvement d'un point attiré vers un centre fixe",
+    "url": "https://doi.org/10.1016/S0764-4442(97)83740-8"
+  },
+  "georgi-glashow-1974": {
+    "title": "Unity of All Elementary-Particle Forces",
+    "url": "https://doi.org/10.1103/PhysRevLett.32.438"
+  },
+  "haag-lopuszanski-sohnius-1975": {
+    "title": "All Possible Generators of Supersymmetries of the S-Matrix",
+    "url": "https://doi.org/10.1016/0550-3213(75)90279-5"
+  },
+  "t-hooft-1976": {
+    "title": "Symmetry Breaking through Bell-Jackiw Anomalies",
+    "url": "https://doi.org/10.1103/PhysRevLett.37.8"
+  },
+  "peccei-quinn-1977": {
+    "title": "CP Conservation in the Presence of Pseudoparticles",
+    "url": "https://doi.org/10.1103/PhysRevLett.38.1440"
+  },
+  "gibbons-hawking-1977": {
+    "title": "Action Integrals and Partition Functions in Quantum Gravity",
+    "url": "https://doi.org/10.1103/PhysRevD.15.2752"
+  },
+  "leinaas-myrheim-1977": {
+    "title": "On the Theory of Identical Particles",
+    "url": "https://doi.org/10.1007/BF02727953"
+  },
+  "fujikawa-1979": {
+    "title": "Path-Integral Measure for Gauge-Invariant Fermion Theories",
+    "url": "https://doi.org/10.1103/PhysRevLett.42.1195"
+  },
+  "bekenstein-1981": {
+    "title": "Universal Upper Bound on the Entropy-to-Energy Ratio for Bounded Systems",
+    "url": "https://doi.org/10.1103/PhysRevD.23.287"
+  },
+  "giles-1981": {
+    "title": "Reconstruction of Gauge Potentials from Wilson Loops",
+    "url": "https://doi.org/10.1103/PhysRevD.24.2160"
+  },
+  "wootters-zurek-1982": {
+    "title": "A Single Quantum Cannot Be Cloned",
+    "url": "https://doi.org/10.1038/299802a0"
+  },
+  "dieks-1982": {
+    "title": "Communication by EPR Devices",
+    "url": "https://doi.org/10.1016/0375-9601(82)90084-6"
+  },
+  "illman-1983": {
+    "title": "The Equivariant Triangulation Theorem for Actions of Compact Lie Groups",
+    "url": "https://doi.org/10.1007/BF01456987"
+  },
+  "klinkhamer-manton-1984": {
+    "title": "A Saddle-Point Solution in the Weinberg-Salam Theory",
+    "url": "https://doi.org/10.1103/PhysRevD.30.2212"
+  },
+  "machacek-vaughn-1984": {
+    "title": "Two-Loop Renormalization Group Equations in a General Quantum Field Theory",
+    "url": "https://doi.org/10.1016/0550-3213(84)90533-0"
+  },
+  "bombelli-1987": {
+    "title": "Space-Time as a Causal Set",
+    "url": "https://doi.org/10.1103/PhysRevLett.59.521"
+  },
+  "bombelli-lee-meyer-sorkin-1987": {
+    "title": "Space-Time as a Causal Set",
+    "url": "https://doi.org/10.1103/PhysRevLett.59.521"
+  },
+  "sorkin-1987": {
+    "title": "Causal Sets: Discrete Gravity",
+    "url": "https://doi.org/10.1007/978-1-4757-9993-4_9"
+  },
+  "diaconis-shahshahani-1987": {
+    "title": "The Subgroup Algorithm for Generating Uniform Random Variables",
+    "url": "https://doi.org/10.1007/BF01890073"
+  },
+  "weinberg-1987": {
+    "title": "Anthropic Bound on the Cosmological Constant",
+    "url": "https://doi.org/10.1103/PhysRevLett.59.2607"
+  },
+  "diaconis-1988": {
+    "title": "Group Representations in Probability and Statistics",
+    "url": "https://doi.org/10.1214/lnms/1215467407"
+  },
+  "aharonov-albert-vaidman-1988": {
+    "title": "How the Result of a Measurement of a Component of the Spin of a Spin-1/2 Particle Can Turn Out to Be 100",
+    "url": "https://doi.org/10.1103/PhysRevLett.60.1351"
+  },
+  "aczel-dhombres-1989": {
+    "title": "Functional Equations in Several Variables",
+    "url": "https://doi.org/10.1017/CBO9781139086578"
+  },
+  "jacobson-1991": {
+    "title": "Black-Hole Thermodynamics and the Equivalence Principle",
+    "url": "https://doi.org/10.1103/PhysRevD.44.1731"
+  },
+  "brightwell-gregory-1991": {
+    "title": "The Structure of Random Discrete Spacetime",
+    "url": "https://doi.org/10.1103/PhysRevLett.66.260"
+  },
+  "wetterich-1993": {
+    "title": "Exact Evolution Equation for the Effective Potential",
+    "url": "https://doi.org/10.1016/0370-2693(93)90726-X"
+  },
+  "page-1993": {
+    "title": "Average Entropy of a Subsystem",
+    "url": "https://doi.org/10.1103/PhysRevLett.71.1291"
+  },
+  "dixon-1994": {
+    "title": "Division Algebras: Octonions, Quaternions, Complex Numbers and the Algebraic Design of Physics",
+    "url": "https://doi.org/10.1007/978-1-4757-2315-1"
+  },
+  "morris-1994": {
+    "title": "The Exact Renormalization Group and Approximate Solutions",
+    "url": "https://doi.org/10.1142/S0217751X94000972"
+  },
+  "schumacher-1995": {
+    "title": "Quantum Coding",
+    "url": "https://doi.org/10.1103/PhysRevA.51.2738"
+  },
+  "pistone-sempi-1995": {
+    "title": "An Infinite-Dimensional Geometric Structure on the Space of All the Probability Measures Equivalent to a Given One",
+    "url": "https://doi.org/10.1214/aos/1176324311"
+  },
+  "unruh-1995": {
+    "title": "Sonic Analogue of Black Holes and the Effects of High Frequencies on Black Hole Evaporation",
+    "url": "https://doi.org/10.1103/PhysRevD.51.2827"
+  },
+  "brout-1995": {
+    "title": "A Primer for Black Hole Quantum Physics",
+    "url": "https://doi.org/10.1016/0370-1573(95)00008-5"
+  },
+  "bennett-bernstein-popescu-schumacher-1996": {
+    "title": "Concentrating Partial Entanglement by Local Operations",
+    "url": "https://doi.org/10.1103/PhysRevA.53.2046"
+  },
+  "petz-1996": {
+    "title": "Monotone Metrics on Matrix Spaces",
+    "url": "https://doi.org/10.1016/0024-3795(94)00328-8"
+  },
+  "corley-jacobson-1996": {
+    "title": "Hawking Spectrum and High Frequency Dispersion",
+    "url": "https://doi.org/10.1103/PhysRevD.54.1568"
+  },
+  "rovelli-1996": {
+    "title": "Relational Quantum Mechanics",
+    "url": "https://doi.org/10.1007/BF02302261"
+  },
+  "folland-sitaram-1997": {
+    "title": "The Uncertainty Principle: A Mathematical Survey",
+    "url": "https://doi.org/10.1007/BF02649110"
+  },
+  "tegmark-1997": {
+    "title": "On the Dimensionality of Spacetime",
+    "url": "https://doi.org/10.1088/0264-9381/14/4/L01"
+  },
+  "moreno-1998": {
+    "title": "Barker Sequences and Flat Polynomials",
+    "url": "https://doi.org/10.1016/S0024-3795(98)10120-5"
+  },
+  "amari-nagaoka-2000": {
+    "title": "Methods of Information Geometry",
+    "url": "https://doi.org/10.1090/mmono/191"
+  },
+  "springer-veldkamp-2000": {
+    "title": "Octonions, Jordan Algebras and Exceptional Groups",
+    "url": "https://doi.org/10.1007/978-3-662-12622-6"
+  },
+  "coffman-kundu-wootters-2000": {
+    "title": "Distributed Entanglement",
+    "url": "https://doi.org/10.1103/PhysRevA.61.052306"
+  },
+  "ma-2001": {
+    "title": "Pathways to Naturally Small Neutrino Masses",
+    "url": "https://doi.org/10.1103/PhysRevLett.81.1171"
+  },
+  "baez-2002": {
+    "title": "The Octonions",
+    "url": "https://doi.org/10.1090/S0273-0979-01-00934-X"
+  },
+  "dowker-2004": {
+    "title": "Causal Set d'Alembertians for Various Dimensions",
+    "url": "https://doi.org/10.1088/0264-9381/30/19/195016"
+  },
+  "pilaftsis-underwood-2004": {
+    "title": "Resonant Leptogenesis",
+    "url": "https://doi.org/10.1016/j.nuclphysb.2004.05.029"
+  },
+  "altarelli-feruglio-2005": {
+    "title": "Tri-Bimaximal Neutrino Mixing from Discrete Symmetry",
+    "url": "https://doi.org/10.1016/j.nuclphysb.2005.09.048"
+  },
+  "fujishige-2005": {
+    "title": "Submodular Functions and Optimization",
+    "url": "https://doi.org/10.1016/S0076-5392(08)X6000-0"
+  },
+  "groisman-popescu-winter-2005": {
+    "title": "Quantum, Classical, and Total Amount of Correlations in a Quantum State",
+    "url": "https://doi.org/10.1103/PhysRevA.72.032317"
+  },
+  "sekino-susskind-2008": {
+    "title": "Fast Scramblers",
+    "url": "https://doi.org/10.1088/1126-6708/2008/10/065"
+  },
+  "ashtekar-singh-2011": {
+    "title": "Loop Quantum Cosmology: A Status Report",
+    "url": "https://doi.org/10.1088/0264-9381/28/21/213001"
+  },
+  "amps-2012": {
+    "title": "Black Holes: Complementarity vs. Firewalls",
+    "url": "https://doi.org/10.1007/JHEP02(2013)062"
+  },
+  "maldacena-susskind-2013": {
+    "title": "Cool Horizons for Entangled Black Holes",
+    "url": "https://doi.org/10.1002/prop.201300020"
+  },
+  "king-2013": {
+    "title": "Neutrino Mass Models",
+    "url": "https://doi.org/10.1088/0034-4885/76/5/056201"
+  },
+  "rovelli-vidotto-2014": {
+    "title": "Planck Stars",
+    "url": "https://doi.org/10.1142/S0218271814420267"
+  },
+  "almheiri-dong-harlow-2015": {
+    "title": "Bulk Locality and Quantum Error Correction in AdS/CFT",
+    "url": "https://doi.org/10.1007/JHEP04(2015)163"
+  },
+  "dev-mohapatra-2015": {
+    "title": "TeV Scale Inverse Seesaw in SO(10) and Leptonic Non-Unitarity Effects",
+    "url": "https://doi.org/10.1103/PhysRevD.92.016007"
+  },
+  "furey-2016": {
+    "title": "Standard Model Physics from an Algebra?",
+    "url": "https://arxiv.org/abs/1611.09182"
+  },
+  "chou-2017": {
+    "title": "The Holometer: An Instrument to Probe Planckian Quantum Geometry",
+    "url": "https://doi.org/10.1088/1361-6382/aa5e5c"
+  },
+  "frauchiger-renner-2018": {
+    "title": "Quantum Theory Cannot Consistently Describe the Use of Itself",
+    "url": "https://doi.org/10.1038/s41467-018-05739-8"
+  },
+  "stoica-2018": {
+    "title": "The Standard Model Algebra",
+    "url": "https://doi.org/10.1140/epjc/s10052-018-5844-7"
+  },
+  "planck-2018": {
+    "title": "Planck 2018 Results. VI. Cosmological Parameters",
+    "url": "https://doi.org/10.1051/0004-6361/201833910"
+  },
+  "almheiri-2019": {
+    "title": "The Entropy of Bulk Quantum Fields and the Entanglement Wedge of an Evaporating Black Hole",
+    "url": "https://doi.org/10.1007/JHEP12(2019)063"
+  },
+  "abel-2020": {
+    "title": "Mapping the QCD Phase Diagram from the Lattice: Strong CP Problem",
+    "url": "https://doi.org/10.1103/PhysRevD.102.125023"
+  },
+  "born-1957": {
+    "title": "The Born-Einstein Letters",
+    "url": "https://doi.org/10.1007/978-3-0348-7757-5"
+  },
+  "birkhoff-1923": {
+    "title": "Relativity and Modern Physics",
+    "url": "https://doi.org/10.4159/harvard.9780674734098"
+  },
+  "cencov-1972": {
+    "title": "Statistical Decision Rules and Optimal Inference",
+    "url": "https://doi.org/10.1090/mmono/053"
+  },
+  "cencov-1982": {
+    "title": "Statistical Decision Rules and Optimal Inference",
+    "url": "https://doi.org/10.1090/mmono/053"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-15T03:07:31.425Z",
+    "generatedAt": "2026-03-15T11:03:23.038Z",
     "derivationCount": 61,
     "predictionCount": 10,
     "gaPageCount": 12,
@@ -15891,7 +15891,7 @@
       "id": "einstein-equations",
       "filePath": "site/src/content/geometric-algebra/einstein-equations.md",
       "title": "Einstein Equations in STA Form",
-      "status": "provisional",
+      "status": "rigorous",
       "gaStructure": "Cl(1,3)",
       "targetDerivation": "spacetime/einstein-equations",
       "priority": "moderate",
@@ -16167,7 +16167,7 @@
       "id": "entanglement",
       "filePath": "site/src/content/geometric-algebra/entanglement.md",
       "title": "Entanglement via Rotor Pairs",
-      "status": "provisional",
+      "status": "rigorous",
       "gaStructure": "Cl(3,0) ⊗ Cl(3,0)",
       "targetDerivation": "quantum/entanglement",
       "priority": "moderate",
@@ -16231,7 +16231,7 @@
           "type": "Corollary",
           "id": "4.2",
           "name": "Bell inequality violation",
-          "statementPreview": "The CHSH quantity for the singlet is:*"
+          "statementPreview": "The CHSH quantity for the singlet achieves |S| = 22, exceeding the classical bound |S| 2.*"
         },
         {
           "type": "Theorem",
@@ -16286,6 +16286,12 @@
           "id": "8.3",
           "name": "Entropy from the Clifford spectrum",
           "statementPreview": "The von Neumann entropy of the reduced density element is:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "9.1",
+          "name": "Entanglement criteria agree",
+          "statementPreview": "The GA entanglement criterion (Theorem 5.1: coefficient matrix rank > 1) is equivalent to the coherence-based criteri..."
         }
       ],
       "openGaps": [],
@@ -16293,6 +16299,10 @@
         {
           "target": "quantum/entanglement",
           "context": "status: rigorous"
+        },
+        {
+          "target": "axioms/coherence-operational",
+          "context": "Coherence as Physical Primitive"
         }
       ]
     },
@@ -16441,7 +16451,7 @@
       "id": "gravity",
       "filePath": "site/src/content/geometric-algebra/gravity.md",
       "title": "Gravity in STA: Gauge Theory Gravity",
-      "status": "provisional",
+      "status": "rigorous",
       "gaStructure": "Cl(1,3)",
       "targetDerivation": "spacetime/gravity",
       "priority": "moderate",
@@ -16532,6 +16542,18 @@
           "statementPreview": "In the standard Schwarzschild coordinates, gtt = 0 at r = RS, creating a coordinate singularity. In the GTG Newtonian..."
         },
         {
+          "type": "Theorem",
+          "id": "8.1",
+          "name": "GTG field equations from gauge-invariant action",
+          "statementPreview": "The gravitational field equations in GTG follow from the gauge-invariant action:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "8.2",
+          "name": "Schwarzschild field equation verification",
+          "statementPreview": "The Schwarzschild gauge fields of Proposition 7.1 satisfy the vacuum GTG field equation G(a) = 0.*"
+        },
+        {
           "type": "Proposition",
           "id": "8.1",
           "name": "Linearized GTG",
@@ -16549,6 +16571,14 @@
         {
           "target": "spacetime/gravity",
           "context": "status: rigorous"
+        },
+        {
+          "target": "interactions/coherence-lagrangian",
+          "context": "Coherence Lagrangian"
+        },
+        {
+          "target": "spacetime/gravity",
+          "context": "Gravity"
         },
         {
           "target": "spacetime/speed-of-light",
@@ -16737,7 +16767,7 @@
       "id": "overview",
       "filePath": "site/src/content/geometric-algebra/overview.md",
       "title": "Geometric Algebra Exploration",
-      "status": "draft",
+      "status": "provisional",
       "gaStructure": "Cl(p,q)",
       "targetDerivation": null,
       "priority": "high",
@@ -16975,7 +17005,7 @@
       "id": "weak-interaction",
       "filePath": "site/src/content/geometric-algebra/weak-interaction.md",
       "title": "Weak Interaction via H = Cl+(3,0)",
-      "status": "provisional",
+      "status": "rigorous",
       "gaStructure": "Cl+(3,0)",
       "targetDerivation": "gauge/weak-interaction",
       "priority": "high",
@@ -17048,6 +17078,18 @@
           "statementPreview": "The gauge-invariant Yang-Mills Lagrangian is:"
         },
         {
+          "type": "Proposition",
+          "id": "5.4",
+          "name": "Yang-Mills equation of motion",
+          "statementPreview": "The Euler-Lagrange equation from LYM is:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.5",
+          "name": "Bianchi identity",
+          "statementPreview": "The field strength satisfies the Bianchi identity:*"
+        },
+        {
           "type": "Theorem",
           "id": "6.1",
           "name": "Cayley-Dickson = Clifford dimension increase",
@@ -17070,6 +17112,12 @@
           "id": "8.2",
           "name": "Gauge-invariant observable",
           "statementPreview": "The trace tr(Rgamma) = 2Re(Rgamma) = 2langle Rgammarangle0 (the scalar part of the rotor) is gauge-invariant. For a r..."
+        },
+        {
+          "type": "Proposition",
+          "id": "8.3",
+          "name": "Completeness of Wilson loop observables",
+          "statementPreview": "The set of Wilson loop observables langle Rgamma rangle0 : gamma closed curves separates gauge orbits: two gauge fiel..."
         }
       ],
       "openGaps": [],
@@ -17084,9 +17132,8 @@
   "gaStats": {
     "pageCount": 12,
     "byStatus": {
-      "rigorous": 5,
-      "provisional": 6,
-      "draft": 1
+      "rigorous": 9,
+      "provisional": 3
     },
     "byPriority": {
       "high": 8,

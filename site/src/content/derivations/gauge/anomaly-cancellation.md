@@ -49,7 +49,7 @@ where $\Gamma[g, A]$ is the anomalous phase functional.
 
 $$\langle \Phi_f | \Phi_i \rangle = \int \mathcal{D}\Phi \, e^{i\mathcal{S}[\Phi]/\hbar}$$
 
-where $\mathcal{S}$ is the coherence cost functional ([Action and Planck's Constant](/derivations/thermodynamics/action-planck)). The amplitude must be gauge-invariant (Step 1: coherence is gauge-invariant, so amplitudes computed from coherence must also be). Now, under a gauge transformation $g$, the path-integral measure transforms as $\mathcal{D}\Phi^g = \mathcal{D}\Phi \cdot e^{i\Gamma[g,A]}$ where $\Gamma$ is the anomaly functional (Fujikawa, 1979). If $\Gamma \neq 0$, then:
+where $\mathcal{S}$ is the coherence cost functional ([Action and Planck's Constant](/derivations/thermodynamics/action-planck)). The amplitude must be gauge-invariant (Step 1: coherence is gauge-invariant, so amplitudes computed from coherence must also be). Now, under a gauge transformation $g$, the path-integral measure transforms as $\mathcal{D}\Phi^g = \mathcal{D}\Phi \cdot e^{i\Gamma[g,A]}$ where $\Gamma$ is the anomaly functional [Fujikawa, 1979]. If $\Gamma \neq 0$, then:
 
 $$\langle \Phi_f^g | \Phi_i^g \rangle = e^{i\Gamma[g,A]} \langle \Phi_f | \Phi_i \rangle \neq \langle \Phi_f | \Phi_i \rangle$$
 
@@ -172,7 +172,7 @@ where $\eta_f = +1$ for left-handed and $-1$ for right-handed fermions, and $T_a
 | Result | Status | Notes |
 |---|---|---|
 | Theorem 1.2 (coherence → anomaly freedom) | Rigorous | Self-contained three-step proof: (1) gauge invariance of coherence from Axiom 1 + relational invariant structure, (2) Fujikawa mechanism gives gauge-dependent measure Jacobian, (3) contradiction. No longer relies on Fisher metric formulation. |
-| Proposition 2.2 (hypercharge quantization) | Rigorous | Follows from published $\mathbb{C}\ell(6)$ decomposition (Furey, 2016; Stoica, 2018) |
+| Proposition 2.2 (hypercharge quantization) | Rigorous | Follows from published $\mathbb{C}\ell(6)$ decomposition [Furey, 2016]; [Stoica, 2018] |
 | Theorem 3.1 (anomaly traces vanish) | Rigorous | Pure arithmetic on fixed representations |
 | Proposition 4.1 (generation independence) | Rigorous | Immediate from identical representations |
 | Theorem 5.1 (structural necessity) | Rigorous | Rigidity argument now fully formal: eigenvalue discreteness proved from $\hat{n}_k^2 = \hat{n}_k$ (fermionic idempotency); representation fixed by Hurwitz uniqueness, $\mathbb{C}\ell(6)$ isomorphism, Fock dimension $2^3 = 8$, and $\mathbb{Z}_2$ chirality choice. Each input is a theorem, integer, or discrete choice — no continuous parameters. |
@@ -189,3 +189,8 @@ where $\eta_f = +1$ for left-handed and $-1$ for right-handed fermions, and $T_a
 
 - [Chirality Selection](/derivations/gauge/chirality-selection), Gap: "SM chiral fermion content is anomaly-free... constraint should follow from coherence conservation... but the calculation has not been performed" — **Resolved**: Theorem 3.1 performs the explicit computation; Theorem 1.2 provides the coherence-conservation connection.
 - [Weak Interaction](/derivations/gauge/weak-interaction), Gap: "SM is free of gauge anomalies... framework should reproduce this constraint from coherence conservation" — **Resolved**: Full computation with framework-intrinsic justification.
+
+<!-- References -->
+[Fujikawa, 1979]: /references#fujikawa-1979
+[Furey, 2016]: /references#furey-2016
+[Stoica, 2018]: /references#stoica-2018

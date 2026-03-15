@@ -858,6 +858,14 @@ function main() {
     console.error('    (knowledge-index.json was still generated successfully)')
   }
 
+  // ── Extract references ──
+  try {
+    execSync(`node ${join(ROOT, 'scripts/extract-references.mjs')}`, { stdio: 'inherit' })
+  } catch (err) {
+    console.error(`  ⚠ Reference extraction failed: ${err.message}`)
+    console.error('    (knowledge-index.json was still generated successfully)')
+  }
+
   // ── Print summary ──
   console.log('═══════════════════════════════════════════════════')
   console.log('  KNOWLEDGE INDEX GENERATED')

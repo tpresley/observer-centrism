@@ -99,7 +99,7 @@ $$\mathcal{C}(\hat{n}_1, \hat{n}_2, \hat{n}_3) = f(\hat{n}_1 \cdot \hat{n}_2, \h
 
 *The mixing matrix is determined by the relative orientation of these two residual subgroups within $A_5$.*
 
-**Remark.** This is the framework's version of the "discrete flavor symmetry" program (Ma, 2001; Altarelli & Feruglio, 2005; King, 2013). The key difference: here $A_5$ is motivated by the framework's structure (maximal finite symmetry of the coherence cost in 3D), rather than being an ad hoc assumption.
+**Remark.** This is the framework's version of the "discrete flavor symmetry" program [Ma, 2001]; [Altarelli & Feruglio, 2005]; [King, 2013]. The key difference: here $A_5$ is motivated by the framework's structure (maximal finite symmetry of the coherence cost in 3D), rather than being an ad hoc assumption.
 
 ### Step 4: The Mixing Matrix Structure
 
@@ -200,7 +200,7 @@ When $|m_i - m_j| \gg |V_{ij}|$ (strong hierarchy), the mixing angle is small �
 **Fully rigorous (given S1):**
 - Proposition 1.4: Mixing from basis mismatch (standard unitary transformation theory)
 - Proposition 2.2: Coherence cost depends on relative angles (location independence from [Lorentz Invariance](/derivations/spacetime/lorentz-invariance) S1)
-- Theorem 3.1: $A_5$ symmetry from S1 — the classification of finite subgroups of $SO(3)$ is a standard result (Klein 1884), and $A_5$ is the unique largest non-abelian simple subgroup ($|A_5| = 60$). S1 selects this maximal symmetry, following the same pattern as other structural postulates: maximal symmetry consistent with the underlying structure
+- Theorem 3.1: $A_5$ symmetry from S1 — the classification of finite subgroups of $SO(3)$ is a standard result [Klein, 1884], and $A_5$ is the unique largest non-abelian simple subgroup ($|A_5| = 60$). S1 selects this maximal symmetry, following the same pattern as other structural postulates: maximal symmetry consistent with the underlying structure
 - Proposition 3.2: Residual subgroup classification (standard finite group theory — the subgroup lattice of $A_5$ is completely known)
 - Proposition 4.1: Two-sector architecture and golden ratio prediction — the icosahedral geometry is standard, the misalignment computation is finite group representation theory, and the golden ratio $\phi$ enters necessarily from the icosahedron's metric properties
 - Proposition 5.1: Mass hierarchy ↔ mixing angle correspondence (standard perturbation theory applied to mass matrices)
@@ -225,3 +225,9 @@ When $|m_i - m_j| \gg |V_{ij}|$ (strong hierarchy), the mixing angle is small �
 4. **Renormalization-group running**: The mixing parameters measured at low energy differ from their values at the symmetry-breaking scale. RG corrections (from [Renormalization Group](/derivations/thermodynamics-ext/renormalization)) should be computed to compare with experiment.
 
 5. **Quark-lepton complementarity**: The observation $\theta_{12}^{\text{CKM}} + \theta_{12}^{\text{PMNS}} \approx \pi/4$ may be accidental or may reflect a deeper geometric relationship between the quark and lepton sectors. The $A_5$ framework should clarify this.
+
+<!-- References -->
+[Klein, 1884]: /references#klein-1884
+[Ma, 2001]: /references#ma-2001
+[Altarelli & Feruglio, 2005]: /references#altarelli-feruglio-2005
+[King, 2013]: /references#king-2013

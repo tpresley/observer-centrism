@@ -22,7 +22,7 @@ leanProofs:
 
 This derivation addresses a fundamental puzzle: **why is there any matter at all?**
 
-The Big Bang should have produced equal amounts of matter and antimatter, which would have annihilated each other completely, leaving nothing but radiation. Yet the universe is overwhelmingly made of matter. Explaining this asymmetry requires three conditions (identified by Sakharov in 1967): a process that violates the balance between matter and antimatter, a difference between the laws governing matter and antimatter, and a departure from thermal equilibrium so the asymmetry is not erased.
+The Big Bang should have produced equal amounts of matter and antimatter, which would have annihilated each other completely, leaving nothing but radiation. Yet the universe is overwhelmingly made of matter. Explaining this asymmetry requires three conditions [Sakharov, 1967]: a process that violates the balance between matter and antimatter, a difference between the laws governing matter and antimatter, and a departure from thermal equilibrium so the asymmetry is not erased.
 
 **The argument.** Rather than introducing new physics, this derivation shows that all three Sakharov conditions are already consequences of previously derived results in the framework:
 
@@ -38,7 +38,7 @@ The Big Bang should have produced equal amounts of matter and antimatter, which 
 
 ## Statement
 
-**Theorem.** The observed baryon asymmetry of the universe $\eta_B \equiv n_B/n_\gamma \approx 6 \times 10^{-10}$ arises from three conditions (Sakharov, 1967), all of which are structural consequences of the framework:
+**Theorem.** The observed baryon asymmetry of the universe $\eta_B \equiv n_B/n_\gamma \approx 6 \times 10^{-10}$ arises from three conditions [Sakharov, 1967], all of which are structural consequences of the framework:
 
 1. **Baryon number violation**: $SU(2)_L$ instantons (sphalerons) violate $B + L$ while conserving $B - L$, following directly from the [Weak Interaction](/derivations/gauge/weak-interaction)'s non-abelian gauge structure.
 2. **C and CP violation**: The chiral coupling of $SU(2)_L$ (coupling to left-handed fermions only) maximally violates C. CP violation requires complex phases in the quark/lepton mixing matrices — a structural consequence of three generations.
@@ -74,7 +74,7 @@ $$N_{CS} = \frac{g_W^2}{16\pi^2}\int d^3x \, \varepsilon^{ijk}\text{tr}\left(W_i
 
 Each integer value of $N_{CS}$ corresponds to a distinct vacuum of the $SU(2)_L$ gauge theory.
 
-**Part 2 (Sphaleron transitions).** Adjacent vacua ($\Delta N_{CS} = \pm 1$) are separated by an energy barrier. At zero temperature, transitions between vacua are tunneling events (instantons) with amplitude $\sim e^{-8\pi^2/g_W^2} \approx e^{-200}$ — negligibly small. At high temperatures $T \gtrsim E_{\text{sph}} = M_W/\alpha_W \sim 10$ TeV, thermal fluctuations can overcome the barrier classically. The transition configurations are called sphalerons (Klinkhamer & Manton, 1984), unstable saddle-point solutions of the $SU(2)$ Yang-Mills-Higgs equations. The sphaleron rate at high temperature is $\Gamma_{\text{sph}} \sim \alpha_W^5 T^4$ (unsuppressed above the electroweak scale).
+**Part 2 (Sphaleron transitions).** Adjacent vacua ($\Delta N_{CS} = \pm 1$) are separated by an energy barrier. At zero temperature, transitions between vacua are tunneling events (instantons) with amplitude $\sim e^{-8\pi^2/g_W^2} \approx e^{-200}$ — negligibly small. At high temperatures $T \gtrsim E_{\text{sph}} = M_W/\alpha_W \sim 10$ TeV, thermal fluctuations can overcome the barrier classically. The transition configurations are called sphalerons [Klinkhamer & Manton, 1984], unstable saddle-point solutions of the $SU(2)$ Yang-Mills-Higgs equations. The sphaleron rate at high temperature is $\Gamma_{\text{sph}} \sim \alpha_W^5 T^4$ (unsuppressed above the electroweak scale).
 
 **Part 3 (Anomalous baryon number violation).** The $SU(2)_L$ gauge theory has an Adler-Bell-Jackiw anomaly: the classically conserved baryon and lepton currents $J^\mu_B$ and $J^\mu_L$ have anomalous divergences:
 
@@ -193,7 +193,7 @@ $$d = 3 \xrightarrow{\text{Three Dims}} \dim SO(3) = 3 \xrightarrow{\text{Three 
 
 **Fully rigorous (no new structural postulates):**
 - Proposition 1.1: Symmetric pair creation from [Coherence-Dual Pairs](/derivations/minimal-observer/coherence-dual-pairs) (rigorous — direct Noether argument)
-- Proposition 2.1: Sphalerons from $\pi_3(SU(2)) = \mathbb{Z}$ — standard topology + gauge theory (the ABJ anomaly and sphaleron solutions are established physics: 't Hooft 1976, Klinkhamer & Manton 1984). The topological structure $\pi_3(S^3) = \mathbb{Z}$ is inherited from the quaternionic phase algebra of [Weak Interaction](/derivations/gauge/weak-interaction) (now rigorous)
+- Proposition 2.1: Sphalerons from $\pi_3(SU(2)) = \mathbb{Z}$ — standard topology + gauge theory ['t Hooft, 1976]; [Klinkhamer & Manton, 1984]. The topological structure $\pi_3(S^3) = \mathbb{Z}$ is inherited from the quaternionic phase algebra of [Weak Interaction](/derivations/gauge/weak-interaction) (now rigorous)
 - Proposition 3.1: Maximal C violation from chiral coupling — direct consequence of [Chirality Selection](/derivations/gauge/chirality-selection) (now rigorous, via the orientation-consistency theorem)
 - Proposition 3.2: CP violation from $N_g \geq 3$ — the Kobayashi-Maskawa counting argument is standard, and $N_g = 3$ is derived from $\dim SO(3) = 3$ in [Three Generations](/derivations/particles/three-generations) (rigorous)
 - Proposition 4.1: Bootstrap crystallization as phase transitions — the irreversibility follows from [Entropy](/derivations/thermodynamics/entropy) (Theorem 4.1, rigorous). The existence of phase transitions is a generic consequence of the bootstrap hierarchy's sequential structure
@@ -223,3 +223,8 @@ $$d = 3 \xrightarrow{\text{Three Dims}} \dim SO(3) = 3 \xrightarrow{\text{Three 
 ## Addressed Gaps
 
 1. **Leptogenesis** — Addressed by [Neutrino Masses](/derivations/particles/neutrino-masses) (Majorana mechanism) and [Leptogenesis](/derivations/cosmology/leptogenesis) (electroweak-scale resonant leptogenesis).
+
+<!-- References -->
+[Sakharov, 1967]: /references#sakharov-1967
+['t Hooft, 1976]: /references#t-hooft-1976
+[Klinkhamer & Manton, 1984]: /references#klinkhamer-manton-1984

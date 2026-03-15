@@ -53,14 +53,14 @@ Both predictions arise from the same underlying Poisson statistics at different 
 **Proposition 1.3 (Poisson sprinkling at Planck density).** *The distribution of causal set elements follows a Poisson process with density $\rho_P = \ell_P^{-4}$.*
 
 *Proof.* The relational invariant network elements are placed by the dynamics of observer interactions. Two properties constrain the distribution:
-1. **Local Lorentz invariance** ([Lorentz Invariance](/derivations/spacetime/lorentz-invariance)): The distribution must be invariant under local Lorentz boosts. For a point process on a Lorentzian manifold, the unique Lorentz-invariant distribution is Poisson (Bombelli et al., 1987): any non-Poisson distribution would have correlations that distinguish a preferred frame.
+1. **Local Lorentz invariance** ([Lorentz Invariance](/derivations/spacetime/lorentz-invariance)): The distribution must be invariant under local Lorentz boosts. For a point process on a Lorentzian manifold, the unique Lorentz-invariant distribution is Poisson [Bombelli et al., 1987]: any non-Poisson distribution would have correlations that distinguish a preferred frame.
 2. **Planck density**: The sprinkling density is $\rho_P = \ell_P^{-4}$, since the minimum resolvable scale is $\ell_P$ ([Area Scaling](/derivations/holography/area-scaling), S1). The expected number of elements in 4-volume $V_4$ is $\langle N \rangle = \rho_P V_4 = V_4/\ell_P^4$.
 
 The Poisson distribution $P(N = n) = e^{-\langle N \rangle} \langle N \rangle^n / n!$ is the unique distribution satisfying both constraints. $\square$
 
 ### Step 2: Geodesic Length Fluctuations and Holographic Noise
 
-**Definition 2.1.** The **geodesic length estimator** on a causal set approximates the proper distance $L$ between two spacelike-separated events by counting causet elements along the shortest chain connecting them (Brightwell & Gregory, 1991).
+**Definition 2.1.** The **geodesic length estimator** on a causal set approximates the proper distance $L$ between two spacelike-separated events by counting causet elements along the shortest chain connecting them [Brightwell & Gregory, 1991].
 
 **Proposition 2.2 (Geodesic variance).** *For a Poisson-sprinkled causal set in flat spacetime, the variance of the geodesic length estimator for proper distance $L$ is:*
 
@@ -200,8 +200,8 @@ The connection: both are consequences of the discrete, Poisson-distributed relat
 *Verification.* Take a Poisson sprinkling of $\mathbb{M}^4$ at density $\rho = \ell_P^{-4}$.
 
 - **Causal set axioms** (Proposition 1.2): The sprinkling is a locally finite partial order under the Minkowski causal relation. $\checkmark$
-- **Lorentz invariance** (Proposition 1.3): Poisson sprinkling of $\mathbb{M}^4$ is Lorentz-invariant (Bombelli et al., 1987). $\checkmark$
-- **Geodesic variance** (Proposition 2.2): Numerical simulations (Dowker et al., 2004) confirm $\delta L^2 \propto \ell_P L$ for the longest-chain estimator on Poisson causets. $\checkmark$
+- **Lorentz invariance** (Proposition 1.3): Poisson sprinkling of $\mathbb{M}^4$ is Lorentz-invariant [Bombelli et al., 1987]. $\checkmark$
+- **Geodesic variance** (Proposition 2.2): Numerical simulations [Dowker et al., 2004] confirm $\delta L^2 \propto \ell_P L$ for the longest-chain estimator on Poisson causets. $\checkmark$
 - **Holographic coefficient** (Theorem 2.3): $\alpha_H = 1/4$ from the holographic bound, consistent with the Holometer constraint $\alpha_H \lesssim 0.5$. $\checkmark$
 - **Poisson density fluctuations** (Proposition 3.2): $\langle(\delta\rho/\rho)^2\rangle_R = (R/\ell_P)^{-3}$ — correct Poisson scaling. $\checkmark$
 - **Gaussian cutoff** (Theorem 5.1): Steeper than WDM power-law — distinguishable in Lyman-$\alpha$ forest data. $\checkmark$ $\square$
@@ -211,7 +211,7 @@ The connection: both are consequences of the discrete, Poisson-distributed relat
 **Fully rigorous:**
 - Definition 1.1: Causal set axioms (standard mathematical definition)
 - Proposition 1.2: Network satisfies causal set axioms (follows from the partial order of the dependency DAG and local finiteness from the holographic bound)
-- Proposition 1.3: Poisson sprinkling is the unique Lorentz-invariant point process (proven theorem, Bombelli et al. 1987)
+- Proposition 1.3: Poisson sprinkling is the unique Lorentz-invariant point process [Bombelli et al., 1987]
 - Proposition 2.2: Geodesic variance $\delta L^2 = \alpha \ell_P L$ (explicit CLT application: cell decomposition into $N = L/\ell_P$ i.i.d. Poisson cells, linearized length estimator, CLT gives variance $c^2 \ell_P L$. The $\sqrt{\ell_P L}$ scaling is a rigorous consequence of summing independent fluctuations.)
 - Theorem 2.3: $\alpha_H = 1/4$ (holographic reduction: causal diamond boundary area $A_{\max} = L \cdot \ell_P$, Bekenstein-Hawking bound gives $N_{\text{eff}} = A_{\max}/(4\ell_P^2) = L/(4\ell_P)$, variance $\delta L^2 = N_{\text{eff}} \cdot \ell_P^2 = \ell_P L/4$. The factor of 4 is fixed by the Bekenstein-Hawking proportionality constant derived in [Area Scaling](/derivations/holography/area-scaling).)
 - Proposition 3.2: Poisson density fluctuations $\langle(\delta\rho/\rho)^2\rangle = 1/N_R$ (elementary probability theory)
@@ -231,3 +231,8 @@ The connection: both are consequences of the discrete, Poisson-distributed relat
 3. **Quantitative cross-prediction**: The qualitative link between holographic noise and dark matter granularity (Theorem 6.1) should be made quantitative: given $\alpha_H$, what is the predicted $k_J$? This requires computing how the sprinkling density $\rho_P$ connects to both observables through the specific dynamics of the observer network.
 4. **Deriving Poisson from axioms**: Proposition 1.3 assumes Poisson sprinkling as the unique Lorentz-invariant distribution. Can this be derived from the three axioms, or is it an additional input?
 5. **Continuum limit**: The identification of the discrete relational invariant network with a Poisson causal set relies on a continuum limit that has not been rigorously constructed from the axioms.
+
+<!-- References -->
+[Bombelli et al., 1987]: /references#bombelli-1987
+[Brightwell & Gregory, 1991]: /references#brightwell-gregory-1991
+[Dowker et al., 2004]: /references#dowker-2004

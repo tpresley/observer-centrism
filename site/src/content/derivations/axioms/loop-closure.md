@@ -63,7 +63,7 @@ Whitney's theorem (1936) upgrades $C^1$ to the unique compatible $C^\infty$ stru
 
 *Proof.* By S1, $\Sigma$ is a compact topological manifold of dimension $n \geq 1$ with a free continuous $U(1)$ action.
 
-**Step 1 (Smooth structure exists).** Since the $U(1)$ action is free, $\Sigma$ is a principal $U(1)$-bundle over the orbit space $B = \Sigma/U(1)$, which is a compact topological manifold of dimension $n - 1$ (Bredon, 1972, Ch. II, Theorem 5.8). By the equivariant smoothing theorem for compact Lie group actions on topological manifolds (Illman, 1983; for circle actions on 3-manifolds, see also Orlik, 1972), there exists a smooth structure on $\Sigma$ making the $U(1)$ action a smooth Lie group action.
+**Step 1 (Smooth structure exists).** Since the $U(1)$ action is free, $\Sigma$ is a principal $U(1)$-bundle over the orbit space $B = \Sigma/U(1)$, which is a compact topological manifold of dimension $n - 1$ [Bredon, 1972]. By the equivariant smoothing theorem for compact Lie group actions on topological manifolds [Illman, 1983]; [Orlik, 1972], there exists a smooth structure on $\Sigma$ making the $U(1)$ action a smooth Lie group action.
 
 **Step 2 (Uniqueness).** For $n \leq 3$: every compact topological manifold of dimension $\leq 3$ admits a unique smooth structure (dimension 1: elementary; dimension 2: Radó, 1925; dimension 3: Moise, 1952). The smooth $U(1)$ action is then the unique smoothing of the continuous action. For $n \geq 4$: the equivariant smooth structure — the unique smooth structure compatible with the $U(1)$ action — is selected by the equivariance constraint. $\square$
 
@@ -305,3 +305,8 @@ $$E_\mathcal{O} = \frac{S_\mathcal{O}}{T_\mathcal{O}} = \frac{\hbar}{T_\mathcal{
 2. **Non-abelian loops**: The formalization assumes $U(1)$ (abelian) symmetry. Non-abelian internal symmetries ($SU(2)$, $SU(3)$) require replacing the single period $T$ with a representation-theoretic condition on the image of $\phi$ in a non-abelian group.
 
 3. **Massless observers**: Photons have no rest frame and no rest-frame loop. They are limiting cases where $T_\mathcal{O} \to 0$ and $\omega_\mathcal{O} \to \infty$ while $S_\mathcal{O}$ remains finite. This limit needs formal treatment within the approximate closure framework.
+
+<!-- References -->
+[Bredon, 1972]: /references#bredon-1972
+[Orlik, 1972]: /references#orlik-1972
+[Illman, 1983]: /references#illman-1983

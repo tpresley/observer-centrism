@@ -1,0 +1,1441 @@
+{
+  "meta": {
+    "generatedAt": "2026-03-15T11:36:03.495Z",
+    "totalReferences": 88,
+    "totalCitations": 101,
+    "citingFiles": 41,
+    "generator": "scripts/extract-references.mjs"
+  },
+  "categoryNames": {
+    "mathematical-foundations": "Mathematical Foundations",
+    "quantum-mechanics": "Quantum Mechanics",
+    "quantum-information": "Quantum Information",
+    "field-theory": "Field Theory",
+    "spacetime-geometry": "Spacetime & Geometry",
+    "cosmology": "Cosmology",
+    "particle-physics": "Particle Physics",
+    "holography": "Holography & Black Holes",
+    "experimental": "Experimental"
+  },
+  "categoryOrder": [
+    "mathematical-foundations",
+    "quantum-mechanics",
+    "quantum-information",
+    "field-theory",
+    "spacetime-geometry",
+    "particle-physics",
+    "holography",
+    "cosmology",
+    "experimental"
+  ],
+  "byCategory": {
+    "mathematical-foundations": {
+      "name": "Mathematical Foundations",
+      "count": 6
+    },
+    "quantum-mechanics": {
+      "name": "Quantum Mechanics",
+      "count": 7
+    },
+    "quantum-information": {
+      "name": "Quantum Information",
+      "count": 12
+    },
+    "field-theory": {
+      "name": "Field Theory",
+      "count": 13
+    },
+    "spacetime-geometry": {
+      "name": "Spacetime & Geometry",
+      "count": 14
+    },
+    "particle-physics": {
+      "name": "Particle Physics",
+      "count": 18
+    },
+    "holography": {
+      "name": "Holography & Black Holes",
+      "count": 8
+    },
+    "cosmology": {
+      "name": "Cosmology",
+      "count": 7
+    },
+    "experimental": {
+      "name": "Experimental",
+      "count": 3
+    }
+  },
+  "references": [
+    {
+      "id": "dixon-1994",
+      "authors": "Dixon",
+      "year": 1994,
+      "citedAs": [
+        "Dixon, 1994"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "gauge/standard-model-group",
+          "title": "Standard Model Gauge Group from Division Algebras"
+        }
+      ],
+      "category": "mathematical-foundations"
+    },
+    {
+      "id": "hurwitz-1898",
+      "authors": "Hurwitz",
+      "year": 1898,
+      "citedAs": [
+        "Hurwitz, 1898"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "gauge/color-force",
+          "title": "Color Force from Octonionic Structure"
+        },
+        {
+          "derivationId": "gauge/proton-stability",
+          "title": "Proton Stability from Gauge Non-Unification"
+        },
+        {
+          "derivationId": "interactions/bootstrap-division-algebras",
+          "title": "Bootstrap → Division Algebras"
+        }
+      ],
+      "category": "mathematical-foundations"
+    },
+    {
+      "id": "klein-1884",
+      "authors": "Klein",
+      "year": 1884,
+      "citedAs": [
+        "Klein, 1884"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "flavor/mixing-angles",
+          "title": "Flavor Mixing from Winding-Axis Geometry"
+        }
+      ],
+      "category": "mathematical-foundations"
+    },
+    {
+      "id": "moise-1952",
+      "authors": "Moise",
+      "year": 1952,
+      "citedAs": [
+        "Moise, 1952"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "dimensions/three-dimensions",
+          "title": "Three Spatial Dimensions Are Uniquely Stable"
+        }
+      ],
+      "category": "mathematical-foundations"
+    },
+    {
+      "id": "moreno-1998",
+      "authors": "Moreno",
+      "year": 1998,
+      "citedAs": [
+        "Moreno, 1998"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "gauge/color-force",
+          "title": "Color Force from Octonionic Structure"
+        },
+        {
+          "derivationId": "gauge/standard-model-group",
+          "title": "Standard Model Gauge Group from Division Algebras"
+        }
+      ],
+      "category": "mathematical-foundations"
+    },
+    {
+      "id": "smale-1961",
+      "authors": "Smale",
+      "year": 1961,
+      "citedAs": [
+        "Smale, 1961"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "dimensions/three-dimensions",
+          "title": "Three Spatial Dimensions Are Uniquely Stable"
+        }
+      ],
+      "category": "mathematical-foundations"
+    },
+    {
+      "id": "aharonov-albert-vaidman-1988",
+      "authors": "Aharonov, Albert, Vaidman",
+      "year": 1988,
+      "citedAs": [
+        "Aharonov, Albert, Vaidman, 1988"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "quantum/preferred-basis",
+          "title": "Preferred Basis from Relational Invariants"
+        }
+      ],
+      "category": "quantum-mechanics"
+    },
+    {
+      "id": "frauchiger-renner-2018",
+      "authors": "Frauchiger-Renner",
+      "year": 2018,
+      "citedAs": [
+        "Frauchiger-Renner, 2018"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "quantum/measurement",
+          "title": "Measurement as Relational Invariant Generation"
+        }
+      ],
+      "category": "quantum-mechanics"
+    },
+    {
+      "id": "gleason-1957",
+      "authors": "Gleason",
+      "year": 1957,
+      "citedAs": [
+        "Gleason, 1957"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "quantum/born-rule",
+          "title": "Born Rule from Coherence Conservation"
+        }
+      ],
+      "category": "quantum-mechanics"
+    },
+    {
+      "id": "laidlaw-dewitt-1971",
+      "authors": "Laidlaw-DeWitt",
+      "year": 1971,
+      "citedAs": [
+        "Laidlaw-DeWitt, 1971"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "particles/spin-statistics",
+          "title": "Spin and Statistics from Winding Classes"
+        }
+      ],
+      "category": "quantum-mechanics"
+    },
+    {
+      "id": "leinaas-myrheim-1977",
+      "authors": "Leinaas-Myrheim",
+      "year": 1977,
+      "citedAs": [
+        "Leinaas-Myrheim, 1977"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "particles/spin-statistics",
+          "title": "Spin and Statistics from Winding Classes"
+        }
+      ],
+      "category": "quantum-mechanics"
+    },
+    {
+      "id": "pauli-1940",
+      "authors": "Pauli",
+      "year": 1940,
+      "citedAs": [
+        "Pauli, 1940"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "particles/spin-statistics",
+          "title": "Spin and Statistics from Winding Classes"
+        }
+      ],
+      "category": "quantum-mechanics"
+    },
+    {
+      "id": "unruh-1995",
+      "authors": "Unruh",
+      "year": 1995,
+      "citedAs": [
+        "Unruh, 1995"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "holography/hawking-radiation",
+          "title": "Hawking Radiation"
+        },
+        {
+          "derivationId": "spacetime/singularity-resolution",
+          "title": "Singularity Resolution"
+        }
+      ],
+      "category": "quantum-mechanics"
+    },
+    {
+      "id": "araki-lieb-1970",
+      "authors": "Araki & Lieb",
+      "year": 1970,
+      "citedAs": [
+        "Araki & Lieb, 1970",
+        "Araki–Lieb, 1970"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "axioms/coherence-operational",
+          "title": "Coherence as Physical Primitive"
+        }
+      ],
+      "category": "quantum-information"
+    },
+    {
+      "id": "bennett-1996",
+      "authors": "Bennett et al.",
+      "year": 1996,
+      "citedAs": [
+        "Bennett et al., 1996"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "axioms/coherence-operational",
+          "title": "Coherence as Physical Primitive"
+        }
+      ],
+      "category": "quantum-information"
+    },
+    {
+      "id": "bennett-bernstein-popescu-schumacher-1996",
+      "authors": "Bennett, Bernstein, Popescu, Schumacher",
+      "year": 1996,
+      "citedAs": [
+        "Bennett, Bernstein, Popescu, Schumacher, 1996"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "axioms/coherence-operational",
+          "title": "Coherence as Physical Primitive"
+        }
+      ],
+      "category": "quantum-information"
+    },
+    {
+      "id": "bredon-1972",
+      "authors": "Bredon",
+      "year": 1972,
+      "citedAs": [
+        "Bredon, 1972"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "axioms/loop-closure",
+          "title": "Loop Closure"
+        }
+      ],
+      "category": "quantum-information"
+    },
+    {
+      "id": "fujishige-2005",
+      "authors": "Fujishige",
+      "year": 2005,
+      "citedAs": [
+        "Fujishige, 2005"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "axioms/coherence-conservation",
+          "title": "Coherence Conservation"
+        }
+      ],
+      "category": "quantum-information"
+    },
+    {
+      "id": "groisman-2005",
+      "authors": "Groisman et al.",
+      "year": 2005,
+      "citedAs": [
+        "Groisman et al., 2005"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "axioms/coherence-operational",
+          "title": "Coherence as Physical Primitive"
+        }
+      ],
+      "category": "quantum-information"
+    },
+    {
+      "id": "groisman-popescu-winter-2005",
+      "authors": "Groisman, Popescu, Winter",
+      "year": 2005,
+      "citedAs": [
+        "Groisman, Popescu, Winter, 2005"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "axioms/coherence-operational",
+          "title": "Coherence as Physical Primitive"
+        }
+      ],
+      "category": "quantum-information"
+    },
+    {
+      "id": "illman-1983",
+      "authors": "Illman",
+      "year": 1983,
+      "citedAs": [
+        "Illman, 1983"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "axioms/loop-closure",
+          "title": "Loop Closure"
+        }
+      ],
+      "category": "quantum-information"
+    },
+    {
+      "id": "lieb-ruskai-1973",
+      "authors": "Lieb & Ruskai",
+      "year": 1973,
+      "citedAs": [
+        "Lieb & Ruskai, 1973",
+        "Lieb–Ruskai, 1973"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "axioms/coherence-operational",
+          "title": "Coherence as Physical Primitive"
+        },
+        {
+          "derivationId": "quantum/entanglement",
+          "title": "Entanglement from Relational Invariants"
+        }
+      ],
+      "category": "quantum-information"
+    },
+    {
+      "id": "orlik-1972",
+      "authors": "Orlik",
+      "year": 1972,
+      "citedAs": [
+        "Orlik, 1972"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "axioms/loop-closure",
+          "title": "Loop Closure"
+        }
+      ],
+      "category": "quantum-information"
+    },
+    {
+      "id": "petz-1996",
+      "authors": "Petz",
+      "year": 1996,
+      "citedAs": [
+        "Petz, 1996"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "thermodynamics-ext/fisher-metric",
+          "title": "Fisher Information Metric"
+        }
+      ],
+      "category": "quantum-information"
+    },
+    {
+      "id": "schumacher-1995",
+      "authors": "Schumacher",
+      "year": 1995,
+      "citedAs": [
+        "Schumacher, 1995"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "axioms/coherence-operational",
+          "title": "Coherence as Physical Primitive"
+        }
+      ],
+      "category": "quantum-information"
+    },
+    {
+      "id": "amari-nagaoka-2000",
+      "authors": "Amari & Nagaoka",
+      "year": 2000,
+      "citedAs": [
+        "Amari & Nagaoka, 2000"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "thermodynamics-ext/distinguishability-conservation",
+          "title": "Conservation of Distinguishability"
+        },
+        {
+          "derivationId": "thermodynamics-ext/fisher-metric",
+          "title": "Fisher Information Metric"
+        }
+      ],
+      "category": "field-theory"
+    },
+    {
+      "id": "born-1957",
+      "authors": "Born",
+      "year": 1957,
+      "citedAs": [
+        "Born, 1957"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "guide/09-epistemology",
+          "title": "What Rigorous Means Here"
+        }
+      ],
+      "category": "field-theory"
+    },
+    {
+      "id": "coleman-weinberg-1973",
+      "authors": "Coleman & Weinberg",
+      "year": 1973,
+      "citedAs": [
+        "Coleman & Weinberg, 1973"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "gauge/electroweak-breaking",
+          "title": "Electroweak Symmetry Breaking"
+        }
+      ],
+      "category": "field-theory"
+    },
+    {
+      "id": "coleman-mandula-1967",
+      "authors": "Coleman-Mandula",
+      "year": 1967,
+      "citedAs": [
+        "Coleman-Mandula, 1967"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "particles/supersymmetry-impossibility",
+          "title": "Supersymmetry Impossibility"
+        }
+      ],
+      "category": "field-theory"
+    },
+    {
+      "id": "dieks-1982",
+      "authors": "Dieks",
+      "year": 1982,
+      "citedAs": [
+        "Dieks, 1982"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "thermodynamics-ext/distinguishability-conservation",
+          "title": "Conservation of Distinguishability"
+        }
+      ],
+      "category": "field-theory"
+    },
+    {
+      "id": "folland-sitaram-1997",
+      "authors": "Folland & Sitaram",
+      "year": 1997,
+      "citedAs": [
+        "Folland & Sitaram, 1997"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "thermodynamics/action-planck",
+          "title": "Action and Planck's Constant"
+        }
+      ],
+      "category": "field-theory"
+    },
+    {
+      "id": "fujikawa-1979",
+      "authors": "Fujikawa",
+      "year": 1979,
+      "citedAs": [
+        "Fujikawa, 1979"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "gauge/anomaly-cancellation",
+          "title": "Anomaly Cancellation from Coherence Conservation"
+        }
+      ],
+      "category": "field-theory"
+    },
+    {
+      "id": "machacek-vaughn-1984",
+      "authors": "Machacek & Vaughn",
+      "year": 1984,
+      "citedAs": [
+        "Machacek & Vaughn, 1984"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "cosmology/coupling-constants",
+          "title": "Coupling Constant Relationships"
+        }
+      ],
+      "category": "field-theory"
+    },
+    {
+      "id": "morris-1994",
+      "authors": "Morris",
+      "year": 1994,
+      "citedAs": [
+        "Morris, 1994"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "thermodynamics-ext/renormalization",
+          "title": "Renormalization Group from Coherence"
+        }
+      ],
+      "category": "field-theory"
+    },
+    {
+      "id": "pistone-sempi-1995",
+      "authors": "Pistone & Sempi",
+      "year": 1995,
+      "citedAs": [
+        "Pistone & Sempi, 1995"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "thermodynamics-ext/fisher-metric",
+          "title": "Fisher Information Metric"
+        }
+      ],
+      "category": "field-theory"
+    },
+    {
+      "id": "rao-1945",
+      "authors": "Rao",
+      "year": 1945,
+      "citedAs": [
+        "Rao, 1945"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "thermodynamics-ext/fisher-metric",
+          "title": "Fisher Information Metric"
+        }
+      ],
+      "category": "field-theory"
+    },
+    {
+      "id": "wetterich-1993",
+      "authors": "Wetterich",
+      "year": 1993,
+      "citedAs": [
+        "Wetterich, 1993"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "thermodynamics-ext/renormalization",
+          "title": "Renormalization Group from Coherence"
+        }
+      ],
+      "category": "field-theory"
+    },
+    {
+      "id": "wootters-zurek-1982",
+      "authors": "Wootters & Zurek",
+      "year": 1982,
+      "citedAs": [
+        "Wootters & Zurek, 1982"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "thermodynamics-ext/distinguishability-conservation",
+          "title": "Conservation of Distinguishability"
+        }
+      ],
+      "category": "field-theory"
+    },
+    {
+      "id": "ashtekar-singh-2011",
+      "authors": "Ashtekar & Singh",
+      "year": 2011,
+      "citedAs": [
+        "Ashtekar & Singh, 2011"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "spacetime/singularity-resolution",
+          "title": "Singularity Resolution"
+        }
+      ],
+      "category": "spacetime-geometry"
+    },
+    {
+      "id": "birkhoff-1923",
+      "authors": "Birkhoff",
+      "year": 1923,
+      "citedAs": [
+        "Birkhoff, 1923"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "spacetime/gravity",
+          "title": "Gravity as Coherence Geometry Curvature"
+        }
+      ],
+      "category": "spacetime-geometry"
+    },
+    {
+      "id": "bombelli-1987",
+      "authors": "Bombelli et al.",
+      "year": 1987,
+      "citedAs": [
+        "Bombelli et al., 1987"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "holography/causal-set-statistics",
+          "title": "Causal Set Statistics"
+        },
+        {
+          "derivationId": "thermodynamics/time",
+          "title": "Time as Phase Ordering"
+        }
+      ],
+      "category": "spacetime-geometry"
+    },
+    {
+      "id": "bombelli-lee-meyer-sorkin-1987",
+      "authors": "Bombelli, Lee, Meyer, Sorkin",
+      "year": 1987,
+      "citedAs": [
+        "Bombelli, Lee, Meyer, Sorkin, 1987"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "thermodynamics/time",
+          "title": "Time as Phase Ordering"
+        }
+      ],
+      "category": "spacetime-geometry"
+    },
+    {
+      "id": "brightwell-gregory-1991",
+      "authors": "Brightwell & Gregory",
+      "year": 1991,
+      "citedAs": [
+        "Brightwell & Gregory, 1991"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "holography/causal-set-statistics",
+          "title": "Causal Set Statistics"
+        }
+      ],
+      "category": "spacetime-geometry"
+    },
+    {
+      "id": "brout-1995",
+      "authors": "Brout et al.",
+      "year": 1995,
+      "citedAs": [
+        "Brout et al., 1995"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "holography/hawking-radiation",
+          "title": "Hawking Radiation"
+        },
+        {
+          "derivationId": "spacetime/singularity-resolution",
+          "title": "Singularity Resolution"
+        }
+      ],
+      "category": "spacetime-geometry"
+    },
+    {
+      "id": "choquet-bruhat-1952",
+      "authors": "Choquet-Bruhat",
+      "year": 1952,
+      "citedAs": [
+        "Choquet-Bruhat, 1952"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "spacetime/einstein-equations",
+          "title": "Einstein Field Equations as Fixed-Point Conditions"
+        }
+      ],
+      "category": "spacetime-geometry"
+    },
+    {
+      "id": "corley-jacobson-1996",
+      "authors": "Corley & Jacobson",
+      "year": 1996,
+      "citedAs": [
+        "Corley & Jacobson, 1996"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "holography/hawking-radiation",
+          "title": "Hawking Radiation"
+        },
+        {
+          "derivationId": "spacetime/singularity-resolution",
+          "title": "Singularity Resolution"
+        }
+      ],
+      "category": "spacetime-geometry"
+    },
+    {
+      "id": "dowker-2004",
+      "authors": "Dowker et al.",
+      "year": 2004,
+      "citedAs": [
+        "Dowker et al., 2004"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "holography/causal-set-statistics",
+          "title": "Causal Set Statistics"
+        }
+      ],
+      "category": "spacetime-geometry"
+    },
+    {
+      "id": "hawking-1967",
+      "authors": "Hawking",
+      "year": 1967,
+      "citedAs": [
+        "Hawking, 1967"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "spacetime/singularity-resolution",
+          "title": "Singularity Resolution"
+        }
+      ],
+      "category": "spacetime-geometry"
+    },
+    {
+      "id": "jacobson-1991",
+      "authors": "Jacobson",
+      "year": 1991,
+      "citedAs": [
+        "Jacobson, 1991"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "holography/hawking-radiation",
+          "title": "Hawking Radiation"
+        },
+        {
+          "derivationId": "spacetime/singularity-resolution",
+          "title": "Singularity Resolution"
+        }
+      ],
+      "category": "spacetime-geometry"
+    },
+    {
+      "id": "lovelock-1971",
+      "authors": "Lovelock",
+      "year": 1971,
+      "citedAs": [
+        "Lovelock, 1971"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "spacetime/einstein-equations",
+          "title": "Einstein Field Equations as Fixed-Point Conditions"
+        }
+      ],
+      "category": "spacetime-geometry"
+    },
+    {
+      "id": "penrose-1965",
+      "authors": "Penrose",
+      "year": 1965,
+      "citedAs": [
+        "Penrose, 1965"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "spacetime/singularity-resolution",
+          "title": "Singularity Resolution"
+        }
+      ],
+      "category": "spacetime-geometry"
+    },
+    {
+      "id": "rovelli-vidotto-2014",
+      "authors": "Rovelli & Vidotto",
+      "year": 2014,
+      "citedAs": [
+        "Rovelli & Vidotto, 2014"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "spacetime/singularity-resolution",
+          "title": "Singularity Resolution"
+        }
+      ],
+      "category": "spacetime-geometry"
+    },
+    {
+      "id": "altarelli-feruglio-2005",
+      "authors": "Altarelli & Feruglio",
+      "year": 2005,
+      "citedAs": [
+        "Altarelli & Feruglio, 2005"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "flavor/mixing-angles",
+          "title": "Flavor Mixing from Winding-Axis Geometry"
+        }
+      ],
+      "category": "particle-physics"
+    },
+    {
+      "id": "baez-2002",
+      "authors": "Baez",
+      "year": 2002,
+      "citedAs": [
+        "Baez, 2002"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "gauge/color-force",
+          "title": "Color Force from Octonionic Structure"
+        }
+      ],
+      "category": "particle-physics"
+    },
+    {
+      "id": "cartan-1914",
+      "authors": "Cartan",
+      "year": 1914,
+      "citedAs": [
+        "Cartan, 1914"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "gauge/color-force",
+          "title": "Color Force from Octonionic Structure"
+        }
+      ],
+      "category": "particle-physics"
+    },
+    {
+      "id": "dhr-1971",
+      "authors": "DHR",
+      "year": 1971,
+      "citedAs": [
+        "DHR, 1971"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "particles/spin-statistics",
+          "title": "Spin and Statistics from Winding Classes"
+        }
+      ],
+      "category": "particle-physics"
+    },
+    {
+      "id": "diaconis-1988",
+      "authors": "Diaconis",
+      "year": 1988,
+      "citedAs": [
+        "Diaconis, 1988"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "gauge/confinement",
+          "title": "Color Confinement from Non-Associativity"
+        }
+      ],
+      "category": "particle-physics"
+    },
+    {
+      "id": "diaconis-shahshahani-1987",
+      "authors": "Diaconis & Shahshahani",
+      "year": 1987,
+      "citedAs": [
+        "Diaconis & Shahshahani, 1987"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "gauge/confinement",
+          "title": "Color Confinement from Non-Associativity"
+        }
+      ],
+      "category": "particle-physics"
+    },
+    {
+      "id": "furey-2016",
+      "authors": "Furey",
+      "year": 2016,
+      "citedAs": [
+        "Furey, 2016"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "gauge/anomaly-cancellation",
+          "title": "Anomaly Cancellation from Coherence Conservation"
+        },
+        {
+          "derivationId": "gauge/standard-model-group",
+          "title": "Standard Model Gauge Group from Division Algebras"
+        }
+      ],
+      "category": "particle-physics"
+    },
+    {
+      "id": "georgi-glashow-1974",
+      "authors": "Georgi-Glashow",
+      "year": 1974,
+      "citedAs": [
+        "Georgi-Glashow, 1974"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "gauge/standard-model-group",
+          "title": "Standard Model Gauge Group from Division Algebras"
+        }
+      ],
+      "category": "particle-physics"
+    },
+    {
+      "id": "giles-1981",
+      "authors": "Giles",
+      "year": 1981,
+      "citedAs": [
+        "Giles, 1981"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "gauge/electromagnetism",
+          "title": "Electromagnetism from Phase Coherence"
+        },
+        {
+          "derivationId": "gauge/weak-interaction",
+          "title": "Weak Interaction from Quaternionic Structure"
+        }
+      ],
+      "category": "particle-physics"
+    },
+    {
+      "id": "gross-wilczek-1973",
+      "authors": "Gross & Wilczek",
+      "year": 1973,
+      "citedAs": [
+        "Gross & Wilczek, 1973"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "gauge/color-force",
+          "title": "Color Force from Octonionic Structure"
+        }
+      ],
+      "category": "particle-physics"
+    },
+    {
+      "id": "gross-wilczek-politzer-1973",
+      "authors": "Gross-Wilczek-Politzer",
+      "year": 1973,
+      "citedAs": [
+        "Gross-Wilczek-Politzer, 1973"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "gauge/color-force",
+          "title": "Color Force from Octonionic Structure"
+        }
+      ],
+      "category": "particle-physics"
+    },
+    {
+      "id": "king-2013",
+      "authors": "King",
+      "year": 2013,
+      "citedAs": [
+        "King, 2013"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "flavor/mixing-angles",
+          "title": "Flavor Mixing from Winding-Axis Geometry"
+        }
+      ],
+      "category": "particle-physics"
+    },
+    {
+      "id": "ma-2001",
+      "authors": "Ma",
+      "year": 2001,
+      "citedAs": [
+        "Ma, 2001"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "flavor/mixing-angles",
+          "title": "Flavor Mixing from Winding-Axis Geometry"
+        }
+      ],
+      "category": "particle-physics"
+    },
+    {
+      "id": "peccei-quinn-1977",
+      "authors": "Peccei & Quinn",
+      "year": 1977,
+      "citedAs": [
+        "Peccei & Quinn, 1977"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "gauge/strong-cp",
+          "title": "Strong CP Conservation from Octonionic Structure"
+        }
+      ],
+      "category": "particle-physics"
+    },
+    {
+      "id": "planck-2018",
+      "authors": "Planck",
+      "year": 2018,
+      "citedAs": [
+        "Planck, 2018"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "particles/neutrino-masses",
+          "title": "Neutrino Mass Mechanism"
+        }
+      ],
+      "category": "particle-physics"
+    },
+    {
+      "id": "politzer-1973",
+      "authors": "Politzer",
+      "year": 1973,
+      "citedAs": [
+        "Politzer, 1973"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "gauge/color-force",
+          "title": "Color Force from Octonionic Structure"
+        }
+      ],
+      "category": "particle-physics"
+    },
+    {
+      "id": "springer-veldkamp-2000",
+      "authors": "Springer & Veldkamp",
+      "year": 2000,
+      "citedAs": [
+        "Springer & Veldkamp, 2000"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "gauge/standard-model-group",
+          "title": "Standard Model Gauge Group from Division Algebras"
+        }
+      ],
+      "category": "particle-physics"
+    },
+    {
+      "id": "stoica-2018",
+      "authors": "Stoica",
+      "year": 2018,
+      "citedAs": [
+        "Stoica, 2018"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "gauge/anomaly-cancellation",
+          "title": "Anomaly Cancellation from Coherence Conservation"
+        }
+      ],
+      "category": "particle-physics"
+    },
+    {
+      "id": "almheiri-2019",
+      "authors": "Almheiri et al.",
+      "year": 2019,
+      "citedAs": [
+        "Almheiri et al., 2019"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "holography/information-paradox",
+          "title": "Black Hole Information Paradox Resolution"
+        }
+      ],
+      "category": "holography"
+    },
+    {
+      "id": "almheiri-dong-harlow-2015",
+      "authors": "Almheiri-Dong-Harlow",
+      "year": 2015,
+      "citedAs": [
+        "Almheiri-Dong-Harlow, 2015"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "holography/information-paradox",
+          "title": "Black Hole Information Paradox Resolution"
+        }
+      ],
+      "category": "holography"
+    },
+    {
+      "id": "amps-2012",
+      "authors": "AMPS",
+      "year": 2012,
+      "citedAs": [
+        "AMPS, 2012"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "holography/information-paradox",
+          "title": "Black Hole Information Paradox Resolution"
+        }
+      ],
+      "category": "holography"
+    },
+    {
+      "id": "bekenstein-1981",
+      "authors": "Bekenstein",
+      "year": 1981,
+      "citedAs": [
+        "Bekenstein, 1981"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "holography/area-scaling",
+          "title": "Holographic Entropy Bound"
+        }
+      ],
+      "category": "holography"
+    },
+    {
+      "id": "gibbons-hawking-1977",
+      "authors": "Gibbons-Hawking",
+      "year": 1977,
+      "citedAs": [
+        "Gibbons-Hawking, 1977"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "holography/hawking-radiation",
+          "title": "Hawking Radiation"
+        }
+      ],
+      "category": "holography"
+    },
+    {
+      "id": "maldacena-susskind-2013",
+      "authors": "Maldacena & Susskind",
+      "year": 2013,
+      "citedAs": [
+        "Maldacena & Susskind, 2013"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "quantum/entanglement",
+          "title": "Entanglement from Relational Invariants"
+        }
+      ],
+      "category": "holography"
+    },
+    {
+      "id": "page-1993",
+      "authors": "Page",
+      "year": 1993,
+      "citedAs": [
+        "Page, 1993"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "holography/information-paradox",
+          "title": "Black Hole Information Paradox Resolution"
+        }
+      ],
+      "category": "holography"
+    },
+    {
+      "id": "sekino-susskind-2008",
+      "authors": "Sekino-Susskind",
+      "year": 2008,
+      "citedAs": [
+        "Sekino-Susskind, 2008"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "holography/information-paradox",
+          "title": "Black Hole Information Paradox Resolution"
+        }
+      ],
+      "category": "holography"
+    },
+    {
+      "id": "t-hooft-1976",
+      "authors": "'t Hooft",
+      "year": 1976,
+      "citedAs": [
+        "'t Hooft, 1976"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "cosmology/baryogenesis",
+          "title": "Baryogenesis from Coherence Dynamics"
+        }
+      ],
+      "category": "cosmology"
+    },
+    {
+      "id": "dev-mohapatra-2015",
+      "authors": "Dev & Mohapatra",
+      "year": 2015,
+      "citedAs": [
+        "Dev & Mohapatra, 2015"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "cosmology/leptogenesis",
+          "title": "Leptogenesis from Majorana Neutrino Decays"
+        }
+      ],
+      "category": "cosmology"
+    },
+    {
+      "id": "klinkhamer-manton-1984",
+      "authors": "Klinkhamer & Manton",
+      "year": 1984,
+      "citedAs": [
+        "Klinkhamer & Manton, 1984"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "cosmology/baryogenesis",
+          "title": "Baryogenesis from Coherence Dynamics"
+        }
+      ],
+      "category": "cosmology"
+    },
+    {
+      "id": "pilaftsis-underwood-2004",
+      "authors": "Pilaftsis & Underwood",
+      "year": 2004,
+      "citedAs": [
+        "Pilaftsis & Underwood, 2004"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "cosmology/leptogenesis",
+          "title": "Leptogenesis from Majorana Neutrino Decays"
+        }
+      ],
+      "category": "cosmology"
+    },
+    {
+      "id": "sakharov-1967",
+      "authors": "Sakharov",
+      "year": 1967,
+      "citedAs": [
+        "Sakharov, 1967"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "cosmology/baryogenesis",
+          "title": "Baryogenesis from Coherence Dynamics"
+        }
+      ],
+      "category": "cosmology"
+    },
+    {
+      "id": "tegmark-1997",
+      "authors": "Tegmark",
+      "year": 1997,
+      "citedAs": [
+        "Tegmark, 1997"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "dimensions/three-dimensions",
+          "title": "Three Spatial Dimensions Are Uniquely Stable"
+        }
+      ],
+      "category": "cosmology"
+    },
+    {
+      "id": "weinberg-1987",
+      "authors": "Weinberg",
+      "year": 1987,
+      "citedAs": [
+        "Weinberg, 1987"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "cosmology/observer-loop-viability",
+          "title": "Observer Loop Viability Bounds"
+        }
+      ],
+      "category": "cosmology"
+    },
+    {
+      "id": "abel-2020",
+      "authors": "Abel et al.",
+      "year": 2020,
+      "citedAs": [
+        "Abel et al., 2020"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "gauge/strong-cp",
+          "title": "Strong CP Conservation from Octonionic Structure"
+        }
+      ],
+      "category": "experimental"
+    },
+    {
+      "id": "chou-2017",
+      "authors": "Chou et al.",
+      "year": 2017,
+      "citedAs": [
+        "Chou et al., 2017"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "predictions/holographic-noise",
+          "title": "Holographic Noise with Causal Structure"
+        }
+      ],
+      "category": "experimental"
+    },
+    {
+      "id": "wu-1957",
+      "authors": "Wu",
+      "year": 1957,
+      "citedAs": [
+        "Wu, 1957"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "particles/cpt-theorem",
+          "title": "CPT Theorem from Coherence Structure"
+        }
+      ],
+      "category": "experimental"
+    }
+  ]
+}

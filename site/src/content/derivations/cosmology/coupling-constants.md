@@ -210,8 +210,11 @@ $$\alpha_s(M_Z) \sim 0.10\text{–}0.13$$
 
 2. **Crystallization scales from bootstrap dynamics**: The bootstrap crystallization scales $\Lambda_i$ set the RG boundary conditions. Deriving their values from the [Mass Hierarchy](/derivations/particles/mass-hierarchy) exponential tunneling mechanism would convert the coupling estimates from ranges to precise predictions.
 
-3. **Two-loop precision**: Computing the two-loop RG running with threshold corrections would achieve $< 1$% precision in $\alpha_{em}$ and $\alpha_s$ predictions. This is standard QFT technology (Machacek & Vaughn 1984) once the boundary conditions and particle spectrum are fixed.
+3. **Two-loop precision**: Computing the two-loop RG running with threshold corrections would achieve $< 1$% precision in $\alpha_{em}$ and $\alpha_s$ predictions. This is standard QFT technology [Machacek & Vaughn, 1984] once the boundary conditions and particle spectrum are fixed.
 
 4. **Yukawa couplings**: The fermion masses are free parameters in the Standard Model but should be constrained by the division algebra structure and the [Flavor Mixing](/derivations/flavor/mixing-angles) derivation. This requires the electroweak symmetry breaking mechanism (SM Gauge Group, Open Gap 3).
 
 5. **Experimental test of non-convergence**: The most distinctive prediction is non-convergence of couplings — the three curves $\alpha_i^{-1}(\mu)$ do not meet at a single point. Future precision measurements of $\alpha_s(M_Z)$ and $\sin^2\theta_W(M_Z)$, combined with improved determinations of the running, can discriminate between the framework's prediction and GUT convergence.
+
+<!-- References -->
+[Machacek & Vaughn, 1984]: /references#machacek-vaughn-1984

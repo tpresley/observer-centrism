@@ -66,7 +66,7 @@ Electromagnetism uses complex numbers (two-dimensional). The weak force uses qua
 
 **Theorem 1.2 (Hurwitz ceiling).** *The Cayley-Dickson construction applied to $\mathbb{O}$ produces the sedenions $\mathbb{S}$ (dim 16), which are not a division algebra: they contain zero divisors ($ab = 0$ with $a, b \neq 0$).*
 
-*Proof.* By Hurwitz's theorem (1898), the only normed division algebras over $\mathbb{R}$ are $\mathbb{R}, \mathbb{C}, \mathbb{H}, \mathbb{O}$ (dimensions 1, 2, 4, 8). The sedenions $\mathbb{S}$ fail the norm condition $|ab| = |a||b|$ because they contain zero divisors. Explicitly: let $e_1, \ldots, e_{15}$ be the sedenion imaginary units. Then $(e_3 + e_{10})(e_6 - e_{15}) = 0$ (a zero divisor pair discovered by Moreno, 1998). $\square$
+*Proof.* By Hurwitz's theorem (1898), the only normed division algebras over $\mathbb{R}$ are $\mathbb{R}, \mathbb{C}, \mathbb{H}, \mathbb{O}$ (dimensions 1, 2, 4, 8). The sedenions $\mathbb{S}$ fail the norm condition $|ab| = |a||b|$ because they contain zero divisors. Explicitly: let $e_1, \ldots, e_{15}$ be the sedenion imaginary units. Then $(e_3 + e_{10})(e_6 - e_{15}) = 0$ [Moreno, 1998]. $\square$
 
 **Corollary 1.3 (The gauge hierarchy terminates at $\mathbb{O}$).** *There is no fourth gauge force. The bootstrap hierarchy cannot produce a bootstrap level beyond the octonionic level that preserves coherence (the norm condition). The Standard Model gauge structure $U(1) \times SU(2) \times SU(3)$ is the maximal gauge group consistent with coherence conservation.*
 
@@ -78,7 +78,7 @@ Electromagnetism uses complex numbers (two-dimensional). The weak force uses qua
 
 *Proof.* An automorphism of $\mathbb{O}$ is an $\mathbb{R}$-linear map $\phi: \mathbb{O} \to \mathbb{O}$ preserving the multiplication: $\phi(ab) = \phi(a)\phi(b)$ for all $a, b \in \mathbb{O}$. Since $\phi(1) = 1$ (automorphisms fix the identity), $\phi$ acts on the 7-dimensional imaginary subspace $\text{Im}(\mathbb{O})$.
 
-The constraint $\phi(ab) = \phi(a)\phi(b)$ is extremely restrictive. Of the $GL(7, \mathbb{R})$ transformations of $\text{Im}(\mathbb{O})$, only those preserving the Fano-plane multiplication table survive. The resulting group is $G_2$, a 14-dimensional compact simple Lie group. This is a classical result (Cartan, 1914; see also Baez, 2002, *The Octonions*). $\square$
+The constraint $\phi(ab) = \phi(a)\phi(b)$ is extremely restrictive. Of the $GL(7, \mathbb{R})$ transformations of $\text{Im}(\mathbb{O})$, only those preserving the Fano-plane multiplication table survive. The resulting group is $G_2$, a 14-dimensional compact simple Lie group. This is a classical result [Cartan, 1914]; [Baez, 2002]. $\square$
 
 **Remark.** $G_2$ sits in the chain $SU(3) \subset G_2 \subset SO(7)$. It is the smallest of the five exceptional Lie groups ($G_2, F_4, E_6, E_7, E_8$) and the only one that arises as the automorphism group of a division algebra.
 
@@ -162,7 +162,7 @@ These ensure that products involving only two distinct elements are well-defined
 
 *Proof.* The argument has two parts: (1) the standard one-loop computation for $SU(N_c)$ gauge theory, and (2) the framework interpretation via the bootstrap ceiling.
 
-**Part 1 (One-loop $\beta$-function).** For $SU(N_c)$ Yang-Mills theory coupled to $N_f$ Dirac fermion flavors in the fundamental representation, the one-loop $\beta$-function is (Gross & Wilczek, 1973; Politzer, 1973):
+**Part 1 (One-loop $\beta$-function).** For $SU(N_c)$ Yang-Mills theory coupled to $N_f$ Dirac fermion flavors in the fundamental representation, the one-loop $\beta$-function is [Gross & Wilczek, 1973]; [Politzer, 1973]:
 
 $$\beta(g_s) = -\frac{g_s^3}{16\pi^2}\left(\frac{11}{3}N_c - \frac{2}{3}N_f\right)$$
 
@@ -210,14 +210,14 @@ which decreases as $Q^2 \to \infty$ (short distances) and increases as $Q^2 \to 
 
 **Fully rigorous (given S1, S2):**
 - Proposition 1.1: Bootstrap-Cayley-Dickson correspondence. S1 is an explicit structural postulate packaging the algebraic saturation principle — the same pattern as S1 in [Electromagnetism](/derivations/gauge/electromagnetism) (locality) and [Weak Interaction](/derivations/gauge/weak-interaction) (normed division algebra). The correspondence at levels 1 and 2 is derived in those derivations; S1 extends it to level 3.
-- Theorem 1.2: Hurwitz's theorem (published, peer-reviewed — Hurwitz 1898)
+- Theorem 1.2: Hurwitz's theorem [Hurwitz, 1898]
 - Corollary 1.3: Gauge hierarchy termination (direct consequence of Hurwitz)
-- Proposition 2.2: $\text{Aut}(\mathbb{O}) = G_2$ (Cartan 1914, standard reference: Baez 2002)
+- Proposition 2.2: $\text{Aut}(\mathbb{O}) = G_2$ [Cartan, 1914]; [Baez, 2002]
 - Theorem 3.1: $\text{Stab}_{G_2}(e) \cong SU(3)$ (standard Lie group theory, $G_2/SU(3) \cong S^6$)
 - Proposition 3.2: Physical mechanism for $G_2 \to SU(3)$ — the electroweak structure fixes $\mathbb{H} \subset \mathbb{O}$, and the stabilizer computation is standard. The hierarchy $\mathbb{C} \subset \mathbb{H} \subset \mathbb{O}$ maps to $U(1) \subset SU(2) \subset G_2$ by the established gauge derivations
 - Theorem 5.2: Yang-Mills equations from Lorentz covariance + gauge covariance + S2 (same uniqueness argument as EM and weak)
 - Proposition 6.1: Non-associativity and confinement — the algebraic argument (associator lies in the $\mathbf{7}$, singlet projection annihilates it) is rigorous. The dynamical confinement question (mass gap, confining potential) remains open, as it is for all approaches to QCD
-- Proposition 7.1: Asymptotic freedom — the one-loop $\beta$-function computation is standard (Gross-Wilczek-Politzer, 1973). The bootstrap-ceiling interpretation provides the framework context
+- Proposition 7.1: Asymptotic freedom — the one-loop $\beta$-function computation is standard [Gross-Wilczek-Politzer, 1973]. The bootstrap-ceiling interpretation provides the framework context
 - Theorem 8.1: Consistency model verified (explicit octonionic computation)
 
 **Explicitly deferred (not gaps in the derivation logic):**
@@ -239,3 +239,12 @@ which decreases as $Q^2 \to \infty$ (short distances) and increases as $Q^2 \to 
 1. **Bootstrap–Cayley-Dickson proof** — Addressed by [Bootstrap → Division Algebras](/derivations/interactions/bootstrap-division-algebras): Cayley-Dickson doubling forced by coherence conservation. Color Force S1 is now a theorem.
 2. **Confinement** — Addressed by [Color Confinement](/derivations/gauge/confinement): linear potential from non-associative phase transport.
 3. **Strong CP problem** — Addressed by [Strong CP Conservation](/derivations/gauge/strong-cp): octonionic rigidity forces $\theta = 0$.
+
+<!-- References -->
+[Hurwitz, 1898]: /references#hurwitz-1898
+[Cartan, 1914]: /references#cartan-1914
+[Gross & Wilczek, 1973]: /references#gross-wilczek-1973
+[Gross-Wilczek-Politzer, 1973]: /references#gross-wilczek-politzer-1973
+[Politzer, 1973]: /references#politzer-1973
+[Moreno, 1998]: /references#moreno-1998
+[Baez, 2002]: /references#baez-2002

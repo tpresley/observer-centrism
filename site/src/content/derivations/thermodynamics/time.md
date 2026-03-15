@@ -130,7 +130,7 @@ The inequality is strict whenever at least one Type III interaction occurs on th
 
 **Proposition 7.1.** *At scales much larger than the Planck scale ($\gg \ell_P$), the partial order $(V, \preceq)$ approximates the causal structure of a Lorentzian manifold.*
 
-*Proof sketch.* This is the **Hauptvermutung of causal set theory** (Bombelli, Lee, Meyer, Sorkin 1987): a locally finite partial order with a faithful embedding into a Lorentzian manifold $(M, g)$ determines the conformal geometry of $(M, g)$ up to a volume factor. The volume factor is supplied by counting: the number of vertices in a region is proportional to its spacetime volume (at the Planck density $\rho \sim 1/\ell_P^4$).
+*Proof sketch.* This is the **Hauptvermutung of causal set theory** [Bombelli, Lee, Meyer, Sorkin, 1987]: a locally finite partial order with a faithful embedding into a Lorentzian manifold $(M, g)$ determines the conformal geometry of $(M, g)$ up to a volume factor. The volume factor is supplied by counting: the number of vertices in a region is proportional to its spacetime volume (at the Planck density $\rho \sim 1/\ell_P^4$).
 
 The framework arrives at the same mathematical structure (causal set) that causal set theory postulates as primitive. The difference: the partial order is derived from the axioms via the interaction graph, not postulated. $\square$
 
@@ -164,7 +164,7 @@ The framework arrives at the same mathematical structure (causal set) that causa
 - Proposition 8.1: No observers implies no time (follows from empty vertex set)
 
 **Deferred / conjectural:**
-- Proposition 7.1: Connection to Lorentzian manifold uses the **Hauptvermutung of causal set theory** (Bombelli et al. 1987), which is a conjecture supported by extensive evidence but not fully proved. This is clearly flagged as a conjecture, not a result of the framework.
+- Proposition 7.1: Connection to Lorentzian manifold uses the **Hauptvermutung of causal set theory** [Bombelli et al., 1987], which is a conjecture supported by extensive evidence but not fully proved. This is clearly flagged as a conjecture, not a result of the framework.
 
 **Assessment:** The derivation of time as a partial order is fully rigorous from the axioms. The positive coherence cost (Proposition 2.1) now follows directly from the rigorous Loop Closure derivation without depending on Action-Planck. The arrow of time (Theorem 6.1) follows structurally from relational invariant permanence. The only element beyond the axioms is the continuum limit (Proposition 7.1), which depends on an external conjecture that is clearly identified.
 
@@ -173,3 +173,7 @@ The framework arrives at the same mathematical structure (causal set) that causa
 1. **Metric from order**: Recovering the spacetime metric from the partial order requires a volume measure (event counting). This is the central open problem of causal set theory.
 2. **Quantum time**: The derivation gives a single partial order. Quantum mechanics suggests superpositions of causal orders may be physical (indefinite causal structure). The framework should address this.
 3. **Cosmological arrow**: The structural arrow (increasing $d(v)$) is local. The global cosmological arrow (expansion) may require boundary conditions on the fixed-point solution.
+
+<!-- References -->
+[Bombelli et al., 1987]: /references#bombelli-1987
+[Bombelli, Lee, Meyer, Sorkin, 1987]: /references#bombelli-lee-meyer-sorkin-1987

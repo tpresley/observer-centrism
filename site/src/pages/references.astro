@@ -1,0 +1,187 @@
+---
+import MainLayout from '../components/layouts/MainLayout.astro'
+import refsIndex from '../data/references-index.json'
+import refLinks from '../data/reference-links.json'
+
+const { references, categoryNames, categoryOrder, byCategory, meta } = refsIndex as any
+const links = refLinks as Record<string, { title?: string; url?: string }>
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+
+// Group references by category
+const groups = new Map<string, any[]>()
+for (const cat of categoryOrder) {
+  const catRefs = references.filter((r: any) => r.category === cat)
+  if (catRefs.length > 0) {
+    groups.set(cat, catRefs)
+  }
+}
+
+// Count how many have external links
+const linkedCount = references.filter((r: any) => links[r.id]?.url).length
+---
+
+<MainLayout title="References">
+  <h1>References</h1>
+  <p>
+    Academic works cited across the framework's derivations, predictions, and guide.
+    Citations in derivation pages link here; external links go to the original papers.
+  </p>
+
+  <div class="ref-summary">
+    <div class="ref-stat">
+      <div class="ref-stat-value">{meta.totalReferences}</div>
+      <div class="ref-stat-label">References</div>
+    </div>
+    <div class="ref-stat">
+      <div class="ref-stat-value">{linkedCount}</div>
+      <div class="ref-stat-label">With links</div>
+    </div>
+    <div class="ref-stat">
+      <div class="ref-stat-value">{meta.citingFiles}</div>
+      <div class="ref-stat-label">Citing pages</div>
+    </div>
+    <div class="ref-stat">
+      <div class="ref-stat-value">{Object.keys(byCategory).length}</div>
+      <div class="ref-stat-label">Categories</div>
+    </div>
+  </div>
+
+  {[...groups.entries()].map(([catKey, catRefs]) => (
+    <>
+      <h2>{(categoryNames as any)[catKey]}</h2>
+      <div class="ref-cards">
+        {catRefs.map((ref: any) => {
+          const link = links[ref.id]
+          return (
+            <div class="ref-card" id={ref.id}>
+              <div class="ref-main">
+                <span class="ref-authors">{ref.authors}</span>
+                <span class="ref-year">({ref.year})</span>
+                {link?.title && <span class="ref-title">{link.title}</span>}
+                {link?.url && (
+                  <a href={link.url} class="ref-external" target="_blank" rel="noopener noreferrer" title="View paper">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                )}
+              </div>
+              <div class="ref-cited-in">
+                {ref.citedIn.map((c: any, i: number) => (
+                  <>
+                    {i > 0 && <span class="ref-sep">&middot;</span>}
+                    <a href={
+                      c.derivationId.startsWith('predictions/')
+                        ? `${base}/${c.derivationId}/`
+                        : c.derivationId.startsWith('guide/')
+                          ? `${base}/${c.derivationId.replace('guide/', 'guide/')}`
+                          : `${base}/derivations/${c.derivationId}`
+                    } class="ref-link">
+                      {c.title}
+                    </a>
+                  </>
+                ))}
+              </div>
+            </div>
+          )
+        })}
+      </div>
+    </>
+  ))}
+</MainLayout>
+
+<style>
+  .ref-summary {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+    flex-wrap: wrap;
+  }
+  .ref-stat {
+    flex: 1;
+    min-width: 100px;
+    padding: 0.75rem 1rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    text-align: center;
+  }
+  .ref-stat-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 0.04em;
+  }
+  .ref-stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+  }
+  .ref-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .ref-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.6rem 1rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+  }
+  .ref-main {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+  .ref-authors {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-text);
+  }
+  .ref-year {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+  }
+  .ref-title {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+  .ref-external {
+    color: var(--color-accent);
+    opacity: 0.7;
+    transition: opacity 0.15s;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+  }
+  .ref-external:hover {
+    opacity: 1;
+  }
+  .ref-cited-in {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.78rem;
+  }
+  .ref-link {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+  .ref-link:hover {
+    text-decoration: underline;
+  }
+  .ref-sep {
+    color: var(--color-text-muted);
+    font-size: 0.6rem;
+  }
+</style>

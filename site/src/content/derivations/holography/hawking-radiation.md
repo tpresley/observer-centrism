@@ -157,7 +157,7 @@ In the framework: acceleration creates an apparent (Rindler) horizon for the acc
 
 **Fully rigorous:**
 - Theorem 1.2: Loop breaking at the horizon (causal structure of Schwarzschild spacetime — standard GR)
-- Theorem 3.1: Hawking temperature $T_H = \hbar\kappa/(2\pi c k_B)$ (Euclidean periodicity argument, Gibbons-Hawking 1977)
+- Theorem 3.1: Hawking temperature $T_H = \hbar\kappa/(2\pi c k_B)$ [Gibbons-Hawking, 1977]
 - Proposition 5.1: Stefan-Boltzmann mass loss rate (standard thermodynamics applied to a black body)
 - Proposition 6.1: Unruh equivalence (strong equivalence principle + Tolman redshift — standard GR)
 - Theorem 7.1: Consistency model verified on semiclassical Schwarzschild black hole
@@ -175,7 +175,7 @@ In the framework: acceleration creates an apparent (Rindler) horizon for the acc
 
 **Trans-Planckian resolution:** The trans-Planckian problem is structurally resolved by two independent features of the framework:
 - **(i) Planck-scale cutoff.** No observer loop can close below $\ell_P$ ([Singularity Resolution](/derivations/spacetime/singularity-resolution), Theorem 2.1; [Holographic Entropy Bound](/derivations/holography/area-scaling), S1). The highest frequency in the discrete relational network is $\omega_{\max} = c/\ell_P$. Modes are not blueshifted beyond this — they are absorbed into the Planck-density structure of the near-horizon region.
-- **(ii) Derivation independence.** The loop-breaking mechanism (Theorem 2.1 above) derives Hawking radiation from pair production at the horizon, without ever tracing modes back through the trans-Planckian regime. The Hawking temperature depends on the macroscopic surface gravity, not on UV physics. This is confirmed by the insensitivity of the Unruh effect to the UV completion (Jacobson, 1991; Unruh, 1995) and explicit dispersive calculations (Corley & Jacobson, 1996; Brout et al., 1995). See [Singularity Resolution](/derivations/spacetime/singularity-resolution), Proposition 6.1 for the full argument.
+- **(ii) Derivation independence.** The loop-breaking mechanism (Theorem 2.1 above) derives Hawking radiation from pair production at the horizon, without ever tracing modes back through the trans-Planckian regime. The Hawking temperature depends on the macroscopic surface gravity, not on UV physics. This is confirmed by the insensitivity of the Unruh effect to the UV completion [Jacobson, 1991]; [Unruh, 1995] and explicit dispersive calculations [Corley & Jacobson, 1996]; [Brout et al., 1995]. See [Singularity Resolution](/derivations/spacetime/singularity-resolution), Proposition 6.1 for the full argument.
 
 **Assessment:** The Hawking radiation derivation is rigorous. The core mechanism — broken loops at horizons producing coherence-dual pairs — is forced by Axioms 1 + 3. The temperature, spectrum, and evaporation dynamics match established semiclassical results. The trans-Planckian problem is structurally resolved by the Planck-scale cutoff and the derivation-independence of the Hawking temperature. The main remaining open elements are the greybody factors and the evaporation endpoint.
 
@@ -185,3 +185,10 @@ In the framework: acceleration creates an apparent (Rindler) horizon for the acc
 2. **End state**: What happens at the endpoint of evaporation? A Planck-mass remnant? Complete evaporation? The answer depends on the discrete structure at the Planck scale.
 3. **Species counting**: The total luminosity depends on the number of particle species that can be emitted. The framework should predict this from the bootstrap hierarchy.
 4. **Rotating and charged black holes**: The Hawking temperature for Kerr ($T_H = \hbar\kappa/(2\pi c k_B)$ with modified $\kappa$) and Reissner-Nordström black holes should follow from the same loop-breaking mechanism applied to the modified horizon geometry.
+
+<!-- References -->
+[Gibbons-Hawking, 1977]: /references#gibbons-hawking-1977
+[Jacobson, 1991]: /references#jacobson-1991
+[Brout et al., 1995]: /references#brout-1995
+[Unruh, 1995]: /references#unruh-1995
+[Corley & Jacobson, 1996]: /references#corley-jacobson-1996

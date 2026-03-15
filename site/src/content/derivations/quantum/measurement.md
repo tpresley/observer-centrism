@@ -198,7 +198,7 @@ Therefore: $S_\mathcal{O}^{\text{after}}(S) = \mathcal{C}(S) - \mathcal{C}_\math
 
 **Open extensions:**
 - Non-ideal measurements (noisy detectors, partial correlations) correspond to incomplete Type III interactions where the relational invariant is generated with less than maximal coherence content. The formalism generalizes straightforwardly.
-- Extended Wigner's friend (Frauchiger-Renner 2018) should be handled by nested relational invariants, but explicit analysis has not been carried out.
+- Extended Wigner's friend [Frauchiger-Renner, 2018] should be handled by nested relational invariants, but explicit analysis has not been carried out.
 
 **Assessment:** The measurement problem resolution is rigorous. The core elements — Type III interaction as measurement, von Neumann coupling derived from unitarity + linearity, observer-relative descriptions, Wigner's friend consistency — are all rigorously established from the axioms and prior derivations. The interpretive elements (single-outcome question, comparisons with other interpretations) are honestly flagged as non-mathematical.
 
@@ -208,3 +208,6 @@ Therefore: $S_\mathcal{O}^{\text{after}}(S) = \mathcal{C}(S) - \mathcal{C}_\math
 2. **Quantum Darwinism**: When multiple observers independently measure the same system, they obtain consistent results. The framework should derive this from mutual consistency of relational invariants $I_{\mathcal{O}_1 S}, I_{\mathcal{O}_2 S}, \ldots$ when $\mathcal{O}_1, \mathcal{O}_2, \ldots$ share relational invariants with each other.
 3. **Continuous and weak measurement**: Weak measurements correspond to Type III interactions that generate relational invariants with small coherence content $\mathcal{C}(I_{\mathcal{O}S}) \ll \mathcal{C}(S)$. Continuous measurement is the limit of many weak Type III interactions. Formalization needed.
 4. **Delayed choice and quantum eraser**: The relational invariant is generated at the time of the Type III interaction, regardless of when the observer "decides" which interaction to perform. No retrocausality — the partial order $\prec$ in $\mathcal{G}$ is respected.
+
+<!-- References -->
+[Frauchiger-Renner, 2018]: /references#frauchiger-renner-2018

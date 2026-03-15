@@ -289,7 +289,7 @@ The framework is consistent with the observed cosmological constant, predicts it
 |---|---|---|
 | What is required | "Observers like us" (galaxies, stars, chemistry) | Observer triples $(\Sigma, I, \mathcal{B})$ satisfying Axioms 2–3 |
 | Constraint source | Galaxy formation timescale, structure growth | Minimum spatial extent $\ell_P$, coherence budget, loop closure |
-| Typical bound | $\Lambda \lesssim 10^{-120}\;\ell_P^{-2}$ (Weinberg, 1987) | $\Lambda \lesssim \ell_P^{-2}$ (Planck-scale) |
+| Typical bound | $\Lambda \lesssim 10^{-120}\;\ell_P^{-2}$ [Weinberg, 1987] | $\Lambda \lesssim \ell_P^{-2}$ (Planck-scale) |
 | Requires landscape | Yes (ensemble of vacua with different $\Lambda$) | No (single universe, axiomatic constraint) |
 | Explanatory power | Explains hierarchy via typicality in ensemble | Establishes principle (axioms constrain solutions) but not hierarchy |
 
@@ -351,3 +351,6 @@ This derivation addresses [Cosmological Constant](/derivations/cosmology/cosmolo
 - **Upper bound on $|\Lambda|$**: Established at Planck scale (Theorem 2.1). This establishes the principle that the axioms constrain the solution space of the Einstein equations — not just the dynamics, but the allowed solutions. Even at Planck scale, this is a nontrivial result: the axioms have physical content beyond determining equations of motion.
 - **Sign prediction**: Achieved. The axioms predict $\Lambda \geq 0$ (Theorem 5.4). A $\Lambda < 0$ cosmology requires a bounce that violates coherence conservation (Theorem 5.2). Sharpening to $\Lambda > 0$ remains open (Gap 3).
 - **Hierarchy**: Qualitatively explained (Proposition 7.5). The self-consistency equation $C_0 = \sum \Delta c_n + S_H$ is the entropy decomposition: structural coherence is accessible coherence, horizon entropy is inaccessible coherence. The 120-order hierarchy follows from the second law — entropy grows, so the inaccessible fraction dominates in an old universe. The specific value of $\Lambda$ remains open (depends on $C_0$, an initial condition). The coincidence problem ($\Omega_m \sim \Omega_\Lambda$ now) is also open.
+
+<!-- References -->
+[Weinberg, 1987]: /references#weinberg-1987

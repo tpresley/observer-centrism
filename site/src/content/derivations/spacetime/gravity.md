@@ -132,7 +132,7 @@ $$\frac{d^2 x^\mu}{d\tau^2} + \Gamma^\mu_{\alpha\beta} \frac{dx^\alpha}{d\tau} \
 
 $$ds^2 = \left(1 - \frac{R_S}{r}\right) c^2 dt^2 - \left(1 - \frac{R_S}{r}\right)^{-1} dr^2 - r^2 d\Omega^2$$
 
-*where $R_S = 2GM/c^2$ and $d\Omega^2 = d\theta^2 + \sin^2\theta \, d\phi^2$. (Birkhoff's theorem, 1923.)*
+*where $R_S = 2GM/c^2$ and $d\Omega^2 = d\theta^2 + \sin^2\theta \, d\phi^2$. [Birkhoff, 1923]*
 
 **Proposition 5.2 (Event horizon).** *At $r = R_S$: $g_{tt} = 0$. Outward-directed loop closure costs diverge — no observer loop can close across the horizon outward. This is a structural barrier in the coherence geometry.*
 
@@ -183,3 +183,6 @@ $$ds^2 = \left(1 - \frac{R_S}{r}\right) c^2 dt^2 - \left(1 - \frac{R_S}{r}\right
 1. **Deriving $G$**: Is $G$ derivable from $\hbar$ and $c$, leaving the framework with zero free parameters?
 2. **Planck scale** *(partially resolved — downstream)*: The singularity at $r = 0$ is addressed by [Singularity Resolution](/derivations/spacetime/singularity-resolution), which establishes curvature bounds at Planck density and coherence bounces via a model-independent argument. The detailed sub-Planck discrete structure remains open.
 3. **Strong-field regime** *(partially resolved — downstream)*: Black hole singularities are resolved by [Singularity Resolution](/derivations/spacetime/singularity-resolution) (regular cores). Full discrete theory for interior dynamics remains open.
+
+<!-- References -->
+[Birkhoff, 1923]: /references#birkhoff-1923

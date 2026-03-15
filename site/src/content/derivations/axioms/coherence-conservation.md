@@ -211,7 +211,7 @@ Modify: set $\mathcal{C}(\{2\}) = 2$ (keeping others the same, $C_0 = 3$, adjust
 
 A cleaner counterexample: Let $\mathcal{H} = \{1,2,3\}$ and define $\mathcal{C}(\{i\}) = 1$, $\mathcal{C}(\{i,j\}) = 1.5$, $\mathcal{C}(\{1,2,3\}) = 2$, but change $\mathcal{C}(\{1\}) = 0.4$ while keeping other singletons at $1$. Then for $S_1 = \{1,2\}$, $S_2 = \{1,3\}$: $\mathcal{C}(S_1 \cup S_2) + \mathcal{C}(S_1 \cap S_2) = 2 + 0.4 = 2.4$ vs $\mathcal{C}(S_1) + \mathcal{C}(S_2) = 1.5 + 1.5 = 3$. So $2.4 \leq 3$. Still satisfied.
 
-The independence claim is more subtle than it appears. We acknowledge: in the class of set functions determined purely by subset cardinalities, (C5) follows from (C4) via concavity arguments. For general set functions on $\sigma$-algebras, (C5) is independent of (C4), as demonstrated by the theory of submodular functions (see e.g., Fujishige, *Submodular Functions and Optimization*, 2005). $\square$
+The independence claim is more subtle than it appears. We acknowledge: in the class of set functions determined purely by subset cardinalities, (C5) follows from (C4) via concavity arguments. For general set functions on $\sigma$-algebras, (C5) is independent of (C4), as demonstrated by the theory of submodular functions (see [Fujishige, 2005]). $\square$
 
 ## Connection to Physics
 
@@ -242,3 +242,6 @@ The independence claim is more subtle than it appears. We acknowledge: in the cl
 2. **Category-theoretic formulation**: A more natural formalization may use a functor $\mathcal{C}: \mathbf{Sub}(\mathcal{H}) \to \mathbb{R}_{\geq 0}$ from the category of subsystems to non-negative reals, with conservation as a constraint on natural transformations.
 3. **Conditional coherence**: Define $\mathcal{C}(S_1 | S_2) = \mathcal{C}(S_1 \cup S_2) - \mathcal{C}(S_2)$. By (C4), $\mathcal{C}(S_1 | S_2) \leq \mathcal{C}(S_1)$ for disjoint $S_1, S_2$ — conditioning reduces coherence. This is the coherence analogue of conditioning reducing entropy.
 4. **Monotonicity**: Whether monotonicity ($S_1 \subseteq S_2 \Rightarrow \mathcal{C}(S_1) \leq \mathcal{C}(S_2)$) should be added as axiom (C6) depends on whether all physically relevant coherence measures are monotone. The non-trivial model (Model 2) is monotone; whether non-monotone models are physically meaningful is open.
+
+<!-- References -->
+[Fujishige, 2005]: /references#fujishige-2005

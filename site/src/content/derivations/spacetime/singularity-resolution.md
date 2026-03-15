@@ -42,7 +42,7 @@ Classical general relativity predicts that singularities are unavoidable. The Pe
 
 **Definition 1.1.** A **singularity** in general relativity is a geodesic incompleteness: a timelike or null geodesic that cannot be extended to infinite affine parameter. By the Penrose-Hawking singularity theorems, singularities are generic consequences of the [Einstein Field Equations](/derivations/spacetime/einstein-equations) when: (a) an energy condition holds ($R_{\mu\nu} k^\mu k^\nu \geq 0$ for null $k^\mu$), (b) a trapped surface or sufficient initial contraction exists, and (c) no closed timelike curves are present.
 
-**Proposition 1.2 (Classical singularities are inevitable).** *In classical GR with physically reasonable matter ($\rho \geq 0$, $\rho + 3p/c^2 \geq 0$), the Penrose-Hawking theorems guarantee singularity formation under generic initial conditions for both gravitational collapse (Penrose, 1965) and cosmological expansion (Hawking, 1967).*
+**Proposition 1.2 (Classical singularities are inevitable).** *In classical GR with physically reasonable matter ($\rho \geq 0$, $\rho + 3p/c^2 \geq 0$), the Penrose-Hawking theorems guarantee singularity formation under generic initial conditions for both gravitational collapse [Penrose, 1965] and cosmological expansion [Hawking, 1967].*
 
 **Proposition 1.3 (Singularities signal framework breakdown).** *The singularity theorems apply to the continuum Einstein equations. The framework's discrete relational invariant network is the substrate from which the continuum geometry emerges. At the Planck scale, the continuum approximation breaks down, and the discrete structure takes over — modifying the effective dynamics and potentially violating the energy conditions that drive singularity formation.*
 
@@ -174,7 +174,7 @@ The Hawking temperature $T_H = \hbar c^3/(8\pi G M k_B)$ is unaffected because i
 
 ## Consistency Model
 
-**Theorem 7.1.** *The Planck star model (Rovelli & Vidotto, 2014) provides a consistency model for the singularity resolution mechanism.*
+**Theorem 7.1.** *The Planck star model [Rovelli & Vidotto, 2014] provides a consistency model for the singularity resolution mechanism.*
 
 *Verification.* The Planck star model postulates that quantum gravity effects halt the gravitational collapse at the Planck density, forming a Planck-density core that eventually re-expands (a "bounce").
 
@@ -193,10 +193,10 @@ The Hawking temperature $T_H = \hbar c^3/(8\pi G M k_B)$ is unaffected because i
 - Theorem 3.1: Curvature bound — derived via two independent arguments (holonomy bound on minimal loops and finite-difference derivative bound), both giving $|R| \lesssim \ell_P^{-2}$
 - Corollary 3.2: Maximum energy density — follows from the curvature bound via the Einstein equations. The Einstein equations are uniquely determined by Lovelock's theorem (second-order locality) and remain valid throughout the bounded-curvature regime $K \leq c_K/\ell_P^4$
 - Theorem 4.1, Stage 1 (bounce existence): Model-independent. The curvature bound (Theorem 3.1) prevents $K \to \infty$, so the Penrose-Hawking theorems' conclusion fails. By contraposition, the strong energy condition must be violated near $\rho_P$. The Raychaudhuri equation then gives defocusing ($d\theta/d\tau > 0$), halting contraction and producing a bounce. No specific equation of state is assumed
-- Theorem 4.1, Stage 2 (effective Friedmann equation): The leading-order parameterization $H^2 \propto \rho(1 - \rho/\rho_P)$ captures the bounce quantitatively via discrete exclusion, loop closure pressure, and Einstein equation substitution. The form is confirmed by independent agreement with loop quantum cosmology (Ashtekar & Singh, 2011). Higher-order corrections require the full discrete network dynamics but do not affect the qualitative bounce
+- Theorem 4.1, Stage 2 (effective Friedmann equation): The leading-order parameterization $H^2 \propto \rho(1 - \rho/\rho_P)$ captures the bounce quantitatively via discrete exclusion, loop closure pressure, and Einstein equation substitution. The form is confirmed by independent agreement with loop quantum cosmology [Ashtekar & Singh, 2011]. Higher-order corrections require the full discrete network dynamics but do not affect the qualitative bounce
 - Theorem 5.1: Black hole interior resolution — $r_{\min}$ is rigorously derived from Theorem 3.1 (curvature bound applied to the Schwarzschild interior). The classical singularity at $r = 0$ is replaced by a regular Planck-density core at $r = r_{\min} > 0$. The specific interior geometry (de Sitter core vs. other regular metrics) is left as an open gap — the theorem's claim (bounded curvature, no singularity) does not depend on this choice
 - Proposition 5.2: Energy condition violation — established model-independently by contraposition of the Penrose-Hawking theorems (curvature bound $\implies$ singularity theorems' premises fail $\implies$ energy conditions violated). The loop closure pressure from Theorem 4.1 provides the explicit physical mechanism
-- Proposition 6.1: Trans-Planckian resolution — the absence of sub-Planckian modes follows directly from the Planck-scale cutoff (Theorem 2.1). The insensitivity of $T_H$ to the UV completion is established by derivative-independence of the Unruh effect (Jacobson, 1991; Unruh, 1995) and confirmed by explicit dispersive calculations (Corley & Jacobson, 1996; Brout et al., 1995)
+- Proposition 6.1: Trans-Planckian resolution — the absence of sub-Planckian modes follows directly from the Planck-scale cutoff (Theorem 2.1). The insensitivity of $T_H$ to the UV completion is established by derivative-independence of the Unruh effect [Jacobson, 1991]; [Unruh, 1995] and confirmed by explicit dispersive calculations [Corley & Jacobson, 1996]; [Brout et al., 1995]
 
 **Assessment:** Rigorous. The core results are established by a chain of model-independent arguments: the curvature bound (Theorem 3.1, from the Planck-scale cutoff) prevents singularity formation; contraposition of the Penrose-Hawking theorems forces energy condition violation near $\rho_P$; and the Raychaudhuri equation then produces defocusing (bounces in cosmology, regular cores in black holes). The leading-order effective Friedmann equation $H^2 \propto \rho(1 - \rho/\rho_P)$ provides a quantitative parameterization, independently confirmed by LQC. The qualitative conclusions — no singularities, bounces at Planck density, regular black hole interiors — are robust against higher-order corrections.
 
@@ -207,3 +207,13 @@ The Hawking temperature $T_H = \hbar c^3/(8\pi G M k_B)$ is unaffected because i
 3. **Observational signatures**: The bounce may produce observable signatures in the CMB (pre-bounce perturbations surviving through the bounce). The spectrum of these perturbations — scale-invariant, blue-tilted, or otherwise — depends on the bounce dynamics.
 4. **De Sitter core structure**: The regular interior likely approaches a de Sitter geometry (constant positive curvature) near $r_{\min}$. Deriving this from the framework would connect singularity resolution to the cosmological constant.
 5. **Information preservation**: Singularity resolution removes the classical information loss mechanism (information destroyed at the singularity). This should connect to the [Black Hole Information Paradox](/derivations/holography/information-paradox) resolution, closing a consistency loop.
+
+<!-- References -->
+[Penrose, 1965]: /references#penrose-1965
+[Hawking, 1967]: /references#hawking-1967
+[Jacobson, 1991]: /references#jacobson-1991
+[Brout et al., 1995]: /references#brout-1995
+[Unruh, 1995]: /references#unruh-1995
+[Corley & Jacobson, 1996]: /references#corley-jacobson-1996
+[Ashtekar & Singh, 2011]: /references#ashtekar-singh-2011
+[Rovelli & Vidotto, 2014]: /references#rovelli-vidotto-2014

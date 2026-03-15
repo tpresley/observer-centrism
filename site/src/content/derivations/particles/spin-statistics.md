@@ -44,7 +44,7 @@ Every known particle is either a boson (like photons, which can pile up in the s
 
 **Structural Postulate S1 (Topological consistency).** Transition amplitudes are single-valued functions on the universal cover of the configuration space. That is, the amplitude for a process depends on the homotopy class of the path in configuration space, not just the endpoints. Equivalently, the wave function is a section of a flat line bundle over the configuration space, with holonomy group $\text{Hom}(\pi_1(Q), U(1))$.
 
-**Remark.** This is the standard quantization condition in quantum mechanics on multiply-connected spaces (Laidlaw-DeWitt, 1971). In the framework, it follows from the requirement that phase evolution along paths in the interaction graph is well-defined: distinct homotopy classes in the configuration space can accumulate different $U(1)$ phases, but the phase must be single-valued on the covering space. This is loop closure (Axiom 3) applied to the configuration space rather than to physical space.
+**Remark.** This is the standard quantization condition in quantum mechanics on multiply-connected spaces [Laidlaw-DeWitt, 1971]. In the framework, it follows from the requirement that phase evolution along paths in the interaction graph is well-defined: distinct homotopy classes in the configuration space can accumulate different $U(1)$ phases, but the phase must be single-valued on the covering space. This is loop closure (Axiom 3) applied to the configuration space rather than to physical space.
 
 ### Step 1: Observer Loops in the Rotation Group
 
@@ -174,7 +174,7 @@ Higher-dimensional representations of $\mathbb{Z}_2$ decompose into direct sums 
 
 | Aspect | Standard model | Observer-centrism |
 |---|---|---|
-| Spin-statistics connection | Theorem requiring QFT proof (Pauli 1940, Streater-Wightman) | Topological identity: spin and statistics name the same $\mathbb{Z}_2$ invariant |
+| Spin-statistics connection | Theorem requiring QFT proof [Pauli, 1940] | Topological identity: spin and statistics name the same $\mathbb{Z}_2$ invariant |
 | Why two particle types | Postulated (bosons and fermions as fundamental) | Derived from $\pi_1(SO(3)) = \mathbb{Z}_2$ |
 | Anyons | Predicted and observed in 2D | Derived from $\pi_1(SO(2)) = \mathbb{Z}$ |
 | No other statistics in 3D | Assumed | Proved (Theorem 6.1) |
@@ -187,7 +187,7 @@ Higher-dimensional representations of $\mathbb{Z}_2$ decompose into direct sums 
 *Verification.* Take two identical spin-$s$ particles in $\mathbb{R}^3$.
 
 - **$\pi_1(SO(3)) = \mathbb{Z}_2$** (Proposition 1.2): Verified by the double cover $SU(2) \to SO(3)$. $\checkmark$
-- **Exchange–rotation** (Proposition 2.1): $Q_2$ has $\pi_1 = \mathbb{Z}_2$; exchange is topologically a $2\pi$ rotation (Leinaas-Myrheim, 1977). $\checkmark$
+- **Exchange–rotation** (Proposition 2.1): $Q_2$ has $\pi_1 = \mathbb{Z}_2$; exchange is topologically a $2\pi$ rotation [Leinaas-Myrheim, 1977]. $\checkmark$
 - **Spin-statistics** (Theorem 3.3): Spin-0 particles (pions) are bosons; spin-1/2 particles (electrons) are fermions; spin-1 particles (photons) are bosons. The pattern $(-1)^{2s}$ holds for all known particles. $\checkmark$
 - **Relational invariant symmetry** (Proposition 4.1): The two-particle wave function $\psi(\mathbf{r}_1, \mathbf{r}_2)$ transforms as $\psi(\mathbf{r}_2, \mathbf{r}_1) = (-1)^{2s}\psi(\mathbf{r}_1, \mathbf{r}_2)$ — symmetric for bosons, antisymmetric for fermions. $\checkmark$
 - **Anyons** (Proposition 5.1): Fractional quantum Hall quasiparticles at $\nu = 1/3$ exhibit exchange phase $e^{i\pi/3}$, consistent with $\pi_1 = \mathbb{Z}$ in 2D. $\checkmark$
@@ -197,18 +197,18 @@ Higher-dimensional representations of $\mathbb{Z}_2$ decompose into direct sums 
 
 **Fully rigorous:**
 - Proposition 1.2: $\pi_1(SO(3)) = \mathbb{Z}_2$ (standard algebraic topology)
-- Proposition 2.1: Exchange ↔ $2\pi$ rotation via configuration space topology (Leinaas-Myrheim, 1977)
+- Proposition 2.1: Exchange ↔ $2\pi$ rotation via configuration space topology [Leinaas-Myrheim, 1977]
 - Propositions 3.1, 3.2: $SU(2)$ representation theory and the covering map (standard Lie theory)
 - Theorem 3.3: Spin-statistics as topological identity (follows from 2.1 + 3.2)
 - Proposition 5.1: Anyons from $\pi_1 = \mathbb{Z}$ in $d = 2$ (standard topology)
-- Theorem 6.1: Completeness of bosonic/fermionic statistics (DHR theorem, 1971–1974)
+- Theorem 6.1: Completeness of bosonic/fermionic statistics [DHR, 1971]
 - Theorem 7.1: Consistency model verified on standard QM
 
 **Rigorous given axioms + S1:**
 - Proposition 4.1: Relational invariant exchange symmetry (follows from S1 — flat line bundle over $Q_2$ with $\pi_1 = \mathbb{Z}_2$ has exactly two holonomy choices)
 
 **Structural postulate:**
-- S1 (Topological consistency): Amplitudes are single-valued on the universal cover of the configuration space, with holonomy determined by $\pi_1$. This is the standard quantization condition on multiply-connected spaces (Laidlaw-DeWitt, 1971), here motivated by well-definedness of phase evolution (Axiom 3).
+- S1 (Topological consistency): Amplitudes are single-valued on the universal cover of the configuration space, with holonomy determined by $\pi_1$. This is the standard quantization condition on multiply-connected spaces [Laidlaw-DeWitt, 1971], here motivated by well-definedness of phase evolution (Axiom 3).
 
 **Assessment:** The derivation is rigorous. The pure mathematics ($\pi_1$ computations, representation theory, DHR theorem) are established results. The connection to the framework's relational invariants (Proposition 4.1) is rigorous given S1 (topological consistency), which is the standard quantization condition on the configuration space.
 
@@ -219,3 +219,9 @@ Higher-dimensional representations of $\mathbb{Z}_2$ decompose into direct sums 
 2. **Supersymmetry is impossible**: The two winding classes are elements of the discrete group $\mathbb{Z}_2 = \{0, 1\}$. A continuous symmetry rotating bosons into fermions would require a continuous path from $[0]$ to $[1]$ in $\mathbb{Z}_2$, which does not exist ($\mathbb{Z}_2$ is discrete and totally disconnected). This is a rigorous no-go theorem for supersymmetry within the framework.
 
 3. **Higher-spin particles**: Which spin values are realized at each level of the bootstrap hierarchy? Spin-1 gauge bosons and spin-2 gravitons should emerge at specific levels — this connects to the gauge structure derivation.
+
+<!-- References -->
+[Pauli, 1940]: /references#pauli-1940
+[DHR, 1971]: /references#dhr-1971
+[Laidlaw-DeWitt, 1971]: /references#laidlaw-dewitt-1971
+[Leinaas-Myrheim, 1977]: /references#leinaas-myrheim-1977

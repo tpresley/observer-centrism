@@ -172,7 +172,7 @@ Above 16 Hz, the holographic noise between H and L is uncorrelated regardless of
 
 ### The Holometer Experiment
 
-The Holometer (Fermilab, Chou et al. 2017) operated two co-located, co-aligned ($\beta = 0°$) 40-meter Michelson interferometers, searching for correlated length fluctuations at 1–13 MHz.
+The Holometer [Chou et al., 2017] operated two co-located, co-aligned ($\beta = 0°$) 40-meter Michelson interferometers, searching for correlated length fluctuations at 1–13 MHz.
 
 **Published constraint:** $S_L < 8.4 \times 10^{-41}$ m²/Hz at 95% CL.
 
@@ -351,3 +351,6 @@ All steps in the derivation chain are now at **rigorous** status:
 3. **Cosmological corrections**: In an expanding universe with Hubble parameter $H$, the causal structure is modified. The noise PSD may acquire a correction $\sim (H\ell_P/c)$ at cosmological baselines.
 4. **Curved spacetime generalization**: Near massive bodies, the noise should be modified by the local curvature. The prediction in Schwarzschild spacetime would be relevant for tests using GPS or pulsar timing.
 5. **Connection to gravitational wave memory**: Holographic noise at very low frequencies ($f \to 0$) might contribute to a stochastic gravitational wave background with specific polarization properties distinguishable from astrophysical sources.
+
+<!-- References -->
+[Chou et al., 2017]: /references#chou-2017

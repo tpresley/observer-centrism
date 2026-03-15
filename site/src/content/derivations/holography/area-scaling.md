@@ -154,7 +154,7 @@ A key difference: in the framework, the holographic bound is not a statement abo
 - **Planck-scale tiling** (Proposition 2.1, Corollary 2.2): The horizon area supports $N = A/\ell_P^2$ Planck cells. $\checkmark$
 - **Area scaling** (Theorem 3.2): The Bekenstein-Hawking entropy $S_{BH} = A/(4\ell_P^2) \propto A/\ell_P^2$. $\checkmark$
 - **Bandwidth limit** (Proposition 4.2): At the Planck scale, the maximum information rate per cell is $1/t_P$, giving total capacity $\dot{I} = Ac/\ell_P^3$. $\checkmark$
-- **Holographic bound** (Theorem 5.2): $S_{BH} = A/(4\ell_P^2)$ — the bound is saturated. No known configuration with the same boundary area has higher entropy (Bekenstein, 1981). $\checkmark$
+- **Holographic bound** (Theorem 5.2): $S_{BH} = A/(4\ell_P^2)$ — the bound is saturated. No known configuration with the same boundary area has higher entropy [Bekenstein, 1981]. $\checkmark$
 - **Bekenstein bound** (Proposition 6.1): For the Schwarzschild black hole, $S \leq 2\pi RE/(\hbar c)$ with $R = R_S = 2GM/c^2$ and $E = Mc^2$ gives $S \leq 4\pi G M^2/(\hbar c) = A/(4\ell_P^2)$. Saturated. $\checkmark$ $\square$
 
 ## Rigor Assessment
@@ -191,3 +191,6 @@ A key difference: in the framework, the holographic bound is not a statement abo
 3. **Sub-Planckian structure**: The derivation assumes nothing meaningful happens below $\ell_P$. If the coherence geometry has sub-Planckian structure, the counting argument needs modification.
 4. **Dynamical boundaries**: For time-dependent regions (e.g., expanding cosmological horizons), the channel capacity argument must be adapted. The entropy bound should track the apparent horizon, not the event horizon.
 5. **Connection to holographic noise**: The discrete Planck-cell structure of the boundary implies fluctuations at scale $\ell_P$. These fluctuations should produce a detectable holographic noise signature — the path to the experimental prediction in [Holographic Noise](/predictions/holographic-noise).
+
+<!-- References -->
+[Bekenstein, 1981]: /references#bekenstein-1981

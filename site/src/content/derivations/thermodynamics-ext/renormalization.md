@@ -105,7 +105,7 @@ $$\frac{d\Gamma_k}{d(\ln k)} = \frac{1}{2} \text{Tr}\left[ \left(\Gamma_k^{(2)} 
 
 *where $\Gamma_k^{(2)} = \delta^2\Gamma_k/\delta\phi^2$ is the second functional derivative (the inverse propagator) and the trace is over all field modes.*
 
-*Proof.* The derivation applies the Wetterich-Morris functional RG construction (Wetterich, 1993; Morris, 1994) to the coherence action from [Action and Planck's Constant](/derivations/thermodynamics/action-planck) (Theorem 5.1). The argument is standard functional analysis; we give it in full for completeness.
+*Proof.* The derivation applies the Wetterich-Morris functional RG construction [Wetterich, 1993]; [Morris, 1994] to the coherence action from [Action and Planck's Constant](/derivations/thermodynamics/action-planck) (Theorem 5.1). The argument is standard functional analysis; we give it in full for completeness.
 
 **Step (i).** The scale-dependent partition function is:
 
@@ -239,7 +239,7 @@ Since $\mathcal{C}(S)$ is finite and conserved, $g_i(k)$ is bounded at every sca
 **Fully rigorous (given S1):**
 - Proposition 1.3: Scale-dependent coherence conservation (direct from S1 + Axiom 1)
 - Theorem 2.1: Exact coherence flow equation (Leibniz rule applied to S1 decomposition)
-- Theorem 3.2: Wetterich-Morris analog — complete proof (Steps i–iv) applying the standard Legendre transform construction to the coherence action. The derivation uses $\hbar$ from [Action and Planck's Constant](/derivations/thermodynamics/action-planck) as the loop-counting parameter. The functional analysis is standard (Wetterich, 1993; Morris, 1994); the framework contribution is identifying the coherence action as the regulated functional.
+- Theorem 3.2: Wetterich-Morris analog — complete proof (Steps i–iv) applying the standard Legendre transform construction to the coherence action. The derivation uses $\hbar$ from [Action and Planck's Constant](/derivations/thermodynamics/action-planck) as the loop-counting parameter. The functional analysis is standard [Wetterich, 1993]; [Morris, 1994]; the framework contribution is identifying the coherence action as the regulated functional.
 - Theorem 4.1: Bootstrap–RG fixed-point correspondence — complete proof (Steps 1–3). Bootstrap stability (closed invariant set) implies scale-independent couplings ($\beta_i = 0$); perturbation analysis classifies fixed-point stability.
 - Theorem 5.2: Coherence c-theorem ($dc/d\ln k \leq 0$, from non-negativity of $\rho_\mathcal{C}$)
 - Corollary 5.3: Entropy–c-function connection — both are measures of inaccessible coherence (observer-bounded vs. scale-bounded), and both are monotonically non-decreasing as access diminishes
@@ -269,3 +269,7 @@ Since $\mathcal{C}(S)$ is finite and conserved, $g_i(k)$ is bounded at every sca
 ## Addressed Gaps
 
 1. **Asymptotic freedom of QCD** — Addressed by [Color Force](/derivations/gauge/color-force) (Proposition 7.1, Lean-verified): the one-loop $\beta$-function for $SU(3)$ with $N_f = 6$ gives $\beta_0 = 7 > 0$, confirming asymptotic freedom. The computation uses the standard Gross-Wilczek-Politzer method; deriving it from the coherence c-theorem (Theorem 5.2) alone remains an open direction (see Open Gap 2).
+
+<!-- References -->
+[Wetterich, 1993]: /references#wetterich-1993
+[Morris, 1994]: /references#morris-1994
