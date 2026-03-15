@@ -262,19 +262,30 @@ function layoutNodes(nodes, edges, width) {
   const TOP_PAD = 70          // extra room for axiom box header
   const positions = {}
 
+  const STAGGER = 18  // vertical offset for alternating nodes in a row
+  const LEFT_PAD = 100  // extra left margin to clear the legend
+
   for (let d = 0; d <= maxDepth; d++) {
     const row = rows[d]
     const count = row.length
-    const spacing = width / (count + 1)
+    const usableWidth = width - LEFT_PAD
+    const spacing = usableWidth / (count + 1)
     for (let i = 0; i < count; i++) {
+      // Alternate nodes up/down within each row to reduce label overlap
+      // Skip staggering for axiom nodes (depth 0 axiom row)
+      const isAxiom = axiomIds.has(row[i])
+      const yOffset = (!isAxiom && count > 1) ? (i % 2 === 0 ? -STAGGER : STAGGER) : 0
+      // Push all rows after the axiom row down by 1/3 row height for breathing room
+      const postAxiomPad = (d >= 1) ? Math.round(ROW_HEIGHT / 3) : 0
       positions[row[i]] = {
-        x: spacing * (i + 1),
-        y: TOP_PAD + d * ROW_HEIGHT,
+        x: LEFT_PAD + spacing * (i + 1),
+        y: TOP_PAD + d * ROW_HEIGHT + yOffset + postAxiomPad,
       }
     }
   }
 
-  return { positions, height: TOP_PAD + (maxDepth + 1) * ROW_HEIGHT + TOP_PAD, nodeRadius: NODE_RADIUS, axiomIds }
+  const POST_AXIOM_PAD = Math.round(ROW_HEIGHT / 3)
+  return { positions, height: TOP_PAD + (maxDepth + 1) * ROW_HEIGHT + POST_AXIOM_PAD + TOP_PAD, nodeRadius: NODE_RADIUS, axiomIds }
 }
 
 // ---- Component -------------------------------------------------------------
@@ -288,11 +299,19 @@ function DependencyGraph({ state, props }) {
   const parentMap = buildParentMap(edges)
   const childMap = buildChildMap(edges)
   const hoveredId = state.hoveredNode
+  const hoveredGroup = state.hoveredGroup
   const ancestors = hoveredId ? collectAncestors(hoveredId, parentMap) : new Set()
   const descendants = hoveredId ? collectDescendants(hoveredId, childMap) : new Set()
   const chainNodes = hoveredId
     ? new Set([...ancestors, ...descendants])
     : null
+
+  // Build node-id → group lookup for legend↔node interaction
+  const nodeGroupMap = {}
+  for (const n of nodes) nodeGroupMap[n.id] = n.group
+
+  // When a node is hovered, determine which group it belongs to (for legend dimming)
+  const activeGroupFromNode = hoveredId ? nodeGroupMap[hoveredId] : null
 
   // Split edges into normal and highlighted for z-order control
   const normalEdges = []
@@ -362,18 +381,75 @@ function DependencyGraph({ state, props }) {
           </>
         )}
 
+        {/* Legend — inside SVG so it scales with the viewBox */}
+        <foreignObject x={10} y={axiomBox ? axiomBox.y : 10} width={185} height={340}>
+          <div xmlns="http://www.w3.org/1999/xhtml" className="dep-legend" style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '7px',
+            padding: '10px 12px',
+            background: 'rgba(255,255,255,0.92)',
+            borderRadius: '10px',
+            border: '1.5px solid #e2e8f0',
+          }}>
+            {Object.entries(GROUP_COLORS).map(([group, color]) => {
+              const legendDimmed = (activeGroupFromNode && activeGroupFromNode !== group)
+                || (hoveredGroup && hoveredGroup !== group)
+              return (
+                <div
+                  key={group}
+                  className={`dep-legend-item dep-legend--${group}`}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '7px',
+                    cursor: 'pointer',
+                    opacity: legendDimmed ? 0.25 : 1,
+                    transition: 'opacity 0.2s ease',
+                  }}
+                >
+                  <span style={{
+                    display: 'inline-block',
+                    width: '14px',
+                    height: '14px',
+                    borderRadius: '50%',
+                    backgroundColor: color,
+                    flexShrink: 0,
+                  }} />
+                  <span style={{ fontSize: '20px', color: '#444', whiteSpace: 'nowrap', fontFamily: 'Inter, system-ui, sans-serif' }}>
+                    {GROUP_LABELS[group] || group}
+                  </span>
+                </div>
+              )
+            })}
+          </div>
+        </foreignObject>
+
         {/* Non-highlighted edges (bottom layer) */}
-        {normalEdges.map(({ i, from, to }) => (
-          <line
-            key={`edge-${i}`}
-            x1={from.x}
-            y1={from.y}
-            x2={to.x}
-            y2={to.y}
-            stroke="#555"
-            style={{ strokeWidth: 1, strokeOpacity: 0.3 }}
-          />
-        ))}
+        {normalEdges.map(({ e, i, from, to }) => {
+          const edgeDimmedByGroup = hoveredGroup
+            && nodeGroupMap[e.from] !== hoveredGroup
+            && nodeGroupMap[e.to] !== hoveredGroup
+          const edgeDimmedByChain = chainNodes
+            && !chainNodes.has(e.from)
+            && !chainNodes.has(e.to)
+          const edgeDimmed = edgeDimmedByGroup || edgeDimmedByChain
+          return (
+            <line
+              key={`edge-${i}`}
+              x1={from.x}
+              y1={from.y}
+              x2={to.x}
+              y2={to.y}
+              stroke="#555"
+              style={{
+                strokeWidth: 1,
+                strokeOpacity: edgeDimmed ? 0.05 : 0.3,
+                transition: 'stroke-opacity 0.2s ease',
+              }}
+            />
+          )
+        })}
 
         {/* Highlighted edges (rendered on top of normal edges) */}
         {highlightedEdges.map(({ i, from, to }) => (
@@ -397,12 +473,19 @@ function DependencyGraph({ state, props }) {
           const isStub = node.status === 'stub'
           const isNonViable = node.status === 'non-viable'
           const isHovered = hoveredId === node.id
+          const isGroupHighlighted = hoveredGroup && node.group === hoveredGroup
           const inChain = chainNodes && chainNodes.has(node.id) && !isHovered
-          const ringColor = isHovered ? '#f59e0b' : (inChain ? '#fbbf24' : 'none')
-          const ringWidth = isHovered ? 4 : (inChain ? 2.5 : 0)
+          const highlighted = isHovered || isGroupHighlighted
+          const ringColor = isHovered ? '#f59e0b' : (isGroupHighlighted ? '#f59e0b' : (inChain ? '#fbbf24' : 'none'))
+          const ringWidth = isHovered ? 4 : (isGroupHighlighted ? 3 : (inChain ? 2.5 : 0))
 
-          // Show full title when hovered, truncated otherwise
-          const displayTitle = isHovered
+          // Dim nodes not in the hovered legend group or not in the dependency chain
+          const dimmedByGroup = hoveredGroup && !isGroupHighlighted
+          const dimmedByChain = chainNodes && !chainNodes.has(node.id)
+          const dimmed = dimmedByGroup || dimmedByChain
+
+          // Show full title when highlighted, truncated otherwise
+          const displayTitle = highlighted
             ? node.title
             : (node.title.length > 18 ? node.title.slice(0, 16) + '...' : node.title)
 
@@ -431,9 +514,11 @@ function DependencyGraph({ state, props }) {
                   fill={isNonViable ? '#888' : color}
                   stroke={isNonViable ? '#dc2626' : color}
                   style={{
-                    fillOpacity: opacity,
+                    fillOpacity: dimmed ? 0.1 : opacity,
                     strokeWidth: isStub ? 2 : (isNonViable ? 4 : 1.5),
+                    strokeOpacity: dimmed ? 0.1 : 1,
                     strokeDasharray: isStub ? '4 3' : 'none',
+                    transition: 'fill-opacity 0.2s ease, stroke-opacity 0.2s ease',
                   }}
                 />
                 {/* X overlay for non-viable */}
@@ -445,7 +530,7 @@ function DependencyGraph({ state, props }) {
                       x2={pos.x + nodeRadius * 0.45}
                       y2={pos.y + nodeRadius * 0.45}
                       stroke="#dc2626"
-                      style={{ strokeWidth: 3, strokeLinecap: 'round', pointerEvents: 'none' }}
+                      style={{ strokeWidth: 3, strokeLinecap: 'round', pointerEvents: 'none', opacity: dimmed ? 0.1 : 1, transition: 'opacity 0.2s ease' }}
                     />
                     <line
                       x1={pos.x + nodeRadius * 0.45}
@@ -453,57 +538,52 @@ function DependencyGraph({ state, props }) {
                       x2={pos.x - nodeRadius * 0.45}
                       y2={pos.y + nodeRadius * 0.45}
                       stroke="#dc2626"
-                      style={{ strokeWidth: 3, strokeLinecap: 'round', pointerEvents: 'none' }}
+                      style={{ strokeWidth: 3, strokeLinecap: 'round', pointerEvents: 'none', opacity: dimmed ? 0.1 : 1, transition: 'opacity 0.2s ease' }}
                     />
                   </>
                 )}
-                {/* Label below — hidden for nodes outside the dependency chain on hover */}
-                <text
-                  x={pos.x}
-                  y={pos.y + nodeRadius + 20}
-                  fill={isHovered ? '#1e293b' : '#888'}
-                  style={{
-                    fontSize: isHovered ? '20px' : '18px',
-                    pointerEvents: 'none',
-                    textAnchor: 'middle',
-                    fontWeight: isHovered ? 'bold' : 'normal',
-                    opacity: (!chainNodes || chainNodes.has(node.id)) ? 1 : 0,
-                    transition: 'opacity 0.2s ease',
-                  }}
-                >
-                  {displayTitle}
-                </text>
               </g>
+          )
+        })}
+
+        {/* Labels — rendered as a separate layer on top of all nodes */}
+        {nodes.map(node => {
+          const pos = positions[node.id]
+          if (!pos) return null
+          const isHovered2 = hoveredId === node.id
+          const isGroupHighlighted2 = hoveredGroup && node.group === hoveredGroup
+          const highlighted2 = isHovered2 || isGroupHighlighted2
+          const dimmedByGroup2 = hoveredGroup && !isGroupHighlighted2
+          const dimmedByChain2 = chainNodes && !chainNodes.has(node.id)
+          const dimmed2 = dimmedByGroup2 || dimmedByChain2
+          const displayTitle2 = highlighted2
+            ? node.title
+            : (node.title.length > 18 ? node.title.slice(0, 16) + '...' : node.title)
+
+          // Shift label down when highlighted to account for the highlight ring
+          const labelY = pos.y + nodeRadius + (highlighted2 ? 28 : 20)
+
+          return (
+            <text
+              key={`label-${node.id}`}
+              x={pos.x}
+              y={labelY}
+              fill={highlighted2 ? '#1e293b' : '#888'}
+              style={{
+                fontSize: highlighted2 ? '20px' : '18px',
+                pointerEvents: 'none',
+                textAnchor: 'middle',
+                fontWeight: highlighted2 ? 'bold' : 'normal',
+                opacity: dimmed2 ? 0.1 : 1,
+                transition: 'opacity 0.2s ease',
+              }}
+            >
+              {displayTitle2}
+            </text>
           )
         })}
       </svg>
 
-      {/* Legend */}
-      <div style={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        gap: '0.75rem 1.5rem',
-        justifyContent: 'center',
-        padding: '1rem 0 0.5rem',
-        borderTop: '1px solid #e2e8f0',
-        marginTop: '0.5rem',
-      }}>
-        {Object.entries(GROUP_COLORS).map(([group, color]) => (
-          <div key={group} style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
-            <span style={{
-              display: 'inline-block',
-              width: '12px',
-              height: '12px',
-              borderRadius: '50%',
-              backgroundColor: color,
-              flexShrink: 0,
-            }} />
-            <span style={{ fontSize: '0.8rem', color: '#555' }}>
-              {GROUP_LABELS[group] || group}
-            </span>
-          </div>
-        ))}
-      </div>
     </div>
   )
 }
@@ -512,6 +592,7 @@ function DependencyGraph({ state, props }) {
 
 DependencyGraph.initialState = {
   hoveredNode: null,
+  hoveredGroup: null,
 }
 
 DependencyGraph.intent = ({ DOM }) => ({
@@ -524,6 +605,10 @@ DependencyGraph.intent = ({ DOM }) => ({
                  .filter(ev => ev.pointerType === 'mouse'),
   TAP_NODE:    DOM.select('.dep-node').events('click'),
   TAP_BG:      DOM.select('.dependency-graph-svg').events('click'),
+  HOVER_LEGEND: DOM.select('.dep-legend-item').events('pointerover')
+                  .filter(ev => ev.pointerType === 'mouse'),
+  LEAVE_LEGEND: DOM.select('.dep-legend-item').events('pointerout')
+                  .filter(ev => ev.pointerType === 'mouse'),
 })
 
 DependencyGraph.model = {
@@ -561,7 +646,22 @@ DependencyGraph.model = {
   TAP_BG: (state, ev) => {
     // Tap on empty SVG space clears hover (important on touch devices)
     if (ev.target.closest && ev.target.closest('.dep-node')) return state
-    return { ...state, hoveredNode: null }
+    return { ...state, hoveredNode: null, hoveredGroup: null }
+  },
+  HOVER_LEGEND: (state, ev) => {
+    const item = ev.target && ev.target.closest ? ev.target.closest('.dep-legend-item') : null
+    if (!item) return state
+    const cls = Array.from(item.classList).find(c => c.startsWith('dep-legend--'))
+    const group = cls ? cls.replace('dep-legend--', '') : null
+    if (state.hoveredGroup === group) return state
+    return { ...state, hoveredGroup: group }
+  },
+  LEAVE_LEGEND: (state, ev) => {
+    const leaving = ev.target && ev.target.closest ? ev.target.closest('.dep-legend-item') : null
+    const entering = ev.relatedTarget && ev.relatedTarget.closest
+      ? ev.relatedTarget.closest('.dep-legend-item') : null
+    if (leaving && leaving === entering) return state
+    return { ...state, hoveredGroup: null }
   },
 }
 
