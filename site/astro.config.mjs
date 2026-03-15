@@ -4,6 +4,7 @@ import pagefind from 'astro-pagefind'
 import remarkMath from 'remark-math'
 import remarkStats from './src/plugins/remark-stats.mjs'
 import rehypeKatex from 'rehype-katex'
+import rehypeStepAnchors from './src/plugins/rehype-step-anchors.mjs'
 
 const isProd = process.env.NODE_ENV === 'production'
 
@@ -13,7 +14,7 @@ export default defineConfig({
   integrations: [sygnal(), pagefind()],
   markdown: {
     remarkPlugins: [remarkStats, remarkMath],
-    rehypePlugins: [rehypeKatex],
+    rehypePlugins: [rehypeKatex, rehypeStepAnchors],
   },
   vite: {
     build: {

@@ -165,15 +165,18 @@ function statusColor(status: string) {
               </span>
             </div>
             <div class="th-theorem-list">
-              {block.theorems.map(t => (
-                <div class="th-theorem">
+              {block.theorems.map(t => {
+                const stepNum = t.id.split('.')[0]
+                const anchor = stepNum === '0' ? '' : `#step-${stepNum}`
+                return (
+                <a href={`${base}/derivations/${block.derivationId}${anchor}`} class="th-theorem">
                   <span class="th-theorem-badge">{t.type === 'Proposition' ? 'Prop' : t.type === 'Corollary' ? 'Cor' : 'Thm'} {t.id}</span>
                   <span class="th-theorem-name">{t.name}</span>
                   {t.leanVerified && (
                     <span class="th-lean-badge" title="Mechanically verified in Lean 4">Lean 4</span>
                   )}
-                </div>
-              ))}
+                </a>
+              )})}
             </div>
           </div>
         ))}
@@ -269,6 +272,12 @@ function statusColor(status: string) {
     padding: 0.35rem 0.75rem;
     background: color-mix(in srgb, var(--color-border) 30%, transparent);
     border-radius: 6px;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.15s;
+  }
+  .th-theorem:hover {
+    background: color-mix(in srgb, var(--color-accent) 10%, transparent);
   }
   .th-theorem-badge {
     font-size: 0.65rem;
