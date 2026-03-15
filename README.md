@@ -36,9 +36,11 @@ observer-centrism/
 │   │   └── Particles/         # Spin-statistics, generation counting
 │   ├── lakefile.toml          # Lake build configuration
 │   └── lean-toolchain         # Lean version (v4.29.0-rc6)
+├── timestamps/                # OpenTimestamps provenance proofs (.ots files)
 └── scripts/
     ├── build-index.mjs        # Regenerates knowledge.db and knowledge-index.json
-    └── lean-status.mjs        # Reports Lean verification status
+    ├── lean-status.mjs        # Reports Lean verification status
+    └── timestamp.sh           # Creates a timestamped provenance record
 ```
 
 ## Building the Site
@@ -81,6 +83,16 @@ lake build            # Type-check all proofs
 ```
 
 A successful `lake build` with no errors means every theorem statement and proof in the project has been mechanically verified.
+
+## Provenance
+
+Key commits are timestamped using [OpenTimestamps](https://opentimestamps.org/), anchored to the Bitcoin blockchain. This provides an immutable, independently verifiable proof that the work existed at the recorded date. See [TIMESTAMPS.md](TIMESTAMPS.md) for the full log and verification instructions.
+
+To create a new timestamp:
+
+```bash
+./scripts/timestamp.sh "Description of this milestone"
+```
 
 ## License
 
