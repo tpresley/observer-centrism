@@ -14,15 +14,59 @@ interface Mystery {
 
 const mysteries: Mystery[] = [
   {
-    title: 'Why Three Generations of Matter?',
-    question: 'Why does matter come in three identical copies of increasing mass — electron, muon, tau — with no fourth family?',
-    answer: 'Three generations map to three independent winding axes in d = 3 spatial dimensions. Each axis supports one half-integer winding mode, partitioned by Voronoi decomposition of S\u00B2. A fourth generation is topologically forbidden.',
+    title: 'Why Something Rather Than Nothing?',
+    question: 'Why does anything exist at all? Could there be a universe with no matter?',
+    answer: 'A single isolated observer has zero coherence content and is structurally impossible. The axioms are inconsistent with a vacuum (zero observers). At least two mutually defining observers must coexist \u2014 a non-empty universe is the only consistent state.',
     status: 'resolved',
     derivations: [
-      { id: 'particles/three-generations', title: 'Three Generations' },
-      { id: 'dimensions/three-dimensions', title: 'Three Dimensions' },
+      { id: 'minimal-observer/multiplicity', title: 'Multiplicity Is Necessary' },
+      { id: 'minimal-observer/coherence-dual-pairs', title: 'Coherence-Dual Pairs' },
     ],
-    prediction: { id: 'no-fourth-generation', title: 'No Fourth Generation' },
+  },
+  {
+    title: 'Why 3+1 Dimensions?',
+    question: 'Why does space have three dimensions and time have one? Could it be different?',
+    answer: 'Four independent structural conditions on observer boundaries converge uniquely on d = 3: stable orbits, non-trivial topology, the fundamental group condition \u03C0\u2081(SO(d)) = \u2124\u2082, and Hodge duality. The single time dimension follows from the interaction graph\u2019s partial ordering being inherently one-dimensional.',
+    status: 'resolved',
+    derivations: [
+      { id: 'dimensions/three-dimensions', title: 'Three Dimensions' },
+      { id: 'thermodynamics/time', title: 'Time as Phase Ordering' },
+    ],
+  },
+  {
+    title: 'Why Quantum Mechanics?',
+    question: 'Why is nature described by complex amplitudes and probability = |amplitude|\u00B2? Could the rules be different?',
+    answer: 'The Born rule is the unique probability measure consistent with coherence conservation and U(1) phase structure. Unitarity, no-cloning, and no-deleting follow from conservation of distinguishability. Quantum mechanics is not postulated but emerges as the unique consistent framework for observers with loop closure and coherence conservation.',
+    status: 'resolved',
+    derivations: [
+      { id: 'quantum/born-rule', title: 'Born Rule' },
+      { id: 'thermodynamics-ext/distinguishability-conservation', title: 'Conservation of Distinguishability' },
+      { id: 'quantum/entanglement', title: 'Entanglement' },
+    ],
+    prediction: { id: 'exact-unitarity', title: 'Exact Unitarity' },
+  },
+  {
+    title: 'The Arrow of Time',
+    question: 'Why does time flow in one direction when the fundamental laws are time-symmetric?',
+    answer: 'Time is the partial ordering on the interaction graph induced by directed phase transfer. Coherence transfer has strictly positive cost, making the interaction graph a directed acyclic graph. The arrow of time is not a boundary condition but a structural consequence \u2014 the second law follows from bounded observation.',
+    status: 'resolved',
+    derivations: [
+      { id: 'thermodynamics/time', title: 'Time as Phase Ordering' },
+      { id: 'thermodynamics/entropy', title: 'Entropy' },
+    ],
+  },
+  {
+    title: 'Quantum Gravity',
+    question: 'How do you reconcile quantum mechanics with general relativity at the Planck scale?',
+    answer: 'Gravity is coherence geometry curvature: the metric responds to relational invariant density (a theorem, not a postulate). The Einstein equations are self-consistency conditions. At the Planck scale, the discrete relational network resolves all classical singularities \u2014 the Big Bang becomes a coherence bounce, black hole singularities become regular cores.',
+    status: 'resolved',
+    derivations: [
+      { id: 'spacetime/gravity', title: 'Gravity' },
+      { id: 'spacetime/einstein-equations', title: 'Einstein Equations' },
+      { id: 'spacetime/singularity-resolution', title: 'Singularity Resolution' },
+      { id: 'holography/area-scaling', title: 'Holographic Entropy Bound' },
+    ],
+    prediction: { id: 'holographic-noise', title: 'Holographic Noise' },
   },
   {
     title: 'Why These Particular Forces?',
@@ -51,6 +95,30 @@ const mysteries: Mystery[] = [
     prediction: { id: 'exact-unitarity', title: 'Exact Unitarity at All Scales' },
   },
   {
+    title: 'Why Three Generations of Matter?',
+    question: 'Why does matter come in three identical copies of increasing mass — electron, muon, tau — with no fourth family?',
+    answer: 'Three generations map to three independent winding axes in d = 3 spatial dimensions. Each axis supports one half-integer winding mode, partitioned by Voronoi decomposition of S\u00B2. A fourth generation is topologically forbidden.',
+    status: 'resolved',
+    derivations: [
+      { id: 'particles/three-generations', title: 'Three Generations' },
+      { id: 'dimensions/three-dimensions', title: 'Three Dimensions' },
+    ],
+    prediction: { id: 'no-fourth-generation', title: 'No Fourth Generation' },
+  },
+  {
+    title: 'The Fine-Tuning Problem',
+    question: 'Why do the constants of nature appear exquisitely tuned for complexity? Are they free parameters?',
+    answer: 'The apparent free parameters are constrained by algebraic structure. Coupling constant ratios follow from algebraic normalization of the division algebras. The Weinberg angle is fixed by the \u2102 \u2282 \u210D embedding. The mass hierarchy is logarithmically organized. There is nothing to fine-tune because the parameters are structurally determined.',
+    status: 'resolved',
+    derivations: [
+      { id: 'cosmology/coupling-constants', title: 'Coupling Constants' },
+      { id: 'gauge/weinberg-angle', title: 'Weinberg Angle' },
+      { id: 'particles/mass-hierarchy', title: 'Mass Hierarchy' },
+      { id: 'thermodynamics-ext/renormalization', title: 'Renormalization Group' },
+    ],
+    prediction: { id: 'coupling-non-convergence', title: 'Coupling Non-Convergence' },
+  },
+  {
     title: 'The Hierarchy Problem',
     question: 'Why is the Higgs mass 17 orders of magnitude below the Planck scale? Is there extraordinary fine-tuning?',
     answer: 'The mass hierarchy arises from logarithmically organized crystallization scales in the bootstrap mechanism. Large mass ratios are exponentials of small coupling ratios, not fine-tuning. The Higgs mass is protected by the bootstrap hierarchy\u2019s logarithmic structure.',
@@ -59,6 +127,30 @@ const mysteries: Mystery[] = [
       { id: 'particles/mass-hierarchy', title: 'Mass Hierarchy' },
       { id: 'gauge/electroweak-breaking', title: 'Electroweak Breaking' },
     ],
+  },
+  {
+    title: 'The Strong CP Problem',
+    question: 'Why is the QCD vacuum angle \u03B8 effectively zero, when nothing in the Standard Model requires it?',
+    answer: 'The octonionic origin of SU(3) constrains the topological vacuum structure. Non-associativity of the octonions restricts the instanton tunneling that would generate a \u03B8-term, forcing \u03B8 = 0 exactly. No axion is needed.',
+    status: 'resolved',
+    derivations: [
+      { id: 'gauge/strong-cp', title: 'Strong CP Conservation' },
+      { id: 'interactions/bootstrap-division-algebras', title: 'Bootstrap \u2192 Division Algebras' },
+    ],
+    prediction: { id: 'no-axion', title: 'No QCD Axion' },
+  },
+  {
+    title: 'The Black Hole Information Paradox',
+    question: 'Is information destroyed when matter falls into a black hole and it evaporates?',
+    answer: 'Information (coherence) is globally conserved but locally inaccessible. The paradox dissolves when entropy is recognized as observer-indexed. Hawking radiation arises from coherence-dual pair production at the horizon, and the ER=EPR duality is exact \u2014 relational invariants underlie both quantum correlations and spacetime geometry.',
+    status: 'resolved',
+    derivations: [
+      { id: 'holography/information-paradox', title: 'Information Paradox' },
+      { id: 'holography/er-epr', title: 'ER=EPR Formalization' },
+      { id: 'holography/hawking-radiation', title: 'Hawking Radiation' },
+      { id: 'holography/black-hole-entropy', title: 'Black Hole Entropy' },
+    ],
+    prediction: { id: 'holographic-noise', title: 'Holographic Noise' },
   },
   {
     title: 'Matter\u2013Antimatter Asymmetry',
@@ -90,98 +182,6 @@ const mysteries: Mystery[] = [
     derivations: [
       { id: 'cosmology/cosmological-constant', title: 'Cosmological Constant' },
       { id: 'spacetime/einstein-equations', title: 'Einstein Equations' },
-    ],
-  },
-  {
-    title: 'The Arrow of Time',
-    question: 'Why does time flow in one direction when the fundamental laws are time-symmetric?',
-    answer: 'Time is the partial ordering on the interaction graph induced by directed phase transfer. Coherence transfer has strictly positive cost, making the interaction graph a directed acyclic graph. The arrow of time is not a boundary condition but a structural consequence \u2014 the second law follows from bounded observation.',
-    status: 'resolved',
-    derivations: [
-      { id: 'thermodynamics/time', title: 'Time as Phase Ordering' },
-      { id: 'thermodynamics/entropy', title: 'Entropy' },
-    ],
-  },
-  {
-    title: 'The Black Hole Information Paradox',
-    question: 'Is information destroyed when matter falls into a black hole and it evaporates?',
-    answer: 'Information (coherence) is globally conserved but locally inaccessible. The paradox dissolves when entropy is recognized as observer-indexed. Hawking radiation arises from coherence-dual pair production at the horizon, and the ER=EPR duality is exact \u2014 relational invariants underlie both quantum correlations and spacetime geometry.',
-    status: 'resolved',
-    derivations: [
-      { id: 'holography/information-paradox', title: 'Information Paradox' },
-      { id: 'holography/er-epr', title: 'ER=EPR Formalization' },
-      { id: 'holography/hawking-radiation', title: 'Hawking Radiation' },
-      { id: 'holography/black-hole-entropy', title: 'Black Hole Entropy' },
-    ],
-    prediction: { id: 'holographic-noise', title: 'Holographic Noise' },
-  },
-  {
-    title: 'Why Quantum Mechanics?',
-    question: 'Why is nature described by complex amplitudes and probability = |amplitude|\u00B2? Could the rules be different?',
-    answer: 'The Born rule is the unique probability measure consistent with coherence conservation and U(1) phase structure. Unitarity, no-cloning, and no-deleting follow from conservation of distinguishability. Quantum mechanics is not postulated but emerges as the unique consistent framework for observers with loop closure and coherence conservation.',
-    status: 'resolved',
-    derivations: [
-      { id: 'quantum/born-rule', title: 'Born Rule' },
-      { id: 'thermodynamics-ext/distinguishability-conservation', title: 'Conservation of Distinguishability' },
-      { id: 'quantum/entanglement', title: 'Entanglement' },
-    ],
-    prediction: { id: 'exact-unitarity', title: 'Exact Unitarity' },
-  },
-  {
-    title: 'Quantum Gravity',
-    question: 'How do you reconcile quantum mechanics with general relativity at the Planck scale?',
-    answer: 'Gravity is coherence geometry curvature: the metric responds to relational invariant density (a theorem, not a postulate). The Einstein equations are self-consistency conditions. At the Planck scale, the discrete relational network resolves all classical singularities \u2014 the Big Bang becomes a coherence bounce, black hole singularities become regular cores.',
-    status: 'resolved',
-    derivations: [
-      { id: 'spacetime/gravity', title: 'Gravity' },
-      { id: 'spacetime/einstein-equations', title: 'Einstein Equations' },
-      { id: 'spacetime/singularity-resolution', title: 'Singularity Resolution' },
-      { id: 'holography/area-scaling', title: 'Holographic Entropy Bound' },
-    ],
-    prediction: { id: 'holographic-noise', title: 'Holographic Noise' },
-  },
-  {
-    title: 'The Fine-Tuning Problem',
-    question: 'Why do the constants of nature appear exquisitely tuned for complexity? Are they free parameters?',
-    answer: 'The apparent free parameters are constrained by algebraic structure. Coupling constant ratios follow from algebraic normalization of the division algebras. The Weinberg angle is fixed by the \u2102 \u2282 \u210D embedding. The mass hierarchy is logarithmically organized. There is nothing to fine-tune because the parameters are structurally determined.',
-    status: 'resolved',
-    derivations: [
-      { id: 'cosmology/coupling-constants', title: 'Coupling Constants' },
-      { id: 'gauge/weinberg-angle', title: 'Weinberg Angle' },
-      { id: 'particles/mass-hierarchy', title: 'Mass Hierarchy' },
-      { id: 'thermodynamics-ext/renormalization', title: 'Renormalization Group' },
-    ],
-    prediction: { id: 'coupling-non-convergence', title: 'Coupling Non-Convergence' },
-  },
-  {
-    title: 'The Strong CP Problem',
-    question: 'Why is the QCD vacuum angle \u03B8 effectively zero, when nothing in the Standard Model requires it?',
-    answer: 'The octonionic origin of SU(3) constrains the topological vacuum structure. Non-associativity of the octonions restricts the instanton tunneling that would generate a \u03B8-term, forcing \u03B8 = 0 exactly. No axion is needed.',
-    status: 'resolved',
-    derivations: [
-      { id: 'gauge/strong-cp', title: 'Strong CP Conservation' },
-      { id: 'interactions/bootstrap-division-algebras', title: 'Bootstrap \u2192 Division Algebras' },
-    ],
-    prediction: { id: 'no-axion', title: 'No QCD Axion' },
-  },
-  {
-    title: 'Why 3+1 Dimensions?',
-    question: 'Why does space have three dimensions and time have one? Could it be different?',
-    answer: 'Four independent structural conditions on observer boundaries converge uniquely on d = 3: stable orbits, non-trivial topology, the fundamental group condition \u03C0\u2081(SO(d)) = \u2124\u2082, and Hodge duality. The single time dimension follows from the interaction graph\u2019s partial ordering being inherently one-dimensional.',
-    status: 'resolved',
-    derivations: [
-      { id: 'dimensions/three-dimensions', title: 'Three Dimensions' },
-      { id: 'thermodynamics/time', title: 'Time as Phase Ordering' },
-    ],
-  },
-  {
-    title: 'Why Something Rather Than Nothing?',
-    question: 'Why does anything exist at all? Could there be a universe with no matter?',
-    answer: 'A single isolated observer has zero coherence content and is structurally impossible. The axioms are inconsistent with a vacuum (zero observers). At least two mutually defining observers must coexist \u2014 a non-empty universe is the only consistent state.',
-    status: 'resolved',
-    derivations: [
-      { id: 'minimal-observer/multiplicity', title: 'Multiplicity Is Necessary' },
-      { id: 'minimal-observer/coherence-dual-pairs', title: 'Coherence-Dual Pairs' },
     ],
   },
 ]
