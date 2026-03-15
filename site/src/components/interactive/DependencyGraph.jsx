@@ -348,7 +348,7 @@ function DependencyGraph({ state, props }) {
         viewBox={`0 0 ${width} ${height}`}
         width={width}
         height={height}
-        style={{ display: 'block', maxWidth: '100%', height: 'auto' }}
+        style={{ display: 'block', maxWidth: '100%', height: 'auto', touchAction: 'manipulation' }}
       >
         {/* Axiom box */}
         {axiomBox && (
@@ -381,49 +381,75 @@ function DependencyGraph({ state, props }) {
           </>
         )}
 
-        {/* Legend — inside SVG so it scales with the viewBox */}
-        <foreignObject x={10} y={axiomBox ? axiomBox.y : 10} width={185} height={340}>
-          <div xmlns="http://www.w3.org/1999/xhtml" className="dep-legend" style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '7px',
-            padding: '10px 12px',
-            background: 'rgba(255,255,255,0.92)',
-            borderRadius: '10px',
-            border: '1.5px solid #e2e8f0',
-          }}>
-            {Object.entries(GROUP_COLORS).map(([group, color]) => {
-              const legendDimmed = (activeGroupFromNode && activeGroupFromNode !== group)
-                || (hoveredGroup && hoveredGroup !== group)
-              return (
-                <div
-                  key={group}
-                  className={`dep-legend-item dep-legend--${group}`}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '7px',
-                    cursor: 'pointer',
-                    opacity: legendDimmed ? 0.25 : 1,
-                    transition: 'opacity 0.2s ease',
-                  }}
-                >
-                  <span style={{
-                    display: 'inline-block',
-                    width: '14px',
-                    height: '14px',
-                    borderRadius: '50%',
-                    backgroundColor: color,
-                    flexShrink: 0,
-                  }} />
-                  <span style={{ fontSize: '20px', color: '#444', whiteSpace: 'nowrap', fontFamily: 'Inter, system-ui, sans-serif' }}>
-                    {GROUP_LABELS[group] || group}
-                  </span>
-                </div>
-              )
-            })}
-          </div>
-        </foreignObject>
+        {/* Legend — pure SVG elements (no foreignObject, avoids mobile rendering bugs) */}
+        {(() => {
+          const legendX = 10
+          const legendY = axiomBox ? axiomBox.y : 10
+          const ROW_H = 28
+          const PAD_X = 14
+          const PAD_Y = 14
+          const SWATCH_R = 7
+          const FONT_SIZE = 18
+          const entries = Object.entries(GROUP_COLORS)
+          const boxW = 170
+          const boxH = PAD_Y * 2 + entries.length * ROW_H - (ROW_H - FONT_SIZE)
+
+          return (
+            <g className="dep-legend">
+              <rect
+                x={legendX}
+                y={legendY}
+                width={boxW}
+                height={boxH}
+                rx={10}
+                ry={10}
+                fill="rgba(255,255,255,0.92)"
+                stroke="#e2e8f0"
+                style={{ strokeWidth: 1.5 }}
+              />
+              {entries.map(([group, color], idx) => {
+                const legendDimmed = (activeGroupFromNode && activeGroupFromNode !== group)
+                  || (hoveredGroup && hoveredGroup !== group)
+                const rowY = legendY + PAD_Y + idx * ROW_H + SWATCH_R
+                return (
+                  <g
+                    key={group}
+                    className={`dep-legend-item dep-legend--${group}`}
+                    style={{ cursor: 'pointer', opacity: legendDimmed ? 0.25 : 1, transition: 'opacity 0.2s ease' }}
+                  >
+                    {/* Invisible hit area for easier tapping */}
+                    <rect
+                      x={legendX}
+                      y={rowY - SWATCH_R - 2}
+                      width={boxW}
+                      height={ROW_H}
+                      fill="transparent"
+                    />
+                    <circle
+                      cx={legendX + PAD_X + SWATCH_R}
+                      cy={rowY}
+                      r={SWATCH_R}
+                      fill={color}
+                    />
+                    <text
+                      x={legendX + PAD_X + SWATCH_R * 2 + 8}
+                      y={rowY}
+                      fill="#444"
+                      style={{
+                        fontSize: `${FONT_SIZE}px`,
+                        fontFamily: 'Inter, system-ui, sans-serif',
+                        dominantBaseline: 'central',
+                        pointerEvents: 'none',
+                      }}
+                    >
+                      {GROUP_LABELS[group] || group}
+                    </text>
+                  </g>
+                )
+              })}
+            </g>
+          )
+        })()}
 
         {/* Non-highlighted edges (bottom layer) */}
         {normalEdges.map(({ e, i, from, to }) => {
@@ -609,6 +635,7 @@ DependencyGraph.intent = ({ DOM }) => ({
                   .filter(ev => ev.pointerType === 'mouse'),
   LEAVE_LEGEND: DOM.select('.dep-legend-item').events('pointerout')
                   .filter(ev => ev.pointerType === 'mouse'),
+  TAP_LEGEND:  DOM.select('.dep-legend-item').events('click'),
 })
 
 DependencyGraph.model = {
@@ -645,7 +672,8 @@ DependencyGraph.model = {
   },
   TAP_BG: (state, ev) => {
     // Tap on empty SVG space clears hover (important on touch devices)
-    if (ev.target.closest && ev.target.closest('.dep-node')) return state
+    // Ignore taps that landed on a node or legend item
+    if (ev.target.closest && (ev.target.closest('.dep-node') || ev.target.closest('.dep-legend-item'))) return state
     return { ...state, hoveredNode: null, hoveredGroup: null }
   },
   HOVER_LEGEND: (state, ev) => {
@@ -662,6 +690,16 @@ DependencyGraph.model = {
       ? ev.relatedTarget.closest('.dep-legend-item') : null
     if (leaving && leaving === entering) return state
     return { ...state, hoveredGroup: null }
+  },
+  TAP_LEGEND: (state, ev) => {
+    ev.stopPropagation()  // prevent TAP_BG from also firing
+    const item = ev.target && ev.target.closest ? ev.target.closest('.dep-legend-item') : null
+    if (!item) return state
+    const cls = Array.from(item.classList).find(c => c.startsWith('dep-legend--'))
+    const group = cls ? cls.replace('dep-legend--', '') : null
+    // Toggle: tap again to deselect
+    if (state.hoveredGroup === group) return { ...state, hoveredGroup: null }
+    return { ...state, hoveredGroup: group, hoveredNode: null }
   },
 }
 
