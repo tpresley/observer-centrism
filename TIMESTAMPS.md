@@ -25,3 +25,4 @@ Or use the web verifier at https://opentimestamps.org/ — upload the `.ots` fil
 
 | Date | Commit | Description |
 |------|--------|-------------|
+| 2026-03-14 | [ff85ef3](https://github.com/tpresley/observer-centrism/commit/ff85ef3ea731528d4ec27a33df2876c37ea09daf) | Initial provenance record — 61 derivations (59 rigorous, 1 provisional, 1 non-viable), 10 predictions, 9 Lean-verified theorems, CC BY 4.0 |
