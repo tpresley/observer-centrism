@@ -37,13 +37,13 @@ When the framework invokes these theorems, the rigor is borrowed from their orig
 
 **Tier 2: Rigorous given axioms.** The logical chain from axioms to conclusion is complete, with every step explicit, but one or more structural postulates are required as additional input. These postulates are not derived from the axioms — they are motivated assumptions about the mathematical setting (e.g., smooth manifold structure, symplectic geometry, locality).
 
-The framework currently uses 14 active structural postulates. Each is:
+The framework currently uses {{activePostulateCount}} active structural postulates. Each is:
 - Named and numbered (e.g., "Electromagnetism S1: Locality of phase comparison")
 - Stated precisely enough to check
 - Motivated by physical reasoning
 - Tracked on the [Structural Postulates](/postulates) page
 
-Six former postulates have been promoted to theorems as the framework has developed. Promoting postulates to theorems — reducing the assumption count — is a primary form of progress.
+{{nowTheoremCount}} former postulates have been promoted to theorems as the framework has developed. Promoting postulates to theorems — reducing the assumption count — is a primary form of progress.
 
 **Tier 3: Structural argument.** The derivation identifies the unique mathematical structure compatible with the axiom constraints, using plausibility, analogy, or dimensional analysis alongside rigorous steps. The conclusion is well-supported but the argument is not a deductive proof.
 
@@ -85,14 +85,14 @@ The trajectory has been one of steady reduction:
 - Weak Interaction S1 and Color Force S1 were promoted via the division algebra bootstrap
 - Born Rule S1 (amplitude–coherence identification) was promoted via the Cauchy multiplicative equation uniqueness argument
 
-Each promotion reduces the assumption count and narrows the gap between "structural argument" and "formal proof." Fourteen active postulates remain. Whether all can eventually be promoted, or whether some represent genuinely independent input that the three axioms cannot determine, is itself an open question.
+Each promotion reduces the assumption count and narrows the gap between "structural argument" and "formal proof." {{activePostulateCount}} active postulates remain. Whether all can eventually be promoted, or whether some represent genuinely independent input that the three axioms cannot determine, is itself an open question.
 
 ## What Would Strengthen the Framework
 
 For the skeptic who finds structural arguments insufficient, the most productive challenges are:
 
 1. **Formalize a structural argument.** Take a Tier 3 argument and either prove it rigorously or show it fails — both outcomes advance understanding.
-2. **Derive a structural postulate.** Show that one of the 14 active postulates follows from the axioms, or prove it is independent. Independence results are as valuable as derivations.
+2. **Derive a structural postulate.** Show that one of the {{activePostulateCount}} active postulates follows from the axioms, or prove it is independent. Independence results are as valuable as derivations.
 3. **Extend the Lean coverage.** Formalize more propositions, particularly the composition and uniqueness arguments in the Born rule and bootstrap derivations.
 4. **Find a counterexample.** Construct a model satisfying the three axioms (including Axiom 1's conditions C1–C5) but producing physics different from the Standard Model. This would show the axioms are insufficient and identify what additional structure is needed.
 

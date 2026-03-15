@@ -1,7 +1,19 @@
 ---
 import MainLayout from '../components/layouts/MainLayout.astro'
+import knowledgeIndex from '../data/knowledge-index.json'
+import postulatesData from '../data/structural-postulates.json'
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+
+const stats = (knowledgeIndex as any).stats as {
+  byStatus: Record<string, number>
+  derivationCount: number
+  predictionCount: number
+}
+
+const rigorousCount = stats.byStatus.rigorous || 0
+const provisionalCount = stats.byStatus.provisional || 0
+const nonViableCount = stats.byStatus['non-viable'] || 0
 ---
 
 <MainLayout title="Home">
@@ -77,7 +89,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 
   <h2>What Follows</h2>
   <p>
-    From these three axioms, a chain of 53 rigorous derivations (and 2 more at earlier stages) produces the
+    From these three axioms, a chain of {rigorousCount} rigorous derivations{provisionalCount > 0 && ` (plus ${provisionalCount} provisional`}{nonViableCount > 0 && ` and ${nonViableCount} assessed non-viable)`} produces the
     major structures of known physics &mdash; each step following by
     mathematical necessity from the steps before it. The Standard Model gauge
     group U(1) &times; SU(2) &times; SU(3) emerges from the four normed
@@ -103,7 +115,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '')
     <a href={`${base}/map`} class="cta-card">
       <div class="cta-icon">&#9671;</div>
       <h3>Explore the Map</h3>
-      <p>Interactive dependency graph showing how 55 derivations connect axioms to predictions.</p>
+      <p>Interactive dependency graph showing how {stats.derivationCount} derivations connect axioms to predictions.</p>
     </a>
     <a href={`${base}/predictions/`} class="cta-card">
       <div class="cta-icon">&#9678;</div>
