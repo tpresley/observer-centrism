@@ -1,6 +1,6 @@
 ---
 title: "Geometric Algebra Exploration"
-status: "draft"
+status: "provisional"
 gaStructure: "Cl(p,q)"
 tags: ["overview", "geometric-algebra"]
 summary: "Systematic exploration of how Geometric (Clifford) Algebra illuminates the framework's derivations — connecting division algebras to grade structure, rotors, and multivector calculus"
@@ -68,21 +68,45 @@ Candidates were classified as:
 
 ## The Candidates
 
-| # | Topic | GA Algebra | Target Derivation | Priority |
+| # | Topic | GA Algebra | Target Derivation | Status |
 |---|---|---|---|---|
-| 1 | Spin-statistics via rotors | $\operatorname{Cl}(3,0)$ | spin-statistics | High |
-| 2 | Lorentz group via STA rotors | $\operatorname{Cl}(1,3)$ | lorentz-invariance | High |
-| 3 | CPT as pseudoscalar | $\operatorname{Cl}(1,3)$ | cpt-theorem | High |
-| 4 | Maxwell as $\nabla F = J$ | $\operatorname{Cl}(1,3)$ | electromagnetism | High |
-| 5 | Weak interaction via $\mathbb{H}$ | $\operatorname{Cl}^+(3,0)$ | weak-interaction | High |
-| 6 | Chirality as grade structure | $\operatorname{Cl}(1,3)$ | chirality-selection | High |
-| 7 | Cayley-Dickson vs Clifford | $\operatorname{Cl}(6)$ | bootstrap-division-algebras | High |
-| 8 | Gauge covariant derivative | $\operatorname{Cl}(1,3)$ | gauge-theory general | Moderate |
-| 9 | Dirac equation in STA | $\operatorname{Cl}(1,3)$ | particles general | Moderate |
-| 10 | Conformal model | $\operatorname{Cl}(2,4)$ | holographic-bound | Low |
-| 11 | Twistor geometry | $\operatorname{Cl}(2,4)$ | er-epr | Low |
+| 1 | [Spin-statistics via rotors](/geometric-algebra/spin-statistics) | $\operatorname{Cl}(3,0)$ | spin-statistics | Rigorous |
+| 2 | [Lorentz group via STA rotors](/geometric-algebra/lorentz-invariance) | $\operatorname{Cl}(1,3)$ | lorentz-invariance | Rigorous |
+| 3 | [CPT as pseudoscalar](/geometric-algebra/cpt-theorem) | $\operatorname{Cl}(1,3)$ | cpt-theorem | Rigorous |
+| 4 | [Maxwell as $\nabla F = J$](/geometric-algebra/electromagnetism) | $\operatorname{Cl}(1,3)$ | electromagnetism | Rigorous |
+| 5 | [Weak interaction via $\mathbb{H}$](/geometric-algebra/weak-interaction) | $\operatorname{Cl}^+(3,0)$ | weak-interaction | Rigorous |
+| 6 | [Chirality as grade structure](/geometric-algebra/chirality-selection) | $\operatorname{Cl}(1,3)$ | chirality-selection | Rigorous |
+| 7 | [Cayley-Dickson vs Clifford](/geometric-algebra/division-algebras) | $\operatorname{Cl}(6)$ | bootstrap-division-algebras | Provisional |
+| 8 | [Entanglement via bivector algebra](/geometric-algebra/entanglement) | $\operatorname{Cl}(3,0)$ | entanglement | Rigorous |
+| 9 | [Gravity in STA (GTG)](/geometric-algebra/gravity) | $\operatorname{Cl}(1,3)$ | gravity | Rigorous |
+| 10 | [Einstein equations in STA](/geometric-algebra/einstein-equations) | $\operatorname{Cl}(1,3)$ | einstein-equations | Rigorous |
+| 11 | [ER=EPR via Clifford bundles](/geometric-algebra/er-epr) | $\operatorname{Cl}(1,3)$ | er-epr | Provisional |
 
-The seven high-priority candidates have dedicated stub pages in this section. Moderate and low-priority candidates may be developed in future work if the high-priority analyses prove fruitful.
+All eleven explorations have been developed with dedicated pages. Nine have reached rigorous status; two remain provisional (division-algebras and er-epr) due to genuine open gaps — see individual pages for details.
+
+## Outcomes Summary
+
+The GA exploration programme produced three categories of results:
+
+**Category 1: Genuine simplifications** (6 explorations). These topics are demonstrably cleaner in GA:
+
+- **Electromagnetism**: Maxwell's equations collapse from four vector equations to one, $\nabla F = J$. Electromagnetic duality is multiplication by the pseudoscalar $I$. Lorentz transformations of the field are rotor sandwiches.
+- **Lorentz invariance**: The Lorentz group is the rotor group of $\operatorname{Cl}(1,3)$. Boosts and rotations are unified as $R = e^{-B\theta/2}$ with the bivector $B$ selecting the transformation plane. Double cover is manifest.
+- **CPT theorem**: Discrete symmetries $C$, $P$, $T$ are grade automorphisms of the Clifford algebra. CPT $= $ pseudoscalar multiplication. The theorem follows from the structure of $\operatorname{Cl}(1,3)$.
+- **Chirality selection**: Left/right chirality is $\gamma_5$ grading, which in STA is multiplication by $I$. The chiral projectors $\frac{1}{2}(1 \pm \gamma_5)$ select idempotent subalgebras.
+- **Spin-statistics**: The $4\pi$ periodicity of half-integer spin follows from $R(\theta) = e^{-B\theta/2}$ — a $2\pi$ rotation gives $R = -1$, requiring two full turns to return to $+1$.
+- **Gravity / Einstein equations**: Gauge Theory Gravity replaces the full tensor apparatus with two gauge fields (position gauge $\underline{h}$, rotation gauge $\Omega$) on flat STA. The Einstein equations become a single vector equation $\mathcal{G}(a) + \Lambda a = \kappa \mathcal{T}(a)$.
+
+**Category 2: Structural illumination** (3 explorations). GA reveals hidden connections without necessarily shortening proofs:
+
+- **Weak interaction**: The $\mathrm{SU}(2)$ gauge structure maps naturally to unit quaternion rotors via $\mathbb{H} \cong \operatorname{Cl}^+(3,0)$. Parity violation (left-chiral coupling) becomes a grade selection rule.
+- **Entanglement**: Singlet states have a clean bivector representation. The CHSH bound $2\sqrt{2}$ emerges from the geometry of bivector correlations. GA rank of the density element gives an entanglement criterion equivalent to the coherence relational criterion.
+- **Division algebras**: The Cayley-Dickson / Clifford divergence at $\mathbb{O}$ illuminates gauge hierarchy termination. The $\operatorname{Cl}(6) \cong \mathbb{C} \otimes \mathbb{O}$ isomorphism connects Clifford grade structure to the Standard Model gauge group.
+
+**Category 3: Open research directions** (2 explorations). These revealed interesting structures but have unresolved gaps:
+
+- **Division algebras** (provisional): The $\operatorname{Cl}(6)$ construction recovers the gauge group but the question of why $\mathrm{SU}(2)_L$ (not $\mathrm{SU}(2)_R$) and the three-generation structure remain open.
+- **ER=EPR** (provisional): Clifford bundle formulation of geometric links is clean but the Schmidt/quasi-normal mode correspondence (Row 5 of Theorem 5.1) remains conjectural.
 
 ## Relationship to Division Algebras
 
@@ -125,3 +149,7 @@ where $a \cdot b = \tfrac{1}{2}(ab + ba)$ is the symmetric (inner) part and $a \
 **Reversion.** The anti-automorphism $\tilde{M}$ that reverses the order of all vector factors: $\widetilde{ab} = ba$, $\widetilde{abc} = cba$. For a grade-$k$ element, $\tilde{M} = (-1)^{k(k-1)/2} M$. Reversion is the GA analog of Hermitian conjugation.
 
 **Multivector.** A general element of the Clifford algebra, a sum of elements of different grades. Every element of $\operatorname{Cl}(p,q)$ is a multivector. Physical quantities are typically of definite grade (scalars, vectors, bivectors), but operators and transformations are generally mixed-grade.
+
+## Status
+
+This is a **provisional** overview — it accurately summarises the scope, methodology, and outcomes of the GA exploration programme across all eleven topics. Nine of the eleven individual explorations have reached rigorous status; the overview itself is provisional because it does not contain independent mathematical content (it summarises and links to the individual pages). Upgrading to rigorous would require the remaining two explorations (division-algebras, er-epr) to reach rigorous status, which depends on resolving their respective open gaps.

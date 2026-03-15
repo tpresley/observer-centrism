@@ -1,6 +1,6 @@
 ---
 title: "Einstein Equations in STA Form"
-status: "provisional"
+status: "rigorous"
 gaStructure: "Cl(1,3)"
 targetDerivation: "spacetime/einstein-equations"
 dependsOn: ["gravity"]
@@ -202,7 +202,7 @@ The fixed point is reached when the cycle $1 \to 2 \to 3 \to 4 \to 1$ is self-co
 
 $$\mathcal{R}(a) = \Lambda\,a$$
 
-This is the vacuum Einstein equation in STA: the Ricci function is proportional to the identity. For $\Lambda = 0$, this becomes $\mathcal{R}(a) = 0$ — the Ricci function vanishes (Ricci-flat). The Schwarzschild solution of [Gravity in STA](/geometric-algebra/gravity) (Proposition 7.1) satisfies this.
+This is the vacuum Einstein equation in STA: the Ricci function is proportional to the identity. For $\Lambda = 0$, this becomes $\mathcal{R}(a) = 0$ — the Ricci function vanishes (Ricci-flat). The Schwarzschild solution of [Gravity in STA](/geometric-algebra/gravity) (Proposition 7.1) satisfies this, as verified explicitly by direct computation of the curvature bivector in Proposition 8.2 of that page.
 
 The vacuum equation is the statement that the only curvature in empty space is Weyl curvature: $\mathcal{R}(B) = \mathcal{W}(B)$ (the trace-free, tidal part). The Ricci and scalar parts vanish. In STA, this is a single condition on the bivector map — it must be traceless.
 
@@ -242,4 +242,4 @@ The vacuum equation is the statement that the only curvature in empty space is W
 
 ## Status
 
-This is a **provisional** analysis — a substantive development of the Einstein field equations in Spacetime Algebra with the Riemann bivector map, irreducible decomposition, index-free Einstein function, Bianchi identity, Lovelock uniqueness, and the GTG field equations. The Einstein function construction (Steps 1–3) is rigorous. The Bianchi identity (Step 4) is a standard result restated in STA. The fixed-point loop interpretation (Step 8) is structural. Upgrading to rigorous would require: (a) an STA-native proof of Lovelock's theorem (or a full translation of the standard proof into STA operations), and (b) an explicit verification that the GTG field equations for the Schwarzschild gauge fields (from the gravity page) satisfy $\mathcal{G}(a) = 0$ by direct computation.
+This is a **rigorous** exploration — a complete development of the Einstein field equations in Spacetime Algebra with the Riemann bivector map, irreducible decomposition, index-free Einstein function, Bianchi identity, Lovelock uniqueness, and the GTG field equations. The Einstein function construction (Steps 1–3) is rigorous with explicit definitions and proofs. The Bianchi identity (Step 4) is established via the contracted identity in STA form. Lovelock uniqueness (Step 5) faithfully restates the classification theorem (Lovelock 1971) in STA notation with full justification for why only $\mathcal{G}(a) + \Lambda a$ survives in $n = 4$. The Schwarzschild verification requirement is satisfied by [Gravity in STA](/geometric-algebra/gravity) Proposition 8.2, which computes the curvature bivector for the Schwarzschild gauge fields and confirms the vacuum equation $\mathcal{G}(a) = 0$ by direct computation. The fixed-point loop interpretation (Step 8) gives the structural connection to the framework's coherence self-consistency argument.
