@@ -5,7 +5,6 @@ testability: "currently-tested"
 dependsOn: ["gauge/proton-stability", "gauge/standard-model-group", "cosmology/coupling-constants"]
 currentEvidence: "Super-Kamiokande lower bound on proton lifetime exceeds 10^34 years for dominant GUT modes"
 distinctiveness: "shared"
-sourceSection: "13-predictions"
 ---
 
 ## Prediction

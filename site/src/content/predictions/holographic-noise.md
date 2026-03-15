@@ -5,7 +5,6 @@ testability: "near-future"
 dependsOn: ["holography/area-scaling", "spacetime/gravity", "interactions/relational-invariants", "holography/causal-set-statistics"]
 currentEvidence: "Holometer at Fermilab constrains the amplitude coefficient to α_H < 1; LISA Pathfinder demonstrated required sensitivity levels"
 distinctiveness: "unique"
-sourceSection: "13-predictions"
 ---
 
 ## Prediction

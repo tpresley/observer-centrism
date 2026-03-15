@@ -6,7 +6,6 @@ enablesDerivation: []
 tags: ["holography"]
 summary: "Information is globally conserved (coherence conservation) but locally inaccessible — the paradox dissolves when entropy is recognized as observer-indexed"
 rigorLevel: "formal"
-sourceSection: "10-holography"
 lastUpdated: 2026-03-09
 ---
 

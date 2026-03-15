@@ -6,7 +6,6 @@ enablesDerivation: ["holography/hawking-radiation"]
 tags: ["holography"]
 summary: "Bekenstein-Hawking formula S = A/4ℓ²_P as minimal loop counting on the horizon — each Planck cell supports one bit of inaccessible relational invariant"
 rigorLevel: "formal"
-sourceSection: "10-holography"
 lastUpdated: 2026-03-09
 ---
 

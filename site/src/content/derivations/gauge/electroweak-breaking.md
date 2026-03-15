@@ -6,7 +6,6 @@ enablesDerivation: ["gauge/weinberg-angle"]
 tags: ["gauge", "symmetry-breaking"]
 summary: "The electroweak symmetry SU(2)_L × U(1)_Y breaks to U(1)_em through coherence crystallization: the observer hierarchy develops a preferred direction in the quaternionic phase space at the electroweak scale, generating W/Z boson masses and Yukawa couplings. The Higgs field is the order parameter of this crystallization, and its mass is protected by the logarithmic hierarchy of bootstrap levels."
 rigorLevel: "formal"
-sourceSection: "11-mass-hierarchy"
 lastUpdated: 2026-03-12
 ---
 

@@ -6,7 +6,6 @@ enablesDerivation: []
 tags: ["gauge", "anomaly", "fermion-content"]
 summary: "Coherence conservation requires the quantum partition function to be gauge-invariant under all large gauge transformations, which is precisely the anomaly-freedom condition. The chirality-selected fermion representations from the division-algebra decomposition C⊗O ≅ Cℓ(6) automatically satisfy all four independent anomaly cancellation conditions, generation by generation."
 rigorLevel: "formal"
-sourceSection: "08-gauge-sector"
 lastUpdated: 2026-03-12
 ---
 

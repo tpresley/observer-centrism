@@ -6,7 +6,6 @@ enablesDerivation: ["minimal-observer/structure", "thermodynamics/action-planck"
 tags: ["foundation"]
 summary: "Formalization of cyclic dynamics as a Noether pair (U(1) symmetry ↔ conserved charge), with Lyapunov stability and approximate closure giving a precise persistence criterion"
 rigorLevel: "formal"
-sourceSection: "02-axioms"
 lastUpdated: 2026-03-12
 ---
 

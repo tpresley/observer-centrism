@@ -6,7 +6,6 @@ enablesDerivation: ["particles/three-generations"]
 tags: ["particles"]
 summary: "Mass hierarchy as logarithmically organized crystallization scales — large ratios are exponentials of small coupling ratios, not fine-tuning"
 rigorLevel: "formal"
-sourceSection: "11-mass-hierarchy"
 lastUpdated: 2026-03-09
 ---
 

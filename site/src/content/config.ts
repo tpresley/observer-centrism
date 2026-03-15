@@ -20,7 +20,6 @@ const derivations = defineCollection({
     tags: z.array(z.string()).default([]),
     summary: z.string(),
     rigorLevel: z.enum(['informal', 'semi-formal', 'formal']),
-    sourceSection: z.string().optional(),
     lastUpdated: z.date().optional(),
     leanProofs: z.array(z.object({
       module: z.string(),
@@ -39,7 +38,6 @@ const predictions = defineCollection({
     dependsOn: z.array(z.string()).default([]),
     currentEvidence: z.string().optional(),
     distinctiveness: z.enum(['unique', 'shared', 'generic']),
-    sourceSection: z.string().optional(),
   }),
 })
 

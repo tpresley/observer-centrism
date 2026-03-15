@@ -6,7 +6,6 @@ enablesDerivation: ["particles/spin-statistics", "particles/three-generations", 
 tags: ["geometry"]
 summary: "Four independent structural conditions on observer boundaries converge uniquely on d=3 — dimensionality is derived, not postulated"
 rigorLevel: "formal"
-sourceSection: "08-three-dimensions"
 lastUpdated: 2026-03-09
 ---
 

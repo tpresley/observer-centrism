@@ -5,7 +5,6 @@ testability: "far-future"
 dependsOn: ["cosmology/coupling-constants", "gauge/standard-model-group", "interactions/bootstrap-division-algebras"]
 currentEvidence: "Current precision measurements of alpha_1, alpha_2, alpha_3 are consistent with non-convergence. The minimal SU(5) GUT prediction is already excluded by proton decay limits."
 distinctiveness: "unique"
-sourceSection: "13-predictions"
 ---
 
 ## Prediction

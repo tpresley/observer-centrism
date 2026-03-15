@@ -6,7 +6,6 @@ enablesDerivation: ["spacetime/einstein-equations", "holography/area-scaling"]
 tags: ["geometry"]
 summary: "Massive observers generate relational invariant density gradients; geodesics = minimum coherence cost paths; the equivalence principle is structural"
 rigorLevel: "formal"
-sourceSection: "06-geometry"
 lastUpdated: 2026-03-12
 ---
 

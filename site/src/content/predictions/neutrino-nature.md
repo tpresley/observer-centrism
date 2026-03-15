@@ -5,7 +5,6 @@ testability: "near-future"
 dependsOn: ["particles/neutrino-masses", "particles/three-generations", "flavor/mixing-angles"]
 currentEvidence: "NOvA and T2K combined data show mild (~2σ) preference for normal ordering; neutrinoless double-beta decay not yet observed, consistent with normal-ordering Majorana prediction of |m_ββ| ~ 1-5 meV"
 distinctiveness: "shared"
-sourceSection: "13-predictions"
 ---
 
 ## Prediction

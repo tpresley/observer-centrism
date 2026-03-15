@@ -6,7 +6,6 @@ enablesDerivation: []
 tags: ["interactions", "division-algebras"]
 summary: "The bootstrap hierarchy forces the Cayley-Dickson doubling sequence R → C → H → O by requiring algebraic closure at each interaction level. Each bootstrap level demands a larger algebra to accommodate the new relational invariants, and the doubling terminates at O because sedenions have zero divisors that violate coherence conservation. This eliminates Structural Postulate S1 from Weak Interaction (algebraic completeness) and Color Force (algebraic saturation), promoting them from assumptions to theorems."
 rigorLevel: "formal"
-sourceSection: "07-observer-hierarchy"
 lastUpdated: 2026-03-13
 leanProofs:
   - module: "ObserverCentrism.Algebra.HurwitzNormed"

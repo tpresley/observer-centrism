@@ -6,7 +6,6 @@ enablesDerivation: ["quantum/measurement"]
 tags: ["quantum"]
 summary: "Measurement basis is determined by which relational invariants are generated in the observer-system interaction"
 rigorLevel: "formal"
-sourceSection: "12-quantum-mechanics"
 lastUpdated: 2026-03-09
 ---
 

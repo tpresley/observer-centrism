@@ -6,7 +6,6 @@ enablesDerivation: ["spacetime/lorentz-invariance"]
 tags: ["geometry"]
 summary: "The loop closure condition in space+time simultaneously forces L = cT, deriving c as the universal phase propagation speed"
 rigorLevel: "formal"
-sourceSection: "06-geometry"
 lastUpdated: 2026-03-09
 ---
 

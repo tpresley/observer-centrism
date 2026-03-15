@@ -6,7 +6,6 @@ enablesDerivation: ["holography/black-hole-entropy", "spacetime/singularity-reso
 tags: ["holography"]
 summary: "S ≤ A/4ℓ²_P from boundary observer counting and coherence propagation constraints — two independent derivations"
 rigorLevel: "formal"
-sourceSection: "10-holography"
 lastUpdated: 2026-03-09
 ---
 

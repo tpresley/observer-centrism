@@ -6,7 +6,6 @@ enablesDerivation: ["axioms/loop-closure", "minimal-observer/structure", "minima
 tags: ["foundation"]
 summary: "Formalization of the observer as a triple (Σ, I, B) — state space, invariant, and self/non-self boundary — with topological structure, non-triviality conditions, and observer category"
 rigorLevel: "formal"
-sourceSection: "02-axioms"
 lastUpdated: 2026-03-08
 ---
 

@@ -13,12 +13,12 @@ interface Props {
   status?: string
   dependsOn?: string[]
   enablesDerivation?: string[]
-  sourceSection?: string
+
   leanProofs?: LeanProof[]
   hasOverview?: boolean
 }
 
-const { title, status, dependsOn = [], enablesDerivation = [], sourceSection, leanProofs = [], hasOverview = false } = Astro.props
+const { title, status, dependsOn = [], enablesDerivation = [], leanProofs = [], hasOverview = false } = Astro.props
 const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 
 const statusClass = status ? `status-${status}` : ''
@@ -51,11 +51,6 @@ const totalTheorems = leanProofs.reduce((sum, p) => sum + p.theorems.length, 0)
           </svg>
           Lean 4 verified
         </span>
-      )}
-      {sourceSection && (
-        <a href={`${base}/source/${sourceSection}`} class="source-link">
-          View in source document &rarr;
-        </a>
       )}
     </header>
 
@@ -333,12 +328,4 @@ const totalTheorems = leanProofs.reduce((sum, p) => sum + p.theorems.length, 0)
   header {
     margin-bottom: 2rem;
   }
-  .source-link {
-    display: inline-block;
-    margin-top: 0.5rem;
-    font-size: 0.85rem;
-    color: var(--color-accent);
-    text-decoration: none;
-  }
-  .source-link:hover { text-decoration: underline; }
 </style>

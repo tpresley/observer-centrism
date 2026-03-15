@@ -6,7 +6,6 @@ enablesDerivation: ["holography/hawking-radiation", "particles/cpt-theorem"]
 tags: ["foundation"]
 summary: "The minimal crystallization event produces a conjugate pair with equal mass and opposite charges — particle-antiparticle structure"
 rigorLevel: "formal"
-sourceSection: "03-minimal-observer"
 lastUpdated: 2026-03-09
 ---
 

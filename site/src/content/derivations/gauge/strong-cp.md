@@ -6,7 +6,6 @@ enablesDerivation: []
 tags: ["gauge", "cp-violation"]
 summary: "The QCD vacuum angle θ is exactly zero because the octonionic origin of SU(3) constrains the topological vacuum structure. Non-associativity of the octonions restricts the instanton tunneling that would generate a θ-term, resolving the strong CP problem without an axion."
 rigorLevel: "formal"
-sourceSection: "08-gauge-sector"
 lastUpdated: 2026-03-12
 ---
 

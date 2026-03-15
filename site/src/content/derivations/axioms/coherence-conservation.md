@@ -6,7 +6,6 @@ enablesDerivation: ["axioms/observer-definition", "axioms/loop-closure", "minima
 tags: ["foundation"]
 summary: "Formalization of the primitive conserved quantity as a subadditive measure on a directed acyclic graph, with conservation stated graph-theoretically without presupposing time"
 rigorLevel: "formal"
-sourceSection: "02-axioms"
 lastUpdated: 2026-03-08
 ---
 

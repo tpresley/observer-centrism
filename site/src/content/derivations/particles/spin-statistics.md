@@ -6,7 +6,6 @@ enablesDerivation: ["particles/pauli-exclusion", "particles/three-generations", 
 tags: ["particles"]
 summary: "π₁(SO(3)) = Z₂ gives exactly two particle types: bosons (integer winding) and fermions (half-integer) — the spin-statistics connection is the direct topological statement"
 rigorLevel: "formal"
-sourceSection: "09-spin-statistics"
 lastUpdated: 2026-03-09
 leanProofs:
   - module: "ObserverCentrism.Particles.SpinStatistics"

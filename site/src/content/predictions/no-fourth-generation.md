@@ -5,7 +5,6 @@ testability: "currently-tested"
 dependsOn: ["dimensions/three-dimensions", "particles/spin-statistics", "particles/three-generations"]
 currentEvidence: "LEP Z-width measurement constrains light neutrino species to exactly 3"
 distinctiveness: "shared"
-sourceSection: "13-predictions"
 ---
 
 ## Prediction

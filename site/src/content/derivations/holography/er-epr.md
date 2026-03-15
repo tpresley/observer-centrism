@@ -6,7 +6,6 @@ enablesDerivation: []
 tags: ["holography", "entanglement", "wormhole", "ER-EPR"]
 summary: "Relational invariants between spatially separated observers manifest as both entanglement (EPR) and non-traversable wormholes (ER). The duality is exact because relational invariants are the fundamental objects underlying both quantum correlations and spacetime geometry. The wormhole throat area satisfies A = 4ℓ_P² S_ent, and non-traversability follows from the no-signaling property of relational invariants."
 rigorLevel: "formal"
-sourceSection: "10-holography"
 lastUpdated: 2026-03-12
 ---
 

@@ -6,7 +6,6 @@ enablesDerivation: ["minimal-observer/multiplicity", "thermodynamics/time", "dim
 tags: ["foundation"]
 summary: "The simplest structure satisfying all three axioms is a U(1) phase oscillator with conserved charge — a Noether pair realized in the coherence geometry"
 rigorLevel: "formal"
-sourceSection: "03-minimal-observer"
 lastUpdated: 2026-03-08
 ---
 

@@ -6,7 +6,6 @@ enablesDerivation: ["spacetime/gravity", "particles/cpt-theorem"]
 tags: ["geometry"]
 summary: "Lorentz contraction and time dilation as loop projection effects — the Lorentz group is the symmetry group of loop closure in the coherence geometry"
 rigorLevel: "formal"
-sourceSection: "06-geometry"
 lastUpdated: 2026-03-09
 ---
 

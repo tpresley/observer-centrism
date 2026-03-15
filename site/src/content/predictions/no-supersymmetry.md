@@ -5,7 +5,6 @@ testability: "currently-tested"
 dependsOn: ["particles/supersymmetry-impossibility", "dimensions/three-dimensions", "particles/spin-statistics"]
 currentEvidence: "LHC has found no evidence of superpartners to TeV energy scales"
 distinctiveness: "shared"
-sourceSection: "13-predictions"
 ---
 
 ## Prediction

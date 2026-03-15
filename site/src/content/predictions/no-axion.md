@@ -5,7 +5,6 @@ testability: "near-future"
 dependsOn: ["gauge/strong-cp", "interactions/bootstrap-division-algebras"]
 currentEvidence: "No axion detected by ADMX, CASPEr, or other experiments to date; consistent with null prediction"
 distinctiveness: "unique"
-sourceSection: "13-predictions"
 ---
 
 ## Prediction

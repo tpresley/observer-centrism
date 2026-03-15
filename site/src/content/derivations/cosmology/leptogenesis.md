@@ -6,7 +6,6 @@ enablesDerivation: []
 tags: ["cosmology", "baryogenesis", "neutrino", "cp-violation"]
 summary: "The framework's prediction of Majorana neutrinos with an electroweak-scale seesaw mechanism provides a leptogenesis pathway that resolves the baryon asymmetry problem. Heavy right-handed neutrino decays generate a lepton asymmetry via PMNS CP phases, which sphalerons convert to the observed η_B ~ 6×10⁻¹⁰ — orders of magnitude more efficient than CKM-only baryogenesis."
 rigorLevel: "formal"
-sourceSection: "13-cosmology"
 lastUpdated: 2026-03-12
 ---
 

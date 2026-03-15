@@ -6,7 +6,6 @@ enablesDerivation: ["spacetime/speed-of-light", "holography/area-scaling", "foun
 tags: ["dynamics"]
 summary: "Action is the coherence cost of transformation; ℏ is the minimum cost of one observer cycle — the quantum of action"
 rigorLevel: "formal"
-sourceSection: "05-time-entropy-action"
 lastUpdated: 2026-03-09
 ---
 

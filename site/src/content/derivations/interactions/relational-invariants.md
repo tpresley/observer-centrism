@@ -6,7 +6,6 @@ enablesDerivation: ["interactions/bootstrap", "thermodynamics/entropy", "spaceti
 tags: ["dynamics"]
 summary: "Type III interactions generate genuinely new conserved quantities on the joint state space; by reverse Noether, each creates new symmetries and degrees of freedom"
 rigorLevel: "formal"
-sourceSection: "04-interaction-bootstrap"
 lastUpdated: 2026-03-09
 ---
 

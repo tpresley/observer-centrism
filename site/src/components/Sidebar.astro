@@ -8,15 +8,12 @@ interface Props {
 const { currentPath } = Astro.props
 const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 
-const sourceEntries = await getCollection('source')
 const derivationEntries = await getCollection('derivations')
 const predictionEntries = await getCollection('predictions')
 const guideEntries = await getCollection('guide')
 const gaEntries = await getCollection('geometric-algebra')
 
 const sortedGuide = guideEntries.sort((a, b) => a.data.order - b.data.order)
-
-const sortedSource = sourceEntries.sort((a, b) => a.data.order - b.data.order)
 
 /** Strip base prefix from path for comparison */
 const pathWithoutBase = currentPath.startsWith(base) ? (currentPath.slice(base.length) || '/') : currentPath
@@ -27,7 +24,6 @@ function isActive(href: string): boolean {
   return norm(pathWithoutBase) === norm(href)
 }
 
-const isSourcePage = pathWithoutBase.startsWith('/source/')
 const isGAPage = pathWithoutBase.startsWith('/geometric-algebra/')
 
 const gaTopics = gaEntries.filter(e => e.slug !== 'overview')
@@ -186,12 +182,6 @@ function statusColor(status: string) {
     ))}
   </details>
 
-  <details class="sidebar-details" open={isSourcePage || undefined}>
-    <summary><h2>Source Document</h2></summary>
-    {sortedSource.map(entry => (
-      <a href={`${base}/source/${entry.slug}`} aria-current={isActive(`/source/${entry.slug}`) ? 'page' : undefined}>{entry.data.section}. {entry.data.title}</a>
-    ))}
-  </details>
 </nav>
 
 <style>

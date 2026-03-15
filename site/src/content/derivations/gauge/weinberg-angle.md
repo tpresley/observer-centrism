@@ -6,7 +6,6 @@ enablesDerivation: []
 tags: ["gauge", "electroweak", "mixing-angle"]
 summary: "The weak mixing angle sin²θ_W = 1/3 at the algebraic normalization scale (from the C ⊂ H embedding) evolves under SM one-loop RG running to sin²θ_W(M_Z) ≈ 0.231 if and only if the electroweak crystallization scale is Λ_EW ≈ 4×10⁹ GeV. This scale is independently constrained by the bootstrap hierarchy, providing a self-consistency check."
 rigorLevel: "formal"
-sourceSection: "08-gauge-sector"
 lastUpdated: 2026-03-12
 ---
 

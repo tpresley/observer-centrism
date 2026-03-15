@@ -6,7 +6,6 @@ enablesDerivation: ["holography/information-paradox"]
 tags: ["holography"]
 summary: "Loop closure at horizons forces coherence-dual pair production — one falls in, one radiates out; thermal spectrum from maximal entropy"
 rigorLevel: "formal"
-sourceSection: "10-holography"
 lastUpdated: 2026-03-09
 ---
 

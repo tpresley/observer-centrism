@@ -6,7 +6,6 @@ enablesDerivation: []
 tags: ["dynamics"]
 summary: "Entropy relative to observer A is total coherence minus A's accessible coherence; the second law follows structurally from bounded observation"
 rigorLevel: "formal"
-sourceSection: "05-time-entropy-action"
 lastUpdated: 2026-03-09
 ---
 

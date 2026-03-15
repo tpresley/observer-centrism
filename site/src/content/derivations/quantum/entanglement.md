@@ -6,7 +6,6 @@ enablesDerivation: ["holography/er-epr", "quantum/teleportation"]
 tags: ["quantum", "information"]
 summary: "Quantum entanglement is the Hilbert-space image of relational invariants between observers. The coherence of a relational invariant equals the entanglement entropy, the no-cloning theorem follows from coherence conservation, and entanglement monogamy follows from coherence subadditivity."
 rigorLevel: "formal"
-sourceSection: "12-quantum-mechanics"
 lastUpdated: 2026-03-13
 leanProofs:
   - module: "ObserverCentrism.Quantum.NoCloning"

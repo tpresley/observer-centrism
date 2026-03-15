@@ -6,7 +6,6 @@ enablesDerivation: []
 tags: ["gauge", "QCD", "chiral", "symmetry-breaking"]
 summary: "In the confining regime, the non-associative octonionic structure forces quark-antiquark pairing that breaks SU(N_f)_L × SU(N_f)_R → SU(N_f)_V. The confining potential generates an attractive channel for the scalar ̄qq bilinear, and coherence minimization selects the condensate vacuum. Pions emerge as pseudo-Goldstone bosons with m²_π ∝ m_q."
 rigorLevel: "semi-formal"
-sourceSection: "08-gauge-sector"
 lastUpdated: 2026-03-11
 ---
 

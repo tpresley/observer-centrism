@@ -6,7 +6,6 @@ enablesDerivation: ["interactions/relational-invariants", "thermodynamics/time",
 tags: ["dynamics"]
 summary: "Exhaustive classification of observer interactions by invariant outcome: Passage (phase transfer), Fusion (reorganization), Resonance (new relational invariant)"
 rigorLevel: "formal"
-sourceSection: "04-interaction-bootstrap"
 lastUpdated: 2026-03-09
 ---
 

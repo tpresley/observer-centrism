@@ -6,7 +6,6 @@ enablesDerivation: ["quantum/preferred-basis", "quantum/entanglement"]
 tags: ["quantum"]
 summary: "Probability = |amplitude|² is the unique measure consistent with coherence conservation and the U(1) phase structure"
 rigorLevel: "formal"
-sourceSection: "12-quantum-mechanics"
 lastUpdated: 2026-03-09
 ---
 

@@ -6,7 +6,6 @@ enablesDerivation: ["minimal-observer/coherence-dual-pairs", "interactions/three
 tags: ["foundation"]
 summary: "A single observer is vacuous and pairs are insufficient — strong subadditivity requires at least three observers, and the bootstrap propagates this into a full network"
 rigorLevel: "formal"
-sourceSection: "03-minimal-observer"
 lastUpdated: 2026-03-09
 ---
 

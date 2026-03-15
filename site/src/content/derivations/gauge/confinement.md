@@ -6,7 +6,6 @@ enablesDerivation: ["gauge/chiral-symmetry-breaking"]
 tags: ["gauge", "confinement"]
 summary: "Quark confinement follows from the non-associativity of the octonion algebra underlying SU(3). Parallel transport of colored states accumulates path-bracketing ambiguity that grows with distance, while color-singlet states have well-defined transport because the SU(3)-singlet projection annihilates the associator."
 rigorLevel: "formal"
-sourceSection: "08-gauge-sector"
 lastUpdated: 2026-03-12
 ---
 

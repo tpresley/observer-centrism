@@ -6,7 +6,6 @@ enablesDerivation: []
 tags: ["particles"]
 summary: "Antisymmetric relational invariants forbid identical fermions in the same state — a coherence consistency condition, not an additional postulate"
 rigorLevel: "formal"
-sourceSection: "09-spin-statistics"
 lastUpdated: 2026-03-09
 leanProofs:
   - module: "ObserverCentrism.Particles.SpinStatistics"

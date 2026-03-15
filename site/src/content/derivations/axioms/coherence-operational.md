@@ -6,7 +6,6 @@ enablesDerivation: ["quantum/born-rule"]
 tags: ["foundation"]
 summary: "Convergence of the coherence axioms with quantum information theory, operational meaning, and uniqueness of the coherence measure on quantum states"
 rigorLevel: "formal"
-sourceSection: "02-axioms"
 lastUpdated: 2026-03-14
 ---
 

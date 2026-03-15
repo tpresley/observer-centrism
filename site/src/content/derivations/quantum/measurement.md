@@ -6,7 +6,6 @@ enablesDerivation: ["quantum/teleportation"]
 tags: ["quantum"]
 summary: "Measurement = Type III interaction generating relational invariants; 'collapse' is the creation of new relational structure, not the destruction of superposition"
 rigorLevel: "formal"
-sourceSection: "12-quantum-mechanics"
 lastUpdated: 2026-03-09
 ---
 

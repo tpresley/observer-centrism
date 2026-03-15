@@ -6,7 +6,6 @@ enablesDerivation: ["thermodynamics/entropy", "thermodynamics/action-planck", "q
 tags: ["dynamics"]
 summary: "Time is the partial ordering on the interaction graph induced by directed phase transfer — a DAG structure derived from positive coherence cost, not a background parameter"
 rigorLevel: "formal"
-sourceSection: "05-time-entropy-action"
 lastUpdated: 2026-03-09
 ---
 

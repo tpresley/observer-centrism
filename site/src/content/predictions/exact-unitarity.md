@@ -5,7 +5,6 @@ testability: "near-future"
 dependsOn: ["axioms/coherence-conservation", "quantum/born-rule"]
 currentEvidence: "No violation of unitarity observed; matter-wave interferometry pushing to larger masses"
 distinctiveness: "shared"
-sourceSection: "13-predictions"
 ---
 
 ## Prediction

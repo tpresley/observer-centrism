@@ -6,7 +6,6 @@ enablesDerivation: ["particles/neutrino-masses"]
 tags: ["particles"]
 summary: "Three generations correspond to three independent winding directions in d=3 — the generation structure is topological"
 rigorLevel: "formal"
-sourceSection: "11-mass-hierarchy"
 lastUpdated: 2026-03-09
 leanProofs:
   - module: "ObserverCentrism.Particles.GenerationCounting"

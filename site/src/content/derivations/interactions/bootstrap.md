@@ -6,7 +6,6 @@ enablesDerivation: ["spacetime/einstein-equations", "particles/mass-hierarchy", 
 tags: ["dynamics"]
 summary: "Relational invariants are themselves observers, generating hierarchy through iterated interaction — complexity is necessary, not contingent"
 rigorLevel: "formal"
-sourceSection: "04-interaction-bootstrap"
 lastUpdated: 2026-03-09
 ---
 
@@ -206,7 +205,7 @@ $$\mathcal{U} \cong \mathcal{R}(\mathcal{U}, \mathcal{U})$$
 - The hierarchy of stable observers (particles, atoms, molecules) would be the *structure* of $\mathcal{U}$
 - The "unreasonable effectiveness of mathematics" would have a structural explanation: mathematics describes the fixed-point structure of self-consistent observation
 
-**Status.** These are conjectures — clearly stated, not claimed as proven. The framework identifies them as the deepest open problems. Progress on Conjectures 7.1–7.2 would resolve issues (c) and (d) of the expert assessment: fixed-point uniqueness and the cosmological constant.
+**Status.** These are conjectures — clearly stated, not claimed as proven. The framework identifies them as the deepest open problems. Progress on Conjectures 7.1–7.2 would resolve the two deepest open questions: fixed-point uniqueness and the cosmological constant.
 
 ### Topological Consequence: The Network Is Boundaryless
 
