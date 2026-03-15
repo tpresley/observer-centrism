@@ -17,8 +17,75 @@ const nonViableCount = stats.byStatus['non-viable'] || 0
 ---
 
 <MainLayout title="Home">
-  <h1>Observer-Centrism</h1>
-  <p class="subtitle">Physics from Three Axioms</p>
+  <div class="hero">
+    <div class="hero-logo" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="30 30 340 340">
+        <defs>
+          <filter id="glow-blue" x="-40%" y="-40%" width="180%" height="180%">
+            <feGaussianBlur stdDeviation="4" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="glow-core" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="6" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <radialGradient id="core-grad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#eff6ff" stop-opacity="1"/>
+            <stop offset="60%" stop-color="#93c5fd" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#2563eb" stop-opacity="0.7"/>
+          </radialGradient>
+        </defs>
+        <!-- Concentric phase rings -->
+        <circle cx="200" cy="200" r="155" fill="none" stroke="#2563eb" stroke-width="2.5" opacity="0.35"/>
+        <circle cx="200" cy="200" r="108" fill="none" stroke="#2563eb" stroke-width="2" opacity="0.55"/>
+        <circle cx="200" cy="200" r="62" fill="none" stroke="#2563eb" stroke-width="1.8" opacity="0.75"/>
+        <!-- Bright arc -->
+        <path d="M 200,200 m 155,0 A 155,155 0 1 1 224.9,47.1" fill="none" stroke="#60a5fa" stroke-width="3.5" stroke-linecap="round" opacity="0.9" filter="url(#glow-blue)"/>
+        <!-- Outer edges -->
+        <line x1="355" y1="200" x2="277.5" y2="334.2" stroke="#3b82f6" stroke-width="1.4" opacity="0.5" stroke-linecap="round"/>
+        <line x1="277.5" y1="334.2" x2="122.5" y2="334.2" stroke="#3b82f6" stroke-width="1.4" opacity="0.5" stroke-linecap="round"/>
+        <line x1="122.5" y1="334.2" x2="45" y2="200" stroke="#3b82f6" stroke-width="1.4" opacity="0.5" stroke-linecap="round"/>
+        <line x1="45" y1="200" x2="122.5" y2="65.8" stroke="#3b82f6" stroke-width="1.4" opacity="0.5" stroke-linecap="round"/>
+        <line x1="122.5" y1="65.8" x2="277.5" y2="65.8" stroke="#3b82f6" stroke-width="1.4" opacity="0.5" stroke-linecap="round"/>
+        <line x1="277.5" y1="65.8" x2="355" y2="200" stroke="#3b82f6" stroke-width="1.4" opacity="0.5" stroke-linecap="round"/>
+        <!-- Inner triangle -->
+        <line x1="200" y1="92" x2="106.5" y2="254" stroke="#93c5fd" stroke-width="2" opacity="0.85" stroke-linecap="round"/>
+        <line x1="106.5" y1="254" x2="293.5" y2="254" stroke="#93c5fd" stroke-width="2" opacity="0.85" stroke-linecap="round"/>
+        <line x1="293.5" y1="254" x2="200" y2="92" stroke="#93c5fd" stroke-width="2" opacity="0.85" stroke-linecap="round"/>
+        <!-- Spokes -->
+        <line x1="200" y1="92" x2="200" y2="200" stroke="#93c5fd" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
+        <line x1="106.5" y1="254" x2="200" y2="200" stroke="#93c5fd" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
+        <line x1="293.5" y1="254" x2="200" y2="200" stroke="#93c5fd" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
+        <!-- Boundary circles -->
+        <circle cx="355" cy="200" r="14" fill="none" stroke="#1d4ed8" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.4"/>
+        <circle cx="277.5" cy="334.2" r="14" fill="none" stroke="#1d4ed8" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.4"/>
+        <circle cx="122.5" cy="334.2" r="14" fill="none" stroke="#1d4ed8" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.4"/>
+        <circle cx="45" cy="200" r="14" fill="none" stroke="#1d4ed8" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.4"/>
+        <circle cx="122.5" cy="65.8" r="14" fill="none" stroke="#1d4ed8" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.4"/>
+        <circle cx="277.5" cy="65.8" r="14" fill="none" stroke="#1d4ed8" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.4"/>
+        <!-- Outer nodes -->
+        <circle cx="355" cy="200" r="7" fill="#2563eb" filter="url(#glow-blue)"/>
+        <circle cx="277.5" cy="334.2" r="7" fill="#2563eb" filter="url(#glow-blue)"/>
+        <circle cx="122.5" cy="334.2" r="7" fill="#2563eb" filter="url(#glow-blue)"/>
+        <circle cx="45" cy="200" r="7" fill="#2563eb" filter="url(#glow-blue)"/>
+        <circle cx="122.5" cy="65.8" r="7" fill="#2563eb" filter="url(#glow-blue)"/>
+        <circle cx="277.5" cy="65.8" r="7" fill="#2563eb" filter="url(#glow-blue)"/>
+        <!-- Inner nodes -->
+        <circle cx="200" cy="92" r="6" fill="#2563eb" filter="url(#glow-blue)"/>
+        <circle cx="106.5" cy="254" r="6" fill="#2563eb" filter="url(#glow-blue)"/>
+        <circle cx="293.5" cy="254" r="6" fill="#2563eb" filter="url(#glow-blue)"/>
+        <!-- Core -->
+        <circle cx="200" cy="200" r="22" fill="url(#core-grad)" filter="url(#glow-core)"/>
+        <circle cx="200" cy="200" r="10" fill="#eff6ff" opacity="0.95"/>
+        <!-- Phase tick -->
+        <circle cx="349.7" cy="159.9" r="4.5" fill="#eff6ff" filter="url(#glow-core)" opacity="0.85"/>
+      </svg>
+    </div>
+    <div class="hero-text">
+      <h1>Observer-Centrism</h1>
+      <p class="subtitle">Physics from Three Axioms</p>
+    </div>
+  </div>
 
   <p>
     Why is science possible? Not in the philosophical sense &mdash; in the
@@ -126,10 +193,64 @@ const nonViableCount = stats.byStatus['non-viable'] || 0
 </MainLayout>
 
 <style>
-  .subtitle {
-    font-size: 1.15rem;
-    color: var(--color-text-muted);
-    margin-bottom: 1.5rem;
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    background: linear-gradient(135deg, #0f1117 0%, #1e2535 50%, #0f1117 100%);
+    border-radius: 12px;
+    padding: 2.5rem 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-logo {
+    flex-shrink: 0;
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-logo svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .hero-text h1 {
+    color: #eff6ff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 0.35rem;
+    letter-spacing: -0.02em;
+    border: none;
+    padding: 0;
+  }
+
+  .hero-text .subtitle {
+    color: #93c5fd;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 600px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      gap: 1.5rem;
+    }
+    .hero-logo {
+      width: 140px;
+      height: 140px;
+    }
+    .hero-text h1 {
+      font-size: 1.75rem;
+    }
+    .hero-text .subtitle {
+      font-size: 1rem;
+    }
   }
 
   .cta-grid {
