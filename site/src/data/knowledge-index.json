@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-15T01:29:02.722Z",
+    "generatedAt": "2026-03-15T03:07:31.425Z",
     "derivationCount": 61,
     "predictionCount": 10,
     "gaPageCount": 12,
@@ -8,9 +8,9 @@
   },
   "stats": {
     "byStatus": {
-      "rigorous": 58,
+      "rigorous": 59,
       "non-viable": 1,
-      "provisional": 2
+      "provisional": 1
     },
     "derivationCount": 61,
     "predictionCount": 10,
@@ -1934,15 +1934,15 @@
       "id": "cosmology/observer-loop-viability",
       "filePath": "site/src/content/derivations/cosmology/observer-loop-viability.md",
       "title": "Observer Loop Viability Bounds",
-      "status": "provisional",
-      "rigorLevel": "semi-formal",
+      "status": "rigorous",
+      "rigorLevel": "formal",
       "group": "cosmology",
       "tags": [
         "cosmology",
         "quantum-gravity"
       ],
-      "summary": "The three axioms constrain which spacetimes can host observer triples. The Planck-scale upper bound (Λ < 3/ℓ_P²) follows from geometric viability. The sign prediction (Λ ≥ 0) follows from coherence conservation: a Λ < 0 bounce destroys all observer structures, leaving coherence with no valid carrier — violating Axiom 1.",
-      "lastUpdated": "2026-03-13",
+      "summary": "The three axioms constrain which spacetimes can host observer networks. The Planck-scale upper bound (Λ < 3/ℓ_P²) follows from geometric viability. The sign prediction (Λ ≥ 0) follows from coherence conservation: a Λ < 0 bounce destroys all observer structures via divergent effective pressure, leaving coherence with no valid carrier — violating Axiom 1.",
+      "lastUpdated": "2026-03-14",
       "dependsOn": [
         "spacetime/singularity-resolution",
         "holography/area-scaling",
@@ -1994,7 +1994,7 @@
           "type": "Definition",
           "id": "1.1.",
           "name": "",
-          "statementPreview": "A spacetime is **observer-viable** if it admits at least one pair of observer triples (Sigmai, Ii, Bi) for i = 1, 2 s..."
+          "statementPreview": "A spacetime is **observer-viable** if it admits a network of observer triples (Sigmai, Ii, Bi) satisfying:"
         },
         {
           "type": "Definition",
@@ -2150,13 +2150,17 @@
           "description": "The entropy identification (Proposition 7.5) explains the hierarchy qualitatively via the second law. A *quantitative* prediction of Lambda requires formalizing a geometry functor G: mathbfObs mathbfG"
         }
       ],
-      "assessmentVerdict": "Provisional. The Planck-scale upper bound (Theorem 2.1) is essentially rigorous. The sign prediction (Theorem 5.4) follows logically from coherence conservation + the framework's coherence ontology + bounce dissolution — the weakest link is the semi-formal character of Theorem 4.1 (bounce dissolutio",
+      "assessmentVerdict": "Rigorous. The core results form a rigorous chain: the geometric upper bound (Theorem 2.1) follows from the Planck cutoff and de Sitter geometry; the bounce dissolution (Theorem 4.1) follows from the divergent effective pressure exceeding any finite observer energy; the sign prediction (Theorem 5.4) ",
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
           {
             "target": "minimal-observer/multiplicity",
             "context": "Multiplicity"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap Mechanism"
           },
           {
             "target": "holography/area-scaling",
@@ -2188,15 +2192,11 @@
           },
           {
             "target": "spacetime/singularity-resolution",
-            "context": "Theorem 4.1, step iv"
-          },
-          {
-            "target": "spacetime/singularity-resolution",
-            "context": "Singularity Resolution"
-          },
-          {
-            "target": "spacetime/singularity-resolution",
             "context": "Theorem 4.1, step v"
+          },
+          {
+            "target": "spacetime/singularity-resolution",
+            "context": "Corollary 2.2"
           },
           {
             "target": "interactions/relational-invariants",
@@ -2213,10 +2213,6 @@
           {
             "target": "thermodynamics/time",
             "context": "Time as Phase Ordering"
-          },
-          {
-            "target": "interactions/bootstrap",
-            "context": "Bootstrap Mechanism"
           },
           {
             "target": "holography/er-epr",
@@ -2249,6 +2245,10 @@
           {
             "target": "holography/area-scaling",
             "context": "Holographic Entropy Bound"
+          },
+          {
+            "target": "spacetime/singularity-resolution",
+            "context": "Singularity Resolution"
           },
           {
             "target": "holography/er-epr",
@@ -7632,6 +7632,10 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "minimal-observer/multiplicity",
+            "context": "Multiplicity Is Necessary"
+          },
+          {
             "target": "axioms/observer-definition",
             "context": "Observer Definition"
           },
@@ -7690,10 +7694,6 @@
           {
             "target": "axioms/coherence-operational",
             "context": "Coherence as Physical Primitive"
-          },
-          {
-            "target": "minimal-observer/multiplicity",
-            "context": "Multiplicity Is Necessary"
           },
           {
             "target": "holography/area-scaling",
@@ -7760,6 +7760,10 @@
           {
             "source": "interactions/relational-invariants",
             "context": "Bootstrap"
+          },
+          {
+            "source": "minimal-observer/multiplicity",
+            "context": "Bootstrap Mechanism"
           },
           {
             "source": "minimal-observer/multiplicity",
@@ -8824,7 +8828,7 @@
           "type": "Theorem",
           "id": "7.1.",
           "name": "",
-          "statementPreview": "The multiplicity theorem is realized by a pair of U(1) phase oscillators in a product coherence space.*"
+          "statementPreview": "The multiplicity theorem (Steps 1–6: single observer is vacuous, pairs are necessary, composites inherit duals) is re..."
         }
       ],
       "structuralPostulates": [],
@@ -8849,6 +8853,10 @@
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap Mechanism"
+          },
           {
             "target": "axioms/coherence-conservation",
             "context": "Coherence Conservation"
@@ -8897,6 +8905,10 @@
           },
           {
             "source": "interactions/bootstrap",
+            "context": "Multiplicity Is Necessary"
+          },
+          {
+            "source": "interactions/bootstrap",
             "context": "Proposition 4.1"
           },
           {
@@ -8906,10 +8918,6 @@
           {
             "source": "interactions/bootstrap",
             "context": "Theorem 2.1"
-          },
-          {
-            "source": "interactions/bootstrap",
-            "context": "Multiplicity Is Necessary"
           },
           {
             "source": "interactions/relational-invariants",
@@ -13008,15 +13016,15 @@
           },
           {
             "source": "cosmology/observer-loop-viability",
-            "context": "Theorem 4.1, step iv"
+            "context": "Theorem 4.1, step v"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
+            "context": "Corollary 2.2"
           },
           {
             "source": "cosmology/observer-loop-viability",
             "context": "Singularity Resolution"
-          },
-          {
-            "source": "cosmology/observer-loop-viability",
-            "context": "Theorem 4.1, step v"
           },
           {
             "source": "holography/hawking-radiation",
@@ -23545,42 +23553,42 @@
     },
     {
       "derivationId": "cosmology/observer-loop-viability",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 1,
       "title": "Dynamical holographic bound",
       "description": "The holographic entropy bound ([Area Scaling](/derivations/holography/area-scaling)) is proved for static boundaries. Extending it to the de Sitter cosmological horizon (which is static in the static "
     },
     {
       "derivationId": "cosmology/observer-loop-viability",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 2,
       "title": "Minimum non-self coherence",
       "description": "The key gap blocking a tighter bound. What is the minimum coherence content of the non-self side of B required for Lyapunov-stable loop closure? The multiplicity theorem establishes Cnon-self > 0 but "
     },
     {
       "derivationId": "cosmology/observer-loop-viability",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 3,
       "title": "Sharpening to $\\Lambda > 0$",
       "description": "The sign prediction Lambda 0 (Theorem 5.4) does not distinguish Lambda = 0 from Lambda > 0. Does the structural arrow of time (monotonically increasing relational invariant depth) require eternal expa"
     },
     {
       "derivationId": "cosmology/observer-loop-viability",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 4,
       "title": "Bounce prohibition scope",
       "description": "Theorem 5.2 prohibits the Planck-density bounce in Lambda < 0 FRW cosmologies via coherence conservation. Does the same argument extend to *all* global recollapse scenarios, including anisotropic cosm"
     },
     {
       "derivationId": "cosmology/observer-loop-viability",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 5,
       "title": "Gibbons-Hawking stability",
       "description": "The de Sitter horizon radiates at the Gibbons-Hawking temperature TGH = hbar H/(2pi kB). Whether this thermal background destabilizes observer loops depends on the detailed interaction between GH radi"
     },
     {
       "derivationId": "cosmology/observer-loop-viability",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 6,
       "title": "Geometry functor and quantitative $\\Lambda$",
       "description": "The entropy identification (Proposition 7.5) explains the hierarchy qualitatively via the second law. A *quantitative* prediction of Lambda requires formalizing a geometry functor G: mathbfObs mathbfG"
