@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-14T23:36:38.419Z",
+    "generatedAt": "2026-03-15T01:29:02.722Z",
     "derivationCount": 61,
     "predictionCount": 10,
     "gaPageCount": 12,
@@ -15,7 +15,7 @@
     "derivationCount": 61,
     "predictionCount": 10,
     "edgeCount": 129,
-    "formalObjectCount": 897,
+    "formalObjectCount": 901,
     "openGapCount": 201,
     "upgradeEligibleCount": 0,
     "leanVerifiedCount": 8,
@@ -411,14 +411,14 @@
         {
           "type": "Theorem",
           "id": "1.1",
-          "name": "Quantum entropy satisfies C1–C5",
+          "name": "Quantum entropy satisfies Axiom 1",
           "statementPreview": "Let rho be a density operator on a composite Hilbert space H = bigotimesi Hi. For any subsystem S (a subset of the te..."
         },
         {
           "type": "Corollary",
           "id": "1.2",
           "name": "Converse direction",
-          "statementPreview": "The quantum entropy model satisfies C1–C5 with strict subadditivity whenever the global state is entangled: for any e..."
+          "statementPreview": "The quantum entropy model satisfies Axiom 1 with strict subadditivity whenever the global state is entangled: for any..."
         },
         {
           "type": "Theorem",
@@ -491,15 +491,15 @@
         {
           "number": 2,
           "title": "Rényi generalization",
-          "description": "The axioms C1–C5 are also satisfied by Rényi entropies Salpha(rho) = (1-alpha)-1logTr(rhoalpha) for alpha in (0,1) (strong subadditivity holds in this range). Whether the framework selects von Neumann"
+          "description": "Axiom 1 is also satisfied by Rényi entropies Salpha(rho) = (1-alpha)-1logTr(rhoalpha) for alpha in (0,1) (strong subadditivity holds in this range). Whether the framework selects von Neumann (alpha = "
         },
         {
           "number": 3,
           "title": "Algebraic vs. measure-theoretic coherence",
-          "description": "The σ-algebra formulation (C1–C5) and the Hilbert space formulation (C = langlepsi|psirangle) operate at different levels. The former concerns subsystem structure; the latter concerns state-level prop"
+          "description": "The σ-algebra formulation (Axiom 1, conditions C1–C5) and the Hilbert space formulation (C = langlepsi|psirangle) operate at different levels. The former concerns subsystem structure; the latter conce"
         }
       ],
-      "assessmentVerdict": "The convergence results are mathematical facts — they show that C1–C5 are satisfied by quantum entropy, that the derived quantities match quantum information quantities, and that the coherence functional on states is uniquely determined. The promotion of S1 to a theorem depends on the composition co",
+      "assessmentVerdict": "The convergence results are mathematical facts — they show that the conditions of Axiom 1 are satisfied by quantum entropy, that the derived quantities match quantum information quantities, and that the coherence functional on states is uniquely determined. The promotion of S1 to a theorem depends o",
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
@@ -525,6 +525,14 @@
           }
         ],
         "incoming": [
+          {
+            "source": "interactions/bootstrap",
+            "context": "Coherence as Physical Primitive"
+          },
+          {
+            "source": "minimal-observer/multiplicity",
+            "context": "Coherence as Physical Primitive"
+          },
           {
             "source": "quantum/born-rule",
             "context": "Coherence as Physical Primitive"
@@ -6130,6 +6138,10 @@
             "context": "Holographic Entropy Bound"
           },
           {
+            "source": "interactions/bootstrap",
+            "context": "Holographic Entropy Bound"
+          },
+          {
             "source": "quantum/entanglement",
             "context": "Area Scaling"
           },
@@ -7579,6 +7591,12 @@
           "id": "6.2",
           "name": "Ceiling",
           "statementPreview": "The hierarchy has no finite upper bound on levels but is bounded by the total coherence. Each relational invariant ha..."
+        },
+        {
+          "type": "Corollary",
+          "id": "7.3",
+          "name": "No boundary",
+          "statementPreview": "The observer network determined by the bootstrap fixed point has no boundary. It is either spatially infinite or fini..."
         }
       ],
       "structuralPostulates": [],
@@ -7601,7 +7619,7 @@
         {
           "number": 4,
           "title": "Fixed-point uniqueness",
-          "description": "Proving Conjecture 7.2 requires a contraction argument or a rigidity result showing the constraints from C1–C5 plus the three axioms admit only one self-consistent solution."
+          "description": "Proving Conjecture 7.2 requires a contraction argument or a rigidity result showing the constraints from Axiom 1 (conditions C1–C5) plus the three axioms admit only one self-consistent solution."
         },
         {
           "number": 5,
@@ -7670,6 +7688,18 @@
             "context": "Observer Loop Viability"
           },
           {
+            "target": "axioms/coherence-operational",
+            "context": "Coherence as Physical Primitive"
+          },
+          {
+            "target": "minimal-observer/multiplicity",
+            "context": "Multiplicity Is Necessary"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Holographic Entropy Bound"
+          },
+          {
             "target": "cosmology/observer-loop-viability",
             "context": "Step 7, Gap 6"
           }
@@ -7729,6 +7759,10 @@
           },
           {
             "source": "interactions/relational-invariants",
+            "context": "Bootstrap"
+          },
+          {
+            "source": "minimal-observer/multiplicity",
             "context": "Bootstrap"
           },
           {
@@ -8632,7 +8666,7 @@
       "tags": [
         "foundation"
       ],
-      "summary": "A single isolated observer has zero coherence content and is structurally impossible — at least two mutually defining observers must coexist",
+      "summary": "A single observer is vacuous and pairs are insufficient — strong subadditivity requires at least three observers, and the bootstrap propagates this into a full network",
       "lastUpdated": "2026-03-09",
       "dependsOn": [
         "minimal-observer/structure",
@@ -8671,6 +8705,10 @@
         {
           "number": 6,
           "title": "Multiplicity for Composite Observers"
+        },
+        {
+          "number": 7,
+          "title": "Beyond Pairs — The Observer Network"
         }
       ],
       "formalObjects": [
@@ -8765,6 +8803,24 @@
           "statementPreview": "The multiplicity theorem does not generate an infinite tower of required duals. Composite observers at every level of..."
         },
         {
+          "type": "Proposition",
+          "id": "7.1",
+          "name": "C5 is vacuous on pairs",
+          "statementPreview": "If H contains exactly two observers O1, O2 with Sigma1 Sigma2 = H, then strong subadditivity (C5 of [Coherence Conser..."
+        },
+        {
+          "type": "Theorem",
+          "id": "7.2",
+          "name": "Pairs are insufficient",
+          "statementPreview": "The framework requires at least three independent observer subsystems.*"
+        },
+        {
+          "type": "Corollary",
+          "id": "7.3",
+          "name": "The observer network",
+          "statementPreview": "The bootstrap propagates the three-subsystem requirement into a full network. If H contains observers O1, O2, O3, eac..."
+        },
+        {
           "type": "Theorem",
           "id": "7.1.",
           "name": "",
@@ -8775,8 +8831,8 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Minimum number",
-          "description": "The theorem proves 2. Is 2 the exact minimum, or does the topology of H require more? For the coherence space to have non-trivial structure supporting two mutually defining observers, H may need furth"
+          "title": "Minimum number (partially resolved)",
+          "description": "Theorem 7.2 proves 3 (pairs are insufficient). Corollary 7.3 shows the bootstrap propagates this into a network. The exact minimum cardinality of a self-consistent observer network remains open — it d"
         },
         {
           "number": 2,
@@ -8789,7 +8845,7 @@
           "description": "Can the pair be asymmetric (C(O1) C(O2))? If so, the asymmetry introduces a direction in coherence space — possibly connecting to charge conjugation asymmetry."
         }
       ],
-      "assessmentVerdict": "The core result — a single observer is vacuous, multiplicity is necessary — is proved rigorously from the axioms. The coherence budget is correctly derived. The only assumption beyond the axioms is the universality of the observer definition (Corollary 3.2), which is clearly flagged and separated fr",
+      "assessmentVerdict": "The core results — a single observer is vacuous, multiplicity is necessary, and pairs are insufficient — are proved rigorously from the axioms. The coherence budget is correctly derived. The network corollary (7.3) additionally relies on the universality assumption (Corollary 3.2) and the bootstrap ",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -8816,6 +8872,14 @@
           {
             "target": "minimal-observer/coherence-dual-pairs",
             "context": "Definition 6.1"
+          },
+          {
+            "target": "axioms/coherence-operational",
+            "context": "Coherence as Physical Primitive"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap"
           }
         ],
         "incoming": [
@@ -8842,6 +8906,10 @@
           {
             "source": "interactions/bootstrap",
             "context": "Theorem 2.1"
+          },
+          {
+            "source": "interactions/bootstrap",
+            "context": "Multiplicity Is Necessary"
           },
           {
             "source": "interactions/relational-invariants",
@@ -17170,7 +17238,7 @@
       "derivationId": "axioms/coherence-operational",
       "type": "Theorem",
       "id": "1.1",
-      "name": "Quantum entropy satisfies C1–C5",
+      "name": "Quantum entropy satisfies Axiom 1",
       "fullRef": "axioms/coherence-operational:Theorem 1.1"
     },
     {
@@ -20128,6 +20196,13 @@
       "fullRef": "interactions/bootstrap:Proposition 6.2"
     },
     {
+      "derivationId": "interactions/bootstrap",
+      "type": "Corollary",
+      "id": "7.3",
+      "name": "No boundary",
+      "fullRef": "interactions/bootstrap:Corollary 7.3"
+    },
+    {
       "derivationId": "interactions/relational-invariants",
       "type": "Definition",
       "id": "1.1.",
@@ -20511,6 +20586,27 @@
       "id": "6.5",
       "name": "No infinite regress",
       "fullRef": "minimal-observer/multiplicity:Corollary 6.5"
+    },
+    {
+      "derivationId": "minimal-observer/multiplicity",
+      "type": "Proposition",
+      "id": "7.1",
+      "name": "C5 is vacuous on pairs",
+      "fullRef": "minimal-observer/multiplicity:Proposition 7.1"
+    },
+    {
+      "derivationId": "minimal-observer/multiplicity",
+      "type": "Theorem",
+      "id": "7.2",
+      "name": "Pairs are insufficient",
+      "fullRef": "minimal-observer/multiplicity:Theorem 7.2"
+    },
+    {
+      "derivationId": "minimal-observer/multiplicity",
+      "type": "Corollary",
+      "id": "7.3",
+      "name": "The observer network",
+      "fullRef": "minimal-observer/multiplicity:Corollary 7.3"
     },
     {
       "derivationId": "minimal-observer/multiplicity",
@@ -23340,14 +23436,14 @@
       "derivationStatus": "rigorous",
       "number": 2,
       "title": "Rényi generalization",
-      "description": "The axioms C1–C5 are also satisfied by Rényi entropies Salpha(rho) = (1-alpha)-1logTr(rhoalpha) for alpha in (0,1) (strong subadditivity holds in this range). Whether the framework selects von Neumann"
+      "description": "Axiom 1 is also satisfied by Rényi entropies Salpha(rho) = (1-alpha)-1logTr(rhoalpha) for alpha in (0,1) (strong subadditivity holds in this range). Whether the framework selects von Neumann (alpha = "
     },
     {
       "derivationId": "axioms/coherence-operational",
       "derivationStatus": "rigorous",
       "number": 3,
       "title": "Algebraic vs. measure-theoretic coherence",
-      "description": "The σ-algebra formulation (C1–C5) and the Hilbert space formulation (C = langlepsi|psirangle) operate at different levels. The former concerns subsystem structure; the latter concerns state-level prop"
+      "description": "The σ-algebra formulation (Axiom 1, conditions C1–C5) and the Hilbert space formulation (C = langlepsi|psirangle) operate at different levels. The former concerns subsystem structure; the latter conce"
     },
     {
       "derivationId": "axioms/loop-closure",
@@ -23991,7 +24087,7 @@
       "derivationStatus": "rigorous",
       "number": 4,
       "title": "Fixed-point uniqueness",
-      "description": "Proving Conjecture 7.2 requires a contraction argument or a rigidity result showing the constraints from C1–C5 plus the three axioms admit only one self-consistent solution."
+      "description": "Proving Conjecture 7.2 requires a contraction argument or a rigidity result showing the constraints from Axiom 1 (conditions C1–C5) plus the three axioms admit only one self-consistent solution."
     },
     {
       "derivationId": "interactions/bootstrap",
@@ -24067,8 +24163,8 @@
       "derivationId": "minimal-observer/multiplicity",
       "derivationStatus": "rigorous",
       "number": 1,
-      "title": "Minimum number",
-      "description": "The theorem proves 2. Is 2 the exact minimum, or does the topology of H require more? For the coherence space to have non-trivial structure supporting two mutually defining observers, H may need furth"
+      "title": "Minimum number (partially resolved)",
+      "description": "Theorem 7.2 proves 3 (pairs are insufficient). Corollary 7.3 shows the bootstrap propagates this into a network. The exact minimum cardinality of a self-consistent observer network remains open — it d"
     },
     {
       "derivationId": "minimal-observer/multiplicity",

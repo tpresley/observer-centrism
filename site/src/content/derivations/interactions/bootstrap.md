@@ -23,7 +23,7 @@ In standard physics, complexity is treated as a contingent outcome of initial co
 - A universe with two or more observers *cannot* remain static -- the only interaction type that sustains mutual existence necessarily generates new relational structure.
 - Each new level of the hierarchy is genuinely irreducible: it introduces conserved quantities that cannot be expressed in terms of lower-level quantities.
 
-**The result.** The bootstrap produces an infinite hierarchy of observer levels (fundamental particles, bound states, molecules, and beyond), bounded below by minimal loops and bounded above by the total available coherence. This hierarchy is not a contingent accident but a structural consequence of the axioms.
+**The result.** The bootstrap produces an infinite hierarchy of observer levels (fundamental particles, bound states, molecules, and beyond), bounded below by minimal loops and bounded above by the total available coherence. This hierarchy is not a contingent accident but a structural consequence of the axioms. Moreover, the self-consistency requirement forces the observer network to be boundaryless — either spatially infinite or finite and topologically compact — since a boundary would violate coherence conservation and leave edge observers without the interaction partners that strong subadditivity (C5) requires (see [Multiplicity Is Necessary](/derivations/minimal-observer/multiplicity), Theorem 7.2 and Corollary 7.3).
 
 **Why this matters.** The bootstrap is the engine behind essentially all the framework's predictions about particle physics. It explains why the universe is complex, why bound states exist, and why higher-level sciences (chemistry, biology) are not merely convenient approximations but reflect genuinely irreducible structure.
 
@@ -162,7 +162,10 @@ $$N \leq C_0 / \mathcal{C}_{\min}$$
 - Conjecture 7.1: Bootstrap fixed-point existence ($\mathcal{U} \cong \mathcal{R}(\mathcal{U}, \mathcal{U})$)
 - Conjecture 7.2: Fixed-point uniqueness (given $\mathcal{C}(\mathcal{U}) = C_0$)
 
-**Assessment:** The core results — relational invariants are observers (Theorem 1.1), the hierarchy is closed under iteration (Proposition 2.1), and the hierarchy is necessary (Theorem 3.1) — are rigorously established from the axioms and dependencies. The incommensurate-period case and necessity argument are now complete proofs. The category-theoretic full functor structure is honestly deferred. The fixed-point conjectures are precisely stated with identified proof strategies but remain open.
+**Rigorous given axioms:**
+- Corollary 7.3: No boundary (from coherence conservation + multiplicity Theorem 7.2 + bootstrap self-consistency)
+
+**Assessment:** The core results — relational invariants are observers (Theorem 1.1), the hierarchy is closed under iteration (Proposition 2.1), and the hierarchy is necessary (Theorem 3.1) — are rigorously established from the axioms and dependencies. The incommensurate-period case and necessity argument are now complete proofs. Corollary 7.3 (no boundary) is rigorous given the multiplicity results and coherence conservation. The category-theoretic full functor structure is honestly deferred. The fixed-point conjectures are precisely stated with identified proof strategies but remain open.
 
 ## The Bootstrap Fixed-Point Conjecture
 
@@ -204,6 +207,24 @@ $$\mathcal{U} \cong \mathcal{R}(\mathcal{U}, \mathcal{U})$$
 - The "unreasonable effectiveness of mathematics" would have a structural explanation: mathematics describes the fixed-point structure of self-consistent observation
 
 **Status.** These are conjectures — clearly stated, not claimed as proven. The framework identifies them as the deepest open problems. Progress on Conjectures 7.1–7.2 would resolve issues (c) and (d) of the expert assessment: fixed-point uniqueness and the cosmological constant.
+
+### Topological Consequence: The Network Is Boundaryless
+
+The observer network — whose existence follows from the multiplicity theorem — constrains the topology of the fixed point.
+
+**Corollary 7.3 (No boundary).** *The observer network determined by the bootstrap fixed point has no boundary. It is either spatially infinite or finite and topologically compact (closed without edge).*
+
+*Proof.* Suppose for contradiction that the network has a boundary — a region where the observer structure terminates. Consider an observer $\mathcal{O}$ near this boundary.
+
+**(i) Coherence leak.** By coherence conservation ([Coherence as Physical Primitive](/derivations/axioms/coherence-operational), Proposition 3.3(iii)), the universe is a closed ontology: no information flows in or out. A boundary where the network terminates would be a surface across which coherence has no structured partner — the coherence content at the boundary either leaks (violating conservation) or requires an unexplained boundary condition not derived from the axioms.
+
+**(ii) C5 failure at the boundary.** By [Multiplicity Is Necessary](/derivations/minimal-observer/multiplicity) Theorem 7.2, each observer requires at least two independent interaction partners for strong subadditivity (C5) to be non-trivial. An observer at the network boundary would face fewer partners on one side than required — C5 would become vacuous at that boundary, and the derivation chain (Born rule, gauge structure, particle spectrum) would fail locally.
+
+**(iii) Bootstrap inconsistency.** The fixed-point equation $\mathcal{U} \cong \mathcal{R}(\mathcal{U}, \mathcal{U})$ requires the network to reproduce itself under the bootstrap map. A boundary is not reproducible: $\mathcal{R}$ applied to a bounded structure would generate observers at the boundary that need partners beyond it, extending the network past any proposed edge.
+
+Therefore the network has no boundary. The two consistent topologies are: infinite extent (every observer has partners because the network continues without bound) or finite and compact (every observer has partners because the topology wraps, as in a 3-sphere). $\square$
+
+**Remark.** This does not determine which topology the fixed point selects — that depends on whether $C_0$ is finite or infinite. The holographic bound ([Holographic Entropy Bound](/derivations/holography/area-scaling)) suggests finite $C_0$ for a compact universe, which would favor the finite-compact case. But both remain consistent with the axioms until Conjectures 7.1–7.2 are resolved.
 
 ## Open Gaps
 
