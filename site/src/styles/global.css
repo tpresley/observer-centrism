@@ -68,17 +68,36 @@ body {
   font-weight: 600;
 }
 
+.sidebar .site-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  padding: 0;
+  margin-bottom: 1rem;
+  border: none;
+}
+
+.sidebar .site-brand:hover {
+  background: none;
+}
+
+.sidebar .site-logo {
+  flex-shrink: 0;
+  border-radius: 6px;
+}
+
 .sidebar .site-title {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--color-text);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.1rem;
 }
 
 .sidebar .site-subtitle {
   font-size: 0.75rem;
   color: var(--color-text-muted);
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 .main-content {
