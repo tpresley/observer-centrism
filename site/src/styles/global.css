@@ -416,6 +416,32 @@ html {
   animation-play-state: paused;
 }
 
+/* ── Tables ── */
+.main-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.main-content th,
+.main-content td {
+  padding: 0.45rem 0.75rem;
+  border: 1px solid var(--color-border);
+  text-align: left;
+}
+
+.main-content th {
+  background: #f5f5f4;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.main-content tr:hover {
+  background: #fafaf9;
+}
+
 /* KaTeX overrides */
 .katex-display {
   margin: 1.5rem 0;

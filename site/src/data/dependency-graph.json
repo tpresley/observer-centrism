@@ -3,6 +3,7 @@
     { "id": "axioms/coherence-conservation", "title": "Coherence Conservation", "group": "foundation", "status": "rigorous" },
     { "id": "axioms/observer-definition", "title": "Observer Definition", "group": "foundation", "status": "rigorous" },
     { "id": "axioms/loop-closure", "title": "Loop Closure", "group": "foundation", "status": "rigorous" },
+    { "id": "axioms/coherence-operational", "title": "Coherence as Physical Primitive", "group": "foundation", "status": "rigorous" },
     { "id": "minimal-observer/structure", "title": "Minimal Observer Structure", "group": "foundation", "status": "rigorous" },
     { "id": "minimal-observer/multiplicity", "title": "Multiplicity Is Necessary", "group": "foundation", "status": "rigorous" },
     { "id": "minimal-observer/coherence-dual-pairs", "title": "Coherence-Dual Pairs", "group": "foundation", "status": "rigorous" },
@@ -62,6 +63,8 @@
     { "id": "cosmology/observer-loop-viability", "title": "Observer Loop Viability Bounds", "group": "cosmology", "status": "draft" }
   ],
   "edges": [
+    { "from": "axioms/coherence-conservation", "to": "axioms/coherence-operational" },
+    { "from": "axioms/coherence-operational", "to": "quantum/born-rule" },
     { "from": "axioms/coherence-conservation", "to": "axioms/observer-definition" },
     { "from": "axioms/coherence-conservation", "to": "axioms/loop-closure" },
     { "from": "axioms/observer-definition", "to": "axioms/loop-closure" },

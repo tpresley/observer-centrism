@@ -146,8 +146,10 @@
     "postulateId": "S1",
     "shortName": "Amplitude\u2013coherence identification",
     "statement": "The coherence measure restricted to transition amplitudes satisfies C(|\u03c8\u27e9) = \u27e8\u03c8|\u03c8\u27e9 = \u03a3_k |\u03c8_k|\u00b2.",
-    "justification": "Bridges the abstract coherence framework and quantum mechanics: the coherence content of a quantum state equals its squared norm, making coherence conservation equivalent to unitarity.",
-    "group": "quantum"
+    "justification": "Now a theorem (Theorem 0.1): the unique continuous, U(1)-invariant, composition-compatible coherence functional on quantum states is the squared norm, via the Cauchy multiplicative equation. Derived in Coherence as Physical Primitive (Theorem 4.1).",
+    "group": "quantum",
+    "derivedFrom": "axioms/coherence-operational",
+    "derivedFromTitle": "Coherence as Physical Primitive"
   },
   {
     "id": "preferred-basis-s1",

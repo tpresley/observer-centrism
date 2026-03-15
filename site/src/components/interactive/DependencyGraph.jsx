@@ -242,7 +242,10 @@ function collectDescendants(nodeId, childMap) {
 
 /** Lay out nodes into { id -> {x,y} } positions. */
 function layoutNodes(nodes, edges, width) {
-  const axiomIds = new Set(nodes.filter(n => n.id.startsWith('axioms/')).map(n => n.id))
+  // Only the three foundational axioms belong in the "Axioms" box;
+  // other pages in axioms/ (e.g. coherence-operational) are derivations about the axioms.
+  const AXIOM_IDS = ['axioms/coherence-conservation', 'axioms/observer-definition', 'axioms/loop-closure']
+  const axiomIds = new Set(AXIOM_IDS.filter(id => nodes.some(n => n.id === id)))
   const depths = computeDepths(nodes, edges, axiomIds)
   const maxDepth = Math.max(0, ...Object.values(depths))
 

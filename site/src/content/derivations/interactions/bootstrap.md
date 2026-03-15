@@ -158,11 +158,57 @@ $$N \leq C_0 / \mathcal{C}_{\min}$$
 - Precise value of $\mathcal{C}_{\min} = \hbar$ (requires Action and Planck's Constant)
 - Growth rate of the hierarchy (requires entropy and thermodynamic arrow)
 
-**Assessment:** The core results — relational invariants are observers (Theorem 1.1), the hierarchy is closed under iteration (Proposition 2.1), and the hierarchy is necessary (Theorem 3.1) — are rigorously established from the axioms and dependencies. The incommensurate-period case and necessity argument are now complete proofs. The category-theoretic full functor structure is honestly deferred.
+**Conjectures (precisely stated, not claimed as proven):**
+- Conjecture 7.1: Bootstrap fixed-point existence ($\mathcal{U} \cong \mathcal{R}(\mathcal{U}, \mathcal{U})$)
+- Conjecture 7.2: Fixed-point uniqueness (given $\mathcal{C}(\mathcal{U}) = C_0$)
+
+**Assessment:** The core results — relational invariants are observers (Theorem 1.1), the hierarchy is closed under iteration (Proposition 2.1), and the hierarchy is necessary (Theorem 3.1) — are rigorously established from the axioms and dependencies. The incommensurate-period case and necessity argument are now complete proofs. The category-theoretic full functor structure is honestly deferred. The fixed-point conjectures are precisely stated with identified proof strategies but remain open.
+
+## The Bootstrap Fixed-Point Conjecture
+
+The deepest open question in the framework is whether the bootstrap has a unique fixed point — whether the axioms determine *one* universe or a landscape of possibilities.
+
+**Conjecture 7.1 (Bootstrap Fixed Point).** *There exists a reflexive object $\mathcal{U}$ in the observer category $\mathbf{Obs}$ satisfying the domain equation:*
+
+$$\mathcal{U} \cong \mathcal{R}(\mathcal{U}, \mathcal{U})$$
+
+*where $\mathcal{R}$ is the bootstrap map (Proposition 5.1). The fixed point $\mathcal{U}$ represents a self-consistent universe that is its own observer.*
+
+**Conjecture 7.2 (Uniqueness).** *The fixed point of Conjecture 7.1 is unique (up to isomorphism in $\mathbf{Obs}$), given the constraint $\mathcal{C}(\mathcal{U}) = C_0$.*
+
+**Formal structure.** The domain equation $\mathcal{U} \cong \mathcal{R}(\mathcal{U}, \mathcal{U})$ is a *reflexive domain equation* in the sense of Dana Scott (1972). In Scott's theory, reflexive objects exist in categories of continuous lattices where every endomorphism has a fixed point. The key conditions are:
+
+1. **Continuity**: The bootstrap map $\mathcal{R}$ must be Scott-continuous — it preserves directed limits. Physically: the bootstrap applied to increasingly complex observers converges to a limiting structure.
+2. **Boundedness**: The coherence ceiling (Proposition 6.2) ensures bounded iteration: each level adds coherence, but the total is capped at $C_0$. This provides the compactness needed for fixed-point theorems.
+3. **Monotonicity**: Higher-level observers inherit the structure of lower-level ones (Proposition 2.1). This gives the monotonicity needed for Tarski-style or Banach-style fixed-point arguments.
+
+**Known partial results.**
+
+- **Upper bound**: $C_0 / \mathcal{C}_{\min}$ bounds the total relational structure (Proposition 6.2). The fixed point, if it exists, must be bounded by this ceiling.
+- **Planck-scale bound on $\Lambda$**: If $\mathcal{U}$ determines a spacetime geometry, then $\Lambda < 3/\ell_P^2$ ([Observer Loop Viability](/derivations/cosmology/observer-loop-viability), Theorem 2.1).
+- **Sign prediction**: $\Lambda \geq 0$ ([Observer Loop Viability](/derivations/cosmology/observer-loop-viability), Theorem 5.4).
+- **Iteration closure**: The bootstrap is closed under iteration (Proposition 2.1) — a necessary condition for a fixed point to exist.
+- **Irreducibility**: Each level is genuinely new (Theorem 4.1) — the hierarchy does not collapse, so the fixed point must be infinite-level.
+
+**What a proof would require.** Three mathematical ingredients are needed:
+
+1. **A category with reflexive objects.** The observer category $\mathbf{Obs}$ must be enriched to a category where domain equations have solutions — e.g., a category of continuous coherence spaces with continuous maps.
+2. **Scott continuity of $\mathcal{R}$.** The bootstrap map must preserve directed limits. This is plausible (the level-set construction is continuous in the smooth category) but unproven.
+3. **A contraction or compactness argument.** Either Banach's fixed-point theorem (if $\mathcal{R}$ is contractive) or Schauder's theorem (if the space is compact and $\mathcal{R}$ is continuous) would give existence.
+
+**What the fixed point would determine.** If Conjectures 7.1 and 7.2 are proven:
+
+- $C_0$ would be determined by the fixed-point equation (no longer a free parameter)
+- The cosmological constant $\Lambda$ would follow from the geometric realization of $\mathcal{U}$
+- The hierarchy of stable observers (particles, atoms, molecules) would be the *structure* of $\mathcal{U}$
+- The "unreasonable effectiveness of mathematics" would have a structural explanation: mathematics describes the fixed-point structure of self-consistent observation
+
+**Status.** These are conjectures — clearly stated, not claimed as proven. The framework identifies them as the deepest open problems. Progress on Conjectures 7.1–7.2 would resolve issues (c) and (d) of the expert assessment: fixed-point uniqueness and the cosmological constant.
 
 ## Open Gaps
 
 1. **Growth rate**: The rate of relational invariant generation per interaction determines the cosmological timeline of complexity. This connects to the entropy derivation and the thermodynamic arrow.
 2. **Stability filtering**: Not every relational invariant generated will be stable. The persistent hierarchy consists of those relational invariants whose loops close stably. The fraction of stable relational invariants is an important parameter.
-3. **The fixed-point equation**: The universe as its own observer (maintaining self-consistency) is the fixed point of the bootstrap functor $\mathcal{R}$. Formalizing this as $\mathcal{U} = \mathcal{R}(\mathcal{U}, \mathcal{U})$ (a reflexive domain equation) is a major target connecting to the Einstein field equations.
-4. **Geometry functor from the bootstrap map**: Promoting $\mathcal{R}$ to a full functor on morphisms (§Remark after Proposition 5.1) would enable a **geometry functor** $G: \mathbf{Obs} \to \mathbf{Geom}$ mapping each observer's epistemic horizon to an effective geometry, compatible with $\mathcal{R}$ across bootstrap levels. Cross-level geometric consistency (functoriality) may constrain the relationship between the total coherence $C_0$, the bootstrap structure, and the cosmological constant $\Lambda$. See [Observer Loop Viability Bounds](/derivations/cosmology/observer-loop-viability) (Step 7, Gap 6).
+3. **Fixed-point existence**: Proving Conjecture 7.1 requires establishing Scott continuity of $\mathcal{R}$ and identifying the appropriate category of coherence spaces. See §The Bootstrap Fixed-Point Conjecture above.
+4. **Fixed-point uniqueness**: Proving Conjecture 7.2 requires a contraction argument or a rigidity result showing the constraints from Axiom 1 (conditions C1–C5) plus the three axioms admit only one self-consistent solution.
+5. **Geometry functor from the bootstrap map**: Promoting $\mathcal{R}$ to a full functor on morphisms (§Remark after Proposition 5.1) would enable a **geometry functor** $G: \mathbf{Obs} \to \mathbf{Geom}$ mapping each observer's epistemic horizon to an effective geometry, compatible with $\mathcal{R}$ across bootstrap levels. Cross-level geometric consistency (functoriality) may constrain the relationship between $C_0$, the bootstrap structure, and $\Lambda$. See [Observer Loop Viability Bounds](/derivations/cosmology/observer-loop-viability) (Step 7, Gap 6).

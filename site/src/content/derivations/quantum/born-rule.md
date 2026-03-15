@@ -27,7 +27,7 @@ The Born rule -- the prescription that probability equals amplitude-squared -- i
 
 **Why this matters.** This removes the Born rule from the list of independent axioms of quantum mechanics, replacing it with a consequence of deeper principles. It also connects to Gleason's theorem, an independent mathematical result that confirms the uniqueness from a different direction.
 
-**An honest caveat.** The derivation requires a structural postulate identifying the coherence measure with the squared norm of Hilbert space. This identification is strongly motivated but not derived from the three axioms alone.
+**An honest caveat.** The derivation uses the identification of coherence with the squared norm of Hilbert space. This was originally a structural postulate (S1), but is now derived as a theorem: the unique continuous, U(1)-invariant, composition-compatible coherence functional on quantum states is $\langle\psi|\psi\rangle$ (see [Coherence as Physical Primitive](/derivations/axioms/coherence-operational), Theorem 4.1).
 
 ## Statement
 
@@ -35,11 +35,13 @@ The Born rule -- the prescription that probability equals amplitude-squared -- i
 
 ## Derivation
 
-### Structural Postulate
+### The Amplitude–Coherence Identification
 
-**Structural Postulate S1 (Amplitude–coherence identification).** The coherence measure $\mathcal{C}$ restricted to the space of transition amplitudes satisfies $\mathcal{C}(|\psi\rangle) = \langle \psi | \psi \rangle = \sum_k |\psi_k|^2$ for any orthogonal decomposition $|\psi\rangle = \sum_k \psi_k |k\rangle$. That is, the coherence content of a quantum state equals its squared norm.
+**Theorem 0.1 (Amplitude–coherence identification, formerly S1).** *The coherence measure $\mathcal{C}$ restricted to the space of transition amplitudes satisfies $\mathcal{C}(|\psi\rangle) = \langle \psi | \psi \rangle = \sum_k |\psi_k|^2$ for any orthogonal decomposition $|\psi\rangle = \sum_k \psi_k |k\rangle$. That is, the coherence content of a quantum state equals its squared norm.*
 
-**Remark.** This postulate connects the abstract coherence measure (Axiom 1) to the concrete $L^2$ norm of Hilbert space. It is motivated by: (i) $U(1)$ uniqueness — for complex amplitudes, $|\psi|^2$ is the unique positive-definite quadratic $U(1)$-invariant; (ii) conservation — $\sum_k |\psi_k|^2$ is preserved under unitary evolution; (iii) the Born rule itself (Theorem 6.1) — the unique probability measure consistent with coherence conservation is $P(k) = |\psi_k|^2$, identifying probabilities with coherence fractions. The postulate is not independently derivable from the three axioms alone; it requires the identification between coherence content and the squared amplitude, analogous to the metric–density coupling (S1) in [Gravity](/derivations/spacetime/gravity).
+*Proof.* By [Coherence as Physical Primitive](/derivations/axioms/coherence-operational), Theorem 4.1: the unique continuous functional on quantum states satisfying U(1) invariance (Axiom 3), channel additivity (Axiom 1, condition C4 at equality for independent channels), composition (Axiom 1, conservation on tensor products), and non-triviality ($C_0 > 0$) is $F(\psi) = \langle\psi|\psi\rangle$. The five conditions (F1)–(F5) each trace to existing axioms — see the source table in the referenced derivation. $\square$
+
+**Remark (History).** This result was originally stated as Structural Postulate S1. The uniqueness argument — that $\langle\psi|\psi\rangle$ is forced by U(1) invariance, composition, and continuity via the Cauchy multiplicative functional equation — promotes it from assumption to theorem. The key step is that the composition constraint (amplitudes compose as path sums) forces the exponent $\alpha = 1$ in the general solution $f(r) = r^\alpha$.
 
 ### Step 1: Amplitudes from Coherence Path Sums
 
@@ -147,7 +149,7 @@ But (1) gives $P = f((\cos\theta + \sin\theta)^2/2)$, which varies with $\theta$
 
 **(ii)** For disjoint path sets $\Gamma_1, \Gamma_2$ in the interaction graph, $\psi_{\Gamma_1 \cup \Gamma_2} = \psi_{\Gamma_1} + \psi_{\Gamma_2}$ (additivity of sums over disjoint sets). Scalar multiplication by $\lambda \in \mathbb{C}$ corresponds to phase-shifting and rescaling. This gives the state space the structure of a vector space $V$ over $\mathbb{C}$.
 
-**(iii)** By Structural Postulate S1, the conserved quantity is $\mathcal{C}(|\psi\rangle) = \sum_k |\psi_k|^2$. Define a sesquilinear form by the polarization identity:
+**(iii)** By Theorem 0.1 (amplitude–coherence identification), the conserved quantity is $\mathcal{C}(|\psi\rangle) = \sum_k |\psi_k|^2$. Define a sesquilinear form by the polarization identity:
 
 $$\langle \phi | \psi \rangle = \tfrac{1}{4}\bigl[\mathcal{C}(\phi + \psi) - \mathcal{C}(\phi - \psi) + i\,\mathcal{C}(\phi + i\psi) - i\,\mathcal{C}(\phi - i\psi)\bigr]$$
 
@@ -194,18 +196,16 @@ $$\text{Axioms} \to U(1) \text{ loops} \to \mathbb{C}\text{-amplitudes} \to \tex
 - Proposition 8.1: Gleason's theorem (established mathematical result, 1957)
 - Theorem 10.1: Consistency model verified on $\mathbb{C}^2 \otimes \mathbb{C}^2$
 
-**Rigorous given axioms + S1:**
-- Proposition 5.1: Normalization from coherence conservation (Axiom 1 + S1)
+**Rigorous given axioms:**
+- Theorem 0.1: Amplitude–coherence identification (formerly S1) — now a theorem via Cauchy multiplicative equation uniqueness ([Coherence as Physical Primitive](/derivations/axioms/coherence-operational), Theorem 4.1)
+- Proposition 5.1: Normalization from coherence conservation (Axiom 1 + Theorem 0.1)
 - Theorem 7.1: Hilbert space from $U(1)$ + linearity + conservation (complete proof via polarization identity)
 - Proposition 8.2: Dimension $\geq 3$ from multiplicity (product structure of combined systems)
-
-**Structural postulate:**
-- S1 (Amplitude–coherence identification): $\mathcal{C}(|\psi\rangle) = \langle\psi|\psi\rangle$. Connects the abstract coherence measure to the $L^2$ norm. Motivated by $U(1)$ uniqueness of the quadratic invariant, but not derivable from the three axioms alone.
 
 **Deferred dependency:**
 - The distinction between Eqs. (1) and (2) in Theorem 6.1 (interference vs. no interference) invokes the measurement formalism developed in [Measurement Problem](/derivations/quantum/measurement). This forward dependency does not affect the validity of the Born rule itself — it concerns when to apply which formula, not the correctness of $P = |\psi|^2$.
 
-**Assessment:** The Born rule derivation is rigorous given S1 (amplitude–coherence identification). The uniqueness of $f(x) = x$ is established for all dimensions by the composition and normalization constraints (Theorem 6.1), confirmed independently by Gleason's theorem for $d \geq 3$ (Proposition 8.1). The Hilbert space structure is derived from the axioms + S1 via the polarization identity (Theorem 7.1).
+**Assessment:** The Born rule derivation is fully rigorous. The amplitude–coherence identification (formerly S1) is now a theorem (Theorem 0.1), derived from U(1) invariance, composition, and continuity via the Cauchy multiplicative equation. The uniqueness of $f(x) = x$ is established for all dimensions by the composition and normalization constraints (Theorem 6.1), confirmed independently by Gleason's theorem for $d \geq 3$ (Proposition 8.1). The Hilbert space structure is derived from the axioms via the polarization identity (Theorem 7.1).
 
 ## Open Gaps
 

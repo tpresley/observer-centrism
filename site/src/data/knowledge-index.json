@@ -1,22 +1,22 @@
 {
   "meta": {
-    "generatedAt": "2026-03-14T23:06:32.720Z",
-    "derivationCount": 60,
+    "generatedAt": "2026-03-14T23:36:38.419Z",
+    "derivationCount": 61,
     "predictionCount": 10,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
   },
   "stats": {
     "byStatus": {
-      "rigorous": 57,
+      "rigorous": 58,
       "non-viable": 1,
       "provisional": 2
     },
-    "derivationCount": 60,
+    "derivationCount": 61,
     "predictionCount": 10,
-    "edgeCount": 127,
-    "formalObjectCount": 885,
-    "openGapCount": 197,
+    "edgeCount": 129,
+    "formalObjectCount": 897,
+    "openGapCount": 201,
     "upgradeEligibleCount": 0,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -43,6 +43,7 @@
         "gauge/anomaly-cancellation"
       ],
       "dependedOnBy": [
+        "axioms/coherence-operational",
         "axioms/loop-closure",
         "axioms/observer-definition",
         "gauge/anomaly-cancellation",
@@ -239,6 +240,14 @@
         ],
         "incoming": [
           {
+            "source": "axioms/coherence-operational",
+            "context": "Coherence Conservation"
+          },
+          {
+            "source": "axioms/coherence-operational",
+            "context": "Model 2, strictly subadditive"
+          },
+          {
             "source": "axioms/loop-closure",
             "context": "Coherence Conservation"
           },
@@ -341,6 +350,184 @@
           {
             "source": "thermodynamics/time",
             "context": "Coherence Conservation"
+          }
+        ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "axioms/coherence-operational": {
+      "id": "axioms/coherence-operational",
+      "filePath": "site/src/content/derivations/axioms/coherence-operational.md",
+      "title": "Coherence as Physical Primitive",
+      "status": "rigorous",
+      "rigorLevel": "formal",
+      "group": "axioms",
+      "tags": [
+        "foundation"
+      ],
+      "summary": "Convergence of the coherence axioms with quantum information theory, operational meaning, and uniqueness of the coherence measure on quantum states",
+      "lastUpdated": "2026-03-14",
+      "dependsOn": [
+        "axioms/coherence-conservation"
+      ],
+      "enablesDerivation": [
+        "quantum/born-rule"
+      ],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Coherence Axioms as Entropy Axioms"
+        },
+        {
+          "number": 2,
+          "title": "Relational Coherence Is Mutual Information"
+        },
+        {
+          "number": 3,
+          "title": "Operational Meaning"
+        },
+        {
+          "number": 4,
+          "title": "Uniqueness of the Coherence Functional on Quantum States"
+        },
+        {
+          "number": 5,
+          "title": "Classical Limit"
+        },
+        {
+          "number": 6,
+          "title": "Why Coherence Is Primitive"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Theorem",
+          "id": "1.1",
+          "name": "Quantum entropy satisfies C1–C5",
+          "statementPreview": "Let rho be a density operator on a composite Hilbert space H = bigotimesi Hi. For any subsystem S (a subset of the te..."
+        },
+        {
+          "type": "Corollary",
+          "id": "1.2",
+          "name": "Converse direction",
+          "statementPreview": "The quantum entropy model satisfies C1–C5 with strict subadditivity whenever the global state is entangled: for any e..."
+        },
+        {
+          "type": "Theorem",
+          "id": "2.1",
+          "name": "Dictionary",
+          "statementPreview": "Under the identification C(S) = S(rhoS), every derived quantity from [Coherence Conservation](/derivations/axioms/coh..."
+        },
+        {
+          "type": "Definition",
+          "id": "3.1",
+          "name": "Operational coherence",
+          "statementPreview": "The coherence of a subsystem S has three equivalent operational interpretations:"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Operational relational coherence",
+          "statementPreview": "Relational coherence C(A:B) = I(A:B) quantifies the total correlations (both classical and quantum) between A and B. ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.3",
+          "name": "Operational conservation",
+          "statementPreview": "Coherence conservation (C(H) = C0 under admissible transformations) is operationally equivalent to:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "Coherence–amplitude uniqueness",
+          "statementPreview": "Let F: Cd R 0 be a functional on quantum states satisfying:*"
+        },
+        {
+          "type": "Corollary",
+          "id": "4.2",
+          "name": "S1 is a theorem",
+          "statementPreview": "The Structural Postulate S1 of [Born Rule](/derivations/quantum/born-rule) — the identification C(|psirangle) = langl..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Classical convergence",
+          "statementPreview": "In the classical limit (diagonal density matrices rho = diag(p1, ldots, pd)), the von Neumann entropy reduces to Shan..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Primitive status",
+          "statementPreview": "Coherence occupies the same epistemological position as mass in Newtonian mechanics: it is characterized by its axiom..."
+        },
+        {
+          "type": "Theorem",
+          "id": "7.1.",
+          "name": "",
+          "statementPreview": "A qubit pair H = C2 C2 in the Bell state |Phi+rangle = (|00rangle + |11rangle)/2 provides a consistency model for all..."
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "",
+          "statementPreview": ": The inner product langlepsi|psirangle = 1 is the unique U(1)-invariant quadratic functional. checkmark"
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Quantitative $C_0$",
+          "description": "The total coherence C0 = S(rhototal) depends on the global state. Whether C0 is a free parameter or determined by self-consistency (the bootstrap fixed point) remains open — see [Bootstrap Mechanism]("
+        },
+        {
+          "number": 2,
+          "title": "Rényi generalization",
+          "description": "The axioms C1–C5 are also satisfied by Rényi entropies Salpha(rho) = (1-alpha)-1logTr(rhoalpha) for alpha in (0,1) (strong subadditivity holds in this range). Whether the framework selects von Neumann"
+        },
+        {
+          "number": 3,
+          "title": "Algebraic vs. measure-theoretic coherence",
+          "description": "The σ-algebra formulation (C1–C5) and the Hilbert space formulation (C = langlepsi|psirangle) operate at different levels. The former concerns subsystem structure; the latter concerns state-level prop"
+        }
+      ],
+      "assessmentVerdict": "The convergence results are mathematical facts — they show that C1–C5 are satisfied by quantum entropy, that the derived quantities match quantum information quantities, and that the coherence functional on states is uniquely determined. The promotion of S1 to a theorem depends on the composition co",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "axioms/coherence-conservation",
+            "context": "Coherence Conservation"
+          },
+          {
+            "target": "axioms/coherence-conservation",
+            "context": "Model 2, strictly subadditive"
+          },
+          {
+            "target": "quantum/born-rule",
+            "context": "0,\\infty) \\to [0,\\infty)$, where $\\{|k\\rangle\\}$ is any orthonormal basis\n\n*(F3)"
+          },
+          {
+            "target": "quantum/born-rule",
+            "context": "Born Rule"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap Mechanism"
+          }
+        ],
+        "incoming": [
+          {
+            "source": "quantum/born-rule",
+            "context": "Coherence as Physical Primitive"
           }
         ]
       },
@@ -2080,6 +2267,10 @@
           {
             "source": "cosmology/cosmological-constant",
             "context": "Observer Loop Viability Bounds"
+          },
+          {
+            "source": "interactions/bootstrap",
+            "context": "Observer Loop Viability"
           },
           {
             "source": "interactions/bootstrap",
@@ -7404,11 +7595,16 @@
         },
         {
           "number": 3,
-          "title": "The fixed-point equation",
-          "description": "The universe as its own observer (maintaining self-consistency) is the fixed point of the bootstrap functor R. Formalizing this as U = R(U, U) (a reflexive domain equation) is a major target connectin"
+          "title": "Fixed-point existence",
+          "description": "Proving Conjecture 7.1 requires establishing Scott continuity of R and identifying the appropriate category of coherence spaces. See §The Bootstrap Fixed-Point Conjecture above."
         },
         {
           "number": 4,
+          "title": "Fixed-point uniqueness",
+          "description": "Proving Conjecture 7.2 requires a contraction argument or a rigidity result showing the constraints from C1–C5 plus the three axioms admit only one self-consistent solution."
+        },
+        {
+          "number": 5,
           "title": "Geometry functor from the bootstrap map",
           "description": "Promoting R to a full functor on morphisms (§Remark after Proposition 5.1) would enable a **geometry functor** G: mathbfObs mathbfGeom mapping each observer's epistemic horizon to an effective geometr"
         }
@@ -7471,10 +7667,18 @@
           },
           {
             "target": "cosmology/observer-loop-viability",
+            "context": "Observer Loop Viability"
+          },
+          {
+            "target": "cosmology/observer-loop-viability",
             "context": "Step 7, Gap 6"
           }
         ],
         "incoming": [
+          {
+            "source": "axioms/coherence-operational",
+            "context": "Bootstrap Mechanism"
+          },
           {
             "source": "cosmology/baryogenesis",
             "context": "Bootstrap Mechanism"
@@ -10524,9 +10728,9 @@
       ],
       "formalObjects": [
         {
-          "type": "Structural Postulate",
-          "id": "S1",
-          "name": "Amplitude–coherence identification",
+          "type": "Theorem",
+          "id": "0.1",
+          "name": "Amplitude–coherence identification, formerly S1",
           "statementPreview": "The coherence measure C restricted to the space of transition amplitudes satisfies C(|psirangle) = langle psi | psi r..."
         },
         {
@@ -10614,12 +10818,7 @@
           "statementPreview": "Standard quantum mechanics on C2 C2 provides a consistency model for all results of this derivation.*"
         }
       ],
-      "structuralPostulates": [
-        {
-          "id": "S1",
-          "name": "Amplitude–coherence identification"
-        }
-      ],
+      "structuralPostulates": [],
       "openGaps": [
         {
           "number": 1,
@@ -10642,13 +10841,13 @@
           "description": "Generalized measurements (positive operator-valued measures) should follow from partial Type III interactions where the observer does not fully resolve the system's state."
         }
       ],
-      "assessmentVerdict": "The Born rule derivation is rigorous given S1 (amplitude–coherence identification). The uniqueness of f(x) = x is established for all dimensions by the composition and normalization constraints (Theorem 6.1), confirmed independently by Gleason's theorem for d 3 (Proposition 8.1). The Hilbert space s",
+      "assessmentVerdict": "The Born rule derivation is fully rigorous. The amplitude–coherence identification (formerly S1) is now a theorem (Theorem 0.1), derived from U(1) invariance, composition, and continuity via the Cauchy multiplicative equation. The uniqueness of f(x) = x is established for all dimensions by the compo",
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
           {
-            "target": "spacetime/gravity",
-            "context": "Gravity"
+            "target": "axioms/coherence-operational",
+            "context": "Coherence as Physical Primitive"
           },
           {
             "target": "thermodynamics/time",
@@ -10692,6 +10891,14 @@
           }
         ],
         "incoming": [
+          {
+            "source": "axioms/coherence-operational",
+            "context": "0,\\infty) \\to [0,\\infty)$, where $\\{|k\\rangle\\}$ is any orthonormal basis\n\n*(F3)"
+          },
+          {
+            "source": "axioms/coherence-operational",
+            "context": "Born Rule"
+          },
           {
             "source": "gauge/electromagnetism",
             "context": "Born Rule"
@@ -12220,10 +12427,6 @@
           },
           {
             "source": "holography/information-paradox",
-            "context": "Gravity"
-          },
-          {
-            "source": "quantum/born-rule",
             "context": "Gravity"
           },
           {
@@ -16964,6 +17167,90 @@
       "fullRef": "axioms/coherence-conservation:Theorem 6.1"
     },
     {
+      "derivationId": "axioms/coherence-operational",
+      "type": "Theorem",
+      "id": "1.1",
+      "name": "Quantum entropy satisfies C1–C5",
+      "fullRef": "axioms/coherence-operational:Theorem 1.1"
+    },
+    {
+      "derivationId": "axioms/coherence-operational",
+      "type": "Corollary",
+      "id": "1.2",
+      "name": "Converse direction",
+      "fullRef": "axioms/coherence-operational:Corollary 1.2"
+    },
+    {
+      "derivationId": "axioms/coherence-operational",
+      "type": "Theorem",
+      "id": "2.1",
+      "name": "Dictionary",
+      "fullRef": "axioms/coherence-operational:Theorem 2.1"
+    },
+    {
+      "derivationId": "axioms/coherence-operational",
+      "type": "Definition",
+      "id": "3.1",
+      "name": "Operational coherence",
+      "fullRef": "axioms/coherence-operational:Definition 3.1"
+    },
+    {
+      "derivationId": "axioms/coherence-operational",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "Operational relational coherence",
+      "fullRef": "axioms/coherence-operational:Proposition 3.2"
+    },
+    {
+      "derivationId": "axioms/coherence-operational",
+      "type": "Proposition",
+      "id": "3.3",
+      "name": "Operational conservation",
+      "fullRef": "axioms/coherence-operational:Proposition 3.3"
+    },
+    {
+      "derivationId": "axioms/coherence-operational",
+      "type": "Theorem",
+      "id": "4.1",
+      "name": "Coherence–amplitude uniqueness",
+      "fullRef": "axioms/coherence-operational:Theorem 4.1"
+    },
+    {
+      "derivationId": "axioms/coherence-operational",
+      "type": "Corollary",
+      "id": "4.2",
+      "name": "S1 is a theorem",
+      "fullRef": "axioms/coherence-operational:Corollary 4.2"
+    },
+    {
+      "derivationId": "axioms/coherence-operational",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "Classical convergence",
+      "fullRef": "axioms/coherence-operational:Proposition 5.1"
+    },
+    {
+      "derivationId": "axioms/coherence-operational",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "Primitive status",
+      "fullRef": "axioms/coherence-operational:Proposition 6.1"
+    },
+    {
+      "derivationId": "axioms/coherence-operational",
+      "type": "Theorem",
+      "id": "7.1.",
+      "name": "",
+      "fullRef": "axioms/coherence-operational:Theorem 7.1."
+    },
+    {
+      "derivationId": "axioms/coherence-operational",
+      "type": "Theorem",
+      "id": "4.1",
+      "name": "",
+      "fullRef": "axioms/coherence-operational:Theorem 4.1"
+    },
+    {
       "derivationId": "axioms/loop-closure",
       "type": "Axiom",
       "id": "3",
@@ -20983,10 +21270,10 @@
     },
     {
       "derivationId": "quantum/born-rule",
-      "type": "Structural Postulate",
-      "id": "S1",
-      "name": "Amplitude–coherence identification",
-      "fullRef": "quantum/born-rule:Structural Postulate S1"
+      "type": "Theorem",
+      "id": "0.1",
+      "name": "Amplitude–coherence identification, formerly S1",
+      "fullRef": "quantum/born-rule:Theorem 0.1"
     },
     {
       "derivationId": "quantum/born-rule",
@@ -23042,6 +23329,27 @@
       "description": "Whether monotonicity (S1 S2 C(S1) C(S2)) should be added as axiom (C6) depends on whether all physically relevant coherence measures are monotone. The non-trivial model (Model 2) is monotone; whether "
     },
     {
+      "derivationId": "axioms/coherence-operational",
+      "derivationStatus": "rigorous",
+      "number": 1,
+      "title": "Quantitative $C_0$",
+      "description": "The total coherence C0 = S(rhototal) depends on the global state. Whether C0 is a free parameter or determined by self-consistency (the bootstrap fixed point) remains open — see [Bootstrap Mechanism]("
+    },
+    {
+      "derivationId": "axioms/coherence-operational",
+      "derivationStatus": "rigorous",
+      "number": 2,
+      "title": "Rényi generalization",
+      "description": "The axioms C1–C5 are also satisfied by Rényi entropies Salpha(rho) = (1-alpha)-1logTr(rhoalpha) for alpha in (0,1) (strong subadditivity holds in this range). Whether the framework selects von Neumann"
+    },
+    {
+      "derivationId": "axioms/coherence-operational",
+      "derivationStatus": "rigorous",
+      "number": 3,
+      "title": "Algebraic vs. measure-theoretic coherence",
+      "description": "The σ-algebra formulation (C1–C5) and the Hilbert space formulation (C = langlepsi|psirangle) operate at different levels. The former concerns subsystem structure; the latter concerns state-level prop"
+    },
+    {
       "derivationId": "axioms/loop-closure",
       "derivationStatus": "rigorous",
       "number": 1,
@@ -23675,13 +23983,20 @@
       "derivationId": "interactions/bootstrap",
       "derivationStatus": "rigorous",
       "number": 3,
-      "title": "The fixed-point equation",
-      "description": "The universe as its own observer (maintaining self-consistency) is the fixed point of the bootstrap functor R. Formalizing this as U = R(U, U) (a reflexive domain equation) is a major target connectin"
+      "title": "Fixed-point existence",
+      "description": "Proving Conjecture 7.1 requires establishing Scott continuity of R and identifying the appropriate category of coherence spaces. See §The Bootstrap Fixed-Point Conjecture above."
     },
     {
       "derivationId": "interactions/bootstrap",
       "derivationStatus": "rigorous",
       "number": 4,
+      "title": "Fixed-point uniqueness",
+      "description": "Proving Conjecture 7.2 requires a contraction argument or a rigidity result showing the constraints from C1–C5 plus the three axioms admit only one self-consistent solution."
+    },
+    {
+      "derivationId": "interactions/bootstrap",
+      "derivationStatus": "rigorous",
+      "number": 5,
       "title": "Geometry functor from the bootstrap map",
       "description": "Promoting R to a full functor on morphisms (§Remark after Proposition 5.1) would enable a **geometry functor** G: mathbfObs mathbfGeom mapping each observer's epistemic horizon to an effective geometr"
     },
