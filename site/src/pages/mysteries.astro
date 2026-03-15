@@ -197,6 +197,14 @@ const openCount = mysteries.filter(m => m.status === 'open').length
     three axioms have to say about each one. Every answer links to its
     full derivation chain.
   </p>
+  <p class="note">
+    <strong>A note on &ldquo;resolved&rdquo;:</strong> A mystery marked
+    resolved means the framework produces a specific, traceable answer
+    from its axioms &mdash; not that the question is settled in physics
+    at large. These are derivations <em>within</em> the framework.
+    Whether the framework itself is correct is an empirical question,
+    addressed on the <a href={`${base}/predictions/`}>Predictions</a> page.
+  </p>
 
   <div class="my-summary">
     <div class="my-stat my-stat-resolved">
@@ -238,6 +246,16 @@ const openCount = mysteries.filter(m => m.status === 'open').length
 </MainLayout>
 
 <style>
+  .note {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    border-left: 3px solid var(--color-border);
+    padding-left: 1rem;
+    margin-top: 1rem;
+  }
+  .note a {
+    color: var(--color-accent);
+  }
   .my-summary {
     display: flex;
     gap: 1rem;
