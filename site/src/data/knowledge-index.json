@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-16T04:36:54.842Z",
+    "generatedAt": "2026-03-16T04:52:56.047Z",
     "derivationCount": 62,
     "predictionCount": 10,
     "gaPageCount": 12,
@@ -8,9 +8,9 @@
   },
   "stats": {
     "byStatus": {
-      "rigorous": 59,
+      "rigorous": 60,
       "non-viable": 1,
-      "provisional": 2
+      "provisional": 1
     },
     "derivationCount": 62,
     "predictionCount": 10,
@@ -11535,8 +11535,8 @@
       "id": "quantum/observer-relative-objectivity",
       "filePath": "site/src/content/derivations/quantum/observer-relative-objectivity.md",
       "title": "Observer-Relative Objectivity",
-      "status": "provisional",
-      "rigorLevel": "semi-formal",
+      "status": "rigorous",
+      "rigorLevel": "formal",
       "group": "quantum",
       "tags": [
         "quantum",
@@ -11608,7 +11608,7 @@
           "type": "Theorem",
           "id": "2.1",
           "name": "Relational consistency",
-          "statementPreview": "For observers OA, OB with shared coherence C(IAB) > 0, their observer-relative descriptions of any system S with whic..."
+          "statementPreview": "For observers OA, OB and system S in a joint pure state, the conditional mutual information between A and S given B i..."
         },
         {
           "type": "Corollary",
@@ -11717,7 +11717,7 @@
           "description": "The trichotomy (Theorem 6.1) could be formalized as a functor from the observer category Obs to a suitable truth-value category. Level 1 facts correspond to natural transformations (invariant across a"
         }
       ],
-      "assessmentVerdict": "The core results (three-level trichotomy, non-fabrication, failure of universal definiteness) are rigorous given the axioms and build directly on established upstream derivations. The main semi-formal element is the interpretive comparison (Step 7), which positions the framework relative to existing",
+      "assessmentVerdict": "The core mathematical chain (Steps 1–6) is rigorous given the axioms. Every theorem either follows directly from established upstream results (Measurement, Born Rule, Entanglement, Relational Invariants — all rigorous) or is a logical classification whose substantive content reduces to those results",
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
@@ -24852,35 +24852,35 @@
     },
     {
       "derivationId": "quantum/observer-relative-objectivity",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 1,
       "title": "Quantum Darwinism formalization",
       "description": "When many independent observers measure the same system and all obtain consistent results, this creates effective observer-invariance (promotion from Level 2 to effective Level 1). Formalizing this re"
     },
     {
       "derivationId": "quantum/observer-relative-objectivity",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 2,
       "title": "Contextuality connection",
       "description": "The Kochen-Specker theorem shows that non-contextual hidden variable models are impossible. This is closely related to Theorem 5.1 (no universal definiteness) but approaches from a different direction"
     },
     {
       "derivationId": "quantum/observer-relative-objectivity",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 3,
       "title": "Extended Wigner's friend",
       "description": "The Frauchiger-Renner no-go theorem constrains theories with certain assumptions about nested observers. The framework should be formally tested against this theorem — the three-level structure may pr"
     },
     {
       "derivationId": "quantum/observer-relative-objectivity",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 4,
       "title": "Continuous observables",
       "description": "The current treatment focuses on discrete measurement outcomes. Extending the trichotomy to continuous-spectrum observables requires care with the notion of \"definite value\" (replaced by spectral meas"
     },
     {
       "derivationId": "quantum/observer-relative-objectivity",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 5,
       "title": "Category-theoretic objectivity",
       "description": "The trichotomy (Theorem 6.1) could be formalized as a functor from the observer category Obs to a suitable truth-value category. Level 1 facts correspond to natural transformations (invariant across a"

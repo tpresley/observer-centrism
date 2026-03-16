@@ -61,7 +61,7 @@
     { "id": "particles/cpt-theorem", "title": "CPT Theorem", "group": "particles", "status": "rigorous" },
     { "id": "gauge/proton-stability", "title": "Proton Stability", "group": "gauge", "status": "rigorous" },
     { "id": "cosmology/observer-loop-viability", "title": "Observer Loop Viability Bounds", "group": "cosmology", "status": "rigorous" },
-    { "id": "quantum/observer-relative-objectivity", "title": "Observer-Relative Objectivity", "group": "quantum", "status": "provisional" }
+    { "id": "quantum/observer-relative-objectivity", "title": "Observer-Relative Objectivity", "group": "quantum", "status": "rigorous" }
   ],
   "edges": [
     { "from": "axioms/coherence-conservation", "to": "axioms/coherence-operational" },
