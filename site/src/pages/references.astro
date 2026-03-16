@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../components/layouts/MainLayout.astro'
+import PageTitle from '../components/PageTitle.astro'
 import refsIndex from '../data/references-index.json'
 import refLinks from '../data/reference-links.json'
 
@@ -22,7 +23,7 @@ const linkedCount = references.filter((r: any) => links[r.id]?.url).length
 ---
 
 <MainLayout title="References">
-  <h1>References</h1>
+  <PageTitle title="References" />
   <p>
     Academic works cited across the framework's derivations, predictions, and guide.
     Citations in derivation pages link here; external links go to the original papers.

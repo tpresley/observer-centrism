@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../components/layouts/MainLayout.astro'
+import PageTitle from '../components/PageTitle.astro'
 import knowledgeIndex from '../data/knowledge-index.json'
 import postulatesData from '../data/structural-postulates.json'
 
@@ -26,7 +27,7 @@ const nonViableCount = stats.byStatus['non-viable'] || 0
 
 <MainLayout title="Note to Researchers">
   <article class="researcher-note">
-    <h1>Note to Researchers</h1>
+    <PageTitle title="Note to Researchers" />
 
     <p class="lead">
       Observers appear central in every major physics theory &mdash; quantum mechanics

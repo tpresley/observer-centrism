@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
 import MainLayout from '../../components/layouts/MainLayout.astro'
+import PageTitle from '../../components/PageTitle.astro'
 
 export async function getStaticPaths() {
   const entries = await getCollection('source')
@@ -15,10 +16,9 @@ const { Content } = await entry.render()
 ---
 
 <MainLayout title={entry.data.title}>
-  <div class="source-header">
+  <PageTitle title={`${entry.data.section}. ${entry.data.title}`}>
     <span class="source-label">Source Document</span>
-    <h1>{entry.data.section}. {entry.data.title}</h1>
-  </div>
+  </PageTitle>
   <article class="source-content">
     <Content />
   </article>
@@ -26,10 +26,12 @@ const { Content } = await entry.render()
 
 <style>
   .source-label {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-text-muted);
+    letter-spacing: 0.08em;
+    color: #93c5fd;
+    font-weight: 600;
+    order: -1;
   }
   .source-content {
     border-left: 3px solid var(--color-border);

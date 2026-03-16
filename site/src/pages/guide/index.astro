@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
 import MainLayout from '../../components/layouts/MainLayout.astro'
+import PageTitle from '../../components/PageTitle.astro'
 
 const guideEntries = await getCollection('guide')
 const sorted = guideEntries.sort((a, b) => a.data.order - b.data.order)
@@ -8,7 +9,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 ---
 
 <MainLayout title="Guide">
-  <h1>A Guide to Observer-Centrism</h1>
+  <PageTitle title="A Guide to Observer-Centrism" />
   <p class="guide-intro">
     This guide walks through the Observer-Centrism framework in narrative form.
     It explains what the framework does, why it works the way it does, and what

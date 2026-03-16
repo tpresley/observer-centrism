@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
 import MainLayout from './MainLayout.astro'
+import PageTitle from '../PageTitle.astro'
 import GuideNav from '../GuideNav.astro'
 import graphData from '../../data/dependency-graph.json'
 
@@ -35,12 +36,10 @@ for (const entry of predictionEntries) {
 
 <MainLayout title={title}>
   <article class="guide-article">
-    <header class="guide-header">
+    <PageTitle title={title} subtitle={subtitle}>
       <div class="guide-label">Guide</div>
-      <h1>{title}</h1>
-      <p class="guide-subtitle">{subtitle}</p>
       <blockquote class="guide-question">{openingQuestion}</blockquote>
-    </header>
+    </PageTitle>
 
     {physicsQuestions.length > 0 && (
       <div class="guide-questions-addressed">
@@ -83,25 +82,24 @@ for (const entry of predictionEntries) {
 
 <style>
   .guide-label {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-accent);
+    letter-spacing: 0.08em;
+    color: #93c5fd;
     font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
-  .guide-header {
-    margin-bottom: 2rem;
-  }
-  .guide-subtitle {
-    font-size: 1.1rem;
-    color: var(--color-text-muted);
-    margin-bottom: 1rem;
+    margin-bottom: 0.15rem;
+    order: -1;
   }
   .guide-question {
     font-style: italic;
-    font-size: 1.05rem;
-    line-height: 1.6;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #94a3b8;
+    margin: 0.5rem 0 0;
+    padding: 0.6rem 0.85rem;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 6px;
+    background: rgba(148, 163, 184, 0.05);
   }
   .guide-questions-addressed {
     margin: 1.5rem 0;

@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
 import MainLayout from '../../components/layouts/MainLayout.astro'
+import PageTitle from '../../components/PageTitle.astro'
 
 const gaEntries = await getCollection('geometric-algebra')
 const base = import.meta.env.BASE_URL.replace(/\/$/, '')
@@ -62,7 +63,7 @@ function statusColor(status: string) {
 ---
 
 <MainLayout title="Geometric Algebra Exploration">
-  <h1>Geometric Algebra Exploration</h1>
+  <PageTitle title="Geometric Algebra Exploration" />
   <p>
     This section explores how Geometric (Clifford) Algebra illuminates the framework's
     derivations. These pages are <strong>supplementary analyses</strong> that recast existing

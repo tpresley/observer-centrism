@@ -1,5 +1,6 @@
 ---
 import MainLayout from './MainLayout.astro'
+import PageTitle from '../PageTitle.astro'
 import graphData from '../../data/dependency-graph.json'
 
 interface Props {
@@ -32,12 +33,13 @@ function getTitle(id: string): string {
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
       Geometric Algebra Exploration &mdash; supplementary analysis, not part of the core derivation chain
     </div>
-    <header>
-      <h1>{title}</h1>
-      {status && <span class={`status-badge ${statusClass}`}>{status}</span>}
-      {gaStructure && <span class="ga-structure-badge">{gaStructure}</span>}
-      {priority && <span class={`ga-priority-badge ga-priority-${priority}`}>{priority} priority</span>}
-    </header>
+    <PageTitle title={title}>
+      <div class="title-badges">
+        {status && <span class={`status-badge ${statusClass}`}>{status}</span>}
+        {gaStructure && <span class="ga-structure-badge">{gaStructure}</span>}
+        {priority && <span class={`ga-priority-badge ga-priority-${priority}`}>{priority} priority</span>}
+      </div>
+    </PageTitle>
 
     {targetDerivation && (
       <div class="ga-target">
@@ -72,6 +74,7 @@ function getTitle(id: string): string {
         const el = children[i]
         const isStructural = (
           el.tagName === 'HEADER' ||
+          el.classList.contains('page-title-bar') ||
           el.classList.contains('ga-banner') ||
           el.classList.contains('ga-target') ||
           el.tagName === 'STYLE' ||
@@ -211,8 +214,12 @@ function getTitle(id: string): string {
     flex-shrink: 0;
     opacity: 0.6;
   }
-  header {
-    margin-bottom: 2rem;
+  .title-badges {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.35rem;
   }
   .ga-structure-badge {
     display: inline-block;

@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../components/layouts/MainLayout.astro'
+import PageTitle from '../components/PageTitle.astro'
 import knowledgeIndex from '../data/knowledge-index.json'
 import katex from 'katex'
 
@@ -108,7 +109,7 @@ function statusColor(status: string) {
 ---
 
 <MainLayout title="Open Gaps">
-  <h1>Open Gaps</h1>
+  <PageTitle title="Open Gaps" />
   <p>
     Every derivation documents its <strong>open gaps</strong> &mdash; questions, limitations,
     and potential extensions that remain unresolved. These range from foundational mathematical

@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
 import MainLayout from '../../components/layouts/MainLayout.astro'
+import PageTitle from '../../components/PageTitle.astro'
 import PredictionTracker from '../../components/interactive/PredictionTracker.jsx'
 
 const predictions = await getCollection('predictions')
@@ -18,7 +19,7 @@ const predictionData = predictions.map(entry => ({
 ---
 
 <MainLayout title="Predictions">
-  <h1>Predictions</h1>
+  <PageTitle title="Predictions" />
   <p>
     Testable predictions that distinguish Observer-Centrism from standard
     theoretical expectations. Filter by distinctiveness and sort by any dimension.

@@ -1,5 +1,6 @@
 ---
 import MainLayout from './MainLayout.astro'
+import PageTitle from '../PageTitle.astro'
 import graphData from '../../data/dependency-graph.json'
 
 interface LeanProof {
@@ -41,18 +42,19 @@ const totalTheorems = leanProofs.reduce((sum, p) => sum + p.theorems.length, 0)
 
 <MainLayout title={title}>
   <article>
-    <header>
-      <h1>{title}</h1>
-      {status && <span class={`status-badge ${statusClass}`}>{status}</span>}
-      {leanProofs.length > 0 && (
-        <span class="lean-badge">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="20 6 9 17 4 12"></polyline>
-          </svg>
-          Lean 4 verified
-        </span>
-      )}
-    </header>
+    <PageTitle title={title}>
+      <div class="title-badges">
+        {status && <span class={`status-badge ${statusClass}`}>{status}</span>}
+        {leanProofs.length > 0 && (
+          <span class="lean-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Lean 4 verified
+          </span>
+        )}
+      </div>
+    </PageTitle>
 
     {dependsOn.length > 0 && (
       <div class="depends-on">
@@ -186,6 +188,7 @@ const totalTheorems = leanProofs.reduce((sum, p) => sum + p.theorems.length, 0)
         const el = children[i]
         const isStructural = (
           el.tagName === 'HEADER' ||
+          el.classList.contains('page-title-bar') ||
           el.classList.contains('depends-on') ||
           el.classList.contains('lean-proofs-section') ||
           el.tagName === 'STYLE' ||
@@ -325,7 +328,14 @@ const totalTheorems = leanProofs.reduce((sum, p) => sum + p.theorems.length, 0)
 )}
 
 <style>
-  header {
-    margin-bottom: 2rem;
+  .title-badges {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.35rem;
+  }
+  .title-badges :global(.lean-badge) {
+    color: #93c5fd;
   }
 </style>

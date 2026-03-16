@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../components/layouts/MainLayout.astro'
+import PageTitle from '../components/PageTitle.astro'
 import knowledgeIndex from '../data/knowledge-index.json'
 
 const allFormalObjects = (knowledgeIndex as any).allFormalObjects as Array<{
@@ -118,7 +119,7 @@ function statusColor(status: string) {
 ---
 
 <MainLayout title="Theorems">
-  <h1>Theorems</h1>
+  <PageTitle title="Theorems" />
   <p>
     The framework's derivations prove <strong>{totalNamed} named results</strong> (theorems,
     propositions, and corollaries) across {totalDerivations} derivations. Each traces back to the

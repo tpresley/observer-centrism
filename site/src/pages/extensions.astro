@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../components/layouts/MainLayout.astro'
+import PageTitle from '../components/PageTitle.astro'
 
 interface Target {
   slug: string
@@ -107,7 +108,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 ---
 
 <MainLayout title="Extension Targets">
-  <h1>Extension Targets</h1>
+  <PageTitle title="Extension Targets" />
   <p>
     These 11 derivation targets were identified by analyzing earlier versions of the framework.
     Each target represents an idea that is <strong>not yet covered</strong>

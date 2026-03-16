@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../components/layouts/MainLayout.astro'
+import PageTitle from '../components/PageTitle.astro'
 
 // Coverage status types
 type Coverage = 'covered' | 'partial' | 'not-covered'
@@ -406,7 +407,7 @@ const medViability = ideas.filter(i => i.viability === 'medium').length
 ---
 
 <MainLayout title="Whitepaper Analysis">
-  <h1>Prior Whitepaper: Idea Analysis</h1>
+  <PageTitle title="Prior Whitepaper: Idea Analysis" />
   <p>
     An earlier version of the Observer-Centrism framework (dated October 2025) used a
     different mathematical foundation &mdash; information geometry, KL divergence, and

@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
 import MainLayout from '../../components/layouts/MainLayout.astro'
+import PageTitle from '../../components/PageTitle.astro'
 
 const derivations = await getCollection('derivations')
 
@@ -22,7 +23,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 ---
 
 <MainLayout title="Derivations">
-  <h1>Derivations</h1>
+  <PageTitle title="Derivations" />
   <p>
     Rigorous derivations from the three axioms. Each derivation tracks its
     dependencies, rigor level, and what it enables.

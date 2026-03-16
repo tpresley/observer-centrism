@@ -1,11 +1,12 @@
 ---
 import MainLayout from '../components/layouts/MainLayout.astro'
+import PageTitle from '../components/PageTitle.astro'
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 ---
 
 <MainLayout title="Site Map">
-  <h1>Site Map</h1>
+  <PageTitle title="Site Map" />
   <p>Everything on this site, organized by section.</p>
 
   <div class="sm-grid">

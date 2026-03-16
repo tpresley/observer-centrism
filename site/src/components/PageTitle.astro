@@ -1,0 +1,61 @@
+---
+interface Props {
+  title: string
+  subtitle?: string
+}
+
+const { title, subtitle } = Astro.props
+---
+
+<div class="page-title-bar">
+  <div class="page-title-content">
+    <h1>{title}</h1>
+    {subtitle && <p class="page-title-subtitle">{subtitle}</p>}
+    <slot />
+  </div>
+</div>
+
+<style>
+  .page-title-bar {
+    background: linear-gradient(135deg, #0f1117 0%, #1e2535 50%, #0f1117 100%);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .page-title-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page-title-content h1 {
+    color: #eff6ff;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.02em;
+    border: none;
+    padding: 0;
+  }
+
+  .page-title-subtitle {
+    color: #93c5fd;
+    font-size: 1.05rem;
+    font-weight: 400;
+    margin: 0.25rem 0 0;
+    letter-spacing: 0.02em;
+  }
+
+
+  @media (max-width: 600px) {
+    .page-title-bar {
+      padding: 1.25rem 1.25rem;
+    }
+    .page-title-content h1 {
+      font-size: 1.35rem;
+    }
+    .page-title-subtitle {
+      font-size: 0.9rem;
+    }
+  }
+</style>
