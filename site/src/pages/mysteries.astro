@@ -35,6 +35,19 @@ const mysteries: Mystery[] = [
     ],
   },
   {
+    title: 'Is Spacetime Fundamental?',
+    question: 'Is spacetime a fundamental structure, or does it emerge from something deeper?',
+    answer: 'Spacetime is emergent. The fundamental structure is the relational invariant network \u2014 a discrete graph of coherence connections between observers. Continuous geometry arises as an effective description at scales far above the Planck length, where the discrete network approximates a smooth manifold. Gravity is curvature of this emergent geometry, and the Einstein equations are its self-consistency conditions.',
+    status: 'resolved',
+    derivations: [
+      { id: 'spacetime/gravity', title: 'Gravity' },
+      { id: 'spacetime/einstein-equations', title: 'Einstein Equations' },
+      { id: 'holography/causal-set-statistics', title: 'Causal Set Statistics' },
+      { id: 'spacetime/singularity-resolution', title: 'Singularity Resolution' },
+    ],
+    prediction: { id: 'holographic-noise', title: 'Holographic Noise' },
+  },
+  {
     title: 'Why Quantum Mechanics?',
     question: 'Why is nature described by complex amplitudes and probability = |amplitude|\u00B2? Could the rules be different?',
     answer: 'The Born rule is the unique probability measure consistent with coherence conservation and U(1) phase structure. Unitarity, no-cloning, and no-deleting follow from conservation of distinguishability. Quantum mechanics is not postulated but emerges as the unique consistent framework for observers with loop closure and coherence conservation.',
@@ -45,6 +58,26 @@ const mysteries: Mystery[] = [
       { id: 'quantum/entanglement', title: 'Entanglement' },
     ],
     prediction: { id: 'exact-unitarity', title: 'Exact Unitarity' },
+  },
+  {
+    title: 'The Spin-Statistics Connection',
+    question: 'Why do particles with half-integer spin obey Fermi-Dirac statistics while integer-spin particles obey Bose-Einstein? Why is this universal?',
+    answer: 'The quaternionic origin of SU(2) imposes a global orientation on the interaction graph (the I\u2192J\u2192K cycle). Coherence conservation propagates this orientation constraint universally, forcing all half-integer winding modes to be antisymmetric under exchange. The connection between spin and statistics is not an independent postulate but a consequence of the division algebra structure.',
+    status: 'resolved',
+    derivations: [
+      { id: 'gauge/chirality-selection', title: 'Chirality Selection' },
+      { id: 'interactions/bootstrap-division-algebras', title: 'Bootstrap \u2192 Division Algebras' },
+    ],
+  },
+  {
+    title: 'Why Is CPT an Exact Symmetry?',
+    question: 'Why is the combination of charge conjugation, parity, and time reversal always conserved, even when each is individually violated?',
+    answer: 'Each component maps to a structural operation on the observer network: C is the coherence-dual map (swapping observer and complement), P is spatial reflection of winding configurations, and T is loop closure phase reversal. Their composition preserves the coherence Lagrangian identically \u2014 CPT invariance is a theorem, not an assumption.',
+    status: 'resolved',
+    derivations: [
+      { id: 'particles/cpt-theorem', title: 'CPT Theorem' },
+      { id: 'gauge/chirality-selection', title: 'Chirality Selection' },
+    ],
   },
   {
     title: 'The Arrow of Time',
@@ -84,6 +117,17 @@ const mysteries: Mystery[] = [
     prediction: { id: 'coupling-non-convergence', title: 'Coupling Non-Convergence' },
   },
   {
+    title: 'Why Are Quarks Confined?',
+    question: 'Why can quarks never be observed in isolation? What mechanism prevents pulling them apart?',
+    answer: 'Confinement derives from the non-associativity of the octonion algebra underlying SU(3). Path-bracketing ambiguity grows linearly with distance, generating an effective confining potential. Only color-singlet combinations (hadrons) escape this obstruction via projection to the associative subalgebra. Confinement is algebraic, not dynamical.',
+    status: 'resolved',
+    derivations: [
+      { id: 'gauge/confinement', title: 'Confinement' },
+      { id: 'gauge/color-force', title: 'Color Force' },
+      { id: 'interactions/bootstrap-division-algebras', title: 'Bootstrap \u2192 Division Algebras' },
+    ],
+  },
+  {
     title: 'The Measurement Problem',
     question: 'What happens during quantum measurement? Why does the wave function appear to "collapse"?',
     answer: 'Measurement is a Type III interaction that generates new relational invariants. "Collapse" is the creation of new relational structure between observer and system, not the destruction of superposition. The preferred measurement basis is determined by which invariants the interaction generates \u2014 no separate collapse postulate is needed.',
@@ -107,6 +151,17 @@ const mysteries: Mystery[] = [
     prediction: { id: 'no-fourth-generation', title: 'No Fourth Generation' },
   },
   {
+    title: 'Why Are Neutrinos So Light?',
+    question: 'Why are neutrino masses at least a million times smaller than the electron? Are neutrinos their own antiparticle?',
+    answer: 'Neutrino winding configurations are self-conjugate under the coherence-dual map, making neutrinos Majorana particles. Mass smallness follows from a type-I seesaw mechanism where the heavy partner scale is set by electroweak crystallization energy. Normal mass ordering is predicted. Testable via neutrinoless double beta decay.',
+    status: 'resolved',
+    derivations: [
+      { id: 'particles/neutrino-masses', title: 'Neutrino Masses' },
+      { id: 'gauge/electroweak-breaking', title: 'Electroweak Breaking' },
+    ],
+    prediction: { id: 'neutrino-nature', title: 'Majorana Neutrinos' },
+  },
+  {
     title: 'The Fine-Tuning Problem',
     question: 'Why do the constants of nature appear exquisitely tuned for complexity? Are they free parameters?',
     answer: 'The apparent free parameters are constrained by algebraic structure. Coupling constant ratios follow from algebraic normalization of the division algebras. The Weinberg angle is fixed by the \u2102 \u2282 \u210D embedding. The mass hierarchy is logarithmically organized. There is nothing to fine-tune because the parameters are structurally determined.',
@@ -128,6 +183,18 @@ const mysteries: Mystery[] = [
       { id: 'particles/mass-hierarchy', title: 'Mass Hierarchy' },
       { id: 'gauge/electroweak-breaking', title: 'Electroweak Breaking' },
     ],
+  },
+  {
+    title: 'Do the Forces Unify? Does the Proton Decay?',
+    question: 'Is there a grand unified theory at high energies? Will the proton eventually decay?',
+    answer: 'No and no. The division algebra hierarchy terminates at the octonions (Hurwitz\u2019s theorem) \u2014 there is no fifth normed division algebra to embed all three forces into a single group. Coupling constants do not converge at any energy scale. Baryon number is an exact symmetry, and the proton is absolutely stable (gravitational decay suppressed beyond 10\u2076\u2074 years).',
+    status: 'resolved',
+    derivations: [
+      { id: 'gauge/proton-stability', title: 'Proton Stability' },
+      { id: 'interactions/bootstrap-division-algebras', title: 'Bootstrap \u2192 Division Algebras' },
+      { id: 'cosmology/coupling-constants', title: 'Coupling Constants' },
+    ],
+    prediction: { id: 'coupling-non-convergence', title: 'Coupling Non-Convergence' },
   },
   {
     title: 'The Strong CP Problem',
@@ -174,6 +241,16 @@ const mysteries: Mystery[] = [
       { id: 'cosmology/leptogenesis', title: 'Leptogenesis' },
     ],
     prediction: { id: 'neutrino-nature', title: 'Majorana Neutrinos' },
+  },
+  {
+    title: 'What Drove Cosmic Inflation?',
+    question: 'What caused the exponential expansion of the early universe? What is the inflaton field?',
+    answer: 'The framework derives a coherence bounce replacing the Big Bang singularity, and the post-bounce expansion is driven by energy condition violation at Planck density. However, the specific slow-roll mechanism and inflaton identity are not derived from the axioms \u2014 they depend on the details of the post-bounce coherence distribution, which is boundary data the framework does not constrain.',
+    status: 'open',
+    derivations: [
+      { id: 'spacetime/singularity-resolution', title: 'Singularity Resolution' },
+      { id: 'spacetime/einstein-equations', title: 'Einstein Equations' },
+    ],
   },
   {
     title: 'Dark Matter',
