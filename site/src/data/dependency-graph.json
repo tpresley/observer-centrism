@@ -62,7 +62,8 @@
     { "id": "gauge/proton-stability", "title": "Proton Stability", "group": "gauge", "status": "rigorous" },
     { "id": "cosmology/observer-loop-viability", "title": "Observer Loop Viability Bounds", "group": "cosmology", "status": "rigorous" },
     { "id": "quantum/observer-relative-objectivity", "title": "Observer-Relative Objectivity", "group": "quantum", "status": "rigorous" },
-    { "id": "quantum/sheaf-section-uniqueness", "title": "Sheaf Structure & Section Uniqueness", "group": "quantum", "status": "draft" }
+    { "id": "quantum/sheaf-section-uniqueness", "title": "Sheaf Structure & Section Uniqueness", "group": "quantum", "status": "draft" },
+    { "id": "cosmology/geometric-inflation", "title": "Geometric Inflation", "group": "cosmology", "status": "draft" }
   ],
   "edges": [
     { "from": "axioms/coherence-conservation", "to": "axioms/coherence-operational" },
@@ -207,6 +208,12 @@
     { "from": "quantum/observer-relative-objectivity", "to": "quantum/sheaf-section-uniqueness" },
     { "from": "quantum/entanglement", "to": "quantum/sheaf-section-uniqueness" },
     { "from": "quantum/born-rule", "to": "quantum/sheaf-section-uniqueness" },
-    { "from": "thermodynamics/time", "to": "quantum/sheaf-section-uniqueness" }
+    { "from": "thermodynamics/time", "to": "quantum/sheaf-section-uniqueness" },
+    { "from": "spacetime/singularity-resolution", "to": "cosmology/geometric-inflation" },
+    { "from": "holography/causal-set-statistics", "to": "cosmology/geometric-inflation" },
+    { "from": "spacetime/gravity", "to": "cosmology/geometric-inflation" },
+    { "from": "spacetime/einstein-equations", "to": "cosmology/geometric-inflation" },
+    { "from": "minimal-observer/multiplicity", "to": "cosmology/geometric-inflation" },
+    { "from": "interactions/bootstrap", "to": "cosmology/geometric-inflation" }
   ]
 }

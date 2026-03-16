@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-03-16T05:33:55.145Z",
-    "derivationCount": 63,
+    "generatedAt": "2026-03-16T08:48:01.928Z",
+    "derivationCount": 64,
     "predictionCount": 10,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -10,15 +10,15 @@
     "byStatus": {
       "rigorous": 60,
       "non-viable": 1,
-      "provisional": 1,
-      "draft": 1
+      "draft": 2,
+      "provisional": 1
     },
-    "derivationCount": 63,
+    "derivationCount": 64,
     "predictionCount": 10,
-    "edgeCount": 143,
-    "formalObjectCount": 934,
-    "openGapCount": 211,
-    "upgradeEligibleCount": 1,
+    "edgeCount": 149,
+    "formalObjectCount": 942,
+    "openGapCount": 213,
+    "upgradeEligibleCount": 2,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
   },
@@ -1783,6 +1783,160 @@
         "propositions": []
       },
       "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "cosmology/geometric-inflation": {
+      "id": "cosmology/geometric-inflation",
+      "filePath": "site/src/content/derivations/cosmology/geometric-inflation.md",
+      "title": "Geometric Inflation: Expansion as Geometry Emergence",
+      "status": "draft",
+      "rigorLevel": "semi-formal",
+      "group": "cosmology",
+      "tags": [
+        "cosmology",
+        "spacetime"
+      ],
+      "summary": "Cosmic inflation reinterpreted as the emergence of geometric description from a sparse post-bounce observer network, dissolving the horizon and flatness problems without an inflaton field.",
+      "lastUpdated": "2026-03-15",
+      "dependsOn": [
+        "spacetime/singularity-resolution",
+        "holography/causal-set-statistics",
+        "spacetime/gravity",
+        "spacetime/einstein-equations",
+        "minimal-observer/multiplicity",
+        "interactions/bootstrap"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The Pre-Geometric Regime"
+        },
+        {
+          "number": 2,
+          "title": "Network Densification via Bootstrap"
+        },
+        {
+          "number": 3,
+          "title": "The Geometric Transition"
+        },
+        {
+          "number": 4,
+          "title": "Dissolution of the Horizon Problem"
+        },
+        {
+          "number": 5,
+          "title": "Dissolution of the Flatness Problem"
+        },
+        {
+          "number": 6,
+          "title": "Observational Signatures"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Geometric validity threshold",
+          "statementPreview": "Let Gtau denote the observer network at DAG depth tau, and let rhoRI(tau) denote the relational invariant density (nu..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Pre-geometric phase",
+          "statementPreview": "Immediately after the coherence bounce ([Singularity Resolution](/derivations/spacetime/singularity-resolution), Theo..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "Exponential observer multiplication",
+          "statementPreview": "The bootstrap mechanism ([Bootstrap](/derivations/interactions/bootstrap)) combined with the multiplicity theorem ([M..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Effective scale factor during transition",
+          "statementPreview": "When late-universe observers reconstruct a Friedmann-Lemaître-Robertson-Walker geometry for the early universe, the e..."
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "No horizon problem",
+          "statementPreview": "In the pre-geometric regime, there are no \"causally disconnected regions\" — spatial separation is not defined. All ob..."
+        },
+        {
+          "type": "Theorem",
+          "id": "5.1",
+          "name": "Flatness from coherence conservation",
+          "statementPreview": "The spatial curvature parameter Omegak is constrained by coherence conservation (C2) on Cauchy slices. Total coherenc..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Suppressed tensor-to-scalar ratio",
+          "statementPreview": "If the inflationary epoch is geometry emergence rather than physical expansion, the tensor mode production mechanism ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.2",
+          "name": "Scalar spectrum compatibility",
+          "statementPreview": "The approximately scale-invariant scalar perturbation spectrum (ns 0.965) is compatible with geometric inflation: the..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Geometric validity criterion",
+          "description": "The threshold rhoRI gg rhoPl is qualitative. A precise criterion (specific ratio, phase transition vs crossover) would sharpen the predictions. The causal set literature on \"manifold-likeness\" conditi"
+        },
+        {
+          "number": 2,
+          "title": "Quantitative $n_s$ derivation",
+          "description": "Proposition 6.2 claims compatibility with the observed spectral index but does not derive it. Computing ns from the Poisson statistics of the geometric transition would be a strong quantitative test —"
+        },
+        {
+          "number": 3,
+          "title": "Reheating equivalent",
+          "description": "In standard inflation, reheating transfers inflaton energy to Standard Model particles. In geometric inflation, the analogous process is the bootstrap crystallization of the gauge hierarchy. The therm"
+        },
+        {
+          "number": 4,
+          "title": "Relationship to bounce",
+          "description": "The singularity-resolution derivation provides the bounce; this derivation provides the subsequent expansion. The interface — how the bounce state seeds the pre-geometric network — needs formalization"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "holography/causal-set-statistics",
+            "context": "Causal Set Statistics"
+          },
+          {
+            "target": "spacetime/singularity-resolution",
+            "context": "Singularity Resolution"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap"
+          },
+          {
+            "target": "minimal-observer/multiplicity",
+            "context": "Multiplicity"
+          }
+        ],
+        "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": true,
       "upgradeBlockers": []
     },
     "cosmology/leptogenesis": {
@@ -6391,6 +6545,7 @@
         "holography/er-epr"
       ],
       "dependedOnBy": [
+        "cosmology/geometric-inflation",
         "holography/er-epr"
       ],
       "steps": [
@@ -6567,6 +6722,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "cosmology/geometric-inflation",
+            "context": "Causal Set Statistics"
+          },
           {
             "source": "gauge/proton-stability",
             "context": "Causal Set Statistics"
@@ -7504,6 +7663,7 @@
       ],
       "dependedOnBy": [
         "cosmology/coupling-constants",
+        "cosmology/geometric-inflation",
         "cosmology/observer-loop-viability",
         "gauge/color-force",
         "interactions/bootstrap-division-algebras",
@@ -7721,6 +7881,10 @@
           {
             "source": "cosmology/coupling-constants",
             "context": "Bootstrap Mechanism"
+          },
+          {
+            "source": "cosmology/geometric-inflation",
+            "context": "Bootstrap"
           },
           {
             "source": "cosmology/observer-loop-viability",
@@ -8692,6 +8856,7 @@
         "interactions/three-types"
       ],
       "dependedOnBy": [
+        "cosmology/geometric-inflation",
         "cosmology/observer-loop-viability",
         "interactions/three-types",
         "minimal-observer/coherence-dual-pairs"
@@ -8902,6 +9067,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "cosmology/geometric-inflation",
+            "context": "Multiplicity"
+          },
           {
             "source": "cosmology/observer-loop-viability",
             "context": "Multiplicity"
@@ -11261,6 +11430,10 @@
             "context": "Entanglement"
           },
           {
+            "source": "quantum/sheaf-section-uniqueness",
+            "context": "Entanglement"
+          },
+          {
             "source": "quantum/teleportation",
             "context": "Entanglement"
           }
@@ -11727,8 +11900,8 @@
         },
         {
           "number": 5,
-          "title": "Sheaf structure and section uniqueness",
-          "description": "The observer network has a natural sheaf-theoretic description: Level 2 facts are local sections (defined at each observer, constrained by overlap conditions from strong subadditivity), Level 1 facts "
+          "title": "Sheaf structure — remaining quantitative questions",
+          "description": "The [Sheaf Structure](/derivations/quantum/sheaf-section-uniqueness) derivation resolves the qualitative question: the observer network carries three sheaves (coherence, probability, outcome) with a s"
         }
       ],
       "assessmentVerdict": "The core mathematical chain (Steps 1–6) is rigorous given the axioms. Every theorem either follows directly from established upstream results (Measurement, Born Rule, Entanglement, Relational Invariants — all rigorous) or is a logical classification whose substantive content reduces to those results",
@@ -11766,6 +11939,10 @@
           {
             "target": "quantum/entanglement",
             "context": "Entanglement"
+          },
+          {
+            "target": "quantum/sheaf-section-uniqueness",
+            "context": "Sheaf Structure"
           },
           {
             "target": "axioms/loop-closure",
@@ -12189,21 +12366,11 @@
         },
         {
           "number": 2,
-          "title": "Abelian vs. non-abelian coefficients",
-          "description": "— Theorem 5.2 identifies checkH1 0 for the outcome sheaf, but the proof uses the Kochen-Specker result, which works with Z2 coefficients (value assignments are yes/no for projectors). The full outcome"
-        },
-        {
-          "number": 3,
-          "title": "Quantifying the obstruction",
-          "description": "— checkH1 0 says obstructions exist, but doesn't quantify them. Is dim checkH1 related to a physical quantity (entanglement entropy? mutual information? number of non-commuting observables)? A quantit"
-        },
-        {
-          "number": 4,
           "title": "Continuous observables",
           "description": "— The current analysis works for discrete outcome spaces. For continuous spectra, the stalks become infinite-dimensional and the cohomology theory needs refinement (e.g., sheaves of topological spaces"
         },
         {
-          "number": 5,
+          "number": 3,
           "title": "Higher cohomology",
           "description": "— We've focused on H1 (gluing obstructions), but H2 and higher may carry physical information. In gauge theory, H2 classifies gerbes (higher gauge fields). Whether H2(G, O) has a physical interpretati"
         }
@@ -12211,8 +12378,18 @@
       "assessmentVerdict": "",
       "hasConsistencyModel": false,
       "crossReferences": {
-        "outgoing": [],
-        "incoming": []
+        "outgoing": [
+          {
+            "target": "quantum/entanglement",
+            "context": "Entanglement"
+          }
+        ],
+        "incoming": [
+          {
+            "source": "quantum/observer-relative-objectivity",
+            "context": "Sheaf Structure"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -12474,6 +12651,7 @@
       ],
       "dependedOnBy": [
         "cosmology/cosmological-constant",
+        "cosmology/geometric-inflation",
         "holography/er-epr",
         "spacetime/singularity-resolution"
       ],
@@ -12748,6 +12926,7 @@
         "holography/area-scaling"
       ],
       "dependedOnBy": [
+        "cosmology/geometric-inflation",
         "holography/area-scaling",
         "spacetime/einstein-equations"
       ],
@@ -13308,6 +13487,7 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
+        "cosmology/geometric-inflation",
         "cosmology/observer-loop-viability"
       ],
       "steps": [
@@ -13478,6 +13658,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "cosmology/geometric-inflation",
+            "context": "Singularity Resolution"
+          },
           {
             "source": "cosmology/observer-loop-viability",
             "context": "Theorem 4.1"
@@ -18343,6 +18527,62 @@
       "id": "2.1",
       "name": "",
       "fullRef": "cosmology/coupling-constants:Proposition 2.1"
+    },
+    {
+      "derivationId": "cosmology/geometric-inflation",
+      "type": "Definition",
+      "id": "1.1",
+      "name": "Geometric validity threshold",
+      "fullRef": "cosmology/geometric-inflation:Definition 1.1"
+    },
+    {
+      "derivationId": "cosmology/geometric-inflation",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "Pre-geometric phase",
+      "fullRef": "cosmology/geometric-inflation:Proposition 1.2"
+    },
+    {
+      "derivationId": "cosmology/geometric-inflation",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "Exponential observer multiplication",
+      "fullRef": "cosmology/geometric-inflation:Proposition 2.1"
+    },
+    {
+      "derivationId": "cosmology/geometric-inflation",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Effective scale factor during transition",
+      "fullRef": "cosmology/geometric-inflation:Proposition 3.1"
+    },
+    {
+      "derivationId": "cosmology/geometric-inflation",
+      "type": "Theorem",
+      "id": "4.1",
+      "name": "No horizon problem",
+      "fullRef": "cosmology/geometric-inflation:Theorem 4.1"
+    },
+    {
+      "derivationId": "cosmology/geometric-inflation",
+      "type": "Theorem",
+      "id": "5.1",
+      "name": "Flatness from coherence conservation",
+      "fullRef": "cosmology/geometric-inflation:Theorem 5.1"
+    },
+    {
+      "derivationId": "cosmology/geometric-inflation",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "Suppressed tensor-to-scalar ratio",
+      "fullRef": "cosmology/geometric-inflation:Proposition 6.1"
+    },
+    {
+      "derivationId": "cosmology/geometric-inflation",
+      "type": "Proposition",
+      "id": "6.2",
+      "name": "Scalar spectrum compatibility",
+      "fullRef": "cosmology/geometric-inflation:Proposition 6.2"
     },
     {
       "derivationId": "cosmology/leptogenesis",
@@ -24290,6 +24530,34 @@
       "description": "The most distinctive prediction is non-convergence of couplings — the three curves alphai-1(mu) do not meet at a single point. Future precision measurements of alphas(MZ) and sin2thetaW(MZ), combined "
     },
     {
+      "derivationId": "cosmology/geometric-inflation",
+      "derivationStatus": "draft",
+      "number": 1,
+      "title": "Geometric validity criterion",
+      "description": "The threshold rhoRI gg rhoPl is qualitative. A precise criterion (specific ratio, phase transition vs crossover) would sharpen the predictions. The causal set literature on \"manifold-likeness\" conditi"
+    },
+    {
+      "derivationId": "cosmology/geometric-inflation",
+      "derivationStatus": "draft",
+      "number": 2,
+      "title": "Quantitative $n_s$ derivation",
+      "description": "Proposition 6.2 claims compatibility with the observed spectral index but does not derive it. Computing ns from the Poisson statistics of the geometric transition would be a strong quantitative test —"
+    },
+    {
+      "derivationId": "cosmology/geometric-inflation",
+      "derivationStatus": "draft",
+      "number": 3,
+      "title": "Reheating equivalent",
+      "description": "In standard inflation, reheating transfers inflaton energy to Standard Model particles. In geometric inflation, the analogous process is the bootstrap crystallization of the gauge hierarchy. The therm"
+    },
+    {
+      "derivationId": "cosmology/geometric-inflation",
+      "derivationStatus": "draft",
+      "number": 4,
+      "title": "Relationship to bounce",
+      "description": "The singularity-resolution derivation provides the bounce; this derivation provides the subsequent expansion. The interface — how the bounce state seeds the pre-geometric network — needs formalization"
+    },
+    {
       "derivationId": "cosmology/observer-loop-viability",
       "derivationStatus": "rigorous",
       "number": 1,
@@ -25231,8 +25499,8 @@
       "derivationId": "quantum/observer-relative-objectivity",
       "derivationStatus": "rigorous",
       "number": 5,
-      "title": "Sheaf structure and section uniqueness",
-      "description": "The observer network has a natural sheaf-theoretic description: Level 2 facts are local sections (defined at each observer, constrained by overlap conditions from strong subadditivity), Level 1 facts "
+      "title": "Sheaf structure — remaining quantitative questions",
+      "description": "The [Sheaf Structure](/derivations/quantum/sheaf-section-uniqueness) derivation resolves the qualitative question: the observer network carries three sheaves (coherence, probability, outcome) with a s"
     },
     {
       "derivationId": "quantum/preferred-basis",
@@ -25273,27 +25541,13 @@
       "derivationId": "quantum/sheaf-section-uniqueness",
       "derivationStatus": "draft",
       "number": 2,
-      "title": "Abelian vs. non-abelian coefficients",
-      "description": "— Theorem 5.2 identifies checkH1 0 for the outcome sheaf, but the proof uses the Kochen-Specker result, which works with Z2 coefficients (value assignments are yes/no for projectors). The full outcome"
-    },
-    {
-      "derivationId": "quantum/sheaf-section-uniqueness",
-      "derivationStatus": "draft",
-      "number": 3,
-      "title": "Quantifying the obstruction",
-      "description": "— checkH1 0 says obstructions exist, but doesn't quantify them. Is dim checkH1 related to a physical quantity (entanglement entropy? mutual information? number of non-commuting observables)? A quantit"
-    },
-    {
-      "derivationId": "quantum/sheaf-section-uniqueness",
-      "derivationStatus": "draft",
-      "number": 4,
       "title": "Continuous observables",
       "description": "— The current analysis works for discrete outcome spaces. For continuous spectra, the stalks become infinite-dimensional and the cohomology theory needs refinement (e.g., sheaves of topological spaces"
     },
     {
       "derivationId": "quantum/sheaf-section-uniqueness",
       "derivationStatus": "draft",
-      "number": 5,
+      "number": 3,
       "title": "Higher cohomology",
       "description": "— We've focused on H1 (gluing obstructions), but H2 and higher may carry physical information. In gauge theory, H2 classifies gerbes (higher gauge fields). Whether H2(G, O) has a physical interpretati"
     },
@@ -25623,9 +25877,15 @@
   "upgradeAnalysis": {
     "eligible": [
       {
+        "id": "cosmology/geometric-inflation",
+        "currentStatus": "draft",
+        "gapCount": 4,
+        "formalObjectCount": 8
+      },
+      {
         "id": "quantum/sheaf-section-uniqueness",
         "currentStatus": "draft",
-        "gapCount": 5,
+        "gapCount": 3,
         "formalObjectCount": 18
       }
     ],
