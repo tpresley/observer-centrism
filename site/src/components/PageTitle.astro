@@ -5,9 +5,11 @@ interface Props {
 }
 
 const { title, subtitle } = Astro.props
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 ---
 
 <div class="page-title-bar">
+  <img src={`${base}/logo-transparent.svg`} class="page-title-logo" alt="" aria-hidden="true" />
   <div class="page-title-content">
     <h1>{title}</h1>
     {subtitle && <p class="page-title-subtitle">{subtitle}</p>}
@@ -17,13 +19,29 @@ const { title, subtitle } = Astro.props
 
 <style>
   .page-title-bar {
+    position: relative;
+    overflow: hidden;
     background: linear-gradient(135deg, #0f1117 0%, #1e2535 50%, #0f1117 100%);
     border-radius: 12px;
     padding: 1.5rem 2rem;
     margin-bottom: 2rem;
   }
 
+  .page-title-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 280%;
+    width: auto;
+    opacity: 0.12;
+    pointer-events: none;
+    user-select: none;
+  }
+
   .page-title-content {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
   }

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <style>
+      .ring-outer { fill: none; stroke: #2563eb; stroke-width: 2.5; opacity: 0.35; }
+      .ring-mid   { fill: none; stroke: #2563eb; stroke-width: 2.0; opacity: 0.55; }
+      .ring-inner { fill: none; stroke: #2563eb; stroke-width: 1.8; opacity: 0.75; }
+      .arc-glow   { fill: none; stroke: #60a5fa; stroke-width: 3.5; stroke-linecap: round; opacity: 0.9; }
+      .node       { fill: #2563eb; }
+      .node-core  { fill: #eff6ff; }
+      .edge       { stroke: #3b82f6; stroke-width: 1.4; opacity: 0.5; stroke-linecap: round; }
+      .edge-bright{ stroke: #93c5fd; stroke-width: 2.0; opacity: 0.85; stroke-linecap: round; }
+      .boundary   { fill: none; stroke: #1d4ed8; stroke-width: 1.2; stroke-dasharray: 4 3; opacity: 0.4; }
+    </style>
+    <filter id="glow-blue" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-core" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="core-grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#eff6ff" stop-opacity="1"/>
+      <stop offset="60%"  stop-color="#93c5fd" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#2563eb" stop-opacity="0.7"/>
+    </radialGradient>
+  </defs>
+
+  <!-- THREE CONCENTRIC PHASE RINGS (Axiom 3: loop closure) -->
+  <circle cx="200" cy="200" r="155" class="ring-outer"/>
+  <circle cx="200" cy="200" r="108" class="ring-mid"/>
+  <circle cx="200" cy="200" r="62"  class="ring-inner"/>
+
+  <!-- BRIGHT ARC on outer ring -->
+  <path d="M 200,200 m 155,0
+    A 155,155 0 1 1
+    224.9,47.1"
+    class="arc-glow" filter="url(#glow-blue)" fill="none"/>
+
+  <!-- Outer node connections -->
+  <line x1="355" y1="200"   x2="277.5" y2="334.2" class="edge"/>
+  <line x1="277.5" y1="334.2" x2="122.5" y2="334.2" class="edge"/>
+  <line x1="122.5" y1="334.2" x2="45"   y2="200"   class="edge"/>
+  <line x1="45"   y1="200"   x2="122.5" y2="65.8"  class="edge"/>
+  <line x1="122.5" y1="65.8"  x2="277.5" y2="65.8"  class="edge"/>
+  <line x1="277.5" y1="65.8"  x2="355"   y2="200"   class="edge"/>
+
+  <!-- Inner triangle edges -->
+  <line x1="200"   y1="92"  x2="106.5" y2="254" class="edge-bright"/>
+  <line x1="106.5" y1="254" x2="293.5" y2="254" class="edge-bright"/>
+  <line x1="293.5" y1="254" x2="200"   y2="92"  class="edge-bright"/>
+
+  <!-- Spokes from inner nodes to core -->
+  <line x1="200"   y1="92"  x2="200" y2="200" class="edge-bright" opacity="0.6"/>
+  <line x1="106.5" y1="254" x2="200" y2="200" class="edge-bright" opacity="0.6"/>
+  <line x1="293.5" y1="254" x2="200" y2="200" class="edge-bright" opacity="0.6"/>
+
+  <!-- Dashed self/non-self boundary circles -->
+  <circle cx="355"   cy="200"   r="14" class="boundary"/>
+  <circle cx="277.5" cy="334.2" r="14" class="boundary"/>
+  <circle cx="122.5" cy="334.2" r="14" class="boundary"/>
+  <circle cx="45"    cy="200"   r="14" class="boundary"/>
+  <circle cx="122.5" cy="65.8"  r="14" class="boundary"/>
+  <circle cx="277.5" cy="65.8"  r="14" class="boundary"/>
+
+  <!-- Outer nodes -->
+  <circle cx="355"   cy="200"   r="7" class="node" filter="url(#glow-blue)"/>
+  <circle cx="277.5" cy="334.2" r="7" class="node" filter="url(#glow-blue)"/>
+  <circle cx="122.5" cy="334.2" r="7" class="node" filter="url(#glow-blue)"/>
+  <circle cx="45"    cy="200"   r="7" class="node" filter="url(#glow-blue)"/>
+  <circle cx="122.5" cy="65.8"  r="7" class="node" filter="url(#glow-blue)"/>
+  <circle cx="277.5" cy="65.8"  r="7" class="node" filter="url(#glow-blue)"/>
+
+  <!-- Inner nodes -->
+  <circle cx="200"   cy="92"  r="6" class="node" filter="url(#glow-blue)"/>
+  <circle cx="106.5" cy="254" r="6" class="node" filter="url(#glow-blue)"/>
+  <circle cx="293.5" cy="254" r="6" class="node" filter="url(#glow-blue)"/>
+
+  <!-- Central observer -->
+  <circle cx="200" cy="200" r="22" fill="url(#core-grad)" filter="url(#glow-core)"/>
+  <circle cx="200" cy="200" r="10" class="node-core" opacity="0.95"/>
+
+  <!-- Phase tick -->
+  <circle cx="349.7" cy="159.9" r="4.5" fill="#eff6ff" filter="url(#glow-core)" opacity="0.85"/>
+
+</svg>
