@@ -3,7 +3,7 @@ title: "Loop Closure"
 status: "rigorous"
 dependsOn: ["axioms/coherence-conservation", "axioms/observer-definition"]
 enablesDerivation: ["minimal-observer/structure", "thermodynamics/action-planck", "spacetime/speed-of-light"]
-tags: ["foundation"]
+tags: ["axioms"]
 summary: "Formalization of cyclic dynamics as a Noether pair (U(1) symmetry ↔ conserved charge), with Lyapunov stability and approximate closure giving a precise persistence criterion"
 rigorLevel: "formal"
 lastUpdated: 2026-03-12

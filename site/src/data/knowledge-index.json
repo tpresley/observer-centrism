@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-15T11:03:23.038Z",
+    "generatedAt": "2026-03-16T02:23:05.679Z",
     "derivationCount": 61,
     "predictionCount": 10,
     "gaPageCount": 12,
@@ -15,7 +15,7 @@
     "derivationCount": 61,
     "predictionCount": 10,
     "edgeCount": 129,
-    "formalObjectCount": 901,
+    "formalObjectCount": 899,
     "openGapCount": 201,
     "upgradeEligibleCount": 0,
     "leanVerifiedCount": 8,
@@ -30,7 +30,7 @@
       "rigorLevel": "formal",
       "group": "axioms",
       "tags": [
-        "foundation"
+        "axioms"
       ],
       "summary": "Formalization of the primitive conserved quantity as a subadditive measure on a directed acyclic graph, with conservation stated graph-theoretically without presupposing time",
       "lastUpdated": "2026-03-08",
@@ -513,10 +513,6 @@
           },
           {
             "target": "quantum/born-rule",
-            "context": "0,\\infty) \\to [0,\\infty)$, where $\\{|k\\rangle\\}$ is any orthonormal basis\n\n*(F3)"
-          },
-          {
-            "target": "quantum/born-rule",
             "context": "Born Rule"
           },
           {
@@ -556,7 +552,7 @@
       "rigorLevel": "formal",
       "group": "axioms",
       "tags": [
-        "foundation"
+        "axioms"
       ],
       "summary": "Formalization of cyclic dynamics as a Noether pair (U(1) symmetry ↔ conserved charge), with Lyapunov stability and approximate closure giving a precise persistence criterion",
       "lastUpdated": "2026-03-12",
@@ -784,7 +780,7 @@
         {
           "number": 3,
           "title": "Massless observers",
-          "description": "Photons have no rest frame and no rest-frame loop. They are limiting cases where TO 0 and omegaO while SO remains finite. This limit needs formal treatment within the approximate closure framework."
+          "description": "Photons have no rest frame and no rest-frame loop. They are limiting cases where TO 0 and omegaO while SO remains finite. This limit needs formal treatment within the approximate closure framework. <!"
         }
       ],
       "assessmentVerdict": "All claims are proved from definitions and standard mathematical results, with explicit assumptions stated upfront. Structural postulates are clearly separated from proven results. Results that depend on later derivations are explicitly deferred. The axiom meets the standard for rigorous status.",
@@ -944,7 +940,7 @@
       "rigorLevel": "formal",
       "group": "axioms",
       "tags": [
-        "foundation"
+        "axioms"
       ],
       "summary": "Formalization of the observer as a triple (Σ, I, B) — state space, invariant, and self/non-self boundary — with topological structure, non-triviality conditions, and observer category",
       "lastUpdated": "2026-03-08",
@@ -1682,7 +1678,7 @@
         {
           "number": 3,
           "title": "Two-loop precision",
-          "description": "Computing the two-loop RG running with threshold corrections would achieve < 1% precision in alphaem and alphas predictions. This is standard QFT technology (Machacek & Vaughn 1984) once the boundary "
+          "description": "Computing the two-loop RG running with threshold corrections would achieve < 1% precision in alphaem and alphas predictions. This is standard QFT technology [Machacek & Vaughn, 1984] once the boundary"
         },
         {
           "number": 4,
@@ -2719,7 +2715,7 @@
         {
           "number": 5,
           "title": "Quark-lepton complementarity",
-          "description": "The observation theta12CKM + theta12PMNS pi/4 may be accidental or may reflect a deeper geometric relationship between the quark and lepton sectors. The A5 framework should clarify this."
+          "description": "The observation theta12CKM + theta12PMNS pi/4 may be accidental or may reflect a deeper geometric relationship between the quark and lepton sectors. The A5 framework should clarify this. <!-- Referenc"
         }
       ],
       "assessmentVerdict": "Rigorous. The derivation establishes the structural framework for flavor mixing: three generations from dim SO(3) = 3 ([Three Generations](/derivations/particles/three-generations), rigorous), basis mismatch from distinct physical mechanisms (mass vs. weak eigenstates), A5 discrete symmetry from the",
@@ -3813,10 +3809,6 @@
             "context": "Color Force"
           },
           {
-            "source": "gauge/strong-cp",
-            "context": "0, 2\\pi)$ is the vacuum angle.\n\n**Proposition 1.2 (CP violation by $\\theta$).** "
-          },
-          {
             "source": "gauge/weak-interaction",
             "context": "Color Force"
           },
@@ -3989,7 +3981,7 @@
         {
           "number": 6,
           "title": "Lattice comparison",
-          "description": "Compare the non-associative confinement mechanism with lattice QCD results for the static quark potential and flux tube structure."
+          "description": "Compare the non-associative confinement mechanism with lattice QCD results for the static quark potential and flux tube structure. <!-- References --> [Diaconis & Shahshahani, 1987]: /references#diaco"
         }
       ],
       "assessmentVerdict": "Rigorous. The core results (Theorem 3.1, Propositions 2.2–2.3, 4.1, 5.1) have complete proofs, with the linear potential now derived via the random-walk-on-groups framework and asymptotic freedom via explicit segment counting. The deconfinement transition (Proposition 6.1) uses standard thermal QCD ",
@@ -4581,7 +4573,7 @@
         {
           "number": 5,
           "title": "Electroweak phase transition",
-          "description": "The cosmological electroweak phase transition (first-order vs. crossover) depends on the detailed dynamics of the crystallization, relevant for [Baryogenesis](/derivations/cosmology/baryogenesis)."
+          "description": "The cosmological electroweak phase transition (first-order vs. crossover) depends on the detailed dynamics of the crystallization, relevant for [Baryogenesis](/derivations/cosmology/baryogenesis). <!-"
         }
       ],
       "assessmentVerdict": "Rigorous. All key results have formal proofs: the crystallization mechanism uses the explicit one-loop Coleman-Weinberg potential with numerical coefficient evaluation; the Higgs mechanism and gauge boson masses are standard QFT results verified experimentally; the hierarchy protection uses dimensio",
@@ -5235,10 +5227,6 @@
           {
             "target": "gauge/color-force",
             "context": "Color Force"
-          },
-          {
-            "target": "gauge/color-force",
-            "context": "0, 2\\pi)$ is the vacuum angle.\n\n**Proposition 1.2 (CP violation by $\\theta$).** "
           },
           {
             "target": "interactions/bootstrap-division-algebras",
@@ -6525,7 +6513,7 @@
         {
           "number": 5,
           "title": "Continuum limit",
-          "description": "The identification of the discrete relational invariant network with a Poisson causal set relies on a continuum limit that has not been rigorously constructed from the axioms."
+          "description": "The identification of the discrete relational invariant network with a Poisson causal set relies on a continuum limit that has not been rigorously constructed from the axioms. <!-- References --> [Bom"
         }
       ],
       "assessmentVerdict": "Rigorous. The causal set foundation is mathematically rigorous (Propositions 1.2, 1.3, 3.2). The holographic noise amplitude alphaH = 1/4 is derived from the Bekenstein-Hawking entropy bound via explicit causal diamond geometry and degree-of-freedom counting. The geodesic variance scaling is proven ",
@@ -7105,7 +7093,7 @@
           "type": "Theorem",
           "id": "6.1",
           "name": "No firewall",
-          "statementPreview": "The framework rejects the firewall hypothesis (AMPS, 2012).*"
+          "statementPreview": "The framework rejects the firewall hypothesis [AMPS, 2012].*"
         },
         {
           "type": "Proposition",
@@ -7125,12 +7113,12 @@
         {
           "number": 1,
           "title": "Scrambling time",
-          "description": "How quickly does the black hole interior become encoded in the Hawking radiation? The scrambling time ts sim (M/MP)2 tP log(SBH) (Sekino-Susskind, 2008) should be derivable from the rate of relational"
+          "description": "How quickly does the black hole interior become encoded in the Hawking radiation? The scrambling time ts sim (M/MP)2 tP log(SBH) [Sekino-Susskind, 2008] should be derivable from the rate of relational"
         },
         {
           "number": 2,
           "title": "Quantum error correction",
-          "description": "The encoding of interior information in radiation correlations should be formalizable as a quantum error-correcting code (Almheiri-Dong-Harlow, 2015). The relational invariant structure should map ont"
+          "description": "The encoding of interior information in radiation correlations should be formalizable as a quantum error-correcting code [Almheiri-Dong-Harlow, 2015]. The relational invariant structure should map ont"
         },
         {
           "number": 3,
@@ -9380,7 +9368,7 @@
           "type": "Corollary",
           "id": "4.3",
           "name": "",
-          "statementPreview": ": P is violated in weak decays of electrons (observed in Wu experiment, 1957). CP is violated in the kaon system (obs..."
+          "statementPreview": ": P is violated in weak decays of electrons [Wu, 1957]. CP is violated in the kaon system (observed, 1964). Both are ..."
         }
       ],
       "structuralPostulates": [],
@@ -10241,7 +10229,7 @@
         {
           "number": 3,
           "title": "Higher-spin particles",
-          "description": "Which spin values are realized at each level of the bootstrap hierarchy? Spin-1 gauge bosons and spin-2 gravitons should emerge at specific levels — this connects to the gauge structure derivation."
+          "description": "Which spin values are realized at each level of the bootstrap hierarchy? Spin-1 gauge bosons and spin-2 gravitons should emerge at specific levels — this connects to the gauge structure derivation. <!"
         }
       ],
       "assessmentVerdict": "The derivation is rigorous. The pure mathematics (pi1 computations, representation theory, DHR theorem) are established results. The connection to the framework's relational invariants (Proposition 4.1) is rigorous given S1 (topological consistency), which is the standard quantization condition on t",
@@ -10392,7 +10380,7 @@
           "type": "Proposition",
           "id": "3.1",
           "name": "Relation to Coleman-Mandula and Haag-Łopuszański-Sohnius",
-          "statementPreview": "The standard no-go theorem for bosonic symmetries (Coleman-Mandula, 1967) forbids non-trivial mixing of internal and ..."
+          "statementPreview": "The standard no-go theorem for bosonic symmetries [Coleman-Mandula, 1967] forbids non-trivial mixing of internal and ..."
         },
         {
           "type": "Proposition",
@@ -10446,7 +10434,7 @@
         {
           "number": 3,
           "title": "Supergravity and string theory",
-          "description": "In approaches where supersymmetry is a mathematical framework (string theory, supergravity), does the topological no-go theorem constrain which mathematical structures have physical realizations?"
+          "description": "In approaches where supersymmetry is a mathematical framework (string theory, supergravity), does the topological no-go theorem constrain which mathematical structures have physical realizations? <!--"
         }
       ],
       "assessmentVerdict": "Rigorous. The core argument — Theorem 2.1 — is a short topological proof: pi1(SO(3)) = Z2 is discrete, so no continuous symmetry can interpolate between its two elements. This is a stronger no-go theorem than the standard Coleman-Mandula/HLS results because it operates at the topological level rathe",
@@ -10914,7 +10902,7 @@
         {
           "number": 4,
           "title": "POVMs",
-          "description": "Generalized measurements (positive operator-valued measures) should follow from partial Type III interactions where the observer does not fully resolve the system's state."
+          "description": "Generalized measurements (positive operator-valued measures) should follow from partial Type III interactions where the observer does not fully resolve the system's state. <!-- References --> [Aczél, "
         }
       ],
       "assessmentVerdict": "The Born rule derivation is fully rigorous. The amplitude–coherence identification (formerly S1) is now a theorem (Theorem 0.1), derived from U(1) invariance, composition, and continuity via the Cauchy multiplicative equation. The uniqueness of f(x) = x is established for all dimensions by the compo",
@@ -10967,10 +10955,6 @@
           }
         ],
         "incoming": [
-          {
-            "source": "axioms/coherence-operational",
-            "context": "0,\\infty) \\to [0,\\infty)$, where $\\{|k\\rangle\\}$ is any orthonormal basis\n\n*(F3)"
-          },
           {
             "source": "axioms/coherence-operational",
             "context": "Born Rule"
@@ -11188,7 +11172,7 @@
         {
           "number": 5,
           "title": "Entanglement dynamics",
-          "description": "Derive entanglement growth under unitary evolution and the scrambling time from coherence dynamics."
+          "description": "Derive entanglement growth under unitary evolution and the scrambling time from coherence dynamics. <!-- References --> [Lieb & Ruskai, 1973]: /references#lieb-ruskai-1973 [Maldacena & Susskind, 2013]"
         }
       ],
       "assessmentVerdict": "Rigorous. All numbered results (Propositions 1.3–1.4, Theorems 2.1, 3.1, 4.1, Corollary 2.2, Theorem 6.1) have complete proofs combining the coherence axioms with established mathematical theorems (SVD, Shannon–Khinchin uniqueness, Lieb-Ruskai strong subadditivity, CKW). No new structural postulates",
@@ -12084,12 +12068,6 @@
         },
         {
           "type": "Theorem",
-          "id": "4.1",
-          "name": "Lovelock, 1971",
-          "statementPreview": "In n = 4 spacetime dimensions (from [Three Spatial Dimensions](/derivations/dimensions/three-dimensions)), the most g..."
-        },
-        {
-          "type": "Theorem",
           "id": "5.1",
           "name": "Einstein field equations",
           "statementPreview": "The self-consistency condition of the coherence geometry is:*"
@@ -12945,7 +12923,7 @@
           "type": "Theorem",
           "id": "7.1.",
           "name": "",
-          "statementPreview": "The Planck star model (Rovelli & Vidotto, 2014) provides a consistency model for the singularity resolution mechanism.*"
+          "statementPreview": "The Planck star model [Rovelli & Vidotto, 2014] provides a consistency model for the singularity resolution mechanism.*"
         }
       ],
       "structuralPostulates": [],
@@ -13312,10 +13290,6 @@
           {
             "source": "thermodynamics-ext/renormalization",
             "context": "Speed of Light"
-          },
-          {
-            "source": "thermodynamics/action-planck",
-            "context": "0, 2\\pi)$ is the phase and $Q$ is the conserved charge:*\n\n$$\\Delta\\theta \\cdot \\"
           },
           {
             "source": "thermodynamics/action-planck",
@@ -13868,12 +13842,6 @@
           "statementPreview": "A **Markov map** (or sufficient statistic) is a stochastic map T: X Y that preserves the statistical information abou..."
         },
         {
-          "type": "Theorem",
-          "id": "3.1",
-          "name": "Čencov, 1972/1982",
-          "statementPreview": "On the manifold of probability distributions over a finite sample space, the Fisher information metric is the unique ..."
-        },
-        {
           "type": "Corollary",
           "id": "3.2",
           "name": "Uniqueness of coherence geometry",
@@ -13956,12 +13924,12 @@
         {
           "number": 2,
           "title": "Quantum Fisher metric",
-          "description": "Extend from the classical Fisher metric to the quantum Fisher information (Bures metric / symmetric logarithmic derivative). This is needed for full quantum state spaces. The quantum Čencov theorem (P"
+          "description": "Extend from the classical Fisher metric to the quantum Fisher information (Bures metric / symmetric logarithmic derivative). This is needed for full quantum state spaces. The quantum Čencov theorem [P"
         },
         {
           "number": 3,
           "title": "Infinite-dimensional extension",
-          "description": "The derivation assumes finite-dimensional Sigma. For field theory, the state space is infinite-dimensional and requires functional-analytic care (the theory exists — see Pistone & Sempi, 1995)."
+          "description": "The derivation assumes finite-dimensional Sigma. For field theory, the state space is infinite-dimensional and requires functional-analytic care [Pistone & Sempi, 1995]."
         }
       ],
       "assessmentVerdict": "Rigorous. The core identification (Čencov uniqueness → Fisher metric = coherence geometry up to hbar) is now fully rigorous. The critical gap (monotonicity of the Hessian metric) has been closed by the now-rigorous [Conservation of Distinguishability](/derivations/thermodynamics-ext/distinguishabili",
@@ -14617,7 +14585,7 @@
           },
           {
             "target": "spacetime/speed-of-light",
-            "context": "0, 2\\pi)$ is the phase and $Q$ is the conserved charge:*\n\n$$\\Delta\\theta \\cdot \\"
+            "context": "Speed of Light"
           },
           {
             "target": "spacetime/lorentz-invariance",
@@ -14626,10 +14594,6 @@
           {
             "target": "thermodynamics/time",
             "context": "Time as Phase Ordering"
-          },
-          {
-            "target": "spacetime/speed-of-light",
-            "context": "Speed of Light"
           }
         ],
         "incoming": [
@@ -15199,7 +15163,7 @@
         {
           "number": 3,
           "title": "Cosmological arrow",
-          "description": "The structural arrow (increasing d(v)) is local. The global cosmological arrow (expansion) may require boundary conditions on the fixed-point solution."
+          "description": "The structural arrow (increasing d(v)) is local. The global cosmological arrow (expansion) may require boundary conditions on the fixed-point solution. <!-- References --> [Bombelli et al., 1987]: /re"
         }
       ],
       "assessmentVerdict": "The derivation of time as a partial order is fully rigorous from the axioms. The positive coherence cost (Proposition 2.1) now follows directly from the rigorous Loop Closure derivation without depending on Action-Planck. The arrow of time (Theorem 6.1) follows structurally from relational invariant",
@@ -22073,13 +22037,6 @@
     {
       "derivationId": "spacetime/einstein-equations",
       "type": "Theorem",
-      "id": "4.1",
-      "name": "Lovelock, 1971",
-      "fullRef": "spacetime/einstein-equations:Theorem 4.1"
-    },
-    {
-      "derivationId": "spacetime/einstein-equations",
-      "type": "Theorem",
       "id": "5.1",
       "name": "Einstein field equations",
       "fullRef": "spacetime/einstein-equations:Theorem 5.1"
@@ -22835,13 +22792,6 @@
     },
     {
       "derivationId": "thermodynamics-ext/fisher-metric",
-      "type": "Theorem",
-      "id": "3.1",
-      "name": "Čencov, 1972/1982",
-      "fullRef": "thermodynamics-ext/fisher-metric:Theorem 3.1"
-    },
-    {
-      "derivationId": "thermodynamics-ext/fisher-metric",
       "type": "Corollary",
       "id": "3.2",
       "name": "Uniqueness of coherence geometry",
@@ -23519,7 +23469,7 @@
       "derivationStatus": "rigorous",
       "number": 3,
       "title": "Massless observers",
-      "description": "Photons have no rest frame and no rest-frame loop. They are limiting cases where TO 0 and omegaO while SO remains finite. This limit needs formal treatment within the approximate closure framework."
+      "description": "Photons have no rest frame and no rest-frame loop. They are limiting cases where TO 0 and omegaO while SO remains finite. This limit needs formal treatment within the approximate closure framework. <!"
     },
     {
       "derivationId": "axioms/observer-definition",
@@ -23582,7 +23532,7 @@
       "derivationStatus": "rigorous",
       "number": 3,
       "title": "Two-loop precision",
-      "description": "Computing the two-loop RG running with threshold corrections would achieve < 1% precision in alphaem and alphas predictions. This is standard QFT technology (Machacek & Vaughn 1984) once the boundary "
+      "description": "Computing the two-loop RG running with threshold corrections would achieve < 1% precision in alphaem and alphas predictions. This is standard QFT technology [Machacek & Vaughn, 1984] once the boundary"
     },
     {
       "derivationId": "cosmology/coupling-constants",
@@ -23694,7 +23644,7 @@
       "derivationStatus": "rigorous",
       "number": 5,
       "title": "Quark-lepton complementarity",
-      "description": "The observation theta12CKM + theta12PMNS pi/4 may be accidental or may reflect a deeper geometric relationship between the quark and lepton sectors. The A5 framework should clarify this."
+      "description": "The observation theta12CKM + theta12PMNS pi/4 may be accidental or may reflect a deeper geometric relationship between the quark and lepton sectors. The A5 framework should clarify this. <!-- Referenc"
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
@@ -23792,7 +23742,7 @@
       "derivationStatus": "rigorous",
       "number": 6,
       "title": "Lattice comparison",
-      "description": "Compare the non-associative confinement mechanism with lattice QCD results for the static quark potential and flux tube structure."
+      "description": "Compare the non-associative confinement mechanism with lattice QCD results for the static quark potential and flux tube structure. <!-- References --> [Diaconis & Shahshahani, 1987]: /references#diaco"
     },
     {
       "derivationId": "gauge/electromagnetism",
@@ -23855,7 +23805,7 @@
       "derivationStatus": "rigorous",
       "number": 5,
       "title": "Electroweak phase transition",
-      "description": "The cosmological electroweak phase transition (first-order vs. crossover) depends on the detailed dynamics of the crystallization, relevant for [Baryogenesis](/derivations/cosmology/baryogenesis)."
+      "description": "The cosmological electroweak phase transition (first-order vs. crossover) depends on the detailed dynamics of the crystallization, relevant for [Baryogenesis](/derivations/cosmology/baryogenesis). <!-"
     },
     {
       "derivationId": "gauge/proton-stability",
@@ -24030,7 +23980,7 @@
       "derivationStatus": "rigorous",
       "number": 5,
       "title": "Continuum limit",
-      "description": "The identification of the discrete relational invariant network with a Poisson causal set relies on a continuum limit that has not been rigorously constructed from the axioms."
+      "description": "The identification of the discrete relational invariant network with a Poisson causal set relies on a continuum limit that has not been rigorously constructed from the axioms. <!-- References --> [Bom"
     },
     {
       "derivationId": "holography/hawking-radiation",
@@ -24065,14 +24015,14 @@
       "derivationStatus": "rigorous",
       "number": 1,
       "title": "Scrambling time",
-      "description": "How quickly does the black hole interior become encoded in the Hawking radiation? The scrambling time ts sim (M/MP)2 tP log(SBH) (Sekino-Susskind, 2008) should be derivable from the rate of relational"
+      "description": "How quickly does the black hole interior become encoded in the Hawking radiation? The scrambling time ts sim (M/MP)2 tP log(SBH) [Sekino-Susskind, 2008] should be derivable from the rate of relational"
     },
     {
       "derivationId": "holography/information-paradox",
       "derivationStatus": "rigorous",
       "number": 2,
       "title": "Quantum error correction",
-      "description": "The encoding of interior information in radiation correlations should be formalizable as a quantum error-correcting code (Almheiri-Dong-Harlow, 2015). The relational invariant structure should map ont"
+      "description": "The encoding of interior information in radiation correlations should be formalizable as a quantum error-correcting code [Almheiri-Dong-Harlow, 2015]. The relational invariant structure should map ont"
     },
     {
       "derivationId": "holography/information-paradox",
@@ -24373,7 +24323,7 @@
       "derivationStatus": "rigorous",
       "number": 3,
       "title": "Higher-spin particles",
-      "description": "Which spin values are realized at each level of the bootstrap hierarchy? Spin-1 gauge bosons and spin-2 gravitons should emerge at specific levels — this connects to the gauge structure derivation."
+      "description": "Which spin values are realized at each level of the bootstrap hierarchy? Spin-1 gauge bosons and spin-2 gravitons should emerge at specific levels — this connects to the gauge structure derivation. <!"
     },
     {
       "derivationId": "particles/supersymmetry-impossibility",
@@ -24394,7 +24344,7 @@
       "derivationStatus": "rigorous",
       "number": 3,
       "title": "Supergravity and string theory",
-      "description": "In approaches where supersymmetry is a mathematical framework (string theory, supergravity), does the topological no-go theorem constrain which mathematical structures have physical realizations?"
+      "description": "In approaches where supersymmetry is a mathematical framework (string theory, supergravity), does the topological no-go theorem constrain which mathematical structures have physical realizations? <!--"
     },
     {
       "derivationId": "particles/three-generations",
@@ -24443,7 +24393,7 @@
       "derivationStatus": "rigorous",
       "number": 4,
       "title": "POVMs",
-      "description": "Generalized measurements (positive operator-valued measures) should follow from partial Type III interactions where the observer does not fully resolve the system's state."
+      "description": "Generalized measurements (positive operator-valued measures) should follow from partial Type III interactions where the observer does not fully resolve the system's state. <!-- References --> [Aczél, "
     },
     {
       "derivationId": "quantum/entanglement",
@@ -24478,7 +24428,7 @@
       "derivationStatus": "rigorous",
       "number": 5,
       "title": "Entanglement dynamics",
-      "description": "Derive entanglement growth under unitary evolution and the scrambling time from coherence dynamics."
+      "description": "Derive entanglement growth under unitary evolution and the scrambling time from coherence dynamics. <!-- References --> [Lieb & Ruskai, 1973]: /references#lieb-ruskai-1973 [Maldacena & Susskind, 2013]"
     },
     {
       "derivationId": "quantum/measurement",
@@ -24751,14 +24701,14 @@
       "derivationStatus": "rigorous",
       "number": 2,
       "title": "Quantum Fisher metric",
-      "description": "Extend from the classical Fisher metric to the quantum Fisher information (Bures metric / symmetric logarithmic derivative). This is needed for full quantum state spaces. The quantum Čencov theorem (P"
+      "description": "Extend from the classical Fisher metric to the quantum Fisher information (Bures metric / symmetric logarithmic derivative). This is needed for full quantum state spaces. The quantum Čencov theorem [P"
     },
     {
       "derivationId": "thermodynamics-ext/fisher-metric",
       "derivationStatus": "rigorous",
       "number": 3,
       "title": "Infinite-dimensional extension",
-      "description": "The derivation assumes finite-dimensional Sigma. For field theory, the state space is infinite-dimensional and requires functional-analytic care (the theory exists — see Pistone & Sempi, 1995)."
+      "description": "The derivation assumes finite-dimensional Sigma. For field theory, the state space is infinite-dimensional and requires functional-analytic care [Pistone & Sempi, 1995]."
     },
     {
       "derivationId": "thermodynamics-ext/renormalization",
@@ -24856,7 +24806,7 @@
       "derivationStatus": "rigorous",
       "number": 3,
       "title": "Cosmological arrow",
-      "description": "The structural arrow (increasing d(v)) is local. The global cosmological arrow (expansion) may require boundary conditions on the fixed-point solution."
+      "description": "The structural arrow (increasing d(v)) is local. The global cosmological arrow (expansion) may require boundary conditions on the fixed-point solution. <!-- References --> [Bombelli et al., 1987]: /re"
     }
   ],
   "upgradeAnalysis": {

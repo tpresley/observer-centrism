@@ -47,7 +47,14 @@ for (const g of GA_GROUP_ORDER) {
   if (entries.length > 0) gaGroups.set(g, entries)
 }
 
+// Axioms in explicit order: Axiom 1, Axiom 2, Axiom 3, then Coherence Operational
+const AXIOM_ORDER = ['axioms/coherence-conservation', 'axioms/observer-definition', 'axioms/loop-closure']
+const axiomEntries = derivationEntries
+  .filter(d => d.data.tags.includes('axioms'))
+  .sort((a, b) => AXIOM_ORDER.indexOf(a.slug) - AXIOM_ORDER.indexOf(b.slug))
+
 const derivationGroups = {
+  'Axioms': axiomEntries,
   'Foundation': derivationEntries.filter(d => d.data.tags.includes('foundation')),
   'Dynamics': derivationEntries.filter(d => d.data.tags.includes('dynamics')),
   'Geometry': derivationEntries.filter(d => d.data.tags.includes('geometry')),

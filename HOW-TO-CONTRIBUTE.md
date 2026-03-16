@@ -70,6 +70,7 @@ New contributions should typically start as `draft` or `provisional`. Status upg
 
 | Tag | Sidebar group | Examples |
 |---|---|---|
+| `axioms` | Axioms | Coherence conservation, observer definition, loop closure |
 | `foundation` | Foundation | Multiplicity, bootstrap, observer-loop-viability |
 | `dynamics` | Dynamics | Minimal observer structure, three interaction types |
 | `geometry` | Geometry | Speed of light, Lorentz invariance, Einstein equations |
