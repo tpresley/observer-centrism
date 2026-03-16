@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-03-16T04:52:56.047Z",
-    "derivationCount": 62,
+    "generatedAt": "2026-03-16T05:33:55.145Z",
+    "derivationCount": 63,
     "predictionCount": 10,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -10,14 +10,15 @@
     "byStatus": {
       "rigorous": 60,
       "non-viable": 1,
-      "provisional": 1
+      "provisional": 1,
+      "draft": 1
     },
-    "derivationCount": 62,
+    "derivationCount": 63,
     "predictionCount": 10,
-    "edgeCount": 136,
-    "formalObjectCount": 916,
-    "openGapCount": 206,
-    "upgradeEligibleCount": 0,
+    "edgeCount": 143,
+    "formalObjectCount": 934,
+    "openGapCount": 211,
+    "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
   },
@@ -51,6 +52,7 @@
         "holography/information-paradox",
         "minimal-observer/structure",
         "quantum/observer-relative-objectivity",
+        "quantum/sheaf-section-uniqueness",
         "thermodynamics-ext/distinguishability-conservation"
       ],
       "steps": [
@@ -895,6 +897,10 @@
             "context": "Loop Closure"
           },
           {
+            "source": "quantum/observer-relative-objectivity",
+            "context": "Loop Closure"
+          },
+          {
             "source": "spacetime/gravity",
             "context": "Loop Closure"
           },
@@ -963,7 +969,8 @@
         "dimensions/three-dimensions",
         "minimal-observer/multiplicity",
         "minimal-observer/structure",
-        "quantum/observer-relative-objectivity"
+        "quantum/observer-relative-objectivity",
+        "quantum/sheaf-section-uniqueness"
       ],
       "steps": [
         {
@@ -7837,6 +7844,7 @@
         "quantum/born-rule",
         "quantum/entanglement",
         "quantum/observer-relative-objectivity",
+        "quantum/sheaf-section-uniqueness",
         "spacetime/gravity",
         "thermodynamics/entropy"
       ],
@@ -10766,7 +10774,8 @@
       "dependedOnBy": [
         "quantum/entanglement",
         "quantum/observer-relative-objectivity",
-        "quantum/preferred-basis"
+        "quantum/preferred-basis",
+        "quantum/sheaf-section-uniqueness"
       ],
       "steps": [
         {
@@ -11058,6 +11067,7 @@
       "dependedOnBy": [
         "holography/er-epr",
         "quantum/observer-relative-objectivity",
+        "quantum/sheaf-section-uniqueness",
         "quantum/teleportation"
       ],
       "steps": [
@@ -11553,8 +11563,12 @@
         "quantum/born-rule",
         "thermodynamics/time"
       ],
-      "enablesDerivation": [],
-      "dependedOnBy": [],
+      "enablesDerivation": [
+        "quantum/sheaf-section-uniqueness"
+      ],
+      "dependedOnBy": [
+        "quantum/sheaf-section-uniqueness"
+      ],
       "steps": [
         {
           "number": 1,
@@ -11693,8 +11707,8 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Quantum Darwinism formalization",
-          "description": "When many independent observers measure the same system and all obtain consistent results, this creates effective observer-invariance (promotion from Level 2 to effective Level 1). Formalizing this re"
+          "title": "Effective observer-invariance from redundant relational invariants",
+          "description": "When many observers O1, ldots, On independently perform Type III interactions with S, each generating IOi S, strong subadditivity (Theorem 2.1) constrains all descriptions to be mutually consistent. A"
         },
         {
           "number": 2,
@@ -11708,13 +11722,13 @@
         },
         {
           "number": 4,
-          "title": "Continuous observables",
-          "description": "The current treatment focuses on discrete measurement outcomes. Extending the trichotomy to continuous-spectrum observables requires care with the notion of \"definite value\" (replaced by spectral meas"
+          "title": "Emergent continuous observables",
+          "description": "The framework naturally produces discrete outcomes at the fundamental level — relational invariants have discrete spectra from the U(1) loop structure ([Loop Closure](/derivations/axioms/loop-closure)"
         },
         {
           "number": 5,
-          "title": "Category-theoretic objectivity",
-          "description": "The trichotomy (Theorem 6.1) could be formalized as a functor from the observer category Obs to a suitable truth-value category. Level 1 facts correspond to natural transformations (invariant across a"
+          "title": "Sheaf structure and section uniqueness",
+          "description": "The observer network has a natural sheaf-theoretic description: Level 2 facts are local sections (defined at each observer, constrained by overlap conditions from strong subadditivity), Level 1 facts "
         }
       ],
       "assessmentVerdict": "The core mathematical chain (Steps 1–6) is rigorous given the axioms. Every theorem either follows directly from established upstream results (Measurement, Born Rule, Entanglement, Relational Invariants — all rigorous) or is a logical classification whose substantive content reduces to those results",
@@ -11752,6 +11766,10 @@
           {
             "target": "quantum/entanglement",
             "context": "Entanglement"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
           }
         ],
         "incoming": []
@@ -11999,6 +12017,210 @@
         "propositions": []
       },
       "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "quantum/sheaf-section-uniqueness": {
+      "id": "quantum/sheaf-section-uniqueness",
+      "filePath": "site/src/content/derivations/quantum/sheaf-section-uniqueness.md",
+      "title": "Sheaf Structure and Section Uniqueness",
+      "status": "draft",
+      "rigorLevel": "semi-formal",
+      "group": "quantum",
+      "tags": [
+        "quantum",
+        "foundation",
+        "mathematics"
+      ],
+      "summary": "Formalizes the observer network as three sheaves (coherence, probability, outcome) and shows the trichotomy of observer-relative-objectivity is the cohomological classification: coherence and probability sheaves have unique global sections, while the outcome sheaf admits contextuality (non-vanishing H¹)",
+      "lastUpdated": "2026-03-15",
+      "dependsOn": [
+        "axioms/coherence-conservation",
+        "axioms/observer-definition",
+        "interactions/relational-invariants",
+        "quantum/observer-relative-objectivity",
+        "quantum/entanglement",
+        "quantum/born-rule",
+        "thermodynamics/time"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Coherence Topology on the Observer Category"
+        },
+        {
+          "number": 2,
+          "title": "Three Sheaves on the Observer Network"
+        },
+        {
+          "number": 3,
+          "title": "Temporal Contractibility"
+        },
+        {
+          "number": 4,
+          "title": "Coherence and Probability Sheaves Have Unique Global Sections"
+        },
+        {
+          "number": 5,
+          "title": "The Outcome Sheaf and Contextuality"
+        },
+        {
+          "number": 6,
+          "title": "Resolution — The Trichotomy Is the Sheaf Classification"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Coherence neighborhood",
+          "statementPreview": "For an observer Oi in Obs, define the *coherence neighborhood* Ui = Oj in Obs mid C(Oi : Oj) > 0 : all observers shar..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.1.",
+          "name": "",
+          "statementPreview": "The collection Uii in Obs forms a covering of Obs.*"
+        },
+        {
+          "type": "Definition",
+          "id": "1.2",
+          "name": "Coherence site",
+          "statementPreview": "Equip Obs with the Grothendieck topology generated by coherence neighborhoods: a sieve on O is covering if it contain..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Monogamy constrains the nerve",
+          "statementPreview": "The nerve N(mathfrakU) of the coherence covering has bounded simplex dimension. If C(Oi : Oj) is maximal (saturates t..."
+        },
+        {
+          "type": "Definition",
+          "id": "2.1",
+          "name": "Coherence sheaf",
+          "statementPreview": "C: Obsop textbfSet assigns to each observer Oi the coherence allocation visible to Oi: the set of values C(Oi : Oj)j ..."
+        },
+        {
+          "type": "Definition",
+          "id": "2.2",
+          "name": "Probability sheaf",
+          "statementPreview": "P: Obsop textbfSet assigns to each observer Oi the Born rule probability distributions Pi(k) = |langle k | psii rangl..."
+        },
+        {
+          "type": "Definition",
+          "id": "2.3",
+          "name": "Outcome sheaf",
+          "statementPreview": "O: Obsop textbfSet assigns to each observer Oi the actual definite values vij of relational invariants Iij for all j ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "Hierarchy",
+          "statementPreview": "These sheaves are ordered by information content: C is recoverable from P (coherence determines probabilities via C(|..."
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "Temporal $H^1 = 0$",
+          "statementPreview": "The first cohomology of any sheaf F on the time-ordered nerve of G vanishes: H1temporal(G, F) = 0.*"
+        },
+        {
+          "type": "Corollary",
+          "id": "3.1",
+          "name": "Unique coherence future",
+          "statementPreview": "Given the coherence state on any Cauchy slice Sigma of the DAG, the coherence evolution forward in the DAG is uniquel..."
+        },
+        {
+          "type": "Corollary",
+          "id": "3.2",
+          "name": "Unique probability future",
+          "statementPreview": "The Born rule probability assignments evolve uniquely along the DAG. Given the probability sheaf P on a Cauchy slice,..."
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "Uniqueness of $\\mathcal{C}$ global section",
+          "statementPreview": "The coherence sheaf C has a unique global section: total coherence Ctotal is observer-invariant, and the coherence al..."
+        },
+        {
+          "type": "Theorem",
+          "id": "4.2",
+          "name": "Uniqueness of $\\mathcal{P}$ global section",
+          "statementPreview": "The probability sheaf P has a unique global section: for every observer Oi and every observable accessible to Oi, the..."
+        },
+        {
+          "type": "Theorem",
+          "id": "5.1",
+          "name": "Outcome sheaf admits multiple local sections",
+          "statementPreview": "For any observer Oi with access to non-commuting observables, the outcome sheaf O restricted to Ui has multiple disti..."
+        },
+        {
+          "type": "Theorem",
+          "id": "5.2",
+          "name": "Non-globalizability of outcome sections",
+          "statementPreview": "For networks G containing three or more observers with pairwise coherence and access to non-commuting observables, th..."
+        },
+        {
+          "type": "Theorem",
+          "id": "6.1",
+          "name": "Sheaf-theoretic trichotomy",
+          "statementPreview": "The three levels of the observer-relative-objectivity trichotomy correspond exactly to the sheaf-cohomological classi..."
+        },
+        {
+          "type": "Corollary",
+          "id": "6.1",
+          "name": "The central question answered",
+          "statementPreview": "The coherence topology does NOT force a unique global section of the full observer sheaf. It forces unique global sec..."
+        },
+        {
+          "type": "Corollary",
+          "id": "6.2",
+          "name": "No duplication",
+          "statementPreview": "Multiple outcome sections do not duplicate coherence. All sections of O live within the unique global section of C: t..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Formal isomorphism with Abramsky-Brandenburger",
+          "description": "— The structural parallel between the observer sheaf O and the Abramsky-Brandenburger empirical model presheaf is compelling but not yet a formal isomorphism. Establishing this requires: (a) mapping r"
+        },
+        {
+          "number": 2,
+          "title": "Abelian vs. non-abelian coefficients",
+          "description": "— Theorem 5.2 identifies checkH1 0 for the outcome sheaf, but the proof uses the Kochen-Specker result, which works with Z2 coefficients (value assignments are yes/no for projectors). The full outcome"
+        },
+        {
+          "number": 3,
+          "title": "Quantifying the obstruction",
+          "description": "— checkH1 0 says obstructions exist, but doesn't quantify them. Is dim checkH1 related to a physical quantity (entanglement entropy? mutual information? number of non-commuting observables)? A quantit"
+        },
+        {
+          "number": 4,
+          "title": "Continuous observables",
+          "description": "— The current analysis works for discrete outcome spaces. For continuous spectra, the stalks become infinite-dimensional and the cohomology theory needs refinement (e.g., sheaves of topological spaces"
+        },
+        {
+          "number": 5,
+          "title": "Higher cohomology",
+          "description": "— We've focused on H1 (gluing obstructions), but H2 and higher may carry physical information. In gauge theory, H2 classifies gerbes (higher gauge fields). Whether H2(G, O) has a physical interpretati"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [],
+        "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": true,
       "upgradeBlockers": []
     },
     "quantum/teleportation": {
@@ -15312,6 +15534,7 @@
         "cosmology/observer-loop-viability",
         "quantum/born-rule",
         "quantum/observer-relative-objectivity",
+        "quantum/sheaf-section-uniqueness",
         "thermodynamics/action-planck",
         "thermodynamics/entropy"
       ],
@@ -22224,6 +22447,132 @@
       "fullRef": "quantum/preferred-basis:Theorem 9.1."
     },
     {
+      "derivationId": "quantum/sheaf-section-uniqueness",
+      "type": "Definition",
+      "id": "1.1",
+      "name": "Coherence neighborhood",
+      "fullRef": "quantum/sheaf-section-uniqueness:Definition 1.1"
+    },
+    {
+      "derivationId": "quantum/sheaf-section-uniqueness",
+      "type": "Proposition",
+      "id": "1.1.",
+      "name": "",
+      "fullRef": "quantum/sheaf-section-uniqueness:Proposition 1.1."
+    },
+    {
+      "derivationId": "quantum/sheaf-section-uniqueness",
+      "type": "Definition",
+      "id": "1.2",
+      "name": "Coherence site",
+      "fullRef": "quantum/sheaf-section-uniqueness:Definition 1.2"
+    },
+    {
+      "derivationId": "quantum/sheaf-section-uniqueness",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "Monogamy constrains the nerve",
+      "fullRef": "quantum/sheaf-section-uniqueness:Proposition 1.2"
+    },
+    {
+      "derivationId": "quantum/sheaf-section-uniqueness",
+      "type": "Definition",
+      "id": "2.1",
+      "name": "Coherence sheaf",
+      "fullRef": "quantum/sheaf-section-uniqueness:Definition 2.1"
+    },
+    {
+      "derivationId": "quantum/sheaf-section-uniqueness",
+      "type": "Definition",
+      "id": "2.2",
+      "name": "Probability sheaf",
+      "fullRef": "quantum/sheaf-section-uniqueness:Definition 2.2"
+    },
+    {
+      "derivationId": "quantum/sheaf-section-uniqueness",
+      "type": "Definition",
+      "id": "2.3",
+      "name": "Outcome sheaf",
+      "fullRef": "quantum/sheaf-section-uniqueness:Definition 2.3"
+    },
+    {
+      "derivationId": "quantum/sheaf-section-uniqueness",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "Hierarchy",
+      "fullRef": "quantum/sheaf-section-uniqueness:Proposition 2.1"
+    },
+    {
+      "derivationId": "quantum/sheaf-section-uniqueness",
+      "type": "Theorem",
+      "id": "3.1",
+      "name": "Temporal $H^1 = 0$",
+      "fullRef": "quantum/sheaf-section-uniqueness:Theorem 3.1"
+    },
+    {
+      "derivationId": "quantum/sheaf-section-uniqueness",
+      "type": "Corollary",
+      "id": "3.1",
+      "name": "Unique coherence future",
+      "fullRef": "quantum/sheaf-section-uniqueness:Corollary 3.1"
+    },
+    {
+      "derivationId": "quantum/sheaf-section-uniqueness",
+      "type": "Corollary",
+      "id": "3.2",
+      "name": "Unique probability future",
+      "fullRef": "quantum/sheaf-section-uniqueness:Corollary 3.2"
+    },
+    {
+      "derivationId": "quantum/sheaf-section-uniqueness",
+      "type": "Theorem",
+      "id": "4.1",
+      "name": "Uniqueness of $\\mathcal{C}$ global section",
+      "fullRef": "quantum/sheaf-section-uniqueness:Theorem 4.1"
+    },
+    {
+      "derivationId": "quantum/sheaf-section-uniqueness",
+      "type": "Theorem",
+      "id": "4.2",
+      "name": "Uniqueness of $\\mathcal{P}$ global section",
+      "fullRef": "quantum/sheaf-section-uniqueness:Theorem 4.2"
+    },
+    {
+      "derivationId": "quantum/sheaf-section-uniqueness",
+      "type": "Theorem",
+      "id": "5.1",
+      "name": "Outcome sheaf admits multiple local sections",
+      "fullRef": "quantum/sheaf-section-uniqueness:Theorem 5.1"
+    },
+    {
+      "derivationId": "quantum/sheaf-section-uniqueness",
+      "type": "Theorem",
+      "id": "5.2",
+      "name": "Non-globalizability of outcome sections",
+      "fullRef": "quantum/sheaf-section-uniqueness:Theorem 5.2"
+    },
+    {
+      "derivationId": "quantum/sheaf-section-uniqueness",
+      "type": "Theorem",
+      "id": "6.1",
+      "name": "Sheaf-theoretic trichotomy",
+      "fullRef": "quantum/sheaf-section-uniqueness:Theorem 6.1"
+    },
+    {
+      "derivationId": "quantum/sheaf-section-uniqueness",
+      "type": "Corollary",
+      "id": "6.1",
+      "name": "The central question answered",
+      "fullRef": "quantum/sheaf-section-uniqueness:Corollary 6.1"
+    },
+    {
+      "derivationId": "quantum/sheaf-section-uniqueness",
+      "type": "Corollary",
+      "id": "6.2",
+      "name": "No duplication",
+      "fullRef": "quantum/sheaf-section-uniqueness:Corollary 6.2"
+    },
+    {
       "derivationId": "quantum/teleportation",
       "type": "Definition",
       "id": "1.1",
@@ -24854,8 +25203,8 @@
       "derivationId": "quantum/observer-relative-objectivity",
       "derivationStatus": "rigorous",
       "number": 1,
-      "title": "Quantum Darwinism formalization",
-      "description": "When many independent observers measure the same system and all obtain consistent results, this creates effective observer-invariance (promotion from Level 2 to effective Level 1). Formalizing this re"
+      "title": "Effective observer-invariance from redundant relational invariants",
+      "description": "When many observers O1, ldots, On independently perform Type III interactions with S, each generating IOi S, strong subadditivity (Theorem 2.1) constrains all descriptions to be mutually consistent. A"
     },
     {
       "derivationId": "quantum/observer-relative-objectivity",
@@ -24875,15 +25224,15 @@
       "derivationId": "quantum/observer-relative-objectivity",
       "derivationStatus": "rigorous",
       "number": 4,
-      "title": "Continuous observables",
-      "description": "The current treatment focuses on discrete measurement outcomes. Extending the trichotomy to continuous-spectrum observables requires care with the notion of \"definite value\" (replaced by spectral meas"
+      "title": "Emergent continuous observables",
+      "description": "The framework naturally produces discrete outcomes at the fundamental level — relational invariants have discrete spectra from the U(1) loop structure ([Loop Closure](/derivations/axioms/loop-closure)"
     },
     {
       "derivationId": "quantum/observer-relative-objectivity",
       "derivationStatus": "rigorous",
       "number": 5,
-      "title": "Category-theoretic objectivity",
-      "description": "The trichotomy (Theorem 6.1) could be formalized as a functor from the observer category Obs to a suitable truth-value category. Level 1 facts correspond to natural transformations (invariant across a"
+      "title": "Sheaf structure and section uniqueness",
+      "description": "The observer network has a natural sheaf-theoretic description: Level 2 facts are local sections (defined at each observer, constrained by overlap conditions from strong subadditivity), Level 1 facts "
     },
     {
       "derivationId": "quantum/preferred-basis",
@@ -24912,6 +25261,41 @@
       "number": 4,
       "title": "Weak measurements",
       "description": "For partial (weak) Type III interactions, the relational invariant is not fully generated, and the system is left in a superposition of eigenstates with small disturbance. This should connect to the w"
+    },
+    {
+      "derivationId": "quantum/sheaf-section-uniqueness",
+      "derivationStatus": "draft",
+      "number": 1,
+      "title": "Formal isomorphism with Abramsky-Brandenburger",
+      "description": "— The structural parallel between the observer sheaf O and the Abramsky-Brandenburger empirical model presheaf is compelling but not yet a formal isomorphism. Establishing this requires: (a) mapping r"
+    },
+    {
+      "derivationId": "quantum/sheaf-section-uniqueness",
+      "derivationStatus": "draft",
+      "number": 2,
+      "title": "Abelian vs. non-abelian coefficients",
+      "description": "— Theorem 5.2 identifies checkH1 0 for the outcome sheaf, but the proof uses the Kochen-Specker result, which works with Z2 coefficients (value assignments are yes/no for projectors). The full outcome"
+    },
+    {
+      "derivationId": "quantum/sheaf-section-uniqueness",
+      "derivationStatus": "draft",
+      "number": 3,
+      "title": "Quantifying the obstruction",
+      "description": "— checkH1 0 says obstructions exist, but doesn't quantify them. Is dim checkH1 related to a physical quantity (entanglement entropy? mutual information? number of non-commuting observables)? A quantit"
+    },
+    {
+      "derivationId": "quantum/sheaf-section-uniqueness",
+      "derivationStatus": "draft",
+      "number": 4,
+      "title": "Continuous observables",
+      "description": "— The current analysis works for discrete outcome spaces. For continuous spectra, the stalks become infinite-dimensional and the cohomology theory needs refinement (e.g., sheaves of topological spaces"
+    },
+    {
+      "derivationId": "quantum/sheaf-section-uniqueness",
+      "derivationStatus": "draft",
+      "number": 5,
+      "title": "Higher cohomology",
+      "description": "— We've focused on H1 (gluing obstructions), but H2 and higher may carry physical information. In gauge theory, H2 classifies gerbes (higher gauge fields). Whether H2(G, O) has a physical interpretati"
     },
     {
       "derivationId": "quantum/teleportation",
@@ -25237,7 +25621,14 @@
     }
   ],
   "upgradeAnalysis": {
-    "eligible": [],
+    "eligible": [
+      {
+        "id": "quantum/sheaf-section-uniqueness",
+        "currentStatus": "draft",
+        "gapCount": 5,
+        "formalObjectCount": 18
+      }
+    ],
     "blocked": []
   },
   "warnings": []

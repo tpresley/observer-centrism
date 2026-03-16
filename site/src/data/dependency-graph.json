@@ -61,7 +61,8 @@
     { "id": "particles/cpt-theorem", "title": "CPT Theorem", "group": "particles", "status": "rigorous" },
     { "id": "gauge/proton-stability", "title": "Proton Stability", "group": "gauge", "status": "rigorous" },
     { "id": "cosmology/observer-loop-viability", "title": "Observer Loop Viability Bounds", "group": "cosmology", "status": "rigorous" },
-    { "id": "quantum/observer-relative-objectivity", "title": "Observer-Relative Objectivity", "group": "quantum", "status": "rigorous" }
+    { "id": "quantum/observer-relative-objectivity", "title": "Observer-Relative Objectivity", "group": "quantum", "status": "rigorous" },
+    { "id": "quantum/sheaf-section-uniqueness", "title": "Sheaf Structure & Section Uniqueness", "group": "quantum", "status": "draft" }
   ],
   "edges": [
     { "from": "axioms/coherence-conservation", "to": "axioms/coherence-operational" },
@@ -199,6 +200,13 @@
     { "from": "quantum/measurement", "to": "quantum/observer-relative-objectivity" },
     { "from": "quantum/entanglement", "to": "quantum/observer-relative-objectivity" },
     { "from": "quantum/born-rule", "to": "quantum/observer-relative-objectivity" },
-    { "from": "thermodynamics/time", "to": "quantum/observer-relative-objectivity" }
+    { "from": "thermodynamics/time", "to": "quantum/observer-relative-objectivity" },
+    { "from": "axioms/coherence-conservation", "to": "quantum/sheaf-section-uniqueness" },
+    { "from": "axioms/observer-definition", "to": "quantum/sheaf-section-uniqueness" },
+    { "from": "interactions/relational-invariants", "to": "quantum/sheaf-section-uniqueness" },
+    { "from": "quantum/observer-relative-objectivity", "to": "quantum/sheaf-section-uniqueness" },
+    { "from": "quantum/entanglement", "to": "quantum/sheaf-section-uniqueness" },
+    { "from": "quantum/born-rule", "to": "quantum/sheaf-section-uniqueness" },
+    { "from": "thermodynamics/time", "to": "quantum/sheaf-section-uniqueness" }
   ]
 }
