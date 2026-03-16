@@ -17,7 +17,7 @@ relatedPredictions: []
 
 Every framework in physics begins with assumptions. Newton assumed absolute space and time. Einstein assumed the constancy of the speed of light. Quantum mechanics assumes the Hilbert space formalism and the Born rule. These assumptions are the foundation — everything else is derived from them.
 
-Observer-Centrism strips this down to three statements. Not three equations or three symmetry groups — three structural commitments about what exists, what observers are, and what persistence requires. Everything else, the framework claims, follows.
+Observer-Centrism takes a different approach. Rather than assuming specific physical structures, it asks: what is the minimal definition of a persistent observer? The answer turns out to require three commitments — about what is conserved, what constitutes an observer, and what makes one persist. Everything else, the framework claims, follows.
 
 ## The Three Axioms
 
@@ -45,9 +45,15 @@ The framework does not postulate observers as a special class of entity standing
 
 A natural question: why *these* three axioms? Is this choice arbitrary?
 
-The framework's answer is: these three capture the minimum structure needed for physics to work. Conservation (Axiom 1) is required for anything to be predictable at all — without it, there is nothing that persists across time to serve as a law. Structural identity (Axiom 2) is required for anything to be distinguishable — without it, there are no objects, no measurements, no observations. Cyclic stability (Axiom 3) is required for anything to last — without it, structures appear and vanish with no possibility of building complexity.
+The framework's answer is: these three are exactly what you need to define a persistent observer and the universe it exists in. Start from the question "what is the minimal definition of a persistent observer?" and you are forced into three requirements:
 
-The axioms are also independent. You can have conservation without observers (a featureless conserved soup). You can have observers without loop closure (transient structures that flicker in and out). You can have loop closure without conservation (cycles that exist but obey no conservation law). It takes all three together to generate physics.
+- The observer must conserve *something* (Axiom 1) — without a conserved quantity, there is nothing to maintain, nothing to measure, no basis for physical law.
+- The observer must have *structure* (Axiom 2) — it must maintain at least one invariant and distinguish what threatens that invariant from what does not. Without this, there is no self, no measurement, no observation.
+- The observer must *persist* (Axiom 3) — its dynamics must close into a stable cycle. Without this, structures appear and vanish with no possibility of building complexity or conducting science.
+
+These are not three independent postulates about the universe. They are three facets of a single requirement: *what must be true for a persistent observer to exist?* The axioms then encode the minimal supporting structure that a universe must have to instantiate such observers.
+
+The axioms are also independent in the logical sense. You can have conservation without observers (a featureless conserved soup). You can have observers without loop closure (transient structures that flicker in and out). You can have loop closure without conservation (cycles that exist but obey no conservation law). It takes all three together to generate physics.
 
 ## Structural Postulates
 
