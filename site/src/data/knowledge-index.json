@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-03-16T02:23:05.679Z",
-    "derivationCount": 61,
+    "generatedAt": "2026-03-16T04:36:54.842Z",
+    "derivationCount": 62,
     "predictionCount": 10,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -10,13 +10,13 @@
     "byStatus": {
       "rigorous": 59,
       "non-viable": 1,
-      "provisional": 1
+      "provisional": 2
     },
-    "derivationCount": 61,
+    "derivationCount": 62,
     "predictionCount": 10,
-    "edgeCount": 129,
-    "formalObjectCount": 899,
-    "openGapCount": 201,
+    "edgeCount": 136,
+    "formalObjectCount": 916,
+    "openGapCount": 206,
     "upgradeEligibleCount": 0,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -50,6 +50,7 @@
         "gauge/chirality-selection",
         "holography/information-paradox",
         "minimal-observer/structure",
+        "quantum/observer-relative-objectivity",
         "thermodynamics-ext/distinguishability-conservation"
       ],
       "steps": [
@@ -305,6 +306,10 @@
           },
           {
             "source": "quantum/measurement",
+            "context": "Coherence Conservation"
+          },
+          {
+            "source": "quantum/observer-relative-objectivity",
             "context": "Coherence Conservation"
           },
           {
@@ -957,7 +962,8 @@
         "axioms/loop-closure",
         "dimensions/three-dimensions",
         "minimal-observer/multiplicity",
-        "minimal-observer/structure"
+        "minimal-observer/structure",
+        "quantum/observer-relative-objectivity"
       ],
       "steps": [
         {
@@ -1183,6 +1189,10 @@
           },
           {
             "source": "minimal-observer/structure",
+            "context": "Observer Definition"
+          },
+          {
+            "source": "quantum/observer-relative-objectivity",
             "context": "Observer Definition"
           },
           {
@@ -7826,6 +7836,7 @@
         "interactions/bootstrap",
         "quantum/born-rule",
         "quantum/entanglement",
+        "quantum/observer-relative-objectivity",
         "spacetime/gravity",
         "thermodynamics/entropy"
       ],
@@ -8100,6 +8111,10 @@
           {
             "source": "quantum/entanglement",
             "context": "Theorem 4.1"
+          },
+          {
+            "source": "quantum/observer-relative-objectivity",
+            "context": "Relational Invariants"
           },
           {
             "source": "quantum/preferred-basis",
@@ -10750,6 +10765,7 @@
       ],
       "dependedOnBy": [
         "quantum/entanglement",
+        "quantum/observer-relative-objectivity",
         "quantum/preferred-basis"
       ],
       "steps": [
@@ -10992,6 +11008,10 @@
             "context": "Born Rule"
           },
           {
+            "source": "quantum/observer-relative-objectivity",
+            "context": "Born Rule"
+          },
+          {
             "source": "quantum/preferred-basis",
             "context": "Born Rule"
           },
@@ -11037,6 +11057,7 @@
       ],
       "dependedOnBy": [
         "holography/er-epr",
+        "quantum/observer-relative-objectivity",
         "quantum/teleportation"
       ],
       "steps": [
@@ -11226,6 +11247,10 @@
             "context": "rigorous"
           },
           {
+            "source": "quantum/observer-relative-objectivity",
+            "context": "Entanglement"
+          },
+          {
             "source": "quantum/teleportation",
             "context": "Entanglement"
           }
@@ -11263,6 +11288,7 @@
         "quantum/teleportation"
       ],
       "dependedOnBy": [
+        "quantum/observer-relative-objectivity",
         "quantum/teleportation"
       ],
       "steps": [
@@ -11483,6 +11509,10 @@
             "context": "Measurement Problem"
           },
           {
+            "source": "quantum/observer-relative-objectivity",
+            "context": "Measurement"
+          },
+          {
             "source": "quantum/teleportation",
             "context": "Measurement"
           },
@@ -11491,6 +11521,240 @@
             "context": "Theorem 2.2"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "quantum/observer-relative-objectivity": {
+      "id": "quantum/observer-relative-objectivity",
+      "filePath": "site/src/content/derivations/quantum/observer-relative-objectivity.md",
+      "title": "Observer-Relative Objectivity",
+      "status": "provisional",
+      "rigorLevel": "semi-formal",
+      "group": "quantum",
+      "tags": [
+        "quantum",
+        "foundation"
+      ],
+      "summary": "Facts are observer-relative but not subjective: coherence conservation constrains all observer descriptions, certain structural facts are observer-invariant, and the subjective/objective dichotomy is replaced by a precise three-level classification",
+      "lastUpdated": "2026-03-15",
+      "dependsOn": [
+        "axioms/coherence-conservation",
+        "axioms/observer-definition",
+        "interactions/relational-invariants",
+        "quantum/measurement",
+        "quantum/entanglement",
+        "quantum/born-rule",
+        "thermodynamics/time"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Observer-Relative Descriptions"
+        },
+        {
+          "number": 2,
+          "title": "Consistency Across Observers"
+        },
+        {
+          "number": 3,
+          "title": "Observer-Invariant Facts"
+        },
+        {
+          "number": 4,
+          "title": "Subjectivity Is Impossible"
+        },
+        {
+          "number": 5,
+          "title": "Pure Observer-Independence Fails"
+        },
+        {
+          "number": 6,
+          "title": "The Three-Level Trichotomy"
+        },
+        {
+          "number": 7,
+          "title": "Comparison with Other Frameworks"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Observer-relative fact",
+          "statementPreview": "A proposition P is **observer-relative** if its truth value is defined only with respect to a specific observer O = (..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.1",
+          "name": "All measurement outcomes are observer-relative",
+          "statementPreview": "The outcome of measuring observable A on system S depends on which observer performs the measurement. Different obser..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Basis decomposition is observer-relative",
+          "statementPreview": "The preferred basis in which a system's state is expressed depends on the observer's interaction structure.*"
+        },
+        {
+          "type": "Theorem",
+          "id": "2.1",
+          "name": "Relational consistency",
+          "statementPreview": "For observers OA, OB with shared coherence C(IAB) > 0, their observer-relative descriptions of any system S with whic..."
+        },
+        {
+          "type": "Corollary",
+          "id": "2.2",
+          "name": "Wigner's friend consistency",
+          "statementPreview": "In the Wigner's friend scenario, when Wigner (W) finally interacts with the friend (F), the outcome W obtains is nece..."
+        },
+        {
+          "type": "Definition",
+          "id": "3.1",
+          "name": "Observer-invariant fact",
+          "statementPreview": "A proposition P is **observer-invariant** if P(O) = true for every observer O in a coherence-connected network N (a c..."
+        },
+        {
+          "type": "Theorem",
+          "id": "3.2",
+          "name": "Total coherence is observer-invariant",
+          "statementPreview": "The total coherence C(H) = C0 is the same for all observers.*"
+        },
+        {
+          "type": "Theorem",
+          "id": "3.3",
+          "name": "Conservation laws are observer-invariant",
+          "statementPreview": "The conservation of coherence on Cauchy slices of the dependency DAG ([Coherence Conservation](/derivations/axioms/co..."
+        },
+        {
+          "type": "Theorem",
+          "id": "3.4",
+          "name": "Network topology is observer-invariant",
+          "statementPreview": "Whether two observers share a relational invariant (C(IAB) > 0) is an observer-invariant fact.*"
+        },
+        {
+          "type": "Definition",
+          "id": "4.1",
+          "name": "Subjective fact",
+          "statementPreview": "A proposition P is **subjective** if an observer O can assign it any truth value without constraint from the coherenc..."
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "Non-fabrication",
+          "statementPreview": "No observer O can assign arbitrary measurement outcomes to a system S. The probability of outcome k is uniquely deter..."
+        },
+        {
+          "type": "Corollary",
+          "id": "4.2",
+          "name": "Observer-relative ≠ subjective",
+          "statementPreview": "The fact that measurement outcomes are observer-relative (Proposition 1.1) does not imply they are subjective (Defini..."
+        },
+        {
+          "type": "Definition",
+          "id": "5.1",
+          "name": "Observer-independent fact",
+          "statementPreview": "A proposition P is **observer-independent** (in the classical realist sense) if there exists a single assignment of d..."
+        },
+        {
+          "type": "Theorem",
+          "id": "5.1",
+          "name": "No universal definiteness",
+          "statementPreview": "There exists no assignment of simultaneous definite values to all observables of a system S that is consistent with a..."
+        },
+        {
+          "type": "Theorem",
+          "id": "6.1",
+          "name": "Trichotomy",
+          "statementPreview": "Every physical proposition P about a system S within a coherence-connected network N falls into exactly one of three ..."
+        },
+        {
+          "type": "Corollary",
+          "id": "6.2",
+          "name": "Dissolution of the subjective/objective dichotomy",
+          "statementPreview": "The classical binary — \"either subjective or objective\" — is a false dichotomy. The framework replaces it with a thre..."
+        },
+        {
+          "type": "Proposition",
+          "id": "7.1",
+          "name": "Structural positioning",
+          "statementPreview": "The three-level trichotomy relates to existing interpretive frameworks as follows:*"
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Quantum Darwinism formalization",
+          "description": "When many independent observers measure the same system and all obtain consistent results, this creates effective observer-invariance (promotion from Level 2 to effective Level 1). Formalizing this re"
+        },
+        {
+          "number": 2,
+          "title": "Contextuality connection",
+          "description": "The Kochen-Specker theorem shows that non-contextual hidden variable models are impossible. This is closely related to Theorem 5.1 (no universal definiteness) but approaches from a different direction"
+        },
+        {
+          "number": 3,
+          "title": "Extended Wigner's friend",
+          "description": "The Frauchiger-Renner no-go theorem constrains theories with certain assumptions about nested observers. The framework should be formally tested against this theorem — the three-level structure may pr"
+        },
+        {
+          "number": 4,
+          "title": "Continuous observables",
+          "description": "The current treatment focuses on discrete measurement outcomes. Extending the trichotomy to continuous-spectrum observables requires care with the notion of \"definite value\" (replaced by spectral meas"
+        },
+        {
+          "number": 5,
+          "title": "Category-theoretic objectivity",
+          "description": "The trichotomy (Theorem 6.1) could be formalized as a functor from the observer category Obs to a suitable truth-value category. Level 1 facts correspond to natural transformations (invariant across a"
+        }
+      ],
+      "assessmentVerdict": "The core results (three-level trichotomy, non-fabrication, failure of universal definiteness) are rigorous given the axioms and build directly on established upstream derivations. The main semi-formal element is the interpretive comparison (Step 7), which positions the framework relative to existing",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "axioms/observer-definition",
+            "context": "Observer Definition"
+          },
+          {
+            "target": "quantum/measurement",
+            "context": "Measurement"
+          },
+          {
+            "target": "quantum/preferred-basis",
+            "context": "Preferred Basis"
+          },
+          {
+            "target": "thermodynamics/time",
+            "context": "Time"
+          },
+          {
+            "target": "axioms/coherence-conservation",
+            "context": "Coherence Conservation"
+          },
+          {
+            "target": "interactions/relational-invariants",
+            "context": "Relational Invariants"
+          },
+          {
+            "target": "quantum/born-rule",
+            "context": "Born Rule"
+          },
+          {
+            "target": "quantum/entanglement",
+            "context": "Entanglement"
+          }
+        ],
+        "incoming": []
       },
       "leanVerification": {
         "hasProofs": false,
@@ -11720,6 +11984,10 @@
           },
           {
             "source": "quantum/measurement",
+            "context": "Preferred Basis"
+          },
+          {
+            "source": "quantum/observer-relative-objectivity",
             "context": "Preferred Basis"
           }
         ]
@@ -15043,6 +15311,7 @@
       "dependedOnBy": [
         "cosmology/observer-loop-viability",
         "quantum/born-rule",
+        "quantum/observer-relative-objectivity",
         "thermodynamics/action-planck",
         "thermodynamics/entropy"
       ],
@@ -15222,6 +15491,10 @@
           },
           {
             "source": "quantum/measurement",
+            "context": "Time"
+          },
+          {
+            "source": "quantum/observer-relative-objectivity",
             "context": "Time"
           },
           {
@@ -21713,6 +21986,125 @@
       "fullRef": "quantum/measurement:Theorem 9.1."
     },
     {
+      "derivationId": "quantum/observer-relative-objectivity",
+      "type": "Definition",
+      "id": "1.1",
+      "name": "Observer-relative fact",
+      "fullRef": "quantum/observer-relative-objectivity:Definition 1.1"
+    },
+    {
+      "derivationId": "quantum/observer-relative-objectivity",
+      "type": "Proposition",
+      "id": "1.1",
+      "name": "All measurement outcomes are observer-relative",
+      "fullRef": "quantum/observer-relative-objectivity:Proposition 1.1"
+    },
+    {
+      "derivationId": "quantum/observer-relative-objectivity",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "Basis decomposition is observer-relative",
+      "fullRef": "quantum/observer-relative-objectivity:Proposition 1.2"
+    },
+    {
+      "derivationId": "quantum/observer-relative-objectivity",
+      "type": "Theorem",
+      "id": "2.1",
+      "name": "Relational consistency",
+      "fullRef": "quantum/observer-relative-objectivity:Theorem 2.1"
+    },
+    {
+      "derivationId": "quantum/observer-relative-objectivity",
+      "type": "Corollary",
+      "id": "2.2",
+      "name": "Wigner's friend consistency",
+      "fullRef": "quantum/observer-relative-objectivity:Corollary 2.2"
+    },
+    {
+      "derivationId": "quantum/observer-relative-objectivity",
+      "type": "Definition",
+      "id": "3.1",
+      "name": "Observer-invariant fact",
+      "fullRef": "quantum/observer-relative-objectivity:Definition 3.1"
+    },
+    {
+      "derivationId": "quantum/observer-relative-objectivity",
+      "type": "Theorem",
+      "id": "3.2",
+      "name": "Total coherence is observer-invariant",
+      "fullRef": "quantum/observer-relative-objectivity:Theorem 3.2"
+    },
+    {
+      "derivationId": "quantum/observer-relative-objectivity",
+      "type": "Theorem",
+      "id": "3.3",
+      "name": "Conservation laws are observer-invariant",
+      "fullRef": "quantum/observer-relative-objectivity:Theorem 3.3"
+    },
+    {
+      "derivationId": "quantum/observer-relative-objectivity",
+      "type": "Theorem",
+      "id": "3.4",
+      "name": "Network topology is observer-invariant",
+      "fullRef": "quantum/observer-relative-objectivity:Theorem 3.4"
+    },
+    {
+      "derivationId": "quantum/observer-relative-objectivity",
+      "type": "Definition",
+      "id": "4.1",
+      "name": "Subjective fact",
+      "fullRef": "quantum/observer-relative-objectivity:Definition 4.1"
+    },
+    {
+      "derivationId": "quantum/observer-relative-objectivity",
+      "type": "Theorem",
+      "id": "4.1",
+      "name": "Non-fabrication",
+      "fullRef": "quantum/observer-relative-objectivity:Theorem 4.1"
+    },
+    {
+      "derivationId": "quantum/observer-relative-objectivity",
+      "type": "Corollary",
+      "id": "4.2",
+      "name": "Observer-relative ≠ subjective",
+      "fullRef": "quantum/observer-relative-objectivity:Corollary 4.2"
+    },
+    {
+      "derivationId": "quantum/observer-relative-objectivity",
+      "type": "Definition",
+      "id": "5.1",
+      "name": "Observer-independent fact",
+      "fullRef": "quantum/observer-relative-objectivity:Definition 5.1"
+    },
+    {
+      "derivationId": "quantum/observer-relative-objectivity",
+      "type": "Theorem",
+      "id": "5.1",
+      "name": "No universal definiteness",
+      "fullRef": "quantum/observer-relative-objectivity:Theorem 5.1"
+    },
+    {
+      "derivationId": "quantum/observer-relative-objectivity",
+      "type": "Theorem",
+      "id": "6.1",
+      "name": "Trichotomy",
+      "fullRef": "quantum/observer-relative-objectivity:Theorem 6.1"
+    },
+    {
+      "derivationId": "quantum/observer-relative-objectivity",
+      "type": "Corollary",
+      "id": "6.2",
+      "name": "Dissolution of the subjective/objective dichotomy",
+      "fullRef": "quantum/observer-relative-objectivity:Corollary 6.2"
+    },
+    {
+      "derivationId": "quantum/observer-relative-objectivity",
+      "type": "Proposition",
+      "id": "7.1",
+      "name": "Structural positioning",
+      "fullRef": "quantum/observer-relative-objectivity:Proposition 7.1"
+    },
+    {
       "derivationId": "quantum/preferred-basis",
       "type": "Structural Postulate",
       "id": "S1",
@@ -24457,6 +24849,41 @@
       "number": 4,
       "title": "Delayed choice and quantum eraser",
       "description": "The relational invariant is generated at the time of the Type III interaction, regardless of when the observer \"decides\" which interaction to perform. No retrocausality — the partial order prec in G i"
+    },
+    {
+      "derivationId": "quantum/observer-relative-objectivity",
+      "derivationStatus": "provisional",
+      "number": 1,
+      "title": "Quantum Darwinism formalization",
+      "description": "When many independent observers measure the same system and all obtain consistent results, this creates effective observer-invariance (promotion from Level 2 to effective Level 1). Formalizing this re"
+    },
+    {
+      "derivationId": "quantum/observer-relative-objectivity",
+      "derivationStatus": "provisional",
+      "number": 2,
+      "title": "Contextuality connection",
+      "description": "The Kochen-Specker theorem shows that non-contextual hidden variable models are impossible. This is closely related to Theorem 5.1 (no universal definiteness) but approaches from a different direction"
+    },
+    {
+      "derivationId": "quantum/observer-relative-objectivity",
+      "derivationStatus": "provisional",
+      "number": 3,
+      "title": "Extended Wigner's friend",
+      "description": "The Frauchiger-Renner no-go theorem constrains theories with certain assumptions about nested observers. The framework should be formally tested against this theorem — the three-level structure may pr"
+    },
+    {
+      "derivationId": "quantum/observer-relative-objectivity",
+      "derivationStatus": "provisional",
+      "number": 4,
+      "title": "Continuous observables",
+      "description": "The current treatment focuses on discrete measurement outcomes. Extending the trichotomy to continuous-spectrum observables requires care with the notion of \"definite value\" (replaced by spectral meas"
+    },
+    {
+      "derivationId": "quantum/observer-relative-objectivity",
+      "derivationStatus": "provisional",
+      "number": 5,
+      "title": "Category-theoretic objectivity",
+      "description": "The trichotomy (Theorem 6.1) could be formalized as a functor from the observer category Obs to a suitable truth-value category. Level 1 facts correspond to natural transformations (invariant across a"
     },
     {
       "derivationId": "quantum/preferred-basis",

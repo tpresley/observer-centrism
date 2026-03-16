@@ -60,7 +60,8 @@
     { "id": "quantum/teleportation", "title": "Quantum Teleportation", "group": "quantum", "status": "rigorous" },
     { "id": "particles/cpt-theorem", "title": "CPT Theorem", "group": "particles", "status": "rigorous" },
     { "id": "gauge/proton-stability", "title": "Proton Stability", "group": "gauge", "status": "rigorous" },
-    { "id": "cosmology/observer-loop-viability", "title": "Observer Loop Viability Bounds", "group": "cosmology", "status": "rigorous" }
+    { "id": "cosmology/observer-loop-viability", "title": "Observer Loop Viability Bounds", "group": "cosmology", "status": "rigorous" },
+    { "id": "quantum/observer-relative-objectivity", "title": "Observer-Relative Objectivity", "group": "quantum", "status": "provisional" }
   ],
   "edges": [
     { "from": "axioms/coherence-conservation", "to": "axioms/coherence-operational" },
@@ -191,6 +192,13 @@
     { "from": "thermodynamics/entropy", "to": "cosmology/observer-loop-viability" },
     { "from": "interactions/bootstrap", "to": "cosmology/observer-loop-viability" },
     { "from": "thermodynamics-ext/renormalization", "to": "cosmology/observer-loop-viability" },
-    { "from": "holography/er-epr", "to": "cosmology/observer-loop-viability" }
+    { "from": "holography/er-epr", "to": "cosmology/observer-loop-viability" },
+    { "from": "axioms/coherence-conservation", "to": "quantum/observer-relative-objectivity" },
+    { "from": "axioms/observer-definition", "to": "quantum/observer-relative-objectivity" },
+    { "from": "interactions/relational-invariants", "to": "quantum/observer-relative-objectivity" },
+    { "from": "quantum/measurement", "to": "quantum/observer-relative-objectivity" },
+    { "from": "quantum/entanglement", "to": "quantum/observer-relative-objectivity" },
+    { "from": "quantum/born-rule", "to": "quantum/observer-relative-objectivity" },
+    { "from": "thermodynamics/time", "to": "quantum/observer-relative-objectivity" }
   ]
 }
