@@ -154,6 +154,17 @@ const mysteries: Mystery[] = [
     prediction: { id: 'holographic-noise', title: 'Holographic Noise' },
   },
   {
+    title: 'Does Reality Branch?',
+    question: 'Does quantum mechanics require parallel worlds? When a measurement occurs, do all outcomes happen in separate branches?',
+    answer: 'No. The interaction DAG is acyclic, making its geometric realization contractible — the first Čech cohomology vanishes, ruling out temporal branching. There is one coherence budget and one evolution, not copies. Multiple possible outcomes exist (the outcome sheaf has non-trivial spatial cohomology from Kochen-Specker contextuality), but the Born rule assigns a unique probability measure over them, and the coherence future is determined. Quantum indeterminacy is real; branching is not.',
+    status: 'resolved',
+    derivations: [
+      { id: 'quantum/sheaf-section-uniqueness', title: 'Sheaf Structure & Section Uniqueness' },
+      { id: 'quantum/observer-relative-objectivity', title: 'Observer-Relative Objectivity' },
+      { id: 'quantum/measurement', title: 'Measurement Problem' },
+    ],
+  },
+  {
     title: 'Matter\u2013Antimatter Asymmetry',
     question: 'Why is the universe made of matter rather than equal parts matter and antimatter?',
     answer: 'The three Sakharov conditions are structural consequences: SU(2) sphalerons violate baryon number, chiral gauge coupling provides C and CP violation, and sequential bootstrap crystallization ensures departure from thermal equilibrium. The specific mechanism is leptogenesis via Majorana neutrino decays.',
