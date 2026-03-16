@@ -1,0 +1,361 @@
+---
+import MainLayout from '../components/layouts/MainLayout.astro'
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+---
+
+<MainLayout title="How to Contribute">
+  <article class="contribute-page">
+    <h1>How to Contribute</h1>
+
+    <p class="lead">
+      <strong>Repository:</strong> <a href="https://github.com/tpresley/observer-centrism">github.com/tpresley/observer-centrism</a>
+    </p>
+
+    <p class="lead">
+      Contributions to Observer-Centrism are welcome. You can submit pull requests
+      for new derivations, corrections to existing ones, or additions that strengthen
+      the derivation chain.
+    </p>
+
+    <h2>What you can contribute</h2>
+    <ul>
+      <li><strong>New derivations</strong> that extend the framework from its axioms or existing results to new physical consequences</li>
+      <li><strong>Corrections</strong> to existing derivations &mdash; errors in proofs, unjustified steps, missing assumptions</li>
+      <li><strong>Strengthening existing derivations</strong> &mdash; closing <a href={`${base}/open-gaps`}>open gaps</a>, tightening bounds, promoting <a href={`${base}/postulates`}>structural postulates</a> to theorems</li>
+      <li><strong>Lean 4 formalization</strong> of derivations that lack mechanical verification</li>
+    </ul>
+
+    <h2>Derivation file structure</h2>
+
+    <p>
+      Derivations live in <code>site/src/content/derivations/</code>, organized by topic subdirectory:
+    </p>
+
+    <div class="dir-tree">
+      <pre>site/src/content/derivations/
+  axioms/             The three axioms + operational coherence
+  foundation/         Multiplicity, bootstrap, observer-loop-viability
+  minimal-observer/   Minimal observer structure, interactions
+  interactions/       Three interaction types, relational invariants
+  thermodynamics/     Time, action-planck, entropy, arrow of time
+  spacetime/          Speed of light, Lorentz invariance, Einstein eqs
+  dimensions/         Three spatial dimensions
+  quantum/            Born rule, measurement, entanglement, decoherence
+  holography/         Holographic bound, Bekenstein, causal set statistics
+  particles/          Spin-statistics, Pauli exclusion, mass hierarchy
+  gauge/              Standard Model group, electroweak, strong CP
+  flavor/             Three generations, CKM/PMNS, Weinberg angle
+  cosmology/          Dark matter, dark energy, baryogenesis, singularity
+  thermodynamics-ext/ Extended thermodynamic derivations</pre>
+    </div>
+
+    <h3>Frontmatter</h3>
+
+    <p>Every derivation file begins with YAML frontmatter:</p>
+
+    <div class="code-block">
+      <pre><code>---
+title: "Descriptive Title"
+status: "draft"
+dependsOn:
+  - "axioms/loop-closure"
+  - "thermodynamics/action-planck"
+enablesDerivation:
+  - "spacetime/lorentz-invariance"
+tags: ["geometry"]
+summary: "One-line summary for navigation and index display"
+rigorLevel: "semi-formal"
+lastUpdated: 2026-03-15
+leanProofs: []
+---</code></pre>
+    </div>
+
+    <h4>Status values</h4>
+
+    <table>
+      <thead>
+        <tr><th>Status</th><th>Meaning</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="status-dot rigorous">●</span> rigorous</td><td>All steps formally justified, no unresolved gaps</td></tr>
+        <tr><td><span class="status-dot provisional">◐</span> provisional</td><td>Main structure sound but some steps rely on conjectures</td></tr>
+        <tr><td><span class="status-dot draft">○</span> draft</td><td>Argument sketched but significant gaps remain</td></tr>
+        <tr><td><span class="status-dot stub">·</span> stub</td><td>Placeholder with direction but little formal content</td></tr>
+        <tr><td><span class="status-dot non-viable">✗</span> non-viable</td><td>Approach assessed as fundamentally blocked</td></tr>
+      </tbody>
+    </table>
+
+    <p>
+      New contributions should typically start as <strong>draft</strong> or <strong>provisional</strong>.
+      Status upgrades happen through review.
+    </p>
+
+    <h4>Tag values</h4>
+    <p>The <code>tags</code> field determines sidebar grouping:</p>
+    <table>
+      <thead>
+        <tr><th>Tag</th><th>Sidebar group</th><th>Examples</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>foundation</code></td><td>Foundation</td><td>Multiplicity, bootstrap, observer-loop-viability</td></tr>
+        <tr><td><code>dynamics</code></td><td>Dynamics</td><td>Minimal observer structure, three interaction types</td></tr>
+        <tr><td><code>geometry</code></td><td>Geometry</td><td>Speed of light, Lorentz invariance, Einstein equations</td></tr>
+        <tr><td><code>quantum</code></td><td>Quantum</td><td>Born rule, measurement, entanglement, decoherence</td></tr>
+        <tr><td><code>particles</code></td><td>Particles</td><td>Spin-statistics, Pauli exclusion, mass hierarchy</td></tr>
+        <tr><td><code>holography</code></td><td>Holography</td><td>Holographic bound, Bekenstein, causal set statistics</td></tr>
+        <tr><td><code>gauge</code></td><td>Gauge</td><td>Standard Model group, electroweak breaking, strong CP</td></tr>
+        <tr><td><code>flavor</code></td><td>Flavor</td><td>Three generations, CKM/PMNS, Weinberg angle</td></tr>
+        <tr><td><code>cosmology</code></td><td>Cosmology</td><td>Dark matter, dark energy, baryogenesis, singularity</td></tr>
+        <tr><td><code>thermo-ext</code></td><td>Thermo Extensions</td><td>Extended thermodynamic derivations</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Required sections</h3>
+
+    <p>Every derivation must include these sections, in this order:</p>
+
+    <div class="section-list">
+      <div class="section-item">
+        <h4>1. Overview</h4>
+        <p>
+          A narrative explanation accessible to physicists who may not follow every line of the proof. Should include:
+        </p>
+        <ul>
+          <li><strong>Bold opening question</strong> &mdash; what physical question does this derivation answer?</li>
+          <li><strong>The argument</strong> &mdash; a plain-language summary of the logical steps</li>
+          <li><strong>The result</strong> &mdash; what is derived</li>
+          <li><strong>Why this matters</strong> &mdash; connection to known physics</li>
+          <li><strong>An honest caveat</strong> &mdash; any structural postulates required, known limitations, or open issues</li>
+        </ul>
+      </div>
+
+      <div class="section-item">
+        <h4>2. Statement</h4>
+        <p>
+          A formal theorem statement with all variables defined. Begin with <code>**Theorem.**</code> followed by the precise claim in mathematical notation.
+        </p>
+      </div>
+
+      <div class="section-item">
+        <h4>3. Derivation</h4>
+        <p>The main proof body, structured as numbered steps:</p>
+        <ul>
+          <li><strong>Structural Postulates</strong> (if any) &mdash; listed first, before Step 1</li>
+          <li><strong>Step 1, Step 2, ...</strong> &mdash; each step contains Definitions, Propositions, and Proofs</li>
+        </ul>
+        <p>Use the standard format:</p>
+        <ul class="format-list">
+          <li><code>**Definition N.M.**</code> for new definitions</li>
+          <li><code>**Proposition N.M.**</code> or <code>**Theorem N.M.**</code> for claims</li>
+          <li><code>*Proof.*</code> followed by the argument, ending with <code>$\square$</code></li>
+          <li><code>**Remark.**</code> for clarifications and context</li>
+          <li><code>**Corollary N.M.**</code> for immediate consequences</li>
+        </ul>
+      </div>
+
+      <div class="section-item">
+        <h4>4. Rigor Assessment</h4>
+        <p>An honest evaluation of the derivation's logical strength. Categorize each major result:</p>
+        <ul>
+          <li><strong>Fully rigorous</strong> &mdash; complete proofs from stated assumptions</li>
+          <li><strong>Rigorous given axioms</strong> &mdash; relies on the framework's axioms being correct</li>
+          <li><strong>Semi-formal</strong> &mdash; argument is sound but some steps appeal to physical intuition</li>
+          <li><strong>Structural</strong> &mdash; analogies or motivated arguments rather than proofs</li>
+        </ul>
+      </div>
+
+      <div class="section-item">
+        <h4>5. Open Gaps</h4>
+        <p>
+          A numbered list of specific issues that remain unresolved. Each gap should identify what is missing,
+          what would be needed to close it, and whether it is a straightforward exercise or a deep open problem.
+        </p>
+      </div>
+
+      <div class="section-item">
+        <h4>6. Comparison with Other Frameworks <span class="optional">(optional)</span></h4>
+        <p>
+          A table comparing how the result is obtained in standard physics versus the framework.
+        </p>
+      </div>
+    </div>
+
+    <h3>Citing external papers</h3>
+    <p>Use inline author-date references in the text:</p>
+    <div class="code-block">
+      <pre><code>This is the quantum subadditivity theorem [Araki &amp; Lieb, 1970].</code></pre>
+    </div>
+    <p>For multiple authors, list up to four; beyond that use &ldquo;et al.&rdquo;:</p>
+    <div class="code-block">
+      <pre><code>[Bennett, Bernstein, Popescu, Schumacher, 1996]
+[Lieb &amp; Ruskai, 1973]
+[Hawking et al., 1995]</code></pre>
+    </div>
+    <p>
+      External references are collected in <code>site/src/data/reference-links.json</code>
+      with DOI or arXiv URLs. Add an entry for any new paper you cite:
+    </p>
+    <div class="code-block">
+      <pre><code>{`{
+  "araki-lieb-1970": {
+    "title": "Entropy Inequalities",
+    "url": "https://doi.org/10.1007/BF01646092"
+  }
+}`}</code></pre>
+    </div>
+    <p>
+      The key should be <code>lowercase-author-year</code> format. Prefer DOI links
+      where available; use arXiv URLs for preprints.
+    </p>
+
+    <h3>Mathematical notation</h3>
+    <ul>
+      <li>Inline math: <code>$...$</code></li>
+      <li>Display math: <code>$$...$$</code></li>
+      <li>KaTeX is the rendering engine &mdash; use KaTeX-compatible LaTeX</li>
+      <li>Cross-reference other derivations with markdown links: <code>[Link Text](/derivations/category/slug)</code></li>
+    </ul>
+
+    <h3>Dependency graph</h3>
+    <p>
+      The <code>dependsOn</code> and <code>enablesDerivation</code> frontmatter fields
+      automatically integrate new derivations into the <a href={`${base}/map`}>dependency graph</a>.
+      Make sure these are accurate &mdash; the graph is generated from frontmatter, not from in-text links.
+    </p>
+    <p>
+      After adding or modifying derivations, regenerate the knowledge index:
+    </p>
+    <div class="code-block">
+      <pre><code>node scripts/build-index.mjs</code></pre>
+    </div>
+
+    <h2>Submitting</h2>
+    <ol>
+      <li>Fork <a href="https://github.com/tpresley/observer-centrism">tpresley/observer-centrism</a></li>
+      <li>Create a branch for your contribution</li>
+      <li>Add or modify files following the conventions above</li>
+      <li>Run <code>node scripts/build-index.mjs</code> to regenerate the index</li>
+      <li>Run <code>cd site && npm run build</code> to verify the site builds cleanly</li>
+      <li>Submit a pull request with a clear description of what you are contributing and why</li>
+    </ol>
+    <p>
+      For corrections, reference the specific step, proposition, or gap number you are addressing.
+    </p>
+  </article>
+</MainLayout>
+
+<style>
+  .contribute-page {
+    max-width: 720px;
+  }
+
+  .lead {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+  }
+
+  .contribute-page h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.35rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.5rem;
+  }
+
+  .contribute-page h2:first-of-type {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .contribute-page h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.15rem;
+  }
+
+  .contribute-page h4 {
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .dir-tree pre,
+  .code-block pre {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  th {
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  .status-dot {
+    font-size: 0.8rem;
+    margin-right: 0.25rem;
+  }
+  .status-dot.rigorous { color: var(--color-rigorous); }
+  .status-dot.provisional { color: var(--color-provisional); }
+  .status-dot.draft { color: var(--color-draft); }
+  .status-dot.stub { color: var(--color-stub); }
+  .status-dot.non-viable { color: var(--color-non-viable); }
+
+  .section-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .section-item {
+    border-left: 3px solid var(--color-border);
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-item h4 {
+    margin-top: 0.5rem;
+  }
+
+  .optional {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-weight: 400;
+  }
+
+  .format-list {
+    font-size: 0.9rem;
+  }
+
+  .format-list code {
+    font-size: 0.82rem;
+  }
+
+  ol {
+    padding-left: 1.5rem;
+  }
+
+  ol li {
+    margin-bottom: 0.4rem;
+  }
+</style>
