@@ -1,0 +1,389 @@
+---
+import MainLayout from '../components/layouts/MainLayout.astro'
+import PageTitle from '../components/PageTitle.astro'
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+
+type Verdict = 'forbidden' | 'allowed' | 'open' | 'dissolved'
+
+interface Trope {
+  title: string
+  premise: string
+  verdict: Verdict
+  verdictLabel: string
+  explanation: string
+  keyResult?: string
+  derivations: { id: string; title: string }[]
+}
+
+const tropes: Trope[] = [
+  {
+    title: 'Time Travel',
+    premise: 'Could you travel backwards in time, visit the past, or create a causal loop?',
+    verdict: 'forbidden',
+    verdictLabel: 'Axiomatically forbidden',
+    explanation: 'The interaction graph is a directed acyclic graph (DAG) — a structural consequence of the axioms, not a dynamical accident. Every edge in the graph advances phase by a positive amount. A closed timelike curve would require returning to the same event with accumulated phase, demanding a single event carry two different phase values simultaneously. This is a contradiction, not a difficulty.',
+    keyResult: 'Theorem 3.1 (Time): The interaction graph is acyclic. No closed timelike curves can form regardless of spacetime geometry or matter content.',
+    derivations: [
+      { id: 'thermodynamics/time', title: 'Time as Phase Ordering' },
+    ],
+  },
+  {
+    title: 'Faster-Than-Light Travel',
+    premise: 'Could a warp drive, hyperspace jump, or any mechanism allow travel or signaling faster than light?',
+    verdict: 'forbidden',
+    verdictLabel: 'Axiomatically forbidden',
+    explanation: 'The speed of light is not an imposed speed limit — it is the universal phase propagation speed, derived from the requirement that observer loops close simultaneously in space and time. The relationship L = cT is a geometric identity, not a law that could be circumvented by clever engineering. A massive observer cannot reach c because its cycle period diverges: loop closure fails before the limit is reached. Any signal between events must propagate along edges of the interaction graph, each bounded by c.',
+    keyResult: 'Proposition 4.2 (Speed of Light): No physical process propagates faster than c. Theorem 6.1 (Lorentz Invariance): A massive observer cannot reach v = c.',
+    derivations: [
+      { id: 'spacetime/speed-of-light', title: 'Speed of Light' },
+      { id: 'spacetime/lorentz-invariance', title: 'Lorentz Invariance' },
+    ],
+  },
+  {
+    title: 'Warp Drives',
+    premise: 'Could spacetime itself be warped to move a bubble of space faster than light, as in the Alcubierre drive?',
+    verdict: 'forbidden',
+    verdictLabel: 'Axiomatically forbidden',
+    explanation: 'Warp drive proposals rely on exotic matter configurations to reshape spacetime geometry. But in this framework, spacetime is emergent from the coherence geometry of the observer network. The metric is not a free field that can be sculpted — it is determined by coherence conservation and loop closure across all observers in the region. Warping it into an Alcubierre configuration would require either violating coherence conservation or breaking the loop closure of every observer the bubble passes through. Both are axiomatically impossible.',
+    derivations: [
+      { id: 'spacetime/speed-of-light', title: 'Speed of Light' },
+      { id: 'gravity/einstein-equations', title: 'Einstein Field Equations' },
+    ],
+  },
+  {
+    title: 'Traversable Wormholes',
+    premise: 'Could a wormhole be held open and used as a shortcut between distant points in space?',
+    verdict: 'forbidden',
+    verdictLabel: 'Non-traversable only',
+    explanation: 'Wormholes exist in the framework — they are the geometric face of entanglement (ER = EPR). A relational invariant between two spatially separated observers manifests simultaneously as quantum entanglement and as a non-traversable Einstein-Rosen bridge. But the throat area is exactly saturated at the entanglement entropy. Any independent signal through the wormhole would carry additional coherence, requiring a larger throat than the Einstein equations source. The geometry cannot accommodate it. Geometric non-traversability and quantum no-signaling are dual expressions of the same constraint.',
+    keyResult: 'Theorem 4.1 (ER-EPR): The wormhole is non-traversable. Corollary 4.2: Non-traversability and no-signaling are dual.',
+    derivations: [
+      { id: 'holography/er-epr', title: 'ER = EPR Correspondence' },
+    ],
+  },
+  {
+    title: 'Teleportation',
+    premise: 'Could an object or person be disassembled and perfectly reconstructed at a distant location?',
+    verdict: 'allowed',
+    verdictLabel: 'Allowed (quantum teleportation)',
+    explanation: 'Quantum teleportation is not science fiction within this framework — it is a direct consequence of the axioms. The process transfers a relational invariant from one observer-system pair to another using shared entanglement and classical communication. Coherence conservation enforces no-cloning: the original state is destroyed in the transfer. Exact fidelity (F = 1) is structurally guaranteed. The catch, familiar from quantum information theory, is that classical communication at or below c is required — teleportation does not enable faster-than-light signaling.',
+    keyResult: 'Theorem 5.1 (Teleportation): Teleportation is a coherence channel transfer with fidelity F = 1. Corollary 4.2: Classical communication is necessary.',
+    derivations: [
+      { id: 'quantum/teleportation', title: 'Quantum Teleportation' },
+    ],
+  },
+  {
+    title: 'Parallel Universes & Many Worlds',
+    premise: 'Does the universe split into copies every time a quantum measurement occurs?',
+    verdict: 'forbidden',
+    verdictLabel: 'No branching',
+    explanation: 'The coherence sheaf has a unique global section on the time-ordered nerve of the interaction graph, because the DAG structure makes the geometric realization contractible (vanishing first cohomology). The coherence future is uniquely determined — there is no branching. Quantum indeterminacy is real: the outcome sheaf is multivalued, reflecting Kochen-Specker contextuality. But different outcomes are different ways of realizing the same coherence budget within a single evolving universe, not copies in parallel branches.',
+    keyResult: 'Corollary 3.1 (Sheaf Section Uniqueness): The coherence future is uniquely determined. No branching of the coherence sheaf occurs.',
+    derivations: [
+      { id: 'quantum/sheaf-section-uniqueness', title: 'Sheaf Section Uniqueness' },
+      { id: 'quantum/observer-relative-objectivity', title: 'Observer-Relative Objectivity' },
+    ],
+  },
+  {
+    title: 'The Multiverse',
+    premise: 'Are there other universes with different laws of physics, different constants, or different histories?',
+    verdict: 'forbidden',
+    verdictLabel: 'Single coherence universe',
+    explanation: 'The axioms define a single coherence measure on the entire \u03C3-algebra of observer events — a global conservation law, not one that applies per universe. All events lie on a single partially ordered set. Causally disconnected regions (as in eternal inflation) are consistent with the framework, but they are parts of one spacetime governed by one coherence conservation law, not separate universes. The string landscape question (why these constants?) is partially addressed: the observer loop viability conditions severely constrain which solutions can host observer networks, selecting for \u039B in a narrow range near zero.',
+    derivations: [
+      { id: 'thermodynamics/time', title: 'Time as Phase Ordering' },
+      { id: 'cosmology/observer-loop-viability', title: 'Observer Loop Viability' },
+    ],
+  },
+  {
+    title: 'Perpetual Motion & Free Energy',
+    premise: 'Could a machine run forever, producing energy from nothing?',
+    verdict: 'forbidden',
+    verdictLabel: 'Axiomatically forbidden',
+    explanation: 'Coherence is conserved on every Cauchy slice (Axiom 1) and every observer cycle has a minimum coherence cost. You cannot extract more work than you have coherence to sustain, and you cannot create coherence from vacuum. This is not merely the first and second laws of thermodynamics restated — it is their derivation from something deeper. The thermodynamic arrow, energy conservation, and the impossibility of perpetual motion all follow from the same axiom.',
+    derivations: [
+      { id: 'thermodynamics/entropy', title: 'Entropy & Second Law' },
+      { id: 'thermodynamics/action-planck', title: 'Action & Planck\u2019s Constant' },
+    ],
+  },
+  {
+    title: 'Boltzmann Brains',
+    premise: 'Could a conscious observer fluctuate into existence from thermal noise in an empty universe?',
+    verdict: 'forbidden',
+    verdictLabel: 'Structurally impossible',
+    explanation: 'Two independent arguments rule out Boltzmann brains. First, a single isolated observer has zero coherence content and is structurally impossible (Multiplicity, Theorem 2.1). At least three mutually defining observers are required for the full axiom set to be non-vacuous. Second, and more fundamentally: complexity does not come for free. The relational invariants that constitute a complex structure like a brain require the entire bootstrap hierarchy to have been traversed — division algebras before gauge groups, gauge groups before particle spectrum, particles before bound states. Each layer depends on the previous one having crystallized. The bootstrap is the only mechanism the framework provides for generating new relational invariants from existing ones. A thermal fluctuation would need to instantiate every layer of this hierarchy simultaneously without the process that creates them. This is not merely improbable — it is structurally impossible, like trying to build the tenth floor of a building without the nine below it.',
+    keyResult: 'Theorem 2.1 (Multiplicity): A single observer has C(\u03A3) = 0. The bootstrap hierarchy has no shortcut: each layer of relational invariant complexity requires the previous layer.',
+    derivations: [
+      { id: 'minimal-observer/multiplicity', title: 'Multiplicity Is Necessary' },
+      { id: 'interactions/bootstrap', title: 'Bootstrap & Compositeness' },
+    ],
+  },
+  {
+    title: 'Simulation Theory',
+    premise: 'Could we be living inside a computer simulation? Would there be any way to tell?',
+    verdict: 'dissolved',
+    verdictLabel: 'Question dissolved',
+    explanation: 'Three independent arguments dissolve the simulation question rather than answering it. First: a simulation that faithfully instantiates the three axioms produces genuine observers by the framework\u2019s own structural definition — real coherence, real relational invariants, real measurement outcomes. The distinction between "simulated" and "real" evaporates. Second: a simulation where the operator intervenes violates coherence conservation (C2), which doesn\u2019t produce observers who experience anomalies — it produces structures that fail to be observers at all. The U(1) loop doesn\u2019t close, the Noether invariant isn\u2019t conserved, and the triple (\u03A3, I, B) no longer satisfies the axioms. Intervention doesn\u2019t create a glitchy world; it destroys the observers. Third: the popular "brain in a vat" scenario — one real mind in a universe of non-player characters — is forbidden by the multiplicity theorem. A single observer has zero coherence and is structurally impossible. Non-observers don\u2019t contribute relational invariants to the network. The lone-mind scenario is not the easy case; it is the impossible case.',
+    keyResult: 'Faithful simulation = reality (vacuous distinction). Interfered simulation = no observers. Single-mind simulation = forbidden by multiplicity.',
+    derivations: [
+      { id: 'axioms/observer-definition', title: 'Observer Definition' },
+      { id: 'axioms/coherence-conservation', title: 'Coherence Conservation' },
+      { id: 'minimal-observer/multiplicity', title: 'Multiplicity Is Necessary' },
+    ],
+  },
+  {
+    title: 'Consciousness Uploading',
+    premise: 'Could a mind be copied into a computer and continue to exist as the same person?',
+    verdict: 'open',
+    verdictLabel: 'Open question',
+    explanation: 'The framework provides the structural definition of an observer but not the physical construction principle that instantiates one. If a digital system could support a Hilbert state space, maintain a Noether invariant, sustain a self/non-self boundary, and close a U(1) phase loop with Lyapunov stability — then by the axioms, it would be an observer. Whether classical digital hardware can achieve this, or whether actual quantum degrees of freedom are required, is not settled by the framework. The no-cloning theorem (a consequence of coherence conservation) does rule out one scenario: you cannot copy a mind while preserving the original. Transfer, not duplication.',
+    derivations: [
+      { id: 'axioms/observer-definition', title: 'Observer Definition' },
+      { id: 'quantum/teleportation', title: 'Quantum Teleportation' },
+    ],
+  },
+]
+
+const forbiddenCount = tropes.filter(t => t.verdict === 'forbidden').length
+const allowedCount = tropes.filter(t => t.verdict === 'allowed').length
+const dissolvedCount = tropes.filter(t => t.verdict === 'dissolved').length
+const openCount = tropes.filter(t => t.verdict === 'open').length
+---
+
+<MainLayout title="Science Fiction Meets Three Axioms">
+  <PageTitle title="Science Fiction Meets Three Axioms" />
+  <p>
+    Science fiction explores what might be possible. Fundamental physics determines
+    what actually is. Many of the most iconic ideas in science fiction &mdash; time travel,
+    warp drives, parallel universes &mdash; make implicit assumptions about the structure
+    of reality that can be tested against a sufficiently complete physical framework.
+  </p>
+  <p>
+    Observer-centrism is specific enough to have something to say about most of these.
+    Some tropes are axiomatically forbidden &mdash; not merely difficult or unlikely, but
+    structurally impossible given the three axioms. Others are allowed, even expected.
+    Some questions are dissolved entirely &mdash; shown to be less meaningful than they
+    appear. A few remain genuinely open.
+  </p>
+  <p>
+    Each entry below gives the framework&rsquo;s current assessment and links to the
+    relevant derivation chain. As with everything on this site, these are conclusions
+    <em>within</em> the framework &mdash; contingent on the axioms being correct,
+    which is an <a href={`${base}/predictions/`}>empirical question</a>.
+  </p>
+
+  <div class="sf-summary">
+    <div class="sf-stat sf-stat-forbidden">
+      <div class="sf-stat-value">{forbiddenCount}</div>
+      <div class="sf-stat-label">Forbidden</div>
+    </div>
+    <div class="sf-stat sf-stat-allowed">
+      <div class="sf-stat-value">{allowedCount}</div>
+      <div class="sf-stat-label">Allowed</div>
+    </div>
+    <div class="sf-stat sf-stat-dissolved">
+      <div class="sf-stat-value">{dissolvedCount}</div>
+      <div class="sf-stat-label">Dissolved</div>
+    </div>
+    <div class="sf-stat sf-stat-open">
+      <div class="sf-stat-value">{openCount}</div>
+      <div class="sf-stat-label">Open</div>
+    </div>
+  </div>
+
+  <div class="sf-cards">
+    {tropes.map(t => (
+      <div class={`sf-card sf-card-${t.verdict}`}>
+        <div class="sf-card-header">
+          <span class={`sf-badge sf-badge-${t.verdict}`}>
+            {t.verdictLabel}
+          </span>
+          <h2 class="sf-title">{t.title}</h2>
+        </div>
+        <p class="sf-premise">{t.premise}</p>
+        <p class="sf-explanation">{t.explanation}</p>
+        {t.keyResult && (
+          <p class="sf-key-result">{t.keyResult}</p>
+        )}
+        <div class="sf-links">
+          {t.derivations.map(d => (
+            <a href={`${base}/derivations/${d.id}`} class="sf-deriv-link">
+              {d.title}
+            </a>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</MainLayout>
+
+<style>
+  p {
+    line-height: 1.7;
+  }
+  p a {
+    color: var(--color-accent);
+  }
+
+  .sf-summary {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .sf-stat {
+    flex: 0;
+    min-width: 100px;
+    padding: 0.75rem 1.25rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    text-align: center;
+  }
+  .sf-stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .sf-stat-forbidden .sf-stat-value {
+    color: var(--color-non-viable);
+  }
+  .sf-stat-allowed .sf-stat-value {
+    color: var(--color-rigorous);
+  }
+  .sf-stat-dissolved .sf-stat-value {
+    color: #7c6fae;
+  }
+  .sf-stat-open .sf-stat-value {
+    color: var(--color-provisional);
+  }
+  .sf-stat-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 0.04em;
+  }
+
+  .sf-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .sf-card {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    background: var(--color-surface);
+  }
+  .sf-card-forbidden {
+    border-left: 3px solid color-mix(in srgb, var(--color-non-viable) 50%, var(--color-border));
+  }
+  .sf-card-allowed {
+    border-left: 3px solid color-mix(in srgb, var(--color-rigorous) 50%, var(--color-border));
+  }
+  .sf-card-dissolved {
+    border-left: 3px solid color-mix(in srgb, #7c6fae 50%, var(--color-border));
+  }
+  .sf-card-open {
+    border-left: 3px solid color-mix(in srgb, var(--color-provisional) 50%, var(--color-border));
+  }
+
+  .sf-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .sf-badge {
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.15rem 0.5rem;
+    border-radius: 9999px;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .sf-badge-forbidden {
+    background: color-mix(in srgb, var(--color-non-viable) 12%, transparent);
+    color: var(--color-non-viable);
+  }
+  .sf-badge-allowed {
+    background: color-mix(in srgb, var(--color-rigorous) 12%, transparent);
+    color: var(--color-rigorous);
+  }
+  .sf-badge-dissolved {
+    background: color-mix(in srgb, #7c6fae 12%, transparent);
+    color: #7c6fae;
+  }
+  .sf-badge-open {
+    background: color-mix(in srgb, var(--color-provisional) 12%, transparent);
+    color: var(--color-provisional);
+  }
+
+  .sf-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: var(--color-text);
+  }
+
+  .sf-premise {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0 0 0.6rem;
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  .sf-explanation {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0 0 0.5rem;
+    color: var(--color-text);
+  }
+
+  .sf-key-result {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin: 0 0 0.75rem;
+    padding: 0.5rem 0.75rem;
+    background: color-mix(in srgb, var(--color-accent) 5%, transparent);
+    border-radius: 6px;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono, monospace);
+  }
+
+  .sf-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .sf-deriv-link {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: background 0.15s;
+    background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+    color: var(--color-accent);
+  }
+  .sf-deriv-link:hover {
+    background: color-mix(in srgb, var(--color-accent) 20%, transparent);
+  }
+
+  @media (max-width: 768px) {
+    .sf-card {
+      padding: 1rem 1.15rem;
+    }
+    .sf-title {
+      font-size: 0.95rem;
+    }
+  }
+</style>
