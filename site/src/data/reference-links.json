@@ -10,7 +10,7 @@
   },
   "klein-1884": {
     "title": "Vorlesungen über das Ikosaeder",
-    "url": "https://doi.org/10.1007/978-3-0348-8594-2"
+    "url": "https://eudml.org/doc/203220"
   },
   "cartan-1914": {
     "title": "Les groupes réels simples, finis et continus",
@@ -58,7 +58,7 @@
   },
   "aczel-1966": {
     "title": "Lectures on Functional Equations and Their Applications",
-    "url": "https://doi.org/10.1016/s0076-5392(09)x6011-0"
+    "url": "https://books.google.com/books?id=n7vckU_1tY4C"
   },
   "coleman-mandula-1967": {
     "title": "All Possible Symmetries of the S Matrix",
@@ -78,7 +78,7 @@
   },
   "bredon-1972": {
     "title": "Introduction to Compact Transformation Groups",
-    "url": "https://doi.org/10.1016/S0079-8169(08)60640-1"
+    "url": "https://www.sciencedirect.com/bookseries/pure-and-applied-mathematics/vol/46/suppl/C"
   },
   "orlik-1972": {
     "title": "Seifert Manifolds",
@@ -102,7 +102,7 @@
   },
   "bertrand-1873": {
     "title": "Théorème relatif au mouvement d'un point attiré vers un centre fixe",
-    "url": "https://doi.org/10.1016/S0764-4442(97)83740-8"
+    "url": "https://gallica.bnf.fr/ark:/12148/bpt6k3042j/f849"
   },
   "georgi-glashow-1974": {
     "title": "Unity of All Elementary-Particle Forces",
@@ -158,7 +158,7 @@
   },
   "machacek-vaughn-1984": {
     "title": "Two-Loop Renormalization Group Equations in a General Quantum Field Theory",
-    "url": "https://doi.org/10.1016/0550-3213(84)90533-0"
+    "url": "https://doi.org/10.1016/0550-3213(83)90610-7"
   },
   "bombelli-1987": {
     "title": "Space-Time as a Causal Set",
@@ -238,7 +238,7 @@
   },
   "petz-1996": {
     "title": "Monotone Metrics on Matrix Spaces",
-    "url": "https://doi.org/10.1016/0024-3795(94)00328-8"
+    "url": "https://doi.org/10.1016/0024-3795(94)00211-8"
   },
   "corley-jacobson-1996": {
     "title": "Hawking Spectrum and High Frequency Dispersion",
@@ -254,11 +254,11 @@
   },
   "tegmark-1997": {
     "title": "On the Dimensionality of Spacetime",
-    "url": "https://doi.org/10.1088/0264-9381/14/4/L01"
+    "url": "https://doi.org/10.1088/0264-9381/14/4/002"
   },
   "moreno-1998": {
     "title": "Barker Sequences and Flat Polynomials",
-    "url": "https://doi.org/10.1016/S0024-3795(98)10120-5"
+    "url": "https://www.researchgate.net/publication/228525044_Barker_sequences_and_flat_polynomials"
   },
   "amari-nagaoka-2000": {
     "title": "Methods of Information Geometry",
@@ -290,11 +290,11 @@
   },
   "altarelli-feruglio-2005": {
     "title": "Tri-Bimaximal Neutrino Mixing from Discrete Symmetry",
-    "url": "https://doi.org/10.1016/j.nuclphysb.2005.09.048"
+    "url": "https://doi.org/10.1016/j.nuclphysb.2006.01.043"
   },
   "fujishige-2005": {
     "title": "Submodular Functions and Optimization",
-    "url": "https://doi.org/10.1016/S0076-5392(08)X6000-0"
+    "url": "https://shop.elsevier.com/books/submodular-functions-and-optimization/fujishige/978-0-444-52086-9"
   },
   "groisman-popescu-winter-2005": {
     "title": "Quantum, Classical, and Total Amount of Correlations in a Quantum State",
@@ -362,7 +362,7 @@
   },
   "born-1957": {
     "title": "The Born-Einstein Letters",
-    "url": "https://doi.org/10.1007/978-3-0348-7757-5"
+    "url": "https://link.springer.com/book/9781403944962"
   },
   "birkhoff-1923": {
     "title": "Relativity and Modern Physics",
@@ -375,5 +375,33 @@
   "cencov-1982": {
     "title": "Statistical Decision Rules and Optimal Inference",
     "url": "https://doi.org/10.1090/mmono/053"
+  },
+  "wu-1957": {
+    "title": "Experimental Test of Parity Conservation in Beta Decay",
+    "url": "https://doi.org/10.1103/PhysRev.105.1413"
+  },
+  "kochen-specker-1967": {
+    "title": "The Problem of Hidden Variables in Quantum Mechanics",
+    "url": "https://doi.org/10.1512/iumj.1968.17.17004"
+  },
+  "dhr-1971": {
+    "title": "Local Observables and Particle Statistics I",
+    "url": "https://doi.org/10.1007/BF01877742"
+  },
+  "bennett-1996": {
+    "title": "Purification of Noisy Entanglement and Faithful Teleportation via Noisy Channels",
+    "url": "https://doi.org/10.1103/PhysRevLett.76.722"
+  },
+  "abramsky-brandenburger-2011": {
+    "title": "The Sheaf-Theoretic Structure of Non-Locality and Contextuality",
+    "url": "https://doi.org/10.1088/1367-2630/13/11/113036"
+  },
+  "gross-wilczek-politzer-1973": {
+    "title": "Asymptotic Freedom (Gross & Wilczek + Politzer, 1973)",
+    "url": "https://doi.org/10.1103/PhysRevLett.30.1343"
+  },
+  "groisman-2005": {
+    "title": "Quantum, Classical, and Total Amount of Correlations in a Quantum State",
+    "url": "https://doi.org/10.1103/PhysRevA.72.032317"
   }
 }
