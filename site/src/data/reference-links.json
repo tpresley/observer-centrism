@@ -1,5 +1,9 @@
 {
   "_comment": "Curated external links for academic references. NOT overwritten by build scripts. Update via /update-references skill.",
+  "aharonov-bohm-1959": {
+    "title": "Significance of Electromagnetic Potentials in the Quantum Theory",
+    "url": "https://doi.org/10.1103/PhysRev.115.485"
+  },
   "hurwitz-1898": {
     "title": "Über die Composition der quadratischen Formen von beliebig vielen Variablen",
     "url": "https://doi.org/10.1007/BF02403043"

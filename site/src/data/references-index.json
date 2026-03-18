@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-03-16T08:48:02.221Z",
-    "totalReferences": 90,
-    "totalCitations": 103,
+    "generatedAt": "2026-03-17T22:14:39.640Z",
+    "totalReferences": 91,
+    "totalCitations": 104,
     "citingFiles": 42,
     "generator": "scripts/extract-references.mjs"
   },
@@ -51,7 +51,7 @@
     },
     "particle-physics": {
       "name": "Particle Physics",
-      "count": 18
+      "count": 19
     },
     "holography": {
       "name": "Holography & Black Holes",
@@ -918,6 +918,21 @@
         }
       ],
       "category": "spacetime-geometry"
+    },
+    {
+      "id": "aharonov-bohm-1959",
+      "authors": "Aharonov and Bohm",
+      "year": 1959,
+      "citedAs": [
+        "Aharonov and Bohm, 1959"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "gauge/electromagnetism",
+          "title": "Electromagnetism from Phase Coherence"
+        }
+      ],
+      "category": "particle-physics"
     },
     {
       "id": "altarelli-feruglio-2005",
