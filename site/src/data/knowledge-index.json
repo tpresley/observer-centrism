@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-23T07:30:21.743Z",
+    "generatedAt": "2026-03-23T08:50:42.809Z",
     "derivationCount": 64,
     "predictionCount": 11,
     "gaPageCount": 12,
@@ -10,15 +10,15 @@
     "byStatus": {
       "rigorous": 60,
       "non-viable": 1,
-      "draft": 2,
-      "provisional": 1
+      "draft": 1,
+      "provisional": 2
     },
     "derivationCount": 64,
     "predictionCount": 11,
     "edgeCount": 149,
-    "formalObjectCount": 948,
+    "formalObjectCount": 949,
     "openGapCount": 213,
-    "upgradeEligibleCount": 2,
+    "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
   },
@@ -12266,7 +12266,7 @@
       "id": "quantum/sheaf-section-uniqueness",
       "filePath": "site/src/content/derivations/quantum/sheaf-section-uniqueness.md",
       "title": "Sheaf Structure and Section Uniqueness",
-      "status": "draft",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "quantum",
       "tags": [
@@ -12275,7 +12275,7 @@
         "mathematics"
       ],
       "summary": "Formalizes the observer network as three sheaves (coherence, probability, outcome) and shows the trichotomy of observer-relative-objectivity is the cohomological classification: coherence and probability sheaves have unique global sections, while the outcome sheaf admits contextuality (non-vanishing H¹)",
-      "lastUpdated": "2026-03-15",
+      "lastUpdated": "2026-03-22",
       "dependsOn": [
         "axioms/coherence-conservation",
         "axioms/observer-definition",
@@ -12342,19 +12342,25 @@
           "type": "Definition",
           "id": "2.1",
           "name": "Coherence sheaf",
-          "statementPreview": "C: Obsop textbfSet assigns to each observer Oi the coherence allocation visible to Oi: the set of values C(Oi : Oj)j ..."
+          "statementPreview": "C: Obsop textbfSet is the presheaf:"
         },
         {
           "type": "Definition",
           "id": "2.2",
           "name": "Probability sheaf",
-          "statementPreview": "P: Obsop textbfSet assigns to each observer Oi the Born rule probability distributions Pi(k) = |langle k | psii rangl..."
+          "statementPreview": "P: Obsop textbfSet is the presheaf:"
         },
         {
           "type": "Definition",
           "id": "2.3",
           "name": "Outcome sheaf",
-          "statementPreview": "O: Obsop textbfSet assigns to each observer Oi the actual definite values vij of relational invariants Iij for all j ..."
+          "statementPreview": "O: Obsop textbfSet is the presheaf:"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.0",
+          "name": "Functoriality",
+          "statementPreview": "Each of C, P, O is a well-defined presheaf: restriction maps compose, rhoik = rhojk circ rhoij for Ok in Uj Ui.*"
         },
         {
           "type": "Proposition",
@@ -12463,7 +12469,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "quantum/teleportation": {
@@ -22870,6 +22876,13 @@
     {
       "derivationId": "quantum/sheaf-section-uniqueness",
       "type": "Proposition",
+      "id": "2.0",
+      "name": "Functoriality",
+      "fullRef": "quantum/sheaf-section-uniqueness:Proposition 2.0"
+    },
+    {
+      "derivationId": "quantum/sheaf-section-uniqueness",
+      "type": "Proposition",
       "id": "2.1",
       "name": "Hierarchy",
       "fullRef": "quantum/sheaf-section-uniqueness:Proposition 2.1"
@@ -25678,21 +25691,21 @@
     },
     {
       "derivationId": "quantum/sheaf-section-uniqueness",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Formal isomorphism with Abramsky-Brandenburger",
       "description": "— The structural parallel between the observer sheaf O and the Abramsky-Brandenburger empirical model presheaf is compelling but not yet a formal isomorphism. Establishing this requires: (a) mapping r"
     },
     {
       "derivationId": "quantum/sheaf-section-uniqueness",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Continuous observables",
       "description": "— The current analysis works for discrete outcome spaces. For continuous spectra, the stalks become infinite-dimensional and the cohomology theory needs refinement (e.g., sheaves of topological spaces"
     },
     {
       "derivationId": "quantum/sheaf-section-uniqueness",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Higher cohomology",
       "description": "— We've focused on H1 (gluing obstructions), but H2 and higher may carry physical information. In gauge theory, H2 classifies gerbes (higher gauge fields). Whether H2(G, O) has a physical interpretati"
@@ -26027,12 +26040,6 @@
         "currentStatus": "draft",
         "gapCount": 4,
         "formalObjectCount": 8
-      },
-      {
-        "id": "quantum/sheaf-section-uniqueness",
-        "currentStatus": "draft",
-        "gapCount": 3,
-        "formalObjectCount": 18
       }
     ],
     "blocked": []

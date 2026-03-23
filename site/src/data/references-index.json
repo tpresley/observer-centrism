@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-03-23T07:30:21.900Z",
-    "totalReferences": 91,
-    "totalCitations": 104,
+    "generatedAt": "2026-03-23T08:50:42.970Z",
+    "totalReferences": 90,
+    "totalCitations": 103,
     "citingFiles": 42,
     "generator": "scripts/extract-references.mjs"
   },
@@ -35,7 +35,7 @@
     },
     "quantum-mechanics": {
       "name": "Quantum Mechanics",
-      "count": 9
+      "count": 8
     },
     "quantum-information": {
       "name": "Quantum Information",
@@ -225,21 +225,6 @@
         {
           "derivationId": "quantum/born-rule",
           "title": "Born Rule from Coherence Conservation"
-        }
-      ],
-      "category": "quantum-mechanics"
-    },
-    {
-      "id": "kochen-specker-1967",
-      "authors": "Kochen & Specker",
-      "year": 1967,
-      "citedAs": [
-        "Kochen & Specker 1967"
-      ],
-      "citedIn": [
-        {
-          "derivationId": "quantum/sheaf-section-uniqueness",
-          "title": "Sheaf Structure and Section Uniqueness"
         }
       ],
       "category": "quantum-mechanics"
