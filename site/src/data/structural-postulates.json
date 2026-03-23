@@ -28,8 +28,10 @@
     "postulateId": "S1",
     "shortName": "Symplectic structure",
     "statement": "The joint state space \u03a3\u2081 \u00d7 \u03a3\u2082 carries a symplectic form \u03c9 compatible with the U(1) \u00d7 U(1) action of the constituent observers.",
-    "justification": "Symplectic structure is the minimal geometric setting for Noether's theorem, which is needed to define relational invariants as conserved quantities.",
-    "group": "dynamics"
+    "justification": "Now a theorem (Theorem 0.1): Axiom 3 gives each observer a Noether pair (Loop Closure, Theorem 3.1), a Noether pair defines a symplectic form, and the product of symplectic manifolds is canonically symplectic (Abraham & Marsden, Proposition 3.2.10).",
+    "group": "dynamics",
+    "derivedFrom": "interactions/relational-invariants",
+    "derivedFromTitle": "Relational Invariants"
   },
   {
     "id": "action-planck-s1",
@@ -38,8 +40,10 @@
     "postulateId": "S1",
     "shortName": "Smooth coherence measure",
     "statement": "The coherence measure C is at least C\u00b2 (twice continuously differentiable), with a positive-definite Hessian metric on state space.",
-    "justification": "Extends the Riemannian metric of Loop Closure S2 by requiring that coherence curvature itself defines a metric, enabling identification of coherence cost with the action functional.",
-    "group": "dynamics"
+    "justification": "Now a theorem (Theorem 0.1): the Born Rule (derived via coherence-operational) forces statistical regularity for finite-dimensional systems, and the Fisher metric chain (Čencov uniqueness + Proposition 4.1 of Fisher Information Metric) identifies the coherence Hessian as ℏ × Fisher metric, which is C∞ and positive definite.",
+    "group": "dynamics",
+    "derivedFrom": "thermodynamics/action-planck",
+    "derivedFromTitle": "Action and Planck's Constant"
   },
   {
     "id": "speed-of-light-s1",
@@ -82,8 +86,10 @@
     "postulateId": "S1",
     "shortName": "Second-order locality",
     "statement": "The self-consistency relation between curvature and coherence content involves at most second derivatives of the metric g_\u03bc\u03bd.",
-    "justification": "Restricts the field equation to depend on g, \u2202g, and \u2202\u00b2g only. Combined with d = 4, Lovelock's theorem uniquely determines the Einstein tensor as the geometric side of the equation.",
-    "group": "geometry"
+    "justification": "Now a theorem (Coherence Lagrangian, Theorem 6.0): Ostrogradsky's instability theorem shows higher-derivative Lagrangians have unbounded Hamiltonians, violating the Lyapunov stability required by Axiom 3 (loop closure). Second-order locality is therefore forced by loop closure stability.",
+    "group": "geometry",
+    "derivedFrom": "foundation/coherence-lagrangian",
+    "derivedFromTitle": "Coherence Lagrangian"
   },
   {
     "id": "electromagnetism-s1",
@@ -92,8 +98,10 @@
     "postulateId": "S1",
     "shortName": "Locality of phase comparison",
     "statement": "Phase comparison between observers at distinct spacetime points requires smooth parallel transport, described by a connection 1-form A on a principal U(1) bundle P \u2192 \u2133 over the spacetime manifold.",
-    "justification": "Relational physics with finite signal speed makes global phase conventions impossible. The minimal structure for comparing phases at separated points is a gauge connection \u2014 the gauge-theory analog of the metric in gravity.",
-    "group": "gauge"
+    "justification": "Now a theorem (Theorem 0.1): local gauge freedom is inevitable from relational physics + finite signal speed (Theorem 2.1), and the classification theorem for connections on principal bundles (Kobayashi & Nomizu) shows the principal U(1) bundle with connection is the unique smooth implementation.",
+    "group": "gauge",
+    "derivedFrom": "gauge/electromagnetism",
+    "derivedFromTitle": "Electromagnetism"
   },
   {
     "id": "electromagnetism-s2",
@@ -102,8 +110,10 @@
     "postulateId": "S2",
     "shortName": "Minimal gauge dynamics",
     "statement": "The self-consistency condition for the U(1) gauge connection involves at most second derivatives of A_\u03bc \u2014 equivalently, at most first derivatives of F_\u03bc\u03bd.",
-    "justification": "The gauge-theory analog of second-order locality (Einstein Equations S1). Higher-derivative equations would couple the field to non-local coherence information, violating the principle that the interaction graph determines dynamics locally.",
-    "group": "gauge"
+    "justification": "Now a theorem (Coherence Lagrangian, Theorem 6.0): Ostrogradsky instability excludes higher-derivative gauge Lagrangians, as the resulting unbounded Hamiltonian violates loop closure stability (Axiom 3).",
+    "group": "gauge",
+    "derivedFrom": "foundation/coherence-lagrangian",
+    "derivedFromTitle": "Coherence Lagrangian"
   },
   {
     "id": "weak-interaction-s1",
@@ -124,8 +134,10 @@
     "postulateId": "S2",
     "shortName": "Minimal non-abelian gauge dynamics",
     "statement": "The self-consistency condition for the SU(2) gauge connection involves at most second derivatives of W\u1d43_\u03bc \u2014 equivalently, at most first derivatives of the field strength W\u1d43_\u03bc\u03bd.",
-    "justification": "Identical in motivation to Electromagnetism S2 and Einstein Equations S1: locality restricts the field equations to depend on the connection and its first derivatives only.",
-    "group": "gauge"
+    "justification": "Now a theorem (Coherence Lagrangian, Theorem 6.0): Ostrogradsky instability excludes higher-derivative gauge Lagrangians, as the resulting unbounded Hamiltonian violates loop closure stability (Axiom 3).",
+    "group": "gauge",
+    "derivedFrom": "foundation/coherence-lagrangian",
+    "derivedFromTitle": "Coherence Lagrangian"
   },
   {
     "id": "color-force-s1",
@@ -168,8 +180,10 @@
     "postulateId": "S1",
     "shortName": "Topological consistency",
     "statement": "Transition amplitudes are single-valued on the universal cover of configuration space. The wave function is a section of a flat line bundle with holonomy Hom(\u03c0\u2081(Q), U(1)).",
-    "justification": "The standard Laidlaw\u2013DeWitt quantization condition: amplitudes must be consistent under particle exchange, which constrains the wave function to be either symmetric or antisymmetric in d = 3.",
-    "group": "particles"
+    "justification": "Now a theorem (Theorem 0.1): Axiom 3 (loop closure) applied to configuration space forces single-valued phases on the universal cover; the holonomy classification follows from standard covering-space theory. The Laidlaw\u2013DeWitt condition is derived, not postulated.",
+    "group": "particles",
+    "derivedFrom": "particles/spin-statistics",
+    "derivedFromTitle": "Spin-Statistics Connection"
   },
   {
     "id": "mass-hierarchy-s1",

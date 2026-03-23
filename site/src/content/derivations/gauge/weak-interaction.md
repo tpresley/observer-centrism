@@ -41,9 +41,9 @@ Electromagnetism arises from a single phase channel -- one direction in which an
 
 **Remark.** This postulate packages three physical requirements: (i) phase composition is bilinear (linearity of quantum mechanics), (ii) phase composition preserves coherence (the norm condition, from Axiom 1), and (iii) every non-zero phase has an inverse (dynamics are reversible). These three conditions define a normed division algebra. The postulate's content is that the phase algebra respects these properties — it is the gauge-theory analog of S1 in [Electromagnetism](/derivations/gauge/electromagnetism) (locality of phase comparison), now applied to a richer algebraic structure.
 
-**Structural Postulate S2 (Minimal non-abelian gauge dynamics).** The self-consistency condition for the $SU(2)$ gauge connection involves at most second derivatives of $W^a_\mu$ — equivalently, at most first derivatives of the field strength $W^a_{\mu\nu}$.
+**Structural Postulate S2 (Minimal non-abelian gauge dynamics).** **Now a theorem** ([Coherence Lagrangian](/derivations/foundation/coherence-lagrangian), Theorem 6.0). The gauge field equations involve at most second derivatives of $W^a_\mu$, derived from Axiom 3 via Ostrogradsky's instability theorem.
 
-**Remark.** Identical in motivation to S2 of [Electromagnetism](/derivations/gauge/electromagnetism) and S1 of [Einstein Field Equations](/derivations/spacetime/einstein-equations).
+**Remark.** Promoted by the same unified argument as S2 of [Electromagnetism](/derivations/gauge/electromagnetism) and S1 of [Einstein Field Equations](/derivations/spacetime/einstein-equations).
 
 ## Derivation
 

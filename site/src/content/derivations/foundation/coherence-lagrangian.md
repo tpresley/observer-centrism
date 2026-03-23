@@ -157,9 +157,29 @@ $$Z = \int \mathcal{D}\phi\, e^{iS[\phi]/\hbar}$$
 
 *Proof.* From [Action and Planck's Constant](/derivations/thermodynamics/action-planck) (Theorem 5.1), the amplitude for a transition is the sum over all paths, each weighted by $e^{iS/\hbar}$, where $S$ is the coherence cost. The classical limit ($\hbar \to 0$) selects the stationary-action path. The full quantum theory retains all paths, with the rapidly oscillating phase suppressing non-classical contributions. $\square$
 
-### Step 6: Stress-Energy from Coherence
+### Step 6: Second-Order Locality from Loop Closure Stability
 
-**Proposition 6.1 (Stress-energy tensor).** *The stress-energy tensor is the variational derivative of the matter Lagrangian with respect to the metric:*
+**Theorem 6.0 (Ostrogradsky exclusion).** *The field equations of the coherence Lagrangian involve at most second derivatives of the dynamical fields. Higher-derivative terms are excluded by Axiom 3 (loop closure stability).*
+
+*Proof.* The argument applies Ostrogradsky's instability theorem (1850) to the requirement of Lyapunov stability from Axiom 3.
+
+**(i) Ostrogradsky's theorem.** For a non-degenerate Lagrangian $L(q, \dot{q}, \ddot{q}, \ldots, q^{(n)})$ depending on derivatives of order $n \geq 2$, the Hamiltonian constructed via the Ostrogradsky procedure is necessarily *linear* in at least one canonical momentum. Consequently, the energy is unbounded below — the system has no ground state and is linearly unstable. (Ostrogradsky, 1850; Woodard, 2015, *Scholarpedia* 10(8):32243; see also Pais & Uhlenbeck, 1950, Phys. Rev. 79, for the field-theoretic extension.)
+
+**(ii) Loop closure requires Lyapunov stability.** Axiom 3 requires that each observer loop closes: $\phi_T = \mathrm{id}_\Sigma$ for some $T > 0$. The loop closure condition requires Lyapunov stability of the orbit — perturbations to the observer state must remain bounded, otherwise the loop fails to close ([Loop Closure](/derivations/axioms/loop-closure), Proposition 4.3). A system with energy unbounded below is linearly unstable: perturbations grow without bound along the direction in which the Hamiltonian decreases. This directly contradicts the Lyapunov stability required for loop closure.
+
+**(iii) Exclusion.** Combining (i) and (ii): any non-degenerate Lagrangian with derivatives of order $n \geq 2$ has unbounded energy (Ostrogradsky) and hence is linearly unstable, violating loop closure stability (Axiom 3). Therefore the coherence Lagrangian involves at most first derivatives of the fields — equivalently, the field equations involve at most second derivatives (since the Euler-Lagrange equations of a first-derivative Lagrangian are second-order).
+
+This applies uniformly to all sectors:
+- **Gravitational sector**: Field equations involve at most $\partial^2 g_{\mu\nu}$ (formerly [Einstein Equations](/derivations/spacetime/einstein-equations) S1)
+- **Gauge sector**: Field equations involve at most $\partial^2 A_\mu$ / $\partial^2 W^a_\mu$ (formerly [Electromagnetism](/derivations/gauge/electromagnetism) S2 and [Weak Interaction](/derivations/gauge/weak-interaction) S2)
+
+All three "second-order locality" postulates are now consequences of Axiom 3 via Ostrogradsky's theorem. $\square$
+
+**Remark (Degenerate higher-derivative theories).** Ostrogradsky's theorem applies to *non-degenerate* higher-derivative Lagrangians. Degenerate cases (where the Hessian $\partial^2 L / \partial q^{(n)} \partial q^{(n)}$ vanishes) can evade the instability — examples include $f(R)$ gravity and Horndeski theory. However, in the coherence framework, the Fisher metric provides the unique kinetic term (Theorem 1.2), which is non-degenerate by construction (Corollary 2.2 of [Fisher Information Metric](/derivations/thermodynamics-ext/fisher-metric)). Adding higher-derivative terms to a non-degenerate kinetic structure produces a non-degenerate higher-derivative Lagrangian, which falls under Ostrogradsky's theorem. The degenerate loophole does not apply.
+
+### Step 7: Stress-Energy from Coherence
+
+**Proposition 7.1 (Stress-energy tensor).** *The stress-energy tensor is the variational derivative of the matter Lagrangian with respect to the metric:*
 
 $$T_{\mu\nu} = -\frac{2}{\sqrt{-g}}\frac{\delta(\sqrt{-g}\,\mathcal{L}_{\text{matter}})}{\delta g^{\mu\nu}}$$
 

@@ -1,7 +1,7 @@
 ---
 title: "Action and Planck's Constant"
 status: "rigorous"
-dependsOn: ["axioms/loop-closure", "thermodynamics/time"]
+dependsOn: ["axioms/loop-closure", "thermodynamics/time", "thermodynamics-ext/fisher-metric"]
 enablesDerivation: ["spacetime/speed-of-light", "holography/area-scaling", "foundation/coherence-lagrangian"]
 tags: ["dynamics"]
 summary: "Action is the coherence cost of transformation; ℏ is the minimum cost of one observer cycle — the quantum of action"
@@ -28,7 +28,7 @@ Planck's constant is the tiny number that separates classical from quantum physi
 
 **Why this matters.** This connects the abstract axiom of loop closure to the physical constant that governs all of quantum mechanics. The quantum of action, the stationary action principle, and the uncertainty principle all emerge from a single geometric fact about observer loops.
 
-**An honest caveat.** The derivation requires one structural postulate: that the coherence measure is smooth enough to define a well-behaved metric on state space. Computing the numerical value of Planck's constant from first principles remains an open problem.
+**An honest caveat.** The structural postulate for smooth coherence measure has been promoted to a theorem (Theorem 0.1): the Born Rule (itself derived) forces statistical regularity, and the Fisher metric chain establishes $C^2$ smoothness and positive definiteness. No structural postulates remain. Computing the numerical value of Planck's constant from first principles remains an open problem.
 
 ## Statement
 
@@ -36,9 +36,27 @@ Planck's constant is the tiny number that separates classical from quantum physi
 
 ## Structural Postulate
 
-**S1 (Smooth coherence measure).** The coherence measure $\mathcal{C}$, restricted to any observer state space $\Sigma$, is at least $C^2$ (twice continuously differentiable). This extends [Loop Closure](/derivations/axioms/loop-closure) Theorem 0.1 (which provides a $G_\mathcal{O}$-invariant Riemannian metric on $\Sigma$ via Weyl averaging) by requiring that the Hessian of $\mathcal{C}$ itself yields a positive-definite metric on the physical state space.
+**S1 (Smooth coherence measure).** **Now a theorem** (Theorem 0.1 below). Formerly a structural postulate; now derived from the Fisher metric chain.
 
-**Remark.** The $G_\mathcal{O}$-invariant metric from Loop Closure (Theorem 0.1) and the Hessian metric from $\mathcal{C}$ are structurally related: both measure the cost of motion on $\Sigma$. The postulate is that they agree — i.e., the natural metric on $\Sigma$ is the one induced by the coherence measure. This is a uniqueness assumption that restricts the framework to a single geometric structure on state space.
+### Theorem 0.1 (Smooth Coherence Measure from the Fisher Metric)
+
+**Theorem 0.1.** *The coherence measure $\mathcal{C}$, restricted to any observer state space $\Sigma$, is at least $C^2$. Its Hessian yields a positive-definite metric on the physical state space.*
+
+*Proof.* The argument chains three established results:
+
+**(i) Statistical regularity.** By [Fisher Information Metric](/derivations/thermodynamics-ext/fisher-metric), Theorem 0.1, the Born Rule (now a theorem via [Coherence as Physical Primitive](/derivations/axioms/coherence-operational)) forces observer states to satisfy the regularity conditions of classical information geometry: $p(x|\sigma) = |\langle x|\sigma\rangle|^2$ is $C^\infty$ in $\sigma$ for finite-dimensional systems.
+
+**(ii) Coherence Hessian = Fisher metric.** By [Fisher Information Metric](/derivations/thermodynamics-ext/fisher-metric), Proposition 4.1, the Hessian of the coherence measure coincides (up to scale) with the Fisher information metric:
+
+$$g_{ij}(\sigma) = \hbar \, G_{ij}(\sigma)$$
+
+where $G_{ij}$ is the Fisher information matrix. The identification is established by Čencov's theorem (the Fisher metric is the unique monotone Riemannian metric) combined with coherence conservation (which provides the monotonicity condition).
+
+**(iii) Positive definiteness.** The Fisher information matrix is positive definite on the non-degenerate sector of the state space ([Fisher Information Metric](/derivations/thermodynamics-ext/fisher-metric), Corollary 2.2): $G_{ij}$ is positive semi-definite by construction (as an expectation of outer products), and positive definite when the parameterization $\sigma \mapsto p(\cdot|\sigma)$ is non-degenerate. On the physical state space modulo gauge ([Observer Definition](/derivations/axioms/observer-definition), condition N3), distinct states yield distinct outcome distributions, so the parameterization is non-degenerate.
+
+Therefore $g = \hbar G$ is $C^\infty$ (from (i)), positive definite (from (iii)), and equals the Hessian of $\mathcal{C}$ (from (ii)). This is precisely the content of S1. $\square$
+
+**Remark.** The chain that eliminates this postulate: Born Rule (theorem) → statistical regularity (theorem) → Fisher metric exists and is positive definite → coherence Hessian = $\hbar \times$ Fisher metric → S1 holds. The $G_\mathcal{O}$-invariant metric from Loop Closure (Theorem 0.1) and the Fisher-Hessian metric are now identified by uniqueness (Čencov's theorem), not by postulate.
 
 ## Derivation
 

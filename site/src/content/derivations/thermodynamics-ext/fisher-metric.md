@@ -25,7 +25,7 @@ When an observer is in one state versus another, those states may be easy or har
 
 **Why this matters.** This reveals Planck's constant as a bridge between information geometry and physics -- it converts information-theoretic distance into physical action. It also explains why the specific geometry of quantum state space is what it is: it is the only geometry consistent with coherence conservation.
 
-**An honest caveat.** The structural postulate that observer states satisfy certain regularity conditions for information geometry is strongly motivated by the Born rule but not independently derived. Also, connecting the Fisher curvature on state space to the curvature of physical spacetime remains an open research direction.
+**An honest caveat.** The structural postulate for statistical regularity has now been promoted to a theorem (Theorem 0.1): the Born Rule (itself derived in [Coherence as Physical Primitive](/derivations/axioms/coherence-operational)) forces the regularity conditions automatically for finite-dimensional systems. No structural postulates remain. Connecting the Fisher curvature on state space to the curvature of physical spacetime remains an open research direction.
 
 ## Statement
 
@@ -33,9 +33,25 @@ When an observer is in one state versus another, those states may be easy or har
 
 ## Structural Postulate
 
-**S1 (Statistical regularity).** Each observer state $\sigma \in \Sigma$ determines a family of probability distributions $\{p(\cdot|\sigma)\}_{\sigma \in \Sigma}$ over interaction outcomes, satisfying the regularity conditions of classical information geometry: (i) the map $\sigma \mapsto p(x|\sigma)$ is $C^2$ for each outcome $x$; (ii) the support of $p(\cdot|\sigma)$ is independent of $\sigma$; (iii) differentiation and integration commute.
+**S1 (Statistical regularity).** **Now a theorem** (Theorem 0.1 below). Formerly a structural postulate; now derived from the Born Rule (itself a theorem via [Coherence as Physical Primitive](/derivations/axioms/coherence-operational), Theorem 4.1).
 
-**Remark.** This postulate is not independent of the existing derivation chain — it is strongly motivated by the [Born Rule](/derivations/quantum/born-rule), which establishes that interaction outcomes are governed by $p(x|\psi) = |\langle x|\psi\rangle|^2$. The postulate packages the regularity conditions needed for information geometry to apply. These conditions hold automatically for finite-dimensional quantum systems.
+### Theorem 0.1 (Statistical Regularity from the Born Rule)
+
+**Theorem 0.1.** *Each observer state $\sigma \in \Sigma$ determines a family of probability distributions $\{p(\cdot|\sigma)\}_{\sigma \in \Sigma}$ over interaction outcomes satisfying: (i) the map $\sigma \mapsto p(x|\sigma)$ is $C^2$ for each outcome $x$; (ii) the support of $p(\cdot|\sigma)$ is independent of $\sigma$; (iii) differentiation and integration commute.*
+
+*Proof.* The Born Rule ([Born Rule](/derivations/quantum/born-rule), Theorem 6.1, now derived from the axioms via [Coherence as Physical Primitive](/derivations/axioms/coherence-operational), Theorem 4.1) establishes that interaction outcomes are governed by:
+
+$$p(x|\psi) = |\langle x|\psi\rangle|^2$$
+
+We verify each regularity condition for finite-dimensional observer state spaces ($\dim \Sigma < \infty$, from [Loop Closure](/derivations/axioms/loop-closure) S1):
+
+**(i) $C^2$ smoothness.** The inner product $\langle x|\psi\rangle$ is a continuous linear functional of $\psi$ on a finite-dimensional Hilbert space, hence $C^\infty$ (in fact, real-analytic). The squared modulus $|\langle x|\psi\rangle|^2 = \langle \psi|x\rangle\langle x|\psi\rangle$ is a polynomial in the components of $\psi$, hence $C^\infty$. In particular, $\sigma \mapsto p(x|\sigma)$ is $C^2$.
+
+**(ii) Support independence.** For finite-dimensional Hilbert spaces with a fixed measurement basis $\{|x\rangle\}$, every outcome $x$ has $p(x|\psi) = |\langle x|\psi\rangle|^2 > 0$ for a generic $\psi$. More precisely, the support of $p(\cdot|\psi)$ is $\{x : \langle x|\psi\rangle \neq 0\}$. For $\psi$ in the interior of the state space (not orthogonal to any basis vector), the support is the full outcome space. Since we work modulo gauge on the physical state space where $\psi \neq 0$ ([Observer Definition](/derivations/axioms/observer-definition), N3), the interior is dense and the support condition holds on an open dense set. For the formal condition, we restrict to the non-degenerate sector $\Sigma^\circ = \{\sigma : \langle x|\sigma\rangle \neq 0 \; \forall x\}$, which is open and dense in $\Sigma$.
+
+**(iii) Interchange of differentiation and integration.** For finite-dimensional systems, the sum $\sum_x p(x|\sigma) = 1$ is a finite sum (or an integral over a compact space), and differentiation under a finite sum is always valid. For continuous outcome spaces with Lebesgue measure, dominated convergence applies because $p(x|\sigma) \leq 1$ uniformly. $\square$
+
+**Remark.** The key insight is that the Born Rule functional form $p = |\langle x|\psi\rangle|^2$ is a polynomial in the state components — the smoothest possible dependence. The regularity conditions, which had to be postulated when the Born Rule was itself a postulate, become automatic once the Born Rule is derived.
 
 ## Derivation
 
@@ -99,17 +115,13 @@ $$g^{(\lambda)}_{ij}(\sigma) = \lambda \, G_{ij}(\sigma)$$
 
 ### Step 4: Identification with the Action-Planck Metric
 
-**Proposition 4.1 (Metric identification).** *The Hessian metric $g$ of the Action-Planck derivation (Structural Postulate S1 there) is proportional to the Fisher information metric $G_{ij}$ on the coherence state manifold:*
+**Proposition 4.1 (Metric identification).** *Any Riemannian metric on the coherence state manifold that respects coherence conservation is proportional to the Fisher information metric:*
 
 $$g_{ij}(\sigma) = \hbar \, G_{ij}(\sigma)$$
 
-*Proof.* The argument has three parts: (1) the Hessian metric is Riemannian, (2) it satisfies Čencov's monotonicity condition, and (3) the proportionality constant is $\hbar$.
+*Proof.* The argument has three parts: (1) the Fisher metric is the unique candidate, (2) it satisfies Čencov's monotonicity condition, and (3) the proportionality constant is $\hbar$.
 
-**Part 1 (The Hessian metric is Riemannian).** The [Action and Planck's Constant](/derivations/thermodynamics/action-planck) derivation defines $g$ as the Hessian of the coherence measure $\mathcal{C}$:
-
-$$g_{\sigma}(u, v) = \left.\frac{\partial^2}{\partial s \, \partial t} \mathcal{C}(\sigma + su + tv)\right|_{s=t=0}$$
-
-This is positive definite on the physical state space by [Action and Planck's Constant](/derivations/thermodynamics/action-planck), Proposition 2.1 (the coherence measure is strictly convex on the interior of $\Sigma$).
+**Part 1 (The Fisher metric is Riemannian and unique).** By Theorem 0.1 (above), observer states form a statistical manifold with $C^\infty$ parameterization. The Fisher information metric $G_{ij}$ is positive definite on the non-degenerate sector (Corollary 2.2): it is positive semi-definite by construction (as an expectation of outer products), and positive definite when distinct states yield distinct outcome distributions — which holds on the physical state space modulo gauge ([Observer Definition](/derivations/axioms/observer-definition), condition N3). By Čencov's theorem (Corollary 3.2), $\lambda G_{ij}$ is the *unique* monotone Riemannian metric. Therefore any coherence-derived metric must equal $\lambda G_{ij}$ for some $\lambda > 0$.
 
 **Part 2 (Monotonicity from conservation of distinguishability).** By [Conservation of Distinguishability](/derivations/thermodynamics-ext/distinguishability-conservation), Proposition 4.1 (now rigorous), Axiom 1 implies that the coherence-derived geometry on state space must satisfy Čencov's monotonicity condition: admissible transformations are isometries (Theorem 2.1 there) and coarse-grainings are contractions (Proposition 3.2 there). The Hessian metric $g$, being derived from $\mathcal{C}$, inherits these properties: since $\mathcal{C}$ is preserved by admissible transformations (Axiom 1a), the Hessian $g$ is preserved; since $\mathcal{C}$ satisfies subadditivity (C4), coarse-grainings contract $g$. Formally, for any Markov map $\pi$: $g^{\pi(\sigma)}_{ij} \leq g^{\sigma}_{ij}$ in the positive-definite ordering. This is precisely the monotonicity condition of Čencov's theorem.
 

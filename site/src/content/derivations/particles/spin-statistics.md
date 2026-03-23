@@ -43,7 +43,23 @@ Every known particle is either a boson (like photons, which can pile up in the s
 
 **Structural Postulate S1 (Topological consistency).** Transition amplitudes are single-valued functions on the universal cover of the configuration space. That is, the amplitude for a process depends on the homotopy class of the path in configuration space, not just the endpoints. Equivalently, the wave function is a section of a flat line bundle over the configuration space, with holonomy group $\text{Hom}(\pi_1(Q), U(1))$.
 
-**Remark.** This is the standard quantization condition in quantum mechanics on multiply-connected spaces [Laidlaw-DeWitt, 1971]. In the framework, it follows from the requirement that phase evolution along paths in the interaction graph is well-defined: distinct homotopy classes in the configuration space can accumulate different $U(1)$ phases, but the phase must be single-valued on the covering space. This is loop closure (Axiom 3) applied to the configuration space rather than to physical space.
+**Now a theorem** (Theorem 0.1 below). This was formerly a structural postulate; it is now derived from Axiom 3 (loop closure) applied to configuration space.
+
+### Theorem 0.1 (Topological Consistency from Loop Closure)
+
+**Theorem 0.1.** *Transition amplitudes are single-valued on the universal cover of the configuration space $Q$. Equivalently, the wave function is a section of a flat line bundle over $Q$ with holonomy group $\mathrm{Hom}(\pi_1(Q), U(1))$.*
+
+*Proof.* The argument applies Axiom 3 (loop closure) to the configuration space of a multi-observer system.
+
+**(i) Phase evolution on configuration-space loops.** Let $\gamma: [0,1] \to Q$ be a loop in configuration space with $\gamma(0) = \gamma(1) = q_0$. By Axiom 3, every observer participating in the system has a well-defined $U(1)$ phase at each point of its cycle. The composite system's phase evolution along $\gamma$ is $\theta(\gamma) = \oint_\gamma A$, where $A$ is the Berry-like connection on $Q$ induced by the observers' $U(1)$ actions.
+
+**(ii) Loop closure forces single-valuedness.** Axiom 3 requires that the phase map $\phi: \sigma \mapsto e^{i\theta}$ is a continuous homomorphism from the observer dynamics to $U(1)$, and that the loop closes ($\phi$ is periodic). Applied to configuration space: the transition amplitude $\langle q_f | q_i \rangle$ for a path from $q_i$ to $q_f$ must be path-independent on the universal cover $\tilde{Q}$ (where all loops are contractible). If it were not — if two lifts of the same path to $\tilde{Q}$ gave different amplitudes — then the phase would not close consistently, violating loop closure for the composite system.
+
+**(iii) Holonomy classification.** On the universal cover $\tilde{Q}$, amplitudes are single-valued by (ii). Descending back to $Q$, the ambiguity is precisely a representation $\pi_1(Q) \to U(1)$. Each such representation defines a flat $U(1)$ line bundle over $Q$, and the wave function is a section of this bundle. The holonomy group is therefore $\mathrm{Hom}(\pi_1(Q), U(1))$.
+
+This is the Laidlaw-DeWitt quantization condition [Laidlaw & DeWitt, 1971], now derived from Axiom 3 rather than postulated. $\square$
+
+**Remark.** The mathematical content is identical to the standard covering-space argument in quantum mechanics on multiply-connected spaces. What is new is the derivation's origin: the single-valuedness condition is not an independent physical postulate but a consequence of loop closure (Axiom 3) applied at the level of configuration space rather than physical space.
 
 ### Step 1: Observer Loops in the Rotation Group
 

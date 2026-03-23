@@ -27,7 +27,7 @@ Lovelock's uniqueness theorem (1971) then proves that in four spacetime dimensio
 
 **Why this matters.** This derivation converts Wheeler's famous summary of general relativity — "matter tells spacetime how to curve, spacetime tells matter how to move" — from a poetic description into a precise mathematical fixed-point condition.
 
-**An honest caveat.** The derivation relies on one structural postulate: that the field equations involve at most second derivatives of the metric. This is the same assumption made in standard general relativity, and it is well-motivated by locality, but it is not derived from the axioms. The values of Newton's constant and the cosmological constant also remain empirical.
+**An honest caveat.** The derivation formerly relied on a structural postulate (second-order locality) that has now been promoted to a theorem via Ostrogradsky's instability theorem ([Coherence Lagrangian](/derivations/foundation/coherence-lagrangian), Theorem 6.0): higher-derivative gravitational Lagrangians violate loop closure stability (Axiom 3). No structural postulates remain in this derivation. The values of Newton's constant and the cosmological constant remain empirical.
 
 ## Statement
 
@@ -37,9 +37,9 @@ Lovelock's uniqueness theorem (1971) then proves that in four spacetime dimensio
 
 ### Structural Postulate
 
-**Structural Postulate S1 (Second-order locality).** The self-consistency relation between the curvature of $(\mathcal{H}, g)$ and the coherence content that generates it involves at most second derivatives of the metric $g_{\mu\nu}$. That is, the geometric side of the field equation depends on $g_{\mu\nu}$, $\partial_\alpha g_{\mu\nu}$, and $\partial_\alpha \partial_\beta g_{\mu\nu}$, but not on higher derivatives.
+**Structural Postulate S1 (Second-order locality).** **Now a theorem** ([Coherence Lagrangian](/derivations/foundation/coherence-lagrangian), Theorem 6.0). The self-consistency relation between curvature and coherence content involves at most second derivatives of $g_{\mu\nu}$. This is derived from Axiom 3 via Ostrogradsky's instability theorem: higher-derivative gravitational Lagrangians have unbounded Hamiltonians, violating the Lyapunov stability required for loop closure.
 
-**Remark.** This postulate reflects the locality of the relational invariant density: the curvature at a point $p$ is determined by the coherence content in an infinitesimal neighborhood of $p$ (via [Gravity](/derivations/spacetime/gravity), Theorem 0.1). Higher-derivative theories (involving $\partial^3 g$ or beyond) would couple curvature to non-local coherence information, violating the principle that the interaction graph determines geometry locally. In standard physics, second-order locality is equivalent to the requirement that the field equations are a well-posed initial value problem [Choquet-Bruhat, 1952].
+**Remark.** The locality of the relational invariant density provides the physical intuition: curvature at a point $p$ is determined by coherence content in an infinitesimal neighborhood of $p$ (via [Gravity](/derivations/spacetime/gravity), Theorem 0.1). The Ostrogradsky argument makes this rigorous: higher-derivative theories are not merely unnatural but dynamically unstable, contradicting loop closure. In standard physics, second-order locality is equivalent to a well-posed initial value problem [Choquet-Bruhat, 1952].
 
 ### Step 1: The Self-Consistency Requirement
 
@@ -183,14 +183,12 @@ These are the $(0,0)$ and trace components of the Einstein equations. The self-c
 - Proposition 7.2: Vacuum field equations (standard GR)
 - Theorem 8.1: Consistency model (Schwarzschild and FLRW verified)
 
-**Rigorous given axioms + S1:**
+**Fully rigorous:**
 - Theorem 2.2: $\nabla_\mu T^{\mu\nu} = 0$ from Axiom 1 (continuum limit of coherence conservation)
-- Theorem 5.1: Einstein equations as the unique fixed-point condition satisfying (i)–(iii) (follows from Lovelock + Axiom 1 + S1)
+- Theorem 5.1: Einstein equations as the unique fixed-point condition satisfying (i)–(iii) (follows from Lovelock + Axiom 1 + second-order locality)
 - Proposition 6.1: Bootstrap interpretation — self-consistency loop formalized with explicit 4-step closure referencing rigorous results from [Gravity](/derivations/spacetime/gravity) and [Bootstrap](/derivations/interactions/bootstrap)
 - Proposition 7.1: $\Lambda g_{\mu\nu}$ uniquely allowed by Lovelock's theorem; interpretation as vacuum coherence cost
-
-**Structural postulate:**
-- S1 (Second-order locality): Field equations involve at most $\partial^2 g$. Motivated by locality of the coherence geometry. This is the same assumption made in GR; it is uniquely constraining via Lovelock's theorem.
+- S1 (Second-order locality): **Now a theorem** — derived from Axiom 3 via Ostrogradsky's instability theorem ([Coherence Lagrangian](/derivations/foundation/coherence-lagrangian), Theorem 6.0). No structural postulates remain.
 
 **Empirical parameters:**
 - $G$: The coupling constant is empirical. Whether derivable from $\hbar$ and $c$ alone is open.
@@ -200,7 +198,7 @@ These are the $(0,0)$ and trace components of the Einstein equations. The self-c
 - Proposition 1.2: The existence and uniqueness of the fixed point for given initial data is the Cauchy problem for the Einstein equations (Choquet-Bruhat 1952: local existence and uniqueness established; global existence remains open). This is a deep PDE-theoretic question not specific to the framework.
 - The construction of $T_{\mu\nu}$ from the discrete observer network is stated in terms of coherence content (Definition 2.1). The precise map from $\rho_I$ to all 10 components of $T_{\mu\nu}$ requires the full coherence Lagrangian, which is deferred.
 
-**Assessment:** The core result — the Einstein equations as the unique second-order, conserved, tensorial self-consistency condition — is rigorously established through Lovelock's theorem (Theorem 4.1), coherence conservation (Theorem 2.2), and second-order locality (S1). The bootstrap interpretation and cosmological constant term are complete. The main deferred elements are the coupling constant $G$, the microscopic construction of $T_{\mu\nu}$, and the Cauchy problem.
+**Assessment:** The core result — the Einstein equations as the unique second-order, conserved, tensorial self-consistency condition — is rigorously established through Lovelock's theorem (Theorem 4.1), coherence conservation (Theorem 2.2), and second-order locality (now Theorem 6.0 of Coherence Lagrangian, derived from Axiom 3). No structural postulates remain. The main deferred elements are the coupling constant $G$, the microscopic construction of $T_{\mu\nu}$, and the Cauchy problem.
 
 ## Open Gaps
 

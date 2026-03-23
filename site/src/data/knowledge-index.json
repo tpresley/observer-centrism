@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-23T01:51:27.256Z",
+    "generatedAt": "2026-03-23T07:30:21.743Z",
     "derivationCount": 64,
     "predictionCount": 11,
     "gaPageCount": 12,
@@ -16,7 +16,7 @@
     "derivationCount": 64,
     "predictionCount": 11,
     "edgeCount": 149,
-    "formalObjectCount": 942,
+    "formalObjectCount": 948,
     "openGapCount": 213,
     "upgradeEligibleCount": 2,
     "leanVerifiedCount": 8,
@@ -537,6 +537,14 @@
           {
             "source": "quantum/born-rule",
             "context": "Coherence as Physical Primitive"
+          },
+          {
+            "source": "thermodynamics-ext/fisher-metric",
+            "context": "Coherence as Physical Primitive"
+          },
+          {
+            "source": "thermodynamics/action-planck",
+            "context": "Coherence as Physical Primitive"
           }
         ]
       },
@@ -836,6 +844,10 @@
             "context": "Loop Closure"
           },
           {
+            "source": "foundation/coherence-lagrangian",
+            "context": "Loop Closure"
+          },
+          {
             "source": "gauge/color-force",
             "context": "Corollary 2.3"
           },
@@ -862,6 +874,10 @@
           {
             "source": "interactions/bootstrap",
             "context": "Loop Closure"
+          },
+          {
+            "source": "interactions/relational-invariants",
+            "context": "0, 2\\pi)$ ([Loop Closure"
           },
           {
             "source": "interactions/relational-invariants",
@@ -914,6 +930,10 @@
           {
             "source": "spacetime/speed-of-light",
             "context": "Theorem 8.1"
+          },
+          {
+            "source": "thermodynamics-ext/fisher-metric",
+            "context": "Loop Closure"
           },
           {
             "source": "thermodynamics-ext/renormalization",
@@ -2999,6 +3019,10 @@
         },
         {
           "number": 6,
+          "title": "Second-Order Locality from Loop Closure Stability"
+        },
+        {
+          "number": 7,
           "title": "Stress-Energy from Coherence"
         }
       ],
@@ -3052,8 +3076,14 @@
           "statementPreview": "The quantum path integral*"
         },
         {
+          "type": "Theorem",
+          "id": "6.0",
+          "name": "Ostrogradsky exclusion",
+          "statementPreview": "The field equations of the coherence Lagrangian involve at most second derivatives of the dynamical fields. Higher-de..."
+        },
+        {
           "type": "Proposition",
-          "id": "6.1",
+          "id": "7.1",
           "name": "Stress-energy tensor",
           "statementPreview": "The stress-energy tensor is the variational derivative of the matter Lagrangian with respect to the metric:*"
         },
@@ -3149,17 +3179,37 @@
             "context": "Theorem 5.1"
           },
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/einstein-equations",
+            "context": "Einstein Equations"
+          },
+          {
             "target": "cosmology/cosmological-constant",
             "context": "Cosmological Constant"
           }
         ],
         "incoming": [
           {
+            "source": "gauge/electromagnetism",
+            "context": "Coherence Lagrangian"
+          },
+          {
             "source": "gauge/electroweak-breaking",
             "context": "Coherence Lagrangian"
           },
           {
+            "source": "gauge/weak-interaction",
+            "context": "Coherence Lagrangian"
+          },
+          {
             "source": "particles/cpt-theorem",
+            "context": "Coherence Lagrangian"
+          },
+          {
+            "source": "spacetime/einstein-equations",
             "context": "Coherence Lagrangian"
           },
           {
@@ -4251,13 +4301,19 @@
           "type": "Structural Postulate",
           "id": "S1",
           "name": "Locality of phase comparison",
-          "statementPreview": "The comparison of U(1) phases between observers at distinct spacetime points x and y requires smooth parallel transpo..."
+          "statementPreview": "**Now a theorem** (Theorem 0.1 below). Formerly a structural postulate; now derived from Axiom 3 (loop closure) + fin..."
+        },
+        {
+          "type": "Theorem",
+          "id": "0.1.",
+          "name": "",
+          "statementPreview": "The comparison of U(1) phases between observers at distinct spacetime points is described by a connection 1-form A on..."
         },
         {
           "type": "Structural Postulate",
           "id": "S2",
           "name": "Minimal gauge dynamics",
-          "statementPreview": "The self-consistency condition for the gauge connection involves at most second derivatives of Amu — equivalently, at..."
+          "statementPreview": "**Now a theorem** ([Coherence Lagrangian](/derivations/foundation/coherence-lagrangian), Theorem 6.0). The gauge fiel..."
         },
         {
           "type": "Definition",
@@ -4421,8 +4477,12 @@
             "context": "Coherence-Dual Pairs"
           },
           {
+            "target": "foundation/coherence-lagrangian",
+            "context": "Coherence Lagrangian"
+          },
+          {
             "target": "spacetime/einstein-equations",
-            "context": "second-order locality for gravity"
+            "context": "Einstein Field Equations"
           },
           {
             "target": "axioms/loop-closure",
@@ -4453,10 +4513,6 @@
             "context": "Axiom 1"
           },
           {
-            "target": "spacetime/einstein-equations",
-            "context": "Einstein Field Equations"
-          },
-          {
             "target": "spacetime/lorentz-invariance",
             "context": "Lorentz Invariance"
           },
@@ -4483,14 +4539,6 @@
           {
             "target": "spacetime/einstein-equations",
             "context": "Einstein Equations"
-          },
-          {
-            "target": "spacetime/speed-of-light",
-            "context": "pseudo-Riemannian structure"
-          },
-          {
-            "target": "spacetime/gravity",
-            "context": "metric-density coupling"
           },
           {
             "target": "spacetime/einstein-equations",
@@ -5502,7 +5550,7 @@
           "type": "Structural Postulate",
           "id": "S2",
           "name": "Minimal non-abelian gauge dynamics",
-          "statementPreview": "The self-consistency condition for the SU(2) gauge connection involves at most second derivatives of Wamu — equivalen..."
+          "statementPreview": "**Now a theorem** ([Coherence Lagrangian](/derivations/foundation/coherence-lagrangian), Theorem 6.0). The gauge fiel..."
         },
         {
           "type": "Definition",
@@ -5705,6 +5753,10 @@
           {
             "target": "gauge/electromagnetism",
             "context": "locality of phase comparison"
+          },
+          {
+            "target": "foundation/coherence-lagrangian",
+            "context": "Coherence Lagrangian"
           },
           {
             "target": "gauge/electromagnetism",
@@ -8040,6 +8092,12 @@
       ],
       "formalObjects": [
         {
+          "type": "Theorem",
+          "id": "0.1.",
+          "name": "",
+          "statementPreview": "The joint state space Sigma1 Sigma2 of two observers carries a symplectic form omega compatible with the U(1) U(1) ac..."
+        },
+        {
           "type": "Definition",
           "id": "1.1.",
           "name": "",
@@ -8148,6 +8206,14 @@
         "outgoing": [
           {
             "target": "axioms/loop-closure",
+            "context": "0, 2\\pi)$ ([Loop Closure"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap"
+          },
+          {
+            "target": "axioms/loop-closure",
             "context": "Loop Closure"
           },
           {
@@ -8173,10 +8239,6 @@
           {
             "target": "interactions/three-types",
             "context": "Three Types"
-          },
-          {
-            "target": "interactions/bootstrap",
-            "context": "Bootstrap"
           }
         ],
         "incoming": [
@@ -10330,6 +10392,12 @@
           "id": "S1",
           "name": "Topological consistency",
           "statementPreview": "Transition amplitudes are single-valued functions on the universal cover of the configuration space. That is, the amp..."
+        },
+        {
+          "type": "Theorem",
+          "id": "0.1.",
+          "name": "",
+          "statementPreview": "Transition amplitudes are single-valued on the universal cover of the configuration space Q. Equivalently, the wave f..."
         },
         {
           "type": "Definition",
@@ -12688,7 +12756,7 @@
           "type": "Structural Postulate",
           "id": "S1",
           "name": "Second-order locality",
-          "statementPreview": "The self-consistency relation between the curvature of (H, g) and the coherence content that generates it involves at..."
+          "statementPreview": "**Now a theorem** ([Coherence Lagrangian](/derivations/foundation/coherence-lagrangian), Theorem 6.0). The self-consi..."
         },
         {
           "type": "Definition",
@@ -12797,10 +12865,14 @@
           "description": "Constructing the energy-momentum tensor explicitly from the relational invariant density and observer distribution would close the self-consistency loop at the formal level."
         }
       ],
-      "assessmentVerdict": "The core result — the Einstein equations as the unique second-order, conserved, tensorial self-consistency condition — is rigorously established through Lovelock's theorem (Theorem 4.1), coherence conservation (Theorem 2.2), and second-order locality (S1). The bootstrap interpretation and cosmologic",
+      "assessmentVerdict": "The core result — the Einstein equations as the unique second-order, conserved, tensorial self-consistency condition — is rigorously established through Lovelock's theorem (Theorem 4.1), coherence conservation (Theorem 2.2), and second-order locality (now Theorem 6.0 of Coherence Lagrangian, derived",
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
+          {
+            "target": "foundation/coherence-lagrangian",
+            "context": "Coherence Lagrangian"
+          },
           {
             "target": "spacetime/gravity",
             "context": "Gravity"
@@ -12848,8 +12920,8 @@
             "context": "Theorem 5.1"
           },
           {
-            "source": "gauge/electromagnetism",
-            "context": "second-order locality for gravity"
+            "source": "foundation/coherence-lagrangian",
+            "context": "Einstein Equations"
           },
           {
             "source": "gauge/electromagnetism",
@@ -13117,10 +13189,6 @@
           {
             "source": "gauge/electromagnetism",
             "context": "Gravity"
-          },
-          {
-            "source": "gauge/electromagnetism",
-            "context": "metric-density coupling"
           },
           {
             "source": "holography/area-scaling",
@@ -13928,10 +13996,6 @@
             "context": "Speed of Light"
           },
           {
-            "source": "gauge/electromagnetism",
-            "context": "pseudo-Riemannian structure"
-          },
-          {
             "source": "gauge/weak-interaction",
             "context": "Proposition 4.2"
           },
@@ -14449,7 +14513,8 @@
         "foundation/coherence-lagrangian"
       ],
       "dependedOnBy": [
-        "foundation/coherence-lagrangian"
+        "foundation/coherence-lagrangian",
+        "thermodynamics/action-planck"
       ],
       "steps": [
         {
@@ -14478,6 +14543,12 @@
         }
       ],
       "formalObjects": [
+        {
+          "type": "Theorem",
+          "id": "0.1.",
+          "name": "",
+          "statementPreview": "Each observer state sigma in Sigma determines a family of probability distributions p(|sigma)sigma in Sigma over inte..."
+        },
         {
           "type": "Definition",
           "id": "1.1.",
@@ -14524,7 +14595,7 @@
           "type": "Proposition",
           "id": "4.1",
           "name": "Metric identification",
-          "statementPreview": "The Hessian metric g of the Action-Planck derivation (Structural Postulate S1 there) is proportional to the Fisher in..."
+          "statementPreview": "Any Riemannian metric on the coherence state manifold that respects coherence conservation is proportional to the Fis..."
         },
         {
           "type": "Corollary",
@@ -14610,16 +14681,20 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/coherence-operational",
+            "context": "Coherence as Physical Primitive"
+          },
+          {
             "target": "quantum/born-rule",
             "context": "Born Rule"
           },
           {
-            "target": "axioms/observer-definition",
-            "context": "Observer Definition"
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
           },
           {
-            "target": "thermodynamics/action-planck",
-            "context": "Action and Planck's Constant"
+            "target": "axioms/observer-definition",
+            "context": "Observer Definition"
           },
           {
             "target": "thermodynamics-ext/distinguishability-conservation",
@@ -14670,6 +14745,10 @@
           {
             "source": "thermodynamics-ext/renormalization",
             "context": "Proposition 4.1"
+          },
+          {
+            "source": "thermodynamics/action-planck",
+            "context": "Fisher Information Metric"
           }
         ]
       },
@@ -15009,7 +15088,8 @@
       "lastUpdated": "2026-03-09",
       "dependsOn": [
         "axioms/loop-closure",
-        "thermodynamics/time"
+        "thermodynamics/time",
+        "thermodynamics-ext/fisher-metric"
       ],
       "enablesDerivation": [
         "spacetime/speed-of-light",
@@ -15056,6 +15136,12 @@
         }
       ],
       "formalObjects": [
+        {
+          "type": "Theorem",
+          "id": "0.1.",
+          "name": "",
+          "statementPreview": "The coherence measure C, restricted to any observer state space Sigma, is at least C2. Its Hessian yields a positive-..."
+        },
         {
           "type": "Definition",
           "id": "1.1.",
@@ -15242,20 +15328,28 @@
       "crossReferences": {
         "outgoing": [
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
+            "target": "thermodynamics-ext/fisher-metric",
+            "context": "Fisher Information Metric"
           },
           {
-            "target": "axioms/coherence-conservation",
-            "context": "Coherence Conservation"
+            "target": "axioms/coherence-operational",
+            "context": "Coherence as Physical Primitive"
           },
           {
             "target": "axioms/observer-definition",
             "context": "Observer Definition"
           },
           {
+            "target": "axioms/coherence-conservation",
+            "context": "Coherence Conservation"
+          },
+          {
             "target": "minimal-observer/structure",
             "context": "Minimal Observer Structure"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
           },
           {
             "target": "spacetime/speed-of-light",
@@ -15369,10 +15463,6 @@
           },
           {
             "source": "thermodynamics-ext/first-law",
-            "context": "Action and Planck's Constant"
-          },
-          {
-            "source": "thermodynamics-ext/fisher-metric",
             "context": "Action and Planck's Constant"
           },
           {
@@ -19132,10 +19222,17 @@
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
+      "type": "Theorem",
+      "id": "6.0",
+      "name": "Ostrogradsky exclusion",
+      "fullRef": "foundation/coherence-lagrangian:Theorem 6.0"
+    },
+    {
+      "derivationId": "foundation/coherence-lagrangian",
       "type": "Proposition",
-      "id": "6.1",
+      "id": "7.1",
       "name": "Stress-energy tensor",
-      "fullRef": "foundation/coherence-lagrangian:Proposition 6.1"
+      "fullRef": "foundation/coherence-lagrangian:Proposition 7.1"
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
@@ -19556,6 +19653,13 @@
       "id": "S1",
       "name": "Locality of phase comparison",
       "fullRef": "gauge/electromagnetism:Structural Postulate S1"
+    },
+    {
+      "derivationId": "gauge/electromagnetism",
+      "type": "Theorem",
+      "id": "0.1.",
+      "name": "",
+      "fullRef": "gauge/electromagnetism:Theorem 0.1."
     },
     {
       "derivationId": "gauge/electromagnetism",
@@ -20973,6 +21077,13 @@
     },
     {
       "derivationId": "interactions/relational-invariants",
+      "type": "Theorem",
+      "id": "0.1.",
+      "name": "",
+      "fullRef": "interactions/relational-invariants:Theorem 0.1."
+    },
+    {
+      "derivationId": "interactions/relational-invariants",
       "type": "Definition",
       "id": "1.1.",
       "name": "",
@@ -21866,6 +21977,13 @@
       "id": "S1",
       "name": "Topological consistency",
       "fullRef": "particles/spin-statistics:Structural Postulate S1"
+    },
+    {
+      "derivationId": "particles/spin-statistics",
+      "type": "Theorem",
+      "id": "0.1.",
+      "name": "",
+      "fullRef": "particles/spin-statistics:Theorem 0.1."
     },
     {
       "derivationId": "particles/spin-statistics",
@@ -23745,6 +23863,13 @@
     },
     {
       "derivationId": "thermodynamics-ext/fisher-metric",
+      "type": "Theorem",
+      "id": "0.1.",
+      "name": "",
+      "fullRef": "thermodynamics-ext/fisher-metric:Theorem 0.1."
+    },
+    {
+      "derivationId": "thermodynamics-ext/fisher-metric",
       "type": "Definition",
       "id": "1.1.",
       "name": "",
@@ -24015,6 +24140,13 @@
       "id": "6.1",
       "name": "",
       "fullRef": "thermodynamics-ext/renormalization:Proposition 6.1"
+    },
+    {
+      "derivationId": "thermodynamics/action-planck",
+      "type": "Theorem",
+      "id": "0.1.",
+      "name": "",
+      "fullRef": "thermodynamics/action-planck:Theorem 0.1."
     },
     {
       "derivationId": "thermodynamics/action-planck",

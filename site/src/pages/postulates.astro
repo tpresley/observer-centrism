@@ -20,8 +20,9 @@ const groups = {
 const totalCount = postulatesData.length
 const derivedCount = postulatesData.filter(p => p.derivedFrom).length
 const activeCount = totalCount - derivedCount
-const derivationsWithCount = new Set(postulatesData.map(p => p.derivation)).size
-const derivationsWithoutCount = totalDerivations - derivationsWithCount
+const activePostulates = postulatesData.filter(p => !p.derivedFrom)
+const derivationsWithActiveCount = new Set(activePostulates.map(p => p.derivation)).size
+const derivationsWithoutCount = totalDerivations - new Set(postulatesData.map(p => p.derivation)).size
 const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 ---
 
@@ -54,8 +55,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '')
       </div>
     )}
     <div class="sp-stat">
-      <div class="sp-stat-value">{derivationsWithCount}</div>
-      <div class="sp-stat-label">Derivations with</div>
+      <div class="sp-stat-value">{derivationsWithActiveCount}</div>
+      <div class="sp-stat-label">Derivations with active</div>
     </div>
     <div class="sp-stat">
       <div class="sp-stat-value">{derivationsWithoutCount}</div>

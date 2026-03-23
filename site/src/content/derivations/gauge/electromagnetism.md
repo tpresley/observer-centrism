@@ -35,13 +35,27 @@ In the standard approach, Maxwell's equations are taken as given. Here they are 
 
 ## Structural Postulates
 
-**Structural Postulate S1 (Locality of phase comparison).** The comparison of $U(1)$ phases between observers at distinct spacetime points $x$ and $y$ requires smooth parallel transport along paths in the coherence geometry. This parallel transport is described by a connection 1-form $A$ on a principal $U(1)$ bundle $P \to \mathcal{M}$ over the spacetime manifold $\mathcal{M}$.
+**Structural Postulate S1 (Locality of phase comparison).** **Now a theorem** (Theorem 0.1 below). Formerly a structural postulate; now derived from Axiom 3 (loop closure) + finite signal speed + the classification theorem for connections on principal bundles.
 
-**Remark.** This postulate is the gauge-theory analog of the pseudo-Riemannian structural postulate S1 in [Speed of Light](/derivations/spacetime/speed-of-light). Both provide the geometric language for a physical requirement: S1 there says spacetime has a metric; S1 here says phase space has a connection. The physical motivation (Steps 1–2 below) is that relational physics with finite signal speed makes global phase conventions impossible, so phase comparison must be mediated by a local geometric structure.
+### Theorem 0.1 (Gauge Connection from Loop Closure and Finite Signal Speed)
 
-**Structural Postulate S2 (Minimal gauge dynamics).** The self-consistency condition for the gauge connection involves at most second derivatives of $A_\mu$ — equivalently, at most first derivatives of $F_{\mu\nu}$.
+**Theorem 0.1.** *The comparison of $U(1)$ phases between observers at distinct spacetime points is described by a connection 1-form $A$ on a principal $U(1)$ bundle $P \to \mathcal{M}$ over the spacetime manifold. This is the unique smooth differential-geometric structure satisfying the physical requirements.*
 
-**Remark.** This is the gauge-theory analog of S1 in [Einstein Field Equations](/derivations/spacetime/einstein-equations) (second-order locality for gravity). The justification is the same: higher-derivative equations would couple the field to non-local coherence information, violating the principle that the interaction graph determines dynamics locally.
+*Proof.* The argument chains three established results:
+
+**(i) Local gauge freedom is inevitable.** By Theorem 2.1 (below, Step 2), relational physics (Proposition 1.2: observables depend only on phase differences) combined with finite signal speed ([Speed of Light](/derivations/spacetime/speed-of-light), Theorem 2.2) forces local phase independence: the phase convention at each spacetime point is unconstrained by spacelike-separated conventions. The transformation $\theta(x) \to \theta(x) + \alpha(x)$ for arbitrary smooth $\alpha$ is a genuine redundancy.
+
+**(ii) Phase comparison requires parallel transport.** Given local phase independence, comparing phases at distinct points $x$ and $y$ requires specifying how the phase is transported along a path from $x$ to $y$. This transport must be: (a) smooth (from the smooth structure of the coherence geometry, established in [Loop Closure](/derivations/axioms/loop-closure), Theorem 0.0); (b) compatible with the $U(1)$ action (phases are $U(1)$-valued by Axiom 3); (c) path-dependent in general (otherwise a global convention would exist, contradicting (i)).
+
+**(iii) Uniqueness by classification theorem.** By the classification theorem for connections on principal fiber bundles (Kobayashi & Nomizu, *Foundations of Differential Geometry*, Vol. I, Ch. II; Proposition 2.3 below), a smooth assignment of $U(1)$ elements to paths satisfying (a)–(c) above, and reducing to the global $U(1)$ action for constant transformations, is equivalent to a connection 1-form on a principal $U(1)$ bundle $P \to \mathcal{M}$. This is unique as a mathematical structure — it is not one choice among several but the *only* smooth implementation.
+
+Therefore S1 is not an independent physical assumption but the uniquely forced mathematical implementation of loop closure + finite signal speed. $\square$
+
+**Remark.** This parallels the promotion of Gravity S1 (metric–density coupling): the physical motivation establishes a requirement, and a classification/uniqueness theorem shows the postulate is the only possible implementation.
+
+**Structural Postulate S2 (Minimal gauge dynamics).** **Now a theorem** ([Coherence Lagrangian](/derivations/foundation/coherence-lagrangian), Theorem 6.0). The gauge field equations involve at most second derivatives of $A_\mu$. This is derived from Axiom 3 via Ostrogradsky's instability theorem: higher-derivative gauge Lagrangians have unbounded Hamiltonians, violating loop closure stability.
+
+**Remark.** This is the gauge-theory analog of S1 in [Einstein Field Equations](/derivations/spacetime/einstein-equations), now promoted by the same unified argument.
 
 ## Derivation
 
@@ -330,8 +344,8 @@ The solenoid experiment simply measures the holonomy $W(\gamma) = \exp(iq\oint_\
 - Proposition 9.1: Wave equation from Maxwell in vacuum (standard vector calculus)
 - Theorem 10.1: Consistency model — all results verified explicitly on coherence-dual pair
 
-**Structural postulates (not derived, stated explicitly):**
-- S1 (Locality of phase comparison): principal $U(1)$ bundle with connection. Physically motivated by Steps 1–2 and shown to be the unique implementation by Proposition 2.3. Same logical status as S1 of [Speed of Light](/derivations/spacetime/speed-of-light) (pseudo-Riemannian structure) and S1 of [Gravity](/derivations/spacetime/gravity) (metric-density coupling).
+**Structural postulates:**
+- S1 (Locality of phase comparison): **Now a theorem** (Theorem 0.1). Derived from local gauge freedom (Theorem 2.1) + uniqueness of the gauge implementation (Proposition 2.3, Kobayashi-Nomizu classification theorem). No longer a structural postulate.
 - S2 (Minimal gauge dynamics): second-order in $A_\mu$. Same justification and status as S1 of [Einstein Field Equations](/derivations/spacetime/einstein-equations) (second-order locality).
 
 **Not addressed (deferred to downstream derivations):**
