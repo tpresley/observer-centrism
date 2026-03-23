@@ -232,6 +232,18 @@ const mysteries: Mystery[] = [
     ],
   },
   {
+    title: 'Are There Hidden Variables?',
+    question: 'Is quantum randomness fundamental, or does it reflect ignorance of deeper, deterministic variables that fully determine outcomes?',
+    answer: 'The outcome sheaf over the observer network has non-vanishing first cohomology (H\u00B9 \u2260 0), meaning no consistent global assignment of definite values to all observables exists. Hidden variables would require a global section of this sheaf \u2014 which is topologically obstructed. Correlations in entangled systems are not carried by local properties but are the relational invariant itself: shared coherence conserved on DAG Cauchy slices. Individual outcomes are observer-relative (the outcome sheaf has no global section), but joint statistics are objective (the probability sheaf does). Quantum indeterminacy is structural, not epistemic.',
+    status: 'resolved',
+    derivations: [
+      { id: 'quantum/sheaf-section-uniqueness', title: 'Sheaf Structure & Section Uniqueness' },
+      { id: 'quantum/entanglement', title: 'Entanglement' },
+      { id: 'quantum/observer-relative-objectivity', title: 'Observer-Relative Objectivity' },
+      { id: 'quantum/born-rule', title: 'Born Rule' },
+    ],
+  },
+  {
     title: 'Matter\u2013Antimatter Asymmetry',
     question: 'Why is the universe made of matter rather than equal parts matter and antimatter?',
     answer: 'The three Sakharov conditions are structural consequences: SU(2) sphalerons violate baryon number, chiral gauge coupling provides C and CP violation, and sequential bootstrap crystallization ensures departure from thermal equilibrium. The specific mechanism is leptogenesis via Majorana neutrino decays.',
@@ -251,6 +263,19 @@ const mysteries: Mystery[] = [
       { id: 'cosmology/geometric-inflation', title: 'Geometric Inflation' },
       { id: 'spacetime/singularity-resolution', title: 'Singularity Resolution' },
       { id: 'holography/causal-set-statistics', title: 'Causal Set Statistics' },
+    ],
+  },
+  {
+    title: 'Why Didn\u2019t the Early Universe Collapse into a Black Hole?',
+    question: 'The energy density of the early universe far exceeded what would form a black hole at any later epoch. Why did it expand instead of collapsing?',
+    answer: 'The question dissolves rather than resolves \u2014 from two directions simultaneously. First, gravity: black holes are geometric objects defined by trapped surfaces and event horizons, but geometry is emergent from the observer network. At the earliest post-bounce epoch, the network was too sparse to support a geometric description. You cannot form a trapped surface when \u201Csurface\u201D is not defined. Second, energy: the framework does not treat energy as a primordial substance filling space. Energy is the coherence cost of observer loop closure (E \u2265 \u0127\u03C9), constitutive of observers themselves. It is not injected at the Big Bang \u2014 the total coherence budget is conserved (Axiom 1), and the bounce is a reorganization of that budget, not a creation event. The \u201Cenormous energy density\u201D of the early universe is what the conserved coherence looks like when described in geometric language that only becomes valid after emergence. Both sides of the ratio \u03C1 = E/V are emergent \u2014 the energy-as-density and the volume \u2014 so the dangerous configuration (high energy + active gravity + small volume) never actually obtains. By the time the bootstrap network is dense enough for geometry and energy density to be well-defined, the network is already expanding through observer crystallization. In the effective GR description, this appears as a curvature bound at the Planck scale, but the deeper reason is that gravity, energy density, and spatial volume co-emerge, and the pre-geometric phase has no frame in which the collapse question is formulable.',
+    status: 'resolved',
+    derivations: [
+      { id: 'cosmology/geometric-inflation', title: 'Geometric Inflation' },
+      { id: 'spacetime/singularity-resolution', title: 'Singularity Resolution' },
+      { id: 'spacetime/gravity', title: 'Gravity' },
+      { id: 'thermodynamics/action-planck', title: 'Action & Planck\u2019s Constant' },
+      { id: 'interactions/bootstrap', title: 'Bootstrap Hierarchy' },
     ],
   },
   {
