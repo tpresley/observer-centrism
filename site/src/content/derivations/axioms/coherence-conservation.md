@@ -141,7 +141,7 @@ $$\mathcal{C}(T(S)) = \mathcal{C}(S) \quad \forall S \in \mathcal{A}$$
 
 **Proposition 4.3 (Cauchy slices exist).** *Every finite DAG has at least one Cauchy slice.*
 
-*Proof.* By Dilworth's theorem, the minimum number of antichains needed to partition the vertices of a finite partially ordered set equals the length of the longest chain. Since the DAG is finite, there exists at least one maximal antichain. Alternatively, take any topological ordering $v_1, v_2, \ldots, v_n$ and select the set of all vertices at a fixed topological depth — this forms an antichain, which can be extended to a maximal antichain. $\square$
+*Proof.* In any finite poset, every antichain can be extended to a maximal antichain (by finiteness: iteratively add elements that are incomparable to all current members; the process terminates). Hence at least one maximal antichain exists. Concretely: take any topological ordering $v_1, v_2, \ldots, v_n$ and select the set of all vertices at a fixed topological depth — this forms an antichain, which can be extended to a maximal antichain. $\square$
 
 **Definition 4.4 (Vertex coherence).** Each vertex $v \in V$ carries a coherence value $\mathcal{C}(v) \geq 0$, defined as the coherence of the subsystem represented by $v$.
 
@@ -149,7 +149,7 @@ $$\mathcal{C}(T(S)) = \mathcal{C}(S) \quad \forall S \in \mathcal{A}$$
 
 $$\mathcal{C}(\Sigma) \equiv \sum_{v \in \Sigma} \mathcal{C}(v) = C_0$$
 
-**Theorem 4.5 (Equivalence of formulations).** *Given $(\mathcal{H}, \mathcal{A}, \mathcal{C}, \mathcal{G})$ with the vertex-to-subsystem identification $v \mapsto S_v \in \mathcal{A}$, Axioms 1a and 1b are consistent: Axiom 1a (isometric admissible transformations) is sufficient to ensure Axiom 1b (Cauchy slice conservation) when admissible transformations correspond to graph automorphisms.*
+**Theorem 4.5 (Consistency of formulations).** *Given $(\mathcal{H}, \mathcal{A}, \mathcal{C}, \mathcal{G})$ with the vertex-to-subsystem identification $v \mapsto S_v \in \mathcal{A}$, Axioms 1a and 1b are consistent: Axiom 1a (isometric admissible transformations) is sufficient to ensure Axiom 1b (Cauchy slice conservation) when admissible transformations correspond to graph automorphisms.*
 
 *Proof.* Let $\phi: \mathcal{G} \to \mathcal{G}$ be a graph automorphism, and let $T_\phi: \mathcal{H} \to \mathcal{H}$ be the corresponding admissible transformation. Since $\phi$ is a graph automorphism, it maps antichains to antichains and preserves maximality, so it maps Cauchy slices to Cauchy slices: if $\Sigma$ is a Cauchy slice, so is $\phi(\Sigma)$.
 
@@ -191,7 +191,7 @@ This is additive — $\mathcal{C}(S_1 : S_2) = 0$ for all disjoint pairs. It sat
 **Model 2 (Strictly subadditive/non-trivial).** Let $\mathcal{H} = \{1, 2, \ldots, n\}$ with $n \geq 2$, $\mathcal{A} = \mathcal{P}(\mathcal{H})$, and $\mathcal{C}(S) = f(|S|) \cdot C_0 / f(n)$ where $f(k) = \ln(1 + k)$. Then:
 - (C1): $\ln(1 + |S|) \geq 0$ since $|S| \geq 0$. ✓
 - (C2): $\mathcal{C}(\mathcal{H}) = f(n) \cdot C_0 / f(n) = C_0$. ✓
-- (C3): $\mathcal{C}(\emptyset) = f(0) \cdot C_0/f(n) = \ln(1)/C_0 \cdot f(n) = 0$. ✓
+- (C3): $\mathcal{C}(\emptyset) = f(0) \cdot C_0/f(n) = \ln(1) \cdot C_0/f(n) = 0$. ✓
 - (C4): For disjoint $S_1, S_2$ with $|S_1| = a, |S_2| = b$: $f(a+b) = \ln(1+a+b) \leq \ln((1+a)(1+b)) = \ln(1+a) + \ln(1+b) = f(a) + f(b)$ since $1+a+b \leq (1+a)(1+b) = 1+a+b+ab$ for $a,b \geq 0$. ✓
 - (C5): For any $S_1, S_2$ with $|S_1| = a$, $|S_2| = b$, $|S_1 \cap S_2| = c$, $|S_1 \cup S_2| = a+b-c$: Need $f(a+b-c) + f(c) \leq f(a) + f(b)$, i.e., $\ln(1+a+b-c) + \ln(1+c) \leq \ln(1+a) + \ln(1+b)$, i.e., $(1+a+b-c)(1+c) \leq (1+a)(1+b)$. Expanding: $1+c+a+b-c+ac+bc-c^2 = 1+a+b+ac+bc-c^2 \leq 1+a+b+ab$. So need $ac+bc-c^2 \leq ab$, i.e., $c(a+b-c) \leq ab$. Since $c \leq \min(a,b)$, we have $c \leq a$ and $a+b-c \leq a+b$, but more precisely $c(a+b-c) = ca + cb - c^2 \leq ca + c(b-c) \leq ca + (b-c)a = a(b) = ab$ (using $c \leq a$ in the last step: $c \leq a \Rightarrow cb - c^2 \leq ab - ac \Rightarrow ca + cb - c^2 \leq ab$). ✓
 
@@ -199,18 +199,21 @@ This model has $\mathcal{C}(S_1 : S_2) > 0$ for disjoint non-empty $S_1, S_2$: $
 
 **Proposition 6.2 (Independence of (C5) from (C1)–(C4)).** *(C5) does not follow from (C1)–(C4) alone.*
 
-*Proof.* Let $\mathcal{H} = \{1, 2, 3\}$, $\mathcal{A} = \mathcal{P}(\mathcal{H})$, and define $\mathcal{C}$ by: $\mathcal{C}(\emptyset) = 0$, $\mathcal{C}(\{i\}) = 1$ for each $i$, $\mathcal{C}(\{1,2\}) = 1.5$, $\mathcal{C}(\{1,3\}) = 1.5$, $\mathcal{C}(\{2,3\}) = 1.5$, $\mathcal{C}(\{1,2,3\}) = C_0 = 2$. Then:
+*Proof.* We construct a set function satisfying (C1)–(C4) but violating (C5). Let $\mathcal{H} = \{1, 2, 3\}$, $\mathcal{A} = \mathcal{P}(\mathcal{H})$, and define:
 
-- (C1)–(C3): Satisfied by construction.
-- (C4): For disjoint singletons $\{i\}, \{j\}$: $\mathcal{C}(\{i,j\}) = 1.5 \leq 1 + 1 = 2$. ✓
+$$\mathcal{C}(\emptyset) = 0, \quad \mathcal{C}(\{i\}) = 1 \text{ for each } i, \quad \mathcal{C}(\{i,j\}) = 1.5 \text{ for each pair}, \quad \mathcal{C}(\{1,2,3\}) = 2.2$$
 
-Check (C5) for $S_1 = \{1,2\}, S_2 = \{2,3\}$: $S_1 \cup S_2 = \{1,2,3\}$, $S_1 \cap S_2 = \{2\}$. Need $2 + 1 \leq 1.5 + 1.5$, i.e., $3 \leq 3$. ✓ (barely).
+Verify (C1)–(C4):
+- (C1)–(C3): Satisfied by construction. ✓
+- (C4): For disjoint singletons: $\mathcal{C}(\{i,j\}) = 1.5 \leq 1 + 1 = 2$. ✓ For a singleton and a disjoint pair: $\mathcal{C}(\{1,2,3\}) = 2.2 \leq 1 + 1.5 = 2.5$. ✓
 
-Modify: set $\mathcal{C}(\{2\}) = 2$ (keeping others the same, $C_0 = 3$, adjusting $\mathcal{C}(\{1,2\}) = 2.5$, $\mathcal{C}(\{2,3\}) = 2.5$, $\mathcal{C}(\{1,3\}) = 1.5$, $\mathcal{C}(\{1,2,3\}) = 3$). Then for $S_1 = \{1,2\}$, $S_2 = \{1,3\}$: $S_1 \cup S_2 = \{1,2,3\}$, $S_1 \cap S_2 = \{1\}$. (C5) requires $3 + 1 \leq 2.5 + 1.5$, i.e., $4 \leq 4$. Still satisfied.
+Now check (C5) for $S_1 = \{1,2\}$, $S_2 = \{2,3\}$: $S_1 \cup S_2 = \{1,2,3\}$, $S_1 \cap S_2 = \{2\}$.
 
-A cleaner counterexample: Let $\mathcal{H} = \{1,2,3\}$ and define $\mathcal{C}(\{i\}) = 1$, $\mathcal{C}(\{i,j\}) = 1.5$, $\mathcal{C}(\{1,2,3\}) = 2$, but change $\mathcal{C}(\{1\}) = 0.4$ while keeping other singletons at $1$. Then for $S_1 = \{1,2\}$, $S_2 = \{1,3\}$: $\mathcal{C}(S_1 \cup S_2) + \mathcal{C}(S_1 \cap S_2) = 2 + 0.4 = 2.4$ vs $\mathcal{C}(S_1) + \mathcal{C}(S_2) = 1.5 + 1.5 = 3$. So $2.4 \leq 3$. Still satisfied.
+$$\mathcal{C}(S_1 \cup S_2) + \mathcal{C}(S_1 \cap S_2) = 2.2 + 1 = 3.2 > 1.5 + 1.5 = 3 = \mathcal{C}(S_1) + \mathcal{C}(S_2)$$
 
-The independence claim is more subtle than it appears. We acknowledge: in the class of set functions determined purely by subset cardinalities, (C5) follows from (C4) via concavity arguments. For general set functions on $\sigma$-algebras, (C5) is independent of (C4), as demonstrated by the theory of submodular functions (see [Fujishige, 2005]). $\square$
+This violates (C5). Hence (C5) is independent of (C1)–(C4).
+
+**Remark.** In the restricted class of set functions determined purely by subset cardinality, (C5) follows from (C4) via concavity arguments. For general set functions on $\sigma$-algebras, (C5) is independent of (C4), as the counterexample above demonstrates. This is a special case of the general independence of submodularity from subadditivity in the theory of set functions (see [Fujishige, 2005]). $\square$
 
 ## Connection to Physics
 

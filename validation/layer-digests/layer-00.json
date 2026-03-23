@@ -1,0 +1,24 @@
+{
+  "layer": 0,
+  "completedAt": "2026-03-22T00:01:00Z",
+  "derivations": {
+    "axioms/coherence-conservation": {
+      "verdict": "pass-with-corrections",
+      "status": "rigorous",
+      "corrections": [
+        {"location": "Prop 4.3", "summary": "Dilworth theorem misstated; replaced with direct argument", "impact": "none"},
+        {"location": "Thm 4.5 title", "summary": "Renamed 'Equivalence' to 'Consistency' to match content", "impact": "none"},
+        {"location": "Model 2 C3", "summary": "Fixed notation typo in C3 verification", "impact": "none"},
+        {"location": "Prop 6.2", "summary": "Replaced failed counterexamples with working one for C5 independence", "impact": "none"}
+      ],
+      "keyResults": [
+        "C1-C5: positivity, normalization, null empty set, subadditivity, strong subadditivity",
+        "Relational coherence C(S1:S2) >= 0 (Prop 2.2)",
+        "Axiom 1a: admissible transformations are C-isometries",
+        "Axiom 1b: Cauchy slice conservation C(Σ) = C₀",
+        "Two consistency models verified (additive and strictly subadditive)",
+        "Monotonicity does NOT follow from C1-C5 (correctly noted, not assumed)"
+      ]
+    }
+  }
+}

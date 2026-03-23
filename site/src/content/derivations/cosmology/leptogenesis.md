@@ -149,7 +149,7 @@ $$\eta_B \sim 0.354 \times 10^{-1} \times 10^{-2} \times \frac{1}{106.75} \appro
 
 $$\eta_B \sim 0.354 \times 10^{-3} \times 10^{-1} \times \frac{1}{106.75} \approx 3.3 \times 10^{-7}$$
 
-The observed value $\eta_B^{\text{obs}} \approx 6.1 \times 10^{-10}$ lies between these benchmarks. In the resonant regime, the product $\kappa \cdot \varepsilon_1$ is a function of $\Delta M / \Gamma_N$ and $\tilde{m}_1 / m_*$; the observed $\eta_B$ is reproduced for $\kappa \cdot \varepsilon_1 \approx 1.6 \times 10^{-6}$, which is well within the resonant leptogenesis parameter space [Pilaftsis & Underwood, 2004]; [Dev & Mohapatra, 2015].
+The observed value $\eta_B^{\text{obs}} \approx 6.1 \times 10^{-10}$ lies between these benchmarks. In the resonant regime, the product $\kappa \cdot \varepsilon_1$ is a function of $\Delta M / \Gamma_N$ and $\tilde{m}_1 / m_*$; the observed $\eta_B$ is reproduced for $\kappa \cdot \varepsilon_1 \approx 1.84 \times 10^{-7}$, which is well within the resonant leptogenesis parameter space [Pilaftsis & Underwood, 2004]; [Dev & Mohapatra, 2015].
 
 *Proof.* The argument establishes viability by showing the observed $\eta_B$ lies within the accessible parameter space.
 

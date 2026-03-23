@@ -1,7 +1,7 @@
 ---
 title: "Coherence as Physical Primitive"
 status: "rigorous"
-dependsOn: ["axioms/coherence-conservation"]
+dependsOn: ["axioms/coherence-conservation", "axioms/loop-closure"]
 enablesDerivation: ["quantum/born-rule"]
 tags: ["foundation"]
 summary: "Convergence of the coherence axioms with quantum information theory, operational meaning, and uniqueness of the coherence measure on quantum states"
@@ -194,11 +194,7 @@ Like mass, coherence is not "nothing but entropy" or "nothing but the inner prod
 
 **Theorem 7.1.** *A qubit pair $\mathcal{H} = \mathbb{C}^2 \otimes \mathbb{C}^2$ in the Bell state $|\Phi^+\rangle = (|00\rangle + |11\rangle)/\sqrt{2}$ provides a consistency model for all results of this derivation.*
 
-*Verification.* The global state is pure: $\rho = |\Phi^+\rangle\langle\Phi^+|$, so $C_0 = S(\rho) = 0$ for the pure global state.
-
-**Remark (Mixed-state universe).** The total coherence $C_0 = 0$ for a pure total state is a special case. In the framework, no observer has access to the full state of the universe — each observer's accessible state is the reduced density matrix obtained by tracing out everything beyond its boundary $\mathcal{B}$ (Axiom 2). The relevant total is the state as seen from any given observer, which is generically mixed with $S > 0$. To model $C_0 > 0$, take the total system in a thermal state $\rho = e^{-\beta H}/Z$ with $C_0 = S(\rho) = \beta \langle H \rangle + \log Z > 0$.
-
-For the Bell state model, working with the pure state to verify axiom structure:
+*Verification.* **Note on $C_0$:** A pure global state has $S(\rho) = 0$, which would violate C2's requirement $C_0 > 0$. We therefore use the Bell state as the *accessible* state of a bounded observer, embedded in a larger thermal environment with $C_0 > 0$. Concretely, take the total system in a thermal state $\rho_{\text{total}} = e^{-\beta H}/Z$ with $C_0 = S(\rho_{\text{total}}) = \beta \langle H \rangle + \log Z > 0$, and the Bell pair as a subsystem. The axiom structure is verified on the subsystem:
 
 - **C1**: $S(\rho_A) = \log 2 \geq 0$. $\checkmark$
 - **C4**: $S(\rho_{AB}) = 0 \leq S(\rho_A) + S(\rho_B) = 2\log 2$. $\checkmark$

@@ -1,0 +1,30 @@
+{
+  "layer": 2,
+  "completedAt": "2026-03-22T00:22:00Z",
+  "derivations": {
+    "axioms/loop-closure": {
+      "verdict": "pass-with-corrections",
+      "status": "rigorous",
+      "corrections": [
+        {"location": "Axiom 3 + Prop 1.2", "summary": "Added non-triviality clause to Axiom 3; fixed Prop 1.2 contradiction argument (was citing N3 incorrectly)", "impact": "none"},
+        {"location": "Prop 6.2", "summary": "Fixed incorrect C2 citation for strict positivity; replaced with proper argument from normalization + observer non-degeneracy", "impact": "none"},
+        {"location": "Cor 7.3", "summary": "Fixed equality to inequality E >= hbar*omega; equality only for minimal observer", "impact": "none"},
+        {"location": "Thm 0.0 Step 2", "summary": "Added Illman 1983 reference for n>=4 uniqueness", "impact": "none"},
+        {"location": "Thm 3.1 Remark", "summary": "Fixed stale S1-S2 reference", "impact": "none"},
+        {"location": "Consistency Model", "summary": "Added remark about I≡1 vs N3 compliance", "impact": "none"}
+      ],
+      "keyResults": [
+        "Axiom 3: non-trivial cyclic dynamics with period T > 0",
+        "Structural Postulate S1: compact topological manifold, free U(1) orbits",
+        "Theorem 0.0: smooth structure derived from S1 + Axiom 3 (not assumed)",
+        "Theorem 0.1: G_O-invariant Riemannian metric via Weyl averaging",
+        "Corollary 2.3: faithful U(1) action on Sigma",
+        "Theorem 3.1: Noether pair (U(1) symmetry <-> conserved charge) under symplectic structure",
+        "Lyapunov stability required; instability implies dissolution",
+        "Approximate closure: drift bound N*epsilon, lifetime tau = N_max * T",
+        "Coherence cost S_O > 0 with positive lower bound S_min",
+        "E >= hbar*omega (equality for minimal observer)"
+      ]
+    }
+  }
+}

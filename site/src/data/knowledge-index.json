@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-18T04:55:27.088Z",
+    "generatedAt": "2026-03-23T01:51:27.256Z",
     "derivationCount": 64,
     "predictionCount": 11,
     "gaPageCount": 12,
@@ -50,6 +50,7 @@
         "gauge/anomaly-cancellation",
         "gauge/chirality-selection",
         "holography/information-paradox",
+        "minimal-observer/multiplicity",
         "minimal-observer/structure",
         "quantum/observer-relative-objectivity",
         "quantum/sheaf-section-uniqueness",
@@ -177,7 +178,7 @@
         {
           "type": "Theorem",
           "id": "4.5",
-          "name": "Equivalence of formulations",
+          "name": "Consistency of formulations",
           "statementPreview": "Given (H, A, C, G) with the vertex-to-subsystem identification v Sv in A, Axioms 1a and 1b are consistent: Axiom 1a (..."
         },
         {
@@ -249,10 +250,6 @@
           {
             "source": "axioms/coherence-operational",
             "context": "Model 2, strictly subadditive"
-          },
-          {
-            "source": "axioms/loop-closure",
-            "context": "Coherence Conservation"
           },
           {
             "source": "axioms/observer-definition",
@@ -382,7 +379,8 @@
       "summary": "Convergence of the coherence axioms with quantum information theory, operational meaning, and uniqueness of the coherence measure on quantum states",
       "lastUpdated": "2026-03-14",
       "dependsOn": [
-        "axioms/coherence-conservation"
+        "axioms/coherence-conservation",
+        "axioms/loop-closure"
       ],
       "enablesDerivation": [
         "quantum/born-rule"
@@ -573,6 +571,7 @@
         "spacetime/speed-of-light"
       ],
       "dependedOnBy": [
+        "axioms/coherence-operational",
         "cosmology/observer-loop-viability",
         "gauge/electromagnetism",
         "minimal-observer/structure",
@@ -644,7 +643,7 @@
           "type": "Axiom",
           "id": "3",
           "name": "Precise statement",
-          "statementPreview": "There exists T > 0 such that phiT = idSigma."
+          "statementPreview": "The homomorphism phi is non-trivial (phi const), and there exists T > 0 such that phiT = idSigma."
         },
         {
           "type": "Proposition",
@@ -809,10 +808,6 @@
           {
             "target": "thermodynamics-ext/fisher-metric",
             "context": "Fisher Information Metric"
-          },
-          {
-            "target": "axioms/coherence-conservation",
-            "context": "Coherence Conservation"
           },
           {
             "target": "minimal-observer/structure",
@@ -7668,7 +7663,8 @@
         "gauge/color-force",
         "interactions/bootstrap-division-algebras",
         "particles/mass-hierarchy",
-        "spacetime/einstein-equations"
+        "spacetime/einstein-equations",
+        "thermodynamics/entropy"
       ],
       "steps": [
         {
@@ -8849,7 +8845,8 @@
       "lastUpdated": "2026-03-09",
       "dependsOn": [
         "minimal-observer/structure",
-        "axioms/observer-definition"
+        "axioms/observer-definition",
+        "axioms/coherence-conservation"
       ],
       "enablesDerivation": [
         "minimal-observer/coherence-dual-pairs",
@@ -10934,7 +10931,8 @@
       "lastUpdated": "2026-03-09",
       "dependsOn": [
         "interactions/relational-invariants",
-        "thermodynamics/time"
+        "thermodynamics/time",
+        "thermodynamics/action-planck"
       ],
       "enablesDerivation": [
         "quantum/preferred-basis",
@@ -12294,7 +12292,7 @@
           "type": "Proposition",
           "id": "2.1",
           "name": "Hierarchy",
-          "statementPreview": "These sheaves are ordered by information content: C is recoverable from P (coherence determines probabilities via C(|..."
+          "statementPreview": "These sheaves are ordered by information content: P is determined by C (coherence determines probabilities via C(|psi..."
         },
         {
           "type": "Theorem",
@@ -13336,7 +13334,7 @@
           "type": "Theorem",
           "id": "7.1",
           "name": "Poincaré group from homogeneity",
-          "statementPreview": "Under Structural Postulate S1 (homogeneity), the full symmetry group of loop closure is the Poincaré group ISO(3,1) =..."
+          "statementPreview": "Under Theorem 0.1 (homogeneity), the full symmetry group of loop closure is the Poincaré group ISO(3,1) = R3,1 rtimes..."
         },
         {
           "type": "Proposition",
@@ -13993,7 +13991,8 @@
       "summary": "Conservation of coherence implies conservation of distinguishability: admissible transformations preserve all coherence-derived distance measures, forcing unitarity, no-cloning, and no-deleting as structural consequences",
       "lastUpdated": "2026-03-10",
       "dependsOn": [
-        "axioms/coherence-conservation"
+        "axioms/coherence-conservation",
+        "thermodynamics/entropy"
       ],
       "enablesDerivation": [
         "thermodynamics-ext/fisher-metric"
@@ -14084,13 +14083,13 @@
           "type": "Theorem",
           "id": "5.1",
           "name": "No-cloning",
-          "statementPreview": "There is no admissible transformation that copies an arbitrary coherence state. Formally: let Sigma be a state space ..."
+          "statementPreview": "Assume the coherence measure is strictly subadditive on at least one pair of correlated subsystems (i.e., perfect cor..."
         },
         {
           "type": "Theorem",
           "id": "6.1",
           "name": "No-deleting",
-          "statementPreview": "There is no admissible transformation that erases an unknown coherence state against a fixed reference. Formally: the..."
+          "statementPreview": "Under the same strict subadditivity hypothesis as Theorem 5.1: there is no admissible transformation that erases an u..."
         },
         {
           "type": "Corollary",
@@ -14716,7 +14715,7 @@
         },
         {
           "number": 3,
-          "title": "The Wetterink-Morris Analog"
+          "title": "The Wetterich-Morris Analog"
         },
         {
           "number": 4,
@@ -14777,7 +14776,7 @@
         {
           "type": "Theorem",
           "id": "3.2",
-          "name": "Coherence flow equation — analog of Wetterink-Morris",
+          "name": "Coherence flow equation — analog of Wetterich-Morris",
           "statementPreview": "The effective coherence action satisfies the exact flow equation:*"
         },
         {
@@ -15020,6 +15019,7 @@
       "dependedOnBy": [
         "foundation/coherence-lagrangian",
         "holography/area-scaling",
+        "quantum/born-rule",
         "spacetime/speed-of-light",
         "thermodynamics-ext/first-law",
         "thermodynamics-ext/fisher-metric",
@@ -15412,11 +15412,13 @@
       "lastUpdated": "2026-03-09",
       "dependsOn": [
         "thermodynamics/time",
-        "interactions/relational-invariants"
+        "interactions/relational-invariants",
+        "interactions/bootstrap"
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
         "cosmology/observer-loop-viability",
+        "thermodynamics-ext/distinguishability-conservation",
         "thermodynamics-ext/first-law",
         "thermodynamics-ext/fisher-metric",
         "thermodynamics-ext/renormalization"
@@ -17914,7 +17916,7 @@
       "derivationId": "axioms/coherence-conservation",
       "type": "Theorem",
       "id": "4.5",
-      "name": "Equivalence of formulations",
+      "name": "Consistency of formulations",
       "fullRef": "axioms/coherence-conservation:Theorem 4.5"
     },
     {
@@ -23920,7 +23922,7 @@
       "derivationId": "thermodynamics-ext/renormalization",
       "type": "Theorem",
       "id": "3.2",
-      "name": "Coherence flow equation — analog of Wetterink-Morris",
+      "name": "Coherence flow equation — analog of Wetterich-Morris",
       "fullRef": "thermodynamics-ext/renormalization:Theorem 3.2"
     },
     {

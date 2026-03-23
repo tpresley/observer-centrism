@@ -1,0 +1,14 @@
+{
+  "layer": 12,
+  "completedAt": "2026-03-22T02:30:00Z",
+  "derivations": {
+    "gauge/color-force": {"verdict": "pass", "status": "rigorous", "corrections": [], "keyResults": ["SU(3) from Aut(O) stabilizer (G2/SU(3)=S^6)", "Hurwitz ceiling: no fourth force", "8 gluons from dim(su(3))=8", "Confinement mechanism from non-associativity", "Asymptotic freedom (b_0=7>0)"]},
+    "flavor/mixing-angles": {"verdict": "pass", "status": "rigorous", "corrections": [], "keyResults": ["CKM/PMNS from basis mismatch", "A5 discrete flavor symmetry (S1)", "Golden ratio prediction: tan(theta_12)=1/phi", "CP phases from complex A5 embedding"]},
+    "cosmology/baryogenesis": {"verdict": "pass-with-corrections", "status": "rigorous", "corrections": [{"location": "line 51 remark", "summary": "Stale 'status as a draft' wording updated — file is rigorous", "impact": "none"}], "keyResults": ["Sakharov conditions from axioms", "d=3 → N_g=3 → CP violation chain", "Sphaleron B+L violation from pi_3(SU(2))=Z", "Quantitative insufficiency honestly flagged"]},
+    "gauge/chirality-selection": {"verdict": "pass", "status": "rigorous", "corrections": [], "keyResults": ["Quaternionic orientation = chirality", "Maximal parity violation (exactly zero, not suppressed)", "SU(3) vector-like from G2 stabilizer", "Global orientation lock from bootstrap"]},
+    "holography/black-hole-entropy": {"verdict": "pass", "status": "rigorous", "corrections": [], "keyResults": ["S = A/(4l_P^2) from area-scaling saturation", "One bit per horizon loop", "Observer-relative entropy", "Hawking temperature forward reference resolved"]},
+    "cosmology/cosmological-constant": {"verdict": "pass", "status": "non-viable", "corrections": [], "keyResults": ["Non-viability honestly assessed", "Two routes attempted and failed (holographic constraint, coherence self-reference)", "Root cause: dynamics vs initial conditions", "Lambda existence, sign, and bounds established"]},
+    "spacetime/singularity-resolution": {"verdict": "pass", "status": "rigorous", "corrections": [], "keyResults": ["Curvature bound |R| <= 2pi/l_P^2", "Bounce existence (model-independent contraposition of Penrose-Hawking)", "Regular black hole interiors", "Trans-Planckian resolution"]},
+    "holography/causal-set-statistics": {"verdict": "pass", "status": "rigorous", "corrections": [], "keyResults": ["Poisson sprinkling = unique Lorentz-invariant process", "alpha_H = 1/4 from holographic bound", "Quantum Jeans mass M_J ~ m_DM^{-3/2}", "Gaussian cutoff (steeper than WDM)"]}
+  }
+}

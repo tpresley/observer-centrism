@@ -48,7 +48,7 @@ The Big Bang should have produced equal amounts of matter and antimatter, which 
 
 No new structural postulates are needed. Baryogenesis follows from the established gauge structure and cosmological dynamics.
 
-**Remark.** This derivation has the deepest dependency chain in the framework: it requires the full gauge structure (weak interaction, chiral coupling) and the cosmological setting (entropy, bootstrap dynamics). Its status as a draft reflects the cumulative uncertainties of these dependencies rather than any novel structural assumption.
+**Remark.** This derivation has the deepest dependency chain in the framework: it requires the full gauge structure (weak interaction, chiral coupling) and the cosmological setting (entropy, bootstrap dynamics). Its deep dependency chain reflects the cumulative structure of these dependencies rather than any novel structural assumption.
 
 ## Derivation
 

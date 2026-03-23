@@ -1,0 +1,21 @@
+{
+  "layer": 3,
+  "completedAt": "2026-03-22T00:30:00Z",
+  "derivations": {
+    "minimal-observer/structure": {
+      "verdict": "pass",
+      "status": "rigorous",
+      "corrections": [],
+      "keyResults": [
+        "Minimal state space: |Σ| >= 2 (discrete) or dim Σ >= 1 (continuous)",
+        "Discrete minimal: Z/nZ cyclic action",
+        "Continuous minimal: Σ ≅ S¹, uniform rotation, G_O = U(1)",
+        "Exactly one conserved charge (rank-1 Lie group)",
+        "Q_O = C(Σ) identification (definitional bridge, forced by uniqueness)",
+        "Coherence domain boundary ∂D_O separates conserved/non-conserved",
+        "Minimality theorem: U(1) ⊆ G_O for all observers; G_O = U(1) → unique S¹ oscillator (up to frequency)",
+        "Physical identification with fundamental particle (interpretive, deferred)"
+      ]
+    }
+  }
+}

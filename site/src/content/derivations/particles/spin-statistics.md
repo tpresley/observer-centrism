@@ -89,16 +89,12 @@ The nontrivial element of $\pi_1(Q_2)$ is precisely the exchange loop — a path
 
 In the full space (before quotienting), the exchange loop lifts to a path in which $\mathcal{O}_1$ traverses a semicircle around $\mathcal{O}_2$. Composed with itself, this gives a full $2\pi$ rotation of $\mathcal{O}_1$ around $\mathcal{O}_2$ — a closed loop in $SO(3)$ acting on the relative coordinate.
 
-The map $\pi_1(Q_2) \to \pi_1(SO(3))$ identifies:
-- Exchange$^2$ = $2\pi$ rotation → class in $\pi_1(SO(3))$
-- The exchange phase $\phi$ satisfies $e^{2i\phi} = e^{i\theta_{2\pi}}$ where $\theta_{2\pi}$ is the $2\pi$-rotation phase
+By Structural Postulate S1, the exchange phase $\phi$ is determined by a homomorphism $h: \pi_1(Q_2) \to U(1)$. Since $\pi_1(Q_2) = \mathbb{Z}_2$, the generator $g$ satisfies $g^2 = e$, so $h(g)^2 = 1$, giving $h(g) \in \{+1, -1\}$. There are exactly two possibilities:
 
-For class $[0]$: $\theta_{2\pi} = 0$, so $e^{2i\phi} = 1$, giving $\phi = 0$ or $\phi = \pi$.
-For class $[1]$: $\theta_{2\pi} = \pi$ (the nontrivial $\mathbb{Z}_2$ phase), so $e^{2i\phi} = e^{i\pi} = -1$, giving $\phi = \pi/2$ or $\phi = 3\pi/2$.
-
-But the $\mathbb{Z}_2$ structure forces consistency: the exchange phase must satisfy $e^{2i\phi} \in \{+1, -1\}$ corresponding to the two group elements. This gives exactly two possibilities:
 - $e^{i\phi} = +1$ → **symmetric** exchange (bosons)
-- $e^{i\phi} = -1$ → **antisymmetric** exchange (fermions) $\square$
+- $e^{i\phi} = -1$ → **antisymmetric** exchange (fermions)
+
+The geometric content is that exchange$^2$ corresponds to a $2\pi$ rotation of the relative coordinate (a closed loop in $SO(3)$). The spin of the particle determines which holonomy applies: integer spin gives a contractible $2\pi$-rotation loop (trivial holonomy, $e^{i\phi} = +1$), half-integer spin gives a non-contractible loop (nontrivial holonomy, $e^{i\phi} = -1$). This identification is made precise in Proposition 3.2. $\square$
 
 **Remark.** This proof uses only the topology of the configuration space, not any dynamical input. The spin-statistics connection is topological, not dynamical.
 

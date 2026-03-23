@@ -1,7 +1,7 @@
 ---
 title: "Multiplicity Is Necessary"
 status: "rigorous"
-dependsOn: ["minimal-observer/structure", "axioms/observer-definition"]
+dependsOn: ["minimal-observer/structure", "axioms/observer-definition", "axioms/coherence-conservation"]
 enablesDerivation: ["minimal-observer/coherence-dual-pairs", "interactions/three-types"]
 tags: ["foundation"]
 summary: "A single observer is vacuous and pairs are insufficient — strong subadditivity requires at least three observers, and the bootstrap propagates this into a full network"
@@ -56,7 +56,7 @@ In standard physics, there is no principled reason why a single particle or enti
 
 We show $G_\mathcal{O}^c = \emptyset$, which by Proposition 1.2 gives $\mathcal{C}(\Sigma) = 0$.
 
-Every $T \in \text{Aut}(\mathcal{H})$ acts on $\Sigma = \mathcal{H}$ and preserves total coherence $\mathcal{C}(\mathcal{H}) = C_0$ (Axiom 1). Suppose for contradiction that $T \in G_\mathcal{O}^c$ — then $I(T(\sigma)) \neq I(\sigma)$ for some $\sigma$. This means $T$ disrupts the invariant $I$. But since $\Sigma = \mathcal{H}$, there is no complement $\mathcal{H} \setminus \Sigma$ to absorb the coherence displaced from $I$. Specifically: by coherence conservation on the Cauchy slice containing $\{T(\sigma)\}$ ([Coherence Conservation](/derivations/axioms/coherence-conservation), Axiom C5), the total coherence is unchanged, but the portion structured by $I$ has changed. Since there is no other structured degree of freedom in $\mathcal{H}$ (no other observer, no other invariant), the disrupted coherence cannot be reassigned — it is lost, violating $\mathcal{C}(\mathcal{H}) = C_0$.
+Every $T \in \text{Aut}(\mathcal{H})$ acts on $\Sigma = \mathcal{H}$ and preserves total coherence $\mathcal{C}(\mathcal{H}) = C_0$ (Axiom 1). Suppose for contradiction that $T \in G_\mathcal{O}^c$ — then $I(T(\sigma)) \neq I(\sigma)$ for some $\sigma$. This means $T$ disrupts the invariant $I$. But since $\Sigma = \mathcal{H}$, there is no complement $\mathcal{H} \setminus \Sigma$ to absorb the coherence displaced from $I$. Specifically: by coherence conservation ([Coherence Conservation](/derivations/axioms/coherence-conservation), Axiom 1b), the total coherence is unchanged, but the portion structured by $I$ has changed. Since there is no other structured degree of freedom in $\mathcal{H}$ (no other observer, no other invariant), the disrupted coherence cannot be reassigned — it is lost, violating $\mathcal{C}(\mathcal{H}) = C_0$.
 
 Therefore no $T \in \text{Aut}(\mathcal{H})$ can disrupt $I$: every admissible transformation preserves $I$, so $G_\mathcal{O}^c = \emptyset$. By Proposition 1.2, $\mathcal{C}(\Sigma) = 0$. $\square$
 

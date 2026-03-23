@@ -1,0 +1,8 @@
+{
+  "layer": 15,
+  "completedAt": "2026-03-22T02:30:00Z",
+  "derivations": {
+    "gauge/weinberg-angle": {"verdict": "pass", "status": "rigorous", "corrections": [], "keyResults": ["sin²(θ_W)(M_Z) = 0.231 from algebraic boundary + RG running", "Λ_EW ~ 10¹⁰ GeV", "Self-consistency verified (perturbative α₂)", "Gap 4 tension with coupling-constants S1 honestly flagged"]},
+    "gauge/proton-stability": {"verdict": "pass", "status": "rigorous", "corrections": [], "keyResults": ["Proton absolutely stable", "No GUT → no B-violating gauge bosons", "Exact B conservation verified per gauge factor", "τ_p > 10⁶⁴ years (gravitational bound)"]}
+  }
+}

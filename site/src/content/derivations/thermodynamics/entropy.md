@@ -1,7 +1,7 @@
 ---
 title: "Entropy as Inaccessible Coherence"
 status: "rigorous"
-dependsOn: ["thermodynamics/time", "interactions/relational-invariants"]
+dependsOn: ["thermodynamics/time", "interactions/relational-invariants", "interactions/bootstrap"]
 enablesDerivation: []
 tags: ["dynamics"]
 summary: "Entropy relative to observer A is total coherence minus A's accessible coherence; the second law follows structurally from bounded observation"

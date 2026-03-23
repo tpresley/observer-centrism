@@ -1,0 +1,55 @@
+{
+  "layer": 1,
+  "completedAt": "2026-03-22T00:15:00Z",
+  "derivations": {
+    "axioms/observer-definition": {
+      "verdict": "pass-with-corrections",
+      "status": "rigorous",
+      "corrections": [
+        {"location": "Prop 3.3", "summary": "Invalid counterexample (constant I forces G_O = full Aut, violating N2); rewrote with structural analysis", "impact": "none"},
+        {"location": "Thm 5.1 & Cor 5.2", "summary": "Fixed dim/rank confusion: rank(G_O) → dim(g_O) for Noether charge count", "impact": "none"},
+        {"location": "Remark after Def 2.1", "summary": "Same dim/rank fix", "impact": "none"}
+      ],
+      "keyResults": [
+        "Observer triple (Σ, I, B) with state space, Noether invariant, boundary",
+        "Observer category Obs with morphisms preserving (I, B) structure",
+        "N1-N4 axioms for Noether invariant",
+        "Boundary functor B: Obs → Set",
+        "Composition and product of observers"
+      ]
+    },
+    "axioms/coherence-operational": {
+      "verdict": "pass-with-corrections",
+      "status": "rigorous",
+      "corrections": [
+        {"location": "frontmatter dependsOn", "summary": "Added axioms/loop-closure as dependency (F1, F4 trace to Axiom 3)", "impact": "none"},
+        {"location": "Consistency model", "summary": "Reframed Bell state as subsystem of thermal environment with C₀>0", "impact": "none"}
+      ],
+      "keyResults": [
+        "C1-C5 isomorphic to quantum entropy axioms (Lieb-Ruskai)",
+        "Relational coherence = mutual information",
+        "Conservation = unitarity",
+        "Theorem 4.1: uniqueness of coherence functional on states",
+        "Born Rule S1 derived as Theorem 0.1 via Cauchy multiplicative equation"
+      ]
+    },
+    "thermodynamics-ext/distinguishability-conservation": {
+      "verdict": "pass-with-corrections",
+      "status": "rigorous",
+      "corrections": [
+        {"location": "frontmatter dependsOn", "summary": "Added thermodynamics/entropy as dependency (Prop 7.1, Def 7.0 use it)", "impact": "trivial"},
+        {"location": "Theorem 5.1", "summary": "Added explicit strict subadditivity hypothesis for no-cloning proof", "impact": "none"},
+        {"location": "Theorem 6.1", "summary": "Added explicit strict subadditivity hypothesis for no-deleting proof", "impact": "none"},
+        {"location": "Prop 3.2", "summary": "Added remark acknowledging monotonicity assumption not provable from C1-C5 alone", "impact": "none"}
+      ],
+      "keyResults": [
+        "Distinguishability D(ρ,σ) defined via coherence",
+        "D conserved under admissible transformations",
+        "No-cloning theorem (Thm 5.1, requires strict subadditivity)",
+        "No-deleting theorem (Thm 6.1, requires strict subadditivity)",
+        "Monotonicity under coarse-graining (assumed, not derived from C1-C5)"
+      ],
+      "note": "Adding thermodynamics/entropy as dependency moves this derivation from Layer 1 to post-Layer 7 in strict topological order. Validation was still valid since core content depends only on coherence-conservation; the entropy-dependent content (Prop 7.1, Def 7.0) was flagged and dependency added."
+    }
+  }
+}

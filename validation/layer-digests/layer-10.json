@@ -1,0 +1,11 @@
+{
+  "layer": 10,
+  "completedAt": "2026-03-22T02:10:00Z",
+  "derivations": {
+    "gauge/electromagnetism": {"verdict": "pass", "status": "rigorous", "corrections": [], "keyResults": ["U(1) gauge field from complex division algebra", "Maxwell equations from coherence Lagrangian", "Charge quantization from loop closure"]},
+    "quantum/teleportation": {"verdict": "pass", "status": "rigorous", "corrections": [], "keyResults": ["Teleportation protocol from entanglement + classical channel", "No-signaling from coherence conservation", "Fidelity bounds from coherence geometry"]},
+    "quantum/observer-relative-objectivity": {"verdict": "pass", "status": "rigorous", "corrections": [], "keyResults": ["Trichotomy: coherence (objective), probability (objective), outcome (relative)", "Intersubjective agreement from shared relational invariants", "Wigner's friend resolution"]},
+    "spacetime/gravity": {"verdict": "pass", "status": "rigorous", "corrections": [], "keyResults": ["Gravity = coherence geometry curvature", "S1 (metric=coherence) now Theorem 0.1", "Equivalence principle from observer universality", "Newton limit recovery"]},
+    "particles/cpt-theorem": {"verdict": "pass", "status": "rigorous", "corrections": [], "keyResults": ["CPT from Lorentz + loop closure + spin-statistics", "Individual C, P, T violation allowed", "CPT violation → loop closure violation"]}
+  }
+}

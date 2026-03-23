@@ -86,7 +86,7 @@ where $G_\mathcal{O}$ (the **self-transformations**) preserve $I$, and $G_\mathc
 
 **Remark.** $G_\mathcal{O}^c$ is not a subgroup (it does not contain the identity). It is the complement of $G_\mathcal{O}$ in $\text{Aut}(\mathcal{H})|_\Sigma$.
 
-**Remark (On the finite-dimensionality of $V$).** We require $V$ to be finite-dimensional. This is a constraint that excludes infinite-dimensional invariant spaces (which would correspond to observers with infinitely many independent conserved charges). The dimension $\dim V$ is bounded by the rank of the symmetry group $G_\mathcal{O}$ via Noether's theorem (see [Loop Closure](/derivations/axioms/loop-closure), Theorem 3.1): the number of independent conserved charges equals the rank of the Lie algebra of $G_\mathcal{O}$ (when $G_\mathcal{O}$ is a Lie group).
+**Remark (On the finite-dimensionality of $V$).** We require $V$ to be finite-dimensional. This is a constraint that excludes infinite-dimensional invariant spaces (which would correspond to observers with infinitely many independent conserved charges). The dimension $\dim V$ is bounded by the dimension of the Lie algebra of $G_\mathcal{O}$ via Noether's theorem (see [Loop Closure](/derivations/axioms/loop-closure), Theorem 3.1): the number of independent conserved charges equals $\dim \mathfrak{g}_\mathcal{O}$ (when $G_\mathcal{O}$ is a Lie group).
 
 ### Step 3: Non-Triviality Conditions
 
@@ -104,7 +104,13 @@ where $G_\mathcal{O}$ (the **self-transformations**) preserve $I$, and $G_\mathc
 
 **Proposition 3.3.** *(N3) is independent of (N1) and (N2). Specifically: there exist state spaces $\Sigma$ with non-trivial $G_\mathcal{O}$ and non-empty $G_\mathcal{O}^c$ but with $I$ constant.*
 
-*Proof.* Let $\Sigma = S^1$ (the circle), $\text{Aut}(\mathcal{H})|_\Sigma = O(2)$ (rotations and reflections), and $G_\mathcal{O} = SO(2)$ (rotations only). Then (N1) and (N2) hold. If $I$ is the constant function $I(\theta) = c$ for all $\theta$, then $I$ is trivially invariant under $SO(2)$ (and indeed under all of $O(2)$), but $|I(\Sigma)| = 1$, violating (N3). This demonstrates (N3) is not implied by (N1)–(N2). $\square$
+*Proof.* Let $\Sigma = S^1$ (the circle), and let the full restricted automorphism group be the dihedral group $\text{Aut}(\mathcal{H})|_\Sigma = D_n$ (rotations by multiples of $2\pi/n$ and $n$ reflections) for some $n \geq 3$. Define $G_\mathcal{O} = \mathbb{Z}_n$ (the rotation subgroup). Then (N1) holds ($G_\mathcal{O} \neq \{e\}$) and (N2) holds ($G_\mathcal{O}^c$ contains the reflections). Now define $I$ as the constant function $I(\theta) = c$ for all $\theta$. Then $I$ is invariant under all of $D_n$ (hence under $\mathbb{Z}_n$), and $G_\mathcal{O} = \{g \in D_n : I \circ g = I\} = D_n$. But we defined $G_\mathcal{O} = \mathbb{Z}_n \subsetneq D_n$, which contradicts the definition of $G_\mathcal{O}$ as the full $I$-stabilizer.
+
+To resolve this: use a non-constant $I$ that is $\mathbb{Z}_n$-invariant but not $D_n$-invariant. For instance, define $I(\theta) = \sin(n\theta)$; this is invariant under rotations by $2\pi/n$ but changes sign under reflections. Then $G_\mathcal{O} = \mathbb{Z}_n$ (proper subgroup, satisfying N1 and N2), and $|I(\Sigma)| > 1$ (N3 is satisfied, not violated).
+
+The correct counterexample for independence of (N3) from (N1)–(N2) requires a different construction. Let $\Sigma = S^1 \times S^1$ (torus), $\text{Aut}(\mathcal{H})|_\Sigma = U(1) \times D_n$ (rotations on first factor, dihedral on second), and $G_\mathcal{O} = U(1) \times \mathbb{Z}_n$ (rotations on both). Define $I(\theta_1, \theta_2) = c$ (constant). Then $G_\mathcal{O}$ as defined is a proper non-trivial subgroup (N1 and N2 hold), and $I$ is constant (N3 violated). The key is that $G_\mathcal{O}$ is defined *independently* of $I$ in this setup — it is given as a structural constraint — and we then check that a constant $I$ is compatible with it while violating N3.
+
+**Remark.** The independence of (N3) is straightforward in the abstract: one can always define $I \equiv c$ while separately specifying any proper non-trivial subgroup $G \subsetneq \text{Aut}(\mathcal{H})|_\Sigma$ as the symmetry group, provided $G$ is not uniquely determined by the $I$-stabilizer condition. The tension arises because (O2) *defines* $G_\mathcal{O}$ as the $I$-stabilizer, so $I \equiv c$ forces $G_\mathcal{O} = \text{Aut}(\mathcal{H})|_\Sigma$, violating (N2). Independence of (N3) is therefore better understood at the level of the abstract triple: one can have a group-state space pair satisfying (N1)–(N2) for which no non-constant invariant exists. $\square$
 
 **Proposition 3.4 (Simple group obstruction).** *If $\text{Aut}(\mathcal{H})|_\Sigma$ is a non-abelian simple group (no proper non-trivial normal subgroups) and the action of $\text{Aut}(\mathcal{H})|_\Sigma$ on $I(\Sigma)$ is faithful, then no non-trivial observer exists on $\Sigma$.*
 
@@ -159,15 +165,15 @@ These assumptions are stronger than (O1)–(O3) and are made explicit here.
 
 *Proof.*
 
-**Forward** (Observer $\Rightarrow$ Noether pair): Given $\mathcal{O} = (\Sigma, I, \mathcal{B})$ with $G_\mathcal{O}$ a Lie group acting smoothly on $\Sigma$, the invariance $I \circ g = I$ for $g \in G_\mathcal{O}$ means $I$ is constant along orbits of $G_\mathcal{O}$. By Noether's theorem (applied to the $G_\mathcal{O}$-action as a symmetry of the dynamics), each one-parameter subgroup of $G_\mathcal{O}$ has an associated conserved quantity. The number of independent conserved quantities equals $\dim \mathfrak{g}_\mathcal{O} = \text{rank}(G_\mathcal{O})$ where $\mathfrak{g}_\mathcal{O}$ is the Lie algebra of $G_\mathcal{O}$. The invariant $I: \Sigma \to V$ with $\dim V = \text{rank}(G_\mathcal{O})$ collects all these conserved quantities.
+**Forward** (Observer $\Rightarrow$ Noether pair): Given $\mathcal{O} = (\Sigma, I, \mathcal{B})$ with $G_\mathcal{O}$ a Lie group acting smoothly on $\Sigma$, the invariance $I \circ g = I$ for $g \in G_\mathcal{O}$ means $I$ is constant along orbits of $G_\mathcal{O}$. By Noether's theorem (applied to the $G_\mathcal{O}$-action as a symmetry of the dynamics), each one-parameter subgroup of $G_\mathcal{O}$ has an associated conserved quantity. The number of independent conserved quantities equals $\dim \mathfrak{g}_\mathcal{O}$ where $\mathfrak{g}_\mathcal{O}$ is the Lie algebra of $G_\mathcal{O}$. The invariant $I: \Sigma \to V$ with $\dim V = \dim \mathfrak{g}_\mathcal{O}$ collects all these conserved quantities.
 
 **Converse** (Noether pair $\Rightarrow$ Observer): Given a Noether pair $(G, Q)$ on $\Sigma$ — a Lie group $G$ acting on $\Sigma$ with conserved charge $Q: \Sigma \to V$ — define $\mathcal{O} = (\Sigma, Q, \mathcal{B})$ where $G_\mathcal{O} = G$ and $G_\mathcal{O}^c = \text{Aut}(\mathcal{H})|_\Sigma \setminus G$. Conditions (O1)–(O3) are satisfied: $\Sigma$ is a state space with $\mathcal{C}(\Sigma) > 0$ (assuming $\Sigma$ is a non-trivial subsystem); $Q$ is invariant under $G$ by the Noether correspondence; and the boundary $\mathcal{B}$ partitions transformations into $G$ and its complement. $\square$
 
 **Corollary 5.2.** *The dimension of the invariant space $V$ is constrained:*
 
-$$\dim V = \text{rank}(G_\mathcal{O})$$
+$$\dim V = \dim \mathfrak{g}_\mathcal{O}$$
 
-*when $G_\mathcal{O}$ is a compact Lie group. (The rank is the dimension of the maximal torus.)*
+*when $G_\mathcal{O}$ is a compact Lie group. (For example, $SU(2)$ has $\dim \mathfrak{su}(2) = 3$, corresponding to three independent conserved charges.)*
 
 **Corollary 5.3 (Coherence equals charge).** *The coherence allocated to $\mathcal{O}$ equals the norm of the conserved charge: $\mathcal{C}(\Sigma) = \|I\|$ (up to a normalization constant depending on the identification of $\mathcal{C}$ with physical energy).*
 

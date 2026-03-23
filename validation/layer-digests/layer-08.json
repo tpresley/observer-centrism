@@ -1,0 +1,14 @@
+{
+  "layer": 8,
+  "completedAt": "2026-03-22T01:55:00Z",
+  "derivations": {
+    "spacetime/speed-of-light": {"verdict": "pass", "status": "rigorous", "corrections": [], "keyResults": ["Universal c=L/T from loop closure", "Minkowski signature (+,-,-,-)", "Maximal signaling speed", "S1: pseudo-Riemannian structure"]},
+    "quantum/preferred-basis": {"verdict": "pass", "status": "rigorous", "corrections": [], "keyResults": ["Measurement basis = eigenbasis of relational invariant", "Complementarity from non-commuting invariants", "Decoherence recovery"]},
+    "particles/mass-hierarchy": {"verdict": "pass", "status": "rigorous", "corrections": [], "keyResults": ["Λ_k/Λ_{k-1} ~ exp(-c_k/g_k²) (dimensional transmutation)", "Self-protection via coherence conservation", "Great desert prediction", "No SUSY needed"]},
+    "thermodynamics-ext/first-law": {"verdict": "pass", "status": "rigorous", "corrections": [], "keyResults": ["dU = δQ - δW from Axiom 1 + interaction types", "Coherence temperature", "Clausius relation", "Zeroth law"]},
+    "thermodynamics-ext/renormalization": {"verdict": "pass-with-corrections", "status": "rigorous", "corrections": [{"location": "4 instances", "summary": "Fixed author name: Wetterink-Morris → Wetterich-Morris", "impact": "none"}], "keyResults": ["Scale-dependent coherence", "Wetterich-Morris analog", "Bootstrap = RG fixed points", "c-theorem", "No Landau poles"]},
+    "interactions/bootstrap-division-algebras": {"verdict": "pass", "status": "rigorous", "corrections": [], "keyResults": ["R→C→H→O forced by bootstrap + coherence conservation", "Norm-multiplicativity from Axiom 1", "Sedenion obstruction terminates at O", "Three gauge forces exactly"]},
+    "quantum/entanglement": {"verdict": "pass", "status": "rigorous", "corrections": [], "keyResults": ["Relational invariants = entangled states", "Relational coherence = von Neumann entropy (Shannon-Khinchin)", "No-cloning from coherence conservation", "Monogamy from C5"]},
+    "thermodynamics-ext/fisher-metric": {"verdict": "pass", "status": "rigorous", "corrections": [], "keyResults": ["Fisher metric = unique monotone metric (Cencov)", "g = ℏG (coherence geometry = Fisher geometry at scale ℏ)", "S1: statistical manifold structure"]}
+  }
+}

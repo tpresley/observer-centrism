@@ -1,0 +1,10 @@
+{
+  "layer": 9,
+  "completedAt": "2026-03-22T02:10:00Z",
+  "derivations": {
+    "spacetime/lorentz-invariance": {"verdict": "pass-with-corrections", "status": "rigorous", "corrections": [{"location": "Theorem 7.1", "summary": "Stale 'Structural Postulate S1' → 'Theorem 0.1' (S1 was promoted)", "impact": "none"}], "keyResults": ["Lorentz group = isometry group of Minkowski metric", "Time dilation, length contraction from loop projection", "No tachyons (Cor 6.3)", "Poincaré group from homogeneity (Thm 7.1)", "S1 (homogeneity) now Theorem 0.1"]},
+    "quantum/measurement": {"verdict": "pass", "status": "rigorous", "corrections": [], "keyResults": ["Wavefunction collapse = coherence update (Thm 3.1)", "Measurement disturbance from coherence conservation", "Decoherence from entropy increase"]},
+    "particles/three-generations": {"verdict": "pass", "status": "rigorous", "corrections": [], "keyResults": ["Three generations from bootstrap fixed-point structure", "Mass hierarchy from dimensional transmutation", "CKM mixing from relational invariant misalignment"]},
+    "foundation/coherence-lagrangian": {"verdict": "pass", "status": "rigorous", "corrections": [], "keyResults": ["Coherence Lagrangian from action principle", "Euler-Lagrange = coherence conservation", "Gauge coupling from bootstrap interactions"]}
+  }
+}

@@ -159,7 +159,7 @@ At $v > c$: $\gamma$ becomes imaginary, and $ds^2 < 0$ (spacelike). The loop can
 
 ### Step 7: The Poincaré Group
 
-**Theorem 7.1 (Poincaré group from homogeneity).** *Under Structural Postulate S1 (homogeneity), the full symmetry group of loop closure is the Poincaré group $ISO(3,1) = \mathbb{R}^{3,1} \rtimes SO^+(3,1)$.*
+**Theorem 7.1 (Poincaré group from homogeneity).** *Under Theorem 0.1 (homogeneity), the full symmetry group of loop closure is the Poincaré group $ISO(3,1) = \mathbb{R}^{3,1} \rtimes SO^+(3,1)$.*
 
 *Proof.* Translations $x^\mu \mapsto x^\mu + a^\mu$ trivially preserve $ds^2$ (since the metric depends only on coordinate differences). Combined with the Lorentz transformations (Theorem 4.2), the full group is the semidirect product $ISO(3,1)$. This is a 10-dimensional Lie group with generators: 4 translations + 3 rotations + 3 boosts = 10 parameters. $\square$
 

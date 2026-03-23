@@ -1,0 +1,48 @@
+{
+  "layer": 4,
+  "completedAt": "2026-03-22T00:42:00Z",
+  "derivations": {
+    "minimal-observer/multiplicity": {
+      "verdict": "pass-with-corrections",
+      "status": "rigorous",
+      "corrections": [
+        {"location": "Thm 2.1", "summary": "Fixed citation: Axiom C5 → Axiom 1b for Cauchy slice conservation", "impact": "none"},
+        {"location": "frontmatter dependsOn", "summary": "Added axioms/coherence-conservation as declared dependency", "impact": "none"}
+      ],
+      "keyResults": [
+        "Coherence content C(Σ)>0 iff G_O^c ≠ ∅ (Prop 1.2)",
+        "Single observer is vacuous: C(Σ)=0 (Thm 2.1)",
+        "Multiplicity: C(O₁)>0 → complement has positive coherence (Thm 3.1)",
+        "Pair creation necessary (Prop 4.2)",
+        "Coherence budget: C(O₁)+C(O₂) = C₀ + C(O₁:O₂) (Prop 5.1)",
+        "Relational coherence > 0 for mutual pair (Cor 5.2)",
+        "No new dual required for composites (Thm 6.3)",
+        "Relational invariants self-conjugate (Prop 6.4)",
+        "C5 vacuous on pairs → ≥3 observers needed (Prop 7.1, Thm 7.2)",
+        "Bootstrap propagates into network (Cor 7.3)"
+      ],
+      "notes": [
+        "Thm 2.1 proof uses informal bridging step ('disrupted coherence is lost') — physically compelling but not purely measure-theoretic",
+        "Cor 5.2 conflates coherence-independence with dynamical independence — interpretive step, clearly flagged in rigor assessment",
+        "Step 6 forward-references coherence-dual-pairs (which multiplicity enables) — mild circularity in citation"
+      ]
+    },
+    "dimensions/three-dimensions": {
+      "verdict": "pass",
+      "status": "rigorous",
+      "corrections": [],
+      "keyResults": [
+        "Condition 1: Selective permeability eliminates d=1 (Prop 2.1)",
+        "Condition 2: π₁(SO(d)) finite iff d≥3; eliminates d=2 (Prop 3.1, Cor 3.2)",
+        "Condition 3: Exotic R⁴ smooth structures eliminate d=4 (Props 4.1-4.2, supplementary)",
+        "Condition 4: Orbital stability V_eff''(r₀) = (d-2)k/r₀^d·(4-d); eliminates d≥4 (Prop 5.2)",
+        "Convergence: d=3 is unique value passing all four conditions (Thm 6.1)",
+        "Consistency model verified (Thm 7.1)"
+      ],
+      "notes": [
+        "Cor 3.2 forward-references interactions/bootstrap — not a true logical dependency since π₁ values are self-contained math",
+        "Prop 5.2 'iff d≤3' slightly misleading for d=2 (formula undefined there); d=2 handled by Cor 5.4 separately"
+      ]
+    }
+  }
+}

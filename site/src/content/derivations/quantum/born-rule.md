@@ -1,7 +1,7 @@
 ---
 title: "Born Rule from Coherence Conservation"
 status: "rigorous"
-dependsOn: ["interactions/relational-invariants", "thermodynamics/time"]
+dependsOn: ["interactions/relational-invariants", "thermodynamics/time", "thermodynamics/action-planck"]
 enablesDerivation: ["quantum/preferred-basis", "quantum/entanglement"]
 tags: ["quantum"]
 summary: "Probability = |amplitude|² is the unique measure consistent with coherence conservation and the U(1) phase structure"

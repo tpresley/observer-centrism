@@ -29,7 +29,7 @@ The renormalization group is one of the deepest ideas in theoretical physics. It
 
 ## Statement
 
-**Theorem.** The renormalization group (RG) emerges as the scale-dependent coarse-graining of the coherence measure. Integrating out coherence modes above a cutoff scale $k$ defines a scale-dependent effective coherence $\mathcal{C}_k$. Coherence conservation (Axiom 1) constrains the flow: what is lost from the UV must reappear as effective couplings at scale $k$. The resulting flow equation is the coherence analog of the Wetterink-Morris exact RG equation. Fixed points of this flow correspond to levels of the bootstrap hierarchy, and the monotonic decrease of the c-function along RG flow is a consequence of the second law of thermodynamics (entropy as inaccessible coherence).
+**Theorem.** The renormalization group (RG) emerges as the scale-dependent coarse-graining of the coherence measure. Integrating out coherence modes above a cutoff scale $k$ defines a scale-dependent effective coherence $\mathcal{C}_k$. Coherence conservation (Axiom 1) constrains the flow: what is lost from the UV must reappear as effective couplings at scale $k$. The resulting flow equation is the coherence analog of the Wetterich-Morris exact RG equation. Fixed points of this flow correspond to levels of the bootstrap hierarchy, and the monotonic decrease of the c-function along RG flow is a consequence of the second law of thermodynamics (entropy as inaccessible coherence).
 
 ## Structural Postulate
 
@@ -91,7 +91,7 @@ $$\frac{dg_i}{d(\ln k)} = \beta_i(\{g_j\}, k)$$
 
 **Remark.** The exact form of $\beta_i$ requires specifying the system (which gauge group, which matter content). At this stage, we derive the *structure* of the flow equation and its constraints from coherence conservation, not the specific $\beta$-functions.
 
-### Step 3: The Wetterink-Morris Analog
+### Step 3: The Wetterich-Morris Analog
 
 **Proposition 3.1 (Effective coherence action).** *Define the scale-dependent effective coherence action as the Legendre transform of the generating functional for coherence correlation functions, with modes above $k$ integrated out:*
 
@@ -99,7 +99,7 @@ $$\Gamma_k[\phi] = \sup_J \left\{ \int J \phi - \ln Z_k[J] \right\} - \Delta S_k
 
 *where $\Delta S_k[\phi] = \frac{1}{2}\int \phi \, R_k \, \phi$ is the regulator that suppresses modes below $k$, and $R_k$ is a smooth cutoff function satisfying $R_k(p^2) \to \infty$ for $p^2/k^2 \to 0$ and $R_k(p^2) \to 0$ for $p^2/k^2 \to \infty$.*
 
-**Theorem 3.2 (Coherence flow equation — analog of Wetterink-Morris).** *The effective coherence action satisfies the exact flow equation:*
+**Theorem 3.2 (Coherence flow equation — analog of Wetterich-Morris).** *The effective coherence action satisfies the exact flow equation:*
 
 $$\frac{d\Gamma_k}{d(\ln k)} = \frac{1}{2} \text{Tr}\left[ \left(\Gamma_k^{(2)} + R_k\right)^{-1} \frac{dR_k}{d(\ln k)} \right]$$
 
@@ -207,7 +207,7 @@ Since $\mathcal{C}(S)$ is finite and conserved, $g_i(k)$ is bounded at every sca
 | Coherence spectral density $\rho_\mathcal{C}(\omega)$ | Mode density in momentum shells |
 | Scale-dependent coherence $\mathcal{C}_k$ | Wilsonian effective action $S_k$ |
 | Coherence conservation at each scale | Integrating out doesn't lose information |
-| Flow equation (Thm 3.2) | Wetterink-Morris exact RG equation |
+| Flow equation (Thm 3.2) | Wetterich-Morris exact RG equation |
 | Bootstrap fixed points | RG fixed points (CFTs) |
 | c-function (Def 5.1) | Zamolodchikov's c-function |
 | Tunneling between levels | RG crossovers |

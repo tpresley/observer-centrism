@@ -89,7 +89,7 @@ The key distinction: in the standard framework, spin is a representation label (
 | $d = 2$ | $\mathbb{Z}$ | $\infty$ (anyons) | No |
 | $d \geq 3$ | $\mathbb{Z}_2$ | 2 (bosons/fermions) | **Yes** |
 
-*Proof.* For $d = 2$, $\pi_1(SO(2)) = \pi_1(S^1) = \mathbb{Z}$, which is connected (as a subset of $\mathbb{R}$ with the induced topology on integers — actually $\mathbb{Z}$ is discrete too). However, the exchange phases form a continuous family $e^{i\alpha\pi}$ for arbitrary $\alpha$ ([Spin and Statistics](/derivations/particles/spin-statistics), Proposition 5.1), so continuous interpolation between different statistics is possible. For $d \geq 3$, $\pi_1(SO(d)) = \mathbb{Z}_2$ (stable range), and the no-go theorem applies universally. $\square$
+*Proof.* For $d = 2$, $\pi_1(SO(2)) = \pi_1(S^1) = \mathbb{Z}$. Although $\mathbb{Z}$ is itself discrete as a group, the key difference is that the exchange phases form a continuous family $e^{i\alpha\pi}$ for arbitrary real $\alpha$ ([Spin and Statistics](/derivations/particles/spin-statistics), Proposition 5.1), so continuous interpolation between different statistics is possible. For $d \geq 3$, $\pi_1(SO(d)) = \mathbb{Z}_2$ (stable range), and the no-go theorem applies universally. $\square$
 
 **Remark.** Since [Three Spatial Dimensions](/derivations/dimensions/three-dimensions) derives $d = 3$ from the axioms, the supersymmetry impossibility is a prediction of the framework, not an input.
 

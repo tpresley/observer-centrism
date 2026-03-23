@@ -1,0 +1,49 @@
+{
+  "layer": 5,
+  "completedAt": "2026-03-22T01:05:00Z",
+  "derivations": {
+    "minimal-observer/coherence-dual-pairs": {
+      "verdict": "pass",
+      "status": "rigorous",
+      "corrections": [],
+      "keyResults": [
+        "Both members of minimal pair are U(1) oscillators (Prop 1.2)",
+        "Equal rest frequency T₁=T₂ (Thm 2.1, variational uniqueness in same geometry)",
+        "Charge conjugation Q₁+Q₂=0 (Thm 3.1)",
+        "Conjugate boundaries (Prop 4.1), dissolution operators (Cor 4.2)",
+        "Pair persistence with exact closure (Thm 5.1)",
+        "Charge conjugation operator C with C²=id (Prop 6.2)",
+        "Self-conjugate (Q=0) observers are own antiparticle (Prop 7.1)"
+      ]
+    },
+    "interactions/three-types": {
+      "verdict": "pass",
+      "status": "rigorous",
+      "corrections": [],
+      "keyResults": [
+        "Exhaustive 3-type classification: Passage (I), Fusion (II), Resonance (III)",
+        "Type I: phase-only exchange (for minimal observers; Prop 4.2)",
+        "Type II: merge into non-product space with dimension reduction",
+        "Type III: both survive + new irreducibly relational invariant",
+        "Decision tree is exhaustive and types are mutually exclusive (Thm 5.1)",
+        "Cases B, C, D reduce to dissolution or Case A (Props 2.1, 3.1)"
+      ]
+    },
+    "particles/spin-statistics": {
+      "verdict": "pass-with-corrections",
+      "status": "rigorous",
+      "corrections": [
+        {"location": "Prop 2.1 proof", "summary": "Rewrote exchange-phase derivation: replaced confused intermediate step (spurious π/2, 3π/2 phases) with direct Hom(Z₂,U(1))={+1,-1} argument", "impact": "none"}
+      ],
+      "keyResults": [
+        "π₁(SO(3)) = Z₂ → exactly two homotopy classes of observer loop (Prop 1.2)",
+        "Exchange ↔ 2π rotation via configuration space topology (Prop 2.1)",
+        "Integer spin → R(2π)=+1, half-integer → R(2π)=-1 (Prop 3.2)",
+        "Spin-statistics connection = identity map Z₂→Z₂ (Thm 3.3)",
+        "Structural Postulate S1: topological consistency (Laidlaw-DeWitt)",
+        "Anyons in d=2 from π₁=Z (Prop 5.1)",
+        "Only bosonic/fermionic in d=3 (Thm 6.1, DHR)"
+      ]
+    }
+  }
+}

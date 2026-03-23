@@ -64,7 +64,7 @@ Whitney's theorem (1936) upgrades $C^1$ to the unique compatible $C^\infty$ stru
 
 **Step 1 (Smooth structure exists).** Since the $U(1)$ action is free, $\Sigma$ is a principal $U(1)$-bundle over the orbit space $B = \Sigma/U(1)$, which is a compact topological manifold of dimension $n - 1$ [Bredon, 1972]. By the equivariant smoothing theorem for compact Lie group actions on topological manifolds [Illman, 1983]; [Orlik, 1972], there exists a smooth structure on $\Sigma$ making the $U(1)$ action a smooth Lie group action.
 
-**Step 2 (Uniqueness).** For $n \leq 3$: every compact topological manifold of dimension $\leq 3$ admits a unique smooth structure (dimension 1: elementary; dimension 2: Radó, 1925; dimension 3: Moise, 1952). The smooth $U(1)$ action is then the unique smoothing of the continuous action. For $n \geq 4$: the equivariant smooth structure — the unique smooth structure compatible with the $U(1)$ action — is selected by the equivariance constraint. $\square$
+**Step 2 (Uniqueness).** For $n \leq 3$: every compact topological manifold of dimension $\leq 3$ admits a unique smooth structure (dimension 1: elementary; dimension 2: Radó, 1925; dimension 3: Moise, 1952). The smooth $U(1)$ action is then the unique smoothing of the continuous action. For $n \geq 4$: by the uniqueness part of the equivariant smoothing theorem [Illman, 1983], any two smooth structures making the compact Lie group action smooth are equivariantly diffeomorphic, so the equivariant smooth structure is unique. $\square$
 
 **Remark.** For the minimal observer ($\Sigma = S^1$, $\dim \Sigma = 1$), Theorem 0.0 is trivial: $S^1$ has a unique smooth structure and every continuous $U(1)$ action on $S^1$ is automatically smooth. The theorem's content becomes substantive for higher-dimensional state spaces. The net effect: S1 assumes only finite-dimensional manifold structure and free orbits; smoothness is a theorem, not a postulate.
 
@@ -98,7 +98,7 @@ satisfying:
 - **Smoothness**: The map $(t, \sigma) \mapsto \phi_t(\sigma)$ is smooth as a map $\mathbb{R} \times \Sigma \to \Sigma$
 - **Invariant preservation**: $I(\phi_t(\sigma)) = I(\sigma)$ for all $t \in \mathbb{R}$, $\sigma \in \Sigma$ (follows from $\phi_t \in G_\mathcal{O}$)
 
-**Axiom 3 (Precise statement).** There exists $T > 0$ such that $\phi_T = \text{id}_\Sigma$.
+**Axiom 3 (Precise statement).** The homomorphism $\phi$ is non-trivial ($\phi \neq \text{const}$), and there exists $T > 0$ such that $\phi_T = \text{id}_\Sigma$.
 
 **Proposition 1.2 (Minimal period).** *Under Axiom 3, the minimal period $T_\mathcal{O} = \inf\{T > 0 : \phi_T = \text{id}_\Sigma\}$ exists, is positive, and satisfies $\phi_{T_\mathcal{O}} = \text{id}_\Sigma$.*
 
@@ -106,7 +106,7 @@ satisfying:
 
 **$P$ is closed**: Let $T_n \in P$ with $T_n \to T^*$. For any $\sigma \in \Sigma$, $\phi_{T_n}(\sigma) = \sigma$ for all $n$. By smoothness of $\phi$, $\phi_{T^*}(\sigma) = \lim_{n} \phi_{T_n}(\sigma) = \sigma$. Hence $T^* \in P \cup \{0\}$.
 
-**$P$ is discrete**: Suppose $P$ is not discrete. Then there exists a sequence $T_n \in P$ with $T_n \to 0^+$. For any $\sigma \in \Sigma$, $\phi_{T_n}(\sigma) = \sigma$, so the orbit $t \mapsto \phi_t(\sigma)$ returns to $\sigma$ at arbitrarily small positive times. By smoothness, the generating vector field $X(\sigma) = \frac{d}{dt}\big|_0 \phi_t(\sigma)$ must vanish at every $\sigma$ (since the orbit is at $\sigma$ at times converging to 0). Hence $\phi_t = \text{id}_\Sigma$ for all $t$ — the dynamics is trivial. But triviality contradicts non-degeneracy condition (N3) of Axiom 2 (the invariant $I$ must be non-trivially conserved, requiring $\dim G_\mathcal{O} \geq 1$, which requires a non-trivial flow).
+**$P$ is discrete**: Suppose $P$ is not discrete. Then there exists a sequence $T_n \in P$ with $T_n \to 0^+$. For any $\sigma \in \Sigma$, $\phi_{T_n}(\sigma) = \sigma$, so the orbit $t \mapsto \phi_t(\sigma)$ returns to $\sigma$ at arbitrarily small positive times. By smoothness, the generating vector field $X(\sigma) = \frac{d}{dt}\big|_0 \phi_t(\sigma)$ must vanish at every $\sigma$ (since the orbit is at $\sigma$ at times converging to 0). Hence $\phi_t = \text{id}_\Sigma$ for all $t$ — the dynamics is trivial. But triviality contradicts the non-triviality requirement of Axiom 3 ($\phi \neq \text{const}$).
 
 Therefore $P$ is closed and discrete in $(0, \infty)$, so $T_\mathcal{O} = \inf P$ exists in $P$ and $T_\mathcal{O} > 0$. $\square$
 
@@ -144,7 +144,7 @@ $$\rho: U(1) \to \text{Diff}(\Sigma), \quad e^{i\theta} \mapsto \phi_{\theta T_\
 
 (b) Given periodic Hamiltonian flow with period $T$, define $\rho(e^{i\theta}) = \phi_{\theta T/2\pi}$. This is a $U(1)$ action by the argument of Corollary 2.3, and periodicity is Axiom 3. $\square$
 
-**Remark (Assumptions).** Theorem 3.1 requires: (i) a symplectic structure on $\Sigma$, (ii) the flow preserves it, and (iii) the moment map exists (automatic if $H^1(\Sigma) = 0$). These are additional structural assumptions beyond (S1–S2), physically motivated by the fact that state spaces of classical mechanical systems and projective Hilbert spaces carry natural symplectic structures.
+**Remark (Assumptions).** Theorem 3.1 requires: (i) a symplectic structure on $\Sigma$, (ii) the flow preserves it, and (iii) the moment map exists (automatic if $H^1(\Sigma) = 0$). These are additional structural assumptions beyond S1 (and its consequence, Theorem 0.1), physically motivated by the fact that state spaces of classical mechanical systems and projective Hilbert spaces carry natural symplectic structures.
 
 **Proposition 3.2 (Relationship between Axioms 2 and 3).** *Axiom 3 is not logically independent of Axiom 2 — it specifies the dynamical realization. Precisely:*
 
@@ -213,7 +213,7 @@ where $\dot{\phi}_t = \frac{d}{dt}\phi_t(\sigma_0)$ is the velocity along the lo
 
 **Proposition 6.2 (Positive minimum).** *The coherence cost satisfies $S_\mathcal{O} > 0$ for every observer. There exists a positive lower bound $S_{\min} > 0$.*
 
-*Proof.* Since $\gamma_\mathcal{O}$ is a smooth embedding $S^1 \hookrightarrow \Sigma$ (Proposition 2.2), its arc length $L = \int_0^{T_\mathcal{O}} |\dot{\phi}_t| \, dt > 0$ (the loop is not a point, by minimality of $T_\mathcal{O}$ and the non-degeneracy argument in Proposition 1.2). The coherence measure $\mathcal{C}$ is positive on non-empty subsets of $\mathcal{H}$ (axiom C2 from [Coherence Conservation](/derivations/axioms/coherence-conservation)), and $\mathcal{C}|_\Sigma > 0$ pointwise. Therefore:
+*Proof.* Since $\gamma_\mathcal{O}$ is a smooth embedding $S^1 \hookrightarrow \Sigma$ (Proposition 2.2), its arc length $L = \int_0^{T_\mathcal{O}} |\dot{\phi}_t| \, dt > 0$ (the loop is not a point, by minimality of $T_\mathcal{O}$ and the non-degeneracy argument in Proposition 1.2). The coherence measure satisfies $\mathcal{C}(\Sigma) > 0$ by axiom C2 (normalization: $\mathcal{C}(\mathcal{H}) = C_0 > 0$) combined with the fact that $\Sigma \subseteq \mathcal{H}$ is a non-empty observer state space carrying non-zero coherence (an observer with $\mathcal{C}(\Sigma) = 0$ would have zero coherence cost and could not sustain a loop — contradicting the physical content of Axiom 3). Since $\mathcal{C}$ is continuous and $\gamma_\mathcal{O}$ is compact, $\inf_{\sigma \in \gamma_\mathcal{O}} \mathcal{C}(\sigma) > 0$. Therefore:
 
 $$S_\mathcal{O} \geq \inf_{\sigma \in \gamma_\mathcal{O}} \mathcal{C}(\sigma) \cdot L > 0$$
 
@@ -235,7 +235,9 @@ The infimum $S_{\min} = \inf_\mathcal{O} S_\mathcal{O}$ over all observers satis
 
 **Corollary 7.3 (Planck-Einstein relation).** *Defining $E_\mathcal{O} = S_\mathcal{O}/T_\mathcal{O}$ as the energy (action per period), and using $S_{\min} = \hbar$ (cf. [Action and Planck's Constant](/derivations/thermodynamics/action-planck)):*
 
-$$E_\mathcal{O} = \frac{S_\mathcal{O}}{T_\mathcal{O}} = \frac{\hbar}{T_\mathcal{O}} = \hbar \omega_\mathcal{O}$$
+$$E_\mathcal{O} = \frac{S_\mathcal{O}}{T_\mathcal{O}} \geq \frac{S_{\min}}{T_\mathcal{O}} = \hbar \omega_\mathcal{O}$$
+
+*For the minimal observer ($S_\mathcal{O} = S_{\min} = \hbar$), equality holds: $E = \hbar\omega$. For general observers, the quantization $S_\mathcal{O} = n\hbar$ ($n \in \mathbb{Z}_{>0}$) giving $E = n\hbar\omega$ is derived in [Action and Planck's Constant](/derivations/thermodynamics/action-planck).*
 
 *This is the Planck-Einstein relation.*
 
@@ -257,7 +259,9 @@ $$E_\mathcal{O} = \frac{S_\mathcal{O}}{T_\mathcal{O}} = \frac{\hbar}{T_\mathcal{
 - **Prop 2.2**: The orbit $\gamma = S^1$ is a smooth embedding. ✓
 - **Cor 2.3**: $\rho(e^{i\alpha})(\theta) = \theta + \alpha$ is faithful. ✓
 - **Lyapunov stability**: Rotation is an isometry, so $d(\phi_t(\sigma), \gamma) = d(\sigma, \gamma)$ — neutrally stable. ✓
-- **Coherence cost**: $S = c_0 \cdot 2\pi > 0$. ✓ $\square$
+- **Coherence cost**: $S = c_0 \cdot 2\pi > 0$. ✓
+
+*Remark*: The model uses $I \equiv 1$ (constant), which satisfies invariant preservation ($I \circ \phi_t = I$) but has $|I(\Sigma)| = 1$. This model demonstrates the loop closure machinery (cyclic dynamics, U(1) action, stability, coherence cost); full Axiom 2 compliance (including N3: $|I(\Sigma)| > 1$) is demonstrated in the composite models of downstream derivations where $I$ is non-constant. $\square$
 
 ## Consequences
 

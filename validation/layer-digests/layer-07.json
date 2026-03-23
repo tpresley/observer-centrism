@@ -1,0 +1,61 @@
+{
+  "layer": 7,
+  "completedAt": "2026-03-22T01:32:00Z",
+  "derivations": {
+    "interactions/bootstrap": {
+      "verdict": "pass",
+      "status": "rigorous",
+      "corrections": [],
+      "keyResults": [
+        "Relational invariants are observers (Thm 1.1)",
+        "Hierarchy closed under iteration (Prop 2.1)",
+        "Hierarchy necessary for >=2 observers (Thm 3.1)",
+        "Higher levels irreducible (Thm 4.1)",
+        "Bootstrap map R: Obs×Obs → Obs (Prop 5.1)",
+        "Floor (minimal loops) and ceiling (C₀/C_min) bounds",
+        "Observer network is boundaryless (Cor 7.3)",
+        "Fixed-point conjectures 7.1-7.2 (honestly conjectural)"
+      ]
+    },
+    "thermodynamics/entropy": {
+      "verdict": "pass-with-corrections",
+      "status": "rigorous",
+      "corrections": [
+        {"location": "frontmatter dependsOn", "summary": "Added interactions/bootstrap (used in boundedness proof)", "impact": "none"}
+      ],
+      "keyResults": [
+        "Entropy = inaccessible coherence S_A = C - C_A (Def 3.1)",
+        "Every physical observer is bounded (Prop 2.4)",
+        "Second Law: dS_A/dτ >= 0 (Thm 4.1)",
+        "Global entropy identically zero (Thm 6.1)",
+        "Boltzmann formula recovered (Prop 8.1)"
+      ]
+    },
+    "thermodynamics/action-planck": {
+      "verdict": "pass",
+      "status": "rigorous",
+      "corrections": [],
+      "keyResults": [
+        "Action = coherence cost of transformation (Def 1.3)",
+        "ℏ = minimum cycle cost (Def 3.2, Thm 3.1)",
+        "E = ℏω (Cor 4.2)",
+        "Stationary action from coherence resonance (Thm 5.1)",
+        "Heisenberg uncertainty from U(1) Fourier conjugacy (Thm 6.1)",
+        "S1: smooth coherence measure (C² Hessian metric)"
+      ]
+    },
+    "quantum/born-rule": {
+      "verdict": "pass-with-corrections",
+      "status": "rigorous",
+      "corrections": [
+        {"location": "frontmatter dependsOn", "summary": "Added thermodynamics/action-planck (Def 1.1 uses S[γ]/ℏ)", "impact": "none"}
+      ],
+      "keyResults": [
+        "C(|ψ⟩) = ⟨ψ|ψ⟩ (Thm 0.1, promoted from postulate)",
+        "Born rule P(k) = |ψ_k|² unique (Thm 6.1, via Aczel + Case analysis)",
+        "Hilbert space from U(1) + linearity + conservation (Thm 7.1)",
+        "Gleason confirmation for d>=3 (Prop 8.1)"
+      ]
+    }
+  }
+}

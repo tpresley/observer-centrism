@@ -1,7 +1,7 @@
 ---
 title: "Conservation of Distinguishability"
 status: "rigorous"
-dependsOn: ["axioms/coherence-conservation"]
+dependsOn: ["axioms/coherence-conservation", "thermodynamics/entropy"]
 enablesDerivation: ["thermodynamics-ext/fisher-metric"]
 tags: ["thermo-ext"]
 summary: "Conservation of coherence implies conservation of distinguishability: admissible transformations preserve all coherence-derived distance measures, forcing unitarity, no-cloning, and no-deleting as structural consequences"
@@ -118,7 +118,9 @@ $$\mathcal{C}(\pi^{-1}(S_1') : \pi^{-1}(S_2')) \leq \mathcal{C}(S_1 : S_2)$$
 
 with equality if and only if $\pi$ does not merge any configurations that distinguish $S_1$ from $S_2$. The key point: merging configurations that were previously distinguishable into a single equivalence class destroys the relational coherence that distinguished them.
 
-Combining Parts 1 and 2: $\pi_*\mathcal{C}(S_1' : S_2') = \mathcal{C}(\pi^{-1}(S_1') : \pi^{-1}(S_2')) \leq \mathcal{C}(S_1 : S_2)$. $\square$
+Combining Parts 1 and 2: $\pi_*\mathcal{C}(S_1' : S_2') = \mathcal{C}(\pi^{-1}(S_1') : \pi^{-1}(S_2')) \leq \mathcal{C}(S_1 : S_2)$.
+
+**Remark (Assumption in Part 2).** The inequality in Part 2 uses the physical assumption that enlarging a subsystem (by adding merged configurations) cannot increase relational coherence with a fixed partner. This is implied by monotonicity of mutual information in the quantum realization (where $\mathcal{C} = S$), but does not follow from axioms C1–C5 alone — as noted in [Coherence Conservation](/derivations/axioms/coherence-conservation), monotonicity is not guaranteed by subadditivity. The conclusion holds for all physical realizations of Axiom 1 (quantum entropy, Shannon entropy) and is therefore treated as established, but a purely axiomatic proof would require an additional monotonicity hypothesis. $\square$
 
 **Remark.** On the statistical manifold of observer states, this monotonicity is equivalent to the data processing inequality for the Fisher distance: $d_G(\pi(\sigma_1), \pi(\sigma_2)) \leq d_G(\sigma_1, \sigma_2)$ for any Markov map $\pi$ [Amari & Nagaoka, 2000]. The coherence-framework proof above derives this from axiom C4 alone, without requiring the full information-geometric apparatus.
 
@@ -150,7 +152,7 @@ This addresses the open gap in the [Fisher Information Metric](/derivations/ther
 
 **Remark.** The product construction inherits all axioms (C1)–(C5) from the factor spaces. The additivity condition for uncorrelated subsystems is the defining property of independence: subsystems that have never interacted carry zero relational coherence, so $\mathcal{C}(S_1 : S_2) = 0$, which by Definition 2.1 of [Coherence Conservation](/derivations/axioms/coherence-conservation) is equivalent to additivity.
 
-**Theorem 5.1 (No-cloning).** *There is no admissible transformation that copies an arbitrary coherence state. Formally: let $\Sigma$ be a state space with $|\Sigma| \geq 2$ and $\sigma_0 \in \Sigma$ a fixed reference state. There is no admissible $T: \Sigma \times \Sigma \to \Sigma \times \Sigma$ satisfying $T(\sigma, \sigma_0) = (\sigma, \sigma)$ for all $\sigma \in \Sigma$.*
+**Theorem 5.1 (No-cloning).** *Assume the coherence measure is strictly subadditive on at least one pair of correlated subsystems (i.e., perfect correlation implies positive relational coherence). Then there is no admissible transformation that copies an arbitrary coherence state. Formally: let $\Sigma$ be a state space with $|\Sigma| \geq 2$ and $\sigma_0 \in \Sigma$ a fixed reference state. There is no admissible $T: \Sigma \times \Sigma \to \Sigma \times \Sigma$ satisfying $T(\sigma, \sigma_0) = (\sigma, \sigma)$ for all $\sigma \in \Sigma$.*
 
 *Proof.* Suppose such a $T$ exists and is admissible. Consider the product coherence space $\Sigma \times \Sigma$ (Definition 5.0).
 
@@ -174,7 +176,7 @@ By Corollary 2.2, admissible transformations preserve relational coherence. Ther
 
 ### Step 6: No-Deleting Theorem
 
-**Theorem 6.1 (No-deleting).** *There is no admissible transformation that erases an unknown coherence state against a fixed reference. Formally: there is no admissible $T: \Sigma \times \Sigma \to \Sigma \times \Sigma$ satisfying $T(\sigma, \sigma) = (\sigma, \sigma_0)$ for all $\sigma \in \Sigma$ (where $\sigma_0$ is a fixed state and $|\Sigma| \geq 2$).*
+**Theorem 6.1 (No-deleting).** *Under the same strict subadditivity hypothesis as Theorem 5.1: there is no admissible transformation that erases an unknown coherence state against a fixed reference. Formally: there is no admissible $T: \Sigma \times \Sigma \to \Sigma \times \Sigma$ satisfying $T(\sigma, \sigma) = (\sigma, \sigma_0)$ for all $\sigma \in \Sigma$ (where $\sigma_0$ is a fixed state and $|\Sigma| \geq 2$).*
 
 *Proof.* The argument mirrors Theorem 5.1 with the direction reversed.
 

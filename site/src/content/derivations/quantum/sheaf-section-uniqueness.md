@@ -58,7 +58,7 @@ The observer network carries three distinct presheaves, each capturing a differe
 
 **Definition 2.3 (Outcome sheaf).** $\mathcal{O}: \text{Obs}^{\text{op}} \to \textbf{Set}$ assigns to each observer $O_i$ the actual definite values $\{v_{ij}\}$ of relational invariants $I_{ij}$ for all $j \in U_i$: the "facts" relative to $O_i$.
 
-**Proposition 2.1 (Hierarchy).** *These sheaves are ordered by information content: $\mathcal{C}$ is recoverable from $\mathcal{P}$ (coherence determines probabilities via $\mathcal{C}(|\psi\rangle) = \langle\psi|\psi\rangle$), and $\mathcal{P}$ constrains $\mathcal{O}$ (outcomes must be distributed according to the Born rule). But $\mathcal{O}$ is not recoverable from $\mathcal{P}$: knowing the probabilities does not determine the actual outcomes.*
+**Proposition 2.1 (Hierarchy).** *These sheaves are ordered by information content: $\mathcal{P}$ is determined by $\mathcal{C}$ (coherence determines probabilities via $\mathcal{C}(|\psi\rangle) = \langle\psi|\psi\rangle$), and $\mathcal{P}$ constrains $\mathcal{O}$ (outcomes must be distributed according to the Born rule). But $\mathcal{O}$ is not recoverable from $\mathcal{P}$: knowing the probabilities does not determine the actual outcomes.*
 
 ### Step 3: Temporal Contractibility
 
