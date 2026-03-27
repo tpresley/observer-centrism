@@ -57,13 +57,7 @@ $$\mathcal{C}(S_1 \cup S_2) \leq \mathcal{C}(S_1) + \mathcal{C}(S_2)$$
 
 $$\mathcal{C}(S_1 \cup S_2) + \mathcal{C}(S_1 \cap S_2) \leq \mathcal{C}(S_1) + \mathcal{C}(S_2)$$
 
-**Proposition 1.3 (Monotonicity).** *For all $S_1, S_2 \in \mathcal{A}$ with $S_1 \subseteq S_2$: $\mathcal{C}(S_1) \leq \mathcal{C}(S_2)$.*
-
-*Proof.* Set $A = S_1$ and $B = S_2$ in (C5). Then $A \cup B = S_2$ and $A \cap B = S_1$. So (C5) gives $\mathcal{C}(S_2) + \mathcal{C}(S_1) \leq \mathcal{C}(S_1) + \mathcal{C}(S_2)$, which is an equality. This does not directly give monotonicity.
-
-Instead, write $S_2 = S_1 \cup (S_2 \setminus S_1)$ where $S_1$ and $S_2 \setminus S_1$ are disjoint. By (C4): $\mathcal{C}(S_2) \leq \mathcal{C}(S_1) + \mathcal{C}(S_2 \setminus S_1)$. But we need the reverse inequality. Note that by (C1), $\mathcal{C}(S_2 \setminus S_1) \geq 0$, so $\mathcal{C}(S_1) \leq \mathcal{C}(S_1) + \mathcal{C}(S_2 \setminus S_1)$. However, (C4) gives an upper bound on the union, not a lower bound on the parts.
-
-**Remark:** Monotonicity does not follow from (C1)–(C5) alone. A subadditive set function need not be monotone. If monotonicity is required, it must be added as a separate axiom or derived from additional structure. In this framework, monotonicity follows once the coherence measure is connected to the observer definition (Axiom 2), where $\mathcal{C}(\Sigma) > 0$ for any observer state space implies larger subsystems contain at least as much coherence as their sub-observers. We do *not* assume monotonicity at this stage.
+**Remark 1.3 (Monotonicity).** Monotonicity ($S_1 \subseteq S_2 \Rightarrow \mathcal{C}(S_1) \leq \mathcal{C}(S_2)$) does not follow from (C1)–(C5) alone. Subadditivity (C4) bounds the union from above, not the parts from below, and (C5) applied to nested sets yields only a tautology. A subadditive set function need not be monotone. In this framework, monotonicity follows once the coherence measure is connected to the observer definition (Axiom 2), where $\mathcal{C}(\Sigma) > 0$ for any observer state space implies larger subsystems contain at least as much coherence as their sub-observers. We do *not* assume monotonicity at this stage.
 
 **Proposition 1.4 (C5 implies C4).** *Strong subadditivity (C5) implies subadditivity (C4) for disjoint sets, given (C3).*
 
@@ -123,13 +117,19 @@ In the physical regime where $\mathcal{C}$ specializes to von Neumann entropy, $
 
 **Definition 3.2.** The set of admissible transformations forms a group $\text{Aut}(\mathcal{H}, \mathcal{A})$ under composition. (This is a standard result: identity is admissible, composition of $\sigma$-algebra-preserving bijections is $\sigma$-algebra-preserving, and inverses exist by construction.)
 
-**Axiom 1a (Conservation under transformations).** Every admissible transformation $T \in \text{Aut}(\mathcal{H}, \mathcal{A})$ conserves the coherence of every subsystem:
+**Axiom 1 (Conservation).** Coherence is conserved in two senses simultaneously:
+
+**(i) Under transformations.** Every admissible transformation $T \in \text{Aut}(\mathcal{H}, \mathcal{A})$ conserves the coherence of every subsystem:
 
 $$\mathcal{C}(T(S)) = \mathcal{C}(S) \quad \forall S \in \mathcal{A}$$
 
-**Remark.** This is stronger than conserving only the total coherence $\mathcal{C}(\mathcal{H}) = C_0$. It states that admissible transformations are *isometries* of the coherence measure — they preserve the entire coherence structure, not just its global sum. This is the coherence analogue of unitarity preserving the full density matrix, not just the trace.
+**(ii) Across Cauchy slices.** For every Cauchy slice $\Sigma$ of the dependency graph $\mathcal{G}$ (defined below):
 
-### Step 4: Graph-Theoretic Conservation (Time-Free Formulation)
+$$\mathcal{C}(\Sigma) \equiv \sum_{v \in \Sigma} \mathcal{C}(v) = C_0$$
+
+**Remark.** Part (i) states that admissible transformations are *isometries* of the coherence measure — they preserve the entire coherence structure, not just its global sum. This is the coherence analogue of unitarity preserving the full density matrix, not just the trace. Part (ii) extends conservation to Cauchy slices that are not related by any global automorphism, analogous to energy conservation holding across all spacelike slices rather than just those related by Poincaré transformations. Neither part implies the other in general: (i) guarantees slice conservation only between automorphism-related slices, while (ii) asserts it universally.
+
+### Step 4: The Dependency Graph
 
 **Definition 4.1 (Dependency graph).** The **dependency graph** $\mathcal{G} = (V, E)$ is a finite or countable directed acyclic graph (DAG) that is postulated as part of the framework's structure. Vertices $v \in V$ represent interaction events; directed edges $(v_1, v_2) \in E$ encode causal dependence ($v_1$ is an input to $v_2$).
 
@@ -145,27 +145,11 @@ $$\mathcal{C}(T(S)) = \mathcal{C}(S) \quad \forall S \in \mathcal{A}$$
 
 **Definition 4.4 (Vertex coherence).** Each vertex $v \in V$ carries a coherence value $\mathcal{C}(v) \geq 0$, defined as the coherence of the subsystem represented by $v$.
 
-**Axiom 1b (Graph-theoretic conservation).** For every Cauchy slice $\Sigma$ of $\mathcal{G}$:
-
-$$\mathcal{C}(\Sigma) \equiv \sum_{v \in \Sigma} \mathcal{C}(v) = C_0$$
-
-**Theorem 4.5 (Consistency of formulations).** *Given $(\mathcal{H}, \mathcal{A}, \mathcal{C}, \mathcal{G})$ with the vertex-to-subsystem identification $v \mapsto S_v \in \mathcal{A}$, Axioms 1a and 1b are consistent: Axiom 1a (isometric admissible transformations) is sufficient to ensure Axiom 1b (Cauchy slice conservation) when admissible transformations correspond to graph automorphisms.*
-
-*Proof.* Let $\phi: \mathcal{G} \to \mathcal{G}$ be a graph automorphism, and let $T_\phi: \mathcal{H} \to \mathcal{H}$ be the corresponding admissible transformation. Since $\phi$ is a graph automorphism, it maps antichains to antichains and preserves maximality, so it maps Cauchy slices to Cauchy slices: if $\Sigma$ is a Cauchy slice, so is $\phi(\Sigma)$.
-
-By Axiom 1a, $\mathcal{C}(T_\phi(S_v)) = \mathcal{C}(S_v)$ for each vertex $v$. Under the identification $T_\phi(S_v) = S_{\phi(v)}$:
-
-$$\mathcal{C}(\phi(\Sigma)) = \sum_{v \in \phi(\Sigma)} \mathcal{C}(v) = \sum_{v \in \Sigma} \mathcal{C}(\phi(v)) = \sum_{v \in \Sigma} \mathcal{C}(v) = \mathcal{C}(\Sigma)$$
-
-If any one Cauchy slice has total coherence $C_0$, and every other Cauchy slice can be reached via a sequence of local moves (each corresponding to a graph automorphism), then all Cauchy slices have total coherence $C_0$.
-
-For general DAGs, the assumption that all Cauchy slices are connected by automorphisms is restrictive. Axiom 1b therefore adds genuine content beyond Axiom 1a: it asserts conservation even between Cauchy slices that are *not* related by a global automorphism. This is the graph-theoretic analogue of conservation holding across all spacelike slices, not just those related by Poincaré transformations. $\square$
-
 ### Step 5: Consequences
 
 **Proposition 5.1 (Ontological closure).** *No coherence can be created from nothing or destroyed. Formally: there exists no admissible transformation $T$ and subsystem $S \in \mathcal{A}$ with $\mathcal{C}(T(S)) \neq \mathcal{C}(S)$.*
 
-*Proof.* Direct from Axiom 1a: $\mathcal{C}(T(S)) = \mathcal{C}(S)$ for all $S \in \mathcal{A}$ and all admissible $T$. $\square$
+*Proof.* Direct from Axiom 1(i): $\mathcal{C}(T(S)) = \mathcal{C}(S)$ for all $S \in \mathcal{A}$ and all admissible $T$. $\square$
 
 **Proposition 5.2 (Subadditivity forces relational structure).** *If $\mathcal{C}$ were strictly additive (i.e., $\mathcal{C}(S_1 \cup S_2) = \mathcal{C}(S_1) + \mathcal{C}(S_2)$ for all disjoint $S_1, S_2$), then $\mathcal{C}(S_1 : S_2) = 0$ for all disjoint pairs — no relational coherence exists.*
 
@@ -219,8 +203,8 @@ This violates (C5). Hence (C5) is independent of (C1)–(C4).
 
 | Physical quantity | Conservation law | Coherence analogue |
 |---|---|---|
-| Energy | $dE/dt = 0$ (Noether, time symmetry) | $\mathcal{C}$ conserved on Cauchy slices (Axiom 1b) |
-| Quantum information | Unitarity ($\rho \to U\rho U^\dagger$) | $\mathcal{C}(T(S)) = \mathcal{C}(S)$ (Axiom 1a) |
+| Energy | $dE/dt = 0$ (Noether, time symmetry) | $\mathcal{C}$ conserved on Cauchy slices (Axiom 1(ii)) |
+| Quantum information | Unitarity ($\rho \to U\rho U^\dagger$) | $\mathcal{C}(T(S)) = \mathcal{C}(S)$ (Axiom 1(i)) |
 | Phase space volume | Liouville's theorem | Admissible transformations preserve $\mathcal{C}$ |
 | Von Neumann entropy properties | Strong subadditivity | (C5) |
 
@@ -236,7 +220,7 @@ This violates (C5). Hence (C5) is independent of (C1)–(C4).
 - The dependency graph $\mathcal{G}$ is a structural postulate (Definition 4.1, Remark). This is not a gap — it is an acknowledged foundational element alongside the coherence space.
 - The vertex-to-subsystem identification $v \mapsto S_v$ connecting $\mathcal{G}$ to $(\mathcal{H}, \mathcal{A}, \mathcal{C})$ is postulated. Its precise construction requires the interaction types (developed in [Three Interaction Types](/derivations/interactions/three-types)).
 
-**Assessment:** The axiom is rigorously formalized with complete definitions, proofs, and explicit consistency models. All assumptions are stated. The main structural postulate (the dependency graph) is acknowledged as a co-axiom. The relationship between the two formulations (Axiom 1a and 1b) is made precise in Theorem 4.5, which clearly identifies where 1b adds content beyond 1a.
+**Assessment:** The axiom is rigorously formalized with complete definitions, proofs, and explicit consistency models. All assumptions are stated. The main structural postulate (the dependency graph) is acknowledged as a co-axiom. Conservation is stated as a single axiom with two parts — transformation isometry (i) and Cauchy slice invariance (ii) — with their logical independence noted in the remark following the axiom statement.
 
 ## Open Gaps
 

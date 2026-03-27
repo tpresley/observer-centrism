@@ -44,7 +44,7 @@ The definition also requires non-triviality: the symmetry group cannot be trivia
 **Definition 1.2 (Admissible transformation group).** Let $\text{Aut}(\mathcal{H})$ denote the group of bijections $T: \mathcal{H} \to \mathcal{H}$ that are:
 1. **Homeomorphisms**: $T$ and $T^{-1}$ are continuous with respect to $\tau$
 2. **$\sigma$-algebra preserving**: $T(S) \in \mathcal{A}$ for all $S \in \mathcal{A}$
-3. **Coherence-preserving**: $\mathcal{C}(T(S)) = \mathcal{C}(S)$ for all $S \in \mathcal{A}$ (as required by Axiom 1a)
+3. **Coherence-preserving**: $\mathcal{C}(T(S)) = \mathcal{C}(S)$ for all $S \in \mathcal{A}$ (as required by Axiom 1(i))
 
 $\text{Aut}(\mathcal{H})$ is a group under composition. (Identity is a homeomorphism preserving $\sigma$-algebra and $\mathcal{C}$; composition and inversion inherit all three properties.)
 
@@ -86,7 +86,7 @@ where $G_\mathcal{O}$ (the **self-transformations**) preserve $I$, and $G_\mathc
 
 **Remark.** $G_\mathcal{O}^c$ is not a subgroup (it does not contain the identity). It is the complement of $G_\mathcal{O}$ in $\text{Aut}(\mathcal{H})|_\Sigma$.
 
-**Remark (On the finite-dimensionality of $V$).** We require $V$ to be finite-dimensional. This is a constraint that excludes infinite-dimensional invariant spaces (which would correspond to observers with infinitely many independent conserved charges). The dimension $\dim V$ is bounded by the dimension of the Lie algebra of $G_\mathcal{O}$ via Noether's theorem (see [Loop Closure](/derivations/axioms/loop-closure), Theorem 3.1): the number of independent conserved charges equals $\dim \mathfrak{g}_\mathcal{O}$ (when $G_\mathcal{O}$ is a Lie group).
+**Remark (On the finite-dimensionality of $V$).** We require $V$ to be finite-dimensional. This is a constraint that excludes infinite-dimensional invariant spaces (which would correspond to observers with infinitely many independent conserved charges). The dimension $\dim V$ is bounded by the dimension of the Lie algebra of $G_\mathcal{O}$ via Noether's theorem (see [Loop Closure](/derivations/axioms/loop-closure), Theorem 5.1): the number of independent conserved charges equals $\dim \mathfrak{g}_\mathcal{O}$ (when $G_\mathcal{O}$ is a Lie group).
 
 ### Step 3: Non-Triviality Conditions
 
@@ -102,15 +102,7 @@ where $G_\mathcal{O}$ (the **self-transformations**) preserve $I$, and $G_\mathc
 
 *Proof.* (N1) gives $G_\mathcal{O} \supsetneq \{e\}$. (N2) gives $G_\mathcal{O}^c \neq \emptyset$, so $G_\mathcal{O} \neq \text{Aut}(\mathcal{H})|_\Sigma$, i.e., $G_\mathcal{O} \subsetneq \text{Aut}(\mathcal{H})|_\Sigma$. Conversely, $\{e\} \subsetneq G_\mathcal{O}$ gives (N1), and $G_\mathcal{O} \subsetneq \text{Aut}(\mathcal{H})|_\Sigma$ gives (N2). $\square$
 
-**Proposition 3.3.** *(N3) is independent of (N1) and (N2). Specifically: there exist state spaces $\Sigma$ with non-trivial $G_\mathcal{O}$ and non-empty $G_\mathcal{O}^c$ but with $I$ constant.*
-
-*Proof.* Let $\Sigma = S^1$ (the circle), and let the full restricted automorphism group be the dihedral group $\text{Aut}(\mathcal{H})|_\Sigma = D_n$ (rotations by multiples of $2\pi/n$ and $n$ reflections) for some $n \geq 3$. Define $G_\mathcal{O} = \mathbb{Z}_n$ (the rotation subgroup). Then (N1) holds ($G_\mathcal{O} \neq \{e\}$) and (N2) holds ($G_\mathcal{O}^c$ contains the reflections). Now define $I$ as the constant function $I(\theta) = c$ for all $\theta$. Then $I$ is invariant under all of $D_n$ (hence under $\mathbb{Z}_n$), and $G_\mathcal{O} = \{g \in D_n : I \circ g = I\} = D_n$. But we defined $G_\mathcal{O} = \mathbb{Z}_n \subsetneq D_n$, which contradicts the definition of $G_\mathcal{O}$ as the full $I$-stabilizer.
-
-To resolve this: use a non-constant $I$ that is $\mathbb{Z}_n$-invariant but not $D_n$-invariant. For instance, define $I(\theta) = \sin(n\theta)$; this is invariant under rotations by $2\pi/n$ but changes sign under reflections. Then $G_\mathcal{O} = \mathbb{Z}_n$ (proper subgroup, satisfying N1 and N2), and $|I(\Sigma)| > 1$ (N3 is satisfied, not violated).
-
-The correct counterexample for independence of (N3) from (N1)–(N2) requires a different construction. Let $\Sigma = S^1 \times S^1$ (torus), $\text{Aut}(\mathcal{H})|_\Sigma = U(1) \times D_n$ (rotations on first factor, dihedral on second), and $G_\mathcal{O} = U(1) \times \mathbb{Z}_n$ (rotations on both). Define $I(\theta_1, \theta_2) = c$ (constant). Then $G_\mathcal{O}$ as defined is a proper non-trivial subgroup (N1 and N2 hold), and $I$ is constant (N3 violated). The key is that $G_\mathcal{O}$ is defined *independently* of $I$ in this setup — it is given as a structural constraint — and we then check that a constant $I$ is compatible with it while violating N3.
-
-**Remark.** The independence of (N3) is straightforward in the abstract: one can always define $I \equiv c$ while separately specifying any proper non-trivial subgroup $G \subsetneq \text{Aut}(\mathcal{H})|_\Sigma$ as the symmetry group, provided $G$ is not uniquely determined by the $I$-stabilizer condition. The tension arises because (O2) *defines* $G_\mathcal{O}$ as the $I$-stabilizer, so $I \equiv c$ forces $G_\mathcal{O} = \text{Aut}(\mathcal{H})|_\Sigma$, violating (N2). Independence of (N3) is therefore better understood at the level of the abstract triple: one can have a group-state space pair satisfying (N1)–(N2) for which no non-constant invariant exists. $\square$
+**Remark 3.3 (Role of N3).** Since (O2) defines $G_\mathcal{O}$ as the $I$-stabilizer, a constant invariant $I \equiv c$ forces $G_\mathcal{O} = \text{Aut}(\mathcal{H})|_\Sigma$, automatically violating (N2). So (N3) is not independent of (N1)–(N2) at the level of a single observer triple: any triple satisfying (N1)–(N2) already has a non-constant $I$. The role of (N3) is therefore not logical independence but *emphasis*: it makes explicit that the invariant must carry genuine information, excluding the degenerate case where the symmetry group happens to be proper but the invariant is uninformative (e.g., constant on connected components of orbits). In short, (N3) is a clarity condition rather than an independent axiom.
 
 **Proposition 3.4 (Simple group obstruction).** *If $\text{Aut}(\mathcal{H})|_\Sigma$ is a non-abelian simple group (no proper non-trivial normal subgroups) and the action of $\text{Aut}(\mathcal{H})|_\Sigma$ on $I(\Sigma)$ is faithful, then no non-trivial observer exists on $\Sigma$.*
 
@@ -122,31 +114,19 @@ The remaining case is $G_\mathcal{O} = \text{Aut}(\mathcal{H})|_\Sigma$ (the ful
 
 ### Step 4: The Observer Boundary
 
-**Definition 4.1 (Observer boundary).** The **boundary** $\partial\mathcal{O}$ of observer $\mathcal{O}$ is:
+**Definition 4.1 (Observer boundary).** The **boundary** $\partial\mathcal{O}$ of observer $\mathcal{O}$ is defined with respect to the full transformation group $\text{Aut}(\mathcal{H})$ (not only the $\Sigma$-preserving subgroup):
 
-$$\partial\mathcal{O} = \{\sigma \in \Sigma : \exists T \in G_\mathcal{O}^c \text{ such that } T(\sigma) \notin \Sigma\}$$
+$$\partial\mathcal{O} = \{\sigma \in \Sigma : \exists T \in \text{Aut}(\mathcal{H}) \text{ such that } T(\sigma) \notin \Sigma \text{ or } I(T(\sigma)) \neq I(\sigma)\}$$
 
-This is the set of states from which a non-self transformation can eject the system from $\Sigma$ — the **locus of vulnerability**.
+This is the **locus of vulnerability**: the set of states from which some transformation in $\mathcal{H}$ can either eject the system from $\Sigma$ or disrupt its invariant.
 
-**Definition 4.2 (Observer interior).** The **interior** $\Sigma^\circ = \Sigma \setminus \partial\mathcal{O}$ consists of states from which no non-self transformation ejects the system:
+**Definition 4.2 (Observer interior).** The **interior** $\Sigma^\circ = \Sigma \setminus \partial\mathcal{O}$ consists of states that are preserved by all transformations:
 
-$$\Sigma^\circ = \{\sigma \in \Sigma : \forall T \in G_\mathcal{O}^c, \; T(\sigma) \in \Sigma\}$$
+$$\Sigma^\circ = \{\sigma \in \Sigma : \forall T \in \text{Aut}(\mathcal{H}), \; T(\sigma) \in \Sigma \text{ and } I(T(\sigma)) = I(\sigma)\}$$
 
 **Proposition 4.3.** *For any non-trivial observer, $\partial\mathcal{O} \neq \emptyset$.*
 
-*Proof.* Suppose for contradiction that $\partial\mathcal{O} = \emptyset$, meaning every $\sigma \in \Sigma$ satisfies $T(\sigma) \in \Sigma$ for all $T \in \text{Aut}(\mathcal{H})|_\Sigma$ (including all $T \in G_\mathcal{O}^c$). This means $\text{Aut}(\mathcal{H})|_\Sigma$ maps $\Sigma$ to itself. But this is already assumed in Definition 1.3 (we restricted to $\Sigma$-preserving transformations).
-
-The issue is more subtle: we need to distinguish between transformations in $\text{Aut}(\mathcal{H})|_\Sigma$ (which by definition preserve $\Sigma$) and transformations in the *unrestricted* group $\text{Aut}(\mathcal{H})$ (which may not preserve $\Sigma$).
-
-**Corrected definition.** Redefine $\partial\mathcal{O}$ with respect to the full transformation group:
-
-$$\partial\mathcal{O} = \{\sigma \in \Sigma : \exists T \in \text{Aut}(\mathcal{H}) \text{ with } I(T(\sigma)) \neq I(\sigma) \text{ and } T(\sigma) \notin \Sigma\}$$
-
-With this definition: by (N2), there exist transformations in $\text{Aut}(\mathcal{H})$ that do not preserve $I$ on $\Sigma$. If any such $T$ has $T(\sigma) \notin \Sigma$, then $\sigma \in \partial\mathcal{O}$. If all such $T$ have $T(\Sigma) \subseteq \Sigma$, then $\Sigma$ is invariant under all of $\text{Aut}(\mathcal{H})$, and the boundary is defined instead by the $I$-change locus within $\Sigma$:
-
-$$\partial\mathcal{O} = \{\sigma \in \Sigma : \exists T \in \text{Aut}(\mathcal{H}) \text{ with } T(\Sigma) \subseteq \Sigma \text{ and } I(T(\sigma)) \neq I(\sigma)\}$$
-
-In this case, $\partial\mathcal{O}$ consists of states reachable by non-self transformations, and is non-empty by (N2). $\square$
+*Proof.* By (N2), there exists $T \in \text{Aut}(\mathcal{H})|_\Sigma$ with $I \circ T \neq I$, so $I(T(\sigma)) \neq I(\sigma)$ for some $\sigma \in \Sigma$. Since $T \in \text{Aut}(\mathcal{H})$ and the invariant is disrupted, $\sigma \in \partial\mathcal{O}$. $\square$
 
 **Proposition 4.4 (Boundary decomposition).** *$\Sigma = \Sigma^\circ \sqcup \partial\mathcal{O}$ is a disjoint partition of the state space into interior and boundary.*
 
@@ -175,9 +155,7 @@ $$\dim V = \dim \mathfrak{g}_\mathcal{O}$$
 
 *when $G_\mathcal{O}$ is a compact Lie group. (For example, $SU(2)$ has $\dim \mathfrak{su}(2) = 3$, corresponding to three independent conserved charges.)*
 
-**Corollary 5.3 (Coherence equals charge).** *The coherence allocated to $\mathcal{O}$ equals the norm of the conserved charge: $\mathcal{C}(\Sigma) = \|I\|$ (up to a normalization constant depending on the identification of $\mathcal{C}$ with physical energy).*
-
-*Justification.* This identification is not proven from the axioms alone — it requires the later identification of $\mathcal{C}$ with energy (via $E = \hbar\omega$, developed in [Action and Planck's Constant](/derivations/thermodynamics/action-planck)). At this stage, Corollary 5.3 is a structural identification whose justification is deferred.
+**Identification 5.3 (Coherence equals charge).** *The coherence allocated to $\mathcal{O}$ equals the norm of the conserved charge: $\mathcal{C}(\Sigma) = \|I\|$ (up to a normalization constant depending on the identification of $\mathcal{C}$ with physical energy).* This is not derived from the axioms alone — it requires the later identification of $\mathcal{C}$ with energy (via $E = \hbar\omega$, developed in [Action and Planck's Constant](/derivations/thermodynamics/action-planck)). It is stated here as a forward reference to motivate the connection between the abstract coherence measure and the observer's conserved charge.
 
 ### Step 6: Universality
 
@@ -230,7 +208,7 @@ $$\dim V = \dim \mathfrak{g}_\mathcal{O}$$
 
 **Fully rigorous:**
 - Definitions 1.1–1.3, 2.1, 3.1, 4.1–4.2, 7.1, 7.3: Precise mathematical definitions with all conditions and types stated
-- Propositions 1.4, 2.2, 3.2–3.4, 4.3–4.4, 7.2, 7.4: Complete proofs from stated definitions
+- Propositions 1.4, 2.2, 3.2, 3.4, 4.3–4.4, 7.2, 7.4: Complete proofs from stated definitions
 - Theorem 5.1: Both directions proven, with assumptions (smooth manifold, Lie group, Lagrangian dynamics) made fully explicit
 
 **Structural assumptions (stated, not derived):**
@@ -239,10 +217,10 @@ $$\dim V = \dim \mathfrak{g}_\mathcal{O}$$
 - Smooth structure on $\Sigma$ and Lie group structure on $G_\mathcal{O}$ (Theorem 5.1): Required only for the Noether identification, not for the basic observer definition
 
 **Deferred identifications:**
-- Corollary 5.3 ($\mathcal{C}(\Sigma) = \|I\|$): Justified in [Action and Planck's Constant](/derivations/thermodynamics/action-planck)
+- Identification 5.3 ($\mathcal{C}(\Sigma) = \|I\|$): Forward reference, justified in [Action and Planck's Constant](/derivations/thermodynamics/action-planck)
 - Universality (Proposition 6.1): Physical claim, not formally provable
 
-**Assessment:** The axiom is rigorously formalized. Every definition is precise, every proof is complete, and every additional assumption (topology, smooth structure, Lie group) is explicitly stated at the point where it is introduced. The boundary definition has been corrected and clarified. The observer category $\mathbf{Obs}$ is fully constructed with verified category axioms.
+**Assessment:** The axiom is rigorously formalized. Every definition is precise, every proof is complete, and every additional assumption (topology, smooth structure, Lie group) is explicitly stated at the point where it is introduced. The observer category $\mathbf{Obs}$ is fully constructed with verified category axioms.
 
 ## Open Gaps
 

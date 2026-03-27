@@ -43,7 +43,7 @@ The speed of light is one of the most precisely measured constants in physics an
 
 ### Step 1: Dual Projections of the Observer Loop
 
-**Definition 1.1.** Let $\mathcal{O} = (\Sigma, I, \mathcal{B})$ be an observer satisfying loop closure ([Loop Closure](/derivations/axioms/loop-closure), Definition 2.1). The observer loop $\gamma: S^1 \to \Sigma$ lives in the coherence geometry $(\mathcal{H}, g)$. The interaction graph $\mathcal{G}$ ([Time as Phase Ordering](/derivations/thermodynamics/time)) provides a partial order $\prec$ (the temporal direction).
+**Definition 1.1.** Let $\mathcal{O} = (\Sigma, I, \mathcal{B})$ be an observer satisfying loop closure ([Loop Closure](/derivations/axioms/loop-closure), Definition 4.1). The observer loop $\gamma: S^1 \to \Sigma$ lives in the coherence geometry $(\mathcal{H}, g)$. The interaction graph $\mathcal{G}$ ([Time as Phase Ordering](/derivations/thermodynamics/time)) provides a partial order $\prec$ (the temporal direction).
 
 **Definition 1.2.** The **temporal projection** $\gamma_T$ of the observer loop is its image under the ordering map $\prec$ — the advancement through one complete phase cycle. This costs coherence $\hbar$ ([Action and Planck's Constant](/derivations/thermodynamics/action-planck), Definition 3.2) and takes duration $T$ in the interaction graph ordering.
 
@@ -67,7 +67,7 @@ Consider two observers $\mathcal{O}_1, \mathcal{O}_2$ in the same connected comp
 
 Suppose $c_1 \neq c_2$. Then one unit of temporal phase for $\mathcal{O}_1$ corresponds to spatial extent $c_1 \delta t$, while for $\mathcal{O}_2$ it corresponds to $c_2 \delta t$. Phase transfer $\delta\theta_1 = -\delta\theta_2$ would require a spatial conversion factor $c_1/c_2 \neq 1$, meaning the same phase unit carries different spatial content for different observers.
 
-But phase is the $U(1)$ variable conjugate to the Noether charge ([Loop Closure](/derivations/axioms/loop-closure), Theorem 3.1). The Noether charge is the coherence content $\mathcal{C}(\Sigma)$ ([Minimal Observer Structure](/derivations/minimal-observer/structure), Proposition 4.2), defined by the coherence geometry $(\mathcal{H}, g)$ (Structural Postulate S1). The metric $g$ assigns a unique spatial length to each displacement at each point. If one unit of phase corresponds to spatial extent $c_1/\omega_1$ for $\mathcal{O}_1$ and $c_2/\omega_2$ for $\mathcal{O}_2$ at the same point in $\mathcal{H}$, with $c_1 \neq c_2$, then $g$ is multivalued — contradicting S1 (non-degenerate quadratic form).
+But phase is the $U(1)$ variable conjugate to the Noether charge ([Loop Closure](/derivations/axioms/loop-closure), Theorem 5.1). The Noether charge is the coherence content $\mathcal{C}(\Sigma)$ ([Minimal Observer Structure](/derivations/minimal-observer/structure), Proposition 4.2), defined by the coherence geometry $(\mathcal{H}, g)$ (Structural Postulate S1). The metric $g$ assigns a unique spatial length to each displacement at each point. If one unit of phase corresponds to spatial extent $c_1/\omega_1$ for $\mathcal{O}_1$ and $c_2/\omega_2$ for $\mathcal{O}_2$ at the same point in $\mathcal{H}$, with $c_1 \neq c_2$, then $g$ is multivalued — contradicting S1 (non-degenerate quadratic form).
 
 Therefore $c_1 = c_2$ for any pair of observers that can interact. Since all physically relevant observers lie in the same connected component of $\mathcal{G}$, $c$ is universal: $c_\mathcal{O} = c$ for all $\mathcal{O}$, and $c$ is a property of $(\mathcal{H}, g)$ alone. $\square$
 
@@ -148,7 +148,7 @@ $$c = \frac{\text{coherence distance per cycle}}{\text{coherence time per cycle}
 
 ### Consistency Model
 
-**Theorem 7.1.** *The $S^1$ minimal observer model of [Loop Closure](/derivations/axioms/loop-closure) (Theorem 8.1) extends to a $(1+1)$-dimensional Minkowski spacetime model satisfying all results of this derivation.*
+**Theorem 7.1.** *The $S^1$ minimal observer model of [Loop Closure](/derivations/axioms/loop-closure) (Theorem 9.1) extends to a $(1+1)$-dimensional Minkowski spacetime model satisfying all results of this derivation.*
 
 *Proof.* Let $\mathcal{O} = S^1$ with period $T_0$ and coherence cost $\hbar$ per cycle. Embed in $\mathbb{R}^{1,1}$ with metric $ds^2 = c^2 dt^2 - dx^2$ (S1).
 

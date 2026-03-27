@@ -94,7 +94,7 @@ For $d \geq 5$: The $h$-cobordism theorem [Smale, 1961] implies that $\mathbb{R}
 
 **Proposition 4.2.** *Exotic smooth structures on $\mathbb{R}^4$ are incompatible with uniqueness of the observer loop closure condition.*
 
-*Proof.* The observer loop closure condition ([Loop Closure](/derivations/axioms/loop-closure), Definition 2.1) requires the loop $\gamma: S^1 \to \Sigma$ to be a smooth embedding. "Smooth" is defined relative to the smooth structure on the ambient space $\mathbb{R}^d$.
+*Proof.* The observer loop closure condition ([Loop Closure](/derivations/axioms/loop-closure), Definition 4.1) requires the loop $\gamma: S^1 \to \Sigma$ to be a smooth embedding. "Smooth" is defined relative to the smooth structure on the ambient space $\mathbb{R}^d$.
 
 In $d = 4$: by Proposition 4.1, $\mathbb{R}^4$ admits uncountably many smooth structures $\{\mathcal{S}_\alpha\}_{\alpha \in A}$ with $|A| = 2^{\aleph_0}$. For two distinct smooth structures $\mathcal{S}_\alpha \neq \mathcal{S}_\beta$:
 

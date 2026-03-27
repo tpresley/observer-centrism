@@ -69,11 +69,11 @@ To second order, this is $\frac{1}{2} G_{ij} \, d\sigma^i d\sigma^j$ where $G_{i
 
 $$D(T(S_1), T(S_2)) = D(S_1, S_2) \quad \forall S_1, S_2 \in \mathcal{A}$$
 
-*Proof.* By [Coherence Conservation](/derivations/axioms/coherence-conservation), Axiom 1a: $\mathcal{C}(T(S)) = \mathcal{C}(S)$ for all $S \in \mathcal{A}$ and all admissible $T$. Since $D$ is a function of coherence values only (Definition 1.1), and $T$ preserves all coherence values, $D$ is preserved. Explicitly:
+*Proof.* By [Coherence Conservation](/derivations/axioms/coherence-conservation), Axiom 1(i): $\mathcal{C}(T(S)) = \mathcal{C}(S)$ for all $S \in \mathcal{A}$ and all admissible $T$. Since $D$ is a function of coherence values only (Definition 1.1), and $T$ preserves all coherence values, $D$ is preserved. Explicitly:
 
 $$D(T(S_1), T(S_2)) = F(\{\mathcal{C}(T(A))\}) = F(\{\mathcal{C}(A)\}) = D(S_1, S_2)$$
 
-where the middle equality uses Axiom 1a on each argument. $\square$
+where the middle equality uses Axiom 1(i) on each argument. $\square$
 
 **Corollary 2.2 (Relational coherence is conserved).** *For any admissible $T$ and any disjoint $S_1, S_2$:*
 
@@ -212,7 +212,7 @@ since $\mathcal{C}(S) > 0$ (axiom C2) and $dS_A/d\tau \geq 0$ (second law). Equa
 
 | Framework concept | Standard physics | Information theory |
 |---|---|---|
-| Axiom 1a (coherence isometry) | Unitarity | Reversible channel |
+| Axiom 1(i) (coherence isometry) | Unitarity | Reversible channel |
 | Theorem 2.1 (conservation of $D$) | Wigner's theorem | Isometry of metric |
 | Proposition 3.2 (monotonicity) | Data processing inequality | Markov monotonicity |
 | Proposition 4.1 (Čencov) | Fisher metric uniqueness | Cramér-Rao bound |
@@ -240,7 +240,7 @@ since $\mathcal{C}(S) > 0$ (axiom C2) and $dS_A/d\tau \geq 0$ (second law). Equa
 
 **Fully rigorous:**
 - Definition 1.1: Distinguishability functional (clean mathematical definition)
-- Theorem 2.1: Conservation of distinguishability (one-line proof from Axiom 1a)
+- Theorem 2.1: Conservation of distinguishability (one-line proof from Axiom 1(i))
 - Corollary 2.2: Conservation of relational coherence (direct computation)
 - Corollary 2.3: Isometry of coherence geometry (immediate from Theorem 2.1)
 - Proposition 3.2: Monotonicity under coarse-graining — complete proof from subadditivity (C4) and the pushforward construction, with the data processing inequality recovered as a consequence (not a prerequisite)
@@ -255,7 +255,7 @@ since $\mathcal{C}(S) > 0$ (axiom C2) and $dS_A/d\tau \geq 0$ (second law). Equa
 **References standard results (well-established mathematics applied to the framework):**
 - Proposition 4.1: Čencov uniqueness. The chain (Axiom 1 → Theorem 2.1 → Čencov monotonicity → Fisher metric uniqueness) is rigorous. Čencov's theorem itself (1982) is a standard result of information geometry; the framework's contribution is showing that the Čencov monotonicity condition is a *theorem* of Axiom 1, not an additional assumption.
 
-**Assessment:** Rigorous. The core theorem (Theorem 2.1) follows in one line from Axiom 1a. The deep consequences — no-cloning (Theorem 5.1), no-deleting (Theorem 6.1), monotonicity (Proposition 3.2), and the second law as distinguishability loss (Proposition 7.1) — all have complete proofs. The product-space coherence structure (Definition 5.0) is now explicitly axiomatized, closing the formalization gap. The consistency model verifies all results on the minimal observer pair. No structural postulates are needed — the entire derivation follows from Axiom 1 and the coherence axioms (C1)–(C5).
+**Assessment:** Rigorous. The core theorem (Theorem 2.1) follows in one line from Axiom 1(i). The deep consequences — no-cloning (Theorem 5.1), no-deleting (Theorem 6.1), monotonicity (Proposition 3.2), and the second law as distinguishability loss (Proposition 7.1) — all have complete proofs. The product-space coherence structure (Definition 5.0) is now explicitly axiomatized, closing the formalization gap. The consistency model verifies all results on the minimal observer pair. No structural postulates are needed — the entire derivation follows from Axiom 1 and the coherence axioms (C1)–(C5).
 
 ## Open Gaps
 

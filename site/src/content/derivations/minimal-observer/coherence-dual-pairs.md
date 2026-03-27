@@ -48,9 +48,9 @@ The existence of antimatter is one of the most striking facts about physics. Eve
 
 *Proof.* Both observers are minimal loops satisfying the loop closure condition ([Loop Closure](/derivations/axioms/loop-closure)) in the **same local coherence geometry** $(\mathcal{H}, g)$.
 
-The minimal period $T_\mathcal{O}$ of a $U(1)$ phase oscillator is determined by the local geometry: it is the period of the shortest closed geodesic of the $U(1)$ action in $(\Sigma, g)$ ([Loop Closure](/derivations/axioms/loop-closure), Proposition 1.2). For the coherence-dual pair, both observers crystallize from the same local region of $\mathcal{H}$ in a single creation event ([Multiplicity](/derivations/minimal-observer/multiplicity), Proposition 4.2). The local Riemannian metric $g$ and coherence measure $\mathcal{C}$ are identical for both.
+The minimal period $T_\mathcal{O}$ of a $U(1)$ phase oscillator is determined by the local geometry: it is the period of the shortest closed geodesic of the $U(1)$ action in $(\Sigma, g)$ ([Loop Closure](/derivations/axioms/loop-closure), Proposition 3.2). For the coherence-dual pair, both observers crystallize from the same local region of $\mathcal{H}$ in a single creation event ([Multiplicity](/derivations/minimal-observer/multiplicity), Proposition 4.2). The local Riemannian metric $g$ and coherence measure $\mathcal{C}$ are identical for both.
 
-The coherence cost of each loop is ([Loop Closure](/derivations/axioms/loop-closure), Definition 6.1):
+The coherence cost of each loop is ([Loop Closure](/derivations/axioms/loop-closure), Definition 7.1):
 
 $$S_i = \int_0^{T_i} \mathcal{C}(\phi_t^{(i)}(\sigma_0^{(i)})) |\dot{\phi}_t^{(i)}| \, dt$$
 
@@ -94,7 +94,7 @@ The boundary $\mathcal{B}_1$ classifies $\mathcal{O}_2$'s transformations as non
 
 **Theorem 5.1 (Pair persistence).** *A coherence-dual pair with exact closure ($\epsilon = 0$) persists indefinitely. Pair annihilation requires a specific interaction that disrupts both loops simultaneously.*
 
-*Proof.* Each observer in the pair satisfies exact loop closure ([Loop Closure](/derivations/axioms/loop-closure), Axiom 3), with period $T$ and Lyapunov stability ([Loop Closure](/derivations/axioms/loop-closure), Proposition 4.3 — instability would dissolve the observer). By Proposition 5.4 of [Loop Closure](/derivations/axioms/loop-closure), exact closure gives infinite lifetime: $\tau_\mathcal{O} = \infty$.
+*Proof.* Each observer in the pair satisfies exact loop closure ([Loop Closure](/derivations/axioms/loop-closure), Axiom 3), with period $T$ and Lyapunov stability ([Loop Closure](/derivations/axioms/loop-closure), Proposition 2.5 — instability would dissolve the observer). By Proposition 2.5 of [Loop Closure](/derivations/axioms/loop-closure), exact closure gives infinite lifetime: $\tau_\mathcal{O} = \infty$.
 
 The pair persists because each observer independently satisfies the persistence conditions of the axioms. Annihilation requires both observers to encounter non-self transformations strong enough to break both loops simultaneously — this requires spatial contact (overlap of coherence domains) and specific phase alignment. The pair's default state is persistence, not annihilation. $\square$
 
@@ -102,7 +102,7 @@ The pair persists because each observer independently satisfies the persistence 
 
 *Proof.* Direct from [Multiplicity](/derivations/minimal-observer/multiplicity), Proposition 4.2: creation from a structureless state always produces at least two observers. $\square$
 
-**Proposition 5.3 (Virtual pairs).** *Virtual pair creation and annihilation — the quantum vacuum — corresponds to $\epsilon$-approximately closed loop pairs ([Loop Closure](/derivations/axioms/loop-closure), Definition 5.1) with finite lifetime $\tau \leq \lfloor D_\mathcal{B}/\epsilon \rfloor \cdot T$ ([Loop Closure](/derivations/axioms/loop-closure), Proposition 5.2).*
+**Proposition 5.3 (Virtual pairs).** *Virtual pair creation and annihilation — the quantum vacuum — corresponds to $\epsilon$-approximately closed loop pairs ([Loop Closure](/derivations/axioms/loop-closure), Definition 2.2) with finite lifetime $\tau \leq \lfloor D_\mathcal{B}/\epsilon \rfloor \cdot T$ ([Loop Closure](/derivations/axioms/loop-closure), Proposition 2.3).*
 
 ### Step 6: Charge Conjugation Symmetry
 

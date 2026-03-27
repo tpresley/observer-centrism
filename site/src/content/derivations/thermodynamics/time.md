@@ -46,13 +46,13 @@ In standard physics, time is either a background stage on which events play out 
 
 **Proposition 2.1.** *Phase transfer in the interaction graph is directed: for each edge $A \to B$, the direction is determined by the internal phase advance of the mediating observer.*
 
-*Proof.* Consider an observer $\mathcal{O}_k$ participating in event $A$ at phase $\theta_A$ and in event $B$ at phase $\theta_B$. The $U(1)$ dynamics of $\mathcal{O}_k$ ([Loop Closure](/derivations/axioms/loop-closure), Corollary 2.3) advances the phase as:
+*Proof.* Consider an observer $\mathcal{O}_k$ participating in event $A$ at phase $\theta_A$ and in event $B$ at phase $\theta_B$. The $U(1)$ dynamics of $\mathcal{O}_k$ ([Loop Closure](/derivations/axioms/loop-closure), Corollary 4.3) advances the phase as:
 
 $$\theta_B = \theta_A + \omega_k \cdot \Delta\tau$$
 
 where $\Delta\tau$ is the elapsed proper parameter (measured in cycles of $\mathcal{O}_k$'s loop) and $\omega_k > 0$ is the angular frequency.
 
-We show $\Delta\tau > 0$ (phase cannot run backward). Each cycle of the loop has coherence cost $S_k > 0$ ([Loop Closure](/derivations/axioms/loop-closure), Proposition 6.2 — proved rigorously from the positive-definite $G_\mathcal{O}$-invariant metric). A path from $A$ to $B$ comprising $n$ partial or complete cycles costs $n \cdot (S_k / T_k) \cdot \Delta\tau$. If $\Delta\tau < 0$, the coherence cost would be negative, contradicting positivity of the coherence measure (C1 of [Coherence Conservation](/derivations/axioms/coherence-conservation)). If $\Delta\tau = 0$, the path is trivial (no phase advance, no interaction). Therefore for any non-trivial connection between events, $\Delta\tau > 0$ and $\theta_B > \theta_A$. $\square$
+We show $\Delta\tau > 0$ (phase cannot run backward). Each cycle of the loop has coherence cost $S_k > 0$ ([Loop Closure](/derivations/axioms/loop-closure), Proposition 7.2 — proved rigorously from the positive-definite $G_\mathcal{O}$-invariant metric). A path from $A$ to $B$ comprising $n$ partial or complete cycles costs $n \cdot (S_k / T_k) \cdot \Delta\tau$. If $\Delta\tau < 0$, the coherence cost would be negative, contradicting positivity of the coherence measure (C1 of [Coherence Conservation](/derivations/axioms/coherence-conservation)). If $\Delta\tau = 0$, the path is trivial (no phase advance, no interaction). Therefore for any non-trivial connection between events, $\Delta\tau > 0$ and $\theta_B > \theta_A$. $\square$
 
 ### Step 3: Acyclicity
 
@@ -154,7 +154,7 @@ The framework arrives at the same mathematical structure (causal set) that causa
 **Fully rigorous:**
 - Definition 1.1: Interaction graph is precisely defined (vertices = interaction events, edges = phase-mediated connections)
 - Definition 1.2: Worldlines as phase-ordered sequences of interaction events
-- Proposition 2.1: Directed phase transfer from positive coherence cost (follows from [Loop Closure](/derivations/axioms/loop-closure) Proposition 6.2, which is rigorous, + C1 positivity)
+- Proposition 2.1: Directed phase transfer from positive coherence cost (follows from [Loop Closure](/derivations/axioms/loop-closure) Proposition 7.2, which is rigorous, + C1 positivity)
 - Theorem 3.1: Acyclicity (follows from Proposition 2.1 by contradiction — two independent arguments given)
 - Theorem 4.2: Partial order (standard verification of reflexivity, antisymmetry, transitivity)
 - Theorem 5.1: Operational properties of time (each row verified from the partial order structure)

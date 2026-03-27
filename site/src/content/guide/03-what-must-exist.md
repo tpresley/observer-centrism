@@ -21,7 +21,7 @@ The three axioms do not sit passively, waiting for a universe to illustrate them
 
 Start with the most minimal question: what is the simplest thing that satisfies all three axioms simultaneously?
 
-It needs to maintain an invariant (Axiom 2). It needs to cycle (Axiom 3). And it lives in a world where coherence is conserved (Axiom 1).
+It needs to maintain an invariant (Axiom 2). It needs to persist — to sustain itself indefinitely, which forces it to cycle (Axiom 3). And it lives in a world where coherence is conserved (Axiom 1).
 
 The answer, derived rigorously from these constraints, is a phase oscillator — a system whose state traces a circle, returning to its starting point after each cycle. Mathematically, this is a U(1) structure: a single complex phase rotating at a fixed frequency. It has exactly one invariant (its winding number — how many times it goes around), exactly one self/non-self distinction (phase-preserving vs. phase-disrupting transformations), and it closes perfectly.
 

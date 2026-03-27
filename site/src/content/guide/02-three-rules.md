@@ -31,9 +31,9 @@ This is a functional definition, not a philosophical one. It says nothing about 
 
 The self/non-self distinction is critical. Without it, maintaining an invariant is trivially easy — anything in complete isolation preserves all its properties. The distinction requires that the observer exist in an environment capable of threatening its invariant, and that it have some structural response to that threat.
 
-**Axiom 3: Loop Closure.** Observer dynamics must be closed loops. The internal dynamics must be cyclic: the state returns, at least approximately, to its initial configuration after a finite time.
+**Axiom 3: Loop Closure.** An observer must be self-sustaining: its current state, processed through its own dynamics, must reproduce a valid observer state. This is self-reference — the observer is a process that instantiates itself. With finite resources (a compact state space, a finite coherence budget), self-reference forces the dynamics into a closed loop: the state must return to its initial configuration after a finite time.
 
-This is the stability condition. A loop that does not close eventually dissipates — its invariant fails, and the observer dissolves. Loop closure is what makes an observer persistent rather than transient. Only closed loops maintain their invariants indefinitely. This is not an additional constraint imposed on observers — it is what separates the things that exist from the things that almost exist and then vanish.
+Why? Because approximate return is not enough. Each imperfect cycle accumulates drift, and drift eventually carries the state across the observer's boundary — dissolving it. Only exact return gives indefinite persistence. And exact return of a continuous flow is periodicity: the mathematics of "going around and coming back" that appears throughout physics as oscillation, rotation, and phase.
 
 ## What Is Deliberately Not Assumed
 
@@ -49,7 +49,7 @@ The framework's answer is: these three are exactly what you need to define a per
 
 - The observer must conserve *something* (Axiom 1) — without a conserved quantity, there is nothing to maintain, nothing to measure, no basis for physical law.
 - The observer must have *structure* (Axiom 2) — it must maintain at least one invariant and distinguish what threatens that invariant from what does not. Without this, there is no self, no measurement, no observation.
-- The observer must *persist* (Axiom 3) — its dynamics must close into a stable cycle. Without this, structures appear and vanish with no possibility of building complexity or conducting science.
+- The observer must *persist* (Axiom 3) — it must be self-sustaining, reproducing its own state cycle after cycle. Self-reference under finite resources forces a closed loop. Without this, structures appear and vanish with no possibility of building complexity or conducting science.
 
 These are not three independent postulates about the universe. They are three facets of a single requirement: *what must be true for a persistent observer to exist?* The axioms then encode the minimal supporting structure that a universe must have to instantiate such observers.
 

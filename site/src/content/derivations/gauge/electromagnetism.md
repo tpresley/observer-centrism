@@ -61,7 +61,7 @@ Therefore S1 is not an independent physical assumption but the uniquely forced m
 
 ### Step 1: Observer Phases and Relational Physics
 
-**Definition 1.1.** Let $\mathcal{O}_x = (\Sigma_x, I_x, \mathcal{B}_x)$ be an observer at spacetime point $x$. By [Loop Closure](/derivations/axioms/loop-closure) (Corollary 2.3), $\mathcal{O}_x$ has a faithful $U(1)$ action with internal phase $\theta_x \in [0, 2\pi)$.
+**Definition 1.1.** Let $\mathcal{O}_x = (\Sigma_x, I_x, \mathcal{B}_x)$ be an observer at spacetime point $x$. By [Loop Closure](/derivations/axioms/loop-closure) (Corollary 4.3), $\mathcal{O}_x$ has a faithful $U(1)$ action with internal phase $\theta_x \in [0, 2\pi)$.
 
 **Proposition 1.2 (Phase redundancy).** *Physical observables depend only on phase differences between observers, not on absolute phase values.*
 
@@ -69,7 +69,7 @@ Therefore S1 is not an independent physical assumption but the uniquely forced m
 
 More concretely, the consistency model of [Relational Invariants](/derivations/interactions/relational-invariants) (Theorem 7.1) constructs $I_{12}(\theta_1, \theta_2) = \cos(\theta_1 - \theta_2)$, which manifestly depends only on the phase difference.
 
-Under a global phase shift $\theta(x) \to \theta(x) + \alpha$ for constant $\alpha$, all relational invariants are unchanged. This is the global $U(1)$ symmetry of the observer network — the same symmetry established in [Loop Closure](/derivations/axioms/loop-closure) (Theorem 3.1), now recognized as a redundancy. $\square$
+Under a global phase shift $\theta(x) \to \theta(x) + \alpha$ for constant $\alpha$, all relational invariants are unchanged. This is the global $U(1)$ symmetry of the observer network — the same symmetry established in [Loop Closure](/derivations/axioms/loop-closure) (Theorem 5.1), now recognized as a redundancy. $\square$
 
 ### Step 2: Local Phase Independence
 

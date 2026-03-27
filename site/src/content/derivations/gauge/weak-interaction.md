@@ -49,7 +49,7 @@ Electromagnetism arises from a single phase channel -- one direction in which an
 
 ### Step 1: Three Orthogonal Phase Channels
 
-**Definition 1.1.** In $d = 3$ spatial dimensions, an observer $\mathcal{O}$ at point $x$ has three orthogonal spatial axes $\hat{e}_1, \hat{e}_2, \hat{e}_3$. Along each axis $\hat{e}_a$, the observer maintains a $U(1)$ phase cycle $\theta_a(x)$ (from [Loop Closure](/derivations/axioms/loop-closure), Corollary 2.3, applied to the spatial component along axis $a$). These are the **phase channels**: the three independent directions in which the observer's coherence loop can wind.
+**Definition 1.1.** In $d = 3$ spatial dimensions, an observer $\mathcal{O}$ at point $x$ has three orthogonal spatial axes $\hat{e}_1, \hat{e}_2, \hat{e}_3$. Along each axis $\hat{e}_a$, the observer maintains a $U(1)$ phase cycle $\theta_a(x)$ (from [Loop Closure](/derivations/axioms/loop-closure), Corollary 4.3, applied to the spatial component along axis $a$). These are the **phase channels**: the three independent directions in which the observer's coherence loop can wind.
 
 **Proposition 1.2 (Three independent phase channels).** *In $d = 3$, an observer requires exactly three independent phase channels.*
 

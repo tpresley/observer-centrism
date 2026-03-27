@@ -116,7 +116,7 @@ This is the **quantum of action** — the irreducible minimum cost of any cohere
 
 $$\mathcal{S}[\gamma_\mathcal{O}] = E_\mathcal{O} \cdot T_\mathcal{O}$$
 
-*Proof.* The observer loop $\gamma_\mathcal{O}$ traverses $\Sigma$ uniformly (by the $U(1)$ action from [Loop Closure](/derivations/axioms/loop-closure), Corollary 2.3). At each instant, the coherence allocated to maintaining the loop is $\mathcal{C}(\Sigma)$. The loop takes time $T_\mathcal{O}$ to complete. The total coherence cost is the coherence rate times the duration: $\mathcal{S} = \mathcal{C}(\Sigma) \cdot T_\mathcal{O}$. $\square$
+*Proof.* The observer loop $\gamma_\mathcal{O}$ traverses $\Sigma$ uniformly (by the $U(1)$ action from [Loop Closure](/derivations/axioms/loop-closure), Corollary 4.3). At each instant, the coherence allocated to maintaining the loop is $\mathcal{C}(\Sigma)$. The loop takes time $T_\mathcal{O}$ to complete. The total coherence cost is the coherence rate times the duration: $\mathcal{S} = \mathcal{C}(\Sigma) \cdot T_\mathcal{O}$. $\square$
 
 **Corollary 4.2 (Planck-Einstein relation).** *For the minimal observer: $\hbar = E_{\min} \cdot T_{\min}$. Using $\omega = 2\pi/T$ and absorbing the $2\pi$ into the convention:*
 

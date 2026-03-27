@@ -42,7 +42,7 @@ In standard physics, conserved quantities like energy and momentum are associate
 
 *Proof.* The argument constructs the symplectic form by induction on the bootstrap level, avoiding circularity with Theorem 3.1 (which assumes symplectic structure).
 
-**(i) Base case: minimal observers.** For the minimal observer, $\Sigma_i \cong S^1$ with phase coordinate $\theta_i \in [0, 2\pi)$ ([Loop Closure](/derivations/axioms/loop-closure), Corollary 2.3). The product $\Sigma_1 \times \Sigma_2 \cong S^1 \times S^1 = \mathbb{T}^2$ is a compact orientable 2-manifold. Define:
+**(i) Base case: minimal observers.** For the minimal observer, $\Sigma_i \cong S^1$ with phase coordinate $\theta_i \in [0, 2\pi)$ ([Loop Closure](/derivations/axioms/loop-closure), Corollary 4.3). The product $\Sigma_1 \times \Sigma_2 \cong S^1 \times S^1 = \mathbb{T}^2$ is a compact orientable 2-manifold. Define:
 
 $$\omega = d\theta_1 \wedge d\theta_2$$
 
@@ -58,7 +58,7 @@ By induction, the state space at every bootstrap level carries a symplectic form
 
 **(iii) Product compatibility.** For two composite observers $\mathcal{O}_1, \mathcal{O}_2$ at bootstrap levels $n_1, n_2$, their individual state spaces $(\Sigma_1, \omega_1)$ and $(\Sigma_2, \omega_2)$ are symplectic by the inductive construction. The product is canonically symplectic: $\omega = \pi_1^*\omega_1 + \pi_2^*\omega_2$ (Abraham & Marsden, Proposition 3.2.10). The product $U(1) \times U(1)$ action preserves $\omega$ because each factor preserves its respective $\omega_i$. $\square$
 
-**Remark.** The circularity concern: Theorem 3.1 of [Loop Closure](/derivations/axioms/loop-closure) assumes symplectic structure to produce a Noether pair. This proof avoids that assumption by constructing the symplectic form directly — from the canonical area form on $\mathbb{T}^2$ at the base level, and by symplectic extension at each bootstrap level. Theorem 3.1 can then be *applied* (rather than used as input) to produce Noether pairs on the inductively constructed symplectic manifolds.
+**Remark.** The circularity concern: Theorem 5.1 of [Loop Closure](/derivations/axioms/loop-closure) assumes symplectic structure to produce a Noether pair. This proof avoids that assumption by constructing the symplectic form directly — from the canonical area form on $\mathbb{T}^2$ at the base level, and by symplectic extension at each bootstrap level. Theorem 5.1 can then be *applied* (rather than used as input) to produce Noether pairs on the inductively constructed symplectic manifolds.
 
 ## Derivation
 

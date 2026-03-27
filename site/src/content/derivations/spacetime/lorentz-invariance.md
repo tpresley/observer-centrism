@@ -145,7 +145,7 @@ $$t' = t \cosh\phi - x \sinh\phi, \qquad x' = -t \sinh\phi + x \cosh\phi$$
 
 $$\gamma \to \infty \implies T \to \infty$$
 
-The cycle period diverges — the observer can never complete a cycle. Since loop closure requires cycle completion ([Loop Closure](/derivations/axioms/loop-closure), Definition 2.1), the observer fails to satisfy the axioms. It ceases to be an observer.
+The cycle period diverges — the observer can never complete a cycle. Since loop closure requires cycle completion ([Loop Closure](/derivations/axioms/loop-closure), Definition 4.1), the observer fails to satisfy the axioms. It ceases to be an observer.
 
 Simultaneously, from Theorem 3.1: $L = L_0/\gamma \to 0$. The spatial extent contracts to zero.
 

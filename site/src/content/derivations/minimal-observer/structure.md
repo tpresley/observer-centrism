@@ -41,7 +41,7 @@ The framework's three axioms require that every observer (1) conserves a quantit
 
 *Proof.* By non-triviality condition (N1) of [Observer Definition](/derivations/axioms/observer-definition), $G_\mathcal{O} \neq \{e\}$: there exists a non-trivial self-transformation. If $|\Sigma| = 1$, then $\text{Aut}(\Sigma) = \{e\}$, so $G_\mathcal{O} = \{e\}$, violating (N1). Therefore $|\Sigma| \geq 2$.
 
-In the continuous case: by Axiom 3 (loop closure), the dynamics forms a smooth homomorphism $\phi: \mathbb{R} \to G_\mathcal{O}$ with period $T > 0$, generating a faithful $U(1)$ action ([Loop Closure](/derivations/axioms/loop-closure), Corollary 2.3). A faithful $U(1)$ action on $\Sigma$ requires $\dim \Sigma \geq 1$ (a zero-dimensional manifold has only trivial continuous symmetries). $\square$
+In the continuous case: by Axiom 3 (loop closure), the dynamics forms a smooth homomorphism $\phi: \mathbb{R} \to G_\mathcal{O}$ with period $T > 0$, generating a faithful $U(1)$ action ([Loop Closure](/derivations/axioms/loop-closure), Corollary 4.3). A faithful $U(1)$ action on $\Sigma$ requires $\dim \Sigma \geq 1$ (a zero-dimensional manifold has only trivial continuous symmetries). $\square$
 
 ### Step 2: Minimal Dynamics
 
@@ -63,9 +63,9 @@ This is minimal: $|\Sigma| = 2$ is the smallest state space (Proposition 1.1), a
 - *Period $T = 2\pi/\omega$*
 - *Symmetry group $G_\mathcal{O} \cong U(1)$*
 
-*Proof.* By Axiom 3, the dynamics generates a faithful $U(1)$ action on $\Sigma$ ([Loop Closure](/derivations/axioms/loop-closure), Corollary 2.3). For the minimal observer, the symmetry group is $G_\mathcal{O} = U(1)$ exactly (any larger group would carry additional structure, contradicting minimality — see Theorem 6.1 below).
+*Proof.* By Axiom 3, the dynamics generates a faithful $U(1)$ action on $\Sigma$ ([Loop Closure](/derivations/axioms/loop-closure), Corollary 4.3). For the minimal observer, the symmetry group is $G_\mathcal{O} = U(1)$ exactly (any larger group would carry additional structure, contradicting minimality — see Theorem 6.1 below).
 
-The minimal state space on which $U(1)$ acts faithfully and transitively is $S^1 = U(1)$ itself (the regular representation). Faithfulness: follows from Corollary 2.3 of [Loop Closure](/derivations/axioms/loop-closure). Transitivity: if the action were not transitive, the orbit decomposition ([Loop Closure](/derivations/axioms/loop-closure), Proposition 2.4) would give $\Sigma = \bigsqcup_\alpha \gamma_\alpha$ with $|\{\gamma_\alpha\}| \geq 2$. But $\dim \gamma_\alpha = 1$ for each orbit, so $\dim \Sigma \geq 1$ is achieved with a single orbit — the minimal choice is a single transitive orbit, giving $\Sigma \cong U(1)/\text{Stab} = U(1)/\{e\} = S^1$.
+The minimal state space on which $U(1)$ acts faithfully and transitively is $S^1 = U(1)$ itself (the regular representation). Faithfulness: follows from Corollary 4.3 of [Loop Closure](/derivations/axioms/loop-closure). Transitivity: if the action were not transitive, the orbit decomposition ([Loop Closure](/derivations/axioms/loop-closure), Proposition 4.4) would give $\Sigma = \bigsqcup_\alpha \gamma_\alpha$ with $|\{\gamma_\alpha\}| \geq 2$. But $\dim \gamma_\alpha = 1$ for each orbit, so $\dim \Sigma \geq 1$ is achieved with a single orbit — the minimal choice is a single transitive orbit, giving $\Sigma \cong U(1)/\text{Stab} = U(1)/\{e\} = S^1$.
 
 The dynamics on $S^1$ is left multiplication: $\phi_t(\theta) = e^{i\omega t} \cdot e^{i\theta} = e^{i(\theta + \omega t)}$, uniform rotation at angular frequency $\omega = 2\pi/T$. $\square$
 
@@ -75,7 +75,7 @@ The dynamics on $S^1$ is left multiplication: $\phi_t(\theta) = e^{i\omega t} \c
 
 **Theorem 4.1.** *The minimal observer carries exactly one independent conserved charge.*
 
-*Proof.* By Noether's theorem ([Loop Closure](/derivations/axioms/loop-closure), Theorem 3.1), the $U(1)$ symmetry has one conserved charge — the moment map $\mu: \Sigma \to \mathbb{R}$ conjugate to the phase angle $\theta$. Call this charge $Q_\mathcal{O} = \mu$.
+*Proof.* By Noether's theorem ([Loop Closure](/derivations/axioms/loop-closure), Theorem 5.1), the $U(1)$ symmetry has one conserved charge — the moment map $\mu: \Sigma \to \mathbb{R}$ conjugate to the phase angle $\theta$. Call this charge $Q_\mathcal{O} = \mu$.
 
 The count follows from representation theory: $U(1)$ is a rank-1 Lie group with $\mathfrak{u}(1) \cong \mathbb{R}$ (one-dimensional Lie algebra). The number of independent Casimir invariants (and hence independent conserved charges via Noether) equals the rank. Therefore the minimal observer has exactly one independent conserved charge. $\square$
 
@@ -103,9 +103,9 @@ $$Q_\mathcal{O} = \mathcal{C}(\Sigma)$$
 
 *(b) If $G_\mathcal{O} = U(1)$, then $\mathcal{O}$ is isomorphic (in the observer category) to the $S^1$ phase oscillator of Proposition 3.1.*
 
-*Proof.* (a) By Axiom 3, the dynamics $\phi: \mathbb{R} \to G_\mathcal{O}$ is a smooth periodic homomorphism with minimal period $T_\mathcal{O} > 0$ ([Loop Closure](/derivations/axioms/loop-closure), Proposition 1.2). Its image $\text{Im}(\phi) = \{\phi_t : t \in [0, T)\}$ is isomorphic to $\mathbb{R}/T\mathbb{Z} \cong U(1)$. Hence $U(1) \hookrightarrow G_\mathcal{O}$.
+*Proof.* (a) By Axiom 3, the dynamics $\phi: \mathbb{R} \to G_\mathcal{O}$ is a smooth periodic homomorphism with minimal period $T_\mathcal{O} > 0$ ([Loop Closure](/derivations/axioms/loop-closure), Proposition 3.2). Its image $\text{Im}(\phi) = \{\phi_t : t \in [0, T)\}$ is isomorphic to $\mathbb{R}/T\mathbb{Z} \cong U(1)$. Hence $U(1) \hookrightarrow G_\mathcal{O}$.
 
-(b) Let $\mathcal{O}_1 = (\Sigma_1, I_1, \mathcal{B}_1)$ and $\mathcal{O}_2 = (\Sigma_2, I_2, \mathcal{B}_2)$ both have $G_{\mathcal{O}_i} = U(1)$ with the same frequency $\omega$. Each $\Sigma_i$ is a disjoint union of $U(1)$-orbits ([Loop Closure](/derivations/axioms/loop-closure), Proposition 2.4). For the minimal observer, $\Sigma_i$ is a single transitive orbit (minimality of state space), so $\Sigma_i \cong U(1)/\text{Stab}$. By faithfulness (Corollary 2.3 of [Loop Closure](/derivations/axioms/loop-closure)), $\text{Stab} = \{e\}$, so $\Sigma_i \cong S^1$. The equivariant diffeomorphism $f: \Sigma_1 \to \Sigma_2$ mapping $\phi_t^{(1)}(\sigma_0) \mapsto \phi_t^{(2)}(\sigma_0')$ is an observer morphism (Definition 7.3 of [Observer Definition](/derivations/axioms/observer-definition)) since it intertwines the dynamics and preserves the invariant structure. $\square$
+(b) Let $\mathcal{O}_1 = (\Sigma_1, I_1, \mathcal{B}_1)$ and $\mathcal{O}_2 = (\Sigma_2, I_2, \mathcal{B}_2)$ both have $G_{\mathcal{O}_i} = U(1)$ with the same frequency $\omega$. Each $\Sigma_i$ is a disjoint union of $U(1)$-orbits ([Loop Closure](/derivations/axioms/loop-closure), Proposition 4.4). For the minimal observer, $\Sigma_i$ is a single transitive orbit (minimality of state space), so $\Sigma_i \cong U(1)/\text{Stab}$. By faithfulness (Corollary 4.3 of [Loop Closure](/derivations/axioms/loop-closure)), $\text{Stab} = \{e\}$, so $\Sigma_i \cong S^1$. The equivariant diffeomorphism $f: \Sigma_1 \to \Sigma_2$ mapping $\phi_t^{(1)}(\sigma_0) \mapsto \phi_t^{(2)}(\sigma_0')$ is an observer morphism (Definition 7.3 of [Observer Definition](/derivations/axioms/observer-definition)) since it intertwines the dynamics and preserves the invariant structure. $\square$
 
 **Remark.** If $G_\mathcal{O} \supsetneq U(1)$ (e.g., $G_\mathcal{O} = SU(2)$ or $U(1) \times U(1)$), the observer has additional conserved charges (by Noether's theorem, one per rank of $G_\mathcal{O}$) and a higher-dimensional state space, so it is not minimal.
 
@@ -124,7 +124,7 @@ $$Q_\mathcal{O} = \mathcal{C}(\Sigma)$$
 *Proof.* Each identification follows from the mathematical structure:
 - The $U(1)$ phase is the same $U(1)$ that generates quantum mechanical phase evolution $|\psi\rangle \to e^{-iEt/\hbar}|\psi\rangle$
 - The Noether charge of the $U(1)$ action is the particle's conserved quantum number (charge, lepton number, etc.)
-- The period $T$ gives $\omega = 2\pi/T$, and $E = \hbar\omega$ (Corollary 7.3 of [Loop Closure](/derivations/axioms/loop-closure)), hence mass $m = E/c^2 = \hbar\omega/c^2$
+- The period $T$ gives $\omega = 2\pi/T$, and $E = \hbar\omega$ (Corollary 8.3 of [Loop Closure](/derivations/axioms/loop-closure)), hence mass $m = E/c^2 = \hbar\omega/c^2$
 - The coherence domain size $\sim \hbar/mc = \lambda_C$ (Compton wavelength) follows from dimensional analysis with $S_{\min} = \hbar$ $\square$
 
 ### Step 8: Structure Summary
