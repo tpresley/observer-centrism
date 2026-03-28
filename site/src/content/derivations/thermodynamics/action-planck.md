@@ -62,11 +62,11 @@ Therefore $g = \hbar G$ is $C^\infty$ (from (i)), positive definite (from (iii))
 
 ### Step 1: The Coherence Lagrangian
 
-**Definition 1.1.** Let $\mathcal{O} = (\Sigma, I, \mathcal{B})$ be an observer with state space $\Sigma \subset \mathcal{H}$. The coherence geometry induces a **Riemannian metric** $g$ on $\Sigma$ via the Hessian of the coherence measure (Structural Postulate S1):
+**Definition 1.1.** Let $\mathcal{O} = (\Sigma, I, \mathcal{B})$ be an observer with state space $\Sigma \subset \mathcal{H}$. The coherence geometry induces a **Riemannian metric** $g$ on $\Sigma$ via the Hessian of the coherence measure (Theorem 0.1):
 
 $$g_{\sigma}(u, v) = \left.\frac{\partial^2}{\partial s \, \partial t} \mathcal{C}(\sigma + su + tv)\right|_{s=t=0}$$
 
-for tangent vectors $u, v \in T_\sigma \Sigma$. By S1, this is well-defined and is positive definite on the physical state space (modulo gauge).
+for tangent vectors $u, v \in T_\sigma \Sigma$. By Theorem 0.1, this is well-defined ($C^2$ smoothness) and positive definite on the physical state space (modulo gauge).
 
 **Definition 1.2.** The **coherence Lagrangian** is the function $\mathcal{L}: T\Sigma \to \mathbb{R}_{\geq 0}$ defined by:
 
@@ -204,7 +204,7 @@ $$\hbar = \min_{\gamma \in \Lambda(\Sigma_{\min})} \oint \mathcal{L} \, dt = 2\p
 ## Rigor Assessment
 
 **Fully rigorous:**
-- Proposition 2.1: Positivity of coherence cost (from positive definiteness of Riemannian metric, given Structural Postulate S1)
+- Proposition 2.1: Positivity of coherence cost (from positive definiteness of Riemannian metric, given Theorem 0.1)
 - Theorem 3.1: Existence of minimum cycle cost (Lyusternik–Fet on compact $S^1$, with $L_{\min} > 0$ from non-contractibility)
 - Definition 3.2: $\hbar$ as the minimum cycle cost (well-defined by Theorem 3.1)
 - Proposition 3.3: Quantization of action (by definition of $\hbar$ as infimum)
@@ -215,15 +215,15 @@ $$\hbar = \min_{\gamma \in \Lambda(\Sigma_{\min})} \oint \mathcal{L} \, dt = 2\p
 - Proposition 6.4: Structural interpretation (immediate from $U(1)$ conjugacy)
 - Theorem 8.1: Consistency model verified
 
-**Structural postulate (clearly flagged):**
-- S1: $C^2$ smoothness of coherence measure on state spaces. Required for the Hessian metric to be well-defined. The identification of the Hessian metric with the physical metric is a uniqueness assumption.
+**Formerly a structural postulate (now derived):**
+- S1: $C^2$ smoothness of coherence measure — promoted to Theorem 0.1 via the Fisher metric chain (Born Rule → statistical regularity → Čencov uniqueness → coherence Hessian identification). No structural postulates remain in this derivation.
 
 **Deferred to later derivations:**
 - Corollaries 6.2–6.3: Position-momentum and energy-time uncertainty (require spacetime chain: $p = \hbar k$, $x = \theta/k$)
 - Numerical value of $\hbar$ (requires full coherence metric specification)
 - Relationship between $\hbar$, $c$, and $G$ (requires geometry derivation chain)
 
-**Assessment:** The core results — existence and positivity of the action quantum, stationary action from path sums, Planck-Einstein relation, and uncertainty from $U(1)$ conjugacy — are fully rigorous given Structural Postulate S1. The postulate is clearly flagged. Spacetime-dependent physical identifications are properly deferred.
+**Assessment:** The core results — existence and positivity of the action quantum, stationary action from path sums, Planck-Einstein relation, and uncertainty from $U(1)$ conjugacy — are fully rigorous. The former structural postulate S1 has been promoted to Theorem 0.1, leaving no active postulates in this derivation. Spacetime-dependent physical identifications are properly deferred.
 
 ## Open Gaps
 
