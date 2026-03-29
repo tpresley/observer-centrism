@@ -36,7 +36,7 @@ Newton described gravity as a force pulling masses together. Einstein reframed i
 
 ### Theorem 0.1 (Metric–Density Coupling)
 
-**Theorem 0.1 (Metric–density coupling).** *The spacetime metric $g_{\mu\nu}$ on the coherence geometry $(\mathcal{H}, g)$ cannot be independent of the relational invariant density $\rho_I$. In any region where $\rho_I \neq 0$, the metric deviates from its vacuum form. The dependence is local and couples to $\rho_I$.*
+**Theorem 0.1.** *The spacetime metric $g_{\mu\nu}$ on the coherence geometry $(\mathcal{H}, g)$ cannot be independent of the relational invariant density $\rho_I$. In any region where $\rho_I \neq 0$, the metric deviates from its vacuum form. The dependence is local and couples to $\rho_I$.*
 
 *Proof.* The argument has three parts: action duality, subadditivity forcing, and locality.
 
