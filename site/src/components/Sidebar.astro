@@ -47,25 +47,105 @@ for (const g of GA_GROUP_ORDER) {
   if (entries.length > 0) gaGroups.set(g, entries)
 }
 
-// Axioms in explicit order: Axiom 1, Axiom 2, Axiom 3, then Coherence Operational
-const AXIOM_ORDER = ['axioms/coherence-conservation', 'axioms/observer-definition', 'axioms/loop-closure']
-const axiomEntries = derivationEntries
-  .filter(d => d.data.tags.includes('axioms'))
-  .sort((a, b) => AXIOM_ORDER.indexOf(a.slug) - AXIOM_ORDER.indexOf(b.slug))
-
-const derivationGroups = {
-  'Axioms': axiomEntries,
-  'Foundation': derivationEntries.filter(d => d.data.tags.includes('foundation')),
-  'Dynamics': derivationEntries.filter(d => d.data.tags.includes('dynamics')),
-  'Geometry': derivationEntries.filter(d => d.data.tags.includes('geometry')),
-  'Quantum': derivationEntries.filter(d => d.data.tags.includes('quantum')),
-  'Particles': derivationEntries.filter(d => d.data.tags.includes('particles')),
-  'Holography': derivationEntries.filter(d => d.data.tags.includes('holography')),
-  'Gauge': derivationEntries.filter(d => d.data.tags.includes('gauge')),
-  'Flavor': derivationEntries.filter(d => d.data.tags.includes('flavor')),
-  'Cosmology': derivationEntries.filter(d => d.data.tags.includes('cosmology')),
-  'Thermo Extensions': derivationEntries.filter(d => d.data.tags.includes('thermo-ext')),
+// Explicit ordered slug lists: each derivation appears exactly once,
+// in approximate dependency order within each group.
+const DERIVATION_GROUPS: Record<string, string[]> = {
+  'Axioms': [
+    'axioms/coherence-conservation',
+    'axioms/observer-definition',
+    'axioms/loop-closure',
+  ],
+  'Foundation': [
+    'minimal-observer/structure',
+    'minimal-observer/multiplicity',
+    'minimal-observer/coherence-dual-pairs',
+    'axioms/coherence-operational',
+    'foundation/coherence-lagrangian',
+  ],
+  'Dynamics': [
+    'interactions/three-types',
+    'interactions/relational-invariants',
+    'interactions/bootstrap',
+    'interactions/bootstrap-division-algebras',
+    'thermodynamics/time',
+    'thermodynamics/entropy',
+    'thermodynamics/action-planck',
+  ],
+  'Geometry': [
+    'dimensions/three-dimensions',
+    'spacetime/speed-of-light',
+    'spacetime/lorentz-invariance',
+    'spacetime/gravity',
+    'spacetime/einstein-equations',
+    'spacetime/singularity-resolution',
+  ],
+  'Quantum': [
+    'quantum/born-rule',
+    'quantum/preferred-basis',
+    'quantum/measurement',
+    'quantum/entanglement',
+    'quantum/teleportation',
+    'quantum/observer-relative-objectivity',
+    'quantum/sheaf-section-uniqueness',
+  ],
+  'Particles': [
+    'particles/spin-statistics',
+    'particles/pauli-exclusion',
+    'particles/three-generations',
+    'particles/mass-hierarchy',
+    'particles/neutrino-masses',
+    'particles/cpt-theorem',
+    'particles/supersymmetry-impossibility',
+  ],
+  'Holography': [
+    'holography/area-scaling',
+    'holography/causal-set-statistics',
+    'holography/black-hole-entropy',
+    'holography/hawking-radiation',
+    'holography/information-paradox',
+    'holography/er-epr',
+  ],
+  'Gauge': [
+    'gauge/electromagnetism',
+    'gauge/weak-interaction',
+    'gauge/electroweak-breaking',
+    'gauge/chirality-selection',
+    'gauge/color-force',
+    'gauge/standard-model-group',
+    'gauge/confinement',
+    'gauge/strong-cp',
+    'gauge/anomaly-cancellation',
+    'gauge/chiral-symmetry-breaking',
+    'gauge/weinberg-angle',
+    'gauge/proton-stability',
+  ],
+  'Flavor': [
+    'flavor/mixing-angles',
+  ],
+  'Cosmology': [
+    'cosmology/geometric-inflation',
+    'cosmology/cosmological-constant',
+    'cosmology/baryogenesis',
+    'cosmology/leptogenesis',
+    'cosmology/coupling-constants',
+    'cosmology/observer-loop-viability',
+  ],
+  'Thermo Extensions': [
+    'thermodynamics-ext/distinguishability-conservation',
+    'thermodynamics-ext/first-law',
+    'thermodynamics-ext/fisher-metric',
+    'thermodynamics-ext/renormalization',
+  ],
 }
+
+// Build ordered entries by looking up each slug in the collection
+const derivationsBySlug = new Map(derivationEntries.map(d => [d.slug, d]))
+const derivationGroups = Object.fromEntries(
+  Object.entries(DERIVATION_GROUPS).map(([group, slugs]) => [
+    group,
+    slugs.map(s => derivationsBySlug.get(s)).filter(Boolean)
+  ])
+)
 
 function statusIcon(status: string) {
   switch(status) {

@@ -4,19 +4,105 @@ import MainLayout from '../../components/layouts/MainLayout.astro'
 import PageTitle from '../../components/PageTitle.astro'
 
 const derivations = await getCollection('derivations')
+const bySlug = new Map(derivations.map(d => [d.slug, d]))
 
-const groups = {
-  'Foundation': derivations.filter(d => d.data.tags.includes('foundation')),
-  'Dynamics': derivations.filter(d => d.data.tags.includes('dynamics')),
-  'Geometry': derivations.filter(d => d.data.tags.includes('geometry')),
-  'Quantum': derivations.filter(d => d.data.tags.includes('quantum')),
-  'Particles': derivations.filter(d => d.data.tags.includes('particles')),
-  'Holography': derivations.filter(d => d.data.tags.includes('holography')),
-  'Gauge': derivations.filter(d => d.data.tags.includes('gauge')),
-  'Flavor': derivations.filter(d => d.data.tags.includes('flavor')),
-  'Cosmology': derivations.filter(d => d.data.tags.includes('cosmology')),
-  'Thermo Extensions': derivations.filter(d => d.data.tags.includes('thermo-ext')),
+// Explicit ordered slug lists — each derivation appears exactly once,
+// in approximate dependency order. Matches Sidebar.astro.
+const GROUP_ORDER: Record<string, string[]> = {
+  'Axioms': [
+    'axioms/coherence-conservation',
+    'axioms/observer-definition',
+    'axioms/loop-closure',
+  ],
+  'Foundation': [
+    'minimal-observer/structure',
+    'minimal-observer/multiplicity',
+    'minimal-observer/coherence-dual-pairs',
+    'axioms/coherence-operational',
+    'foundation/coherence-lagrangian',
+  ],
+  'Dynamics': [
+    'interactions/three-types',
+    'interactions/relational-invariants',
+    'interactions/bootstrap',
+    'interactions/bootstrap-division-algebras',
+    'thermodynamics/time',
+    'thermodynamics/entropy',
+    'thermodynamics/action-planck',
+  ],
+  'Geometry': [
+    'dimensions/three-dimensions',
+    'spacetime/speed-of-light',
+    'spacetime/lorentz-invariance',
+    'spacetime/gravity',
+    'spacetime/einstein-equations',
+    'spacetime/singularity-resolution',
+  ],
+  'Quantum': [
+    'quantum/born-rule',
+    'quantum/preferred-basis',
+    'quantum/measurement',
+    'quantum/entanglement',
+    'quantum/teleportation',
+    'quantum/observer-relative-objectivity',
+    'quantum/sheaf-section-uniqueness',
+  ],
+  'Particles': [
+    'particles/spin-statistics',
+    'particles/pauli-exclusion',
+    'particles/three-generations',
+    'particles/mass-hierarchy',
+    'particles/neutrino-masses',
+    'particles/cpt-theorem',
+    'particles/supersymmetry-impossibility',
+  ],
+  'Holography': [
+    'holography/area-scaling',
+    'holography/causal-set-statistics',
+    'holography/black-hole-entropy',
+    'holography/hawking-radiation',
+    'holography/information-paradox',
+    'holography/er-epr',
+  ],
+  'Gauge': [
+    'gauge/electromagnetism',
+    'gauge/weak-interaction',
+    'gauge/electroweak-breaking',
+    'gauge/chirality-selection',
+    'gauge/color-force',
+    'gauge/standard-model-group',
+    'gauge/confinement',
+    'gauge/strong-cp',
+    'gauge/anomaly-cancellation',
+    'gauge/chiral-symmetry-breaking',
+    'gauge/weinberg-angle',
+    'gauge/proton-stability',
+  ],
+  'Flavor': [
+    'flavor/mixing-angles',
+  ],
+  'Cosmology': [
+    'cosmology/geometric-inflation',
+    'cosmology/cosmological-constant',
+    'cosmology/baryogenesis',
+    'cosmology/leptogenesis',
+    'cosmology/coupling-constants',
+    'cosmology/observer-loop-viability',
+  ],
+  'Thermo Extensions': [
+    'thermodynamics-ext/distinguishability-conservation',
+    'thermodynamics-ext/first-law',
+    'thermodynamics-ext/fisher-metric',
+    'thermodynamics-ext/renormalization',
+  ],
 }
+
+const groups = Object.fromEntries(
+  Object.entries(GROUP_ORDER).map(([group, slugs]) => [
+    group,
+    slugs.map(s => bySlug.get(s)).filter(Boolean)
+  ])
+)
 
 function statusClass(status: string) { return `status-badge status-${status}` }
 const base = import.meta.env.BASE_URL.replace(/\/$/, '')
