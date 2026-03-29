@@ -1,0 +1,446 @@
+---
+import MainLayout from '../components/layouts/MainLayout.astro'
+import PageTitle from '../components/PageTitle.astro'
+import parametersData from '../data/parameters.json'
+import katex from 'katex'
+
+/** Render inline $...$ math with KaTeX and convert basic markdown to HTML. */
+function renderInline(text: string): string {
+  let out = text.replace(/\$([^$]+)\$/g, (_m: string, tex: string) => {
+    try { return katex.renderToString(tex, { throwOnError: false }) }
+    catch { return tex }
+  })
+  out = out.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
+  out = out.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+  out = out.replace(/\*([^*]+)\*/g, '<em>$1</em>')
+  return out
+}
+
+const groups = {
+  'Fundamental Constants': parametersData.filter(p => p.group === 'fundamental-constants'),
+  'Gauge Couplings': parametersData.filter(p => p.group === 'gauge-couplings'),
+  'Electroweak Sector': parametersData.filter(p => p.group === 'electroweak-sector'),
+  'Quark Masses': parametersData.filter(p => p.group === 'quark-masses'),
+  'Lepton Masses': parametersData.filter(p => p.group === 'lepton-masses'),
+  'Mixing Parameters': parametersData.filter(p => p.group === 'mixing'),
+  'QCD Vacuum': parametersData.filter(p => p.group === 'qcd-vacuum'),
+  'Cosmological': parametersData.filter(p => p.group === 'cosmological'),
+}
+
+const statusColors: Record<string, { bg: string; text: string; label: string }> = {
+  'derived':        { bg: 'color-mix(in srgb, #22c55e 15%, transparent)', text: '#22c55e', label: 'Derived' },
+  'constrained':    { bg: 'color-mix(in srgb, #3b82f6 15%, transparent)', text: '#3b82f6', label: 'Constrained' },
+  'mechanism-only': { bg: 'color-mix(in srgb, #f59e0b 15%, transparent)', text: '#f59e0b', label: 'Mechanism Only' },
+  'free':           { bg: 'color-mix(in srgb, #94a3b8 15%, transparent)', text: '#94a3b8', label: 'Free' },
+  'non-viable':     { bg: 'color-mix(in srgb, #ef4444 15%, transparent)', text: '#ef4444', label: 'Non-Viable' },
+}
+
+const totalCount = parametersData.length
+const derivedCount = parametersData.filter(p => p.status === 'derived').length
+const constrainedCount = parametersData.filter(p => p.status === 'constrained').length
+const mechanismCount = parametersData.filter(p => p.status === 'mechanism-only').length
+const freeCount = parametersData.filter(p => p.status === 'free').length
+const nonViableCount = parametersData.filter(p => p.status === 'non-viable').length
+
+// "Determined in principle" = derived + constrained + mechanism-only
+// (the path to computing them exists, even if quantitative computation is not yet done)
+const determinedInPrinciple = derivedCount + constrainedCount + mechanismCount
+const genuinelyFree = freeCount + nonViableCount
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+---
+
+<MainLayout title="Framework Parameters">
+  <PageTitle title="Framework Parameters" />
+  <p>
+    The Standard Model of particle physics has roughly <strong>25 free parameters</strong>
+    (including neutrino masses and gravity) that must be measured experimentally.
+    This page tracks how the observer-centrism framework addresses each one &mdash;
+    whether it derives, constrains, explains the mechanism of, or leaves free each parameter.
+  </p>
+  <p class="pm-honest-note">
+    <strong>Honest accounting.</strong> &ldquo;Derived&rdquo; means the framework produces the
+    value from axioms (plus structural postulates) with no empirical input beyond unit conventions.
+    &ldquo;Constrained&rdquo; means boundary conditions or ranges are derived but the exact value
+    requires further computation (typically RG running or bootstrap dynamics).
+    &ldquo;Mechanism only&rdquo; means the physical mechanism is explained but the numerical
+    value remains empirical. Parameters listed as &ldquo;free&rdquo; are genuine degrees of
+    freedom. &ldquo;Non-viable&rdquo; means the framework currently cannot explain the observed value.
+  </p>
+
+  <div class="pm-summary">
+    <div class="pm-stat pm-stat-derived">
+      <div class="pm-stat-value">{derivedCount}</div>
+      <div class="pm-stat-label">Derived</div>
+    </div>
+    <div class="pm-stat pm-stat-constrained">
+      <div class="pm-stat-value">{constrainedCount}</div>
+      <div class="pm-stat-label">Constrained</div>
+    </div>
+    <div class="pm-stat pm-stat-mechanism">
+      <div class="pm-stat-value">{mechanismCount}</div>
+      <div class="pm-stat-label">Mechanism only</div>
+    </div>
+    <div class="pm-stat pm-stat-free">
+      <div class="pm-stat-value">{freeCount}</div>
+      <div class="pm-stat-label">Free</div>
+    </div>
+    {nonViableCount > 0 && (
+      <div class="pm-stat pm-stat-nonviable">
+        <div class="pm-stat-value">{nonViableCount}</div>
+        <div class="pm-stat-label">Non-viable</div>
+      </div>
+    )}
+  </div>
+
+  <div class="pm-determined-box">
+    <strong>{determinedInPrinciple}</strong> of <strong>{totalCount}</strong> parameters
+    are <strong>determined in principle</strong> (derived, constrained, or mechanism identified).
+    Only <strong>{genuinelyFree}</strong> remain genuinely free or non-viable.
+  </div>
+
+  <h2>Comparison with Other Frameworks</h2>
+  <p class="pm-comparison-intro">
+    How does this compare to the parameter-reduction claims of other major theoretical frameworks?
+    The table below compares the number of free parameters each framework leaves unexplained
+    out of the Standard Model's ~25.
+  </p>
+  <div class="pm-comparison-table-wrap">
+    <table class="pm-comparison-table">
+      <thead>
+        <tr>
+          <th>Framework</th>
+          <th>Free parameters</th>
+          <th>Determined in principle</th>
+          <th>Key mechanism</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Standard Model</strong></td>
+          <td>~25</td>
+          <td>0</td>
+          <td>All measured experimentally</td>
+        </tr>
+        <tr>
+          <td><strong>MSSM</strong> (minimal SUSY)</td>
+          <td>~124</td>
+          <td>0 (adds ~100 new parameters)</td>
+          <td>Soft SUSY-breaking terms</td>
+        </tr>
+        <tr>
+          <td><strong>SU(5) GUT</strong></td>
+          <td>~24</td>
+          <td>~1 (predicts coupling unification)</td>
+          <td>Gauge unification at high scale</td>
+        </tr>
+        <tr>
+          <td><strong>SO(10) GUT</strong></td>
+          <td>~18–22</td>
+          <td>~3–7 (constrains Yukawa textures)</td>
+          <td>Single spinor representation for fermions</td>
+        </tr>
+        <tr>
+          <td><strong>String/M-theory</strong></td>
+          <td>0 in principle; ~10<sup>500</sup> landscape vacua</td>
+          <td>All in principle (vacuum selection unsolved)</td>
+          <td>Geometry of extra dimensions</td>
+        </tr>
+        <tr class="pm-comparison-highlight">
+          <td><strong>Observer-Centrism</strong></td>
+          <td><strong>{genuinelyFree}</strong></td>
+          <td><strong>{determinedInPrinciple}</strong></td>
+          <td>Division algebras + coherence geometry + bootstrap hierarchy</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="pm-comparison-caveat">
+    <strong>Caveats.</strong> &ldquo;Determined in principle&rdquo; for this framework means
+    the derivation chain from axioms to the parameter exists and is identified, even where
+    the quantitative computation (e.g. full RG flow, bootstrap fixed-point) is not yet completed.
+    String theory similarly claims all parameters are determined once the vacuum is selected, but
+    the vacuum selection problem remains open. GUTs reduce parameters through group-theoretic
+    constraints but do not explain Yukawa couplings. No framework has yet computed all SM
+    parameters from first principles.
+  </p>
+
+  {Object.entries(groups).map(([group, params]) => (
+    params.length > 0 && (
+      <>
+        <h2>{group}</h2>
+        <div class="pm-cards">
+          {params.map(p => {
+            const sc = statusColors[p.status] || statusColors['free']
+            return (
+              <div class="pm-card" style={`border-left: 3px solid ${sc.text}`}>
+                <div class="pm-card-header">
+                  <span class="pm-symbol" set:html={renderInline(`$${p.symbol}$`)} />
+                  <span class="pm-name">{p.name}</span>
+                  <span class="pm-status-badge" style={`background: ${sc.bg}; color: ${sc.text}`}>
+                    {sc.label}
+                  </span>
+                  {p.accuracy && (
+                    <span class="pm-accuracy" set:html={renderInline(p.accuracy)} />
+                  )}
+                </div>
+                <div class="pm-card-body">
+                  <div class="pm-row">
+                    <span class="pm-row-label">SM value</span>
+                    <span class="pm-row-value" set:html={renderInline(p.smValue)} />
+                  </div>
+                  <div class="pm-row">
+                    <span class="pm-row-label">Framework</span>
+                    <span class="pm-row-value" set:html={renderInline(p.frameworkValue)} />
+                  </div>
+                  {p.notes && (
+                    <p class="pm-notes" set:html={renderInline(p.notes)} />
+                  )}
+                  {p.gaps && p.gaps.length > 0 && (
+                    <div class="pm-gaps">
+                      <span class="pm-gaps-label">Remaining gaps:</span>
+                      {p.gaps.map((g: string) => (
+                        <span class="pm-gap-tag" set:html={renderInline(g)} />
+                      ))}
+                    </div>
+                  )}
+                </div>
+                <div class="pm-card-footer">
+                  <a href={`${base}/derivations/${p.derivation}`} class="pm-source">
+                    {p.derivationTitle} &rarr;
+                  </a>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </>
+    )
+  ))}
+</MainLayout>
+
+<style>
+  .pm-honest-note {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0.5rem 0 1.5rem;
+    padding: 0.75rem 1rem;
+    background: color-mix(in srgb, #3b82f6 6%, transparent);
+    border-left: 3px solid #3b82f6;
+    border-radius: 4px;
+    line-height: 1.6;
+  }
+  .pm-summary {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+    flex-wrap: wrap;
+  }
+  .pm-stat {
+    flex: 1;
+    min-width: 100px;
+    padding: 0.75rem 1rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    text-align: center;
+  }
+  .pm-stat-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 0.04em;
+  }
+  .pm-stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+  }
+  .pm-stat-derived .pm-stat-value { color: #22c55e; }
+  .pm-stat-constrained .pm-stat-value { color: #3b82f6; }
+  .pm-stat-mechanism .pm-stat-value { color: #f59e0b; }
+  .pm-stat-free .pm-stat-value { color: #94a3b8; }
+  .pm-stat-nonviable .pm-stat-value { color: #ef4444; }
+
+  .pm-determined-box {
+    font-size: 0.95rem;
+    padding: 1rem 1.25rem;
+    background: color-mix(in srgb, #22c55e 6%, transparent);
+    border-left: 3px solid #22c55e;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .pm-comparison-intro {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+  }
+  .pm-comparison-table-wrap {
+    overflow-x: auto;
+    margin-bottom: 0.75rem;
+  }
+  .pm-comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+  .pm-comparison-table th,
+  .pm-comparison-table td {
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .pm-comparison-table th {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted);
+    background: var(--color-surface);
+  }
+  .pm-comparison-table td:nth-child(2),
+  .pm-comparison-table td:nth-child(3) {
+    text-align: center;
+  }
+  .pm-comparison-table th:nth-child(2),
+  .pm-comparison-table th:nth-child(3) {
+    text-align: center;
+  }
+  .pm-comparison-highlight {
+    background: color-mix(in srgb, #22c55e 6%, transparent);
+  }
+  .pm-comparison-highlight td {
+    border-bottom: 2px solid #22c55e;
+  }
+  .pm-comparison-caveat {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .pm-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  .pm-card {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    background: var(--color-surface);
+  }
+  .pm-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .pm-symbol {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    min-width: 2rem;
+  }
+  .pm-symbol :global(.katex) {
+    font-size: 1.1rem;
+  }
+  .pm-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-text);
+  }
+  .pm-status-badge {
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.15rem 0.5rem;
+    border-radius: 9999px;
+    letter-spacing: 0.03em;
+    flex-shrink: 0;
+  }
+  .pm-accuracy {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    margin-left: auto;
+  }
+  .pm-accuracy :global(.katex) {
+    font-size: 0.78rem;
+  }
+  .pm-card-body {
+    margin-bottom: 0.5rem;
+  }
+  .pm-row {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.35rem;
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+  .pm-row-label {
+    font-weight: 600;
+    color: var(--color-text-muted);
+    min-width: 5.5rem;
+    flex-shrink: 0;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding-top: 0.1rem;
+  }
+  .pm-row-value {
+    color: var(--color-text);
+  }
+  .pm-row-value :global(.katex) {
+    font-size: 0.88rem;
+  }
+  .pm-notes {
+    font-size: 0.78rem;
+    line-height: 1.5;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0.35rem 0 0.25rem;
+  }
+  .pm-notes :global(.katex) {
+    font-size: 0.82rem;
+  }
+  .pm-gaps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  .pm-gaps-label {
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .pm-gap-tag {
+    font-size: 0.7rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    background: color-mix(in srgb, #f59e0b 10%, transparent);
+    color: #f59e0b;
+  }
+  .pm-gap-tag :global(.katex) {
+    font-size: 0.72rem;
+  }
+  .pm-card-footer {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .pm-source {
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+  .pm-source:hover {
+    text-decoration: underline;
+  }
+</style>
