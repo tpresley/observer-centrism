@@ -151,7 +151,7 @@ Therefore: $S_\mathcal{O}^{\text{after}}(S) = \mathcal{C}(S) - \mathcal{C}_\math
 | Copenhagen | Collapse postulate (non-unitary) | No collapse — relational invariant generation is unitary and local |
 | Many Worlds | Ontological branching | No branching — one interaction graph, multiple relational perspectives |
 | Bohmian mechanics | Hidden positions + guiding equation | No hidden variables — relational invariants are the complete description |
-| QBism | Subjective probabilities | Probabilities are objective ($P = |\psi|^2$ from [Born Rule](/derivations/quantum/born-rule)) but observer-indexed |
+| QBism | Subjective probabilities | Probabilities are objective ($P = \lvert\psi\rvert^2$ from [Born Rule](/derivations/quantum/born-rule)) but observer-indexed |
 | Relational QM (Rovelli) | Postulated relationality | Relationality is derived from axioms, not postulated |
 
 **Proposition 7.2 (Closest to Rovelli, but derived).** *The framework is structurally closest to Rovelli's relational quantum mechanics (1996), but differs in a crucial respect: RQM postulates that quantum states are relational without deriving why. The observer-centric framework derives the relational structure from the three axioms. The relational invariants are constructed objects, not interpretive choices.*
