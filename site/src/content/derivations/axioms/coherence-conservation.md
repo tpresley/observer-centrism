@@ -222,15 +222,17 @@ This violates (C5). Hence (C5) is independent of (C1)–(C4).
 
 **Assessment:** The axiom is rigorously formalized with complete definitions, proofs, and explicit consistency models. All assumptions are stated. The main structural postulate (the dependency graph) is acknowledged as a co-axiom. Conservation is stated as a single axiom with two parts — transformation isometry (i) and Cauchy slice invariance (ii) — with their logical independence noted in the remark following the axiom statement.
 
+**Remark (Monotonicity as a theorem).** The question of whether monotonicity ($S_1 \subseteq S_2 \Rightarrow \mathcal{C}(S_1) \leq \mathcal{C}(S_2)$) should be added as axiom (C6) is resolved by the operational identification developed in [Coherence Operational](/derivations/axioms/coherence-operational). Theorem 4.1 of that derivation establishes a uniqueness result: under the axioms (C1)–(C5) together with the observer structure (Axiom 2) and the operational constraints (channel additivity, composition, continuity), the coherence functional is uniquely identified with the von Neumann entropy $S(\rho) = -\text{tr}(\rho \ln \rho)$. Von Neumann entropy is monotone for subsystems of a fixed system — this is a standard consequence of strong subadditivity applied to the purification. Therefore monotonicity follows as a theorem once the operational identification is established and need not be added as a separate axiom. The question of whether non-monotone coherence measures are physically relevant is moot: the uniqueness theorem selects the von Neumann entropy uniquely, and von Neumann entropy is monotone.
+
 ## Open Gaps
 
 1. **Uniqueness of $C_0$**: Is the total coherence $C_0$ a free parameter or fixed by self-consistency? Without loss of generality, one may normalize $C_0 = 1$ for the abstract theory; the physical value of $C_0$ (if any) would be determined by the bootstrap fixed point.
 2. **Category-theoretic formulation**: A more natural formalization may use a functor $\mathcal{C}: \mathbf{Sub}(\mathcal{H}) \to \mathbb{R}_{\geq 0}$ from the category of subsystems to non-negative reals, with conservation as a constraint on natural transformations.
-3. **Monotonicity**: Whether monotonicity ($S_1 \subseteq S_2 \Rightarrow \mathcal{C}(S_1) \leq \mathcal{C}(S_2)$) should be added as axiom (C6) depends on whether all physically relevant coherence measures are monotone. The non-trivial model (Model 2) is monotone; whether non-monotone models are physically meaningful is open.
 
 ## Addressed Gaps
 
 1. **Conditional coherence** — *Resolved by [Coherence Operational](/derivations/axioms/coherence-operational) (Theorem 2.1)*: The dictionary identifying coherence with quantum entropy identifies conditional coherence $\mathcal{C}(S_1 | S_2) = \mathcal{C}(S_1 \cup S_2) - \mathcal{C}(S_2)$ with quantum conditional entropy, completing the formal characterization.
+2. **Monotonicity** — *Resolved*: The operational identification in [Coherence Operational](/derivations/axioms/coherence-operational) (Theorem 4.1) uniquely selects von Neumann entropy as the coherence functional. Von Neumann entropy is monotone for subsystems of a fixed system, so monotonicity follows as a theorem and need not be added as axiom (C6). See the Remark preceding this section.
 
 <!-- References -->
 [Fujishige, 2005]: /references#fujishige-2005

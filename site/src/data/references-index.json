@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-03-29T14:45:59.280Z",
-    "totalReferences": 92,
-    "totalCitations": 105,
-    "citingFiles": 43,
+    "generatedAt": "2026-03-29T15:01:17.091Z",
+    "totalReferences": 94,
+    "totalCitations": 107,
+    "citingFiles": 44,
     "generator": "scripts/extract-references.mjs"
   },
   "categoryNames": {
@@ -47,7 +47,7 @@
     },
     "spacetime-geometry": {
       "name": "Spacetime & Geometry",
-      "count": 14
+      "count": 16
     },
     "particle-physics": {
       "name": "Particle Physics",
@@ -707,6 +707,36 @@
         }
       ],
       "category": "field-theory"
+    },
+    {
+      "id": "anandan-1988",
+      "authors": "Anandan",
+      "year": 1988,
+      "citedAs": [
+        "Anandan, 1988"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "spacetime/lorentz-invariance",
+          "title": "Lorentz Invariance"
+        }
+      ],
+      "category": "spacetime-geometry"
+    },
+    {
+      "id": "aravind-1997",
+      "authors": "Aravind",
+      "year": 1997,
+      "citedAs": [
+        "Aravind, 1997"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "spacetime/lorentz-invariance",
+          "title": "Lorentz Invariance"
+        }
+      ],
+      "category": "spacetime-geometry"
     },
     {
       "id": "ashtekar-singh-2011",

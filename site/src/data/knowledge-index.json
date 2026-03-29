@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-29T14:45:59.096Z",
+    "generatedAt": "2026-03-29T15:01:16.913Z",
     "derivationCount": 64,
     "predictionCount": 11,
     "gaPageCount": 12,
@@ -16,8 +16,8 @@
     "derivationCount": 64,
     "predictionCount": 11,
     "edgeCount": 149,
-    "formalObjectCount": 955,
-    "openGapCount": 202,
+    "formalObjectCount": 959,
+    "openGapCount": 188,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -211,11 +211,6 @@
           "number": 2,
           "title": "Category-theoretic formulation",
           "description": "A more natural formalization may use a functor C: mathbfSub(H) R 0 from the category of subsystems to non-negative reals, with conservation as a constraint on natural transformations."
-        },
-        {
-          "number": 3,
-          "title": "Monotonicity",
-          "description": "Whether monotonicity (S1 S2 C(S1) C(S2)) should be added as axiom (C6) depends on whether all physically relevant coherence measures are monotone. The non-trivial model (Model 2) is monotone; whether "
         }
       ],
       "assessmentVerdict": "The axiom is rigorously formalized with complete definitions, proofs, and explicit consistency models. All assumptions are stated. The main structural postulate (the dependency graph) is acknowledged as a co-axiom. Conservation is stated as a single axiom with two parts — transformation isometry (i)",
@@ -232,7 +227,15 @@
           },
           {
             "target": "axioms/coherence-operational",
+            "context": "Coherence Operational"
+          },
+          {
+            "target": "axioms/coherence-operational",
             "context": "Theorem 2.1"
+          },
+          {
+            "target": "axioms/coherence-operational",
+            "context": "Theorem 4.1"
           }
         ],
         "incoming": [
@@ -525,7 +528,15 @@
         "incoming": [
           {
             "source": "axioms/coherence-conservation",
+            "context": "Coherence Operational"
+          },
+          {
+            "source": "axioms/coherence-conservation",
             "context": "Theorem 2.1"
+          },
+          {
+            "source": "axioms/coherence-conservation",
+            "context": "Theorem 4.1"
           },
           {
             "source": "interactions/bootstrap",
@@ -1162,11 +1173,6 @@
           "number": 1,
           "title": "Graded boundaries",
           "description": "The binary self/non-self partition is an idealization. A generalization to B: Aut(H)|Sigma [0,1] (degree of threat) is physically motivated but not developed."
-        },
-        {
-          "number": 2,
-          "title": "Observer equivalence",
-          "description": "Isomorphism in mathbfObs (Definition 7.3) is the natural notion. Whether physically distinct observers can be isomorphic (like different particles of the same type) is a question about the category's "
         }
       ],
       "assessmentVerdict": "The axiom is rigorously formalized. Every definition is precise, every proof is complete, and every additional assumption (topology, smooth structure, Lie group) is explicitly stated at the point where it is introduced. The observer category mathbfObs is fully constructed with verified category axio",
@@ -1184,6 +1190,14 @@
           {
             "target": "thermodynamics/action-planck",
             "context": "Action and Planck's Constant"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "bootstrap level"
+          },
+          {
+            "target": "gauge/spin-statistics",
+            "context": "spin-statistics theorem"
           },
           {
             "target": "interactions/relational-invariants",
@@ -1213,6 +1227,10 @@
           },
           {
             "source": "spacetime/lorentz-invariance",
+            "context": "Axiom 2"
+          },
+          {
+            "source": "spacetime/singularity-resolution",
             "context": "Axiom 2"
           },
           {
@@ -1710,11 +1728,6 @@
           "number": 4,
           "title": "Yukawa couplings",
           "description": "The fermion masses are free parameters in the Standard Model but should be constrained by the division algebra structure and the [Flavor Mixing](/derivations/flavor/mixing-angles) derivation. This req"
-        },
-        {
-          "number": 5,
-          "title": "Experimental test of non-convergence",
-          "description": "The most distinctive prediction is non-convergence of couplings — the three curves alphai-1(mu) do not meet at a single point. Future precision measurements of alphas(MZ) and sin2thetaW(MZ), combined "
         }
       ],
       "assessmentVerdict": "Rigorous. This derivation introduces one new structural postulate (S1: algebraic normalization) and derives the coupling constant relationships: sin2thetaW = 1/3 at the algebraic scale, coupling ratios alpha1 : alpha2 : alpha3 = 4:2:1, and the non-convergence prediction. All proofs are complete. The",
@@ -6781,6 +6794,10 @@
           {
             "source": "quantum/entanglement",
             "context": "Causal Set Statistics"
+          },
+          {
+            "source": "spacetime/lorentz-invariance",
+            "context": "Causal Set Statistics"
           }
         ]
       },
@@ -7395,7 +7412,7 @@
           },
           {
             "source": "spacetime/singularity-resolution",
-            "context": "Black Hole Information Paradox"
+            "context": "Information Paradox"
           }
         ]
       },
@@ -7567,11 +7584,6 @@
           "number": 3,
           "title": "Non-associativity and confinement",
           "description": "The connection between octonionic non-associativity and color confinement (Proposition 8.1) is structural but not quantitative. A rigorous confinement proof from the octonionic structure would be a ma"
-        },
-        {
-          "number": 4,
-          "title": "Alternative algebras",
-          "description": "Could a non-Cayley-Dickson extension (e.g., Clifford algebras, Jordan algebras) serve as the interaction algebra at some level? The coherence constraints (norm-preserving doubling → Hurwitz) exclude t"
         }
       ],
       "assessmentVerdict": "Rigorous. The central result (Theorem 2.3) now chains three fully rigorous steps: (1) each bootstrap level needs a larger algebra (from irreducibility of relational invariants), (2) the norm is multiplicative under composition (unit elements are isometries by coherence conservation; general elements",
@@ -7916,6 +7928,10 @@
             "context": "Bootstrap Mechanism"
           },
           {
+            "source": "axioms/observer-definition",
+            "context": "bootstrap level"
+          },
+          {
             "source": "cosmology/baryogenesis",
             "context": "Bootstrap Mechanism"
           },
@@ -7993,6 +8009,10 @@
           },
           {
             "source": "spacetime/einstein-equations",
+            "context": "Bootstrap"
+          },
+          {
+            "source": "thermodynamics-ext/first-law",
             "context": "Bootstrap"
           },
           {
@@ -10342,16 +10362,11 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Partial exclusion",
-          "description": "The exclusion principle applies to identical fermions. Non-identical fermions (e.g., electron and muon) are not exchangeable and have no antisymmetry requirement. The framework correctly predicts this"
-        },
-        {
-          "number": 2,
           "title": "Fermi-Dirac statistics",
           "description": "The full Fermi-Dirac distribution langle nk rangle = 1/(e(epsilonk - mu)/kBT + 1) should be derivable from the exclusion principle (each state occupied by 0 or 1 fermion) plus the entropy framework (["
         },
         {
-          "number": 3,
+          "number": 2,
           "title": "Stability of matter",
           "description": "Lieb and Thirring (1975) proved that the stability of ordinary matter (energy extensive in particle number) requires the Pauli exclusion principle. This should be connected to the framework's structur"
         }
@@ -11167,6 +11182,12 @@
           "statementPreview": "The unique function f: [0,) [0,1] satisfying Propositions 4.1, 5.1, and the composition constraint B3 is f(x) = x. Th..."
         },
         {
+          "type": "Corollary",
+          "id": "6.2",
+          "name": "Born rule for mixed states",
+          "statementPreview": "For a mixed state rho = sumi pi |psiiranglelanglepsii|, the probability of outcome k is:*"
+        },
+        {
           "type": "Theorem",
           "id": "7.1",
           "name": "Hilbert space from coherence conservation",
@@ -11220,16 +11241,6 @@
           "number": 2,
           "title": "Continuous observables",
           "description": "Extension to continuous spectra (dP = |psi(x)|2 dx) follows from the same arguments in the continuum limit, using the measure-theoretic version of coherence conservation."
-        },
-        {
-          "number": 3,
-          "title": "Mixed states",
-          "description": "For mixed states rho = sumi pi |psiiranglelanglepsii|, the Born rule generalizes to P(k) = Tr(rho |kranglelangle k|). This should follow from the [Entropy](/derivations/thermodynamics/entropy) derivat"
-        },
-        {
-          "number": 4,
-          "title": "POVMs",
-          "description": "Generalized measurements (positive operator-valued measures) should follow from partial Type III interactions where the observer does not fully resolve the system's state. <!-- References --> [Aczél, "
         }
       ],
       "assessmentVerdict": "The Born rule derivation is fully rigorous. The amplitude–coherence identification (formerly S1) is now a theorem (Theorem 0.1), derived from U(1) invariance, composition, and continuity via the Cauchy multiplicative equation. The uniqueness of f(x) = x is established for all dimensions by the compo",
@@ -11269,16 +11280,16 @@
             "context": "Measurement Problem"
           },
           {
+            "target": "thermodynamics/entropy",
+            "context": "Entropy"
+          },
+          {
             "target": "minimal-observer/structure",
             "context": "Minimal Observer Structure"
           },
           {
             "target": "minimal-observer/multiplicity",
             "context": "Multiplicity"
-          },
-          {
-            "target": "thermodynamics/entropy",
-            "context": "Entropy"
           }
         ],
         "incoming": [
@@ -11637,6 +11648,10 @@
         {
           "number": 8,
           "title": "The Single-Outcome Question"
+        },
+        {
+          "number": 9,
+          "title": "Delayed Choice and Quantum Eraser"
         }
       ],
       "formalObjects": [
@@ -11744,7 +11759,7 @@
         },
         {
           "type": "Theorem",
-          "id": "9.1.",
+          "id": "10.1.",
           "name": "",
           "statementPreview": "The Stern-Gerlach measurement of a spin-1/2 system provides a consistency model for all results of this derivation.*"
         }
@@ -11765,11 +11780,6 @@
           "number": 3,
           "title": "Continuous and weak measurement",
           "description": "Weak measurements correspond to Type III interactions that generate relational invariants with small coherence content C(IOS) ll C(S). Continuous measurement is the limit of many weak Type III interac"
-        },
-        {
-          "number": 4,
-          "title": "Delayed choice and quantum eraser",
-          "description": "The relational invariant is generated at the time of the Type III interaction, regardless of when the observer \"decides\" which interaction to perform. No retrocausality — the partial order prec in G i"
         }
       ],
       "assessmentVerdict": "The measurement problem resolution is rigorous. The core elements — Type III interaction as measurement, von Neumann coupling derived from unitarity + linearity, observer-relative descriptions, Wigner's friend consistency — are all rigorously established from the axioms and prior derivations. The in",
@@ -13336,7 +13346,7 @@
         "geometry"
       ],
       "summary": "Lorentz contraction and time dilation as loop projection effects — the Lorentz group is the symmetry group of loop closure in the coherence geometry",
-      "lastUpdated": "2026-03-09",
+      "lastUpdated": "2026-03-29",
       "dependsOn": [
         "spacetime/speed-of-light"
       ],
@@ -13381,6 +13391,14 @@
         {
           "number": 8,
           "title": "Discrete Symmetries"
+        },
+        {
+          "number": 9,
+          "title": "Thomas Precession as Berry Phase"
+        },
+        {
+          "number": 10,
+          "title": "Lorentz Invariance as an Experimental Prediction"
         }
       ],
       "formalObjects": [
@@ -13493,8 +13511,14 @@
           "statementPreview": "The full Lorentz group O(3,1) has four components. The three discrete transformations beyond SO+(3,1) are:*"
         },
         {
+          "type": "Proposition",
+          "id": "9.1",
+          "name": "Wigner rotation as observer loop Berry phase",
+          "statementPreview": "The Wigner rotation arising from successive non-collinear boosts is a Berry phase of the observer's U(1) loop transpo..."
+        },
+        {
           "type": "Theorem",
-          "id": "9.1.",
+          "id": "11.1.",
           "name": "",
           "statementPreview": "Two S1 observers in (1+1)-dimensional Minkowski space (R1,1, eta) satisfy all results of this derivation.*"
         }
@@ -13505,16 +13529,6 @@
           "number": 1,
           "title": "Acceleration",
           "description": "*(partially resolved — downstream)*: This derivation covers inertial (constant velocity) observers. Accelerated observers require curved coherence geometry — connecting to [Gravity](/derivations/space"
-        },
-        {
-          "number": 2,
-          "title": "Thomas precession",
-          "description": "A boost followed by a boost in a different direction includes a rotation (Wigner rotation). This should correspond to a geometric phase in the observer loop — a Berry phase from the loop's trajectory "
-        },
-        {
-          "number": 3,
-          "title": "Lorentz violation tests",
-          "description": "The framework predicts exact Lorentz invariance at the level of the coherence geometry. Any observed Lorentz violation would require the coherence geometry to deviate from exact Minkowski form — a sha"
         }
       ],
       "assessmentVerdict": "The Lorentz group is rigorously derived as the isometry group of the Minkowski metric (from [Speed of Light](/derivations/spacetime/speed-of-light)). Time dilation, length contraction, the speed limit, and the Poincaré extension are standard consequences. Homogeneity (formerly S1) is now a theorem d",
@@ -13556,6 +13570,10 @@
           {
             "target": "particles/spin-statistics",
             "context": "Spin and Statistics"
+          },
+          {
+            "target": "holography/causal-set-statistics",
+            "context": "Causal Set Statistics"
           },
           {
             "target": "particles/spin-statistics",
@@ -13622,7 +13640,7 @@
         "quantum-gravity"
       ],
       "summary": "The discrete relational invariant network resolves all classical singularities: the Planck-scale resolution limit bounds curvature, replacing the Big Bang with a coherence bounce and black hole singularities with regular Planck-density cores. The bounce is model-independently forced by the curvature bound via contraposition of the Penrose-Hawking singularity theorems.",
-      "lastUpdated": "2026-03-12",
+      "lastUpdated": "2026-03-29",
       "dependsOn": [
         "spacetime/einstein-equations",
         "holography/area-scaling"
@@ -13656,6 +13674,10 @@
         {
           "number": 6,
           "title": "The Trans-Planckian Problem"
+        },
+        {
+          "number": 7,
+          "title": "Information Preservation and the Information Paradox"
         }
       ],
       "formalObjects": [
@@ -13732,6 +13754,12 @@
           "statementPreview": "The discreteness of the relational invariant network automatically resolves the trans-Planckian problem for Hawking r..."
         },
         {
+          "type": "Corollary",
+          "id": "7.1",
+          "name": "Complementary resolution of black hole information loss",
+          "statementPreview": "Singularity resolution (this derivation) and the information paradox resolution ([Information Paradox](/derivations/h..."
+        },
+        {
           "type": "Theorem",
           "id": "7.1.",
           "name": "",
@@ -13759,11 +13787,6 @@
           "number": 4,
           "title": "De Sitter core structure",
           "description": "The regular interior likely approaches a de Sitter geometry (constant positive curvature) near rmin. Deriving this from the framework would connect singularity resolution to the cosmological constant."
-        },
-        {
-          "number": 5,
-          "title": "Information preservation",
-          "description": "Singularity resolution removes the classical information loss mechanism (information destroyed at the singularity). This should connect to the [Black Hole Information Paradox](/derivations/holography/"
         }
       ],
       "assessmentVerdict": "Rigorous. The core results are established by a chain of model-independent arguments: the curvature bound (Theorem 3.1, from the Planck-scale cutoff) prevents singularity formation; contraposition of the Penrose-Hawking theorems forces energy condition violation near rhoP; and the Raychaudhuri equat",
@@ -13787,16 +13810,20 @@
             "context": "Hawking Radiation"
           },
           {
+            "target": "holography/information-paradox",
+            "context": "Information Paradox"
+          },
+          {
+            "target": "axioms/observer-definition",
+            "context": "Axiom 2"
+          },
+          {
             "target": "holography/area-scaling",
             "context": "Area Scaling"
           },
           {
             "target": "foundation/coherence-lagrangian",
             "context": "Coherence Lagrangian"
-          },
-          {
-            "target": "holography/information-paradox",
-            "context": "Black Hole Information Paradox"
           }
         ],
         "incoming": [
@@ -14168,6 +14195,10 @@
         {
           "number": 7,
           "title": "The Second Law as Distinguishability Loss"
+        },
+        {
+          "number": 8,
+          "title": "Completing the Čencov Verification"
         }
       ],
       "formalObjects": [
@@ -14250,6 +14281,12 @@
           "statementPreview": "The second law of thermodynamics ([Entropy](/derivations/thermodynamics/entropy), Theorem 4.1) is equivalent to: a bo..."
         },
         {
+          "type": "Proposition",
+          "id": "8.1",
+          "name": "Čencov monotonicity of the coherence Hessian",
+          "statementPreview": "The coherence Hessian metric from [Action and Planck's Constant](/derivations/thermodynamics/action-planck) satisfies..."
+        },
+        {
           "type": "Theorem",
           "id": "8.1.",
           "name": "",
@@ -14284,21 +14321,16 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Čencov verification",
-          "description": "Complete the formal verification that the coherence Hessian metric from [Action and Planck's Constant](/derivations/thermodynamics/action-planck) satisfies Čencov's monotonicity conditions under all M"
-        },
-        {
-          "number": 2,
           "title": "Quantum extension",
           "description": "Extend from the classical Čencov theorem (unique monotone metric) to the quantum Petz classification (family of monotone metrics). In the quantum case, the monotone metrics form a family parameterized"
         },
         {
-          "number": 3,
+          "number": 2,
           "title": "Landauer's principle",
           "description": "The monotonicity direction (Proposition 3.2) implies that erasing information has a minimum thermodynamic cost. Quantify this: the coherence cost of reducing distinguishability by Delta D should be at"
         },
         {
-          "number": 4,
+          "number": 3,
           "title": "No-broadcasting",
           "description": "Generalize no-cloning from pure states to mixed states. Broadcasting (approximately copying) a mixed state is possible classically but impossible quantumly for non-commuting states. The coherence fram"
         }
@@ -14326,6 +14358,10 @@
           {
             "target": "thermodynamics/entropy",
             "context": "Theorem 4.1"
+          },
+          {
+            "target": "thermodynamics-ext/fisher-metric",
+            "context": "Proposition 4.1"
           }
         ],
         "incoming": [
@@ -14406,6 +14442,10 @@
         {
           "number": 7,
           "title": "Zeroth Law and Thermal Equilibrium"
+        },
+        {
+          "number": 8,
+          "title": "Free Energy as Constrained Coherence"
         }
       ],
       "formalObjects": [
@@ -14509,16 +14549,11 @@
         },
         {
           "number": 2,
-          "title": "Free energy and Legendre transforms",
-          "description": "The Helmholtz free energy F = U - TS, Gibbs free energy G = U - TS + PV, and other thermodynamic potentials should have natural coherence interpretations as constrained coherence optimizations."
-        },
-        {
-          "number": 3,
           "title": "Non-equilibrium thermodynamics",
           "description": "The first law holds for arbitrary processes, not just quasi-static ones. The framework should extend to far-from-equilibrium coherence dynamics, connecting to fluctuation theorems."
         },
         {
-          "number": 4,
+          "number": 3,
           "title": "Negative temperature",
           "description": "In standard thermodynamics, population-inverted systems have T < 0. In the framework, this corresponds to systems where adding coherence *decreases* entropy — which requires a bounded state space wher"
         }
@@ -14554,9 +14589,18 @@
           {
             "target": "thermodynamics/action-planck",
             "context": "Action and Planck's Constant"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "thermodynamics/entropy",
+            "context": "Coherence First Law"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -14817,6 +14861,10 @@
           {
             "source": "thermodynamics-ext/distinguishability-conservation",
             "context": "Fisher Information Metric"
+          },
+          {
+            "source": "thermodynamics-ext/distinguishability-conservation",
+            "context": "Proposition 4.1"
           },
           {
             "source": "thermodynamics-ext/renormalization",
@@ -15621,6 +15669,10 @@
         {
           "number": 8,
           "title": "Recovery of Boltzmann Entropy"
+        },
+        {
+          "number": 9,
+          "title": "Status of Boltzmann's Constant"
         }
       ],
       "formalObjects": [
@@ -15725,21 +15777,16 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Boltzmann's constant",
-          "description": "kB enters as the proportionality constant between coherence units and thermodynamic energy units (Sthermo = kB Scoherence). Its numerical value should be derivable once the action/Planck constant rela"
-        },
-        {
-          "number": 2,
           "title": "Fluctuation theorems",
           "description": "The Jarzynski equality langle e-beta Wrangle = e-beta Delta F and Crooks fluctuation theorem describe the probability of entropy-decreasing fluctuations. These should arise as finite-size corrections "
         },
         {
-          "number": 3,
+          "number": 2,
           "title": "Negative entropy flow",
           "description": "Living systems locally decrease their entropy by expanding their coherence domains through structured interactions. The framework predicts this is possible because entropy is observer-relative — what "
         },
         {
-          "number": 4,
+          "number": 3,
           "title": "Quantum entropy",
           "description": "The von Neumann entropy S = -tr(rho ln rho) should be derivable as the inaccessible coherence when A's access is limited to a subsystem of an entangled state."
         }
@@ -15779,6 +15826,10 @@
           {
             "target": "thermodynamics/action-planck",
             "context": "Action and Planck's Constant"
+          },
+          {
+            "target": "thermodynamics-ext/first-law",
+            "context": "Coherence First Law"
           },
           {
             "target": "quantum/born-rule",
@@ -22431,6 +22482,13 @@
     },
     {
       "derivationId": "quantum/born-rule",
+      "type": "Corollary",
+      "id": "6.2",
+      "name": "Born rule for mixed states",
+      "fullRef": "quantum/born-rule:Corollary 6.2"
+    },
+    {
+      "derivationId": "quantum/born-rule",
       "type": "Theorem",
       "id": "7.1",
       "name": "Hilbert space from coherence conservation",
@@ -22698,9 +22756,9 @@
     {
       "derivationId": "quantum/measurement",
       "type": "Theorem",
-      "id": "9.1.",
+      "id": "10.1.",
       "name": "",
-      "fullRef": "quantum/measurement:Theorem 9.1."
+      "fullRef": "quantum/measurement:Theorem 10.1."
     },
     {
       "derivationId": "quantum/observer-relative-objectivity",
@@ -23551,10 +23609,17 @@
     },
     {
       "derivationId": "spacetime/lorentz-invariance",
+      "type": "Proposition",
+      "id": "9.1",
+      "name": "Wigner rotation as observer loop Berry phase",
+      "fullRef": "spacetime/lorentz-invariance:Proposition 9.1"
+    },
+    {
+      "derivationId": "spacetime/lorentz-invariance",
       "type": "Theorem",
-      "id": "9.1.",
+      "id": "11.1.",
       "name": "",
-      "fullRef": "spacetime/lorentz-invariance:Theorem 9.1."
+      "fullRef": "spacetime/lorentz-invariance:Theorem 11.1."
     },
     {
       "derivationId": "spacetime/singularity-resolution",
@@ -23639,6 +23704,13 @@
       "id": "6.1",
       "name": "Trans-Planckian resolution",
       "fullRef": "spacetime/singularity-resolution:Proposition 6.1"
+    },
+    {
+      "derivationId": "spacetime/singularity-resolution",
+      "type": "Corollary",
+      "id": "7.1",
+      "name": "Complementary resolution of black hole information loss",
+      "fullRef": "spacetime/singularity-resolution:Corollary 7.1"
     },
     {
       "derivationId": "spacetime/singularity-resolution",
@@ -23849,6 +23921,13 @@
       "id": "7.1",
       "name": "Entropic restatement",
       "fullRef": "thermodynamics-ext/distinguishability-conservation:Proposition 7.1"
+    },
+    {
+      "derivationId": "thermodynamics-ext/distinguishability-conservation",
+      "type": "Proposition",
+      "id": "8.1",
+      "name": "Čencov monotonicity of the coherence Hessian",
+      "fullRef": "thermodynamics-ext/distinguishability-conservation:Proposition 8.1"
     },
     {
       "derivationId": "thermodynamics-ext/distinguishability-conservation",
@@ -24672,13 +24751,6 @@
       "description": "A more natural formalization may use a functor C: mathbfSub(H) R 0 from the category of subsystems to non-negative reals, with conservation as a constraint on natural transformations."
     },
     {
-      "derivationId": "axioms/coherence-conservation",
-      "derivationStatus": "rigorous",
-      "number": 3,
-      "title": "Monotonicity",
-      "description": "Whether monotonicity (S1 S2 C(S1) C(S2)) should be added as axiom (C6) depends on whether all physically relevant coherence measures are monotone. The non-trivial model (Model 2) is monotone; whether "
-    },
-    {
       "derivationId": "axioms/coherence-operational",
       "derivationStatus": "rigorous",
       "number": 1,
@@ -24728,13 +24800,6 @@
       "description": "The binary self/non-self partition is an idealization. A generalization to B: Aut(H)|Sigma [0,1] (degree of threat) is physically motivated but not developed."
     },
     {
-      "derivationId": "axioms/observer-definition",
-      "derivationStatus": "rigorous",
-      "number": 2,
-      "title": "Observer equivalence",
-      "description": "Isomorphism in mathbfObs (Definition 7.3) is the natural notion. Whether physically distinct observers can be isomorphic (like different particles of the same type) is a question about the category's "
-    },
-    {
       "derivationId": "cosmology/baryogenesis",
       "derivationStatus": "rigorous",
       "number": 1,
@@ -24782,13 +24847,6 @@
       "number": 4,
       "title": "Yukawa couplings",
       "description": "The fermion masses are free parameters in the Standard Model but should be constrained by the division algebra structure and the [Flavor Mixing](/derivations/flavor/mixing-angles) derivation. This req"
-    },
-    {
-      "derivationId": "cosmology/coupling-constants",
-      "derivationStatus": "rigorous",
-      "number": 5,
-      "title": "Experimental test of non-convergence",
-      "description": "The most distinctive prediction is non-convergence of couplings — the three curves alphai-1(mu) do not meet at a single point. Future precision measurements of alphas(MZ) and sin2thetaW(MZ), combined "
     },
     {
       "derivationId": "cosmology/geometric-inflation",
@@ -25295,13 +25353,6 @@
       "description": "The connection between octonionic non-associativity and color confinement (Proposition 8.1) is structural but not quantitative. A rigorous confinement proof from the octonionic structure would be a ma"
     },
     {
-      "derivationId": "interactions/bootstrap-division-algebras",
-      "derivationStatus": "rigorous",
-      "number": 4,
-      "title": "Alternative algebras",
-      "description": "Could a non-Cayley-Dickson extension (e.g., Clifford algebras, Jordan algebras) serve as the interaction algebra at some level? The coherence constraints (norm-preserving doubling → Hurwitz) exclude t"
-    },
-    {
       "derivationId": "interactions/bootstrap",
       "derivationStatus": "rigorous",
       "number": 1,
@@ -25515,20 +25566,13 @@
       "derivationId": "particles/pauli-exclusion",
       "derivationStatus": "rigorous",
       "number": 1,
-      "title": "Partial exclusion",
-      "description": "The exclusion principle applies to identical fermions. Non-identical fermions (e.g., electron and muon) are not exchangeable and have no antisymmetry requirement. The framework correctly predicts this"
-    },
-    {
-      "derivationId": "particles/pauli-exclusion",
-      "derivationStatus": "rigorous",
-      "number": 2,
       "title": "Fermi-Dirac statistics",
       "description": "The full Fermi-Dirac distribution langle nk rangle = 1/(e(epsilonk - mu)/kBT + 1) should be derivable from the exclusion principle (each state occupied by 0 or 1 fermion) plus the entropy framework (["
     },
     {
       "derivationId": "particles/pauli-exclusion",
       "derivationStatus": "rigorous",
-      "number": 3,
+      "number": 2,
       "title": "Stability of matter",
       "description": "Lieb and Thirring (1975) proved that the stability of ordinary matter (energy extensive in particle number) requires the Pauli exclusion principle. This should be connected to the framework's structur"
     },
@@ -25603,20 +25647,6 @@
       "description": "Extension to continuous spectra (dP = |psi(x)|2 dx) follows from the same arguments in the continuum limit, using the measure-theoretic version of coherence conservation."
     },
     {
-      "derivationId": "quantum/born-rule",
-      "derivationStatus": "rigorous",
-      "number": 3,
-      "title": "Mixed states",
-      "description": "For mixed states rho = sumi pi |psiiranglelanglepsii|, the Born rule generalizes to P(k) = Tr(rho |kranglelangle k|). This should follow from the [Entropy](/derivations/thermodynamics/entropy) derivat"
-    },
-    {
-      "derivationId": "quantum/born-rule",
-      "derivationStatus": "rigorous",
-      "number": 4,
-      "title": "POVMs",
-      "description": "Generalized measurements (positive operator-valued measures) should follow from partial Type III interactions where the observer does not fully resolve the system's state. <!-- References --> [Aczél, "
-    },
-    {
       "derivationId": "quantum/entanglement",
       "derivationStatus": "rigorous",
       "number": 1,
@@ -25657,13 +25687,6 @@
       "number": 3,
       "title": "Continuous and weak measurement",
       "description": "Weak measurements correspond to Type III interactions that generate relational invariants with small coherence content C(IOS) ll C(S). Continuous measurement is the limit of many weak Type III interac"
-    },
-    {
-      "derivationId": "quantum/measurement",
-      "derivationStatus": "rigorous",
-      "number": 4,
-      "title": "Delayed choice and quantum eraser",
-      "description": "The relational invariant is generated at the time of the Type III interaction, regardless of when the observer \"decides\" which interaction to perform. No retrocausality — the partial order prec in G i"
     },
     {
       "derivationId": "quantum/observer-relative-objectivity",
@@ -25827,20 +25850,6 @@
       "description": "*(partially resolved — downstream)*: This derivation covers inertial (constant velocity) observers. Accelerated observers require curved coherence geometry — connecting to [Gravity](/derivations/space"
     },
     {
-      "derivationId": "spacetime/lorentz-invariance",
-      "derivationStatus": "rigorous",
-      "number": 2,
-      "title": "Thomas precession",
-      "description": "A boost followed by a boost in a different direction includes a rotation (Wigner rotation). This should correspond to a geometric phase in the observer loop — a Berry phase from the loop's trajectory "
-    },
-    {
-      "derivationId": "spacetime/lorentz-invariance",
-      "derivationStatus": "rigorous",
-      "number": 3,
-      "title": "Lorentz violation tests",
-      "description": "The framework predicts exact Lorentz invariance at the level of the coherence geometry. Any observed Lorentz violation would require the coherence geometry to deviate from exact Minkowski form — a sha"
-    },
-    {
       "derivationId": "spacetime/singularity-resolution",
       "derivationStatus": "rigorous",
       "number": 1,
@@ -25869,13 +25878,6 @@
       "description": "The regular interior likely approaches a de Sitter geometry (constant positive curvature) near rmin. Deriving this from the framework would connect singularity resolution to the cosmological constant."
     },
     {
-      "derivationId": "spacetime/singularity-resolution",
-      "derivationStatus": "rigorous",
-      "number": 5,
-      "title": "Information preservation",
-      "description": "Singularity resolution removes the classical information loss mechanism (information destroyed at the singularity). This should connect to the [Black Hole Information Paradox](/derivations/holography/"
-    },
-    {
       "derivationId": "spacetime/speed-of-light",
       "derivationStatus": "rigorous",
       "number": 1,
@@ -25900,27 +25902,20 @@
       "derivationId": "thermodynamics-ext/distinguishability-conservation",
       "derivationStatus": "rigorous",
       "number": 1,
-      "title": "Čencov verification",
-      "description": "Complete the formal verification that the coherence Hessian metric from [Action and Planck's Constant](/derivations/thermodynamics/action-planck) satisfies Čencov's monotonicity conditions under all M"
-    },
-    {
-      "derivationId": "thermodynamics-ext/distinguishability-conservation",
-      "derivationStatus": "rigorous",
-      "number": 2,
       "title": "Quantum extension",
       "description": "Extend from the classical Čencov theorem (unique monotone metric) to the quantum Petz classification (family of monotone metrics). In the quantum case, the monotone metrics form a family parameterized"
     },
     {
       "derivationId": "thermodynamics-ext/distinguishability-conservation",
       "derivationStatus": "rigorous",
-      "number": 3,
+      "number": 2,
       "title": "Landauer's principle",
       "description": "The monotonicity direction (Proposition 3.2) implies that erasing information has a minimum thermodynamic cost. Quantify this: the coherence cost of reducing distinguishability by Delta D should be at"
     },
     {
       "derivationId": "thermodynamics-ext/distinguishability-conservation",
       "derivationStatus": "rigorous",
-      "number": 4,
+      "number": 3,
       "title": "No-broadcasting",
       "description": "Generalize no-cloning from pure states to mixed states. Broadcasting (approximately copying) a mixed state is possible classically but impossible quantumly for non-commuting states. The coherence fram"
     },
@@ -25935,20 +25930,13 @@
       "derivationId": "thermodynamics-ext/first-law",
       "derivationStatus": "rigorous",
       "number": 2,
-      "title": "Free energy and Legendre transforms",
-      "description": "The Helmholtz free energy F = U - TS, Gibbs free energy G = U - TS + PV, and other thermodynamic potentials should have natural coherence interpretations as constrained coherence optimizations."
-    },
-    {
-      "derivationId": "thermodynamics-ext/first-law",
-      "derivationStatus": "rigorous",
-      "number": 3,
       "title": "Non-equilibrium thermodynamics",
       "description": "The first law holds for arbitrary processes, not just quasi-static ones. The framework should extend to far-from-equilibrium coherence dynamics, connecting to fluctuation theorems."
     },
     {
       "derivationId": "thermodynamics-ext/first-law",
       "derivationStatus": "rigorous",
-      "number": 4,
+      "number": 3,
       "title": "Negative temperature",
       "description": "In standard thermodynamics, population-inverted systems have T < 0. In the framework, this corresponds to systems where adding coherence *decreases* entropy — which requires a bounded state space wher"
     },
@@ -26026,27 +26014,20 @@
       "derivationId": "thermodynamics/entropy",
       "derivationStatus": "rigorous",
       "number": 1,
-      "title": "Boltzmann's constant",
-      "description": "kB enters as the proportionality constant between coherence units and thermodynamic energy units (Sthermo = kB Scoherence). Its numerical value should be derivable once the action/Planck constant rela"
-    },
-    {
-      "derivationId": "thermodynamics/entropy",
-      "derivationStatus": "rigorous",
-      "number": 2,
       "title": "Fluctuation theorems",
       "description": "The Jarzynski equality langle e-beta Wrangle = e-beta Delta F and Crooks fluctuation theorem describe the probability of entropy-decreasing fluctuations. These should arise as finite-size corrections "
     },
     {
       "derivationId": "thermodynamics/entropy",
       "derivationStatus": "rigorous",
-      "number": 3,
+      "number": 2,
       "title": "Negative entropy flow",
       "description": "Living systems locally decrease their entropy by expanding their coherence domains through structured interactions. The framework predicts this is possible because entropy is observer-relative — what "
     },
     {
       "derivationId": "thermodynamics/entropy",
       "derivationStatus": "rigorous",
-      "number": 4,
+      "number": 3,
       "title": "Quantum entropy",
       "description": "The von Neumann entropy S = -tr(rho ln rho) should be derivable as the inaccessible coherence when A's access is limited to a subsystem of an entangled state."
     },

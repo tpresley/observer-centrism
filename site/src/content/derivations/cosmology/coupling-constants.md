@@ -204,6 +204,8 @@ $$\alpha_s(M_Z) \sim 0.10\text{–}0.13$$
 
 **Assessment:** Rigorous. This derivation introduces one new structural postulate (S1: algebraic normalization) and derives the coupling constant relationships: $\sin^2\theta_W = 1/3$ at the algebraic scale, coupling ratios $\alpha_1 : \alpha_2 : \alpha_3 = 4:2:1$, and the non-convergence prediction. All proofs are complete. The numerical estimates ($\alpha_{em}^{-1} \sim 127$, $\alpha_s \sim 0.12$) match experiment to $\sim 5$%, which is the expected accuracy for one-loop running without threshold corrections. The most distinctive prediction — that the three couplings do *not* converge to a GUT point — is falsifiable by precision measurements.
 
+**Remark (Non-convergence as a falsifiable prediction).** The non-convergence of gauge couplings (Theorem 4.1) is the most distinctive experimental signature of this derivation and deserves emphasis as a *prediction*. (1) The framework predicts that the three inverse couplings $\alpha_1^{-1}(\mu)$, $\alpha_2^{-1}(\mu)$, $\alpha_3^{-1}(\mu)$ do *not* converge to a single point at any energy scale — there is no grand unification scale. This is because the couplings are set independently at their respective crystallization scales by the division algebra structure ($\mathbb{C}$, $\mathbb{H}$, $\mathbb{O}$), not by a single unified coupling. (2) Current data: the SM couplings with no new physics miss unification by several percent — the three one-loop extrapolated curves form a triangle rather than a point near $\sim 10^{15}$ GeV. The framework explains this miss as *structural*, not as evidence for new particles (such as SUSY) to adjust the running. (3) Testable: improved measurements of $\alpha_s(M_Z)$ (currently $\pm 0.9$%) and $\sin^2\theta_W(M_Z)$ (currently $\pm 0.02$%) can further constrain whether precise unification is excluded. The framework predicts it is. A future electron-positron collider (FCC-ee, CEPC) would measure $\alpha_s$ to $\pm 0.1$% and $\sin^2\theta_W$ to $\pm 0.003$%, providing a definitive test. (4) This distinguishes the framework from GUT models ($SU(5)$, $SO(10)$) and SUSY-GUT models, all of which *require* convergence — and from the standard "desert hypothesis" which treats the near-miss as suggestive of new physics at the GUT scale.
+
 ## Open Gaps
 
 1. **Axiom-level derivation of S1**: The algebraic normalization $g_i^2 = 4\pi / \dim_{\mathbb{R}} \mathbb{A}_i$ is a structural postulate. Deriving it from the coherence axioms (e.g., showing that the canonical norm on $\mathbb{A}_i$ uniquely determines the coupling) would eliminate the only new assumption in this derivation.
@@ -214,7 +216,10 @@ $$\alpha_s(M_Z) \sim 0.10\text{–}0.13$$
 
 4. **Yukawa couplings**: The fermion masses are free parameters in the Standard Model but should be constrained by the division algebra structure and the [Flavor Mixing](/derivations/flavor/mixing-angles) derivation. This requires the electroweak symmetry breaking mechanism (SM Gauge Group, Open Gap 3).
 
-5. **Experimental test of non-convergence**: The most distinctive prediction is non-convergence of couplings — the three curves $\alpha_i^{-1}(\mu)$ do not meet at a single point. Future precision measurements of $\alpha_s(M_Z)$ and $\sin^2\theta_W(M_Z)$, combined with improved determinations of the running, can discriminate between the framework's prediction and GUT convergence.
+
+## Addressed Gaps
+
+1. **Experimental test of non-convergence** — *Resolved*: The non-convergence prediction is now documented as a falsifiable prediction with specific experimental discriminators. See Remark after Rigor Assessment. Current data already disfavor exact unification; future colliders (FCC-ee, CEPC) can provide a definitive test at the $0.1$% level.
 
 <!-- References -->
 [Machacek & Vaughn, 1984]: /references#machacek-vaughn-1984

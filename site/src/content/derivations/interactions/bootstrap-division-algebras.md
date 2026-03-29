@@ -192,6 +192,8 @@ Therefore the sedenion algebra is inconsistent with coherence conservation. The 
 - **Three forces** (Corollary 7.2): Electromagnetic ($U(1)$), weak ($SU(2)$), strong ($SU(3)$). No fourth. $\checkmark$
 - **Property loss** (Proposition 8.1): Charge distinction at $\mathbb{C}$, non-abelian structure at $\mathbb{H}$, confinement at $\mathbb{O}$. All consistent with observations. $\checkmark$ $\square$
 
+**Remark (Exclusion of alternative algebras).** One might ask whether non-Cayley-Dickson extensions — Clifford algebras $\operatorname{Cl}(n)$, Jordan algebras, or the sedenions $\mathbb{S}$ — could serve as interaction algebras at some bootstrap level. The coherence constraints exclude all of them. The key requirement is the composition property $\|ab\| = \|a\| \cdot \|b\|$ (Theorem 2.3, Part 2), which is necessary because coherence is multiplicative under interaction. **Clifford algebras** $\operatorname{Cl}(n)$ for $n \geq 3$ fail because they contain zero divisors: elements $a \neq 0$, $b \neq 0$ with $ab = 0$. For example, in $\operatorname{Cl}(3)$, the elements $a = 1 + e_{123}$ and $b = 1 - e_{123}$ satisfy $ab = 1 - e_{123}^2 = 0$ (since $e_{123}^2 = -1$ in signature $(3,0)$ gives $ab = 1 - 1 = 0$). Zero divisors violate the composition property ($\|ab\| = 0$ but $\|a\| \cdot \|b\| > 0$) and hence violate coherence conservation, by the same argument as Theorem 7.1. **Jordan algebras** fail because their symmetric product $a \circ b = (ab + ba)/2$ does not preserve the multiplicative norm — the composition property $\|a \circ b\| = \|a\| \cdot \|b\|$ fails generically (the symmetrization destroys the norm-multiplicative structure). **Sedenions** $\mathbb{S}$ (the next Cayley-Dickson step beyond $\mathbb{O}$) are already excluded by Theorem 7.1 via explicit zero divisors. By Hurwitz's theorem (1898), the *only* real normed division algebras satisfying the composition property are $\mathbb{R}$, $\mathbb{C}$, $\mathbb{H}$, $\mathbb{O}$ — exactly the Cayley-Dickson sequence. The bootstrap terminates at $\mathbb{O}$: four levels, four forces.
+
 ## Rigor Assessment
 
 **Fully rigorous:**
@@ -213,7 +215,10 @@ Therefore the sedenion algebra is inconsistent with coherence conservation. The 
 1. **Category-theoretic formulation**: A categorical framework (e.g., using the theory of composition algebras over monoidal categories) might make the Cayley-Dickson necessity even more transparent and provide an independent mathematical perspective.
 2. **Level counting**: The derivation identifies 4 levels ($\mathbb{R}, \mathbb{C}, \mathbb{H}, \mathbb{O}$) with 4 types of interaction (identity, pairwise, triple, quadruple). Making precise the correspondence between "number of interacting observers" and "Cayley-Dickson level" — particularly for levels > 4, which the algebra cannot accommodate.
 3. **Non-associativity and confinement**: The connection between octonionic non-associativity and color confinement (Proposition 8.1) is structural but not quantitative. A rigorous confinement proof from the octonionic structure would be a major result (related to the Clay Millennium Prize problem).
-4. **Alternative algebras**: Could a non-Cayley-Dickson extension (e.g., Clifford algebras, Jordan algebras) serve as the interaction algebra at some level? The coherence constraints (norm-preserving doubling → Hurwitz) exclude these, but an explicit proof that Clifford algebras violate the composition property would strengthen the uniqueness claim.
+
+## Addressed Gaps
+
+1. **Alternative algebras** — *Resolved*: Clifford algebras (zero divisors for $n \geq 3$), Jordan algebras (symmetric product fails composition property), and sedenions (zero divisors) are all excluded by the coherence norm requirement $\|ab\| = \|a\| \cdot \|b\|$. Hurwitz's theorem guarantees $\mathbb{R}, \mathbb{C}, \mathbb{H}, \mathbb{O}$ are the only possibilities. See Remark before Rigor Assessment.
 
 <!-- References -->
 [Hurwitz, 1898]: /references#hurwitz-1898

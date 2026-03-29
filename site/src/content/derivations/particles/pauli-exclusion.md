@@ -132,6 +132,8 @@ This pressure diverges as $V \to 0$ ($n \to \infty$), preventing complete collap
 
 *Proof.* The symmetric subspace $\text{Sym}^2(\mathcal{H}) \subset \mathcal{H} \otimes \mathcal{H}$ contains the state $|\psi\rangle \otimes |\psi\rangle$ for any $|\psi\rangle$. The exchange operator acts as $P_{12}(|\psi\rangle \otimes |\psi\rangle) = |\psi\rangle \otimes |\psi\rangle = +1 \cdot (|\psi\rangle \otimes |\psi\rangle)$, consistent with the symmetric requirement. No contradiction arises. This is the basis for Bose-Einstein condensation — macroscopic occupation of a single quantum state. $\square$
 
+**Remark (Species decomposition and partial exclusion).** The Pauli exclusion principle applies only to *identical* fermions — those sharing the same winding class $[\gamma] \in \pi_1(Q)$ (same species). Non-identical fermions (e.g., electron and muon) belong to *different* winding classes and have independent loop structures. Formally: the multi-observer state space decomposes as $\mathcal{H} = \bigotimes_\alpha \mathcal{H}_\alpha$ where $\alpha$ indexes distinct winding classes (species). The antisymmetrization requirement (from $\pi_1 = \mathbb{Z}_2$) applies *within* each sector $\mathcal{H}_\alpha$, not between sectors. An electron and a muon can occupy the same spatial state because they reside in different sectors — their winding numbers are independently defined. This is exactly the standard physics: Pauli exclusion applies per species, and species labels are the framework's winding class labels. No additional axiom is needed; the sector decomposition is a direct consequence of the topological classification of loop types.
+
 ## Comparison with Standard Physics
 
 | Aspect | Standard QM | Observer-centrism |
@@ -174,6 +176,9 @@ This pressure diverges as $V \to 0$ ($n \to \infty$), preventing complete collap
 
 ## Open Gaps
 
-1. **Partial exclusion**: The exclusion principle applies to identical fermions. Non-identical fermions (e.g., electron and muon) are not exchangeable and have no antisymmetry requirement. The framework correctly predicts this — exchange symmetry applies only within a winding class — but should formalize the "species" concept.
-2. **Fermi-Dirac statistics**: The full Fermi-Dirac distribution $\langle n_k \rangle = 1/(e^{(\epsilon_k - \mu)/k_BT} + 1)$ should be derivable from the exclusion principle (each state occupied by 0 or 1 fermion) plus the entropy framework ([Entropy](/derivations/thermodynamics/entropy)).
-3. **Stability of matter**: Lieb and Thirring (1975) proved that the stability of ordinary matter (energy extensive in particle number) requires the Pauli exclusion principle. This should be connected to the framework's structural explanation of matter stability.
+1. **Fermi-Dirac statistics**: The full Fermi-Dirac distribution $\langle n_k \rangle = 1/(e^{(\epsilon_k - \mu)/k_BT} + 1)$ should be derivable from the exclusion principle (each state occupied by 0 or 1 fermion) plus the entropy framework ([Entropy](/derivations/thermodynamics/entropy)).
+2. **Stability of matter**: Lieb and Thirring (1975) proved that the stability of ordinary matter (energy extensive in particle number) requires the Pauli exclusion principle. This should be connected to the framework's structural explanation of matter stability.
+
+## Addressed Gaps
+
+1. **Partial exclusion** — *Resolved*: The species concept is formalized via the winding class decomposition $\mathcal{H} = \bigotimes_\alpha \mathcal{H}_\alpha$, where $\alpha$ indexes distinct winding classes $[\gamma] \in \pi_1(Q)$. Antisymmetrization applies within each sector, not between sectors. See Remark after Step 7.

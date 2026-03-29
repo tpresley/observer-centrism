@@ -195,6 +195,10 @@ $$\dim V = \dim \mathfrak{g}_\mathcal{O}$$
 
 *Proof.* Forward: an isomorphism provides all three. Converse: given homeomorphism $f: \Sigma_1 \to \Sigma_2$, group isomorphism $\alpha: G_1 \to G_2$, and linear isomorphism $\phi: V_1 \to V_2$ with $I_2 \circ f = \phi \circ I_1$ and equivariance, the triple $(f, \phi, \alpha)$ constitutes an isomorphism in $\mathbf{Obs}$. $\square$
 
+**Remark 7.5 (Observer equivalence and identical particles).** Isomorphism in $\mathbf{Obs}$ (Definition 7.3) is precisely the framework's notion of identical particles. Two observers $\mathcal{O}_1 = (\Sigma_1, I_1, \mathcal{B}_1)$ and $\mathcal{O}_2 = (\Sigma_2, I_2, \mathcal{B}_2)$ are isomorphic when they share the same state space dimension ($\dim \Sigma_1 = \dim \Sigma_2$ as manifolds), the same Noether invariant spectrum ($\text{spec}(I_1) \cong \text{spec}(I_2)$ as subsets of isomorphic target spaces), and the same boundary type ($G_{\mathcal{O}_1} \cong G_{\mathcal{O}_2}$ as groups). This is exactly the classification by [bootstrap level](/derivations/interactions/bootstrap): the bootstrap mechanism determines which isomorphism classes in $\mathbf{Obs}$ are populated at each level of the hierarchy, while the [spin-statistics theorem](/derivations/gauge/spin-statistics) determines the exchange behavior (bosonic or fermionic) of collections of isomorphic observers.
+
+Physically distinct but isomorphic observers are ubiquitous: two electrons in different orbitals, a particle and its antiparticle (related by a $\mathbf{Obs}$-isomorphism that conjugates the invariant $I \mapsto -I$ while preserving the group structure), and exchange-symmetric multi-particle systems. The question "can physically distinct observers be isomorphic?" therefore has a definitive affirmative answer — and this is not an additional axiom but a consequence of the categorical structure already defined in Proposition 7.4. The isomorphism classes of $\mathbf{Obs}$ are the particle types; the objects within each class are the individual instances.
+
 ## Comparison with Other Frameworks
 
 | Framework | "Observer" definition | Observer-centrism |
@@ -225,8 +229,8 @@ $$\dim V = \dim \mathfrak{g}_\mathcal{O}$$
 ## Open Gaps
 
 1. **Graded boundaries**: The binary self/non-self partition is an idealization. A generalization to $\mathcal{B}: \text{Aut}(\mathcal{H})|_\Sigma \to [0,1]$ (degree of threat) is physically motivated but not developed.
-2. **Observer equivalence**: Isomorphism in $\mathbf{Obs}$ (Definition 7.3) is the natural notion. Whether physically distinct observers can be isomorphic (like different particles of the same type) is a question about the category's structure.
 
 ## Addressed Gaps
 
 1. **Composite observers** — *Resolved by [Relational Invariants](/derivations/interactions/relational-invariants)*: The relational invariant construction builds composite observers $(\Sigma_{12}, I_{12}, \mathcal{B}_{12})$ from component observers, providing the composition rule for the observer category.
+2. **Observer equivalence** — *Resolved*: Remark 7.5 shows that isomorphism in $\mathbf{Obs}$ is precisely the framework's notion of identical particles. Physically distinct but isomorphic observers (electrons, antiparticles, exchange-symmetric systems) are classified by bootstrap level, with exchange behavior determined by the spin-statistics theorem. This is a consequence of the categorical structure (Proposition 7.4), not an additional axiom.

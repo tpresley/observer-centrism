@@ -208,6 +208,26 @@ since $\mathcal{C}(S) > 0$ (axiom C2) and $dS_A/d\tau \geq 0$ (second law). Equa
 
 **Remark.** Note the parallel: globally, distinguishability is *exactly conserved* (Theorem 2.1). Locally (from a bounded observer's perspective), distinguishability is *monotonically lost* (Proposition 7.1). The second law is not about the universe losing structure — it is about observers losing access to structure.
 
+### Step 8: Completing the Čencov Verification
+
+**Proposition 8.1 (Čencov monotonicity of the coherence Hessian).** *The coherence Hessian metric from [Action and Planck's Constant](/derivations/thermodynamics/action-planck) satisfies Čencov's monotonicity condition under all Markov maps.*
+
+*Proof.* The argument assembles four established results into a complete chain:
+
+1. **Coherence monotonicity.** Axiom 1 (coherence conservation), specifically subadditivity (C4), implies that coarse-graining cannot increase coherence: for any Markov map $\pi$, $\mathcal{C}(\pi(S)) \leq \mathcal{C}(S)$. This is monotonicity at the coherence level (Proposition 3.2 above).
+
+2. **Čencov's theorem.** The Fisher information metric $G_{ij}$ is the unique (up to a positive scale factor $\lambda > 0$) Riemannian metric on the probability simplex $\Delta_n$ that is monotone under all stochastic (Markov) maps [Čencov, 1982]. That is, if a metric $g$ satisfies $g_{\pi(\sigma)}(\pi_* v, \pi_* v) \leq g_\sigma(v, v)$ for every Markov map $\pi$ and every tangent vector $v$, then $g = \lambda G$ for some $\lambda > 0$.
+
+3. **Identification.** The [Fisher Information Metric](/derivations/thermodynamics-ext/fisher-metric) derivation (Proposition 4.1) establishes that the coherence Hessian metric equals the Fisher-Rao metric: $g_{ij}^{\text{coh}} = \hbar \, G_{ij}$. This identification is already rigorous.
+
+4. **Inheritance.** Since $g^{\text{coh}} = \hbar \, G$ and $G$ satisfies Čencov monotonicity for all Markov maps (by Čencov's theorem), $g^{\text{coh}}$ automatically inherits this property:
+
+$$g^{\text{coh}}_{\pi(\sigma)}(\pi_* v, \pi_* v) = \hbar \, G_{\pi(\sigma)}(\pi_* v, \pi_* v) \leq \hbar \, G_\sigma(v, v) = g^{\text{coh}}_\sigma(v, v)$$
+
+for every Markov map $\pi$ and every tangent vector $v$. No case-by-case verification is needed — the identification in step (3) does all the work. $\square$
+
+**Remark.** This closes Open Gap #1 of the [Fisher Information Metric](/derivations/thermodynamics-ext/fisher-metric) derivation. The verification is not a new computation but a recognition that the gap was already closed by the identification $g^{\text{coh}} = \hbar G$: any metric proportional to the Fisher metric is automatically Čencov-monotone, because Čencov's theorem characterizes the Fisher metric precisely by that monotonicity property.
+
 ## Physical Interpretation
 
 | Framework concept | Standard physics | Information theory |
@@ -259,17 +279,17 @@ since $\mathcal{C}(S) > 0$ (axiom C2) and $dS_A/d\tau \geq 0$ (second law). Equa
 
 ## Open Gaps
 
-1. **Čencov verification**: Complete the formal verification that the coherence Hessian metric from [Action and Planck's Constant](/derivations/thermodynamics/action-planck) satisfies Čencov's monotonicity conditions under all Markov maps. This would close Open Gap #1 of the [Fisher Information Metric](/derivations/thermodynamics-ext/fisher-metric) derivation.
+1. **Quantum extension**: Extend from the classical Čencov theorem (unique monotone metric) to the quantum Petz classification (family of monotone metrics). In the quantum case, the monotone metrics form a family parameterized by an operator-monotone function $f$; the symmetric logarithmic derivative (SLD) metric and the right logarithmic derivative (RLD) metric are extremal cases. Conservation of distinguishability should select among these.
 
-2. **Quantum extension**: Extend from the classical Čencov theorem (unique monotone metric) to the quantum Petz classification (family of monotone metrics). In the quantum case, the monotone metrics form a family parameterized by an operator-monotone function $f$; the symmetric logarithmic derivative (SLD) metric and the right logarithmic derivative (RLD) metric are extremal cases. Conservation of distinguishability should select among these.
+2. **Landauer's principle**: The monotonicity direction (Proposition 3.2) implies that erasing information has a minimum thermodynamic cost. Quantify this: the coherence cost of reducing distinguishability by $\Delta D$ should be at least $k_B T \ln 2$ per bit, recovering Landauer's bound.
 
-3. **Landauer's principle**: The monotonicity direction (Proposition 3.2) implies that erasing information has a minimum thermodynamic cost. Quantify this: the coherence cost of reducing distinguishability by $\Delta D$ should be at least $k_B T \ln 2$ per bit, recovering Landauer's bound.
-
-4. **No-broadcasting**: Generalize no-cloning from pure states to mixed states. Broadcasting (approximately copying) a mixed state is possible classically but impossible quantumly for non-commuting states. The coherence framework should distinguish these cases based on the structure of the relational coherence.
+3. **No-broadcasting**: Generalize no-cloning from pure states to mixed states. Broadcasting (approximately copying) a mixed state is possible classically but impossible quantumly for non-commuting states. The coherence framework should distinguish these cases based on the structure of the relational coherence.
 
 ## Addressed Gaps
 
 1. **Product-space coherence decomposition** *(resolved)*: Axiomatized in Definition 5.0: additivity for independent subsystems (from the definition of coherence independence) and subadditivity (C4) for correlated subsystems. This closes the formalization gap for the no-cloning/no-deleting proofs.
+
+2. **Čencov verification** — *Resolved*: The formal verification reduces to confirming that the coherence Hessian metric IS the Fisher-Rao metric, which is already established in [Fisher Information Metric](/derivations/thermodynamics-ext/fisher-metric) (Proposition 4.1). Čencov's theorem (1982) then guarantees monotonicity under ALL Markov maps automatically. The chain is: (1) Axiom 1 subadditivity (C4) implies coarse-graining cannot increase coherence — monotonicity at the coherence level; (2) the Fisher metric is the unique (up to scale) Riemannian metric on the probability simplex monotone under all Markov maps (Čencov's theorem); (3) the coherence Hessian equals the Fisher-Rao metric (fisher-metric.md, Proposition 4.1); (4) therefore the coherence Hessian inherits Čencov monotonicity for all Markov maps, not just those explicitly checked. No separate verification is needed — the identification in step (3) does all the work. See also Proposition 4.1 of this derivation.
 
 <!-- References -->
 [Dieks, 1982]: /references#dieks-1982

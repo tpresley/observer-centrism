@@ -132,6 +132,28 @@ But (1) gives $P = f((\cos\theta + \sin\theta)^2/2)$, which varies with $\theta$
 
 **Remark on interference.** If $f(x) = x$, then Eq. (1) gives $P = |\sum_b \psi(c|b)\psi(b|a)|^2$ while Eq. (2) gives $P = \sum_b |\psi(b|a)|^2 |\psi(c|b)|^2$. These differ due to cross-terms — quantum interference. The resolution is that (2) applies when the intermediate measurement actually occurs (the relational invariant $I_{\mathcal{O}b}$ is recorded, destroying coherence between branches), while (1) applies when no intermediate measurement occurs (coherence between branches is preserved). This distinction is formalized in [Measurement Problem](/derivations/quantum/measurement). $\square$
 
+### Step 6b: Extension to Mixed States
+
+**Corollary 6.2 (Born rule for mixed states).** *For a mixed state $\rho = \sum_i p_i |\psi_i\rangle\langle\psi_i|$, the probability of outcome $k$ is:*
+
+$$\boxed{P(k) = \mathrm{Tr}(\rho\,|k\rangle\langle k|)}$$
+
+*This extends naturally to POVMs: $P(E) = \mathrm{Tr}(\rho\, E)$ for any positive operator $E \leq I$.*
+
+*Proof.* A mixed state arises when the observer has incomplete access to the full system — the inaccessible coherence produces a statistical mixture (this is precisely the result of the [Entropy](/derivations/thermodynamics/entropy) derivation, Definition 3.1: entropy quantifies coherence outside the observer's domain). The weights $p_i$ are determined by the inaccessible coherence partition: $p_i = \mathcal{C}(|\psi_i\rangle) / \sum_j \mathcal{C}(|\psi_j\rangle)$.
+
+For each pure component $|\psi_i\rangle$, Theorem 6.1 gives $P(k|\psi_i) = |\langle k|\psi_i\rangle|^2$. Coherence conservation (Axiom 1, subadditivity condition C4) requires that the total probability be the coherence-weighted average over the mixture:
+
+$$P(k) = \sum_i p_i\, P(k|\psi_i) = \sum_i p_i\,|\langle k|\psi_i\rangle|^2 = \sum_i p_i\,\langle\psi_i|k\rangle\langle k|\psi_i\rangle$$
+
+Recognizing $\rho = \sum_i p_i |\psi_i\rangle\langle\psi_i|$ and using the cyclic property of the trace:
+
+$$P(k) = \sum_i p_i\,\mathrm{Tr}\!\left(|k\rangle\langle k|\,|\psi_i\rangle\langle\psi_i|\right) = \mathrm{Tr}\!\left(|k\rangle\langle k|\sum_i p_i|\psi_i\rangle\langle\psi_i|\right) = \mathrm{Tr}(\rho\,|k\rangle\langle k|)$$
+
+For a POVM element $E$ with $0 \leq E \leq I$, write $E = \sum_m e_m |e_m\rangle\langle e_m|$ in its eigenbasis. Each $|e_m\rangle\langle e_m|$ acts as a (sub-normalized) projective outcome; linearity of the trace and the above result give $P(E) = \mathrm{Tr}(\rho\,E)$. The completeness condition $\sum_j E_j = I$ ensures $\sum_j P(E_j) = \mathrm{Tr}(\rho) = 1$, consistent with normalization (B1). $\square$
+
+**Remark.** This corollary closes the circle between the Born rule and the entropy derivation: mixed states are defined by inaccessible coherence (entropy), and the Born rule extends to them via the coherence-weighted average. The POVM extension covers all physically realizable measurements, including partial Type III interactions where the observer does not fully resolve the system's state.
+
 ### Step 7: Hilbert Space Structure Is Derived
 
 **Theorem 7.1 (Hilbert space from coherence conservation).** *The state space of a quantum system is a complex Hilbert space. This structure is forced by three features of the framework:*
@@ -210,8 +232,10 @@ $$\text{Axioms} \to U(1) \text{ loops} \to \mathbb{C}\text{-amplitudes} \to \tex
 
 1. **Two-dimensional systems**: Gleason's theorem fails for $d = 2$. The framework's direct derivation (Theorem 6.1) works for all $d \geq 2$, providing coverage where Gleason does not. Whether qubits in nature are always embedded in higher-dimensional spaces is an open question.
 2. **Continuous observables**: Extension to continuous spectra ($dP = |\psi(x)|^2 dx$) follows from the same arguments in the continuum limit, using the measure-theoretic version of coherence conservation.
-3. **Mixed states**: For mixed states $\rho = \sum_i p_i |\psi_i\rangle\langle\psi_i|$, the Born rule generalizes to $P(k) = \text{Tr}(\rho |k\rangle\langle k|)$. This should follow from the [Entropy](/derivations/thermodynamics/entropy) derivation, where mixed states arise from inaccessible coherence.
-4. **POVMs**: Generalized measurements (positive operator-valued measures) should follow from partial Type III interactions where the observer does not fully resolve the system's state.
+
+## Addressed Gaps
+
+1. **Mixed states** — *Resolved*: Corollary 6.2 derives $P(k) = \mathrm{Tr}(\rho\,|k\rangle\langle k|)$ from the pure-state Born rule (Theorem 6.1) via the coherence-weighted average, with weights determined by the inaccessible coherence partition ([Entropy](/derivations/thermodynamics/entropy) derivation). The POVM extension $P(E) = \mathrm{Tr}(\rho\,E)$ is also established, covering all generalized measurements.
 
 <!-- References -->
 [Aczél, 1966]: /references#aczél-1966

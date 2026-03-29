@@ -227,12 +227,32 @@ Similarly, $\mathcal{B}$-$\mathcal{C}$ equilibrium gives $T_\mathcal{C}^{(\mathc
 
 **Assessment:** Rigorous. The first law $dU = \delta Q - \delta W$ is proved cleanly from Axiom 1 with no additional structural postulates. The work-heat decomposition is structurally determined by the exhaustive interaction type classification. The temperature identification and standard thermodynamics recovery (Proposition 6.1) use only assumptions already present in the rigorous upstream derivations. The consistency model verifies all results. The derivation requires no new structural postulates — the most economical of all the thermodynamics derivations.
 
+### Step 8: Free Energy as Constrained Coherence
+
+**Remark 8.1 (Thermodynamic potentials as constrained coherence optimizations).** The standard thermodynamic potentials arise naturally as Legendre transforms of the internal coherence energy $U_\mathcal{A}$, each corresponding to constraining one intensive variable by coupling the system to an external coherence reservoir.
+
+The framework identifications are: $U = $ total coherence energy (Theorem 3.1), $T = (\partial S / \partial U)^{-1}$ (Definition 4.1), $S = $ inaccessible coherence ([Entropy](/derivations/thermodynamics/entropy), Definition 3.1), $P = $ coherence pressure (the rate of coherence change with respect to domain volume), $V = $ coherence domain volume.
+
+**Helmholtz free energy.** $F = U - TS$ is the coherence available for work when the observer's environment fixes the temperature (thermal contact with a coherence reservoir). Minimizing $F$ at constant $T$ is equivalent to maximizing the total coherence of system plus environment — this is coherence conservation (Axiom 1) with a thermal constraint. The natural variable set is $(T, V)$: the system exchanges entropy freely with the reservoir but its volume is fixed.
+
+**Gibbs free energy.** $G = U - TS + PV$ is the coherence available when both temperature and pressure are externally fixed. This is relevant for phase transitions — crystallization events in the bootstrap ([Bootstrap](/derivations/interactions/bootstrap)) where the system restructures at fixed intensive conditions. The equilibrium condition $\Delta G = 0$ determines phase boundaries as loci where two coherence configurations have equal constrained coherence.
+
+**Grand potential.** $\Omega = U - TS - \mu N$ is the relevant potential when particle number varies — open systems exchanging minimal observers with the environment. Here $\mu$ (the chemical potential) is the coherence cost of adding one minimal observer to $\mathcal{A}$, and $N$ is the observer count.
+
+Each Legendre transform corresponds to constraining one intensive variable $(T, P, \mu)$ by coupling to an external coherence reservoir, converting the corresponding extensive variable $(S, V, N)$ from a free parameter to one determined by equilibrium. The transform structure is:
+
+$$\text{Potential} = U - \sum_i (\text{intensive}_i)(\text{extensive}_i)$$
+
+where the sum runs over the constrained pairs. The Maxwell relations (e.g., $(\partial T / \partial V)_S = -(\partial P / \partial S)_V$) follow from the equality of mixed partial derivatives of $U(S, V, N)$ and carry no additional content beyond the smoothness of the coherence energy function.
+
 ## Open Gaps
 
 1. **Chemical potential**: For systems with variable particle number, the first law extends to $dU = TdS - PdV + \mu dN$. The coherence analog of $\mu$ is the coherence cost of adding a minimal observer to $\mathcal{A}$ — this should be derivable from the bootstrap mechanism.
 
-2. **Free energy and Legendre transforms**: The Helmholtz free energy $F = U - TS$, Gibbs free energy $G = U - TS + PV$, and other thermodynamic potentials should have natural coherence interpretations as constrained coherence optimizations.
+2. **Non-equilibrium thermodynamics**: The first law holds for arbitrary processes, not just quasi-static ones. The framework should extend to far-from-equilibrium coherence dynamics, connecting to fluctuation theorems.
 
-3. **Non-equilibrium thermodynamics**: The first law holds for arbitrary processes, not just quasi-static ones. The framework should extend to far-from-equilibrium coherence dynamics, connecting to fluctuation theorems.
+3. **Negative temperature**: In standard thermodynamics, population-inverted systems have $T < 0$. In the framework, this corresponds to systems where adding coherence *decreases* entropy — which requires a bounded state space where most microstates are already accessible. Whether the framework permits such configurations is an open question.
 
-4. **Negative temperature**: In standard thermodynamics, population-inverted systems have $T < 0$. In the framework, this corresponds to systems where adding coherence *decreases* entropy — which requires a bounded state space where most microstates are already accessible. Whether the framework permits such configurations is an open question.
+## Addressed Gaps
+
+1. **Free energy and Legendre transforms** — *Resolved*: Helmholtz $F = U - TS$, Gibbs $G = U - TS + PV$, and grand potential $\Omega = U - TS - \mu N$ are identified as constrained coherence optimizations, each arising from coupling to an external coherence reservoir that fixes one intensive variable. See Remark 8.1.

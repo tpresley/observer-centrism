@@ -6,7 +6,7 @@ enablesDerivation: []
 tags: ["spacetime", "quantum-gravity"]
 summary: "The discrete relational invariant network resolves all classical singularities: the Planck-scale resolution limit bounds curvature, replacing the Big Bang with a coherence bounce and black hole singularities with regular Planck-density cores. The bounce is model-independently forced by the curvature bound via contraposition of the Penrose-Hawking singularity theorems."
 rigorLevel: "formal"
-lastUpdated: 2026-03-12
+lastUpdated: 2026-03-29
 ---
 
 ## Overview
@@ -172,6 +172,20 @@ In the framework, there are no modes with wavelength $\lambda < \ell_P$ (Theorem
 
 The Hawking temperature $T_H = \hbar c^3/(8\pi G M k_B)$ is unaffected because it depends on the surface gravity at the horizon, which is a macroscopic quantity ($r_S \gg \ell_P$ for astrophysical black holes). The trans-Planckian modes were never physically real — they were an artifact of extrapolating the continuum theory beyond its domain of validity. $\square$
 
+### Step 7: Information Preservation and the Information Paradox
+
+**Corollary 7.1 (Complementary resolution of black hole information loss).** *Singularity resolution (this derivation) and the information paradox resolution ([Information Paradox](/derivations/holography/information-paradox)) provide complementary halves of a complete solution to black hole information loss: singularity resolution handles the interior (no destruction mechanism), while the information paradox derivation handles the exterior (encoding in radiation).*
+
+*Proof.* The classical information loss argument requires two ingredients: (1) a singularity that destroys information falling into the black hole, and (2) Hawking radiation that carries no information out. Resolving either alone is insufficient.
+
+**(i) Interior: no destruction mechanism.** Theorem 3.1 bounds curvature at the Planck scale, and Theorem 5.1 replaces the classical $r = 0$ singularity with a regular Planck-density core. In the classical picture, information reaching $r = 0$ is destroyed because geodesics terminate and field evolution becomes undefined. In the framework, geodesics reach the regular core at $r = r_{\min}$ and field evolution remains well-defined on the bounded-curvature geometry. There is no mechanism to destroy information — it persists in the Planck-density core.
+
+**(ii) Exterior: encoding in radiation.** The [Information Paradox](/derivations/holography/information-paradox) derivation establishes that Hawking radiation correlations encode the infalling information via relational invariant continuity. The observer's Noether invariant $I$ ([Axiom 2](/derivations/axioms/observer-definition)) is conserved across the evaporation process, ensuring that the final radiation state is unitarily related to the initial state.
+
+**(iii) Complementarity.** Neither result alone suffices. Singularity resolution without information encoding would leave information trapped in a remnant (the remnant problem). Information encoding without singularity resolution would require information to escape from a region of infinite curvature (the transplanckian problem). Together: information is never destroyed (this derivation), and information is returned to the external observer (information paradox derivation). The two results close a consistency loop. $\square$
+
+**Remark 7.2.** The complementary structure mirrors the Page curve: before the Page time, information accumulates in the growing interior (protected by the regular core); after the Page time, it is transferred to the radiation (via relational invariant correlations). The transition occurs when the black hole's coherence entropy equals the radiation entropy — the point at which the interior can no longer absorb additional coherence without violating the holographic bound ([Area Scaling](/derivations/holography/area-scaling)).
+
 ## Consistency Model
 
 **Theorem 7.1.** *The Planck star model [Rovelli & Vidotto, 2014] provides a consistency model for the singularity resolution mechanism.*
@@ -197,6 +211,7 @@ The Hawking temperature $T_H = \hbar c^3/(8\pi G M k_B)$ is unaffected because i
 - Theorem 5.1: Black hole interior resolution — $r_{\min}$ is rigorously derived from Theorem 3.1 (curvature bound applied to the Schwarzschild interior). The classical singularity at $r = 0$ is replaced by a regular Planck-density core at $r = r_{\min} > 0$. The specific interior geometry (de Sitter core vs. other regular metrics) is left as an open gap — the theorem's claim (bounded curvature, no singularity) does not depend on this choice
 - Proposition 5.2: Energy condition violation — established model-independently by contraposition of the Penrose-Hawking theorems (curvature bound $\implies$ singularity theorems' premises fail $\implies$ energy conditions violated). The loop closure pressure from Theorem 4.1 provides the explicit physical mechanism
 - Proposition 6.1: Trans-Planckian resolution — the absence of sub-Planckian modes follows directly from the Planck-scale cutoff (Theorem 2.1). The insensitivity of $T_H$ to the UV completion is established by derivative-independence of the Unruh effect [Jacobson, 1991]; [Unruh, 1995] and confirmed by explicit dispersive calculations [Corley & Jacobson, 1996]; [Brout et al., 1995]
+- Corollary 7.1: Information preservation — complementary resolution with [Information Paradox](/derivations/holography/information-paradox). Interior (this derivation: regular core, no destruction) + exterior (information paradox: encoding in radiation) together close the consistency loop
 
 **Assessment:** Rigorous. The core results are established by a chain of model-independent arguments: the curvature bound (Theorem 3.1, from the Planck-scale cutoff) prevents singularity formation; contraposition of the Penrose-Hawking theorems forces energy condition violation near $\rho_P$; and the Raychaudhuri equation then produces defocusing (bounces in cosmology, regular cores in black holes). The leading-order effective Friedmann equation $H^2 \propto \rho(1 - \rho/\rho_P)$ provides a quantitative parameterization, independently confirmed by LQC. The qualitative conclusions — no singularities, bounces at Planck density, regular black hole interiors — are robust against higher-order corrections.
 
@@ -206,7 +221,10 @@ The Hawking temperature $T_H = \hbar c^3/(8\pi G M k_B)$ is unaffected because i
 2. **Black hole end state**: Does a Planck-density core eventually re-expand (Planck star), remain static (remnant), or evaporate completely? The answer depends on the dynamics at $\rho \sim \rho_P$ and the interaction between Hawking radiation and the core.
 3. **Observational signatures**: The bounce may produce observable signatures in the CMB (pre-bounce perturbations surviving through the bounce). The spectrum of these perturbations — scale-invariant, blue-tilted, or otherwise — depends on the bounce dynamics.
 4. **De Sitter core structure**: The regular interior likely approaches a de Sitter geometry (constant positive curvature) near $r_{\min}$. Deriving this from the framework would connect singularity resolution to the cosmological constant.
-5. **Information preservation**: Singularity resolution removes the classical information loss mechanism (information destroyed at the singularity). This should connect to the [Black Hole Information Paradox](/derivations/holography/information-paradox) resolution, closing a consistency loop.
+
+## Addressed Gaps
+
+1. **Information preservation** — *Resolved*: Corollary 7.1 establishes the complementary resolution — singularity resolution removes the interior destruction mechanism (regular core, no singularity), while the [Information Paradox](/derivations/holography/information-paradox) derivation shows information is encoded in Hawking radiation via relational invariant continuity. Neither alone suffices; together they close the consistency loop.
 
 <!-- References -->
 [Penrose, 1965]: /references#penrose-1965

@@ -195,6 +195,18 @@ The logarithm arises because independent relational invariants contribute multip
 
 **Remark.** The uniform coherence distribution assumption is a special case, not the general situation. The general inaccessible-coherence entropy (Definition 3.1) does not require equipartition and applies to arbitrary coherence distributions. The Boltzmann formula is recovered as the equipartition limit. $\square$
 
+### Step 9: Status of Boltzmann's Constant
+
+**Remark 9.1 (Boltzmann's constant is a unit conversion factor).** The constant $k_B$ appearing in Proposition 8.1 is not a dynamical quantity but a unit conversion factor, fully determined once $\hbar$ and the definition of temperature are in place.
+
+In the framework, entropy $S_A$ (Definition 3.1) is dimensionless — it counts inaccessible coherence in natural (information-theoretic) units. The action quantum $\hbar$ ([Action and Planck's Constant](/derivations/thermodynamics/action-planck)) sets the coherence cost of one loop cycle, and temperature $T$ ([Coherence First Law](/derivations/thermodynamics-ext/first-law), Definition 4.1) is defined as $T = (\partial S / \partial U)^{-1}$, where $U$ has units of energy and $S$ is dimensionless. In natural units where $\hbar = c = k_B = 1$, all three constants are unity and entropy, energy, and temperature share a common scale.
+
+The role of $k_B$ is to convert between entropy measured in nats (dimensionless) and entropy measured in J/K:
+
+$$S_{\text{thermo}} = k_B \cdot S_{\text{coherence}}$$
+
+Its SI value $k_B \approx 1.381 \times 10^{-23}$ J/K reflects the historically arbitrary choice of the kelvin as a temperature unit. No dynamical content is encoded in $k_B$ — it is analogous to a conversion factor between meters and feet. Once $\hbar$ (from the action derivation) and the thermodynamic temperature definition (from the first law derivation) are established, $k_B$ is uniquely fixed by dimensional analysis. The 2019 SI redefinition, which assigns $k_B$ an exact value, confirms this status: $k_B$ is a defined constant, not a measured one.
+
 ## Comparison with Standard Thermodynamics
 
 | Aspect | Standard thermodynamics | Observer-centrism |
@@ -230,7 +242,10 @@ The logarithm arises because independent relational invariants contribute multip
 
 ## Open Gaps
 
-1. **Boltzmann's constant**: $k_B$ enters as the proportionality constant between coherence units and thermodynamic energy units ($S_{\text{thermo}} = k_B \cdot S_{\text{coherence}}$). Its numerical value should be derivable once the action/Planck constant relation is established.
-2. **Fluctuation theorems**: The Jarzynski equality $\langle e^{-\beta W}\rangle = e^{-\beta \Delta F}$ and Crooks fluctuation theorem describe the probability of entropy-decreasing fluctuations. These should arise as finite-size corrections to Theorem 4.1 when $A$'s coherence domain fluctuates.
-3. **Negative entropy flow**: Living systems locally decrease their entropy by expanding their coherence domains through structured interactions. The framework predicts this is possible because entropy is observer-relative — what decreases for the organism increases for its environment.
-4. **Quantum entropy**: The von Neumann entropy $S = -\text{tr}(\rho \ln \rho)$ should be derivable as the inaccessible coherence when $A$'s access is limited to a subsystem of an entangled state.
+1. **Fluctuation theorems**: The Jarzynski equality $\langle e^{-\beta W}\rangle = e^{-\beta \Delta F}$ and Crooks fluctuation theorem describe the probability of entropy-decreasing fluctuations. These should arise as finite-size corrections to Theorem 4.1 when $A$'s coherence domain fluctuates.
+2. **Negative entropy flow**: Living systems locally decrease their entropy by expanding their coherence domains through structured interactions. The framework predicts this is possible because entropy is observer-relative — what decreases for the organism increases for its environment.
+3. **Quantum entropy**: The von Neumann entropy $S = -\text{tr}(\rho \ln \rho)$ should be derivable as the inaccessible coherence when $A$'s access is limited to a subsystem of an entangled state.
+
+## Addressed Gaps
+
+1. **Boltzmann's constant** — *Resolved*: $k_B$ is not a dynamical quantity but a unit conversion factor between coherence (dimensionless) and thermodynamic (J/K) entropy units, fully determined once $\hbar$ and the definition of temperature are in place. Its SI value reflects the arbitrary choice of kelvin. See Remark 9.1.

@@ -162,9 +162,25 @@ Therefore: $S_\mathcal{O}^{\text{after}}(S) = \mathcal{C}(S) - \mathcal{C}_\math
 
 *The Born rule $P(k) = |\psi_k|^2$ is then the optimal prediction available to a bounded observer — the best possible forecast given structural limitations on self-knowledge. This is not epistemic uncertainty (ignorance of an underlying deterministic variable) but ontological indeterminacy for bounded observers: the information that determines $k_0$ exists in the coherence geometry but is inaccessible from within.*
 
+### Step 9: Delayed Choice and Quantum Eraser
+
+**Remark 9.1 (Delayed choice dissolved).** *Delayed-choice experiments and quantum erasers are sometimes cited as evidence for retrocausality. The framework dissolves this appearance by distinguishing two events in the interaction graph $\mathcal{G}$: the generation of a relational invariant (Type III interaction) and the choice of readout basis.*
+
+Consider the standard delayed-choice setup. A photon interacts with a beam splitter at vertex $v_1 \in \mathcal{G}$, generating the relational invariant $I_{\mathcal{O}S}$ at time $t_1$. At a later time $t_2 > t_1$, the experimenter "chooses" whether to insert or remove a second beam splitter, selecting which observable to read out.
+
+**(i) The relational invariant is generated at $v_1$.** The Type III interaction at $v_1$ creates $I_{\mathcal{O}S}$ — the full coherence structure of the photon–apparatus correlation is fixed at this moment (Theorem 2.2). This is the irreversible event (Proposition 3.2(iii)).
+
+**(ii) The "choice" at $t_2$ selects a readout basis.** The experimenter's decision at $v_2$ determines which component of $I_{\mathcal{O}S}$ to access — which observable's eigenstates form the outcome basis $\{|k\rangle\}$. This is a Type III interaction between the experimenter and the apparatus, generating a second relational invariant $I_{\mathcal{O}'\mathcal{O}}$.
+
+**(iii) No retrocausality.** The partial order $\prec$ in $\mathcal{G}$ ensures $v_1 \prec v_2$. The invariant $I_{\mathcal{O}S}$ generated at $v_1$ is not altered by the choice at $v_2$ — what changes is only which aspect of the already-existing invariant is revealed.
+
+**Remark 9.2 (Quantum eraser).** In a quantum eraser, "erasing" which-path information means performing a measurement in a basis that does not distinguish the paths. Concretely: the which-path relational invariant $I_{\mathcal{O}S}^{\text{path}}$ was generated at the path-marking interaction (at $v_1$). The "erasure" measurement (at $v_2 \succ v_1$) projects onto a basis $\{|e_j\rangle\}$ that is complementary to the path basis — the chosen readout averages over path-distinguishing components of $I_{\mathcal{O}S}^{\text{path}}$. The interference pattern re-emerges in the post-selected subensemble precisely because the readout basis was chosen to be insensitive to path information. The relational invariant $I_{\mathcal{O}S}^{\text{path}}$ still exists in the full coherence structure; it is not "erased" but merely not accessed by the chosen observable.
+
+The framework dissolves the apparent paradox: the interaction (Type III, generating $I_{\mathcal{O}S}$) and the readout (choice of basis, a subsequent Type III interaction) are distinct events ordered by $\prec$. No information travels backward in the DAG.
+
 ### Consistency Model
 
-**Theorem 9.1.** *The Stern-Gerlach measurement of a spin-1/2 system provides a consistency model for all results of this derivation.*
+**Theorem 10.1.** *The Stern-Gerlach measurement of a spin-1/2 system provides a consistency model for all results of this derivation.*
 
 *Verification.* Take $\mathcal{O}$ = Stern-Gerlach apparatus (oriented along $\hat{z}$), $S$ = spin-1/2 particle with $|\psi_S\rangle = \alpha|\uparrow\rangle + \beta|\downarrow\rangle$.
 
@@ -184,7 +200,7 @@ Therefore: $S_\mathcal{O}^{\text{after}}(S) = \mathcal{C}(S) - \mathcal{C}_\math
 - Theorem 4.1: Observer-relativity of descriptions (different conditioning on the same joint state)
 - Theorem 5.2: Wigner's friend consistency (entanglement structure + conditional descriptions)
 - Theorem 6.1: Entropy change from coherence domain expansion (direct application of entropy definition)
-- Theorem 9.1: Consistency model verified on Stern-Gerlach measurement
+- Theorem 10.1: Consistency model verified on Stern-Gerlach measurement
 
 **Rigorous given axioms:**
 - Proposition 3.2(i): Locality (Type III interaction is a vertex in $\mathcal{G}$)
@@ -206,7 +222,10 @@ Therefore: $S_\mathcal{O}^{\text{after}}(S) = \mathcal{C}(S) - \mathcal{C}_\math
 1. **Extended Wigner's friend (Frauchiger-Renner)**: The no-go theorem constrains theories that simultaneously assume (i) quantum mechanics applies universally, (ii) measurement has single outcomes, (iii) reasoning about others' measurements is valid. The framework should be tested against this theorem — the relational invariant structure may evade it by modifying assumption (iii).
 2. **Quantum Darwinism**: When multiple observers independently measure the same system, they obtain consistent results. The framework should derive this from mutual consistency of relational invariants $I_{\mathcal{O}_1 S}, I_{\mathcal{O}_2 S}, \ldots$ when $\mathcal{O}_1, \mathcal{O}_2, \ldots$ share relational invariants with each other.
 3. **Continuous and weak measurement**: Weak measurements correspond to Type III interactions that generate relational invariants with small coherence content $\mathcal{C}(I_{\mathcal{O}S}) \ll \mathcal{C}(S)$. Continuous measurement is the limit of many weak Type III interactions. Formalization needed.
-4. **Delayed choice and quantum eraser**: The relational invariant is generated at the time of the Type III interaction, regardless of when the observer "decides" which interaction to perform. No retrocausality — the partial order $\prec$ in $\mathcal{G}$ is respected.
+
+## Addressed Gaps
+
+1. **Delayed choice and quantum eraser** — *Resolved*: Remarks 9.1–9.2 give an explicit analysis showing the Type III interaction (generating $I_{\mathcal{O}S}$) and the readout (choice of measurement basis) are distinct events ordered by $\prec$ in $\mathcal{G}$. No retrocausality: the relational invariant is fixed at the interaction vertex; the later "choice" selects which component to access. Quantum erasure is reinterpreted as choosing a readout basis complementary to the path basis, so the path information is not accessed (but still exists in the full coherence structure).
 
 <!-- References -->
 [Frauchiger-Renner, 2018]: /references#frauchiger-renner-2018
