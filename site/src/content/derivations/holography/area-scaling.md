@@ -189,7 +189,10 @@ A key difference: in the framework, the holographic bound is not a statement abo
 2. **Covariant generalization**: The derivation assumes a spatial region at a moment of time. A covariant formulation would bound the entropy on arbitrary spacelike surfaces — connecting to the Bousso covariant entropy bound.
 3. **Sub-Planckian structure**: The derivation assumes nothing meaningful happens below $\ell_P$. If the coherence geometry has sub-Planckian structure, the counting argument needs modification.
 4. **Dynamical boundaries**: For time-dependent regions (e.g., expanding cosmological horizons), the channel capacity argument must be adapted. The entropy bound should track the apparent horizon, not the event horizon.
-5. **Connection to holographic noise**: The discrete Planck-cell structure of the boundary implies fluctuations at scale $\ell_P$. These fluctuations should produce a detectable holographic noise signature — the path to the experimental prediction in [Holographic Noise](/predictions/holographic-noise).
+
+## Addressed Gaps
+
+1. **Connection to holographic noise** — *Resolved by [Causal Set Statistics](/derivations/holography/causal-set-statistics) derivation (rigorous)*: The Planck-cell fluctuations from the discrete boundary structure yield a strain power spectral density $S_h = \ell_P/(2c)$, completing the path from area scaling to the experimental holographic noise prediction.
 
 <!-- References -->
 [Bekenstein, 1981]: /references#bekenstein-1981

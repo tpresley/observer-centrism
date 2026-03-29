@@ -633,6 +633,20 @@ CREATE VIEW v_ga_status_summary AS
   // ── Write and execute ──
   const sqlContent = lines.join('\n')
 
+  // Backup gap_triage table if it exists (survives rebuild)
+  let triageBackupSql = null
+  if (existsSync(DB_PATH)) {
+    try {
+      const dump = execSync(
+        `sqlite3 "${DB_PATH}" ".dump gap_triage"`,
+        { encoding: 'utf8', stdio: ['pipe', 'pipe', 'pipe'] }
+      ).trim()
+      if (dump && dump.includes('INSERT')) {
+        triageBackupSql = dump
+      }
+    } catch { /* table doesn't exist yet — skip */ }
+  }
+
   // Remove existing DB
   if (existsSync(DB_PATH)) unlinkSync(DB_PATH)
 
@@ -644,6 +658,16 @@ CREATE VIEW v_ga_status_summary AS
   } finally {
     // Clean up temp file
     if (existsSync(SQL_TEMP_PATH)) unlinkSync(SQL_TEMP_PATH)
+  }
+
+  // Restore gap_triage table if it was backed up
+  if (triageBackupSql) {
+    try {
+      const triageTempPath = join(ROOT, 'site/src/data/_triage_restore.sql')
+      writeFileSync(triageTempPath, triageBackupSql)
+      execSync(`sqlite3 "${DB_PATH}" < "${triageTempPath}"`, { stdio: 'pipe' })
+      if (existsSync(triageTempPath)) unlinkSync(triageTempPath)
+    } catch { /* restore failed — gap_triage will need manual re-creation */ }
   }
 
   // Report size

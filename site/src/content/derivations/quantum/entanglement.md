@@ -209,11 +209,14 @@ This connection is developed in the [ER=EPR](/derivations/holography/er-epr) der
 
 ## Open Gaps
 
-1. **Quantum teleportation**: Derive teleportation as coherence channel transfer — the relational invariant provides the channel, and classical communication provides the key to unlock it.
-2. **Quantum error correction**: Explore whether coherence conservation imposes fundamental limits on or structures for quantum error-correcting codes.
-3. **Holographic connection**: Make the ER=EPR sketch (Proposition 5.1) rigorous by connecting to the [Area Scaling](/derivations/holography/area-scaling) and [Causal Set Statistics](/derivations/holography/causal-set-statistics) derivations.
-4. **Multipartite entanglement**: Extend beyond the bipartite case to full multipartite classification (W-states, cluster states, SLOCC classes).
-5. **Entanglement dynamics**: Derive entanglement growth under unitary evolution and the scrambling time from coherence dynamics.
+1. **Quantum error correction**: Explore whether coherence conservation imposes fundamental limits on or structures for quantum error-correcting codes.
+2. **Multipartite entanglement**: Extend beyond the bipartite case to full multipartite classification (W-states, cluster states, SLOCC classes).
+3. **Entanglement dynamics**: Derive entanglement growth under unitary evolution and the scrambling time from coherence dynamics.
+
+## Addressed Gaps
+
+1. **Quantum teleportation** — *Resolved by [Teleportation](/derivations/quantum/teleportation) (rigorous)*: Teleportation is derived as coherence channel transfer, where the relational invariant provides the channel and classical communication unlocks it.
+2. **Holographic connection** — *Resolved by [ER=EPR](/derivations/holography/er-epr) (rigorous)*: The ER=EPR connection is made rigorous via area scaling and causal set statistics, establishing that entanglement entropy and geometric area are descriptions of the same relational coherence.
 
 <!-- References -->
 [Lieb & Ruskai, 1973]: /references#lieb-ruskai-1973

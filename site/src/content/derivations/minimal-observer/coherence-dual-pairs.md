@@ -178,6 +178,9 @@ The pair persists because each observer independently satisfies the persistence 
 
 ## Open Gaps
 
-1. **CPT theorem**: The full CPT theorem ($CPT$ is an exact symmetry of any Lorentz-invariant local quantum field theory) should be derivable from the coherence-dual pair structure plus the spacetime derivation. This is a significant target.
-2. **Matter-antimatter asymmetry**: The pair is symmetric by construction. The observed matter-antimatter asymmetry (baryogenesis) must arise from dynamical processes that break the symmetry of pair creation — this is a question about which configurations are stable under the bootstrap, not a violation of the multiplicity theorem.
-3. **Pair separation mechanism**: The process by which virtual pairs become real (separate and propagate) needs the interaction type classification and the spacetime geometry to be quantitative.
+1. **Matter-antimatter asymmetry**: The pair is symmetric by construction. The observed matter-antimatter asymmetry (baryogenesis) must arise from dynamical processes that break the symmetry of pair creation — this is a question about which configurations are stable under the bootstrap, not a violation of the multiplicity theorem.
+2. **Pair separation mechanism**: The process by which virtual pairs become real (separate and propagate) needs the interaction type classification and the spacetime geometry to be quantitative.
+
+## Addressed Gaps
+
+1. **CPT theorem** — *Resolved by [CPT Theorem](/derivations/particles/cpt-theorem) derivation (rigorous)*: The full CPT theorem is derived from the axioms plus Lorentz invariance and spin-statistics, confirming that $CPT$ is an exact symmetry as anticipated by the coherence-dual pair structure.

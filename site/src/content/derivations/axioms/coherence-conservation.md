@@ -226,8 +226,11 @@ This violates (C5). Hence (C5) is independent of (C1)–(C4).
 
 1. **Uniqueness of $C_0$**: Is the total coherence $C_0$ a free parameter or fixed by self-consistency? Without loss of generality, one may normalize $C_0 = 1$ for the abstract theory; the physical value of $C_0$ (if any) would be determined by the bootstrap fixed point.
 2. **Category-theoretic formulation**: A more natural formalization may use a functor $\mathcal{C}: \mathbf{Sub}(\mathcal{H}) \to \mathbb{R}_{\geq 0}$ from the category of subsystems to non-negative reals, with conservation as a constraint on natural transformations.
-3. **Conditional coherence**: Define $\mathcal{C}(S_1 | S_2) = \mathcal{C}(S_1 \cup S_2) - \mathcal{C}(S_2)$. By (C4), $\mathcal{C}(S_1 | S_2) \leq \mathcal{C}(S_1)$ for disjoint $S_1, S_2$ — conditioning reduces coherence. This is the coherence analogue of conditioning reducing entropy.
-4. **Monotonicity**: Whether monotonicity ($S_1 \subseteq S_2 \Rightarrow \mathcal{C}(S_1) \leq \mathcal{C}(S_2)$) should be added as axiom (C6) depends on whether all physically relevant coherence measures are monotone. The non-trivial model (Model 2) is monotone; whether non-monotone models are physically meaningful is open.
+3. **Monotonicity**: Whether monotonicity ($S_1 \subseteq S_2 \Rightarrow \mathcal{C}(S_1) \leq \mathcal{C}(S_2)$) should be added as axiom (C6) depends on whether all physically relevant coherence measures are monotone. The non-trivial model (Model 2) is monotone; whether non-monotone models are physically meaningful is open.
+
+## Addressed Gaps
+
+1. **Conditional coherence** — *Resolved by [Coherence Operational](/derivations/axioms/coherence-operational) (Theorem 2.1)*: The dictionary identifying coherence with quantum entropy identifies conditional coherence $\mathcal{C}(S_1 | S_2) = \mathcal{C}(S_1 \cup S_2) - \mathcal{C}(S_2)$ with quantum conditional entropy, completing the formal characterization.
 
 <!-- References -->
 [Fujishige, 2005]: /references#fujishige-2005

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-23T08:50:42.809Z",
+    "generatedAt": "2026-03-29T14:45:59.096Z",
     "derivationCount": 64,
     "predictionCount": 11,
     "gaPageCount": 12,
@@ -16,8 +16,8 @@
     "derivationCount": 64,
     "predictionCount": 11,
     "edgeCount": 149,
-    "formalObjectCount": 949,
-    "openGapCount": 213,
+    "formalObjectCount": 955,
+    "openGapCount": 202,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -71,7 +71,7 @@
         },
         {
           "number": 4,
-          "title": "Graph-Theoretic Conservation (Time-Free Formulation)"
+          "title": "The Dependency Graph"
         },
         {
           "number": 5,
@@ -96,12 +96,6 @@
           "id": "1.2",
           "name": "Coherence axioms",
           "statementPreview": "The coherence measure C satisfies:"
-        },
-        {
-          "type": "Proposition",
-          "id": "1.3",
-          "name": "Monotonicity",
-          "statementPreview": "For all S1, S2 in A with S1 S2: C(S1) C(S2).*"
         },
         {
           "type": "Proposition",
@@ -152,6 +146,12 @@
           "statementPreview": "The set of admissible transformations forms a group Aut(H, A) under composition. (This is a standard result: identity..."
         },
         {
+          "type": "Axiom",
+          "id": "1",
+          "name": "Conservation",
+          "statementPreview": "Coherence is conserved in two senses simultaneously:"
+        },
+        {
           "type": "Definition",
           "id": "4.1",
           "name": "Dependency graph",
@@ -174,12 +174,6 @@
           "id": "4.4",
           "name": "Vertex coherence",
           "statementPreview": "Each vertex v in V carries a coherence value C(v) 0, defined as the coherence of the subsystem represented by v."
-        },
-        {
-          "type": "Theorem",
-          "id": "4.5",
-          "name": "Consistency of formulations",
-          "statementPreview": "Given (H, A, C, G) with the vertex-to-subsystem identification v Sv in A, Axioms 1a and 1b are consistent: Axiom 1a (..."
         },
         {
           "type": "Proposition",
@@ -220,16 +214,11 @@
         },
         {
           "number": 3,
-          "title": "Conditional coherence",
-          "description": "Define C(S1 | S2) = C(S1 S2) - C(S2). By (C4), C(S1 | S2) C(S1) for disjoint S1, S2 — conditioning reduces coherence. This is the coherence analogue of conditioning reducing entropy."
-        },
-        {
-          "number": 4,
           "title": "Monotonicity",
           "description": "Whether monotonicity (S1 S2 C(S1) C(S2)) should be added as axiom (C6) depends on whether all physically relevant coherence measures are monotone. The non-trivial model (Model 2) is monotone; whether "
         }
       ],
-      "assessmentVerdict": "The axiom is rigorously formalized with complete definitions, proofs, and explicit consistency models. All assumptions are stated. The main structural postulate (the dependency graph) is acknowledged as a co-axiom. The relationship between the two formulations (Axiom 1a and 1b) is made precise in Th",
+      "assessmentVerdict": "The axiom is rigorously formalized with complete definitions, proofs, and explicit consistency models. All assumptions are stated. The main structural postulate (the dependency graph) is acknowledged as a co-axiom. Conservation is stated as a single axiom with two parts — transformation isometry (i)",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -240,6 +229,10 @@
           {
             "target": "interactions/three-types",
             "context": "Three Interaction Types"
+          },
+          {
+            "target": "axioms/coherence-operational",
+            "context": "Theorem 2.1"
           }
         ],
         "incoming": [
@@ -285,6 +278,10 @@
           },
           {
             "source": "interactions/relational-invariants",
+            "context": "Coherence Conservation"
+          },
+          {
+            "source": "interactions/three-types",
             "context": "Coherence Conservation"
           },
           {
@@ -527,6 +524,10 @@
         ],
         "incoming": [
           {
+            "source": "axioms/coherence-conservation",
+            "context": "Theorem 2.1"
+          },
+          {
             "source": "interactions/bootstrap",
             "context": "Coherence as Physical Primitive"
           },
@@ -567,8 +568,8 @@
       "tags": [
         "axioms"
       ],
-      "summary": "Formalization of cyclic dynamics as a Noether pair (U(1) symmetry ↔ conserved charge), with Lyapunov stability and approximate closure giving a precise persistence criterion",
-      "lastUpdated": "2026-03-12",
+      "summary": "Derivation of cyclic dynamics from self-reference: an observer must reproduce its own state to persist, and finite resources force this self-reproduction into a periodic loop with U(1) symmetry",
+      "lastUpdated": "2026-03-27",
       "dependsOn": [
         "axioms/coherence-conservation",
         "axioms/observer-definition"
@@ -589,30 +590,34 @@
       "steps": [
         {
           "number": 1,
-          "title": "Cyclic Dynamics"
+          "title": "Self-Sustaining Dynamics"
         },
         {
           "number": 2,
-          "title": "The Observer Loop as Geometric Object"
+          "title": "Approximate Closure and Dissolution"
         },
         {
           "number": 3,
-          "title": "The Noether Pair"
+          "title": "Persistence Forces Periodicity"
         },
         {
           "number": 4,
-          "title": "Stability — Lyapunov Formulation"
+          "title": "The Observer Loop as Geometric Object"
         },
         {
           "number": 5,
-          "title": "Approximate Closure"
+          "title": "The Noether Pair"
         },
         {
           "number": 6,
-          "title": "The Coherence Cost of a Loop"
+          "title": "Stability — Lyapunov Formulation"
         },
         {
           "number": 7,
+          "title": "The Coherence Cost of a Loop"
+        },
+        {
+          "number": 8,
           "title": "Frequency, Energy, and Mass"
         }
       ],
@@ -621,7 +626,7 @@
           "type": "Axiom",
           "id": "3",
           "name": "Loop Closure",
-          "statementPreview": "The internal dynamics of every observer are cyclic: the state returns to its initial configuration after a finite per..."
+          "statementPreview": "Every observer's internal dynamics is self-sustaining and periodic: the state returns to its initial configuration af..."
         },
         {
           "type": "Structural Postulate",
@@ -648,6 +653,42 @@
           "statementPreview": "Let O = (Sigma, I, B) be an observer (Axiom 2). The **internal dynamics** of O is a smooth group homomorphism:"
         },
         {
+          "type": "Definition",
+          "id": "2.1",
+          "name": "Boundary diameter",
+          "statementPreview": "The **boundary diameter** of observer O is DB = diam(Sigma) < (finite by compactness, using the geodesic distance d i..."
+        },
+        {
+          "type": "Definition",
+          "id": "2.2",
+          "name": "$\\epsilon$-approximate closure",
+          "statementPreview": "An observer satisfies **epsilon-approximate closure** with period T if:"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.3",
+          "name": "Drift bound",
+          "statementPreview": "An epsilon-approximately closed observer's state drifts by at most Nepsilon from the initial state after N cycles:*"
+        },
+        {
+          "type": "Definition",
+          "id": "2.4",
+          "name": "Observer lifetime",
+          "statementPreview": "The **observer lifetime** is tauO = Nmax T where Nmax = lfloor DB/epsilon rfloor."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.5",
+          "name": "Exact closure gives persistence",
+          "statementPreview": "Exact closure (epsilon = 0) gives Nmax = and tauO = .*"
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "Persistence requires exact closure",
+          "statementPreview": "If an observer persists indefinitely (tauO = ), then its dynamics satisfies exact closure: there exists T > 0 with ph..."
+        },
+        {
           "type": "Axiom",
           "id": "3",
           "name": "Precise statement",
@@ -655,115 +696,85 @@
         },
         {
           "type": "Proposition",
-          "id": "1.2",
+          "id": "3.2",
           "name": "Minimal period",
           "statementPreview": "Under Axiom 3, the minimal period TO = infT > 0 : phiT = idSigma exists, is positive, and satisfies phiTO = idSigma.*"
         },
         {
           "type": "Definition",
-          "id": "2.1",
+          "id": "4.1",
           "name": "Observer loop",
           "statementPreview": "The **observer loop** of O based at sigma0 in Sigma is the image of the orbit map:"
         },
         {
           "type": "Proposition",
-          "id": "2.2",
+          "id": "4.2",
           "name": "Loop is a smooth embedding",
           "statementPreview": "For each sigma0 in Sigma, the orbit map alpha: S1 Sigma defined by alpha(e2pi i t/TO) = phit(sigma0) is a smooth embe..."
         },
         {
           "type": "Proposition",
-          "id": "2.4",
+          "id": "4.4",
           "name": "Orbit decomposition",
           "statementPreview": "For any sigma0, sigma1 in Sigma, the observer loops gammaO(sigma0) and gammaO(sigma1) are either identical or disjoin..."
         },
         {
           "type": "Theorem",
-          "id": "3.1",
+          "id": "5.1",
           "name": "Loop closure ↔ Noether pair",
           "statementPreview": "Assume Sigma carries a symplectic structure omega preserved by phit (i.e., phit*omega = omega). Then:*"
         },
         {
           "type": "Proposition",
-          "id": "3.2",
+          "id": "5.2",
           "name": "Relationship between Axioms 2 and 3",
           "statementPreview": "Axiom 3 is not logically independent of Axiom 2 — it specifies the dynamical realization. Precisely:*"
         },
         {
           "type": "Definition",
-          "id": "4.1",
+          "id": "6.1",
           "name": "Lyapunov stability",
           "statementPreview": "Using the geodesic distance d induced by the Riemannian metric g (Theorem 0.1), the observer loop gammaO is **Lyapuno..."
         },
         {
           "type": "Definition",
-          "id": "4.2",
+          "id": "6.2",
           "name": "Asymptotic stability",
           "statementPreview": "The loop is **asymptotically stable** if it is Lyapunov stable and additionally limt d(phit(sigma), gammaO) = 0 for a..."
         },
         {
-          "type": "Proposition",
-          "id": "4.3",
-          "name": "Instability implies dissolution",
-          "statementPreview": "If the observer loop gammaO is not Lyapunov stable, then arbitrarily small perturbations can carry the state outside ..."
-        },
-        {
           "type": "Definition",
-          "id": "5.1",
-          "name": "$\\epsilon$-approximate closure",
-          "statementPreview": "An observer satisfies **epsilon-approximate closure** with period T if:"
-        },
-        {
-          "type": "Proposition",
-          "id": "5.2",
-          "name": "Drift bound",
-          "statementPreview": "An epsilon-approximately closed observer's state drifts by at most Nepsilon from the initial state after N cycles:*"
-        },
-        {
-          "type": "Definition",
-          "id": "5.3",
-          "name": "Observer lifetime",
-          "statementPreview": "The **observer lifetime** is tauO = Nmax TO where Nmax = lfloor DB/epsilon rfloor."
-        },
-        {
-          "type": "Proposition",
-          "id": "5.4",
-          "name": "Exact closure gives persistence",
-          "statementPreview": "Exact closure (epsilon = 0) gives Nmax = and tauO = .*"
-        },
-        {
-          "type": "Definition",
-          "id": "6.1",
+          "id": "7.1",
           "name": "Coherence cost / action",
           "statementPreview": "Using the Riemannian metric g (Theorem 0.1) and the coherence measure C from Axiom 1, the **coherence cost** of an ob..."
         },
         {
           "type": "Proposition",
-          "id": "6.2",
+          "id": "7.2",
           "name": "Positive minimum",
           "statementPreview": "The coherence cost satisfies SO > 0 for every observer. There exists a positive lower bound Smin > 0.*"
         },
         {
           "type": "Proposition",
-          "id": "7.1",
+          "id": "8.1",
           "name": "Natural frequency",
           "statementPreview": "An observer loop with period TO has natural frequency omegaO = 2pi/TO.*"
         },
         {
           "type": "Proposition",
-          "id": "7.2",
+          "id": "8.2",
           "name": "Action-energy relation",
           "statementPreview": "If C(phit(sigma0)) is constant along the loop and the loop is traversed at constant speed, then SO = C(Sigma) v TO, w..."
         },
         {
           "type": "Corollary",
-          "id": "7.3",
+          "id": "8.3",
           "name": "Planck-Einstein relation",
           "statementPreview": "Defining EO = SO/TO as the energy (action per period), and using Smin = hbar (cf. [Action and Planck's Constant](/der..."
         },
         {
           "type": "Theorem",
-          "id": "8.1.",
+          "id": "9.1.",
           "name": "",
           "statementPreview": "The loop closure axiom with structural postulate S1 (and its consequence, Theorem 0.1) is consistent: there exists a ..."
         },
@@ -797,7 +808,7 @@
           "description": "Photons have no rest frame and no rest-frame loop. They are limiting cases where TO 0 and omegaO while SO remains finite. This limit needs formal treatment within the approximate closure framework. <!"
         }
       ],
-      "assessmentVerdict": "All claims are proved from definitions and standard mathematical results, with explicit assumptions stated upfront. Structural postulates are clearly separated from proven results. Results that depend on later derivations are explicitly deferred. The axiom meets the standard for rigorous status.",
+      "assessmentVerdict": "The derivation is restructured around the self-reference argument: persistence requires exact closure, which forces periodicity and U(1) symmetry. All claims are proved from definitions and standard mathematical results, with explicit assumptions stated upfront. The quasi-periodic gap (Remark follow",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -849,7 +860,7 @@
           },
           {
             "source": "gauge/color-force",
-            "context": "Corollary 2.3"
+            "context": "Corollary 4.3"
           },
           {
             "source": "gauge/electromagnetism",
@@ -857,11 +868,11 @@
           },
           {
             "source": "gauge/electromagnetism",
-            "context": "Corollary 2.3"
+            "context": "Corollary 4.3"
           },
           {
             "source": "gauge/electromagnetism",
-            "context": "Theorem 3.1"
+            "context": "Theorem 5.1"
           },
           {
             "source": "gauge/weak-interaction",
@@ -929,7 +940,7 @@
           },
           {
             "source": "spacetime/speed-of-light",
-            "context": "Theorem 8.1"
+            "context": "Theorem 9.1"
           },
           {
             "source": "thermodynamics-ext/fisher-metric",
@@ -1074,12 +1085,6 @@
         },
         {
           "type": "Proposition",
-          "id": "3.3.",
-          "name": "",
-          "statementPreview": "(N3) is independent of (N1) and (N2). Specifically: there exist state spaces Sigma with non-trivial GO and non-empty ..."
-        },
-        {
-          "type": "Proposition",
           "id": "3.4",
           "name": "Simple group obstruction",
           "statementPreview": "If Aut(H)|Sigma is a non-abelian simple group (no proper non-trivial normal subgroups) and the action of Aut(H)|Sigma..."
@@ -1088,13 +1093,13 @@
           "type": "Definition",
           "id": "4.1",
           "name": "Observer boundary",
-          "statementPreview": "The **boundary** partialO of observer O is:"
+          "statementPreview": "The **boundary** partialO of observer O is defined with respect to the full transformation group Aut(H) (not only the..."
         },
         {
           "type": "Definition",
           "id": "4.2",
           "name": "Observer interior",
-          "statementPreview": "The **interior** Sigmacirc = Sigma setminus partialO consists of states from which no non-self transformation ejects ..."
+          "statementPreview": "The **interior** Sigmacirc = Sigma setminus partialO consists of states that are preserved by all transformations:"
         },
         {
           "type": "Proposition",
@@ -1119,12 +1124,6 @@
           "id": "5.2.",
           "name": "",
           "statementPreview": "The dimension of the invariant space V is constrained:*"
-        },
-        {
-          "type": "Corollary",
-          "id": "5.3",
-          "name": "Coherence equals charge",
-          "statementPreview": "The coherence allocated to O equals the norm of the conserved charge: C(Sigma) = |I| (up to a normalization constant ..."
         },
         {
           "type": "Proposition",
@@ -1161,21 +1160,16 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Composite observers",
-          "description": "The composition rule for building (Sigma12, I12, B12) from component observers requires the relational invariant construction, developed in [Relational Invariants](/derivations/interactions/relational"
-        },
-        {
-          "number": 2,
           "title": "Graded boundaries",
           "description": "The binary self/non-self partition is an idealization. A generalization to B: Aut(H)|Sigma [0,1] (degree of threat) is physically motivated but not developed."
         },
         {
-          "number": 3,
+          "number": 2,
           "title": "Observer equivalence",
           "description": "Isomorphism in mathbfObs (Definition 7.3) is the natural notion. Whether physically distinct observers can be isomorphic (like different particles of the same type) is a question about the category's "
         }
       ],
-      "assessmentVerdict": "The axiom is rigorously formalized. Every definition is precise, every proof is complete, and every additional assumption (topology, smooth structure, Lie group) is explicitly stated at the point where it is introduced. The boundary definition has been corrected and clarified. The observer category ",
+      "assessmentVerdict": "The axiom is rigorously formalized. Every definition is precise, every proof is complete, and every additional assumption (topology, smooth structure, Lie group) is explicitly stated at the point where it is introduced. The observer category mathbfObs is fully constructed with verified category axio",
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
@@ -1755,10 +1749,6 @@
           },
           {
             "source": "gauge/electromagnetism",
-            "context": "Coupling Constants"
-          },
-          {
-            "source": "gauge/electroweak-breaking",
             "context": "Coupling Constants"
           },
           {
@@ -2890,18 +2880,13 @@
         },
         {
           "number": 3,
-          "title": "Neutrino masses",
-          "description": "The neutrino mass mechanism (Dirac vs. Majorana, seesaw types) affects the PMNS matrix structure. This requires extending the coherence-dual pair mechanism to the neutrino sector."
-        },
-        {
-          "number": 4,
           "title": "Renormalization-group running",
           "description": "The mixing parameters measured at low energy differ from their values at the symmetry-breaking scale. RG corrections (from [Renormalization Group](/derivations/thermodynamics-ext/renormalization)) sho"
         },
         {
-          "number": 5,
+          "number": 4,
           "title": "Quark-lepton complementarity",
-          "description": "The observation theta12CKM + theta12PMNS pi/4 may be accidental or may reflect a deeper geometric relationship between the quark and lepton sectors. The A5 framework should clarify this. <!-- Referenc"
+          "description": "The observation theta12CKM + theta12PMNS pi/4 may be accidental or may reflect a deeper geometric relationship between the quark and lepton sectors. The A5 framework should clarify this."
         }
       ],
       "assessmentVerdict": "Rigorous. The derivation establishes the structural framework for flavor mixing: three generations from dim SO(3) = 3 ([Three Generations](/derivations/particles/three-generations), rigorous), basis mismatch from distinct physical mechanisms (mass vs. weak eigenstates), A5 discrete symmetry from the",
@@ -2935,6 +2920,10 @@
           {
             "target": "thermodynamics-ext/renormalization",
             "context": "Renormalization Group"
+          },
+          {
+            "target": "particles/neutrino-masses",
+            "context": "rigorous"
           }
         ],
         "incoming": [
@@ -3948,7 +3937,7 @@
           },
           {
             "target": "axioms/loop-closure",
-            "context": "Corollary 2.3"
+            "context": "Corollary 4.3"
           },
           {
             "target": "gauge/electromagnetism",
@@ -4015,6 +4004,10 @@
           {
             "source": "gauge/electromagnetism",
             "context": "Color Force"
+          },
+          {
+            "source": "gauge/electromagnetism",
+            "context": "both rigorous"
           },
           {
             "source": "gauge/standard-model-group",
@@ -4442,18 +4435,8 @@
         },
         {
           "number": 2,
-          "title": "Magnetic monopoles",
-          "description": "The derivation gives mathbfB = 0 (no monopoles) from the Bianchi identity. The framework structurally excludes monopoles: the gauge potential is not an optional convenience but the mechanism of phase "
-        },
-        {
-          "number": 3,
           "title": "Quantum electrodynamics",
           "description": "This derivation gives classical Maxwell equations. The quantized theory (QED) requires applying the [Born Rule](/derivations/quantum/born-rule) to the gauge field: the photon is the quantum of Fmunu, "
-        },
-        {
-          "number": 4,
-          "title": "Non-abelian extension",
-          "description": "The weak and color forces require extending from U(1) to SU(2) and SU(3). The proposed route — through the division algebra hierarchy R C H O — is the subject of the [Weak Interaction](/derivations/ga"
         }
       ],
       "assessmentVerdict": "Rigorous. The complete logical chain from axioms + structural postulates to all four Maxwell equations, charge quantization, and the Lorentz force law is established with full proofs. Every theorem has a complete proof; the consistency model verifies all results. The structural postulates S1 and S2 ",
@@ -4486,7 +4469,7 @@
           },
           {
             "target": "axioms/loop-closure",
-            "context": "Corollary 2.3"
+            "context": "Corollary 4.3"
           },
           {
             "target": "interactions/relational-invariants",
@@ -4498,7 +4481,7 @@
           },
           {
             "target": "axioms/loop-closure",
-            "context": "Theorem 3.1"
+            "context": "Theorem 5.1"
           },
           {
             "target": "spacetime/gravity",
@@ -4559,6 +4542,10 @@
           {
             "target": "gauge/color-force",
             "context": "Color Force"
+          },
+          {
+            "target": "gauge/color-force",
+            "context": "both rigorous"
           }
         ],
         "incoming": [
@@ -4771,23 +4758,18 @@
         },
         {
           "number": 2,
-          "title": "Weinberg angle",
-          "description": "The value sin2thetaW 0.231 should be derivable from the relative strengths of SU(2)L and U(1)Y at the crystallization scale. This connects to [Coupling Constants](/derivations/cosmology/coupling-const"
-        },
-        {
-          "number": 3,
           "title": "Higgs self-coupling",
           "description": "The value lambda 0.13 (determining mh = 125 GeV) is not predicted — it depends on the shape of the coherence potential near the crystallization."
         },
         {
-          "number": 4,
+          "number": 3,
           "title": "Custodial symmetry",
           "description": "The approximate SU(2) custodial symmetry protecting rho = mW2/(mZ2cos2thetaW) 1 should follow from the quaternionic structure but is not explicitly derived."
         },
         {
-          "number": 5,
+          "number": 4,
           "title": "Electroweak phase transition",
-          "description": "The cosmological electroweak phase transition (first-order vs. crossover) depends on the detailed dynamics of the crystallization, relevant for [Baryogenesis](/derivations/cosmology/baryogenesis). <!-"
+          "description": "The cosmological electroweak phase transition (first-order vs. crossover) depends on the detailed dynamics of the crystallization, relevant for [Baryogenesis](/derivations/cosmology/baryogenesis)."
         }
       ],
       "assessmentVerdict": "Rigorous. All key results have formal proofs: the crystallization mechanism uses the explicit one-loop Coleman-Weinberg potential with numerical coefficient evaluation; the Higgs mechanism and gauge boson masses are standard QFT results verified experimentally; the hierarchy protection uses dimensio",
@@ -4819,12 +4801,12 @@
             "context": "Coherence Lagrangian"
           },
           {
-            "target": "cosmology/coupling-constants",
-            "context": "Coupling Constants"
-          },
-          {
             "target": "cosmology/baryogenesis",
             "context": "Baryogenesis"
+          },
+          {
+            "target": "gauge/weinberg-angle",
+            "context": "Weinberg Angle"
           }
         ],
         "incoming": [
@@ -6064,6 +6046,10 @@
         ],
         "incoming": [
           {
+            "source": "gauge/electroweak-breaking",
+            "context": "Weinberg Angle"
+          },
+          {
             "source": "gauge/weak-interaction",
             "context": "Weinberg Angle"
           },
@@ -6230,11 +6216,6 @@
           "number": 4,
           "title": "Dynamical boundaries",
           "description": "For time-dependent regions (e.g., expanding cosmological horizons), the channel capacity argument must be adapted. The entropy bound should track the apparent horizon, not the event horizon."
-        },
-        {
-          "number": 5,
-          "title": "Connection to holographic noise",
-          "description": "The discrete Planck-cell structure of the boundary implies fluctuations at scale ellP. These fluctuations should produce a detectable holographic noise signature — the path to the experimental predict"
         }
       ],
       "assessmentVerdict": "The holographic entropy bound is rigorous given S1 (Planck-scale resolution). The area scaling S propto A/ellP2 is established from boundary counting. The coefficient 1/4 is obtained through the gravitational stability argument using established GR results (Schwarzschild geometry, thermodynamic rela",
@@ -6284,6 +6265,10 @@
           {
             "target": "thermodynamics/action-planck",
             "context": "Action and Planck's Constant"
+          },
+          {
+            "target": "holography/causal-set-statistics",
+            "context": "Causal Set Statistics"
           }
         ],
         "incoming": [
@@ -6778,6 +6763,10 @@
             "context": "Causal Set Statistics"
           },
           {
+            "source": "holography/area-scaling",
+            "context": "Causal Set Statistics"
+          },
+          {
             "source": "holography/er-epr",
             "context": "Proposition 2.1, rigorous"
           },
@@ -6981,6 +6970,10 @@
           {
             "source": "quantum/entanglement",
             "context": "ER=EPR"
+          },
+          {
+            "source": "quantum/entanglement",
+            "context": "rigorous"
           }
         ]
       },
@@ -8036,7 +8029,7 @@
         "dynamics"
       ],
       "summary": "Type III interactions generate genuinely new conserved quantities on the joint state space; by reverse Noether, each creates new symmetries and degrees of freedom",
-      "lastUpdated": "2026-03-09",
+      "lastUpdated": "2026-03-27",
       "dependsOn": [
         "interactions/three-types"
       ],
@@ -8193,14 +8186,9 @@
           "number": 2,
           "title": "Generation rate",
           "description": "How many relational invariants does a given Type III interaction produce? Likely one per independent component of I12, but this needs the dimensionality of V."
-        },
-        {
-          "number": 3,
-          "title": "The bootstrap transition",
-          "description": "When relational invariants compound sufficiently, the system undergoes a phase transition from isolated observers to a connected network. This is the bootstrap mechanism, developed in [Bootstrap](/der"
         }
       ],
-      "assessmentVerdict": "The core results — relational invariants are well-defined, their coherence content is identified, the reverse Noether mechanism follows from standard theorems, and composability is proved — are fully rigorous given the symplectic structure postulate S1. The postulate is clearly flagged and physicall",
+      "assessmentVerdict": "The core results — relational invariants are well-defined, their coherence content is identified, the reverse Noether mechanism follows from standard theorems, and composability is proved — are fully rigorous. The symplectic structure that was formerly a structural postulate (S1) is now derived as T",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -8387,8 +8375,8 @@
       "tags": [
         "dynamics"
       ],
-      "summary": "Exhaustive classification of observer interactions by invariant outcome: Passage (phase transfer), Fusion (reorganization), Resonance (new relational invariant)",
-      "lastUpdated": "2026-03-09",
+      "summary": "Exhaustive classification of observer interactions by invariant outcome: Passage (phase transfer), Fusion (reorganization), Resonance (new relational invariant), with formal treatment of reverse processes (decay, decoherence, dissolution) and their coherence accounting",
+      "lastUpdated": "2026-03-27",
       "dependsOn": [
         "minimal-observer/multiplicity"
       ],
@@ -8427,6 +8415,14 @@
         {
           "number": 6,
           "title": "Physical Identification"
+        },
+        {
+          "number": 7,
+          "title": "Reverse Processes"
+        },
+        {
+          "number": 8,
+          "title": "Thermodynamic Asymmetry"
         }
       ],
       "formalObjects": [
@@ -8491,8 +8487,56 @@
           "statementPreview": "Type I is the unique interaction type that preserves both individual invariants without creating new structure. All T..."
         },
         {
+          "type": "Proposition",
+          "id": "7.1",
+          "name": "Passage is self-reverse",
+          "statementPreview": "Type I (Passage) is symmetric under reversal. If T12(I) transfers phase delta from O1 to O2, the reverse (T12(I))-1 t..."
+        },
+        {
+          "type": "Definition",
+          "id": "7.2",
+          "name": "Decay — Reverse Type II",
+          "statementPreview": "A **decay** is the reverse of Fusion: a composite observer (Sigma12, I12) splits into product observers (Sigma1, I1) ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "7.3",
+          "name": "Decay coherence accounting",
+          "statementPreview": "In a decay process, the binding coherence of the composite — the difference between the composite's coherence and the..."
+        },
+        {
+          "type": "Definition",
+          "id": "7.4",
+          "name": "Decoherence — Reverse Type III",
+          "statementPreview": "A **decoherence** is the reverse of Resonance: a relational invariant I12 between observers O1 and O2 ceases to be we..."
+        },
+        {
+          "type": "Proposition",
+          "id": "7.5",
+          "name": "Decoherence coherence accounting",
+          "statementPreview": "Relational coherence lost between O1 and O2 is redistributed into relational coherence with the remaining observers O..."
+        },
+        {
+          "type": "Definition",
+          "id": "7.6",
+          "name": "Dissolution",
+          "statementPreview": "An observer O = (Sigma, I, B) **dissolves** when its loop closure condition fails — the dynamics ceases to return to ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "7.7",
+          "name": "Dissolution coherence accounting",
+          "statementPreview": "When an observer dissolves, its coherence C(Sigma) > 0 is redistributed among the remaining observers on the Cauchy s..."
+        },
+        {
+          "type": "Proposition",
+          "id": "8.1",
+          "name": "Concentration vs. distribution",
+          "statementPreview": "Let O3 be an observer that persists across an interaction between O1 and O2. Forward processes (Fusion, Resonance) co..."
+        },
+        {
           "type": "Theorem",
-          "id": "7.1.",
+          "id": "9.1.",
           "name": "",
           "statementPreview": "The three interaction types are realized in the product coherence space H = S1 S1 with observers O1 = (S11, I1, B1) a..."
         }
@@ -8507,15 +8551,25 @@
         {
           "number": 2,
           "title": "Energy thresholds",
-          "description": "At what energy does Type I give way to Type II? The threshold likely depends on the coherence content of the observers relative to their relational coherence."
+          "description": "At what energy does Type I give way to Type II? The threshold likely depends on the coherence content of the observers relative to their relational coherence. Similarly, what determines whether a comp"
         },
         {
           "number": 3,
           "title": "Mixed interactions",
           "description": "The classification assigns a single type per interaction event. Whether superpositions of interaction types are physical (e.g., an interaction that is partly Type I and partly Type III) depends on the"
+        },
+        {
+          "number": 4,
+          "title": "Quantitative decoherence rates",
+          "description": "Proposition 7.5 establishes the coherence accounting for decoherence but does not give a rate. The timescale depends on the coupling strength between the pair and the surrounding observers, and on the"
+        },
+        {
+          "number": 5,
+          "title": "Decay selection rules",
+          "description": "Which composites are stable and which decay? The framework predicts that stability requires exact loop closure of the composite (epsilon = 0), but the conditions under which a composite's closure para"
         }
       ],
-      "assessmentVerdict": "The classification is logically exhaustive, mathematically clean, and each type is formally distinguished by a precise criterion (invariant survival, dimension reduction, product preservation). The consistency model verifies all three types in the minimal setting. Physical predictions (rates, thresh",
+      "assessmentVerdict": "The classification is logically exhaustive, mathematically clean, and each type is formally distinguished by a precise criterion (invariant survival, dimension reduction, product preservation). The reverse processes (decay, decoherence, dissolution) are shown to be consistent with coherence conserva",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -8534,6 +8588,14 @@
           {
             "target": "thermodynamics/action-planck",
             "context": "Action and Planck's Constant"
+          },
+          {
+            "target": "axioms/coherence-conservation",
+            "context": "Coherence Conservation"
+          },
+          {
+            "target": "thermodynamics/entropy",
+            "context": "Entropy"
           }
         ],
         "incoming": [
@@ -8770,16 +8832,11 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "CPT theorem",
-          "description": "The full CPT theorem (CPT is an exact symmetry of any Lorentz-invariant local quantum field theory) should be derivable from the coherence-dual pair structure plus the spacetime derivation. This is a "
-        },
-        {
-          "number": 2,
           "title": "Matter-antimatter asymmetry",
           "description": "The pair is symmetric by construction. The observed matter-antimatter asymmetry (baryogenesis) must arise from dynamical processes that break the symmetry of pair creation — this is a question about w"
         },
         {
-          "number": 3,
+          "number": 2,
           "title": "Pair separation mechanism",
           "description": "The process by which virtual pairs become real (separate and propagate) needs the interaction type classification and the spacetime geometry to be quantitative."
         }
@@ -8827,6 +8884,10 @@
           {
             "target": "minimal-observer/structure",
             "context": "Theorem 6.1(b"
+          },
+          {
+            "target": "particles/cpt-theorem",
+            "context": "CPT Theorem"
           }
         ],
         "incoming": [
@@ -8864,7 +8925,7 @@
           },
           {
             "source": "minimal-observer/structure",
-            "context": "Coherence-Dual Pairs"
+            "context": "rigorous"
           },
           {
             "source": "particles/cpt-theorem",
@@ -9352,11 +9413,6 @@
           "number": 2,
           "title": "Coherence cost quantization",
           "description": "The coherence cost SO is bounded below by Smin. Whether the allowed values form a discrete spectrum (quantized action) depends on the topology of the coherence space — this connects to the dimensional"
-        },
-        {
-          "number": 3,
-          "title": "Anti-observers",
-          "description": "For every observer with charge QO, there exists a conjugate with charge -QO (the U(1) representation and its dual). These are coherence-dual pairs — the framework's antiparticles. Developed in [Cohere"
         }
       ],
       "assessmentVerdict": "The derivation is mathematically rigorous: the minimal observer is the unique simplest object satisfying the three axioms, its structure (U(1) phase oscillator with single conserved charge) follows with mathematical certainty from the axioms, and a consistency model is verified. Physical identificat",
@@ -9377,7 +9433,7 @@
           },
           {
             "target": "minimal-observer/coherence-dual-pairs",
-            "context": "Coherence-Dual Pairs"
+            "context": "rigorous"
           }
         ],
         "incoming": [
@@ -9692,6 +9748,10 @@
         "incoming": [
           {
             "source": "gauge/chirality-selection",
+            "context": "CPT Theorem"
+          },
+          {
+            "source": "minimal-observer/coherence-dual-pairs",
             "context": "CPT Theorem"
           },
           {
@@ -10139,6 +10199,10 @@
             "context": "Neutrino Masses"
           },
           {
+            "source": "flavor/mixing-angles",
+            "context": "rigorous"
+          },
+          {
             "source": "particles/three-generations",
             "context": "Neutrino Masses"
           }
@@ -10480,13 +10544,8 @@
         },
         {
           "number": 2,
-          "title": "Supersymmetry is impossible",
-          "description": "The two winding classes are elements of the discrete group Z2 = 0, 1. A continuous symmetry rotating bosons into fermions would require a continuous path from [0] to [1] in Z2, which does not exist (Z"
-        },
-        {
-          "number": 3,
           "title": "Higher-spin particles",
-          "description": "Which spin values are realized at each level of the bootstrap hierarchy? Spin-1 gauge bosons and spin-2 gravitons should emerge at specific levels — this connects to the gauge structure derivation. <!"
+          "description": "Which spin values are realized at each level of the bootstrap hierarchy? Spin-1 gauge bosons and spin-2 gravitons should emerge at specific levels — this connects to the gauge structure derivation."
         }
       ],
       "assessmentVerdict": "The derivation is rigorous. The pure mathematics (pi1 computations, representation theory, DHR theorem) are established results. The connection to the framework's relational invariants (Proposition 4.1) is rigorous given S1 (topological consistency), which is the standard quantization condition on t",
@@ -10496,6 +10555,10 @@
           {
             "target": "interactions/relational-invariants",
             "context": "Relational Invariants"
+          },
+          {
+            "target": "particles/supersymmetry-impossibility",
+            "context": "rigorous"
           }
         ],
         "incoming": [
@@ -10719,6 +10782,10 @@
           {
             "source": "particles/cpt-theorem",
             "context": "Supersymmetry Impossibility"
+          },
+          {
+            "source": "particles/spin-statistics",
+            "context": "rigorous"
           }
         ]
       },
@@ -11417,28 +11484,18 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Quantum teleportation",
-          "description": "Derive teleportation as coherence channel transfer — the relational invariant provides the channel, and classical communication provides the key to unlock it."
-        },
-        {
-          "number": 2,
           "title": "Quantum error correction",
           "description": "Explore whether coherence conservation imposes fundamental limits on or structures for quantum error-correcting codes."
         },
         {
-          "number": 3,
-          "title": "Holographic connection",
-          "description": "Make the ER=EPR sketch (Proposition 5.1) rigorous by connecting to the [Area Scaling](/derivations/holography/area-scaling) and [Causal Set Statistics](/derivations/holography/causal-set-statistics) d"
-        },
-        {
-          "number": 4,
+          "number": 2,
           "title": "Multipartite entanglement",
           "description": "Extend beyond the bipartite case to full multipartite classification (W-states, cluster states, SLOCC classes)."
         },
         {
-          "number": 5,
+          "number": 3,
           "title": "Entanglement dynamics",
-          "description": "Derive entanglement growth under unitary evolution and the scrambling time from coherence dynamics. <!-- References --> [Lieb & Ruskai, 1973]: /references#lieb-ruskai-1973 [Maldacena & Susskind, 2013]"
+          "description": "Derive entanglement growth under unitary evolution and the scrambling time from coherence dynamics."
         }
       ],
       "assessmentVerdict": "Rigorous. All numbered results (Propositions 1.3–1.4, Theorems 2.1, 3.1, 4.1, Corollary 2.2, Theorem 6.1) have complete proofs combining the coherence axioms with established mathematical theorems (SVD, Shannon–Khinchin uniqueness, Lieb-Ruskai strong subadditivity, CKW). No new structural postulates",
@@ -11480,6 +11537,14 @@
           {
             "target": "holography/causal-set-statistics",
             "context": "Causal Set Statistics"
+          },
+          {
+            "target": "quantum/teleportation",
+            "context": "rigorous"
+          },
+          {
+            "target": "holography/er-epr",
+            "context": "rigorous"
           }
         ],
         "incoming": [
@@ -12685,7 +12750,12 @@
             "context": "Theorem 2.2"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "quantum/entanglement",
+            "context": "rigorous"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": true,
@@ -13035,8 +13105,8 @@
       "formalObjects": [
         {
           "type": "Theorem",
-          "id": "0.1",
-          "name": "Metric–density coupling",
+          "id": "0.1.",
+          "name": "",
           "statementPreview": "The spacetime metric gmunu on the coherence geometry (H, g) cannot be independent of the relational invariant density..."
         },
         {
@@ -13921,7 +13991,7 @@
           "type": "Theorem",
           "id": "7.1.",
           "name": "",
-          "statementPreview": "The S1 minimal observer model of [Loop Closure](/derivations/axioms/loop-closure) (Theorem 8.1) extends to a (1+1)-di..."
+          "statementPreview": "The S1 minimal observer model of [Loop Closure](/derivations/axioms/loop-closure) (Theorem 9.1) extends to a (1+1)-di..."
         }
       ],
       "structuralPostulates": [
@@ -13993,7 +14063,7 @@
           },
           {
             "target": "axioms/loop-closure",
-            "context": "Theorem 8.1"
+            "context": "Theorem 9.1"
           }
         ],
         "incoming": [
@@ -14233,7 +14303,7 @@
           "description": "Generalize no-cloning from pure states to mixed states. Broadcasting (approximately copying) a mixed state is possible classically but impossible quantumly for non-commuting states. The coherence fram"
         }
       ],
-      "assessmentVerdict": "Rigorous. The core theorem (Theorem 2.1) follows in one line from Axiom 1a. The deep consequences — no-cloning (Theorem 5.1), no-deleting (Theorem 6.1), monotonicity (Proposition 3.2), and the second law as distinguishability loss (Proposition 7.1) — all have complete proofs. The product-space coher",
+      "assessmentVerdict": "Rigorous. The core theorem (Theorem 2.1) follows in one line from Axiom 1(i). The deep consequences — no-cloning (Theorem 5.1), no-deleting (Theorem 6.1), monotonicity (Proposition 3.2), and the second law as distinguishability loss (Proposition 7.1) — all have complete proofs. The product-space coh",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -15329,7 +15399,7 @@
           "description": "The relationship between hbar (coherence cost quantum), c (phase propagation speed from [Speed of Light](/derivations/spacetime/speed-of-light)), and G (gravitational coupling) determines whether the "
         }
       ],
-      "assessmentVerdict": "The core results — existence and positivity of the action quantum, stationary action from path sums, Planck-Einstein relation, and uncertainty from U(1) conjugacy — are fully rigorous given Structural Postulate S1. The postulate is clearly flagged. Spacetime-dependent physical identifications are pr",
+      "assessmentVerdict": "The core results — existence and positivity of the action quantum, stationary action from path sums, Planck-Einstein relation, and uncertainty from U(1) conjugacy — are fully rigorous. The former structural postulate S1 has been promoted to Theorem 0.1, leaving no active postulates in this derivatio",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -15735,6 +15805,10 @@
           {
             "source": "holography/black-hole-entropy",
             "context": "Entropy as Inaccessible Coherence"
+          },
+          {
+            "source": "interactions/three-types",
+            "context": "Entropy"
           },
           {
             "source": "particles/pauli-exclusion",
@@ -17920,13 +17994,6 @@
     {
       "derivationId": "axioms/coherence-conservation",
       "type": "Proposition",
-      "id": "1.3",
-      "name": "Monotonicity",
-      "fullRef": "axioms/coherence-conservation:Proposition 1.3"
-    },
-    {
-      "derivationId": "axioms/coherence-conservation",
-      "type": "Proposition",
       "id": "1.4",
       "name": "C5 implies C4",
       "fullRef": "axioms/coherence-conservation:Proposition 1.4"
@@ -17982,6 +18049,13 @@
     },
     {
       "derivationId": "axioms/coherence-conservation",
+      "type": "Axiom",
+      "id": "1",
+      "name": "Conservation",
+      "fullRef": "axioms/coherence-conservation:Axiom 1"
+    },
+    {
+      "derivationId": "axioms/coherence-conservation",
       "type": "Definition",
       "id": "4.1",
       "name": "Dependency graph",
@@ -18007,13 +18081,6 @@
       "id": "4.4",
       "name": "Vertex coherence",
       "fullRef": "axioms/coherence-conservation:Definition 4.4"
-    },
-    {
-      "derivationId": "axioms/coherence-conservation",
-      "type": "Theorem",
-      "id": "4.5",
-      "name": "Consistency of formulations",
-      "fullRef": "axioms/coherence-conservation:Theorem 4.5"
     },
     {
       "derivationId": "axioms/coherence-conservation",
@@ -18164,6 +18231,48 @@
     },
     {
       "derivationId": "axioms/loop-closure",
+      "type": "Definition",
+      "id": "2.1",
+      "name": "Boundary diameter",
+      "fullRef": "axioms/loop-closure:Definition 2.1"
+    },
+    {
+      "derivationId": "axioms/loop-closure",
+      "type": "Definition",
+      "id": "2.2",
+      "name": "$\\epsilon$-approximate closure",
+      "fullRef": "axioms/loop-closure:Definition 2.2"
+    },
+    {
+      "derivationId": "axioms/loop-closure",
+      "type": "Proposition",
+      "id": "2.3",
+      "name": "Drift bound",
+      "fullRef": "axioms/loop-closure:Proposition 2.3"
+    },
+    {
+      "derivationId": "axioms/loop-closure",
+      "type": "Definition",
+      "id": "2.4",
+      "name": "Observer lifetime",
+      "fullRef": "axioms/loop-closure:Definition 2.4"
+    },
+    {
+      "derivationId": "axioms/loop-closure",
+      "type": "Proposition",
+      "id": "2.5",
+      "name": "Exact closure gives persistence",
+      "fullRef": "axioms/loop-closure:Proposition 2.5"
+    },
+    {
+      "derivationId": "axioms/loop-closure",
+      "type": "Theorem",
+      "id": "3.1",
+      "name": "Persistence requires exact closure",
+      "fullRef": "axioms/loop-closure:Theorem 3.1"
+    },
+    {
+      "derivationId": "axioms/loop-closure",
       "type": "Axiom",
       "id": "3",
       "name": "Precise statement",
@@ -18172,135 +18281,100 @@
     {
       "derivationId": "axioms/loop-closure",
       "type": "Proposition",
-      "id": "1.2",
-      "name": "Minimal period",
-      "fullRef": "axioms/loop-closure:Proposition 1.2"
-    },
-    {
-      "derivationId": "axioms/loop-closure",
-      "type": "Definition",
-      "id": "2.1",
-      "name": "Observer loop",
-      "fullRef": "axioms/loop-closure:Definition 2.1"
-    },
-    {
-      "derivationId": "axioms/loop-closure",
-      "type": "Proposition",
-      "id": "2.2",
-      "name": "Loop is a smooth embedding",
-      "fullRef": "axioms/loop-closure:Proposition 2.2"
-    },
-    {
-      "derivationId": "axioms/loop-closure",
-      "type": "Proposition",
-      "id": "2.4",
-      "name": "Orbit decomposition",
-      "fullRef": "axioms/loop-closure:Proposition 2.4"
-    },
-    {
-      "derivationId": "axioms/loop-closure",
-      "type": "Theorem",
-      "id": "3.1",
-      "name": "Loop closure ↔ Noether pair",
-      "fullRef": "axioms/loop-closure:Theorem 3.1"
-    },
-    {
-      "derivationId": "axioms/loop-closure",
-      "type": "Proposition",
       "id": "3.2",
-      "name": "Relationship between Axioms 2 and 3",
+      "name": "Minimal period",
       "fullRef": "axioms/loop-closure:Proposition 3.2"
     },
     {
       "derivationId": "axioms/loop-closure",
       "type": "Definition",
       "id": "4.1",
-      "name": "Lyapunov stability",
+      "name": "Observer loop",
       "fullRef": "axioms/loop-closure:Definition 4.1"
     },
     {
       "derivationId": "axioms/loop-closure",
-      "type": "Definition",
+      "type": "Proposition",
       "id": "4.2",
-      "name": "Asymptotic stability",
-      "fullRef": "axioms/loop-closure:Definition 4.2"
+      "name": "Loop is a smooth embedding",
+      "fullRef": "axioms/loop-closure:Proposition 4.2"
     },
     {
       "derivationId": "axioms/loop-closure",
       "type": "Proposition",
-      "id": "4.3",
-      "name": "Instability implies dissolution",
-      "fullRef": "axioms/loop-closure:Proposition 4.3"
+      "id": "4.4",
+      "name": "Orbit decomposition",
+      "fullRef": "axioms/loop-closure:Proposition 4.4"
     },
     {
       "derivationId": "axioms/loop-closure",
-      "type": "Definition",
+      "type": "Theorem",
       "id": "5.1",
-      "name": "$\\epsilon$-approximate closure",
-      "fullRef": "axioms/loop-closure:Definition 5.1"
+      "name": "Loop closure ↔ Noether pair",
+      "fullRef": "axioms/loop-closure:Theorem 5.1"
     },
     {
       "derivationId": "axioms/loop-closure",
       "type": "Proposition",
       "id": "5.2",
-      "name": "Drift bound",
+      "name": "Relationship between Axioms 2 and 3",
       "fullRef": "axioms/loop-closure:Proposition 5.2"
     },
     {
       "derivationId": "axioms/loop-closure",
       "type": "Definition",
-      "id": "5.3",
-      "name": "Observer lifetime",
-      "fullRef": "axioms/loop-closure:Definition 5.3"
-    },
-    {
-      "derivationId": "axioms/loop-closure",
-      "type": "Proposition",
-      "id": "5.4",
-      "name": "Exact closure gives persistence",
-      "fullRef": "axioms/loop-closure:Proposition 5.4"
-    },
-    {
-      "derivationId": "axioms/loop-closure",
-      "type": "Definition",
       "id": "6.1",
-      "name": "Coherence cost / action",
+      "name": "Lyapunov stability",
       "fullRef": "axioms/loop-closure:Definition 6.1"
     },
     {
       "derivationId": "axioms/loop-closure",
-      "type": "Proposition",
+      "type": "Definition",
       "id": "6.2",
-      "name": "Positive minimum",
-      "fullRef": "axioms/loop-closure:Proposition 6.2"
+      "name": "Asymptotic stability",
+      "fullRef": "axioms/loop-closure:Definition 6.2"
     },
     {
       "derivationId": "axioms/loop-closure",
-      "type": "Proposition",
+      "type": "Definition",
       "id": "7.1",
-      "name": "Natural frequency",
-      "fullRef": "axioms/loop-closure:Proposition 7.1"
+      "name": "Coherence cost / action",
+      "fullRef": "axioms/loop-closure:Definition 7.1"
     },
     {
       "derivationId": "axioms/loop-closure",
       "type": "Proposition",
       "id": "7.2",
-      "name": "Action-energy relation",
+      "name": "Positive minimum",
       "fullRef": "axioms/loop-closure:Proposition 7.2"
     },
     {
       "derivationId": "axioms/loop-closure",
+      "type": "Proposition",
+      "id": "8.1",
+      "name": "Natural frequency",
+      "fullRef": "axioms/loop-closure:Proposition 8.1"
+    },
+    {
+      "derivationId": "axioms/loop-closure",
+      "type": "Proposition",
+      "id": "8.2",
+      "name": "Action-energy relation",
+      "fullRef": "axioms/loop-closure:Proposition 8.2"
+    },
+    {
+      "derivationId": "axioms/loop-closure",
       "type": "Corollary",
-      "id": "7.3",
+      "id": "8.3",
       "name": "Planck-Einstein relation",
-      "fullRef": "axioms/loop-closure:Corollary 7.3"
+      "fullRef": "axioms/loop-closure:Corollary 8.3"
     },
     {
       "derivationId": "axioms/loop-closure",
       "type": "Theorem",
-      "id": "8.1.",
+      "id": "9.1.",
       "name": "",
-      "fullRef": "axioms/loop-closure:Theorem 8.1."
+      "fullRef": "axioms/loop-closure:Theorem 9.1."
     },
     {
       "derivationId": "axioms/loop-closure",
@@ -18375,13 +18449,6 @@
     {
       "derivationId": "axioms/observer-definition",
       "type": "Proposition",
-      "id": "3.3.",
-      "name": "",
-      "fullRef": "axioms/observer-definition:Proposition 3.3."
-    },
-    {
-      "derivationId": "axioms/observer-definition",
-      "type": "Proposition",
       "id": "3.4",
       "name": "Simple group obstruction",
       "fullRef": "axioms/observer-definition:Proposition 3.4"
@@ -18427,13 +18494,6 @@
       "id": "5.2.",
       "name": "",
       "fullRef": "axioms/observer-definition:Corollary 5.2."
-    },
-    {
-      "derivationId": "axioms/observer-definition",
-      "type": "Corollary",
-      "id": "5.3",
-      "name": "Coherence equals charge",
-      "fullRef": "axioms/observer-definition:Corollary 5.3"
     },
     {
       "derivationId": "axioms/observer-definition",
@@ -21258,10 +21318,66 @@
     },
     {
       "derivationId": "interactions/three-types",
+      "type": "Proposition",
+      "id": "7.1",
+      "name": "Passage is self-reverse",
+      "fullRef": "interactions/three-types:Proposition 7.1"
+    },
+    {
+      "derivationId": "interactions/three-types",
+      "type": "Definition",
+      "id": "7.2",
+      "name": "Decay — Reverse Type II",
+      "fullRef": "interactions/three-types:Definition 7.2"
+    },
+    {
+      "derivationId": "interactions/three-types",
+      "type": "Proposition",
+      "id": "7.3",
+      "name": "Decay coherence accounting",
+      "fullRef": "interactions/three-types:Proposition 7.3"
+    },
+    {
+      "derivationId": "interactions/three-types",
+      "type": "Definition",
+      "id": "7.4",
+      "name": "Decoherence — Reverse Type III",
+      "fullRef": "interactions/three-types:Definition 7.4"
+    },
+    {
+      "derivationId": "interactions/three-types",
+      "type": "Proposition",
+      "id": "7.5",
+      "name": "Decoherence coherence accounting",
+      "fullRef": "interactions/three-types:Proposition 7.5"
+    },
+    {
+      "derivationId": "interactions/three-types",
+      "type": "Definition",
+      "id": "7.6",
+      "name": "Dissolution",
+      "fullRef": "interactions/three-types:Definition 7.6"
+    },
+    {
+      "derivationId": "interactions/three-types",
+      "type": "Proposition",
+      "id": "7.7",
+      "name": "Dissolution coherence accounting",
+      "fullRef": "interactions/three-types:Proposition 7.7"
+    },
+    {
+      "derivationId": "interactions/three-types",
+      "type": "Proposition",
+      "id": "8.1",
+      "name": "Concentration vs. distribution",
+      "fullRef": "interactions/three-types:Proposition 8.1"
+    },
+    {
+      "derivationId": "interactions/three-types",
       "type": "Theorem",
-      "id": "7.1.",
+      "id": "9.1.",
       "name": "",
-      "fullRef": "interactions/three-types:Theorem 7.1."
+      "fullRef": "interactions/three-types:Theorem 9.1."
     },
     {
       "derivationId": "minimal-observer/coherence-dual-pairs",
@@ -23205,9 +23321,9 @@
     {
       "derivationId": "spacetime/gravity",
       "type": "Theorem",
-      "id": "0.1",
-      "name": "Metric–density coupling",
-      "fullRef": "spacetime/gravity:Theorem 0.1"
+      "id": "0.1.",
+      "name": "",
+      "fullRef": "spacetime/gravity:Theorem 0.1."
     },
     {
       "derivationId": "spacetime/gravity",
@@ -24559,13 +24675,6 @@
       "derivationId": "axioms/coherence-conservation",
       "derivationStatus": "rigorous",
       "number": 3,
-      "title": "Conditional coherence",
-      "description": "Define C(S1 | S2) = C(S1 S2) - C(S2). By (C4), C(S1 | S2) C(S1) for disjoint S1, S2 — conditioning reduces coherence. This is the coherence analogue of conditioning reducing entropy."
-    },
-    {
-      "derivationId": "axioms/coherence-conservation",
-      "derivationStatus": "rigorous",
-      "number": 4,
       "title": "Monotonicity",
       "description": "Whether monotonicity (S1 S2 C(S1) C(S2)) should be added as axiom (C6) depends on whether all physically relevant coherence measures are monotone. The non-trivial model (Model 2) is monotone; whether "
     },
@@ -24615,20 +24724,13 @@
       "derivationId": "axioms/observer-definition",
       "derivationStatus": "rigorous",
       "number": 1,
-      "title": "Composite observers",
-      "description": "The composition rule for building (Sigma12, I12, B12) from component observers requires the relational invariant construction, developed in [Relational Invariants](/derivations/interactions/relational"
-    },
-    {
-      "derivationId": "axioms/observer-definition",
-      "derivationStatus": "rigorous",
-      "number": 2,
       "title": "Graded boundaries",
       "description": "The binary self/non-self partition is an idealization. A generalization to B: Aut(H)|Sigma [0,1] (degree of threat) is physically motivated but not developed."
     },
     {
       "derivationId": "axioms/observer-definition",
       "derivationStatus": "rigorous",
-      "number": 3,
+      "number": 2,
       "title": "Observer equivalence",
       "description": "Isomorphism in mathbfObs (Definition 7.3) is the natural notion. Whether physically distinct observers can be isomorphic (like different particles of the same type) is a question about the category's "
     },
@@ -24797,22 +24899,15 @@
       "derivationId": "flavor/mixing-angles",
       "derivationStatus": "rigorous",
       "number": 3,
-      "title": "Neutrino masses",
-      "description": "The neutrino mass mechanism (Dirac vs. Majorana, seesaw types) affects the PMNS matrix structure. This requires extending the coherence-dual pair mechanism to the neutrino sector."
-    },
-    {
-      "derivationId": "flavor/mixing-angles",
-      "derivationStatus": "rigorous",
-      "number": 4,
       "title": "Renormalization-group running",
       "description": "The mixing parameters measured at low energy differ from their values at the symmetry-breaking scale. RG corrections (from [Renormalization Group](/derivations/thermodynamics-ext/renormalization)) sho"
     },
     {
       "derivationId": "flavor/mixing-angles",
       "derivationStatus": "rigorous",
-      "number": 5,
+      "number": 4,
       "title": "Quark-lepton complementarity",
-      "description": "The observation theta12CKM + theta12PMNS pi/4 may be accidental or may reflect a deeper geometric relationship between the quark and lepton sectors. The A5 framework should clarify this. <!-- Referenc"
+      "description": "The observation theta12CKM + theta12PMNS pi/4 may be accidental or may reflect a deeper geometric relationship between the quark and lepton sectors. The A5 framework should clarify this."
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
@@ -24923,22 +25018,8 @@
       "derivationId": "gauge/electromagnetism",
       "derivationStatus": "rigorous",
       "number": 2,
-      "title": "Magnetic monopoles",
-      "description": "The derivation gives mathbfB = 0 (no monopoles) from the Bianchi identity. The framework structurally excludes monopoles: the gauge potential is not an optional convenience but the mechanism of phase "
-    },
-    {
-      "derivationId": "gauge/electromagnetism",
-      "derivationStatus": "rigorous",
-      "number": 3,
       "title": "Quantum electrodynamics",
       "description": "This derivation gives classical Maxwell equations. The quantized theory (QED) requires applying the [Born Rule](/derivations/quantum/born-rule) to the gauge field: the photon is the quantum of Fmunu, "
-    },
-    {
-      "derivationId": "gauge/electromagnetism",
-      "derivationStatus": "rigorous",
-      "number": 4,
-      "title": "Non-abelian extension",
-      "description": "The weak and color forces require extending from U(1) to SU(2) and SU(3). The proposed route — through the division algebra hierarchy R C H O — is the subject of the [Weak Interaction](/derivations/ga"
     },
     {
       "derivationId": "gauge/electroweak-breaking",
@@ -24951,29 +25032,22 @@
       "derivationId": "gauge/electroweak-breaking",
       "derivationStatus": "rigorous",
       "number": 2,
-      "title": "Weinberg angle",
-      "description": "The value sin2thetaW 0.231 should be derivable from the relative strengths of SU(2)L and U(1)Y at the crystallization scale. This connects to [Coupling Constants](/derivations/cosmology/coupling-const"
-    },
-    {
-      "derivationId": "gauge/electroweak-breaking",
-      "derivationStatus": "rigorous",
-      "number": 3,
       "title": "Higgs self-coupling",
       "description": "The value lambda 0.13 (determining mh = 125 GeV) is not predicted — it depends on the shape of the coherence potential near the crystallization."
     },
     {
       "derivationId": "gauge/electroweak-breaking",
       "derivationStatus": "rigorous",
-      "number": 4,
+      "number": 3,
       "title": "Custodial symmetry",
       "description": "The approximate SU(2) custodial symmetry protecting rho = mW2/(mZ2cos2thetaW) 1 should follow from the quaternionic structure but is not explicitly derived."
     },
     {
       "derivationId": "gauge/electroweak-breaking",
       "derivationStatus": "rigorous",
-      "number": 5,
+      "number": 4,
       "title": "Electroweak phase transition",
-      "description": "The cosmological electroweak phase transition (first-order vs. crossover) depends on the detailed dynamics of the crystallization, relevant for [Baryogenesis](/derivations/cosmology/baryogenesis). <!-"
+      "description": "The cosmological electroweak phase transition (first-order vs. crossover) depends on the detailed dynamics of the crystallization, relevant for [Baryogenesis](/derivations/cosmology/baryogenesis)."
     },
     {
       "derivationId": "gauge/proton-stability",
@@ -25072,13 +25146,6 @@
       "number": 4,
       "title": "Dynamical boundaries",
       "description": "For time-dependent regions (e.g., expanding cosmological horizons), the channel capacity argument must be adapted. The entropy bound should track the apparent horizon, not the event horizon."
-    },
-    {
-      "derivationId": "holography/area-scaling",
-      "derivationStatus": "rigorous",
-      "number": 5,
-      "title": "Connection to holographic noise",
-      "description": "The discrete Planck-cell structure of the boundary implies fluctuations at scale ellP. These fluctuations should produce a detectable holographic noise signature — the path to the experimental predict"
     },
     {
       "derivationId": "holography/black-hole-entropy",
@@ -25284,13 +25351,6 @@
       "description": "How many relational invariants does a given Type III interaction produce? Likely one per independent component of I12, but this needs the dimensionality of V."
     },
     {
-      "derivationId": "interactions/relational-invariants",
-      "derivationStatus": "rigorous",
-      "number": 3,
-      "title": "The bootstrap transition",
-      "description": "When relational invariants compound sufficiently, the system undergoes a phase transition from isolated observers to a connected network. This is the bootstrap mechanism, developed in [Bootstrap](/der"
-    },
-    {
       "derivationId": "interactions/three-types",
       "derivationStatus": "rigorous",
       "number": 1,
@@ -25302,7 +25362,7 @@
       "derivationStatus": "rigorous",
       "number": 2,
       "title": "Energy thresholds",
-      "description": "At what energy does Type I give way to Type II? The threshold likely depends on the coherence content of the observers relative to their relational coherence."
+      "description": "At what energy does Type I give way to Type II? The threshold likely depends on the coherence content of the observers relative to their relational coherence. Similarly, what determines whether a comp"
     },
     {
       "derivationId": "interactions/three-types",
@@ -25312,23 +25372,30 @@
       "description": "The classification assigns a single type per interaction event. Whether superpositions of interaction types are physical (e.g., an interaction that is partly Type I and partly Type III) depends on the"
     },
     {
-      "derivationId": "minimal-observer/coherence-dual-pairs",
+      "derivationId": "interactions/three-types",
       "derivationStatus": "rigorous",
-      "number": 1,
-      "title": "CPT theorem",
-      "description": "The full CPT theorem (CPT is an exact symmetry of any Lorentz-invariant local quantum field theory) should be derivable from the coherence-dual pair structure plus the spacetime derivation. This is a "
+      "number": 4,
+      "title": "Quantitative decoherence rates",
+      "description": "Proposition 7.5 establishes the coherence accounting for decoherence but does not give a rate. The timescale depends on the coupling strength between the pair and the surrounding observers, and on the"
+    },
+    {
+      "derivationId": "interactions/three-types",
+      "derivationStatus": "rigorous",
+      "number": 5,
+      "title": "Decay selection rules",
+      "description": "Which composites are stable and which decay? The framework predicts that stability requires exact loop closure of the composite (epsilon = 0), but the conditions under which a composite's closure para"
     },
     {
       "derivationId": "minimal-observer/coherence-dual-pairs",
       "derivationStatus": "rigorous",
-      "number": 2,
+      "number": 1,
       "title": "Matter-antimatter asymmetry",
       "description": "The pair is symmetric by construction. The observed matter-antimatter asymmetry (baryogenesis) must arise from dynamical processes that break the symmetry of pair creation — this is a question about w"
     },
     {
       "derivationId": "minimal-observer/coherence-dual-pairs",
       "derivationStatus": "rigorous",
-      "number": 3,
+      "number": 2,
       "title": "Pair separation mechanism",
       "description": "The process by which virtual pairs become real (separate and propagate) needs the interaction type classification and the spacetime geometry to be quantitative."
     },
@@ -25366,13 +25433,6 @@
       "number": 2,
       "title": "Coherence cost quantization",
       "description": "The coherence cost SO is bounded below by Smin. Whether the allowed values form a discrete spectrum (quantized action) depends on the topology of the coherence space — this connects to the dimensional"
-    },
-    {
-      "derivationId": "minimal-observer/structure",
-      "derivationStatus": "rigorous",
-      "number": 3,
-      "title": "Anti-observers",
-      "description": "For every observer with charge QO, there exists a conjugate with charge -QO (the U(1) representation and its dual). These are coherence-dual pairs — the framework's antiparticles. Developed in [Cohere"
     },
     {
       "derivationId": "particles/cpt-theorem",
@@ -25483,15 +25543,8 @@
       "derivationId": "particles/spin-statistics",
       "derivationStatus": "rigorous",
       "number": 2,
-      "title": "Supersymmetry is impossible",
-      "description": "The two winding classes are elements of the discrete group Z2 = 0, 1. A continuous symmetry rotating bosons into fermions would require a continuous path from [0] to [1] in Z2, which does not exist (Z"
-    },
-    {
-      "derivationId": "particles/spin-statistics",
-      "derivationStatus": "rigorous",
-      "number": 3,
       "title": "Higher-spin particles",
-      "description": "Which spin values are realized at each level of the bootstrap hierarchy? Spin-1 gauge bosons and spin-2 gravitons should emerge at specific levels — this connects to the gauge structure derivation. <!"
+      "description": "Which spin values are realized at each level of the bootstrap hierarchy? Spin-1 gauge bosons and spin-2 gravitons should emerge at specific levels — this connects to the gauge structure derivation."
     },
     {
       "derivationId": "particles/supersymmetry-impossibility",
@@ -25567,36 +25620,22 @@
       "derivationId": "quantum/entanglement",
       "derivationStatus": "rigorous",
       "number": 1,
-      "title": "Quantum teleportation",
-      "description": "Derive teleportation as coherence channel transfer — the relational invariant provides the channel, and classical communication provides the key to unlock it."
-    },
-    {
-      "derivationId": "quantum/entanglement",
-      "derivationStatus": "rigorous",
-      "number": 2,
       "title": "Quantum error correction",
       "description": "Explore whether coherence conservation imposes fundamental limits on or structures for quantum error-correcting codes."
     },
     {
       "derivationId": "quantum/entanglement",
       "derivationStatus": "rigorous",
-      "number": 3,
-      "title": "Holographic connection",
-      "description": "Make the ER=EPR sketch (Proposition 5.1) rigorous by connecting to the [Area Scaling](/derivations/holography/area-scaling) and [Causal Set Statistics](/derivations/holography/causal-set-statistics) d"
-    },
-    {
-      "derivationId": "quantum/entanglement",
-      "derivationStatus": "rigorous",
-      "number": 4,
+      "number": 2,
       "title": "Multipartite entanglement",
       "description": "Extend beyond the bipartite case to full multipartite classification (W-states, cluster states, SLOCC classes)."
     },
     {
       "derivationId": "quantum/entanglement",
       "derivationStatus": "rigorous",
-      "number": 5,
+      "number": 3,
       "title": "Entanglement dynamics",
-      "description": "Derive entanglement growth under unitary evolution and the scrambling time from coherence dynamics. <!-- References --> [Lieb & Ruskai, 1973]: /references#lieb-ruskai-1973 [Maldacena & Susskind, 2013]"
+      "description": "Derive entanglement growth under unitary evolution and the scrambling time from coherence dynamics."
     },
     {
       "derivationId": "quantum/measurement",

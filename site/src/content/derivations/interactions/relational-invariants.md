@@ -206,4 +206,7 @@ The process iterates: $\mathcal{O}_{(12)3}$ is itself an observer (by the same a
 
 1. **Entanglement mapping**: The identification of $I_{12}$ with quantum entanglement needs a precise mapping between $\mathcal{C}(I_{12})$ and entanglement entropy $S = -\text{Tr}(\rho_A \ln \rho_A)$.
 2. **Generation rate**: How many relational invariants does a given Type III interaction produce? Likely one per independent component of $I_{12}$, but this needs the dimensionality of $V$.
-3. **The bootstrap transition**: When relational invariants compound sufficiently, the system undergoes a phase transition from isolated observers to a connected network. This is the bootstrap mechanism, developed in [Bootstrap](/derivations/interactions/bootstrap).
+
+## Addressed Gaps
+
+1. **The bootstrap transition** — *Resolved by [Bootstrap](/derivations/interactions/bootstrap) derivation (rigorous)*: The bootstrap mechanism addresses when relational invariants compound sufficiently to produce a phase transition from isolated observers to a connected network.

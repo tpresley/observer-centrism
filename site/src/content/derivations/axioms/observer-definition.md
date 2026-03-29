@@ -224,6 +224,9 @@ $$\dim V = \dim \mathfrak{g}_\mathcal{O}$$
 
 ## Open Gaps
 
-1. **Composite observers**: The composition rule for building $(\Sigma_{12}, I_{12}, \mathcal{B}_{12})$ from component observers requires the relational invariant construction, developed in [Relational Invariants](/derivations/interactions/relational-invariants).
-2. **Graded boundaries**: The binary self/non-self partition is an idealization. A generalization to $\mathcal{B}: \text{Aut}(\mathcal{H})|_\Sigma \to [0,1]$ (degree of threat) is physically motivated but not developed.
-3. **Observer equivalence**: Isomorphism in $\mathbf{Obs}$ (Definition 7.3) is the natural notion. Whether physically distinct observers can be isomorphic (like different particles of the same type) is a question about the category's structure.
+1. **Graded boundaries**: The binary self/non-self partition is an idealization. A generalization to $\mathcal{B}: \text{Aut}(\mathcal{H})|_\Sigma \to [0,1]$ (degree of threat) is physically motivated but not developed.
+2. **Observer equivalence**: Isomorphism in $\mathbf{Obs}$ (Definition 7.3) is the natural notion. Whether physically distinct observers can be isomorphic (like different particles of the same type) is a question about the category's structure.
+
+## Addressed Gaps
+
+1. **Composite observers** — *Resolved by [Relational Invariants](/derivations/interactions/relational-invariants)*: The relational invariant construction builds composite observers $(\Sigma_{12}, I_{12}, \mathcal{B}_{12})$ from component observers, providing the composition rule for the observer category.

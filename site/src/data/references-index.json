@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-03-23T08:50:42.970Z",
-    "totalReferences": 90,
-    "totalCitations": 103,
-    "citingFiles": 42,
+    "generatedAt": "2026-03-29T14:45:59.280Z",
+    "totalReferences": 92,
+    "totalCitations": 105,
+    "citingFiles": 43,
     "generator": "scripts/extract-references.mjs"
   },
   "categoryNames": {
@@ -43,7 +43,7 @@
     },
     "field-theory": {
       "name": "Field Theory",
-      "count": 13
+      "count": 15
     },
     "spacetime-geometry": {
       "name": "Spacetime & Geometry",
@@ -649,6 +649,21 @@
       "category": "field-theory"
     },
     {
+      "id": "schlosshauer-2007",
+      "authors": "Schlosshauer",
+      "year": 2007,
+      "citedAs": [
+        "Schlosshauer, 2007"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "interactions/three-types",
+          "title": "Three Interaction Types"
+        }
+      ],
+      "category": "field-theory"
+    },
+    {
       "id": "wetterich-1993",
       "authors": "Wetterich",
       "year": 1993,
@@ -674,6 +689,21 @@
         {
           "derivationId": "thermodynamics-ext/distinguishability-conservation",
           "title": "Conservation of Distinguishability"
+        }
+      ],
+      "category": "field-theory"
+    },
+    {
+      "id": "zurek-1991",
+      "authors": "Zurek",
+      "year": 1991,
+      "citedAs": [
+        "Zurek, 1991"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "interactions/three-types",
+          "title": "Three Interaction Types"
         }
       ],
       "category": "field-theory"

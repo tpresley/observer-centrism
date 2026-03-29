@@ -220,11 +220,13 @@ When $|m_i - m_j| \gg |V_{ij}|$ (strong hierarchy), the mixing angle is small â€
 
 2. **Channel selection**: Determine which of the five $A_5$ breaking channels is realized in the quark and lepton sectors. This may require input from the gauge structure (how $SU(3) \times SU(2) \times U(1)$ interacts with the $A_5$ flavor symmetry).
 
-3. **Neutrino masses**: The neutrino mass mechanism (Dirac vs. Majorana, seesaw types) affects the PMNS matrix structure. This requires extending the coherence-dual pair mechanism to the neutrino sector.
+3. **Renormalization-group running**: The mixing parameters measured at low energy differ from their values at the symmetry-breaking scale. RG corrections (from [Renormalization Group](/derivations/thermodynamics-ext/renormalization)) should be computed to compare with experiment.
 
-4. **Renormalization-group running**: The mixing parameters measured at low energy differ from their values at the symmetry-breaking scale. RG corrections (from [Renormalization Group](/derivations/thermodynamics-ext/renormalization)) should be computed to compare with experiment.
+4. **Quark-lepton complementarity**: The observation $\theta_{12}^{\text{CKM}} + \theta_{12}^{\text{PMNS}} \approx \pi/4$ may be accidental or may reflect a deeper geometric relationship between the quark and lepton sectors. The $A_5$ framework should clarify this.
 
-5. **Quark-lepton complementarity**: The observation $\theta_{12}^{\text{CKM}} + \theta_{12}^{\text{PMNS}} \approx \pi/4$ may be accidental or may reflect a deeper geometric relationship between the quark and lepton sectors. The $A_5$ framework should clarify this.
+## Addressed Gaps
+
+1. **Neutrino masses** â€” *Resolved by [Neutrino Masses](/derivations/particles/neutrino-masses) (rigorous)*: The neutrino mass mechanism is now fully derived, establishing Majorana nature, the seesaw mechanism, and normal mass ordering, completing the PMNS matrix structure.
 
 <!-- References -->
 [Klein, 1884]: /references#klein-1884

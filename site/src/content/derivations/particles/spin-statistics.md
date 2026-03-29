@@ -226,10 +226,11 @@ Higher-dimensional representations of $\mathbb{Z}_2$ decompose into direct sums 
 ## Open Gaps
 
 1. **Minimal spin**: Why is the minimal fermion spin-1/2 and not spin-3/2? The answer is that $s = 1/2$ is the fundamental (lowest-dimensional) representation of $SU(2)$, and the minimal observer has the simplest possible loop. A formal proof would require showing that the minimal observer's state space $\Sigma$ is isomorphic to $V_{1/2} = \mathbb{C}^2$.
+2. **Higher-spin particles**: Which spin values are realized at each level of the bootstrap hierarchy? Spin-1 gauge bosons and spin-2 gravitons should emerge at specific levels — this connects to the gauge structure derivation.
 
-2. **Supersymmetry is impossible**: The two winding classes are elements of the discrete group $\mathbb{Z}_2 = \{0, 1\}$. A continuous symmetry rotating bosons into fermions would require a continuous path from $[0]$ to $[1]$ in $\mathbb{Z}_2$, which does not exist ($\mathbb{Z}_2$ is discrete and totally disconnected). This is a rigorous no-go theorem for supersymmetry within the framework.
+## Addressed Gaps
 
-3. **Higher-spin particles**: Which spin values are realized at each level of the bootstrap hierarchy? Spin-1 gauge bosons and spin-2 gravitons should emerge at specific levels — this connects to the gauge structure derivation.
+1. **Supersymmetry is impossible** — *Resolved by [Supersymmetry Impossibility](/derivations/particles/supersymmetry-impossibility) (rigorous)*: The topological no-go theorem is fully developed — the $\mathbb{Z}_2$ discreteness of winding classes forbids any continuous boson-fermion interpolation, ruling out supersymmetry within the framework.
 
 <!-- References -->
 [Pauli, 1940]: /references#pauli-1940
