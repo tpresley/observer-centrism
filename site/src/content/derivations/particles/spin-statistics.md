@@ -215,13 +215,14 @@ Higher-dimensional representations of $\mathbb{Z}_2$ decompose into direct sums 
 - Theorem 6.1: Completeness of bosonic/fermionic statistics [DHR, 1971]
 - Theorem 7.1: Consistency model verified on standard QM
 
-**Rigorous given axioms + S1:**
-- Proposition 4.1: Relational invariant exchange symmetry (follows from S1 — flat line bundle over $Q_2$ with $\pi_1 = \mathbb{Z}_2$ has exactly two holonomy choices)
+**Rigorous given axioms:**
+- Theorem 0.1: Topological consistency derived from Axiom 3 (loop closure on configuration space)
+- Proposition 4.1: Relational invariant exchange symmetry (follows from Theorem 0.1 — flat line bundle over $Q_2$ with $\pi_1 = \mathbb{Z}_2$ has exactly two holonomy choices)
 
-**Structural postulate:**
-- S1 (Topological consistency): Amplitudes are single-valued on the universal cover of the configuration space, with holonomy determined by $\pi_1$. This is the standard quantization condition on multiply-connected spaces [Laidlaw-DeWitt, 1971], here motivated by well-definedness of phase evolution (Axiom 3).
+**Structural postulate (now a theorem):**
+- S1 (Topological consistency): Originally postulated; now derived as Theorem 0.1 from Axiom 3 applied to configuration space. The Laidlaw–DeWitt quantization condition [Laidlaw-DeWitt, 1971] follows from loop closure rather than being an independent assumption.
 
-**Assessment:** The derivation is rigorous. The pure mathematics ($\pi_1$ computations, representation theory, DHR theorem) are established results. The connection to the framework's relational invariants (Proposition 4.1) is rigorous given S1 (topological consistency), which is the standard quantization condition on the configuration space.
+**Assessment:** The derivation is rigorous. S1 (topological consistency) was formerly a structural postulate but is now derived as Theorem 0.1 from Axiom 3 (loop closure), eliminating the only non-axiomatic assumption. The pure mathematics ($\pi_1$ computations, representation theory, DHR theorem) are established results. The connection to the framework's relational invariants (Proposition 4.1) is rigorous given Theorem 0.1.
 
 ## Open Gaps
 
