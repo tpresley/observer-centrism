@@ -108,11 +108,11 @@ $$\psi(c|a) = \sum_b \psi(c|b) \cdot \psi(b|a)$$
 
 The probability rule applied directly gives:
 
-$$P(a \to c) = f(|\psi(c|a)|^2) = f\!\left(\left|\sum_b \psi(c|b)\psi(b|a)\right|^2\right) \tag{1}$$
+$$P(a \to c) = f(|\psi(c|a)|^2) = f\!\left(\left|\sum_b \psi(c|b)\psi(b|a)\right|^2\right) \qquad \text{(1)}$$
 
 Alternatively, summing over intermediate outcomes (total probability via each intermediate step):
 
-$$P(a \to c) = \sum_b P(a \to b) \cdot P(b \to c) = \sum_b f(|\psi(b|a)|^2) \cdot f(|\psi(c|b)|^2) \tag{2}$$
+$$P(a \to c) = \sum_b P(a \to b) \cdot P(b \to c) = \sum_b f(|\psi(b|a)|^2) \cdot f(|\psi(c|b)|^2) \qquad \text{(2)}$$
 
 Equations (1) and (2) must agree for **all** choices of amplitudes $\psi(b|a)$ and $\psi(c|b)$.
 
