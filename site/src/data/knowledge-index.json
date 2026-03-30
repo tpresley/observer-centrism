@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-29T15:01:16.913Z",
+    "generatedAt": "2026-03-29T21:15:12.276Z",
     "derivationCount": 64,
     "predictionCount": 11,
     "gaPageCount": 12,
@@ -16,8 +16,8 @@
     "derivationCount": 64,
     "predictionCount": 11,
     "edgeCount": 149,
-    "formalObjectCount": 959,
-    "openGapCount": 188,
+    "formalObjectCount": 960,
+    "openGapCount": 189,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -1600,7 +1600,7 @@
         "cosmology"
       ],
       "summary": "The division algebra structure constrains coupling constant ratios: the Weinberg angle follows from the C ⊂ H embedding, the relative gauge coupling strengths from algebraic normalization, and the RG running from bootstrap fixed points. The framework predicts that the three couplings do not converge to a single GUT point.",
-      "lastUpdated": "2026-03-10",
+      "lastUpdated": "2026-03-29",
       "dependsOn": [
         "gauge/standard-model-group",
         "interactions/bootstrap",
@@ -1638,14 +1638,18 @@
         {
           "number": 6,
           "title": "The Strong Coupling"
+        },
+        {
+          "number": 7,
+          "title": "Two-Loop Refinement"
         }
       ],
       "formalObjects": [
         {
           "type": "Structural Postulate",
           "id": "S1",
-          "name": "Algebraic normalization",
-          "statementPreview": "At the scale where each gauge factor \"crystallizes\" from the bootstrap hierarchy, the gauge coupling is determined by..."
+          "name": "Algebraic ratio constraint",
+          "statementPreview": "At the scales where the gauge factors crystallize from the bootstrap hierarchy, the gauge coupling *ratios* are deter..."
         },
         {
           "type": "Theorem",
@@ -1656,14 +1660,14 @@
         {
           "type": "Proposition",
           "id": "2.1",
-          "name": "Algebraic normalization of couplings",
-          "statementPreview": "At the bootstrap crystallization scale Lambdai for each gauge factor, Structural Postulate S1 gives:*"
+          "name": "Algebraic ratio constraint on couplings",
+          "statementPreview": "At a common electroweak crystallization scale LambdaEW, Structural Postulate S1 constrains the coupling ratios:*"
         },
         {
           "type": "Proposition",
           "id": "3.1",
-          "name": "Bootstrap fixed points as RG boundary conditions",
-          "statementPreview": "Each level of the bootstrap hierarchy ([Bootstrap Mechanism](/derivations/interactions/bootstrap)) corresponds to a s..."
+          "name": "Self-consistent determination of $\\Lambda_{\\text{EW}}$",
+          "statementPreview": "The crystallization scale LambdaEW for the electroweak sector is determined by requiring that sin2thetaW(LambdaEW) = ..."
         },
         {
           "type": "Theorem",
@@ -1681,38 +1685,44 @@
           "type": "Proposition",
           "id": "5.1",
           "name": "Estimate of $\\alpha_{em}$",
-          "statementPreview": "The electromagnetic coupling at MZ is:*"
+          "statementPreview": "The electromagnetic coupling at MZ is determined by:*"
         },
         {
           "type": "Proposition",
           "id": "6.1",
-          "name": "Estimate of $\\alpha_s$",
-          "statementPreview": "The strong coupling at MZ from the algebraic normalization and one-loop running:*"
+          "name": "Status of $\\alpha_s$",
+          "statementPreview": "The strong coupling prediction depends on the SU(3) crystallization scale Lambda3:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "7.1",
+          "name": "Two-loop stability of the electroweak sector",
+          "statementPreview": "The two-loop RG computation confirms the stability of the one-loop analysis for the electroweak sector:*"
         },
         {
           "type": "Theorem",
-          "id": "7.1.",
+          "id": "8.1.",
           "name": "",
-          "statementPreview": "The algebraic normalization is consistent with the minimal observer.*"
+          "statementPreview": "The algebraic ratio constraint is consistent with the minimal observer.*"
         },
         {
           "type": "Proposition",
           "id": "2.1",
           "name": "",
-          "statementPreview": ": alpha1 = 1/2 for C (2 real dimensions). ✓"
+          "statementPreview": ": The ratio alpha1/alpha2 = 2 reflects that the quaternionic observer has twice as many phase channels as the complex..."
         }
       ],
       "structuralPostulates": [
         {
           "id": "S1",
-          "name": "Algebraic normalization"
+          "name": "Algebraic ratio constraint"
         }
       ],
       "openGaps": [
         {
           "number": 1,
           "title": "Axiom-level derivation of S1",
-          "description": "The algebraic normalization gi2 = 4pi / dimR Ai is a structural postulate. Deriving it from the coherence axioms (e.g., showing that the canonical norm on Ai uniquely determines the coupling) would el"
+          "description": "The algebraic ratio constraint alpha1 : alpha2 : alpha3 = 4:2:1 is a structural postulate. Deriving it from the coherence axioms (e.g., showing that the canonical norm on Ai uniquely determines the co"
         },
         {
           "number": 2,
@@ -1722,15 +1732,20 @@
         {
           "number": 3,
           "title": "Two-loop precision",
-          "description": "Computing the two-loop RG running with threshold corrections would achieve < 1% precision in alphaem and alphas predictions. This is standard QFT technology [Machacek & Vaughn, 1984] once the boundary"
+          "description": "Partially addressed for the electroweak sector (Proposition 7.1: 3.3% shift, confirming one-loop reliability). The QCD sector remains problematic — the ratio constraint at a common EW scale does not p"
         },
         {
           "number": 4,
+          "title": "SU(3) crystallization scale",
+          "description": "Determining Lambda3 independently from bootstrap dynamics would convert the suggestive near-coincidence 1/dim(O) alphas(MZ) into a genuine prediction. This is the key open question for the strong coup"
+        },
+        {
+          "number": 5,
           "title": "Yukawa couplings",
           "description": "The fermion masses are free parameters in the Standard Model but should be constrained by the division algebra structure and the [Flavor Mixing](/derivations/flavor/mixing-angles) derivation. This req"
         }
       ],
-      "assessmentVerdict": "Rigorous. This derivation introduces one new structural postulate (S1: algebraic normalization) and derives the coupling constant relationships: sin2thetaW = 1/3 at the algebraic scale, coupling ratios alpha1 : alpha2 : alpha3 = 4:2:1, and the non-convergence prediction. All proofs are complete. The",
+      "assessmentVerdict": "Rigorous. This derivation introduces one structural postulate (S1: algebraic ratio constraint) and derives the coupling constant relationships: sin2thetaW = 1/3 at the algebraic scale, coupling ratios alpha1 : alpha2 : alpha3 = 4:2:1, and the non-convergence prediction. All proofs are complete. The ",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -10563,7 +10578,7 @@
           "description": "Which spin values are realized at each level of the bootstrap hierarchy? Spin-1 gauge bosons and spin-2 gravitons should emerge at specific levels — this connects to the gauge structure derivation."
         }
       ],
-      "assessmentVerdict": "The derivation is rigorous. The pure mathematics (pi1 computations, representation theory, DHR theorem) are established results. The connection to the framework's relational invariants (Proposition 4.1) is rigorous given S1 (topological consistency), which is the standard quantization condition on t",
+      "assessmentVerdict": "The derivation is rigorous. S1 (topological consistency) was formerly a structural postulate but is now derived as Theorem 0.1 from Axiom 3 (loop closure), eliminating the only non-axiomatic assumption. The pure mathematics (pi1 computations, representation theory, DHR theorem) are established resul",
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
@@ -18683,7 +18698,7 @@
       "derivationId": "cosmology/coupling-constants",
       "type": "Structural Postulate",
       "id": "S1",
-      "name": "Algebraic normalization",
+      "name": "Algebraic ratio constraint",
       "fullRef": "cosmology/coupling-constants:Structural Postulate S1"
     },
     {
@@ -18697,14 +18712,14 @@
       "derivationId": "cosmology/coupling-constants",
       "type": "Proposition",
       "id": "2.1",
-      "name": "Algebraic normalization of couplings",
+      "name": "Algebraic ratio constraint on couplings",
       "fullRef": "cosmology/coupling-constants:Proposition 2.1"
     },
     {
       "derivationId": "cosmology/coupling-constants",
       "type": "Proposition",
       "id": "3.1",
-      "name": "Bootstrap fixed points as RG boundary conditions",
+      "name": "Self-consistent determination of $\\Lambda_{\\text{EW}}$",
       "fullRef": "cosmology/coupling-constants:Proposition 3.1"
     },
     {
@@ -18732,15 +18747,22 @@
       "derivationId": "cosmology/coupling-constants",
       "type": "Proposition",
       "id": "6.1",
-      "name": "Estimate of $\\alpha_s$",
+      "name": "Status of $\\alpha_s$",
       "fullRef": "cosmology/coupling-constants:Proposition 6.1"
     },
     {
       "derivationId": "cosmology/coupling-constants",
+      "type": "Proposition",
+      "id": "7.1",
+      "name": "Two-loop stability of the electroweak sector",
+      "fullRef": "cosmology/coupling-constants:Proposition 7.1"
+    },
+    {
+      "derivationId": "cosmology/coupling-constants",
       "type": "Theorem",
-      "id": "7.1.",
+      "id": "8.1.",
       "name": "",
-      "fullRef": "cosmology/coupling-constants:Theorem 7.1."
+      "fullRef": "cosmology/coupling-constants:Theorem 8.1."
     },
     {
       "derivationId": "cosmology/coupling-constants",
@@ -24825,7 +24847,7 @@
       "derivationStatus": "rigorous",
       "number": 1,
       "title": "Axiom-level derivation of S1",
-      "description": "The algebraic normalization gi2 = 4pi / dimR Ai is a structural postulate. Deriving it from the coherence axioms (e.g., showing that the canonical norm on Ai uniquely determines the coupling) would el"
+      "description": "The algebraic ratio constraint alpha1 : alpha2 : alpha3 = 4:2:1 is a structural postulate. Deriving it from the coherence axioms (e.g., showing that the canonical norm on Ai uniquely determines the co"
     },
     {
       "derivationId": "cosmology/coupling-constants",
@@ -24839,12 +24861,19 @@
       "derivationStatus": "rigorous",
       "number": 3,
       "title": "Two-loop precision",
-      "description": "Computing the two-loop RG running with threshold corrections would achieve < 1% precision in alphaem and alphas predictions. This is standard QFT technology [Machacek & Vaughn, 1984] once the boundary"
+      "description": "Partially addressed for the electroweak sector (Proposition 7.1: 3.3% shift, confirming one-loop reliability). The QCD sector remains problematic — the ratio constraint at a common EW scale does not p"
     },
     {
       "derivationId": "cosmology/coupling-constants",
       "derivationStatus": "rigorous",
       "number": 4,
+      "title": "SU(3) crystallization scale",
+      "description": "Determining Lambda3 independently from bootstrap dynamics would convert the suggestive near-coincidence 1/dim(O) alphas(MZ) into a genuine prediction. This is the key open question for the strong coup"
+    },
+    {
+      "derivationId": "cosmology/coupling-constants",
+      "derivationStatus": "rigorous",
+      "number": 5,
       "title": "Yukawa couplings",
       "description": "The fermion masses are free parameters in the Standard Model but should be constrained by the division algebra structure and the [Flavor Mixing](/derivations/flavor/mixing-angles) derivation. This req"
     },
