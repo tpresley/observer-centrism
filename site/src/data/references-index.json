@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-03-29T21:15:12.472Z",
-    "totalReferences": 94,
-    "totalCitations": 107,
-    "citingFiles": 44,
+    "generatedAt": "2026-03-30T23:21:02.124Z",
+    "totalReferences": 95,
+    "totalCitations": 108,
+    "citingFiles": 45,
     "generator": "scripts/extract-references.mjs"
   },
   "categoryNames": {
@@ -47,7 +47,7 @@
     },
     "spacetime-geometry": {
       "name": "Spacetime & Geometry",
-      "count": 16
+      "count": 17
     },
     "particle-physics": {
       "name": "Particle Physics",
@@ -915,6 +915,21 @@
         {
           "derivationId": "spacetime/singularity-resolution",
           "title": "Singularity Resolution"
+        }
+      ],
+      "category": "spacetime-geometry"
+    },
+    {
+      "id": "jacobson-1995",
+      "authors": "Jacobson",
+      "year": 1995,
+      "citedAs": [
+        "Jacobson, 1995"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "spacetime/gravitational-constant",
+          "title": "Gravitational Coupling from Coherence Geometry"
         }
       ],
       "category": "spacetime-geometry"

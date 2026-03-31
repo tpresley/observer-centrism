@@ -63,7 +63,8 @@
     { "id": "cosmology/observer-loop-viability", "title": "Observer Loop Viability Bounds", "group": "cosmology", "status": "rigorous" },
     { "id": "quantum/observer-relative-objectivity", "title": "Observer-Relative Objectivity", "group": "quantum", "status": "rigorous" },
     { "id": "quantum/sheaf-section-uniqueness", "title": "Sheaf Structure & Section Uniqueness", "group": "quantum", "status": "draft" },
-    { "id": "cosmology/geometric-inflation", "title": "Geometric Inflation", "group": "cosmology", "status": "draft" }
+    { "id": "cosmology/geometric-inflation", "title": "Geometric Inflation", "group": "cosmology", "status": "draft" },
+    { "id": "spacetime/gravitational-constant", "title": "Gravitational Coupling", "group": "geometry", "status": "provisional" }
   ],
   "edges": [
     { "from": "axioms/coherence-conservation", "to": "axioms/coherence-operational" },
@@ -214,6 +215,15 @@
     { "from": "spacetime/gravity", "to": "cosmology/geometric-inflation" },
     { "from": "spacetime/einstein-equations", "to": "cosmology/geometric-inflation" },
     { "from": "minimal-observer/multiplicity", "to": "cosmology/geometric-inflation" },
-    { "from": "interactions/bootstrap", "to": "cosmology/geometric-inflation" }
+    { "from": "interactions/bootstrap", "to": "cosmology/geometric-inflation" },
+    { "from": "spacetime/gravity", "to": "spacetime/gravitational-constant" },
+    { "from": "spacetime/einstein-equations", "to": "spacetime/gravitational-constant" },
+    { "from": "thermodynamics/action-planck", "to": "spacetime/gravitational-constant" },
+    { "from": "thermodynamics-ext/fisher-metric", "to": "spacetime/gravitational-constant" },
+    { "from": "foundation/coherence-lagrangian", "to": "spacetime/gravitational-constant" },
+    { "from": "holography/area-scaling", "to": "spacetime/gravitational-constant" },
+    { "from": "particles/spin-statistics", "to": "spacetime/gravitational-constant" },
+    { "from": "minimal-observer/multiplicity", "to": "spacetime/gravitational-constant" },
+    { "from": "interactions/bootstrap", "to": "spacetime/gravitational-constant" }
   ]
 }

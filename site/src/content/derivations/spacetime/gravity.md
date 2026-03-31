@@ -2,7 +2,7 @@
 title: "Gravity as Coherence Geometry Curvature"
 status: "rigorous"
 dependsOn: ["interactions/relational-invariants", "spacetime/lorentz-invariance", "dimensions/three-dimensions"]
-enablesDerivation: ["spacetime/einstein-equations", "holography/area-scaling"]
+enablesDerivation: ["spacetime/einstein-equations", "holography/area-scaling", "spacetime/gravitational-constant"]
 tags: ["geometry"]
 summary: "Massive observers generate relational invariant density gradients; geodesics = minimum coherence cost paths; the equivalence principle is structural"
 rigorLevel: "formal"

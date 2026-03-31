@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-03-29T21:15:12.276Z",
-    "derivationCount": 64,
+    "generatedAt": "2026-03-30T23:21:01.923Z",
+    "derivationCount": 65,
     "predictionCount": 11,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -11,13 +11,13 @@
       "rigorous": 60,
       "non-viable": 1,
       "draft": 1,
-      "provisional": 2
+      "provisional": 3
     },
-    "derivationCount": 64,
+    "derivationCount": 65,
     "predictionCount": 11,
-    "edgeCount": 149,
-    "formalObjectCount": 960,
-    "openGapCount": 189,
+    "edgeCount": 158,
+    "formalObjectCount": 986,
+    "openGapCount": 195,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -3008,10 +3008,12 @@
         "thermodynamics-ext/fisher-metric"
       ],
       "enablesDerivation": [
-        "particles/cpt-theorem"
+        "particles/cpt-theorem",
+        "spacetime/gravitational-constant"
       ],
       "dependedOnBy": [
-        "particles/cpt-theorem"
+        "particles/cpt-theorem",
+        "spacetime/gravitational-constant"
       ],
       "steps": [
         {
@@ -3227,6 +3229,10 @@
           },
           {
             "source": "spacetime/einstein-equations",
+            "context": "Coherence Lagrangian"
+          },
+          {
+            "source": "spacetime/gravitational-constant",
             "context": "Coherence Lagrangian"
           },
           {
@@ -6124,6 +6130,7 @@
         "holography/black-hole-entropy",
         "holography/causal-set-statistics",
         "holography/er-epr",
+        "spacetime/gravitational-constant",
         "spacetime/singularity-resolution"
       ],
       "steps": [
@@ -6363,6 +6370,14 @@
           {
             "source": "quantum/entanglement",
             "context": "Area Scaling"
+          },
+          {
+            "source": "spacetime/gravitational-constant",
+            "context": "Holographic Entropy Bound"
+          },
+          {
+            "source": "spacetime/gravitational-constant",
+            "context": "\"the minimum resolvable scale is $\\ell_P$\""
           },
           {
             "source": "spacetime/singularity-resolution",
@@ -7736,6 +7751,7 @@
         "interactions/bootstrap-division-algebras",
         "particles/mass-hierarchy",
         "spacetime/einstein-equations",
+        "spacetime/gravitational-constant",
         "thermodynamics/entropy"
       ],
       "steps": [
@@ -8024,6 +8040,14 @@
           },
           {
             "source": "spacetime/einstein-equations",
+            "context": "Bootstrap"
+          },
+          {
+            "source": "spacetime/gravitational-constant",
+            "context": "Bootstrap Mechanism"
+          },
+          {
+            "source": "spacetime/gravitational-constant",
             "context": "Bootstrap"
           },
           {
@@ -9014,7 +9038,8 @@
         "cosmology/geometric-inflation",
         "cosmology/observer-loop-viability",
         "interactions/three-types",
-        "minimal-observer/coherence-dual-pairs"
+        "minimal-observer/coherence-dual-pairs",
+        "spacetime/gravitational-constant"
       ],
       "steps": [
         {
@@ -10452,7 +10477,8 @@
         "particles/cpt-theorem",
         "particles/pauli-exclusion",
         "particles/supersymmetry-impossibility",
-        "particles/three-generations"
+        "particles/three-generations",
+        "spacetime/gravitational-constant"
       ],
       "steps": [
         {
@@ -10635,6 +10661,10 @@
           {
             "source": "particles/three-generations",
             "context": "Spin and Statistics"
+          },
+          {
+            "source": "spacetime/gravitational-constant",
+            "context": "Spin-Statistics"
           },
           {
             "source": "spacetime/lorentz-invariance",
@@ -12814,12 +12844,14 @@
       ],
       "enablesDerivation": [
         "spacetime/singularity-resolution",
-        "holography/er-epr"
+        "holography/er-epr",
+        "spacetime/gravitational-constant"
       ],
       "dependedOnBy": [
         "cosmology/cosmological-constant",
         "cosmology/geometric-inflation",
         "holography/er-epr",
+        "spacetime/gravitational-constant",
         "spacetime/singularity-resolution"
       ],
       "steps": [
@@ -13057,6 +13089,10 @@
             "context": "Einstein Equations"
           },
           {
+            "source": "spacetime/gravitational-constant",
+            "context": "Einstein Field Equations"
+          },
+          {
             "source": "spacetime/gravity",
             "context": "Einstein Field Equations"
           },
@@ -13065,6 +13101,332 @@
             "context": "Einstein Field Equations"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "spacetime/gravitational-constant": {
+      "id": "spacetime/gravitational-constant",
+      "filePath": "site/src/content/derivations/spacetime/gravitational-constant.md",
+      "title": "Gravitational Coupling from Coherence Geometry",
+      "status": "provisional",
+      "rigorLevel": "semi-formal",
+      "group": "spacetime",
+      "tags": [
+        "geometry"
+      ],
+      "summary": "The gravitational coupling G is constrained by the coherence Lagrangian structure: the Fisher metric fixes the matter sector at ℏ, Lovelock fixes the gravity sector's form, and the action duality linking state-space to spacetime geometry determines their ratio. The spinor/tetrad route is ruled out; network condensation yields a transcendental equation for the packing coefficient but not ℓ_min itself",
+      "lastUpdated": "2026-03-30",
+      "dependsOn": [
+        "spacetime/gravity",
+        "spacetime/einstein-equations",
+        "thermodynamics/action-planck",
+        "thermodynamics-ext/fisher-metric",
+        "foundation/coherence-lagrangian",
+        "holography/area-scaling",
+        "particles/spin-statistics",
+        "minimal-observer/multiplicity",
+        "interactions/bootstrap"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The Coupling Constant Problem"
+        },
+        {
+          "number": 2,
+          "title": "The Matter Sector is Anchored by $\\hbar$"
+        },
+        {
+          "number": 3,
+          "title": "The Thermodynamic Route (Jacobson)"
+        },
+        {
+          "number": 4,
+          "title": "Self-Consistency of the Minimal Observer"
+        },
+        {
+          "number": 5,
+          "title": "Dimensional Independence of $G$"
+        },
+        {
+          "number": 6,
+          "title": "The Curvature-Spacetime Bridge (Open Direction)"
+        },
+        {
+          "number": 7,
+          "title": "Convergence of the Arguments"
+        },
+        {
+          "number": 8,
+          "title": "Implications for Structural Postulate S1 of Area Scaling"
+        },
+        {
+          "number": 9,
+          "title": "Spinor/Tetrad Route (Negative Result)"
+        },
+        {
+          "number": 10,
+          "title": "Network Condensation Conjecture"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1.",
+          "name": "",
+          "statementPreview": "In the coherence Lagrangian ([Coherence Lagrangian](/derivations/foundation/coherence-lagrangian), Theorem 3.1):"
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "G as a ratio",
+          "statementPreview": "The coupling constant G controls the ratio between the coherence cost of matter configurations and the coherence cost..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "Fisher normalization of $T_{\\mu\\nu}$",
+          "statementPreview": "The stress-energy tensor Tmunu, derived from the matter Lagrangian by variation with respect to gmunu, inherits the h..."
+        },
+        {
+          "type": "Corollary",
+          "id": "2.2",
+          "name": "Einstein equations with explicit $\\hbar$",
+          "statementPreview": "Substituting into the Einstein equations ([Einstein Field Equations](/derivations/spacetime/einstein-equations), Theo..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Unruh temperature from loop closure",
+          "statementPreview": "An observer with proper acceleration a in the coherence geometry experiences a thermal state at temperature:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Clausius relation from coherence conservation",
+          "statementPreview": "For a local Rindler horizon, the heat flux delta Q (coherence flowing through the horizon) satisfies the Clausius rel..."
+        },
+        {
+          "type": "Theorem",
+          "id": "3.3",
+          "name": "Einstein equations from thermodynamics",
+          "statementPreview": "The Einstein equations with a specific coupling constant follow from Propositions 3.1–3.2 combined with the entropy-a..."
+        },
+        {
+          "type": "Corollary",
+          "id": "3.4",
+          "name": "G from entropy density",
+          "statementPreview": "If the entropy density per unit area is eta = 1/(4ellmin2), then:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Gravitational self-consistency bound",
+          "statementPreview": "A minimal observer of cycle cost hbar, period T, and spatial extent L = cT satisfies the gravitational self-consisten..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.2",
+          "name": "Saturation defines the Planck scale",
+          "statementPreview": "The bound in Proposition 4.1 is saturated when L = 2,ellP, giving the minimum spatial extent of a self-consistent obs..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Dimensional independence",
+          "statementPreview": "The three constants hbar, c, G are dimensionally independent: there exist no rational exponents a, b and no dimension..."
+        },
+        {
+          "type": "Corollary",
+          "id": "5.2.",
+          "name": "",
+          "statementPreview": "The minimum resolvable scale ellmin (with G = ellmin2 c3/hbar) is likewise dimensionally independent of hbar and c: i..."
+        },
+        {
+          "type": "Definition",
+          "id": "6.1.",
+          "name": "",
+          "statementPreview": "The **action duality** ([Gravity](/derivations/spacetime/gravity), Theorem 0.1) equates the coherence cost of a path ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.2",
+          "name": "Dimensional obstacle",
+          "statementPreview": "The Fisher curvature on the observer state space Sigma and the Riemann curvature on spacetime M have different dimens..."
+        },
+        {
+          "type": "Proposition",
+          "id": "7.1",
+          "name": "Structural consistency",
+          "statementPreview": "The two rigorous arguments of Steps 3–4 are mutually consistent: both yield G = ellmin2 c3/hbar, and the convergence ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "8.1",
+          "name": "Area-scaling S1 would become a theorem",
+          "statementPreview": "If ellmin is independently determined (e.g., via Conjecture 6.3), then:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "9.1",
+          "name": "Clifford normalization is conventional",
+          "statementPreview": "The Clifford algebra relation gammaI gammaJ + gammaJ gammaI = 2etaIJ fixes the internal metric etaIJ = diag(-1,1,1,1)..."
+        },
+        {
+          "type": "Proposition",
+          "id": "9.2",
+          "name": "Fisher $\\hbar$ does not propagate to the gravity sector",
+          "statementPreview": "In the action duality, the Fisher metric scalar hbar is absorbed by the particle mass prefactor mc, leaving the tetra..."
+        },
+        {
+          "type": "Corollary",
+          "id": "9.3",
+          "name": "Spinor/tetrad route does not determine $G$",
+          "statementPreview": "The Palatini action S = (1/2kappa2) varepsilonIJKL,eI !wedge eJ !wedge FKL, with kappa2 = 8pi G/c4, has a free prefac..."
+        },
+        {
+          "type": "Definition",
+          "id": "10.1",
+          "name": "Simultaneous condensation",
+          "statementPreview": "Time is derived from observer loop closure (Axiom 3) and does not exist prior to observers. Sequential bootstrapping ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "10.1",
+          "name": "Simultaneous condensation is forced",
+          "statementPreview": "The following chain is deductive from the axioms:*"
+        },
+        {
+          "type": "Definition",
+          "id": "10.2",
+          "name": "Packing on a causal boundary",
+          "statementPreview": "Consider a causal boundary (null surface) of area A. Minimal observer loops cross this boundary; each crossing regist..."
+        },
+        {
+          "type": "Proposition",
+          "id": "10.2",
+          "name": "Subadditivity reduces the net entropy",
+          "statementPreview": "By C5, neighboring crossings at separation d share mutual information I(i!:!j) = hbar,f(d/ell) where f is a positive,..."
+        },
+        {
+          "type": "Proposition",
+          "id": "10.3",
+          "name": "Transcendental optimization",
+          "statementPreview": "For a Gaussian mutual information profile f(x) = e-x2/2 (motivated by the Fisher metric structure of phase-parameteri..."
+        },
+        {
+          "type": "Proposition",
+          "id": "10.4",
+          "name": "Circularity diagnosis",
+          "statementPreview": "The network condensation conjecture correctly determines the dimensionless packing coefficient alpha in eta = alpha/e..."
+        },
+        {
+          "type": "Theorem",
+          "id": "11.1.",
+          "name": "",
+          "statementPreview": "The Schwarzschild black hole and the Planck scale provide a consistency model for the structural relationship G = ell..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Independent determination of $\\ell_{\\min}$ (key gap)",
+          "description": "Prove Conjecture 6.3 — that there exists a dimensionless self-consistency condition, arising from the action duality or the bootstrap structure, that uniquely determines ellmin without reference to G."
+        },
+        {
+          "number": 2,
+          "title": "Curvature-spacetime bridge",
+          "description": "Construct a well-posed dimensionless curvature comparison between the Fisher geometry on Sigma and the spacetime geometry on M (avoiding the dimensional obstacle of Proposition 6.2). This requires for"
+        },
+        {
+          "number": 3,
+          "title": "Numerical coefficient",
+          "description": "Pin down the precise dimensionless O(1) coefficient in G = alpha ellmin2 c3/hbar — currently the Jacobson route gives alpha = 1 while the self-consistency bound gives alpha = 1/2, reflecting different"
+        },
+        {
+          "number": 4,
+          "title": "Universality",
+          "description": "The self-consistency bound (Step 4) uses the minimal observer (Sigma = S1). Verify that the same G emerges for composite observers with higher-dimensional state spaces, confirming that G is universal "
+        },
+        {
+          "number": 5,
+          "title": "Mutual information functional form",
+          "description": "The network condensation analysis (Step 10) uses a Gaussian mutual information profile f(x) = e-x2/2, motivated by the Fisher metric structure of phase distributions. Rigorously deriving f from the ax"
+        },
+        {
+          "number": 6,
+          "title": "No-boundary vs. maximal packing",
+          "description": "The network condensation argument assumes that the no-boundary condition (topological: no edge vertices in the observer network graph) implies maximal packing (geometric: maximum entropy density on ca"
+        }
+      ],
+      "assessmentVerdict": "Provisional. The main structure is sound: the Jacobson thermodynamic argument (Theorem 3.3) rigorously derives G = c4/(4hbareta), the self-consistency bound (Proposition 4.1) rigorously establishes ellmin 2,ellP, and the dimensional independence (Proposition 5.1) precisely characterizes what kind of",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "foundation/coherence-lagrangian",
+            "context": "Coherence Lagrangian"
+          },
+          {
+            "target": "thermodynamics-ext/fisher-metric",
+            "context": "Fisher Information Metric"
+          },
+          {
+            "target": "spacetime/einstein-equations",
+            "context": "Einstein Field Equations"
+          },
+          {
+            "target": "spacetime/gravity",
+            "context": "Gravity"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
+          {
+            "target": "thermodynamics/action-planck",
+            "context": "Action and Planck's Constant"
+          },
+          {
+            "target": "thermodynamics/entropy",
+            "context": "Entropy"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Holographic Entropy Bound"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap Mechanism"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "\"the minimum resolvable scale is $\\ell_P$\""
+          },
+          {
+            "target": "particles/spin-statistics",
+            "context": "Spin-Statistics"
+          },
+          {
+            "target": "foundation/multiplicity",
+            "context": "Multiplicity"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap"
+          }
+        ],
+        "incoming": []
       },
       "leanVerification": {
         "hasProofs": false,
@@ -13094,12 +13456,14 @@
       ],
       "enablesDerivation": [
         "spacetime/einstein-equations",
-        "holography/area-scaling"
+        "holography/area-scaling",
+        "spacetime/gravitational-constant"
       ],
       "dependedOnBy": [
         "cosmology/geometric-inflation",
         "holography/area-scaling",
-        "spacetime/einstein-equations"
+        "spacetime/einstein-equations",
+        "spacetime/gravitational-constant"
       ],
       "steps": [
         {
@@ -13330,6 +13694,10 @@
           {
             "source": "spacetime/einstein-equations",
             "context": "Theorem 3.1"
+          },
+          {
+            "source": "spacetime/gravitational-constant",
+            "context": "Gravity"
           },
           {
             "source": "spacetime/lorentz-invariance",
@@ -14130,6 +14498,10 @@
             "context": "Speed of Light"
           },
           {
+            "source": "spacetime/gravitational-constant",
+            "context": "Speed of Light"
+          },
+          {
             "source": "spacetime/gravity",
             "context": "Speed of Light"
           },
@@ -14645,10 +15017,12 @@
       ],
       "enablesDerivation": [
         "thermodynamics-ext/renormalization",
-        "foundation/coherence-lagrangian"
+        "foundation/coherence-lagrangian",
+        "spacetime/gravitational-constant"
       ],
       "dependedOnBy": [
         "foundation/coherence-lagrangian",
+        "spacetime/gravitational-constant",
         "thermodynamics/action-planck"
       ],
       "steps": [
@@ -14871,6 +15245,10 @@
           },
           {
             "source": "foundation/coherence-lagrangian",
+            "context": "Fisher Information Metric"
+          },
+          {
+            "source": "spacetime/gravitational-constant",
             "context": "Fisher Information Metric"
           },
           {
@@ -15233,12 +15611,14 @@
       "enablesDerivation": [
         "spacetime/speed-of-light",
         "holography/area-scaling",
-        "foundation/coherence-lagrangian"
+        "foundation/coherence-lagrangian",
+        "spacetime/gravitational-constant"
       ],
       "dependedOnBy": [
         "foundation/coherence-lagrangian",
         "holography/area-scaling",
         "quantum/born-rule",
+        "spacetime/gravitational-constant",
         "spacetime/speed-of-light",
         "thermodynamics-ext/first-law",
         "thermodynamics-ext/fisher-metric",
@@ -15577,6 +15957,10 @@
             "context": "Action and Planck's Constant"
           },
           {
+            "source": "spacetime/gravitational-constant",
+            "context": "Action and Planck's Constant"
+          },
+          {
             "source": "spacetime/gravity",
             "context": "Action and Planck's Constant"
           },
@@ -15890,6 +16274,10 @@
           },
           {
             "source": "quantum/measurement",
+            "context": "Entropy"
+          },
+          {
+            "source": "spacetime/gravitational-constant",
             "context": "Entropy"
           },
           {
@@ -23399,6 +23787,188 @@
       "fullRef": "spacetime/einstein-equations:Theorem 8.1."
     },
     {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Definition",
+      "id": "1.1.",
+      "name": "",
+      "fullRef": "spacetime/gravitational-constant:Definition 1.1."
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "G as a ratio",
+      "fullRef": "spacetime/gravitational-constant:Proposition 1.2"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "Fisher normalization of $T_{\\mu\\nu}$",
+      "fullRef": "spacetime/gravitational-constant:Proposition 2.1"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Corollary",
+      "id": "2.2",
+      "name": "Einstein equations with explicit $\\hbar$",
+      "fullRef": "spacetime/gravitational-constant:Corollary 2.2"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Unruh temperature from loop closure",
+      "fullRef": "spacetime/gravitational-constant:Proposition 3.1"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "Clausius relation from coherence conservation",
+      "fullRef": "spacetime/gravitational-constant:Proposition 3.2"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Theorem",
+      "id": "3.3",
+      "name": "Einstein equations from thermodynamics",
+      "fullRef": "spacetime/gravitational-constant:Theorem 3.3"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Corollary",
+      "id": "3.4",
+      "name": "G from entropy density",
+      "fullRef": "spacetime/gravitational-constant:Corollary 3.4"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Gravitational self-consistency bound",
+      "fullRef": "spacetime/gravitational-constant:Proposition 4.1"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Proposition",
+      "id": "4.2",
+      "name": "Saturation defines the Planck scale",
+      "fullRef": "spacetime/gravitational-constant:Proposition 4.2"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "Dimensional independence",
+      "fullRef": "spacetime/gravitational-constant:Proposition 5.1"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Corollary",
+      "id": "5.2.",
+      "name": "",
+      "fullRef": "spacetime/gravitational-constant:Corollary 5.2."
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Definition",
+      "id": "6.1.",
+      "name": "",
+      "fullRef": "spacetime/gravitational-constant:Definition 6.1."
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Proposition",
+      "id": "6.2",
+      "name": "Dimensional obstacle",
+      "fullRef": "spacetime/gravitational-constant:Proposition 6.2"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Proposition",
+      "id": "7.1",
+      "name": "Structural consistency",
+      "fullRef": "spacetime/gravitational-constant:Proposition 7.1"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Proposition",
+      "id": "8.1",
+      "name": "Area-scaling S1 would become a theorem",
+      "fullRef": "spacetime/gravitational-constant:Proposition 8.1"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Proposition",
+      "id": "9.1",
+      "name": "Clifford normalization is conventional",
+      "fullRef": "spacetime/gravitational-constant:Proposition 9.1"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Proposition",
+      "id": "9.2",
+      "name": "Fisher $\\hbar$ does not propagate to the gravity sector",
+      "fullRef": "spacetime/gravitational-constant:Proposition 9.2"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Corollary",
+      "id": "9.3",
+      "name": "Spinor/tetrad route does not determine $G$",
+      "fullRef": "spacetime/gravitational-constant:Corollary 9.3"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Definition",
+      "id": "10.1",
+      "name": "Simultaneous condensation",
+      "fullRef": "spacetime/gravitational-constant:Definition 10.1"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Proposition",
+      "id": "10.1",
+      "name": "Simultaneous condensation is forced",
+      "fullRef": "spacetime/gravitational-constant:Proposition 10.1"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Definition",
+      "id": "10.2",
+      "name": "Packing on a causal boundary",
+      "fullRef": "spacetime/gravitational-constant:Definition 10.2"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Proposition",
+      "id": "10.2",
+      "name": "Subadditivity reduces the net entropy",
+      "fullRef": "spacetime/gravitational-constant:Proposition 10.2"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Proposition",
+      "id": "10.3",
+      "name": "Transcendental optimization",
+      "fullRef": "spacetime/gravitational-constant:Proposition 10.3"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Proposition",
+      "id": "10.4",
+      "name": "Circularity diagnosis",
+      "fullRef": "spacetime/gravitational-constant:Proposition 10.4"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Theorem",
+      "id": "11.1.",
+      "name": "",
+      "fullRef": "spacetime/gravitational-constant:Theorem 11.1."
+    },
+    {
       "derivationId": "spacetime/gravity",
       "type": "Theorem",
       "id": "0.1.",
@@ -25849,6 +26419,48 @@
       "number": 4,
       "title": "$T_{\\mu\\nu}$ from the observer network",
       "description": "Constructing the energy-momentum tensor explicitly from the relational invariant density and observer distribution would close the self-consistency loop at the formal level."
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "derivationStatus": "provisional",
+      "number": 1,
+      "title": "Independent determination of $\\ell_{\\min}$ (key gap)",
+      "description": "Prove Conjecture 6.3 — that there exists a dimensionless self-consistency condition, arising from the action duality or the bootstrap structure, that uniquely determines ellmin without reference to G."
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "derivationStatus": "provisional",
+      "number": 2,
+      "title": "Curvature-spacetime bridge",
+      "description": "Construct a well-posed dimensionless curvature comparison between the Fisher geometry on Sigma and the spacetime geometry on M (avoiding the dimensional obstacle of Proposition 6.2). This requires for"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "derivationStatus": "provisional",
+      "number": 3,
+      "title": "Numerical coefficient",
+      "description": "Pin down the precise dimensionless O(1) coefficient in G = alpha ellmin2 c3/hbar — currently the Jacobson route gives alpha = 1 while the self-consistency bound gives alpha = 1/2, reflecting different"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "derivationStatus": "provisional",
+      "number": 4,
+      "title": "Universality",
+      "description": "The self-consistency bound (Step 4) uses the minimal observer (Sigma = S1). Verify that the same G emerges for composite observers with higher-dimensional state spaces, confirming that G is universal "
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "derivationStatus": "provisional",
+      "number": 5,
+      "title": "Mutual information functional form",
+      "description": "The network condensation analysis (Step 10) uses a Gaussian mutual information profile f(x) = e-x2/2, motivated by the Fisher metric structure of phase distributions. Rigorously deriving f from the ax"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "derivationStatus": "provisional",
+      "number": 6,
+      "title": "No-boundary vs. maximal packing",
+      "description": "The network condensation argument assumes that the no-boundary condition (topological: no edge vertices in the observer network graph) implies maximal packing (geometric: maximum entropy density on ca"
     },
     {
       "derivationId": "spacetime/gravity",

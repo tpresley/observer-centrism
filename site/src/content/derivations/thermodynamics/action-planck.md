@@ -2,7 +2,7 @@
 title: "Action and Planck's Constant"
 status: "rigorous"
 dependsOn: ["axioms/loop-closure", "thermodynamics/time", "thermodynamics-ext/fisher-metric"]
-enablesDerivation: ["spacetime/speed-of-light", "holography/area-scaling", "foundation/coherence-lagrangian"]
+enablesDerivation: ["spacetime/speed-of-light", "holography/area-scaling", "foundation/coherence-lagrangian", "spacetime/gravitational-constant"]
 tags: ["dynamics"]
 summary: "Action is the coherence cost of transformation; ℏ is the minimum cost of one observer cycle — the quantum of action"
 rigorLevel: "formal"

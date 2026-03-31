@@ -32,14 +32,14 @@
     "symbol": "G",
     "name": "Newton's gravitational constant",
     "smValue": "$6.674 \\times 10^{-11}\\;\\text{m}^3\\text{kg}^{-1}\\text{s}^{-2}$",
-    "frameworkValue": "Not derived. Whether $G$ is computable from $\\hbar$ and $c$ alone is an open problem.",
-    "status": "free",
+    "frameworkValue": "Constrained: $G = \\ell_{\\min}^2 c^3/\\hbar$ where $\\ell_{\\min}$ is the minimum resolvable scale. Three convergent arguments (Jacobson thermodynamic, minimal observer self-consistency, curvature-spacetime bridge) establish this relationship. Full derivation requires independent determination of $\\ell_{\\min}$.",
+    "status": "constrained",
     "accuracy": null,
     "group": "fundamental-constants",
-    "derivation": "spacetime/gravity",
-    "derivationTitle": "Gravity",
-    "gaps": ["Deriving $G$ from coherence geometry (hard-open)"],
-    "notes": "The gravitational mechanism (coherence geometry curvature) is derived, but the coupling strength remains empirical."
+    "derivation": "spacetime/gravitational-constant",
+    "derivationTitle": "Gravitational Coupling from Coherence Geometry",
+    "gaps": ["Independent derivation of $\\ell_{\\min}$ from axioms (curvature-spacetime bridge conjecture)"],
+    "notes": "Three independent arguments converge on $G = \\ell_{\\min}^2 c^3/\\hbar$. The coupling strength is structurally constrained by the coherence Lagrangian, not fully free. Draft status: the curvature-spacetime bridge conjecture (Conjecture 5.3) would complete the derivation."
   },
   {
     "id": "fine-structure-constant",

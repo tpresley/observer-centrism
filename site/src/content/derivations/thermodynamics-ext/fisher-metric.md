@@ -2,7 +2,7 @@
 title: "Fisher Information Metric"
 status: "rigorous"
 dependsOn: ["thermodynamics/action-planck", "thermodynamics/entropy", "thermodynamics-ext/distinguishability-conservation"]
-enablesDerivation: ["thermodynamics-ext/renormalization", "foundation/coherence-lagrangian"]
+enablesDerivation: ["thermodynamics-ext/renormalization", "foundation/coherence-lagrangian", "spacetime/gravitational-constant"]
 tags: ["thermo-ext"]
 summary: "The Fisher information metric is the unique natural Riemannian geometry on the space of coherence states, identified with the Hessian metric of Action-Planck via Čencov's theorem"
 rigorLevel: "formal"
