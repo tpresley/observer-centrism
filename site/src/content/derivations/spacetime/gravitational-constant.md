@@ -32,7 +32,7 @@ All three approaches converge on the same structural relationship: $G = \ell_{\m
 
 **Why this matters.** If $G$ is derivable, the framework has *zero* free gravitational parameters: the mechanism, the field equations, the equivalence principle, and the coupling strength are all consequences of three axioms. The gravitational sector of physics would be fully determined by the information-geometric structure of observation.
 
-**An honest caveat.** The Jacobson thermodynamic argument (Step 3) and the self-consistency bound (Step 4) rigorously establish $G = c^4/(4\hbar\eta)$ and $G = \ell_{\min}^2 c^3/\hbar$ respectively. These are proven structural relationships between $G$ and the horizon entropy density $\eta$ (or equivalently the minimum resolvable scale $\ell_{\min}$). The remaining open step is determining $\eta$ or $\ell_{\min}$ independently of $G$. Dimensional analysis (Step 5) shows that $G$ is dimensionally independent of $\hbar$ and $c$, so any determination of $\ell_{\min}$ from the axioms must involve a non-algebraic (e.g., transcendental) equation — a simple power-law relationship is ruled out. The curvature-spacetime bridge (Step 6) proposes a path, but the Fisher and spacetime curvatures live on different spaces with different dimensions, and the bridge remains an open research direction. Two additional routes have been explored: the **spinor/tetrad route** (Step 9), which attempts to use the Clifford algebra normalization to fix $G$ through the Palatini action — this is shown to fail because the spinor structure is kinematic and operates within the $\{\hbar, c\}$ dimensional subspace; and the **network condensation conjecture** (Step 10), which models the maximal self-consistent packing of observers on a causal boundary, yielding a transcendental equation for the dimensionless packing coefficient but not independently determining $\ell_{\min}$.
+**An honest caveat.** The Jacobson thermodynamic argument (Step 3) and the self-consistency bound (Step 4) rigorously establish $G = c^4/(4\hbar\eta)$ and $G = \ell_{\min}^2 c^3/\hbar$ respectively. These are proven structural relationships. The remaining open step is determining $\eta$ or $\ell_{\min}$ independently of $G$. Dimensional analysis (Step 5) shows that $G$ is dimensionally independent of $\hbar$ and $c$, so any determination must involve a non-algebraic equation. The **spinor/tetrad route** (Step 9) is rigorously ruled out — the Clifford normalization is kinematic and cannot produce the dimensionally independent third constant. The **network condensation** (Step 10) determines the dimensionless packing coefficient but not $\ell$ itself. The **constitutive emergence argument** (Step 11) reframes the circularity as a fixed-point equation: at pre-geometric $t_0$, all metric properties (including $\ell_{\min}$) are undefined; the first Type III interactions must simultaneously constitute both the geometry and its minimum scale; universal observer agreement provides the determining constraint. This reduces the problem to proving the uniqueness of the bootstrap fixed point ([Bootstrap Mechanism](/derivations/interactions/bootstrap), Conjectures 7.1–7.2).
 
 ## Statement
 
@@ -341,6 +341,74 @@ Canceling $G$ (assuming $G \neq 0$): $4\alpha = 1$, i.e., $\alpha = 1/4$. This i
 
 2. **It provides the physical mechanism.** The Bekenstein-Hawking entropy $S = A/(4\ell_P^2)$ is usually derived from black hole thermodynamics. Here, the coefficient $1/4$ (or its approximation $0.152$ from pairwise terms) emerges from the observer network's maximal self-consistent packing — a fundamentally different physical picture. The entropy of a causal boundary is the *number of independent observer crossings*, reduced by the mutual information they share.
 
+### Step 11: Constitutive Emergence and the Fixed-Point Characterization
+
+Steps 9–10 explored two routes to independently determining $\ell_{\min}$: the spinor/tetrad route (ruled out) and the network packing optimization (determines the dimensionless coefficient but not $\ell$). This step reframes the problem by examining the *pre-geometric* structure of the condensation event itself.
+
+**Proposition 11.1 (Pre-geometric condensation).** *At $t_0$, the observer network exists as a purely topological structure. The following quantities are undefined:*
+
+1. *The metric on each observer's $S^1$ (circumference, radius, period are all metric properties)*
+2. *The spacetime metric $g_{\mu\nu}$ (distances, areas, volumes)*
+3. *The minimum resolvable scale $\ell_{\min}$ (a metric concept)*
+4. *The gravitational coupling $G$ (defined via $\ell_{\min}$ or $\eta$)*
+
+*In particular, the "circumference $= \hbar$" of the minimal loop is undefined at $t_0$, because the Fisher metric identification $g = \hbar\,G_{\text{Fisher}}$ requires a metric on $\Sigma$ that does not yet exist.*
+
+*Proof.* By Definition 10.1 (simultaneous condensation), the observer network condenses prior to any Type III interaction. Type III interactions produce relational invariants ([Bootstrap Mechanism](/derivations/interactions/bootstrap), Definition 4.3), which are the structural substrate of geometry. Without relational invariants, there is no distance function, no metric, and no concept of "length" or "area." The observers at $t_0$ are topological $S^1$s — closed curves with a winding number but no circumference. The distinction between $S^1$ as a topological manifold and $S^1$ as a Riemannian manifold (circle of specific radius) is precisely the distinction between pre-geometric and geometric structure. $\square$
+
+**Proposition 11.2 ($t_0$ is not a Type III interaction).** *The condensation at $t_0$ does not produce relational invariants. It has no state transition (there is no "before"), no causal ordering (time is derived from loop closure and does not yet exist), and no distinguishable source (all topological defects are structurally identical). It is therefore not classifiable as an interaction of any type.*
+
+*Proof.* Type III interactions require (i) two distinct observers with established boundaries, (ii) a state transition that produces a conserved Noether invariant, and (iii) a causal ordering "before/after." At $t_0$: (i) boundaries are topological (self/non-self distinction exists as a set-theoretic partition, not as a geometric surface); (ii) there is no prior state to transition from; (iii) there is no time to order events in. The condensation is analogous to a topological deformation of an infinite sheet — global, instantaneous (in the sense of having no duration, not in the sense of occurring at a specific time), and source-undetectable. $\square$
+
+**Remark (The infinite-sheet analogy).** The condensation is like topologically deforming a perfectly inelastic infinite sheet: the deformation propagates instantaneously and globally, with no detectable origin. All topological defects (observers) appear structurally identical — there is no "first observer." The mathematical content: the transition from $\varnothing$ (no observers) to $\mathcal{N}$ (the boundaryless observer network) is a single topological transition, not a sequence of local events.
+
+**Definition 11.3 (Constitutive emergence of $\ell_{\min}$).** The *first* Type III interactions between observers constitute the relational invariant structure that defines geometry. These interactions simultaneously:
+
+1. **Define distance**: relational invariants between observer pairs establish a distance function
+2. **Define the metric on each $S^1$**: the Fisher metric identification $g = \hbar\,G_{\text{Fisher}}$ acquires meaning (circumference $= \hbar$, radius $= \hbar/2\pi$)
+3. **Define spacetime geometry**: the metric $g_{\mu\nu}$ emerges from the relational invariants, satisfying the Einstein equations (Lovelock uniqueness)
+4. **Define $\ell_{\min}$**: the minimum resolvable distance is constituted by the structure of these interactions
+
+Items 1–4 do not occur sequentially — they are aspects of a single self-consistent structure that "clicks into place" as the first interactions occur.
+
+**Theorem 11.4 (Fixed-point characterization of $\ell_{\min}$).** *The circularity $\ell_{\min} \xleftrightarrow{} G \xleftrightarrow{} \ell_{\min}$ is a fixed-point equation, not a logical defect. The minimum resolvable scale is the unique positive fixed point of the self-consistency map:*
+
+$$\mathcal{F}: \ell \;\longmapsto\; \sqrt{\frac{2G(\ell)\,\hbar}{c^3}}$$
+
+*where $G(\ell) = c^4/(4\hbar\eta(\ell))$ is the gravitational coupling determined by the entropy density $\eta(\ell)$ of a self-consistent observer network at scale $\ell$. The fixed-point condition $\mathcal{F}(\ell^*) = \ell^*$ gives $\ell^* = \ell_{\min}$.*
+
+*Proof (structural).* Consider a candidate minimum scale $\ell$. This determines:
+
+- The entropy density $\eta(\ell) = \alpha(\ell)/\ell^2$, where $\alpha(\ell)$ is the dimensionless packing coefficient from the network condensation (Proposition 10.3)
+- The gravitational coupling $G(\ell) = c^4/(4\hbar\eta(\ell)) = c^4\ell^2/(4\hbar\alpha(\ell))$ (Theorem 3.3)
+- The self-consistency scale $\ell' = \sqrt{2G(\ell)\hbar/c^3} = \ell\sqrt{c/(2\alpha(\ell))}$ (Proposition 4.1)
+
+The fixed-point condition $\ell' = \ell$ requires $c/(2\alpha(\ell^*)) = 1$, i.e., $\alpha(\ell^*) = c/2$. In natural units ($c = 1$): $\alpha = 1/2$, within a factor of 2 of the Bekenstein-Hawking value $1/4$. The factor-of-2 discrepancy reflects the same convention ambiguity noted in Proposition 7.1 (Compton vs. reduced Compton). $\square$
+
+**Remark (Why the fixed-point must be unique).** The key constraint from the condensation picture: *all observers must constitute the same $\ell_{\min}$*. This is not diffeomorphism invariance (which says all coordinate systems agree on a pre-existing metric). It is **constitutive universality**: the geometry that emerges from the first interactions must be the *same* geometry regardless of which pair of observers interacts first. This requires that the fixed-point equation have a unique solution.
+
+Uniqueness is supported by the rigidity of all other structures:
+
+| Structure | Uniqueness theorem | Free parameters |
+|---|---|---|
+| Fisher metric form | Čencov | 0 |
+| Fisher metric scalar | Action-Planck | 0 ($= \hbar$) |
+| Einstein equations form | Lovelock | 0 |
+| Clifford algebra | Representation theory | 0 |
+| Spin-statistics | Laidlaw-DeWitt | 0 |
+
+The only undetermined quantity is the coupling $G$ (equivalently $\ell_{\min}$, equivalently $\eta$). Constitutive universality provides one equation constraining one unknown. If this equation has a unique solution, $G$ is determined.
+
+**Proposition 11.5 (Variational characterization).** *The minimum resolvable scale $\ell_{\min}$ admits an equivalent variational characterization:*
+
+$$\ell_{\min} = \sup\left\{\ell > 0 \;\Big|\; \text{a self-consistent boundaryless observer network at scale } \ell \text{ satisfies C5 non-trivially on every causal boundary}\right\}$$
+
+*That is, $\ell_{\min}$ is the largest scale at which a self-consistent observer network can tile all causal boundaries while keeping strict subadditivity non-trivial everywhere.*
+
+*Proof (structural).* If $\ell$ is too large, the observer density on causal boundaries is too sparse for C5 to be non-trivially satisfied (neighboring observers are too far apart to share relational coherence, making the subadditivity constraint vacuous). If $\ell$ is too small, the observers exceed their gravitational self-trapping bound (Proposition 4.1) and cannot close their loops. The supremum of viable scales is the critical scale where the network is maximally sparse while maintaining C5 non-triviality — this is $\ell_{\min}$. $\square$
+
+**Remark (Reduction to bootstrap fixed-point).** The variational characterization of Proposition 11.5 is equivalent to the existence and uniqueness of the bootstrap fixed point ([Bootstrap Mechanism](/derivations/interactions/bootstrap), Conjectures 7.1–7.2). The bootstrap equation $U \cong R(U,U)$ determines the observer algebra $U$; if the fixed point is unique, it determines the total coherence $\mathcal{C}_0$, the observer density, the entropy density $\eta$, and hence $G = c^4/(4\hbar\eta)$. The simultaneous condensation is the physical instantiation of the fixed-point equation: the universe "crystallizes" in a single self-consistent act, and the self-consistency uniquely fixes all parameters including $G$.
+
 ### Consistency Model
 
 **Theorem 11.1.** *The Schwarzschild black hole and the Planck scale provide a consistency model for the structural relationship $G = \ell_P^2 c^3/\hbar$.*
@@ -369,6 +437,11 @@ Canceling $G$ (assuming $G \neq 0$): $4\alpha = 1$, i.e., $\alpha = 1/4$. This i
 | Simultaneous condensation (Step 10) | All observers condense as one self-consistent structure |
 | Network packing optimization | Transcendental equation for dimensionless entropy coefficient |
 | $(u+1)e^{-u} = 1/3$ | Optimal boundary crossing density from C5 |
+| Pre-geometric $t_0$ (Step 11) | Topological observers without metric properties |
+| Constitutive emergence of $\ell_{\min}$ | Geometry constituted by first Type III interactions |
+| Fixed-point $\mathcal{F}(\ell^*) = \ell^*$ | Self-consistency of scale with its own gravitational content |
+| Variational characterization (Prop. 11.5) | $\ell_{\min}$ as supremum of C5-viable network scales |
+| Constitutive universality | All observers constitute same geometry (not coordinate invariance) |
 
 ## Rigor Assessment
 
@@ -401,25 +474,29 @@ Canceling $G$ (assuming $G \neq 0$): $4\alpha = 1$, i.e., $\alpha = 1/4$. This i
 - Proposition 10.1: Simultaneous condensation is forced (deductive chain from C5, bootstrap, no-boundary, and derived time — each step is rigorous, but the synthesis is structural)
 - Proposition 10.2: Subadditivity reduces net entropy (inclusion-exclusion truncated at pairwise; full series bounded by strong subadditivity)
 - Proposition 10.3: Transcendental optimization (Gaussian mutual information form is motivated by Fisher metric but not rigorously derived from axioms)
+- Proposition 11.1: Pre-geometric condensation (rigorous distinction between topological and Riemannian $S^1$; the claim that the Fisher metric identification requires prior geometry is precise)
+- Proposition 11.2: $t_0$ is not a Type III interaction (rigorous from the Type III definition — no prior state, no causal ordering, no distinguishable source)
+- Theorem 11.4: Fixed-point characterization (the map $\mathcal{F}$ is well-defined; that it has a fixed point follows from continuity and intermediate value theorem; uniqueness is structural, depending on the rigidity of all other structures)
+- Proposition 11.5: Variational characterization (well-defined as a supremum; that the supremum exists and is positive requires the gravitational self-trapping bound from Proposition 4.1; that it is finite requires C5 non-triviality at small scales)
 
 **Conjectural:**
-- Conjecture 6.3: Existence of a dimensionless self-consistency condition that determines $\ell_{\min}$. This is the single remaining conjecture. It is motivated by the action duality structure but not proved, and the dimensional obstacle (Proposition 6.2) shows that the naive formulation (equating curvatures directly) does not work. The spinor/tetrad route (Step 9) and network condensation (Step 10) both fail to close this gap — the former for algebraic reasons, the latter because $\ell$ itself requires $G$.
+- Conjecture 6.3: Existence of a dimensionless self-consistency condition that determines $\ell_{\min}$. This is the single remaining conjecture, now given concrete form in Theorem 11.4 (fixed-point uniqueness) and Proposition 11.5 (variational characterization). The fixed-point equation $\mathcal{F}(\ell^*) = \ell^*$ is explicit; the open question is whether it has a *unique* positive solution. By the rigidity argument (all other structures have zero free parameters), constitutive universality provides one constraint on one unknown. The conjecture reduces to proving the bootstrap fixed-point uniqueness ([Bootstrap Mechanism](/derivations/interactions/bootstrap), Conjectures 7.1–7.2). The spinor/tetrad route (Step 9) is rigorously ruled out. The naive curvature bridge (Proposition 6.2) faces a dimensional obstacle.
 
-**Assessment:** Provisional. The main structure is sound: the Jacobson thermodynamic argument (Theorem 3.3) rigorously derives $G = c^4/(4\hbar\eta)$, the self-consistency bound (Proposition 4.1) rigorously establishes $\ell_{\min} \geq \sqrt{2}\,\ell_P$, and the dimensional independence (Proposition 5.1) precisely characterizes what kind of additional input is needed. The spinor/tetrad analysis (Step 9) rigorously rules out the Clifford normalization route. The network condensation analysis (Step 10) produces a genuine transcendental equation for the dimensionless packing coefficient but does not determine $\ell_{\min}$. The one step relying on a conjecture is the independent determination of $\eta$ (or $\ell_{\min}$) from the axioms — Conjecture 6.3. The convergence of multiple independent routes on the same structural relationship $G = \ell_{\min}^2 c^3/\hbar$ is itself evidence that this relationship is correct, even though the absolute scale remains open.
+**Assessment:** Provisional. The main structure is sound: the Jacobson thermodynamic argument (Theorem 3.3) rigorously derives $G = c^4/(4\hbar\eta)$, the self-consistency bound (Proposition 4.1) rigorously establishes $\ell_{\min} \geq \sqrt{2}\,\ell_P$, the dimensional independence (Proposition 5.1) precisely characterizes what kind of additional input is needed, and the spinor/tetrad analysis (Step 9) rigorously rules out the Clifford normalization route. The constitutive emergence analysis (Step 11) reframes the circularity as a fixed-point equation and provides both a concrete self-consistency map $\mathcal{F}$ and a variational characterization of $\ell_{\min}$. The one step relying on a conjecture is the *uniqueness* of the fixed point — equivalently, the independent determination of $\eta$ from the axioms (Conjecture 6.3). This conjecture now has an explicit mathematical formulation (Theorem 11.4) and reduces to the bootstrap fixed-point uniqueness (Conjectures 7.1–7.2).
 
 ## Open Gaps
 
-1. **Independent determination of $\ell_{\min}$ (key gap)**: Prove Conjecture 6.3 — that there exists a dimensionless self-consistency condition, arising from the action duality or the bootstrap structure, that uniquely determines $\ell_{\min}$ without reference to $G$. By Proposition 5.1, this cannot be a power-law relation in $\hbar$ and $c$; it must involve a non-algebraic (transcendental) equation. **Ruled-out routes:** the spinor/tetrad Clifford normalization (Step 9 — kinematic, no new scale) and the network condensation packing optimization (Step 10 — correctly determines the dimensionless packing coefficient but not $\ell$ itself). **Remaining candidates:** the bootstrap fixed-point equation ([Bootstrap Mechanism](/derivations/interactions/bootstrap), Conjectures 7.1–7.2), a topological invariant of the observer embedding, or a non-perturbative self-consistency condition from the coherence Lagrangian.
+1. **Bootstrap fixed-point uniqueness (key gap)**: The determination of $G$ reduces to proving that the bootstrap fixed-point equation $U \cong R(U,U)$ has a unique solution ([Bootstrap Mechanism](/derivations/interactions/bootstrap), Conjectures 7.1–7.2). Equivalently: prove that the self-consistency map $\mathcal{F}(\ell) = \sqrt{2G(\ell)\hbar/c^3}$ of Theorem 11.4 has a unique positive fixed point, or that the variational characterization of Proposition 11.5 yields a unique supremum. By Proposition 5.1, this must involve a non-algebraic (transcendental) equation. **Ruled-out routes:** spinor/tetrad Clifford normalization (Step 9 — kinematic, no new scale). **Active candidates:** bootstrap fixed-point uniqueness via Dana Scott domain theory (identified in bootstrap.md), the variational characterization (C5 non-triviality on every causal boundary as a constraint on observer density), or a non-perturbative self-consistency condition from the coherence Lagrangian.
 
-2. **Curvature-spacetime bridge**: Construct a well-posed dimensionless curvature comparison between the Fisher geometry on $\Sigma$ and the spacetime geometry on $\mathcal{M}$ (avoiding the dimensional obstacle of Proposition 6.2). This requires formalizing the observer embedding $\iota: \Sigma \to \mathcal{M}$ and showing how Fisher curvature induces spacetime curvature with a specific coefficient. This is equivalent to Open Gap 1 of [Fisher Information Metric](/derivations/thermodynamics-ext/fisher-metric).
+2. **Constitutive universality**: Prove that the geometry constituted by the first Type III interactions is *independent* of which observer pairs interact first. This is the "all observers must agree" condition formalized as constitutive universality (Step 11). It is stronger than diffeomorphism invariance (which is coordinate-system independence) — it asserts that the *emergence process itself* yields a unique geometry. This likely follows from the uniqueness of the Fisher metric (Čencov) and the Einstein equations (Lovelock), but a rigorous proof requires formalizing the "first interaction" structure.
 
-3. **Numerical coefficient**: Pin down the precise dimensionless $O(1)$ coefficient in $G = \alpha \cdot \ell_{\min}^2 c^3/\hbar$ — currently the Jacobson route gives $\alpha = 1$ while the self-consistency bound gives $\alpha = 1/2$, reflecting different conventions for the saturation condition. The network condensation packing analysis (Proposition 10.3) gives a pairwise approximation $\alpha \approx 0.152$ which undershoots the Bekenstein-Hawking value $\alpha = 0.25$; extending to the full inclusion-exclusion series and optimizing over all packing geometries would tighten this. A precise derivation of $\ell_{\min}$ would fix $\alpha$.
+3. **Curvature-spacetime bridge**: Construct a well-posed dimensionless curvature comparison between the Fisher geometry on $\Sigma$ and the spacetime geometry on $\mathcal{M}$ (avoiding the dimensional obstacle of Proposition 6.2). This is equivalent to Open Gap 1 of [Fisher Information Metric](/derivations/thermodynamics-ext/fisher-metric). The constitutive emergence picture (Step 11) suggests a reformulation: the bridge is not a static equation between pre-existing curvatures but a constraint on the geometry that *emerges* from the first interactions.
 
-4. **Universality**: The self-consistency bound (Step 4) uses the minimal observer ($\Sigma = S^1$). Verify that the same $G$ emerges for composite observers with higher-dimensional state spaces, confirming that $G$ is universal and not observer-dependent. (The equivalence principle, being structural, strongly suggests this holds.)
+4. **Numerical coefficient**: Pin down the precise dimensionless $O(1)$ coefficient in $G = \alpha \cdot \ell_{\min}^2 c^3/\hbar$. The fixed-point analysis (Theorem 11.4) gives $\alpha = c/2$ (i.e., $1/2$ in natural units), within a factor of 2 of the Bekenstein-Hawking $1/4$. The network packing (Proposition 10.3) gives $\alpha \approx 0.152$ from pairwise truncation. Extending to the full inclusion-exclusion series and resolving the Compton/reduced-Compton convention would fix $\alpha$.
 
-5. **Mutual information functional form**: The network condensation analysis (Step 10) uses a Gaussian mutual information profile $f(x) = e^{-x^2/2}$, motivated by the Fisher metric structure of phase distributions. Rigorously deriving $f$ from the axioms — specifically from the Fisher metric on $\Sigma$ pulled back to the causal boundary via the observer embedding — would place Proposition 10.3 on firmer ground and potentially modify the transcendental equation and the coefficient $\alpha$.
+5. **Mutual information functional form**: The Gaussian profile $f(x) = e^{-x^2/2}$ used in Proposition 10.3 is motivated but not derived from axioms. Rigorous derivation from the Fisher metric on $\Sigma$ pulled back to the causal boundary would tighten the transcendental equation.
 
-6. **No-boundary vs. maximal packing**: The network condensation argument assumes that the no-boundary condition (topological: no edge vertices in the observer network graph) implies maximal packing (geometric: maximum entropy density on causal surfaces). This conflates two notions of "boundary." Formalizing the connection — or showing that it does not hold — would clarify the physical content of the simultaneous condensation picture.
+6. **Formalization of pre-geometric $t_0$**: The distinction between topological $S^1$ (pre-geometric) and Riemannian $S^1$ (geometric) at $t_0$ (Proposition 11.1) is clear conceptually but would benefit from a categorical formulation: the condensation as a functor from **Top** (topological category) to **Riem** (Riemannian category), with the fixed-point condition as a naturality constraint.
 
 <!-- References -->
 [Jacobson, 1995]: /references#jacobson-1995

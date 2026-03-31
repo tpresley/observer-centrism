@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-30T23:21:01.923Z",
+    "generatedAt": "2026-03-31T06:59:42.058Z",
     "derivationCount": 65,
     "predictionCount": 11,
     "gaPageCount": 12,
@@ -16,7 +16,7 @@
     "derivationCount": 65,
     "predictionCount": 11,
     "edgeCount": 158,
-    "formalObjectCount": 986,
+    "formalObjectCount": 991,
     "openGapCount": 195,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
@@ -13121,7 +13121,7 @@
       "tags": [
         "geometry"
       ],
-      "summary": "The gravitational coupling G is constrained by the coherence Lagrangian structure: the Fisher metric fixes the matter sector at ℏ, Lovelock fixes the gravity sector's form, and the action duality linking state-space to spacetime geometry determines their ratio. The spinor/tetrad route is ruled out; network condensation yields a transcendental equation for the packing coefficient but not ℓ_min itself",
+      "summary": "The gravitational coupling G is constrained by the coherence Lagrangian structure: the Fisher metric fixes the matter sector at ℏ, Lovelock fixes the gravity sector's form, and the action duality linking state-space to spacetime geometry determines their ratio. The spinor/tetrad route is ruled out; network condensation yields a transcendental equation for the packing coefficient. The constitutive emergence argument identifies the circularity G ↔ ℓ_min as a fixed-point equation: at pre-geometric t₀ all metric properties are undefined, and the first Type III interactions must simultaneously constitute both geometry and its minimum scale, with universal observer agreement providing the determining constraint",
       "lastUpdated": "2026-03-30",
       "dependsOn": [
         "spacetime/gravity",
@@ -13176,6 +13176,10 @@
         {
           "number": 10,
           "title": "Network Condensation Conjecture"
+        },
+        {
+          "number": 11,
+          "title": "Constitutive Emergence and the Fixed-Point Characterization"
         }
       ],
       "formalObjects": [
@@ -13330,6 +13334,36 @@
           "statementPreview": "The network condensation conjecture correctly determines the dimensionless packing coefficient alpha in eta = alpha/e..."
         },
         {
+          "type": "Proposition",
+          "id": "11.1",
+          "name": "Pre-geometric condensation",
+          "statementPreview": "At t0, the observer network exists as a purely topological structure. The following quantities are undefined:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "11.2",
+          "name": "$t_0$ is not a Type III interaction",
+          "statementPreview": "The condensation at t0 does not produce relational invariants. It has no state transition (there is no \"before\"), no ..."
+        },
+        {
+          "type": "Definition",
+          "id": "11.3",
+          "name": "Constitutive emergence of $\\ell_{\\min}$",
+          "statementPreview": "The *first* Type III interactions between observers constitute the relational invariant structure that defines geomet..."
+        },
+        {
+          "type": "Theorem",
+          "id": "11.4",
+          "name": "Fixed-point characterization of $\\ell_{\\min}$",
+          "statementPreview": "The circularity ellmin xleftrightarrow G xleftrightarrow ellmin is a fixed-point equation, not a logical defect. The ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "11.5",
+          "name": "Variational characterization",
+          "statementPreview": "The minimum resolvable scale ellmin admits an equivalent variational characterization:*"
+        },
+        {
           "type": "Theorem",
           "id": "11.1.",
           "name": "",
@@ -13340,39 +13374,43 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Independent determination of $\\ell_{\\min}$ (key gap)",
-          "description": "Prove Conjecture 6.3 — that there exists a dimensionless self-consistency condition, arising from the action duality or the bootstrap structure, that uniquely determines ellmin without reference to G."
+          "title": "Bootstrap fixed-point uniqueness (key gap)",
+          "description": "The determination of G reduces to proving that the bootstrap fixed-point equation U cong R(U,U) has a unique solution ([Bootstrap Mechanism](/derivations/interactions/bootstrap), Conjectures 7.1–7.2)."
         },
         {
           "number": 2,
-          "title": "Curvature-spacetime bridge",
-          "description": "Construct a well-posed dimensionless curvature comparison between the Fisher geometry on Sigma and the spacetime geometry on M (avoiding the dimensional obstacle of Proposition 6.2). This requires for"
+          "title": "Constitutive universality",
+          "description": "Prove that the geometry constituted by the first Type III interactions is *independent* of which observer pairs interact first. This is the \"all observers must agree\" condition formalized as constitut"
         },
         {
           "number": 3,
-          "title": "Numerical coefficient",
-          "description": "Pin down the precise dimensionless O(1) coefficient in G = alpha ellmin2 c3/hbar — currently the Jacobson route gives alpha = 1 while the self-consistency bound gives alpha = 1/2, reflecting different"
+          "title": "Curvature-spacetime bridge",
+          "description": "Construct a well-posed dimensionless curvature comparison between the Fisher geometry on Sigma and the spacetime geometry on M (avoiding the dimensional obstacle of Proposition 6.2). This is equivalen"
         },
         {
           "number": 4,
-          "title": "Universality",
-          "description": "The self-consistency bound (Step 4) uses the minimal observer (Sigma = S1). Verify that the same G emerges for composite observers with higher-dimensional state spaces, confirming that G is universal "
+          "title": "Numerical coefficient",
+          "description": "Pin down the precise dimensionless O(1) coefficient in G = alpha ellmin2 c3/hbar. The fixed-point analysis (Theorem 11.4) gives alpha = c/2 (i.e., 1/2 in natural units), within a factor of 2 of the Be"
         },
         {
           "number": 5,
           "title": "Mutual information functional form",
-          "description": "The network condensation analysis (Step 10) uses a Gaussian mutual information profile f(x) = e-x2/2, motivated by the Fisher metric structure of phase distributions. Rigorously deriving f from the ax"
+          "description": "The Gaussian profile f(x) = e-x2/2 used in Proposition 10.3 is motivated but not derived from axioms. Rigorous derivation from the Fisher metric on Sigma pulled back to the causal boundary would tight"
         },
         {
           "number": 6,
-          "title": "No-boundary vs. maximal packing",
-          "description": "The network condensation argument assumes that the no-boundary condition (topological: no edge vertices in the observer network graph) implies maximal packing (geometric: maximum entropy density on ca"
+          "title": "Formalization of pre-geometric $t_0$",
+          "description": "The distinction between topological S1 (pre-geometric) and Riemannian S1 (geometric) at t0 (Proposition 11.1) is clear conceptually but would benefit from a categorical formulation: the condensation a"
         }
       ],
-      "assessmentVerdict": "Provisional. The main structure is sound: the Jacobson thermodynamic argument (Theorem 3.3) rigorously derives G = c4/(4hbareta), the self-consistency bound (Proposition 4.1) rigorously establishes ellmin 2,ellP, and the dimensional independence (Proposition 5.1) precisely characterizes what kind of",
+      "assessmentVerdict": "Provisional. The main structure is sound: the Jacobson thermodynamic argument (Theorem 3.3) rigorously derives G = c4/(4hbareta), the self-consistency bound (Proposition 4.1) rigorously establishes ellmin 2,ellP, the dimensional independence (Proposition 5.1) precisely characterizes what kind of add",
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap Mechanism"
+          },
           {
             "target": "foundation/coherence-lagrangian",
             "context": "Coherence Lagrangian"
@@ -13404,10 +13442,6 @@
           {
             "target": "holography/area-scaling",
             "context": "Holographic Entropy Bound"
-          },
-          {
-            "target": "interactions/bootstrap",
-            "context": "Bootstrap Mechanism"
           },
           {
             "target": "holography/area-scaling",
@@ -23963,6 +23997,41 @@
     },
     {
       "derivationId": "spacetime/gravitational-constant",
+      "type": "Proposition",
+      "id": "11.1",
+      "name": "Pre-geometric condensation",
+      "fullRef": "spacetime/gravitational-constant:Proposition 11.1"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Proposition",
+      "id": "11.2",
+      "name": "$t_0$ is not a Type III interaction",
+      "fullRef": "spacetime/gravitational-constant:Proposition 11.2"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Definition",
+      "id": "11.3",
+      "name": "Constitutive emergence of $\\ell_{\\min}$",
+      "fullRef": "spacetime/gravitational-constant:Definition 11.3"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Theorem",
+      "id": "11.4",
+      "name": "Fixed-point characterization of $\\ell_{\\min}$",
+      "fullRef": "spacetime/gravitational-constant:Theorem 11.4"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Proposition",
+      "id": "11.5",
+      "name": "Variational characterization",
+      "fullRef": "spacetime/gravitational-constant:Proposition 11.5"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
       "type": "Theorem",
       "id": "11.1.",
       "name": "",
@@ -26424,43 +26493,43 @@
       "derivationId": "spacetime/gravitational-constant",
       "derivationStatus": "provisional",
       "number": 1,
-      "title": "Independent determination of $\\ell_{\\min}$ (key gap)",
-      "description": "Prove Conjecture 6.3 — that there exists a dimensionless self-consistency condition, arising from the action duality or the bootstrap structure, that uniquely determines ellmin without reference to G."
+      "title": "Bootstrap fixed-point uniqueness (key gap)",
+      "description": "The determination of G reduces to proving that the bootstrap fixed-point equation U cong R(U,U) has a unique solution ([Bootstrap Mechanism](/derivations/interactions/bootstrap), Conjectures 7.1–7.2)."
     },
     {
       "derivationId": "spacetime/gravitational-constant",
       "derivationStatus": "provisional",
       "number": 2,
-      "title": "Curvature-spacetime bridge",
-      "description": "Construct a well-posed dimensionless curvature comparison between the Fisher geometry on Sigma and the spacetime geometry on M (avoiding the dimensional obstacle of Proposition 6.2). This requires for"
+      "title": "Constitutive universality",
+      "description": "Prove that the geometry constituted by the first Type III interactions is *independent* of which observer pairs interact first. This is the \"all observers must agree\" condition formalized as constitut"
     },
     {
       "derivationId": "spacetime/gravitational-constant",
       "derivationStatus": "provisional",
       "number": 3,
-      "title": "Numerical coefficient",
-      "description": "Pin down the precise dimensionless O(1) coefficient in G = alpha ellmin2 c3/hbar — currently the Jacobson route gives alpha = 1 while the self-consistency bound gives alpha = 1/2, reflecting different"
+      "title": "Curvature-spacetime bridge",
+      "description": "Construct a well-posed dimensionless curvature comparison between the Fisher geometry on Sigma and the spacetime geometry on M (avoiding the dimensional obstacle of Proposition 6.2). This is equivalen"
     },
     {
       "derivationId": "spacetime/gravitational-constant",
       "derivationStatus": "provisional",
       "number": 4,
-      "title": "Universality",
-      "description": "The self-consistency bound (Step 4) uses the minimal observer (Sigma = S1). Verify that the same G emerges for composite observers with higher-dimensional state spaces, confirming that G is universal "
+      "title": "Numerical coefficient",
+      "description": "Pin down the precise dimensionless O(1) coefficient in G = alpha ellmin2 c3/hbar. The fixed-point analysis (Theorem 11.4) gives alpha = c/2 (i.e., 1/2 in natural units), within a factor of 2 of the Be"
     },
     {
       "derivationId": "spacetime/gravitational-constant",
       "derivationStatus": "provisional",
       "number": 5,
       "title": "Mutual information functional form",
-      "description": "The network condensation analysis (Step 10) uses a Gaussian mutual information profile f(x) = e-x2/2, motivated by the Fisher metric structure of phase distributions. Rigorously deriving f from the ax"
+      "description": "The Gaussian profile f(x) = e-x2/2 used in Proposition 10.3 is motivated but not derived from axioms. Rigorous derivation from the Fisher metric on Sigma pulled back to the causal boundary would tight"
     },
     {
       "derivationId": "spacetime/gravitational-constant",
       "derivationStatus": "provisional",
       "number": 6,
-      "title": "No-boundary vs. maximal packing",
-      "description": "The network condensation argument assumes that the no-boundary condition (topological: no edge vertices in the observer network graph) implies maximal packing (geometric: maximum entropy density on ca"
+      "title": "Formalization of pre-geometric $t_0$",
+      "description": "The distinction between topological S1 (pre-geometric) and Riemannian S1 (geometric) at t0 (Proposition 11.1) is clear conceptually but would benefit from a categorical formulation: the condensation a"
     },
     {
       "derivationId": "spacetime/gravity",
