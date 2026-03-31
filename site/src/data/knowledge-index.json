@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-31T07:42:53.200Z",
+    "generatedAt": "2026-03-31T09:43:30.705Z",
     "derivationCount": 65,
     "predictionCount": 11,
     "gaPageCount": 12,
@@ -16,8 +16,8 @@
     "derivationCount": 65,
     "predictionCount": 11,
     "edgeCount": 158,
-    "formalObjectCount": 993,
-    "openGapCount": 195,
+    "formalObjectCount": 999,
+    "openGapCount": 198,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -9003,6 +9003,10 @@
             "context": "Coherence-Dual Pairs"
           },
           {
+            "source": "spacetime/gravitational-constant",
+            "context": "Coherence-Dual Pairs"
+          },
+          {
             "source": "spacetime/lorentz-invariance",
             "context": "Definition 6.1"
           }
@@ -9325,6 +9329,10 @@
           },
           {
             "source": "quantum/born-rule",
+            "context": "Multiplicity"
+          },
+          {
+            "source": "spacetime/gravitational-constant",
             "context": "Multiplicity"
           },
           {
@@ -13149,7 +13157,7 @@
       "tags": [
         "geometry"
       ],
-      "summary": "The gravitational coupling G is constrained by the coherence Lagrangian structure: the Fisher metric fixes the matter sector at ℏ, Lovelock fixes the gravity sector's form, and the action duality linking state-space to spacetime geometry determines their ratio. The spinor/tetrad route is ruled out; network condensation yields a transcendental equation for the packing coefficient. The constitutive emergence argument identifies the circularity G ↔ ℓ_min as a fixed-point equation: at pre-geometric t₀ all metric properties are undefined, and the first Type III interactions must simultaneously constitute both geometry and its minimum scale, with universal observer agreement providing the determining constraint",
+      "summary": "The gravitational coupling G is constrained by the coherence Lagrangian structure: the Fisher metric fixes the matter sector at ℏ, Lovelock fixes the gravity sector's form. The spinor/tetrad route is ruled out. The constitutive emergence argument reframes the circularity G ↔ ℓ_min as a fixed-point equation at pre-geometric t₀. Aperiodic order of the observer network is forced (periodicity trivializes C5; disorder violates constitutive universality), constraining the substitution matrix to the 2×2 Pisot metallic mean family. Multi-scale self-consistency — requiring the same G at every bootstrap level — provides a potentially non-degenerate constraint that the single-scale analysis lacks",
       "lastUpdated": "2026-03-30",
       "dependsOn": [
         "spacetime/gravity",
@@ -13208,6 +13216,10 @@
         {
           "number": 11,
           "title": "Constitutive Emergence and the Fixed-Point Characterization"
+        },
+        {
+          "number": 12,
+          "title": "Aperiodic Order and Multi-Scale Self-Consistency"
         }
       ],
       "formalObjects": [
@@ -13392,8 +13404,44 @@
           "statementPreview": "The minimum resolvable scale ellmin admits an equivalent variational characterization:*"
         },
         {
+          "type": "Proposition",
+          "id": "12.1",
+          "name": "Periodicity trivializes C5",
+          "statementPreview": "A periodic (crystalline) observer network — one with translational symmetry — makes C5 (strict subadditivity) informa..."
+        },
+        {
+          "type": "Proposition",
+          "id": "12.2",
+          "name": "Disorder violates constitutive universality",
+          "statementPreview": "A random (disordered) observer network violates constitutive universality: density fluctuations cause different obser..."
+        },
+        {
+          "type": "Corollary",
+          "id": "12.3",
+          "name": "Aperiodic order is forced",
+          "statementPreview": "The observer network must have aperiodic order: local matching rules (from the axioms) that enforce global aperiodici..."
+        },
+        {
+          "type": "Proposition",
+          "id": "12.4",
+          "name": "Substitution matrix constraints",
+          "statementPreview": "The observer network's substitution rule — the geometric realization of the bootstrap equation — has a 2 2 substituti..."
+        },
+        {
+          "type": "Proposition",
+          "id": "12.5",
+          "name": "Packing coefficient from inflation factor",
+          "statementPreview": "For a metallic mean tiling with inflation factor betan, the dimensionless packing coefficient alpha in eta = alpha/el..."
+        },
+        {
           "type": "Theorem",
-          "id": "11.1.",
+          "id": "12.6",
+          "name": "Multi-scale self-consistency",
+          "statementPreview": "The single-scale fixed point (Theorem 11.4) is degenerate: it reduces to alpha = c/2 regardless of ell (same circular..."
+        },
+        {
+          "type": "Theorem",
+          "id": "13.1.",
           "name": "",
           "statementPreview": "The Schwarzschild black hole and the Planck scale provide a consistency model for the structural relationship G = ell..."
         }
@@ -13429,6 +13477,21 @@
           "number": 6,
           "title": "Formalization of pre-geometric $t_0$",
           "description": "The distinction between topological S1 (pre-geometric) and Riemannian S1 (geometric) at t0 (Proposition 11.1) is clear conceptually but would benefit from a categorical formulation: the condensation a"
+        },
+        {
+          "number": 7,
+          "title": "Multi-scale non-degeneracy",
+          "description": "Prove rigorously that the multi-scale self-consistency condition (Theorem 12.6) is genuinely non-degenerate — i.e., that the inter-observer distance distribution has non-trivial scaling under substitu"
+        },
+        {
+          "number": 8,
+          "title": "Metallic mean selection",
+          "description": "Determine which metallic mean index n (and corresponding inflation factor betan) is selected by the multi-scale renormalization-group fixed point. This is a well-defined mathematical problem: for whic"
+        },
+        {
+          "number": 9,
+          "title": "Aperiodicity proof",
+          "description": "Formalize the argument that the axiom constraints (C5 non-triviality + Axiom 2 individuation + no-boundary + constitutive universality) function as matching rules that force aperiodicity. Currently Pr"
         }
       ],
       "assessmentVerdict": "Provisional. The main structure is sound: the Jacobson thermodynamic argument (Theorem 3.3) rigorously derives G = c4/(4hbareta), the self-consistency bound (Proposition 4.1) rigorously establishes ellmin 2,ellP, the dimensional independence (Proposition 5.1) precisely characterizes what kind of add",
@@ -13486,6 +13549,14 @@
           {
             "target": "interactions/bootstrap",
             "context": "Bootstrap"
+          },
+          {
+            "target": "minimal-observer/multiplicity",
+            "context": "Multiplicity"
+          },
+          {
+            "target": "minimal-observer/coherence-dual-pairs",
+            "context": "Coherence-Dual Pairs"
           }
         ],
         "incoming": [
@@ -24091,10 +24162,52 @@
     },
     {
       "derivationId": "spacetime/gravitational-constant",
+      "type": "Proposition",
+      "id": "12.1",
+      "name": "Periodicity trivializes C5",
+      "fullRef": "spacetime/gravitational-constant:Proposition 12.1"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Proposition",
+      "id": "12.2",
+      "name": "Disorder violates constitutive universality",
+      "fullRef": "spacetime/gravitational-constant:Proposition 12.2"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Corollary",
+      "id": "12.3",
+      "name": "Aperiodic order is forced",
+      "fullRef": "spacetime/gravitational-constant:Corollary 12.3"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Proposition",
+      "id": "12.4",
+      "name": "Substitution matrix constraints",
+      "fullRef": "spacetime/gravitational-constant:Proposition 12.4"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Proposition",
+      "id": "12.5",
+      "name": "Packing coefficient from inflation factor",
+      "fullRef": "spacetime/gravitational-constant:Proposition 12.5"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
       "type": "Theorem",
-      "id": "11.1.",
+      "id": "12.6",
+      "name": "Multi-scale self-consistency",
+      "fullRef": "spacetime/gravitational-constant:Theorem 12.6"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "type": "Theorem",
+      "id": "13.1.",
       "name": "",
-      "fullRef": "spacetime/gravitational-constant:Theorem 11.1."
+      "fullRef": "spacetime/gravitational-constant:Theorem 13.1."
     },
     {
       "derivationId": "spacetime/gravity",
@@ -26589,6 +26702,27 @@
       "number": 6,
       "title": "Formalization of pre-geometric $t_0$",
       "description": "The distinction between topological S1 (pre-geometric) and Riemannian S1 (geometric) at t0 (Proposition 11.1) is clear conceptually but would benefit from a categorical formulation: the condensation a"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "derivationStatus": "provisional",
+      "number": 7,
+      "title": "Multi-scale non-degeneracy",
+      "description": "Prove rigorously that the multi-scale self-consistency condition (Theorem 12.6) is genuinely non-degenerate — i.e., that the inter-observer distance distribution has non-trivial scaling under substitu"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "derivationStatus": "provisional",
+      "number": 8,
+      "title": "Metallic mean selection",
+      "description": "Determine which metallic mean index n (and corresponding inflation factor betan) is selected by the multi-scale renormalization-group fixed point. This is a well-defined mathematical problem: for whic"
+    },
+    {
+      "derivationId": "spacetime/gravitational-constant",
+      "derivationStatus": "provisional",
+      "number": 9,
+      "title": "Aperiodicity proof",
+      "description": "Formalize the argument that the axiom constraints (C5 non-triviality + Axiom 2 individuation + no-boundary + constitutive universality) function as matching rules that force aperiodicity. Currently Pr"
     },
     {
       "derivationId": "spacetime/gravity",

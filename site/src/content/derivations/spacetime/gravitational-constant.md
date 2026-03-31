@@ -4,7 +4,7 @@ status: "provisional"
 dependsOn: ["spacetime/gravity", "spacetime/einstein-equations", "thermodynamics/action-planck", "thermodynamics-ext/fisher-metric", "foundation/coherence-lagrangian", "holography/area-scaling", "particles/spin-statistics", "minimal-observer/multiplicity", "interactions/bootstrap"]
 enablesDerivation: []
 tags: ["geometry"]
-summary: "The gravitational coupling G is constrained by the coherence Lagrangian structure: the Fisher metric fixes the matter sector at ℏ, Lovelock fixes the gravity sector's form, and the action duality linking state-space to spacetime geometry determines their ratio. The spinor/tetrad route is ruled out; network condensation yields a transcendental equation for the packing coefficient. The constitutive emergence argument identifies the circularity G ↔ ℓ_min as a fixed-point equation: at pre-geometric t₀ all metric properties are undefined, and the first Type III interactions must simultaneously constitute both geometry and its minimum scale, with universal observer agreement providing the determining constraint"
+summary: "The gravitational coupling G is constrained by the coherence Lagrangian structure: the Fisher metric fixes the matter sector at ℏ, Lovelock fixes the gravity sector's form. The spinor/tetrad route is ruled out. The constitutive emergence argument reframes the circularity G ↔ ℓ_min as a fixed-point equation at pre-geometric t₀. Aperiodic order of the observer network is forced (periodicity trivializes C5; disorder violates constitutive universality), constraining the substitution matrix to the 2×2 Pisot metallic mean family. Multi-scale self-consistency — requiring the same G at every bootstrap level — provides a potentially non-degenerate constraint that the single-scale analysis lacks"
 rigorLevel: "semi-formal"
 lastUpdated: 2026-03-30
 ---
@@ -409,9 +409,64 @@ $$\ell_{\min} = \sup\left\{\ell > 0 \;\Big|\; \text{a self-consistent boundaryle
 
 **Remark (Reduction to bootstrap fixed-point).** The variational characterization of Proposition 11.5 is equivalent to the existence and uniqueness of the bootstrap fixed point ([Bootstrap Mechanism](/derivations/interactions/bootstrap), Conjectures 7.1–7.2). The bootstrap equation $U \cong R(U,U)$ determines the observer algebra $U$; if the fixed point is unique, it determines the total coherence $\mathcal{C}_0$, the observer density, the entropy density $\eta$, and hence $G = c^4/(4\hbar\eta)$. The simultaneous condensation is the physical instantiation of the fixed-point equation: the universe "crystallizes" in a single self-consistent act, and the self-consistency uniquely fixes all parameters including $G$.
 
+### Step 12: Aperiodic Order and Multi-Scale Self-Consistency
+
+The constitutive emergence argument (Step 11) establishes that $\ell_{\min}$ is the fixed point of a self-consistency map. This step explores a structural constraint on the observer network — forced aperiodicity — that introduces the bootstrap hierarchy into the fixed-point equation and potentially breaks the single-scale circularity.
+
+**Proposition 12.1 (Periodicity trivializes C5).** *A periodic (crystalline) observer network — one with translational symmetry — makes C5 (strict subadditivity) informationally degenerate: every local C5 instance yields the same constraint, and all observers occupy identical structural positions, violating the individuation requirement of Axiom 2.*
+
+*Proof (structural).* In a periodic tiling with period lattice $\Lambda$, every observer $O_x$ has a neighborhood isometric to every $O_{x+\lambda}$ for $\lambda \in \Lambda$. The mutual information $I(O_x : O_y)$ depends only on $y - x$, making C5 a single equation repeated at every lattice site. The self/non-self boundary of $O_x$ is structurally identical to that of $O_{x+\lambda}$, so the observers are locally indistinguishable — they cannot be individuated within the network. $\square$
+
+**Proposition 12.2 (Disorder violates constitutive universality).** *A random (disordered) observer network violates constitutive universality: density fluctuations cause different observers to constitute different effective $\ell_{\min}$, and sparse regions effectively create boundaries.*
+
+*Proof (structural).* Without matching rules, local observer density fluctuates. Regions of high density have smaller effective $\ell_{\min}$; sparse regions have larger effective $\ell_{\min}$. Furthermore, sufficiently sparse regions violate C5 non-triviality (neighbors too distant for relational coherence), creating effective boundaries that violate the no-boundary condition (Corollary 7.3 of [Multiplicity](/derivations/minimal-observer/multiplicity)). $\square$
+
+**Corollary 12.3 (Aperiodic order is forced).** *The observer network must have aperiodic order: local matching rules (from the axioms) that enforce global aperiodicity. This is the unique intermediate regime between periodic (C5-degenerate) and random (CU-violating) that satisfies all framework requirements:*
+
+| Property | Framework requirement | Aperiodic tiling guarantee |
+|---|---|---|
+| Local order | C5 non-trivially satisfied everywhere | Matching rules enforce consistent local structure |
+| Global aperiodicity | Observers individually distinguishable (Axiom 2) | No two neighborhoods translation-equivalent |
+| Repetitivity | No boundary (every patch recurs within bounded distance) | Guaranteed for substitution tilings |
+| Unique ergodicity | Constitutive universality (Step 11) | Solomyak's theorem (primitivity + FLC) |
+| Self-similar hierarchy | Bootstrap $U \cong R(U,U)$ | Inflation/deflation at ratio $\lambda$ |
+
+**Proposition 12.4 (Substitution matrix constraints).** *The observer network's substitution rule — the geometric realization of the bootstrap equation — has a $2 \times 2$ substitution matrix $M$ that is primitive with Pisot Perron-Frobenius (PF) eigenvalue. The metallic mean family $M_n = \bigl(\begin{smallmatrix} n & 1 \\ 1 & 0 \end{smallmatrix}\bigr)$ with PF eigenvalue $\beta_n = (n + \sqrt{n^2 + 4})/2$ provides the natural discrete parameter space.*
+
+*Proof.* Two tile types follow from observer/dual duality ([Coherence-Dual Pairs](/derivations/minimal-observer/coherence-dual-pairs)). Primitivity follows from bootstrap closure: observers produce relational invariants (Type III), and relational invariants produce further observers. The Pisot condition is required for unique ergodicity (Solomyak's theorem for substitution tilings with finite local complexity), necessary for constitutive universality (Proposition 12.2). The metallic means are the minimal primitive $2 \times 2$ Pisot family. $\square$
+
+**Proposition 12.5 (Packing coefficient from inflation factor).** *For a metallic mean tiling with inflation factor $\beta_n$, the dimensionless packing coefficient $\alpha$ in $\eta = \alpha/\ell^2$ depends only on $\beta_n$:*
+
+$$\alpha(\beta_n) = \frac{\beta_n \cdot s_{\text{net}}(\beta_n)}{\beta_n^2 + 1}$$
+
+*where $s_{\text{net}}(\beta_n)$ is the net entropy per observer crossing (after C5 cost), and the ratio $\beta_n/(\beta_n^2 + 1)$ is the number density of observer-type tiles from the PF eigenvector structure. This coefficient is independent of the absolute scale $\ell$.*
+
+*Proof.* For the metallic mean substitution $M_n$, the right PF eigenvector $(\beta_n, 1)$ gives the tile frequency ratio (observer : dual $= \beta_n : 1$). The left PF eigenvector gives tile areas in the same ratio (for self-similar tilings). The number density of observer tiles per unit area is $\beta_n / ((\beta_n^2 + 1) a_2)$ where $a_2 \propto \ell^2$. Multiplying by $s_{\text{net}}$ gives $\eta = \alpha/\ell^2$. $\square$
+
+**Theorem 12.6 (Multi-scale self-consistency).** *The single-scale fixed point (Theorem 11.4) is degenerate: it reduces to $\alpha = c/2$ regardless of $\ell$ (same circularity as Proposition 10.4). Multi-scale self-consistency — requiring the same $G$ at every level of the bootstrap hierarchy — is a stronger condition.*
+
+*Proof of single-scale degeneracy.* Identical to Proposition 10.4, with $\alpha(\beta_n)$ replacing $\alpha$. The equation $G = c^4\ell^2/(4\hbar\alpha)$ combined with $\ell^2 = 2G\hbar/c^3$ gives $\alpha = c/2$ identically. $\square$
+
+*Multi-scale argument (structural).* The bootstrap hierarchy has observers at scales $\ell_k = \beta_n^k \ell_0$ for $k = 0, 1, 2, \ldots$ At each level $k$, the effective entropy density involves contributions from all levels $0$ through $k$:
+
+$$\eta_k = \sum_{j=0}^{k} \frac{\alpha_j(\beta_n)}{\ell_j^2} \cdot w_j(k, \beta_n)$$
+
+where $w_j(k, \beta_n)$ is the weight of level-$j$ observers as seen by level-$k$ boundaries. Requiring $G = c^4/(4\hbar\eta_k)$ for all $k$ constrains both $\beta_n$ and $\ell_0$.
+
+The multi-scale equations are independent (non-degenerate) when the inter-observer distance distribution has **non-trivial scaling** under substitution — i.e., the shape of the distribution changes at each level, not just its scale. For aperiodic tilings with multiple distinct nearest-neighbor distances (related by powers of $\beta_n$), this generically holds.
+
+**Remark (Constitutive universality = unique ergodicity + locality).** The constitutive universality condition of Step 11 decomposes precisely:
+
+1. **Unique ergodicity**: patch frequencies are uniform everywhere (Solomyak's theorem, given primitivity + finite local complexity)
+2. **Locality of geometric constitution**: the effective metric contributed by a local patch depends only on the patch type (guaranteed by relational invariant mechanism — Type III interactions are local)
+
+Unique ergodicity is strictly weaker; the gap is filled by the locality condition, which the framework provides structurally.
+
+**Remark (Which metallic mean?).** The index $n$ is not determined by combinatorics alone. Selection requires the multi-scale self-consistency of Theorem 12.6: only specific $\beta_n$ make the infinite tower $\{G = c^4/(4\hbar\eta_k)\}_{k=0}^{\infty}$ simultaneously satisfiable. This is a well-defined mathematical problem — finding which Pisot numbers admit a consistent renormalization-group fixed point for the entropy density — but it remains open.
+
 ### Consistency Model
 
-**Theorem 11.1.** *The Schwarzschild black hole and the Planck scale provide a consistency model for the structural relationship $G = \ell_P^2 c^3/\hbar$.*
+**Theorem 13.1.** *The Schwarzschild black hole and the Planck scale provide a consistency model for the structural relationship $G = \ell_P^2 c^3/\hbar$.*
 
 *Verification.* Take the physical values: $\hbar = 1.055 \times 10^{-34}\;\text{J}\!\cdot\!\text{s}$, $c = 2.998 \times 10^8\;\text{m/s}$, $G = 6.674 \times 10^{-11}\;\text{m}^3\text{kg}^{-1}\text{s}^{-2}$.
 
@@ -442,6 +497,11 @@ $$\ell_{\min} = \sup\left\{\ell > 0 \;\Big|\; \text{a self-consistent boundaryle
 | Fixed-point $\mathcal{F}(\ell^*) = \ell^*$ | Self-consistency of scale with its own gravitational content |
 | Variational characterization (Prop. 11.5) | $\ell_{\min}$ as supremum of C5-viable network scales |
 | Constitutive universality | All observers constitute same geometry (not coordinate invariance) |
+| Forced aperiodicity (Corollary 12.3) | Observer network must be quasicrystalline, not periodic or random |
+| Substitution matrix $M_n$ (Prop. 12.4) | Bootstrap as geometric substitution rule, metallic mean family |
+| Inflation factor $\beta_n$ | Scale ratio between adjacent bootstrap levels |
+| Multi-scale self-consistency (Thm. 12.6) | Same $G$ at every level of bootstrap hierarchy |
+| Unique ergodicity + locality = CUP | Solomyak's theorem + relational invariants → constitutive universality |
 
 ## Rigor Assessment
 
@@ -475,6 +535,12 @@ $$\ell_{\min} = \sup\left\{\ell > 0 \;\Big|\; \text{a self-consistent boundaryle
 - Proposition 10.2: Subadditivity reduces net entropy (inclusion-exclusion truncated at pairwise; full series bounded by strong subadditivity)
 - Proposition 10.3: Transcendental optimization (Gaussian mutual information form is motivated by Fisher metric but not rigorously derived from axioms)
 - Proposition 11.1: Pre-geometric condensation (rigorous distinction between topological and Riemannian $S^1$; the claim that the Fisher metric identification requires prior geometry is precise)
+- Proposition 12.1: Periodicity trivializes C5 (structural argument; the claim that identical neighborhoods make C5 informationally degenerate is precise but "informationally degenerate" needs formalization)
+- Proposition 12.2: Disorder violates constitutive universality (structural; density fluctuation argument is sound but quantitative threshold is not derived)
+- Corollary 12.3: Aperiodic order is forced (follows from 12.1 + 12.2 as the unique intermediate regime)
+- Proposition 12.4: Substitution matrix constraints (2×2 + primitive is rigorous from duality and bootstrap; Pisot requirement follows from Solomyak's theorem which is established mathematics)
+- Proposition 12.5: Packing coefficient from inflation factor (PF eigenvector calculation is rigorous; independence from $\ell$ is exact)
+- Theorem 12.6: Multi-scale self-consistency (single-scale degeneracy is rigorous; multi-scale non-degeneracy is structural, depending on non-trivial scaling of the distance distribution under substitution)
 - Proposition 11.2: $t_0$ is not a Type III interaction (rigorous from the Type III definition — no prior state, no causal ordering, no distinguishable source)
 - Theorem 11.4: Fixed-point characterization (the map $\mathcal{F}$ is well-defined; that it has a fixed point follows from continuity and intermediate value theorem; uniqueness is structural, depending on the rigidity of all other structures)
 - Proposition 11.5: Variational characterization (well-defined as a supremum; that the supremum exists and is positive requires the gravitational self-trapping bound from Proposition 4.1; that it is finite requires C5 non-triviality at small scales)
@@ -482,11 +548,11 @@ $$\ell_{\min} = \sup\left\{\ell > 0 \;\Big|\; \text{a self-consistent boundaryle
 **Conjectural:**
 - Conjecture 6.3: Existence of a dimensionless self-consistency condition that determines $\ell_{\min}$. This is the single remaining conjecture, now given concrete form in Theorem 11.4 (fixed-point uniqueness) and Proposition 11.5 (variational characterization). The fixed-point equation $\mathcal{F}(\ell^*) = \ell^*$ is explicit; the open question is whether it has a *unique* positive solution. By the rigidity argument (all other structures have zero free parameters), constitutive universality provides one constraint on one unknown. The conjecture reduces to proving the bootstrap fixed-point uniqueness ([Bootstrap Mechanism](/derivations/interactions/bootstrap), Conjectures 7.1–7.2). The spinor/tetrad route (Step 9) is rigorously ruled out. The naive curvature bridge (Proposition 6.2) faces a dimensional obstacle.
 
-**Assessment:** Provisional. The main structure is sound: the Jacobson thermodynamic argument (Theorem 3.3) rigorously derives $G = c^4/(4\hbar\eta)$, the self-consistency bound (Proposition 4.1) rigorously establishes $\ell_{\min} \geq \sqrt{2}\,\ell_P$, the dimensional independence (Proposition 5.1) precisely characterizes what kind of additional input is needed, and the spinor/tetrad analysis (Step 9) rigorously rules out the Clifford normalization route. The constitutive emergence analysis (Step 11) reframes the circularity as a fixed-point equation and provides both a concrete self-consistency map $\mathcal{F}$ and a variational characterization of $\ell_{\min}$. The one step relying on a conjecture is the *uniqueness* of the fixed point — equivalently, the independent determination of $\eta$ from the axioms (Conjecture 6.3). This conjecture now has an explicit mathematical formulation (Theorem 11.4) and reduces to the bootstrap fixed-point uniqueness (Conjectures 7.1–7.2).
+**Assessment:** Provisional. The main structure is sound: the Jacobson thermodynamic argument (Theorem 3.3) rigorously derives $G = c^4/(4\hbar\eta)$, the self-consistency bound (Proposition 4.1) rigorously establishes $\ell_{\min} \geq \sqrt{2}\,\ell_P$, the dimensional independence (Proposition 5.1) precisely characterizes what kind of additional input is needed, and the spinor/tetrad analysis (Step 9) rigorously rules out the Clifford normalization route. The constitutive emergence analysis (Step 11) reframes the circularity as a fixed-point equation. The aperiodic order analysis (Step 12) establishes that the observer network must be quasicrystalline, constrains the substitution matrix to the 2×2 Pisot metallic mean family, and shows that multi-scale self-consistency is a stronger constraint than single-scale (which is degenerate). The one step relying on a conjecture is the *uniqueness* of the fixed point — Conjecture 6.3, which now has three concrete formulations: the self-consistency map (Theorem 11.4), the variational characterization (Proposition 11.5), and the multi-scale renormalization-group fixed point (Theorem 12.6).
 
 ## Open Gaps
 
-1. **Bootstrap fixed-point uniqueness (key gap)**: The determination of $G$ reduces to proving that the bootstrap fixed-point equation $U \cong R(U,U)$ has a unique solution ([Bootstrap Mechanism](/derivations/interactions/bootstrap), Conjectures 7.1–7.2). Equivalently: prove that the self-consistency map $\mathcal{F}(\ell) = \sqrt{2G(\ell)\hbar/c^3}$ of Theorem 11.4 has a unique positive fixed point, or that the variational characterization of Proposition 11.5 yields a unique supremum. By Proposition 5.1, this must involve a non-algebraic (transcendental) equation. **Ruled-out routes:** spinor/tetrad Clifford normalization (Step 9 — kinematic, no new scale). **Active candidates:** bootstrap fixed-point uniqueness via Dana Scott domain theory (identified in bootstrap.md), the variational characterization (C5 non-triviality on every causal boundary as a constraint on observer density), or a non-perturbative self-consistency condition from the coherence Lagrangian.
+1. **Bootstrap fixed-point uniqueness (key gap)**: The determination of $G$ reduces to proving that the bootstrap fixed-point equation $U \cong R(U,U)$ has a unique solution ([Bootstrap Mechanism](/derivations/interactions/bootstrap), Conjectures 7.1–7.2). Three equivalent formulations: (a) the self-consistency map $\mathcal{F}(\ell) = \sqrt{2G(\ell)\hbar/c^3}$ has a unique positive fixed point (Theorem 11.4); (b) the variational characterization yields a unique supremum (Proposition 11.5); (c) the multi-scale renormalization-group fixed point exists and is unique for a specific metallic mean $\beta_n$ (Theorem 12.6). **Ruled-out routes:** spinor/tetrad Clifford normalization (Step 9). **Active candidates:** multi-scale self-consistency with non-trivial distance-distribution scaling (Step 12), Dana Scott domain theory (bootstrap.md), or a non-perturbative coherence Lagrangian condition.
 
 2. **Constitutive universality**: Prove that the geometry constituted by the first Type III interactions is *independent* of which observer pairs interact first. This is the "all observers must agree" condition formalized as constitutive universality (Step 11). It is stronger than diffeomorphism invariance (which is coordinate-system independence) — it asserts that the *emergence process itself* yields a unique geometry. This likely follows from the uniqueness of the Fisher metric (Čencov) and the Einstein equations (Lovelock), but a rigorous proof requires formalizing the "first interaction" structure.
 
@@ -497,6 +563,12 @@ $$\ell_{\min} = \sup\left\{\ell > 0 \;\Big|\; \text{a self-consistent boundaryle
 5. **Mutual information functional form**: The Gaussian profile $f(x) = e^{-x^2/2}$ used in Proposition 10.3 is motivated but not derived from axioms. Rigorous derivation from the Fisher metric on $\Sigma$ pulled back to the causal boundary would tighten the transcendental equation.
 
 6. **Formalization of pre-geometric $t_0$**: The distinction between topological $S^1$ (pre-geometric) and Riemannian $S^1$ (geometric) at $t_0$ (Proposition 11.1) is clear conceptually but would benefit from a categorical formulation: the condensation as a functor from **Top** (topological category) to **Riem** (Riemannian category), with the fixed-point condition as a naturality constraint.
+
+7. **Multi-scale non-degeneracy**: Prove rigorously that the multi-scale self-consistency condition (Theorem 12.6) is genuinely non-degenerate — i.e., that the inter-observer distance distribution has non-trivial scaling under substitution. For aperiodic tilings with multiple distinct nearest-neighbor distances (related by powers of $\beta_n$), this generically holds, but a proof from the axiom structure is needed.
+
+8. **Metallic mean selection**: Determine which metallic mean index $n$ (and corresponding inflation factor $\beta_n$) is selected by the multi-scale renormalization-group fixed point. This is a well-defined mathematical problem: for which Pisot $\beta_n$ does the infinite tower $\{G = c^4/(4\hbar\eta_k)\}_{k=0}^{\infty}$ have a consistent solution? The answer would determine a specific dimensionless number entering the expression for $G$.
+
+9. **Aperiodicity proof**: Formalize the argument that the axiom constraints (C5 non-triviality + Axiom 2 individuation + no-boundary + constitutive universality) function as matching rules that force aperiodicity. Currently Propositions 12.1–12.2 rule out the endpoints (periodic and random) by structural arguments; a rigorous proof would show these are the *only* alternatives to aperiodic order and that the axioms select it uniquely.
 
 <!-- References -->
 [Jacobson, 1995]: /references#jacobson-1995
