@@ -361,7 +361,7 @@
     "derivation": "particles/three-generations",
     "derivationTitle": "Three Fermion Generations",
     "gaps": ["Deriving $\\hat{n}_{\\text{EW}}$ from bootstrap dynamics or crystallization energetics"],
-    "notes": "These 2 parameters on $S^2$ replace the 9 charged-fermion Yukawa couplings of the SM — a substantial parameter reduction even as free parameters. The three angles $\\{\\alpha_k\\}$ determine all Yukawa couplings via $y_k \\propto \\exp(-\\alpha_k/g^2)$."
+    "notes": "The crystallization direction determines the intra-type mass hierarchy: the three masses within each fermion type (e.g., $u, c, t$) follow from $y_k \\propto \\exp(-\\alpha_k/g_{\\text{eff}}^2)$ with the same three angles $\\alpha_k$ but a type-specific effective coupling $g_{\\text{eff}}$. The inter-type mass splittings (why $m_t \\neq m_b \\neq m_\\tau$ within each generation) require the CKM and PMNS rotations, which relate the distinct winding-axis triples for up-type, down-type, and lepton sectors (Proposition 5.2 of Three Generations). Numerical testing confirms that the three fermion types have incompatible geometric ratios $R = \\ln(m_3/m_2)/\\ln(m_2/m_1)$: $R_{\\text{up}} \\approx 0.91$, $R_{\\text{down}} \\approx 1.31$, $R_{\\text{lepton}} \\approx 0.53$. A shared crystallization direction with type-specific couplings fits each mass to within a factor of ~1.4 (RMS log error 0.33). The original claim of '2 parameters replacing 9 Yukawa couplings' is overstated; the actual parameter content is $\\hat{n}_{\\text{EW}}$ (2 DOF) + CKM/PMNS rotations (7–9 DOF) + effective coupling ratios."
   },
   {
     "id": "w-boson-mass",

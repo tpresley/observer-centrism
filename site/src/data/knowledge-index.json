@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-03-31T09:43:30.705Z",
-    "derivationCount": 65,
+    "generatedAt": "2026-03-31T14:16:41.198Z",
+    "derivationCount": 66,
     "predictionCount": 11,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -10,15 +10,15 @@
     "byStatus": {
       "rigorous": 60,
       "non-viable": 1,
-      "draft": 1,
+      "draft": 2,
       "provisional": 3
     },
-    "derivationCount": 65,
+    "derivationCount": 66,
     "predictionCount": 11,
-    "edgeCount": 158,
-    "formalObjectCount": 999,
-    "openGapCount": 198,
-    "upgradeEligibleCount": 1,
+    "edgeCount": 163,
+    "formalObjectCount": 1014,
+    "openGapCount": 203,
+    "upgradeEligibleCount": 2,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
   },
@@ -47,6 +47,7 @@
         "axioms/coherence-operational",
         "axioms/loop-closure",
         "axioms/observer-definition",
+        "foundation/aperiodic-order",
         "gauge/anomaly-cancellation",
         "gauge/chirality-selection",
         "holography/information-paradox",
@@ -2990,6 +2991,234 @@
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
+    "foundation/aperiodic-order": {
+      "id": "foundation/aperiodic-order",
+      "filePath": "site/src/content/derivations/foundation/aperiodic-order.md",
+      "title": "Aperiodic Order of the Observer Network",
+      "status": "draft",
+      "rigorLevel": "semi-formal",
+      "group": "foundation",
+      "tags": [
+        "foundation",
+        "structure"
+      ],
+      "summary": "The observer network must have aperiodic order: periodicity trivializes C5 (every local neighborhood identical), disorder violates constitutive universality (density fluctuations make geometry observer-dependent), and aperiodic tilings with matching rules are the unique intermediate satisfying all axiom requirements. The substitution matrix is constrained to the 2×2 Pisot metallic mean family",
+      "lastUpdated": "2026-03-31",
+      "dependsOn": [
+        "minimal-observer/multiplicity",
+        "interactions/bootstrap",
+        "axioms/coherence-conservation",
+        "minimal-observer/coherence-dual-pairs"
+      ],
+      "enablesDerivation": [
+        "spacetime/gravitational-constant"
+      ],
+      "dependedOnBy": [
+        "spacetime/gravitational-constant"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Periodic Networks Trivialize C5"
+        },
+        {
+          "number": 2,
+          "title": "Disordered Networks Violate Constitutive Universality"
+        },
+        {
+          "number": 3,
+          "title": "Aperiodic Order as the Unique Intermediate"
+        },
+        {
+          "number": 4,
+          "title": "Substitution Rule from Bootstrap"
+        },
+        {
+          "number": 5,
+          "title": "Primitivity and the Pisot Condition"
+        },
+        {
+          "number": 6,
+          "title": "The Metallic Mean Family"
+        },
+        {
+          "number": 7,
+          "title": "Constitutive Universality Decomposition"
+        },
+        {
+          "number": 8,
+          "title": "Packing Coefficient from Inflation Factor"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Theorem",
+          "id": "1.1",
+          "name": "Forced aperiodicity",
+          "statementPreview": "The observer network at t0 must have aperiodic order: local matching rules (from the axiom constraints) that enforce ..."
+        },
+        {
+          "type": "Theorem",
+          "id": "2.1",
+          "name": "Substitution matrix",
+          "statementPreview": "The geometric substitution rule realizing U cong R(U,U) has a 2 2 primitive substitution matrix with Pisot Perron-Fro..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Constitutive universality decomposition",
+          "statementPreview": "Constitutive universality (all observers constitute the same geometry) = unique ergodicity (Solomyak's theorem) + loc..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Scale-independent packing coefficient",
+          "statementPreview": "The dimensionless packing coefficient alpha in eta = alpha/ell2 is determined by the inflation factor betan alone, in..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.1",
+          "name": "Periodicity collapses individuation",
+          "statementPreview": "A periodic observer network — one with a translational symmetry lattice Lambda — makes C5 (strict subadditivity of co..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "Disorder breaks constitutive universality and the no-boundary condition",
+          "statementPreview": "A disordered observer network — one without local matching rules governing the placement of observers — violates cons..."
+        },
+        {
+          "type": "Theorem",
+          "id": "1.1",
+          "name": "Forced aperiodicity",
+          "statementPreview": "The observer network must have aperiodic order: local matching rules that enforce global aperiodicity.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Bootstrap as substitution",
+          "statementPreview": "The bootstrap equation U cong R(U,U) is realized geometrically as a substitution rule on the observer network: each o..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.2",
+          "name": "Two tile types",
+          "statementPreview": "The substitution has two prototile types, corresponding to observers and their coherence duals.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Primitivity from bootstrap closure",
+          "statementPreview": "The 2 2 substitution matrix M = bigl(beginsmallmatrix a & b c & d endsmallmatrixbigr) is primitive: some power Mk has..."
+        },
+        {
+          "type": "Theorem",
+          "id": "5.2",
+          "name": "Pisot eigenvalue required",
+          "statementPreview": "The Perron-Frobenius eigenvalue lambdaPF of M must be a Pisot number (an algebraic integer > 1 whose algebraic conjug..."
+        },
+        {
+          "type": "Theorem",
+          "id": "2.1",
+          "name": "Metallic mean parameter space",
+          "statementPreview": "The minimal primitive 2 2 substitution matrices with Pisot Perron-Frobenius eigenvalue form the metallic mean family:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "CUP decomposition",
+          "statementPreview": "Constitutive universality — the requirement that all observers constitute the same effective geometry — decomposes in..."
+        },
+        {
+          "type": "Corollary",
+          "id": "3.2",
+          "name": "Solomyak guarantees half of CUP",
+          "statementPreview": "For a primitive substitution tiling with finite local complexity, unique ergodicity is guaranteed by Solomyak's theor..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Scale-independent packing coefficient",
+          "statementPreview": "For a metallic mean tiling with inflation factor betan, the dimensionless packing coefficient alpha in eta = alpha/el..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Formal C5 non-degeneracy",
+          "description": "Define \"informationally degenerate\" precisely — e.g., as vanishing conditional mutual information I(C5x ; C5y mid lattice) = 0 for all pairs of C5 instances in a periodic network. This would make Prop"
+        },
+        {
+          "number": 2,
+          "title": "Trichotomy proof",
+          "description": "Prove that periodic, disordered, and aperiodic-with-matching-rules exhaust all configurations of observer networks. The natural formalization uses Delone sets (uniformly discrete + relatively dense po"
+        },
+        {
+          "number": 3,
+          "title": "Bootstrap-substitution identification",
+          "description": "Prove that the abstract bootstrap equation U cong R(U,U) admits a geometric realization as a substitution tiling in Rd. This requires showing that the recursive structure of observer composition maps "
+        },
+        {
+          "number": 4,
+          "title": "Metallic mean selection",
+          "description": "Determine which n is selected by the multi-scale self-consistency condition ([Gravitational Coupling](/derivations/spacetime/gravitational-constant), Theorem 12.6). The golden mean (n = 1) is the simp"
+        },
+        {
+          "number": 5,
+          "title": "Net entropy $s_{\\text{net}}(\\beta_n)$",
+          "description": "Derive the mutual information cost function from the axioms rather than assuming a Gaussian profile. This would fix alpha(betan) numerically. <!-- References --> [Solomyak, 1997]: /references#solomyak"
+        }
+      ],
+      "assessmentVerdict": "Draft. The exclusion arguments (Steps 1–2) are structurally convincing but rely on informal notions (\"informationally degenerate\", \"effective boundary\"). The constructive results (Steps 4–8) are rigorous once the identification of bootstrap-with-substitution is accepted. Promotion to provisional req",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "minimal-observer/multiplicity",
+            "context": "Multiplicity"
+          },
+          {
+            "target": "quantum/born-rule",
+            "context": "Born Rule"
+          },
+          {
+            "target": "gauge/standard-model-group",
+            "context": "Standard Model Group"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap Mechanism"
+          },
+          {
+            "target": "minimal-observer/coherence-dual-pairs",
+            "context": "Coherence-Dual Pairs"
+          },
+          {
+            "target": "interactions/relational-invariants",
+            "context": "Relational Invariants"
+          },
+          {
+            "target": "spacetime/gravitational-constant",
+            "context": "Gravitational Coupling"
+          }
+        ],
+        "incoming": [
+          {
+            "source": "spacetime/gravitational-constant",
+            "context": "Aperiodic Order"
+          }
+        ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": true,
+      "upgradeBlockers": []
+    },
     "foundation/coherence-lagrangian": {
       "id": "foundation/coherence-lagrangian",
       "filePath": "site/src/content/derivations/foundation/coherence-lagrangian.md",
@@ -5293,6 +5522,10 @@
           {
             "source": "cosmology/coupling-constants",
             "context": "Standard Model Gauge Group"
+          },
+          {
+            "source": "foundation/aperiodic-order",
+            "context": "Standard Model Group"
           },
           {
             "source": "gauge/anomaly-cancellation",
@@ -7747,6 +7980,7 @@
         "cosmology/coupling-constants",
         "cosmology/geometric-inflation",
         "cosmology/observer-loop-viability",
+        "foundation/aperiodic-order",
         "gauge/color-force",
         "interactions/bootstrap-division-algebras",
         "particles/mass-hierarchy",
@@ -7992,6 +8226,10 @@
           },
           {
             "source": "flavor/mixing-angles",
+            "context": "Bootstrap Mechanism"
+          },
+          {
+            "source": "foundation/aperiodic-order",
             "context": "Bootstrap Mechanism"
           },
           {
@@ -8299,6 +8537,10 @@
           },
           {
             "source": "cosmology/observer-loop-viability",
+            "context": "Relational Invariants"
+          },
+          {
+            "source": "foundation/aperiodic-order",
             "context": "Relational Invariants"
           },
           {
@@ -8766,6 +9008,7 @@
       ],
       "dependedOnBy": [
         "cosmology/baryogenesis",
+        "foundation/aperiodic-order",
         "holography/hawking-radiation",
         "particles/cpt-theorem"
       ],
@@ -8963,6 +9206,10 @@
             "context": "rigorous — direct Noether argument"
           },
           {
+            "source": "foundation/aperiodic-order",
+            "context": "Coherence-Dual Pairs"
+          },
+          {
             "source": "gauge/chirality-selection",
             "context": "Definition 6.1"
           },
@@ -9045,6 +9292,7 @@
       "dependedOnBy": [
         "cosmology/geometric-inflation",
         "cosmology/observer-loop-viability",
+        "foundation/aperiodic-order",
         "interactions/three-types",
         "minimal-observer/coherence-dual-pairs",
         "spacetime/gravitational-constant"
@@ -9285,6 +9533,10 @@
           },
           {
             "source": "cosmology/observer-loop-viability",
+            "context": "Multiplicity"
+          },
+          {
+            "source": "foundation/aperiodic-order",
             "context": "Multiplicity"
           },
           {
@@ -11379,6 +11631,10 @@
             "context": "Born Rule"
           },
           {
+            "source": "foundation/aperiodic-order",
+            "context": "Born Rule"
+          },
+          {
             "source": "gauge/electromagnetism",
             "context": "Born Rule"
           },
@@ -13168,7 +13424,8 @@
         "holography/area-scaling",
         "particles/spin-statistics",
         "minimal-observer/multiplicity",
-        "interactions/bootstrap"
+        "interactions/bootstrap",
+        "foundation/aperiodic-order"
       ],
       "enablesDerivation": [],
       "dependedOnBy": [],
@@ -13551,6 +13808,10 @@
             "context": "Bootstrap"
           },
           {
+            "target": "foundation/aperiodic-order",
+            "context": "Aperiodic Order"
+          },
+          {
             "target": "minimal-observer/multiplicity",
             "context": "Multiplicity"
           },
@@ -13560,6 +13821,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "foundation/aperiodic-order",
+            "context": "Gravitational Coupling"
+          },
           {
             "source": "interactions/bootstrap",
             "context": "Gravitational Coupling"
@@ -19842,6 +20107,111 @@
       "fullRef": "flavor/mixing-angles:Proposition 5.1"
     },
     {
+      "derivationId": "foundation/aperiodic-order",
+      "type": "Theorem",
+      "id": "1.1",
+      "name": "Forced aperiodicity",
+      "fullRef": "foundation/aperiodic-order:Theorem 1.1"
+    },
+    {
+      "derivationId": "foundation/aperiodic-order",
+      "type": "Theorem",
+      "id": "2.1",
+      "name": "Substitution matrix",
+      "fullRef": "foundation/aperiodic-order:Theorem 2.1"
+    },
+    {
+      "derivationId": "foundation/aperiodic-order",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Constitutive universality decomposition",
+      "fullRef": "foundation/aperiodic-order:Proposition 3.1"
+    },
+    {
+      "derivationId": "foundation/aperiodic-order",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Scale-independent packing coefficient",
+      "fullRef": "foundation/aperiodic-order:Proposition 4.1"
+    },
+    {
+      "derivationId": "foundation/aperiodic-order",
+      "type": "Proposition",
+      "id": "1.1",
+      "name": "Periodicity collapses individuation",
+      "fullRef": "foundation/aperiodic-order:Proposition 1.1"
+    },
+    {
+      "derivationId": "foundation/aperiodic-order",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "Disorder breaks constitutive universality and the no-boundary condition",
+      "fullRef": "foundation/aperiodic-order:Proposition 2.1"
+    },
+    {
+      "derivationId": "foundation/aperiodic-order",
+      "type": "Theorem",
+      "id": "1.1",
+      "name": "Forced aperiodicity",
+      "fullRef": "foundation/aperiodic-order:Theorem 1.1"
+    },
+    {
+      "derivationId": "foundation/aperiodic-order",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Bootstrap as substitution",
+      "fullRef": "foundation/aperiodic-order:Proposition 4.1"
+    },
+    {
+      "derivationId": "foundation/aperiodic-order",
+      "type": "Proposition",
+      "id": "4.2",
+      "name": "Two tile types",
+      "fullRef": "foundation/aperiodic-order:Proposition 4.2"
+    },
+    {
+      "derivationId": "foundation/aperiodic-order",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "Primitivity from bootstrap closure",
+      "fullRef": "foundation/aperiodic-order:Proposition 5.1"
+    },
+    {
+      "derivationId": "foundation/aperiodic-order",
+      "type": "Theorem",
+      "id": "5.2",
+      "name": "Pisot eigenvalue required",
+      "fullRef": "foundation/aperiodic-order:Theorem 5.2"
+    },
+    {
+      "derivationId": "foundation/aperiodic-order",
+      "type": "Theorem",
+      "id": "2.1",
+      "name": "Metallic mean parameter space",
+      "fullRef": "foundation/aperiodic-order:Theorem 2.1"
+    },
+    {
+      "derivationId": "foundation/aperiodic-order",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "CUP decomposition",
+      "fullRef": "foundation/aperiodic-order:Proposition 3.1"
+    },
+    {
+      "derivationId": "foundation/aperiodic-order",
+      "type": "Corollary",
+      "id": "3.2",
+      "name": "Solomyak guarantees half of CUP",
+      "fullRef": "foundation/aperiodic-order:Corollary 3.2"
+    },
+    {
+      "derivationId": "foundation/aperiodic-order",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Scale-independent packing coefficient",
+      "fullRef": "foundation/aperiodic-order:Proposition 4.1"
+    },
+    {
       "derivationId": "foundation/coherence-lagrangian",
       "type": "Definition",
       "id": "1.1.",
@@ -25808,6 +26178,41 @@
       "description": "The observation theta12CKM + theta12PMNS pi/4 may be accidental or may reflect a deeper geometric relationship between the quark and lepton sectors. The A5 framework should clarify this."
     },
     {
+      "derivationId": "foundation/aperiodic-order",
+      "derivationStatus": "draft",
+      "number": 1,
+      "title": "Formal C5 non-degeneracy",
+      "description": "Define \"informationally degenerate\" precisely — e.g., as vanishing conditional mutual information I(C5x ; C5y mid lattice) = 0 for all pairs of C5 instances in a periodic network. This would make Prop"
+    },
+    {
+      "derivationId": "foundation/aperiodic-order",
+      "derivationStatus": "draft",
+      "number": 2,
+      "title": "Trichotomy proof",
+      "description": "Prove that periodic, disordered, and aperiodic-with-matching-rules exhaust all configurations of observer networks. The natural formalization uses Delone sets (uniformly discrete + relatively dense po"
+    },
+    {
+      "derivationId": "foundation/aperiodic-order",
+      "derivationStatus": "draft",
+      "number": 3,
+      "title": "Bootstrap-substitution identification",
+      "description": "Prove that the abstract bootstrap equation U cong R(U,U) admits a geometric realization as a substitution tiling in Rd. This requires showing that the recursive structure of observer composition maps "
+    },
+    {
+      "derivationId": "foundation/aperiodic-order",
+      "derivationStatus": "draft",
+      "number": 4,
+      "title": "Metallic mean selection",
+      "description": "Determine which n is selected by the multi-scale self-consistency condition ([Gravitational Coupling](/derivations/spacetime/gravitational-constant), Theorem 12.6). The golden mean (n = 1) is the simp"
+    },
+    {
+      "derivationId": "foundation/aperiodic-order",
+      "derivationStatus": "draft",
+      "number": 5,
+      "title": "Net entropy $s_{\\text{net}}(\\beta_n)$",
+      "description": "Derive the mutual information cost function from the axioms rather than assuming a Gaussian profile. This would fix alpha(betan) numerically. <!-- References --> [Solomyak, 1997]: /references#solomyak"
+    },
+    {
       "derivationId": "foundation/coherence-lagrangian",
       "derivationStatus": "rigorous",
       "number": 1,
@@ -26963,6 +27368,12 @@
         "currentStatus": "draft",
         "gapCount": 4,
         "formalObjectCount": 8
+      },
+      {
+        "id": "foundation/aperiodic-order",
+        "currentStatus": "draft",
+        "gapCount": 5,
+        "formalObjectCount": 15
       }
     ],
     "blocked": []

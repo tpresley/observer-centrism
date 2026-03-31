@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-03-31T09:43:30.918Z",
-    "totalReferences": 95,
-    "totalCitations": 108,
-    "citingFiles": 45,
+    "generatedAt": "2026-03-31T14:16:41.433Z",
+    "totalReferences": 96,
+    "totalCitations": 109,
+    "citingFiles": 46,
     "generator": "scripts/extract-references.mjs"
   },
   "categoryNames": {
@@ -39,7 +39,7 @@
     },
     "quantum-information": {
       "name": "Quantum Information",
-      "count": 12
+      "count": 13
     },
     "field-theory": {
       "name": "Field Theory",
@@ -475,6 +475,21 @@
         {
           "derivationId": "axioms/coherence-operational",
           "title": "Coherence as Physical Primitive"
+        }
+      ],
+      "category": "quantum-information"
+    },
+    {
+      "id": "solomyak-1997",
+      "authors": "Solomyak",
+      "year": 1997,
+      "citedAs": [
+        "Solomyak, 1997"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "foundation/aperiodic-order",
+          "title": "Aperiodic Order of the Observer Network"
         }
       ],
       "category": "quantum-information"

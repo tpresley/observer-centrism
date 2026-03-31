@@ -1,7 +1,7 @@
 ---
 title: "Gravitational Coupling from Coherence Geometry"
 status: "provisional"
-dependsOn: ["spacetime/gravity", "spacetime/einstein-equations", "thermodynamics/action-planck", "thermodynamics-ext/fisher-metric", "foundation/coherence-lagrangian", "holography/area-scaling", "particles/spin-statistics", "minimal-observer/multiplicity", "interactions/bootstrap"]
+dependsOn: ["spacetime/gravity", "spacetime/einstein-equations", "thermodynamics/action-planck", "thermodynamics-ext/fisher-metric", "foundation/coherence-lagrangian", "holography/area-scaling", "particles/spin-statistics", "minimal-observer/multiplicity", "interactions/bootstrap", "foundation/aperiodic-order"]
 enablesDerivation: []
 tags: ["geometry"]
 summary: "The gravitational coupling G is constrained by the coherence Lagrangian structure: the Fisher metric fixes the matter sector at ℏ, Lovelock fixes the gravity sector's form. The spinor/tetrad route is ruled out. The constitutive emergence argument reframes the circularity G ↔ ℓ_min as a fixed-point equation at pre-geometric t₀. Aperiodic order of the observer network is forced (periodicity trivializes C5; disorder violates constitutive universality), constraining the substitution matrix to the 2×2 Pisot metallic mean family. Multi-scale self-consistency — requiring the same G at every bootstrap level — provides a potentially non-degenerate constraint that the single-scale analysis lacks"
@@ -411,7 +411,7 @@ $$\ell_{\min} = \sup\left\{\ell > 0 \;\Big|\; \text{a self-consistent boundaryle
 
 ### Step 12: Aperiodic Order and Multi-Scale Self-Consistency
 
-The constitutive emergence argument (Step 11) establishes that $\ell_{\min}$ is the fixed point of a self-consistency map. This step explores a structural constraint on the observer network — forced aperiodicity — that introduces the bootstrap hierarchy into the fixed-point equation and potentially breaks the single-scale circularity.
+The constitutive emergence argument (Step 11) establishes that $\ell_{\min}$ is the fixed point of a self-consistency map. This step summarizes the structural constraint of forced aperiodicity ([Aperiodic Order](/derivations/foundation/aperiodic-order)) and develops its consequences for the fixed-point equation.
 
 **Proposition 12.1 (Periodicity trivializes C5).** *A periodic (crystalline) observer network — one with translational symmetry — makes C5 (strict subadditivity) informationally degenerate: every local C5 instance yields the same constraint, and all observers occupy identical structural positions, violating the individuation requirement of Axiom 2.*
 

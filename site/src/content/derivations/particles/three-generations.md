@@ -117,6 +117,8 @@ $$\frac{m_3}{m_2} \sim e^{(\alpha_2 - \alpha_3)/g^2}, \qquad \frac{m_2}{m_1} \si
 
 *For angular separations of order $\sim 1$ radian and $g^2 \sim 0.1$, these ratios are $\sim e^{10} \sim 10^4$, consistent with the observed ratios $m_t/m_c \sim 130$ and $m_c/m_u \sim 600$.*
 
+**Remark (Intra-type vs. inter-type hierarchy).** The formula $y_k \sim e^{-\alpha_k/g^2}$ with a single set of three angles $\{\alpha_k\}$ determines the mass ratios *within* a given fermion type (e.g., the up-quark hierarchy $m_u : m_c : m_t$). However, different fermion types (up-quarks, down-quarks, charged leptons) have empirically incompatible geometric ratios: the dimensionless ratio $R = \ln(m_3/m_2)/\ln(m_2/m_1)$ equals $R_{\text{up}} \approx 0.91$, $R_{\text{down}} \approx 1.31$, $R_{\text{lepton}} \approx 0.53$. Since $R$ depends only on the angles (not on $g$ or the normalization), the three types *cannot* share the same three angles. The inter-type mass splittings (why $m_t \neq m_b \neq m_\tau$ within each generation) require the CKM and PMNS rotations (Proposition 5.2), which relate the distinct winding-axis triples $\{\hat{n}_k^{(u)}\}$, $\{\hat{n}_k^{(d)}\}$, $\{\hat{n}_k^{(\ell)}\}$ for each fermion type.
+
 ### Step 5: Generation Mixing
 
 **Definition 5.1.** The **generation mixing matrix** describes the relationship between the mass eigenstates (aligned with the Yukawa couplings) and the weak-interaction eigenstates (aligned with the $SU(2)_L$ gauge interaction).
@@ -174,8 +176,9 @@ $$V_{\text{CKM}} = U_{\text{up}}^\dagger \cdot U_{\text{down}}, \qquad V_{\text{
 - The specific mixing angles (CKM, PMNS) require the precise winding geometry, which is not computed.
 - The neutrino mixing pattern (large angles in PMNS vs. small angles in CKM) is not yet explained.
 - The angular separations $\alpha_k$ between generation axes and the electroweak axis are not derived — they would determine the specific Yukawa couplings.
+- Numerical testing confirms that the three fermion types have incompatible geometric ratios ($R_{\text{up}} \approx 0.91$, $R_{\text{down}} \approx 1.31$, $R_{\text{lepton}} \approx 0.53$), so they cannot share the same winding-axis triple. The inter-type splittings require the CKM/PMNS rotations as additional geometric input.
 
-**Assessment:** The central prediction — exactly three fermion generations from $\dim(\mathfrak{so}(3)) = 3$ — is rigorous given S1 (generation–axis correspondence). The prediction is correct and experimentally confirmed. The mass hierarchy and mixing structure follow qualitatively from the tunneling mechanism but remain quantitatively empirical.
+**Assessment:** The central prediction — exactly three fermion generations from $\dim(\mathfrak{so}(3)) = 3$ — is rigorous given S1 (generation–axis correspondence). The prediction is correct and experimentally confirmed. The mass hierarchy and mixing structure follow qualitatively from the tunneling mechanism but remain quantitatively empirical. The parameter reduction from Yukawa couplings to geometric angles is real but less dramatic than originally stated: the 9 Yukawa couplings require $\hat{n}_{\text{EW}}$ (2 DOF) + CKM/PMNS rotations (7–9 DOF) + effective coupling ratios, not 2 parameters alone.
 
 ## Open Gaps
 
