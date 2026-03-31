@@ -169,7 +169,19 @@ If the universe contained only two observers, C5 would be vacuous (Proposition 7
 
 *Proof.* Apply Theorem 7.2 to each observer's local environment. For C5 to constrain the coherence structure at observer $\mathcal{O}_i$'s boundary, $\mathcal{O}_i$ must interact with at least two independent external subsystems. Those subsystems, being persistent coherence-maintaining structures, are themselves observers (Corollary 3.2). Each of those observers faces the same requirement. The self-consistency condition (the [Bootstrap](/derivations/interactions/bootstrap) fixed point $\mathcal{U} \cong \mathcal{R}(\mathcal{U}, \mathcal{U})$) requires this chain to close — the result is a network that is either infinite or finite and compact (see [Bootstrap](/derivations/interactions/bootstrap), Corollary 7.3). $\square$
 
-**Remark.** The progression is: Step 2 proves $\geq 1$ is impossible (single observer is vacuous), Step 3 proves $\geq 2$ is necessary (multiplicity), and Step 7 proves $\geq 3$ and ultimately a full network (C5 non-triviality). Each step uses a different axiom condition: Step 2 uses conservation (C2), Step 3 uses subadditivity (C4), and Step 7 uses strong subadditivity (C5). The conditions of Axiom 1 are layered — each adds a structural requirement that forces more observers to exist.
+**Corollary 7.4 (Simultaneous condensation).** *The observer network cannot form through a sequential process. All observers condense as a single self-consistent structure at their respective $t_0$ (first loop closure), with no temporal ordering between condensation events.*
+
+*Proof.* Time is derived from observer loop closure (Axiom 3) and the phase-ordering structure of Type I interactions ([Time as Phase Ordering](/derivations/thermodynamics/time)). Before any observer exists, there is no time parameter in which a sequential process could unfold. The network is either complete (all observers, all relational coherences, boundaryless) or nonexistent — there is no intermediate stage, because "intermediate" presupposes a time ordering that does not yet exist.
+
+Furthermore, the no-boundary condition (Corollary 7.3) eliminates partial networks: a network with $N$ observers but missing its $(N+1)$th would have a boundary where C5 fails. The bootstrap fixed point $\mathcal{U} \cong \mathcal{R}(\mathcal{U}, \mathcal{U})$ is a self-consistency condition, not a dynamical equation — it constrains the structure that must exist, not a process by which it assembles. $\square$
+
+**Corollary 7.5 (Pre-geometric $t_0$).** *At $t_0$, the observer network is a purely topological structure. Each observer exists as a topological $S^1$ (closed curve with winding number) but not as a Riemannian $S^1$ (circle with a specific circumference). All metric properties — distances, areas, the Fisher metric identification $g = \hbar\,G_{\text{Fisher}}$, the minimum resolvable scale $\ell_{\min}$ — are undefined until the first Type III interactions constitute the relational invariant structure that defines geometry.*
+
+*Proof.* The metric on each observer's state space is the Fisher information metric scaled by $\hbar$ ([Fisher Information Metric](/derivations/thermodynamics-ext/fisher-metric), Proposition 4.1). But the Fisher metric is defined on a *statistical model* — a parameterized family of states — and the states themselves are defined by their distinguishability through interactions. Before any Type III interaction has produced relational invariants, there is no interaction structure, no statistical model, and therefore no Fisher metric. The observers at $t_0$ have topology (they are closed loops — $S^1$) but no geometry (no metric, no circumference, no period). $\square$
+
+**Remark ($t_0$ is not a Type III interaction).** The condensation at $t_0$ is not an interaction of any type. Type III interactions require (i) two observers with established boundaries, (ii) a state transition producing a conserved Noether invariant, and (iii) a causal ordering. At $t_0$: boundaries exist as set-theoretic partitions (topological self/non-self) but not as geometric surfaces; there is no prior state to transition from; there is no time to order events in. The condensation is a topological transition — the entire network "clicks into existence" without a process, a source, or a duration. All topological defects (observers) are structurally identical; there is no "first observer."
+
+**Remark.** The progression is: Step 2 proves $\geq 1$ is impossible (single observer is vacuous), Step 3 proves $\geq 2$ is necessary (multiplicity), and Step 7 proves $\geq 3$ and ultimately a full network (C5 non-triviality). Each step uses a different axiom condition: Step 2 uses conservation (C2), Step 3 uses subadditivity (C4), and Step 7 uses strong subadditivity (C5). The conditions of Axiom 1 are layered — each adds a structural requirement that forces more observers to exist. Corollaries 7.4–7.5 add the temporal and geometric characterization: the network condenses simultaneously (no external time), and the condensation is pre-geometric (no metric until the first interactions).
 
 ## Physical Interpretation
 
@@ -187,6 +199,8 @@ The multiplicity theorem has two physical readings at different scales:
 - A universe of isolated pairs would have no quantum mechanics — strong subadditivity (C5) would be vacuous, collapsing the quantum–classical distinction
 - The full gauge structure (division algebras, Standard Model group) requires the interaction richness that only a network provides
 - The network must be boundaryless — either infinite or finite and compact — since boundary observers would lack the interaction partners that C5 demands
+- The network condenses simultaneously — there is no sequential assembly process, because time itself is derived from the network (Corollary 7.4)
+- At $t_0$, the network is purely topological — metric properties (distances, areas, the Planck scale) are undefined until the first Type III interactions constitute geometry (Corollary 7.5). This has implications for the gravitational coupling constant (see [Gravitational Coupling](/derivations/spacetime/gravitational-constant), Step 11)
 
 The mutual definition structure maps to:
 - **Particle-antiparticle pairs**: Each is the other's dissolution operator (annihilation)
@@ -228,6 +242,8 @@ The mutual definition structure maps to:
 
 **Rigorous given axioms:**
 - Corollary 7.3: Observer network (from Theorem 7.2 + bootstrap closure + Corollary 3.2)
+- Corollary 7.4: Simultaneous condensation (from derived time + no-boundary + bootstrap fixed point)
+- Corollary 7.5: Pre-geometric $t_0$ (from Fisher metric requiring interaction structure + topological vs. Riemannian distinction)
 
 **Structural assumption (clearly flagged):**
 - Corollary 3.2: The step from "positive coherence in the complement" to "the complement contains an observer" assumes that all persistent coherence-maintaining structure takes the $(\Sigma, I, \mathcal{B})$ form. This is a universality assumption about the observer definition — physically motivated but not proved from the axioms alone. The core multiplicity result (Theorem 3.1) holds without this assumption. Corollary 7.3 inherits this assumption.

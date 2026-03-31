@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-03-31T06:59:42.058Z",
+    "generatedAt": "2026-03-31T07:42:53.200Z",
     "derivationCount": 65,
     "predictionCount": 11,
     "gaPageCount": 12,
@@ -16,7 +16,7 @@
     "derivationCount": 65,
     "predictionCount": 11,
     "edgeCount": 158,
-    "formalObjectCount": 991,
+    "formalObjectCount": 993,
     "openGapCount": 195,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
@@ -7949,6 +7949,10 @@
             "context": "Holographic Entropy Bound"
           },
           {
+            "target": "spacetime/gravitational-constant",
+            "context": "Gravitational Coupling"
+          },
+          {
             "target": "cosmology/observer-loop-viability",
             "context": "Step 7, Gap 6"
           }
@@ -9181,6 +9185,18 @@
           "statementPreview": "The bootstrap propagates the three-subsystem requirement into a full network. If H contains observers O1, O2, O3, eac..."
         },
         {
+          "type": "Corollary",
+          "id": "7.4",
+          "name": "Simultaneous condensation",
+          "statementPreview": "The observer network cannot form through a sequential process. All observers condense as a single self-consistent str..."
+        },
+        {
+          "type": "Corollary",
+          "id": "7.5",
+          "name": "Pre-geometric $t_0$",
+          "statementPreview": "At t0, the observer network is a purely topological structure. Each observer exists as a topological S1 (closed curve..."
+        },
+        {
           "type": "Theorem",
           "id": "7.1.",
           "name": "",
@@ -9244,6 +9260,18 @@
           {
             "target": "interactions/bootstrap",
             "context": "Bootstrap"
+          },
+          {
+            "target": "thermodynamics/time",
+            "context": "Time as Phase Ordering"
+          },
+          {
+            "target": "thermodynamics-ext/fisher-metric",
+            "context": "Fisher Information Metric"
+          },
+          {
+            "target": "spacetime/gravitational-constant",
+            "context": "Gravitational Coupling"
           }
         ],
         "incoming": [
@@ -13460,7 +13488,16 @@
             "context": "Bootstrap"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "interactions/bootstrap",
+            "context": "Gravitational Coupling"
+          },
+          {
+            "source": "minimal-observer/multiplicity",
+            "context": "Gravitational Coupling"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -15282,6 +15319,10 @@
             "context": "Fisher Information Metric"
           },
           {
+            "source": "minimal-observer/multiplicity",
+            "context": "Fisher Information Metric"
+          },
+          {
             "source": "spacetime/gravitational-constant",
             "context": "Fisher Information Metric"
           },
@@ -16547,6 +16588,10 @@
           {
             "source": "holography/causal-set-statistics",
             "context": "Theorem 3.1"
+          },
+          {
+            "source": "minimal-observer/multiplicity",
+            "context": "Time as Phase Ordering"
           },
           {
             "source": "quantum/born-rule",
@@ -22104,6 +22149,20 @@
       "id": "7.3",
       "name": "The observer network",
       "fullRef": "minimal-observer/multiplicity:Corollary 7.3"
+    },
+    {
+      "derivationId": "minimal-observer/multiplicity",
+      "type": "Corollary",
+      "id": "7.4",
+      "name": "Simultaneous condensation",
+      "fullRef": "minimal-observer/multiplicity:Corollary 7.4"
+    },
+    {
+      "derivationId": "minimal-observer/multiplicity",
+      "type": "Corollary",
+      "id": "7.5",
+      "name": "Pre-geometric $t_0$",
+      "fullRef": "minimal-observer/multiplicity:Corollary 7.5"
     },
     {
       "derivationId": "minimal-observer/multiplicity",

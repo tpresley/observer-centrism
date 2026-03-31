@@ -57,4 +57,14 @@ This derivation works, but it relies on the entire apparatus of quantum field th
 
 > **Work in progress:** The connection from abstract coherence-dual pairs to the specific particles of the Standard Model passes through the full derivation chain — interactions, geometry, quantum mechanics, and the particle spectrum. The minimal observer is the seed; the forest grows through the mechanisms described in the next several chapters.
 
-With observers forced to exist in pairs, the natural question becomes: how do they interact?
+## Not Pairs — A Network
+
+Pairs are necessary but not sufficient. The axioms include a condition called strong subadditivity (C5) — a constraint on how coherence distributes across three or more subsystems. For a universe containing only two observers, C5 is automatically satisfied and constrains nothing. It becomes vacuous. And the derivation chain needs C5 to be non-trivial: without it, the framework cannot distinguish quantum mechanics from classical probability theory.
+
+So the universe must contain at least three observers. But each of those three needs its own interaction partners for C5 to constrain its local structure. The requirement propagates: three becomes a network. The network must be boundaryless — either infinite or finite and compact — because any boundary would leave edge observers without the partners that C5 demands.
+
+One more consequence, perhaps the deepest: this network cannot assemble piece by piece. Time is derived from observer interactions — it does not exist before observers do. There is no temporal stage on which a sequential construction could play out. The entire boundaryless network must condense as a single self-consistent structure. All observers emerge at once, at their respective first moments, with no ordering between them.
+
+At this initial moment, the network is purely topological — observers are closed curves with winding numbers but no metric properties. Distances, areas, the Planck scale — all undefined. Geometry is constituted by the first interactions between observers, not presupposed. The universe does not form *in* space and time. Space and time form *from* the universe's first relational acts.
+
+With observers forced to exist as a network, the natural question becomes: how do they interact?
