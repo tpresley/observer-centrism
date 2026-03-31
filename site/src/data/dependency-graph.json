@@ -44,6 +44,7 @@
     { "id": "gauge/chirality-selection", "title": "Chirality Selection", "group": "gauge", "status": "rigorous" },
     { "id": "gauge/electroweak-breaking", "title": "Electroweak Symmetry Breaking", "group": "gauge", "status": "rigorous" },
     { "id": "foundation/coherence-lagrangian", "title": "Coherence Lagrangian", "group": "foundation", "status": "rigorous" },
+    { "id": "foundation/aperiodic-order", "title": "Aperiodic Order of Observer Network", "group": "foundation", "status": "draft" },
     { "id": "interactions/bootstrap-division-algebras", "title": "Bootstrap → Division Algebras", "group": "dynamics", "status": "rigorous" },
     { "id": "quantum/entanglement", "title": "Entanglement from Relational Invariants", "group": "quantum", "status": "rigorous" },
     { "id": "gauge/strong-cp", "title": "Strong CP Conservation", "group": "gauge", "status": "rigorous" },
@@ -224,6 +225,11 @@
     { "from": "holography/area-scaling", "to": "spacetime/gravitational-constant" },
     { "from": "particles/spin-statistics", "to": "spacetime/gravitational-constant" },
     { "from": "minimal-observer/multiplicity", "to": "spacetime/gravitational-constant" },
-    { "from": "interactions/bootstrap", "to": "spacetime/gravitational-constant" }
+    { "from": "interactions/bootstrap", "to": "spacetime/gravitational-constant" },
+    { "from": "minimal-observer/multiplicity", "to": "foundation/aperiodic-order" },
+    { "from": "interactions/bootstrap", "to": "foundation/aperiodic-order" },
+    { "from": "axioms/coherence-conservation", "to": "foundation/aperiodic-order" },
+    { "from": "minimal-observer/coherence-dual-pairs", "to": "foundation/aperiodic-order" },
+    { "from": "foundation/aperiodic-order", "to": "spacetime/gravitational-constant" }
   ]
 }
