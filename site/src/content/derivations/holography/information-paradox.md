@@ -2,7 +2,7 @@
 title: "Black Hole Information Paradox Resolution"
 status: "rigorous"
 dependsOn: ["holography/hawking-radiation", "axioms/coherence-conservation"]
-enablesDerivation: []
+enablesDerivation: ["holography/scrambling"]
 tags: ["holography"]
 summary: "Information is globally conserved (coherence conservation) but locally inaccessible — the paradox dissolves when entropy is recognized as observer-indexed"
 rigorLevel: "formal"

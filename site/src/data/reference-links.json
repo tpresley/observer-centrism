@@ -407,5 +407,9 @@
   "groisman-2005": {
     "title": "Quantum, Classical, and Total Amount of Correlations in a Quantum State",
     "url": "https://doi.org/10.1103/PhysRevA.72.032317"
+  },
+  "lagarias-1999": {
+    "title": "Geometric Models for Quasicrystals I. Delone Sets of Finite Type",
+    "url": "https://doi.org/10.1007/s004540010052"
   }
 }

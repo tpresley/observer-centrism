@@ -2,7 +2,7 @@
 title: "Renormalization Group from Coherence"
 status: "rigorous"
 dependsOn: ["thermodynamics/entropy", "thermodynamics/action-planck"]
-enablesDerivation: ["cosmology/coupling-constants"]
+enablesDerivation: ["cosmology/coupling-constants", "thermodynamics-ext/non-ergodicity"]
 tags: ["thermo-ext"]
 summary: "The renormalization group is coherence redistribution across scales: integrating out high-frequency coherence modes transfers coherence to effective low-frequency couplings, with the bootstrap hierarchy providing the fixed-point structure and Zamolodchikov's c-theorem emerging from the second law"
 rigorLevel: "formal"

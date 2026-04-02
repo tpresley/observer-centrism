@@ -2,7 +2,7 @@
 title: "Observer Loop Viability Bounds"
 status: "rigorous"
 dependsOn: ["spacetime/singularity-resolution", "holography/area-scaling", "minimal-observer/structure", "axioms/loop-closure", "minimal-observer/multiplicity", "thermodynamics/entropy", "thermodynamics/time", "interactions/bootstrap", "interactions/relational-invariants", "interactions/three-types", "thermodynamics-ext/renormalization", "holography/er-epr"]
-enablesDerivation: []
+enablesDerivation: ["cosmology/cosmological-arrow"]
 tags: ["cosmology", "quantum-gravity"]
 summary: "The three axioms constrain which spacetimes can host observer networks. The Planck-scale upper bound (Λ < 3/ℓ_P²) follows from geometric viability. The sign prediction (Λ ≥ 0) follows from coherence conservation: a Λ < 0 bounce destroys all observer structures via divergent effective pressure, leaving coherence with no valid carrier — violating Axiom 1."
 rigorLevel: "formal"

@@ -2,7 +2,7 @@
 title: "Black Hole Entropy"
 status: "rigorous"
 dependsOn: ["holography/area-scaling"]
-enablesDerivation: ["holography/hawking-radiation"]
+enablesDerivation: ["holography/hawking-radiation", "holography/scrambling"]
 tags: ["holography"]
 summary: "Bekenstein-Hawking formula S = A/4ℓ²_P as minimal loop counting on the horizon — each Planck cell supports one bit of inaccessible relational invariant"
 rigorLevel: "formal"

@@ -81,12 +81,25 @@ const mysteries: Mystery[] = [
   },
   {
     title: 'The Arrow of Time',
-    question: 'Why does time flow in one direction when the fundamental laws are time-symmetric?',
-    answer: 'Time is the partial ordering on the interaction graph induced by directed phase transfer. Coherence transfer has strictly positive cost, making the interaction graph a directed acyclic graph. The arrow of time is not a boundary condition but a structural consequence \u2014 the second law follows from bounded observation.',
+    question: 'Why does time flow in one direction when the fundamental laws are time-symmetric? Why was the early universe in such a special low-entropy state?',
+    answer: 'Time is the partial ordering on the interaction graph induced by directed phase transfer. Coherence transfer has strictly positive cost, making the interaction graph a directed acyclic graph. The local arrow is structural, not statistical. The cosmological arrow \u2014 the alignment of entropy increase with expansion \u2014 follows from bootstrap hierarchy elaboration: the accessible phase space grows as new hierarchy levels become available during cooling. The \u201Clow-entropy initial condition\u201D (Penrose\u2019s past hypothesis) requires no special explanation because the early universe was not improbable \u2014 it was a typical state of the small sector available at that time. The apparent fine-tuning of exp(\u221210\u00B9\u00B2\u2070) is an artifact of comparing the initial state to the wrong (full, never-accessible) phase space.',
     status: 'resolved',
     derivations: [
       { id: 'thermodynamics/time', title: 'Time as Phase Ordering' },
       { id: 'thermodynamics/entropy', title: 'Entropy' },
+      { id: 'cosmology/cosmological-arrow', title: 'Cosmological Arrow' },
+    ],
+  },
+  {
+    title: 'Why Does Statistical Mechanics Work?',
+    question: 'The ergodic hypothesis \u2014 that time averages equal ensemble averages \u2014 has never been rigorously proved for realistic systems. Why does it work so well in practice?',
+    answer: 'Generic systems are fundamentally non-ergodic. Phase space is partitioned by three independent mechanisms: bootstrap hierarchy barriers (topological, not thermal), aperiodic matching rules (the observer network is forced into quasicrystalline order), and coherence correlations (subadditivity constrains joint states). Statistical mechanics succeeds because a weaker property \u2014 conditional ergodicity \u2014 holds within each sector. The microcanonical ensemble is implicitly conditioned on these constraints. The eigenstate thermalization hypothesis holds within a single hierarchy level but fails across levels, explaining many-body localization as a generic consequence of hierarchy barriers rather than fine-tuned disorder. When multiple hierarchy levels couple strongly, the ultrametric structure of the bootstrap tree produces glassy dynamics \u2014 the Parisi picture emerges from the axioms.',
+    status: 'resolved',
+    derivations: [
+      { id: 'thermodynamics-ext/non-ergodicity', title: 'Non-Ergodicity & Conditional Thermalization' },
+      { id: 'thermodynamics/entropy', title: 'Entropy' },
+      { id: 'foundation/aperiodic-order', title: 'Aperiodic Order' },
+      { id: 'interactions/bootstrap', title: 'Bootstrap Hierarchy' },
     ],
   },
   {
@@ -210,13 +223,14 @@ const mysteries: Mystery[] = [
   {
     title: 'The Black Hole Information Paradox',
     question: 'Is information destroyed when matter falls into a black hole and it evaporates?',
-    answer: 'Information (coherence) is globally conserved but locally inaccessible. The paradox dissolves when entropy is recognized as observer-indexed. Hawking radiation arises from coherence-dual pair production at the horizon, and the ER=EPR duality is exact \u2014 relational invariants underlie both quantum correlations and spacetime geometry.',
+    answer: 'Information (coherence) is globally conserved but locally inaccessible. The paradox dissolves when entropy is recognized as observer-indexed. Hawking radiation arises from coherence-dual pair production at the horizon, and the ER=EPR duality is exact \u2014 relational invariants underlie both quantum correlations and spacetime geometry. Black holes scramble information at the maximum rate within the coherence-saturated sector, but are non-ergodic in the full Hilbert space \u2014 explaining both fast scrambling and slow evaporation.',
     status: 'resolved',
     derivations: [
       { id: 'holography/information-paradox', title: 'Information Paradox' },
       { id: 'holography/er-epr', title: 'ER=EPR Formalization' },
       { id: 'holography/hawking-radiation', title: 'Hawking Radiation' },
       { id: 'holography/black-hole-entropy', title: 'Black Hole Entropy' },
+      { id: 'holography/scrambling', title: 'Scrambling & Non-Ergodicity' },
     ],
     prediction: { id: 'holographic-noise', title: 'Holographic Noise' },
   },
@@ -290,6 +304,18 @@ const mysteries: Mystery[] = [
     prediction: { id: 'dark-matter-granularity', title: 'Dark Matter Granularity' },
   },
   {
+    title: 'What Is Life?',
+    question: 'Why do living systems explore only a vanishing fraction of their configuration space? What distinguishes life from non-life at a fundamental level?',
+    answer: 'Living systems are physical realizations of the observer triple (\u03A3, I, B) at the biochemical hierarchy level. The observer boundary B creates a topological partition of phase space \u2014 the system is confined to the B-compatible sector as long as coherence cycling (metabolism) is active. Self-maintenance is loop closure, memory is non-ergodic sector selection by the Noether invariant I, and adaptation is expansion of the coherence domain. The C5 subadditivity requirement forces ecological networks: at least three mutually interacting observers are needed for non-trivial constraints, so no organism can exist in isolation. Death is the cessation of loop closure and exit from the B-compatible sector. This is currently a structural identification rather than a quantitative derivation.',
+    status: 'resolved',
+    derivations: [
+      { id: 'thermodynamics-ext/biological-non-ergodicity', title: 'Biological Non-Ergodicity' },
+      { id: 'thermodynamics-ext/non-ergodicity', title: 'Non-Ergodicity & Conditional Thermalization' },
+      { id: 'minimal-observer/structure', title: 'Minimal Observer Structure' },
+      { id: 'minimal-observer/multiplicity', title: 'Multiplicity' },
+    ],
+  },
+  {
     title: 'Dark Energy',
     question: 'Why is the expansion of the universe accelerating? What sets the cosmological constant\u2019s tiny value?',
     answer: 'The framework derives the existence of a cosmological constant (via Lovelock\u2019s theorem) and explains why there is no vacuum catastrophe (coherence is fundamentally finite). However, the value depends on cosmological initial conditions \u2014 boundary data the axioms do not constrain. This is the one mystery the framework honestly cannot resolve.',
@@ -322,7 +348,7 @@ const openCount = mysteries.filter(m => m.status === 'open').length
     framework survives empirical falsification &mdash; particularly through its
     <a href={`${base}/predictions/`}>quantitative predictions</a> for
     holographic noise and dark matter structure &mdash; it would provide an
-    unusually cohesive picture: not twenty-three separate answers, but one
+    unusually cohesive picture: not twenty-seven separate answers, but one
     interlocking structure where each resolution reinforces the others.
   </p>
   <p>

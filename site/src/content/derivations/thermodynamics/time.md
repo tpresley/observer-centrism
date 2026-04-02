@@ -2,7 +2,7 @@
 title: "Time as Phase Ordering"
 status: "rigorous"
 dependsOn: ["minimal-observer/structure", "interactions/three-types"]
-enablesDerivation: ["thermodynamics/entropy", "thermodynamics/action-planck", "quantum/born-rule"]
+enablesDerivation: ["thermodynamics/entropy", "thermodynamics/action-planck", "quantum/born-rule", "thermodynamics-ext/non-ergodicity", "cosmology/cosmological-arrow"]
 tags: ["dynamics"]
 summary: "Time is the partial ordering on the interaction graph induced by directed phase transfer — a DAG structure derived from positive coherence cost, not a background parameter"
 rigorLevel: "formal"

@@ -268,7 +268,7 @@
       "id": "foundation/aperiodic-order",
       "title": "Aperiodic Order of Observer Network",
       "group": "foundation",
-      "status": "draft"
+      "status": "provisional"
     },
     {
       "id": "interactions/bootstrap-division-algebras",
@@ -388,13 +388,37 @@
       "id": "cosmology/geometric-inflation",
       "title": "Geometric Inflation",
       "group": "cosmology",
-      "status": "draft"
+      "status": "provisional"
     },
     {
       "id": "spacetime/gravitational-constant",
       "title": "Gravitational Coupling",
       "group": "geometry",
       "status": "provisional"
+    },
+    {
+      "id": "thermodynamics-ext/non-ergodicity",
+      "title": "Non-Ergodicity",
+      "group": "thermo-ext",
+      "status": "draft"
+    },
+    {
+      "id": "holography/scrambling",
+      "title": "Black Hole Scrambling",
+      "group": "holography",
+      "status": "stub"
+    },
+    {
+      "id": "thermodynamics-ext/biological-non-ergodicity",
+      "title": "Biological Non-Ergodicity",
+      "group": "thermo-ext",
+      "status": "stub"
+    },
+    {
+      "id": "cosmology/cosmological-arrow",
+      "title": "Cosmological Arrow",
+      "group": "cosmology",
+      "status": "draft"
     }
   ],
   "edges": [
@@ -1049,6 +1073,82 @@
     {
       "from": "foundation/aperiodic-order",
       "to": "spacetime/gravitational-constant"
+    },
+    {
+      "from": "thermodynamics/entropy",
+      "to": "thermodynamics-ext/non-ergodicity"
+    },
+    {
+      "from": "thermodynamics/time",
+      "to": "thermodynamics-ext/non-ergodicity"
+    },
+    {
+      "from": "thermodynamics-ext/renormalization",
+      "to": "thermodynamics-ext/non-ergodicity"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "thermodynamics-ext/non-ergodicity"
+    },
+    {
+      "from": "foundation/aperiodic-order",
+      "to": "thermodynamics-ext/non-ergodicity"
+    },
+    {
+      "from": "thermodynamics-ext/non-ergodicity",
+      "to": "cosmology/cosmological-arrow"
+    },
+    {
+      "from": "thermodynamics-ext/non-ergodicity",
+      "to": "thermodynamics-ext/biological-non-ergodicity"
+    },
+    {
+      "from": "thermodynamics-ext/non-ergodicity",
+      "to": "holography/scrambling"
+    },
+    {
+      "from": "holography/black-hole-entropy",
+      "to": "holography/scrambling"
+    },
+    {
+      "from": "holography/er-epr",
+      "to": "holography/scrambling"
+    },
+    {
+      "from": "holography/information-paradox",
+      "to": "holography/scrambling"
+    },
+    {
+      "from": "thermodynamics/entropy",
+      "to": "thermodynamics-ext/biological-non-ergodicity"
+    },
+    {
+      "from": "minimal-observer/structure",
+      "to": "thermodynamics-ext/biological-non-ergodicity"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "thermodynamics-ext/biological-non-ergodicity"
+    },
+    {
+      "from": "thermodynamics/time",
+      "to": "cosmology/cosmological-arrow"
+    },
+    {
+      "from": "thermodynamics/entropy",
+      "to": "cosmology/cosmological-arrow"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "cosmology/cosmological-arrow"
+    },
+    {
+      "from": "cosmology/observer-loop-viability",
+      "to": "cosmology/cosmological-arrow"
+    },
+    {
+      "from": "cosmology/geometric-inflation",
+      "to": "cosmology/cosmological-arrow"
     }
   ]
 }

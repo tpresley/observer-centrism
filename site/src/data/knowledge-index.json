@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-03-31T15:03:58.724Z",
-    "derivationCount": 66,
+    "generatedAt": "2026-04-02T01:05:22.866Z",
+    "derivationCount": 70,
     "predictionCount": 11,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -9,16 +9,17 @@
   "stats": {
     "byStatus": {
       "rigorous": 61,
-      "non-viable": 1,
       "draft": 2,
-      "provisional": 2
+      "non-viable": 1,
+      "provisional": 4,
+      "stub": 2
     },
-    "derivationCount": 66,
+    "derivationCount": 70,
     "predictionCount": 11,
-    "edgeCount": 163,
-    "formalObjectCount": 1015,
-    "openGapCount": 203,
-    "upgradeEligibleCount": 2,
+    "edgeCount": 182,
+    "formalObjectCount": 1060,
+    "openGapCount": 221,
+    "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
   },
@@ -895,6 +896,10 @@
             "context": "Loop Closure"
           },
           {
+            "source": "holography/scrambling",
+            "context": "Loop Closure"
+          },
+          {
             "source": "interactions/bootstrap",
             "context": "Loop Closure"
           },
@@ -953,6 +958,10 @@
           {
             "source": "spacetime/speed-of-light",
             "context": "Theorem 9.1"
+          },
+          {
+            "source": "thermodynamics-ext/biological-non-ergodicity",
+            "context": "Loop Closure"
           },
           {
             "source": "thermodynamics-ext/fisher-metric",
@@ -1239,6 +1248,10 @@
             "context": "N2"
           },
           {
+            "source": "thermodynamics-ext/biological-non-ergodicity",
+            "context": "Observer Definition"
+          },
+          {
             "source": "thermodynamics-ext/fisher-metric",
             "context": "Observer Definition"
           },
@@ -1499,6 +1512,174 @@
       },
       "upgradeEligible": false,
       "upgradeBlockers": []
+    },
+    "cosmology/cosmological-arrow": {
+      "id": "cosmology/cosmological-arrow",
+      "filePath": "site/src/content/derivations/cosmology/cosmological-arrow.md",
+      "title": "Cosmological Arrow of Time",
+      "status": "draft",
+      "rigorLevel": "semi-formal",
+      "group": "cosmology",
+      "tags": [
+        "cosmology"
+      ],
+      "summary": "The cosmological arrow (expansion correlating with entropy increase) is not explained by an improbable initial condition but by the non-ergodic elaboration of the bootstrap hierarchy — the accessible phase space grows as new hierarchy levels become available, making the 'low-entropy early universe' natural rather than fine-tuned",
+      "lastUpdated": "2026-04-01",
+      "dependsOn": [
+        "thermodynamics/time",
+        "thermodynamics/entropy",
+        "thermodynamics-ext/non-ergodicity",
+        "interactions/bootstrap",
+        "cosmology/observer-loop-viability",
+        "cosmology/geometric-inflation"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The Phase-Space Growth Mechanism"
+        },
+        {
+          "number": 2,
+          "title": "Entropy Growth from Phase-Space Growth"
+        },
+        {
+          "number": 3,
+          "title": "The Bootstrap Freeze-Out Sequence"
+        },
+        {
+          "number": 4,
+          "title": "Expansion and Hierarchy Elaboration Are Coupled"
+        },
+        {
+          "number": 5,
+          "title": "Dissolution of the Fine-Tuning Problem"
+        },
+        {
+          "number": 6,
+          "title": "Relationship to the Structural Arrow"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1.",
+          "name": "",
+          "statementPreview": "The **accessible phase space** at cosmic time tau is:"
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Phase-space growth",
+          "statementPreview": "vol(Gammaacc(tau)) is monotonically non-decreasing in tau. The growth has three independent contributions:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "2.1",
+          "name": "Cosmological entropy growth",
+          "statementPreview": "The Boltzmann entropy SB(tau) = lnvol(Gammaacc(tau)) is monotonically non-decreasing. This is compatible with but dis..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Hierarchy elaboration timeline",
+          "statementPreview": "The bootstrap hierarchy elaborates in a sequence determined by the binding energies at each level:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Expansion enables elaboration",
+          "statementPreview": "Cosmic expansion is necessary for bootstrap hierarchy elaboration. Without expansion, the universe remains at thermal..."
+        },
+        {
+          "type": "Corollary",
+          "id": "4.2",
+          "name": "Arrow alignment",
+          "statementPreview": "The cosmological arrow (expansion), the thermodynamic arrow (entropy increase), and the structural arrow (relational ..."
+        },
+        {
+          "type": "Theorem",
+          "id": "5.1",
+          "name": "No fine-tuning",
+          "statementPreview": "The Penrose fine-tuning measure exp(-10120) is inapplicable because it compares the initial state to the wrong refere..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Structural arrow as local limit",
+          "statementPreview": "The structural arrow of time (Theorem 6.1 of [Time as Phase Ordering](/derivations/thermodynamics/time)) is the local..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Quantitative phase-space growth rate",
+          "description": "Compute dlnvol(Gammaacc)/dtau from the bootstrap dynamics and show it matches the observed entropy growth rate. This requires the binding energies at each hierarchy level, which in turn require the fu"
+        },
+        {
+          "number": 2,
+          "title": "Inflation and the arrow",
+          "description": "The geometric inflation derivation ([Geometric Inflation](/derivations/cosmology/geometric-inflation)) provides the initial expansion. The relationship between the inflationary epoch and the first hie"
+        },
+        {
+          "number": 3,
+          "title": "De Sitter equilibrium",
+          "description": "In the far future, the universe approaches de Sitter space with constant temperature TdS sim Lambda. At this point, no further hierarchy levels become available (the temperature stops decreasing). Doe"
+        },
+        {
+          "number": 4,
+          "title": "Arrow reversal",
+          "description": "Can the cosmological arrow reverse (in a contracting phase)? The framework predicts no, because contraction would heat the universe, disrupting higher hierarchy levels and *reducing* Gammaacc — the ac"
+        },
+        {
+          "number": 5,
+          "title": "Relationship to Gap 3 of [Time as Phase Ordering](/derivations/thermodynamics/time)",
+          "description": "This derivation claims to resolve Gap 3. The resolution should be verified: does hierarchy elaboration fully account for the cosmological arrow, or are there additional contributions from boundary con"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "thermodynamics-ext/non-ergodicity",
+            "context": "Non-Ergodicity and Conditional Thermalization"
+          },
+          {
+            "target": "thermodynamics/time",
+            "context": "Time as Phase Ordering"
+          },
+          {
+            "target": "thermodynamics-ext/non-ergodicity",
+            "context": "Non-Ergodicity"
+          },
+          {
+            "target": "thermodynamics/entropy",
+            "context": "Entropy as Inaccessible Coherence"
+          },
+          {
+            "target": "cosmology/geometric-inflation",
+            "context": "Geometric Inflation"
+          },
+          {
+            "target": "cosmology/observer-loop-viability",
+            "context": "Observer Loop Viability"
+          }
+        ],
+        "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": [
+        "thermodynamics-ext/non-ergodicity"
+      ]
     },
     "cosmology/cosmological-constant": {
       "id": "cosmology/cosmological-constant",
@@ -1823,7 +2004,7 @@
       "id": "cosmology/geometric-inflation",
       "filePath": "site/src/content/derivations/cosmology/geometric-inflation.md",
       "title": "Geometric Inflation: Expansion as Geometry Emergence",
-      "status": "draft",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "cosmology",
       "tags": [
@@ -1831,7 +2012,7 @@
         "spacetime"
       ],
       "summary": "Cosmic inflation reinterpreted as the emergence of geometric description from a sparse post-bounce observer network, dissolving the horizon and flatness problems without an inflaton field.",
-      "lastUpdated": "2026-03-15",
+      "lastUpdated": "2026-03-31",
       "dependsOn": [
         "spacetime/singularity-resolution",
         "holography/causal-set-statistics",
@@ -1841,7 +2022,9 @@
         "interactions/bootstrap"
       ],
       "enablesDerivation": [],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "cosmology/cosmological-arrow"
+      ],
       "steps": [
         {
           "number": 1,
@@ -1941,8 +2124,8 @@
           "description": "The singularity-resolution derivation provides the bounce; this derivation provides the subsequent expansion. The interface — how the bounce state seeds the pre-geometric network — needs formalization"
         }
       ],
-      "assessmentVerdict": "",
-      "hasConsistencyModel": false,
+      "assessmentVerdict": "Provisional. The dissolution of the horizon problem (Theorem 4.1) is rigorous given the framework's premises. The flatness and inflation mechanisms are structurally sound but depend on the bootstrap growth rate alpha, which is not yet determined. The observational predictions (Step 6) are qualitativ",
+      "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
           {
@@ -1960,9 +2143,26 @@
           {
             "target": "minimal-observer/multiplicity",
             "context": "Multiplicity"
+          },
+          {
+            "target": "spacetime/einstein-equations",
+            "context": "Einstein Equations"
+          },
+          {
+            "target": "spacetime/gravity",
+            "context": "Gravity"
+          },
+          {
+            "target": "foundation/aperiodic-order",
+            "context": "Aperiodic Order"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "cosmology/cosmological-arrow",
+            "context": "Geometric Inflation"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -1970,7 +2170,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "cosmology/leptogenesis": {
@@ -2158,8 +2358,12 @@
         "thermodynamics-ext/renormalization",
         "holography/er-epr"
       ],
-      "enablesDerivation": [],
-      "dependedOnBy": [],
+      "enablesDerivation": [
+        "cosmology/cosmological-arrow"
+      ],
+      "dependedOnBy": [
+        "cosmology/cosmological-arrow"
+      ],
       "steps": [
         {
           "number": 1,
@@ -2457,6 +2661,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "cosmology/cosmological-arrow",
+            "context": "Observer Loop Viability"
+          },
           {
             "source": "cosmology/cosmological-constant",
             "context": "Theorem 5.4"
@@ -2995,7 +3203,7 @@
       "id": "foundation/aperiodic-order",
       "filePath": "site/src/content/derivations/foundation/aperiodic-order.md",
       "title": "Aperiodic Order of the Observer Network",
-      "status": "draft",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "foundation",
       "tags": [
@@ -3011,10 +3219,12 @@
         "minimal-observer/coherence-dual-pairs"
       ],
       "enablesDerivation": [
-        "spacetime/gravitational-constant"
+        "spacetime/gravitational-constant",
+        "thermodynamics-ext/non-ergodicity"
       ],
       "dependedOnBy": [
-        "spacetime/gravitational-constant"
+        "spacetime/gravitational-constant",
+        "thermodynamics-ext/non-ergodicity"
       ],
       "steps": [
         {
@@ -3023,7 +3233,7 @@
         },
         {
           "number": 2,
-          "title": "Disordered Networks Violate Constitutive Universality"
+          "title": "Observer Networks Are Delone Sets; Disorder Is Excluded"
         },
         {
           "number": 3,
@@ -3076,22 +3286,46 @@
           "statementPreview": "The dimensionless packing coefficient alpha in eta = alpha/ell2 is determined by the inflation factor betan alone, in..."
         },
         {
+          "type": "Definition",
+          "id": "1.0",
+          "name": "C5 constraint complexity",
+          "statementPreview": "For a finite sub-network NR of radius R centered at an observer O, define the *C5 constraint complexity* as the numbe..."
+        },
+        {
           "type": "Proposition",
           "id": "1.1",
-          "name": "Periodicity collapses individuation",
-          "statementPreview": "A periodic observer network — one with a translational symmetry lattice Lambda — makes C5 (strict subadditivity of co..."
+          "name": "Periodicity collapses C5 and individuation",
+          "statementPreview": "A periodic observer network — one with a translational symmetry lattice Lambda — has degenerate C5 (kappa(R) = O(1)) ..."
+        },
+        {
+          "type": "Definition",
+          "id": "2.0",
+          "name": "Delone set",
+          "statementPreview": "A point set N Rd is a *Delone set* if it is:"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.0",
+          "name": "Observer networks are Delone sets",
+          "statementPreview": "The observer network N at t0 is a Delone set in the constituted geometry.*"
+        },
+        {
+          "type": "Definition",
+          "id": "2.1",
+          "name": "Finite local complexity",
+          "statementPreview": "A Delone set N has *finite local complexity* (FLC) if for every r > 0, the set (Br(x) N) - x : x in N of centered r-p..."
         },
         {
           "type": "Proposition",
           "id": "2.1",
           "name": "Disorder breaks constitutive universality and the no-boundary condition",
-          "statementPreview": "A disordered observer network — one without local matching rules governing the placement of observers — violates cons..."
+          "statementPreview": "A Delone set without finite local complexity — a disordered observer network — violates constitutive universality and..."
         },
         {
           "type": "Theorem",
           "id": "1.1",
           "name": "Forced aperiodicity",
-          "statementPreview": "The observer network must have aperiodic order: local matching rules that enforce global aperiodicity.*"
+          "statementPreview": "The observer network must have aperiodic order: a Delone set with finite local complexity (FLC) and no translational ..."
         },
         {
           "type": "Proposition",
@@ -3145,19 +3379,9 @@
       "structuralPostulates": [],
       "openGaps": [
         {
-          "number": 1,
-          "title": "Formal C5 non-degeneracy",
-          "description": "Define \"informationally degenerate\" precisely — e.g., as vanishing conditional mutual information I(C5x ; C5y mid lattice) = 0 for all pairs of C5 instances in a periodic network. This would make Prop"
-        },
-        {
-          "number": 2,
-          "title": "Trichotomy proof",
-          "description": "Prove that periodic, disordered, and aperiodic-with-matching-rules exhaust all configurations of observer networks. The natural formalization uses Delone sets (uniformly discrete + relatively dense po"
-        },
-        {
           "number": 3,
           "title": "Bootstrap-substitution identification",
-          "description": "Prove that the abstract bootstrap equation U cong R(U,U) admits a geometric realization as a substitution tiling in Rd. This requires showing that the recursive structure of observer composition maps "
+          "description": "Prove that the abstract bootstrap equation U cong R(U,U) admits a geometric realization as a substitution tiling in Rd. This requires constructing an explicit functor from the observer category to a t"
         },
         {
           "number": 4,
@@ -3167,10 +3391,10 @@
         {
           "number": 5,
           "title": "Net entropy $s_{\\text{net}}(\\beta_n)$",
-          "description": "Derive the mutual information cost function from the axioms rather than assuming a Gaussian profile. This would fix alpha(betan) numerically. <!-- References --> [Solomyak, 1997]: /references#solomyak"
+          "description": "Derive the mutual information cost function from the axioms rather than assuming a Gaussian profile. This would fix alpha(betan) numerically. <!-- References --> [Lagarias, 1999]: /references#lagarias"
         }
       ],
-      "assessmentVerdict": "Draft. The exclusion arguments (Steps 1–2) are structurally convincing but rely on informal notions (\"informationally degenerate\", \"effective boundary\"). The constructive results (Steps 4–8) are rigorous once the identification of bootstrap-with-substitution is accepted. Promotion to provisional req",
+      "assessmentVerdict": "Provisional. The exclusion arguments (Steps 1–3) are now rigorous: C5 non-degeneracy is formally defined (Definition 1.0), the observer network → Delone set mapping is established (Proposition 2.0), and the trichotomy follows from the standard Lagarias classification. The constructive results (Steps",
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
@@ -3205,7 +3429,19 @@
         ],
         "incoming": [
           {
+            "source": "cosmology/geometric-inflation",
+            "context": "Aperiodic Order"
+          },
+          {
+            "source": "holography/scrambling",
+            "context": "Aperiodic Order"
+          },
+          {
             "source": "spacetime/gravitational-constant",
+            "context": "Aperiodic Order"
+          },
+          {
+            "source": "thermodynamics-ext/non-ergodicity",
             "context": "Aperiodic Order"
           }
         ]
@@ -3216,7 +3452,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "foundation/coherence-lagrangian": {
@@ -6597,6 +6833,10 @@
             "context": "Holographic Entropy Bound"
           },
           {
+            "source": "holography/scrambling",
+            "context": "Area Scaling"
+          },
+          {
             "source": "interactions/bootstrap",
             "context": "Holographic Entropy Bound"
           },
@@ -6651,10 +6891,12 @@
         "holography/area-scaling"
       ],
       "enablesDerivation": [
-        "holography/hawking-radiation"
+        "holography/hawking-radiation",
+        "holography/scrambling"
       ],
       "dependedOnBy": [
-        "holography/hawking-radiation"
+        "holography/hawking-radiation",
+        "holography/scrambling"
       ],
       "steps": [
         {
@@ -6819,6 +7061,10 @@
           {
             "source": "holography/hawking-radiation",
             "context": "Theorem 3.1"
+          },
+          {
+            "source": "holography/scrambling",
+            "context": "Black Hole Entropy"
           }
         ]
       },
@@ -7094,9 +7340,12 @@
         "holography/causal-set-statistics",
         "spacetime/einstein-equations"
       ],
-      "enablesDerivation": [],
+      "enablesDerivation": [
+        "holography/scrambling"
+      ],
       "dependedOnBy": [
-        "cosmology/observer-loop-viability"
+        "cosmology/observer-loop-viability",
+        "holography/scrambling"
       ],
       "steps": [],
       "formalObjects": [
@@ -7246,6 +7495,10 @@
           {
             "source": "holography/information-paradox",
             "context": "ER=EPR from Relational Invariants"
+          },
+          {
+            "source": "holography/scrambling",
+            "context": "ER=EPR Correspondence"
           },
           {
             "source": "quantum/entanglement",
@@ -7498,8 +7751,12 @@
         "holography/hawking-radiation",
         "axioms/coherence-conservation"
       ],
-      "enablesDerivation": [],
-      "dependedOnBy": [],
+      "enablesDerivation": [
+        "holography/scrambling"
+      ],
+      "dependedOnBy": [
+        "holography/scrambling"
+      ],
       "steps": [
         {
           "number": 1,
@@ -7678,6 +7935,192 @@
             "context": "Information Paradox"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "holography/scrambling": {
+      "id": "holography/scrambling",
+      "filePath": "site/src/content/derivations/holography/scrambling.md",
+      "title": "Black Hole Scrambling and Non-Ergodicity",
+      "status": "stub",
+      "rigorLevel": "semi-formal",
+      "group": "holography",
+      "tags": [
+        "holography"
+      ],
+      "summary": "Black holes are fast scramblers within the coherence-saturated sector but non-ergodic in the full Hilbert space — resolving the tension between scrambling and fundamental non-ergodicity via sector-restricted maximal mixing",
+      "lastUpdated": "2026-04-01",
+      "dependsOn": [
+        "holography/black-hole-entropy",
+        "holography/er-epr",
+        "holography/information-paradox",
+        "thermodynamics-ext/non-ergodicity"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The Coherence-Saturated Sector"
+        },
+        {
+          "number": 2,
+          "title": "Hierarchy Collapse in the Saturated Sector"
+        },
+        {
+          "number": 3,
+          "title": "Matching-Rule Reduction"
+        },
+        {
+          "number": 4,
+          "title": "Maximal Within-Sector Ergodicity"
+        },
+        {
+          "number": 5,
+          "title": "Loop-Tilt Mechanism at the Horizon"
+        },
+        {
+          "number": 6,
+          "title": "Scrambling Time"
+        },
+        {
+          "number": 7,
+          "title": "Non-Ergodicity in the Full Hilbert Space"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1.",
+          "name": "",
+          "statementPreview": "For a region of area A, the **coherence-saturated sector** Hsat is the subspace of the Hilbert space consisting of st..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2.",
+          "name": "",
+          "statementPreview": "dimHsat = exp(A/4ellP2). This is the Bekenstein-Hawking entropy SBH ([Black Hole Entropy](/derivations/holography/bla..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "Single effective level",
+          "statementPreview": "Within Hsat, the bootstrap hierarchy collapses to a single effective level. All coherence is allocated to boundary (h..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1.",
+          "name": "",
+          "statementPreview": "In Hsat, the aperiodic matching rules reduce to a single constraint: the total boundary coherence equals A/4ellP2. Al..."
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "Sector ergodicity",
+          "statementPreview": "The dynamics within Hsat satisfy conditional ergodicity (Definition 5.1 of [Non-Ergodicity](/derivations/thermodynami..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Loop projection tilt",
+          "statementPreview": "As an observer approaches the event horizon, the projection of its U(1) loop closure onto the spacetime manifold tilt..."
+        },
+        {
+          "type": "Corollary",
+          "id": "5.2",
+          "name": "Continuous ergodicity gradient",
+          "statementPreview": "The degree of ergodicity increases continuously as a function of the tilt angle alpha between the loop projection and..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Scrambling time bound",
+          "statementPreview": "The scrambling time for a black hole of Hawking temperature TH and entropy SBH is:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "7.1.",
+          "name": "",
+          "statementPreview": "The black hole is non-ergodic in the full Hilbert space H. States outside Hsat (sub-saturated states with S < SBH) ar..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Chaos bound from axioms",
+          "description": "Derive the Maldacena-Shenker-Stanford chaos bound lambdaL 2pi T from coherence conservation and the observer axioms, rather than importing it as an external result."
+        },
+        {
+          "number": 2,
+          "title": "Evaporation dynamics",
+          "description": "Connect the inter-sector transition rate (hierarchy barrier crossing) to the Hawking evaporation rate Gamma sim TH2. This should give a derivation of the Page curve from the coherence-sector framework"
+        },
+        {
+          "number": 3,
+          "title": "Sub-saturated scrambling",
+          "description": "Characterize the scrambling dynamics for states that do not saturate the holographic bound. The scrambling time should increase as the hierarchy becomes more complex (more levels, tighter matching rul"
+        },
+        {
+          "number": 4,
+          "title": "Scrambling and ER=EPR",
+          "description": "Make the connection between maximal within-sector mixing and the ER=EPR bridge structure more precise. The complete-graph argument (Step 4) should follow from the ER bridge connectivity derived in [ER"
+        },
+        {
+          "number": 5,
+          "title": "Loop-tilt for other horizons",
+          "description": "Extend the loop-tilt mechanism (Step 5) to cosmological horizons (de Sitter), Rindler horizons (uniformly accelerating observers), and inner horizons of rotating black holes (Kerr). The de Sitter case"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "thermodynamics-ext/non-ergodicity",
+            "context": "Non-Ergodicity and Conditional Thermalization"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
+          },
+          {
+            "target": "holography/black-hole-entropy",
+            "context": "Black Hole Entropy"
+          },
+          {
+            "target": "thermodynamics-ext/non-ergodicity",
+            "context": "Non-Ergodicity"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap Mechanism"
+          },
+          {
+            "target": "foundation/aperiodic-order",
+            "context": "Aperiodic Order"
+          },
+          {
+            "target": "holography/er-epr",
+            "context": "ER=EPR Correspondence"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "thermodynamics/time",
+            "context": "Time as Phase Ordering"
+          }
+        ],
+        "incoming": []
       },
       "leanVerification": {
         "hasProofs": false,
@@ -7974,9 +8417,13 @@
       "enablesDerivation": [
         "spacetime/einstein-equations",
         "particles/mass-hierarchy",
-        "interactions/bootstrap-division-algebras"
+        "interactions/bootstrap-division-algebras",
+        "thermodynamics-ext/non-ergodicity",
+        "thermodynamics-ext/biological-non-ergodicity",
+        "cosmology/cosmological-arrow"
       ],
       "dependedOnBy": [
+        "cosmology/cosmological-arrow",
         "cosmology/coupling-constants",
         "cosmology/geometric-inflation",
         "cosmology/observer-loop-viability",
@@ -7986,6 +8433,8 @@
         "particles/mass-hierarchy",
         "spacetime/einstein-equations",
         "spacetime/gravitational-constant",
+        "thermodynamics-ext/biological-non-ergodicity",
+        "thermodynamics-ext/non-ergodicity",
         "thermodynamics/entropy"
       ],
       "steps": [
@@ -8245,6 +8694,10 @@
             "context": "Bootstrap Mechanism"
           },
           {
+            "source": "holography/scrambling",
+            "context": "Bootstrap Mechanism"
+          },
+          {
             "source": "interactions/bootstrap-division-algebras",
             "context": "Theorem 1.1"
           },
@@ -8295,6 +8748,10 @@
           {
             "source": "thermodynamics-ext/first-law",
             "context": "Bootstrap"
+          },
+          {
+            "source": "thermodynamics-ext/non-ergodicity",
+            "context": "Bootstrap Mechanism"
           },
           {
             "source": "thermodynamics-ext/renormalization",
@@ -9588,6 +10045,10 @@
             "context": "Multiplicity"
           },
           {
+            "source": "thermodynamics-ext/biological-non-ergodicity",
+            "context": "Multiplicity"
+          },
+          {
             "source": "thermodynamics/entropy",
             "context": "Multiplicity"
           }
@@ -9622,12 +10083,14 @@
       "enablesDerivation": [
         "minimal-observer/multiplicity",
         "thermodynamics/time",
-        "dimensions/three-dimensions"
+        "dimensions/three-dimensions",
+        "thermodynamics-ext/biological-non-ergodicity"
       ],
       "dependedOnBy": [
         "cosmology/observer-loop-viability",
         "dimensions/three-dimensions",
         "minimal-observer/multiplicity",
+        "thermodynamics-ext/biological-non-ergodicity",
         "thermodynamics/time"
       ],
       "steps": [
@@ -9847,6 +10310,10 @@
           },
           {
             "source": "spacetime/speed-of-light",
+            "context": "Minimal Observer Structure"
+          },
+          {
+            "source": "thermodynamics-ext/non-ergodicity",
             "context": "Minimal Observer Structure"
           },
           {
@@ -13343,6 +13810,10 @@
             "context": "Einstein Field Equations"
           },
           {
+            "source": "cosmology/geometric-inflation",
+            "context": "Einstein Equations"
+          },
+          {
             "source": "foundation/coherence-lagrangian",
             "context": "Einstein Field Equations"
           },
@@ -14064,6 +14535,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "cosmology/geometric-inflation",
+            "context": "Gravity"
+          },
           {
             "source": "gauge/electromagnetism",
             "context": "Gravity"
@@ -14945,6 +15420,178 @@
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
+    "thermodynamics-ext/biological-non-ergodicity": {
+      "id": "thermodynamics-ext/biological-non-ergodicity",
+      "filePath": "site/src/content/derivations/thermodynamics-ext/biological-non-ergodicity.md",
+      "title": "Biological Non-Ergodicity",
+      "status": "stub",
+      "rigorLevel": "informal",
+      "group": "thermodynamics-ext",
+      "tags": [
+        "thermo-ext"
+      ],
+      "summary": "Living systems are non-ergodic because the observer boundary B constrains phase-space exploration — connecting the observer definition to the hallmark features of biological organization: self-maintenance, memory, and adaptive expansion of coherence domains",
+      "lastUpdated": "2026-04-01",
+      "dependsOn": [
+        "thermodynamics-ext/non-ergodicity",
+        "thermodynamics/entropy",
+        "minimal-observer/structure",
+        "interactions/bootstrap"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The Observer Boundary as Phase-Space Partition"
+        },
+        {
+          "number": 2,
+          "title": "Maintenance Cost and Coherence Cycling"
+        },
+        {
+          "number": 3,
+          "title": "Non-Ergodicity from Boundary Maintenance"
+        },
+        {
+          "number": 4,
+          "title": "Memory as Sector Selection"
+        },
+        {
+          "number": 5,
+          "title": "Adaptation as Coherence-Domain Expansion"
+        },
+        {
+          "number": 6,
+          "title": "The C5 Requirement and Ecological Networks"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1.",
+          "name": "",
+          "statementPreview": "For an observer O = (Sigma, I, B), the **B-compatible sector** is the set of configurations in which the boundary B i..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Topological partition",
+          "statementPreview": "GammaB is a proper subset of Gamma whose complement Gamma setminus GammaB has strictly positive measure. The boundary..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "Maintenance cost",
+          "statementPreview": "Maintaining the observer boundary B requires continuous coherence expenditure. The minimum cost per cycle is hbaromeg..."
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "Biological non-ergodicity",
+          "statementPreview": "An observer with maintained boundary B is non-ergodic in Gamma. Its trajectory is confined to GammaB for as long as t..."
+        },
+        {
+          "type": "Corollary",
+          "id": "3.2",
+          "name": "Conditional ergodicity within $\\Gamma_B$",
+          "statementPreview": "Within GammaB, the observer's dynamics satisfy conditional ergodicity (Theorem 5.2 of [Non-Ergodicity](/derivations/t..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Structural memory",
+          "statementPreview": "The observer's Noether invariant I selects a specific sub-sector within GammaB. Since different values of I correspon..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Adaptive expansion",
+          "statementPreview": "An observer can expand its coherence domain DA ([Entropy as Inaccessible Coherence](/derivations/thermodynamics/entro..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Obligate sociality",
+          "statementPreview": "The subadditivity requirement C5, which is vacuous for pairs but non-trivial for 3 observers ([Multiplicity](/derivat..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Metabolic scaling",
+          "description": "Derive the scaling of maintenance cost with hierarchy level ell. If the cost scales as ell hbaromegaell where omegaell is the cycling frequency at level ell, this should connect to Kleiber's law (meta"
+        },
+        {
+          "number": 2,
+          "title": "$\\Gamma_B$ dimension",
+          "description": "Compute the dimension of the B-compatible sector as a function of the complexity of B (number of self/non-self distinctions). This would give a quantitative measure of biological non-ergodicity."
+        },
+        {
+          "number": 3,
+          "title": "Autopoiesis connection",
+          "description": "Make the relationship to Maturana and Varela's autopoiesis theory precise. The observer triple (Sigma, I, B) with active loop closure appears to be a formal version of autopoietic organization; this s"
+        },
+        {
+          "number": 4,
+          "title": "Evolutionary dynamics",
+          "description": "If adaptation is coherence-domain expansion, natural selection should emerge as the process by which observers compete for coherence access. This would connect to the Fisher-Price equation via the Fis"
+        },
+        {
+          "number": 5,
+          "title": "Abiogenesis",
+          "description": "The transition from non-observer chemistry to observer biology is the formation of the first B boundary with active loop closure. The framework should predict conditions under which this transition is"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "thermodynamics-ext/non-ergodicity",
+            "context": "Non-Ergodicity and Conditional Thermalization"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "thermodynamics/action-planck",
+            "context": "Action and Planck's Constant"
+          },
+          {
+            "target": "thermodynamics/time",
+            "context": "Time as Phase Ordering"
+          },
+          {
+            "target": "thermodynamics-ext/non-ergodicity",
+            "context": "Non-Ergodicity"
+          },
+          {
+            "target": "axioms/observer-definition",
+            "context": "Observer Definition"
+          },
+          {
+            "target": "thermodynamics/entropy",
+            "context": "Entropy as Inaccessible Coherence"
+          },
+          {
+            "target": "minimal-observer/multiplicity",
+            "context": "Multiplicity"
+          }
+        ],
+        "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
     "thermodynamics-ext/distinguishability-conservation": {
       "id": "thermodynamics-ext/distinguishability-conservation",
       "filePath": "site/src/content/derivations/thermodynamics-ext/distinguishability-conservation.md",
@@ -15695,6 +16342,255 @@
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
+    "thermodynamics-ext/non-ergodicity": {
+      "id": "thermodynamics-ext/non-ergodicity",
+      "filePath": "site/src/content/derivations/thermodynamics-ext/non-ergodicity.md",
+      "title": "Non-Ergodicity and Conditional Thermalization",
+      "status": "draft",
+      "rigorLevel": "semi-formal",
+      "group": "thermodynamics-ext",
+      "tags": [
+        "thermo-ext"
+      ],
+      "summary": "Generic systems are non-ergodic: the bootstrap hierarchy, aperiodic matching rules, and coherence correlations partition phase space. Statistical mechanics succeeds because conditional ergodicity holds within matching-rule hulls — deriving the domain of validity of the microcanonical ensemble, eigenstate thermalization conditions, and glassy dynamics as corollaries",
+      "lastUpdated": "2026-04-01",
+      "dependsOn": [
+        "thermodynamics/entropy",
+        "thermodynamics/time",
+        "thermodynamics-ext/renormalization",
+        "interactions/bootstrap",
+        "foundation/aperiodic-order"
+      ],
+      "enablesDerivation": [
+        "cosmology/cosmological-arrow",
+        "thermodynamics-ext/biological-non-ergodicity"
+      ],
+      "dependedOnBy": [
+        "cosmology/cosmological-arrow",
+        "holography/scrambling",
+        "thermodynamics-ext/biological-non-ergodicity"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Phase Space Partitioning by Hierarchy Level"
+        },
+        {
+          "number": 2,
+          "title": "Aperiodic Matching Rules Confine Dynamics"
+        },
+        {
+          "number": 3,
+          "title": "Coherence Correlations Reduce Effective Dimension"
+        },
+        {
+          "number": 4,
+          "title": "The Three Mechanisms Are Independent"
+        },
+        {
+          "number": 5,
+          "title": "Conditional Ergodicity Within Sectors"
+        },
+        {
+          "number": 6,
+          "title": "Eigenstate Thermalization and Its Failure"
+        },
+        {
+          "number": 7,
+          "title": "Glassy Dynamics from the Bootstrap Tree"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1.",
+          "name": "",
+          "statementPreview": "For a system S composed of observers at bootstrap hierarchy levels ell = 1, 2, ldots, L, the **level-ell configuratio..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Hierarchy barriers",
+          "statementPreview": "The bootstrap hierarchy creates effective barriers in Gamma. A trajectory in Gamma that changes the hierarchy level o..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "Matching-rule confinement",
+          "statementPreview": "The aperiodic order of the observer network ([Aperiodic Order](/derivations/foundation/aperiodic-order)) confines the..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Correlated submanifold",
+          "statementPreview": "Subadditivity of coherence (C(A B) C(A) + C(B), Axiom 1, property C5) constrains the joint state of any composite sys..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Dimension deficit",
+          "statementPreview": "The dimension deficit delta = dimGamma - dimMcorr is bounded below by the number of independent coherence constraints:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Independence",
+          "statementPreview": "The three phase-space partitioning mechanisms — hierarchy barriers (Step 1), matching-rule confinement (Step 2), and ..."
+        },
+        {
+          "type": "Corollary",
+          "id": "4.2.",
+          "name": "",
+          "statementPreview": "The accessible phase space Gammaacc satisfies:*"
+        },
+        {
+          "type": "Definition",
+          "id": "5.1.",
+          "name": "",
+          "statementPreview": "A system is **conditionally ergodic** with respect to a partition Gammaalpha if, for each sector Gammaalpha, time ave..."
+        },
+        {
+          "type": "Theorem",
+          "id": "5.2",
+          "name": "Conditional ergodicity",
+          "statementPreview": "Within a single sector Gammaalpha (fixed hierarchy level, fixed matching-rule class, fixed correlation structure), th..."
+        },
+        {
+          "type": "Definition",
+          "id": "6.1",
+          "name": "ETH",
+          "statementPreview": "The eigenstate thermalization hypothesis states that for a quantum system with Hamiltonian H and energy eigenstates |..."
+        },
+        {
+          "type": "Theorem",
+          "id": "6.2",
+          "name": "ETH within a hierarchy level",
+          "statementPreview": "ETH holds for quantum systems whose Hamiltonian couples only observers within a single bootstrap hierarchy level ell...."
+        },
+        {
+          "type": "Theorem",
+          "id": "6.3",
+          "name": "ETH failure across hierarchy levels",
+          "statementPreview": "ETH fails when the Hamiltonian significantly couples observers at different hierarchy levels. The failure mechanism i..."
+        },
+        {
+          "type": "Definition",
+          "id": "7.1.",
+          "name": "",
+          "statementPreview": "The **bootstrap tree** B is the rooted tree whose vertices are the bootstrap levels ell = 1, ldots, L and whose edges..."
+        },
+        {
+          "type": "Theorem",
+          "id": "7.2",
+          "name": "Ultrametric phase-space structure",
+          "statementPreview": "When multiple hierarchy levels are strongly coupled (inter-level coupling gell,ell+1 exceeds the intra-level bandwidt..."
+        },
+        {
+          "type": "Corollary",
+          "id": "7.3",
+          "name": "Aging and history-dependence",
+          "statementPreview": "In the glassy regime, the system's relaxation function C(tw, tw + t) depends on the waiting time tw (aging). This fol..."
+        },
+        {
+          "type": "Corollary",
+          "id": "7.4",
+          "name": "Stretched exponentials",
+          "statementPreview": "Relaxation within the glassy regime follows stretched-exponential form C(t) sim exp(-(t/tau)beta) with 0 < beta < 1. ..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Mixing theorem",
+          "description": "Prove conditional ergodicity (Theorem 5.2) rigorously from the dynamics, not just from the equidistribution of phases. This requires a mixing-time bound for the interaction-driven shuffling of non-pha"
+        },
+        {
+          "number": 2,
+          "title": "ETH transition threshold",
+          "description": "Quantify the critical inter-level coupling strength at which ETH fails. This should be expressible in terms of the coherence gap DeltaC and the intra-level density of states."
+        },
+        {
+          "number": 3,
+          "title": "Aging exponents",
+          "description": "Derive the specific aging exponents and stretched-exponential parameters beta from the substitution matrix of the aperiodic tiling. The metallic-mean family ([Aperiodic Order](/derivations/foundation/"
+        },
+        {
+          "number": 4,
+          "title": "Fluctuation theorems",
+          "description": "The Jarzynski equality and Crooks theorem should arise as finite-size corrections to the conditional-ergodicity framework. This overlaps with Gap 1 of [Entropy as Inaccessible Coherence](/derivations/"
+        },
+        {
+          "number": 5,
+          "title": "Quantum conditional ergodicity",
+          "description": "Extend Theorem 5.2 to the quantum regime, where the phase torus is replaced by a Hilbert space and Weyl equidistribution by quantum ergodicity of eigenfunctions."
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "foundation/aperiodic-order",
+            "context": "Aperiodic Order"
+          },
+          {
+            "target": "minimal-observer/structure",
+            "context": "Minimal Observer Structure"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap Mechanism"
+          },
+          {
+            "target": "thermodynamics/time",
+            "context": "Time as Phase Ordering"
+          },
+          {
+            "target": "thermodynamics/action-planck",
+            "context": "Action and Planck's Constant"
+          },
+          {
+            "target": "thermodynamics/entropy",
+            "context": "Entropy as Inaccessible Coherence"
+          }
+        ],
+        "incoming": [
+          {
+            "source": "cosmology/cosmological-arrow",
+            "context": "Non-Ergodicity and Conditional Thermalization"
+          },
+          {
+            "source": "cosmology/cosmological-arrow",
+            "context": "Non-Ergodicity"
+          },
+          {
+            "source": "holography/scrambling",
+            "context": "Non-Ergodicity and Conditional Thermalization"
+          },
+          {
+            "source": "holography/scrambling",
+            "context": "Non-Ergodicity"
+          },
+          {
+            "source": "thermodynamics-ext/biological-non-ergodicity",
+            "context": "Non-Ergodicity and Conditional Thermalization"
+          },
+          {
+            "source": "thermodynamics-ext/biological-non-ergodicity",
+            "context": "Non-Ergodicity"
+          }
+        ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": true,
+      "upgradeBlockers": []
+    },
     "thermodynamics-ext/renormalization": {
       "id": "thermodynamics-ext/renormalization",
       "filePath": "site/src/content/derivations/thermodynamics-ext/renormalization.md",
@@ -15712,10 +16608,12 @@
         "thermodynamics/action-planck"
       ],
       "enablesDerivation": [
-        "cosmology/coupling-constants"
+        "cosmology/coupling-constants",
+        "thermodynamics-ext/non-ergodicity"
       ],
       "dependedOnBy": [
-        "cosmology/observer-loop-viability"
+        "cosmology/observer-loop-viability",
+        "thermodynamics-ext/non-ergodicity"
       ],
       "steps": [
         {
@@ -16398,11 +17296,19 @@
             "context": "Action"
           },
           {
+            "source": "thermodynamics-ext/biological-non-ergodicity",
+            "context": "Action and Planck's Constant"
+          },
+          {
             "source": "thermodynamics-ext/distinguishability-conservation",
             "context": "Action and Planck's Constant"
           },
           {
             "source": "thermodynamics-ext/first-law",
+            "context": "Action and Planck's Constant"
+          },
+          {
+            "source": "thermodynamics-ext/non-ergodicity",
             "context": "Action and Planck's Constant"
           },
           {
@@ -16445,12 +17351,19 @@
         "interactions/relational-invariants",
         "interactions/bootstrap"
       ],
-      "enablesDerivation": [],
+      "enablesDerivation": [
+        "thermodynamics-ext/non-ergodicity",
+        "thermodynamics-ext/biological-non-ergodicity",
+        "cosmology/cosmological-arrow"
+      ],
       "dependedOnBy": [
+        "cosmology/cosmological-arrow",
         "cosmology/observer-loop-viability",
+        "thermodynamics-ext/biological-non-ergodicity",
         "thermodynamics-ext/distinguishability-conservation",
         "thermodynamics-ext/first-law",
         "thermodynamics-ext/fisher-metric",
+        "thermodynamics-ext/non-ergodicity",
         "thermodynamics-ext/renormalization"
       ],
       "steps": [
@@ -16658,6 +17571,10 @@
             "context": "Theorem 4.1, rigorous"
           },
           {
+            "source": "cosmology/cosmological-arrow",
+            "context": "Entropy as Inaccessible Coherence"
+          },
+          {
             "source": "cosmology/cosmological-constant",
             "context": "Entropy"
           },
@@ -16698,6 +17615,10 @@
             "context": "Entropy"
           },
           {
+            "source": "thermodynamics-ext/biological-non-ergodicity",
+            "context": "Entropy as Inaccessible Coherence"
+          },
+          {
             "source": "thermodynamics-ext/distinguishability-conservation",
             "context": "Entropy"
           },
@@ -16720,6 +17641,10 @@
           {
             "source": "thermodynamics-ext/fisher-metric",
             "context": "Definition 3.1"
+          },
+          {
+            "source": "thermodynamics-ext/non-ergodicity",
+            "context": "Entropy as Inaccessible Coherence"
           },
           {
             "source": "thermodynamics-ext/renormalization",
@@ -16755,13 +17680,17 @@
       "enablesDerivation": [
         "thermodynamics/entropy",
         "thermodynamics/action-planck",
-        "quantum/born-rule"
+        "quantum/born-rule",
+        "thermodynamics-ext/non-ergodicity",
+        "cosmology/cosmological-arrow"
       ],
       "dependedOnBy": [
+        "cosmology/cosmological-arrow",
         "cosmology/observer-loop-viability",
         "quantum/born-rule",
         "quantum/observer-relative-objectivity",
         "quantum/sheaf-section-uniqueness",
+        "thermodynamics-ext/non-ergodicity",
         "thermodynamics/action-planck",
         "thermodynamics/entropy"
       ],
@@ -16920,6 +17849,10 @@
             "context": "Time as Phase Ordering"
           },
           {
+            "source": "cosmology/cosmological-arrow",
+            "context": "Time as Phase Ordering"
+          },
+          {
             "source": "cosmology/observer-loop-viability",
             "context": "Time as Phase Ordering"
           },
@@ -16930,6 +17863,10 @@
           {
             "source": "holography/causal-set-statistics",
             "context": "Theorem 3.1"
+          },
+          {
+            "source": "holography/scrambling",
+            "context": "Time as Phase Ordering"
           },
           {
             "source": "minimal-observer/multiplicity",
@@ -16958,6 +17895,14 @@
           {
             "source": "spacetime/speed-of-light",
             "context": "Time"
+          },
+          {
+            "source": "thermodynamics-ext/biological-non-ergodicity",
+            "context": "Time as Phase Ordering"
+          },
+          {
+            "source": "thermodynamics-ext/non-ergodicity",
+            "context": "Time as Phase Ordering"
           },
           {
             "source": "thermodynamics/action-planck",
@@ -19504,6 +20449,62 @@
       "fullRef": "cosmology/baryogenesis:Theorem 5.1"
     },
     {
+      "derivationId": "cosmology/cosmological-arrow",
+      "type": "Definition",
+      "id": "1.1.",
+      "name": "",
+      "fullRef": "cosmology/cosmological-arrow:Definition 1.1."
+    },
+    {
+      "derivationId": "cosmology/cosmological-arrow",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "Phase-space growth",
+      "fullRef": "cosmology/cosmological-arrow:Proposition 1.2"
+    },
+    {
+      "derivationId": "cosmology/cosmological-arrow",
+      "type": "Theorem",
+      "id": "2.1",
+      "name": "Cosmological entropy growth",
+      "fullRef": "cosmology/cosmological-arrow:Theorem 2.1"
+    },
+    {
+      "derivationId": "cosmology/cosmological-arrow",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Hierarchy elaboration timeline",
+      "fullRef": "cosmology/cosmological-arrow:Proposition 3.1"
+    },
+    {
+      "derivationId": "cosmology/cosmological-arrow",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Expansion enables elaboration",
+      "fullRef": "cosmology/cosmological-arrow:Proposition 4.1"
+    },
+    {
+      "derivationId": "cosmology/cosmological-arrow",
+      "type": "Corollary",
+      "id": "4.2",
+      "name": "Arrow alignment",
+      "fullRef": "cosmology/cosmological-arrow:Corollary 4.2"
+    },
+    {
+      "derivationId": "cosmology/cosmological-arrow",
+      "type": "Theorem",
+      "id": "5.1",
+      "name": "No fine-tuning",
+      "fullRef": "cosmology/cosmological-arrow:Theorem 5.1"
+    },
+    {
+      "derivationId": "cosmology/cosmological-arrow",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "Structural arrow as local limit",
+      "fullRef": "cosmology/cosmological-arrow:Proposition 6.1"
+    },
+    {
       "derivationId": "cosmology/coupling-constants",
       "type": "Structural Postulate",
       "id": "S1",
@@ -20142,10 +21143,38 @@
     },
     {
       "derivationId": "foundation/aperiodic-order",
+      "type": "Definition",
+      "id": "1.0",
+      "name": "C5 constraint complexity",
+      "fullRef": "foundation/aperiodic-order:Definition 1.0"
+    },
+    {
+      "derivationId": "foundation/aperiodic-order",
       "type": "Proposition",
       "id": "1.1",
-      "name": "Periodicity collapses individuation",
+      "name": "Periodicity collapses C5 and individuation",
       "fullRef": "foundation/aperiodic-order:Proposition 1.1"
+    },
+    {
+      "derivationId": "foundation/aperiodic-order",
+      "type": "Definition",
+      "id": "2.0",
+      "name": "Delone set",
+      "fullRef": "foundation/aperiodic-order:Definition 2.0"
+    },
+    {
+      "derivationId": "foundation/aperiodic-order",
+      "type": "Proposition",
+      "id": "2.0",
+      "name": "Observer networks are Delone sets",
+      "fullRef": "foundation/aperiodic-order:Proposition 2.0"
+    },
+    {
+      "derivationId": "foundation/aperiodic-order",
+      "type": "Definition",
+      "id": "2.1",
+      "name": "Finite local complexity",
+      "fullRef": "foundation/aperiodic-order:Definition 2.1"
     },
     {
       "derivationId": "foundation/aperiodic-order",
@@ -21952,6 +22981,69 @@
       "id": "8.1.",
       "name": "",
       "fullRef": "holography/information-paradox:Theorem 8.1."
+    },
+    {
+      "derivationId": "holography/scrambling",
+      "type": "Definition",
+      "id": "1.1.",
+      "name": "",
+      "fullRef": "holography/scrambling:Definition 1.1."
+    },
+    {
+      "derivationId": "holography/scrambling",
+      "type": "Proposition",
+      "id": "1.2.",
+      "name": "",
+      "fullRef": "holography/scrambling:Proposition 1.2."
+    },
+    {
+      "derivationId": "holography/scrambling",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "Single effective level",
+      "fullRef": "holography/scrambling:Proposition 2.1"
+    },
+    {
+      "derivationId": "holography/scrambling",
+      "type": "Proposition",
+      "id": "3.1.",
+      "name": "",
+      "fullRef": "holography/scrambling:Proposition 3.1."
+    },
+    {
+      "derivationId": "holography/scrambling",
+      "type": "Theorem",
+      "id": "4.1",
+      "name": "Sector ergodicity",
+      "fullRef": "holography/scrambling:Theorem 4.1"
+    },
+    {
+      "derivationId": "holography/scrambling",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "Loop projection tilt",
+      "fullRef": "holography/scrambling:Proposition 5.1"
+    },
+    {
+      "derivationId": "holography/scrambling",
+      "type": "Corollary",
+      "id": "5.2",
+      "name": "Continuous ergodicity gradient",
+      "fullRef": "holography/scrambling:Corollary 5.2"
+    },
+    {
+      "derivationId": "holography/scrambling",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "Scrambling time bound",
+      "fullRef": "holography/scrambling:Proposition 6.1"
+    },
+    {
+      "derivationId": "holography/scrambling",
+      "type": "Theorem",
+      "id": "7.1.",
+      "name": "",
+      "fullRef": "holography/scrambling:Theorem 7.1."
     },
     {
       "derivationId": "interactions/bootstrap-division-algebras",
@@ -25048,6 +26140,62 @@
       "fullRef": "spacetime/speed-of-light:Theorem 7.1."
     },
     {
+      "derivationId": "thermodynamics-ext/biological-non-ergodicity",
+      "type": "Definition",
+      "id": "1.1.",
+      "name": "",
+      "fullRef": "thermodynamics-ext/biological-non-ergodicity:Definition 1.1."
+    },
+    {
+      "derivationId": "thermodynamics-ext/biological-non-ergodicity",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "Topological partition",
+      "fullRef": "thermodynamics-ext/biological-non-ergodicity:Proposition 1.2"
+    },
+    {
+      "derivationId": "thermodynamics-ext/biological-non-ergodicity",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "Maintenance cost",
+      "fullRef": "thermodynamics-ext/biological-non-ergodicity:Proposition 2.1"
+    },
+    {
+      "derivationId": "thermodynamics-ext/biological-non-ergodicity",
+      "type": "Theorem",
+      "id": "3.1",
+      "name": "Biological non-ergodicity",
+      "fullRef": "thermodynamics-ext/biological-non-ergodicity:Theorem 3.1"
+    },
+    {
+      "derivationId": "thermodynamics-ext/biological-non-ergodicity",
+      "type": "Corollary",
+      "id": "3.2",
+      "name": "Conditional ergodicity within $\\Gamma_B$",
+      "fullRef": "thermodynamics-ext/biological-non-ergodicity:Corollary 3.2"
+    },
+    {
+      "derivationId": "thermodynamics-ext/biological-non-ergodicity",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Structural memory",
+      "fullRef": "thermodynamics-ext/biological-non-ergodicity:Proposition 4.1"
+    },
+    {
+      "derivationId": "thermodynamics-ext/biological-non-ergodicity",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "Adaptive expansion",
+      "fullRef": "thermodynamics-ext/biological-non-ergodicity:Proposition 5.1"
+    },
+    {
+      "derivationId": "thermodynamics-ext/biological-non-ergodicity",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "Obligate sociality",
+      "fullRef": "thermodynamics-ext/biological-non-ergodicity:Proposition 6.1"
+    },
+    {
       "derivationId": "thermodynamics-ext/distinguishability-conservation",
       "type": "Definition",
       "id": "1.1.",
@@ -25417,6 +26565,118 @@
       "id": "4.2",
       "name": "",
       "fullRef": "thermodynamics-ext/fisher-metric:Corollary 4.2"
+    },
+    {
+      "derivationId": "thermodynamics-ext/non-ergodicity",
+      "type": "Definition",
+      "id": "1.1.",
+      "name": "",
+      "fullRef": "thermodynamics-ext/non-ergodicity:Definition 1.1."
+    },
+    {
+      "derivationId": "thermodynamics-ext/non-ergodicity",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "Hierarchy barriers",
+      "fullRef": "thermodynamics-ext/non-ergodicity:Proposition 1.2"
+    },
+    {
+      "derivationId": "thermodynamics-ext/non-ergodicity",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "Matching-rule confinement",
+      "fullRef": "thermodynamics-ext/non-ergodicity:Proposition 2.1"
+    },
+    {
+      "derivationId": "thermodynamics-ext/non-ergodicity",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Correlated submanifold",
+      "fullRef": "thermodynamics-ext/non-ergodicity:Proposition 3.1"
+    },
+    {
+      "derivationId": "thermodynamics-ext/non-ergodicity",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "Dimension deficit",
+      "fullRef": "thermodynamics-ext/non-ergodicity:Proposition 3.2"
+    },
+    {
+      "derivationId": "thermodynamics-ext/non-ergodicity",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Independence",
+      "fullRef": "thermodynamics-ext/non-ergodicity:Proposition 4.1"
+    },
+    {
+      "derivationId": "thermodynamics-ext/non-ergodicity",
+      "type": "Corollary",
+      "id": "4.2.",
+      "name": "",
+      "fullRef": "thermodynamics-ext/non-ergodicity:Corollary 4.2."
+    },
+    {
+      "derivationId": "thermodynamics-ext/non-ergodicity",
+      "type": "Definition",
+      "id": "5.1.",
+      "name": "",
+      "fullRef": "thermodynamics-ext/non-ergodicity:Definition 5.1."
+    },
+    {
+      "derivationId": "thermodynamics-ext/non-ergodicity",
+      "type": "Theorem",
+      "id": "5.2",
+      "name": "Conditional ergodicity",
+      "fullRef": "thermodynamics-ext/non-ergodicity:Theorem 5.2"
+    },
+    {
+      "derivationId": "thermodynamics-ext/non-ergodicity",
+      "type": "Definition",
+      "id": "6.1",
+      "name": "ETH",
+      "fullRef": "thermodynamics-ext/non-ergodicity:Definition 6.1"
+    },
+    {
+      "derivationId": "thermodynamics-ext/non-ergodicity",
+      "type": "Theorem",
+      "id": "6.2",
+      "name": "ETH within a hierarchy level",
+      "fullRef": "thermodynamics-ext/non-ergodicity:Theorem 6.2"
+    },
+    {
+      "derivationId": "thermodynamics-ext/non-ergodicity",
+      "type": "Theorem",
+      "id": "6.3",
+      "name": "ETH failure across hierarchy levels",
+      "fullRef": "thermodynamics-ext/non-ergodicity:Theorem 6.3"
+    },
+    {
+      "derivationId": "thermodynamics-ext/non-ergodicity",
+      "type": "Definition",
+      "id": "7.1.",
+      "name": "",
+      "fullRef": "thermodynamics-ext/non-ergodicity:Definition 7.1."
+    },
+    {
+      "derivationId": "thermodynamics-ext/non-ergodicity",
+      "type": "Theorem",
+      "id": "7.2",
+      "name": "Ultrametric phase-space structure",
+      "fullRef": "thermodynamics-ext/non-ergodicity:Theorem 7.2"
+    },
+    {
+      "derivationId": "thermodynamics-ext/non-ergodicity",
+      "type": "Corollary",
+      "id": "7.3",
+      "name": "Aging and history-dependence",
+      "fullRef": "thermodynamics-ext/non-ergodicity:Corollary 7.3"
+    },
+    {
+      "derivationId": "thermodynamics-ext/non-ergodicity",
+      "type": "Corollary",
+      "id": "7.4",
+      "name": "Stretched exponentials",
+      "fullRef": "thermodynamics-ext/non-ergodicity:Corollary 7.4"
     },
     {
       "derivationId": "thermodynamics-ext/renormalization",
@@ -26037,6 +27297,41 @@
       "description": "The framework's dark matter prediction ([Dark Matter Granularity](/predictions/dark-matter-granularity)) involves coherence structures. Could a dark-sector version of baryogenesis explain the OmegaB /"
     },
     {
+      "derivationId": "cosmology/cosmological-arrow",
+      "derivationStatus": "draft",
+      "number": 1,
+      "title": "Quantitative phase-space growth rate",
+      "description": "Compute dlnvol(Gammaacc)/dtau from the bootstrap dynamics and show it matches the observed entropy growth rate. This requires the binding energies at each hierarchy level, which in turn require the fu"
+    },
+    {
+      "derivationId": "cosmology/cosmological-arrow",
+      "derivationStatus": "draft",
+      "number": 2,
+      "title": "Inflation and the arrow",
+      "description": "The geometric inflation derivation ([Geometric Inflation](/derivations/cosmology/geometric-inflation)) provides the initial expansion. The relationship between the inflationary epoch and the first hie"
+    },
+    {
+      "derivationId": "cosmology/cosmological-arrow",
+      "derivationStatus": "draft",
+      "number": 3,
+      "title": "De Sitter equilibrium",
+      "description": "In the far future, the universe approaches de Sitter space with constant temperature TdS sim Lambda. At this point, no further hierarchy levels become available (the temperature stops decreasing). Doe"
+    },
+    {
+      "derivationId": "cosmology/cosmological-arrow",
+      "derivationStatus": "draft",
+      "number": 4,
+      "title": "Arrow reversal",
+      "description": "Can the cosmological arrow reverse (in a contracting phase)? The framework predicts no, because contraction would heat the universe, disrupting higher hierarchy levels and *reducing* Gammaacc — the ac"
+    },
+    {
+      "derivationId": "cosmology/cosmological-arrow",
+      "derivationStatus": "draft",
+      "number": 5,
+      "title": "Relationship to Gap 3 of [Time as Phase Ordering](/derivations/thermodynamics/time)",
+      "description": "This derivation claims to resolve Gap 3. The resolution should be verified: does hierarchy elaboration fully account for the cosmological arrow, or are there additional contributions from boundary con"
+    },
+    {
       "derivationId": "cosmology/coupling-constants",
       "derivationStatus": "rigorous",
       "number": 1,
@@ -26073,28 +27368,28 @@
     },
     {
       "derivationId": "cosmology/geometric-inflation",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Geometric validity criterion",
       "description": "The threshold rhoRI gg rhoPl is qualitative. A precise criterion (specific ratio, phase transition vs crossover) would sharpen the predictions. The causal set literature on \"manifold-likeness\" conditi"
     },
     {
       "derivationId": "cosmology/geometric-inflation",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Quantitative $n_s$ derivation",
       "description": "Proposition 6.2 claims compatibility with the observed spectral index but does not derive it. Computing ns from the Poisson statistics of the geometric transition would be a strong quantitative test —"
     },
     {
       "derivationId": "cosmology/geometric-inflation",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Reheating equivalent",
       "description": "In standard inflation, reheating transfers inflaton energy to Standard Model particles. In geometric inflation, the analogous process is the bootstrap crystallization of the gauge hierarchy. The therm"
     },
     {
       "derivationId": "cosmology/geometric-inflation",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Relationship to bounce",
       "description": "The singularity-resolution derivation provides the bounce; this derivation provides the subsequent expansion. The interface — how the bounce state seeds the pre-geometric network — needs formalization"
@@ -26192,38 +27487,24 @@
     },
     {
       "derivationId": "foundation/aperiodic-order",
-      "derivationStatus": "draft",
-      "number": 1,
-      "title": "Formal C5 non-degeneracy",
-      "description": "Define \"informationally degenerate\" precisely — e.g., as vanishing conditional mutual information I(C5x ; C5y mid lattice) = 0 for all pairs of C5 instances in a periodic network. This would make Prop"
-    },
-    {
-      "derivationId": "foundation/aperiodic-order",
-      "derivationStatus": "draft",
-      "number": 2,
-      "title": "Trichotomy proof",
-      "description": "Prove that periodic, disordered, and aperiodic-with-matching-rules exhaust all configurations of observer networks. The natural formalization uses Delone sets (uniformly discrete + relatively dense po"
-    },
-    {
-      "derivationId": "foundation/aperiodic-order",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Bootstrap-substitution identification",
-      "description": "Prove that the abstract bootstrap equation U cong R(U,U) admits a geometric realization as a substitution tiling in Rd. This requires showing that the recursive structure of observer composition maps "
+      "description": "Prove that the abstract bootstrap equation U cong R(U,U) admits a geometric realization as a substitution tiling in Rd. This requires constructing an explicit functor from the observer category to a t"
     },
     {
       "derivationId": "foundation/aperiodic-order",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Metallic mean selection",
       "description": "Determine which n is selected by the multi-scale self-consistency condition ([Gravitational Coupling](/derivations/spacetime/gravitational-constant), Theorem 12.6). The golden mean (n = 1) is the simp"
     },
     {
       "derivationId": "foundation/aperiodic-order",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Net entropy $s_{\\text{net}}(\\beta_n)$",
-      "description": "Derive the mutual information cost function from the axioms rather than assuming a Gaussian profile. This would fix alpha(betan) numerically. <!-- References --> [Solomyak, 1997]: /references#solomyak"
+      "description": "Derive the mutual information cost function from the axioms rather than assuming a Gaussian profile. This would fix alpha(betan) numerically. <!-- References --> [Lagarias, 1999]: /references#lagarias"
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
@@ -26588,6 +27869,41 @@
       "number": 4,
       "title": "Observational signatures",
       "description": "The information encoding in Hawking radiation correlations is in principle observable but requires collecting an astronomically large number of quanta. Are there more accessible signatures of the reso"
+    },
+    {
+      "derivationId": "holography/scrambling",
+      "derivationStatus": "stub",
+      "number": 1,
+      "title": "Chaos bound from axioms",
+      "description": "Derive the Maldacena-Shenker-Stanford chaos bound lambdaL 2pi T from coherence conservation and the observer axioms, rather than importing it as an external result."
+    },
+    {
+      "derivationId": "holography/scrambling",
+      "derivationStatus": "stub",
+      "number": 2,
+      "title": "Evaporation dynamics",
+      "description": "Connect the inter-sector transition rate (hierarchy barrier crossing) to the Hawking evaporation rate Gamma sim TH2. This should give a derivation of the Page curve from the coherence-sector framework"
+    },
+    {
+      "derivationId": "holography/scrambling",
+      "derivationStatus": "stub",
+      "number": 3,
+      "title": "Sub-saturated scrambling",
+      "description": "Characterize the scrambling dynamics for states that do not saturate the holographic bound. The scrambling time should increase as the hierarchy becomes more complex (more levels, tighter matching rul"
+    },
+    {
+      "derivationId": "holography/scrambling",
+      "derivationStatus": "stub",
+      "number": 4,
+      "title": "Scrambling and ER=EPR",
+      "description": "Make the connection between maximal within-sector mixing and the ER=EPR bridge structure more precise. The complete-graph argument (Step 4) should follow from the ER bridge connectivity derived in [ER"
+    },
+    {
+      "derivationId": "holography/scrambling",
+      "derivationStatus": "stub",
+      "number": 5,
+      "title": "Loop-tilt for other horizons",
+      "description": "Extend the loop-tilt mechanism (Step 5) to cosmological horizons (de Sitter), Rindler horizons (uniformly accelerating observers), and inner horizons of rotating black holes (Kerr). The de Sitter case"
     },
     {
       "derivationId": "interactions/bootstrap-division-algebras",
@@ -27220,6 +28536,41 @@
       "description": "The Minkowski metric determines the causal structure (light cones). The framework should show that this causal structure is equivalent to the partial order prec on G in the continuum limit — connectin"
     },
     {
+      "derivationId": "thermodynamics-ext/biological-non-ergodicity",
+      "derivationStatus": "stub",
+      "number": 1,
+      "title": "Metabolic scaling",
+      "description": "Derive the scaling of maintenance cost with hierarchy level ell. If the cost scales as ell hbaromegaell where omegaell is the cycling frequency at level ell, this should connect to Kleiber's law (meta"
+    },
+    {
+      "derivationId": "thermodynamics-ext/biological-non-ergodicity",
+      "derivationStatus": "stub",
+      "number": 2,
+      "title": "$\\Gamma_B$ dimension",
+      "description": "Compute the dimension of the B-compatible sector as a function of the complexity of B (number of self/non-self distinctions). This would give a quantitative measure of biological non-ergodicity."
+    },
+    {
+      "derivationId": "thermodynamics-ext/biological-non-ergodicity",
+      "derivationStatus": "stub",
+      "number": 3,
+      "title": "Autopoiesis connection",
+      "description": "Make the relationship to Maturana and Varela's autopoiesis theory precise. The observer triple (Sigma, I, B) with active loop closure appears to be a formal version of autopoietic organization; this s"
+    },
+    {
+      "derivationId": "thermodynamics-ext/biological-non-ergodicity",
+      "derivationStatus": "stub",
+      "number": 4,
+      "title": "Evolutionary dynamics",
+      "description": "If adaptation is coherence-domain expansion, natural selection should emerge as the process by which observers compete for coherence access. This would connect to the Fisher-Price equation via the Fis"
+    },
+    {
+      "derivationId": "thermodynamics-ext/biological-non-ergodicity",
+      "derivationStatus": "stub",
+      "number": 5,
+      "title": "Abiogenesis",
+      "description": "The transition from non-observer chemistry to observer biology is the formation of the first B boundary with active loop closure. The framework should predict conditions under which this transition is"
+    },
+    {
       "derivationId": "thermodynamics-ext/distinguishability-conservation",
       "derivationStatus": "rigorous",
       "number": 1,
@@ -27281,6 +28632,41 @@
       "number": 3,
       "title": "Infinite-dimensional extension",
       "description": "The derivation assumes finite-dimensional Sigma. For field theory, the state space is infinite-dimensional and requires functional-analytic care [Pistone & Sempi, 1995]."
+    },
+    {
+      "derivationId": "thermodynamics-ext/non-ergodicity",
+      "derivationStatus": "draft",
+      "number": 1,
+      "title": "Mixing theorem",
+      "description": "Prove conditional ergodicity (Theorem 5.2) rigorously from the dynamics, not just from the equidistribution of phases. This requires a mixing-time bound for the interaction-driven shuffling of non-pha"
+    },
+    {
+      "derivationId": "thermodynamics-ext/non-ergodicity",
+      "derivationStatus": "draft",
+      "number": 2,
+      "title": "ETH transition threshold",
+      "description": "Quantify the critical inter-level coupling strength at which ETH fails. This should be expressible in terms of the coherence gap DeltaC and the intra-level density of states."
+    },
+    {
+      "derivationId": "thermodynamics-ext/non-ergodicity",
+      "derivationStatus": "draft",
+      "number": 3,
+      "title": "Aging exponents",
+      "description": "Derive the specific aging exponents and stretched-exponential parameters beta from the substitution matrix of the aperiodic tiling. The metallic-mean family ([Aperiodic Order](/derivations/foundation/"
+    },
+    {
+      "derivationId": "thermodynamics-ext/non-ergodicity",
+      "derivationStatus": "draft",
+      "number": 4,
+      "title": "Fluctuation theorems",
+      "description": "The Jarzynski equality and Crooks theorem should arise as finite-size corrections to the conditional-ergodicity framework. This overlaps with Gap 1 of [Entropy as Inaccessible Coherence](/derivations/"
+    },
+    {
+      "derivationId": "thermodynamics-ext/non-ergodicity",
+      "derivationStatus": "draft",
+      "number": 5,
+      "title": "Quantum conditional ergodicity",
+      "description": "Extend Theorem 5.2 to the quantum regime, where the phase torus is replaced by a Hilbert space and Weyl equidistribution by quantum ergodicity of eigenfunctions."
     },
     {
       "derivationId": "thermodynamics-ext/renormalization",
@@ -27377,19 +28763,22 @@
   "upgradeAnalysis": {
     "eligible": [
       {
-        "id": "cosmology/geometric-inflation",
-        "currentStatus": "draft",
-        "gapCount": 4,
-        "formalObjectCount": 8
-      },
-      {
-        "id": "foundation/aperiodic-order",
+        "id": "thermodynamics-ext/non-ergodicity",
         "currentStatus": "draft",
         "gapCount": 5,
-        "formalObjectCount": 15
+        "formalObjectCount": 16
       }
     ],
-    "blocked": []
+    "blocked": [
+      {
+        "id": "cosmology/cosmological-arrow",
+        "currentStatus": "draft",
+        "blockedBy": [
+          "thermodynamics-ext/non-ergodicity"
+        ],
+        "reason": "Depends on 1 draft derivation(s)"
+      }
+    ]
   },
   "warnings": []
 }
