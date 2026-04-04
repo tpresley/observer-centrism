@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-04T01:27:08.420Z",
+    "generatedAt": "2026-04-04T13:56:22.316Z",
     "derivationCount": 71,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -17,7 +17,7 @@
     "derivationCount": 71,
     "predictionCount": 12,
     "edgeCount": 188,
-    "formalObjectCount": 1080,
+    "formalObjectCount": 1082,
     "openGapCount": 221,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
@@ -1976,6 +1976,10 @@
         ],
         "incoming": [
           {
+            "source": "cosmology/observer-loop-viability",
+            "context": "Proposition 2.1"
+          },
+          {
             "source": "gauge/color-force",
             "context": "Coupling Constants"
           },
@@ -2806,6 +2810,18 @@
           "id": "8.6",
           "name": "The hierarchy from level 0's perspective",
           "statementPreview": "A minimal observer at level 0 \"sees\" an almost entirely de Sitter universe. Its effective cosmological fraction is:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "8.7",
+          "name": "Numerical consistency check",
+          "statementPreview": "Using the empirical matter fraction Omegam 0.3 as input, the level-indexed quantities can be evaluated numerically. T..."
+        },
+        {
+          "type": "Proposition",
+          "id": "8.8",
+          "name": "The hierarchy as a finite self-consistency problem",
+          "statementPreview": "The framework converts the cosmological constant problem from \"an arbitrary free parameter with no structural constra..."
         }
       ],
       "structuralPostulates": [],
@@ -2928,6 +2944,22 @@
           {
             "target": "holography/er-epr",
             "context": "ER=EPR"
+          },
+          {
+            "target": "interactions/bootstrap-division-algebras",
+            "context": "Theorem 7.1 — Hurwitz obstruction"
+          },
+          {
+            "target": "particles/three-generations",
+            "context": "Theorem 3.1 — dim so(3"
+          },
+          {
+            "target": "cosmology/coupling-constants",
+            "context": "Proposition 2.1"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Theorem 3.1"
           },
           {
             "target": "cosmology/dark-energy-equation-of-state",
@@ -8694,6 +8726,10 @@
             "context": "Bootstrap → Division Algebras"
           },
           {
+            "source": "cosmology/observer-loop-viability",
+            "context": "Theorem 7.1 — Hurwitz obstruction"
+          },
+          {
             "source": "gauge/color-force",
             "context": "Theorems 2.2–2.3, 7.1"
           },
@@ -11112,6 +11148,10 @@
             "context": "Mass Hierarchy"
           },
           {
+            "source": "cosmology/observer-loop-viability",
+            "context": "Theorem 3.1"
+          },
+          {
             "source": "flavor/mixing-angles",
             "context": "Mass Hierarchy"
           },
@@ -12146,6 +12186,10 @@
           {
             "source": "cosmology/baryogenesis",
             "context": "rigorous"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
+            "context": "Theorem 3.1 — dim so(3"
           },
           {
             "source": "flavor/mixing-angles",
@@ -21386,6 +21430,20 @@
       "id": "8.6",
       "name": "The hierarchy from level 0's perspective",
       "fullRef": "cosmology/observer-loop-viability:Proposition 8.6"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Proposition",
+      "id": "8.7",
+      "name": "Numerical consistency check",
+      "fullRef": "cosmology/observer-loop-viability:Proposition 8.7"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Proposition",
+      "id": "8.8",
+      "name": "The hierarchy as a finite self-consistency problem",
+      "fullRef": "cosmology/observer-loop-viability:Proposition 8.8"
     },
     {
       "derivationId": "dimensions/three-dimensions",
