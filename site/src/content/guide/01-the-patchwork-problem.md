@@ -32,7 +32,11 @@ The observer is simultaneously everywhere in physics and nowhere in the foundati
 
 ## A Different Starting Point
 
-Observer-Centrism takes this gap as its starting point. Rather than treating the observer's centrality as a philosophical curiosity, it asks a concrete question: *What is the minimal definition of a persistent observer, what structure must a universe have to support such observers, and what — if anything — is forced about the physics of that universe?*
+Why has this gap persisted? Not for lack of ambition — physics has attacked far harder problems. The reason is more human: "observer" in everyday language carries connotations of consciousness, awareness, subjective experience. Formalizing the observer seems to require first solving the hard problem of consciousness, and physics has understandably avoided anything that might open the door to mysticism in the foundations.
+
+Observer-Centrism's first move is to show that this conflation is unnecessary. The definition of an observer used here is entirely structural: a state space, a conserved quantity, and a boundary between self and non-self. A proton satisfies it. A vortex satisfies it. Nothing about consciousness, intelligence, or awareness enters at any point. Measurement, in this framework, is not a mysterious act of "observation" — it is the generation of relational invariants, the residue of interactions recorded in the structure of the interacting systems. The hard problem of consciousness remains hard, but it is a *separate* problem, and nothing in this framework depends on solving it.
+
+With that fear set aside, the framework asks a concrete question: *What is the minimal definition of a persistent observer, what structure must a universe have to support such observers, and what — if anything — is forced about the physics of that universe?*
 
 The framework's answer is three axioms — one encoding what persistent structures conserve, one defining what an observer is, and one specifying the stability condition that separates things that persist from things that don't. From these, it derives quantum mechanics, general relativity, thermodynamics, the particle spectrum, holography, and the basis of experience — not by postulating them, but by showing that they are structurally necessary consequences.
 
