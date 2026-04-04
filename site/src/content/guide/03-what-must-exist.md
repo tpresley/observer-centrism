@@ -59,9 +59,9 @@ This derivation works, but it relies on the entire apparatus of quantum field th
 
 ## Not Pairs — A Network
 
-Pairs are necessary but not sufficient. The axioms include a condition called strong subadditivity (C5) — a constraint on how coherence distributes across three or more subsystems. For a universe containing only two observers, C5 is automatically satisfied and constrains nothing. It becomes vacuous. And the derivation chain needs C5 to be non-trivial: without it, the framework cannot distinguish quantum mechanics from classical probability theory.
+Pairs are necessary but not sufficient. Coherence conservation includes a constraint on how coherence distributes across three or more subsystems — roughly, the whole must carry less coherence than the sum of its parts. For a universe containing only two observers, this constraint is automatically satisfied and tells you nothing. It becomes vacuous. And the derivation chain needs it to be non-trivial: without it, the framework cannot distinguish quantum mechanics from classical probability theory.
 
-So the universe must contain at least three observers. But each of those three needs its own interaction partners for C5 to constrain its local structure. The requirement propagates: three becomes a network. The network must be boundaryless — either infinite or finite and compact — because any boundary would leave edge observers without the partners that C5 demands.
+So the universe must contain at least three observers. But each of those three needs its own interaction partners for the constraint to bite. The requirement propagates: three becomes a network. The network must be boundaryless — either infinite or finite and compact — because any boundary would leave edge observers without the partners the constraint demands.
 
 One more consequence, perhaps the deepest: this network cannot assemble piece by piece. Time is derived from observer interactions — it does not exist before observers do. There is no temporal stage on which a sequential construction could play out. The entire boundaryless network must condense as a single self-consistent structure. All observers emerge at once, at their respective first moments, with no ordering between them.
 
