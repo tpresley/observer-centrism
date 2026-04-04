@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-04T13:56:22.316Z",
+    "generatedAt": "2026-04-04T16:28:22.338Z",
     "derivationCount": 71,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -1980,6 +1980,10 @@
             "context": "Proposition 2.1"
           },
           {
+            "source": "cosmology/observer-loop-viability",
+            "context": "Coupling Constants"
+          },
+          {
             "source": "gauge/color-force",
             "context": "Coupling Constants"
           },
@@ -2853,8 +2857,8 @@
         },
         {
           "number": 6,
-          "title": "Geometry functor, level-indexed $\\Lambda$, and quantitative prediction",
-          "description": "Step 8 defines the level-indexed quantities (Lambdaneff, S(n)) and the cross-level consistency constraint (Proposition 8.3), but does not derive the quantitative relationship. A geometry functor G: ma"
+          "title": "Geometry functor and double saturation",
+          "description": "Step 8 defines the level-indexed quantities (Lambdaneff, S(n)) and the cross-level consistency constraint (Proposition 8.3). Conjecture 8.9 identifies the boundary condition that would close the syste"
         }
       ],
       "assessmentVerdict": "Rigorous. The core results form a rigorous chain: the geometric upper bound (Theorem 2.1) follows from the Planck cutoff and de Sitter geometry; the bounce dissolution (Theorem 4.1) follows from the divergent effective pressure exceeding any finite observer energy; the sign prediction (Theorem 5.4) ",
@@ -2960,6 +2964,14 @@
           {
             "target": "particles/mass-hierarchy",
             "context": "Theorem 3.1"
+          },
+          {
+            "target": "particles/three-generations",
+            "context": "Three Generations"
+          },
+          {
+            "target": "cosmology/coupling-constants",
+            "context": "Coupling Constants"
           },
           {
             "target": "cosmology/dark-energy-equation-of-state",
@@ -12190,6 +12202,10 @@
           {
             "source": "cosmology/observer-loop-viability",
             "context": "Theorem 3.1 — dim so(3"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
+            "context": "Three Generations"
           },
           {
             "source": "flavor/mixing-angles",
@@ -27989,8 +28005,8 @@
       "derivationId": "cosmology/observer-loop-viability",
       "derivationStatus": "rigorous",
       "number": 6,
-      "title": "Geometry functor, level-indexed $\\Lambda$, and quantitative prediction",
-      "description": "Step 8 defines the level-indexed quantities (Lambdaneff, S(n)) and the cross-level consistency constraint (Proposition 8.3), but does not derive the quantitative relationship. A geometry functor G: ma"
+      "title": "Geometry functor and double saturation",
+      "description": "Step 8 defines the level-indexed quantities (Lambdaneff, S(n)) and the cross-level consistency constraint (Proposition 8.3). Conjecture 8.9 identifies the boundary condition that would close the syste"
     },
     {
       "derivationId": "dimensions/three-dimensions",
