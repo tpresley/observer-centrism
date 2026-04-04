@@ -190,6 +190,18 @@
       "dependencies": ["spacetime/singularity-resolution", "spacetime/einstein-equations", "holography/area-scaling"],
       "addressesGaps": ["spacetime/singularity-resolution Gap 4"],
       "impact": "Connects bounce to dark energy. Makes the self-consistency loop concrete."
+    },
+    {
+      "id": "dark-energy-equation-of-state",
+      "title": "Dark Energy Equation of State from Distinguishability Conservation",
+      "difficulty": "MODERATE",
+      "status": "COMPLETED — created cosmology/dark-energy-equation-of-state.md (provisional). Phantom exclusion w ≥ -1 (Thm 2.1, rigorous), constancy preference w = -1 (Thm 3.1, rigorous), horizon distinguishability bound (Prop 4.4, semi-formal).",
+      "completedDate": "2026-04-03",
+      "rationale": "Distinguishability conservation (rigorous) constrains the dark energy equation of state, not just the value of Λ. The Big Rip (w < -1) destroys all coherence carriers at finite time — the expansion-side mirror of the bounce dissolution that excludes Λ < 0. The constancy preference (w = -1 is the unique equilibrium) follows from the time-independence of the de Sitter static patch.",
+      "strategy": "(1) Define coherence partition across cosmological horizon. (2) Show phantom energy (w < -1) produces Big Rip → carrier destruction → Axiom 1 violation (three independent arguments: carrier destruction, geodesic incompleteness, horizon shrinkage). (3) Show w = -1 is unique fixed point: only equation of state with time-independent partition, exact Lyapunov stability, and zero coherence flux. (4) Horizon distinguishability of non-self relational invariants (characterized by Gibbons-Hawking temperature) gives two-sided Λ bound (semi-formal). (5) Cross-predictions: bounded eternal expansion, connection to holographic noise.",
+      "dependencies": ["thermodynamics-ext/distinguishability-conservation", "cosmology/observer-loop-viability", "axioms/coherence-conservation", "axioms/loop-closure", "holography/area-scaling", "spacetime/singularity-resolution"],
+      "addressesGaps": ["cosmology/observer-loop-viability Gap 2 (partial — provides mechanism via horizon distinguishability)"],
+      "impact": "New derivation. Constrains dark energy equation of state from axioms. Derives null energy condition. Provides concrete mechanism for observer-loop-viability Gap 2."
     }
   ],
 

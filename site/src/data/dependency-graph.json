@@ -419,6 +419,12 @@
       "title": "Cosmological Arrow",
       "group": "cosmology",
       "status": "draft"
+    },
+    {
+      "id": "cosmology/dark-energy-equation-of-state",
+      "title": "Dark Energy Equation of State",
+      "group": "cosmology",
+      "status": "provisional"
     }
   ],
   "edges": [
@@ -1149,6 +1155,30 @@
     {
       "from": "cosmology/geometric-inflation",
       "to": "cosmology/cosmological-arrow"
+    },
+    {
+      "from": "thermodynamics-ext/distinguishability-conservation",
+      "to": "cosmology/dark-energy-equation-of-state"
+    },
+    {
+      "from": "cosmology/observer-loop-viability",
+      "to": "cosmology/dark-energy-equation-of-state"
+    },
+    {
+      "from": "axioms/coherence-conservation",
+      "to": "cosmology/dark-energy-equation-of-state"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "cosmology/dark-energy-equation-of-state"
+    },
+    {
+      "from": "holography/area-scaling",
+      "to": "cosmology/dark-energy-equation-of-state"
+    },
+    {
+      "from": "spacetime/singularity-resolution",
+      "to": "cosmology/dark-energy-equation-of-state"
     }
   ]
 }
