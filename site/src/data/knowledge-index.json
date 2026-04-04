@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-04T00:39:38.537Z",
+    "generatedAt": "2026-04-04T01:27:08.420Z",
     "derivationCount": 71,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -17,7 +17,7 @@
     "derivationCount": 71,
     "predictionCount": 12,
     "edgeCount": 188,
-    "formalObjectCount": 1074,
+    "formalObjectCount": 1080,
     "openGapCount": 221,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
@@ -1730,6 +1730,10 @@
           },
           {
             "target": "cosmology/observer-loop-viability",
+            "context": "Step 8"
+          },
+          {
+            "target": "cosmology/observer-loop-viability",
             "context": "Theorem 5.4"
           },
           {
@@ -2583,7 +2587,7 @@
         "quantum-gravity"
       ],
       "summary": "The three axioms constrain which spacetimes can host observer networks. The Planck-scale upper bound (Λ < 3/ℓ_P²) follows from geometric viability. The sign prediction (Λ ≥ 0) follows from coherence conservation: a Λ < 0 bounce destroys all observer structures via divergent effective pressure, leaving coherence with no valid carrier — violating Axiom 1.",
-      "lastUpdated": "2026-03-14",
+      "lastUpdated": "2026-04-03",
       "dependsOn": [
         "spacetime/singularity-resolution",
         "holography/area-scaling",
@@ -2634,6 +2638,10 @@
         {
           "number": 7,
           "title": "Hierarchical Coherence Suppression (Mechanism Sketch)"
+        },
+        {
+          "number": 8,
+          "title": "Level-Dependent Coherence Partition"
         }
       ],
       "formalObjects": [
@@ -2762,6 +2770,42 @@
           "id": "7.5",
           "name": "The hierarchy is the second law",
           "statementPreview": "The self-consistency equation (Proposition 7.4) is the entropy decomposition ([Entropy](/derivations/thermodynamics/e..."
+        },
+        {
+          "type": "Definition",
+          "id": "8.1",
+          "name": "Level-$n$ entropy partition",
+          "statementPreview": "For an observer at bootstrap level n (Definition 7.1), the entropy decomposition ([Entropy](/derivations/thermodynami..."
+        },
+        {
+          "type": "Definition",
+          "id": "8.2",
+          "name": "Effective cosmological parameter",
+          "statementPreview": "The geometry projected at level n is constructed from relational invariants accessible to level-n observers via [ER=E..."
+        },
+        {
+          "type": "Proposition",
+          "id": "8.3",
+          "name": "Cross-level consistency",
+          "statementPreview": "The effective cosmological parameters at different levels are not independent — they are constrained by the cross-lev..."
+        },
+        {
+          "type": "Proposition",
+          "id": "8.4",
+          "name": "Reframing the hierarchy",
+          "statementPreview": "The standard statement of the cosmological constant hierarchy problem compares the Planck-scale bound Lambda < 3/ellP..."
+        },
+        {
+          "type": "Proposition",
+          "id": "8.5",
+          "name": "Breakdown of the level-independence approximation",
+          "statementPreview": "Proposition 7.5 identifies the self-consistency equation with the entropy decomposition and claims approximate observ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "8.6",
+          "name": "The hierarchy from level 0's perspective",
+          "statementPreview": "A minimal observer at level 0 \"sees\" an almost entirely de Sitter universe. Its effective cosmological fraction is:*"
         }
       ],
       "structuralPostulates": [],
@@ -2793,8 +2837,8 @@
         },
         {
           "number": 6,
-          "title": "Geometry functor and quantitative $\\Lambda$",
-          "description": "The entropy identification (Proposition 7.5) explains the hierarchy qualitatively via the second law. A *quantitative* prediction of Lambda requires formalizing a geometry functor G: mathbfObs mathbfG"
+          "title": "Geometry functor, level-indexed $\\Lambda$, and quantitative prediction",
+          "description": "Step 8 defines the level-indexed quantities (Lambdaneff, S(n)) and the cross-level consistency constraint (Proposition 8.3), but does not derive the quantitative relationship. A geometry functor G: ma"
         }
       ],
       "assessmentVerdict": "Rigorous. The core results form a rigorous chain: the geometric upper bound (Theorem 2.1) follows from the Planck cutoff and de Sitter geometry; the bounce dissolution (Theorem 4.1) follows from the divergent effective pressure exceeding any finite observer energy; the sign prediction (Theorem 5.4) ",
@@ -2882,6 +2926,10 @@
             "context": "Mass Hierarchy"
           },
           {
+            "target": "holography/er-epr",
+            "context": "ER=EPR"
+          },
+          {
             "target": "cosmology/dark-energy-equation-of-state",
             "context": "Proposition 4.3–4.4"
           },
@@ -2900,16 +2948,16 @@
           {
             "target": "spacetime/singularity-resolution",
             "context": "Singularity Resolution"
-          },
-          {
-            "target": "holography/er-epr",
-            "context": "ER=EPR"
           }
         ],
         "incoming": [
           {
             "source": "cosmology/cosmological-arrow",
             "context": "Observer Loop Viability"
+          },
+          {
+            "source": "cosmology/cosmological-constant",
+            "context": "Step 8"
           },
           {
             "source": "cosmology/cosmological-constant",
@@ -7765,11 +7813,11 @@
           },
           {
             "source": "cosmology/observer-loop-viability",
-            "context": "geometry from relational invariants"
+            "context": "ER=EPR"
           },
           {
             "source": "cosmology/observer-loop-viability",
-            "context": "ER=EPR"
+            "context": "geometry from relational invariants"
           },
           {
             "source": "holography/information-paradox",
@@ -21298,6 +21346,48 @@
       "fullRef": "cosmology/observer-loop-viability:Proposition 7.5"
     },
     {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Definition",
+      "id": "8.1",
+      "name": "Level-$n$ entropy partition",
+      "fullRef": "cosmology/observer-loop-viability:Definition 8.1"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Definition",
+      "id": "8.2",
+      "name": "Effective cosmological parameter",
+      "fullRef": "cosmology/observer-loop-viability:Definition 8.2"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Proposition",
+      "id": "8.3",
+      "name": "Cross-level consistency",
+      "fullRef": "cosmology/observer-loop-viability:Proposition 8.3"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Proposition",
+      "id": "8.4",
+      "name": "Reframing the hierarchy",
+      "fullRef": "cosmology/observer-loop-viability:Proposition 8.4"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Proposition",
+      "id": "8.5",
+      "name": "Breakdown of the level-independence approximation",
+      "fullRef": "cosmology/observer-loop-viability:Proposition 8.5"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Proposition",
+      "id": "8.6",
+      "name": "The hierarchy from level 0's perspective",
+      "fullRef": "cosmology/observer-loop-viability:Proposition 8.6"
+    },
+    {
       "derivationId": "dimensions/three-dimensions",
       "type": "Definition",
       "id": "1.1.",
@@ -27841,8 +27931,8 @@
       "derivationId": "cosmology/observer-loop-viability",
       "derivationStatus": "rigorous",
       "number": 6,
-      "title": "Geometry functor and quantitative $\\Lambda$",
-      "description": "The entropy identification (Proposition 7.5) explains the hierarchy qualitatively via the second law. A *quantitative* prediction of Lambda requires formalizing a geometry functor G: mathbfObs mathbfG"
+      "title": "Geometry functor, level-indexed $\\Lambda$, and quantitative prediction",
+      "description": "Step 8 defines the level-indexed quantities (Lambdaneff, S(n)) and the cross-level consistency constraint (Proposition 8.3), but does not derive the quantitative relationship. A geometry functor G: ma"
     },
     {
       "derivationId": "dimensions/three-dimensions",

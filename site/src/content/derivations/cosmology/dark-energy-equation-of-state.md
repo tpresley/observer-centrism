@@ -183,6 +183,8 @@ $$\Lambda \gtrsim \frac{12\pi^2}{c^2 T_{\text{loop}}^2}$$
 
 **Remark (Connection to Gap 2 of observer-loop-viability).** Proposition 4.4 provides a concrete mechanism for the minimum non-self coherence identified as Gap 2 in [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) (Proposition 6.2): the minimum is set by the distinguishability of relational invariants characterized by $T_{\text{GH}}$. The bound becomes quantitatively interesting only when combined with a specific model of which observers the universe must support — not just the minimal observer, but the full bootstrap hierarchy. This connection remains open (Gap 2 below).
 
+**Remark (Level-indexing of bounds).** The bounds in Proposition 4.4 apply at specific bootstrap levels. The Gibbons-Hawking temperature itself is level-indexed: $T_{\text{GH}}^{(n)}$ characterizes the effective temperature of relational invariants crossing the level-$n$ boundary $\mathcal{B}^{(n)}$, not the cosmological horizon per se. The two-sided bound on $\Lambda$ from Proposition 4.4 is therefore a bound on $\Lambda_n^{\text{eff}}$ ([Observer Loop Viability](/derivations/cosmology/observer-loop-viability), Step 8, Definition 8.2), not on the bare cosmological constant. Cross-level consistency (Proposition 8.3 of observer-loop-viability) constrains how these bounds relate across the hierarchy.
+
 ### Step 5: Cross-Predictions and Consistency
 
 **Proposition 5.1 (Bounded eternal expansion).** *The combined results of this derivation and [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) constrain the universe to bounded eternal expansion:*

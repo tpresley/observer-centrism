@@ -90,6 +90,8 @@ The above analysis treats "initial conditions" as straightforwardly ontic — fi
 
 So the "boundary data" that determine $\Lambda$ are a mix: $\mathcal{C}_{\text{total}}$ is ontic but inaccessible; the horizon size and accessible content are genuinely observer-relative. The statement "the value of $\Lambda$ depends on initial conditions" is less clean than it first appears — the "initial conditions" themselves are partly observer-projected quantities.
 
+[Observer Loop Viability Bounds](/derivations/cosmology/observer-loop-viability) (Step 8) now makes this level-dependence precise: the entropy decomposition is level-indexed ($C_0 = \mathcal{C}_{\text{acc}}^{(n)} + S^{(n)}$), each bootstrap level projects its own effective cosmological parameter $\Lambda_n^{\text{eff}}$, and the 120-order comparison between $\Lambda_P$ and $\Lambda_{\text{obs}}$ is identified as a cross-level comparison — mixing a bound set by level-0 observers (Theorem 2.1) with a measurement by level-$N$ observers (us). The hierarchy question becomes: what determines the sequence $\{\Lambda_n^{\text{eff}}\}$ and its endpoint $\Lambda_N^{\text{eff}} = \Lambda$?
+
 This does **not** make $\Lambda$ observer-relative. $\Lambda$ enters the Einstein equations as a geometric constant shared by all observers in the same spacetime. But it means the relationship between $\Lambda$ and the quantities it supposedly "depends on" is tangled: $\Lambda$ determines the horizon, the horizon determines the accessible coherence domain, the coherence domain determines the observer's effective description of the universe, and that description is what we call "the initial conditions." The arrow of explanation is not one-directional.
 
 ### The self-consistency loop

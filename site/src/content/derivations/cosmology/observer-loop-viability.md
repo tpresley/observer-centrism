@@ -6,7 +6,7 @@ enablesDerivation: ["cosmology/cosmological-arrow", "cosmology/dark-energy-equat
 tags: ["cosmology", "quantum-gravity"]
 summary: "The three axioms constrain which spacetimes can host observer networks. The Planck-scale upper bound (Λ < 3/ℓ_P²) follows from geometric viability. The sign prediction (Λ ≥ 0) follows from coherence conservation: a Λ < 0 bounce destroys all observer structures via divergent effective pressure, leaving coherence with no valid carrier — violating Axiom 1."
 rigorLevel: "formal"
-lastUpdated: 2026-03-14
+lastUpdated: 2026-04-03
 ---
 
 ## Overview
@@ -255,7 +255,11 @@ $$C_0 = \underbrace{\sum \Delta c_n}_{\mathcal{C}_A} + \underbrace{S_H}_{S_A}$$
 
 The self-consistency equation and the entropy decomposition are the same equation. The hierarchy question "why is $\sum \Delta c_n \ll C_0$?" is identical to "why is entropy large?" — and the second law answers this: $S_A$ increases monotonically ([Entropy](/derivations/thermodynamics/entropy), Theorem 4.1). In a universe whose interaction graph has been growing for cosmic time $t \gg t_P$, the inaccessible fraction has grown large.
 
-This decomposition is approximately observer-independent for all sub-cosmological observers. Any two observers within the same cosmological horizon see $S_A \approx S_B \approx S_H$, because the horizon entropy dominates — observer-specific corrections (the epistemic horizon differences from Proposition 1.5) are negligible relative to $S_H \sim 10^{122}$. The cosmological density fractions are the entropy fractions:
+This decomposition is approximately observer-independent for observers whose epistemic horizon satisfies $\mathcal{I}_n^{\max} \gg 1$. Any two such observers within the same cosmological horizon see $S_A \approx S_B \approx S_H$, because the horizon entropy dominates — observer-specific corrections (the epistemic horizon differences from Proposition 1.5) are negligible relative to $S_H \sim 10^{122}$.
+
+**Caveat (validity domain).** This approximation breaks down for observers at low bootstrap levels. For a Planck-mass observer at level 0, the epistemic horizon is $\mathcal{I}_0^{\max} \sim 1$ bit (Proposition 1.5). Its "correction" is not small relative to $S_H$ — the observer's entire accessible coherence *is* the correction. Nearly all coherence is inaccessible from level 0's perspective. Step 8 makes this level-dependence precise: the entropy decomposition is genuinely level-indexed, and the hierarchy question looks fundamentally different from different levels of the bootstrap.
+
+For observers at the electron scale or above ($\mathcal{I}_n^{\max} \gtrsim 10^{43}$), the approximation is excellent and the cosmological density fractions are the entropy fractions:
 
 $$\Omega_\Lambda = \frac{S_H}{C_0}, \qquad \Omega_m = 1 - \frac{S_H}{C_0}$$
 
@@ -269,7 +273,71 @@ What remains open:
 
 The absorbed fraction $\sum \Delta c_n / C_0 = \Omega_m \approx 0.3$ is a cosmological observable, not a Planck-scale ratio. The bootstrap ceiling ([Bootstrap Mechanism](/derivations/interactions/bootstrap), Proposition 6.2) gives $N \leq C_0/\hbar$, but the *actual* number of stable levels is determined by the division algebra chain ([Bootstrap → Division Algebras](/derivations/interactions/bootstrap-division-algebras)) and the mass hierarchy tunneling factors ([Mass Hierarchy](/derivations/particles/mass-hierarchy)).
 
-**Remark (The geometry functor).** The entropy identification (Proposition 7.5) explains the hierarchy qualitatively: the second law ensures $S_H \gg \sum \Delta c_n$ in an old universe. A *quantitative* prediction of $\Lambda$ would additionally require a **geometry functor** $G: \mathbf{Obs} \to \mathbf{Geom}$ mapping each observer's epistemic horizon to an effective geometry, compatible with the bootstrap map $\mathcal{R}$ (functoriality across levels). This would constrain $C_0$ through the relationship between the bootstrap structure, the division algebra chain, and the spacetime geometry — potentially reducing the free parameter count from one ($C_0$) to zero. The existing gap in [Bootstrap Mechanism](/derivations/interactions/bootstrap) about promoting $\mathcal{R}$ to a full functor on morphisms is the key prerequisite.
+**Remark (The geometry functor and level-indexed $\Lambda$).** The entropy identification (Proposition 7.5) explains the hierarchy qualitatively: the second law ensures $S_H \gg \sum \Delta c_n$ in an old universe. A *quantitative* prediction of $\Lambda$ would additionally require a **geometry functor** $G: \mathbf{Obs} \to \mathbf{Geom}$ mapping each observer's epistemic horizon to an effective geometry, compatible with the bootstrap map $\mathcal{R}$ (functoriality across levels). Crucially, Step 8 shows that $G$ must produce **level-indexed effective cosmological parameters** $\Lambda_n^{\text{eff}}$ (Definition 8.2): each bootstrap level projects its own effective geometry with its own effective $\Lambda$. The constraint is not that all levels agree on a single $\Lambda$, but that the sequence $\{\Lambda_n^{\text{eff}}\}$ satisfies cross-level consistency (Proposition 8.3). This would constrain $C_0$ through the relationship between the bootstrap structure, the division algebra chain, and the spacetime geometry — potentially reducing the free parameter count from one ($C_0$) to zero. The existing gap in [Bootstrap Mechanism](/derivations/interactions/bootstrap) about promoting $\mathcal{R}$ to a full functor on morphisms is the key prerequisite.
+
+### Step 8: Level-Dependent Coherence Partition
+
+The framework says geometry is emergent: each observer projects an effective geometry from its accessible relational invariants via [ER=EPR](/derivations/holography/er-epr) (Theorem 3.2). The epistemic horizon distinction (Proposition 1.5) shows that different bootstrap levels project vastly different effective geometries. Step 7 used the self-consistency equation with $S_H$ treated as level-independent. This step makes the level-dependence explicit and identifies a potential category error in the standard 120-order hierarchy comparison.
+
+**Definition 8.1 (Level-$n$ entropy partition).** For an observer at bootstrap level $n$ (Definition 7.1), the entropy decomposition ([Entropy](/derivations/thermodynamics/entropy), Definition 3.1) takes the form:
+
+$$C_0 = \mathcal{C}_{\text{acc}}^{(n)} + S^{(n)}$$
+
+where $\mathcal{C}_{\text{acc}}^{(n)}$ is the coherence accessible through the level-$n$ epistemic horizon $\mathcal{I}_n^{\max} = A_n/(4\ell_P^2)$, and $S^{(n)}$ is the inaccessible coherence from level $n$'s perspective. The inaccessible portion $S^{(n)}$ includes:
+
+**(i)** The cosmological horizon entropy $S_H = 3\pi/(\Lambda\,\ell_P^2)$ — coherence beyond causal reach for any observer.
+
+**(ii)** Coherence locked into bootstrap levels $> n$ that level-$n$ cannot resolve — relational invariants between composite observers at scales $> \lambda_n$ that are invisible to level $n$.
+
+Therefore $S^{(n)} \geq S_H$ for all $n$, with equality only at the highest realized level $N$ where all sub-cosmological structure is resolved. For the minimal observer at level 0: $S^{(0)} \approx C_0 - O(1)$.
+
+**Definition 8.2 (Effective cosmological parameter).** The geometry projected at level $n$ is constructed from relational invariants accessible to level-$n$ observers via [ER=EPR](/derivations/holography/er-epr). This projected geometry has an effective horizon determined by what level $n$ can access. Define $\Lambda_n^{\text{eff}}$ as the cosmological parameter of this effective geometry:
+
+$$\Lambda_n^{\text{eff}} = \frac{3\pi}{S^{(n)}\,\ell_P^2}$$
+
+At the highest level ($n = N$): $S^{(N)} = S_H$, so $\Lambda_N^{\text{eff}} = \Lambda$ — the effective parameter coincides with the geometric constant in the Einstein equations. At level 0: $S^{(0)} \approx C_0$, so $\Lambda_0^{\text{eff}} \approx 3\pi/(C_0\,\ell_P^2)$.
+
+**Proposition 8.3 (Cross-level consistency).** *The effective cosmological parameters at different levels are not independent — they are constrained by the cross-level geometric consistency requirement (Proposition 7.2).*
+
+*Argument.* By Proposition 7.2, the geometry $G_{n+1}$ at level $n+1$ restricted to scale $\lambda_n$ must reduce to the geometry $G_n$ at level $n$. The effective horizon at level $n+1$ is determined by $S^{(n+1)} = S^{(n)} - \Delta S_n$, where $\Delta S_n > 0$ is the coherence that becomes accessible when moving from level $n$ to level $n+1$ (the coherence locked into relational invariants at scale $\lambda_{n+1}$ that level $n$ could not resolve). Therefore:
+
+$$\Lambda_{n+1}^{\text{eff}} = \frac{3\pi}{(S^{(n)} - \Delta S_n)\,\ell_P^2} > \Lambda_n^{\text{eff}}$$
+
+The sequence $\{\Lambda_n^{\text{eff}}\}$ is strictly increasing with level — higher-level observers project geometries with larger effective $\Lambda$ (smaller effective horizons in the inaccessible sector, because they have resolved more of the coherence into accessible structure). The sequence is bounded above by $\Lambda = \Lambda_N^{\text{eff}}$ and below by $\Lambda_0^{\text{eff}} = 3\pi/(C_0\,\ell_P^2)$. The increments $\Delta S_n$ are determined by the bootstrap structure: the division algebra chain, the mass hierarchy tunneling factors, and the coherence absorbed at each RG fixed point (Proposition 7.3). $\square$
+
+**Proposition 8.4 (Reframing the hierarchy).** *The standard statement of the cosmological constant hierarchy problem compares the Planck-scale bound $\Lambda < 3/\ell_P^2$ (Theorem 2.1) with the observed value $\Lambda_{\text{obs}} \sim 10^{-122}\;\ell_P^{-2}$. Within the framework, this comparison mixes two different levels of geometric projection.*
+
+*Argument.* The Planck bound (Theorem 2.1) asks whether a minimal observer at level 0 can fit within the causal horizon. It constrains the *causal* structure of the spacetime, which is ontic and level-independent — the bound is $\Lambda < 3/\ell_P^2$ regardless of which level is doing the observing. This is correct.
+
+However, the "observed value" $\Lambda_{\text{obs}}$ is measured by human-scale observers at a high bootstrap level $N$. What they measure is $\Lambda_N^{\text{eff}}$ — the effective cosmological parameter of the geometry projected at their level. The ratio:
+
+$$\frac{\Lambda_{\text{obs}}}{\Lambda_P} = \frac{\Lambda_N^{\text{eff}}}{3/\ell_P^2} \sim 10^{-122}$$
+
+is a cross-level comparison. It compares a bound set by level-0 viability with a parameter measured at level $N$. Within the framework, the natural comparison at each level is between $\Lambda_n^{\text{eff}}$ and the viability bound for level-$n$ observers.
+
+This does not dissolve the hierarchy — the ontic cosmological constant $\Lambda$ that appears in the Einstein equations is still $10^{-122}$ in Planck units, and the framework cannot derive this value. But it reframes the *question*: the hierarchy is not "why is $\Lambda$ so small?" but "what determines the sequence $\{\Lambda_n^{\text{eff}}\}$ and its endpoint $\Lambda_N^{\text{eff}} = \Lambda$?" The answer lies in the bootstrap structure — how much coherence each level absorbs — which is determined by the division algebra chain, the mass hierarchy, and the geometry functor (Gap 6). $\square$
+
+**Proposition 8.5 (Breakdown of the level-independence approximation).** *Proposition 7.5 identifies the self-consistency equation with the entropy decomposition and claims approximate observer-independence. This approximation has a specific validity domain:*
+
+| Level | $\mathcal{I}_n^{\max}$ | $S^{(n)}$ | $\Lambda_n^{\text{eff}}$ | Approximation |
+|---|---|---|---|---|
+| 0 (Planck) | $\sim 1$ | $\approx C_0$ | $\approx 3\pi/(C_0\,\ell_P^2)$ | **Fails** — $S^{(0)} \gg S_H$ |
+| Electron | $\sim 10^{43}$ | $\approx C_0 - 10^{43}$ | $\approx \Lambda_0^{\text{eff}} + O(10^{-79})$ | Marginal |
+| Proton | $\sim 10^{37}$ | $\approx C_0 - 10^{37}$ | similar | Marginal |
+| Human scale | $\gg 10^{43}$ | $\approx S_H$ | $\approx \Lambda$ | **Valid** |
+| Cosmological | $\sim 10^{122}$ | $= S_H$ | $= \Lambda$ | **Exact** |
+
+*For observers at or above the electron scale, $S^{(n)}$ differs from $S_H$ by at most $10^{43}$ — negligible compared to $S_H \sim 10^{122}$. The approximation is excellent. For level-0 observers, $S^{(0)}/S_H \approx C_0/S_H \gg 1$ — the approximation fails completely.* $\square$
+
+**Proposition 8.6 (The hierarchy from level 0's perspective).** *A minimal observer at level 0 "sees" an almost entirely de Sitter universe. Its effective cosmological fraction is:*
+
+$$\Omega_\Lambda^{(0)} = \frac{S^{(0)}}{C_0} \approx 1 - \frac{O(1)}{C_0} \approx 1$$
+
+*From level 0's perspective, there is no hierarchy problem. Nearly all coherence is inaccessible — locked into structures the minimal observer cannot resolve. The universe it projects is almost entirely horizon, with vanishing structural content. The "hierarchy" between $\Lambda_0^{\text{eff}}$ and $\Lambda_P$ is $O(1)$, not $O(10^{122})$.*
+
+*The 120-order hierarchy appears only when we compare the effective parameter at level $N$ (human observers) with the viability bound (level 0). It is a measure of how much coherence the bootstrap hierarchy has organized into resolvable structure between level 0 and level $N$ — i.e., a measure of the complexity of the observer network, not a coincidence requiring explanation.*
+
+**Remark (What Step 8 does and does not show).** Step 8 defines the level-indexed quantities ($S^{(n)}$, $\Lambda_n^{\text{eff}}$) and shows where the level-independence approximation breaks down. It reframes the hierarchy question but does not solve it: the value of $\Lambda = \Lambda_N^{\text{eff}}$ still depends on $C_0$ and the bootstrap structure. The hard theorems of this derivation (Theorems 2.1, 4.1, 5.4) remain unchanged — they use the causal horizon, which is ontic and level-independent. The reframing matters for the *interpretation* of the hierarchy and for the *formulation* of what a quantitative theory must explain (Gap 6): not a single fine-tuned number, but a cross-level consistency condition on the sequence $\{\Lambda_n^{\text{eff}}\}$.
 
 ## Consistency Check
 
@@ -310,6 +378,7 @@ The anthropic bound is $\sim 10^{120}$ times tighter because it requires complex
 - Proposition 3.1 (holographic budget): uses the holographic entropy bound (rigorous) applied to the de Sitter horizon. The application to the multiplicity requirement involves interpreting the bound as a coherence budget (the de Sitter horizon is static in the static patch, so the bound applies, but the connection to the coherence budget for interior observers involves assumptions from [Entropy](/derivations/thermodynamics/entropy) not explicitly formalized for cosmological horizons). This is an independent confirmation of the Planck-scale bound, not in the critical path.
 - Proposition 5.3 (Type II fusion reinforcement): the gravitational fusion dynamics are well-established via the information paradox resolution (rigorous), but the claim that the approach to $\rho_P$ goes "entirely through fusion" is a physical argument. This reinforces the sign prediction but is not required for it.
 - Proposition 7.5 (entropy identification): logically rigorous — identifies the self-consistency equation with the entropy decomposition and applies the second law. The qualitative hierarchy explanation ($\sum \Delta c_n \ll C_0$) follows. Propositions 7.2–7.4 are mechanism sketches (physically motivated, not formal proofs).
+- Step 8 (level-dependent coherence partition): defines level-indexed quantities ($S^{(n)}$, $\Lambda_n^{\text{eff}}$) and identifies where Proposition 7.5's level-independence approximation breaks down. Propositions 8.3–8.6 are structurally sound but the cross-level constraints are not derived quantitatively. Not in the critical path.
 
 **Conjectural / open:**
 - Proposition 6.2 (conditions for tighter bound): the key open question. No mechanism is known within the framework to force $\mathcal{C}_{\min}^{\text{non-self}} \gg 1$.
@@ -325,7 +394,7 @@ The anthropic bound is $\sim 10^{120}$ times tighter because it requires complex
 3. **Sharpening to $\Lambda > 0$**: The sign prediction $\Lambda \geq 0$ (Theorem 5.4) does not distinguish $\Lambda = 0$ from $\Lambda > 0$. Does the structural arrow of time (monotonically increasing relational invariant depth) require eternal expansion, which would give $\Lambda > 0$? This connects to [Time as Phase Ordering](/derivations/thermodynamics/time), Gap 3.
 4. **Bounce prohibition scope**: Theorem 5.2 prohibits the Planck-density bounce in $\Lambda < 0$ FRW cosmologies via coherence conservation. Does the same argument extend to *all* global recollapse scenarios, including anisotropic cosmologies (Bianchi models) or cosmologies with exotic matter violating standard energy conditions? The argument should generalize to any scenario where $\rho \to \rho_P$ globally, but cosmologies with localized collapse (e.g., black holes forming within an expanding universe) are not affected — the bounce is local, not global, and external observers preserve coherence.
 5. **Gibbons-Hawking stability**: The de Sitter horizon radiates at the Gibbons-Hawking temperature $T_{GH} = \hbar H/(2\pi k_B)$. Whether this thermal background destabilizes observer loops depends on the detailed interaction between GH radiation and the observer's loop closure — specifically, whether photon absorption changes the observer's Noether invariant $I$. For a minimal $U(1)$ oscillator, phase perturbations are Lyapunov-stable (the oscillator is neutrally stable on $S^1$), but energy-changing interactions (Type III absorption of GH quanta) could disrupt the invariant. A mass-dependent viability condition $mc^2 > k_B T_{GH}$ would give $\Lambda < 12\pi^2 m^2 c^2/\hbar^2$, which tightens the bound for light observers but remains Planck-scale for the minimal observer ($m = m_P$).
-6. **Geometry functor and quantitative $\Lambda$**: The entropy identification (Proposition 7.5) explains the hierarchy qualitatively via the second law. A *quantitative* prediction of $\Lambda$ requires formalizing a geometry functor $G: \mathbf{Obs} \to \mathbf{Geom}$ that maps each observer's epistemic horizon to an effective geometry, compatible with the bootstrap map $\mathcal{R}$. This would constrain $C_0$ through the bootstrap structure, potentially eliminating the last free parameter. Requires promoting $\mathcal{R}$ to a full functor on morphisms ([Bootstrap Mechanism](/derivations/interactions/bootstrap), §Remark after Proposition 5.1). Connects to [ER=EPR](/derivations/holography/er-epr) (geometry from relational invariants) and [Renormalization Group](/derivations/thermodynamics-ext/renormalization) (c-theorem, fixed-point structure).
+6. **Geometry functor, level-indexed $\Lambda$, and quantitative prediction**: Step 8 defines the level-indexed quantities ($\Lambda_n^{\text{eff}}$, $S^{(n)}$) and the cross-level consistency constraint (Proposition 8.3), but does not derive the quantitative relationship. A geometry functor $G: \mathbf{Obs} \to \mathbf{Geom}$ must map each observer's epistemic horizon to an effective geometry with its own effective cosmological parameter $\Lambda_n^{\text{eff}}$ (Definition 8.2), compatible with the bootstrap map $\mathcal{R}$ (functoriality across levels). The key constraint is cross-level consistency: the sequence $\{\Lambda_n^{\text{eff}}\}$ must satisfy Proposition 8.3, with increments $\Delta S_n$ determined by the bootstrap structure. Computing these increments from the division algebra chain and mass hierarchy tunneling factors would yield $\Lambda = \Lambda_N^{\text{eff}}$ as a function of $C_0$ and the bootstrap data — potentially eliminating the last free parameter. Requires promoting $\mathcal{R}$ to a full functor on morphisms ([Bootstrap Mechanism](/derivations/interactions/bootstrap), §Remark after Proposition 5.1). Connects to [ER=EPR](/derivations/holography/er-epr) (geometry from relational invariants) and [Renormalization Group](/derivations/thermodynamics-ext/renormalization) (c-theorem, fixed-point structure).
 
 ## Dependencies
 
@@ -350,7 +419,7 @@ This derivation addresses [Cosmological Constant](/derivations/cosmology/cosmolo
 
 - **Upper bound on $|\Lambda|$**: Established at Planck scale (Theorem 2.1). This establishes the principle that the axioms constrain the solution space of the Einstein equations — not just the dynamics, but the allowed solutions. Even at Planck scale, this is a nontrivial result: the axioms have physical content beyond determining equations of motion.
 - **Sign prediction**: Achieved. The axioms predict $\Lambda \geq 0$ (Theorem 5.4). A $\Lambda < 0$ cosmology requires a bounce that violates coherence conservation (Theorem 5.2). Sharpening to $\Lambda > 0$ remains open (Gap 3).
-- **Hierarchy**: Qualitatively explained (Proposition 7.5). The self-consistency equation $C_0 = \sum \Delta c_n + S_H$ is the entropy decomposition: structural coherence is accessible coherence, horizon entropy is inaccessible coherence. The 120-order hierarchy follows from the second law — entropy grows, so the inaccessible fraction dominates in an old universe. The specific value of $\Lambda$ remains open (depends on $C_0$, an initial condition). The coincidence problem ($\Omega_m \sim \Omega_\Lambda$ now) is also open.
+- **Hierarchy**: Qualitatively explained (Proposition 7.5). The self-consistency equation $C_0 = \sum \Delta c_n + S_H$ is the entropy decomposition: structural coherence is accessible coherence, horizon entropy is inaccessible coherence. The 120-order hierarchy follows from the second law — entropy grows, so the inaccessible fraction dominates in an old universe. Step 8 further shows that the entropy decomposition is level-indexed: each bootstrap level projects its own effective geometry with its own effective $\Lambda_n^{\text{eff}}$, and the 120-order comparison between $\Lambda_P$ and $\Lambda_{\text{obs}}$ is a cross-level comparison that mixes the viability bound (level 0) with the measured parameter (level $N$). The specific value of $\Lambda = \Lambda_N^{\text{eff}}$ remains open (depends on $C_0$ and the bootstrap structure). The coincidence problem ($\Omega_m \sim \Omega_\Lambda$ now) is also open.
 
 <!-- References -->
 [Weinberg, 1987]: /references#weinberg-1987
