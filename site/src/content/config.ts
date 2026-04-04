@@ -54,6 +54,17 @@ const guide = defineCollection({
   }),
 })
 
+const domains = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    subtitle: z.string(),
+    order: z.number(),
+    relatedDerivations: z.array(z.string()).default([]),
+    relatedPredictions: z.array(z.string()).default([]),
+  }),
+})
+
 const geometricAlgebra = defineCollection({
   type: 'content',
   schema: z.object({
@@ -69,4 +80,4 @@ const geometricAlgebra = defineCollection({
   }),
 })
 
-export const collections = { source, derivations, predictions, guide, 'geometric-algebra': geometricAlgebra }
+export const collections = { source, derivations, predictions, guide, domains, 'geometric-algebra': geometricAlgebra }

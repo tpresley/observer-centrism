@@ -1,0 +1,91 @@
+---
+import { getCollection } from 'astro:content'
+import MainLayout from '../../components/layouts/MainLayout.astro'
+import PageTitle from '../../components/PageTitle.astro'
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+const entries = await getCollection('domains')
+const sorted = entries.sort((a, b) => a.data.order - b.data.order)
+---
+
+<MainLayout title="Domain Overviews">
+  <PageTitle
+    title="Domain Overviews"
+    subtitle="The framework's contributions organized by research area"
+  />
+
+  <p class="intro">
+    The derivation chain follows the framework's internal logic &mdash; axioms
+    to observers to interactions to geometry to particles. These domain pages
+    tell the same story in the <em>reader's</em> order: organized by research
+    specialty, written for people who already know the open problems in their
+    field and want to see what this framework contributes.
+  </p>
+
+  <div class="domain-list">
+    {sorted.map(entry => (
+      <a href={`${base}/domains/${entry.slug}`} class="domain-card">
+        <h3>{entry.data.title}</h3>
+        <p>{entry.data.subtitle}</p>
+        <span class="domain-count">
+          {entry.data.relatedDerivations.length} derivations
+          {entry.data.relatedPredictions.length > 0 &&
+            ` \u00B7 ${entry.data.relatedPredictions.length} predictions`}
+        </span>
+      </a>
+    ))}
+  </div>
+</MainLayout>
+
+<style>
+  .intro {
+    max-width: 680px;
+    line-height: 1.75;
+    margin-bottom: 2rem;
+    color: var(--color-text-muted);
+  }
+
+  .domain-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+
+  .domain-card {
+    display: block;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  .domain-card:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+  }
+
+  .domain-card h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 0 0 0.4rem;
+    color: var(--color-accent);
+    border: none;
+    padding: 0;
+  }
+
+  .domain-card p {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--color-text-muted);
+    margin: 0 0 0.75rem;
+  }
+
+  .domain-count {
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
+    opacity: 0.7;
+  }
+</style>

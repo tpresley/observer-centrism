@@ -187,6 +187,11 @@ const nonViableCount = stats.byStatus['non-viable'] || 0
       <h3>Read the Guide</h3>
       <p>A narrative walkthrough of the framework, from first principles to predictions.</p>
     </a>
+    <a href={`${base}/domains/`} class="cta-card">
+      <div class="cta-icon">&#9673;</div>
+      <h3>Browse by Domain</h3>
+      <p>Enter from your specialty: quantum foundations, cosmology, particle physics, or holography.</p>
+    </a>
     <a href={`${base}/map`} class="cta-card">
       <div class="cta-icon">&#9671;</div>
       <h3>Explore the Map</h3>
@@ -263,7 +268,7 @@ const nonViableCount = stats.byStatus['non-viable'] || 0
 
   .cta-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin-top: 1.5rem;
   }

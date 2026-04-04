@@ -17,6 +17,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '')
     (though it links to them throughout). Start at the beginning or jump to
     any topic.
   </p>
+  <p class="guide-alt">
+    Prefer to enter from your own specialty? The
+    <a href={`${base}/domains/`}>domain overviews</a> cover the same material
+    organized by research area &mdash; quantum foundations, cosmology, particle
+    physics, and holography &mdash; written for specialists who want to see
+    what&rsquo;s novel before following the full derivation chain.
+  </p>
 
   <div class="guide-toc">
     {sorted.map(entry => (
@@ -35,7 +42,22 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '')
   .guide-intro {
     font-size: 1rem;
     line-height: 1.7;
+    margin-bottom: 0.75rem;
+  }
+  .guide-alt {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
     margin-bottom: 2rem;
+  }
+  .guide-alt a {
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+  .guide-alt a:hover {
+    border-bottom-color: var(--color-accent);
   }
   .guide-toc {
     display: flex;

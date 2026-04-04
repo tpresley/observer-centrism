@@ -1,0 +1,197 @@
+---
+import { getCollection } from 'astro:content'
+import MainLayout from '../../components/layouts/MainLayout.astro'
+import PageTitle from '../../components/PageTitle.astro'
+import graphData from '../../data/dependency-graph.json'
+
+export async function getStaticPaths() {
+  const entries = await getCollection('domains')
+  const sorted = entries.sort((a, b) => a.data.order - b.data.order)
+  return sorted.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }))
+}
+
+const { entry } = Astro.props
+const { Content } = await entry.render()
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+
+const titleMap: Record<string, string> = {}
+const statusMap: Record<string, string> = {}
+for (const node of graphData.nodes) {
+  titleMap[node.id] = node.title
+  statusMap[node.id] = node.status
+}
+
+const predictionEntries = await getCollection('predictions')
+const predictionTitleMap: Record<string, string> = {}
+for (const p of predictionEntries) {
+  predictionTitleMap[p.slug] = p.data.title
+}
+
+function statusColor(status: string): string {
+  const colors: Record<string, string> = {
+    rigorous: 'var(--color-rigorous)',
+    provisional: 'var(--color-provisional)',
+    draft: 'var(--color-draft)',
+    stub: 'var(--color-stub)',
+    'non-viable': 'var(--color-non-viable)',
+  }
+  return colors[status] || 'var(--color-text-muted)'
+}
+
+function statusIcon(status: string): string {
+  const icons: Record<string, string> = {
+    rigorous: '\u25CF',
+    provisional: '\u25D0',
+    draft: '\u25CB',
+    stub: '\u00B7',
+    'non-viable': '\u2717',
+  }
+  return icons[status] || '?'
+}
+---
+
+<MainLayout title={entry.data.title}>
+  <article class="domain-article">
+    <PageTitle title={entry.data.title} subtitle={entry.data.subtitle}>
+      <div class="domain-label">Domain Overview</div>
+    </PageTitle>
+
+    <div class="domain-body">
+      <Content />
+    </div>
+
+    {entry.data.relatedDerivations.length > 0 && (
+      <div class="domain-derivations">
+        <h3>Related Derivations</h3>
+        <ul>
+          {entry.data.relatedDerivations.map((id: string) => (
+            <li>
+              <span style={`color: ${statusColor(statusMap[id] || 'draft')}`}>
+                {statusIcon(statusMap[id] || 'draft')}
+              </span>
+              {' '}
+              <a href={`${base}/derivations/${id}`}>{titleMap[id] || id}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+
+    {entry.data.relatedPredictions.length > 0 && (
+      <div class="domain-predictions">
+        <h3>Related Predictions</h3>
+        <ul>
+          {entry.data.relatedPredictions.map((slug: string) => (
+            <li>
+              <a href={`${base}/predictions/${slug}`}>{predictionTitleMap[slug] || slug}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+  </article>
+</MainLayout>
+
+<style>
+  .domain-article {
+    max-width: 780px;
+  }
+
+  .domain-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+    background: rgba(37, 99, 235, 0.08);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+  }
+
+  .domain-body {
+    line-height: 1.8;
+  }
+
+  .domain-body :global(h2) {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.5rem;
+  }
+
+  .domain-body :global(h2:first-child) {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .domain-body :global(h3) {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .domain-body :global(table) {
+    font-size: 0.82rem;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    overflow-x: auto;
+    display: block;
+  }
+
+  .domain-body :global(th),
+  .domain-body :global(td) {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+  }
+
+  .domain-body :global(th) {
+    background: var(--color-surface);
+    font-weight: 600;
+  }
+
+  .domain-derivations,
+  .domain-predictions {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .domain-derivations h3,
+  .domain-predictions h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .domain-derivations ul,
+  .domain-predictions ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .domain-derivations li,
+  .domain-predictions li {
+    margin-bottom: 0.4rem;
+    line-height: 1.6;
+  }
+
+  .domain-derivations a,
+  .domain-predictions a {
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+
+  .domain-derivations a:hover,
+  .domain-predictions a:hover {
+    border-bottom-color: var(--color-accent);
+  }
+</style>

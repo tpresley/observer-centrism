@@ -11,9 +11,18 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 const derivationEntries = await getCollection('derivations')
 const predictionEntries = await getCollection('predictions')
 const guideEntries = await getCollection('guide')
+const domainEntries = await getCollection('domains')
 const gaEntries = await getCollection('geometric-algebra')
 
 const sortedGuide = guideEntries.sort((a, b) => a.data.order - b.data.order)
+const sortedDomains = domainEntries.sort((a, b) => a.data.order - b.data.order)
+
+const domainIcons: Record<string, string> = {
+  'quantum-foundations': '\u269B',
+  'cosmology': '\u2604',
+  'particle-physics': '\u2699',
+  'holography': '\u25C9',
+}
 
 /** Strip base prefix from path for comparison */
 const pathWithoutBase = currentPath.startsWith(base) ? (currentPath.slice(base.length) || '/') : currentPath
@@ -247,6 +256,14 @@ function statusColor(status: string) {
     </a>
   ))}
 
+  <h2>Domains</h2>
+  <a href={`${base}/domains/`} aria-current={isActive('/domains/') ? 'page' : undefined}>Overview</a>
+  {sortedDomains.map(entry => (
+    <a href={`${base}/domains/${entry.slug}`} aria-current={isActive(`/domains/${entry.slug}`) ? 'page' : undefined}>
+      <span class="domain-icon">{domainIcons[entry.slug] || '\u25CB'}</span> {entry.data.title}
+    </a>
+  ))}
+
   <h2>Derivations</h2>
   <a href={`${base}/derivations/`} aria-current={isActive('/derivations/') ? 'page' : undefined}>Index</a>
   {Object.entries(derivationGroups).map(([group, entries]) => (
@@ -293,6 +310,17 @@ function statusColor(status: string) {
 
 </nav>
 
+<script>
+  // Scroll the active sidebar link into view on page load
+  const active = document.querySelector('nav.sidebar a[aria-current="page"]');
+  if (active) {
+    // Use requestAnimationFrame to ensure layout is complete
+    requestAnimationFrame(() => {
+      active.scrollIntoView({ block: 'center', behavior: 'instant' });
+    });
+  }
+</script>
+
 <style>
   nav > a > svg {
     vertical-align: -2px;
@@ -327,6 +355,12 @@ function statusColor(status: string) {
   }
   .sidebar-details[open] summary h2::after {
     content: ' \25BC';
+  }
+  .domain-icon {
+    display: inline-block;
+    width: 1.1em;
+    text-align: center;
+    font-size: 0.85em;
   }
   .sidebar-footer {
     margin-top: 1.5rem;
