@@ -48,6 +48,16 @@ where $T$ is the period of the observer's loop in its rest frame and $\omega = 2
 
 **Proposition 1.2.** *Heavier particles have faster internal cycles; lighter particles cycle more slowly. The mass spectrum of particles is the frequency spectrum of stable observer loops in the coherence geometry.*
 
+**Remark (Three aspects of mass).** Definition 1.1 establishes the first of three complementary aspects of mass in the framework. Together they form a chain — definition, selection, consequence — that is developed across this derivation and its dependencies:
+
+1. **Mass is loop frequency** (Definition 1.1, this step). The rest mass of an observer is its loop closure frequency: $m = \hbar\omega/c^2$. This is the *definition* — what mass *is*. It follows from the action principle and the speed of light derivation.
+
+2. **The electroweak crystallization selects which frequencies are stable** (Step 3, Theorem 3.1; [Three Generations](/derivations/particles/three-generations), Theorem 4.2). Not every frequency corresponds to a stable observer loop. The division algebra structure provides the gauge symmetries, and the electroweak crystallization axis sets a reference direction. Each generation's winding axis has a specific angular misalignment $\alpha_k$ from this axis, giving a tunneling factor $m_k \propto \Lambda_{\text{EW}} \cdot e^{-\alpha_k/g^2}$ that determines which masses in the frequency spectrum are actually realized. This is the *selection mechanism* — which masses exist.
+
+3. **The boundary area determines what mass implies for information access** ([Observer Loop Viability](/derivations/cosmology/observer-loop-viability), Proposition 1.5; Step 7 below). Given a mass $m$, the Compton wavelength $\lambda_C = \hbar/(mc)$ sets the observer's boundary area and hence its epistemic horizon: $\mathcal{I}^{\max} = A_{\mathcal{B}}/(4\ell_P^2) \sim (m_P/m)^2$. This is the *consequence* — what a given mass means for the observer's relationship to the rest of the universe. Heavier elementary particles have faster loops but smaller windows to the non-self world.
+
+These three aspects are consistent because they operate at different levels: (1) defines the quantity, (2) explains which values it takes, and (3) derives what those values imply. The mass hierarchy problem — why the spectrum spans 12 orders of magnitude from neutrinos to the top quark — is addressed by (2). The information hierarchy — why heavier particles have less epistemic capacity — is addressed by (3). Step 7 shows that this information hierarchy reverses for composite observers beyond the division algebra chain.
+
 ### Step 2: Crystallization Scales from the Bootstrap
 
 **Definition 2.1.** A **crystallization scale** $\Lambda_k$ is the characteristic coherence cost at which stable loop closure becomes possible at level $k$ of the bootstrap hierarchy ([Bootstrap Mechanism](/derivations/interactions/bootstrap)).

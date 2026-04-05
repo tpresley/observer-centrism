@@ -104,9 +104,17 @@ Three fermion generations correspond to the three independent generators of $SO(
 
 **Formal derivation:** [Three Generations](/derivations/particles/three-generations)
 
-### The Mass Hierarchy
+### What Mass Is
 
-Why is the top quark $\sim 10^5$ times heavier than the electron? The framework derives the mass hierarchy as exponentials of small couplings via dimensional transmutation across bootstrap levels: $\Lambda_k \sim \Lambda_{k-1} \cdot e^{-c_k/g_k^2}$. Large mass ratios are logarithmically natural &mdash; they correspond to small differences in coupling constants, not fine-tuning. Each mass ratio is "self-protected" by the exponential sensitivity: the logarithm of a mass ratio is a coupling, and couplings are continuous parameters.
+The framework provides a unified picture of mass with three complementary aspects:
+
+**Mass is loop frequency.** The rest mass of a particle is its loop closure frequency: $m = \hbar\omega/c^2$. A heavier particle cycles faster. The mass spectrum is the frequency spectrum of stable observer loops.
+
+**The electroweak crystallization selects which frequencies are stable.** Not every frequency corresponds to a stable loop. Each generation's winding axis has a specific angular misalignment from the electroweak crystallization axis, producing a tunneling factor $m_k \propto \Lambda_{\text{EW}} \cdot e^{-\alpha_k/g^2}$. Large mass ratios are exponentials of small coupling differences &mdash; logarithmically natural, not fine-tuned. This is why the top quark is $\sim 10^5$ times heavier than the electron.
+
+**The boundary area determines what mass implies.** Given a mass $m$, the Compton wavelength $\lambda_C = \hbar/(mc)$ sets the observer's boundary and hence its epistemic capacity: $\mathcal{I}^{\max} \sim (m_P/m)^2$. Heavier elementary particles have faster loops but *smaller windows to the non-self world* &mdash; less information capacity, not more. This relationship reverses for composite observers beyond the division algebra chain, where information is stored structurally in relational invariant networks rather than topologically in gauge charges.
+
+These three aspects are consistent: the first defines the quantity, the second explains which values it takes, the third derives what those values mean. The mass hierarchy problem is addressed by the second. The information hierarchy &mdash; and its reversal at the confinement scale &mdash; is addressed by the third.
 
 **Formal derivation:** [Mass Hierarchy](/derivations/particles/mass-hierarchy)
 
