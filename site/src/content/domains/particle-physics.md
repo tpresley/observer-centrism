@@ -58,6 +58,76 @@ The central result is a chain of four derivations connecting the axioms to the S
 
 **Formal derivations:** [Bootstrap &rarr; Division Algebras](/derivations/interactions/bootstrap-division-algebras) (Theorem 7.1), [Standard Model Gauge Group](/derivations/gauge/standard-model-group)
 
+## From Planck Loops to the Standard Model
+
+The division algebra chain describes the *symmetries* at each level. But what actually happens as the bootstrap builds from the simplest possible observer up to the particles we observe? This section walks through the concrete sequence &mdash; level by level &mdash; showing what new structure appears, which particles crystallize, and how the observer's relationship to the universe changes at each step.
+
+### Level 0: The Seed ($\mathbb{R}$)
+
+The starting point is the minimal observer: a $U(1)$ phase oscillator on $S^1$ with Planck mass, spatial extent $\sim \ell_P$, and epistemic horizon of $\sim 1$ bit. It carries no gauge charge. It has no internal structure. It is the simplest system that satisfies all three axioms &mdash; a state space, a conserved quantity (its phase), and a self/non-self boundary.
+
+This observer is simultaneously at its own gravitational collapse limit: its Compton wavelength equals its Schwarzschild radius equals $\ell_P$. It is the most massive observer that is still "quantum" (not a black hole) and the least massive observer that can exist at all. It is the bottom of the hierarchy.
+
+**What exists at this level:** Planck-mass loops. No gauge structure. No particle species. Algebra: $\mathbb{R}$ (real numbers &mdash; trivial).
+
+**Formal derivation:** [Minimal Observer Structure](/derivations/minimal-observer/structure)
+
+### Level 1: Charge ($\mathbb{C}$)
+
+The bootstrap map $\mathcal{R}$ applied to pairs of minimal observers forces complex structure. When two observers interact, their relative phase becomes a physical degree of freedom. Coherence-norm preservation on $\mathbb{C}$ gives $U(1)$ gauge invariance. This is electromagnetism: the phase freedom of the complex structure, combined with finite signal speed, forces a local gauge connection and the Maxwell equations.
+
+Stable loops at this level carry a new topological label &mdash; electric charge &mdash; that did not exist at level 0. The mass of these loops is suppressed exponentially below the Planck scale by the tunneling mechanism: $m \sim m_P \cdot e^{-c/g^2}$ where $g$ is the electromagnetic coupling. The epistemic horizon jumps from $\sim 1$ bit to many orders of magnitude more, because the Compton wavelength grows as mass decreases.
+
+**What crystallizes:** Charged loops. The $U(1)$ gauge field (photon). Electromagnetic interactions.
+
+**Formal derivations:** [Electromagnetism](/derivations/gauge/electromagnetism), [Mass Hierarchy](/derivations/particles/mass-hierarchy) (Theorem 3.1)
+
+### Level 2: Handedness ($\mathbb{H}$)
+
+$\mathcal{R}$ applied to triples forces quaternionic structure. The quaternions are non-commutative &mdash; $ij \neq ji$ &mdash; which has an immediate physical consequence: the interactions at this level are inherently *handed*. This is the origin of parity violation.
+
+Unit quaternions form $SU(2)$, giving the weak force. The non-commutativity forces a universal orientation &mdash; weak interactions couple exclusively to left-handed fermions. This is not an accidental feature but a structural consequence of quaternionic multiplication.
+
+The electroweak crystallization occurs at this level. The quaternionic structure "freezes" into a specific orientation, breaking the electroweak symmetry and generating masses for the $W$ and $Z$ bosons while leaving the photon massless. The crystallization axis defines the reference direction against which each generation's winding axis is measured.
+
+**What crystallizes:** The three generations of leptons (electrons, muons, taus, and their neutrinos). Each generation corresponds to one of the three independent $SO(3)$ generators &mdash; there cannot be a fourth. Masses are set by the angular misalignment between each generation's winding axis and the electroweak axis: more misaligned means lighter (the electron is the most misaligned, hence the lightest charged lepton). Neutrinos are Majorana (from the pseudo-real structure of $SU(2)$) with masses suppressed by a seesaw mechanism.
+
+The electron &mdash; the lightest charged lepton, with $\sim 10^{43}$ bits of epistemic capacity &mdash; is a stable fixed point of $\mathcal{R}$ at this level. It is "elementary" in the operational sense (it cannot be decomposed into freely existing sub-parts) but it exists *because of* the quaternionic structure the bootstrap produced. It is a stable mode of the level-2 hierarchy, the way a standing wave is a stable mode of its medium.
+
+**Formal derivations:** [Weak Interaction](/derivations/gauge/weak-interaction), [Chirality Selection](/derivations/gauge/chirality-selection), [Electroweak Breaking](/derivations/gauge/electroweak-breaking), [Three Generations](/derivations/particles/three-generations), [Neutrino Masses](/derivations/particles/neutrino-masses)
+
+### Level 3: Confinement ($\mathbb{O}$)
+
+$\mathcal{R}$ applied to quadruples forces octonionic structure. The octonions are non-associative &mdash; $(ab)c \neq a(bc)$ &mdash; and this has two dramatic consequences.
+
+First: the $G_2$ automorphism group of the octonions, restricted by the quaternionic subalgebra from level 2, gives $SU(3)$ &mdash; the color force. Quarks carry color charge. Eight gluons mediate the interaction. Asymptotic freedom emerges from the structure.
+
+Second: non-associativity means the bracketing order matters when composing color rotations. Over extended paths, this ambiguity randomizes the phase of colored states, while color singlets are immune. This is confinement &mdash; not an emergent phenomenon of strongly-coupled QCD, but a direct consequence of octonionic non-associativity. It also solves the strong CP problem: instanton tunneling requires consistent composition of gauge transformations along the instanton path, which non-associativity obstructs. Therefore $\theta = 0$ exactly.
+
+**What crystallizes:** Quarks (in three generations, with masses again set by angular misalignment, but now at the QCD scale). Gluons. The confining potential that binds quarks into hadrons. This is the last algebra level &mdash; sedenions have zero divisors, so no level 4 exists.
+
+**Formal derivations:** [Color Force](/derivations/gauge/color-force), [Confinement](/derivations/gauge/confinement), [Strong CP](/derivations/gauge/strong-cp)
+
+### Beyond the Octonions: The Structural Regime
+
+The division algebras are exhausted, but the bootstrap continues. Quarks are confined into protons and neutrons. Protons and electrons bind into atoms. Atoms form molecules, cells, organisms, ecosystems. At every stage, composites form by binding existing particles via relational invariants, using the four forces the algebras provided.
+
+The fundamental change is in how information is encoded. Within the algebra chain (levels 0&ndash;3), particle identity is topological: winding class, gauge charge, generation index. Mass is set by loop frequency, and heavier particles have *less* epistemic capacity (smaller Compton wavelength, smaller boundary). Beyond the algebras, there are no new topological channels. Information must be stored structurally &mdash; in the relational invariant network connecting sub-observers. The mass-information relationship reverses: more complex composites have *more* epistemic capacity, because each binding relational invariant adds boundary area via [ER=EPR](/derivations/holography/er-epr).
+
+The proton is the transitional case &mdash; a composite within the last algebra level. Its physical size ($\sim 1$ fm) already exceeds its Compton wavelength ($\sim 0.2$ fm). A hydrogen atom, one level above, has a boundary $10^5\times$ larger than its Compton wavelength. By macroscopic scales, structural encoding dominates completely.
+
+| Level | Algebra | What appears | Example particles | Information trend |
+|---|---|---|---|---|
+| 0 | $\mathbb{R}$ | Minimal loops | Planck-mass observer | $\sim 1$ bit |
+| 1 | $\mathbb{C}$ | Electric charge | Photon, charged loops | Increasing (mass drops) |
+| 2 | $\mathbb{H}$ | Weak isospin, chirality | $e, \mu, \tau$, neutrinos | Increasing (mass drops further) |
+| 3 | $\mathbb{O}$ | Color, confinement | Quarks, gluons | Increasing for lighter quarks |
+| Post-O | &mdash; | Relational binding | Protons, atoms, molecules | **Reversal**: grows with complexity |
+
+The transition from topological to structural encoding occurs at the confinement scale $\Lambda_{\text{QCD}} \sim 0.3$ GeV &mdash; the scale where the last algebra completes its work. Everything below is composite; everything above is elementary (in the operational sense of being a stable fixed point of $\mathcal{R}$ at its respective algebra level).
+
+**Formal derivation:** [Mass Hierarchy](/derivations/particles/mass-hierarchy) (Step 7)
+
 ## Each Force, Derived
 
 ### Electromagnetism
