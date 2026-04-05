@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-04T16:28:22.338Z",
+    "generatedAt": "2026-04-05T18:49:12.696Z",
     "derivationCount": 71,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -17,8 +17,8 @@
     "derivationCount": 71,
     "predictionCount": 12,
     "edgeCount": 188,
-    "formalObjectCount": 1082,
-    "openGapCount": 221,
+    "formalObjectCount": 1085,
+    "openGapCount": 222,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -2974,6 +2974,10 @@
             "context": "Coupling Constants"
           },
           {
+            "target": "particles/mass-hierarchy",
+            "context": "Step 7"
+          },
+          {
             "target": "cosmology/dark-energy-equation-of-state",
             "context": "Proposition 4.3–4.4"
           },
@@ -3058,6 +3062,10 @@
           {
             "source": "interactions/bootstrap",
             "context": "Step 7, Gap 6"
+          },
+          {
+            "source": "particles/mass-hierarchy",
+            "context": "Observer Loop Viability"
           }
         ]
       },
@@ -7872,6 +7880,10 @@
             "context": "ER=EPR Correspondence"
           },
           {
+            "source": "particles/mass-hierarchy",
+            "context": "Theorem 3.2"
+          },
+          {
             "source": "quantum/entanglement",
             "context": "ER=EPR"
           },
@@ -8756,6 +8768,10 @@
           {
             "source": "gauge/weak-interaction",
             "context": "Theorem 2.3"
+          },
+          {
+            "source": "particles/mass-hierarchy",
+            "context": "Bootstrap $\\to$ Division Algebras"
           }
         ]
       },
@@ -10987,7 +11003,8 @@
         "interactions/bootstrap"
       ],
       "enablesDerivation": [
-        "particles/three-generations"
+        "particles/three-generations",
+        "cosmology/observer-loop-viability"
       ],
       "dependedOnBy": [
         "cosmology/coupling-constants",
@@ -11017,6 +11034,10 @@
         {
           "number": 6,
           "title": "The Great Desert"
+        },
+        {
+          "number": 7,
+          "title": "The Topological-Structural Transition"
         }
       ],
       "formalObjects": [
@@ -11087,6 +11108,24 @@
           "statementPreview": "Between crystallization levels, no stable observer loops can close. The coherence cost is too high for the lower leve..."
         },
         {
+          "type": "Definition",
+          "id": "7.1",
+          "name": "Topological vs. structural encoding",
+          "statementPreview": "At bootstrap levels n 3 (within the division algebra chain), particle identity is **topological**: winding class (pi1..."
+        },
+        {
+          "type": "Proposition",
+          "id": "7.2",
+          "name": "Mass-information reversal",
+          "statementPreview": "The relationship between mass and epistemic information capacity reverses at the transition from topological to struc..."
+        },
+        {
+          "type": "Proposition",
+          "id": "7.3",
+          "name": "Exhaustion drives the transition",
+          "statementPreview": "The reversal occurs because the division algebras are exhausted. When topological channels exist (n 3), they are the ..."
+        },
+        {
           "type": "Theorem",
           "id": "7.1.",
           "name": "",
@@ -11119,6 +11158,11 @@
           "number": 4,
           "title": "Cosmological constant",
           "description": "The vacuum energy (cosmological constant) is anomalously small (sim 10-122 in Planck units). Whether the crystallization framework can explain this extreme hierarchy is an open challenge."
+        },
+        {
+          "number": 5,
+          "title": "Quantifying the topological-structural decomposition",
+          "description": "Step 7 identifies the qualitative decomposition Delta cn = Delta cntopo + Delta cnstruct. Computing the topological contribution from the known particle content (division algebra structure, three gene"
         }
       ],
       "assessmentVerdict": "The mass hierarchy mechanism — exponential scale separation from dimensional transmutation, hierarchy stability from level independence — is rigorous given S1 (tunneling–crystallization correspondence). The qualitative structure parallels established physics (QCD dimensional transmutation is the pro",
@@ -11142,6 +11186,22 @@
             "context": "Bootstrap"
           },
           {
+            "target": "interactions/bootstrap-division-algebras",
+            "context": "Bootstrap $\\to$ Division Algebras"
+          },
+          {
+            "target": "particles/three-generations",
+            "context": "Three Generations"
+          },
+          {
+            "target": "cosmology/observer-loop-viability",
+            "context": "Observer Loop Viability"
+          },
+          {
+            "target": "holography/er-epr",
+            "context": "Theorem 3.2"
+          },
+          {
             "target": "thermodynamics/action-planck",
             "context": "Action"
           },
@@ -11162,6 +11222,10 @@
           {
             "source": "cosmology/observer-loop-viability",
             "context": "Theorem 3.1"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
+            "context": "Step 7"
           },
           {
             "source": "flavor/mixing-angles",
@@ -12237,6 +12301,10 @@
           },
           {
             "source": "particles/cpt-theorem",
+            "context": "Three Generations"
+          },
+          {
+            "source": "particles/mass-hierarchy",
             "context": "Three Generations"
           },
           {
@@ -24592,6 +24660,27 @@
     },
     {
       "derivationId": "particles/mass-hierarchy",
+      "type": "Definition",
+      "id": "7.1",
+      "name": "Topological vs. structural encoding",
+      "fullRef": "particles/mass-hierarchy:Definition 7.1"
+    },
+    {
+      "derivationId": "particles/mass-hierarchy",
+      "type": "Proposition",
+      "id": "7.2",
+      "name": "Mass-information reversal",
+      "fullRef": "particles/mass-hierarchy:Proposition 7.2"
+    },
+    {
+      "derivationId": "particles/mass-hierarchy",
+      "type": "Proposition",
+      "id": "7.3",
+      "name": "Exhaustion drives the transition",
+      "fullRef": "particles/mass-hierarchy:Proposition 7.3"
+    },
+    {
+      "derivationId": "particles/mass-hierarchy",
       "type": "Theorem",
       "id": "7.1.",
       "name": "",
@@ -28679,6 +28768,13 @@
       "number": 4,
       "title": "Cosmological constant",
       "description": "The vacuum energy (cosmological constant) is anomalously small (sim 10-122 in Planck units). Whether the crystallization framework can explain this extreme hierarchy is an open challenge."
+    },
+    {
+      "derivationId": "particles/mass-hierarchy",
+      "derivationStatus": "rigorous",
+      "number": 5,
+      "title": "Quantifying the topological-structural decomposition",
+      "description": "Step 7 identifies the qualitative decomposition Delta cn = Delta cntopo + Delta cnstruct. Computing the topological contribution from the known particle content (division algebra structure, three gene"
     },
     {
       "derivationId": "particles/neutrino-masses",

@@ -379,9 +379,15 @@ Between these two saturated endpoints, the bootstrap hierarchy builds a finite b
 
 The total coherence is:
 
-$$C_0 = \underbrace{S_{\min}}_{\text{Planck}\atop\text{saturation}} + \underbrace{\sum_{n=1}^{N} \Delta c_n}_{\text{bootstrap}\atop\text{bridge}} + \underbrace{S_H}_{\text{cosmological}\atop\text{saturation}}$$
+$$C_0 = \underbrace{S_{\min}}_{\substack{\text{Planck}\\\text{saturation}}} + \underbrace{\sum_{n=1}^{N} \Delta c_n}_{\substack{\text{bootstrap}\\\text{bridge}}} + \underbrace{S_H}_{\substack{\text{cosmological}\\\text{saturation}}}$$
 
-Both endpoints are pinned by gravitational saturation. The bridge structure is determined by the Standard Model content. The self-consistency condition is: $\Lambda$ must be such that the bridge, with the determined $\{\Delta c_n\}$, exactly connects the two saturated endpoints. This is a fixed-point equation in one unknown ($C_0$ or equivalently $\Lambda$), with determined coefficients.
+Both endpoints are pinned by gravitational saturation. The bridge structure is determined by the Standard Model content. [Mass Hierarchy](/derivations/particles/mass-hierarchy) (Step 7) shows that the bridge decomposes into two regimes with different information scaling:
+
+$$\sum_{n=1}^{N} \Delta c_n = \underbrace{\sum_{n \leq 3} \Delta c_n^{\text{topo}}}_{\text{topological encoding}} + \underbrace{\sum_{n > 3} \Delta c_n^{\text{struct}}}_{\text{structural encoding}}$$
+
+Within the division algebra chain ($n \leq 3$), information is stored topologically (gauge charges, winding numbers, generation indices) and the mass-information relationship is *inverse*: heavier particles have smaller boundaries and less epistemic capacity. Beyond the octonionic level ($n > 3$), the algebras are exhausted and information is stored structurally (relational invariant networks), where the mass-information relationship *reverses*: more complex composites have larger boundaries and more epistemic capacity. The topological contribution is bounded by the finite particle content that the division algebras determine. The structural contribution grows with composite complexity. The transition occurs at the confinement scale $\Lambda_{\text{QCD}} \sim 0.3$ GeV.
+
+The self-consistency condition is: $\Lambda$ must be such that the bridge, with the determined $\{\Delta c_n\}$ in both regimes, exactly connects the two saturated endpoints. This is a fixed-point equation in one unknown ($C_0$ or equivalently $\Lambda$), with determined coefficients.
 
 *The conjecture*: this fixed-point equation has a unique solution. That is, there exists exactly one value of $C_0$ (and hence exactly one $\Lambda$) for which the bootstrap hierarchy, with the particle content determined by the division algebra chain, simultaneously satisfies Planck saturation at the bottom and cosmological saturation at the top.
 
