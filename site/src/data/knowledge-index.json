@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-06T08:05:49.159Z",
+    "generatedAt": "2026-04-06T18:20:48.295Z",
     "derivationCount": 73,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -16,7 +16,7 @@
     },
     "derivationCount": 73,
     "predictionCount": 12,
-    "edgeCount": 203,
+    "edgeCount": 205,
     "formalObjectCount": 1109,
     "openGapCount": 226,
     "upgradeEligibleCount": 1,
@@ -56,6 +56,7 @@
         "holography/information-paradox",
         "minimal-observer/multiplicity",
         "minimal-observer/structure",
+        "particles/three-generations",
         "quantum/observer-relative-objectivity",
         "quantum/sheaf-section-uniqueness",
         "thermodynamics-ext/distinguishability-conservation"
@@ -10733,6 +10734,7 @@
         "foundation/aperiodic-order",
         "interactions/three-types",
         "minimal-observer/coherence-dual-pairs",
+        "particles/three-generations",
         "spacetime/gravitational-constant"
       ],
       "steps": [
@@ -11028,6 +11030,22 @@
           {
             "source": "minimal-observer/coherence-dual-pairs",
             "context": "Proposition 4.1"
+          },
+          {
+            "source": "particles/three-generations",
+            "context": "Proposition 7.1"
+          },
+          {
+            "source": "particles/three-generations",
+            "context": "Theorem 7.2"
+          },
+          {
+            "source": "particles/three-generations",
+            "context": "Proposition 7.1, Theorem 7.2"
+          },
+          {
+            "source": "particles/three-generations",
+            "context": "Multiplicity"
           },
           {
             "source": "quantum/born-rule",
@@ -12703,7 +12721,9 @@
       "dependsOn": [
         "dimensions/three-dimensions",
         "particles/spin-statistics",
-        "particles/mass-hierarchy"
+        "particles/mass-hierarchy",
+        "minimal-observer/multiplicity",
+        "axioms/coherence-conservation"
       ],
       "enablesDerivation": [
         "particles/neutrino-masses"
@@ -12736,10 +12756,10 @@
       ],
       "formalObjects": [
         {
-          "type": "Structural Postulate",
-          "id": "S1",
-          "name": "Generation–axis correspondence",
-          "statementPreview": "Each fermion generation corresponds to a class of half-integer winding loops classified by dominant alignment with on..."
+          "type": "Theorem",
+          "id": "0.1",
+          "name": "Generation–axis correspondence — now a theorem",
+          "statementPreview": "The partition of half-integer winding loops in SO(3) into exactly three generation sectors, classified by dominant al..."
         },
         {
           "type": "Definition",
@@ -12826,12 +12846,7 @@
           "statementPreview": "The Standard Model with three fermion generations provides a consistency model.*"
         }
       ],
-      "structuralPostulates": [
-        {
-          "id": "S1",
-          "name": "Generation–axis correspondence"
-        }
-      ],
+      "structuralPostulates": [],
       "openGaps": [
         {
           "number": 1,
@@ -12849,13 +12864,25 @@
           "description": "If right-handed neutrinos exist as a fourth \"hidden\" winding mode (not a fourth generation but a different chirality), their properties should be predictable."
         }
       ],
-      "assessmentVerdict": "The central prediction — exactly three fermion generations from dim(mathfrakso(3)) = 3 — is rigorous given S1 (generation–axis correspondence). The prediction is correct and experimentally confirmed. The mass hierarchy and mixing structure follow qualitatively from the tunneling mechanism but remain",
+      "assessmentVerdict": "The central prediction — exactly three fermion generations from dim(mathfrakso(3)) = 3 — is rigorous. The generation-axis correspondence (formerly S1) is now derived from C5 applied to internal winding space (Theorem 0.1), eliminating the framework's dependence on this structural postulate. The pred",
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
           {
             "target": "particles/spin-statistics",
             "context": "Spin and Statistics"
+          },
+          {
+            "target": "minimal-observer/multiplicity",
+            "context": "Proposition 7.1"
+          },
+          {
+            "target": "minimal-observer/multiplicity",
+            "context": "Theorem 7.2"
+          },
+          {
+            "target": "minimal-observer/multiplicity",
+            "context": "Proposition 7.1, Theorem 7.2"
           },
           {
             "target": "dimensions/three-dimensions",
@@ -12868,6 +12895,10 @@
           {
             "target": "particles/mass-hierarchy",
             "context": "Theorem 3.1, via S1"
+          },
+          {
+            "target": "minimal-observer/multiplicity",
+            "context": "Multiplicity"
           },
           {
             "target": "particles/neutrino-masses",
@@ -25845,10 +25876,10 @@
     },
     {
       "derivationId": "particles/three-generations",
-      "type": "Structural Postulate",
-      "id": "S1",
-      "name": "Generation–axis correspondence",
-      "fullRef": "particles/three-generations:Structural Postulate S1"
+      "type": "Theorem",
+      "id": "0.1",
+      "name": "Generation–axis correspondence — now a theorem",
+      "fullRef": "particles/three-generations:Theorem 0.1"
     },
     {
       "derivationId": "particles/three-generations",

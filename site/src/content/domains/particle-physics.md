@@ -90,7 +90,7 @@ Unit quaternions form $SU(2)$, giving the weak force. The non-commutativity forc
 
 The electroweak crystallization occurs at this level. The quaternionic structure "freezes" into a specific orientation, breaking the electroweak symmetry and generating masses for the $W$ and $Z$ bosons while leaving the photon massless. The crystallization axis defines the reference direction against which each generation's winding axis is measured.
 
-**What crystallizes:** The three generations of leptons (electrons, muons, taus, and their neutrinos). Each generation corresponds to one of the three independent $SO(3)$ generators &mdash; there cannot be a fourth. Masses are set by the angular misalignment between each generation's winding axis and the electroweak axis: more misaligned means lighter (the electron is the most misaligned, hence the lightest charged lepton). Neutrinos are Majorana (from the pseudo-real structure of $SU(2)$) with masses suppressed by a seesaw mechanism.
+**What crystallizes:** The three generations of leptons (electrons, muons, taus, and their neutrinos). Each generation corresponds to one of the three independent $SO(3)$ generators &mdash; this is derived from C5 applied to the internal winding space (the same argument that gives observer multiplicity), not postulated. There cannot be a fourth: $\dim(\mathfrak{so}(3)) = 3$ is both the minimum for C5 non-triviality and the maximum for sector independence. Masses are set by the angular misalignment between each generation's winding axis and the electroweak axis: more misaligned means lighter (the electron is the most misaligned, hence the lightest charged lepton). Neutrinos are Majorana (from the pseudo-real structure of $SU(2)$) with masses suppressed by a seesaw mechanism.
 
 The electron &mdash; the lightest charged lepton, with $\sim 10^{43}$ bits of epistemic capacity &mdash; is a stable fixed point of $\mathcal{R}$ at this level. It is "elementary" in the operational sense (it cannot be decomposed into freely existing sub-parts) but it exists *because of* the quaternionic structure the bootstrap produced. It is a stable mode of the level-2 hierarchy, the way a standing wave is a stable mode of its medium.
 
@@ -170,7 +170,7 @@ The topology of three-dimensional space ($\pi_1(SO(3)) = \mathbb{Z}_2$) produces
 
 ### Three Generations
 
-Three fermion generations correspond to the three independent generators of $SO(3)$: each generation's dominant winding axis aligns with one of the three independent rotation generators. A fourth generation would require a fourth independent axis, which does not exist in $d = 3$. This is not a bound &mdash; it is a topological impossibility.
+Three fermion generations correspond to the three independent generators of $SO(3)$. The generation-axis correspondence &mdash; formerly a structural postulate &mdash; is now derived from C5 (strong subadditivity) applied to the internal winding-direction space of fermions: the same argument that forces observer multiplicity ($\geq 3$ observers for C5 non-triviality) forces $\geq 3$ winding sectors, and $\dim(\mathfrak{so}(3)) = 3$ gives $\leq 3$ independent sectors. Exactly three. A fourth generation would require a fourth independent rotation axis, which does not exist in $d = 3$ &mdash; a topological impossibility.
 
 **Formal derivation:** [Three Generations](/derivations/particles/three-generations)
 

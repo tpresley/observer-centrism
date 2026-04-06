@@ -203,7 +203,8 @@
     "shortName": "Generation\u2013axis correspondence",
     "statement": "Each fermion generation corresponds to a class of half-integer winding loops classified by dominant alignment with one of three independent generators of so(3), partitioned by Voronoi decomposition of S\u00b2.",
     "justification": "Since d = 3 spatial dimensions provide exactly three independent rotation axes, the half-integer winding loops of fermions naturally partition into three sectors, one per generation.",
-    "group": "particles"
+    "group": "particles",
+    "derivedFrom": "particles/three-generations"
   },
   {
     "id": "chiral-symmetry-breaking-s1",

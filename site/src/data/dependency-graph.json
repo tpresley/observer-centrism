@@ -585,6 +585,14 @@
       "to": "particles/three-generations"
     },
     {
+      "from": "minimal-observer/multiplicity",
+      "to": "particles/three-generations"
+    },
+    {
+      "from": "axioms/coherence-conservation",
+      "to": "particles/three-generations"
+    },
+    {
       "from": "interactions/bootstrap",
       "to": "particles/mass-hierarchy"
     },
