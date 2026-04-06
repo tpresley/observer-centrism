@@ -1,0 +1,1 @@
+import t from"https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.mjs";t(document.querySelector(".summary-article"),{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]});
