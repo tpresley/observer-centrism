@@ -1,6 +1,6 @@
 ---
 title: "Three Spatial Dimensions Are Uniquely Stable"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["minimal-observer/structure", "axioms/observer-definition"]
 enablesDerivation: ["particles/spin-statistics", "particles/three-generations", "spacetime/gravity", "spacetime/einstein-equations", "particles/supersymmetry-impossibility"]
 tags: ["geometry"]
@@ -27,6 +27,9 @@ We take three-dimensionality for granted, but there is no obvious reason why the
 **Why this matters.** The four conditions use entirely different mathematical tools — topology, homotopy theory, differential topology, and classical analysis. Their convergence on a single number is not an artifact of applying one method four times; it is a genuine structural coincidence that the framework explains.
 
 **An honest caveat.** This derivation establishes the number of spatial dimensions but treats the single time dimension as following from the partial ordering structure of phase advance, which is argued but not yet elevated to a full theorem.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold) (see [Loop Closure](/derivations/axioms/loop-closure)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

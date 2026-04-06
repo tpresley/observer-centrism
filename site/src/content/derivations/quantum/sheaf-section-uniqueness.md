@@ -1,6 +1,6 @@
 ---
 title: "Sheaf Structure and Section Uniqueness"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["axioms/coherence-conservation", "axioms/observer-definition", "interactions/relational-invariants", "quantum/observer-relative-objectivity", "quantum/entanglement", "quantum/born-rule", "thermodynamics/time"]
 enablesDerivation: []
 tags: ["quantum", "foundation", "mathematics"]
@@ -29,6 +29,9 @@ The three-level trichotomy (Theorem 6.1 of observer-relative-objectivity) classi
 **What this means.** The framework does not admit "multiple disjoint coherent branches" in the many-worlds sense. There is no duplication of the coherence budget. But it does admit multiple consistent outcome assignments within a single coherence evolution — weighted by the unique Born rule probability. Quantum indeterminacy is not branching of the sheaf; it is the multiplicity of the outcome sheaf's local sections, all of which live within the unique global section of the probability sheaf.
 
 **Rigorous status.** All core results are now fully rigorous. The sheaf condition for $\mathcal{C}$ and $\mathcal{P}$ is formally verified (Theorem 2.2) via the gluing argument from conservation (C2) and Born rule uniqueness. The outcome sheaf's non-globalizability follows from the Kochen-Specker theorem applied to the framework's Hilbert space structure (Theorem 5.2). The temporal contractibility argument is rigorous given the DAG structure. The three-sheaf decomposition is definitional, and the trichotomy correspondence (Theorem 6.1) is proved in both directions. What remains open is the precise isomorphism with the Abramsky-Brandenburger cohomological contextuality framework — this would provide quantitative control over the obstruction (connecting $\dim \check{H}^1$ to entanglement entropy) but is not needed for the qualitative classification.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), preferred-basis S1 (interaction-invariant correspondence) (see [Loop Closure](/derivations/axioms/loop-closure), [Preferred Basis](/derivations/quantum/preferred-basis)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

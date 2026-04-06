@@ -1,6 +1,6 @@
 ---
 title: "Gravity as Coherence Geometry Curvature"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["interactions/relational-invariants", "spacetime/lorentz-invariance", "dimensions/three-dimensions"]
 enablesDerivation: ["spacetime/einstein-equations", "holography/area-scaling", "spacetime/gravitational-constant"]
 tags: ["geometry"]
@@ -27,6 +27,9 @@ Newton described gravity as a force pulling masses together. Einstein reframed i
 **Why this matters.** The metric-density coupling — the fact that matter curves spacetime — was originally stated as a structural postulate of the framework. It has since been promoted to a theorem, derived from the action duality linking spacetime geometry to the coherence Hessian. This derivation now requires no structural postulates.
 
 **An honest caveat.** The coupling constant (Newton's gravitational constant G) remains an empirical parameter. Whether it can be derived from the framework's other constants is an open question.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

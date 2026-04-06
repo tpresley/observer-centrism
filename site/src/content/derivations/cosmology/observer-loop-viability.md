@@ -1,6 +1,6 @@
 ---
 title: "Observer Loop Viability Bounds"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["spacetime/singularity-resolution", "holography/area-scaling", "minimal-observer/structure", "axioms/loop-closure", "minimal-observer/multiplicity", "thermodynamics/entropy", "thermodynamics/time", "interactions/bootstrap", "interactions/relational-invariants", "interactions/three-types", "thermodynamics-ext/renormalization", "holography/er-epr"]
 enablesDerivation: ["cosmology/cosmological-arrow", "cosmology/dark-energy-equation-of-state"]
 tags: ["cosmology", "quantum-gravity"]
@@ -26,6 +26,9 @@ The framework's axioms require that observers have specific structural propertie
 **Why this matters.** This is not anthropic reasoning ("observers like us must exist"). It is axiomatic selection: the mathematical requirements of the three axioms exclude certain spacetimes entirely. The sign prediction is a genuine, falsifiable consequence of coherence conservation.
 
 **An honest caveat.** The upper bound is 120 orders of magnitude above the observed value -- it establishes a principle, not a tight constraint. Closing the quantitative gap requires understanding the minimum coherence content needed for stable observer loops, which remains the key open question.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure), area-scaling S1 (Planck-scale resolution) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light), [Area Scaling](/derivations/holography/area-scaling)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

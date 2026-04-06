@@ -1,6 +1,6 @@
 ---
 title: "Coherence First Law"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["thermodynamics/entropy", "thermodynamics/action-planck"]
 enablesDerivation: []
 tags: ["thermo-ext"]
@@ -26,6 +26,9 @@ The first law states that changes in a system's internal energy equal the heat a
 **Why this matters.** Energy conservation is often treated as a foundational assumption. Showing it follows from a deeper principle (coherence conservation) unifies energy conservation with information-theoretic constraints and reveals the structural origin of the work-heat distinction.
 
 **An honest caveat.** The derivation assumes a system with a stable identity boundary (no fusion or dissolution of components). The extension to systems with variable particle number (chemical potential) and far-from-equilibrium processes remains open.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold) (see [Loop Closure](/derivations/axioms/loop-closure)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

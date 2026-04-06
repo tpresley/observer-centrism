@@ -1,6 +1,6 @@
 ---
 title: "Entropy as Inaccessible Coherence"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["thermodynamics/time", "interactions/relational-invariants", "interactions/bootstrap"]
 enablesDerivation: ["thermodynamics-ext/non-ergodicity", "thermodynamics-ext/biological-non-ergodicity", "cosmology/cosmological-arrow"]
 tags: ["dynamics"]
@@ -27,6 +27,9 @@ The standard account treats entropy increase as a statistical tendency -- overwh
 **Why this matters.** This resolves the Loschmidt paradox (why entropy increases despite time-reversible dynamics) by locating the asymmetry in the observer's bounded perspective, not in the underlying laws. It also explains why different observers can assign different entropies to the same system -- entropy is fundamentally observer-relative.
 
 **An honest caveat.** The recovery of the standard Boltzmann formula requires an additional assumption of uniform coherence distribution, which is a special case of the more general framework.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold) (see [Loop Closure](/derivations/axioms/loop-closure)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

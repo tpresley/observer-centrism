@@ -1,6 +1,6 @@
 ---
 title: "The Mass Hierarchy"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["interactions/bootstrap"]
 enablesDerivation: ["particles/three-generations", "cosmology/observer-loop-viability"]
 tags: ["particles"]
@@ -25,6 +25,9 @@ The top quark is roughly 340,000 times heavier than the electron, and the electr
 **Why this matters.** The hierarchy problem has driven decades of theoretical work, much of it focused on supersymmetry as the solution. This derivation offers a structural alternative where the hierarchy is a natural consequence of how observer loops organize at different scales.
 
 **An honest caveat.** The qualitative structure (exponential separation, self-protection) is robust, but the specific particle masses and coupling constants remain empirical inputs. Computing exact masses from the coherence geometry is an open problem.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold) (see [Loop Closure](/derivations/axioms/loop-closure)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

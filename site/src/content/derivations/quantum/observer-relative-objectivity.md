@@ -1,6 +1,6 @@
 ---
 title: "Observer-Relative Objectivity"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["axioms/coherence-conservation", "axioms/observer-definition", "interactions/relational-invariants", "quantum/measurement", "quantum/entanglement", "quantum/born-rule", "thermodynamics/time"]
 enablesDerivation: ["quantum/sheaf-section-uniqueness"]
 tags: ["quantum", "foundation"]
@@ -28,6 +28,9 @@ Standard physics assumes a clear answer: there is one objective reality, and obs
 **Why this matters.** The subjective/objective debate has confused discussions of quantum mechanics for a century. By making the three-level structure precise, the framework removes the confusion: quantum mechanics is neither subjective nor classically objective — it is observer-relatively objective.
 
 **An honest caveat.** The comparison with other interpretive frameworks (Step 7) is structural and philosophical rather than mathematical — it positions the framework but does not make formal claims. The core trichotomy (Theorem 6.1) is rigorous given the axioms. A category-theoretic formalization as a functor on Obs would strengthen the result but is not required for the classification itself.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), preferred-basis S1 (interaction-invariant correspondence) (see [Loop Closure](/derivations/axioms/loop-closure), [Preferred Basis](/derivations/quantum/preferred-basis)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

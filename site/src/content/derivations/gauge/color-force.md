@@ -1,6 +1,6 @@
 ---
 title: "Color Force from Octonionic Structure"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["gauge/weak-interaction", "interactions/bootstrap"]
 enablesDerivation: ["gauge/standard-model-group", "gauge/strong-cp", "gauge/confinement", "gauge/chiral-symmetry-breaking"]
 tags: ["gauge"]
@@ -28,6 +28,9 @@ Electromagnetism uses complex numbers (two-dimensional). The weak force uses qua
 **Why this matters.** The strong force is not independent from electromagnetism and the weak force -- all three are facets of a single algebraic structure (the octonions), progressively reduced by the electroweak symmetry. And the impossibility of a fourth force is a theorem, not an observation.
 
 **An honest caveat.** The confinement argument is structural (non-associativity obstructs colored-state transport) but does not constitute a rigorous proof of dynamical confinement or the mass gap -- that remains one of the Clay Millennium Prize problems. The strong coupling constant is a free parameter.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

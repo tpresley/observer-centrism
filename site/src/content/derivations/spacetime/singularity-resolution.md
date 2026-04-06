@@ -1,6 +1,6 @@
 ---
 title: "Singularity Resolution"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["spacetime/einstein-equations", "holography/area-scaling"]
 enablesDerivation: []
 tags: ["spacetime", "quantum-gravity"]
@@ -27,6 +27,9 @@ Classical general relativity predicts that singularities are unavoidable. The Pe
 **Why this matters.** Singularity resolution is often discussed speculatively, but this derivation achieves it through a model-independent logical argument: bounded curvature plus the Penrose-Hawking theorems, via pure contraposition, force the energy conditions to fail near Planck density. No specific model of quantum gravity is assumed.
 
 **An honest caveat.** The qualitative conclusion (no singularities, bounces occur) is robust, but the detailed structure of the bounce and the black hole interior depend on higher-order corrections that have not yet been derived from the framework's coherence Lagrangian.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure), area-scaling S1 (Planck-scale resolution) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light), [Area Scaling](/derivations/holography/area-scaling)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

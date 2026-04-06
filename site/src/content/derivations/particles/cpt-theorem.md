@@ -1,6 +1,6 @@
 ---
 title: "CPT Theorem from Coherence Structure"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["minimal-observer/coherence-dual-pairs", "spacetime/lorentz-invariance", "particles/spin-statistics", "foundation/coherence-lagrangian"]
 enablesDerivation: []
 tags: ["particles"]
@@ -27,6 +27,9 @@ Nature violates parity (the weak force distinguishes left from right), violates 
 **Why this matters.** CPT invariance is one of the deepest results in quantum field theory. By deriving it from the framework's axioms rather than assuming it, the derivation demonstrates that the framework reproduces -- and structurally explains -- a cornerstone of modern physics.
 
 **An honest caveat.** The full argument relies on the Jost-Luders-Pauli theorem, a standard but technically demanding result. The overview simplifies how the three transformations "compensate" each other, particularly regarding the interplay of chirality, complex phases, and anti-unitarity in the weak sector.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

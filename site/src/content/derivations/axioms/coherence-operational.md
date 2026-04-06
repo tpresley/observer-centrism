@@ -1,6 +1,6 @@
 ---
 title: "Coherence as Physical Primitive"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["axioms/coherence-conservation", "axioms/loop-closure"]
 enablesDerivation: ["quantum/born-rule"]
 tags: ["foundation"]
@@ -29,6 +29,9 @@ Axiom 1 ([Coherence Conservation](/derivations/axioms/coherence-conservation)) d
 **Why "coherence" and not "entropy"?** If the conditions of Axiom 1 match the axioms of quantum entropy, why introduce a new name? Because Axiom 1 is *stronger* than entropy conservation alone. Conservation (C2) says the total is constant under admissible evolution — that is unitarity, and entropy has it. But subadditivity (C4) and strong subadditivity (C5) constrain how subsystem values relate to each other: they are compositional axioms about structure, not just a statement about a conserved total. Von Neumann entropy happens to satisfy them [Araki–Lieb, 1970]; [Lieb–Ruskai, 1973], but those are deep *theorems*, not part of entropy's definition. Moreover, the inner product $\langle\psi|\psi\rangle$ (Theorem 4.1 below) is also a realization of the same axioms, and no one would call it entropy. "Coherence" names the abstract structure — positive, subadditive, conserved — that entropy, inner products, and phase space volumes share. The abstraction earns its own name because it is the load-bearing primitive: the derivation chain runs from C1–C5, not from any single realization.
 
 **An honest caveat.** The convergence establishes structural isomorphism — the same mathematical axioms, the same derived quantities. It does not establish ontological identity: whether coherence *is* entropy, or whether both are aspects of something deeper, remains a philosophical question the framework does not attempt to settle.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold) (see [Loop Closure](/derivations/axioms/loop-closure)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

@@ -508,6 +508,13 @@ CREATE TABLE postulates (
   derived_from_title TEXT
 );
 
+CREATE TABLE derivation_postulate_deps (
+  derivation_id TEXT NOT NULL,
+  postulate_id TEXT NOT NULL,
+  postulate_short_name TEXT,
+  PRIMARY KEY (derivation_id, postulate_id)
+);
+
 CREATE TABLE lean_proofs (
   derivation_id TEXT NOT NULL,
   module TEXT NOT NULL,
@@ -554,6 +561,22 @@ CREATE VIEW v_gaps_by_group AS
 
 CREATE VIEW v_ga_status_summary AS
   SELECT status, COUNT(*) as count FROM ga_pages GROUP BY status ORDER BY count DESC;
+
+CREATE VIEW v_postulate_blast_radius AS
+  SELECT dpd.postulate_id, dpd.postulate_short_name,
+    COUNT(DISTINCT dpd.derivation_id) as dependent_derivation_count,
+    GROUP_CONCAT(DISTINCT dpd.derivation_id) as dependent_derivations
+  FROM derivation_postulate_deps dpd
+  GROUP BY dpd.postulate_id
+  ORDER BY dependent_derivation_count DESC;
+
+CREATE VIEW v_derivation_postulate_summary AS
+  SELECT d.id, d.title, d.status,
+    COUNT(dpd.postulate_id) as postulate_dep_count,
+    GROUP_CONCAT(dpd.postulate_short_name, ', ') as depends_on_postulates
+  FROM derivations d
+  LEFT JOIN derivation_postulate_deps dpd ON d.id = dpd.derivation_id
+  GROUP BY d.id;
 `)
 
   // ── Insert derivations ──
@@ -607,6 +630,53 @@ CREATE VIEW v_ga_status_summary AS
     const postulates = JSON.parse(readFileSync(POSTULATES_PATH, 'utf-8'))
     for (const p of postulates) {
       lines.push(`INSERT OR IGNORE INTO postulates VALUES ('${esc(p.id)}','${esc(p.derivation)}','${esc(p.derivationTitle)}','${esc(p.postulateId)}','${esc(p.shortName)}','${esc(p.statement)}','${esc(p.justification)}','${esc(p.group)}',${p.derivedFrom ? `'${esc(p.derivedFrom)}'` : 'NULL'},${p.derivedFromTitle ? `'${esc(p.derivedFromTitle)}'` : 'NULL'});`)
+    }
+  }
+
+  // ── Insert derivation-postulate dependencies ──
+  // Trace the dependency graph to find which active structural postulates each derivation depends on
+  if (existsSync(POSTULATES_PATH)) {
+    const postulatesData = JSON.parse(readFileSync(POSTULATES_PATH, 'utf-8'))
+    const activePostulates = postulatesData.filter(p => !p.derivedFrom)
+    const s1DerivationIds = new Set(activePostulates.map(p => p.derivation))
+    const s1ById = {}
+    for (const p of activePostulates) {
+      s1ById[p.derivation] = p
+    }
+
+    // Build reverse adjacency from graph edges
+    const depsMap = {}
+    for (const e of graph.edges) {
+      if (!depsMap[e.to]) depsMap[e.to] = []
+      depsMap[e.to].push(e.from)
+    }
+
+    function getTransitiveS1(nodeId, visited = new Set()) {
+      if (visited.has(nodeId)) return new Set()
+      visited.add(nodeId)
+      const found = new Set()
+      if (s1DerivationIds.has(nodeId)) found.add(nodeId)
+      for (const parent of (depsMap[nodeId] || [])) {
+        for (const s of getTransitiveS1(parent, visited)) found.add(s)
+      }
+      return found
+    }
+
+    for (const d of Object.values(index.derivations)) {
+      const s1deps = getTransitiveS1(d.id)
+      // Also check graph-clean files that are known to need S1 through non-graph paths
+      // (coherence-operational, fisher-metric, etc. depend on smooth structure but graph misses the edge)
+      if (d.status === 'provisional' && s1deps.size === 0) {
+        // If provisional but graph shows no S1, it was demoted for non-graph reasons (smooth structure dependency)
+        s1deps.add('axioms/loop-closure')
+      }
+      for (const s1id of s1deps) {
+        if (s1id === d.id) continue // Don't self-reference
+        const p = s1ById[s1id]
+        if (p) {
+          lines.push(`INSERT OR IGNORE INTO derivation_postulate_deps VALUES ('${esc(d.id)}','${esc(p.id)}','${esc(p.shortName)}');`)
+        }
+      }
     }
   }
 

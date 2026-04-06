@@ -1,6 +1,6 @@
 ---
 title: "Measurement as Relational Invariant Generation"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["quantum/preferred-basis"]
 enablesDerivation: ["quantum/teleportation"]
 tags: ["quantum"]
@@ -27,6 +27,9 @@ The "measurement problem" has haunted physics for nearly a century. In standard 
 **Why this matters.** This dissolves the measurement problem without introducing extra postulates, branching universes, or hidden variables. Measurement is ordinary physics -- coherence dynamics across observer boundaries.
 
 **An honest caveat.** The question of what determines the specific outcome in a single trial is addressed structurally (the information exists in the full coherence geometry but is inaccessible to any bounded observer), which is an interpretive position rather than a mathematical theorem.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on preferred-basis S1 (interaction-invariant correspondence), loop-closure S1 (finite-dimensional manifold) (see [Preferred Basis](/derivations/quantum/preferred-basis), [Loop Closure](/derivations/axioms/loop-closure)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

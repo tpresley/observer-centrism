@@ -1,6 +1,6 @@
 ---
 title: "Quantum Teleportation as Coherence Channel Transfer"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["quantum/entanglement", "quantum/measurement", "interactions/three-types"]
 enablesDerivation: []
 tags: ["quantum", "information"]
@@ -33,6 +33,9 @@ Quantum teleportation -- experimentally demonstrated many times since 1997 -- al
 **Why this matters.** Teleportation is often presented as one of quantum mechanics' most counterintuitive phenomena. The coherence framework shows it is structurally inevitable once you have entanglement and conservation -- there is nothing mysterious about it beyond the unfamiliarity of the underlying rules.
 
 **An honest caveat.** The overview omits the detailed algebraic manipulations (Bell basis expansion, Pauli corrections) that make the protocol precise. The explanation also focuses on the simplest case of a single qubit; the generalization to higher-dimensional systems is straightforward but technically richer.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), preferred-basis S1 (interaction-invariant correspondence) (see [Loop Closure](/derivations/axioms/loop-closure), [Preferred Basis](/derivations/quantum/preferred-basis)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

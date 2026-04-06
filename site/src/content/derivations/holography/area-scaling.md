@@ -1,6 +1,6 @@
 ---
 title: "Holographic Entropy Bound"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["spacetime/gravity", "thermodynamics/action-planck"]
 enablesDerivation: ["holography/black-hole-entropy", "spacetime/singularity-resolution", "holography/causal-set-statistics", "holography/er-epr"]
 tags: ["holography"]
@@ -25,6 +25,9 @@ In everyday experience, the amount of stuff you can pack into a box grows with i
 **Why this matters.** This is the foundation for the entire holography chain: black hole entropy, Hawking radiation, the information paradox, and the holographic noise prediction all rest on this bound.
 
 **An honest caveat.** The derivation relies on one structural postulate (that the Planck length is the actual resolution limit of the coherence geometry), which is dimensionally unique but not constructively derived from the axioms alone.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

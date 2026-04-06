@@ -1,6 +1,6 @@
 ---
 title: "Chirality Selection from Relational Coherence"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["gauge/weak-interaction", "interactions/relational-invariants", "axioms/coherence-conservation"]
 enablesDerivation: ["gauge/anomaly-cancellation"]
 tags: ["gauge"]
@@ -27,6 +27,9 @@ Every other force in nature treats left-handed and right-handed particles identi
 **Why this matters.** Parity violation is not an arbitrary feature of nature but an algebraic inevitability of non-commutative phase structure. The framework predicts it is exact at all energies -- there is no high-energy scale at which parity is restored, contrary to some beyond-Standard-Model proposals.
 
 **An honest caveat.** The derivation predicts that one chirality is selected but not which one (left versus right). The choice of "left" is spontaneous, like a coin flip at the birth of the universe. A CPT-conjugate universe would have right-handed weak interactions.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

@@ -1,6 +1,6 @@
 ---
 title: "Weak Interaction from Quaternionic Structure"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["gauge/electromagnetism", "dimensions/three-dimensions", "particles/spin-statistics"]
 enablesDerivation: ["gauge/chirality-selection", "gauge/standard-model-group", "flavor/mixing-angles", "cosmology/baryogenesis", "gauge/electroweak-breaking", "gauge/weinberg-angle"]
 tags: ["gauge"]
@@ -28,6 +28,9 @@ Electromagnetism arises from a single phase channel -- one direction in which an
 **Why this matters.** The weak force is not an arbitrary addition to physics but an algebraic necessity of living in three spatial dimensions. The same Hurwitz theorem that selects quaternions here also constrains the entire gauge hierarchy, placing a ceiling on how many forces can exist.
 
 **An honest caveat.** This derivation establishes the gauge structure but not the symmetry breaking that gives W and Z bosons their masses (addressed downstream in [Electroweak Breaking](/derivations/gauge/electroweak-breaking)) or the value of the Weinberg angle (addressed in [Weinberg Angle](/derivations/gauge/weinberg-angle) via the $\mathbb{C} \subset \mathbb{H}$ algebraic embedding). The weak coupling constant $g_W$ remains a free parameter at this stage, with the same status as $e$ in electromagnetism.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

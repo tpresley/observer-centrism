@@ -22,7 +22,7 @@
       "id": "axioms/coherence-operational",
       "title": "Coherence as Physical Primitive",
       "group": "foundation",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "minimal-observer/structure",
@@ -64,67 +64,67 @@
       "id": "thermodynamics/time",
       "title": "Time as Phase Ordering",
       "group": "dynamics",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "thermodynamics/entropy",
       "title": "Entropy",
       "group": "dynamics",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "thermodynamics/action-planck",
       "title": "Action and Planck's Constant",
       "group": "dynamics",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "spacetime/speed-of-light",
       "title": "Speed of Light",
       "group": "geometry",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "spacetime/lorentz-invariance",
       "title": "Lorentz Invariance",
       "group": "geometry",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "spacetime/gravity",
       "title": "Gravity as Curvature",
       "group": "geometry",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "spacetime/einstein-equations",
       "title": "Einstein Field Equations",
       "group": "geometry",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "dimensions/three-dimensions",
       "title": "Three Spatial Dimensions",
       "group": "geometry",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "quantum/born-rule",
       "title": "Born Rule",
       "group": "quantum",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "quantum/preferred-basis",
       "title": "Preferred Basis",
       "group": "quantum",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "quantum/measurement",
       "title": "Measurement Problem",
       "group": "quantum",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "particles/spin-statistics",
@@ -142,7 +142,7 @@
       "id": "particles/mass-hierarchy",
       "title": "Mass Hierarchy",
       "group": "particles",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "particles/three-generations",
@@ -154,55 +154,55 @@
       "id": "holography/area-scaling",
       "title": "Holographic Entropy Bound",
       "group": "holography",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "holography/black-hole-entropy",
       "title": "Black Hole Entropy",
       "group": "holography",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "holography/hawking-radiation",
       "title": "Hawking Radiation",
       "group": "holography",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "holography/information-paradox",
       "title": "Information Paradox",
       "group": "holography",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "gauge/electromagnetism",
       "title": "Electromagnetism",
       "group": "gauge",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "gauge/weak-interaction",
       "title": "Weak Interaction",
       "group": "gauge",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "gauge/color-force",
       "title": "Color Force",
       "group": "gauge",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "gauge/standard-model-group",
       "title": "SM Gauge Group",
       "group": "gauge",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "flavor/mixing-angles",
       "title": "Flavor Mixing (PMNS/CKM)",
       "group": "flavor",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "cosmology/cosmological-constant",
@@ -214,31 +214,31 @@
       "id": "cosmology/baryogenesis",
       "title": "Baryogenesis",
       "group": "cosmology",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "cosmology/coupling-constants",
       "title": "Coupling Constants",
       "group": "cosmology",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "thermodynamics-ext/first-law",
       "title": "Coherence First Law",
       "group": "thermo-ext",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "thermodynamics-ext/fisher-metric",
       "title": "Fisher Information Metric",
       "group": "thermo-ext",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "thermodynamics-ext/renormalization",
       "title": "Renormalization Group",
       "group": "thermo-ext",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "thermodynamics-ext/distinguishability-conservation",
@@ -250,19 +250,19 @@
       "id": "gauge/chirality-selection",
       "title": "Chirality Selection",
       "group": "gauge",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "gauge/electroweak-breaking",
       "title": "Electroweak Symmetry Breaking",
       "group": "gauge",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "foundation/coherence-lagrangian",
       "title": "Coherence Lagrangian",
       "group": "foundation",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "foundation/aperiodic-order",
@@ -272,7 +272,7 @@
     },
     {
       "id": "interactions/bootstrap-division-algebras",
-      "title": "Bootstrap \u2192 Division Algebras",
+      "title": "Bootstrap → Division Algebras",
       "group": "dynamics",
       "status": "rigorous"
     },
@@ -280,55 +280,55 @@
       "id": "quantum/entanglement",
       "title": "Entanglement from Relational Invariants",
       "group": "quantum",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "gauge/strong-cp",
       "title": "Strong CP Conservation",
       "group": "gauge",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "spacetime/singularity-resolution",
       "title": "Singularity Resolution",
       "group": "geometry",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "gauge/confinement",
       "title": "Color Confinement",
       "group": "gauge",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "holography/causal-set-statistics",
       "title": "Causal Set Statistics",
       "group": "holography",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "particles/neutrino-masses",
       "title": "Neutrino Mass Mechanism",
       "group": "particles",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "gauge/anomaly-cancellation",
       "title": "Anomaly Cancellation",
       "group": "gauge",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "gauge/weinberg-angle",
       "title": "Weinberg Angle",
       "group": "gauge",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "cosmology/leptogenesis",
       "title": "Leptogenesis",
       "group": "cosmology",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "gauge/chiral-symmetry-breaking",
@@ -340,7 +340,7 @@
       "id": "holography/er-epr",
       "title": "ER=EPR Formalization",
       "group": "holography",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "particles/supersymmetry-impossibility",
@@ -352,37 +352,37 @@
       "id": "quantum/teleportation",
       "title": "Quantum Teleportation",
       "group": "quantum",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "particles/cpt-theorem",
       "title": "CPT Theorem",
       "group": "particles",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "gauge/proton-stability",
       "title": "Proton Stability",
       "group": "gauge",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "cosmology/observer-loop-viability",
       "title": "Observer Loop Viability Bounds",
       "group": "cosmology",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "quantum/observer-relative-objectivity",
       "title": "Observer-Relative Objectivity",
       "group": "quantum",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "quantum/sheaf-section-uniqueness",
       "title": "Sheaf Structure & Section Uniqueness",
       "group": "quantum",
-      "status": "rigorous"
+      "status": "provisional"
     },
     {
       "id": "cosmology/geometric-inflation",

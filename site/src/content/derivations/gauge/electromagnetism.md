@@ -1,6 +1,6 @@
 ---
 title: "Electromagnetism from Phase Coherence"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["axioms/loop-closure", "spacetime/speed-of-light", "spacetime/lorentz-invariance"]
 enablesDerivation: ["gauge/weak-interaction", "gauge/standard-model-group"]
 tags: ["gauge"]
@@ -28,6 +28,9 @@ In the standard approach, Maxwell's equations are taken as given. Here they are 
 **Why this matters.** Electromagnetism is not an independent postulate but a necessary consequence of how observers relate to each other across spacetime. The same logical template -- local symmetry forces a gauge connection whose curvature obeys uniquely determined field equations -- recurs for the weak and strong forces.
 
 **An honest caveat.** The coupling constant (how strong the electromagnetic force is) remains a free parameter. The derivation also relies on two structural postulates about the geometric language connecting phases, which are well-motivated but not derived from the axioms alone.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

@@ -1,6 +1,6 @@
 ---
 title: "Strong CP Conservation from Octonionic Structure"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["gauge/color-force"]
 enablesDerivation: []
 tags: ["gauge", "cp-violation"]
@@ -25,6 +25,9 @@ The equations governing the strong force contain a parameter (the "theta angle")
 **Why this matters.** The strong CP problem has motivated decades of experimental searches for the axion. This derivation offers a structural resolution and a falsifiable counter-prediction: if an axion is discovered, the framework's resolution of the strong CP problem is wrong.
 
 **An honest caveat.** The algebraic argument is rigorous, but the detailed instanton obstruction mechanism (the explicit computation of the octonionic Chern-Simons functional) remains at the level of a well-motivated structural argument rather than a fully explicit calculation.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

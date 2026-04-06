@@ -1,6 +1,6 @@
 ---
 title: "Coherence Lagrangian"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["thermodynamics/action-planck", "thermodynamics-ext/fisher-metric"]
 enablesDerivation: ["particles/cpt-theorem", "spacetime/gravitational-constant"]
 tags: ["foundation", "lagrangian"]
@@ -28,6 +28,9 @@ In standard physics, the Lagrangian (the function that encodes all dynamics) is 
 **Why this matters.** If correct, this means the laws of physics are not contingent choices but necessary consequences of self-consistent observation. The Lagrangian is not "designed" -- it is the only one that works.
 
 **An honest caveat.** The derivation focuses on scalar fields; extending rigorously to spinor fields (fermions) requires additional work. The path integral measure also inherits the standard mathematical ambiguity shared by all continuum quantum field theories.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold) (see [Loop Closure](/derivations/axioms/loop-closure)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

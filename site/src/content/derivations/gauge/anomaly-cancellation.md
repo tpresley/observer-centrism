@@ -1,6 +1,6 @@
 ---
 title: "Anomaly Cancellation from Coherence Conservation"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["gauge/chirality-selection", "gauge/standard-model-group", "axioms/coherence-conservation"]
 enablesDerivation: []
 tags: ["gauge", "anomaly", "fermion-content"]
@@ -25,6 +25,9 @@ Gauge anomalies are quantum-mechanical inconsistencies that would render a theor
 **Why this matters.** In the Standard Model, anomaly cancellation constrains what particles can exist. Here the logic runs deeper: the algebraic structure that generates the forces also generates exactly the particle content needed for consistency. The framework explains why the Standard Model is the way it is, rather than treating its particle content as an empirical input.
 
 **An honest caveat.** The proof uses the Fujikawa mechanism (a standard path-integral result) to connect anomalies to coherence violation. A purely algebraic proof that avoids path-integral language would provide an independent perspective but has not yet been constructed.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

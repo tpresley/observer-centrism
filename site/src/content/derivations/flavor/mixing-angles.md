@@ -1,6 +1,6 @@
 ---
 title: "Flavor Mixing from Winding-Axis Geometry"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["particles/three-generations", "gauge/weak-interaction"]
 enablesDerivation: ["particles/neutrino-masses", "cosmology/leptogenesis"]
 tags: ["flavor"]
@@ -27,6 +27,9 @@ In the Standard Model, the CKM matrix (quarks) and PMNS matrix (leptons) describ
 **Why this matters.** If the icosahedral symmetry is correct, the CP-violating phase in the PMNS matrix takes one of five discrete values rather than being a continuous free parameter. This is directly testable by the DUNE and Hyper-Kamiokande experiments.
 
 **An honest caveat.** The golden ratio prediction for the solar angle is about 2 degrees below the experimental value, and the specific choice of icosahedral symmetry is a structural postulate (S1) not yet derived from the axioms alone.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), mass-hierarchy S1 (tunneling-crystallization correspondence), speed-of-light S1 (pseudo-Riemannian structure) (see [Loop Closure](/derivations/axioms/loop-closure), [Mass Hierarchy](/derivations/particles/mass-hierarchy), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

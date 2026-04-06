@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-06T19:03:49.436Z",
+    "generatedAt": "2026-04-06T19:59:04.038Z",
     "derivationCount": 73,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -8,10 +8,10 @@
   },
   "stats": {
     "byStatus": {
-      "rigorous": 61,
+      "rigorous": 15,
+      "provisional": 53,
       "draft": 2,
       "non-viable": 1,
-      "provisional": 7,
       "stub": 2
     },
     "derivationCount": 73,
@@ -379,7 +379,7 @@
       "id": "axioms/coherence-operational",
       "filePath": "site/src/content/derivations/axioms/coherence-operational.md",
       "title": "Coherence as Physical Primitive",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "axioms",
       "tags": [
@@ -520,6 +520,10 @@
           {
             "target": "axioms/coherence-conservation",
             "context": "Coherence Conservation"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
           },
           {
             "target": "axioms/coherence-conservation",
@@ -875,7 +879,23 @@
         ],
         "incoming": [
           {
+            "source": "axioms/coherence-operational",
+            "context": "Loop Closure"
+          },
+          {
             "source": "axioms/observer-definition",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "cosmology/baryogenesis",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "cosmology/coupling-constants",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "cosmology/leptogenesis",
             "context": "Loop Closure"
           },
           {
@@ -887,12 +907,32 @@
             "context": "Loop Closure"
           },
           {
+            "source": "flavor/mixing-angles",
+            "context": "Loop Closure"
+          },
+          {
             "source": "foundation/coherence-lagrangian",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "gauge/anomaly-cancellation",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "gauge/chirality-selection",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "gauge/color-force",
             "context": "Loop Closure"
           },
           {
             "source": "gauge/color-force",
             "context": "Corollary 4.3"
+          },
+          {
+            "source": "gauge/confinement",
+            "context": "Loop Closure"
           },
           {
             "source": "gauge/electromagnetism",
@@ -907,11 +947,51 @@
             "context": "Theorem 5.1"
           },
           {
+            "source": "gauge/electroweak-breaking",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "gauge/proton-stability",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "gauge/standard-model-group",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "gauge/strong-cp",
+            "context": "Loop Closure"
+          },
+          {
             "source": "gauge/weak-interaction",
             "context": "Loop Closure"
           },
           {
+            "source": "gauge/weinberg-angle",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "holography/area-scaling",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "holography/black-hole-entropy",
+            "context": "Loop Closure"
+          },
+          {
             "source": "holography/causal-set-statistics",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "holography/er-epr",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "holography/hawking-radiation",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "holography/information-paradox",
             "context": "Loop Closure"
           },
           {
@@ -951,11 +1031,43 @@
             "context": "Loop Closure"
           },
           {
+            "source": "particles/mass-hierarchy",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "particles/neutrino-masses",
+            "context": "Loop Closure"
+          },
+          {
             "source": "quantum/born-rule",
             "context": "Loop Closure"
           },
           {
+            "source": "quantum/entanglement",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "quantum/measurement",
+            "context": "Loop Closure"
+          },
+          {
             "source": "quantum/observer-relative-objectivity",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "quantum/preferred-basis",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "quantum/sheaf-section-uniqueness",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "quantum/teleportation",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "spacetime/einstein-equations",
             "context": "Loop Closure"
           },
           {
@@ -964,10 +1076,14 @@
           },
           {
             "source": "spacetime/lorentz-invariance",
-            "context": "Axiom 3"
+            "context": "Loop Closure"
           },
           {
             "source": "spacetime/lorentz-invariance",
+            "context": "Axiom 3"
+          },
+          {
+            "source": "spacetime/singularity-resolution",
             "context": "Loop Closure"
           },
           {
@@ -983,6 +1099,10 @@
             "context": "Loop Closure"
           },
           {
+            "source": "thermodynamics-ext/first-law",
+            "context": "Loop Closure"
+          },
+          {
             "source": "thermodynamics-ext/fisher-metric",
             "context": "Loop Closure"
           },
@@ -992,6 +1112,10 @@
           },
           {
             "source": "thermodynamics/action-planck",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "thermodynamics/entropy",
             "context": "Loop Closure"
           },
           {
@@ -1302,7 +1426,7 @@
       "id": "cosmology/baryogenesis",
       "filePath": "site/src/content/derivations/cosmology/baryogenesis.md",
       "title": "Baryogenesis from Coherence Dynamics",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "cosmology",
       "tags": [
@@ -1454,6 +1578,14 @@
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
           {
             "target": "gauge/weak-interaction",
             "context": "Weak Interaction"
@@ -1819,7 +1951,7 @@
       "id": "cosmology/coupling-constants",
       "filePath": "site/src/content/derivations/cosmology/coupling-constants.md",
       "title": "Coupling Constant Relationships",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "cosmology",
       "tags": [
@@ -1976,6 +2108,18 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
+          },
+          {
             "target": "gauge/standard-model-group",
             "context": "Standard Model Gauge Group"
           },
@@ -1986,10 +2130,6 @@
           {
             "target": "interactions/bootstrap",
             "context": "Bootstrap Mechanism"
-          },
-          {
-            "target": "particles/mass-hierarchy",
-            "context": "Mass Hierarchy"
           },
           {
             "target": "flavor/mixing-angles",
@@ -2742,7 +2882,7 @@
       "id": "cosmology/leptogenesis",
       "filePath": "site/src/content/derivations/cosmology/leptogenesis.md",
       "title": "Leptogenesis from Majorana Neutrino Decays",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "cosmology",
       "tags": [
@@ -2860,6 +3000,18 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
+          },
+          {
             "target": "particles/neutrino-masses",
             "context": "Neutrino Masses"
           },
@@ -2900,7 +3052,7 @@
       "id": "cosmology/observer-loop-viability",
       "filePath": "site/src/content/derivations/cosmology/observer-loop-viability.md",
       "title": "Observer Loop Viability Bounds",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "cosmology",
       "tags": [
@@ -3180,6 +3332,18 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
+          },
+          {
             "target": "minimal-observer/multiplicity",
             "context": "Multiplicity"
           },
@@ -3197,19 +3361,11 @@
           },
           {
             "target": "holography/area-scaling",
-            "context": "Area Scaling"
-          },
-          {
-            "target": "holography/area-scaling",
             "context": "Theorem 5.2"
           },
           {
             "target": "thermodynamics/entropy",
             "context": "Entropy"
-          },
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
           },
           {
             "target": "spacetime/singularity-resolution",
@@ -3416,7 +3572,7 @@
       "id": "dimensions/three-dimensions",
       "filePath": "site/src/content/derivations/dimensions/three-dimensions.md",
       "title": "Three Spatial Dimensions Are Uniquely Stable",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "dimensions",
       "tags": [
@@ -3584,16 +3740,16 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
             "target": "interactions/bootstrap",
             "context": "Bootstrap Mechanism"
           },
           {
             "target": "interactions/bootstrap",
             "context": "Bootstrap"
-          },
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
           },
           {
             "target": "thermodynamics/action-planck",
@@ -3656,7 +3812,7 @@
       "id": "flavor/mixing-angles",
       "filePath": "site/src/content/derivations/flavor/mixing-angles.md",
       "title": "Flavor Mixing from Winding-Axis Geometry",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "flavor",
       "tags": [
@@ -3839,12 +3995,20 @@
       "crossReferences": {
         "outgoing": [
           {
-            "target": "interactions/bootstrap",
-            "context": "Bootstrap Mechanism"
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
           },
           {
             "target": "particles/mass-hierarchy",
             "context": "Mass Hierarchy"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap Mechanism"
           },
           {
             "target": "gauge/weak-interaction",
@@ -4202,7 +4366,7 @@
       "id": "foundation/coherence-lagrangian",
       "filePath": "site/src/content/derivations/foundation/coherence-lagrangian.md",
       "title": "Coherence Lagrangian",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "foundation",
       "tags": [
@@ -4355,6 +4519,10 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
             "target": "thermodynamics-ext/fisher-metric",
             "context": "Proposition 4.1"
           },
@@ -4405,10 +4573,6 @@
           {
             "target": "thermodynamics/action-planck",
             "context": "Theorem 5.1"
-          },
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
           },
           {
             "target": "spacetime/einstein-equations",
@@ -4673,7 +4837,7 @@
       "id": "gauge/anomaly-cancellation",
       "filePath": "site/src/content/derivations/gauge/anomaly-cancellation.md",
       "title": "Anomaly Cancellation from Coherence Conservation",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "gauge",
       "tags": [
@@ -4741,6 +4905,14 @@
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
           {
             "target": "gauge/chirality-selection",
             "context": "Chirality Selection"
@@ -4928,7 +5100,7 @@
       "id": "gauge/chirality-selection",
       "filePath": "site/src/content/derivations/gauge/chirality-selection.md",
       "title": "Chirality Selection from Relational Coherence",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "gauge",
       "tags": [
@@ -5048,6 +5220,14 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
+          {
             "target": "gauge/weak-interaction",
             "context": "originally Structural Postulate S1, now a [theorem](/derivations/interactions/bo"
           },
@@ -5164,7 +5344,7 @@
       "id": "gauge/color-force",
       "filePath": "site/src/content/derivations/gauge/color-force.md",
       "title": "Color Force from Octonionic Structure",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "gauge",
       "tags": [
@@ -5373,6 +5553,14 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
+          {
             "target": "interactions/bootstrap",
             "context": "Bootstrap Mechanism"
           },
@@ -5513,7 +5701,7 @@
       "id": "gauge/confinement",
       "filePath": "site/src/content/derivations/gauge/confinement.md",
       "title": "Color Confinement from Non-Associativity",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "gauge",
       "tags": [
@@ -5651,6 +5839,14 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
+          {
             "target": "gauge/color-force",
             "context": "Color Force"
           }
@@ -5683,7 +5879,7 @@
       "id": "gauge/electromagnetism",
       "filePath": "site/src/content/derivations/gauge/electromagnetism.md",
       "title": "Electromagnetism from Phase Coherence",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "gauge",
       "tags": [
@@ -6089,7 +6285,7 @@
       "id": "gauge/electroweak-breaking",
       "filePath": "site/src/content/derivations/gauge/electroweak-breaking.md",
       "title": "Electroweak Symmetry Breaking",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "gauge",
       "tags": [
@@ -6230,6 +6426,14 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
+          {
             "target": "gauge/weak-interaction",
             "context": "Theorem 2.1"
           },
@@ -6310,7 +6514,7 @@
       "id": "gauge/proton-stability",
       "filePath": "site/src/content/derivations/gauge/proton-stability.md",
       "title": "Proton Stability from Gauge Non-Unification",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "gauge",
       "tags": [
@@ -6467,6 +6671,18 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
+          },
+          {
             "target": "gauge/standard-model-group",
             "context": "Standard Model Gauge Group"
           },
@@ -6503,7 +6719,7 @@
       "id": "gauge/standard-model-group",
       "filePath": "site/src/content/derivations/gauge/standard-model-group.md",
       "title": "Standard Model Gauge Group from Division Algebras",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "gauge",
       "tags": [
@@ -6652,6 +6868,14 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
+          {
             "target": "gauge/electromagnetism",
             "context": "Electromagnetism"
           },
@@ -6758,7 +6982,7 @@
       "id": "gauge/strong-cp",
       "filePath": "site/src/content/derivations/gauge/strong-cp.md",
       "title": "Strong CP Conservation from Octonionic Structure",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "gauge",
       "tags": [
@@ -6878,6 +7102,14 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
+          {
             "target": "gauge/color-force",
             "context": "Color Force"
           },
@@ -6910,7 +7142,7 @@
       "id": "gauge/weak-interaction",
       "filePath": "site/src/content/derivations/gauge/weak-interaction.md",
       "title": "Weak Interaction from Quaternionic Structure",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "gauge",
       "tags": [
@@ -7178,6 +7410,14 @@
             "context": "Weinberg Angle"
           },
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
+          {
             "target": "gauge/electromagnetism",
             "context": "Theorem 2.1"
           },
@@ -7204,10 +7444,6 @@
           {
             "target": "spacetime/einstein-equations",
             "context": "Einstein Field Equations"
-          },
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
           },
           {
             "target": "dimensions/three-dimensions",
@@ -7402,7 +7638,7 @@
       "id": "gauge/weinberg-angle",
       "filePath": "site/src/content/derivations/gauge/weinberg-angle.md",
       "title": "Weinberg Angle from Division Algebra Embedding",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "gauge",
       "tags": [
@@ -7477,6 +7713,18 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
+          },
+          {
             "target": "cosmology/coupling-constants",
             "context": "Coupling Constants"
           },
@@ -7491,10 +7739,6 @@
           {
             "target": "gauge/electroweak-breaking",
             "context": "Electroweak Breaking"
-          },
-          {
-            "target": "particles/mass-hierarchy",
-            "context": "Mass Hierarchy"
           },
           {
             "target": "gauge/weak-interaction",
@@ -7529,7 +7773,7 @@
       "id": "holography/area-scaling",
       "filePath": "site/src/content/derivations/holography/area-scaling.md",
       "title": "Holographic Entropy Bound",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "holography",
       "tags": [
@@ -7683,6 +7927,14 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
+          {
             "target": "spacetime/gravitational-constant",
             "context": "Gravitational Coupling"
           },
@@ -7717,10 +7969,6 @@
           {
             "target": "minimal-observer/structure",
             "context": "0, 2\\pi)$ and conserved charge $Q$ ([Minimal Observer Structure"
-          },
-          {
-            "target": "spacetime/speed-of-light",
-            "context": "Speed of Light"
           },
           {
             "target": "spacetime/gravity",
@@ -7766,11 +8014,11 @@
           },
           {
             "source": "cosmology/observer-loop-viability",
-            "context": "Theorem 3.2"
+            "context": "Area Scaling"
           },
           {
             "source": "cosmology/observer-loop-viability",
-            "context": "Area Scaling"
+            "context": "Theorem 3.2"
           },
           {
             "source": "cosmology/observer-loop-viability",
@@ -7786,6 +8034,10 @@
           },
           {
             "source": "holography/black-hole-entropy",
+            "context": "Area Scaling"
+          },
+          {
+            "source": "holography/black-hole-entropy",
             "context": "Holographic Entropy Bound"
           },
           {
@@ -7794,11 +8046,11 @@
           },
           {
             "source": "holography/causal-set-statistics",
-            "context": "Structural Postulate S1"
+            "context": "Area Scaling"
           },
           {
             "source": "holography/causal-set-statistics",
-            "context": "Area Scaling"
+            "context": "Structural Postulate S1"
           },
           {
             "source": "holography/causal-set-statistics",
@@ -7814,7 +8066,15 @@
           },
           {
             "source": "holography/hawking-radiation",
+            "context": "Area Scaling"
+          },
+          {
+            "source": "holography/hawking-radiation",
             "context": "Holographic Entropy Bound"
+          },
+          {
+            "source": "holography/information-paradox",
+            "context": "Area Scaling"
           },
           {
             "source": "holography/scrambling",
@@ -7838,11 +8098,11 @@
           },
           {
             "source": "spacetime/singularity-resolution",
-            "context": "Holographic Entropy Bound"
+            "context": "Area Scaling"
           },
           {
             "source": "spacetime/singularity-resolution",
-            "context": "Area Scaling"
+            "context": "Holographic Entropy Bound"
           },
           {
             "source": "thermodynamics/entropy",
@@ -7863,7 +8123,7 @@
       "id": "holography/black-hole-entropy",
       "filePath": "site/src/content/derivations/holography/black-hole-entropy.md",
       "title": "Black Hole Entropy",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "holography",
       "tags": [
@@ -7998,6 +8258,18 @@
         "outgoing": [
           {
             "target": "holography/area-scaling",
+            "context": "Area Scaling"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
+          {
+            "target": "holography/area-scaling",
             "context": "Holographic Entropy Bound"
           },
           {
@@ -8065,7 +8337,7 @@
       "id": "holography/causal-set-statistics",
       "filePath": "site/src/content/derivations/holography/causal-set-statistics.md",
       "title": "Causal Set Statistics",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "holography",
       "tags": [
@@ -8232,6 +8504,18 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
+          {
             "target": "interactions/relational-invariants",
             "context": "Relational Invariants"
           },
@@ -8249,15 +8533,7 @@
           },
           {
             "target": "holography/area-scaling",
-            "context": "Area Scaling"
-          },
-          {
-            "target": "holography/area-scaling",
             "context": "Theorem 5.2"
-          },
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
           }
         ],
         "incoming": [
@@ -8312,7 +8588,7 @@
       "id": "holography/er-epr",
       "filePath": "site/src/content/derivations/holography/er-epr.md",
       "title": "ER=EPR from Relational Invariants",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "holography",
       "tags": [
@@ -8414,6 +8690,18 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
+          {
             "target": "quantum/entanglement",
             "context": "Entanglement"
           },
@@ -8444,10 +8732,6 @@
           {
             "target": "holography/causal-set-statistics",
             "context": "rigorous"
-          },
-          {
-            "target": "holography/area-scaling",
-            "context": "Area Scaling"
           },
           {
             "target": "quantum/born-rule",
@@ -8534,7 +8818,7 @@
       "id": "holography/hawking-radiation",
       "filePath": "site/src/content/derivations/holography/hawking-radiation.md",
       "title": "Hawking Radiation",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "holography",
       "tags": [
@@ -8686,6 +8970,18 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
+          {
             "target": "holography/black-hole-entropy",
             "context": "Theorem 1.2"
           },
@@ -8750,7 +9046,7 @@
       "id": "holography/information-paradox",
       "filePath": "site/src/content/derivations/holography/information-paradox.md",
       "title": "Black Hole Information Paradox Resolution",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "holography",
       "tags": [
@@ -8899,6 +9195,18 @@
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
+          {
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
           {
             "target": "holography/hawking-radiation",
             "context": "Hawking Radiation"
@@ -11417,7 +11725,7 @@
       "id": "particles/cpt-theorem",
       "filePath": "site/src/content/derivations/particles/cpt-theorem.md",
       "title": "CPT Theorem from Coherence Structure",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "particles",
       "tags": [
@@ -11594,6 +11902,14 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
+          {
             "target": "minimal-observer/coherence-dual-pairs",
             "context": "Coherence-Dual Pairs"
           },
@@ -11616,10 +11932,6 @@
           {
             "target": "gauge/chirality-selection",
             "context": "Chirality Selection"
-          },
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
           },
           {
             "target": "spacetime/lorentz-invariance",
@@ -11666,7 +11978,7 @@
       "id": "particles/mass-hierarchy",
       "filePath": "site/src/content/derivations/particles/mass-hierarchy.md",
       "title": "The Mass Hierarchy",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "particles",
       "tags": [
@@ -11846,6 +12158,10 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
             "target": "foundation/coherence-lagrangian",
             "context": "Theorem 6.0"
           },
@@ -11912,6 +12228,10 @@
             "context": "Proposition 6.1"
           },
           {
+            "source": "cosmology/leptogenesis",
+            "context": "Mass Hierarchy"
+          },
+          {
             "source": "cosmology/observer-loop-viability",
             "context": "Mass Hierarchy"
           },
@@ -11932,11 +12252,19 @@
             "context": "Mass Hierarchy"
           },
           {
+            "source": "gauge/proton-stability",
+            "context": "Mass Hierarchy"
+          },
+          {
             "source": "gauge/standard-model-group",
             "context": "Mass Hierarchy"
           },
           {
             "source": "gauge/weinberg-angle",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "source": "particles/neutrino-masses",
             "context": "Mass Hierarchy"
           },
           {
@@ -11970,7 +12298,7 @@
       "id": "particles/neutrino-masses",
       "filePath": "site/src/content/derivations/particles/neutrino-masses.md",
       "title": "Neutrino Mass Mechanism",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "particles",
       "tags": [
@@ -12110,6 +12438,18 @@
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
           {
             "target": "particles/three-generations",
             "context": "Three Generations"
@@ -13047,7 +13387,7 @@
       "id": "quantum/born-rule",
       "filePath": "site/src/content/derivations/quantum/born-rule.md",
       "title": "Born Rule from Coherence Conservation",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "quantum",
       "tags": [
@@ -13228,6 +13568,10 @@
             "context": "Coherence as Physical Primitive"
           },
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
             "target": "thermodynamics/time",
             "context": "Time as Phase Ordering"
           },
@@ -13246,10 +13590,6 @@
           {
             "target": "axioms/coherence-conservation",
             "context": "Coherence Conservation"
-          },
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
           },
           {
             "target": "quantum/measurement",
@@ -13344,7 +13684,7 @@
       "id": "quantum/entanglement",
       "filePath": "site/src/content/derivations/quantum/entanglement.md",
       "title": "Entanglement from Relational Invariants",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "quantum",
       "tags": [
@@ -13498,6 +13838,10 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
             "target": "interactions/relational-invariants",
             "context": "Relational Invariants"
           },
@@ -13582,7 +13926,7 @@
       "id": "quantum/measurement",
       "filePath": "site/src/content/derivations/quantum/measurement.md",
       "title": "Measurement as Relational Invariant Generation",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "quantum",
       "tags": [
@@ -13771,16 +14115,20 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "quantum/preferred-basis",
+            "context": "Preferred Basis"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
             "target": "quantum/born-rule",
             "context": "amplitude-coherence identification"
           },
           {
             "target": "quantum/preferred-basis",
             "context": "interaction-invariant correspondence"
-          },
-          {
-            "target": "quantum/preferred-basis",
-            "context": "Preferred Basis"
           },
           {
             "target": "quantum/born-rule",
@@ -13843,7 +14191,7 @@
       "id": "quantum/observer-relative-objectivity",
       "filePath": "site/src/content/derivations/quantum/observer-relative-objectivity.md",
       "title": "Observer-Relative Objectivity",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "quantum",
       "tags": [
@@ -14034,16 +14382,20 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "quantum/preferred-basis",
+            "context": "Preferred Basis"
+          },
+          {
             "target": "axioms/observer-definition",
             "context": "Observer Definition"
           },
           {
             "target": "quantum/measurement",
             "context": "Measurement"
-          },
-          {
-            "target": "quantum/preferred-basis",
-            "context": "Preferred Basis"
           },
           {
             "target": "thermodynamics/time",
@@ -14068,10 +14420,6 @@
           {
             "target": "quantum/sheaf-section-uniqueness",
             "context": "Sheaf Structure"
-          },
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
           }
         ],
         "incoming": []
@@ -14089,7 +14437,7 @@
       "id": "quantum/preferred-basis",
       "filePath": "site/src/content/derivations/quantum/preferred-basis.md",
       "title": "Preferred Basis from Relational Invariants",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "quantum",
       "tags": [
@@ -14277,6 +14625,10 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
             "target": "foundation/continuous-discrete-duality",
             "context": "Proposition 3.2"
           },
@@ -14308,14 +14660,22 @@
           },
           {
             "source": "quantum/measurement",
-            "context": "interaction-invariant correspondence"
-          },
-          {
-            "source": "quantum/measurement",
             "context": "Preferred Basis"
           },
           {
+            "source": "quantum/measurement",
+            "context": "interaction-invariant correspondence"
+          },
+          {
             "source": "quantum/observer-relative-objectivity",
+            "context": "Preferred Basis"
+          },
+          {
+            "source": "quantum/sheaf-section-uniqueness",
+            "context": "Preferred Basis"
+          },
+          {
+            "source": "quantum/teleportation",
             "context": "Preferred Basis"
           }
         ]
@@ -14333,7 +14693,7 @@
       "id": "quantum/sheaf-section-uniqueness",
       "filePath": "site/src/content/derivations/quantum/sheaf-section-uniqueness.md",
       "title": "Sheaf Structure and Section Uniqueness",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "quantum",
       "tags": [
@@ -14525,6 +14885,14 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "quantum/preferred-basis",
+            "context": "Preferred Basis"
+          },
+          {
             "target": "quantum/entanglement",
             "context": "Entanglement"
           }
@@ -14549,7 +14917,7 @@
       "id": "quantum/teleportation",
       "filePath": "site/src/content/derivations/quantum/teleportation.md",
       "title": "Quantum Teleportation as Coherence Channel Transfer",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "quantum",
       "tags": [
@@ -14742,6 +15110,14 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "quantum/preferred-basis",
+            "context": "Preferred Basis"
+          },
+          {
             "target": "quantum/entanglement",
             "context": "Entanglement"
           },
@@ -14782,7 +15158,7 @@
       "id": "spacetime/einstein-equations",
       "filePath": "site/src/content/derivations/spacetime/einstein-equations.md",
       "title": "Einstein Field Equations as Fixed-Point Conditions",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "spacetime",
       "tags": [
@@ -14958,6 +15334,14 @@
           {
             "target": "foundation/coherence-lagrangian",
             "context": "Coherence Lagrangian"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
           },
           {
             "target": "spacetime/gravity",
@@ -15525,7 +15909,7 @@
       "id": "spacetime/gravity",
       "filePath": "site/src/content/derivations/spacetime/gravity.md",
       "title": "Gravity as Coherence Geometry Curvature",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "spacetime",
       "tags": [
@@ -15690,6 +16074,10 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
           },
@@ -15700,10 +16088,6 @@
           {
             "target": "axioms/coherence-conservation",
             "context": "Axiom 1, C4"
-          },
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
           },
           {
             "target": "spacetime/einstein-equations",
@@ -15806,7 +16190,7 @@
       "id": "spacetime/lorentz-invariance",
       "filePath": "site/src/content/derivations/spacetime/lorentz-invariance.md",
       "title": "Lorentz Invariance",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "spacetime",
       "tags": [
@@ -16003,6 +16387,14 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
             "target": "axioms/coherence-conservation",
             "context": "Axiom 1"
           },
@@ -16016,19 +16408,11 @@
           },
           {
             "target": "spacetime/speed-of-light",
-            "context": "Speed of Light"
-          },
-          {
-            "target": "spacetime/speed-of-light",
             "context": "Theorem 5.1"
           },
           {
             "target": "thermodynamics/action-planck",
             "context": "Action and Planck's Constant"
-          },
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
           },
           {
             "target": "minimal-observer/coherence-dual-pairs",
@@ -16103,7 +16487,7 @@
       "id": "spacetime/singularity-resolution",
       "filePath": "site/src/content/derivations/spacetime/singularity-resolution.md",
       "title": "Singularity Resolution",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "spacetime",
       "tags": [
@@ -16266,6 +16650,18 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
+          },
+          {
             "target": "spacetime/einstein-equations",
             "context": "Einstein Field Equations"
           },
@@ -16288,10 +16684,6 @@
           {
             "target": "axioms/observer-definition",
             "context": "Axiom 2"
-          },
-          {
-            "target": "holography/area-scaling",
-            "context": "Area Scaling"
           },
           {
             "target": "foundation/coherence-lagrangian",
@@ -16354,7 +16746,7 @@
       "id": "spacetime/speed-of-light",
       "filePath": "site/src/content/derivations/spacetime/speed-of-light.md",
       "title": "Speed of Light from Loop Closure",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "spacetime",
       "tags": [
@@ -16571,7 +16963,63 @@
         ],
         "incoming": [
           {
+            "source": "cosmology/baryogenesis",
+            "context": "Speed of Light"
+          },
+          {
+            "source": "cosmology/coupling-constants",
+            "context": "Speed of Light"
+          },
+          {
+            "source": "cosmology/leptogenesis",
+            "context": "Speed of Light"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
+            "context": "Speed of Light"
+          },
+          {
+            "source": "flavor/mixing-angles",
+            "context": "Speed of Light"
+          },
+          {
+            "source": "gauge/anomaly-cancellation",
+            "context": "Speed of Light"
+          },
+          {
+            "source": "gauge/chirality-selection",
+            "context": "Speed of Light"
+          },
+          {
+            "source": "gauge/color-force",
+            "context": "Speed of Light"
+          },
+          {
+            "source": "gauge/confinement",
+            "context": "Speed of Light"
+          },
+          {
             "source": "gauge/electromagnetism",
+            "context": "Speed of Light"
+          },
+          {
+            "source": "gauge/electroweak-breaking",
+            "context": "Speed of Light"
+          },
+          {
+            "source": "gauge/proton-stability",
+            "context": "Speed of Light"
+          },
+          {
+            "source": "gauge/standard-model-group",
+            "context": "Speed of Light"
+          },
+          {
+            "source": "gauge/strong-cp",
+            "context": "Speed of Light"
+          },
+          {
+            "source": "gauge/weak-interaction",
             "context": "Speed of Light"
           },
           {
@@ -16579,7 +17027,35 @@
             "context": "Proposition 4.2"
           },
           {
+            "source": "gauge/weinberg-angle",
+            "context": "Speed of Light"
+          },
+          {
             "source": "holography/area-scaling",
+            "context": "Speed of Light"
+          },
+          {
+            "source": "holography/black-hole-entropy",
+            "context": "Speed of Light"
+          },
+          {
+            "source": "holography/causal-set-statistics",
+            "context": "Speed of Light"
+          },
+          {
+            "source": "holography/er-epr",
+            "context": "Speed of Light"
+          },
+          {
+            "source": "holography/hawking-radiation",
+            "context": "Speed of Light"
+          },
+          {
+            "source": "holography/information-paradox",
+            "context": "Speed of Light"
+          },
+          {
+            "source": "particles/cpt-theorem",
             "context": "Speed of Light"
           },
           {
@@ -16588,6 +17064,14 @@
           },
           {
             "source": "particles/mass-hierarchy",
+            "context": "Speed of Light"
+          },
+          {
+            "source": "particles/neutrino-masses",
+            "context": "Speed of Light"
+          },
+          {
+            "source": "spacetime/einstein-equations",
             "context": "Speed of Light"
           },
           {
@@ -16605,6 +17089,10 @@
           {
             "source": "spacetime/lorentz-invariance",
             "context": "Theorem 5.1"
+          },
+          {
+            "source": "spacetime/singularity-resolution",
+            "context": "Speed of Light"
           },
           {
             "source": "thermodynamics-ext/renormalization",
@@ -17057,7 +17545,7 @@
       "id": "thermodynamics-ext/first-law",
       "filePath": "site/src/content/derivations/thermodynamics-ext/first-law.md",
       "title": "Coherence First Law",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "thermodynamics-ext",
       "tags": [
@@ -17220,6 +17708,10 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
             "target": "interactions/three-types",
             "context": "Three Interaction Types"
           },
@@ -17272,7 +17764,7 @@
       "id": "thermodynamics-ext/fisher-metric",
       "filePath": "site/src/content/derivations/thermodynamics-ext/fisher-metric.md",
       "title": "Fisher Information Metric",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "thermodynamics-ext",
       "tags": [
@@ -17465,12 +17957,12 @@
             "context": "Coherence as Physical Primitive"
           },
           {
-            "target": "quantum/born-rule",
-            "context": "Born Rule"
-          },
-          {
             "target": "axioms/loop-closure",
             "context": "Loop Closure"
+          },
+          {
+            "target": "quantum/born-rule",
+            "context": "Born Rule"
           },
           {
             "target": "axioms/observer-definition",
@@ -17810,7 +18302,7 @@
       "id": "thermodynamics-ext/renormalization",
       "filePath": "site/src/content/derivations/thermodynamics-ext/renormalization.md",
       "title": "Renormalization Group from Coherence",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "thermodynamics-ext",
       "tags": [
@@ -18025,16 +18517,16 @@
             "context": "Coupling Constants"
           },
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
           },
           {
             "target": "thermodynamics/action-planck",
             "context": "Action and Planck's Constant"
-          },
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
           },
           {
             "target": "interactions/relational-invariants",
@@ -18129,7 +18621,7 @@
       "id": "thermodynamics/action-planck",
       "filePath": "site/src/content/derivations/thermodynamics/action-planck.md",
       "title": "Action and Planck's Constant",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "thermodynamics",
       "tags": [
@@ -18381,6 +18873,10 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
             "target": "thermodynamics-ext/fisher-metric",
             "context": "Fisher Information Metric"
           },
@@ -18399,10 +18895,6 @@
           {
             "target": "minimal-observer/structure",
             "context": "Minimal Observer Structure"
-          },
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
           },
           {
             "target": "spacetime/speed-of-light",
@@ -18553,7 +19045,7 @@
       "id": "thermodynamics/entropy",
       "filePath": "site/src/content/derivations/thermodynamics/entropy.md",
       "title": "Entropy as Inaccessible Coherence",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "thermodynamics",
       "tags": [
@@ -18740,6 +19232,10 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
             "target": "thermodynamics/time",
             "context": "Time as Phase Ordering"
           },
@@ -18884,7 +19380,7 @@
       "id": "thermodynamics/time",
       "filePath": "site/src/content/derivations/thermodynamics/time.md",
       "title": "Time as Phase Ordering",
-      "status": "rigorous",
+      "status": "provisional",
       "rigorLevel": "formal",
       "group": "thermodynamics",
       "tags": [
@@ -19038,16 +19534,16 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
             "target": "interactions/three-types",
             "context": "Three Interaction Types"
           },
           {
             "target": "minimal-observer/structure",
             "context": "Minimal Observer Structure"
-          },
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
           },
           {
             "target": "axioms/coherence-conservation",
@@ -28810,21 +29306,21 @@
     },
     {
       "derivationId": "axioms/coherence-operational",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Quantitative $C_0$",
       "description": "The total coherence C0 = S(rhototal) depends on the global state. Whether C0 is a free parameter or determined by self-consistency (the bootstrap fixed point) remains open — see [Bootstrap Mechanism]("
     },
     {
       "derivationId": "axioms/coherence-operational",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Rényi generalization",
       "description": "Axiom 1 is also satisfied by Rényi entropies Salpha(rho) = (1-alpha)-1logTr(rhoalpha) for alpha in (0,1) (strong subadditivity holds in this range). Whether the framework selects von Neumann (alpha = "
     },
     {
       "derivationId": "axioms/coherence-operational",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Algebraic vs. measure-theoretic coherence",
       "description": "The σ-algebra formulation (Axiom 1, conditions C1–C5) and the Hilbert space formulation (C = langlepsi|psirangle) operate at different levels. The former concerns subsystem structure; the latter conce"
@@ -28859,21 +29355,21 @@
     },
     {
       "derivationId": "cosmology/baryogenesis",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Electroweak phase transition",
       "description": "Derive the nature (first-order vs. crossover) of the electroweak phase transition from the coherence framework. The Standard Model predicts a crossover (insufficient for baryogenesis); the framework m"
     },
     {
       "derivationId": "cosmology/baryogenesis",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Quantitative $\\eta_B$",
       "description": "Compute the baryon-to-photon ratio from the framework's parameters. This requires the sphaleron rate, CP-violating phases, and phase transition dynamics — all computable in principle but technically d"
     },
     {
       "derivationId": "cosmology/baryogenesis",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Dark baryogenesis",
       "description": "The framework's dark matter prediction ([Dark Matter Granularity](/predictions/dark-matter-granularity)) involves coherence structures. Could a dark-sector version of baryogenesis explain the OmegaB /"
@@ -28915,35 +29411,35 @@
     },
     {
       "derivationId": "cosmology/coupling-constants",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Axiom-level derivation of S1",
       "description": "The algebraic ratio constraint alpha1 : alpha2 : alpha3 = 4:2:1 is a structural postulate. Deriving it from the coherence axioms (e.g., showing that the canonical norm on Ai uniquely determines the co"
     },
     {
       "derivationId": "cosmology/coupling-constants",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Crystallization scales from bootstrap dynamics",
       "description": "The bootstrap crystallization scales Lambdai set the RG boundary conditions. Deriving their values from the [Mass Hierarchy](/derivations/particles/mass-hierarchy) exponential tunneling mechanism woul"
     },
     {
       "derivationId": "cosmology/coupling-constants",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Two-loop precision",
       "description": "Partially addressed for the electroweak sector (Proposition 7.1: 3.3% shift, confirming one-loop reliability). The QCD sector remains problematic — the ratio constraint at a common EW scale does not p"
     },
     {
       "derivationId": "cosmology/coupling-constants",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "SU(3) crystallization scale",
       "description": "Determining Lambda3 independently from bootstrap dynamics would convert the suggestive near-coincidence 1/dim(O) alphas(MZ) into a genuine prediction. This is the key open question for the strong coup"
     },
     {
       "derivationId": "cosmology/coupling-constants",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Yukawa couplings",
       "description": "The fermion masses are free parameters in the Standard Model but should be constrained by the division algebra structure and the [Flavor Mixing](/derivations/flavor/mixing-angles) derivation. This req"
@@ -28992,91 +29488,91 @@
     },
     {
       "derivationId": "cosmology/observer-loop-viability",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Dynamical holographic bound",
       "description": "The holographic entropy bound ([Area Scaling](/derivations/holography/area-scaling)) is proved for static boundaries. Extending it to the de Sitter cosmological horizon (which is static in the static "
     },
     {
       "derivationId": "cosmology/observer-loop-viability",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Minimum non-self coherence",
       "description": "The key gap blocking a tighter bound. What is the minimum coherence content of the non-self side of B required for Lyapunov-stable loop closure? The multiplicity theorem establishes Cnon-self > 0 but "
     },
     {
       "derivationId": "cosmology/observer-loop-viability",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Sharpening to $\\Lambda > 0$",
       "description": "The sign prediction Lambda 0 (Theorem 5.4) does not distinguish Lambda = 0 from Lambda > 0. Does the structural arrow of time (monotonically increasing relational invariant depth) require eternal expa"
     },
     {
       "derivationId": "cosmology/observer-loop-viability",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Bounce prohibition scope",
       "description": "Theorem 5.2 prohibits the Planck-density bounce in Lambda < 0 FRW cosmologies via coherence conservation. Does the same argument extend to *all* global recollapse scenarios, including anisotropic cosm"
     },
     {
       "derivationId": "cosmology/observer-loop-viability",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Gibbons-Hawking stability",
       "description": "The de Sitter horizon radiates at the Gibbons-Hawking temperature TGH = hbar H/(2pi kB). Whether this thermal background destabilizes observer loops depends on the detailed interaction between GH radi"
     },
     {
       "derivationId": "cosmology/observer-loop-viability",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 6,
       "title": "Continuous-discrete fixed point and quantitative $\\Lambda$",
       "description": "Step 8 defines the level-indexed quantities (Lambdaneff, S(n)) and the cross-level consistency constraint (Proposition 8.3). Conjecture 8.9 identifies the boundary condition (double saturation). [Cont"
     },
     {
       "derivationId": "dimensions/three-dimensions",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Time dimension",
       "description": "This derives dspace = 3. The uniqueness of dtime = 1 follows from the partial order structure of [Time as Phase Ordering](/derivations/thermodynamics/time) — a partial order defines a single ordering "
     },
     {
       "derivationId": "dimensions/three-dimensions",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Compactification",
       "description": "Could extra dimensions exist but be compactified at scales below ellP? The framework's conditions apply to the *effective* dimensionality experienced by observers. If compact dimensions are below the "
     },
     {
       "derivationId": "dimensions/three-dimensions",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "The $3 + 1 = 4$ coincidence",
       "description": "The total spacetime dimension is 4 — the unique dimension with exotic smooth structures. The spatial dimension is 3 — the unique dimension where this exotic pathology is *absent*. Whether this is coin"
     },
     {
       "derivationId": "flavor/mixing-angles",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "$A_5$ from axioms",
       "description": "Derive that the coherence cost function must have A5 symmetry, rather than postulating it (S1). This would require showing that the bootstrap dynamics on three winding axes naturally produce icosahedr"
     },
     {
       "derivationId": "flavor/mixing-angles",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Channel selection",
       "description": "Determine which of the five A5 breaking channels is realized in the quark and lepton sectors. This may require input from the gauge structure (how SU(3) SU(2) U(1) interacts with the A5 flavor symmetr"
     },
     {
       "derivationId": "flavor/mixing-angles",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Renormalization-group running",
       "description": "The mixing parameters measured at low energy differ from their values at the symmetry-breaking scale. RG corrections (from [Renormalization Group](/derivations/thermodynamics-ext/renormalization)) sho"
     },
     {
       "derivationId": "flavor/mixing-angles",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Quark-lepton complementarity",
       "description": "The observation theta12CKM + theta12PMNS pi/4 may be accidental or may reflect a deeper geometric relationship between the quark and lepton sectors. The A5 framework should clarify this."
@@ -29104,35 +29600,35 @@
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Uniqueness proof",
       "description": "A complete proof that L is the *unique* Lagrangian consistent with all three axioms, not merely the simplest. This requires classifying all possible terms consistent with the derived symmetries."
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Cosmological constant",
       "description": "The coherence potential allows a constant term V0 (the cosmological constant). Its value should be derivable from the coherence geometry but is not — this connects to the [Cosmological Constant](/deri"
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Path integral measure",
       "description": "The functional integral measure Dphi is not rigorously defined. The coherence framework may provide a natural regularization via the discrete relational invariant network, but this is not yet formaliz"
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Higher-order corrections",
       "description": "The quartic restriction (Theorem 2.2c) holds at tree level; loop corrections generate higher-dimensional operators suppressed by powers of the cutoff. The bootstrap hierarchy structure should organize"
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Fermion kinetic term",
       "description": "The derivation focuses on scalar fields. Extending to spinor fields requires the Fisher metric on the spinor state space, which should connect to the Dirac Lagrangian psi(igammamu Dmu - m)psi."
@@ -29153,329 +29649,329 @@
     },
     {
       "derivationId": "gauge/chirality-selection",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Left-right symmetric extensions",
       "description": "Some BSM models (Pati-Salam, left-right symmetric models) restore parity at high energies. The framework's prediction is that parity violation is *exact* (algebraic, not dynamical). Experimental tests"
     },
     {
       "derivationId": "gauge/color-force",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Chiral symmetry breaking",
       "description": "*(partially resolved — downstream)*: Addressed by [Chiral Symmetry Breaking](/derivations/gauge/chiral-symmetry-breaking) (provisional), which derives the QCD chiral condensate from coherence minimiza"
     },
     {
       "derivationId": "gauge/color-force",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Explicit gluon spectrum",
       "description": "Derive the gluon propagator and self-coupling vertices from the octonionic product structure, confirming that they match the standard QCD Feynman rules."
     },
     {
       "derivationId": "gauge/confinement",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Quantitative string tension",
       "description": "Derive sigma in terms of framework parameters (gs, associator magnitude, Planck length)."
     },
     {
       "derivationId": "gauge/confinement",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Wilson loop criterion",
       "description": "Show that the expectation value of the Wilson loop langle W(C) rangle sim e-sigma A(C) (area law) follows from the non-associative phase accumulation."
     },
     {
       "derivationId": "gauge/confinement",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Mass gap",
       "description": "Connect the associator-based confinement mechanism to a rigorous lower bound on the glueball mass spectrum."
     },
     {
       "derivationId": "gauge/confinement",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Glueball spectrum",
       "description": "Derive the masses of 0++, 2++, and other glueball states from the octonionic framework."
     },
     {
       "derivationId": "gauge/confinement",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Regge trajectories",
       "description": "Show that the linear potential produces the observed linear relationship between hadron spin and mass squared: J sim alpha' M2."
     },
     {
       "derivationId": "gauge/confinement",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 6,
       "title": "Lattice comparison",
       "description": "Compare the non-associative confinement mechanism with lattice QCD results for the static quark potential and flux tube structure. <!-- References --> [Diaconis & Shahshahani, 1987]: /references#diaco"
     },
     {
       "derivationId": "gauge/electromagnetism",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Coupling constant",
       "description": "The electric charge e (or equivalently alphaem = e2/(4pivarepsilon0hbar c) 1/137) is a free parameter. Its value should ultimately follow from the [Coupling Constants](/derivations/cosmology/coupling-"
     },
     {
       "derivationId": "gauge/electromagnetism",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Quantum electrodynamics",
       "description": "This derivation gives classical Maxwell equations. The quantized theory (QED) requires applying the [Born Rule](/derivations/quantum/born-rule) to the gauge field: the photon is the quantum of Fmunu, "
     },
     {
       "derivationId": "gauge/electroweak-breaking",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Electroweak scale derivation",
       "description": "Computing v 246 GeV from the coherence Lagrangian and bootstrap hierarchy. This requires [Coherence Lagrangian](/derivations/foundation/coherence-lagrangian)."
     },
     {
       "derivationId": "gauge/electroweak-breaking",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Higgs self-coupling",
       "description": "The value lambda 0.13 (determining mh = 125 GeV) is not predicted — it depends on the shape of the coherence potential near the crystallization."
     },
     {
       "derivationId": "gauge/electroweak-breaking",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Custodial symmetry",
       "description": "The approximate SU(2) custodial symmetry protecting rho = mW2/(mZ2cos2thetaW) 1 should follow from the quaternionic structure but is not explicitly derived."
     },
     {
       "derivationId": "gauge/electroweak-breaking",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Electroweak phase transition",
       "description": "The cosmological electroweak phase transition (first-order vs. crossover) depends on the detailed dynamics of the crystallization, relevant for [Baryogenesis](/derivations/cosmology/baryogenesis)."
     },
     {
       "derivationId": "gauge/proton-stability",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Neutron-antineutron oscillation",
       "description": "While proton decay is forbidden, neutron-antineutron oscillation (Delta B = 2) might occur through non-perturbative effects. The framework should determine whether B violation by 2 units (without lept"
     },
     {
       "derivationId": "gauge/proton-stability",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Black hole baryon number",
       "description": "When a proton falls into a black hole, is baryon number preserved? The information paradox resolution ([Information Paradox](/derivations/holography/information-paradox)) suggests yes (no information "
     },
     {
       "derivationId": "gauge/proton-stability",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Quantitative gravitational amplitude",
       "description": "The estimate taup sim 1064 years is parametric. A precise calculation would require the non-perturbative gravitational path integral, which is not available. The causal set statistics ([Causal Set Sta"
     },
     {
       "derivationId": "gauge/standard-model-group",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Framework-intrinsic fermion representations",
       "description": "The Cell(6) decomposition (Proposition 4.1) correctly reproduces SM quantum numbers using published mathematics, but the derivation from the framework's own bootstrap axioms — showing *why* the bootst"
     },
     {
       "derivationId": "gauge/standard-model-group",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "$SU(2)_L$ quantum numbers from $\\mathbb{C}\\ell(6)$",
       "description": "The current algebraic construction cleanly produces U(1) SU(3) quantum numbers. Incorporating the SU(2)L weak isospin assignments requires combining the Cell(6) structure with the quaternionic chirali"
     },
     {
       "derivationId": "gauge/strong-cp",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Topological rigidity proof",
       "description": "Formalize the argument that octonionic gauge bundles admit only topologically trivial SU(3) connections. This may connect to the theory of G2-instantons on manifolds with G2 holonomy."
     },
     {
       "derivationId": "gauge/strong-cp",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Instanton moduli space",
       "description": "Characterize the moduli space of SU(3) instantons within the G2 framework. If the moduli space is empty (or consists only of the trivial connection), the argument is complete."
     },
     {
       "derivationId": "gauge/strong-cp",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Non-perturbative effects",
       "description": "Check whether other non-perturbative effects (monopoles, domain walls) are also constrained by the octonionic structure."
     },
     {
       "derivationId": "gauge/strong-cp",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Electroweak-strong unification",
       "description": "The fact that thetaQCD = 0 from non-associativity and thetaW is unphysical from standard arguments suggests a deeper connection between the associative/non-associative split and the strong/electroweak"
     },
     {
       "derivationId": "gauge/weak-interaction",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Weak coupling constant",
       "description": "gW is a free parameter, related to alphaem via gW = e/sinthetaW. Its value should follow from the [Coupling Constants](/derivations/cosmology/coupling-constants) derivation. Same status as e in electr"
     },
     {
       "derivationId": "holography/area-scaling",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "A direct combinatorial route to $\\alpha = 1/4$",
       "description": "The coefficient is currently established by the gravitational stability argument (Theorem 5.1), which uses the Schwarzschild geometry — itself derived from the axioms through the Einstein equations ch"
     },
     {
       "derivationId": "holography/area-scaling",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Covariant generalization",
       "description": "The derivation assumes a spatial region at a moment of time. A covariant formulation would bound the entropy on arbitrary spacelike surfaces — connecting to the Bousso covariant entropy bound."
     },
     {
       "derivationId": "holography/area-scaling",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Sub-Planckian structure",
       "description": "The derivation assumes nothing meaningful happens below ellP. If the coherence geometry has sub-Planckian structure, the counting argument needs modification."
     },
     {
       "derivationId": "holography/area-scaling",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Dynamical boundaries",
       "description": "For time-dependent regions (e.g., expanding cosmological horizons), the channel capacity argument must be adapted. The entropy bound should track the apparent horizon, not the event horizon."
     },
     {
       "derivationId": "holography/black-hole-entropy",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "The factor of $1/4$ via a direct combinatorial route.",
       "description": "The coefficient is currently established through the derivation chain: gravitational stability fixes the effective area per bit to 4ellP2 ([Holographic Entropy Bound](/derivations/holography/area-scal"
     },
     {
       "derivationId": "holography/black-hole-entropy",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Interior structure.",
       "description": "What is the coherence structure inside the horizon? The discrete relational network should provide a model avoiding the classical singularity."
     },
     {
       "derivationId": "holography/black-hole-entropy",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Rotating and charged black holes.",
       "description": "The framework should reproduce S = A/(4ellP2) for Kerr and Reissner-Nordström black holes, explaining why the result depends only on area regardless of spin or charge."
     },
     {
       "derivationId": "holography/black-hole-entropy",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Entanglement entropy connection.",
       "description": "The mapping between relational invariant coherence C(I12) and entanglement entropy SE = -Tr(rho ln rho) needs formalization."
     },
     {
       "derivationId": "holography/black-hole-entropy",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Extremal black holes.",
       "description": "Extremal black holes have TH = 0 but S > 0. The framework should explain this: the horizon still supports minimal observer loops (nonzero entropy) but thermal radiation is suppressed."
     },
     {
       "derivationId": "holography/causal-set-statistics",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Rigorous geodesic estimator",
       "description": "The geodesic variance calculation (Proposition 2.2) uses a simplified cell-counting argument. A rigorous derivation should use the Myrheim-Meyer dimension estimator or the Brightwell-Gregory longest-c"
     },
     {
       "derivationId": "holography/causal-set-statistics",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Non-flat corrections",
       "description": "All calculations assume flat (Minkowski) background. The corrections from curvature — particularly near black holes or in the early universe — should modify both alphaH and the density fluctuation spe"
     },
     {
       "derivationId": "holography/causal-set-statistics",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Quantitative cross-prediction",
       "description": "The qualitative link between holographic noise and dark matter granularity (Theorem 6.1) should be made quantitative: given alphaH, what is the predicted kJ? This requires computing how the sprinkling"
     },
     {
       "derivationId": "holography/causal-set-statistics",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Deriving Poisson from axioms",
       "description": "Proposition 1.3 assumes Poisson sprinkling as the unique Lorentz-invariant distribution. Can this be derived from the three axioms, or is it an additional input?"
     },
     {
       "derivationId": "holography/causal-set-statistics",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Continuum limit",
       "description": "The identification of the discrete relational invariant network with a Poisson causal set relies on a continuum limit that has not been rigorously constructed from the axioms. <!-- References --> [Bom"
     },
     {
       "derivationId": "holography/hawking-radiation",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Greybody factors",
       "description": "The actual spectrum deviates from perfect thermal due to the potential barrier. These corrections should be derivable from the coherence geometry."
     },
     {
       "derivationId": "holography/hawking-radiation",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "End state",
       "description": "What happens at the endpoint of evaporation? A Planck-mass remnant? Complete evaporation? The answer depends on the discrete structure at the Planck scale."
     },
     {
       "derivationId": "holography/hawking-radiation",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Species counting",
       "description": "The total luminosity depends on the number of particle species that can be emitted. The framework should predict this from the bootstrap hierarchy."
     },
     {
       "derivationId": "holography/hawking-radiation",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Rotating and charged black holes",
       "description": "The Hawking temperature for Kerr (TH = hbarkappa/(2pi c kB) with modified kappa) and Reissner-Nordström black holes should follow from the same loop-breaking mechanism applied to the modified horizon "
     },
     {
       "derivationId": "holography/information-paradox",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Scrambling time",
       "description": "How quickly does the black hole interior become encoded in the Hawking radiation? The scrambling time ts sim (M/MP)2 tP log(SBH) [Sekino-Susskind, 2008] should be derivable from the rate of relational"
     },
     {
       "derivationId": "holography/information-paradox",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Quantum error correction",
       "description": "The encoding of interior information in radiation correlations should be formalizable as a quantum error-correcting code [Almheiri-Dong-Harlow, 2015]. The relational invariant structure should map ont"
     },
     {
       "derivationId": "holography/information-paradox",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Island formula",
       "description": "The island formula for entropy (S = min ext[A( I)/(4Ghbar) + Smatter(I R)]) should be derivable from the coherence domain structure, with \"islands\" corresponding to regions where the external observer"
     },
     {
       "derivationId": "holography/information-paradox",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Observational signatures",
       "description": "The information encoding in Hawking radiation correlations is in principle observable but requires collecting an astronomically large number of quanta. Are there more accessible signatures of the reso"
@@ -29671,84 +30167,84 @@
     },
     {
       "derivationId": "particles/cpt-theorem",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "CP violation mechanism",
       "description": "While the theorem allows individual CP violation (Corollary 4.3), the framework should derive the specific mechanism — complex phases in the CKM and PMNS matrices — from the flavor structure ([Three G"
     },
     {
       "derivationId": "particles/cpt-theorem",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "CPT tests",
       "description": "The prediction m = m and tau = tau can be tested with increasing precision. Current best tests: |mK - mK|/mK < 10-18 (kaon system), |qp + qp|/e < 10-12 (proton-antiproton charge ratio). Any violation "
     },
     {
       "derivationId": "particles/cpt-theorem",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Gravitational CPT",
       "description": "Does CPT extend to the gravitational sector? The coherence Lagrangian includes gravity ([Einstein Equations](/derivations/spacetime/einstein-equations)), so the theorem formally applies. However, the "
     },
     {
       "derivationId": "particles/mass-hierarchy",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Computing specific masses",
       "description": "Can the framework predict specific particle masses, or only the hierarchical structure? Computing the electron mass from the coherence geometry would be a breakthrough."
     },
     {
       "derivationId": "particles/mass-hierarchy",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Coupling constant derivation",
       "description": "The values of gk at each level should be derivable from the structure of the coherence geometry. Currently they are empirical inputs."
     },
     {
       "derivationId": "particles/mass-hierarchy",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Dark matter scale",
       "description": "If dark matter is a stable crystallization at an intermediate scale, its mass should be derivable. This connects to [Dark Matter Granularity](/predictions/dark-matter-granularity)."
     },
     {
       "derivationId": "particles/mass-hierarchy",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Cosmological constant",
       "description": "The vacuum energy (cosmological constant) is anomalously small (sim 10-122 in Planck units). Whether the crystallization framework can explain this extreme hierarchy is an open challenge."
     },
     {
       "derivationId": "particles/mass-hierarchy",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Quantifying the topological-structural decomposition",
       "description": "Step 7 identifies the qualitative decomposition Delta cn = Delta cntopo + Delta cnstruct. Computing the topological contribution from the known particle content (division algebra structure, three gene"
     },
     {
       "derivationId": "particles/neutrino-masses",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Absolute mass scale",
       "description": "The specific values of m1, m2, m3 are not predicted — only the ordering and approximate scale. Computing the individual masses requires the precise Yukawa couplings from the winding geometry."
     },
     {
       "derivationId": "particles/neutrino-masses",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Majorana phases",
       "description": "The PMNS matrix for Majorana neutrinos contains two additional CP-violating phases (alpha1, alpha2) beyond the Dirac phase delta. These should be computable from the A5 breaking pattern of [Flavor Mix"
     },
     {
       "derivationId": "particles/neutrino-masses",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Sterile neutrinos",
       "description": "The heavy right-handed neutrinos (MR sim v) could be produced at colliders (unlike GUT-scale seesaw where MR sim 1014 GeV). Collider signatures should be analyzed."
     },
     {
       "derivationId": "particles/neutrino-masses",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Dirac limit test",
       "description": "If experiments conclusively establish Dirac neutrinos (absence of 0nubetabeta), this derivation would be falsified — the self-conjugacy argument would need revision."
@@ -29825,189 +30321,189 @@
     },
     {
       "derivationId": "quantum/born-rule",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Two-dimensional systems",
       "description": "Gleason's theorem fails for d = 2. The framework's direct derivation (Theorem 6.1) works for all d 2, providing coverage where Gleason does not. Whether qubits in nature are always embedded in higher-"
     },
     {
       "derivationId": "quantum/born-rule",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Continuous observables",
       "description": "Extension to continuous spectra (dP = |psi(x)|2 dx) follows from the same arguments in the continuum limit, using the measure-theoretic version of coherence conservation."
     },
     {
       "derivationId": "quantum/entanglement",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Quantum error correction",
       "description": "Explore whether coherence conservation imposes fundamental limits on or structures for quantum error-correcting codes."
     },
     {
       "derivationId": "quantum/entanglement",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Multipartite entanglement",
       "description": "Extend beyond the bipartite case to full multipartite classification (W-states, cluster states, SLOCC classes)."
     },
     {
       "derivationId": "quantum/entanglement",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Entanglement dynamics",
       "description": "Derive entanglement growth under unitary evolution and the scrambling time from coherence dynamics."
     },
     {
       "derivationId": "quantum/measurement",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Extended Wigner's friend (Frauchiger-Renner)",
       "description": "The no-go theorem constrains theories that simultaneously assume (i) quantum mechanics applies universally, (ii) measurement has single outcomes, (iii) reasoning about others' measurements is valid. T"
     },
     {
       "derivationId": "quantum/measurement",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Quantum Darwinism",
       "description": "When multiple observers independently measure the same system, they obtain consistent results. The framework should derive this from mutual consistency of relational invariants IO1 S, IO2 S, ldots whe"
     },
     {
       "derivationId": "quantum/measurement",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Continuous and weak measurement",
       "description": "Weak measurements correspond to Type III interactions that generate relational invariants with small coherence content C(IOS) ll C(S). Continuous measurement is the limit of many weak Type III interac"
     },
     {
       "derivationId": "quantum/observer-relative-objectivity",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Effective observer-invariance from redundant relational invariants",
       "description": "When many observers O1, ldots, On independently perform Type III interactions with S, each generating IOi S, strong subadditivity (Theorem 2.1) constrains all descriptions to be mutually consistent. A"
     },
     {
       "derivationId": "quantum/observer-relative-objectivity",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Contextuality connection",
       "description": "The Kochen-Specker theorem shows that non-contextual hidden variable models are impossible. This is closely related to Theorem 5.1 (no universal definiteness) but approaches from a different direction"
     },
     {
       "derivationId": "quantum/observer-relative-objectivity",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Extended Wigner's friend",
       "description": "The Frauchiger-Renner no-go theorem constrains theories with certain assumptions about nested observers. The framework should be formally tested against this theorem — the three-level structure may pr"
     },
     {
       "derivationId": "quantum/observer-relative-objectivity",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Emergent continuous observables",
       "description": "The framework naturally produces discrete outcomes at the fundamental level — relational invariants have discrete spectra from the U(1) loop structure ([Loop Closure](/derivations/axioms/loop-closure)"
     },
     {
       "derivationId": "quantum/observer-relative-objectivity",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Sheaf structure — remaining quantitative questions",
       "description": "The [Sheaf Structure](/derivations/quantum/sheaf-section-uniqueness) derivation resolves the qualitative question: the observer network carries three sheaves (coherence, probability, outcome) with a s"
     },
     {
       "derivationId": "quantum/preferred-basis",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Interaction Hamiltonian mapping",
       "description": "The explicit map Hint IOS from the physical interaction to the relational invariant is needed for concrete predictions."
     },
     {
       "derivationId": "quantum/preferred-basis",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Contextuality",
       "description": "The Kochen-Specker theorem shows that quantum observables cannot all have simultaneous definite values. This should follow from the relational-invariant mechanism: each measurement context generates a"
     },
     {
       "derivationId": "quantum/preferred-basis",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Continuous observables",
       "description": "Extension to position, momentum, and other continuous-spectrum observables via spectral measures."
     },
     {
       "derivationId": "quantum/preferred-basis",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Weak measurements",
       "description": "For partial (weak) Type III interactions, the relational invariant is not fully generated, and the system is left in a superposition of eigenstates with small disturbance. This should connect to the w"
     },
     {
       "derivationId": "quantum/sheaf-section-uniqueness",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Formal isomorphism with Abramsky-Brandenburger",
       "description": "— The structural parallel between the observer sheaf O and the Abramsky-Brandenburger empirical model presheaf is compelling but not yet a formal isomorphism. Establishing this requires: (a) mapping r"
     },
     {
       "derivationId": "quantum/sheaf-section-uniqueness",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Continuous observables",
       "description": "— The current analysis works for discrete outcome spaces. For continuous spectra, the stalks become infinite-dimensional and the cohomology theory needs refinement (e.g., sheaves of topological spaces"
     },
     {
       "derivationId": "quantum/sheaf-section-uniqueness",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Higher cohomology",
       "description": "— We've focused on H1 (gluing obstructions), but H2 and higher may carry physical information. In gauge theory, H2 classifies gerbes (higher gauge fields). Whether H2(G, O) has a physical interpretati"
     },
     {
       "derivationId": "quantum/teleportation",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Quantum key distribution",
       "description": "The teleportation channel can be repurposed for quantum key distribution (BB84, E91). Derive the security of QKD from coherence conservation — specifically, that any eavesdropper must create a relatio"
     },
     {
       "derivationId": "quantum/teleportation",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Continuous-variable teleportation",
       "description": "Extend from qubits to continuous-variable systems (Braunstein-Kimble protocol). The relational invariants become continuous, and the Bell measurement becomes a homodyne detection. The coherence accoun"
     },
     {
       "derivationId": "quantum/teleportation",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Teleportation as a resource theory",
       "description": "Formalize the resource-theoretic aspects: entanglement as the resource, classical communication as the catalyst, and coherence conservation as the resource monotone. This connects to the broader resou"
     },
     {
       "derivationId": "spacetime/einstein-equations",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Cosmological constant problem",
       "description": "The value of Lambda — the deepest open problem in theoretical physics — should in principle be computable from the coherence geometry of the substrate. The observed value Lambda sim 10-122 in Planck u"
     },
     {
       "derivationId": "spacetime/einstein-equations",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Deriving $G$",
       "description": "Is Newton's constant derivable from the coherence geometry, or is it an independent parameter? If derivable, the framework has zero free gravitational parameters."
     },
     {
       "derivationId": "spacetime/einstein-equations",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Quantum gravity",
       "description": "The full quantum treatment requires quantizing the coherence geometry itself. The Einstein equations are the classical (continuum) limit; the discrete relational network is the quantum substrate."
     },
     {
       "derivationId": "spacetime/einstein-equations",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "$T_{\\mu\\nu}$ from the observer network",
       "description": "Constructing the energy-momentum tensor explicitly from the relational invariant density and observer distribution would close the self-consistency loop at the formal level."
@@ -30077,77 +30573,77 @@
     },
     {
       "derivationId": "spacetime/gravity",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Deriving $G$",
       "description": "Is G derivable from hbar and c, leaving the framework with zero free parameters?"
     },
     {
       "derivationId": "spacetime/gravity",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Planck scale",
       "description": "*(partially resolved — downstream)*: The singularity at r = 0 is addressed by [Singularity Resolution](/derivations/spacetime/singularity-resolution), which establishes curvature bounds at Planck dens"
     },
     {
       "derivationId": "spacetime/gravity",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Strong-field regime",
       "description": "*(partially resolved — downstream)*: Black hole singularities are resolved by [Singularity Resolution](/derivations/spacetime/singularity-resolution) (regular cores). Full discrete theory for interior"
     },
     {
       "derivationId": "spacetime/lorentz-invariance",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Acceleration",
       "description": "*(partially resolved — downstream)*: This derivation covers inertial (constant velocity) observers. Accelerated observers require curved coherence geometry — connecting to [Gravity](/derivations/space"
     },
     {
       "derivationId": "spacetime/singularity-resolution",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Higher-order corrections",
       "description": "The modified Friedmann equation uses (1 - rho/rhoP) as the leading-order correction. The exact form, including sub-leading terms, should be derivable from the coherence Lagrangian ([Coherence Lagrangi"
     },
     {
       "derivationId": "spacetime/singularity-resolution",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Black hole end state",
       "description": "Does a Planck-density core eventually re-expand (Planck star), remain static (remnant), or evaporate completely? The answer depends on the dynamics at rho sim rhoP and the interaction between Hawking "
     },
     {
       "derivationId": "spacetime/singularity-resolution",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Observational signatures",
       "description": "The bounce may produce observable signatures in the CMB (pre-bounce perturbations surviving through the bounce). The spectrum of these perturbations — scale-invariant, blue-tilted, or otherwise — depe"
     },
     {
       "derivationId": "spacetime/singularity-resolution",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "De Sitter core structure",
       "description": "The regular interior likely approaches a de Sitter geometry (constant positive curvature) near rmin. Deriving this from the framework would connect singularity resolution to the cosmological constant."
     },
     {
       "derivationId": "spacetime/speed-of-light",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "$c$ from $\\hbar$ and $G$",
       "description": "Whether c is independently determined or derivable from the other fundamental constants is a key open question. The three constants hbar, c, G may be reducible to fewer independent structural paramete"
     },
     {
       "derivationId": "spacetime/speed-of-light",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Massless observer spectrum",
       "description": "The framework should derive which massless observers exist and their properties (spin-1 for photons, spin-2 for gravitons). This requires the spin-statistics connection applied to the L = cT limiting "
     },
     {
       "derivationId": "spacetime/speed-of-light",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Causal structure",
       "description": "The Minkowski metric determines the causal structure (light cones). The framework should show that this causal structure is equivalent to the partial order prec on G in the continuum limit — connectin"
@@ -30210,42 +30706,42 @@
     },
     {
       "derivationId": "thermodynamics-ext/first-law",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Chemical potential",
       "description": "For systems with variable particle number, the first law extends to dU = TdS - PdV + mu dN. The coherence analog of mu is the coherence cost of adding a minimal observer to A — this should be derivabl"
     },
     {
       "derivationId": "thermodynamics-ext/first-law",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Non-equilibrium thermodynamics",
       "description": "The first law holds for arbitrary processes, not just quasi-static ones. The framework should extend to far-from-equilibrium coherence dynamics, connecting to fluctuation theorems."
     },
     {
       "derivationId": "thermodynamics-ext/first-law",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Negative temperature",
       "description": "In standard thermodynamics, population-inverted systems have T < 0. In the framework, this corresponds to systems where adding coherence *decreases* entropy — which requires a bounded state space wher"
     },
     {
       "derivationId": "thermodynamics-ext/fisher-metric",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Curvature–spacetime bridge",
       "description": "Connect the Fisher curvature on Sigma to the spacetime curvature on M. The [Gravity](/derivations/spacetime/gravity) derivation provides the latter from coherence density gradients; the bridge would n"
     },
     {
       "derivationId": "thermodynamics-ext/fisher-metric",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Quantum Fisher metric",
       "description": "Extend from the classical Fisher metric to the quantum Fisher information (Bures metric / symmetric logarithmic derivative). This is needed for full quantum state spaces. The quantum Čencov theorem [P"
     },
     {
       "derivationId": "thermodynamics-ext/fisher-metric",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Infinite-dimensional extension",
       "description": "The derivation assumes finite-dimensional Sigma. For field theory, the state space is infinite-dimensional and requires functional-analytic care [Pistone & Sempi, 1995]."
@@ -30287,91 +30783,91 @@
     },
     {
       "derivationId": "thermodynamics-ext/renormalization",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Bootstrap–RG correspondence (formal proof)",
       "description": "Prove that bootstrap stability (invariant couplings under the addition of relational observers) implies betai = 0 in the coherence flow. This would make Theorem 4.1 rigorous."
     },
     {
       "derivationId": "thermodynamics-ext/renormalization",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "$\\beta$-functions from the coherence spectral density",
       "description": "The one-loop beta-function coefficients for U(1), SU(2), and SU(3) are established by standard methods in the framework's downstream derivations ([Color Force](/derivations/gauge/color-force) Proposit"
     },
     {
       "derivationId": "thermodynamics-ext/renormalization",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Non-perturbative effects",
       "description": "The coherence flow equation (Theorem 3.2) is exact, but extracting non-perturbative physics (confinement, instantons, solitons) requires solving the full functional equation. Connect to the [Mass Hier"
     },
     {
       "derivationId": "thermodynamics-ext/renormalization",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Coherence spectral density from first principles",
       "description": "Derive rhoC(omega) from the axioms and the particle content, rather than postulating its existence (S1). This would make the scale decomposition a theorem rather than a postulate."
     },
     {
       "derivationId": "thermodynamics/action-planck",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Constructing $\\mathcal{L}$ from first principles",
       "description": "The coherence Lagrangian should be uniquely derivable from C and the observer structure. The Fisher information metric is a natural candidate. This is the key missing link between the abstract framewo"
     },
     {
       "derivationId": "thermodynamics/action-planck",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Quantization of energy levels",
       "description": "The existence of a minimum action quantum hbar implies that admissible observer cycles have quantized action nhbar for n in Z 1. This should connect to the quantization of energy levels in bound syste"
     },
     {
       "derivationId": "thermodynamics/action-planck",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "$\\hbar$, $c$, and $G$",
       "description": "The relationship between hbar (coherence cost quantum), c (phase propagation speed from [Speed of Light](/derivations/spacetime/speed-of-light)), and G (gravitational coupling) determines whether the "
     },
     {
       "derivationId": "thermodynamics/entropy",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Fluctuation theorems",
       "description": "The Jarzynski equality langle e-beta Wrangle = e-beta Delta F and Crooks fluctuation theorem describe the probability of entropy-decreasing fluctuations. These should arise as finite-size corrections "
     },
     {
       "derivationId": "thermodynamics/entropy",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Negative entropy flow",
       "description": "Living systems locally decrease their entropy by expanding their coherence domains through structured interactions. The framework predicts this is possible because entropy is observer-relative — what "
     },
     {
       "derivationId": "thermodynamics/entropy",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Quantum entropy",
       "description": "The von Neumann entropy S = -tr(rho ln rho) should be derivable as the inaccessible coherence when A's access is limited to a subsystem of an entangled state."
     },
     {
       "derivationId": "thermodynamics/time",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Metric from order",
       "description": "Recovering the spacetime metric from the partial order requires a volume measure (event counting). This is the central open problem of causal set theory."
     },
     {
       "derivationId": "thermodynamics/time",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Quantum time",
       "description": "The derivation gives a single partial order. Quantum mechanics suggests superpositions of causal orders may be physical (indefinite causal structure). The framework should address this."
     },
     {
       "derivationId": "thermodynamics/time",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Cosmological arrow",
       "description": "The structural arrow (increasing d(v)) is local. The global cosmological arrow (expansion) may require boundary conditions on the fixed-point solution. <!-- References --> [Bombelli et al., 1987]: /re"

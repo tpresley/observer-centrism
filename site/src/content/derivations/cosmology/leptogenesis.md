@@ -1,6 +1,6 @@
 ---
 title: "Leptogenesis from Majorana Neutrino Decays"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["cosmology/baryogenesis", "particles/neutrino-masses", "flavor/mixing-angles"]
 enablesDerivation: []
 tags: ["cosmology", "baryogenesis", "neutrino", "cp-violation"]
@@ -26,6 +26,9 @@ The baryogenesis derivation shows that all three Sakharov conditions are satisfi
 **Why this matters.** The heavy Majorana neutrinos are predicted to be light enough for collider detection, making this a testable prediction. Same-sign dilepton signatures at the LHC and connections to neutrinoless double beta decay provide independent experimental cross-checks.
 
 **An honest caveat.** The derivation establishes that the observed asymmetry lies within the accessible parameter space, but does not pin down a unique predicted value. The precise prediction depends on the heavy neutrino mass splittings, which the framework constrains but does not fully determine.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure), mass-hierarchy S1 (tunneling-crystallization correspondence) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light), [Mass Hierarchy](/derivations/particles/mass-hierarchy)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

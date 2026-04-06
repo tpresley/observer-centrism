@@ -1,6 +1,6 @@
 ---
 title: "Color Confinement from Non-Associativity"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["gauge/color-force"]
 enablesDerivation: ["gauge/chiral-symmetry-breaking"]
 tags: ["gauge", "confinement"]
@@ -25,6 +25,9 @@ Every experiment ever conducted has confirmed that quarks -- the building blocks
 **Why this matters.** Confinement explains why nuclear matter exists in the form it does -- why we see protons and neutrons rather than a soup of free quarks. The framework provides a structural reason rooted in the algebra of octonions, rather than leaving it as a brute computational fact.
 
 **An honest caveat.** This is a structural explanation for why confinement occurs, not a proof of the Yang-Mills mass gap. The quantitative string tension (how strong the confining force is) is characterized but not computed from first principles.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

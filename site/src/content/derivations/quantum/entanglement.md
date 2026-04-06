@@ -1,6 +1,6 @@
 ---
 title: "Entanglement from Relational Invariants"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["interactions/relational-invariants", "quantum/born-rule"]
 enablesDerivation: ["holography/er-epr", "quantum/teleportation"]
 tags: ["quantum", "information"]
@@ -33,6 +33,9 @@ Entanglement -- the phenomenon Einstein called "spooky action at a distance" -- 
 **Why this matters.** By grounding entanglement in coherence conservation, the framework explains not just what entanglement is but why it has the specific properties it does -- monogamy, no-cloning, and the entropy measure all emerge from a single underlying principle.
 
 **An honest caveat.** The identification of relational coherence with von Neumann entropy relies on the Shannon-Khinchin uniqueness theorem, which pins down the functional form. The deeper question of why coherence satisfies these axioms is answered by the foundational axioms themselves, but the chain of reasoning is long.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold) (see [Loop Closure](/derivations/axioms/loop-closure)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

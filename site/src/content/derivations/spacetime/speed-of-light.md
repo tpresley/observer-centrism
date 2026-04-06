@@ -1,6 +1,6 @@
 ---
 title: "Speed of Light from Loop Closure"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["thermodynamics/action-planck", "axioms/loop-closure"]
 enablesDerivation: ["spacetime/lorentz-invariance"]
 tags: ["geometry"]
@@ -28,6 +28,9 @@ The speed of light is one of the most precisely measured constants in physics an
 **Why this matters.** Special relativity's foundational constant is derived rather than postulated. The derivation also reveals that space and time are not independent dimensions but two projections of a single loop closure geometry, connected by the speed of light.
 
 **An honest caveat.** The derivation requires a structural postulate that the coherence geometry is pseudo-Riemannian (a smooth metric with a well-behaved quadratic form). The continuum limit from the discrete interaction graph to continuous spacetime relies on a standard conjecture in causal set theory.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold) (see [Loop Closure](/derivations/axioms/loop-closure)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

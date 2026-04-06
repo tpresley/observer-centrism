@@ -1,6 +1,6 @@
 ---
 title: "Baryogenesis from Coherence Dynamics"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["minimal-observer/coherence-dual-pairs", "gauge/weak-interaction"]
 enablesDerivation: ["cosmology/leptogenesis"]
 tags: ["cosmology"]
@@ -35,6 +35,9 @@ The Big Bang should have produced equal amounts of matter and antimatter, which 
 **Why this matters.** The existence of matter is not an accident or a free parameter -- it is traced back to the dimensionality of space through a fully derived logical chain, with no new assumptions required.
 
 **An honest caveat.** The derivation is qualitatively rigorous, but the Standard Model mechanism alone produces far too little asymmetry (by about eight orders of magnitude). The quantitative shortfall is a known problem shared by all Standard Model baryogenesis approaches, and is addressed separately by the leptogenesis derivation.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

@@ -1,6 +1,6 @@
 ---
 title: "Standard Model Gauge Group from Division Algebras"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["gauge/electromagnetism", "gauge/weak-interaction", "gauge/color-force"]
 enablesDerivation: ["cosmology/coupling-constants", "gauge/electroweak-breaking", "gauge/anomaly-cancellation", "gauge/proton-stability"]
 tags: ["gauge"]
@@ -42,6 +42,9 @@ In the Standard Model, this gauge group is an empirical input -- chosen because 
 **Why this matters.** The Standard Model's gauge structure changes from a contingent fact to a mathematical necessity. The same theorem that tells mathematicians there are only four normed division algebras tells physicists there can be only three non-gravitational forces.
 
 **An honest caveat.** The coupling constants (the relative strengths of the three forces) are not predicted and remain free parameters. The construction cleanly reproduces U(1) and SU(3) quantum numbers for fermions, but the full incorporation of SU(2) weak isospin assignments within a single algebraic framework remains to be completed.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

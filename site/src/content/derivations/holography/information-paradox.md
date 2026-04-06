@@ -1,6 +1,6 @@
 ---
 title: "Black Hole Information Paradox Resolution"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["holography/hawking-radiation", "axioms/coherence-conservation"]
 enablesDerivation: ["holography/scrambling"]
 tags: ["holography"]
@@ -25,6 +25,9 @@ The standard paradox runs as follows. A black hole forms from a known quantum st
 **Why this matters.** This resolves the paradox without invoking speculative new physics. The key insight -- that "is information lost?" is not a meaningful question without specifying which observer is asking -- reframes the debate entirely.
 
 **An honest caveat.** The explicit quantum error-correcting code that maps interior degrees of freedom to radiation correlations is described structurally but not constructed in computational detail. The connection to the island formula and entanglement wedge reconstruction remains to be formalized.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on area-scaling S1 (Planck-scale resolution), loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Area Scaling](/derivations/holography/area-scaling), [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

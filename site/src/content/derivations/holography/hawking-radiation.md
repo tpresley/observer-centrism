@@ -1,6 +1,6 @@
 ---
 title: "Hawking Radiation"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["holography/black-hole-entropy", "minimal-observer/coherence-dual-pairs"]
 enablesDerivation: ["holography/information-paradox"]
 tags: ["holography"]
@@ -22,6 +22,9 @@ Classically, nothing escapes a black hole. But quantum effects change the pictur
 **Why this matters.** Hawking radiation connects gravity, quantum mechanics, and thermodynamics in a single phenomenon. It directly sets up the black hole information paradox: if the radiation is purely thermal, where did the information about what fell in go?
 
 **An honest caveat.** The quantitative results (temperature, evaporation rate) match the standard semiclassical calculation. The trans-Planckian problem -- modes blue-shifted to super-Planckian energies near the horizon -- is structurally resolved by the framework's Planck-scale cutoff (no observer loops can close below the Planck length), and the loop-breaking derivation here never requires tracing modes into the trans-Planckian regime. The remaining open elements are the greybody factors and the endpoint of evaporation.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on area-scaling S1 (Planck-scale resolution), loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Area Scaling](/derivations/holography/area-scaling), [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

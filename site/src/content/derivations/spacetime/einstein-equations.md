@@ -1,6 +1,6 @@
 ---
 title: "Einstein Field Equations as Fixed-Point Conditions"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["spacetime/gravity", "interactions/bootstrap", "dimensions/three-dimensions"]
 enablesDerivation: ["spacetime/singularity-resolution", "holography/er-epr", "spacetime/gravitational-constant"]
 tags: ["geometry"]
@@ -28,6 +28,9 @@ Lovelock's uniqueness theorem (1971) then proves that in four spacetime dimensio
 **Why this matters.** This derivation converts Wheeler's famous summary of general relativity — "matter tells spacetime how to curve, spacetime tells matter how to move" — from a poetic description into a precise mathematical fixed-point condition.
 
 **An honest caveat.** The derivation formerly relied on a structural postulate (second-order locality) that has now been promoted to a theorem via Ostrogradsky's instability theorem ([Coherence Lagrangian](/derivations/foundation/coherence-lagrangian), Theorem 6.0): higher-derivative gravitational Lagrangians violate loop closure stability (Axiom 3). No structural postulates remain in this derivation. The values of Newton's constant and the cosmological constant remain empirical.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

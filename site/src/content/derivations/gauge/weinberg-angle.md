@@ -1,6 +1,6 @@
 ---
 title: "Weinberg Angle from Division Algebra Embedding"
-status: "rigorous"
+status: "provisional"
 dependsOn: ["gauge/weak-interaction", "gauge/electroweak-breaking", "cosmology/coupling-constants"]
 enablesDerivation: []
 tags: ["gauge", "electroweak", "mixing-angle"]
@@ -25,6 +25,9 @@ The Weinberg angle is a fundamental parameter that controls how the electromagne
 **Why this matters.** This is one of the framework's quantitative tests. The algebraic boundary condition is rigid (not adjustable), so the entire prediction depends on whether standard physics correctly connects the high-energy starting point to the low-energy measurement. The result is more accurate than the classic Grand Unified Theory prediction, which overshoots the observed value.
 
 **An honest caveat.** The crystallization scale is currently determined by requiring consistency with the measured Weinberg angle, rather than being independently predicted. An independent derivation of this scale from the bootstrap hierarchy would convert the consistency check into a genuine prediction.
+
+
+**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure), mass-hierarchy S1 (tunneling-crystallization correspondence) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light), [Mass Hierarchy](/derivations/particles/mass-hierarchy)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 
