@@ -2,7 +2,7 @@
 title: "Aperiodic Order of the Observer Network"
 status: "provisional"
 dependsOn: ["minimal-observer/multiplicity", "interactions/bootstrap", "axioms/coherence-conservation", "minimal-observer/coherence-dual-pairs"]
-enablesDerivation: ["spacetime/gravitational-constant", "thermodynamics-ext/non-ergodicity"]
+enablesDerivation: ["spacetime/gravitational-constant", "thermodynamics-ext/non-ergodicity", "cosmology/geometric-substrate"]
 tags: ["foundation", "structure"]
 summary: "The observer network must have aperiodic order: periodicity trivializes C5 (every local neighborhood identical), disorder violates constitutive universality (density fluctuations make geometry observer-dependent), and aperiodic tilings with matching rules are the unique intermediate satisfying all axiom requirements. The substitution matrix is constrained to the 2×2 Pisot metallic mean family"
 rigorLevel: "semi-formal"
@@ -193,6 +193,8 @@ $\square$
 **Locality from relational invariants.** The framework provides locality structurally: the effective metric is constituted by Type III interactions ([Relational Invariants](/derivations/interactions/relational-invariants)), which are local (they involve pairs of observers). The metric at a point depends on the observer crossings of nearby causal boundaries, not on the global network structure. $\square$
 
 **Corollary 3.2 (Solomyak guarantees half of CUP).** *For a primitive substitution tiling with finite local complexity, unique ergodicity is guaranteed by Solomyak's theorem. The only additional input needed for CUP is locality of geometric constitution, which the framework provides through the relational invariant mechanism.*
+
+**Remark (Cosmological homogeneity).** Constitutive universality — uniform patch frequencies everywhere in the network — is the combinatorial precursor of cosmological homogeneity: the observed uniformity of the matter distribution on large scales. This property is intrinsic to the network and does not reference a background space. When geometry and particles emerge from this network (via [ER=EPR](/derivations/holography/er-epr)), they inherit its statistical uniformity. Any sufficiently large region of the network (and hence any observer's cosmological horizon, which contains $\sim 10^{122}$ elements) has the same statistical content as any other. The physical interpretation — including why this resolves the question of how "homogeneity" can be meaningful pre-geometrically — is developed in [Geometric Substrate](/derivations/cosmology/geometric-substrate), Step 2.
 
 ### Step 8: Packing Coefficient from Inflation Factor
 

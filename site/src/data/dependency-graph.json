@@ -1213,6 +1213,10 @@
     {
       "from": "interactions/bootstrap",
       "to": "cosmology/geometric-substrate"
+    },
+    {
+      "from": "foundation/aperiodic-order",
+      "to": "cosmology/geometric-substrate"
     }
   ]
 }
