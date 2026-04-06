@@ -40,7 +40,15 @@ where $\ell_P = \sqrt{\hbar G / c^3}$ is the Planck length. Entropy scales with 
 
 **Structural Postulate S1 (Planck-scale resolution).** The coherence geometry has a minimum resolvable scale $\ell_{\min}$ at which stable loop closure is possible. This scale is determined by the three fundamental constants $\hbar$, $G$, and $c$ as $\ell_{\min} = \sqrt{\hbar G/c^3} = \ell_P$ (the Planck length). At scales below $\ell_P$, the coherence cost of loop closure exceeds the available coherence for any observer.
 
-**Remark.** This postulate connects the discrete structure of the observer network to the continuum geometry. It follows from combining [Action and Planck's Constant](/derivations/thermodynamics/action-planck) ($\hbar$ as the minimal cycle cost) with [Gravity](/derivations/spacetime/gravity) ($G$ as the coupling between coherence and curvature). The Planck length is the unique length scale constructible from $\hbar$, $G$, $c$ — it is not a free parameter. The postulate asserts that this dimensional-analysis scale is the actual resolution limit, which cannot be derived from the three axioms alone without a full theory of quantum gravity.
+**Remark (Tightened content).** The content of this postulate has been substantially reduced by recent framework results:
+
+1. **The Planck length is not a free parameter** — it is the unique length scale constructible from $\hbar$, $G$, and $c$. This is dimensional analysis, not a postulate.
+
+2. **The minimum scale is a fixed-point property.** The [Gravitational Coupling](/derivations/spacetime/gravitational-constant) derivation identifies $G = \ell_{\min}^2 c^3/\hbar$ (Theorem 3.3, Jacobson route), creating a self-consistency equation: $\ell_{\min}$ determines $G$, and $G$ determines $\ell_P = \sqrt{\hbar G/c^3}$. The postulate $\ell_{\min} = \ell_P$ is therefore a fixed-point condition — the unique positive solution of $\ell = \sqrt{\hbar \cdot (\ell^2 c^3/\hbar) / c^3} = \ell$.
+
+3. **The discrete substrate provides the physical content.** The [Geometric Substrate](/derivations/cosmology/geometric-substrate) identifies $\ell_P$ with the scale of individual Planck-scale observers in the substrate (Proposition 1.1). The [Aperiodic Order](/derivations/foundation/aperiodic-order) derivation establishes that the observer network is a Delone set with a minimum spacing set by loop closure. The [Continuous-Discrete Duality](/derivations/foundation/continuous-discrete-duality) requires the continuous and discrete layers to be compatible, which constrains the minimum scale.
+
+The irreducible content of S1 reduces to: **the bootstrap fixed-point equation has a unique positive solution, and that solution equals $\ell_P$.** This is equivalent to the bootstrap fixed-point uniqueness conjectures (Conjectures 7.1–7.2 of [Bootstrap](/derivations/interactions/bootstrap)). If those are proved, S1 becomes a theorem.
 
 ### Argument 1: Boundary Observer Counting
 
@@ -171,8 +179,8 @@ A key difference: in the framework, the holographic bound is not a statement abo
 - Theorem 5.1: The coefficient $1/4$ from gravitational stability (uses Schwarzschild geometry and the thermodynamic relation $S = E/(2T_H)$)
 - Theorem 5.2: Holographic entropy bound $S \leq A/(4\ell_P^2)$ (synthesis of both arguments)
 
-**Structural postulate:**
-- S1 (Planck-scale resolution): The minimum resolvable scale is $\ell_P = \sqrt{\hbar G/c^3}$. This is the unique scale from $\hbar$, $G$, $c$ — not a free parameter. The postulate asserts that this dimensional-analysis scale is the actual resolution limit.
+**Structural postulate (tightened):**
+- S1 (Planck-scale resolution): The Planck length is dimensionally unique and the minimum scale is a fixed-point property of the self-consistency equation $G = \ell_{\min}^2 c^3/\hbar$ ([Gravitational Coupling](/derivations/spacetime/gravitational-constant), Theorem 3.3). The remaining postulated content is equivalent to the bootstrap fixed-point uniqueness conjectures (7.1–7.2 of [Bootstrap](/derivations/interactions/bootstrap)). If those are proved, S1 becomes a theorem.
 
 **Forward dependency:**
 - Theorem 5.1 invokes the Hawking temperature $T_H$ ([Hawking Radiation](/derivations/holography/hawking-radiation)), which depends on [Black Hole Entropy](/derivations/holography/black-hole-entropy), which depends on this derivation. The circularity is resolved because both the entropy and temperature follow independently from the geometric structure of the Schwarzschild horizon — the consistency is a self-consistency condition, not a circular argument.

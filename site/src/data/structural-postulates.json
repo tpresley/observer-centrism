@@ -169,8 +169,8 @@
     "derivationTitle": "Preferred Basis",
     "postulateId": "S1",
     "shortName": "Interaction\u2013invariant correspondence",
-    "statement": "Every Type III interaction generates a relational invariant whose operator representation is the conserved quantity associated with the interaction Hamiltonian via Noether's theorem.",
-    "justification": "Connects the framework's interaction types to quantum measurement: the measurement basis is determined by the conserved quantities of the observer\u2013system interaction, not by an external choice.",
+    "statement": "Every Type III interaction generates a relational invariant whose operator representation is the conserved quantity associated with the interaction Hamiltonian via Noether's theorem. TIGHTENED: the structural correspondence (invariants map to conserved quantities) is forced by the continuous-discrete duality. The irreducible postulated content is the explicit map from interaction configurations to specific Hamiltonians.",
+    "justification": "The continuous-discrete duality forces relational invariants (discrete layer) to map to conserved quantities (continuous layer) \u2014 there is nothing else in the Lagrangian dynamics for them to correspond to. What remains postulated is the specific identification of which Hamiltonian governs which interaction.",
     "group": "quantum"
   },
   {
@@ -191,8 +191,8 @@
     "derivationTitle": "Mass Hierarchy",
     "postulateId": "S1",
     "shortName": "Tunneling\u2013crystallization correspondence",
-    "statement": "The formation of stable composite observers at each bootstrap level is mediated by coherence tunneling with WKB probability P ~ exp(\u2212V\u00b7a/\u0127).",
-    "justification": "The bootstrap hierarchy produces new composite observers at each level. Tunneling through coherence barriers provides the mechanism, and the exponential WKB suppression naturally generates the large mass ratios observed in the particle spectrum.",
+    "statement": "The formation of stable composite observers at each bootstrap level is mediated by coherence tunneling through a barrier in the coherence geometry. TIGHTENED: the WKB form of the tunneling probability is a theorem of semiclassical analysis for any Lagrangian system (the coherence Lagrangian provides the Lagrangian). The irreducible postulated content is the identification of bootstrap crystallization with barrier tunneling.",
+    "justification": "The exponential WKB suppression is forced by the Lagrangian dynamics (Coherence Lagrangian, Theorem 6.0). What remains postulated is that composite observer formation at each bootstrap level corresponds to barrier penetration in the coherence geometry.",
     "group": "particles"
   },
   {
@@ -222,8 +222,8 @@
     "derivationTitle": "Area Scaling",
     "postulateId": "S1",
     "shortName": "Planck-scale resolution",
-    "statement": "The coherence geometry has a minimum resolvable scale \u2113_P = \u221a(\u0127G/c\u00b3) (the Planck length). Below \u2113_P, the coherence cost of loop closure exceeds available coherence for any observer.",
-    "justification": "Combines gravity (G), quantum mechanics (\u0127), and the speed of light (c) into a fundamental resolution limit. No observer loop can exist at sub-Planck scales, providing the UV cutoff that leads to holographic entropy bounds.",
+    "statement": "The coherence geometry has a minimum resolvable scale \u2113_P = \u221a(\u0127G/c\u00b3). TIGHTENED: \u2113_P is dimensionally unique and is a fixed-point property of the self-consistency equation G = \u2113_min\u00b2 c\u00b3/\u0127. The irreducible postulated content is equivalent to the bootstrap fixed-point uniqueness conjectures (7.1\u20137.2). If those are proved, this becomes a theorem.",
+    "justification": "The Planck length is the unique length from \u0127, G, c. The Jacobson route (Gravitational Coupling, Theorem 3.3) gives G = \u2113_min\u00b2 c\u00b3/\u0127, making \u2113_P a fixed-point property. The geometric substrate identifies \u2113_P with individual substrate nodes. The remaining content is the uniqueness of the bootstrap fixed point.",
     "group": "holography"
   }
 ]

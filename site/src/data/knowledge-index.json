@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-06T18:36:25.974Z",
+    "generatedAt": "2026-04-06T19:03:49.436Z",
     "derivationCount": 73,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -2722,6 +2722,10 @@
           {
             "source": "foundation/continuous-discrete-duality",
             "context": "Geometric Substrate"
+          },
+          {
+            "source": "holography/area-scaling",
+            "context": "Geometric Substrate"
           }
         ]
       },
@@ -4168,6 +4172,10 @@
             "context": "Proposition 4.1"
           },
           {
+            "source": "holography/area-scaling",
+            "context": "Aperiodic Order"
+          },
+          {
             "source": "holography/scrambling",
             "context": "Aperiodic Order"
           },
@@ -4433,6 +4441,14 @@
             "context": "Coherence Lagrangian"
           },
           {
+            "source": "particles/mass-hierarchy",
+            "context": "Theorem 6.0"
+          },
+          {
+            "source": "quantum/preferred-basis",
+            "context": "Coherence Lagrangian"
+          },
+          {
             "source": "spacetime/einstein-equations",
             "context": "Coherence Lagrangian"
           },
@@ -4633,6 +4649,14 @@
           {
             "source": "cosmology/observer-loop-viability",
             "context": "Continuous-Discrete Duality"
+          },
+          {
+            "source": "holography/area-scaling",
+            "context": "Continuous-Discrete Duality"
+          },
+          {
+            "source": "quantum/preferred-basis",
+            "context": "Proposition 3.2"
           }
         ]
       },
@@ -7659,12 +7683,24 @@
       "crossReferences": {
         "outgoing": [
           {
-            "target": "thermodynamics/action-planck",
-            "context": "$\\hbar$ as the minimal cycle cost"
+            "target": "spacetime/gravitational-constant",
+            "context": "Gravitational Coupling"
           },
           {
-            "target": "spacetime/gravity",
-            "context": "$G$ as the coupling between coherence and curvature"
+            "target": "cosmology/geometric-substrate",
+            "context": "Geometric Substrate"
+          },
+          {
+            "target": "foundation/aperiodic-order",
+            "context": "Aperiodic Order"
+          },
+          {
+            "target": "foundation/continuous-discrete-duality",
+            "context": "Continuous-Discrete Duality"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap"
           },
           {
             "target": "thermodynamics/entropy",
@@ -9684,6 +9720,10 @@
           {
             "source": "gauge/electroweak-breaking",
             "context": "Bootstrap Mechanism"
+          },
+          {
+            "source": "holography/area-scaling",
+            "context": "Bootstrap"
           },
           {
             "source": "holography/scrambling",
@@ -11805,6 +11845,10 @@
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
+          {
+            "target": "foundation/coherence-lagrangian",
+            "context": "Theorem 6.0"
+          },
           {
             "target": "interactions/bootstrap",
             "context": "Bootstrap Mechanism"
@@ -14233,6 +14277,14 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "foundation/continuous-discrete-duality",
+            "context": "Proposition 3.2"
+          },
+          {
+            "target": "foundation/coherence-lagrangian",
+            "context": "Coherence Lagrangian"
+          },
+          {
             "target": "interactions/relational-invariants",
             "context": "Relational Invariants"
           },
@@ -15447,6 +15499,10 @@
             "context": "Gravitational Coupling"
           },
           {
+            "source": "holography/area-scaling",
+            "context": "Gravitational Coupling"
+          },
+          {
             "source": "interactions/bootstrap",
             "context": "Gravitational Coupling"
           },
@@ -15686,10 +15742,6 @@
           {
             "source": "gauge/electromagnetism",
             "context": "Gravity"
-          },
-          {
-            "source": "holography/area-scaling",
-            "context": "$G$ as the coupling between coherence and curvature"
           },
           {
             "source": "holography/area-scaling",
@@ -18405,10 +18457,6 @@
           {
             "source": "gauge/weak-interaction",
             "context": "Action and Planck's Constant"
-          },
-          {
-            "source": "holography/area-scaling",
-            "context": "$\\hbar$ as the minimal cycle cost"
           },
           {
             "source": "holography/area-scaling",

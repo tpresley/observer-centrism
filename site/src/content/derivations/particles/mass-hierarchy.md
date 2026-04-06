@@ -34,9 +34,15 @@ The top quark is roughly 340,000 times heavier than the electron, and the electr
 
 ### Structural Postulate
 
-**Structural Postulate S1 (Tunneling–crystallization correspondence).** The formation of a stable composite observer at level $k$ of the bootstrap hierarchy is mediated by coherence tunneling through a barrier in the coherence geometry. The tunneling probability takes the WKB form $P \sim e^{-V \cdot a/\hbar}$, where $V$ is the barrier height and $a$ is the barrier width, both determined by the coupling structure at level $k$.
+**Structural Postulate S1 (Tunneling–crystallization correspondence).** The formation of a stable composite observer at level $k$ of the bootstrap hierarchy is mediated by coherence tunneling through a barrier in the coherence geometry.
 
-**Remark.** This postulate connects the bootstrap hierarchy's discrete level structure ([Bootstrap Mechanism](/derivations/interactions/bootstrap)) to the quantitative scale separations observed in nature. The tunneling mechanism is the standard non-perturbative effect responsible for dimensional transmutation in quantum field theory (e.g., $\Lambda_{\text{QCD}} \sim M_Z e^{-c/\alpha_s}$). The postulate asserts that the same mechanism operates in the coherence geometry — that bootstrap crystallization is a tunneling process. This cannot be derived from the three axioms alone; it requires the identification of the bootstrap fixed-point structure with a barrier-tunneling geometry.
+**Remark (Tightened content).** This postulate has two components with different status:
+
+1. **The WKB form** ($P \sim e^{-V \cdot a/\hbar}$): This is a *theorem*, not a postulate. The [Coherence Lagrangian](/derivations/foundation/coherence-lagrangian) (Theorem 6.0) establishes that the framework's dynamics are Lagrangian. For any Lagrangian system, barrier penetration in the semiclassical limit takes WKB form — this is a standard result of semiclassical analysis (the leading-order term in the $\hbar \to 0$ expansion of the path integral). The exponential suppression $e^{-c/g^2}$ responsible for the large mass ratios is a mathematical consequence of the Lagrangian structure, not a physical assumption.
+
+2. **The identification** (bootstrap crystallization IS barrier tunneling): This remains postulated. The postulate asserts that the formation of a composite observer at bootstrap level $k$ corresponds to penetrating a barrier in the coherence geometry — that the abstract bootstrap fixed-point structure has a geometric realization as barrier tunneling. This identification connects the discrete level structure of the bootstrap ([Bootstrap Mechanism](/derivations/interactions/bootstrap)) to the quantitative scale separations observed in nature (e.g., $\Lambda_{\text{QCD}} \sim M_Z e^{-c/\alpha_s}$). It cannot be derived from the three axioms alone.
+
+The irreducible content of S1 is therefore the identification (2), not the WKB form (1). The exponential mass hierarchy is forced by the Lagrangian dynamics once the identification is granted.
 
 ### Step 1: Mass as Rest-Cycle Frequency
 
@@ -209,8 +215,8 @@ The topological contribution is bounded by the number of particle species $\time
 - Theorem 5.1: Self-protection from loop-factor cancellation (follows the logic of 't Hooft's technical naturalness)
 - Proposition 6.1: Great desert from discreteness of bootstrap fixed points
 
-**Structural postulate:**
-- S1 (Tunneling–crystallization correspondence): Bootstrap crystallization proceeds via coherence barrier tunneling with WKB form. This identifies the bootstrap mechanism with the standard non-perturbative tunneling responsible for dimensional transmutation. Not derivable from the axioms alone.
+**Structural postulate (tightened):**
+- S1 (Tunneling–crystallization correspondence): The WKB form of the tunneling probability is a theorem of semiclassical analysis for any Lagrangian system (and the coherence Lagrangian provides the Lagrangian). The remaining postulated content is the identification of bootstrap crystallization with barrier tunneling — that composite observer formation corresponds to barrier penetration in the coherence geometry.
 
 **Empirical parameters:**
 - The coupling constants $g_k$ at each level are empirical inputs. Computing them from the coherence geometry would determine the entire particle mass spectrum — this is an open problem.
