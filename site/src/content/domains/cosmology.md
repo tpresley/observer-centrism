@@ -10,6 +10,7 @@ relatedDerivations:
   - "cosmology/baryogenesis"
   - "cosmology/leptogenesis"
   - "cosmology/coupling-constants"
+  - "cosmology/geometric-substrate"
   - "cosmology/cosmological-arrow"
   - "spacetime/singularity-resolution"
   - "spacetime/gravitational-constant"
@@ -71,6 +72,18 @@ The combined results constrain the universe to a narrow class of behaviors:
 | $\Omega_\Lambda \geq 0.5$ | Dark-energy-dominated | Holographic bound on structural coherence |
 
 The physically realized spacetimes are those that expand forever at a bounded rate, asymptoting to de Sitter.
+
+## Spacetime as Geometric Substrate
+
+The framework provides a concrete physical picture of what dark energy *is*. Spacetime geometry is constituted by a network of $\sim 10^{122}$ Planck-scale observers whose relational invariants form the geometric fabric (via ER=EPR). Standard Model particles are coherence *crystallized out of* this fabric &mdash; stable resonances of the substrate, not objects placed within it. An electron is to the geometric substrate what a phonon is to a crystal lattice.
+
+The self-consistency equation $C_0 = \sum \Delta c_n + S_H$ becomes substrate accounting: total substrate = crystallized coherence + remaining fabric. The cosmological density fractions are crystallization fractions: $\Omega_m \approx 0.3$ means 30% of the coherence has crystallized into particles, and $\Omega_\Lambda \approx 0.7$ means 70% remains in the geometric fabric. Dark energy is not a mysterious substance &mdash; it is the coherence content of the un-crystallized spacetime itself.
+
+The "great desert" between the Planck and electroweak scales is not empty &mdash; it is filled by the collective substrate. The electron's $\sim 10^{43}$ bits of epistemic capacity reflects the $\sim 10^{43}$ Planck-scale substrate elements its boundary contacts. The "jump" from 1 bit (individual Planck observer) to $10^{43}$ bits (electron) is the transition from individual to collective, not empty to full.
+
+This picture unifies three apparently separate predictions: holographic noise (the discrete substrate fluctuating at Planck scale), the dark energy equation of state (the substrate in equilibrium), and the holographic bound on crystallization ($\Omega_\Lambda \geq 0.5$ &mdash; you cannot crystallize more coherence than the fabric contains). All three flow from the same underlying structure.
+
+**Formal derivation:** [Geometric Substrate and Coherence Crystallization](/derivations/cosmology/geometric-substrate)
 
 ## The Big Bang Singularity
 

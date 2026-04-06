@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-04-05T18:49:12.696Z",
-    "derivationCount": 71,
+    "generatedAt": "2026-04-05T22:15:12.777Z",
+    "derivationCount": 72,
     "predictionCount": 12,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -11,14 +11,14 @@
       "rigorous": 61,
       "draft": 2,
       "non-viable": 1,
-      "provisional": 5,
+      "provisional": 6,
       "stub": 2
     },
-    "derivationCount": 71,
+    "derivationCount": 72,
     "predictionCount": 12,
-    "edgeCount": 188,
-    "formalObjectCount": 1085,
-    "openGapCount": 222,
+    "edgeCount": 195,
+    "formalObjectCount": 1099,
+    "openGapCount": 224,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -2238,6 +2238,10 @@
             "context": "Dark Energy Equation of State"
           },
           {
+            "source": "cosmology/geometric-substrate",
+            "context": "Dark Energy Equation of State"
+          },
+          {
             "source": "cosmology/observer-loop-viability",
             "context": "Proposition 4.3–4.4"
           }
@@ -2413,8 +2417,249 @@
           {
             "source": "cosmology/cosmological-arrow",
             "context": "Geometric Inflation"
+          },
+          {
+            "source": "cosmology/geometric-substrate",
+            "context": "Geometric Inflation"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "cosmology/geometric-substrate": {
+      "id": "cosmology/geometric-substrate",
+      "filePath": "site/src/content/derivations/cosmology/geometric-substrate.md",
+      "title": "Geometric Substrate and Coherence Crystallization",
+      "status": "provisional",
+      "rigorLevel": "semi-formal",
+      "group": "cosmology",
+      "tags": [
+        "cosmology",
+        "quantum-gravity"
+      ],
+      "summary": "Spacetime geometry is a network of Planck-scale observers whose relational invariants constitute the geometric fabric. Standard Model particles are coherence crystallized out of this fabric. The cosmological density fractions Ω_Λ and Ω_m measure the ratio of geometric substrate to crystallized structure — dark energy is the coherence content of the fabric itself.",
+      "lastUpdated": "2026-04-05",
+      "dependsOn": [
+        "holography/area-scaling",
+        "holography/causal-set-statistics",
+        "holography/er-epr",
+        "cosmology/observer-loop-viability",
+        "particles/mass-hierarchy",
+        "minimal-observer/structure",
+        "interactions/bootstrap"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The Geometric Substrate"
+        },
+        {
+          "number": 2,
+          "title": "Crystallization from the Substrate"
+        },
+        {
+          "number": 3,
+          "title": "The Coherence Budget as Substrate Accounting"
+        },
+        {
+          "number": 4,
+          "title": "The Desert as Collective Emergence"
+        },
+        {
+          "number": 5,
+          "title": "Dual Saturation from the Substrate Perspective"
+        },
+        {
+          "number": 6,
+          "title": "Observational Consequences"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Proposition",
+          "id": "1.1",
+          "name": "Planck-scale observers constitute geometry",
+          "statementPreview": "The Planck-scale relational invariant network, described by [Causal Set Statistics](/derivations/holography/causal-se..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Horizon entropy is an observer census",
+          "statementPreview": "The horizon entropy SH = AH/(4ellP2) counts the Planck-scale observers whose relational invariants constitute the cos..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "Particles are substrate resonances",
+          "statementPreview": "Each Standard Model particle is a stable resonance of the geometric substrate — a coherence configuration that satisf..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "Crystallization depletes the substrate",
+          "statementPreview": "Each crystallized particle removes coherence from the geometric substrate. The coherence locked into a particle's loo..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.3",
+          "name": "Two crystallization regimes",
+          "statementPreview": "By [Mass Hierarchy](/derivations/particles/mass-hierarchy) (Step 7), crystallization operates in two regimes:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Cosmological fractions are crystallization fractions",
+          "statementPreview": "The self-consistency equation ([Observer Loop Viability](/derivations/cosmology/observer-loop-viability), Proposition..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Dark energy is substrate coherence",
+          "statementPreview": "Dark energy, in this picture, is not a new form of energy or a cosmological constant added to the Einstein equations ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "The great desert is substrate-filled",
+          "statementPreview": "Between the Planck scale (sim 1019 GeV) and the electroweak scale (sim 102 GeV), there are no stable particles ([Mass..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.2",
+          "name": "First crystallization scale",
+          "statementPreview": "The electroweak scale is the first scale at which the bootstrap supports stable crystallization from the substrate. A..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Substrate perspective on double saturation",
+          "statementPreview": "The double-saturation boundary condition ([Observer Loop Viability](/derivations/cosmology/observer-loop-viability), ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.2",
+          "name": "Holographic bound on crystallization",
+          "statementPreview": "The crystallized coherence cannot exceed the substrate coherence: Delta cn SH. This follows from the holographic boun..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Holographic noise as substrate signature",
+          "statementPreview": "The discrete Planck-scale substrate produces a measurable signature: holographic noise with strain power spectral den..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.2",
+          "name": "Unified source of dark energy constraints and holographic noise",
+          "statementPreview": "The dark energy constraints ([Dark Energy Equation of State](/derivations/cosmology/dark-energy-equation-of-state): w..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.3",
+          "name": "Cross-prediction with dark matter",
+          "statementPreview": "Dark matter particles, if they are stable observer loops satisfying Axiom 3, are additional crystallizations from the..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Quantitative crystallization fraction.",
+          "description": "The substrate picture identifies Omegam as the crystallization fraction but does not compute it from first principles. Computing Delta cn from the SM particle content and cosmological evolution would "
+        },
+        {
+          "number": 2,
+          "title": "Substrate dynamics.",
+          "description": "This derivation treats the substrate in de Sitter equilibrium. In the early universe, the substrate density evolves from the post-bounce state ([Singularity Resolution](/derivations/spacetime/singular"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "holography/causal-set-statistics",
+            "context": "Causal Set Statistics"
+          },
+          {
+            "target": "holography/er-epr",
+            "context": "ER=EPR"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "target": "cosmology/observer-loop-viability",
+            "context": "Observer Loop Viability"
+          },
+          {
+            "target": "minimal-observer/structure",
+            "context": "Minimal Observer Structure"
+          },
+          {
+            "target": "minimal-observer/structure",
+            "context": "Theorem 3.1"
+          },
+          {
+            "target": "holography/er-epr",
+            "context": "Theorem 3.2"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Theorem 5.2"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Definition 1.1"
+          },
+          {
+            "target": "interactions/bootstrap-division-algebras",
+            "context": "Theorem 7.1"
+          },
+          {
+            "target": "thermodynamics-ext/renormalization",
+            "context": "Renormalization Group"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Step 7"
+          },
+          {
+            "target": "thermodynamics/entropy",
+            "context": "Entropy"
+          },
+          {
+            "target": "cosmology/dark-energy-equation-of-state",
+            "context": "Dark Energy Equation of State"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Proposition 6.1"
+          },
+          {
+            "target": "spacetime/singularity-resolution",
+            "context": "Singularity Resolution"
+          },
+          {
+            "target": "cosmology/geometric-inflation",
+            "context": "Geometric Inflation"
+          }
+        ],
+        "incoming": []
       },
       "leanVerification": {
         "hasProofs": false,
@@ -2616,7 +2861,8 @@
       ],
       "dependedOnBy": [
         "cosmology/cosmological-arrow",
-        "cosmology/dark-energy-equation-of-state"
+        "cosmology/dark-energy-equation-of-state",
+        "cosmology/geometric-substrate"
       ],
       "steps": [
         {
@@ -3054,6 +3300,10 @@
           {
             "source": "cosmology/dark-energy-equation-of-state",
             "context": "Proposition 6.2"
+          },
+          {
+            "source": "cosmology/geometric-substrate",
+            "context": "Observer Loop Viability"
           },
           {
             "source": "interactions/bootstrap",
@@ -6970,6 +7220,7 @@
       "dependedOnBy": [
         "cosmology/cosmological-constant",
         "cosmology/dark-energy-equation-of-state",
+        "cosmology/geometric-substrate",
         "cosmology/observer-loop-viability",
         "holography/black-hole-entropy",
         "holography/causal-set-statistics",
@@ -7162,6 +7413,14 @@
           {
             "source": "cosmology/dark-energy-equation-of-state",
             "context": "Area Scaling"
+          },
+          {
+            "source": "cosmology/geometric-substrate",
+            "context": "Area Scaling"
+          },
+          {
+            "source": "cosmology/geometric-substrate",
+            "context": "Theorem 5.2"
           },
           {
             "source": "cosmology/observer-loop-viability",
@@ -7479,6 +7738,7 @@
       ],
       "dependedOnBy": [
         "cosmology/geometric-inflation",
+        "cosmology/geometric-substrate",
         "holography/er-epr"
       ],
       "steps": [
@@ -7660,6 +7920,10 @@
             "context": "Causal Set Statistics"
           },
           {
+            "source": "cosmology/geometric-substrate",
+            "context": "Causal Set Statistics"
+          },
+          {
             "source": "gauge/proton-stability",
             "context": "Causal Set Statistics"
           },
@@ -7723,6 +7987,7 @@
         "holography/scrambling"
       ],
       "dependedOnBy": [
+        "cosmology/geometric-substrate",
         "cosmology/observer-loop-viability",
         "holography/scrambling"
       ],
@@ -7859,6 +8124,14 @@
           }
         ],
         "incoming": [
+          {
+            "source": "cosmology/geometric-substrate",
+            "context": "ER=EPR"
+          },
+          {
+            "source": "cosmology/geometric-substrate",
+            "context": "Theorem 3.2"
+          },
           {
             "source": "cosmology/observer-loop-viability",
             "context": "Theorem 3.2"
@@ -8746,6 +9019,10 @@
         ],
         "incoming": [
           {
+            "source": "cosmology/geometric-substrate",
+            "context": "Theorem 7.1"
+          },
+          {
             "source": "cosmology/observer-loop-viability",
             "context": "Bootstrap → Division Algebras"
           },
@@ -8817,6 +9094,7 @@
         "cosmology/cosmological-arrow",
         "cosmology/coupling-constants",
         "cosmology/geometric-inflation",
+        "cosmology/geometric-substrate",
         "cosmology/observer-loop-viability",
         "foundation/aperiodic-order",
         "gauge/color-force",
@@ -10490,6 +10768,7 @@
         "thermodynamics-ext/biological-non-ergodicity"
       ],
       "dependedOnBy": [
+        "cosmology/geometric-substrate",
         "cosmology/observer-loop-viability",
         "dimensions/three-dimensions",
         "minimal-observer/multiplicity",
@@ -10654,6 +10933,14 @@
           {
             "source": "axioms/loop-closure",
             "context": "Minimal Observer Structure"
+          },
+          {
+            "source": "cosmology/geometric-substrate",
+            "context": "Minimal Observer Structure"
+          },
+          {
+            "source": "cosmology/geometric-substrate",
+            "context": "Theorem 3.1"
           },
           {
             "source": "cosmology/observer-loop-viability",
@@ -11008,6 +11295,7 @@
       ],
       "dependedOnBy": [
         "cosmology/coupling-constants",
+        "cosmology/geometric-substrate",
         "particles/three-generations"
       ],
       "steps": [
@@ -11182,20 +11470,20 @@
             "context": "Theorem 3.1"
           },
           {
-            "target": "interactions/bootstrap",
-            "context": "Bootstrap"
-          },
-          {
-            "target": "interactions/bootstrap-division-algebras",
-            "context": "Bootstrap $\\to$ Division Algebras"
-          },
-          {
             "target": "particles/three-generations",
             "context": "Three Generations"
           },
           {
             "target": "cosmology/observer-loop-viability",
             "context": "Observer Loop Viability"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap"
+          },
+          {
+            "target": "interactions/bootstrap-division-algebras",
+            "context": "Bootstrap $\\to$ Division Algebras"
           },
           {
             "target": "holography/er-epr",
@@ -11214,6 +11502,22 @@
           {
             "source": "cosmology/coupling-constants",
             "context": "Mass Hierarchy"
+          },
+          {
+            "source": "cosmology/geometric-substrate",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "source": "cosmology/geometric-substrate",
+            "context": "Definition 1.1"
+          },
+          {
+            "source": "cosmology/geometric-substrate",
+            "context": "Step 7"
+          },
+          {
+            "source": "cosmology/geometric-substrate",
+            "context": "Proposition 6.1"
           },
           {
             "source": "cosmology/observer-loop-viability",
@@ -15571,6 +15875,10 @@
             "context": "Singularity Resolution"
           },
           {
+            "source": "cosmology/geometric-substrate",
+            "context": "Singularity Resolution"
+          },
+          {
             "source": "cosmology/observer-loop-viability",
             "context": "Theorem 4.1"
           },
@@ -17357,6 +17665,10 @@
         ],
         "incoming": [
           {
+            "source": "cosmology/geometric-substrate",
+            "context": "Renormalization Group"
+          },
+          {
             "source": "cosmology/observer-loop-viability",
             "context": "Renormalization Group"
           },
@@ -18049,6 +18361,10 @@
           },
           {
             "source": "cosmology/cosmological-constant",
+            "context": "Entropy"
+          },
+          {
+            "source": "cosmology/geometric-substrate",
             "context": "Entropy"
           },
           {
@@ -21220,6 +21536,104 @@
       "id": "6.2",
       "name": "Scalar spectrum compatibility",
       "fullRef": "cosmology/geometric-inflation:Proposition 6.2"
+    },
+    {
+      "derivationId": "cosmology/geometric-substrate",
+      "type": "Proposition",
+      "id": "1.1",
+      "name": "Planck-scale observers constitute geometry",
+      "fullRef": "cosmology/geometric-substrate:Proposition 1.1"
+    },
+    {
+      "derivationId": "cosmology/geometric-substrate",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "Horizon entropy is an observer census",
+      "fullRef": "cosmology/geometric-substrate:Proposition 1.2"
+    },
+    {
+      "derivationId": "cosmology/geometric-substrate",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "Particles are substrate resonances",
+      "fullRef": "cosmology/geometric-substrate:Proposition 2.1"
+    },
+    {
+      "derivationId": "cosmology/geometric-substrate",
+      "type": "Proposition",
+      "id": "2.2",
+      "name": "Crystallization depletes the substrate",
+      "fullRef": "cosmology/geometric-substrate:Proposition 2.2"
+    },
+    {
+      "derivationId": "cosmology/geometric-substrate",
+      "type": "Proposition",
+      "id": "2.3",
+      "name": "Two crystallization regimes",
+      "fullRef": "cosmology/geometric-substrate:Proposition 2.3"
+    },
+    {
+      "derivationId": "cosmology/geometric-substrate",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Cosmological fractions are crystallization fractions",
+      "fullRef": "cosmology/geometric-substrate:Proposition 3.1"
+    },
+    {
+      "derivationId": "cosmology/geometric-substrate",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "Dark energy is substrate coherence",
+      "fullRef": "cosmology/geometric-substrate:Proposition 3.2"
+    },
+    {
+      "derivationId": "cosmology/geometric-substrate",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "The great desert is substrate-filled",
+      "fullRef": "cosmology/geometric-substrate:Proposition 4.1"
+    },
+    {
+      "derivationId": "cosmology/geometric-substrate",
+      "type": "Proposition",
+      "id": "4.2",
+      "name": "First crystallization scale",
+      "fullRef": "cosmology/geometric-substrate:Proposition 4.2"
+    },
+    {
+      "derivationId": "cosmology/geometric-substrate",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "Substrate perspective on double saturation",
+      "fullRef": "cosmology/geometric-substrate:Proposition 5.1"
+    },
+    {
+      "derivationId": "cosmology/geometric-substrate",
+      "type": "Proposition",
+      "id": "5.2",
+      "name": "Holographic bound on crystallization",
+      "fullRef": "cosmology/geometric-substrate:Proposition 5.2"
+    },
+    {
+      "derivationId": "cosmology/geometric-substrate",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "Holographic noise as substrate signature",
+      "fullRef": "cosmology/geometric-substrate:Proposition 6.1"
+    },
+    {
+      "derivationId": "cosmology/geometric-substrate",
+      "type": "Proposition",
+      "id": "6.2",
+      "name": "Unified source of dark energy constraints and holographic noise",
+      "fullRef": "cosmology/geometric-substrate:Proposition 6.2"
+    },
+    {
+      "derivationId": "cosmology/geometric-substrate",
+      "type": "Proposition",
+      "id": "6.3",
+      "name": "Cross-prediction with dark matter",
+      "fullRef": "cosmology/geometric-substrate:Proposition 6.3"
     },
     {
       "derivationId": "cosmology/leptogenesis",
@@ -28054,6 +28468,20 @@
       "number": 4,
       "title": "Relationship to bounce",
       "description": "The singularity-resolution derivation provides the bounce; this derivation provides the subsequent expansion. The interface — how the bounce state seeds the pre-geometric network — needs formalization"
+    },
+    {
+      "derivationId": "cosmology/geometric-substrate",
+      "derivationStatus": "provisional",
+      "number": 1,
+      "title": "Quantitative crystallization fraction.",
+      "description": "The substrate picture identifies Omegam as the crystallization fraction but does not compute it from first principles. Computing Delta cn from the SM particle content and cosmological evolution would "
+    },
+    {
+      "derivationId": "cosmology/geometric-substrate",
+      "derivationStatus": "provisional",
+      "number": 2,
+      "title": "Substrate dynamics.",
+      "description": "This derivation treats the substrate in de Sitter equilibrium. In the early universe, the substrate density evolves from the post-bounce state ([Singularity Resolution](/derivations/spacetime/singular"
     },
     {
       "derivationId": "cosmology/observer-loop-viability",

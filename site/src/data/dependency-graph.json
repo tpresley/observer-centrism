@@ -425,6 +425,12 @@
       "title": "Dark Energy Equation of State",
       "group": "cosmology",
       "status": "provisional"
+    },
+    {
+      "id": "cosmology/geometric-substrate",
+      "title": "Geometric Substrate and Coherence Crystallization",
+      "group": "cosmology",
+      "status": "provisional"
     }
   ],
   "edges": [
@@ -1179,6 +1185,34 @@
     {
       "from": "spacetime/singularity-resolution",
       "to": "cosmology/dark-energy-equation-of-state"
+    },
+    {
+      "from": "holography/area-scaling",
+      "to": "cosmology/geometric-substrate"
+    },
+    {
+      "from": "holography/causal-set-statistics",
+      "to": "cosmology/geometric-substrate"
+    },
+    {
+      "from": "holography/er-epr",
+      "to": "cosmology/geometric-substrate"
+    },
+    {
+      "from": "cosmology/observer-loop-viability",
+      "to": "cosmology/geometric-substrate"
+    },
+    {
+      "from": "particles/mass-hierarchy",
+      "to": "cosmology/geometric-substrate"
+    },
+    {
+      "from": "minimal-observer/structure",
+      "to": "cosmology/geometric-substrate"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "cosmology/geometric-substrate"
     }
   ]
 }
