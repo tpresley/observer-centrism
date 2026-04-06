@@ -5,8 +5,8 @@
     "derivationTitle": "Loop Closure",
     "postulateId": "S1",
     "shortName": "Finite-dimensional manifold",
-    "statement": "The state space \u03a3 is a compact topological manifold of finite dimension dim \u03a3 \u2265 1, on which the U(1) action from Axiom 3 acts freely. Smooth (C\u221e) structure is derived in Theorem 0.0 via the equivariant smoothing theorem, not assumed.",
-    "justification": "Finite dimensionality gives finitely many degrees of freedom; local Euclidean structure excludes topological pathologies; free orbits ensure every state participates in the cyclic dynamics. Smooth structure then follows from the equivariant smoothing theorem (Illman 1983) applied to the continuous U(1) action.",
+    "statement": "The state space \u03a3 is a topological manifold of finite dimension dim \u03a3 \u2265 1 (locally homeomorphic to R^n). Compactness comes from O1 of Axiom 2; free orbits are derived in Lemma 0.0 from coherence cost positivity; smooth structure is derived in Theorem 0.0 via the equivariant smoothing theorem. The irreducible content is: manifold structure + finite dimensionality.",
+    "justification": "Finite dimensionality gives finitely many degrees of freedom; local Euclidean structure excludes topological pathologies (fractals, Cantor sets, non-manifold points). Motivated by the continuous-discrete duality's requirement that observer state spaces be compatible with the smooth coherence manifold, and by the finite information content from the holographic bound, but not rigorously derived from either.",
     "group": "foundation"
   },
   {

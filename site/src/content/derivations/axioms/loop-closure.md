@@ -34,17 +34,28 @@ Having a conserved quantity (Axiom 1) and a self-maintaining identity (Axiom 2) 
 
 ## Structural Postulate
 
-**Structural Postulate S1 (Finite-dimensional manifold with free orbits).** The state space $\Sigma$ of an observer $\mathcal{O} = (\Sigma, I, \mathcal{B})$ (Axiom 2) is:
+**Structural Postulate S1 (Finite-dimensional manifold).** The state space $\Sigma$ of an observer $\mathcal{O} = (\Sigma, I, \mathcal{B})$ (Axiom 2) is:
 
-(S1) A compact topological manifold of finite dimension $\dim \Sigma \geq 1$ (locally homeomorphic to $\mathbb{R}^n$), on which the periodic dynamics (Axiom 3) defines a $U(1)$ action (Corollary 4.3 below) that acts freely: the stabilizer of every point is trivial.
+(S1) A topological manifold of finite dimension $\dim \Sigma \geq 1$ (locally homeomorphic to $\mathbb{R}^n$).
 
-S1 does **not** assume smooth ($C^\infty$) structure. Smoothness is derived in Theorem 0.0 below.
+S1 does **not** assume smooth ($C^\infty$) structure, compactness, or free orbits. Compactness and connectedness come from O1 of [Observer Definition](/derivations/axioms/observer-definition). Free orbits are derived in Lemma 0.0 below. Smoothness is derived in Theorem 0.0 below.
 
-**Remark (Physical content of S1).** S1 encodes two physical requirements beyond the compactness and connectedness already guaranteed by O1 of [Observer Definition](/derivations/axioms/observer-definition):
+**Remark (Irreducible content of S1).** Of the original four components of S1 (manifold structure, finite dimensionality, compactness, free orbits), two are now derived from other parts of the framework:
 
-1. **Finite dimensionality and local regularity**: the observer has finitely many internal degrees of freedom, and its state space has no topological pathologies (fractal structure, non-manifold points). This is consistent with the framework's built-in UV cutoff ([Holographic Entropy Bound](/derivations/holography/area-scaling), S1).
+- **Compactness and connectedness**: already required by O1 of Axiom 2.
+- **Free orbits**: derived from Axiom 3's non-triviality combined with coherence cost positivity (Lemma 0.0 below).
 
-2. **Free orbits**: every state $\sigma \in \Sigma$ participates in the cyclic dynamics — there are no static states where the loop closure oscillation freezes. A fixed point ($\phi_t(\sigma^*) = \sigma^*$ for all $t$) would represent a state with zero coherence cost (no oscillation), violating the physical content of Axiom 3: to persist is to cycle.
+The genuinely irreducible content of S1 is:
+
+1. **Local regularity** (manifold structure): the state space is locally homeomorphic to $\mathbb{R}^n$, excluding topological pathologies such as fractal state spaces, Cantor-set-like configurations, or non-manifold points. This is consistent with the framework's built-in UV cutoff ([Holographic Entropy Bound](/derivations/holography/area-scaling), S1) and with the continuous-discrete duality's requirement that the discrete observer network be compatible with a smooth coherence manifold ([Continuous-Discrete Duality](/derivations/foundation/continuous-discrete-duality), Proposition 3.2), but is not rigorously derived from either.
+
+2. **Finite dimensionality**: the observer has finitely many internal degrees of freedom. This is strongly motivated by the finite energy from Axiom 3 (finite period $T$ gives finite energy $E = \hbar\omega$) and the finite information content from the holographic bound, but making the argument rigorous creates a dependency inversion (the holographic bound depends on loop-closure).
+
+**Lemma 0.0 (Free orbits from Axiom 3).** *Given S1 and Axiom 3, the $U(1)$ action on $\Sigma$ is free: no point of $\Sigma$ is fixed under all $\phi_t$.*
+
+*Proof.* **Case $\dim \Sigma = 1$** (minimal observer): $\Sigma$ is a compact connected 1-manifold, hence homeomorphic to $S^1$. A non-trivial continuous $U(1)$ action on $S^1$ has no fixed points (a rotation with a fixed point is the identity, contradicting non-triviality from Axiom 3). So the action is free.
+
+**Case $\dim \Sigma \geq 2$**: Suppose $\sigma^* \in \Sigma$ is a fixed point: $\phi_t(\sigma^*) = \sigma^*$ for all $t$. The orbit through $\sigma^*$ is the single point $\{\sigma^*\}$, which has zero length. The coherence cost of this orbit is zero: $S(\sigma^*) = 0$. But by Proposition 7.2 (below), every point in an observer's state space must have positive coherence cost — zero-cost states carry no coherence and cannot contribute to the observer's conserved invariant $I$. A state that does not participate in the dynamics is not part of the observer (it violates the self-referential character of loop closure: to persist is to cycle). Therefore no fixed point exists, and the action is free. $\square$
 
 **Remark (Axiom coherence — why smooth structure is structurally necessary).** Beyond being the unique consistent setting, smooth structure is required for the three axioms to *communicate*. The framework's core mechanism is the **Noether pair** (Theorem 5.1 below): the $U(1)$ symmetry from Axiom 3 is linked to the conserved invariant $I$ from Axiom 2, which is related to the coherence measure $\mathcal{C}$ from Axiom 1, through the moment map. This identification requires a Lie algebra (to define the generating vector field), a smooth action (for the moment map to exist), and a smooth manifold (for the tangent bundle and differential forms).
 
@@ -83,7 +94,7 @@ where $\mu$ is the normalized Haar measure on $U(1)$ and $\phi_\theta = \phi_{\t
 
 **Remark (Canonical choice).** Theorem 0.1 establishes existence using an arbitrary initial metric. The [Fisher Information Metric](/derivations/thermodynamics-ext/fisher-metric) provides a *canonical* choice: the unique (up to scale) Riemannian metric on $\Sigma$ invariant under sufficient statistics (Čencov's theorem). Since the Fisher metric is already $U(1)$-invariant when $\mathcal{C}$ is constant along orbits (which holds by invariant preservation), it provides a distinguished $G_\mathcal{O}$-invariant metric without averaging.
 
-**Remark (Former Postulates S1 and S2).** S1 originally assumed smooth manifold structure; this has been weakened to topological manifold + free orbits, with smoothness derived in Theorem 0.0. S2 originally assumed a $G_\mathcal{O}$-invariant Riemannian metric; this is now Theorem 0.1, derived from Theorem 0.0 + compactness + Weyl averaging. The net structural input is: $\Sigma$ is a finite-dimensional topological manifold with free $U(1)$ orbits.
+**Remark (Former Postulates S1 and S2).** S1 has been progressively tightened. Originally it assumed smooth manifold structure + compactness + free orbits. Compactness comes from O1 (Axiom 2). Free orbits are derived in Lemma 0.0 from Axiom 3 + coherence cost positivity. Smoothness is derived in Theorem 0.0 via the equivariant smoothing theorem. S2 originally assumed a $G_\mathcal{O}$-invariant Riemannian metric; this is now Theorem 0.1, derived from Theorem 0.0 + compactness + Weyl averaging. The net irreducible structural input is: $\Sigma$ is a finite-dimensional topological manifold (locally homeomorphic to $\mathbb{R}^n$).
 
 ## Formalization
 
@@ -302,12 +313,13 @@ $$E_\mathcal{O} = \frac{S_\mathcal{O}}{T_\mathcal{O}} \geq \frac{S_{\min}}{T_\ma
 - Theorem 9.1: Consistency model fully verified
 
 **Newly proved (this derivation):**
-- Theorem 0.0: Smooth manifold structure on $\Sigma$ (from S1 + Axiom 3 via equivariant smoothing theorem; S1 assumes only topological manifold + free orbits)
+- Lemma 0.0: Free U(1) orbits on $\Sigma$ (from Axiom 3 non-triviality + coherence cost positivity; removes free-orbit assumption from S1)
+- Theorem 0.0: Smooth manifold structure on $\Sigma$ (from S1 + Lemma 0.0 + Axiom 3 via equivariant smoothing theorem)
 - Theorem 0.1: $G_\mathcal{O}$-invariant Riemannian metric exists on $\Sigma$ (from Theorem 0.0 + compactness + Weyl averaging; replaces former Postulate S2)
 - Theorem 3.1: Persistence forces exact closure (from drift bound + compactness, with quasi-periodic exclusion noted)
 
 **Structural postulate (not derived, stated explicitly):**
-- (S1) Finite-dimensional topological manifold structure on $\Sigma$ with free $U(1)$ orbits (smoothness is derived in Theorem 0.0, not assumed)
+- (S1) Finite-dimensional topological manifold structure on $\Sigma$ (locally homeomorphic to $\mathbb{R}^n$). Compactness comes from O1; free orbits are derived in Lemma 0.0; smoothness is derived in Theorem 0.0. The irreducible content is: manifold structure + finite dimensionality.
 - Symplectic structure for Theorem 5.1 (additional assumption, stated in theorem)
 
 **Deferred to later derivations:**
