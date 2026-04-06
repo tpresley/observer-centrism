@@ -1,0 +1,404 @@
+---
+import MainLayout from '../components/layouts/MainLayout.astro'
+import PageTitle from '../components/PageTitle.astro'
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+---
+
+<MainLayout title="Technical Summary">
+  <article class="summary-article">
+    <PageTitle
+      title="Technical Summary"
+      subtitle="The Observer-Centrism framework in five pages"
+    />
+
+    <p class="lead">
+      This summary assumes familiarity with quantum mechanics, general relativity,
+      the Standard Model, and holographic entropy bounds. It states the framework's
+      axioms, key results, central thesis, and open problems in their most compressed
+      form. For narrative exposition see the <a href={`${base}/guide/`}>Guide</a>;
+      for formal proofs see the <a href={`${base}/derivations/`}>derivation chain</a>.
+    </p>
+
+    <h2>I. Axioms</h2>
+
+    <p>
+      Three axioms. No background spacetime, no quantum mechanics, no field content assumed.
+    </p>
+
+    <p set:html={`
+      <strong>Axiom 1 (Coherence Conservation).</strong> There exists a primitive quantity
+      $\\mathcal{C}$ &mdash; a subadditive measure on a $\\sigma$-algebra of observer events &mdash;
+      satisfying five conditions: (C1) non-negativity, (C2) monotonicity under restriction,
+      (C3) additivity on independent subsystems, (C4) subadditivity on overlapping subsystems,
+      (C5) strong subadditivity on triples. $\\mathcal{C}$ is conserved on every Cauchy slice.
+      These conditions are isomorphic to the von Neumann entropy axioms (Lieb-Ruskai).
+    `} />
+
+    <p set:html={`
+      <strong>Axiom 2 (Observer Definition).</strong> An observer is a triple
+      $(\\Sigma, I, \\mathcal{B})$ &mdash; a state space $\\Sigma$, a Noether invariant $I$
+      conserved under admissible transformations, and a self/non-self boundary $\\mathcal{B}$
+      partitioning transformations into self-preserving and self-threatening classes.
+      This is a functional definition: a proton qualifies. No reference to consciousness,
+      intelligence, or awareness.
+    `} />
+
+    <p set:html={`
+      <strong>Axiom 3 (Loop Closure).</strong> An observer's dynamics form a $U(1)$ phase
+      loop with period $T$ and Lyapunov stability. Approximate closure gives finite lifetime;
+      exact closure gives persistence. The Noether pair linking Axioms 1 and 3 identifies
+      the conserved quantity with the phase symmetry.
+    `} />
+
+    <h2>II. Immediate Consequences</h2>
+
+    <p set:html={`
+      <strong>Hilbert space.</strong> $U(1)$ invariance + channel additivity + composition +
+      continuity force $\\mathcal{C}(|\\psi\\rangle) = \\langle\\psi|\\psi\\rangle$ via the Cauchy
+      multiplicative equation. The Born rule $P(k) = |\\psi_k|^2$ is the unique probability
+      measure compatible with coherence conservation. [Rigorous]
+    `} />
+
+    <p>
+      <strong>Fisher geometry.</strong> The coherence Hessian on state space is uniquely the
+      Fisher information metric (&#268;encov uniqueness). This gives a Riemannian structure on
+      the space of coherence configurations. [Rigorous]
+    </p>
+
+    <p set:html={`
+      <strong>Mass $=$ frequency.</strong> $m = \\hbar\\omega/c^2$ where $\\omega = 2\\pi/T$ is
+      the loop closure frequency. Mass is the observer's internal clock rate. [Rigorous]
+    `} />
+
+    <p set:html={`
+      <strong>Multiplicity.</strong> A single observer has $\\mathcal{C}(\\Sigma) = 0$. C5 is
+      vacuous on pairs. Therefore $\\geq 3$ observers are required, propagating into a
+      boundaryless network (finite-compact or infinite). [Rigorous]
+    `} />
+
+    <p>
+      <strong>Aperiodic order.</strong> Periodicity trivializes C5; disorder violates
+      constitutive universality. The observer network must be an aperiodic substitution tiling
+      with metallic mean inflation factor and unique ergodicity (Solomyak). This gives
+      cosmological homogeneity as a derived combinatorial property. [Provisional]
+    </p>
+
+    <p>
+      <strong>Distinguishability conservation.</strong> Coherence conservation implies all
+      coherence-derived distances are preserved under admissible transformations. This
+      simultaneously gives unitarity (Wigner), no-cloning, no-deleting, and the second law
+      (monotonicity under coarse-graining). [Rigorous]
+    </p>
+
+    <h2>III. The Derivation Chain</h2>
+
+    <h3>Spacetime</h3>
+
+    <p set:html={`
+      The coherence geometry with pseudo-Riemannian structure (S1) gives a finite maximum
+      signal speed $c$, Lorentz invariance (including spatial homogeneity as a theorem),
+      and $3+1$ dimensions as the unique stable configuration for observer loops. Gravity
+      is curvature of the coherence geometry sourced by observer density; the Einstein
+      equations follow as the unique second-order, divergence-free field equations (Lovelock).
+      Singularities are resolved by a Planck-density curvature bound &mdash; the Big Bang
+      becomes a coherence bounce. [All rigorous except gravitational coupling, provisional]
+    `} />
+
+    <h3>Gauge Structure</h3>
+
+    <p set:html={`
+      The bootstrap mechanism (composite observers from simpler ones) forces Cayley-Dickson
+      doubling: $\\mathbb{R} \\to \\mathbb{C} \\to \\mathbb{H} \\to \\mathbb{O}$, terminating at octonions
+      (sedenion zero divisors violate Axiom 1). The automorphism groups give
+      $U(1) \\times SU(2) \\times SU(3)$ &mdash; the Standard Model gauge group, derived rather
+      than assumed. Each force has specific structural content:
+    `} />
+
+    <ul>
+      <li set:html={`$U(1)$: phase coherence + finite signal speed $\\to$ Maxwell equations`} />
+      <li set:html={`$SU(2)$: quaternionic non-commutativity $\\to$ maximal parity violation, electroweak breaking`} />
+      <li set:html={`$SU(3)$: octonionic non-associativity $\\to$ confinement, $\\theta = 0$ exactly (no axion needed), anomaly cancellation`} />
+    </ul>
+
+    <p set:html={`
+      No fifth force is possible (no fifth division algebra). No GUT group exists (the
+      chain terminates). The Weinberg angle is $\\sin^2\\theta_W = 1/3$ at the algebraic scale,
+      evolving to $\\approx 0.21$ at $M_Z$ (measured: 0.231). Couplings do not converge.
+      [All rigorous]
+    `} />
+
+    <h3>Particle Spectrum</h3>
+
+    <p set:html={`
+      $\\pi_1(SO(3)) = \\mathbb{Z}_2$ gives exactly two particle types (bosons/fermions) and the
+      spin-statistics connection. $\\dim(\\mathfrak{so}(3)) = 3$ gives exactly three fermion
+      generations. Mass hierarchy: $\\Lambda_k \\sim \\Lambda_{k-1} \\cdot e^{-c_k/g_k^2}$
+      (dimensional transmutation across bootstrap levels). Neutrinos are Majorana from
+      pseudo-real $SU(2)$; normal ordering from universal hierarchy. SUSY is topologically
+      forbidden ($\\mathbb{Z}_2$ admits no continuous interpolation). Proton lifetime
+      $> 10^{64}$ years (no GUT bosons). [All rigorous]
+    `} />
+
+    <h3>Quantum Mechanics</h3>
+
+    <p>
+      Measurement is Type III interaction generating a relational invariant &mdash; a permanent
+      structural correlation between observer and system. "Collapse" is invariant generation
+      (local, unitary on joint space, irreversible). Preferred basis determined by interaction
+      Hamiltonian, not environment. Entanglement = relational coherence; von Neumann entropy
+      = coherence of relational invariant. Observer-relative objectivity: three-level trichotomy
+      (invariant / relative-but-constrained / undefined), sheaf structure with unique global
+      sections for coherence and probability. [All rigorous]
+    </p>
+
+    <h3>Holography</h3>
+
+    <p set:html={`
+      $S \\leq A/(4\\ell_P^2)$ from boundary observer counting (two independent derivations).
+      Black hole entropy counts inaccessible relational invariants at the horizon. Hawking
+      radiation from loop closure at horizons (coherence-dual pair production). Information
+      paradox resolved: coherence globally conserved, locally inaccessible (entropy is
+      observer-indexed). ER=EPR derived: relational invariants are both entanglement and
+      wormhole geometry, with throat area $A_{\\text{ER}} = 4\\ell_P^2 S_{\\text{ent}}$. Holographic noise:
+      $S_h = 2\\alpha_H \\ell_P/c$ with $\\Gamma(\\beta) = \\cos\\beta$ (anisotropic, distinguishable
+      from all other holographic noise models). [All rigorous except scrambling, stub]
+    `} />
+
+    <h2>IV. The Central Thesis: Continuous-Discrete Duality</h2>
+
+    <p set:html={`
+      The axioms simultaneously force two structures: a <strong>smooth coherence manifold</strong>
+      $(\\mathcal{M}, g_F, \\mathcal{L})$ (Hilbert space, Fisher metric, coherence Lagrangian)
+      and a <strong>discrete observer network</strong>
+      $(\\mathcal{N}, \\mathcal{R}, \\beta)$ (aperiodic graph, bootstrap map, metallic mean
+      inflation). Neither layer alone captures the full physics: C5 requires discreteness;
+      gauge structure requires continuity; the holographic bound straddles both.
+    `} />
+
+    <p set:html={`
+      The layers are <strong>co-formed</strong>, not sequentially derived. The coherence manifold
+      constrains viable observer networks (not every graph is compatible with a smooth subadditive
+      measure). The observer network constrains realizable manifolds (not every smooth geometry
+      admits the required aperiodic tiling). The physical universe is the
+      <strong>fixed point</strong> of their mutual compatibility &mdash; the unique configuration
+      $(\\mathcal{M}^*, \\mathcal{N}^*)$ where both layers are simultaneously satisfied.
+    `} />
+
+    <p set:html={`
+      <strong>Consequence:</strong> the cosmological parameters ($\\Lambda$, $\\Omega_m$, the
+      particle spectrum) are properties of this fixed point, not free parameters. The partition
+      equation $C_0 = \\sum \\Delta c_n + S_H$ is an accounting identity (it holds for any
+      $\\Lambda$). The genuine constraint is the compatibility condition between the layers.
+      The packing coefficient $\\alpha(\\beta)$ from the aperiodic tiling bridges them: it
+      translates the substitution rule (discrete) into an entropy density (continuous) entering
+      the gravitational constant via the Jacobson route.
+    `} />
+
+    <p set:html={`
+      <strong>The geometric substrate picture:</strong> $S_H \\sim 10^{122}$ counts the
+      Planck-scale observers constituting the geometric fabric (via ER=EPR). SM particles are
+      coherence crystallized out of this fabric &mdash; stable resonances, not objects within
+      spacetime. $\\Omega_\\Lambda \\approx 0.7$ is the fraction of per-horizon coherence remaining
+      in the fabric; $\\Omega_m \\approx 0.3$ is crystallized. Dark energy is the coherence content
+      of the un-crystallized geometry. The holographic bound gives $\\Omega_\\Lambda \\geq 0.5$.
+      Homogeneity is derived from the network's constitutive universality (aperiodic order),
+      not assumed.
+    `} />
+
+    <h2>V. Predictions, Status, and Open Problems</h2>
+
+    <h3>Testable Predictions</h3>
+
+    <table>
+      <thead>
+        <tr><th>Prediction</th><th>Status</th><th>Distinguishing feature</th></tr>
+      </thead>
+      <tbody>
+        <tr set:html={`<td>Holographic noise $\\Gamma(\\beta) = \\cos\\beta$</td><td>Near-future</td><td>Angular structure (isotropic models ruled out)</td>`} />
+        <tr set:html={`<td>Dark matter granularity $M_J \\propto m^{-3/2}$</td><td>Near-future</td><td>Gaussian cutoff (steeper than WDM)</td>`} />
+        <tr><td>No SUSY partners</td><td>Currently tested</td><td>Topological impossibility, not energy limit</td></tr>
+        <tr set:html={`<td>No QCD axion</td><td>Near-future</td><td>$\\theta = 0$ from non-associativity</td>`} />
+        <tr set:html={`<td>Proton stability $> 10^{64}$ yr</td><td>Currently tested</td><td>No GUT group, baryon number exact</td>`} />
+        <tr><td>Gauge coupling non-convergence</td><td>Currently tested</td><td>Contradicts all GUTs</td></tr>
+        <tr set:html={`<td>$w \\geq -1$ (no phantom energy)</td><td>Currently tested</td><td>From coherence conservation</td>`} />
+        <tr set:html={`<td>Neutrino normal ordering, Majorana</td><td>Near-future</td><td>From pseudo-real $SU(2)$</td>`} />
+        <tr><td>Exact unitarity at all scales</td><td>In principle</td><td>No GRW modifications</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Framework Status</h3>
+
+    <table>
+      <thead>
+        <tr><th>Count</th><th>Category</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>73</td><td>Total derivations</td></tr>
+        <tr><td>61</td><td>Rigorous</td></tr>
+        <tr><td>6</td><td>Provisional</td></tr>
+        <tr><td>7</td><td>Active structural postulates (irreducible assumptions beyond axioms)</td></tr>
+        <tr><td>13</td><td>Former postulates promoted to theorems</td></tr>
+        <tr><td>226</td><td>Cataloged open gaps</td></tr>
+        <tr><td>1</td><td>Non-viable derivation (cosmological constant value)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Key Open Problems</h3>
+
+    <ol>
+      <li set:html={`
+        <strong>The fixed point.</strong> Characterize $(\\mathcal{M}^*, \\mathcal{N}^*)$ &mdash;
+        the unique configuration where the smooth coherence manifold and the aperiodic observer
+        network are simultaneously consistent. This would determine $\\Lambda$, $\\Omega_m$, and
+        potentially the full particle spectrum from the compatibility condition. The mathematical
+        problem: for which Riemannian manifolds does a compatible aperiodic Delone set exist
+        with the required substitution rule? [Geometric topology, HARD]
+      `} />
+      <li set:html={`
+        <strong>Bootstrap fixed-point uniqueness.</strong> Prove (or disprove) that the abstract
+        equation $U \\cong \\mathcal{R}(U, U)$ has a unique solution in the observer category.
+        Dana Scott domain theory provides the natural framework. Uniqueness would determine the
+        metallic mean index, the packing coefficient, and (via the duality) all cosmological
+        parameters. [Mathematical logic, HARD]
+      `} />
+      <li set:html={`
+        <strong>Quantitative particle masses.</strong> The mass hierarchy mechanism (exponential
+        scale separation) is rigorous. The specific coupling values $g_k$ at each level remain
+        empirical. Computing them from the coherence geometry &mdash; specifically from the
+        fixed-point structure of the bootstrap &mdash; would yield the entire mass spectrum
+        from the axioms. [Mathematical physics, HARD]
+      `} />
+      <li set:html={`
+        <strong>The gravitational constant.</strong> $G = \\ell_{\\text{min}}^2 c^3/\\hbar$ where
+        $\\ell_{\\text{min}}$ is the minimum coherence geometry scale. Uniqueness of $\\ell_{\\text{min}}$
+        (Conjecture 6.3) reduces to the bootstrap fixed-point problem. If proved, area scaling
+        S1 becomes a theorem and the last dimensional constant is determined. [Provisional]
+      `} />
+      <li>
+        <strong>Chiral symmetry breaking.</strong> Depends on the Yang-Mills mass gap &mdash;
+        a Clay Millennium Problem. Will likely remain provisional until that problem is solved.
+      </li>
+    </ol>
+
+    <h3>What Distinguishes This Framework</h3>
+
+    <ul>
+      <li set:html={`
+        <strong>Starting point:</strong> observers defined structurally (not strings, loops,
+        extra dimensions, or modifications to the Schr&ouml;dinger equation)
+      `} />
+      <li set:html={`
+        <strong>Gauge group derived:</strong> $U(1) \\times SU(2) \\times SU(3)$ from Hurwitz's
+        theorem, not postulated or embedded in a larger group
+      `} />
+      <li>
+        <strong>Negative predictions:</strong> no SUSY, no axion, no monopoles, no fourth
+        generation, no GUT, no proton decay &mdash; all falsifiable
+      </li>
+      <li>
+        <strong>Radical transparency:</strong> every assumption declared, every gap cataloged,
+        every non-viable result preserved. The goal is not to defend a theory but to follow the
+        logic.
+      </li>
+    </ul>
+
+    <div class="summary-links">
+      <a href={`${base}/central-thesis`}>The Central Thesis</a> &middot;
+      <a href={`${base}/derivations/`}>Derivation Index</a> &middot;
+      <a href={`${base}/predictions/`}>Predictions</a> &middot;
+      <a href={`${base}/open-gaps`}>Open Gaps</a> &middot;
+      <a href={`${base}/map`}>Derivation Map</a>
+    </div>
+  </article>
+</MainLayout>
+
+<script>
+  // Client-side KaTeX rendering for math in static Astro pages
+  import renderMathInElement from 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.mjs';
+  renderMathInElement(document.querySelector('.summary-article'), {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '$', right: '$', display: false}
+    ]
+  });
+</script>
+
+<style>
+  .summary-article {
+    max-width: 780px;
+  }
+
+  .lead {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .summary-article h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.35rem;
+    border-top: 2px solid var(--color-border);
+    padding-top: 1.5rem;
+  }
+
+  .summary-article h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+  }
+
+  .summary-article p {
+    margin-bottom: 0.85rem;
+    line-height: 1.75;
+  }
+
+  .summary-article ul, .summary-article ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .summary-article li {
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+  }
+
+  .summary-article table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.88rem;
+  }
+
+  .summary-article th, .summary-article td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+  }
+
+  .summary-article th {
+    background: var(--color-surface);
+    font-weight: 600;
+  }
+
+  .summary-links {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .summary-links a {
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+
+  .summary-links a:hover {
+    border-bottom-color: var(--color-accent);
+  }
+</style>
