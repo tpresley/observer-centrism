@@ -80,31 +80,35 @@ The analogy is precise: a phonon is a vibrational mode of a crystal lattice, not
 
 ### Step 3: The Coherence Budget as Substrate Accounting
 
-**Proposition 3.1 (Cosmological fractions are crystallization fractions).** *The self-consistency equation ([Observer Loop Viability](/derivations/cosmology/observer-loop-viability), Proposition 7.4) is substrate accounting:*
+**Proposition 3.1 (Cosmological fractions are crystallization fractions).** *The coherence partition within each observer's horizon ([Observer Loop Viability](/derivations/cosmology/observer-loop-viability), Proposition 7.4) is substrate accounting:*
 
-$$C_0 = \underbrace{\sum \Delta c_n}_{\text{crystallized coherence}} + \underbrace{S_H}_{\text{substrate coherence}}$$
+$$C_0^{(A)} = \underbrace{\sum \Delta c_n^{(A)}}_{\text{crystallized coherence}} + \underbrace{S_H^{(A)}}_{\text{substrate coherence}}$$
+
+*Each comoving observer $A$ has their own cosmological horizon, centered on themselves, enclosing their own coherence budget $C_0^{(A)}$. No two observers share exactly the same horizon — but in a homogeneous universe, the budget has the same value for all comoving observers. We write $C_0$ without superscript when this homogeneity is assumed.*
 
 *The cosmological density fractions are the crystallization fractions:*
 
 $$\Omega_m = \frac{\sum \Delta c_n}{C_0} \qquad \Omega_\Lambda = \frac{S_H}{C_0}$$
 
-*$\Omega_m$ measures the fraction of the total coherence budget that has been crystallized into particles and composite structures. $\Omega_\Lambda$ measures the fraction that remains in the geometric substrate.*
+*$\Omega_m$ measures the fraction of the per-horizon coherence budget that has been crystallized into particles and composite structures. $\Omega_\Lambda$ measures the fraction that remains in the geometric substrate.*
 
-*Argument.* This is Proposition 7.5 of [Observer Loop Viability](/derivations/cosmology/observer-loop-viability), now with a physical interpretation for each term. The identification is:
+*Argument.* This is Proposition 7.5 of [Observer Loop Viability](/derivations/cosmology/observer-loop-viability), now with a physical interpretation for each term. The partition equation is an accounting identity — it holds for any $\Lambda$ and any $\Omega_m$ (Proposition 8.8 of observer-loop-viability). It describes how the budget splits but does not determine $\Lambda$. The genuine unknown is the crystallization fraction: how much coherence the bootstrap hierarchy extracts from the substrate. Computing this independently from the SM structure would determine $\Lambda$ (see Conjecture 8.9).
 
-| Self-consistency term | Substrate interpretation | Observed quantity |
+| Partition term | Substrate interpretation | Observed quantity |
 |---|---|---|
-| $C_0$ | Total substrate (all Planck observers) | $\sim 4.6 \times 10^{122}$ |
+| $C_0$ | Per-horizon substrate (Planck observers within horizon) | $\sim 4.6 \times 10^{122}$ |
 | $\sum \Delta c_n$ | Coherence crystallized into particles | $\sim 1.4 \times 10^{122}$ |
 | $S_H$ | Remaining geometric fabric | $\sim 3.25 \times 10^{122}$ |
 | $\Omega_m$ | Crystallization fraction | $\approx 0.3$ |
 | $\Omega_\Lambda$ | Fabric fraction | $\approx 0.7$ |
 
-The second law ([Entropy](/derivations/thermodynamics/entropy), Theorem 4.1) drives $\Omega_\Lambda \to 1$ as the universe approaches de Sitter equilibrium — crystallized structures gradually dissolve back into the substrate as entropy grows. The observed $\Omega_\Lambda \approx 0.7$ is a snapshot of this process: the universe has crystallized about 30% of its substrate into observable structure, and the fraction is slowly decreasing. $\square$
+The second law ([Entropy](/derivations/thermodynamics/entropy), Theorem 4.1) drives $\Omega_\Lambda \to 1$ as the universe approaches de Sitter equilibrium — crystallized structures gradually dissolve back into the substrate as entropy grows. The observed $\Omega_\Lambda \approx 0.7$ is a snapshot of this process: the universe has crystallized about 30% of its per-horizon substrate into observable structure, and the fraction is slowly decreasing. $\square$
 
-**Proposition 3.2 (Dark energy is substrate coherence).** *Dark energy, in this picture, is not a new form of energy or a cosmological constant added to the Einstein equations by hand. It is the coherence content of the un-crystallized geometric fabric — the $\sim 70\%$ of the total coherence budget that remains in the Planck-scale observer network constituting the geometry, rather than crystallized into particles.*
+**Proposition 3.2 (Dark energy is substrate coherence).** *Dark energy, in this picture, is not a new form of energy or a cosmological constant added to the Einstein equations by hand. It is the coherence content of the un-crystallized geometric fabric — the $\sim 70\%$ of the per-horizon coherence budget that remains in the Planck-scale observer network constituting the geometry, rather than crystallized into particles.*
 
 *The equation of state $w = -1$ ([Dark Energy Equation of State](/derivations/cosmology/dark-energy-equation-of-state), Theorem 3.1) follows because the substrate in de Sitter equilibrium has zero net coherence flux: the geometric fabric is static, with no tendency to crystallize further or to dissolve existing structure. This is the unique equilibrium of the substrate.* $\square$
+
+**Remark ($C_0$ is per-observer, not global).** The quantity $C_0$ entering the substrate accounting is the coherence within a single observer's cosmological horizon — not the total coherence of the universe. The global total $\mathcal{C}_{\text{global}}$ (conserved on full Cauchy slices by Axiom 1) may be much larger, or even infinite if the observer network extends beyond the horizon. No observer can access $\mathcal{C}_{\text{global}}$. What each observer can account for is the substrate within their own causal patch. The universality of $C_0$ among comoving observers is a consequence of cosmological homogeneity — a symmetry of the universe, not a structural requirement of the axioms.
 
 ### Step 4: The Desert as Collective Emergence
 

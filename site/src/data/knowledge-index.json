@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-05T22:15:12.777Z",
+    "generatedAt": "2026-04-06T00:43:28.899Z",
     "derivationCount": 72,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -1730,6 +1730,10 @@
           },
           {
             "target": "cosmology/observer-loop-viability",
+            "context": "Observer Loop Viability"
+          },
+          {
+            "target": "cosmology/observer-loop-viability",
             "context": "Step 8"
           },
           {
@@ -2518,7 +2522,7 @@
           "type": "Proposition",
           "id": "3.1",
           "name": "Cosmological fractions are crystallization fractions",
-          "statementPreview": "The self-consistency equation ([Observer Loop Viability](/derivations/cosmology/observer-loop-viability), Proposition..."
+          "statementPreview": "The coherence partition within each observer's horizon ([Observer Loop Viability](/derivations/cosmology/observer-loo..."
         },
         {
           "type": "Proposition",
@@ -3016,8 +3020,8 @@
         {
           "type": "Proposition",
           "id": "7.4",
-          "name": "Self-consistency equation",
-          "statementPreview": "The IR geometry's capacity, encoded by Lambda, must be consistent with the total coherence budget after the bootstrap..."
+          "name": "Coherence partition within a horizon volume",
+          "statementPreview": "For any comoving observer A, the coherence within A's cosmological horizon decomposes into structural coherence (lock..."
         },
         {
           "type": "Proposition",
@@ -3070,8 +3074,8 @@
         {
           "type": "Proposition",
           "id": "8.8",
-          "name": "The hierarchy as a finite self-consistency problem",
-          "statementPreview": "The framework converts the cosmological constant problem from \"an arbitrary free parameter with no structural constra..."
+          "name": "The hierarchy requires an independent constraint",
+          "statementPreview": "The partition equation C0 = Delta cn + SH cannot determine Lambda on its own — it is an accounting identity. The cosm..."
         }
       ],
       "structuralPostulates": [],
@@ -3180,10 +3184,6 @@
             "context": "Renormalization Group"
           },
           {
-            "target": "cosmology/cosmological-constant",
-            "context": "Cosmological Constant"
-          },
-          {
             "target": "interactions/bootstrap-division-algebras",
             "context": "Bootstrap → Division Algebras"
           },
@@ -3242,11 +3242,19 @@
           {
             "target": "spacetime/singularity-resolution",
             "context": "Singularity Resolution"
+          },
+          {
+            "target": "cosmology/cosmological-constant",
+            "context": "Cosmological Constant"
           }
         ],
         "incoming": [
           {
             "source": "cosmology/cosmological-arrow",
+            "context": "Observer Loop Viability"
+          },
+          {
+            "source": "cosmology/cosmological-constant",
             "context": "Observer Loop Viability"
           },
           {
@@ -21877,7 +21885,7 @@
       "derivationId": "cosmology/observer-loop-viability",
       "type": "Proposition",
       "id": "7.4",
-      "name": "Self-consistency equation",
+      "name": "Coherence partition within a horizon volume",
       "fullRef": "cosmology/observer-loop-viability:Proposition 7.4"
     },
     {
@@ -21940,7 +21948,7 @@
       "derivationId": "cosmology/observer-loop-viability",
       "type": "Proposition",
       "id": "8.8",
-      "name": "The hierarchy as a finite self-consistency problem",
+      "name": "The hierarchy requires an independent constraint",
       "fullRef": "cosmology/observer-loop-viability:Proposition 8.8"
     },
     {

@@ -69,14 +69,9 @@ The "observed scaling" $\Lambda \sim H_0^2/c^2$ is just the tautological stateme
 
 The framework derives the *existence* of $\Lambda$ as the unique additional term in the Einstein equations (via Lovelock's theorem in [Einstein Field Equations](/derivations/spacetime/einstein-equations)). This is a genuine result.
 
-However, the *value* of $\Lambda$ depends on cosmological initial conditions:
-- The total coherence budget of the universe
-- The horizon size (equivalently, the age of the universe)
-- The matter/radiation content that determines the expansion history
+However, the *value* of $\Lambda$ cannot be determined by the partition equation $C_0 = \sum \Delta c_n + S_H$ alone, because that equation is an accounting identity — it holds for any $\Lambda$ and any matter fraction (see [Observer Loop Viability](/derivations/cosmology/observer-loop-viability), Proposition 8.8). The quantity $C_0$ is not an independent "initial condition" — it is the coherence within a specific observer's cosmological horizon, determined by $\Lambda$ and the expansion history. Each comoving observer has their own $C_0^{(A)}$, centered on their own horizon; homogeneity ensures all comoving observers agree on its value.
 
-These are **boundary data** in the framework — they specify which solution of the Einstein equations describes our universe, but they are not derivable from the three axioms. The axioms constrain the dynamics (what equations govern evolution) but not the initial state (what the universe started with).
-
-This is analogous to how Newton's laws determine $F = ma$ but do not predict where any particular planet is — that requires initial conditions.
+The genuine unknown is the **crystallization fraction** $\Omega_m = \sum \Delta c_n / C_0$ — how much of the geometric substrate's coherence the bootstrap hierarchy crystallizes into particles. Computing this from the SM structure (4 algebra levels, 3 generations, known couplings) without $\Lambda$ as input would determine $\Lambda$. This is the role of the geometry functor (Gap 6 of [Observer Loop Viability](/derivations/cosmology/observer-loop-viability)) and the double-saturation conjecture (Conjecture 8.9).
 
 ### The ontic/epistemic tension
 
