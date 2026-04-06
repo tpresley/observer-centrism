@@ -431,6 +431,12 @@
       "title": "Geometric Substrate and Coherence Crystallization",
       "group": "cosmology",
       "status": "provisional"
+    },
+    {
+      "id": "foundation/continuous-discrete-duality",
+      "title": "Continuous-Discrete Duality",
+      "group": "foundation",
+      "status": "provisional"
     }
   ],
   "edges": [
@@ -1217,6 +1223,34 @@
     {
       "from": "foundation/aperiodic-order",
       "to": "cosmology/geometric-substrate"
+    },
+    {
+      "from": "foundation/coherence-lagrangian",
+      "to": "foundation/continuous-discrete-duality"
+    },
+    {
+      "from": "foundation/aperiodic-order",
+      "to": "foundation/continuous-discrete-duality"
+    },
+    {
+      "from": "thermodynamics-ext/fisher-metric",
+      "to": "foundation/continuous-discrete-duality"
+    },
+    {
+      "from": "axioms/coherence-conservation",
+      "to": "foundation/continuous-discrete-duality"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "foundation/continuous-discrete-duality"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "foundation/continuous-discrete-duality"
+    },
+    {
+      "from": "holography/er-epr",
+      "to": "foundation/continuous-discrete-duality"
     }
   ]
 }

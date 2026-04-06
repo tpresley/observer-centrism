@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-04-06T01:40:40.274Z",
-    "derivationCount": 72,
+    "generatedAt": "2026-04-06T07:41:41.592Z",
+    "derivationCount": 73,
     "predictionCount": 12,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -11,14 +11,14 @@
       "rigorous": 61,
       "draft": 2,
       "non-viable": 1,
-      "provisional": 6,
+      "provisional": 7,
       "stub": 2
     },
-    "derivationCount": 72,
+    "derivationCount": 73,
     "predictionCount": 12,
-    "edgeCount": 196,
-    "formalObjectCount": 1101,
-    "openGapCount": 224,
+    "edgeCount": 203,
+    "formalObjectCount": 1109,
+    "openGapCount": 226,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -50,6 +50,7 @@
         "axioms/observer-definition",
         "cosmology/dark-energy-equation-of-state",
         "foundation/aperiodic-order",
+        "foundation/continuous-discrete-duality",
         "gauge/anomaly-cancellation",
         "gauge/chirality-selection",
         "holography/information-paradox",
@@ -601,6 +602,7 @@
         "axioms/coherence-operational",
         "cosmology/dark-energy-equation-of-state",
         "cosmology/observer-loop-viability",
+        "foundation/continuous-discrete-duality",
         "gauge/electromagnetism",
         "minimal-observer/structure",
         "spacetime/speed-of-light",
@@ -1020,6 +1022,7 @@
       "dependedOnBy": [
         "axioms/loop-closure",
         "dimensions/three-dimensions",
+        "foundation/continuous-discrete-duality",
         "minimal-observer/multiplicity",
         "minimal-observer/structure",
         "quantum/observer-relative-objectivity",
@@ -2599,7 +2602,7 @@
         {
           "number": 1,
           "title": "Quantitative crystallization fraction.",
-          "description": "The substrate picture identifies Omegam as the crystallization fraction but does not compute it from first principles. Computing Delta cn from the SM particle content and cosmological evolution would "
+          "description": "The substrate picture identifies Omegam as the crystallization fraction but does not compute it from first principles. [Continuous-Discrete Duality](/derivations/foundation/continuous-discrete-duality"
         },
         {
           "number": 2,
@@ -2688,6 +2691,10 @@
             "context": "Proposition 6.1"
           },
           {
+            "target": "foundation/continuous-discrete-duality",
+            "context": "Continuous-Discrete Duality"
+          },
+          {
             "target": "spacetime/singularity-resolution",
             "context": "Singularity Resolution"
           },
@@ -2699,6 +2706,10 @@
         "incoming": [
           {
             "source": "foundation/aperiodic-order",
+            "context": "Geometric Substrate"
+          },
+          {
+            "source": "foundation/continuous-discrete-duality",
             "context": "Geometric Substrate"
           }
         ]
@@ -3145,8 +3156,8 @@
         },
         {
           "number": 6,
-          "title": "Geometry functor and double saturation",
-          "description": "Step 8 defines the level-indexed quantities (Lambdaneff, S(n)) and the cross-level consistency constraint (Proposition 8.3). Conjecture 8.9 identifies the boundary condition that would close the syste"
+          "title": "Continuous-discrete fixed point and quantitative $\\Lambda$",
+          "description": "Step 8 defines the level-indexed quantities (Lambdaneff, S(n)) and the cross-level consistency constraint (Proposition 8.3). Conjecture 8.9 identifies the boundary condition (double saturation). [Cont"
         }
       ],
       "assessmentVerdict": "Rigorous. The core results form a rigorous chain: the geometric upper bound (Theorem 2.1) follows from the Planck cutoff and de Sitter geometry; the bounce dissolution (Theorem 4.1) follows from the divergent effective pressure exceeding any finite observer energy; the sign prediction (Theorem 5.4) ",
@@ -3270,6 +3281,10 @@
             "context": "Proposition 4.3–4.4"
           },
           {
+            "target": "foundation/continuous-discrete-duality",
+            "context": "Continuous-Discrete Duality"
+          },
+          {
             "target": "holography/er-epr",
             "context": "geometry from relational invariants"
           },
@@ -3353,6 +3368,10 @@
           },
           {
             "source": "cosmology/geometric-substrate",
+            "context": "Observer Loop Viability"
+          },
+          {
+            "source": "foundation/continuous-discrete-duality",
             "context": "Observer Loop Viability"
           },
           {
@@ -3899,6 +3918,7 @@
       ],
       "dependedOnBy": [
         "cosmology/geometric-substrate",
+        "foundation/continuous-discrete-duality",
         "spacetime/gravitational-constant",
         "thermodynamics-ext/non-ergodicity"
       ],
@@ -4129,6 +4149,14 @@
             "context": "Aperiodic Order"
           },
           {
+            "source": "foundation/continuous-discrete-duality",
+            "context": "Aperiodic Order"
+          },
+          {
+            "source": "foundation/continuous-discrete-duality",
+            "context": "Proposition 4.1"
+          },
+          {
             "source": "holography/scrambling",
             "context": "Aperiodic Order"
           },
@@ -4173,6 +4201,7 @@
         "spacetime/gravitational-constant"
       ],
       "dependedOnBy": [
+        "foundation/continuous-discrete-duality",
         "particles/cpt-theorem",
         "spacetime/gravitational-constant"
       ],
@@ -4373,6 +4402,10 @@
         ],
         "incoming": [
           {
+            "source": "foundation/continuous-discrete-duality",
+            "context": "Coherence Lagrangian"
+          },
+          {
             "source": "gauge/electromagnetism",
             "context": "Coherence Lagrangian"
           },
@@ -4399,6 +4432,192 @@
           {
             "source": "spacetime/singularity-resolution",
             "context": "Coherence Lagrangian"
+          }
+        ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "foundation/continuous-discrete-duality": {
+      "id": "foundation/continuous-discrete-duality",
+      "filePath": "site/src/content/derivations/foundation/continuous-discrete-duality.md",
+      "title": "Continuous-Discrete Duality",
+      "status": "provisional",
+      "rigorLevel": "semi-formal",
+      "group": "foundation",
+      "tags": [
+        "foundation",
+        "structure"
+      ],
+      "summary": "The axioms simultaneously require a smooth coherence manifold (continuous, differentiable, Fisher metric) and a discrete observer network (aperiodic, combinatorial, 1-bit nodes). These are not separate structures — they are co-formed dual descriptions of the same physics. The physical universe is the fixed point of their mutual compatibility: the unique configuration where the continuous Lagrangian and the discrete network are simultaneously satisfied.",
+      "lastUpdated": "2026-04-05",
+      "dependsOn": [
+        "foundation/coherence-lagrangian",
+        "foundation/aperiodic-order",
+        "thermodynamics-ext/fisher-metric",
+        "axioms/coherence-conservation",
+        "axioms/observer-definition",
+        "axioms/loop-closure",
+        "holography/er-epr"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The Continuous Layer"
+        },
+        {
+          "number": 2,
+          "title": "The Discrete Layer"
+        },
+        {
+          "number": 3,
+          "title": "The Compatibility Condition"
+        },
+        {
+          "number": 4,
+          "title": "The Fixed Point"
+        },
+        {
+          "number": 5,
+          "title": "Consequences"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Proposition",
+          "id": "1.1",
+          "name": "What the axioms require of coherence",
+          "statementPreview": "The following continuous structures are forced by the axioms:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "What the axioms require of observers",
+          "statementPreview": "The following discrete structures are forced by the axioms:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Neither layer alone is complete",
+          "statementPreview": "The continuous and discrete layers each capture structures the other cannot express:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Co-formation, not emergence",
+          "statementPreview": "The continuous and discrete layers do not stand in a derivation relation — neither \"emerges from\" the other. They are..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.3",
+          "name": "The joint constraint is selective",
+          "statementPreview": "The space of coherence configurations allowed by the continuous layer alone is large (any smooth manifold with the Fi..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.2",
+          "name": "The crystallization fraction as compatibility condition",
+          "statementPreview": "The crystallization fraction Omegam — the ratio of coherence locked into particle structures vs. remaining in the geo..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.3",
+          "name": "The packing coefficient as the bridge",
+          "statementPreview": "The packing coefficient alpha(beta) from [Aperiodic Order](/derivations/foundation/aperiodic-order) (Proposition 4.1)..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Reformulation of open problems",
+          "statementPreview": "The continuous-discrete duality reformulates several open problems in the framework:*"
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Formal characterization of the compatibility condition.",
+          "description": "The derivation argues that the joint constraint (smooth manifold + aperiodic tiling) is selective, but does not characterize the solution space. The mathematical problem: for which smooth Riemannian m"
+        },
+        {
+          "number": 2,
+          "title": "Uniqueness of the fixed point.",
+          "description": "Even if the compatibility condition is selective, it might admit multiple solutions (multiple manifold-network pairs satisfying all constraints). Whether the axioms + aperiodic order + Lagrangian uniq"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "quantum/born-rule",
+            "context": "Born Rule"
+          },
+          {
+            "target": "thermodynamics-ext/fisher-metric",
+            "context": "Fisher Metric"
+          },
+          {
+            "target": "foundation/coherence-lagrangian",
+            "context": "Coherence Lagrangian"
+          },
+          {
+            "target": "minimal-observer/structure",
+            "context": "Minimal Observer Structure"
+          },
+          {
+            "target": "minimal-observer/multiplicity",
+            "context": "Multiplicity"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap"
+          },
+          {
+            "target": "foundation/aperiodic-order",
+            "context": "Aperiodic Order"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
+          },
+          {
+            "target": "spacetime/einstein-equations",
+            "context": "Einstein Equations"
+          },
+          {
+            "target": "spacetime/gravitational-constant",
+            "context": "Gravitational Coupling"
+          },
+          {
+            "target": "cosmology/geometric-substrate",
+            "context": "Geometric Substrate"
+          },
+          {
+            "target": "foundation/aperiodic-order",
+            "context": "Proposition 4.1"
+          },
+          {
+            "target": "cosmology/observer-loop-viability",
+            "context": "Observer Loop Viability"
+          }
+        ],
+        "incoming": [
+          {
+            "source": "cosmology/geometric-substrate",
+            "context": "Continuous-Discrete Duality"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
+            "context": "Continuous-Discrete Duality"
           }
         ]
       },
@@ -7511,6 +7730,10 @@
             "context": "Holographic Entropy Bound"
           },
           {
+            "source": "foundation/continuous-discrete-duality",
+            "context": "Area Scaling"
+          },
+          {
             "source": "holography/black-hole-entropy",
             "context": "Holographic Entropy Bound"
           },
@@ -8061,6 +8284,7 @@
       "dependedOnBy": [
         "cosmology/geometric-substrate",
         "cosmology/observer-loop-viability",
+        "foundation/continuous-discrete-duality",
         "holography/scrambling"
       ],
       "steps": [],
@@ -9435,6 +9659,10 @@
             "context": "Bootstrap Mechanism"
           },
           {
+            "source": "foundation/continuous-discrete-duality",
+            "context": "Bootstrap"
+          },
+          {
             "source": "gauge/color-force",
             "context": "Bootstrap Mechanism"
           },
@@ -10758,6 +10986,10 @@
             "context": "Multiplicity"
           },
           {
+            "source": "foundation/continuous-discrete-duality",
+            "context": "Multiplicity"
+          },
+          {
             "source": "gauge/chirality-selection",
             "context": "Theorem 2.1"
           },
@@ -11024,6 +11256,10 @@
           },
           {
             "source": "cosmology/observer-loop-viability",
+            "context": "Minimal Observer Structure"
+          },
+          {
+            "source": "foundation/continuous-discrete-duality",
             "context": "Minimal Observer Structure"
           },
           {
@@ -12953,6 +13189,10 @@
             "context": "Born Rule"
           },
           {
+            "source": "foundation/continuous-discrete-duality",
+            "context": "Born Rule"
+          },
+          {
             "source": "gauge/electromagnetism",
             "context": "Born Rule"
           },
@@ -14677,6 +14917,10 @@
             "context": "Einstein Equations"
           },
           {
+            "source": "foundation/continuous-discrete-duality",
+            "context": "Einstein Equations"
+          },
+          {
             "source": "gauge/electromagnetism",
             "context": "Einstein Field Equations"
           },
@@ -15151,6 +15395,10 @@
         "incoming": [
           {
             "source": "foundation/aperiodic-order",
+            "context": "Gravitational Coupling"
+          },
+          {
+            "source": "foundation/continuous-discrete-duality",
             "context": "Gravitational Coupling"
           },
           {
@@ -16947,6 +17195,7 @@
       ],
       "dependedOnBy": [
         "foundation/coherence-lagrangian",
+        "foundation/continuous-discrete-duality",
         "spacetime/gravitational-constant",
         "thermodynamics/action-planck"
       ],
@@ -17171,6 +17420,10 @@
           {
             "source": "foundation/coherence-lagrangian",
             "context": "Fisher Information Metric"
+          },
+          {
+            "source": "foundation/continuous-discrete-duality",
+            "context": "Fisher Metric"
           },
           {
             "source": "minimal-observer/multiplicity",
@@ -22474,6 +22727,62 @@
       "id": "7.1.",
       "name": "",
       "fullRef": "foundation/coherence-lagrangian:Theorem 7.1."
+    },
+    {
+      "derivationId": "foundation/continuous-discrete-duality",
+      "type": "Proposition",
+      "id": "1.1",
+      "name": "What the axioms require of coherence",
+      "fullRef": "foundation/continuous-discrete-duality:Proposition 1.1"
+    },
+    {
+      "derivationId": "foundation/continuous-discrete-duality",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "What the axioms require of observers",
+      "fullRef": "foundation/continuous-discrete-duality:Proposition 2.1"
+    },
+    {
+      "derivationId": "foundation/continuous-discrete-duality",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Neither layer alone is complete",
+      "fullRef": "foundation/continuous-discrete-duality:Proposition 3.1"
+    },
+    {
+      "derivationId": "foundation/continuous-discrete-duality",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "Co-formation, not emergence",
+      "fullRef": "foundation/continuous-discrete-duality:Proposition 3.2"
+    },
+    {
+      "derivationId": "foundation/continuous-discrete-duality",
+      "type": "Proposition",
+      "id": "3.3",
+      "name": "The joint constraint is selective",
+      "fullRef": "foundation/continuous-discrete-duality:Proposition 3.3"
+    },
+    {
+      "derivationId": "foundation/continuous-discrete-duality",
+      "type": "Proposition",
+      "id": "4.2",
+      "name": "The crystallization fraction as compatibility condition",
+      "fullRef": "foundation/continuous-discrete-duality:Proposition 4.2"
+    },
+    {
+      "derivationId": "foundation/continuous-discrete-duality",
+      "type": "Proposition",
+      "id": "4.3",
+      "name": "The packing coefficient as the bridge",
+      "fullRef": "foundation/continuous-discrete-duality:Proposition 4.3"
+    },
+    {
+      "derivationId": "foundation/continuous-discrete-duality",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "Reformulation of open problems",
+      "fullRef": "foundation/continuous-discrete-duality:Proposition 5.1"
     },
     {
       "derivationId": "gauge/anomaly-cancellation",
@@ -28572,7 +28881,7 @@
       "derivationStatus": "provisional",
       "number": 1,
       "title": "Quantitative crystallization fraction.",
-      "description": "The substrate picture identifies Omegam as the crystallization fraction but does not compute it from first principles. Computing Delta cn from the SM particle content and cosmological evolution would "
+      "description": "The substrate picture identifies Omegam as the crystallization fraction but does not compute it from first principles. [Continuous-Discrete Duality](/derivations/foundation/continuous-discrete-duality"
     },
     {
       "derivationId": "cosmology/geometric-substrate",
@@ -28620,8 +28929,8 @@
       "derivationId": "cosmology/observer-loop-viability",
       "derivationStatus": "rigorous",
       "number": 6,
-      "title": "Geometry functor and double saturation",
-      "description": "Step 8 defines the level-indexed quantities (Lambdaneff, S(n)) and the cross-level consistency constraint (Proposition 8.3). Conjecture 8.9 identifies the boundary condition that would close the syste"
+      "title": "Continuous-discrete fixed point and quantitative $\\Lambda$",
+      "description": "Step 8 defines the level-indexed quantities (Lambdaneff, S(n)) and the cross-level consistency constraint (Proposition 8.3). Conjecture 8.9 identifies the boundary condition (double saturation). [Cont"
     },
     {
       "derivationId": "dimensions/three-dimensions",
@@ -28727,6 +29036,20 @@
       "number": 5,
       "title": "Fermion kinetic term",
       "description": "The derivation focuses on scalar fields. Extending to spinor fields requires the Fisher metric on the spinor state space, which should connect to the Dirac Lagrangian psi(igammamu Dmu - m)psi."
+    },
+    {
+      "derivationId": "foundation/continuous-discrete-duality",
+      "derivationStatus": "provisional",
+      "number": 1,
+      "title": "Formal characterization of the compatibility condition.",
+      "description": "The derivation argues that the joint constraint (smooth manifold + aperiodic tiling) is selective, but does not characterize the solution space. The mathematical problem: for which smooth Riemannian m"
+    },
+    {
+      "derivationId": "foundation/continuous-discrete-duality",
+      "derivationStatus": "provisional",
+      "number": 2,
+      "title": "Uniqueness of the fixed point.",
+      "description": "Even if the compatibility condition is selective, it might admit multiple solutions (multiple manifold-network pairs satisfying all constraints). Whether the axioms + aperiodic order + Lagrangian uniq"
     },
     {
       "derivationId": "gauge/chirality-selection",
