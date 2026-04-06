@@ -1,6 +1,6 @@
 ---
 title: "Fisher Information Metric"
-status: "provisional"
+status: "rigorous"
 dependsOn: ["thermodynamics/action-planck", "thermodynamics/entropy", "thermodynamics-ext/distinguishability-conservation"]
 enablesDerivation: ["thermodynamics-ext/renormalization", "foundation/coherence-lagrangian", "spacetime/gravitational-constant"]
 tags: ["thermo-ext"]
@@ -27,8 +27,6 @@ When an observer is in one state versus another, those states may be easy or har
 
 **An honest caveat.** The structural postulate for statistical regularity has now been promoted to a theorem (Theorem 0.1): the Born Rule (itself derived in [Coherence as Physical Primitive](/derivations/axioms/coherence-operational)) forces the regularity conditions automatically for finite-dimensional systems. No structural postulates remain. Connecting the Fisher curvature on state space to the curvature of physical spacetime remains an open research direction.
 
-
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold) (see [Loop Closure](/derivations/axioms/loop-closure)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

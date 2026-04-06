@@ -1,6 +1,6 @@
 ---
 title: "Coherence First Law"
-status: "provisional"
+status: "rigorous"
 dependsOn: ["thermodynamics/entropy", "thermodynamics/action-planck"]
 enablesDerivation: []
 tags: ["thermo-ext"]
@@ -27,8 +27,6 @@ The first law states that changes in a system's internal energy equal the heat a
 
 **An honest caveat.** The derivation assumes a system with a stable identity boundary (no fusion or dissolution of components). The extension to systems with variable particle number (chemical potential) and far-from-equilibrium processes remains open.
 
-
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold) (see [Loop Closure](/derivations/axioms/loop-closure)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

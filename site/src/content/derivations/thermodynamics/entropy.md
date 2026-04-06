@@ -1,6 +1,6 @@
 ---
 title: "Entropy as Inaccessible Coherence"
-status: "provisional"
+status: "rigorous"
 dependsOn: ["thermodynamics/time", "interactions/relational-invariants", "interactions/bootstrap"]
 enablesDerivation: ["thermodynamics-ext/non-ergodicity", "thermodynamics-ext/biological-non-ergodicity", "cosmology/cosmological-arrow"]
 tags: ["dynamics"]
@@ -28,8 +28,6 @@ The standard account treats entropy increase as a statistical tendency -- overwh
 
 **An honest caveat.** The recovery of the standard Boltzmann formula requires an additional assumption of uniform coherence distribution, which is a special case of the more general framework.
 
-
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold) (see [Loop Closure](/derivations/axioms/loop-closure)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

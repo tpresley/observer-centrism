@@ -1,6 +1,6 @@
 ---
 title: "Born Rule from Coherence Conservation"
-status: "provisional"
+status: "rigorous"
 dependsOn: ["interactions/relational-invariants", "thermodynamics/time", "thermodynamics/action-planck"]
 enablesDerivation: ["quantum/preferred-basis", "quantum/entanglement"]
 tags: ["quantum"]
@@ -28,8 +28,6 @@ The Born rule -- the prescription that probability equals amplitude-squared -- i
 
 **An honest caveat.** The derivation uses the identification of coherence with the squared norm of Hilbert space. This was originally a structural postulate (S1), but is now derived as a theorem: the unique continuous, U(1)-invariant, composition-compatible coherence functional on quantum states is $\langle\psi|\psi\rangle$ (see [Coherence as Physical Primitive](/derivations/axioms/coherence-operational), Theorem 4.1).
 
-
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold) (see [Loop Closure](/derivations/axioms/loop-closure)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

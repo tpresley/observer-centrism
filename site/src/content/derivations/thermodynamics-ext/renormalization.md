@@ -1,6 +1,6 @@
 ---
 title: "Renormalization Group from Coherence"
-status: "provisional"
+status: "rigorous"
 dependsOn: ["thermodynamics/entropy", "thermodynamics/action-planck"]
 enablesDerivation: ["cosmology/coupling-constants", "thermodynamics-ext/non-ergodicity"]
 tags: ["thermo-ext"]
@@ -27,8 +27,6 @@ The renormalization group is one of the deepest ideas in theoretical physics. It
 
 **An honest caveat.** The derivation establishes the general structure of the renormalization group flow and its constraints. The specific beta functions for the Standard Model gauge groups have been computed by standard methods in downstream derivations ([Color Force](/derivations/gauge/color-force), [Coupling Constants](/derivations/cosmology/coupling-constants)), but have not yet been derived directly from the coherence spectral density — the more ambitious goal of showing that standard perturbative results are consequences of coherence conservation.
 
-
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold) (see [Loop Closure](/derivations/axioms/loop-closure)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

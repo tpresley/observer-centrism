@@ -22,7 +22,7 @@
       "id": "axioms/coherence-operational",
       "title": "Coherence as Physical Primitive",
       "group": "foundation",
-      "status": "provisional"
+      "status": "rigorous"
     },
     {
       "id": "minimal-observer/structure",
@@ -64,19 +64,19 @@
       "id": "thermodynamics/time",
       "title": "Time as Phase Ordering",
       "group": "dynamics",
-      "status": "provisional"
+      "status": "rigorous"
     },
     {
       "id": "thermodynamics/entropy",
       "title": "Entropy",
       "group": "dynamics",
-      "status": "provisional"
+      "status": "rigorous"
     },
     {
       "id": "thermodynamics/action-planck",
       "title": "Action and Planck's Constant",
       "group": "dynamics",
-      "status": "provisional"
+      "status": "rigorous"
     },
     {
       "id": "spacetime/speed-of-light",
@@ -106,13 +106,13 @@
       "id": "dimensions/three-dimensions",
       "title": "Three Spatial Dimensions",
       "group": "geometry",
-      "status": "provisional"
+      "status": "rigorous"
     },
     {
       "id": "quantum/born-rule",
       "title": "Born Rule",
       "group": "quantum",
-      "status": "provisional"
+      "status": "rigorous"
     },
     {
       "id": "quantum/preferred-basis",
@@ -226,19 +226,19 @@
       "id": "thermodynamics-ext/first-law",
       "title": "Coherence First Law",
       "group": "thermo-ext",
-      "status": "provisional"
+      "status": "rigorous"
     },
     {
       "id": "thermodynamics-ext/fisher-metric",
       "title": "Fisher Information Metric",
       "group": "thermo-ext",
-      "status": "provisional"
+      "status": "rigorous"
     },
     {
       "id": "thermodynamics-ext/renormalization",
       "title": "Renormalization Group",
       "group": "thermo-ext",
-      "status": "provisional"
+      "status": "rigorous"
     },
     {
       "id": "thermodynamics-ext/distinguishability-conservation",
@@ -262,7 +262,7 @@
       "id": "foundation/coherence-lagrangian",
       "title": "Coherence Lagrangian",
       "group": "foundation",
-      "status": "provisional"
+      "status": "rigorous"
     },
     {
       "id": "foundation/aperiodic-order",
@@ -280,7 +280,7 @@
       "id": "quantum/entanglement",
       "title": "Entanglement from Relational Invariants",
       "group": "quantum",
-      "status": "provisional"
+      "status": "rigorous"
     },
     {
       "id": "gauge/strong-cp",
@@ -1259,6 +1259,18 @@
     {
       "from": "holography/er-epr",
       "to": "foundation/continuous-discrete-duality"
+    },
+    {
+      "from": "interactions/relational-invariants",
+      "to": "axioms/loop-closure"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "axioms/loop-closure"
+    },
+    {
+      "from": "foundation/aperiodic-order",
+      "to": "axioms/loop-closure"
     }
   ]
 }

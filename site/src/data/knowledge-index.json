@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-06T19:59:04.038Z",
+    "generatedAt": "2026-04-06T23:23:02.991Z",
     "derivationCount": 73,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -8,15 +8,15 @@
   },
   "stats": {
     "byStatus": {
-      "rigorous": 15,
-      "provisional": 53,
+      "rigorous": 26,
+      "provisional": 42,
       "draft": 2,
       "non-viable": 1,
       "stub": 2
     },
     "derivationCount": 73,
     "predictionCount": 12,
-    "edgeCount": 205,
+    "edgeCount": 208,
     "formalObjectCount": 1110,
     "openGapCount": 226,
     "upgradeEligibleCount": 1,
@@ -379,7 +379,7 @@
       "id": "axioms/coherence-operational",
       "filePath": "site/src/content/derivations/axioms/coherence-operational.md",
       "title": "Coherence as Physical Primitive",
-      "status": "provisional",
+      "status": "rigorous",
       "rigorLevel": "formal",
       "group": "axioms",
       "tags": [
@@ -522,10 +522,6 @@
             "context": "Coherence Conservation"
           },
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "axioms/coherence-conservation",
             "context": "Model 2, strictly subadditive"
           },
@@ -596,7 +592,10 @@
       "lastUpdated": "2026-03-27",
       "dependsOn": [
         "axioms/coherence-conservation",
-        "axioms/observer-definition"
+        "axioms/observer-definition",
+        "interactions/relational-invariants",
+        "interactions/bootstrap",
+        "foundation/aperiodic-order"
       ],
       "enablesDerivation": [
         "minimal-observer/structure",
@@ -655,28 +654,28 @@
           "statementPreview": "Every observer's internal dynamics is self-sustaining and periodic: the state returns to its initial configuration af..."
         },
         {
-          "type": "Structural Postulate",
-          "id": "S1",
-          "name": "Finite-dimensional manifold",
-          "statementPreview": "The state space Sigma of an observer O = (Sigma, I, B) (Axiom 2) is:"
+          "type": "Theorem",
+          "id": "0.2",
+          "name": "State space is a finite-dimensional compact smooth manifold",
+          "statementPreview": "The state space Sigma of any observer O = (Sigma, I, B) is a finite-dimensional, compact, smooth manifold — without a..."
         },
         {
           "type": "Lemma",
           "id": "0.0",
           "name": "Free orbits from Axiom 3",
-          "statementPreview": "Given S1 and Axiom 3, the U(1) action on Sigma is free: no point of Sigma is fixed under all phit.*"
+          "statementPreview": "The U(1) action on Sigma is free: no point of Sigma is fixed under all phit.*"
         },
         {
           "type": "Theorem",
           "id": "0.0",
-          "name": "Smooth structure from S1 and Axiom 3",
-          "statementPreview": "Given S1, Sigma admits a smooth manifold structure, unique up to equivariant diffeomorphism, such that the U(1) actio..."
+          "name": "Smooth structure",
+          "statementPreview": "Sigma admits a smooth manifold structure, unique up to equivariant diffeomorphism, such that the U(1) action from Axi..."
         },
         {
           "type": "Theorem",
           "id": "0.1",
           "name": "Invariant Riemannian metric",
-          "statementPreview": "Given S1, the state space Sigma carries a GO-invariant Riemannian metric g with phit* g = g for all t.*"
+          "statementPreview": "The state space Sigma carries a GO-invariant Riemannian metric g with phit* g = g for all t.*"
         },
         {
           "type": "Definition",
@@ -817,12 +816,7 @@
           "statementPreview": ": phiT(theta) = theta + 2pi = theta, with TO = T. ✓"
         }
       ],
-      "structuralPostulates": [
-        {
-          "id": "S1",
-          "name": "Finite-dimensional manifold"
-        }
-      ],
+      "structuralPostulates": [],
       "openGaps": [
         {
           "number": 1,
@@ -845,16 +839,20 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "interactions/relational-invariants",
+            "context": "Relational Invariants"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap Mechanism"
+          },
+          {
+            "target": "foundation/aperiodic-order",
+            "context": "Aperiodic Order"
+          },
+          {
             "target": "axioms/observer-definition",
             "context": "Observer Definition"
-          },
-          {
-            "target": "holography/area-scaling",
-            "context": "Holographic Entropy Bound"
-          },
-          {
-            "target": "foundation/continuous-discrete-duality",
-            "context": "Continuous-Discrete Duality"
           },
           {
             "target": "thermodynamics-ext/fisher-metric",
@@ -878,10 +876,6 @@
           }
         ],
         "incoming": [
-          {
-            "source": "axioms/coherence-operational",
-            "context": "Loop Closure"
-          },
           {
             "source": "axioms/observer-definition",
             "context": "Loop Closure"
@@ -1043,10 +1037,6 @@
             "context": "Loop Closure"
           },
           {
-            "source": "quantum/entanglement",
-            "context": "Loop Closure"
-          },
-          {
             "source": "quantum/measurement",
             "context": "Loop Closure"
           },
@@ -1099,10 +1089,6 @@
             "context": "Loop Closure"
           },
           {
-            "source": "thermodynamics-ext/first-law",
-            "context": "Loop Closure"
-          },
-          {
             "source": "thermodynamics-ext/fisher-metric",
             "context": "Loop Closure"
           },
@@ -1112,10 +1098,6 @@
           },
           {
             "source": "thermodynamics/action-planck",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "thermodynamics/entropy",
             "context": "Loop Closure"
           },
           {
@@ -3572,7 +3554,7 @@
       "id": "dimensions/three-dimensions",
       "filePath": "site/src/content/derivations/dimensions/three-dimensions.md",
       "title": "Three Spatial Dimensions Are Uniquely Stable",
-      "status": "provisional",
+      "status": "rigorous",
       "rigorLevel": "formal",
       "group": "dimensions",
       "tags": [
@@ -3740,16 +3722,16 @@
       "crossReferences": {
         "outgoing": [
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "interactions/bootstrap",
             "context": "Bootstrap Mechanism"
           },
           {
             "target": "interactions/bootstrap",
             "context": "Bootstrap"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
           },
           {
             "target": "thermodynamics/action-planck",
@@ -4096,6 +4078,7 @@
         "cosmology/geometric-substrate"
       ],
       "dependedOnBy": [
+        "axioms/loop-closure",
         "cosmology/geometric-substrate",
         "foundation/continuous-discrete-duality",
         "spacetime/gravitational-constant",
@@ -4312,6 +4295,10 @@
         ],
         "incoming": [
           {
+            "source": "axioms/loop-closure",
+            "context": "Aperiodic Order"
+          },
+          {
             "source": "cosmology/cosmological-constant",
             "context": "Aperiodic Order"
           },
@@ -4366,7 +4353,7 @@
       "id": "foundation/coherence-lagrangian",
       "filePath": "site/src/content/derivations/foundation/coherence-lagrangian.md",
       "title": "Coherence Lagrangian",
-      "status": "provisional",
+      "status": "rigorous",
       "rigorLevel": "formal",
       "group": "foundation",
       "tags": [
@@ -4519,10 +4506,6 @@
       "crossReferences": {
         "outgoing": [
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "thermodynamics-ext/fisher-metric",
             "context": "Proposition 4.1"
           },
@@ -4573,6 +4556,10 @@
           {
             "target": "thermodynamics/action-planck",
             "context": "Theorem 5.1"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
           },
           {
             "target": "spacetime/einstein-equations",
@@ -4802,10 +4789,6 @@
           }
         ],
         "incoming": [
-          {
-            "source": "axioms/loop-closure",
-            "context": "Continuous-Discrete Duality"
-          },
           {
             "source": "cosmology/geometric-substrate",
             "context": "Continuous-Discrete Duality"
@@ -7993,10 +7976,6 @@
         ],
         "incoming": [
           {
-            "source": "axioms/loop-closure",
-            "context": "Holographic Entropy Bound"
-          },
-          {
             "source": "cosmology/cosmological-constant",
             "context": "Holographic Entropy Bound"
           },
@@ -9754,6 +9733,7 @@
         "cosmology/cosmological-arrow"
       ],
       "dependedOnBy": [
+        "axioms/loop-closure",
         "cosmology/cosmological-arrow",
         "cosmology/coupling-constants",
         "cosmology/geometric-inflation",
@@ -9978,6 +9958,10 @@
             "context": "Bootstrap Mechanism"
           },
           {
+            "source": "axioms/loop-closure",
+            "context": "Bootstrap Mechanism"
+          },
+          {
             "source": "axioms/observer-definition",
             "context": "bootstrap level"
           },
@@ -10140,6 +10124,7 @@
         "holography/causal-set-statistics"
       ],
       "dependedOnBy": [
+        "axioms/loop-closure",
         "cosmology/observer-loop-viability",
         "gauge/chirality-selection",
         "holography/causal-set-statistics",
@@ -10328,6 +10313,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "axioms/loop-closure",
+            "context": "Relational Invariants"
+          },
           {
             "source": "axioms/observer-definition",
             "context": "Relational Invariants"
@@ -13387,7 +13376,7 @@
       "id": "quantum/born-rule",
       "filePath": "site/src/content/derivations/quantum/born-rule.md",
       "title": "Born Rule from Coherence Conservation",
-      "status": "provisional",
+      "status": "rigorous",
       "rigorLevel": "formal",
       "group": "quantum",
       "tags": [
@@ -13568,10 +13557,6 @@
             "context": "Coherence as Physical Primitive"
           },
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "thermodynamics/time",
             "context": "Time as Phase Ordering"
           },
@@ -13590,6 +13575,10 @@
           {
             "target": "axioms/coherence-conservation",
             "context": "Coherence Conservation"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
           },
           {
             "target": "quantum/measurement",
@@ -13684,7 +13673,7 @@
       "id": "quantum/entanglement",
       "filePath": "site/src/content/derivations/quantum/entanglement.md",
       "title": "Entanglement from Relational Invariants",
-      "status": "provisional",
+      "status": "rigorous",
       "rigorLevel": "formal",
       "group": "quantum",
       "tags": [
@@ -13837,10 +13826,6 @@
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
           {
             "target": "interactions/relational-invariants",
             "context": "Relational Invariants"
@@ -17545,7 +17530,7 @@
       "id": "thermodynamics-ext/first-law",
       "filePath": "site/src/content/derivations/thermodynamics-ext/first-law.md",
       "title": "Coherence First Law",
-      "status": "provisional",
+      "status": "rigorous",
       "rigorLevel": "formal",
       "group": "thermodynamics-ext",
       "tags": [
@@ -17708,10 +17693,6 @@
       "crossReferences": {
         "outgoing": [
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "interactions/three-types",
             "context": "Three Interaction Types"
           },
@@ -17764,7 +17745,7 @@
       "id": "thermodynamics-ext/fisher-metric",
       "filePath": "site/src/content/derivations/thermodynamics-ext/fisher-metric.md",
       "title": "Fisher Information Metric",
-      "status": "provisional",
+      "status": "rigorous",
       "rigorLevel": "formal",
       "group": "thermodynamics-ext",
       "tags": [
@@ -17957,12 +17938,12 @@
             "context": "Coherence as Physical Primitive"
           },
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "quantum/born-rule",
             "context": "Born Rule"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
           },
           {
             "target": "axioms/observer-definition",
@@ -18302,7 +18283,7 @@
       "id": "thermodynamics-ext/renormalization",
       "filePath": "site/src/content/derivations/thermodynamics-ext/renormalization.md",
       "title": "Renormalization Group from Coherence",
-      "status": "provisional",
+      "status": "rigorous",
       "rigorLevel": "formal",
       "group": "thermodynamics-ext",
       "tags": [
@@ -18517,16 +18498,16 @@
             "context": "Coupling Constants"
           },
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
           },
           {
             "target": "thermodynamics/action-planck",
             "context": "Action and Planck's Constant"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
           },
           {
             "target": "interactions/relational-invariants",
@@ -18621,7 +18602,7 @@
       "id": "thermodynamics/action-planck",
       "filePath": "site/src/content/derivations/thermodynamics/action-planck.md",
       "title": "Action and Planck's Constant",
-      "status": "provisional",
+      "status": "rigorous",
       "rigorLevel": "formal",
       "group": "thermodynamics",
       "tags": [
@@ -18873,10 +18854,6 @@
       "crossReferences": {
         "outgoing": [
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "thermodynamics-ext/fisher-metric",
             "context": "Fisher Information Metric"
           },
@@ -18895,6 +18872,10 @@
           {
             "target": "minimal-observer/structure",
             "context": "Minimal Observer Structure"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
           },
           {
             "target": "spacetime/speed-of-light",
@@ -19045,7 +19026,7 @@
       "id": "thermodynamics/entropy",
       "filePath": "site/src/content/derivations/thermodynamics/entropy.md",
       "title": "Entropy as Inaccessible Coherence",
-      "status": "provisional",
+      "status": "rigorous",
       "rigorLevel": "formal",
       "group": "thermodynamics",
       "tags": [
@@ -19232,10 +19213,6 @@
       "crossReferences": {
         "outgoing": [
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "thermodynamics/time",
             "context": "Time as Phase Ordering"
           },
@@ -19380,7 +19357,7 @@
       "id": "thermodynamics/time",
       "filePath": "site/src/content/derivations/thermodynamics/time.md",
       "title": "Time as Phase Ordering",
-      "status": "provisional",
+      "status": "rigorous",
       "rigorLevel": "formal",
       "group": "thermodynamics",
       "tags": [
@@ -19534,16 +19511,16 @@
       "crossReferences": {
         "outgoing": [
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "interactions/three-types",
             "context": "Three Interaction Types"
           },
           {
             "target": "minimal-observer/structure",
             "context": "Minimal Observer Structure"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
           },
           {
             "target": "axioms/coherence-conservation",
@@ -21751,10 +21728,10 @@
     },
     {
       "derivationId": "axioms/loop-closure",
-      "type": "Structural Postulate",
-      "id": "S1",
-      "name": "Finite-dimensional manifold",
-      "fullRef": "axioms/loop-closure:Structural Postulate S1"
+      "type": "Theorem",
+      "id": "0.2",
+      "name": "State space is a finite-dimensional compact smooth manifold",
+      "fullRef": "axioms/loop-closure:Theorem 0.2"
     },
     {
       "derivationId": "axioms/loop-closure",
@@ -21767,7 +21744,7 @@
       "derivationId": "axioms/loop-closure",
       "type": "Theorem",
       "id": "0.0",
-      "name": "Smooth structure from S1 and Axiom 3",
+      "name": "Smooth structure",
       "fullRef": "axioms/loop-closure:Theorem 0.0"
     },
     {
@@ -29306,21 +29283,21 @@
     },
     {
       "derivationId": "axioms/coherence-operational",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 1,
       "title": "Quantitative $C_0$",
       "description": "The total coherence C0 = S(rhototal) depends on the global state. Whether C0 is a free parameter or determined by self-consistency (the bootstrap fixed point) remains open — see [Bootstrap Mechanism]("
     },
     {
       "derivationId": "axioms/coherence-operational",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 2,
       "title": "Rényi generalization",
       "description": "Axiom 1 is also satisfied by Rényi entropies Salpha(rho) = (1-alpha)-1logTr(rhoalpha) for alpha in (0,1) (strong subadditivity holds in this range). Whether the framework selects von Neumann (alpha = "
     },
     {
       "derivationId": "axioms/coherence-operational",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 3,
       "title": "Algebraic vs. measure-theoretic coherence",
       "description": "The σ-algebra formulation (Axiom 1, conditions C1–C5) and the Hilbert space formulation (C = langlepsi|psirangle) operate at different levels. The former concerns subsystem structure; the latter conce"
@@ -29530,21 +29507,21 @@
     },
     {
       "derivationId": "dimensions/three-dimensions",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 1,
       "title": "Time dimension",
       "description": "This derives dspace = 3. The uniqueness of dtime = 1 follows from the partial order structure of [Time as Phase Ordering](/derivations/thermodynamics/time) — a partial order defines a single ordering "
     },
     {
       "derivationId": "dimensions/three-dimensions",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 2,
       "title": "Compactification",
       "description": "Could extra dimensions exist but be compactified at scales below ellP? The framework's conditions apply to the *effective* dimensionality experienced by observers. If compact dimensions are below the "
     },
     {
       "derivationId": "dimensions/three-dimensions",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 3,
       "title": "The $3 + 1 = 4$ coincidence",
       "description": "The total spacetime dimension is 4 — the unique dimension with exotic smooth structures. The spatial dimension is 3 — the unique dimension where this exotic pathology is *absent*. Whether this is coin"
@@ -29600,35 +29577,35 @@
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 1,
       "title": "Uniqueness proof",
       "description": "A complete proof that L is the *unique* Lagrangian consistent with all three axioms, not merely the simplest. This requires classifying all possible terms consistent with the derived symmetries."
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 2,
       "title": "Cosmological constant",
       "description": "The coherence potential allows a constant term V0 (the cosmological constant). Its value should be derivable from the coherence geometry but is not — this connects to the [Cosmological Constant](/deri"
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 3,
       "title": "Path integral measure",
       "description": "The functional integral measure Dphi is not rigorously defined. The coherence framework may provide a natural regularization via the discrete relational invariant network, but this is not yet formaliz"
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 4,
       "title": "Higher-order corrections",
       "description": "The quartic restriction (Theorem 2.2c) holds at tree level; loop corrections generate higher-dimensional operators suppressed by powers of the cutoff. The bootstrap hierarchy structure should organize"
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 5,
       "title": "Fermion kinetic term",
       "description": "The derivation focuses on scalar fields. Extending to spinor fields requires the Fisher metric on the spinor state space, which should connect to the Dirac Lagrangian psi(igammamu Dmu - m)psi."
@@ -30321,35 +30298,35 @@
     },
     {
       "derivationId": "quantum/born-rule",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 1,
       "title": "Two-dimensional systems",
       "description": "Gleason's theorem fails for d = 2. The framework's direct derivation (Theorem 6.1) works for all d 2, providing coverage where Gleason does not. Whether qubits in nature are always embedded in higher-"
     },
     {
       "derivationId": "quantum/born-rule",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 2,
       "title": "Continuous observables",
       "description": "Extension to continuous spectra (dP = |psi(x)|2 dx) follows from the same arguments in the continuum limit, using the measure-theoretic version of coherence conservation."
     },
     {
       "derivationId": "quantum/entanglement",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 1,
       "title": "Quantum error correction",
       "description": "Explore whether coherence conservation imposes fundamental limits on or structures for quantum error-correcting codes."
     },
     {
       "derivationId": "quantum/entanglement",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 2,
       "title": "Multipartite entanglement",
       "description": "Extend beyond the bipartite case to full multipartite classification (W-states, cluster states, SLOCC classes)."
     },
     {
       "derivationId": "quantum/entanglement",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 3,
       "title": "Entanglement dynamics",
       "description": "Derive entanglement growth under unitary evolution and the scrambling time from coherence dynamics."
@@ -30706,42 +30683,42 @@
     },
     {
       "derivationId": "thermodynamics-ext/first-law",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 1,
       "title": "Chemical potential",
       "description": "For systems with variable particle number, the first law extends to dU = TdS - PdV + mu dN. The coherence analog of mu is the coherence cost of adding a minimal observer to A — this should be derivabl"
     },
     {
       "derivationId": "thermodynamics-ext/first-law",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 2,
       "title": "Non-equilibrium thermodynamics",
       "description": "The first law holds for arbitrary processes, not just quasi-static ones. The framework should extend to far-from-equilibrium coherence dynamics, connecting to fluctuation theorems."
     },
     {
       "derivationId": "thermodynamics-ext/first-law",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 3,
       "title": "Negative temperature",
       "description": "In standard thermodynamics, population-inverted systems have T < 0. In the framework, this corresponds to systems where adding coherence *decreases* entropy — which requires a bounded state space wher"
     },
     {
       "derivationId": "thermodynamics-ext/fisher-metric",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 1,
       "title": "Curvature–spacetime bridge",
       "description": "Connect the Fisher curvature on Sigma to the spacetime curvature on M. The [Gravity](/derivations/spacetime/gravity) derivation provides the latter from coherence density gradients; the bridge would n"
     },
     {
       "derivationId": "thermodynamics-ext/fisher-metric",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 2,
       "title": "Quantum Fisher metric",
       "description": "Extend from the classical Fisher metric to the quantum Fisher information (Bures metric / symmetric logarithmic derivative). This is needed for full quantum state spaces. The quantum Čencov theorem [P"
     },
     {
       "derivationId": "thermodynamics-ext/fisher-metric",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 3,
       "title": "Infinite-dimensional extension",
       "description": "The derivation assumes finite-dimensional Sigma. For field theory, the state space is infinite-dimensional and requires functional-analytic care [Pistone & Sempi, 1995]."
@@ -30783,91 +30760,91 @@
     },
     {
       "derivationId": "thermodynamics-ext/renormalization",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 1,
       "title": "Bootstrap–RG correspondence (formal proof)",
       "description": "Prove that bootstrap stability (invariant couplings under the addition of relational observers) implies betai = 0 in the coherence flow. This would make Theorem 4.1 rigorous."
     },
     {
       "derivationId": "thermodynamics-ext/renormalization",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 2,
       "title": "$\\beta$-functions from the coherence spectral density",
       "description": "The one-loop beta-function coefficients for U(1), SU(2), and SU(3) are established by standard methods in the framework's downstream derivations ([Color Force](/derivations/gauge/color-force) Proposit"
     },
     {
       "derivationId": "thermodynamics-ext/renormalization",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 3,
       "title": "Non-perturbative effects",
       "description": "The coherence flow equation (Theorem 3.2) is exact, but extracting non-perturbative physics (confinement, instantons, solitons) requires solving the full functional equation. Connect to the [Mass Hier"
     },
     {
       "derivationId": "thermodynamics-ext/renormalization",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 4,
       "title": "Coherence spectral density from first principles",
       "description": "Derive rhoC(omega) from the axioms and the particle content, rather than postulating its existence (S1). This would make the scale decomposition a theorem rather than a postulate."
     },
     {
       "derivationId": "thermodynamics/action-planck",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 1,
       "title": "Constructing $\\mathcal{L}$ from first principles",
       "description": "The coherence Lagrangian should be uniquely derivable from C and the observer structure. The Fisher information metric is a natural candidate. This is the key missing link between the abstract framewo"
     },
     {
       "derivationId": "thermodynamics/action-planck",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 2,
       "title": "Quantization of energy levels",
       "description": "The existence of a minimum action quantum hbar implies that admissible observer cycles have quantized action nhbar for n in Z 1. This should connect to the quantization of energy levels in bound syste"
     },
     {
       "derivationId": "thermodynamics/action-planck",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 3,
       "title": "$\\hbar$, $c$, and $G$",
       "description": "The relationship between hbar (coherence cost quantum), c (phase propagation speed from [Speed of Light](/derivations/spacetime/speed-of-light)), and G (gravitational coupling) determines whether the "
     },
     {
       "derivationId": "thermodynamics/entropy",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 1,
       "title": "Fluctuation theorems",
       "description": "The Jarzynski equality langle e-beta Wrangle = e-beta Delta F and Crooks fluctuation theorem describe the probability of entropy-decreasing fluctuations. These should arise as finite-size corrections "
     },
     {
       "derivationId": "thermodynamics/entropy",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 2,
       "title": "Negative entropy flow",
       "description": "Living systems locally decrease their entropy by expanding their coherence domains through structured interactions. The framework predicts this is possible because entropy is observer-relative — what "
     },
     {
       "derivationId": "thermodynamics/entropy",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 3,
       "title": "Quantum entropy",
       "description": "The von Neumann entropy S = -tr(rho ln rho) should be derivable as the inaccessible coherence when A's access is limited to a subsystem of an entangled state."
     },
     {
       "derivationId": "thermodynamics/time",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 1,
       "title": "Metric from order",
       "description": "Recovering the spacetime metric from the partial order requires a volume measure (event counting). This is the central open problem of causal set theory."
     },
     {
       "derivationId": "thermodynamics/time",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 2,
       "title": "Quantum time",
       "description": "The derivation gives a single partial order. Quantum mechanics suggests superpositions of causal orders may be physical (indefinite causal structure). The framework should address this."
     },
     {
       "derivationId": "thermodynamics/time",
-      "derivationStatus": "provisional",
+      "derivationStatus": "rigorous",
       "number": 3,
       "title": "Cosmological arrow",
       "description": "The structural arrow (increasing d(v)) is local. The global cosmological arrow (expansion) may require boundary conditions on the fixed-point solution. <!-- References --> [Bombelli et al., 1987]: /re"

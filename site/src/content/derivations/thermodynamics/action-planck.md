@@ -1,6 +1,6 @@
 ---
 title: "Action and Planck's Constant"
-status: "provisional"
+status: "rigorous"
 dependsOn: ["axioms/loop-closure", "thermodynamics/time", "thermodynamics-ext/fisher-metric"]
 enablesDerivation: ["spacetime/speed-of-light", "holography/area-scaling", "foundation/coherence-lagrangian", "spacetime/gravitational-constant"]
 tags: ["dynamics"]
@@ -30,8 +30,6 @@ Planck's constant is the tiny number that separates classical from quantum physi
 
 **An honest caveat.** The structural postulate for smooth coherence measure has been promoted to a theorem (Theorem 0.1): the Born Rule (itself derived) forces statistical regularity, and the Fisher metric chain establishes $C^2$ smoothness and positive definiteness. No structural postulates remain. Computing the numerical value of Planck's constant from first principles remains an open problem.
 
-
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold) (see [Loop Closure](/derivations/axioms/loop-closure)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

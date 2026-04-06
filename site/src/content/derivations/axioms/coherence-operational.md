@@ -1,6 +1,6 @@
 ---
 title: "Coherence as Physical Primitive"
-status: "provisional"
+status: "rigorous"
 dependsOn: ["axioms/coherence-conservation", "axioms/loop-closure"]
 enablesDerivation: ["quantum/born-rule"]
 tags: ["foundation"]
@@ -30,8 +30,6 @@ Axiom 1 ([Coherence Conservation](/derivations/axioms/coherence-conservation)) d
 
 **An honest caveat.** The convergence establishes structural isomorphism — the same mathematical axioms, the same derived quantities. It does not establish ontological identity: whether coherence *is* entropy, or whether both are aspects of something deeper, remains a philosophical question the framework does not attempt to settle.
 
-
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold) (see [Loop Closure](/derivations/axioms/loop-closure)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

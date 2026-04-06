@@ -5,9 +5,10 @@
     "derivationTitle": "Loop Closure",
     "postulateId": "S1",
     "shortName": "Finite-dimensional manifold",
-    "statement": "The state space \u03a3 is a topological manifold of finite dimension dim \u03a3 \u2265 1 (locally homeomorphic to R^n). Compactness comes from O1 of Axiom 2; free orbits are derived in Lemma 0.0 from coherence cost positivity; smooth structure is derived in Theorem 0.0 via the equivariant smoothing theorem. The irreducible content is: manifold structure + finite dimensionality.",
-    "justification": "Finite dimensionality gives finitely many degrees of freedom; local Euclidean structure excludes topological pathologies (fractals, Cantor sets, non-manifold points). Motivated by the continuous-discrete duality's requirement that observer state spaces be compatible with the smooth coherence manifold, and by the finite information content from the holographic bound, but not rigorously derived from either.",
-    "group": "foundation"
+    "statement": "The state space \u03a3 is a finite-dimensional compact smooth manifold. Now derived as Theorem 0.2: the base case S\u00b9 is a Lie group manifold (from U(1) loop closure), the inductive step uses level sets of relational invariants (regular value theorem preserves manifold structure), and finite dimensionality follows from the Delone finite local complexity of the observer network.",
+    "justification": "Promoted to Theorem 0.2. The manifold structure follows from the constructive mechanism by which observer state spaces are built: U(1) Lie group orbits at the base, bootstrap level-set construction at each step, finite local complexity from aperiodic order bounding the dimension.",
+    "group": "foundation",
+    "derivedFrom": "axioms/loop-closure"
   },
   {
     "id": "loop-closure-s2",

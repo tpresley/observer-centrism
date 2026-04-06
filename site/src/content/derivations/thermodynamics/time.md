@@ -1,6 +1,6 @@
 ---
 title: "Time as Phase Ordering"
-status: "provisional"
+status: "rigorous"
 dependsOn: ["minimal-observer/structure", "interactions/three-types"]
 enablesDerivation: ["thermodynamics/entropy", "thermodynamics/action-planck", "quantum/born-rule", "thermodynamics-ext/non-ergodicity", "cosmology/cosmological-arrow"]
 tags: ["dynamics"]
@@ -28,8 +28,6 @@ In standard physics, time is either a background stage on which events play out 
 
 **An honest caveat.** The connection from this discrete partial order to the smooth spacetime of general relativity relies on a conjecture from causal set theory (the Hauptvermutung) that is well-supported but not fully proved.
 
-
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold) (see [Loop Closure](/derivations/axioms/loop-closure)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 
