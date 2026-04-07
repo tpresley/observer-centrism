@@ -29,7 +29,7 @@ The wormhole cannot be used to send messages, for the same reason that entanglem
 **An honest caveat.** One row of the correspondence table -- the identification of Schmidt coefficients with the quasi-normal mode spectrum of the wormhole throat -- remains conjectural, motivated by AdS/CFT but not yet derived within the framework.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), area-scaling S1 (Planck-scale resolution), speed-of-light S1 (pseudo-Riemannian structure) (see [Loop Closure](/derivations/axioms/loop-closure), [Area Scaling](/derivations/holography/area-scaling), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on area-scaling S1 (Planck-scale resolution), speed-of-light S1 (pseudo-Riemannian structure) (see [Area Scaling](/derivations/holography/area-scaling), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

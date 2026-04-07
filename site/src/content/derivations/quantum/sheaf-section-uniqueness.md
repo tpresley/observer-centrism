@@ -31,7 +31,7 @@ The three-level trichotomy (Theorem 6.1 of observer-relative-objectivity) classi
 **Rigorous status.** All core results are now fully rigorous. The sheaf condition for $\mathcal{C}$ and $\mathcal{P}$ is formally verified (Theorem 2.2) via the gluing argument from conservation (C2) and Born rule uniqueness. The outcome sheaf's non-globalizability follows from the Kochen-Specker theorem applied to the framework's Hilbert space structure (Theorem 5.2). The temporal contractibility argument is rigorous given the DAG structure. The three-sheaf decomposition is definitional, and the trichotomy correspondence (Theorem 6.1) is proved in both directions. What remains open is the precise isomorphism with the Abramsky-Brandenburger cohomological contextuality framework — this would provide quantitative control over the obstruction (connecting $\dim \check{H}^1$ to entanglement entropy) but is not needed for the qualitative classification.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), preferred-basis S1 (interaction-invariant correspondence) (see [Loop Closure](/derivations/axioms/loop-closure), [Preferred Basis](/derivations/quantum/preferred-basis)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on preferred-basis S1 (interaction-invariant correspondence) (see [Preferred Basis](/derivations/quantum/preferred-basis)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

@@ -30,7 +30,7 @@ The speed of light is one of the most precisely measured constants in physics an
 **An honest caveat.** The derivation requires a structural postulate that the coherence geometry is pseudo-Riemannian (a smooth metric with a well-behaved quadratic form). The continuum limit from the discrete interaction graph to continuous spacetime relies on a standard conjecture in causal set theory.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold) (see [Loop Closure](/derivations/axioms/loop-closure)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because it contains speed-of-light S1 (pseudo-Riemannian structure). If that postulate is promoted to a theorem, this derivation would be upgraded to rigorous.
 
 ## Statement
 
@@ -42,7 +42,7 @@ The speed of light is one of the most precisely measured constants in physics an
 
 **Structural Postulate S1 (Pseudo-Riemannian structure).** The coherence geometry $(\mathcal{H}, g)$ is a smooth pseudo-Riemannian manifold. The line element $ds^2 = g_{\mu\nu} dx^\mu dx^\nu$ is a non-degenerate quadratic form in coordinate differentials.
 
-**Remark.** This promotes the smooth metric structure on observer state spaces ([Loop Closure](/derivations/axioms/loop-closure), Structural Postulate S1; [Action and Planck's Constant](/derivations/thermodynamics/action-planck), Structural Postulate S1) to the ambient coherence geometry. The quadratic form — ruling out Finsler geometry — follows from the local isotropy of the coherence measure: if the coherence cost of an infinitesimal displacement depends only on its magnitude (not its direction in the spatial subspace), the metric is necessarily Riemannian. A Finslerian metric would require a preferred spatial direction at each point, breaking the rotational symmetry inherent in the $U(1)$ loop closure structure.
+**Remark.** The smooth metric structure on observer state spaces is now a theorem ([Loop Closure](/derivations/axioms/loop-closure), Theorem 0.2 — state spaces are finite-dimensional compact smooth manifolds by construction from U(1) Lie group orbits). This postulate promotes that structure to the *ambient* coherence geometry: the multi-observer spacetime, not just individual state spaces. The quadratic form — ruling out Finsler geometry — follows from the local isotropy of the coherence measure: if the coherence cost of an infinitesimal displacement depends only on its magnitude (not its direction in the spatial subspace), the metric is necessarily Riemannian. A Finslerian metric would require a preferred spatial direction at each point, breaking the rotational symmetry inherent in the $U(1)$ loop closure structure. The irreducible content of this postulate is therefore: the ambient coherence geometry is pseudo-Riemannian (signature $(-,+,+,+)$), not merely that observer state spaces are smooth manifolds.
 
 ### Step 1: Dual Projections of the Observer Loop
 

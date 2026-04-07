@@ -28,7 +28,7 @@ In standard physics, Lorentz invariance is simply postulated — Einstein's seco
 **An honest caveat.** The geometric picture of "tilted loops" is a helpful analogy but inevitably simplifies the underlying mathematical structure. The actual derivation works with the Minkowski metric and its isometry group — precise mathematical objects that the informal language only approximates.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure), loop-closure S1 (finite-dimensional manifold) (see [Speed of Light](/derivations/spacetime/speed-of-light), [Loop Closure](/derivations/axioms/loop-closure)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

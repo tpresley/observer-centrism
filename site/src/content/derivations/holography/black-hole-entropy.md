@@ -24,7 +24,7 @@ The Bekenstein-Hawking entropy formula is one of the most important results in t
 **An honest caveat.** The derivation inherits the Planck-scale resolution postulate from the holographic entropy bound. The factor of one quarter is established through the derivation chain (gravitational stability in the holographic bound, confirmed by thermodynamic integration), but a purely combinatorial derivation from the coherence geometry alone — without routing through the Schwarzschild solution — remains an open goal.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on area-scaling S1 (Planck-scale resolution), loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Area Scaling](/derivations/holography/area-scaling), [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on area-scaling S1 (Planck-scale resolution), speed-of-light S1 (pseudo-Riemannian structure) (see [Area Scaling](/derivations/holography/area-scaling), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

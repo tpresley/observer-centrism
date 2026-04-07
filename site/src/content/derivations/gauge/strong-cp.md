@@ -27,7 +27,7 @@ The equations governing the strong force contain a parameter (the "theta angle")
 **An honest caveat.** The algebraic argument is rigorous, but the detailed instanton obstruction mechanism (the explicit computation of the octonionic Chern-Simons functional) remains at the level of a well-motivated structural argument rather than a fully explicit calculation.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

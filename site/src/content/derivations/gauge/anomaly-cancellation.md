@@ -27,7 +27,7 @@ Gauge anomalies are quantum-mechanical inconsistencies that would render a theor
 **An honest caveat.** The proof uses the Fujikawa mechanism (a standard path-integral result) to connect anomalies to coherence violation. A purely algebraic proof that avoids path-integral language would provide an independent perspective but has not yet been constructed.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

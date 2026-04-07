@@ -29,7 +29,7 @@ The "measurement problem" has haunted physics for nearly a century. In standard 
 **An honest caveat.** The question of what determines the specific outcome in a single trial is addressed structurally (the information exists in the full coherence geometry but is inaccessible to any bounded observer), which is an interpretive position rather than a mathematical theorem.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on preferred-basis S1 (interaction-invariant correspondence), loop-closure S1 (finite-dimensional manifold) (see [Preferred Basis](/derivations/quantum/preferred-basis), [Loop Closure](/derivations/axioms/loop-closure)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on preferred-basis S1 (interaction-invariant correspondence) (see [Preferred Basis](/derivations/quantum/preferred-basis)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

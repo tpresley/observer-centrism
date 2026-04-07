@@ -27,7 +27,7 @@ At the Planck scale, spacetime is not the smooth continuum we experience in ever
 **An honest caveat.** The qualitative cross-prediction linking holographic noise and dark matter granularity through their common Poisson origin is established, but the precise quantitative relationship between the two observables awaits a full dynamical treatment of the observer network.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on area-scaling S1 (Planck-scale resolution), loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Area Scaling](/derivations/holography/area-scaling), [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on area-scaling S1 (Planck-scale resolution), speed-of-light S1 (pseudo-Riemannian structure) (see [Area Scaling](/derivations/holography/area-scaling), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

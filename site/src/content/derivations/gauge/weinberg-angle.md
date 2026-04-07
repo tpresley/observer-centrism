@@ -27,7 +27,7 @@ The Weinberg angle is a fundamental parameter that controls how the electromagne
 **An honest caveat.** The crystallization scale is currently determined by requiring consistency with the measured Weinberg angle, rather than being independently predicted. An independent derivation of this scale from the bootstrap hierarchy would convert the consistency check into a genuine prediction.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure), mass-hierarchy S1 (tunneling-crystallization correspondence) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light), [Mass Hierarchy](/derivations/particles/mass-hierarchy)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure), mass-hierarchy S1 (tunneling-crystallization correspondence) (see [Speed of Light](/derivations/spacetime/speed-of-light), [Mass Hierarchy](/derivations/particles/mass-hierarchy)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

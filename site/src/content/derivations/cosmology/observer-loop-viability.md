@@ -28,7 +28,7 @@ The framework's axioms require that observers have specific structural propertie
 **An honest caveat.** The upper bound is 120 orders of magnitude above the observed value -- it establishes a principle, not a tight constraint. Closing the quantitative gap requires understanding the minimum coherence content needed for stable observer loops, which remains the key open question.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure), area-scaling S1 (Planck-scale resolution) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light), [Area Scaling](/derivations/holography/area-scaling)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure), area-scaling S1 (Planck-scale resolution) (see [Speed of Light](/derivations/spacetime/speed-of-light), [Area Scaling](/derivations/holography/area-scaling)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 
@@ -477,7 +477,7 @@ The anthropic bound is $\sim 10^{120}$ times tighter because it requires complex
 | Prerequisite | What it provides |
 |---|---|
 | [Minimal Observer Structure](/derivations/minimal-observer/structure) | Minimum spatial extent $\ell_P$, coherence cost $S_O$ |
-| [Loop Closure](/derivations/axioms/loop-closure) | Lyapunov stability (Def 4.1), approximate closure (Def 5.1), drift bound (Prop 5.2), dissolution (Prop 4.3), coherence cost $S_{\min} = \hbar$ (Prop 6.2) |
+| | Lyapunov stability (Def 4.1), approximate closure (Def 5.1), drift bound (Prop 5.2), dissolution (Prop 4.3), coherence cost $S_{\min} = \hbar$ (Prop 6.2) |
 | [Multiplicity](/derivations/minimal-observer/multiplicity) | Single observer has $\mathcal{C} = 0$ (Thm 2.1), mutually defining pair (Prop 4.1), coherence budget (Prop 5.1) |
 | [Holographic Entropy Bound](/derivations/holography/area-scaling) | $S \leq A/(4\ell_P^2)$; maximum coherence within a horizon |
 | [Singularity Resolution](/derivations/spacetime/singularity-resolution) | Planck-density bounce (Thm 4.1), effective Friedmann equation, loop closure pressure |

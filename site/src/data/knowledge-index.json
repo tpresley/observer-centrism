@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-06T23:23:02.991Z",
+    "generatedAt": "2026-04-06T23:56:02.912Z",
     "derivationCount": 73,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -881,111 +881,11 @@
             "context": "Loop Closure"
           },
           {
-            "source": "cosmology/baryogenesis",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "cosmology/coupling-constants",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "cosmology/leptogenesis",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "cosmology/observer-loop-viability",
-            "context": "Loop Closure"
-          },
-          {
             "source": "dimensions/three-dimensions",
             "context": "Loop Closure"
           },
           {
-            "source": "flavor/mixing-angles",
-            "context": "Loop Closure"
-          },
-          {
             "source": "foundation/coherence-lagrangian",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "gauge/anomaly-cancellation",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "gauge/chirality-selection",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "gauge/color-force",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "gauge/color-force",
-            "context": "Corollary 4.3"
-          },
-          {
-            "source": "gauge/confinement",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "gauge/electromagnetism",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "gauge/electromagnetism",
-            "context": "Corollary 4.3"
-          },
-          {
-            "source": "gauge/electromagnetism",
-            "context": "Theorem 5.1"
-          },
-          {
-            "source": "gauge/electroweak-breaking",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "gauge/proton-stability",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "gauge/standard-model-group",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "gauge/strong-cp",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "gauge/weak-interaction",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "gauge/weinberg-angle",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "holography/area-scaling",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "holography/black-hole-entropy",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "holography/causal-set-statistics",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "holography/er-epr",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "holography/hawking-radiation",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "holography/information-paradox",
             "context": "Loop Closure"
           },
           {
@@ -1021,68 +921,12 @@
             "context": "0, T)\\}$ is isomorphic to $\\mathbb{R}/T\\mathbb{Z} \\cong U(1)$. Hence $U(1) \\hook"
           },
           {
-            "source": "particles/cpt-theorem",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "particles/mass-hierarchy",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "particles/neutrino-masses",
-            "context": "Loop Closure"
-          },
-          {
             "source": "quantum/born-rule",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "quantum/measurement",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "quantum/observer-relative-objectivity",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "quantum/preferred-basis",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "quantum/sheaf-section-uniqueness",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "quantum/teleportation",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "spacetime/einstein-equations",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "spacetime/gravity",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "spacetime/lorentz-invariance",
             "context": "Loop Closure"
           },
           {
             "source": "spacetime/lorentz-invariance",
             "context": "Axiom 3"
-          },
-          {
-            "source": "spacetime/singularity-resolution",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "spacetime/speed-of-light",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "spacetime/speed-of-light",
-            "context": "Theorem 9.1"
           },
           {
             "source": "thermodynamics-ext/biological-non-ergodicity",
@@ -1560,10 +1404,6 @@
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
           {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
@@ -2089,10 +1929,6 @@
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
           {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
@@ -2982,10 +2818,6 @@
       "crossReferences": {
         "outgoing": [
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
           },
@@ -3313,10 +3145,6 @@
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
           {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
@@ -3976,10 +3804,6 @@
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
           {
             "target": "particles/mass-hierarchy",
             "context": "Mass Hierarchy"
@@ -4889,10 +4713,6 @@
       "crossReferences": {
         "outgoing": [
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
           },
@@ -5202,10 +5022,6 @@
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
           {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
@@ -5536,10 +5352,6 @@
       "crossReferences": {
         "outgoing": [
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
           },
@@ -5558,10 +5370,6 @@
           {
             "target": "gauge/weak-interaction",
             "context": "Weak Interaction"
-          },
-          {
-            "target": "axioms/loop-closure",
-            "context": "Corollary 4.3"
           },
           {
             "target": "gauge/electromagnetism",
@@ -5822,10 +5630,6 @@
       "crossReferences": {
         "outgoing": [
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
           },
@@ -5944,7 +5748,7 @@
           "type": "Definition",
           "id": "1.1.",
           "name": "",
-          "statementPreview": "Let Ox = (Sigmax, Ix, Bx) be an observer at spacetime point x. By [Loop Closure](/derivations/axioms/loop-closure) (C..."
+          "statementPreview": "Let Ox = (Sigmax, Ix, Bx) be an observer at spacetime point x. By (Corollary 4.3), Ox has a faithful U(1) action with..."
         },
         {
           "type": "Proposition",
@@ -6076,10 +5880,6 @@
       "crossReferences": {
         "outgoing": [
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
           },
@@ -6100,20 +5900,12 @@
             "context": "Einstein Field Equations"
           },
           {
-            "target": "axioms/loop-closure",
-            "context": "Corollary 4.3"
-          },
-          {
             "target": "interactions/relational-invariants",
             "context": "Definition 1.1"
           },
           {
             "target": "interactions/relational-invariants",
             "context": "Theorem 7.1"
-          },
-          {
-            "target": "axioms/loop-closure",
-            "context": "Theorem 5.1"
           },
           {
             "target": "spacetime/gravity",
@@ -6409,10 +6201,6 @@
       "crossReferences": {
         "outgoing": [
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
           },
@@ -6654,10 +6442,6 @@
       "crossReferences": {
         "outgoing": [
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
           },
@@ -6850,10 +6634,6 @@
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
           {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
@@ -7084,10 +6864,6 @@
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
           {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
@@ -7393,10 +7169,6 @@
             "context": "Weinberg Angle"
           },
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
           },
@@ -7696,10 +7468,6 @@
       "crossReferences": {
         "outgoing": [
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
           },
@@ -7909,10 +7677,6 @@
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
           {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
@@ -8240,10 +8004,6 @@
             "context": "Area Scaling"
           },
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
           },
@@ -8487,10 +8247,6 @@
             "context": "Area Scaling"
           },
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
           },
@@ -8668,10 +8424,6 @@
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
           {
             "target": "holography/area-scaling",
             "context": "Area Scaling"
@@ -8953,10 +8705,6 @@
             "context": "Area Scaling"
           },
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
           },
@@ -9177,10 +8925,6 @@
           {
             "target": "holography/area-scaling",
             "context": "Area Scaling"
-          },
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
           },
           {
             "target": "spacetime/speed-of-light",
@@ -11787,7 +11531,7 @@
           "type": "Definition",
           "id": "3.1",
           "name": "Time reversal",
-          "statementPreview": "The time reversal operator T reverses the direction of the loop closure phase evolution ([Loop Closure](/derivations/..."
+          "statementPreview": "The time reversal operator T reverses the direction of the loop closure phase evolution ():"
         },
         {
           "type": "Proposition",
@@ -11890,10 +11634,6 @@
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
           {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
@@ -12146,10 +11886,6 @@
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
           {
             "target": "foundation/coherence-lagrangian",
             "context": "Theorem 6.0"
@@ -12427,10 +12163,6 @@
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
           {
             "target": "particles/mass-hierarchy",
             "context": "Mass Hierarchy"
@@ -14104,10 +13836,6 @@
             "context": "Preferred Basis"
           },
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "quantum/born-rule",
             "context": "amplitude-coherence identification"
           },
@@ -14354,7 +14082,7 @@
         {
           "number": 4,
           "title": "Emergent continuous observables",
-          "description": "The framework naturally produces discrete outcomes at the fundamental level — relational invariants have discrete spectra from the U(1) loop structure ([Loop Closure](/derivations/axioms/loop-closure)"
+          "description": "The framework naturally produces discrete outcomes at the fundamental level — relational invariants have discrete spectra from the U(1) loop structure (). Continuous observables like position and mome"
         },
         {
           "number": 5,
@@ -14366,10 +14094,6 @@
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
           {
             "target": "quantum/preferred-basis",
             "context": "Preferred Basis"
@@ -14609,10 +14333,6 @@
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
           {
             "target": "foundation/continuous-discrete-duality",
             "context": "Proposition 3.2"
@@ -14870,10 +14590,6 @@
       "crossReferences": {
         "outgoing": [
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "quantum/preferred-basis",
             "context": "Preferred Basis"
           },
@@ -15095,10 +14811,6 @@
       "crossReferences": {
         "outgoing": [
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "quantum/preferred-basis",
             "context": "Preferred Basis"
           },
@@ -15319,10 +15031,6 @@
           {
             "target": "foundation/coherence-lagrangian",
             "context": "Coherence Lagrangian"
-          },
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
           },
           {
             "target": "spacetime/speed-of-light",
@@ -16059,10 +15767,6 @@
       "crossReferences": {
         "outgoing": [
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
           },
@@ -16376,10 +16080,6 @@
             "context": "Speed of Light"
           },
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "axioms/coherence-conservation",
             "context": "Axiom 1"
           },
@@ -16635,10 +16335,6 @@
       "crossReferences": {
         "outgoing": [
           {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
           },
@@ -16787,7 +16483,7 @@
           "type": "Definition",
           "id": "1.1.",
           "name": "",
-          "statementPreview": "Let O = (Sigma, I, B) be an observer satisfying loop closure ([Loop Closure](/derivations/axioms/loop-closure), Defin..."
+          "statementPreview": "Let O = (Sigma, I, B) be an observer satisfying loop closure (Definition 4.1). The observer loop gamma: S1 Sigma live..."
         },
         {
           "type": "Definition",
@@ -16871,7 +16567,7 @@
           "type": "Theorem",
           "id": "7.1.",
           "name": "",
-          "statementPreview": "The S1 minimal observer model of [Loop Closure](/derivations/axioms/loop-closure) (Theorem 9.1) extends to a (1+1)-di..."
+          "statementPreview": "The S1 minimal observer model of (Theorem 9.1) extends to a (1+1)-dimensional Minkowski spacetime model satisfying al..."
         }
       ],
       "structuralPostulates": [
@@ -16901,10 +16597,6 @@
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
           {
             "target": "thermodynamics/action-planck",
             "context": "Action and Planck's Constant"
@@ -16940,10 +16632,6 @@
           {
             "target": "dimensions/three-dimensions",
             "context": "Three Spatial Dimensions"
-          },
-          {
-            "target": "axioms/loop-closure",
-            "context": "Theorem 9.1"
           }
         ],
         "incoming": [
@@ -30378,7 +30066,7 @@
       "derivationStatus": "provisional",
       "number": 4,
       "title": "Emergent continuous observables",
-      "description": "The framework naturally produces discrete outcomes at the fundamental level — relational invariants have discrete spectra from the U(1) loop structure ([Loop Closure](/derivations/axioms/loop-closure)"
+      "description": "The framework naturally produces discrete outcomes at the fundamental level — relational invariants have discrete spectra from the U(1) loop structure (). Continuous observables like position and mome"
     },
     {
       "derivationId": "quantum/observer-relative-objectivity",

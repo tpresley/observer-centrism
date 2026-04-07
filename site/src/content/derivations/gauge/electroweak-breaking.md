@@ -30,7 +30,7 @@ The electroweak symmetry group, SU(2) x U(1), treats all its gauge bosons as mas
 **An honest caveat.** The precise value of the electroweak scale (246 GeV), the Higgs self-coupling, and the Weinberg angle are not predicted from first principles -- they require input from experiment or from the full renormalization group flow of the coherence Lagrangian, which is not yet completed.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

@@ -35,7 +35,7 @@ Quantum teleportation -- experimentally demonstrated many times since 1997 -- al
 **An honest caveat.** The overview omits the detailed algebraic manipulations (Bell basis expansion, Pauli corrections) that make the protocol precise. The explanation also focuses on the simplest case of a single qubit; the generalization to higher-dimensional systems is straightforward but technically richer.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), preferred-basis S1 (interaction-invariant correspondence) (see [Loop Closure](/derivations/axioms/loop-closure), [Preferred Basis](/derivations/quantum/preferred-basis)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on preferred-basis S1 (interaction-invariant correspondence) (see [Preferred Basis](/derivations/quantum/preferred-basis)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

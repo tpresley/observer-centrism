@@ -27,7 +27,7 @@ Neutrinos were long thought to be massless, but oscillation experiments proved t
 **An honest caveat.** The derivation correctly identifies the parametric structure, but the precise neutrino masses depend on a winding-geometry overlap coefficient that is not computed from first principles.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), mass-hierarchy S1 (tunneling-crystallization correspondence), speed-of-light S1 (pseudo-Riemannian structure) (see [Loop Closure](/derivations/axioms/loop-closure), [Mass Hierarchy](/derivations/particles/mass-hierarchy), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on mass-hierarchy S1 (tunneling-crystallization correspondence), speed-of-light S1 (pseudo-Riemannian structure) (see [Mass Hierarchy](/derivations/particles/mass-hierarchy), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

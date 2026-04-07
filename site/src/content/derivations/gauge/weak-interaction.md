@@ -30,7 +30,7 @@ Electromagnetism arises from a single phase channel -- one direction in which an
 **An honest caveat.** This derivation establishes the gauge structure but not the symmetry breaking that gives W and Z bosons their masses (addressed downstream in [Electroweak Breaking](/derivations/gauge/electroweak-breaking)) or the value of the Weinberg angle (addressed in [Weinberg Angle](/derivations/gauge/weinberg-angle) via the $\mathbb{C} \subset \mathbb{H}$ algebraic embedding). The weak coupling constant $g_W$ remains a free parameter at this stage, with the same status as $e$ in electromagnetism.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

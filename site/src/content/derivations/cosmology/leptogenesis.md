@@ -28,7 +28,7 @@ The baryogenesis derivation shows that all three Sakharov conditions are satisfi
 **An honest caveat.** The derivation establishes that the observed asymmetry lies within the accessible parameter space, but does not pin down a unique predicted value. The precise prediction depends on the heavy neutrino mass splittings, which the framework constrains but does not fully determine.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure), mass-hierarchy S1 (tunneling-crystallization correspondence) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light), [Mass Hierarchy](/derivations/particles/mass-hierarchy)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure), mass-hierarchy S1 (tunneling-crystallization correspondence) (see [Speed of Light](/derivations/spacetime/speed-of-light), [Mass Hierarchy](/derivations/particles/mass-hierarchy)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

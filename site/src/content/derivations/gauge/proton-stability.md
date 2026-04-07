@@ -27,7 +27,7 @@ Grand Unified Theories predict that protons should eventually decay, converting 
 **An honest caveat.** The gravitational proton lifetime estimate is an order-of-magnitude calculation based on dimensional analysis. The precise value depends on unknown non-perturbative gravitational amplitudes, but the parametric scaling is robust. The prediction of absolute stability (up to gravitational effects) is the important structural claim.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure), mass-hierarchy S1 (tunneling-crystallization correspondence) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light), [Mass Hierarchy](/derivations/particles/mass-hierarchy)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure), mass-hierarchy S1 (tunneling-crystallization correspondence) (see [Speed of Light](/derivations/spacetime/speed-of-light), [Mass Hierarchy](/derivations/particles/mass-hierarchy)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

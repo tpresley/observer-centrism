@@ -30,7 +30,7 @@ Electromagnetism uses complex numbers (two-dimensional). The weak force uses qua
 **An honest caveat.** The confinement argument is structural (non-associativity obstructs colored-state transport) but does not constitute a rigorous proof of dynamical confinement or the mass gap -- that remains one of the Clay Millennium Prize problems. The strong coupling constant is a free parameter.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

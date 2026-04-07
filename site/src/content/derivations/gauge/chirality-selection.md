@@ -29,7 +29,7 @@ Every other force in nature treats left-handed and right-handed particles identi
 **An honest caveat.** The derivation predicts that one chirality is selected but not which one (left versus right). The choice of "left" is spontaneous, like a coin flip at the birth of the universe. A CPT-conjugate universe would have right-handed weak interactions.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

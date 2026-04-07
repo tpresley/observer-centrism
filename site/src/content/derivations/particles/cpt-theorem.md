@@ -29,7 +29,7 @@ Nature violates parity (the weak force distinguishes left from right), violates 
 **An honest caveat.** The full argument relies on the Jost-Luders-Pauli theorem, a standard but technically demanding result. The overview simplifies how the three transformations "compensate" each other, particularly regarding the interplay of chirality, complex phases, and anti-unitarity in the weak sector.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

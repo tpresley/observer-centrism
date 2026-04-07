@@ -29,7 +29,7 @@ Classical general relativity predicts that singularities are unavoidable. The Pe
 **An honest caveat.** The qualitative conclusion (no singularities, bounces occur) is robust, but the detailed structure of the bounce and the black hole interior depend on higher-order corrections that have not yet been derived from the framework's coherence Lagrangian.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure), area-scaling S1 (Planck-scale resolution) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light), [Area Scaling](/derivations/holography/area-scaling)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure), area-scaling S1 (Planck-scale resolution) (see [Speed of Light](/derivations/spacetime/speed-of-light), [Area Scaling](/derivations/holography/area-scaling)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

@@ -30,7 +30,7 @@ The Weinberg angle -- a key parameter mixing the electromagnetic and weak forces
 **An honest caveat.** The derivation introduces one structural postulate (the algebraic ratio rule). The Weinberg angle sector is well-controlled: the ratio constraint $\sin^2\theta_W = 1/3$ determines $\Lambda_{\text{EW}}$ and $\alpha_{em}$ from a single parameter. The strong coupling sector is less constrained: the near-coincidence $1/8 \approx \alpha_s(M_Z)$ is suggestive but requires an independent determination of the SU(3) crystallization scale $\Lambda_3$ to become a prediction.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure), mass-hierarchy S1 (tunneling-crystallization correspondence) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light), [Mass Hierarchy](/derivations/particles/mass-hierarchy)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure), mass-hierarchy S1 (tunneling-crystallization correspondence) (see [Speed of Light](/derivations/spacetime/speed-of-light), [Mass Hierarchy](/derivations/particles/mass-hierarchy)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 

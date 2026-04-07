@@ -30,7 +30,7 @@ In the standard approach, Maxwell's equations are taken as given. Here they are 
 **An honest caveat.** The coupling constant (how strong the electromagnetic force is) remains a free parameter. The derivation also relies on two structural postulates about the geometric language connecting phases, which are well-motivated but not derived from the axioms alone.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on loop-closure S1 (finite-dimensional manifold), speed-of-light S1 (pseudo-Riemannian structure) (see [Loop Closure](/derivations/axioms/loop-closure), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
 
 ## Statement
 
@@ -48,7 +48,7 @@ In the standard approach, Maxwell's equations are taken as given. Here they are 
 
 **(i) Local gauge freedom is inevitable.** By Theorem 2.1 (below, Step 2), relational physics (Proposition 1.2: observables depend only on phase differences) combined with finite signal speed ([Speed of Light](/derivations/spacetime/speed-of-light), Theorem 2.2) forces local phase independence: the phase convention at each spacetime point is unconstrained by spacelike-separated conventions. The transformation $\theta(x) \to \theta(x) + \alpha(x)$ for arbitrary smooth $\alpha$ is a genuine redundancy.
 
-**(ii) Phase comparison requires parallel transport.** Given local phase independence, comparing phases at distinct points $x$ and $y$ requires specifying how the phase is transported along a path from $x$ to $y$. This transport must be: (a) smooth (from the smooth structure of the coherence geometry, established in [Loop Closure](/derivations/axioms/loop-closure), Theorem 0.0); (b) compatible with the $U(1)$ action (phases are $U(1)$-valued by Axiom 3); (c) path-dependent in general (otherwise a global convention would exist, contradicting (i)).
+**(ii) Phase comparison requires parallel transport.** Given local phase independence, comparing phases at distinct points $x$ and $y$ requires specifying how the phase is transported along a path from $x$ to $y$. This transport must be: (a) smooth (from the smooth structure of the coherence geometry, established in Theorem 0.0); (b) compatible with the $U(1)$ action (phases are $U(1)$-valued by Axiom 3); (c) path-dependent in general (otherwise a global convention would exist, contradicting (i)).
 
 **(iii) Uniqueness by classification theorem.** By the classification theorem for connections on principal fiber bundles (Kobayashi & Nomizu, *Foundations of Differential Geometry*, Vol. I, Ch. II; Proposition 2.3 below), a smooth assignment of $U(1)$ elements to paths satisfying (a)–(c) above, and reducing to the global $U(1)$ action for constant transformations, is equivalent to a connection 1-form on a principal $U(1)$ bundle $P \to \mathcal{M}$. This is unique as a mathematical structure — it is not one choice among several but the *only* smooth implementation.
 
@@ -64,7 +64,7 @@ Therefore S1 is not an independent physical assumption but the uniquely forced m
 
 ### Step 1: Observer Phases and Relational Physics
 
-**Definition 1.1.** Let $\mathcal{O}_x = (\Sigma_x, I_x, \mathcal{B}_x)$ be an observer at spacetime point $x$. By [Loop Closure](/derivations/axioms/loop-closure) (Corollary 4.3), $\mathcal{O}_x$ has a faithful $U(1)$ action with internal phase $\theta_x \in [0, 2\pi)$.
+**Definition 1.1.** Let $\mathcal{O}_x = (\Sigma_x, I_x, \mathcal{B}_x)$ be an observer at spacetime point $x$. By (Corollary 4.3), $\mathcal{O}_x$ has a faithful $U(1)$ action with internal phase $\theta_x \in [0, 2\pi)$.
 
 **Proposition 1.2 (Phase redundancy).** *Physical observables depend only on phase differences between observers, not on absolute phase values.*
 
@@ -72,7 +72,7 @@ Therefore S1 is not an independent physical assumption but the uniquely forced m
 
 More concretely, the consistency model of [Relational Invariants](/derivations/interactions/relational-invariants) (Theorem 7.1) constructs $I_{12}(\theta_1, \theta_2) = \cos(\theta_1 - \theta_2)$, which manifestly depends only on the phase difference.
 
-Under a global phase shift $\theta(x) \to \theta(x) + \alpha$ for constant $\alpha$, all relational invariants are unchanged. This is the global $U(1)$ symmetry of the observer network — the same symmetry established in [Loop Closure](/derivations/axioms/loop-closure) (Theorem 5.1), now recognized as a redundancy. $\square$
+Under a global phase shift $\theta(x) \to \theta(x) + \alpha$ for constant $\alpha$, all relational invariants are unchanged. This is the global $U(1)$ symmetry of the observer network — the same symmetry established in (Theorem 5.1), now recognized as a redundancy. $\square$
 
 ### Step 2: Local Phase Independence
 
@@ -319,7 +319,7 @@ The solenoid experiment simply measures the holonomy $W(\gamma) = \exp(iq\oint_\
 
 | Prerequisite | What it provides |
 |---|---|
-| [Loop Closure](/derivations/axioms/loop-closure) | $U(1)$ phase structure of every observer |
+| | $U(1)$ phase structure of every observer |
 | [Minimal Observer Structure](/derivations/minimal-observer/structure) | Observer as $U(1)$ oscillator, Noether charge $Q$ |
 | [Coherence-Dual Pairs](/derivations/minimal-observer/coherence-dual-pairs) | Charge conjugation, integer winding numbers |
 | [Relational Invariants](/derivations/interactions/relational-invariants) | Physics depends on phase *differences* only (R1) |
