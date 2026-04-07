@@ -51,9 +51,9 @@
     "derivation": "spacetime/speed-of-light",
     "derivationTitle": "Speed of Light",
     "postulateId": "S1",
-    "shortName": "Pseudo-Riemannian structure",
-    "statement": "The coherence geometry (H, g) is a smooth pseudo-Riemannian manifold. The line element ds\u00b2 = g_\u03bc\u03bd dx\u03bc dx\u03bd is a non-degenerate quadratic form in coordinate differentials.",
-    "justification": "The individual observer state spaces are Riemannian (positive-definite), but the ambient geometry containing multiple observers must allow for both timelike and spacelike separations. Pseudo-Riemannian rules out Finsler geometry.",
+    "shortName": "Smooth ambient geometry",
+    "statement": "The ambient multi-observer coherence geometry is a smooth manifold. TIGHTENED: individual state space smoothness is derived (Loop Closure Theorem 0.2), quadratic form from U(1) isotropy, Lorentzian signature from causal structure. The irreducible content is: the global assembly of the observer network into a smooth ambient manifold. Reduces to the continuous-discrete duality compatibility condition (Conjecture 4.1).",
+    "justification": "Individual observer state spaces are smooth manifolds (Theorem 0.2). Geometric connections between them are smooth (ER=EPR). The remaining question is whether the global assembly produces a smooth manifold, which is the continuous-discrete duality\u2019s compatibility condition.",
     "group": "geometry"
   },
   {

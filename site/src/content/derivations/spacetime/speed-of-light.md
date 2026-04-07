@@ -40,9 +40,17 @@ The speed of light is one of the most precisely measured constants in physics an
 
 ### Structural Postulate
 
-**Structural Postulate S1 (Pseudo-Riemannian structure).** The coherence geometry $(\mathcal{H}, g)$ is a smooth pseudo-Riemannian manifold. The line element $ds^2 = g_{\mu\nu} dx^\mu dx^\nu$ is a non-degenerate quadratic form in coordinate differentials.
+**Structural Postulate S1 (Smooth ambient geometry).** The ambient coherence geometry $(\mathcal{H}, g)$ — the multi-observer spacetime — is a smooth manifold.
 
-**Remark.** The smooth metric structure on observer state spaces is now a theorem ([Loop Closure](/derivations/axioms/loop-closure), Theorem 0.2 — state spaces are finite-dimensional compact smooth manifolds by construction from U(1) Lie group orbits). This postulate promotes that structure to the *ambient* coherence geometry: the multi-observer spacetime, not just individual state spaces. The quadratic form — ruling out Finsler geometry — follows from the local isotropy of the coherence measure: if the coherence cost of an infinitesimal displacement depends only on its magnitude (not its direction in the spatial subspace), the metric is necessarily Riemannian. A Finslerian metric would require a preferred spatial direction at each point, breaking the rotational symmetry inherent in the $U(1)$ loop closure structure. The irreducible content of this postulate is therefore: the ambient coherence geometry is pseudo-Riemannian (signature $(-,+,+,+)$), not merely that observer state spaces are smooth manifolds.
+**Remark (Tightened content).** The original postulate assumed a smooth pseudo-Riemannian manifold with a non-degenerate quadratic form. Most of this content is now derived:
+
+1. **Individual state spaces are smooth manifolds** — derived as [Loop Closure](/derivations/axioms/loop-closure), Theorem 0.2 (state spaces constructed from $U(1)$ Lie group orbits via the bootstrap mechanism).
+
+2. **Quadratic form (not Finsler)** — derived from the local isotropy of $U(1)$ loop closure. The coherence cost of a spatial displacement depends only on its magnitude, not its direction. An $SO(d)$-invariant metric is necessarily quadratic — this is a standard mathematical result, not a physical assumption. A Finslerian metric would require a preferred spatial direction at each point, breaking the rotational symmetry inherent in the $U(1)$ structure.
+
+3. **Lorentzian signature $(-,+,+,+)$** — derived from the interaction graph's partial order ([Time as Phase Ordering](/derivations/thermodynamics/time)), which distinguishes a temporal direction, combined with the loop closure constraint $L = cT$ (Theorem 3.1 below) which relates temporal and spatial projections with opposite signs.
+
+The **irreducible content** of S1 is now specifically: *the ambient multi-observer geometry assembles into a smooth manifold.* Individual state spaces are smooth manifolds (derived). The geometric connections between them are smooth (relational invariants via [ER=EPR](/derivations/holography/er-epr) create smooth throat geometries). But whether the global assembly — the network of observers connected by relational invariants — produces a smooth manifold (rather than something more exotic) is the compatibility condition identified by the [Continuous-Discrete Duality](/derivations/foundation/continuous-discrete-duality) (Conjecture 4.1). If that conjecture is proved, this postulate becomes a theorem.
 
 ### Step 1: Dual Projections of the Observer Loop
 
@@ -185,8 +193,8 @@ $$c = \frac{\text{coherence distance per cycle}}{\text{coherence time per cycle}
 - Theorem 5.1: Uniqueness of Minkowski signature from S1 (quadratic form) + three conditions (standard metric geometry)
 - Theorem 7.1: Consistency model verified on $S^1$ in $\mathbb{R}^{1,1}$
 
-**Structural postulate:**
-- S1 (pseudo-Riemannian structure): Promotes smooth metric from Loop Closure/Action-Planck to ambient geometry. Quadratic form justified by isotropy of coherence measure. This is a structural assumption, not derived from the three axioms.
+**Structural postulate (tightened):**
+- S1 (smooth ambient geometry): The quadratic form is derived from $U(1)$ isotropy, the Lorentzian signature from the interaction graph's causal structure, and individual state space smoothness from Loop Closure Theorem 0.2. The remaining postulated content is: the ambient multi-observer geometry assembles into a smooth manifold. This reduces to the continuous-discrete duality's compatibility condition (Conjecture 4.1).
 
 **Deferred / conjectural:**
 - The continuum limit from the discrete interaction graph $\mathcal{G}$ to the continuous Minkowski metric requires the Hauptvermutung of causal set theory ([Time as Phase Ordering](/derivations/thermodynamics/time), Proposition 7.1), which is an external conjecture. This is the same deferred element as in the time derivation.
