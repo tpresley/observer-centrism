@@ -6,11 +6,9 @@ import remarkStats from './src/plugins/remark-stats.mjs'
 import rehypeKatex from 'rehype-katex'
 import rehypeStepAnchors from './src/plugins/rehype-step-anchors.mjs'
 
-const isProd = process.env.NODE_ENV === 'production'
-
 export default defineConfig({
-  site: 'https://tpresley.github.io',
-  base: isProd ? '/observer-centrism' : '/',
+  site: 'https://observer-centrism.org',
+  base: '/',
   integrations: [sygnal(), pagefind()],
   markdown: {
     remarkPlugins: [remarkStats, remarkMath],
