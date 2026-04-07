@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-07T05:20:18.673Z",
+    "generatedAt": "2026-04-07T08:54:05.351Z",
     "derivationCount": 74,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -17,8 +17,8 @@
     "derivationCount": 74,
     "predictionCount": 12,
     "edgeCount": 211,
-    "formalObjectCount": 1119,
-    "openGapCount": 228,
+    "formalObjectCount": 1122,
+    "openGapCount": 229,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -2062,7 +2062,7 @@
         "cosmology",
         "quantum-gravity"
       ],
-      "summary": "True de Sitter equilibrium is axiomatically forbidden because relational invariants are permanent. The universe approaches equilibrium but never reaches it. Minimal observers continue interacting (C5 never switches off), accumulating relational invariant structure that is invisible at their epistemic level but constitutes real geometric structure. When enough accumulates, a new bootstrap level becomes viable — a perceptual phase transition where complex observers re-emerge at a higher level of description. The cosmological arrow of time is real at each level, but the universe cycles through levels of descriptive complexity.",
+      "summary": "True de Sitter equilibrium is axiomatically forbidden because relational invariants are permanent. The universe approaches equilibrium but never reaches it. The cycle that results is fundamentally about epistemic memory: the network's shared capacity to know its own history grows to a maximum, wanes to a floor, and begins again — with the coherence topology retaining what finite observers necessarily forget.",
       "lastUpdated": "2026-04-06",
       "dependsOn": [
         "cosmology/observer-loop-viability",
@@ -2070,7 +2070,8 @@
         "cosmology/geometric-substrate",
         "interactions/relational-invariants",
         "minimal-observer/multiplicity",
-        "thermodynamics/entropy"
+        "thermodynamics/entropy",
+        "thermodynamics/time"
       ],
       "enablesDerivation": [],
       "dependedOnBy": [],
@@ -2081,19 +2082,23 @@
         },
         {
           "number": 2,
-          "title": "The Observer Horizon Problem"
+          "title": "Time Without History"
         },
         {
           "number": 3,
-          "title": "Accumulation in the Substrate"
+          "title": "Geometry as Consistency Solution"
         },
         {
           "number": 4,
-          "title": "The Perceptual Phase Transition"
+          "title": "Beginning Equals End"
         },
         {
           "number": 5,
-          "title": "The Cycle"
+          "title": "The Epistemic Memory Cycle"
+        },
+        {
+          "number": 6,
+          "title": "Duration, Scale, and the Question of \"First\""
         }
       ],
       "formalObjects": [
@@ -2101,68 +2106,91 @@
           "type": "Proposition",
           "id": "1.1",
           "name": "Relational invariants are permanent",
-          "statementPreview": "Every Type III interaction generates a relational invariant that is conserved by Axiom 1 and cannot be destroyed ([Re..."
+          "statementPreview": "Every Type III interaction generates a relational invariant conserved by Axiom 1 ([Relational Invariants](/derivation..."
         },
         {
           "type": "Proposition",
           "id": "1.2",
           "name": "Complete thermalization is axiomatically forbidden",
-          "statementPreview": "True de Sitter equilibrium — a featureless thermal state at the Gibbons-Hawking temperature with zero structural cohe..."
+          "statementPreview": "True de Sitter equilibrium — a featureless thermal state with zero structural coherence — requires all relational inv..."
         },
         {
           "type": "Proposition",
           "id": "2.1",
-          "name": "De Sitter equilibrium is epistemically incoherent",
-          "statementPreview": "The prediction \"OmegaLambda 1\" is made by complex observers at bootstrap level N, using their level-N projected geome..."
+          "name": "Minimal observers have duration but not memory",
+          "statementPreview": "A minimal observer has state space S1 with 1 bit of epistemic capacity ([Minimal Observer Structure](/derivations/min..."
         },
         {
           "type": "Proposition",
           "id": "3.1",
-          "name": "Interaction never ceases",
-          "statementPreview": "C5 (strong subadditivity) requires at least three interacting observers at all times ([Multiplicity](/derivations/min..."
-        },
-        {
-          "type": "Proposition",
-          "id": "3.2",
-          "name": "Relational invariants accumulate",
-          "statementPreview": "Each interaction between minimal observers generates a new relational invariant (reverse Noether, [Relational Invaria..."
+          "name": "Geometry is constituted and deconstituted by observer level",
+          "statementPreview": "The effective geometry at bootstrap level n is the unique consistency solution for the relational invariants accessib..."
         },
         {
           "type": "Proposition",
           "id": "4.1",
-          "name": "Bootstrap re-initiation",
-          "statementPreview": "The bootstrap mechanism ([Bootstrap](/derivations/interactions/bootstrap), Theorem 1.1) produces composite observers ..."
+          "name": "Epistemic identity of initial and final states",
+          "statementPreview": "The post-dissolution state and the post-bounce initial state are epistemically identical from the only observer level..."
         },
         {
-          "type": "Proposition",
-          "id": "4.2",
-          "name": "The second law is preserved",
-          "statementPreview": "The re-emergence of complex observers does not violate the second law for any existing observer.*"
-        },
-        {
-          "type": "Proposition",
+          "type": "Definition",
           "id": "5.1",
-          "name": "The four-phase cycle",
-          "statementPreview": "The framework's axioms produce a cyclic cosmological dynamics with four phases:*"
+          "name": "Shared epistemic memory",
+          "statementPreview": "The **shared epistemic memory** of the observer network at time tau is the total coherence content of relational inva..."
         },
         {
           "type": "Proposition",
           "id": "5.2",
+          "name": "The four-phase cycle",
+          "statementPreview": "The framework's axioms produce a cyclic dynamics in M:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.3",
+          "name": "The second law is universally preserved",
+          "statementPreview": "No observer at any level in any phase ever sees entropy decrease. The cycle operates in the space of epistemic capaci..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.4",
           "name": "The arrow of time is level-indexed",
-          "statementPreview": "The cosmological arrow of time (entropy increases) is real at every observer level and throughout every phase. No obs..."
+          "statementPreview": "The cosmological arrow of time is real at every observer level throughout every phase. The recurrence does not revers..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "The floor phase has no well-defined duration",
+          "statementPreview": "Asking \"how long does the floor phase last?\" is not a hard problem — it is an ill-posed question. Duration requires a..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.2",
+          "name": "Scale is undefined at the floor",
+          "statementPreview": "Spatial extent — \"how big\" — requires geometry, which requires observers to constitute it (Step 3, Proposition 3.1). ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.3",
+          "name": "\"First cycle\" is not well-posed",
+          "statementPreview": "The cycles do not happen \"in\" time — they are the structure from which experienced time emerges. Asking \"was there a ..."
         }
       ],
       "structuralPostulates": [],
       "openGaps": [
         {
           "number": 1,
-          "title": "Accumulation timescale.",
-          "description": "How long does the accumulation phase last? The rate of relational invariant generation in the substrate depends on the Gibbons-Hawking temperature and the minimal observer interaction cross-section. T"
+          "title": "Duration of the floor.",
+          "description": "~~How long does the floor phase last?~~ Per Proposition 6.1, this question is ill-posed: duration requires observers with memory, which the floor phase lacks. The well-posed version: what is the *comb"
         },
         {
           "number": 2,
           "title": "Level progression.",
-          "description": "Does each cycle produce observers at a strictly higher bootstrap level (ascending spiral), or can cycles recur at the same level? If the permanent relational invariant floor Cfloor grows with each cyc"
+          "description": "Does each epoch produce observers at a strictly higher bootstrap level (because the coherence topology's richness raises the structural starting point), or does the epistemic inaccessibility of the fl"
+        },
+        {
+          "number": 3,
+          "title": "Statistical fossils.",
+          "description": "Any imprint from a previous epoch would be statistical, not structural (Proposition 6.2 — spatial patterns require geometry that doesn't exist at the floor). The question: do the statistical propertie"
         }
       ],
       "assessmentVerdict": "",
@@ -2170,8 +2198,8 @@
       "crossReferences": {
         "outgoing": [
           {
-            "target": "cosmology/observer-loop-viability",
-            "context": "Observer Loop Viability"
+            "target": "foundation/continuous-discrete-duality",
+            "context": "Continuous-Discrete Duality"
           },
           {
             "target": "interactions/relational-invariants",
@@ -2186,20 +2214,24 @@
             "context": "Geometric Substrate"
           },
           {
-            "target": "minimal-observer/multiplicity",
-            "context": "Multiplicity"
+            "target": "minimal-observer/structure",
+            "context": "Minimal Observer Structure"
           },
           {
-            "target": "cosmology/dark-energy-equation-of-state",
-            "context": "Dark Energy Equation of State"
+            "target": "thermodynamics/time",
+            "context": "Time as Phase Ordering"
+          },
+          {
+            "target": "cosmology/observer-loop-viability",
+            "context": "Observer Loop Viability"
           },
           {
             "target": "holography/er-epr",
-            "context": "Theorem 3.2"
+            "context": "ER=EPR"
           },
           {
-            "target": "interactions/bootstrap",
-            "context": "Bootstrap"
+            "target": "minimal-observer/multiplicity",
+            "context": "Multiplicity"
           }
         ],
         "incoming": []
@@ -2420,10 +2452,6 @@
           },
           {
             "source": "cosmology/cosmological-constant",
-            "context": "Dark Energy Equation of State"
-          },
-          {
-            "source": "cosmology/cyclic-cosmology",
             "context": "Dark Energy Equation of State"
           },
           {
@@ -4836,6 +4864,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "cosmology/cyclic-cosmology",
+            "context": "Continuous-Discrete Duality"
+          },
           {
             "source": "cosmology/geometric-substrate",
             "context": "Continuous-Discrete Duality"
@@ -8731,7 +8763,7 @@
         "incoming": [
           {
             "source": "cosmology/cyclic-cosmology",
-            "context": "Theorem 3.2"
+            "context": "ER=EPR"
           },
           {
             "source": "cosmology/geometric-substrate",
@@ -9966,10 +9998,6 @@
           {
             "source": "cosmology/coupling-constants",
             "context": "Bootstrap Mechanism"
-          },
-          {
-            "source": "cosmology/cyclic-cosmology",
-            "context": "Bootstrap"
           },
           {
             "source": "cosmology/geometric-inflation",
@@ -11620,6 +11648,10 @@
         "incoming": [
           {
             "source": "axioms/loop-closure",
+            "context": "Minimal Observer Structure"
+          },
+          {
+            "source": "cosmology/cyclic-cosmology",
             "context": "Minimal Observer Structure"
           },
           {
@@ -19366,6 +19398,7 @@
       ],
       "dependedOnBy": [
         "cosmology/cosmological-arrow",
+        "cosmology/cyclic-cosmology",
         "cosmology/observer-loop-viability",
         "quantum/born-rule",
         "quantum/observer-relative-objectivity",
@@ -19530,6 +19563,10 @@
           },
           {
             "source": "cosmology/cosmological-arrow",
+            "context": "Time as Phase Ordering"
+          },
+          {
+            "source": "cosmology/cyclic-cosmology",
             "context": "Time as Phase Ordering"
           },
           {
@@ -22299,50 +22336,71 @@
       "derivationId": "cosmology/cyclic-cosmology",
       "type": "Proposition",
       "id": "2.1",
-      "name": "De Sitter equilibrium is epistemically incoherent",
+      "name": "Minimal observers have duration but not memory",
       "fullRef": "cosmology/cyclic-cosmology:Proposition 2.1"
     },
     {
       "derivationId": "cosmology/cyclic-cosmology",
       "type": "Proposition",
       "id": "3.1",
-      "name": "Interaction never ceases",
+      "name": "Geometry is constituted and deconstituted by observer level",
       "fullRef": "cosmology/cyclic-cosmology:Proposition 3.1"
     },
     {
       "derivationId": "cosmology/cyclic-cosmology",
       "type": "Proposition",
-      "id": "3.2",
-      "name": "Relational invariants accumulate",
-      "fullRef": "cosmology/cyclic-cosmology:Proposition 3.2"
-    },
-    {
-      "derivationId": "cosmology/cyclic-cosmology",
-      "type": "Proposition",
       "id": "4.1",
-      "name": "Bootstrap re-initiation",
+      "name": "Epistemic identity of initial and final states",
       "fullRef": "cosmology/cyclic-cosmology:Proposition 4.1"
     },
     {
       "derivationId": "cosmology/cyclic-cosmology",
-      "type": "Proposition",
-      "id": "4.2",
-      "name": "The second law is preserved",
-      "fullRef": "cosmology/cyclic-cosmology:Proposition 4.2"
-    },
-    {
-      "derivationId": "cosmology/cyclic-cosmology",
-      "type": "Proposition",
+      "type": "Definition",
       "id": "5.1",
-      "name": "The four-phase cycle",
-      "fullRef": "cosmology/cyclic-cosmology:Proposition 5.1"
+      "name": "Shared epistemic memory",
+      "fullRef": "cosmology/cyclic-cosmology:Definition 5.1"
     },
     {
       "derivationId": "cosmology/cyclic-cosmology",
       "type": "Proposition",
       "id": "5.2",
-      "name": "The arrow of time is level-indexed",
+      "name": "The four-phase cycle",
       "fullRef": "cosmology/cyclic-cosmology:Proposition 5.2"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "5.3",
+      "name": "The second law is universally preserved",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 5.3"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "5.4",
+      "name": "The arrow of time is level-indexed",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 5.4"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "The floor phase has no well-defined duration",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 6.1"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "6.2",
+      "name": "Scale is undefined at the floor",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 6.2"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "6.3",
+      "name": "\"First cycle\" is not well-posed",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 6.3"
     },
     {
       "derivationId": "cosmology/dark-energy-equation-of-state",
@@ -29476,15 +29534,22 @@
       "derivationId": "cosmology/cyclic-cosmology",
       "derivationStatus": "provisional",
       "number": 1,
-      "title": "Accumulation timescale.",
-      "description": "How long does the accumulation phase last? The rate of relational invariant generation in the substrate depends on the Gibbons-Hawking temperature and the minimal observer interaction cross-section. T"
+      "title": "Duration of the floor.",
+      "description": "~~How long does the floor phase last?~~ Per Proposition 6.1, this question is ill-posed: duration requires observers with memory, which the floor phase lacks. The well-posed version: what is the *comb"
     },
     {
       "derivationId": "cosmology/cyclic-cosmology",
       "derivationStatus": "provisional",
       "number": 2,
       "title": "Level progression.",
-      "description": "Does each cycle produce observers at a strictly higher bootstrap level (ascending spiral), or can cycles recur at the same level? If the permanent relational invariant floor Cfloor grows with each cyc"
+      "description": "Does each epoch produce observers at a strictly higher bootstrap level (because the coherence topology's richness raises the structural starting point), or does the epistemic inaccessibility of the fl"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "derivationStatus": "provisional",
+      "number": 3,
+      "title": "Statistical fossils.",
+      "description": "Any imprint from a previous epoch would be statistical, not structural (Proposition 6.2 — spatial patterns require geometry that doesn't exist at the floor). The question: do the statistical propertie"
     },
     {
       "derivationId": "cosmology/geometric-inflation",
