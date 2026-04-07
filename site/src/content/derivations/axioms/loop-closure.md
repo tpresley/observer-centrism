@@ -1,7 +1,7 @@
 ---
 title: "Loop Closure"
 status: "rigorous"
-dependsOn: ["axioms/coherence-conservation", "axioms/observer-definition", "interactions/relational-invariants", "interactions/bootstrap", "foundation/aperiodic-order"]
+dependsOn: ["axioms/coherence-conservation", "axioms/observer-definition"]
 enablesDerivation: ["minimal-observer/structure", "thermodynamics/action-planck", "spacetime/speed-of-light"]
 tags: ["axioms"]
 summary: "Derivation of cyclic dynamics from self-reference: an observer must reproduce its own state to persist, and finite resources force this self-reproduction into a periodic loop with U(1) symmetry"

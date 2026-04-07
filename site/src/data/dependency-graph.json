@@ -1259,18 +1259,6 @@
     {
       "from": "holography/er-epr",
       "to": "foundation/continuous-discrete-duality"
-    },
-    {
-      "from": "interactions/relational-invariants",
-      "to": "axioms/loop-closure"
-    },
-    {
-      "from": "interactions/bootstrap",
-      "to": "axioms/loop-closure"
-    },
-    {
-      "from": "foundation/aperiodic-order",
-      "to": "axioms/loop-closure"
     }
   ]
 }

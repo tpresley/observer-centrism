@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-07T00:26:13.459Z",
+    "generatedAt": "2026-04-07T00:35:55.856Z",
     "derivationCount": 73,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -16,7 +16,7 @@
     },
     "derivationCount": 73,
     "predictionCount": 12,
-    "edgeCount": 208,
+    "edgeCount": 205,
     "formalObjectCount": 1110,
     "openGapCount": 226,
     "upgradeEligibleCount": 1,
@@ -592,10 +592,7 @@
       "lastUpdated": "2026-03-27",
       "dependsOn": [
         "axioms/coherence-conservation",
-        "axioms/observer-definition",
-        "interactions/relational-invariants",
-        "interactions/bootstrap",
-        "foundation/aperiodic-order"
+        "axioms/observer-definition"
       ],
       "enablesDerivation": [
         "minimal-observer/structure",
@@ -3950,7 +3947,6 @@
         "cosmology/geometric-substrate"
       ],
       "dependedOnBy": [
-        "axioms/loop-closure",
         "cosmology/geometric-substrate",
         "foundation/continuous-discrete-duality",
         "spacetime/gravitational-constant",
@@ -9549,7 +9545,6 @@
         "cosmology/cosmological-arrow"
       ],
       "dependedOnBy": [
-        "axioms/loop-closure",
         "cosmology/cosmological-arrow",
         "cosmology/coupling-constants",
         "cosmology/geometric-inflation",
@@ -9940,7 +9935,6 @@
         "holography/causal-set-statistics"
       ],
       "dependedOnBy": [
-        "axioms/loop-closure",
         "cosmology/observer-loop-viability",
         "gauge/chirality-selection",
         "holography/causal-set-statistics",
