@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-04-07T00:35:55.856Z",
-    "derivationCount": 73,
+    "generatedAt": "2026-04-07T05:20:18.673Z",
+    "derivationCount": 74,
     "predictionCount": 12,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -9,16 +9,16 @@
   "stats": {
     "byStatus": {
       "rigorous": 26,
-      "provisional": 42,
+      "provisional": 43,
       "draft": 2,
       "non-viable": 1,
       "stub": 2
     },
-    "derivationCount": 73,
+    "derivationCount": 74,
     "predictionCount": 12,
-    "edgeCount": 205,
-    "formalObjectCount": 1110,
-    "openGapCount": 226,
+    "edgeCount": 211,
+    "formalObjectCount": 1119,
+    "openGapCount": 228,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -2051,6 +2051,168 @@
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
+    "cosmology/cyclic-cosmology": {
+      "id": "cosmology/cyclic-cosmology",
+      "filePath": "site/src/content/derivations/cosmology/cyclic-cosmology.md",
+      "title": "Observer-Centric Cyclic Cosmology",
+      "status": "provisional",
+      "rigorLevel": "semi-formal",
+      "group": "cosmology",
+      "tags": [
+        "cosmology",
+        "quantum-gravity"
+      ],
+      "summary": "True de Sitter equilibrium is axiomatically forbidden because relational invariants are permanent. The universe approaches equilibrium but never reaches it. Minimal observers continue interacting (C5 never switches off), accumulating relational invariant structure that is invisible at their epistemic level but constitutes real geometric structure. When enough accumulates, a new bootstrap level becomes viable — a perceptual phase transition where complex observers re-emerge at a higher level of description. The cosmological arrow of time is real at each level, but the universe cycles through levels of descriptive complexity.",
+      "lastUpdated": "2026-04-06",
+      "dependsOn": [
+        "cosmology/observer-loop-viability",
+        "cosmology/dark-energy-equation-of-state",
+        "cosmology/geometric-substrate",
+        "interactions/relational-invariants",
+        "minimal-observer/multiplicity",
+        "thermodynamics/entropy"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The Thermalization Barrier"
+        },
+        {
+          "number": 2,
+          "title": "The Observer Horizon Problem"
+        },
+        {
+          "number": 3,
+          "title": "Accumulation in the Substrate"
+        },
+        {
+          "number": 4,
+          "title": "The Perceptual Phase Transition"
+        },
+        {
+          "number": 5,
+          "title": "The Cycle"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Proposition",
+          "id": "1.1",
+          "name": "Relational invariants are permanent",
+          "statementPreview": "Every Type III interaction generates a relational invariant that is conserved by Axiom 1 and cannot be destroyed ([Re..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Complete thermalization is axiomatically forbidden",
+          "statementPreview": "True de Sitter equilibrium — a featureless thermal state at the Gibbons-Hawking temperature with zero structural cohe..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "De Sitter equilibrium is epistemically incoherent",
+          "statementPreview": "The prediction \"OmegaLambda 1\" is made by complex observers at bootstrap level N, using their level-N projected geome..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Interaction never ceases",
+          "statementPreview": "C5 (strong subadditivity) requires at least three interacting observers at all times ([Multiplicity](/derivations/min..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Relational invariants accumulate",
+          "statementPreview": "Each interaction between minimal observers generates a new relational invariant (reverse Noether, [Relational Invaria..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Bootstrap re-initiation",
+          "statementPreview": "The bootstrap mechanism ([Bootstrap](/derivations/interactions/bootstrap), Theorem 1.1) produces composite observers ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.2",
+          "name": "The second law is preserved",
+          "statementPreview": "The re-emergence of complex observers does not violate the second law for any existing observer.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "The four-phase cycle",
+          "statementPreview": "The framework's axioms produce a cyclic cosmological dynamics with four phases:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.2",
+          "name": "The arrow of time is level-indexed",
+          "statementPreview": "The cosmological arrow of time (entropy increases) is real at every observer level and throughout every phase. No obs..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Accumulation timescale.",
+          "description": "How long does the accumulation phase last? The rate of relational invariant generation in the substrate depends on the Gibbons-Hawking temperature and the minimal observer interaction cross-section. T"
+        },
+        {
+          "number": 2,
+          "title": "Level progression.",
+          "description": "Does each cycle produce observers at a strictly higher bootstrap level (ascending spiral), or can cycles recur at the same level? If the permanent relational invariant floor Cfloor grows with each cyc"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "cosmology/observer-loop-viability",
+            "context": "Observer Loop Viability"
+          },
+          {
+            "target": "interactions/relational-invariants",
+            "context": "Relational Invariants"
+          },
+          {
+            "target": "thermodynamics/entropy",
+            "context": "Entropy"
+          },
+          {
+            "target": "cosmology/geometric-substrate",
+            "context": "Geometric Substrate"
+          },
+          {
+            "target": "minimal-observer/multiplicity",
+            "context": "Multiplicity"
+          },
+          {
+            "target": "cosmology/dark-energy-equation-of-state",
+            "context": "Dark Energy Equation of State"
+          },
+          {
+            "target": "holography/er-epr",
+            "context": "Theorem 3.2"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap"
+          }
+        ],
+        "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
     "cosmology/dark-energy-equation-of-state": {
       "id": "cosmology/dark-energy-equation-of-state",
       "filePath": "site/src/content/derivations/cosmology/dark-energy-equation-of-state.md",
@@ -2073,7 +2235,9 @@
         "spacetime/singularity-resolution"
       ],
       "enablesDerivation": [],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "cosmology/cyclic-cosmology"
+      ],
       "steps": [
         {
           "number": 1,
@@ -2256,6 +2420,10 @@
           },
           {
             "source": "cosmology/cosmological-constant",
+            "context": "Dark Energy Equation of State"
+          },
+          {
+            "source": "cosmology/cyclic-cosmology",
             "context": "Dark Energy Equation of State"
           },
           {
@@ -2478,7 +2646,9 @@
         "foundation/aperiodic-order"
       ],
       "enablesDerivation": [],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "cosmology/cyclic-cosmology"
+      ],
       "steps": [
         {
           "number": 1,
@@ -2715,6 +2885,10 @@
         ],
         "incoming": [
           {
+            "source": "cosmology/cyclic-cosmology",
+            "context": "Geometric Substrate"
+          },
+          {
             "source": "foundation/aperiodic-order",
             "context": "Geometric Substrate"
           },
@@ -2936,6 +3110,7 @@
       ],
       "dependedOnBy": [
         "cosmology/cosmological-arrow",
+        "cosmology/cyclic-cosmology",
         "cosmology/dark-energy-equation-of-state",
         "cosmology/geometric-substrate"
       ],
@@ -3363,6 +3538,10 @@
           {
             "source": "cosmology/cosmological-constant",
             "context": "Observer Loop Viability Bounds"
+          },
+          {
+            "source": "cosmology/cyclic-cosmology",
+            "context": "Observer Loop Viability"
           },
           {
             "source": "cosmology/dark-energy-equation-of-state",
@@ -8551,6 +8730,10 @@
         ],
         "incoming": [
           {
+            "source": "cosmology/cyclic-cosmology",
+            "context": "Theorem 3.2"
+          },
+          {
             "source": "cosmology/geometric-substrate",
             "context": "ER=EPR"
           },
@@ -9785,6 +9968,10 @@
             "context": "Bootstrap Mechanism"
           },
           {
+            "source": "cosmology/cyclic-cosmology",
+            "context": "Bootstrap"
+          },
+          {
             "source": "cosmology/geometric-inflation",
             "context": "Bootstrap"
           },
@@ -9935,6 +10122,7 @@
         "holography/causal-set-statistics"
       ],
       "dependedOnBy": [
+        "cosmology/cyclic-cosmology",
         "cosmology/observer-loop-viability",
         "gauge/chirality-selection",
         "holography/causal-set-statistics",
@@ -10129,6 +10317,10 @@
           },
           {
             "source": "axioms/observer-definition",
+            "context": "Relational Invariants"
+          },
+          {
+            "source": "cosmology/cyclic-cosmology",
             "context": "Relational Invariants"
           },
           {
@@ -10890,6 +11082,7 @@
         "interactions/three-types"
       ],
       "dependedOnBy": [
+        "cosmology/cyclic-cosmology",
         "cosmology/geometric-inflation",
         "cosmology/observer-loop-viability",
         "foundation/aperiodic-order",
@@ -11128,6 +11321,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "cosmology/cyclic-cosmology",
+            "context": "Multiplicity"
+          },
           {
             "source": "cosmology/dark-energy-equation-of-state",
             "context": "Multiplicity"
@@ -18832,6 +19029,7 @@
       ],
       "dependedOnBy": [
         "cosmology/cosmological-arrow",
+        "cosmology/cyclic-cosmology",
         "cosmology/observer-loop-viability",
         "thermodynamics-ext/biological-non-ergodicity",
         "thermodynamics-ext/distinguishability-conservation",
@@ -19050,6 +19248,10 @@
           },
           {
             "source": "cosmology/cosmological-constant",
+            "context": "Entropy"
+          },
+          {
+            "source": "cosmology/cyclic-cosmology",
             "context": "Entropy"
           },
           {
@@ -22078,6 +22280,69 @@
       "id": "2.1",
       "name": "",
       "fullRef": "cosmology/coupling-constants:Proposition 2.1"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "1.1",
+      "name": "Relational invariants are permanent",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 1.1"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "Complete thermalization is axiomatically forbidden",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 1.2"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "De Sitter equilibrium is epistemically incoherent",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 2.1"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Interaction never ceases",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 3.1"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "Relational invariants accumulate",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 3.2"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Bootstrap re-initiation",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 4.1"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "4.2",
+      "name": "The second law is preserved",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 4.2"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "The four-phase cycle",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 5.1"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "5.2",
+      "name": "The arrow of time is level-indexed",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 5.2"
     },
     {
       "derivationId": "cosmology/dark-energy-equation-of-state",
@@ -29206,6 +29471,20 @@
       "number": 5,
       "title": "Yukawa couplings",
       "description": "The fermion masses are free parameters in the Standard Model but should be constrained by the division algebra structure and the [Flavor Mixing](/derivations/flavor/mixing-angles) derivation. This req"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "derivationStatus": "provisional",
+      "number": 1,
+      "title": "Accumulation timescale.",
+      "description": "How long does the accumulation phase last? The rate of relational invariant generation in the substrate depends on the Gibbons-Hawking temperature and the minimal observer interaction cross-section. T"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "derivationStatus": "provisional",
+      "number": 2,
+      "title": "Level progression.",
+      "description": "Does each cycle produce observers at a strictly higher bootstrap level (ascending spiral), or can cycles recur at the same level? If the permanent relational invariant floor Cfloor grows with each cyc"
     },
     {
       "derivationId": "cosmology/geometric-inflation",

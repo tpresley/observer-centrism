@@ -11,6 +11,7 @@ relatedDerivations:
   - "cosmology/leptogenesis"
   - "cosmology/coupling-constants"
   - "cosmology/geometric-substrate"
+  - "cosmology/cyclic-cosmology"
   - "cosmology/cosmological-arrow"
   - "spacetime/singularity-resolution"
   - "spacetime/gravitational-constant"
@@ -130,6 +131,18 @@ The framework predicts that the three gauge couplings **do not converge** to a s
 **Dark matter granularity**: loop closure pressure creates a minimum halo mass $M_J \propto m_{\text{DM}}^{-3/2}$ with a Gaussian power-spectrum cutoff steeper than warm dark matter. Testable with strong lensing and satellite galaxy counts.
 
 **Holographic noise**: strain PSD $S_h = 2\alpha_H \ell_P/c$ with angular structure $\Gamma(\beta) = \cos\beta$. Measurable with co-located interferometers.
+
+## The Fate of the Universe
+
+The framework's axioms have a surprising consequence for the ultimate fate of the universe: **heat death is axiomatically forbidden.**
+
+The second law drives the universe toward de Sitter equilibrium &mdash; all complex structure dissolved, only minimal observers remaining. But relational invariants are permanent (Axiom 1). Every interaction in cosmic history generated correlations that cannot be thermalized away. Complete equilibrium would require their destruction, which violates coherence conservation.
+
+The resolution: minimal observers must continue interacting (C5 never switches off), generating new relational invariants that accumulate as real geometric structure invisible to their 1-bit epistemic capacity. When enough structure has accumulated, the bootstrap can produce a new composite observer level &mdash; a perceptual phase transition where complex observers re-emerge at a higher level of description, perceiving low entropy in structure that was always present but invisible from below.
+
+This is a framework-native cyclic cosmology: complexification &rarr; dissolution &rarr; invisible accumulation &rarr; re-complexification. The second law holds at every level (no observer ever sees entropy decrease). The "rebirth" is the emergence of a new observer level that accesses structure invisible to the previous level.
+
+**Formal derivation:** [Observer-Centric Cyclic Cosmology](/derivations/cosmology/cyclic-cosmology)
 
 ## What's Honestly Open
 

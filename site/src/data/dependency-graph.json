@@ -437,6 +437,12 @@
       "title": "Continuous-Discrete Duality",
       "group": "foundation",
       "status": "provisional"
+    },
+    {
+      "id": "cosmology/cyclic-cosmology",
+      "title": "Observer-Centric Cyclic Cosmology",
+      "group": "cosmology",
+      "status": "provisional"
     }
   ],
   "edges": [
@@ -1259,6 +1265,30 @@
     {
       "from": "holography/er-epr",
       "to": "foundation/continuous-discrete-duality"
+    },
+    {
+      "from": "cosmology/observer-loop-viability",
+      "to": "cosmology/cyclic-cosmology"
+    },
+    {
+      "from": "cosmology/dark-energy-equation-of-state",
+      "to": "cosmology/cyclic-cosmology"
+    },
+    {
+      "from": "cosmology/geometric-substrate",
+      "to": "cosmology/cyclic-cosmology"
+    },
+    {
+      "from": "interactions/relational-invariants",
+      "to": "cosmology/cyclic-cosmology"
+    },
+    {
+      "from": "minimal-observer/multiplicity",
+      "to": "cosmology/cyclic-cosmology"
+    },
+    {
+      "from": "thermodynamics/entropy",
+      "to": "cosmology/cyclic-cosmology"
     }
   ]
 }
