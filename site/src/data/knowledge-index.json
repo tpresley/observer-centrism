@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-07T08:54:05.351Z",
+    "generatedAt": "2026-04-08T20:46:08.897Z",
     "derivationCount": 74,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -17,7 +17,7 @@
     "derivationCount": 74,
     "predictionCount": 12,
     "edgeCount": 211,
-    "formalObjectCount": 1122,
+    "formalObjectCount": 1124,
     "openGapCount": 229,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
@@ -2062,7 +2062,7 @@
         "cosmology",
         "quantum-gravity"
       ],
-      "summary": "True de Sitter equilibrium is axiomatically forbidden because relational invariants are permanent. The universe approaches equilibrium but never reaches it. The cycle that results is fundamentally about epistemic memory: the network's shared capacity to know its own history grows to a maximum, wanes to a floor, and begins again — with the coherence topology retaining what finite observers necessarily forget.",
+      "summary": "True de Sitter equilibrium is axiomatically forbidden because relational invariants are permanent. As complex observers dissolve, their coherence redistributes to the minimal observer network — satisfying the coherence ontology (Prop 5.1: coherence exists only in observer structures). Maximal correlation in this network is operationally indistinguishable from zero correlation for any internal observer, producing a complete epistemic reset. The cycle is fundamentally about shared epistemic memory: the network's collective capacity to know its own history grows to a maximum, wanes to a floor, and begins again.",
       "lastUpdated": "2026-04-06",
       "dependsOn": [
         "cosmology/observer-loop-viability",
@@ -2090,14 +2090,18 @@
         },
         {
           "number": 4,
-          "title": "Beginning Equals End"
+          "title": "Coherence Redistribution and the Saturation Equivalence"
         },
         {
           "number": 5,
-          "title": "The Epistemic Memory Cycle"
+          "title": "Beginning Equals End"
         },
         {
           "number": 6,
+          "title": "The Epistemic Memory Cycle"
+        },
+        {
+          "number": 7,
           "title": "Duration, Scale, and the Question of \"First\""
         }
       ],
@@ -2128,49 +2132,61 @@
         },
         {
           "type": "Proposition",
+          "id": "4.0",
+          "name": "Coherence redistributes to the minimal network",
+          "statementPreview": "As complex observers dissolve, their coherence does not float free or persist in an abstract topology. It redistribut..."
+        },
+        {
+          "type": "Proposition",
           "id": "4.1",
+          "name": "Maximal correlation is operationally equivalent to zero correlation",
+          "statementPreview": "A minimal observer network in which every pair carries a relational invariant (the end state of redistribution) is in..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
           "name": "Epistemic identity of initial and final states",
           "statementPreview": "The post-dissolution state and the post-bounce initial state are epistemically identical from the only observer level..."
         },
         {
           "type": "Definition",
-          "id": "5.1",
+          "id": "6.1",
           "name": "Shared epistemic memory",
           "statementPreview": "The **shared epistemic memory** of the observer network at time tau is the total coherence content of relational inva..."
         },
         {
           "type": "Proposition",
-          "id": "5.2",
+          "id": "6.2",
           "name": "The four-phase cycle",
           "statementPreview": "The framework's axioms produce a cyclic dynamics in M:*"
         },
         {
           "type": "Proposition",
-          "id": "5.3",
+          "id": "6.3",
           "name": "The second law is universally preserved",
           "statementPreview": "No observer at any level in any phase ever sees entropy decrease. The cycle operates in the space of epistemic capaci..."
         },
         {
           "type": "Proposition",
-          "id": "5.4",
+          "id": "6.4",
           "name": "The arrow of time is level-indexed",
           "statementPreview": "The cosmological arrow of time is real at every observer level throughout every phase. The recurrence does not revers..."
         },
         {
           "type": "Proposition",
-          "id": "6.1",
+          "id": "7.1",
           "name": "The floor phase has no well-defined duration",
           "statementPreview": "Asking \"how long does the floor phase last?\" is not a hard problem — it is an ill-posed question. Duration requires a..."
         },
         {
           "type": "Proposition",
-          "id": "6.2",
+          "id": "7.2",
           "name": "Scale is undefined at the floor",
           "statementPreview": "Spatial extent — \"how big\" — requires geometry, which requires observers to constitute it (Step 3, Proposition 3.1). ..."
         },
         {
           "type": "Proposition",
-          "id": "6.3",
+          "id": "7.3",
           "name": "\"First cycle\" is not well-posed",
           "statementPreview": "The cycles do not happen \"in\" time — they are the structure from which experienced time emerges. Asking \"was there a ..."
         }
@@ -2179,18 +2195,18 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Duration of the floor.",
-          "description": "~~How long does the floor phase last?~~ Per Proposition 6.1, this question is ill-posed: duration requires observers with memory, which the floor phase lacks. The well-posed version: what is the *comb"
+          "title": "Combinatorial threshold for renewal.",
+          "description": "~~How long does the floor phase last?~~ Per Proposition 7.1, duration is ill-posed at the floor (no observers with memory). The well-posed version: what is the combinatorial threshold — the number of "
         },
         {
           "number": 2,
-          "title": "Level progression.",
-          "description": "Does each epoch produce observers at a strictly higher bootstrap level (because the coherence topology's richness raises the structural starting point), or does the epistemic inaccessibility of the fl"
+          "title": "Exactness of the saturation equivalence.",
+          "description": "Is Proposition 4.1 (maximal correlation ≈ zero correlation) *exact* or *approximate*? If exact: every cycle is a true reset, the \"ascending spiral\" is physically meaningless, \"first cycle\" is not just"
         },
         {
           "number": 3,
           "title": "Statistical fossils.",
-          "description": "Any imprint from a previous epoch would be statistical, not structural (Proposition 6.2 — spatial patterns require geometry that doesn't exist at the floor). The question: do the statistical propertie"
+          "description": "If the saturation equivalence is approximate (Gap 2), any imprint from a previous epoch would be statistical, not structural (Proposition 7.2 — spatial patterns require geometry that doesn't exist at "
         }
       ],
       "assessmentVerdict": "",
@@ -2198,8 +2214,8 @@
       "crossReferences": {
         "outgoing": [
           {
-            "target": "foundation/continuous-discrete-duality",
-            "context": "Continuous-Discrete Duality"
+            "target": "cosmology/observer-loop-viability",
+            "context": "Observer Loop Viability"
           },
           {
             "target": "interactions/relational-invariants",
@@ -2222,12 +2238,16 @@
             "context": "Time as Phase Ordering"
           },
           {
-            "target": "cosmology/observer-loop-viability",
-            "context": "Observer Loop Viability"
+            "target": "foundation/continuous-discrete-duality",
+            "context": "Continuous-Discrete Duality"
           },
           {
             "target": "holography/er-epr",
             "context": "ER=EPR"
+          },
+          {
+            "target": "holography/information-paradox",
+            "context": "Information Paradox"
           },
           {
             "target": "minimal-observer/multiplicity",
@@ -9237,6 +9257,10 @@
         "incoming": [
           {
             "source": "cosmology/cosmological-constant",
+            "context": "Information Paradox"
+          },
+          {
+            "source": "cosmology/cyclic-cosmology",
             "context": "Information Paradox"
           },
           {
@@ -22349,58 +22373,72 @@
     {
       "derivationId": "cosmology/cyclic-cosmology",
       "type": "Proposition",
+      "id": "4.0",
+      "name": "Coherence redistributes to the minimal network",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 4.0"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
       "id": "4.1",
-      "name": "Epistemic identity of initial and final states",
+      "name": "Maximal correlation is operationally equivalent to zero correlation",
       "fullRef": "cosmology/cyclic-cosmology:Proposition 4.1"
     },
     {
       "derivationId": "cosmology/cyclic-cosmology",
-      "type": "Definition",
+      "type": "Proposition",
       "id": "5.1",
-      "name": "Shared epistemic memory",
-      "fullRef": "cosmology/cyclic-cosmology:Definition 5.1"
+      "name": "Epistemic identity of initial and final states",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 5.1"
     },
     {
       "derivationId": "cosmology/cyclic-cosmology",
-      "type": "Proposition",
-      "id": "5.2",
-      "name": "The four-phase cycle",
-      "fullRef": "cosmology/cyclic-cosmology:Proposition 5.2"
-    },
-    {
-      "derivationId": "cosmology/cyclic-cosmology",
-      "type": "Proposition",
-      "id": "5.3",
-      "name": "The second law is universally preserved",
-      "fullRef": "cosmology/cyclic-cosmology:Proposition 5.3"
-    },
-    {
-      "derivationId": "cosmology/cyclic-cosmology",
-      "type": "Proposition",
-      "id": "5.4",
-      "name": "The arrow of time is level-indexed",
-      "fullRef": "cosmology/cyclic-cosmology:Proposition 5.4"
-    },
-    {
-      "derivationId": "cosmology/cyclic-cosmology",
-      "type": "Proposition",
+      "type": "Definition",
       "id": "6.1",
-      "name": "The floor phase has no well-defined duration",
-      "fullRef": "cosmology/cyclic-cosmology:Proposition 6.1"
+      "name": "Shared epistemic memory",
+      "fullRef": "cosmology/cyclic-cosmology:Definition 6.1"
     },
     {
       "derivationId": "cosmology/cyclic-cosmology",
       "type": "Proposition",
       "id": "6.2",
-      "name": "Scale is undefined at the floor",
+      "name": "The four-phase cycle",
       "fullRef": "cosmology/cyclic-cosmology:Proposition 6.2"
     },
     {
       "derivationId": "cosmology/cyclic-cosmology",
       "type": "Proposition",
       "id": "6.3",
-      "name": "\"First cycle\" is not well-posed",
+      "name": "The second law is universally preserved",
       "fullRef": "cosmology/cyclic-cosmology:Proposition 6.3"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "6.4",
+      "name": "The arrow of time is level-indexed",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 6.4"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "7.1",
+      "name": "The floor phase has no well-defined duration",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 7.1"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "7.2",
+      "name": "Scale is undefined at the floor",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 7.2"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "7.3",
+      "name": "\"First cycle\" is not well-posed",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 7.3"
     },
     {
       "derivationId": "cosmology/dark-energy-equation-of-state",
@@ -29534,22 +29572,22 @@
       "derivationId": "cosmology/cyclic-cosmology",
       "derivationStatus": "provisional",
       "number": 1,
-      "title": "Duration of the floor.",
-      "description": "~~How long does the floor phase last?~~ Per Proposition 6.1, this question is ill-posed: duration requires observers with memory, which the floor phase lacks. The well-posed version: what is the *comb"
+      "title": "Combinatorial threshold for renewal.",
+      "description": "~~How long does the floor phase last?~~ Per Proposition 7.1, duration is ill-posed at the floor (no observers with memory). The well-posed version: what is the combinatorial threshold — the number of "
     },
     {
       "derivationId": "cosmology/cyclic-cosmology",
       "derivationStatus": "provisional",
       "number": 2,
-      "title": "Level progression.",
-      "description": "Does each epoch produce observers at a strictly higher bootstrap level (because the coherence topology's richness raises the structural starting point), or does the epistemic inaccessibility of the fl"
+      "title": "Exactness of the saturation equivalence.",
+      "description": "Is Proposition 4.1 (maximal correlation ≈ zero correlation) *exact* or *approximate*? If exact: every cycle is a true reset, the \"ascending spiral\" is physically meaningless, \"first cycle\" is not just"
     },
     {
       "derivationId": "cosmology/cyclic-cosmology",
       "derivationStatus": "provisional",
       "number": 3,
       "title": "Statistical fossils.",
-      "description": "Any imprint from a previous epoch would be statistical, not structural (Proposition 6.2 — spatial patterns require geometry that doesn't exist at the floor). The question: do the statistical propertie"
+      "description": "If the saturation equivalence is approximate (Gap 2), any imprint from a previous epoch would be statistical, not structural (Proposition 7.2 — spatial patterns require geometry that doesn't exist at "
     },
     {
       "derivationId": "cosmology/geometric-inflation",
