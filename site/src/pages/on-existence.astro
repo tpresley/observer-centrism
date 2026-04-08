@@ -1,0 +1,271 @@
+---
+import MainLayout from '../components/layouts/MainLayout.astro'
+import PageTitle from '../components/PageTitle.astro'
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+---
+
+<MainLayout title="On Existence">
+  <article class="existence-article">
+    <PageTitle
+      title="On Existence"
+      subtitle="Why 'does it exist?' may be the wrong question"
+    />
+
+    <p class="lead">
+      The framework does not set out to answer philosophical questions about existence.
+      But its structure &mdash; in which observers, geometry, and the coherence measure
+      are all equally fundamental and none reduces to the others &mdash; produces a
+      picture in which "exists" is not a single category. This page describes what
+      the framework implies about what it means for something to be real.
+    </p>
+
+    <h2>The Standard Question</h2>
+
+    <p>
+      Physics is full of debates that take the form: <em>does X really exist?</em>
+    </p>
+
+    <p>
+      Does the wavefunction exist, or is it just a calculational tool? Does spacetime
+      exist as a fundamental entity, or is it emergent? Does the holographic dual of a
+      black hole interior exist in the same sense as the exterior? Do virtual particles
+      exist? Does the past exist? Does the future?
+    </p>
+
+    <p>
+      These debates typically assume that "exists" is a binary: either something is
+      part of the furniture of reality, or it isn't. The disagreements are about which
+      category various objects fall into.
+    </p>
+
+    <p>
+      The framework suggests that this is a category error. Not because existence is
+      vague or subjective, but because reality has structure that a single binary
+      cannot capture. The framework naturally produces at least three distinct modes of
+      existence, each with definite content, none reducible to the others.
+    </p>
+
+    <h2>Three Modes</h2>
+
+    <h3>Ontic-Structural</h3>
+
+    <p>
+      The relational invariant network &mdash; the physical state of all observer
+      correlations &mdash; exists in this sense. It satisfies Axiom 1 (conserved on
+      every Cauchy slice). It has definite mathematical properties: specific pair
+      correlations with specific values. It constrains what can happen next &mdash;
+      the bootstrap can only produce new observers when the invariant structure
+      supports it. It is the physical state.
+    </p>
+
+    <p>
+      But no observer can fully access it. Every observer sees only a finite projection
+      through its epistemic horizon. The network is always larger than any observer's
+      view of it. It is real in the strongest sense the framework can express &mdash;
+      conserved, definite, constraining &mdash; and yet never fully observable.
+    </p>
+
+    <h3>Epistemic-Constitutive</h3>
+
+    <p>
+      Geometry exists in this sense. It is not "out there" waiting to be discovered.
+      It is constituted by the consistency requirements of accessible relational
+      invariants at a specific observer level. The geometry an observer experiences is
+      the unique solution that makes its accessible correlations spatially consistent.
+      When the observers dissolve, the geometry they projected does not persist as an
+      invisible backdrop &mdash; it deconstitutes.
+    </p>
+
+    <p>
+      This is not subjectivity. The consistency solution is unique, not a choice. Two
+      observers at the same level with the same accessible invariants project the same
+      geometry. It is observer-<em>dependent</em> but not observer-<em>chosen</em>.
+      Measurement outcomes exist in the same mode: each observer's outcome is uniquely
+      determined by the Born rule and the relational invariant generated in the
+      interaction, but the outcome is relative to the observer who generated the
+      invariant.
+    </p>
+
+    <h3>Descriptive-Mathematical</h3>
+
+    <p>
+      The coherence topology &mdash; the continuous mathematical description of the
+      relational invariant structure &mdash; exists in this sense. It is indispensable:
+      without it, you cannot express gauge symmetry, write the field equations, or
+      state the Lagrangian. The discrete layer (the physical observer network) cannot
+      express these properties on its own. The continuous description is necessary for
+      the physics to be coherently statable.
+    </p>
+
+    <p>
+      But it is not a physical thing. It does not carry coherence (the coherence
+      ontology says coherence exists only in observer structures). It does not
+      participate in interactions. It does not observe or get observed. It is the
+      language in which the physical state is most completely expressed &mdash; but
+      language is not the same as the thing it describes, even when the thing cannot
+      be fully described without it.
+    </p>
+
+    <h2>Why Three, Not One</h2>
+
+    <p>
+      These modes are not a hierarchy. None is "more real" than the others. They are
+      complementary aspects of a reality that has both physical content (the observer
+      network), observer-constituted structure (geometry), and mathematical form (the
+      continuous description). Collapsing them into a single "exists" produces the
+      debates that physics has been having for a century:
+    </p>
+
+    <ul>
+      <li>
+        <strong>"Does the wavefunction exist?"</strong> In the framework: the
+        wavefunction describes the coherence state (descriptive-mathematical), which is
+        grounded in physical relational invariants (ontic-structural), and produces
+        definite measurement outcomes for each observer (epistemic-constitutive). Asking
+        whether it "exists" conflates the three modes. It exists as a description of
+        something that exists as a physical state that produces something that exists as
+        an observer-constituted fact.
+      </li>
+      <li>
+        <strong>"Does spacetime exist?"</strong> As a fundamental entity: no (it is
+        constituted by observers, not prior to them). As a consistency solution
+        projected by observers: yes, uniquely and non-arbitrarily. As a mathematical
+        object: indispensably, in the continuous layer. Three answers, all correct,
+        for three modes.
+      </li>
+      <li>
+        <strong>"Does the past exist?"</strong> The relational invariants generated in
+        the past are permanent (ontic-structural: yes). The geometry of the past is
+        deconstituted when its observers dissolve (epistemic-constitutive: only while
+        observed). The mathematical description of the past is complete in the
+        interaction graph (descriptive-mathematical: timelessly). Again, three answers.
+      </li>
+    </ul>
+
+    <h2>The Connection to the Continuous-Discrete Duality</h2>
+
+    <p>
+      The framework's <a href={`${base}/central-thesis`}>central thesis</a> &mdash;
+      that the axioms simultaneously force a smooth coherence manifold and a discrete
+      observer network, co-formed and neither more fundamental &mdash; maps directly
+      onto this structure. The discrete layer is ontic-structural: the actual physical
+      state, finite, in observer structures, conserved. The continuous layer is
+      descriptive-mathematical: the complete characterization, infinite-dimensional,
+      indispensable for coherent statement but not itself a physical carrier.
+      Epistemic-constitutive existence &mdash; geometry, measurement outcomes,
+      the experienced world &mdash; lives in the overlap: where both descriptions
+      agree, as projected by a specific observer at a specific level.
+    </p>
+
+    <p>
+      This is also why the question "does infinity exist?" finds a natural answer in
+      the framework. Infinity is a property of the continuous description
+      (descriptive-mathematical). Finiteness is a property of the physical state
+      (ontic-structural). Both are real. Neither is the whole story.
+    </p>
+
+    <h2>Not Relativism</h2>
+
+    <p>
+      This might sound like relativism &mdash; "existence is relative to your
+      perspective." It is not. Each mode has definite, unique, non-arbitrary content:
+    </p>
+
+    <ul>
+      <li>The relational invariant network has specific values that are not up for debate.</li>
+      <li>The consistency solution for a given set of accessible invariants is unique &mdash;
+          not a matter of interpretation.</li>
+      <li>The continuous description either correctly characterizes the discrete state or
+          it doesn't &mdash; there is a fact of the matter.</li>
+    </ul>
+
+    <p>
+      What is relative is which <em>mode</em> a given question invokes. "Does spacetime
+      exist?" has a definite answer in each mode. The confusion arises from asking the
+      question without specifying which mode is meant &mdash; and then mistaking the
+      resulting ambiguity for a deep metaphysical problem.
+    </p>
+
+    <p>
+      The framework does not resolve the philosophy of existence. It does something
+      more modest: it provides a physical structure in which the question "does X exist?"
+      can be answered precisely, once you specify what mode of existence you're asking
+      about. This is not a philosophical position imposed on the physics &mdash; it is
+      what the physics, taken at face value, implies.
+    </p>
+
+    <div class="existence-links">
+      <a href={`${base}/central-thesis`}>The Central Thesis</a> &middot;
+      <a href={`${base}/derivations/foundation/continuous-discrete-duality`}>Continuous-Discrete Duality</a> &middot;
+      <a href={`${base}/guide/09-epistemology`}>Epistemology Guide</a>
+    </div>
+  </article>
+</MainLayout>
+
+<style>
+  .existence-article {
+    max-width: 700px;
+  }
+
+  .existence-article h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.35rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.5rem;
+  }
+
+  .existence-article h2:first-of-type {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .existence-article h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--color-accent);
+  }
+
+  .existence-article p {
+    margin-bottom: 1rem;
+    line-height: 1.85;
+  }
+
+  .existence-article ul {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+  }
+
+  .existence-article li {
+    margin-bottom: 0.75rem;
+    line-height: 1.75;
+  }
+
+  .lead {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .existence-links {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .existence-links a {
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+
+  .existence-links a:hover {
+    border-bottom-color: var(--color-accent);
+  }
+</style>

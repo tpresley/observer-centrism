@@ -87,6 +87,18 @@ The trajectory has been one of steady reduction:
 
 Each promotion reduces the assumption count and narrows the gap between "structural argument" and "formal proof." {{activePostulateCount}} active postulates remain. Whether all can eventually be promoted, or whether some represent genuinely independent input that the three axioms cannot determine, is itself an open question.
 
+## What "Exists" Means Here
+
+The framework's structure — in which observers, geometry, and the coherence measure are all fundamental and none reduces to the others — implies that "exists" is not a single category. The framework naturally produces three distinct modes of existence:
+
+- **Ontic-structural**: the relational invariant network. Conserved, definite, constraining — but never fully observable by any finite observer. The physical state.
+- **Epistemic-constitutive**: geometry, measurement outcomes. Not "out there" independently — constituted by the consistency requirements of accessible relational invariants at a specific observer level. Observer-dependent but not subjective (the consistency solution is unique). Deconstitutes when its observers dissolve.
+- **Descriptive-mathematical**: the continuous coherence topology. Indispensable for expressing gauge symmetry, field equations, and smooth dynamics — but not a physical carrier of coherence. The language in which the physical state is most completely expressed.
+
+These are not a hierarchy (none is "more real"). They are complementary aspects of a reality that has physical content, observer-constituted structure, and mathematical form. Collapsing them into a single binary — "exists" vs. "doesn't exist" — produces the debates that physics has been having for a century about wavefunctions, spacetime, and holographic duals.
+
+For the full treatment, see [On Existence](/on-existence).
+
 ## What Would Strengthen the Framework
 
 For the skeptic who finds structural arguments insufficient, the most productive challenges are:
