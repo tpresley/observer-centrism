@@ -443,6 +443,12 @@
       "title": "Observer-Centric Cyclic Cosmology",
       "group": "cosmology",
       "status": "provisional"
+    },
+    {
+      "id": "thermodynamics-ext/memory-persistence-tradeoff",
+      "title": "The Memory-Persistence Tradeoff",
+      "group": "thermo-ext",
+      "status": "provisional"
     }
   ],
   "edges": [
@@ -1289,6 +1295,26 @@
     {
       "from": "thermodynamics/entropy",
       "to": "cosmology/cyclic-cosmology"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "thermodynamics-ext/memory-persistence-tradeoff"
+    },
+    {
+      "from": "interactions/relational-invariants",
+      "to": "thermodynamics-ext/memory-persistence-tradeoff"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "thermodynamics-ext/memory-persistence-tradeoff"
+    },
+    {
+      "from": "minimal-observer/structure",
+      "to": "thermodynamics-ext/memory-persistence-tradeoff"
+    },
+    {
+      "from": "thermodynamics/entropy",
+      "to": "thermodynamics-ext/memory-persistence-tradeoff"
     }
   ]
 }

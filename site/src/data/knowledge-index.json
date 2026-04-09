@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-04-08T20:46:08.897Z",
-    "derivationCount": 74,
+    "generatedAt": "2026-04-09T03:51:02.033Z",
+    "derivationCount": 75,
     "predictionCount": 12,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -9,16 +9,16 @@
   "stats": {
     "byStatus": {
       "rigorous": 26,
-      "provisional": 43,
+      "provisional": 44,
       "draft": 2,
       "non-viable": 1,
       "stub": 2
     },
-    "derivationCount": 74,
+    "derivationCount": 75,
     "predictionCount": 12,
-    "edgeCount": 211,
-    "formalObjectCount": 1124,
-    "openGapCount": 229,
+    "edgeCount": 216,
+    "formalObjectCount": 1132,
+    "openGapCount": 231,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -607,6 +607,7 @@
         "gauge/electromagnetism",
         "minimal-observer/structure",
         "spacetime/speed-of-light",
+        "thermodynamics-ext/memory-persistence-tradeoff",
         "thermodynamics/action-planck"
       ],
       "steps": [
@@ -975,6 +976,10 @@
           },
           {
             "source": "thermodynamics-ext/fisher-metric",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "thermodynamics-ext/memory-persistence-tradeoff",
             "context": "Loop Closure"
           },
           {
@@ -2254,7 +2259,12 @@
             "context": "Multiplicity"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "thermodynamics-ext/memory-persistence-tradeoff",
+            "context": "Cyclic Cosmology"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -9796,6 +9806,7 @@
         "spacetime/einstein-equations",
         "spacetime/gravitational-constant",
         "thermodynamics-ext/biological-non-ergodicity",
+        "thermodynamics-ext/memory-persistence-tradeoff",
         "thermodynamics-ext/non-ergodicity",
         "thermodynamics/entropy"
       ],
@@ -10124,6 +10135,10 @@
             "context": "Bootstrap"
           },
           {
+            "source": "thermodynamics-ext/memory-persistence-tradeoff",
+            "context": "Bootstrap"
+          },
+          {
             "source": "thermodynamics-ext/non-ergodicity",
             "context": "Bootstrap Mechanism"
           },
@@ -10184,6 +10199,7 @@
         "quantum/observer-relative-objectivity",
         "quantum/sheaf-section-uniqueness",
         "spacetime/gravity",
+        "thermodynamics-ext/memory-persistence-tradeoff",
         "thermodynamics/entropy"
       ],
       "steps": [
@@ -10489,6 +10505,10 @@
           },
           {
             "source": "thermodynamics-ext/first-law",
+            "context": "Relational Invariants"
+          },
+          {
+            "source": "thermodynamics-ext/memory-persistence-tradeoff",
             "context": "Relational Invariants"
           },
           {
@@ -10810,6 +10830,10 @@
           },
           {
             "source": "thermodynamics-ext/first-law",
+            "context": "Three Interaction Types"
+          },
+          {
+            "source": "thermodynamics-ext/memory-persistence-tradeoff",
             "context": "Three Interaction Types"
           },
           {
@@ -11470,6 +11494,10 @@
             "context": "Multiplicity"
           },
           {
+            "source": "thermodynamics-ext/memory-persistence-tradeoff",
+            "context": "Multiplicity"
+          },
+          {
             "source": "thermodynamics/entropy",
             "context": "Multiplicity"
           }
@@ -11513,6 +11541,7 @@
         "dimensions/three-dimensions",
         "minimal-observer/multiplicity",
         "thermodynamics-ext/biological-non-ergodicity",
+        "thermodynamics-ext/memory-persistence-tradeoff",
         "thermodynamics/time"
       ],
       "steps": [
@@ -12322,6 +12351,10 @@
           {
             "source": "particles/three-generations",
             "context": "Theorem 3.1, via S1"
+          },
+          {
+            "source": "thermodynamics-ext/memory-persistence-tradeoff",
+            "context": "Theorem 5.1"
           },
           {
             "source": "thermodynamics-ext/renormalization",
@@ -18069,6 +18102,156 @@
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
+    "thermodynamics-ext/memory-persistence-tradeoff": {
+      "id": "thermodynamics-ext/memory-persistence-tradeoff",
+      "filePath": "site/src/content/derivations/thermodynamics-ext/memory-persistence-tradeoff.md",
+      "title": "The Memory-Persistence Tradeoff",
+      "status": "provisional",
+      "rigorLevel": "semi-formal",
+      "group": "thermodynamics-ext",
+      "tags": [
+        "thermo-ext"
+      ],
+      "summary": "Epistemic memory (the capacity to record interactions as relational invariants) is structurally incompatible with permanent persistence (exact loop closure). Each absorbed relational invariant irreversibly expands the state space, perturbing the loop closure condition. Minimal observers persist forever because they cannot remember. Complex observers must eventually dissolve because their accumulated memory prevents loop re-closure.",
+      "lastUpdated": "2026-04-06",
+      "dependsOn": [
+        "axioms/loop-closure",
+        "interactions/relational-invariants",
+        "interactions/bootstrap",
+        "minimal-observer/structure",
+        "thermodynamics/entropy"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Exact Closure and the Drift Bound"
+        },
+        {
+          "number": 2,
+          "title": "Memory as State Space Perturbation"
+        },
+        {
+          "number": 3,
+          "title": "The Memory Capacity Bound"
+        },
+        {
+          "number": 4,
+          "title": "The Tradeoff"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Proposition",
+          "id": "1.1",
+          "name": "Recap: persistence requires exact closure",
+          "statementPreview": "An observer persists indefinitely if and only if its dynamics satisfies exact loop closure: phiT = idSigma for some T..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "Relational invariant absorption expands the state space",
+          "statementPreview": "When an observer O = (Sigma, I, B) participates in a Type III interaction with a system S, a new relational invariant..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "Re-closure at a nearby fixed point",
+          "statementPreview": "If the perturbation from a single relational invariant is small (the coherence content C(IOS) is much less than the o..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.3",
+          "name": "Only Type III interactions generate memory",
+          "statementPreview": "Not all interactions perturb an observer's loop closure. The framework distinguishes three interaction types ([Three ..."
+        },
+        {
+          "type": "Definition",
+          "id": "3.1",
+          "name": "Memory capacity",
+          "statementPreview": "The **memory capacity** K(O) of an observer O is the maximum total coherence content of relational invariants that O ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Minimal observer has zero memory capacity",
+          "statementPreview": "The minimal observer (Sigma = S1, dim Sigma = 1, DB sim ellP) has K 0. It cannot absorb a relational invariant withou..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Complex observer has finite memory capacity",
+          "statementPreview": "A complex observer at bootstrap level n with state space Sigman of dimension dim Sigman > 1 and boundary diameter DB,..."
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "Memory-Persistence Tradeoff",
+          "statementPreview": "The capacity for epistemic memory and the capacity for permanent persistence are structurally incompatible in the fra..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Quantitative memory capacity.",
+          "description": "The bound Kn sim C(Sigman) DB,n/Tn is schematic. Computing K for specific particles (electron, proton) requires the perturbation theory of bootstrap fixed points under relational invariant absorption "
+        },
+        {
+          "number": 2,
+          "title": "Re-closure dynamics and mass renormalization.",
+          "description": "When an observer re-closes at a nearby fixed point (Proposition 2.2), the mass (period), generation assignment (winding axis), and coupling constants all shift slightly. Making this connection to stan"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "interactions/relational-invariants",
+            "context": "Relational Invariants"
+          },
+          {
+            "target": "cosmology/cyclic-cosmology",
+            "context": "Cyclic Cosmology"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Theorem 5.1"
+          },
+          {
+            "target": "interactions/three-types",
+            "context": "Three Interaction Types"
+          },
+          {
+            "target": "thermodynamics/action-planck",
+            "context": "Action and Planck's Constant"
+          },
+          {
+            "target": "minimal-observer/multiplicity",
+            "context": "Multiplicity"
+          }
+        ],
+        "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
     "thermodynamics-ext/non-ergodicity": {
       "id": "thermodynamics-ext/non-ergodicity",
       "filePath": "site/src/content/derivations/thermodynamics-ext/non-ergodicity.md",
@@ -19035,6 +19218,10 @@
             "context": "Action and Planck's Constant"
           },
           {
+            "source": "thermodynamics-ext/memory-persistence-tradeoff",
+            "context": "Action and Planck's Constant"
+          },
+          {
             "source": "thermodynamics-ext/non-ergodicity",
             "context": "Action and Planck's Constant"
           },
@@ -19091,6 +19278,7 @@
         "thermodynamics-ext/distinguishability-conservation",
         "thermodynamics-ext/first-law",
         "thermodynamics-ext/fisher-metric",
+        "thermodynamics-ext/memory-persistence-tradeoff",
         "thermodynamics-ext/non-ergodicity",
         "thermodynamics-ext/renormalization"
       ],
@@ -28769,6 +28957,62 @@
       "fullRef": "thermodynamics-ext/fisher-metric:Corollary 4.2"
     },
     {
+      "derivationId": "thermodynamics-ext/memory-persistence-tradeoff",
+      "type": "Proposition",
+      "id": "1.1",
+      "name": "Recap: persistence requires exact closure",
+      "fullRef": "thermodynamics-ext/memory-persistence-tradeoff:Proposition 1.1"
+    },
+    {
+      "derivationId": "thermodynamics-ext/memory-persistence-tradeoff",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "Relational invariant absorption expands the state space",
+      "fullRef": "thermodynamics-ext/memory-persistence-tradeoff:Proposition 2.1"
+    },
+    {
+      "derivationId": "thermodynamics-ext/memory-persistence-tradeoff",
+      "type": "Proposition",
+      "id": "2.2",
+      "name": "Re-closure at a nearby fixed point",
+      "fullRef": "thermodynamics-ext/memory-persistence-tradeoff:Proposition 2.2"
+    },
+    {
+      "derivationId": "thermodynamics-ext/memory-persistence-tradeoff",
+      "type": "Proposition",
+      "id": "2.3",
+      "name": "Only Type III interactions generate memory",
+      "fullRef": "thermodynamics-ext/memory-persistence-tradeoff:Proposition 2.3"
+    },
+    {
+      "derivationId": "thermodynamics-ext/memory-persistence-tradeoff",
+      "type": "Definition",
+      "id": "3.1",
+      "name": "Memory capacity",
+      "fullRef": "thermodynamics-ext/memory-persistence-tradeoff:Definition 3.1"
+    },
+    {
+      "derivationId": "thermodynamics-ext/memory-persistence-tradeoff",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Minimal observer has zero memory capacity",
+      "fullRef": "thermodynamics-ext/memory-persistence-tradeoff:Proposition 3.1"
+    },
+    {
+      "derivationId": "thermodynamics-ext/memory-persistence-tradeoff",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "Complex observer has finite memory capacity",
+      "fullRef": "thermodynamics-ext/memory-persistence-tradeoff:Proposition 3.2"
+    },
+    {
+      "derivationId": "thermodynamics-ext/memory-persistence-tradeoff",
+      "type": "Theorem",
+      "id": "4.1",
+      "name": "Memory-Persistence Tradeoff",
+      "fullRef": "thermodynamics-ext/memory-persistence-tradeoff:Theorem 4.1"
+    },
+    {
       "derivationId": "thermodynamics-ext/non-ergodicity",
       "type": "Definition",
       "id": "1.1.",
@@ -30890,6 +31134,20 @@
       "number": 3,
       "title": "Infinite-dimensional extension",
       "description": "The derivation assumes finite-dimensional Sigma. For field theory, the state space is infinite-dimensional and requires functional-analytic care [Pistone & Sempi, 1995]."
+    },
+    {
+      "derivationId": "thermodynamics-ext/memory-persistence-tradeoff",
+      "derivationStatus": "provisional",
+      "number": 1,
+      "title": "Quantitative memory capacity.",
+      "description": "The bound Kn sim C(Sigman) DB,n/Tn is schematic. Computing K for specific particles (electron, proton) requires the perturbation theory of bootstrap fixed points under relational invariant absorption "
+    },
+    {
+      "derivationId": "thermodynamics-ext/memory-persistence-tradeoff",
+      "derivationStatus": "provisional",
+      "number": 2,
+      "title": "Re-closure dynamics and mass renormalization.",
+      "description": "When an observer re-closes at a nearby fixed point (Proposition 2.2), the mass (period), generation assignment (winding axis), and coupling constants all shift slightly. Making this connection to stan"
     },
     {
       "derivationId": "thermodynamics-ext/non-ergodicity",
