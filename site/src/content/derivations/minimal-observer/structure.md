@@ -2,7 +2,7 @@
 title: "Minimal Observer Structure"
 status: "rigorous"
 dependsOn: ["axioms/coherence-conservation", "axioms/observer-definition", "axioms/loop-closure"]
-enablesDerivation: ["minimal-observer/multiplicity", "thermodynamics/time", "dimensions/three-dimensions", "thermodynamics-ext/biological-non-ergodicity"]
+enablesDerivation: ["minimal-observer/multiplicity", "thermodynamics/time", "dimensions/three-dimensions", "thermodynamics-ext/biological-non-ergodicity", "thermodynamics-ext/memory-persistence-tradeoff"]
 tags: ["foundation"]
 summary: "The simplest structure satisfying all three axioms is a U(1) phase oscillator with conserved charge — a Noether pair realized in the coherence geometry"
 rigorLevel: "formal"
@@ -126,6 +126,8 @@ $$Q_\mathcal{O} = \mathcal{C}(\Sigma)$$
 - The Noether charge of the $U(1)$ action is the particle's conserved quantum number (charge, lepton number, etc.)
 - The period $T$ gives $\omega = 2\pi/T$, and $E = \hbar\omega$ (Corollary 8.3 of [Loop Closure](/derivations/axioms/loop-closure)), hence mass $m = E/c^2 = \hbar\omega/c^2$
 - The coherence domain size $\sim \hbar/mc = \lambda_C$ (Compton wavelength) follows from dimensional analysis with $S_{\min} = \hbar$ $\square$
+
+**Remark (Why minimal observers persist forever).** A 1-dimensional state space cannot host an additional degree of freedom without leaving $S^1$. The minimal observer therefore cannot absorb a relational invariant into its internal structure: any Type III interaction it participates in lives in the relational geometry between observers, not in either observer's individual state space. This gives the minimal observer zero memory capacity ($\mathcal{K} \approx 0$) and, by the [Memory-Persistence Tradeoff](/derivations/thermodynamics-ext/memory-persistence-tradeoff) (Theorem 4.1, Proposition 3.1), exact loop closure that is never perturbed. The minimal observer's immortality is structurally tied to its inability to remember — it has duration but no history. Every more complex observer trades some persistence for some memory capacity.
 
 ### Step 8: Structure Summary
 

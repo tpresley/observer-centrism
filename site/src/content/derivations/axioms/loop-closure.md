@@ -2,7 +2,7 @@
 title: "Loop Closure"
 status: "rigorous"
 dependsOn: ["axioms/coherence-conservation", "axioms/observer-definition"]
-enablesDerivation: ["minimal-observer/structure", "thermodynamics/action-planck", "spacetime/speed-of-light"]
+enablesDerivation: ["minimal-observer/structure", "thermodynamics/action-planck", "spacetime/speed-of-light", "thermodynamics-ext/memory-persistence-tradeoff"]
 tags: ["axioms"]
 summary: "Derivation of cyclic dynamics from self-reference: an observer must reproduce its own state to persist, and finite resources force this self-reproduction into a periodic loop with U(1) symmetry"
 rigorLevel: "formal"
@@ -153,6 +153,8 @@ Once $N\epsilon \geq D_\mathcal{B}$, the drift may carry the state to $\partial\
 The observer's effective lifetime is $\tau_\mathcal{O} = \sup_T \tau(T)$. For $\tau_\mathcal{O} = \infty$, we would need $\epsilon(T_n) \to 0$ sufficiently fast along some sequence $T_n$ — that is, the dynamics would need to approximate the identity arbitrarily well. By compactness of $\Sigma$, if $\phi_{T_n} \to \text{id}_\Sigma$ uniformly, then any limit point $T^*$ of a bounded subsequence gives $\phi_{T^*} = \text{id}_\Sigma$ (exact closure). If $T_n \to \infty$ with no bounded subsequence, the dynamics approximates the identity only at diverging times — the observer's "renewal period" grows without bound, meaning it takes arbitrarily long to approximately reproduce its state. This is not self-sustaining persistence in the physical sense required by the axiom: a system whose self-reproduction time diverges is not maintaining itself.
 
 Therefore, indefinite persistence requires $\phi_T = \text{id}_\Sigma$ for some finite $T > 0$. $\square$
+
+**Corollary 3.1 (Memory-persistence tradeoff).** *Theorem 3.1 has a structural consequence for any observer that absorbs relational invariants. Each Type III interaction permanently expands the state space ([Relational Invariants](/derivations/interactions/relational-invariants), Proposition 6.2), so the dynamics must re-close on a larger manifold than the one on which exact closure was originally established. The original $\phi_T = \text{id}_\Sigma$ no longer holds on the expanded space; the perturbation reintroduces drift $\epsilon > 0$. By Theorem 3.1, exact closure can only be regained at a (possibly nearby) new fixed point of the bootstrap functor. Since the perturbations are permanent and monotonically accumulate, an observer with nonzero memory capacity must eventually fail to re-close — exact persistence and epistemic memory are structurally incompatible. The full statement is the [Memory-Persistence Tradeoff](/derivations/thermodynamics-ext/memory-persistence-tradeoff) (Theorem 4.1). The minimal observer escapes the corollary because its 1-dimensional state space cannot host an additional degree of freedom.*
 
 **Remark (Quasi-periodic flows).** The argument above rules out non-recurrent flows but leaves open the case of quasi-periodic flows — dynamics where the orbit is dense in a higher-dimensional torus $T^k$ ($k > 1$) rather than closing as a circle. For such flows, $\epsilon(T_n) \to 0$ along a sequence with $T_n \to \infty$, and the effective lifetime can be infinite without exact periodicity.
 

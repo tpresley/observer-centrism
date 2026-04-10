@@ -2,7 +2,7 @@
 title: "Relational Invariants and the Reverse Noether Mechanism"
 status: "rigorous"
 dependsOn: ["interactions/three-types"]
-enablesDerivation: ["interactions/bootstrap", "thermodynamics/entropy", "spacetime/gravity", "quantum/born-rule", "quantum/entanglement", "holography/causal-set-statistics"]
+enablesDerivation: ["interactions/bootstrap", "thermodynamics/entropy", "spacetime/gravity", "quantum/born-rule", "quantum/entanglement", "holography/causal-set-statistics", "thermodynamics-ext/memory-persistence-tradeoff"]
 tags: ["dynamics"]
 summary: "Type III interactions generate genuinely new conserved quantities on the joint state space; by reverse Noether, each creates new symmetries and degrees of freedom"
 rigorLevel: "formal"
@@ -149,6 +149,8 @@ Each link is a theorem:
 *Proof.* Before the Type III interaction, $I_{12}$ does not exist. After, it does. Since $I_{12}$ is permanent (Proposition 6.1), the state space dimension increases permanently. Reversal would require destroying $I_{12}$, which violates Axiom 1. $\square$
 
 **Remark.** Decoherence (Definition 7.4 of [Three Interaction Types](/derivations/interactions/three-types)) does not contradict this result. In decoherence, the relational *coherence* $\mathcal{C}(\Sigma_1 : \Sigma_2)$ is redistributed across the observer network, but the symmetry group $G_1 \times G_2 \times U_{12}(1)$ does not shrink — the degree of freedom created by the relational invariant persists even when the two-body correlation is delocalized. The state space expansion is permanent; what changes is how the coherence is distributed across it.
+
+**Remark (Memory-persistence tradeoff).** Proposition 6.2 has a structural consequence downstream. Any observer that absorbs relational invariants is on a one-way path of state-space expansion: the dynamics that closed exactly on the original $\Sigma$ must now close on a larger manifold, perturbing the loop-closure condition that gives the observer indefinite persistence ([Loop Closure](/derivations/axioms/loop-closure), Theorem 3.1, Corollary 3.1). The cumulative perturbation is monotone and unbounded; the observer's tolerance is finite. The [Memory-Persistence Tradeoff](/derivations/thermodynamics-ext/memory-persistence-tradeoff) (Theorem 4.1) develops the consequence: epistemic memory and exact persistence are structurally incompatible, and only observers with zero memory capacity (the minimal observers, whose 1-dimensional state space cannot host an additional degree of freedom) escape eventual dissolution.
 
 **Proposition 6.3 (Composability).** *Relational invariants compose: if $I_{12}$ exists, the composite observer $\mathcal{O}_{12}$ can undergo a Type III interaction with any observer $\mathcal{O}_3$, generating a second-order relational invariant $I_{(12)3}$ on $\Sigma_1 \times \Sigma_2 \times \Sigma_3$.*
 
