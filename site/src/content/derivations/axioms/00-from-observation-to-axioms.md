@@ -82,4 +82,4 @@ The five definitions above determine most of the mathematical structure that the
 
 ## Open Gaps
 
-None. All formal elements are traced to the five operational definitions, and the downstream connections (Born rule chain, manifold structure induction) are resolved in the relevant derivation pages.
+None. All formal elements are traced to the five operational definitions.
