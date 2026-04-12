@@ -26,7 +26,7 @@ In standard physics, conserved quantities like energy and momentum are associate
 
 **Why this matters.** This mechanism explains how structure accumulates. It is not put in by hand -- it is generated dynamically through interactions, with each step creating the conditions for the next.
 
-**An honest caveat.** The derivation previously required a structural postulate that the joint state space carries a symplectic form. This has now been promoted to Theorem 0.1: the symplectic structure is derived from Axiom 3 (loop closure) via the Noether pair and the canonical product construction. No structural postulates remain in this derivation.
+**An honest caveat.** The symplectic structure on joint state spaces is grounded at the axiom level: [Loop Closure](/derivations/axioms/loop-closure) (Operational Grounding) shows that the canonical form on products of $U(1)$ orbits is forced by Definition 5 (composition) and Axiom 3 (loop closure). Theorem 0.1 below provides the full inductive proof over bootstrap levels. No structural postulates remain in this derivation.
 
 ## Statement
 
@@ -34,7 +34,7 @@ In standard physics, conserved quantities like energy and momentum are associate
 
 ## Structural Postulate
 
-**S1 (Symplectic structure).** **Now a theorem** (Theorem 0.1 below). Formerly a structural postulate; now derived from Axiom 3 (loop closure) via the canonical symplectic structure on individual observer state spaces and the product construction.
+**S1 (Symplectic structure).** **Now a theorem.** The canonical symplectic form on products of $U(1)$ orbits is forced by the operational definitions (see [Loop Closure](/derivations/axioms/loop-closure), Operational Grounding). Theorem 0.1 below gives the full inductive proof over bootstrap levels.
 
 ### Theorem 0.1 (Symplectic Structure from Loop Closure)
 

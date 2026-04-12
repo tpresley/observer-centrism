@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-12T08:18:38.089Z",
+    "generatedAt": "2026-04-12T09:13:17.043Z",
     "derivationCount": 76,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -18,7 +18,7 @@
     "predictionCount": 12,
     "edgeCount": 219,
     "formalObjectCount": 1133,
-    "openGapCount": 236,
+    "openGapCount": 234,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -54,26 +54,16 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Smooth dynamics promotion.",
-          "description": "If the structural necessity of smooth dynamics for inter-axiom coherence (the Noether mechanism) could be formalized as an operational requirement, smooth dynamics might become operationally forced. T"
-        },
-        {
-          "number": 2,
           "title": "Quasi-periodicity exclusion.",
           "description": "If a single-frequency requirement could be derived from operational observerhood — perhaps via a composition argument showing that quasi-periodic observers decompose into multiple independent sub-obse"
         },
         {
-          "number": 3,
-          "title": "Symplectic structure.",
-          "description": "If the symplectic form could be derived from the U(1) action on the state space (perhaps via the cotangent bundle construction), it might become operationally forced."
-        },
-        {
-          "number": 4,
+          "number": 2,
           "title": "Born rule chain",
           "description": "([issue #2](https://github.com/tpresley/observer-centrism/issues/2)). The amplitude–coherence identification (Theorem 0.1 of the Born Rule page) has an unargued bridge step between the probability fun"
         },
         {
-          "number": 5,
+          "number": 3,
           "title": "Loop closure dependency direction",
           "description": "([issue #3](https://github.com/tpresley/observer-centrism/issues/3)). Theorems 0.0 and 0.2 in the Loop Closure page derive manifold structure via induction using downstream results. Tracked separately"
         }
@@ -982,14 +972,6 @@
             "context": "From Observation to Axioms"
           },
           {
-            "target": "axioms/observer-definition",
-            "context": "Observer Definition"
-          },
-          {
-            "target": "thermodynamics-ext/fisher-metric",
-            "context": "Fisher Metric"
-          },
-          {
             "target": "interactions/relational-invariants",
             "context": "Relational Invariants"
           },
@@ -1000,6 +982,14 @@
           {
             "target": "foundation/aperiodic-order",
             "context": "Aperiodic Order"
+          },
+          {
+            "target": "axioms/observer-definition",
+            "context": "Observer Definition"
+          },
+          {
+            "target": "thermodynamics-ext/fisher-metric",
+            "context": "Fisher Metric"
           },
           {
             "target": "thermodynamics-ext/fisher-metric",
@@ -1073,11 +1063,15 @@
           },
           {
             "source": "interactions/relational-invariants",
-            "context": "0, 2\\pi)$ ([Loop Closure"
+            "context": "Operational Grounding"
           },
           {
             "source": "interactions/relational-invariants",
             "context": "Loop Closure"
+          },
+          {
+            "source": "interactions/relational-invariants",
+            "context": "0, 2\\pi)$ ([Loop Closure"
           },
           {
             "source": "interactions/three-types",
@@ -10527,15 +10521,19 @@
         "outgoing": [
           {
             "target": "axioms/loop-closure",
+            "context": "Operational Grounding"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "axioms/loop-closure",
             "context": "0, 2\\pi)$ ([Loop Closure"
           },
           {
             "target": "interactions/bootstrap",
             "context": "Bootstrap"
-          },
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
           },
           {
             "target": "interactions/three-types",
@@ -29900,34 +29898,20 @@
       "derivationId": "axioms/00-from-observation-to-axioms",
       "derivationStatus": "rigorous",
       "number": 1,
-      "title": "Smooth dynamics promotion.",
-      "description": "If the structural necessity of smooth dynamics for inter-axiom coherence (the Noether mechanism) could be formalized as an operational requirement, smooth dynamics might become operationally forced. T"
-    },
-    {
-      "derivationId": "axioms/00-from-observation-to-axioms",
-      "derivationStatus": "rigorous",
-      "number": 2,
       "title": "Quasi-periodicity exclusion.",
       "description": "If a single-frequency requirement could be derived from operational observerhood — perhaps via a composition argument showing that quasi-periodic observers decompose into multiple independent sub-obse"
     },
     {
       "derivationId": "axioms/00-from-observation-to-axioms",
       "derivationStatus": "rigorous",
-      "number": 3,
-      "title": "Symplectic structure.",
-      "description": "If the symplectic form could be derived from the U(1) action on the state space (perhaps via the cotangent bundle construction), it might become operationally forced."
-    },
-    {
-      "derivationId": "axioms/00-from-observation-to-axioms",
-      "derivationStatus": "rigorous",
-      "number": 4,
+      "number": 2,
       "title": "Born rule chain",
       "description": "([issue #2](https://github.com/tpresley/observer-centrism/issues/2)). The amplitude–coherence identification (Theorem 0.1 of the Born Rule page) has an unargued bridge step between the probability fun"
     },
     {
       "derivationId": "axioms/00-from-observation-to-axioms",
       "derivationStatus": "rigorous",
-      "number": 5,
+      "number": 3,
       "title": "Loop closure dependency direction",
       "description": "([issue #3](https://github.com/tpresley/observer-centrism/issues/3)). Theorems 0.0 and 0.2 in the Loop Closure page derive manifold structure via induction using downstream results. Tracked separately"
     },
