@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-12T09:13:17.043Z",
+    "generatedAt": "2026-04-12T09:30:51.598Z",
     "derivationCount": 76,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -18,7 +18,7 @@
     "predictionCount": 12,
     "edgeCount": 219,
     "formalObjectCount": 1133,
-    "openGapCount": 234,
+    "openGapCount": 233,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -54,18 +54,13 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Quasi-periodicity exclusion.",
-          "description": "If a single-frequency requirement could be derived from operational observerhood — perhaps via a composition argument showing that quasi-periodic observers decompose into multiple independent sub-obse"
+          "title": "Born rule chain.",
+          "description": "The amplitude–coherence identification (Theorem 0.1 of the [Born Rule](/derivations/quantum/born-rule) page) relies on a bridge between the probability function and the coherence function that require"
         },
         {
           "number": 2,
-          "title": "Born rule chain",
-          "description": "([issue #2](https://github.com/tpresley/observer-centrism/issues/2)). The amplitude–coherence identification (Theorem 0.1 of the Born Rule page) has an unargued bridge step between the probability fun"
-        },
-        {
-          "number": 3,
-          "title": "Loop closure dependency direction",
-          "description": "([issue #3](https://github.com/tpresley/observer-centrism/issues/3)). Theorems 0.0 and 0.2 in the Loop Closure page derive manifold structure via induction using downstream results. Tracked separately"
+          "title": "Loop closure dependency direction.",
+          "description": "Theorems 0.0 and 0.2 in the [Loop Closure](/derivations/axioms/loop-closure) page derive manifold structure via an inductive argument using results from downstream derivation pages. The proofs are mat"
         }
       ],
       "assessmentVerdict": "",
@@ -95,6 +90,10 @@
           {
             "target": "axioms/loop-closure",
             "context": "Axiom 3"
+          },
+          {
+            "target": "quantum/born-rule",
+            "context": "Born Rule"
           }
         ],
         "incoming": [
@@ -13889,6 +13888,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "axioms/00-from-observation-to-axioms",
+            "context": "Born Rule"
+          },
           {
             "source": "axioms/coherence-operational",
             "context": "Born Rule"
@@ -29898,22 +29901,15 @@
       "derivationId": "axioms/00-from-observation-to-axioms",
       "derivationStatus": "rigorous",
       "number": 1,
-      "title": "Quasi-periodicity exclusion.",
-      "description": "If a single-frequency requirement could be derived from operational observerhood — perhaps via a composition argument showing that quasi-periodic observers decompose into multiple independent sub-obse"
+      "title": "Born rule chain.",
+      "description": "The amplitude–coherence identification (Theorem 0.1 of the [Born Rule](/derivations/quantum/born-rule) page) relies on a bridge between the probability function and the coherence function that require"
     },
     {
       "derivationId": "axioms/00-from-observation-to-axioms",
       "derivationStatus": "rigorous",
       "number": 2,
-      "title": "Born rule chain",
-      "description": "([issue #2](https://github.com/tpresley/observer-centrism/issues/2)). The amplitude–coherence identification (Theorem 0.1 of the Born Rule page) has an unargued bridge step between the probability fun"
-    },
-    {
-      "derivationId": "axioms/00-from-observation-to-axioms",
-      "derivationStatus": "rigorous",
-      "number": 3,
-      "title": "Loop closure dependency direction",
-      "description": "([issue #3](https://github.com/tpresley/observer-centrism/issues/3)). Theorems 0.0 and 0.2 in the Loop Closure page derive manifold structure via induction using downstream results. Tracked separately"
+      "title": "Loop closure dependency direction.",
+      "description": "Theorems 0.0 and 0.2 in the [Loop Closure](/derivations/axioms/loop-closure) page derive manifold structure via an inductive argument using results from downstream derivation pages. The proofs are mat"
     },
     {
       "derivationId": "axioms/coherence-conservation",
