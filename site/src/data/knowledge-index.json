@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-12T03:16:34.190Z",
+    "generatedAt": "2026-04-12T03:40:37.621Z",
     "derivationCount": 76,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -16,7 +16,7 @@
     },
     "derivationCount": 76,
     "predictionCount": 12,
-    "edgeCount": 216,
+    "edgeCount": 217,
     "formalObjectCount": 1133,
     "openGapCount": 231,
     "upgradeEligibleCount": 1,
@@ -43,7 +43,9 @@
         "axioms/observer-definition",
         "axioms/loop-closure"
       ],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "axioms/coherence-conservation"
+      ],
       "steps": [],
       "formalObjects": [],
       "structuralPostulates": [],
@@ -65,7 +67,12 @@
             "context": "Loop Closure"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "axioms/coherence-conservation",
+            "context": "From Observation to Axioms"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -87,8 +94,10 @@
         "axioms"
       ],
       "summary": "Formalization of the primitive conserved quantity as a subadditive measure on a directed acyclic graph, with conservation stated graph-theoretically without presupposing time",
-      "lastUpdated": "2026-03-08",
-      "dependsOn": [],
+      "lastUpdated": "2026-04-11",
+      "dependsOn": [
+        "axioms/00-from-observation-to-axioms"
+      ],
       "enablesDerivation": [
         "axioms/observer-definition",
         "axioms/loop-closure",
@@ -114,6 +123,10 @@
         "thermodynamics-ext/distinguishability-conservation"
       ],
       "steps": [
+        {
+          "number": 0,
+          "title": "From Operational Definition to Formal Target"
+        },
         {
           "number": 1,
           "title": "The Coherence Space"
@@ -274,6 +287,14 @@
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
+          {
+            "target": "axioms/00-from-observation-to-axioms",
+            "context": "From Observation to Axioms"
+          },
+          {
+            "target": "axioms/coherence-operational",
+            "context": "Coherence as Physical Primitive"
+          },
           {
             "target": "thermodynamics/time",
             "context": "Time as Phase Ordering"
@@ -591,6 +612,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "axioms/coherence-conservation",
+            "context": "Coherence as Physical Primitive"
+          },
           {
             "source": "axioms/coherence-conservation",
             "context": "Coherence Operational"

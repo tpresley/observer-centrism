@@ -1,12 +1,12 @@
 ---
 title: "Coherence Conservation"
 status: "rigorous"
-dependsOn: []
+dependsOn: ["axioms/00-from-observation-to-axioms"]
 enablesDerivation: ["axioms/observer-definition", "axioms/loop-closure", "minimal-observer/structure", "holography/information-paradox", "gauge/anomaly-cancellation"]
 tags: ["axioms"]
 summary: "Formalization of the primitive conserved quantity as a subadditive measure on a directed acyclic graph, with conservation stated graph-theoretically without presupposing time"
 rigorLevel: "formal"
-lastUpdated: 2026-03-08
+lastUpdated: 2026-04-11
 ---
 
 ## Overview
@@ -26,13 +26,78 @@ Before we can talk about what observers are or how they behave, we need a conser
 
 **Why this matters.** This axiom plays the role that energy conservation plays in standard physics, but for a more primitive quantity. Everything downstream -- observer identity, dynamics, interactions, and eventually all of physics -- is built on this conservation law.
 
-**An honest caveat.** The word "coherence" is doing heavy lifting here. The formal object is a subadditive measure on a mathematical structure called a sigma-algebra, with conservation stated on directed acyclic graphs. The intuition of a "conserved currency" is helpful but cannot capture the full algebraic content, particularly the distinction between subadditivity and strong subadditivity.
+**An honest caveat.** The word "coherence" is doing heavy lifting here. The formal object is a subadditive measure on a mathematical structure called a sigma-algebra, with conservation stated on directed acyclic graphs. The intuition of a "conserved currency" is helpful but cannot capture the full algebraic content, particularly the distinction between subadditivity and strong subadditivity. The question of *which* parts of this formal apparatus are forced by the operational definition of observation and which are genuinely additional content is addressed explicitly in Step 0 below — the bridge work that ties this axiom page back to [From Observation to Axioms](/derivations/axioms/00-from-observation-to-axioms).
 
 ## Statement
 
 **Axiom 1 (Coherence Conservation).** There exists a primitive quantity $\mathcal{C}$, called **coherence**, defined on the partitions of a coherence space $\mathcal{H}$. The total coherence is globally conserved: it is invariant under all admissible transformations and constant across all slices of the dependency graph. Coherence cannot be created, destroyed, or exported — the ontology is closed.
 
 ## Formalization
+
+### Step 0: From Operational Definition to Formal Target
+
+This section does the bridge work from the operational definitions in [From Observation to Axioms](/derivations/axioms/00-from-observation-to-axioms) to the formal apparatus introduced in Step 1 and beyond. Each formal element is labeled **bucket A** (forced once the operational requirement is stated precisely) or **bucket B** (genuinely additional content with irreducible physical input). The point of the bridge work is to make the distinction visible: this axiom page does not start from "nothing but observerhood," but it does not start from arbitrary mathematical convenience either, and the split is recorded here.
+
+**The operational starting points cited.** Step 0 cites four operational definitions from the bridge page:
+
+- **Definition 1 (Observation):** to observe is to interact with a separate system in a way that updates the observing system's state without destroying it — observation is the residue of interaction, remembered.
+- **Definition 2 (Observer):** a system that has an identity, participates in interactions, and maintains its identity through those interactions.
+- **Definition 3 (Persistence):** an observer persists if it continues to satisfy Definition 2 over the course of repeated interactions.
+- **Definition 4 (Closed ontology):** the universe of all observers and observed systems is closed — no external reservoir exists.
+
+**Summary table.**
+
+| Formal element (introduced below) | Bucket | Forced by / additional content |
+|---|---|---|
+| Universe of configurations $\mathcal{H}$ as a set | A | Def 1 + 2: systems exist and can be collected |
+| $\sigma$-algebra $\mathcal{A}$ closure under complement, finite union | A | Def 1 + 2: operational composition + self/non-self distinction |
+| Countable union closure (vs. finite) | A | Def 3: iterated interaction without bound — see note below |
+| Coherence measure $\mathcal{C}: \mathcal{A} \to \mathbb{R}_{\geq 0}$ as a set function | A | Def 4: closed currency assigned to subsystems |
+| (C1) Positivity | A | Def 4: no negative existence |
+| (C2) Normalization $\mathcal{C}(\mathcal{H}) = C_0$, finite, $C_0 > 0$ | A | Def 4 (finite total) + Def 2 (non-triviality) |
+| (C3) Null empty set | A | Convention-level sanity: the empty collection carries nothing |
+| (C4) Subadditivity | A | Def 1: operational composition does not create currency |
+| **(C5) Strong subadditivity** | **B** | **Not forced by the operational definitions alone** |
+| Admissible transformations preserve $\mathcal{C}$ (Axiom 1(i)) | A | Def 1 + 3: observation doesn't create/destroy, persistence is invariant |
+| Dependency graph $\mathcal{G}$ is directed and acyclic | A | Def 3: "residue remembered" implies ordering without loops |
+| $\mathcal{G}$ is discrete (countable vertices) vs. continuous | B | Modeling choice — discrete is simpler but not forced |
+| Conservation across Cauchy slices of $\mathcal{G}$ (Axiom 1(ii)) | A | Def 4 applied to the graph structure |
+
+**Step 0a (Bucket A items — justifications).**
+
+**Universe $\mathcal{H}$ as a set, and $\sigma$-algebra $\mathcal{A}$.** Definition 1 requires at least two distinguishable systems (observer and observed); Definition 2 requires observers to draw a self/non-self boundary. Both require that "subsystem" be a meaningful category, and that category must be closed under (i) taking the complement (the "non-self" of any "self"), (ii) unions (the operational composition of two subsystems is itself a subsystem), and (iii) containing the trivial cases $\mathcal{H}$ and $\emptyset$. These are exactly the defining closure properties of a Boolean algebra. **Note on countable vs. finite unions.** Definition 3 (persistence under *repeated* interaction, without a bound on the number of interactions) pushes closure from finite unions to countable unions — iterated operational composition is unbounded, so the closure property must survive countably many applications. This is the standard move from Boolean algebra to $\sigma$-algebra. Arbitrary uncountable unions are *not* forced by any operational requirement and are deliberately excluded. The $\sigma$-algebra is the minimal structure consistent with the operational requirements, not a chosen package.
+
+**Measure $\mathcal{C}$ as a function $\mathcal{A} \to \mathbb{R}_{\geq 0}$.** Definition 4 (closed ontology) says the universe carries a conserved currency. Definition 2 says that currency must be attributable to observers and hence to the subsystems $\mathcal{A}$. A set function assigning a non-negative scalar to each admissible subsystem is the minimal formalization — any less structure cannot represent "how much currency this subsystem carries." The choice of $\mathbb{R}_{\geq 0}$ as the codomain (rather than, say, an ordered semigroup) is the minimal mathematical setting in which the conservation constraints below can be stated.
+
+**(C1) Positivity.** A negative value would mean a subsystem carries "less than nothing," which has no operational meaning. Definition 4 implicitly rules this out.
+
+**(C2) Normalization $\mathcal{C}(\mathcal{H}) = C_0$ with $C_0 > 0$ finite.** Three sub-claims: *constancy* (total is the same across every configuration) is forced by Definition 4 — closed ontology means the total doesn't change. *Finiteness* is forced by "the universe is bounded" interpreted operationally: the total currency available to all observers must be finite or Definition 2 (identity distinguishable against a non-trivial background) becomes vacuous. *Positivity* ($C_0 > 0$) is forced by Definition 2 — observers exist and carry some coherence, so the total cannot be zero.
+
+**(C3) Null empty set.** Forced at the convention level: the empty collection is not a subsystem with content. This is a sanity condition rather than a physical claim.
+
+**(C4) Subadditivity.** The operational claim is that merging two disjoint subsystems cannot create currency that wasn't there before. Argument: suppose, for contradiction, $\mathcal{C}(S_1 \cup S_2) > \mathcal{C}(S_1) + \mathcal{C}(S_2)$ for some disjoint pair. Then the act of *grouping* $S_1$ and $S_2$ (a purely notational move, not an interaction) has created $\mathcal{C}(S_1 \cup S_2) - \mathcal{C}(S_1) - \mathcal{C}(S_2) > 0$ units of currency. This contradicts Definition 1 (observation-as-residue does not create stuff) and Definition 4 (closed ontology). Therefore subadditivity holds.
+
+**Admissible transformations preserve $\mathcal{C}$ (Axiom 1 part (i)).** Definition 1 says observation does not create or destroy stuff; Definition 3 says persistence is invariant over repeated interaction. An admissible transformation is the formal analogue of "a change that an observer could undergo while remaining an observer" — it must therefore preserve each subsystem's coherence content. The group structure of $\text{Aut}(\mathcal{H}, \mathcal{A})$ is standard mathematical packaging: identity is admissible, composition of admissible transformations is admissible, inverses exist.
+
+**Dependency graph $\mathcal{G}$ is directed and acyclic.** Definition 3 (persistence through repeated interaction) implies some notion of "one interaction before another" — not a clock-based time, but a logical ordering. This ordering must be *asymmetric*: cyclic causation ("A is input to B is input to A") is incompatible with "residue remembered," because it would mean observer state depends on its own not-yet-produced residue. The set of interaction events together with the asymmetric "is-input-to" relation is, by construction, a directed acyclic graph.
+
+**Conservation across Cauchy slices of $\mathcal{G}$ (Axiom 1 part (ii)).** Given the DAG structure above, a Cauchy slice is any maximal antichain — an operational "snapshot" of the ongoing interaction network that is consistent with the ordering. Closed ontology (Definition 4) applied to such a snapshot says the total coherence recorded in the snapshot is the same constant $C_0$ as applied to the universe as a whole. Part (ii) is therefore Definition 4 restated for graph slices rather than for the universe directly.
+
+**Step 0b (Bucket B items — genuinely additional content).**
+
+**(C5) Strong subadditivity is not forced by the operational definitions alone.** C4 says grouping two disjoint subsystems cannot create currency. C5 says something stronger and subtler: that the way currency is distributed across overlapping subsystems satisfies a specific inequality,
+$$\mathcal{C}(S_1 \cup S_2) + \mathcal{C}(S_1 \cap S_2) \leq \mathcal{C}(S_1) + \mathcal{C}(S_2).$$
+There is no short operational argument from Definitions 1–4 that forces this inequality. In the physical realization where $\mathcal{C}$ specializes to von Neumann entropy, C5 is the Lieb–Ruskai theorem (1973) — a deep mathematical result, proved via the joint convexity of relative entropy, that took decades to establish. Its holding in the quantum model is *evidence* that C5 is the right constraint for physical coherence, but the framework imposes C5 as part of Axiom 1 rather than deriving it from operational primitives. This is the axiom's most contentful single step, and honest bookkeeping requires calling it bucket B. The downstream convergence — that C5 corresponds to the deepest non-trivial property of quantum entropy — is argued in [Coherence as Physical Primitive](/derivations/axioms/coherence-operational); that convergence is what makes the choice of C5 reasonable, but it does not make C5 forced by operational observerhood alone.
+
+**Discreteness of the dependency graph $\mathcal{G}$.** The *directed + acyclic* structure is bucket A (argued above), but the choice to model $\mathcal{G}$ as a discrete graph with countably many vertices — rather than as a continuous partial order, a Lorentzian manifold, or a causal set with a different measure-theoretic structure — is a modeling choice. Discrete is simpler and sufficient for everything the framework derives from $\mathcal{G}$, but it is not the only formalization consistent with the operational definitions. This is acknowledged here as bucket B; no alternative formalization has been developed within the framework, so the discreteness is effectively a working assumption.
+
+**Step 0c (What this does and does not change).**
+
+This Step 0 does not alter any of the downstream content of this page. Steps 1–6 below proceed from the axiom as stated and derive the same consequences as before. What Step 0 does is make the *status* of each formal element explicit, so that a reader reviewing the framework can see which parts are consequences of operational observerhood and which parts are additional commitments the framework makes.
+
+Of the thirteen formal elements in the summary table, eleven are bucket A (forced once the operational definitions are stated precisely) and two are bucket B: strong subadditivity (C5) and the discreteness of the dependency graph. The C5 commitment is the significant one — it is the single most contentful mathematical step in Axiom 1, and the framework's physical interpretation of coherence as von Neumann entropy is what retroactively justifies the commitment. The discreteness of $\mathcal{G}$ is a working-assumption-level choice.
+
+A reader who rejects C5 as an operational primitive can still read this page as a proof that "given C5 plus operational observerhood, the rest of the formal structure follows." A reader who accepts the convergence argument in [Coherence as Physical Primitive](/derivations/axioms/coherence-operational) may prefer to read C5 as forced-by-convergence rather than forced-by-operation. The framework's claim is the narrower of the two: C5 is an axiom, justified post-hoc by its physical realization, and labeled honestly in the bridge work here.
 
 ### Step 1: The Coherence Space
 

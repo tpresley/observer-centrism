@@ -459,6 +459,10 @@
   ],
   "edges": [
     {
+      "from": "axioms/00-from-observation-to-axioms",
+      "to": "axioms/coherence-conservation"
+    },
+    {
       "from": "axioms/coherence-conservation",
       "to": "axioms/coherence-operational"
     },
