@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-12T10:24:10.326Z",
+    "generatedAt": "2026-04-12T10:26:18.953Z",
     "derivationCount": 76,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -13642,6 +13642,7 @@
         "thermodynamics/action-planck"
       ],
       "enablesDerivation": [
+        "axioms/coherence-operational",
         "quantum/preferred-basis",
         "quantum/entanglement"
       ],
