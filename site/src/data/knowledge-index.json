@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-12T04:39:18.066Z",
+    "generatedAt": "2026-04-12T07:34:06.879Z",
     "derivationCount": 76,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -16,7 +16,7 @@
     },
     "derivationCount": 76,
     "predictionCount": 12,
-    "edgeCount": 218,
+    "edgeCount": 219,
     "formalObjectCount": 1133,
     "openGapCount": 231,
     "upgradeEligibleCount": 1,
@@ -45,6 +45,7 @@
       ],
       "dependedOnBy": [
         "axioms/coherence-conservation",
+        "axioms/loop-closure",
         "axioms/observer-definition"
       ],
       "steps": [],
@@ -71,6 +72,10 @@
         "incoming": [
           {
             "source": "axioms/coherence-conservation",
+            "context": "From Observation to Axioms"
+          },
+          {
+            "source": "axioms/loop-closure",
             "context": "From Observation to Axioms"
           },
           {
@@ -679,8 +684,9 @@
         "axioms"
       ],
       "summary": "Derivation of cyclic dynamics from self-reference: an observer must reproduce its own state to persist, and finite resources force this self-reproduction into a periodic loop with U(1) symmetry",
-      "lastUpdated": "2026-03-27",
+      "lastUpdated": "2026-04-11",
       "dependsOn": [
+        "axioms/00-from-observation-to-axioms",
         "axioms/coherence-conservation",
         "axioms/observer-definition"
       ],
@@ -702,6 +708,10 @@
         "thermodynamics/action-planck"
       ],
       "steps": [
+        {
+          "number": 0,
+          "title": "From Operational Definition to Formal Target"
+        },
         {
           "number": 1,
           "title": "Self-Sustaining Dynamics"
@@ -934,6 +944,18 @@
       "crossReferences": {
         "outgoing": [
           {
+            "target": "axioms/00-from-observation-to-axioms",
+            "context": "From Observation to Axioms"
+          },
+          {
+            "target": "axioms/observer-definition",
+            "context": "Observer Definition"
+          },
+          {
+            "target": "thermodynamics-ext/fisher-metric",
+            "context": "Fisher Metric"
+          },
+          {
             "target": "interactions/relational-invariants",
             "context": "Relational Invariants"
           },
@@ -944,14 +966,6 @@
           {
             "target": "foundation/aperiodic-order",
             "context": "Aperiodic Order"
-          },
-          {
-            "target": "axioms/observer-definition",
-            "context": "Observer Definition"
-          },
-          {
-            "target": "thermodynamics-ext/fisher-metric",
-            "context": "Fisher Metric"
           },
           {
             "target": "thermodynamics-ext/fisher-metric",

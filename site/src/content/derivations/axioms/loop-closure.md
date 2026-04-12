@@ -1,12 +1,12 @@
 ---
 title: "Loop Closure"
 status: "rigorous"
-dependsOn: ["axioms/coherence-conservation", "axioms/observer-definition"]
+dependsOn: ["axioms/00-from-observation-to-axioms", "axioms/coherence-conservation", "axioms/observer-definition"]
 enablesDerivation: ["minimal-observer/structure", "thermodynamics/action-planck", "spacetime/speed-of-light", "thermodynamics-ext/memory-persistence-tradeoff"]
 tags: ["axioms"]
 summary: "Derivation of cyclic dynamics from self-reference: an observer must reproduce its own state to persist, and finite resources force this self-reproduction into a periodic loop with U(1) symmetry"
 rigorLevel: "formal"
-lastUpdated: 2026-03-27
+lastUpdated: 2026-04-11
 ---
 
 ## Overview
@@ -26,11 +26,69 @@ Having a conserved quantity (Axiom 1) and a self-maintaining identity (Axiom 2) 
 
 **Why this matters.** Periodicity gives rise to frequency, frequency gives rise to energy (via the Planck-Einstein relation derived later), and the requirement of a minimum coherence cost per cycle is what ultimately produces Planck's constant. The wave-like behavior of quantum mechanics traces back to this requirement: to exist is to oscillate.
 
-**An honest caveat.** The step from "indefinite persistence" to "exact periodicity" relies on ruling out quasi-periodic flows (where the orbit is dense in a higher-dimensional torus rather than closing as a circle). The drift bound motivates this step but does not rigorously exclude quasi-periodicity; the additional physical input is that the observer's dynamics generates a single frequency, not a continuum. See the Remark following Theorem 3.2 for a precise discussion.
+**An honest caveat.** The step from "indefinite persistence" to "exact periodicity" relies on ruling out quasi-periodic flows (where the orbit is dense in a higher-dimensional torus rather than closing as a circle). The drift bound motivates this step but does not rigorously exclude quasi-periodicity; the additional physical input is that the observer's dynamics generates a single frequency, not a continuum. See the Remark following Theorem 3.2 for a precise discussion. The bridge work in Step 0 below classifies each formal element as operationally forced (bucket A) or genuinely additional content (bucket B), making the axiom's real inputs visible — see [From Observation to Axioms](/derivations/axioms/00-from-observation-to-axioms) for the classification scheme.
 
 ## Statement
 
 **Axiom 3 (Loop Closure).** Every observer's internal dynamics is self-sustaining and periodic: the state returns to its initial configuration after a finite period. A self-referencing system with finite resources that does not close its loop eventually dissolves. Loop closure is what makes an observer *persistent* in the sense of Axiom 2.
+
+### Step 0: From Operational Definition to Formal Target
+
+This section does the bridge work from the operational definitions in [From Observation to Axioms](/derivations/axioms/00-from-observation-to-axioms) to the formal apparatus of this page. Unlike Axioms 1 and 2, where every formal element is bucket A, **Axiom 3 has genuine bucket-B content** — additional structural inputs that go beyond operational observerhood. The bridge work here makes those inputs visible and separates them from the large portion that is operationally forced.
+
+**Summary table.**
+
+| Formal element | Bucket | Forced by / additional content |
+|---|---|---|
+| Self-sustaining one-parameter dynamics (flow $\phi_t$) | A | Def 3: persistence requires the current state to determine the next state |
+| Determinism (homomorphism $\phi_{t+s} = \phi_t \circ \phi_s$) | A | Def 3: evolving for $s$ then $t$ must equal evolving for $s+t$ |
+| Continuity of $\phi$ | A | Def 1: operationally similar states produce similar residues |
+| Drift bound and finite lifetime for non-closing flows | A | Axiom 2 (O1 compactness) + non-exact return |
+| Persistence requires recurrence | A | Drift bound: non-recurrent flow on compact space has finite lifetime |
+| **Smooth ($C^\infty$) dynamics** | **B** | **Required for Noether mechanism, coherence cost, Fisher metric — not forced by operational definitions alone** |
+| **Exact periodicity (exclusion of quasi-periodicity)** | **B** | **Physical requirement of discrete energy spectrum — not derivable from operational definitions alone** |
+| $U(1)$ action (given smooth dynamics + exact periodicity) | A | Mathematical consequence: periodic smooth flow on compact manifold |
+| Free orbits (no fixed points) | A | Coherence cost positivity: fixed points carry zero cost, violating Axiom 3 |
+| Lyapunov stability (neutral, not asymptotic) | A | Axiom 1: coherence conservation implies Liouville (phase space preservation) |
+| Coherence cost $S_\mathcal{O} > 0$ (given smooth structure) | A | Non-degeneracy of loop + $\mathcal{C}(\Sigma) > 0$ |
+| **Symplectic structure (for Noether pair, Theorem 5.1)** | **B** | **Additional structural input for the moment map** |
+| Invariant Riemannian metric (given smooth structure) | A | Weyl averaging over compact $U(1)$ action |
+
+**Step 0a (Bucket A items — justifications).**
+
+**Self-sustaining dynamics.** Definition 3 (persistence) says the observer maintains its identity through repeated interactions. At each interaction event, the observer's state must evolve into a valid next state — the current configuration determines the next. This is a one-parameter flow $\phi_t$ on $\Sigma$: a map from "how much interaction time has elapsed" to "where the observer's state is now." The homomorphism property ($\phi_{t+s} = \phi_t \circ \phi_s$) is determinism: the outcome of evolving for $s$ then $t$ must equal evolving for $s+t$, because the observer's dynamics is its own and doesn't depend on external timing. Continuity is forced by Definition 1 (observation as residue): operationally similar states should produce similar residues under similar interactions, so the flow cannot "jump" discontinuously.
+
+**Drift bound and recurrence.** From Axiom 2, the state space $\Sigma$ is compact (O1). A continuous flow on a compact space that does not return to its starting point accumulates drift (Proposition 2.3). The drift bound $d(\phi_{NT}(\sigma), \sigma) \leq N\epsilon$ gives a finite lifetime $\tau \sim D_\mathcal{B}/\epsilon$. For indefinite persistence ($\tau = \infty$), the flow must return — recurrence is forced. This is a purely operational argument: finite resources + non-return → finite lifetime, which contradicts persistence (Definition 3).
+
+**$U(1)$ action, free orbits, metric, coherence cost.** *Given* smooth structure and exact periodicity (both bucket B), the rest follows without additional content. Periodicity defines a $U(1)$ action (Corollary 4.3 — mathematical packaging). Free orbits follow from coherence cost positivity: a fixed point has zero cost, violating the axiom (Lemma 0.0). Lyapunov stability (neutral) is forced by coherence conservation (Axiom 1 implies Liouville's theorem). The invariant Riemannian metric exists by Weyl averaging over the compact $U(1)$ action (Theorem 0.1). The coherence cost integral (Definition 7.1) is well-defined and positive given the metric and smooth structure (Proposition 7.2). None of these require content beyond what the two bucket-B inputs provide.
+
+**Step 0b (Bucket B items — genuinely additional content).**
+
+**Smooth ($C^\infty$) dynamics is not forced by the operational definitions alone.** Continuity of the flow is bucket A (argued above), but *smoothness* — the requirement that $(t, \sigma) \mapsto \phi_t(\sigma)$ is infinitely differentiable — goes beyond what operational definitions force. The operational content (similar states produce similar residues) gives continuity, not differentiability. Smoothness is required by three independent downstream mechanisms:
+
+1. **Noether's theorem** (Step 5, [Observer Definition](/derivations/axioms/observer-definition) Theorem 5.1) requires a Lie group acting smoothly on a smooth manifold. Without smoothness, the Lie algebra that generates the conserved invariant does not exist, and the Noether pair mechanism — linking the $U(1)$ symmetry (Axiom 3) to the conserved invariant $I$ (Axiom 2) to the coherence measure $\mathcal{C}$ (Axiom 1) — is severed.
+2. **Coherence cost** (Step 7) requires the velocity $\dot{\phi}_t$ along the observer loop, presupposing $C^1$ differentiability.
+3. **Fisher information metric** ([Fisher Metric](/derivations/thermodynamics-ext/fisher-metric)) requires $\mathcal{C}$ to be $C^2$ on $\Sigma$.
+
+These three independent convergences are a strong structural selection pressure — they single out smooth dynamics from the much larger class of continuous dynamics. But structural selection is not the same as operational forcing. The honest classification is bucket B: smoothness is genuinely additional content, justified by its structural necessity for the axiom system to cohere, not derived from operational observerhood alone. (Whitney's theorem then upgrades $C^1$ to $C^\infty$.)
+
+**Exact periodicity (exclusion of quasi-periodicity) is not derivable from the operational definitions alone.** The drift bound forces *recurrence* — the flow must return close to its starting point. But quasi-periodic flows (orbits dense in a torus $T^k$ with $k > 1$ incommensurate frequencies) also recur, with $\epsilon(T_n) \to 0$ along an increasing sequence, giving infinite effective lifetime without exact closure. The framework excludes quasi-periodicity on physical grounds: a quasi-periodic observer has a continuous power spectrum rather than a discrete one, while quantum mechanics requires discrete energy levels ($E = n\hbar\omega$) that arise only from a single fundamental frequency — exact periodicity generating $U(1)$, not $T^k$. This is a motivated physical requirement, not an operational derivation. The honest classification is bucket B.
+
+**Symplectic structure (Theorem 5.1 assumption).** The Noether pair equivalence (Theorem 5.1) requires a symplectic form $\omega$ on $\Sigma$ preserved by the flow. This is an additional structural input beyond the manifold, metric, and $U(1)$ action. It is physically motivated: state spaces of classical mechanical systems and projective Hilbert spaces carry natural symplectic structures. But it is not derived from the operational definitions. Bucket B.
+
+**Step 0c (What this does and does not change).**
+
+This Step 0 does not alter any downstream content. The existing derivation (Steps 1–8, consistency model, consequences) proceeds from the axiom as stated. What Step 0 does is make the axiom's real inputs visible.
+
+**Of the thirteen formal elements, ten are bucket A and three are bucket B.** The bucket-B items are:
+
+1. **Smooth dynamics** — the most structurally necessary of the three (without it, the three axioms cannot communicate via the Noether mechanism).
+2. **Exclusion of quasi-periodicity** — the most physically motivated (discrete spectrum requires single frequency).
+3. **Symplectic structure** — the most technically specific (required for the moment map in Theorem 5.1).
+
+A reader who grants these three inputs can verify that everything else in this axiom page is operationally forced. A reader who questions them should note: (1) smoothness is selected by three independent downstream requirements converging on $C^1$; (2) exclusion of quasi-periodicity is equivalent to the requirement of a discrete energy spectrum; (3) symplectic structure is the natural kinematic framework for any system with a Hamiltonian (coherence-Lagrangian-based) formulation.
+
+**Remark (Dependency direction concern).** Theorems 0.0 and 0.2 in the "State Space Structure" section below derive the manifold and smooth structure of observer state spaces via an inductive argument that uses downstream results from [Relational Invariants](/derivations/interactions/relational-invariants), [Bootstrap Mechanism](/derivations/interactions/bootstrap), and [Aperiodic Order](/derivations/foundation/aperiodic-order). This is a dependency-direction concern: these are axiom-page theorems that rely on derivation-page results. The proofs are mathematically correct given their inputs, but the dependency structure may need to be reviewed. This concern is tracked separately and does not affect the bucket-A/B classification above (which classifies the axiom's *content*, not its later theorems' proof structure).
 
 ## State Space Structure (Formerly Structural Postulate S1 — Now a Theorem)
 

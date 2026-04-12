@@ -467,6 +467,10 @@
       "to": "axioms/observer-definition"
     },
     {
+      "from": "axioms/00-from-observation-to-axioms",
+      "to": "axioms/loop-closure"
+    },
+    {
       "from": "axioms/coherence-conservation",
       "to": "axioms/coherence-operational"
     },
