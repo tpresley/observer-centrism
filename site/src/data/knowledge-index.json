@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-12T03:40:37.621Z",
+    "generatedAt": "2026-04-12T03:58:48.109Z",
     "derivationCount": 76,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -290,6 +290,10 @@
           {
             "target": "axioms/00-from-observation-to-axioms",
             "context": "From Observation to Axioms"
+          },
+          {
+            "target": "foundation/continuous-discrete-duality",
+            "context": "Continuous-Discrete Duality"
           },
           {
             "target": "axioms/coherence-operational",
@@ -5002,6 +5006,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "axioms/coherence-conservation",
+            "context": "Continuous-Discrete Duality"
+          },
           {
             "source": "cosmology/cyclic-cosmology",
             "context": "Continuous-Discrete Duality"
