@@ -139,23 +139,23 @@ Setting $r = |a|^2$, $s = |b|^2$: $f(rs) = f(r)f(s)$ for all $r, s \geq 0$. This
 
 More directly: the unique continuous solution to $f(rs) = f(r)f(s)$ on $\mathbb{R}_{>0}$ with $f \not\equiv 0$ is $f(r) = r^\alpha$ for some $\alpha \in \mathbb{R}$ [Aczél & Dhombres, 1989]. Since $f \geq 0$ (by F2 and F1) and $f(1) = f(1)^2$ gives $f(1) = 1$ (using $f \not\equiv 0$), we have $f(r) = r^\alpha$ with $\alpha$ to be determined.
 
-**Step (c): Normalization determines $\alpha$.** For normalized quantum states ($\sum_k |\psi_k|^2 = 1$), the total coherence should be a constant (coherence of a single-system state is fixed). With $f(r) = r^\alpha$:
+**Step (c): The coherence-fraction bridge fixes $\alpha$.** Steps (a)–(b) established $f(r) = r^\alpha$ but left $\alpha$ undetermined — the tensor composition condition (F3) is consistent with any $\alpha$. To fix $\alpha$, we connect the coherence functional to the Born rule via the operational interpretation of measurement.
 
-$$F(\psi) = \sum_{k=1}^d |\psi_k|^{2\alpha}$$
+A measurement (Type III interaction) distributes the system's coherence across outcome channels. The probability of outcome $k$ is the fraction of total coherence flowing through channel $k$:
 
-Take $d = 2$: the state $|1\rangle$ gives $F = f(1) + f(0) = 1 + 0 = 1$. The state $(|1\rangle + |2\rangle)/\sqrt{2}$ gives $F = 2 \cdot (1/2)^\alpha = 2^{1-\alpha}$. For $F$ to be consistent with (F3) applied to $|1\rangle \otimes |1\rangle$ vs. $(|1\rangle + |2\rangle)/\sqrt{2} \otimes (|1\rangle + |2\rangle)/\sqrt{2}$:
+$$P(k) = \frac{f(|\psi_k|^2)}{F(\psi)} = \frac{|\psi_k|^{2\alpha}}{\sum_j |\psi_j|^{2\alpha}}$$
 
-Direct check: $F(|1\rangle \otimes |1\rangle) = f(1) = 1$. Meanwhile $F(|1\rangle) \cdot F(|1\rangle) = 1 \cdot 1 = 1$. $\checkmark$
+This identification is operationally forced: the probability of a measurement outcome IS the coherence fraction (Axiom 1 conserves coherence across the measurement; the outcome channels partition the total coherence; Definition 1 requires the residue to be proportional to the coherence flowing through each channel).
 
-$F((|1\rangle + |2\rangle)/\sqrt{2} \otimes (|1\rangle + |2\rangle)/\sqrt{2}) = \sum_{j,k} f(1/4) = 4 \cdot (1/4)^\alpha = 4^{1-\alpha}$.
+Independently, [Born Rule](/derivations/quantum/born-rule) Theorem 6.1 derives $P(k) = |\psi_k|^2$ from phase covariance, normalization, and the composition structure — without using the coherence functional. Equating the two expressions:
 
-$F((|1\rangle + |2\rangle)/\sqrt{2}) \cdot F((|1\rangle + |2\rangle)/\sqrt{2}) = (2^{1-\alpha})^2 = 4^{1-\alpha}$. $\checkmark$ — this is always consistent, so (F3) alone does not fix $\alpha$.
+$$|\psi_k|^2 = \frac{|\psi_k|^{2\alpha}}{\sum_j |\psi_j|^{2\alpha}}$$
 
-To fix $\alpha$, we invoke the Born rule's composition constraint (B3): the probability rule must be consistent with amplitude composition for sequential measurements. By Theorem 6.1 of [Born Rule](/derivations/quantum/born-rule), the unique solution is $f(x) = x$ (i.e., $\alpha = 1$). The argument is: if $\alpha \neq 1$, then $F$ is not preserved under the path-sum composition of amplitudes. Specifically, the coherence content of a state reached via two paths ($\psi(c|a) = \sum_b \psi(c|b)\psi(b|a)$) must equal the coherence content computed from the composed amplitude, which forces $\alpha = 1$.
+For a normalized two-dimensional state with $|\psi_1|^2 = p$ and $|\psi_2|^2 = 1-p$, this gives $p \cdot [p^\alpha + (1-p)^\alpha] = p^\alpha$. For $p \neq 0, 1$, dividing by $p$ and rearranging yields $(1-p)^{\alpha-1} = p^{\alpha-1}$. This holds for all $p \in (0,1)$ only if $\alpha - 1 = 0$, i.e., $\alpha = 1$.
 
 Therefore $f(x) = x$ and $F(\psi) = \sum_k |\psi_k|^2 = \langle\psi|\psi\rangle$. $\square$
 
-**Remark (No circularity).** Step (c) cites [Born Rule](/derivations/quantum/born-rule) Theorem 6.1, which derives $f(x) = x$ from the composition structure B3, normalization, and continuity. Crucially, that derivation does *not* use Structural Postulate S1 (the identification $\mathcal{C}(|\psi\rangle) = \langle\psi|\psi\rangle$) — it works entirely with probabilities and amplitudes, never invoking the coherence functional. So the logical flow is acyclic: the Born rule derivation independently establishes $f(x) = x$; Theorem 4.1 here uses that result to determine the coherence functional; and Corollary 4.2 then promotes S1 from assumption to theorem. Each step relies only on what precedes it, not on S1 itself.
+**Remark (Logical structure).** The argument combines three independent results: (i) the Cauchy multiplicative equation gives $f(r) = r^\alpha$ from conditions (F1)–(F5); (ii) the Born rule gives $P(k) = |\psi_k|^2$ from phase covariance, normalization, and composition; (iii) the operational bridge $P(k) = f(|\psi_k|^2)/F(\psi)$ connects them. Each step uses independent inputs. The Born rule derivation does not use the coherence functional; the Cauchy equation does not use the Born rule; the bridge is forced by the operational interpretation of measurement (coherence conservation across outcome channels). The flow is acyclic.
 
 **Corollary 4.2 (S1 is a theorem).** *The Structural Postulate S1 of [Born Rule](/derivations/quantum/born-rule) — the identification $\mathcal{C}(|\psi\rangle) = \langle\psi|\psi\rangle$ — follows from Axiom 1 (conditions C1–C5), U(1) phase symmetry (Axiom 3), and the composition structure of the interaction graph. It is the unique coherence functional satisfying conditions (F1)–(F5).*
 

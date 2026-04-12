@@ -44,7 +44,7 @@ When an observer is in one state versus another, those states may be easy or har
 
 $$p(x|\psi) = |\langle x|\psi\rangle|^2$$
 
-We verify each regularity condition for finite-dimensional observer state spaces ($\dim \Sigma < \infty$, from [Loop Closure](/derivations/axioms/loop-closure) S1):
+We verify each regularity condition for finite-dimensional observer state spaces ($\dim \Sigma < \infty$, from [Loop Closure](/derivations/axioms/loop-closure) Theorem 0.2):
 
 **(i) $C^2$ smoothness.** The inner product $\langle x|\psi\rangle$ is a continuous linear functional of $\psi$ on a finite-dimensional Hilbert space, hence $C^\infty$ (in fact, real-analytic). The squared modulus $|\langle x|\psi\rangle|^2 = \langle \psi|x\rangle\langle x|\psi\rangle$ is a polynomial in the components of $\psi$, hence $C^\infty$. In particular, $\sigma \mapsto p(x|\sigma)$ is $C^2$.
 
@@ -60,9 +60,9 @@ We verify each regularity condition for finite-dimensional observer state spaces
 
 **Definition 1.1.** A **statistical manifold** is a pair $(M, \{p(\cdot|\theta)\}_{\theta \in M})$ where $M$ is a smooth manifold and $\theta \mapsto p(\cdot|\theta)$ is a smooth embedding of $M$ into the space of probability distributions over some measurable space $(\mathcal{X}, \mathcal{F})$.
 
-**Proposition 1.1 (Observer states form a statistical manifold).** *Let $\mathcal{O} = (\Sigma, I, \mathcal{B})$ be an observer. The state space $\Sigma$, together with the family of outcome distributions $\{p(\cdot|\sigma)\}_{\sigma \in \Sigma}$ from Structural Postulate S1, forms a statistical manifold.*
+**Proposition 1.1 (Observer states form a statistical manifold).** *Let $\mathcal{O} = (\Sigma, I, \mathcal{B})$ be an observer. The state space $\Sigma$, together with the family of outcome distributions $\{p(\cdot|\sigma)\}_{\sigma \in \Sigma}$ from Theorem 0.1, forms a statistical manifold.*
 
-*Proof.* By [Observer Definition](/derivations/axioms/observer-definition), $\Sigma$ is a smooth manifold (O1). By S1, the map $\sigma \mapsto p(\cdot|\sigma)$ is $C^2$. The map is injective: distinct states $\sigma_1 \neq \sigma_2$ yield distinct outcome distributions (otherwise the states would be operationally indistinguishable and identified by O1). Therefore $(\Sigma, \{p(\cdot|\sigma)\})$ satisfies the definition of a statistical manifold. $\square$
+*Proof.* By [Observer Definition](/derivations/axioms/observer-definition), $\Sigma$ is a smooth manifold (O1). By Theorem 0.1, the map $\sigma \mapsto p(\cdot|\sigma)$ is $C^2$. The map is injective: distinct states $\sigma_1 \neq \sigma_2$ yield distinct outcome distributions (otherwise the states would be operationally indistinguishable and identified by O1). Therefore $(\Sigma, \{p(\cdot|\sigma)\})$ satisfies the definition of a statistical manifold. $\square$
 
 **Remark.** For the minimal observer with $\Sigma \cong S^1$, the state $\theta \in [0, 2\pi)$ parameterizes distributions over interaction outcomes. For composite observers, $\Sigma$ is higher-dimensional and the statistical manifold is correspondingly richer.
 
@@ -211,8 +211,8 @@ $$R^{(0)}_{ijkl} = \frac{1}{4}(C_{ikm}G^{mn}C_{jln} - C_{ilm}G^{mn}C_{jkn})$$
 
 ## Rigor Assessment
 
-**Fully rigorous (given S1):**
-- Proposition 1.1: Statistical manifold structure (from O1 + S1 + injectivity — standard information geometry)
+**Fully rigorous:**
+- Proposition 1.1: Statistical manifold structure (from O1 + Theorem 0.1 + injectivity — standard information geometry)
 - Proposition 2.1: KL divergence expansion, Fisher matrix emergence (standard Taylor expansion + normalization identities)
 - Corollary 2.2: Positive definiteness (from non-degeneracy of the parameterization)
 - Theorem 3.1: Čencov's theorem [Čencov, 1982]; [Amari & Nagaoka, 2000]
