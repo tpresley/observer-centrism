@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-12T04:31:19.999Z",
+    "generatedAt": "2026-04-12T04:39:18.066Z",
     "derivationCount": 76,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -16,7 +16,7 @@
     },
     "derivationCount": 76,
     "predictionCount": 12,
-    "edgeCount": 217,
+    "edgeCount": 218,
     "formalObjectCount": 1133,
     "openGapCount": 231,
     "upgradeEligibleCount": 1,
@@ -44,7 +44,8 @@
         "axioms/loop-closure"
       ],
       "dependedOnBy": [
-        "axioms/coherence-conservation"
+        "axioms/coherence-conservation",
+        "axioms/observer-definition"
       ],
       "steps": [],
       "formalObjects": [],
@@ -70,6 +71,10 @@
         "incoming": [
           {
             "source": "axioms/coherence-conservation",
+            "context": "From Observation to Axioms"
+          },
+          {
+            "source": "axioms/observer-definition",
             "context": "From Observation to Axioms"
           }
         ]
@@ -1116,8 +1121,9 @@
         "axioms"
       ],
       "summary": "Formalization of the observer as a triple (Σ, I, B) — state space, invariant, and self/non-self boundary — with topological structure, non-triviality conditions, and observer category",
-      "lastUpdated": "2026-03-08",
+      "lastUpdated": "2026-04-11",
       "dependsOn": [
+        "axioms/00-from-observation-to-axioms",
         "axioms/coherence-conservation"
       ],
       "enablesDerivation": [
@@ -1136,6 +1142,10 @@
         "quantum/sheaf-section-uniqueness"
       ],
       "steps": [
+        {
+          "number": 0,
+          "title": "From Operational Definition to Formal Target"
+        },
         {
           "number": 1,
           "title": "Structural Postulates"
@@ -1305,6 +1315,10 @@
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
+          {
+            "target": "axioms/00-from-observation-to-axioms",
+            "context": "From Observation to Axioms"
+          },
           {
             "target": "axioms/coherence-conservation",
             "context": "Coherence Conservation"

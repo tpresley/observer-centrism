@@ -463,6 +463,10 @@
       "to": "axioms/coherence-conservation"
     },
     {
+      "from": "axioms/00-from-observation-to-axioms",
+      "to": "axioms/observer-definition"
+    },
+    {
       "from": "axioms/coherence-conservation",
       "to": "axioms/coherence-operational"
     },

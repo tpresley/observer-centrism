@@ -1,12 +1,12 @@
 ---
 title: "The Observer Definition"
 status: "rigorous"
-dependsOn: ["axioms/coherence-conservation"]
+dependsOn: ["axioms/00-from-observation-to-axioms", "axioms/coherence-conservation"]
 enablesDerivation: ["axioms/loop-closure", "minimal-observer/structure", "minimal-observer/multiplicity", "dimensions/three-dimensions"]
 tags: ["axioms"]
 summary: "Formalization of the observer as a triple (Σ, I, B) — state space, invariant, and self/non-self boundary — with topological structure, non-triviality conditions, and observer category"
 rigorLevel: "formal"
-lastUpdated: 2026-03-08
+lastUpdated: 2026-04-11
 ---
 
 ## Overview
@@ -27,7 +27,7 @@ The definition also requires non-triviality: the symmetry group cannot be trivia
 
 **Why this matters.** By making "observer" a precise mathematical object rather than a vague philosophical concept, everything that follows -- dynamics, interactions, spacetime, particles -- can be derived rather than assumed. The framework applies at every scale because the definition is structural, not material.
 
-**An honest caveat.** Calling this triple an "observer" is a deliberate choice to emphasize the framework's perspective, but nothing in the mathematics requires consciousness or awareness. The formal definition is closer to "persistent self-distinguishing system" than to anything colloquial.
+**An honest caveat.** Calling this triple an "observer" is a deliberate choice to emphasize the framework's perspective, but nothing in the mathematics requires consciousness or awareness. The formal definition is closer to "persistent self-distinguishing system" than to anything colloquial. The question of *which* parts of the formal apparatus are forced by the operational definition of observation and which are genuinely additional content is addressed in Step 0 below — the bridge work that ties this axiom page back to [From Observation to Axioms](/derivations/axioms/00-from-observation-to-axioms).
 
 ## Statement
 
@@ -35,11 +35,68 @@ The definition also requires non-triviality: the symmetry group cannot be trivia
 
 ## Formalization
 
+### Step 0: From Operational Definition to Formal Target
+
+This section does the bridge work from the operational definitions in [From Observation to Axioms](/derivations/axioms/00-from-observation-to-axioms) to the formal apparatus introduced in Steps 1–7. Each formal element is labeled **bucket A** (forced once the operational requirement is stated precisely) or **bucket B** (genuinely additional content). The same five operational definitions (Definitions 1–5) established for Axiom 1 are cited here.
+
+**Summary table.**
+
+| Formal element | Bucket | Forced by / additional content |
+|---|---|---|
+| Hausdorff topology $\tau$ on $\mathcal{H}$ | A | Def 1 + 2: well-defined observer states require unique limits — see derivation below |
+| Borel $\sigma$-algebra $\mathcal{B}(\tau) \subseteq \mathcal{A}$ | A | Topologically distinguishable regions must carry coherence |
+| Admissible transformations are homeomorphisms | A | Def 1 + 2: admissible changes preserve operational similarity |
+| The triple $(\Sigma, I, \mathcal{B})$ itself | A | Def 2: state space + identity + self/non-self boundary |
+| (O1) $\Sigma$ connected | A | Def 2 + 3: a single persistent entity is "all of one piece" |
+| (O1) $\Sigma$ compact | A | Def 3 + Axiom 1 (C2): finite resources prevent unbounded drift |
+| (O1) $\mathcal{C}(\Sigma) > 0$ | A | Def 2: observers carry coherence |
+| (O2) Invariant $I: \Sigma \to V$, continuous | A | Def 2: identity is preserved → conserved quantity; continuity from topology |
+| (O2) $V$ finite-dimensional | A | Axiom 1 (C2): finite coherence → finite information capacity → finitely many independent invariants |
+| (O3) Self/non-self boundary $\mathcal{B}$ | A | Def 2: self/non-self distinction |
+| (N1) Non-degenerate symmetry $G_\mathcal{O} \neq \{e\}$ | A | Def 2: "real internal structure" |
+| (N2) Non-degenerate threat $G_\mathcal{O}^c \neq \emptyset$ | A | Def 1 + 2: observer must be distinguishable from environment |
+| (N3) Non-trivial invariant $\|I(\Sigma)\| > 1$ | A | Def 2: "has an identity" — identity must carry genuine information |
+| Observer category $\mathbf{Obs}$ | A | Mathematical packaging of the above — no additional content |
+
+**All fourteen formal elements are bucket A.** No bucket-B items remain for this axiom.
+
+**Step 0a (Justifications).**
+
+**The triple $(\Sigma, I, \mathcal{B})$.** Definition 2 says an observer has *internal states* (→ state space $\Sigma$), an *identity maintained through interactions* (→ conserved invariant $I$), and a *self/non-self distinction* (→ boundary $\mathcal{B}$ partitioning transformations into identity-preserving and identity-threatening). Each component of the triple maps directly to one clause of the operational definition. No additional formal structure is introduced.
+
+**Hausdorff topology $\tau$ on $\mathcal{H}$.** The operational content of Definitions 1 and 2 requires that distinct configurations be distinguishable and that observers have well-defined states. "Well-defined state" means: if an observer's internal configuration approaches a limit through a sequence of interactions, the limit is unique — otherwise the observer's identity is ambiguous. Uniqueness of limits for convergent nets is *equivalent* to the Hausdorff condition (T2 separation). Weaker separation axioms (T0, T1) allow non-unique limits: a sequence can converge to multiple distinct points, making the observer's state indeterminate after the convergent process. This violates Definition 2 (the observer has a *determinate* identity at each step) and Definition 3 (persistence requires that the observer's state remains a valid observer configuration after each interaction — ambiguity is not a valid configuration).
+
+*Remark.* The Hausdorff condition is equivalent to the statement that the diagonal $\Delta = \{(x,x) : x \in \mathcal{H}\}$ is closed in $\mathcal{H} \times \mathcal{H}$. This means: "being the same configuration" is a closed condition — if two configurations are indistinguishable in every neighborhood, they are identical. This is the topological formalization of "distinct configurations are operationally distinguishable" (Definition 1).
+
+**Borel $\sigma$-algebra inclusion $\mathcal{B}(\tau) \subseteq \mathcal{A}$.** Every open set in $\tau$ corresponds to a topologically distinguishable region of $\mathcal{H}$. If such a region were not in $\mathcal{A}$, it would be a region that is topologically distinguishable but cannot carry coherence — invisible to the coherence measure despite being operationally accessible. This contradicts the operational requirement that distinguishable subsystems are admissible subsystems (from Axiom 1's bridge work: the $\sigma$-algebra captures all operationally composable subsystems). Hence $\mathcal{B}(\tau) \subseteq \mathcal{A}$.
+
+**Admissible transformations are homeomorphisms.** Axiom 1 already requires admissible transformations to preserve $\mathcal{A}$ and $\mathcal{C}$. The additional requirement of continuity (homeomorphism) is forced by: an admissible transformation should preserve *operational similarity*. If two configurations are operationally similar (close in $\tau$), they should remain similar after an admissible change — otherwise the transformation has "torn" the state space, making previously-similar configurations suddenly dissimilar. This is operationally incoherent: an admissible change that does not create or destroy coherence (Axiom 1(i)) should not qualitatively restructure the distinguishability relationships between configurations. Continuity of both $T$ and $T^{-1}$ (homeomorphism) is the minimal condition ensuring this.
+
+**(O1) Connectedness.** Definition 2 defines an observer as a *single* system with an identity. A disconnected state space $\Sigma = \Sigma_1 \sqcup \Sigma_2$ (two or more connected components with no continuous path between them) would mean the observer has states that are topologically unreachable from each other — the observer could never evolve from a state in $\Sigma_1$ to a state in $\Sigma_2$ through any continuous process. Operationally, this is two separate observers sharing a label, not one observer. Persistence (Definition 3) through repeated interaction requires the observer to remain in *one* coherent entity. Hence $\Sigma$ is connected.
+
+**(O1) Compactness.** An observer has finite coherence: $\mathcal{C}(\Sigma) \leq C_0 < \infty$ (Axiom 1, C2). If $\Sigma$ were non-compact, there would exist sequences of states with no convergent subsequence — the observer could "drift off to infinity" in its state space without stabilizing. This contradicts persistence (Definition 3): an observer that drifts without bound eventually exits any bounded region and cannot maintain a stable identity. Compactness ensures every sequence of states has a convergent subsequence, which is the topological formalization of "the observer's dynamics cannot escape."
+
+**(O1) $\mathcal{C}(\Sigma) > 0$.** An observer is a non-trivial system (Definition 2: has internal states, participates in interactions). A subsystem with zero coherence carries no currency and cannot participate in coherence-conserving interactions. Hence $\mathcal{C}(\Sigma) > 0$.
+
+**(O2) Invariant $I$ is continuous to a finite-dimensional normed space.** *Continuity*: the invariant $I$ maps internal states to identity values. If $I$ were discontinuous, arbitrarily small changes in the observer's state could cause large jumps in its identity — the observer's identity would be fragile to noise at every scale, contradicting "maintains its identity through interactions" (Definition 2). Continuity ensures small perturbations cause small identity changes. *Finite-dimensionality of $V$*: the observer has finite coherence ($C_0 < \infty$), which bounds its information capacity. Finitely many bits can support at most finitely many independent conserved quantities. An infinite-dimensional $V$ would require infinite information to specify the invariant — more than any finite-coherence observer can maintain. (When $G_\mathcal{O}$ is later shown to be a Lie group via Axiom 3, the Noether theorem confirms $\dim V = \dim \mathfrak{g}_\mathcal{O}$, consistent with this operational bound.)
+
+**(O3) Self/non-self boundary.** Definition 2 requires a self/non-self distinction. Formally, this is the partition $\text{Aut}(\mathcal{H})|_\Sigma = G_\mathcal{O} \sqcup G_\mathcal{O}^c$ between transformations that preserve the invariant (self) and those that don't (non-self). This is a direct transcription of the operational definition.
+
+**Non-triviality conditions N1–N3.** (N1) "$G_\mathcal{O} \neq \{e\}$": an observer with a trivial symmetry group has no internal degrees of freedom — it is a structureless point, not a system with "internal states" (Definition 2). (N2) "$G_\mathcal{O}^c \neq \emptyset$": if every transformation preserves the observer's identity, there is no threat and no boundary — the observer is indistinguishable from the environment, violating Definition 1 (observation requires two distinguishable systems). (N3) "$|I(\Sigma)| > 1$": a constant invariant carries no information — the observer has no identity to maintain (Definition 2).
+
+**Observer category $\mathbf{Obs}$.** The category structure (objects = observers, morphisms = structure-preserving maps) is standard mathematical packaging of the definitions above. The category axioms (identity, composition, associativity) follow from function composition. No additional content is introduced.
+
+**Step 0b (What this does and does not change).**
+
+This Step 0 does not alter any of the downstream content of this page. Steps 1–7 below proceed from the axiom as stated. What Step 0 does is resolve the status of elements that were previously flagged as structural postulates — most notably the Hausdorff topology $\tau$, which the existing Remark after Definition 1.1 calls "a structural postulate, analogous to the dependency graph $\mathcal{G}$." The bridge work shows that the Hausdorff condition is operationally forced (unique limits ↔ well-defined observer states), not a modeling choice. The analogy with $\mathcal{G}$ no longer holds: $\mathcal{G}$'s DAG structure is also bucket A (see [Coherence Conservation](/derivations/axioms/coherence-conservation), Step 0), but for different reasons (the operational binary-ness of interaction residues).
+
+All fourteen formal elements are bucket A. Every formal element of Axiom 2 is traceable to operational observerhood.
+
 ### Step 1: Structural Postulates
 
 **Definition 1.1 (Topological coherence space).** Extend the coherence space $(\mathcal{H}, \mathcal{A}, \mathcal{C})$ from [Coherence Conservation](/derivations/axioms/coherence-conservation) with a topology $\tau$ making $(\mathcal{H}, \tau)$ a Hausdorff topological space. The $\sigma$-algebra $\mathcal{A}$ is required to contain the Borel $\sigma$-algebra $\mathcal{B}(\tau)$ generated by $\tau$: $\mathcal{B}(\tau) \subseteq \mathcal{A}$.
 
-**Remark (Status of the topology).** The topology $\tau$ is a structural postulate, analogous to the dependency graph $\mathcal{G}$ in Axiom 1. It is not derived from the coherence measure alone. The Hausdorff condition ensures distinct configurations are topologically distinguishable — a minimal separation axiom. Stronger conditions (e.g., second-countability, metrizability) may be imposed when needed for specific derivations; at this stage, Hausdorff suffices.
+**Remark (Status of the topology).** The topology $\tau$ was originally classified as a structural postulate. Step 0 above shows it is operationally forced (bucket A): the Hausdorff condition is equivalent to uniqueness of limits for convergent nets, which is required by "observers have well-defined states" (Definition 2). The Hausdorff condition ensures distinct configurations are topologically distinguishable — a minimal separation axiom that is the *exact* formalization of operational distinguishability. Stronger conditions (e.g., second-countability, metrizability) may be imposed when needed for specific derivations; at this stage, Hausdorff suffices.
 
 **Definition 1.2 (Admissible transformation group).** Let $\text{Aut}(\mathcal{H})$ denote the group of bijections $T: \mathcal{H} \to \mathcal{H}$ that are:
 1. **Homeomorphisms**: $T$ and $T^{-1}$ are continuous with respect to $\tau$
