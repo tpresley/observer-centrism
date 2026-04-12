@@ -10,6 +10,7 @@ const bySlug = new Map(derivations.map(d => [d.slug, d]))
 // in approximate dependency order. Matches Sidebar.astro.
 const GROUP_ORDER: Record<string, string[]> = {
   'Axioms': [
+    'axioms/00-from-observation-to-axioms',
     'axioms/coherence-conservation',
     'axioms/observer-definition',
     'axioms/loop-closure',

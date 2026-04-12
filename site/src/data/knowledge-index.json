@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-12T07:34:06.879Z",
+    "generatedAt": "2026-04-12T07:37:51.964Z",
     "derivationCount": 76,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -8,17 +8,17 @@
   },
   "stats": {
     "byStatus": {
-      "stub": 3,
-      "rigorous": 26,
+      "rigorous": 27,
       "provisional": 44,
       "draft": 2,
-      "non-viable": 1
+      "non-viable": 1,
+      "stub": 2
     },
     "derivationCount": 76,
     "predictionCount": 12,
     "edgeCount": 219,
     "formalObjectCount": 1133,
-    "openGapCount": 231,
+    "openGapCount": 236,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -28,14 +28,14 @@
       "id": "axioms/00-from-observation-to-axioms",
       "filePath": "site/src/content/derivations/axioms/00-from-observation-to-axioms.md",
       "title": "From Observation to Axioms",
-      "status": "stub",
-      "rigorLevel": "informal",
+      "status": "rigorous",
+      "rigorLevel": "formal",
       "group": "axioms",
       "tags": [
         "foundation",
         "axioms"
       ],
-      "summary": "Bridge page from the operational definition of observation to the formal mathematical structure of the three axioms — operational starting points, the bridge program, and the postulate classification scheme",
+      "summary": "Bridge from the operational definition of observation to the formal mathematical structure of the three axioms — five operational starting points, the bridge program with results, and the empirical postulate classification",
       "lastUpdated": "2026-04-11",
       "dependsOn": [],
       "enablesDerivation": [
@@ -51,7 +51,33 @@
       "steps": [],
       "formalObjects": [],
       "structuralPostulates": [],
-      "openGaps": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Smooth dynamics promotion.",
+          "description": "If the three independent downstream convergences on C1 (Noether, coherence cost, Fisher metric) could be formalized as operational requirements rather than downstream selection pressures, smooth dynam"
+        },
+        {
+          "number": 2,
+          "title": "Quasi-periodicity exclusion.",
+          "description": "If a single-frequency requirement could be derived from operational observerhood (perhaps via a composition argument: quasi-periodic observers decompose into multiple independent sub-observers by Defi"
+        },
+        {
+          "number": 3,
+          "title": "Symplectic structure.",
+          "description": "If the symplectic form could be derived from the U(1) action on the state space (perhaps via the cotangent bundle construction or the Marsden-Weinstein reduction), it might be promotable to bucket A. "
+        },
+        {
+          "number": 4,
+          "title": "Born rule chain (issue [#2](https://github.com/tpresley/observer-centrism/issues/2)).",
+          "description": "The amplitude–coherence identification (Theorem 0.1 of the Born Rule page) has an unargued bridge step between the probability function and the coherence function. Tracked separately."
+        },
+        {
+          "number": 5,
+          "title": "Loop closure dependency direction (issue [#3](https://github.com/tpresley/observer-centrism/issues/3)).",
+          "description": "Theorems 0.0 and 0.2 in the Loop Closure page derive manifold structure via induction using downstream results. Tracked separately."
+        }
+      ],
       "assessmentVerdict": "",
       "hasConsistencyModel": false,
       "crossReferences": {
@@ -29858,6 +29884,41 @@
     }
   ],
   "allOpenGaps": [
+    {
+      "derivationId": "axioms/00-from-observation-to-axioms",
+      "derivationStatus": "rigorous",
+      "number": 1,
+      "title": "Smooth dynamics promotion.",
+      "description": "If the three independent downstream convergences on C1 (Noether, coherence cost, Fisher metric) could be formalized as operational requirements rather than downstream selection pressures, smooth dynam"
+    },
+    {
+      "derivationId": "axioms/00-from-observation-to-axioms",
+      "derivationStatus": "rigorous",
+      "number": 2,
+      "title": "Quasi-periodicity exclusion.",
+      "description": "If a single-frequency requirement could be derived from operational observerhood (perhaps via a composition argument: quasi-periodic observers decompose into multiple independent sub-observers by Defi"
+    },
+    {
+      "derivationId": "axioms/00-from-observation-to-axioms",
+      "derivationStatus": "rigorous",
+      "number": 3,
+      "title": "Symplectic structure.",
+      "description": "If the symplectic form could be derived from the U(1) action on the state space (perhaps via the cotangent bundle construction or the Marsden-Weinstein reduction), it might be promotable to bucket A. "
+    },
+    {
+      "derivationId": "axioms/00-from-observation-to-axioms",
+      "derivationStatus": "rigorous",
+      "number": 4,
+      "title": "Born rule chain (issue [#2](https://github.com/tpresley/observer-centrism/issues/2)).",
+      "description": "The amplitude–coherence identification (Theorem 0.1 of the Born Rule page) has an unargued bridge step between the probability function and the coherence function. Tracked separately."
+    },
+    {
+      "derivationId": "axioms/00-from-observation-to-axioms",
+      "derivationStatus": "rigorous",
+      "number": 5,
+      "title": "Loop closure dependency direction (issue [#3](https://github.com/tpresley/observer-centrism/issues/3)).",
+      "description": "Theorems 0.0 and 0.2 in the Loop Closure page derive manifold structure via induction using downstream results. Tracked separately."
+    },
     {
       "derivationId": "axioms/coherence-conservation",
       "derivationStatus": "rigorous",
