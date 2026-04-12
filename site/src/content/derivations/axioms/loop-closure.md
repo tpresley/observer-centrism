@@ -228,7 +228,7 @@ $$\rho: U(1) \to \text{Diff}(\Sigma), \quad e^{i\theta} \mapsto \phi_{\theta T_\
 
 (b) Given periodic Hamiltonian flow with period $T$, define $\rho(e^{i\theta}) = \phi_{\theta T/2\pi}$. This is a $U(1)$ action by the argument of Corollary 4.3, and periodicity is Axiom 3. $\square$
 
-**Remark (Assumptions).** Theorem 5.1 requires: (i) a symplectic structure on $\Sigma$, (ii) the flow preserves it, and (iii) the moment map exists (automatic if $H^1(\Sigma) = 0$). These are additional structural assumptions beyond S1 (and its consequence, Theorem 0.1), physically motivated by the fact that state spaces of classical mechanical systems and projective Hilbert spaces carry natural symplectic structures.
+**Remark (Assumptions).** Theorem 5.1 requires: (i) a symplectic structure on $\Sigma$, (ii) the flow preserves it, and (iii) the moment map exists (automatic if $H^1(\Sigma) = 0$). For a single minimal observer ($\Sigma = S^1$), the theorem is vacuous since $S^1$ is odd-dimensional. For composite observers, all three conditions are satisfied: the symplectic structure is the canonical form on products of $U(1)$ orbits (see Operational Grounding above), the flow preserves it by construction, and the moment map exists because the form is exact on the product. No additional structural assumptions are needed.
 
 **Proposition 5.2 (Relationship between Axioms 2 and 3).** *Axiom 3 is not logically independent of Axiom 2 — it specifies the dynamical realization. Precisely:*
 
