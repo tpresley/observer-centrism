@@ -34,13 +34,13 @@ When an observer is in one state versus another, those states may be easy or har
 
 ## Structural Postulate
 
-**S1 (Statistical regularity).** **Now a theorem** (Theorem 0.1 below). Formerly a structural postulate; now derived from the Born Rule (itself a theorem via [Coherence as Physical Primitive](/derivations/axioms/coherence-operational), Theorem 4.1).
+**S1 (Statistical regularity).** **Now a theorem** (Theorem 0.1 below). Formerly a structural postulate; now derived from the Born Rule ([Born Rule](/derivations/quantum/born-rule), Theorem 6c.1).
 
 ### Theorem 0.1 (Statistical Regularity from the Born Rule)
 
 **Theorem 0.1.** *Each observer state $\sigma \in \Sigma$ determines a family of probability distributions $\{p(\cdot|\sigma)\}_{\sigma \in \Sigma}$ over interaction outcomes satisfying: (i) the map $\sigma \mapsto p(x|\sigma)$ is $C^2$ for each outcome $x$; (ii) the support of $p(\cdot|\sigma)$ is independent of $\sigma$; (iii) differentiation and integration commute.*
 
-*Proof.* The Born Rule ([Born Rule](/derivations/quantum/born-rule), Theorem 6.1, now derived from the axioms via [Coherence as Physical Primitive](/derivations/axioms/coherence-operational), Theorem 4.1) establishes that interaction outcomes are governed by:
+*Proof.* The Born Rule ([Born Rule](/derivations/quantum/born-rule), Theorem 6.1) establishes that interaction outcomes are governed by:
 
 $$p(x|\psi) = |\langle x|\psi\rangle|^2$$
 

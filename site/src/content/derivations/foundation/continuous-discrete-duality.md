@@ -35,7 +35,7 @@ This derivation makes explicit what has been implicit: **these are not two separ
 
 **Proposition 1.1 (What the axioms require of coherence).** *The following continuous structures are forced by the axioms:*
 
-**(i) Hilbert space.** *Axiom 1 (coherence conservation) defines a subadditive measure $\mathcal{C}$ on the $\sigma$-algebra. The Born rule derivation ([Born Rule](/derivations/quantum/born-rule), Theorem 0.1) shows that $U(1)$ invariance (from Axiom 3) + channel additivity + composition + continuity uniquely force $\mathcal{C}(|\psi\rangle) = \langle\psi|\psi\rangle$. This is Hilbert space structure — a complex inner product space, inherently continuous and infinite-dimensional.*
+**(i) Hilbert space.** *Axiom 1 (coherence conservation) defines a subadditive measure $\mathcal{C}$ on the $\sigma$-algebra. The Born rule derivation ([Born Rule](/derivations/quantum/born-rule), Theorem 6c.1) shows that $U(1)$ invariance (from Axiom 3) + channel additivity + composition + continuity uniquely force $\mathcal{C}(|\psi\rangle) = \langle\psi|\psi\rangle$. This is Hilbert space structure — a complex inner product space, inherently continuous and infinite-dimensional.*
 
 **(ii) Fisher geometry.** *The coherence Hessian on state space is uniquely the Fisher information metric ([Fisher Metric](/derivations/thermodynamics-ext/fisher-metric), Theorem 0.1), by the Čencov uniqueness theorem. This gives the state space a Riemannian geometry: smooth, differentiable, with geodesic distances measuring the cost of transforming one coherence configuration into another.*
 

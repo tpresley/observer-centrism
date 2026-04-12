@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-12T09:45:57.766Z",
+    "generatedAt": "2026-04-12T10:24:10.326Z",
     "derivationCount": 76,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -17,7 +17,7 @@
     "derivationCount": 76,
     "predictionCount": 12,
     "edgeCount": 219,
-    "formalObjectCount": 1133,
+    "formalObjectCount": 1128,
     "openGapCount": 231,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
@@ -326,16 +326,12 @@
             "context": "Three Interaction Types"
           },
           {
-            "target": "axioms/coherence-operational",
-            "context": "Coherence Operational"
+            "target": "quantum/born-rule",
+            "context": "Born Rule"
           },
           {
             "target": "axioms/coherence-operational",
             "context": "Theorem 2.1"
-          },
-          {
-            "target": "axioms/coherence-operational",
-            "context": "Theorem 4.1"
           }
         ],
         "incoming": [
@@ -488,15 +484,14 @@
       "tags": [
         "foundation"
       ],
-      "summary": "Convergence of the coherence axioms with quantum information theory, operational meaning, and uniqueness of the coherence measure on quantum states",
-      "lastUpdated": "2026-03-14",
+      "summary": "Convergence of the coherence axioms with quantum information theory — von Neumann entropy correspondence, operational meaning, and classical limit",
+      "lastUpdated": "2026-04-12",
       "dependsOn": [
         "axioms/coherence-conservation",
-        "axioms/loop-closure"
-      ],
-      "enablesDerivation": [
+        "axioms/loop-closure",
         "quantum/born-rule"
       ],
+      "enablesDerivation": [],
       "dependedOnBy": [],
       "steps": [
         {
@@ -513,14 +508,10 @@
         },
         {
           "number": 4,
-          "title": "Uniqueness of the Coherence Functional on Quantum States"
-        },
-        {
-          "number": 5,
           "title": "Classical Limit"
         },
         {
-          "number": 6,
+          "number": 5,
           "title": "Why Coherence Is Primitive"
         }
       ],
@@ -562,18 +553,6 @@
           "statementPreview": "Coherence conservation (C(H) = C0 under admissible transformations) is operationally equivalent to:*"
         },
         {
-          "type": "Theorem",
-          "id": "4.1",
-          "name": "Coherence–amplitude uniqueness",
-          "statementPreview": "Let F: Cd R 0 be a functional on quantum states satisfying:*"
-        },
-        {
-          "type": "Corollary",
-          "id": "4.2",
-          "name": "S1 is a theorem",
-          "statementPreview": "The Structural Postulate S1 of [Born Rule](/derivations/quantum/born-rule) — the identification C(|psirangle) = langl..."
-        },
-        {
           "type": "Proposition",
           "id": "5.1",
           "name": "Classical convergence",
@@ -590,12 +569,6 @@
           "id": "7.1.",
           "name": "",
           "statementPreview": "A qubit pair H = C2 C2 in the Bell state |Phi+rangle = (|00rangle + |11rangle)/2 provides a consistency model for all..."
-        },
-        {
-          "type": "Theorem",
-          "id": "4.1",
-          "name": "",
-          "statementPreview": ": The inner product langlepsi|psirangle = 1 is the unique U(1)-invariant quadratic functional. checkmark"
         }
       ],
       "structuralPostulates": [],
@@ -616,7 +589,7 @@
           "description": "The σ-algebra formulation (Axiom 1, conditions C1–C5) and the Hilbert space formulation (C = langlepsi|psirangle) operate at different levels. The former concerns subsystem structure; the latter conce"
         }
       ],
-      "assessmentVerdict": "The convergence results are mathematical facts — they show that the conditions of Axiom 1 are satisfied by quantum entropy, that the derived quantities match quantum information quantities, and that the coherence functional on states is uniquely determined. The promotion of S1 to a theorem depends o",
+      "assessmentVerdict": "The convergence results are mathematical facts — they show that the conditions of Axiom 1 are satisfied by quantum entropy, that the derived quantities match quantum information quantities, and that coherence connects to established physics from multiple independent directions. The uniqueness of the",
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
@@ -625,12 +598,12 @@
             "context": "Coherence Conservation"
           },
           {
-            "target": "axioms/coherence-conservation",
-            "context": "Model 2, strictly subadditive"
-          },
-          {
             "target": "quantum/born-rule",
             "context": "Born Rule"
+          },
+          {
+            "target": "axioms/coherence-conservation",
+            "context": "Model 2, strictly subadditive"
           },
           {
             "target": "interactions/bootstrap",
@@ -644,15 +617,7 @@
           },
           {
             "source": "axioms/coherence-conservation",
-            "context": "Coherence Operational"
-          },
-          {
-            "source": "axioms/coherence-conservation",
             "context": "Theorem 2.1"
-          },
-          {
-            "source": "axioms/coherence-conservation",
-            "context": "Theorem 4.1"
           },
           {
             "source": "interactions/bootstrap",
@@ -660,10 +625,6 @@
           },
           {
             "source": "minimal-observer/multiplicity",
-            "context": "Coherence as Physical Primitive"
-          },
-          {
-            "source": "quantum/born-rule",
             "context": "Coherence as Physical Primitive"
           },
           {
@@ -13685,6 +13646,7 @@
         "quantum/entanglement"
       ],
       "dependedOnBy": [
+        "axioms/coherence-operational",
         "quantum/entanglement",
         "quantum/observer-relative-objectivity",
         "quantum/preferred-basis",
@@ -13729,12 +13691,6 @@
         }
       ],
       "formalObjects": [
-        {
-          "type": "Theorem",
-          "id": "0.1",
-          "name": "Amplitude–coherence identification, formerly S1",
-          "statementPreview": "The coherence measure C restricted to the space of transition amplitudes satisfies C(|psirangle) = langle psi | psi r..."
-        },
         {
           "type": "Definition",
           "id": "1.1.",
@@ -13810,12 +13766,6 @@
         {
           "type": "Proposition",
           "id": "9.1",
-          "name": "Probability as coherence fraction",
-          "statementPreview": "The Born probability P(k) = |psik|2 is the fraction of total coherence that flows through the k-th outcome channel. T..."
-        },
-        {
-          "type": "Proposition",
-          "id": "9.2",
           "name": "Frequency interpretation",
           "statementPreview": "For N independent trials (each an independent Type III interaction), the law of large numbers gives: the fraction of ..."
         },
@@ -13839,14 +13789,10 @@
           "description": "Extension to continuous spectra (dP = |psi(x)|2 dx) follows from the same arguments in the continuum limit, using the measure-theoretic version of coherence conservation."
         }
       ],
-      "assessmentVerdict": "The Born rule derivation is fully rigorous. The amplitude–coherence identification (formerly S1) is now a theorem (Theorem 0.1), derived from U(1) invariance, composition, and continuity via the Cauchy multiplicative equation. The uniqueness of f(x) = x is established for all dimensions by the compo",
+      "assessmentVerdict": "The Born rule derivation is fully rigorous and self-contained. The probability uniqueness (Theorem 6.1) and the coherence functional uniqueness (Theorem 6c.1) are derived in sequence, connected by the coherence-fraction bridge. The Hilbert space structure is derived from the axioms via the polarizat",
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
-          {
-            "target": "axioms/coherence-operational",
-            "context": "Coherence as Physical Primitive"
-          },
           {
             "target": "thermodynamics/time",
             "context": "Time as Phase Ordering"
@@ -13889,6 +13835,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "axioms/coherence-conservation",
+            "context": "Born Rule"
+          },
           {
             "source": "axioms/coherence-operational",
             "context": "Born Rule"
@@ -22145,20 +22095,6 @@
     },
     {
       "derivationId": "axioms/coherence-operational",
-      "type": "Theorem",
-      "id": "4.1",
-      "name": "Coherence–amplitude uniqueness",
-      "fullRef": "axioms/coherence-operational:Theorem 4.1"
-    },
-    {
-      "derivationId": "axioms/coherence-operational",
-      "type": "Corollary",
-      "id": "4.2",
-      "name": "S1 is a theorem",
-      "fullRef": "axioms/coherence-operational:Corollary 4.2"
-    },
-    {
-      "derivationId": "axioms/coherence-operational",
       "type": "Proposition",
       "id": "5.1",
       "name": "Classical convergence",
@@ -22177,13 +22113,6 @@
       "id": "7.1.",
       "name": "",
       "fullRef": "axioms/coherence-operational:Theorem 7.1."
-    },
-    {
-      "derivationId": "axioms/coherence-operational",
-      "type": "Theorem",
-      "id": "4.1",
-      "name": "",
-      "fullRef": "axioms/coherence-operational:Theorem 4.1"
     },
     {
       "derivationId": "axioms/loop-closure",
@@ -27094,13 +27023,6 @@
     },
     {
       "derivationId": "quantum/born-rule",
-      "type": "Theorem",
-      "id": "0.1",
-      "name": "Amplitude–coherence identification, formerly S1",
-      "fullRef": "quantum/born-rule:Theorem 0.1"
-    },
-    {
-      "derivationId": "quantum/born-rule",
       "type": "Definition",
       "id": "1.1.",
       "name": "",
@@ -27187,15 +27109,8 @@
       "derivationId": "quantum/born-rule",
       "type": "Proposition",
       "id": "9.1",
-      "name": "Probability as coherence fraction",
-      "fullRef": "quantum/born-rule:Proposition 9.1"
-    },
-    {
-      "derivationId": "quantum/born-rule",
-      "type": "Proposition",
-      "id": "9.2",
       "name": "Frequency interpretation",
-      "fullRef": "quantum/born-rule:Proposition 9.2"
+      "fullRef": "quantum/born-rule:Proposition 9.1"
     },
     {
       "derivationId": "quantum/born-rule",

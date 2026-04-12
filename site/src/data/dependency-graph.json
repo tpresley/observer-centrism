@@ -475,8 +475,8 @@
       "to": "axioms/coherence-operational"
     },
     {
-      "from": "axioms/coherence-operational",
-      "to": "quantum/born-rule"
+      "from": "quantum/born-rule",
+      "to": "axioms/coherence-operational"
     },
     {
       "from": "axioms/coherence-conservation",

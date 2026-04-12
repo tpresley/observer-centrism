@@ -26,7 +26,7 @@ The Born rule -- the prescription that probability equals amplitude-squared -- i
 
 **Why this matters.** This removes the Born rule from the list of independent axioms of quantum mechanics, replacing it with a consequence of deeper principles. It also connects to Gleason's theorem, an independent mathematical result that confirms the uniqueness from a different direction.
 
-**An honest caveat.** The derivation uses the identification of coherence with the squared norm of Hilbert space. This was originally a structural postulate (S1), but is now derived as a theorem: the unique continuous, U(1)-invariant, composition-compatible coherence functional on quantum states is $\langle\psi|\psi\rangle$ (see [Coherence as Physical Primitive](/derivations/axioms/coherence-operational), Theorem 4.1).
+**An honest caveat.** The derivation uses the identification of coherence with the squared norm of Hilbert space. This was originally a structural postulate (S1), but is derived here as a theorem (Step 6c): the unique continuous, $U(1)$-invariant, composition-compatible coherence functional on quantum states is $\langle\psi|\psi\rangle$, fixed by the requirement that the coherence fraction equals the Born probability.
 
 
 ## Statement
@@ -34,14 +34,6 @@ The Born rule -- the prescription that probability equals amplitude-squared -- i
 **Theorem.** The Born rule — $P(k) = |\psi_k|^2 = |\langle k | \psi \rangle|^2$ — is the **unique** probability assignment compatible with three constraints derived from the axioms: normalization (from coherence conservation), phase covariance (from the $U(1)$ loop structure), and the composition rule (from the interaction graph). Furthermore, the Hilbert space structure of the state space is itself forced by coherence conservation on $U(1)$-structured observers.
 
 ## Derivation
-
-### The Amplitude–Coherence Identification
-
-**Theorem 0.1 (Amplitude–coherence identification, formerly S1).** *The coherence measure $\mathcal{C}$ restricted to the space of transition amplitudes satisfies $\mathcal{C}(|\psi\rangle) = \langle \psi | \psi \rangle = \sum_k |\psi_k|^2$ for any orthogonal decomposition $|\psi\rangle = \sum_k \psi_k |k\rangle$. That is, the coherence content of a quantum state equals its squared norm.*
-
-*Proof.* By [Coherence as Physical Primitive](/derivations/axioms/coherence-operational), Theorem 4.1: the unique continuous functional on quantum states satisfying U(1) invariance (Axiom 3), channel additivity (Axiom 1, condition C4 at equality for independent channels), composition (Axiom 1, conservation on tensor products), and non-triviality ($C_0 > 0$) is $F(\psi) = \langle\psi|\psi\rangle$. The five conditions (F1)–(F5) each trace to existing axioms — see the source table in the referenced derivation. $\square$
-
-**Remark (History).** This result was originally stated as Structural Postulate S1. The uniqueness argument — that $\langle\psi|\psi\rangle$ is forced by U(1) invariance, composition, and continuity via the Cauchy multiplicative functional equation — promotes it from assumption to theorem. The key step is that the composition constraint (amplitudes compose as path sums) forces the exponent $\alpha = 1$ in the general solution $f(r) = r^\alpha$.
 
 ### Step 1: Amplitudes from Coherence Path Sums
 
@@ -155,6 +147,42 @@ For a POVM element $E$ with $0 \leq E \leq I$, write $E = \sum_m e_m |e_m\rangle
 
 **Remark.** This corollary closes the circle between the Born rule and the entropy derivation: mixed states are defined by inaccessible coherence (entropy), and the Born rule extends to them via the coherence-weighted average. The POVM extension covers all physically realizable measurements, including partial Type III interactions where the observer does not fully resolve the system's state.
 
+### Step 6c: The Coherence Functional Is Also Determined
+
+The Born rule (Theorem 6.1) determines the probability assignment $P(k) = |\psi_k|^2$. The same argument, combined with the operational interpretation of measurement, also determines the coherence functional on quantum states.
+
+**Theorem 6c.1 (Coherence–amplitude identification).** *The coherence measure $\mathcal{C}$ restricted to quantum states satisfies $\mathcal{C}(|\psi\rangle) = \langle\psi|\psi\rangle$. That is, the coherence content of a quantum state equals its squared norm. This is the unique coherence functional compatible with the axioms.*
+
+*Proof.* Let $F: \mathbb{C}^d \to \mathbb{R}_{\geq 0}$ be a coherence functional on quantum states satisfying five conditions, each traced to an existing axiom:
+
+| Condition | Source |
+|---|---|
+| (F1) $U(1)$ invariance: $F(e^{i\alpha}\psi) = F(\psi)$ | Axiom 3 (Loop Closure): each observer has $U(1)$ phase |
+| (F2) Channel additivity: $F(\psi) = \sum_k f(|\psi_k|^2)$ | Axiom 1, C4 at equality: independent channels |
+| (F3) Composition: $F(\psi \otimes \phi) = F(\psi) \cdot F(\phi)$ | Axiom 1, conservation on tensor products |
+| (F4) Continuity | Axiom 3 (smooth dynamics on compact manifold) |
+| (F5) Non-triviality: $F \not\equiv 0$ | Axiom 1 ($C_0 > 0$) |
+
+**Step (a): Multiplicative equation.** Take $d = m = 1$. Then $|\psi \otimes \phi\rangle = ab$ with $|ab|^2 = |a|^2|b|^2$. Condition (F3) gives $f(rs) = f(r)f(s)$ for all $r, s \geq 0$. This is Cauchy's multiplicative functional equation.
+
+**Step (b): Continuous solution.** By (F4) and (F5), the unique continuous non-trivial solution is $f(r) = r^\alpha$ for some $\alpha \in \mathbb{R}$ [Aczél & Dhombres, 1989]. Since $f \geq 0$ and $f(1) = 1$, we have $f(r) = r^\alpha$ with $\alpha$ to be determined.
+
+**Step (c): The coherence-fraction bridge fixes $\alpha$.** A measurement distributes the system's coherence across outcome channels. The probability of outcome $k$ is the fraction of total coherence flowing through channel $k$:
+
+$$P(k) = \frac{f(|\psi_k|^2)}{F(\psi)} = \frac{|\psi_k|^{2\alpha}}{\sum_j |\psi_j|^{2\alpha}}$$
+
+This identification is operationally forced: the probability of a measurement outcome IS the coherence fraction (Axiom 1 conserves coherence across the measurement; the outcome channels partition the total coherence). By Theorem 6.1 above, $P(k) = |\psi_k|^2$. Equating:
+
+$$|\psi_k|^2 = \frac{|\psi_k|^{2\alpha}}{\sum_j |\psi_j|^{2\alpha}}$$
+
+For a normalized two-dimensional state with $|\psi_1|^2 = p$, $|\psi_2|^2 = 1-p$, this yields $(1-p)^{\alpha-1} = p^{\alpha-1}$ for all $p \in (0,1)$, which holds only if $\alpha = 1$.
+
+Therefore $f(x) = x$ and $F(\psi) = \langle\psi|\psi\rangle$. $\square$
+
+**Corollary 6c.2 (S1 is a theorem).** *The identification $\mathcal{C}(|\psi\rangle) = \langle\psi|\psi\rangle$ follows from the axioms and the operational interpretation of measurement. It is the unique coherence functional satisfying (F1)–(F5).*
+
+**Proposition 6c.3 (Probability as coherence fraction).** *The Born probability $P(k) = |\psi_k|^2$ is the fraction of total coherence that flows through the $k$-th outcome channel. This is a statement about coherence distribution, not about subjective ignorance.*
+
 ### Step 7: Hilbert Space Structure Is Derived
 
 **Theorem 7.1 (Hilbert space from coherence conservation).** *The state space of a quantum system is a complex Hilbert space. This structure is forced by three features of the framework:*
@@ -171,7 +199,7 @@ For a POVM element $E$ with $0 \leq E \leq I$, write $E = \sum_m e_m |e_m\rangle
 
 **(ii)** For disjoint path sets $\Gamma_1, \Gamma_2$ in the interaction graph, $\psi_{\Gamma_1 \cup \Gamma_2} = \psi_{\Gamma_1} + \psi_{\Gamma_2}$ (additivity of sums over disjoint sets). Scalar multiplication by $\lambda \in \mathbb{C}$ corresponds to phase-shifting and rescaling. This gives the state space the structure of a vector space $V$ over $\mathbb{C}$.
 
-**(iii)** By Theorem 0.1 (amplitude–coherence identification), the conserved quantity is $\mathcal{C}(|\psi\rangle) = \sum_k |\psi_k|^2$. Define a sesquilinear form by the polarization identity:
+**(iii)** By Theorem 6c.1 (coherence–amplitude identification), the conserved quantity is $\mathcal{C}(|\psi\rangle) = \sum_k |\psi_k|^2$. Define a sesquilinear form by the polarization identity:
 
 $$\langle \phi | \psi \rangle = \tfrac{1}{4}\bigl[\mathcal{C}(\phi + \psi) - \mathcal{C}(\phi - \psi) + i\,\mathcal{C}(\phi + i\psi) - i\,\mathcal{C}(\phi - i\psi)\bigr]$$
 
@@ -193,9 +221,7 @@ $$\text{Axioms} \to U(1) \text{ loops} \to \mathbb{C}\text{-amplitudes} \to \tex
 
 ### Step 9: Structural Interpretation
 
-**Proposition 9.1 (Probability as coherence fraction).** *The Born probability $P(k) = |\psi_k|^2$ is the fraction of total coherence that flows through the $k$-th outcome channel. This is a statement about coherence distribution, not about subjective ignorance.*
-
-**Proposition 9.2 (Frequency interpretation).** *For $N$ independent trials (each an independent Type III interaction), the law of large numbers gives: the fraction of outcomes $k$ converges to $|\psi_k|^2$ as $N \to \infty$. This is standard probability theory applied to the derived measure.*
+**Proposition 9.1 (Frequency interpretation).** *For $N$ independent trials (each an independent Type III interaction), the law of large numbers gives: the fraction of outcomes $k$ converges to $|\psi_k|^2$ as $N \to \infty$. This is standard probability theory applied to the derived measure. The operational interpretation — probability as coherence fraction — is established in Proposition 6c.3.*
 
 ### Consistency Model
 
@@ -219,15 +245,15 @@ $$\text{Axioms} \to U(1) \text{ loops} \to \mathbb{C}\text{-amplitudes} \to \tex
 - Theorem 10.1: Consistency model verified on $\mathbb{C}^2 \otimes \mathbb{C}^2$
 
 **Rigorous given axioms:**
-- Theorem 0.1: Amplitude–coherence identification (formerly S1) — now a theorem via Cauchy multiplicative equation uniqueness ([Coherence as Physical Primitive](/derivations/axioms/coherence-operational), Theorem 4.1)
-- Proposition 5.1: Normalization from coherence conservation (Axiom 1 + Theorem 0.1)
+- Theorem 6c.1: Coherence–amplitude identification (formerly S1) — derived here via Cauchy multiplicative equation + coherence-fraction bridge
+- Proposition 5.1: Normalization from coherence conservation (Axiom 1 + Theorem 6c.1)
 - Theorem 7.1: Hilbert space from $U(1)$ + linearity + conservation (complete proof via polarization identity)
 - Proposition 8.2: Dimension $\geq 3$ from multiplicity (product structure of combined systems)
 
 **Deferred dependency:**
 - The distinction between Eqs. (1) and (2) in Theorem 6.1 (interference vs. no interference) invokes the measurement formalism developed in [Measurement Problem](/derivations/quantum/measurement). This forward dependency does not affect the validity of the Born rule itself — it concerns when to apply which formula, not the correctness of $P = |\psi|^2$.
 
-**Assessment:** The Born rule derivation is fully rigorous. The amplitude–coherence identification (formerly S1) is now a theorem (Theorem 0.1), derived from U(1) invariance, composition, and continuity via the Cauchy multiplicative equation. The uniqueness of $f(x) = x$ is established for all dimensions by the composition and normalization constraints (Theorem 6.1), confirmed independently by Gleason's theorem for $d \geq 3$ (Proposition 8.1). The Hilbert space structure is derived from the axioms via the polarization identity (Theorem 7.1).
+**Assessment:** The Born rule derivation is fully rigorous and self-contained. The probability uniqueness (Theorem 6.1) and the coherence functional uniqueness (Theorem 6c.1) are derived in sequence, connected by the coherence-fraction bridge. The Hilbert space structure is derived from the axioms via the polarization identity (Theorem 7.1). Gleason's theorem (Proposition 8.1) provides independent confirmation for $d \geq 3$.
 
 ## Open Gaps
 

@@ -1,12 +1,12 @@
 ---
 title: "Coherence as Physical Primitive"
 status: "rigorous"
-dependsOn: ["axioms/coherence-conservation", "axioms/loop-closure"]
-enablesDerivation: ["quantum/born-rule"]
+dependsOn: ["axioms/coherence-conservation", "axioms/loop-closure", "quantum/born-rule"]
+enablesDerivation: []
 tags: ["foundation"]
-summary: "Convergence of the coherence axioms with quantum information theory, operational meaning, and uniqueness of the coherence measure on quantum states"
+summary: "Convergence of the coherence axioms with quantum information theory — von Neumann entropy correspondence, operational meaning, and classical limit"
 rigorLevel: "formal"
-lastUpdated: 2026-03-14
+lastUpdated: 2026-04-12
 ---
 
 ## Overview
@@ -15,25 +15,26 @@ This derivation answers a challenge: **what is coherence, concretely?**
 
 Axiom 1 ([Coherence Conservation](/derivations/axioms/coherence-conservation)) defines coherence as a subadditive measure on a $\sigma$-algebra with five conditions — positivity (C1), normalization (C2), null empty set (C3), subadditivity (C4), and strong subadditivity (C5). But a skeptic may ask: is this a genuine physical quantity or an abstract placeholder? Does coherence connect to anything already known?
 
-**The argument.** Coherence converges with established physics from four independent directions:
+**The argument.** Coherence converges with established physics from three independent directions:
 
 - **Quantum information theory.** The five conditions of Axiom 1 are exactly the axioms satisfied by von Neumann entropy on quantum subsystems. Strong subadditivity (C5) is the Lieb–Ruskai theorem (1973). Relational coherence equals quantum mutual information.
 - **Operational meaning.** Coherence of a subsystem measures information capacity — the maximum number of distinguishable states. Relational coherence measures correlation between subsystems. Conservation means no information is created or destroyed.
-- **Functional uniqueness.** On quantum states with U(1) symmetry, the unique continuous coherence functional compatible with composition is $\mathcal{C}(|\psi\rangle) = \lambda\langle\psi|\psi\rangle$ — the squared norm. This promotes the Born rule's Structural Postulate S1 from an assumption to a theorem.
 - **Classical limit.** In the classical regime, coherence reduces to Shannon entropy, and coherence conservation becomes Liouville's theorem (phase space volume preservation).
+
+The functional uniqueness of coherence on quantum states — that the unique $U(1)$-invariant, composition-compatible coherence functional is $\mathcal{C}(|\psi\rangle) = \langle\psi|\psi\rangle$ — is established in [Born Rule](/derivations/quantum/born-rule), Theorem 6c.1, where it follows from the Cauchy multiplicative equation and the coherence-fraction bridge.
 
 **The result.** Coherence is not a new invention. It is a unifying name for quantities that already pervade physics — entropy, information, inner product — recognized here as manifestations of a single conserved primitive. The conditions of Axiom 1 are the minimal properties shared by all these realizations.
 
 **Why this matters.** This removes the worry that "coherence" is doing enormous conceptual work without clear content. The content is quantum information theory. The axioms are not ad hoc — they are the axioms of quantum entropy, discovered independently by Lieb and Ruskai.
 
-**Why "coherence" and not "entropy"?** If the conditions of Axiom 1 match the axioms of quantum entropy, why introduce a new name? Because Axiom 1 is *stronger* than entropy conservation alone. Conservation (C2) says the total is constant under admissible evolution — that is unitarity, and entropy has it. But subadditivity (C4) and strong subadditivity (C5) constrain how subsystem values relate to each other: they are compositional axioms about structure, not just a statement about a conserved total. Von Neumann entropy happens to satisfy them [Araki–Lieb, 1970]; [Lieb–Ruskai, 1973], but those are deep *theorems*, not part of entropy's definition. Moreover, the inner product $\langle\psi|\psi\rangle$ (Theorem 4.1 below) is also a realization of the same axioms, and no one would call it entropy. "Coherence" names the abstract structure — positive, subadditive, conserved — that entropy, inner products, and phase space volumes share. The abstraction earns its own name because it is the load-bearing primitive: the derivation chain runs from C1–C5, not from any single realization.
+**Why "coherence" and not "entropy"?** If the conditions of Axiom 1 match the axioms of quantum entropy, why introduce a new name? Because Axiom 1 is *stronger* than entropy conservation alone. Conservation (C2) says the total is constant under admissible evolution — that is unitarity, and entropy has it. But subadditivity (C4) and strong subadditivity (C5) constrain how subsystem values relate to each other: they are compositional axioms about structure, not just a statement about a conserved total. Von Neumann entropy happens to satisfy them [Araki–Lieb, 1970]; [Lieb–Ruskai, 1973], but those are deep *theorems*, not part of entropy's definition. Moreover, the inner product $\langle\psi|\psi\rangle$ ([Born Rule](/derivations/quantum/born-rule), Theorem 6c.1) is also a realization of the same axioms, and no one would call it entropy. "Coherence" names the abstract structure — positive, subadditive, conserved — that entropy, inner products, and phase space volumes share. The abstraction earns its own name because it is the load-bearing primitive: the derivation chain runs from C1–C5, not from any single realization.
 
 **An honest caveat.** The convergence establishes structural isomorphism — the same mathematical axioms, the same derived quantities. It does not establish ontological identity: whether coherence *is* entropy, or whether both are aspects of something deeper, remains a philosophical question the framework does not attempt to settle.
 
 
 ## Statement
 
-**Theorem.** The conditions of Axiom 1 (C1–C5, as defined in [Coherence Conservation](/derivations/axioms/coherence-conservation)) are structurally isomorphic to the axioms of quantum entropy. This isomorphism identifies relational coherence with quantum mutual information, coherence conservation with unitarity, and the coherence measure on quantum states with the unique U(1)-invariant quadratic form $\langle\psi|\psi\rangle$.
+**Theorem.** The conditions of Axiom 1 (C1–C5, as defined in [Coherence Conservation](/derivations/axioms/coherence-conservation)) are structurally isomorphic to the axioms of quantum entropy. This isomorphism identifies relational coherence with quantum mutual information, coherence conservation with unitarity, and the coherence measure on quantum states with the squared norm $\langle\psi|\psi\rangle$ (uniqueness established in [Born Rule](/derivations/quantum/born-rule), Theorem 6c.1).
 
 ## Derivation
 
@@ -111,71 +112,13 @@ This is the Lieb–Ruskai theorem (1973), one of the deepest results in quantum 
 
 *Proof.* (i) and (ii) are the two directions of $\mathcal{C}(\mathcal{H}) = C_0 = \text{const}$. (iii) follows from the structure of the $\sigma$-algebra: $\mathcal{H}$ is the universe of all configurations, so there is no "outside." $\square$
 
-### Step 4: Uniqueness of the Coherence Functional on Quantum States
-
-**Theorem 4.1 (Coherence–amplitude uniqueness).** *Let $F: \mathbb{C}^d \to \mathbb{R}_{\geq 0}$ be a functional on quantum states satisfying:*
-
-*(F1) U(1) invariance:* $F(e^{i\alpha}\psi) = F(\psi)$ for all $\alpha \in \mathbb{R}$
-
-*(F2) Channel additivity:* $F(\psi) = \sum_{k=1}^d f(|\psi_k|^2)$ for some function $f: [0,\infty) \to [0,\infty)$, where $\{|k\rangle\}$ is any orthonormal basis
-
-*(F3) Composition:* $F(\psi \otimes \phi) = F(\psi) \cdot F(\phi)$ for independent systems
-
-*(F4) Continuity:* $F$ is continuous
-
-*(F5) Non-triviality:* $F \not\equiv 0$
-
-*Then $f(x) = x$ and $F(\psi) = \langle\psi|\psi\rangle$.*
-
-*Proof.* From (F2), $F(\psi) = \sum_k f(|\psi_k|^2)$.
-
-**Step (a): Multiplicative equation.** Take $d = m = 1$ (one-dimensional systems), $|\psi\rangle = a \in \mathbb{C}$, $|\phi\rangle = b \in \mathbb{C}$. Then $|\psi \otimes \phi\rangle = ab$, $|ab|^2 = |a|^2|b|^2$. Condition (F3) gives:
-
-$$f(|a|^2 \cdot |b|^2) = f(|a|^2) \cdot f(|b|^2)$$
-
-Setting $r = |a|^2$, $s = |b|^2$: $f(rs) = f(r)f(s)$ for all $r, s \geq 0$. This is Cauchy's multiplicative functional equation on $\mathbb{R}_{\geq 0}$.
-
-**Step (b): Continuous solution.** By (F4), $f$ is continuous. By (F5), $f \not\equiv 0$. From $f(0) = f(0 \cdot r) = f(0)f(r)$ for all $r$: either $f(0) = 0$ or $f \equiv f(0)$ (constant). If $f$ is constant, say $f(r) = c$ for all $r$, then $f(rs) = c$ but $f(r)f(s) = c^2$, so $c = c^2$, giving $c = 0$ or $c = 1$. The case $c = 0$ contradicts (F5). The case $c = 1$ gives $F(\psi) = d$ (dimension) for all states — independent of the state. This contradicts (F3) for systems of different dimensions: $F(\psi \otimes \phi) = d_1 d_2$ but $F(\psi) \cdot F(\phi) = d_1 \cdot d_2$, which is consistent, but checking (F2) with $d = 2$: $F(\psi) = f(|\psi_1|^2) + f(|\psi_2|^2) = 2$ for all states, while $F(\psi)$ should vary with $|\psi_1|^2$. So $f$ cannot be the constant function 1 on $[0,\infty)$ while satisfying the simplex constraint from normalization.
-
-More directly: the unique continuous solution to $f(rs) = f(r)f(s)$ on $\mathbb{R}_{>0}$ with $f \not\equiv 0$ is $f(r) = r^\alpha$ for some $\alpha \in \mathbb{R}$ [Aczél & Dhombres, 1989]. Since $f \geq 0$ (by F2 and F1) and $f(1) = f(1)^2$ gives $f(1) = 1$ (using $f \not\equiv 0$), we have $f(r) = r^\alpha$ with $\alpha$ to be determined.
-
-**Step (c): The coherence-fraction bridge fixes $\alpha$.** Steps (a)–(b) established $f(r) = r^\alpha$ but left $\alpha$ undetermined — the tensor composition condition (F3) is consistent with any $\alpha$. To fix $\alpha$, we connect the coherence functional to the Born rule via the operational interpretation of measurement.
-
-A measurement (Type III interaction) distributes the system's coherence across outcome channels. The probability of outcome $k$ is the fraction of total coherence flowing through channel $k$:
-
-$$P(k) = \frac{f(|\psi_k|^2)}{F(\psi)} = \frac{|\psi_k|^{2\alpha}}{\sum_j |\psi_j|^{2\alpha}}$$
-
-This identification is operationally forced: the probability of a measurement outcome IS the coherence fraction (Axiom 1 conserves coherence across the measurement; the outcome channels partition the total coherence; Definition 1 requires the residue to be proportional to the coherence flowing through each channel).
-
-Independently, [Born Rule](/derivations/quantum/born-rule) Theorem 6.1 derives $P(k) = |\psi_k|^2$ from phase covariance, normalization, and the composition structure — without using the coherence functional. Equating the two expressions:
-
-$$|\psi_k|^2 = \frac{|\psi_k|^{2\alpha}}{\sum_j |\psi_j|^{2\alpha}}$$
-
-For a normalized two-dimensional state with $|\psi_1|^2 = p$ and $|\psi_2|^2 = 1-p$, this gives $p \cdot [p^\alpha + (1-p)^\alpha] = p^\alpha$. For $p \neq 0, 1$, dividing by $p$ and rearranging yields $(1-p)^{\alpha-1} = p^{\alpha-1}$. This holds for all $p \in (0,1)$ only if $\alpha - 1 = 0$, i.e., $\alpha = 1$.
-
-Therefore $f(x) = x$ and $F(\psi) = \sum_k |\psi_k|^2 = \langle\psi|\psi\rangle$. $\square$
-
-**Remark (Logical structure).** The argument combines three independent results: (i) the Cauchy multiplicative equation gives $f(r) = r^\alpha$ from conditions (F1)–(F5); (ii) the Born rule gives $P(k) = |\psi_k|^2$ from phase covariance, normalization, and composition; (iii) the operational bridge $P(k) = f(|\psi_k|^2)/F(\psi)$ connects them. Each step uses independent inputs. The Born rule derivation does not use the coherence functional; the Cauchy equation does not use the Born rule; the bridge is forced by the operational interpretation of measurement (coherence conservation across outcome channels). The flow is acyclic.
-
-**Corollary 4.2 (S1 is a theorem).** *The Structural Postulate S1 of [Born Rule](/derivations/quantum/born-rule) — the identification $\mathcal{C}(|\psi\rangle) = \langle\psi|\psi\rangle$ — follows from Axiom 1 (conditions C1–C5), U(1) phase symmetry (Axiom 3), and the composition structure of the interaction graph. It is the unique coherence functional satisfying conditions (F1)–(F5).*
-
-**Remark.** The five conditions (F1)–(F5) are not new assumptions. Each traces to an existing axiom:
-
-| Condition | Source |
-|---|---|
-| (F1) U(1) invariance | Axiom 3 (Loop Closure): each observer has U(1) phase |
-| (F2) Channel additivity | Axiom 1, condition C4 at equality: pre-measurement channels are coherence-independent |
-| (F3) Composition | Axiom 1, conservation on tensor products of non-interacting subsystems |
-| (F4) Continuity | Axiom 3 (smooth dynamics on compact manifold) |
-| (F5) Non-triviality | Axiom 1 ($C_0 > 0$) |
-
-### Step 5: Classical Limit
+### Step 4: Classical Limit
 
 **Proposition 5.1 (Classical convergence).** *In the classical limit (diagonal density matrices $\rho = \text{diag}(p_1, \ldots, p_d)$), the von Neumann entropy reduces to Shannon entropy: $S(\rho) = -\sum_k p_k \log p_k = H(\mathbf{p})$. The conditions of Axiom 1 reduce to the Shannon entropy axioms, and coherence conservation becomes Liouville's theorem.*
 
 *Proof.* For diagonal $\rho$, the eigenvalues are the probabilities $p_k$, and $S(\rho) = H(\mathbf{p})$ by definition. Classical subadditivity of Shannon entropy is standard. Classical strong subadditivity $H(X,Y) + H(Y,Z) \geq H(X,Y,Z) + H(Y)$ holds for joint distributions (equivalent to non-negativity of conditional mutual information, proved by Shannon). Conservation of Shannon entropy under invertible transformations is Liouville's theorem for Hamiltonian flows (measure preservation $\Leftrightarrow$ entropy preservation). $\square$
 
-### Step 6: Why Coherence Is Primitive
+### Step 5: Why Coherence Is Primitive
 
 **Proposition 6.1 (Primitive status).** *Coherence occupies the same epistemological position as mass in Newtonian mechanics: it is characterized by its axioms and measured by its operational consequences, not defined in terms of other quantities.*
 
@@ -201,7 +144,7 @@ Like mass, coherence is not "nothing but entropy" or "nothing but the inner prod
 - **C4**: $S(\rho_{AB}) = 0 \leq S(\rho_A) + S(\rho_B) = 2\log 2$. $\checkmark$
 - **C5**: Trivially satisfied (only two subsystems). $\checkmark$
 - **Relational coherence**: $\mathcal{C}(A:B) = \log 2 + \log 2 - 0 = 2\log 2 > 0$. Maximal entanglement produces maximal relational coherence. $\checkmark$
-- **Theorem 4.1**: The inner product $\langle\psi|\psi\rangle = 1$ is the unique U(1)-invariant quadratic functional. $\checkmark$
+- **Coherence functional**: The inner product $\langle\psi|\psi\rangle = 1$ is the unique U(1)-invariant quadratic functional ([Born Rule](/derivations/quantum/born-rule), Theorem 6c.1). $\checkmark$
 - **Classical limit**: Replace $|\Phi^+\rangle$ with classical correlation $p(00) = p(11) = 1/2$. Then $H(AB) = \log 2$, $H(A) = H(B) = \log 2$, $I(A:B) = \log 2$. All axioms satisfied. $\checkmark$ $\square$
 
 ## Rigor Assessment
@@ -210,18 +153,15 @@ Like mass, coherence is not "nothing but entropy" or "nothing but the inner prod
 - Theorem 1.1: Von Neumann entropy satisfies Axiom 1 [Araki–Lieb, 1970]; [Lieb–Ruskai, 1973]
 - Theorem 2.1: Dictionary (definitions match by construction)
 - Definition 3.1: Operational interpretations [Schumacher, 1995]; [Bennett et al., 1996]; [Groisman et al., 2005]
-- Proposition 5.1: Classical limit (Shannon entropy properties)
-- Theorem 4.1 Steps (a)–(b): Cauchy multiplicative equation uniqueness [Aczél & Dhombres, 1989]
+- Proposition 4.1: Classical limit (Shannon entropy properties)
 
 **Rigorous given axioms:**
-- Theorem 4.1 Step (c): $\alpha = 1$ from composition constraint (invokes Born Rule Theorem 6.1)
-- Corollary 4.2: S1 promotion (from Theorem 4.1 + axiom tracing)
 - Proposition 3.3: Operational conservation (from axiom structure)
 
 **Structural:**
-- Proposition 6.1: Primitive status analogy (philosophical, not mathematical)
+- Proposition 5.1: Primitive status analogy (philosophical, not mathematical)
 
-**Assessment:** The convergence results are mathematical facts — they show that the conditions of Axiom 1 are satisfied by quantum entropy, that the derived quantities match quantum information quantities, and that the coherence functional on states is uniquely determined. The promotion of S1 to a theorem depends on the composition constraint from the Born rule derivation, which is itself rigorous.
+**Assessment:** The convergence results are mathematical facts — they show that the conditions of Axiom 1 are satisfied by quantum entropy, that the derived quantities match quantum information quantities, and that coherence connects to established physics from multiple independent directions. The uniqueness of the coherence functional on quantum states ($\mathcal{C}(|\psi\rangle) = \langle\psi|\psi\rangle$) is established in [Born Rule](/derivations/quantum/born-rule), Theorem 6c.1.
 
 ## Open Gaps
 
