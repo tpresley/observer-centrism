@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-12T07:40:29.528Z",
+    "generatedAt": "2026-04-12T08:18:38.089Z",
     "derivationCount": 76,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -35,7 +35,7 @@
         "foundation",
         "axioms"
       ],
-      "summary": "Bridge from the operational definition of observation to the formal mathematical structure of the three axioms — five operational starting points, the bridge program with results, and the empirical postulate classification",
+      "summary": "Five operational definitions of observation and observerhood, and the formal structure they force — the starting point for the three axioms",
       "lastUpdated": "2026-04-11",
       "dependsOn": [],
       "enablesDerivation": [
@@ -55,27 +55,27 @@
         {
           "number": 1,
           "title": "Smooth dynamics promotion.",
-          "description": "If the three independent downstream convergences on C1 (Noether, coherence cost, Fisher metric) could be formalized as operational requirements rather than downstream selection pressures, smooth dynam"
+          "description": "If the structural necessity of smooth dynamics for inter-axiom coherence (the Noether mechanism) could be formalized as an operational requirement, smooth dynamics might become operationally forced. T"
         },
         {
           "number": 2,
           "title": "Quasi-periodicity exclusion.",
-          "description": "If a single-frequency requirement could be derived from operational observerhood (perhaps via a composition argument: quasi-periodic observers decompose into multiple independent sub-observers by Defi"
+          "description": "If a single-frequency requirement could be derived from operational observerhood — perhaps via a composition argument showing that quasi-periodic observers decompose into multiple independent sub-obse"
         },
         {
           "number": 3,
           "title": "Symplectic structure.",
-          "description": "If the symplectic form could be derived from the U(1) action on the state space (perhaps via the cotangent bundle construction or the Marsden-Weinstein reduction), it might be promotable to bucket A. "
+          "description": "If the symplectic form could be derived from the U(1) action on the state space (perhaps via the cotangent bundle construction), it might become operationally forced."
         },
         {
           "number": 4,
-          "title": "Born rule chain (issue [#2](https://github.com/tpresley/observer-centrism/issues/2)).",
-          "description": "The amplitude–coherence identification (Theorem 0.1 of the Born Rule page) has an unargued bridge step between the probability function and the coherence function. Tracked separately."
+          "title": "Born rule chain",
+          "description": "([issue #2](https://github.com/tpresley/observer-centrism/issues/2)). The amplitude–coherence identification (Theorem 0.1 of the Born Rule page) has an unargued bridge step between the probability fun"
         },
         {
           "number": 5,
-          "title": "Loop closure dependency direction (issue [#3](https://github.com/tpresley/observer-centrism/issues/3)).",
-          "description": "Theorems 0.0 and 0.2 in the Loop Closure page derive manifold structure via induction using downstream results. Tracked separately."
+          "title": "Loop closure dependency direction",
+          "description": "([issue #3](https://github.com/tpresley/observer-centrism/issues/3)). Theorems 0.0 and 0.2 in the Loop Closure page derive manifold structure via induction using downstream results. Tracked separately"
         }
       ],
       "assessmentVerdict": "",
@@ -88,11 +88,23 @@
           },
           {
             "target": "axioms/observer-definition",
-            "context": "Observer Definition"
+            "context": "The Observer Definition"
           },
           {
             "target": "axioms/loop-closure",
             "context": "Loop Closure"
+          },
+          {
+            "target": "axioms/coherence-conservation",
+            "context": "Axiom 1"
+          },
+          {
+            "target": "axioms/observer-definition",
+            "context": "Axiom 2"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Axiom 3"
           }
         ],
         "incoming": [
@@ -159,10 +171,6 @@
         "thermodynamics-ext/distinguishability-conservation"
       ],
       "steps": [
-        {
-          "number": 0,
-          "title": "From Operational Definition to Formal Target"
-        },
         {
           "number": 1,
           "title": "The Coherence Space"
@@ -328,12 +336,12 @@
             "context": "From Observation to Axioms"
           },
           {
-            "target": "foundation/continuous-discrete-duality",
-            "context": "Continuous-Discrete Duality"
-          },
-          {
             "target": "axioms/coherence-operational",
             "context": "Coherence as Physical Primitive"
+          },
+          {
+            "target": "foundation/continuous-discrete-duality",
+            "context": "Continuous-Discrete Duality"
           },
           {
             "target": "thermodynamics/time",
@@ -360,6 +368,10 @@
           {
             "source": "axioms/00-from-observation-to-axioms",
             "context": "Coherence Conservation"
+          },
+          {
+            "source": "axioms/00-from-observation-to-axioms",
+            "context": "Axiom 1"
           },
           {
             "source": "axioms/coherence-operational",
@@ -735,10 +747,6 @@
       ],
       "steps": [
         {
-          "number": 0,
-          "title": "From Operational Definition to Formal Target"
-        },
-        {
           "number": 1,
           "title": "Self-Sustaining Dynamics"
         },
@@ -1020,6 +1028,10 @@
             "context": "Loop Closure"
           },
           {
+            "source": "axioms/00-from-observation-to-axioms",
+            "context": "Axiom 3"
+          },
+          {
             "source": "axioms/observer-definition",
             "context": "Loop Closure"
           },
@@ -1182,10 +1194,6 @@
         "quantum/sheaf-section-uniqueness"
       ],
       "steps": [
-        {
-          "number": 0,
-          "title": "From Operational Definition to Formal Target"
-        },
         {
           "number": 1,
           "title": "Structural Postulates"
@@ -1387,7 +1395,11 @@
         "incoming": [
           {
             "source": "axioms/00-from-observation-to-axioms",
-            "context": "Observer Definition"
+            "context": "The Observer Definition"
+          },
+          {
+            "source": "axioms/00-from-observation-to-axioms",
+            "context": "Axiom 2"
           },
           {
             "source": "axioms/loop-closure",
@@ -29889,35 +29901,35 @@
       "derivationStatus": "rigorous",
       "number": 1,
       "title": "Smooth dynamics promotion.",
-      "description": "If the three independent downstream convergences on C1 (Noether, coherence cost, Fisher metric) could be formalized as operational requirements rather than downstream selection pressures, smooth dynam"
+      "description": "If the structural necessity of smooth dynamics for inter-axiom coherence (the Noether mechanism) could be formalized as an operational requirement, smooth dynamics might become operationally forced. T"
     },
     {
       "derivationId": "axioms/00-from-observation-to-axioms",
       "derivationStatus": "rigorous",
       "number": 2,
       "title": "Quasi-periodicity exclusion.",
-      "description": "If a single-frequency requirement could be derived from operational observerhood (perhaps via a composition argument: quasi-periodic observers decompose into multiple independent sub-observers by Defi"
+      "description": "If a single-frequency requirement could be derived from operational observerhood — perhaps via a composition argument showing that quasi-periodic observers decompose into multiple independent sub-obse"
     },
     {
       "derivationId": "axioms/00-from-observation-to-axioms",
       "derivationStatus": "rigorous",
       "number": 3,
       "title": "Symplectic structure.",
-      "description": "If the symplectic form could be derived from the U(1) action on the state space (perhaps via the cotangent bundle construction or the Marsden-Weinstein reduction), it might be promotable to bucket A. "
+      "description": "If the symplectic form could be derived from the U(1) action on the state space (perhaps via the cotangent bundle construction), it might become operationally forced."
     },
     {
       "derivationId": "axioms/00-from-observation-to-axioms",
       "derivationStatus": "rigorous",
       "number": 4,
-      "title": "Born rule chain (issue [#2](https://github.com/tpresley/observer-centrism/issues/2)).",
-      "description": "The amplitude–coherence identification (Theorem 0.1 of the Born Rule page) has an unargued bridge step between the probability function and the coherence function. Tracked separately."
+      "title": "Born rule chain",
+      "description": "([issue #2](https://github.com/tpresley/observer-centrism/issues/2)). The amplitude–coherence identification (Theorem 0.1 of the Born Rule page) has an unargued bridge step between the probability fun"
     },
     {
       "derivationId": "axioms/00-from-observation-to-axioms",
       "derivationStatus": "rigorous",
       "number": 5,
-      "title": "Loop closure dependency direction (issue [#3](https://github.com/tpresley/observer-centrism/issues/3)).",
-      "description": "Theorems 0.0 and 0.2 in the Loop Closure page derive manifold structure via induction using downstream results. Tracked separately."
+      "title": "Loop closure dependency direction",
+      "description": "([issue #3](https://github.com/tpresley/observer-centrism/issues/3)). Theorems 0.0 and 0.2 in the Loop Closure page derive manifold structure via induction using downstream results. Tracked separately"
     },
     {
       "derivationId": "axioms/coherence-conservation",
