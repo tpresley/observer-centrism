@@ -1,20 +1,20 @@
 {
   "meta": {
-    "generatedAt": "2026-04-09T23:17:15.253Z",
-    "derivationCount": 75,
+    "generatedAt": "2026-04-12T03:16:34.190Z",
+    "derivationCount": 76,
     "predictionCount": 12,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
   },
   "stats": {
     "byStatus": {
+      "stub": 3,
       "rigorous": 26,
       "provisional": 44,
       "draft": 2,
-      "non-viable": 1,
-      "stub": 2
+      "non-viable": 1
     },
-    "derivationCount": 75,
+    "derivationCount": 76,
     "predictionCount": 12,
     "edgeCount": 216,
     "formalObjectCount": 1133,
@@ -24,6 +24,58 @@
     "leanTheoremCount": 24
   },
   "derivations": {
+    "axioms/00-from-observation-to-axioms": {
+      "id": "axioms/00-from-observation-to-axioms",
+      "filePath": "site/src/content/derivations/axioms/00-from-observation-to-axioms.md",
+      "title": "From Observation to Axioms",
+      "status": "stub",
+      "rigorLevel": "informal",
+      "group": "axioms",
+      "tags": [
+        "foundation",
+        "axioms"
+      ],
+      "summary": "Bridge page from the operational definition of observation to the formal mathematical structure of the three axioms — operational starting points, the bridge program, and the postulate classification scheme",
+      "lastUpdated": "2026-04-11",
+      "dependsOn": [],
+      "enablesDerivation": [
+        "axioms/coherence-conservation",
+        "axioms/observer-definition",
+        "axioms/loop-closure"
+      ],
+      "dependedOnBy": [],
+      "steps": [],
+      "formalObjects": [],
+      "structuralPostulates": [],
+      "openGaps": [],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "axioms/coherence-conservation",
+            "context": "Coherence Conservation"
+          },
+          {
+            "target": "axioms/observer-definition",
+            "context": "Observer Definition"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          }
+        ],
+        "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
     "axioms/coherence-conservation": {
       "id": "axioms/coherence-conservation",
       "filePath": "site/src/content/derivations/axioms/coherence-conservation.md",
@@ -244,6 +296,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "axioms/00-from-observation-to-axioms",
+            "context": "Coherence Conservation"
+          },
           {
             "source": "axioms/coherence-operational",
             "context": "Coherence Conservation"
@@ -886,6 +942,10 @@
         ],
         "incoming": [
           {
+            "source": "axioms/00-from-observation-to-axioms",
+            "context": "Loop Closure"
+          },
+          {
             "source": "axioms/observer-definition",
             "context": "Loop Closure"
           },
@@ -1242,6 +1302,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "axioms/00-from-observation-to-axioms",
+            "context": "Observer Definition"
+          },
           {
             "source": "axioms/loop-closure",
             "context": "Observer Definition"

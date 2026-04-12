@@ -1,6 +1,12 @@
 {
   "nodes": [
     {
+      "id": "axioms/00-from-observation-to-axioms",
+      "title": "From Observation to Axioms",
+      "group": "foundation",
+      "status": "stub"
+    },
+    {
       "id": "axioms/coherence-conservation",
       "title": "Coherence Conservation",
       "group": "foundation",
