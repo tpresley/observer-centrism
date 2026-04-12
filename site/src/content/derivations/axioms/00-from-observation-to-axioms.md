@@ -89,7 +89,3 @@ One formal element goes beyond what the five operational definitions entail.
 ## Open Gaps
 
 1. **Quasi-periodicity exclusion.** If a single-frequency requirement could be derived from operational observerhood — perhaps via a composition argument showing that quasi-periodic observers decompose into multiple independent sub-observers by Definition 5 — the exclusion might become operationally forced.
-
-2. **Born rule chain.** The amplitude–coherence identification (Theorem 0.1 of the [Born Rule](/derivations/quantum/born-rule) page) relies on a bridge between the probability function and the coherence function that requires further formalization.
-
-3. **Loop closure dependency direction.** Theorems 0.0 and 0.2 in the [Loop Closure](/derivations/axioms/loop-closure) page derive manifold structure via an inductive argument using results from downstream derivation pages. The proofs are mathematically correct, but the dependency direction (axiom page citing derivation pages) deserves review.
