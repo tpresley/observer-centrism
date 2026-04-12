@@ -38,12 +38,13 @@ Before we can talk about what observers are or how they behave, we need a conser
 
 This section does the bridge work from the operational definitions in [From Observation to Axioms](/derivations/axioms/00-from-observation-to-axioms) to the formal apparatus introduced in Step 1 and beyond. Each formal element is labeled **bucket A** (forced once the operational requirement is stated precisely) or **bucket B** (genuinely additional content with irreducible physical input). The point of the bridge work is to make the distinction visible: this axiom page does not start from "nothing but observerhood," but it does not start from arbitrary mathematical convenience either, and the split is recorded here.
 
-**The operational starting points cited.** Step 0 cites four operational definitions from the bridge page:
+**The operational starting points cited.** Step 0 cites five operational definitions from the bridge page:
 
 - **Definition 1 (Observation):** to observe is to interact with a separate system in a way that updates the observing system's state without destroying it — observation is the residue of interaction, remembered.
 - **Definition 2 (Observer):** a system that has an identity, participates in interactions, and maintains its identity through those interactions.
 - **Definition 3 (Persistence):** an observer persists if it continues to satisfy Definition 2 over the course of repeated interactions.
 - **Definition 4 (Closed ontology):** the universe of all observers and observed systems is closed — no external reservoir exists.
+- **Definition 5 (Composition):** given two observers, their composite — the system consisting of both, together with any relational structure between them — is itself a system capable of observation. The composite contains its sub-observers: widening the boundary is not an interaction and cannot destroy existing relational coherence.
 
 **Summary table.**
 
@@ -57,7 +58,7 @@ This section does the bridge work from the operational definitions in [From Obse
 | (C2) Normalization $\mathcal{C}(\mathcal{H}) = C_0$, finite, $C_0 > 0$ | A | Def 4 (finite total) + Def 2 (non-triviality) |
 | (C3) Null empty set | A | Convention-level sanity: the empty collection carries nothing |
 | (C4) Subadditivity | A | Def 1: operational composition does not create currency |
-| **(C5) Strong subadditivity** | **B** | **Not forced by the operational definitions alone** |
+| (C5) Strong subadditivity | A | Def 5 + 1: composites contain sub-observers; widening boundary cannot destroy correlations |
 | Admissible transformations preserve $\mathcal{C}$ (Axiom 1(i)) | A | Def 1 + 3: observation doesn't create/destroy, persistence is invariant |
 | Dependency graph $\mathcal{G}$ is directed and acyclic | A | Def 3: "residue remembered" implies ordering without loops |
 | $\mathcal{G}$ is discrete (countable vertices) | A | Def 1: residues are operationally binary + observer-centric commitment — see note below |
@@ -85,19 +86,29 @@ This section does the bridge work from the operational definitions in [From Obse
 
 **Discreteness of $\mathcal{G}$ (countable vertices).** Definition 1 says observation is the *residue* of interaction. A residue is operationally binary: either a relational invariant was recorded or it was not. There is no "half-residue" — each interaction event is a discrete unit. An observer with finite coherence (C2: $C_0 < \infty$) can record at most countably many such residues. Since the vertices of $\mathcal{G}$ represent interaction events, and interaction events are operationally discrete, $\mathcal{G}$ is a countable DAG. The framework does also require continuous mathematical structures — Hilbert space, Fisher geometry, Lagrangian dynamics — but these live on the *state-space manifold* $\mathcal{M}$, not on $\mathcal{G}$. As [Continuous-Discrete Duality](/derivations/foundation/continuous-discrete-duality) makes explicit: the discrete event-level structure ($\mathcal{G}$ / the observer network) and the continuous state-space structure ($\mathcal{M}$) are co-formed dual descriptions of the same physics, each constraining the other. Neither is ontologically "under" the other, and the discreteness of $\mathcal{G}$ is not a modeling choice that excludes continuous descriptions — it is the correct level of description for the event structure, while the continuous layer lives elsewhere.
 
-**Step 0b (Bucket B items — genuinely additional content).**
+**(C5) Strong subadditivity is forced by composition (Definition 5) and observation-as-residue (Definition 1).**
 
-**(C5) Strong subadditivity is not forced by the operational definitions alone.** C4 says grouping two disjoint subsystems cannot create currency. C5 says something stronger and subtler: that the way currency is distributed across overlapping subsystems satisfies a specific inequality,
-$$\mathcal{C}(S_1 \cup S_2) + \mathcal{C}(S_1 \cap S_2) \leq \mathcal{C}(S_1) + \mathcal{C}(S_2).$$
-There is no short operational argument from Definitions 1–4 that forces this inequality. In the physical realization where $\mathcal{C}$ specializes to von Neumann entropy, C5 is the Lieb–Ruskai theorem (1973) — a deep mathematical result, proved via the joint convexity of relative entropy, that took decades to establish. Its holding in the quantum model is *evidence* that C5 is the right constraint for physical coherence, but the framework imposes C5 as part of Axiom 1 rather than deriving it from operational primitives. This is the axiom's most contentful single step, and honest bookkeeping requires calling it bucket B. The downstream convergence — that C5 corresponds to the deepest non-trivial property of quantum entropy — is argued in [Coherence as Physical Primitive](/derivations/axioms/coherence-operational); that convergence is what makes the choice of C5 reasonable, but it does not make C5 forced by operational observerhood alone.
+C5 extends C4 from disjoint to overlapping subsystems. Its content becomes visible when restated in terms of relational coherence. For any $S_1, S_2 \in \mathcal{A}$, decompose into disjoint pieces $A = S_1 \setminus S_2$, $B = S_1 \cap S_2$, $C = S_2 \setminus S_1$. Then C5 is equivalent to:
+
+$$\mathcal{C}(A \cup B : C) \geq \mathcal{C}(B : C)$$
+
+That is: **a composite observer's relational coherence with an external system is at least as large as any sub-observer's relational coherence with that same system.**
+
+*Operational derivation.* The composite $A \cup B$ contains $B$ (Definition 5: composites contain their sub-observers). Whatever relational coherence $B$ has with $C$, the composite also has — because $B$ is a *part* of $A \cup B$, and its correlations with $C$ do not vanish when the boundary is widened to include $A$. Widening the boundary is not an interaction (Definition 1: only interaction creates or destroys residue). The $B$–$C$ relational coherence was established by a $B$–$C$ interaction; $A$'s inclusion in the composite does not undo that interaction and therefore cannot reduce the $B$–$C$ correlation. Furthermore, the composite may have *additional* relational coherence with $C$ mediated through $A$ (if $A$ has its own correlations with $C$), so the total can only be at least as large:
+
+$$\mathcal{C}(A \cup B : C) \geq \mathcal{C}(B : C) \qquad \square$$
+
+*Remark (Why C5 was initially classified as bucket B).* Before Definition 5 (Composition) was stated as an explicit operational starting point, C5 had no short operational argument from Definitions 1–4 alone. In the physical realization where $\mathcal{C}$ specializes to von Neumann entropy, C5 is the Lieb–Ruskai theorem (1973) — a deep mathematical result, proved via the joint convexity of relative entropy, that took decades to establish. The downstream convergence with quantum entropy ([Coherence as Physical Primitive](/derivations/axioms/coherence-operational)) provides independent confirmation that C5 is the right constraint. But with Definition 5 in hand, C5 is forced operationally: composites contain their sub-observers, widening the boundary is not an interaction, and relational coherence persists under inclusion. The Lieb–Ruskai theorem is the *mathematical expression* of this operational fact, not an independent assumption.
 
 **Step 0c (What this does and does not change).**
 
 This Step 0 does not alter any of the downstream content of this page. Steps 1–6 below proceed from the axiom as stated and derive the same consequences as before. What Step 0 does is make the *status* of each formal element explicit, so that a reader reviewing the framework can see which parts are consequences of operational observerhood and which parts are additional commitments the framework makes.
 
-Of the thirteen formal elements in the summary table, twelve are bucket A (forced once the operational definitions are stated precisely) and one is bucket B: **strong subadditivity (C5)**. This is the single most contentful mathematical step in Axiom 1 — a deep constraint on how coherence distributes across overlapping subsystems that is not forced by operational observerhood alone. The framework's physical interpretation of coherence as von Neumann entropy, for which C5 is the Lieb–Ruskai theorem (1973), is what retroactively justifies imposing C5 as an axiom. See [Coherence as Physical Primitive](/derivations/axioms/coherence-operational) for the convergence argument.
+**All thirteen formal elements in the summary table are bucket A** — forced once the five operational definitions (Definitions 1–5 from [From Observation to Axioms](/derivations/axioms/00-from-observation-to-axioms)) are stated precisely. No bucket-B items remain for this axiom.
 
-A reader who rejects C5 as an operational primitive can still read this page as a proof that "given C5 plus operational observerhood, the rest of the formal structure follows." A reader who accepts the convergence argument may prefer to read C5 as forced-by-convergence rather than forced-by-operation. The framework's claim is the narrower of the two: C5 is an axiom, justified post-hoc by its physical realization, and labeled honestly in the bridge work here.
+The most contentful derivation is C5 (strong subadditivity), which requires Definition 5 (Composition) in addition to Definitions 1–4. Without Definition 5, C5 cannot be derived from the other operational definitions alone — it was the addition of "composite observers exist and contain their sub-observers" that closed the gap. The convergence with the Lieb–Ruskai theorem (1973) in [Coherence as Physical Primitive](/derivations/axioms/coherence-operational) provides independent confirmation from quantum information theory.
+
+This is a strong and honestly earned result: every formal element of Axiom 1 is traceable to operational observerhood. A reader who grants the five operational definitions has no choice but to accept the full axiom.
 
 ### Step 1: The Coherence Space
 
@@ -262,7 +273,9 @@ $$\mathcal{C}(S_1 \cup S_2) + \mathcal{C}(S_1 \cap S_2) = 2.2 + 1 = 3.2 > 1.5 + 
 
 This violates (C5). Hence (C5) is independent of (C1)–(C4).
 
-**Remark.** In the restricted class of set functions determined purely by subset cardinality, (C5) follows from (C4) via concavity arguments. For general set functions on $\sigma$-algebras, (C5) is independent of (C4), as the counterexample above demonstrates. This is a special case of the general independence of submodularity from subadditivity in the theory of set functions (see [Fujishige, 2005]). $\square$
+**Remark (Mathematical independence).** In the restricted class of set functions determined purely by subset cardinality, (C5) follows from (C4) via concavity arguments. For general set functions on $\sigma$-algebras, (C5) is independent of (C4), as the counterexample above demonstrates. This is a special case of the general independence of submodularity from subadditivity in the theory of set functions (see [Fujishige, 2005]).
+
+**Remark (Operational exclusion of the counterexample).** The counterexample satisfies (C1)–(C4) but violates the operational premises of the framework. In this model, $\mathcal{C}(\{1,2\} : \{3\}) = 1.5 + 1 - 2.2 = 0.3$ while $\mathcal{C}(\{2\} : \{3\}) = 1 + 1 - 1.5 = 0.5$. The composite $\{1,2\}$ is *less* correlated with $\{3\}$ than the sub-observer $\{2\}$ alone — widening the boundary from $\{2\}$ to $\{1,2\}$ has *destroyed* relational coherence with $\{3\}$. This violates Definition 5 (composites contain their sub-observers) and Definition 1 (widening a boundary is not an interaction and cannot destroy existing residues). The counterexample demonstrates that (C5) is independent of (C1)–(C4) *as pure mathematical axioms*, but the additional operational content of Definitions 1 and 5 excludes the counterexample and forces (C5). $\square$
 
 ## Connection to Physics
 

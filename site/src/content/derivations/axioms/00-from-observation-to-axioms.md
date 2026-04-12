@@ -76,6 +76,16 @@ Operational content:
 
 <!-- TODO Stage 4: confirm whether Definition 4 is genuinely operational or whether it should be folded into the closure assumption of Axiom 1. The current draft treats it as operational because the Motivation page implies it via "the world is explicable" framing, but it may be a stipulation rather than a definition. -->
 
+### Definition 5 (Composition)
+
+**Given two observers, their composite — the system consisting of both, together with any relational structure between them — is itself a system capable of observation.**
+
+Operational content:
+- If two systems can each observe, their combination can also observe.
+- The composite *contains* its sub-observers: any information a sub-observer has about an external system, the composite also has, because the sub-observer is a part of it.
+- Widening the observer boundary (including additional sub-observers in the composite) is not an interaction — it does not create or destroy residue (Definition 1). The existing relational coherence between a sub-observer and an external system persists when the boundary is widened.
+- Composition is the operational basis of the bootstrap mechanism (derived later): observers can build hierarchies of composite observers through repeated interaction.
+
 ## The Bridge Program
 
 <!-- TODO Stage 4: replace placeholder rows with concrete results from each axiom page's Step 0. Each row should point to the specific theorem/proposition/lemma in the relevant axiom page that does the bridge work. -->
@@ -87,7 +97,7 @@ The table below maps each operational requirement to the formal target in the ax
 | Definition 1 + 2: systems are operationally distinguishable | σ-algebra of admissible subsystems | [Coherence Conservation](/derivations/axioms/coherence-conservation), Step 0 | TBD |
 | Definition 4: closed ontology | Conserved measure with `C(H) = C_0` | Coherence Conservation, Step 0 | TBD |
 | Definition 1: interaction does not create currency | Subadditivity (C4) | Coherence Conservation, Step 0 | TBD |
-| Definition 1 + 4: composition of subsystems | Strong subadditivity (C5) | Coherence Conservation, Step 0 | TBD |
+| Definition 5 + 1: composites contain sub-observers, widening boundary is not an interaction | Strong subadditivity (C5) | Coherence Conservation, Step 0 | TBD |
 | Persistence over repeated interaction (no clock) | Conservation across DAG Cauchy slices | Coherence Conservation, Step 0 | TBD |
 | Definition 2: identity-through-change | Triple `(Σ, I, B)` — state space + invariant + boundary | [Observer Definition](/derivations/axioms/observer-definition), Step 0 | TBD |
 | Definition 2: operational distinguishability of configurations | Hausdorff topology on `H` | Observer Definition, Step 0 | TBD |
