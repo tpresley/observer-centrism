@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-13T04:51:30.354Z",
+    "generatedAt": "2026-04-13T22:03:00.411Z",
     "derivationCount": 76,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -881,7 +881,7 @@
           "type": "Theorem",
           "id": "9.1.",
           "name": "",
-          "statementPreview": "The loop closure axiom with structural postulate S1 (and its consequence, Theorem 0.1) is consistent: there exists a ..."
+          "statementPreview": "The loop closure axiom is consistent: there exists a concrete model satisfying all conditions.*"
         },
         {
           "type": "Axiom",
@@ -908,7 +908,7 @@
           "description": "Photons have no rest frame and no rest-frame loop. They are limiting cases where TO 0 and omegaO while SO remains finite. This limit needs formal treatment within the approximate closure framework. <!"
         }
       ],
-      "assessmentVerdict": "The derivation is structured around the self-reference argument: persistence requires exact closure, which forces periodicity and U(1) symmetry. All claims are proved from the operational definitions and standard mathematical results. Quasi-periodicity is excluded by the composition argument (compos",
+      "assessmentVerdict": "The derivation is structured around the self-reference argument: persistence requires exact closure, which forces periodicity and U(1) symmetry. All claims are proved from the operational definitions and standard mathematical results. Quasi-periodicity is excluded by composition (commensurate freque",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -939,10 +939,6 @@
           {
             "target": "axioms/observer-definition",
             "context": "Observer Definition"
-          },
-          {
-            "target": "thermodynamics-ext/fisher-metric",
-            "context": "Fisher Metric"
           },
           {
             "target": "thermodynamics-ext/fisher-metric",
@@ -18201,10 +18197,6 @@
           }
         ],
         "incoming": [
-          {
-            "source": "axioms/loop-closure",
-            "context": "Fisher Metric"
-          },
           {
             "source": "axioms/loop-closure",
             "context": "Fisher Information Metric"

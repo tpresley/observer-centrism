@@ -72,25 +72,11 @@ The product $\Sigma_1 \times \Sigma_2$ is a compact smooth manifold (products of
 
 **(iv) Summary.** Every observer's state space is constructed by a finite sequence of operations — products and level sets — starting from $S^1$ (a Lie group manifold). Each operation preserves compactness, smoothness, and finite dimensionality. The manifold structure is a consequence of the construction, not an assumption about the state space. $\square$
 
-**Remark (Structural Postulate S1 — now a theorem).** S1 originally postulated that $\Sigma$ is a finite-dimensional topological manifold. This has been progressively tightened: compactness was derived from O1, free orbits from Lemma 0.0, smoothness from Theorem 0.0. The final step — deriving the manifold structure itself — comes from recognizing that the framework *constructs* state spaces from $U(1)$ orbits via the bootstrap mechanism, and the construction operations (products, level sets at regular values) preserve manifold structure at each step. Finite dimensionality follows from the finite local complexity of the observer network. S1 is now fully derived: no component remains postulated.
-
 **Lemma 0.0 (Free orbits from Axiom 3).** *The $U(1)$ action on $\Sigma$ is free: no point of $\Sigma$ is fixed under all $\phi_t$.*
 
 *Proof.* **Case $\dim \Sigma = 1$** (minimal observer): $\Sigma \cong S^1$. A non-trivial continuous $U(1)$ action on $S^1$ has no fixed points (a rotation with a fixed point is the identity, contradicting non-triviality from Axiom 3). So the action is free.
 
 **Case $\dim \Sigma \geq 2$**: Suppose $\sigma^* \in \Sigma$ is a fixed point: $\phi_t(\sigma^*) = \sigma^*$ for all $t$. The orbit through $\sigma^*$ is the single point $\{\sigma^*\}$, which has zero length. The coherence cost of this orbit is zero: $S(\sigma^*) = 0$. But by Proposition 7.2 (below), every point in an observer's state space must have positive coherence cost — zero-cost states carry no coherence and cannot contribute to the observer's conserved invariant $I$. A state that does not participate in the dynamics is not part of the observer (it violates the self-referential character of loop closure: to persist is to cycle). Therefore no fixed point exists, and the action is free. $\square$
-
-**Remark (Axiom coherence — why smooth structure is structurally necessary).** Beyond being the unique consistent setting, smooth structure is required for the three axioms to *communicate*. The framework's core mechanism is the **Noether pair** (Theorem 5.1 below): the $U(1)$ symmetry from Axiom 3 is linked to the conserved invariant $I$ from Axiom 2, which is related to the coherence measure $\mathcal{C}$ from Axiom 1, through the moment map. This identification requires a Lie algebra (to define the generating vector field), a smooth action (for the moment map to exist), and a smooth manifold (for the tangent bundle and differential forms).
-
-On a non-smooth space, all three ingredients fail. The three axioms remain individually satisfiable — a conserved measure, a continuous invariant, and a periodic homeomorphism can coexist on a non-smooth space — but the Noether mechanism that *connects* them is severed. Coherence conservation becomes an accidental coincidence rather than a structural consequence of the $U(1)$ symmetry. The axiom system requires smooth structure not as mathematical convenience but for internal coherence: without it, the axioms cannot communicate.
-
-**Remark (Selection argument for S1).** Three independent downstream requirements converge on requiring at least $C^1$ differentiability, from which $C^\infty$ follows:
-
-1. **Noether's theorem** (Step 5, [Observer Definition](/derivations/axioms/observer-definition) Theorem 5.1) requires a Lie group acting smoothly on a smooth manifold.
-2. **Coherence cost** (Step 7) requires the velocity $\dot{\phi}_t$ along the observer loop, presupposing $C^1$ differentiability.
-3. **Fisher information metric** ([Fisher Metric](/derivations/thermodynamics-ext/fisher-metric)) requires $\mathcal{C}$ to be $C^2$ on $\Sigma$.
-
-Whitney's theorem (1936) upgrades $C^1$ to the unique compatible $C^\infty$ structure. The following theorem shows this smooth structure is not assumed but derived from S1 and Axiom 3.
 
 **Theorem 0.0 (Smooth structure).** *$\Sigma$ admits a smooth manifold structure, unique up to equivariant diffeomorphism, such that the $U(1)$ action from Axiom 3 is smooth.*
 
@@ -100,7 +86,7 @@ Whitney's theorem (1936) upgrades $C^1$ to the unique compatible $C^\infty$ stru
 
 **Step 2 (Uniqueness).** For $n \leq 3$: every compact topological manifold of dimension $\leq 3$ admits a unique smooth structure (dimension 1: elementary; dimension 2: Radó, 1925; dimension 3: Moise, 1952). The smooth $U(1)$ action is then the unique smoothing of the continuous action. For $n \geq 4$: by the uniqueness part of the equivariant smoothing theorem [Illman, 1983], any two smooth structures making the compact Lie group action smooth are equivariantly diffeomorphic, so the equivariant smooth structure is unique. $\square$
 
-**Remark.** For the minimal observer ($\Sigma = S^1$, $\dim \Sigma = 1$), Theorem 0.0 is trivial: $S^1$ has a unique smooth structure and every continuous $U(1)$ action on $S^1$ is automatically smooth. The theorem's content becomes substantive for higher-dimensional state spaces. With the promotion of S1 to Theorem 0.2, all inputs to Theorem 0.0 are now derived from the axioms.
+**Remark.** For the minimal observer ($\Sigma = S^1$, $\dim \Sigma = 1$), Theorem 0.0 is trivial: $S^1$ has a unique smooth structure and every continuous $U(1)$ action on $S^1$ is automatically smooth. The theorem's content becomes substantive for higher-dimensional state spaces.
 
 **Theorem 0.1 (Invariant Riemannian metric).** *The state space $\Sigma$ carries a $G_\mathcal{O}$-invariant Riemannian metric $g$ with $\phi_t^* g = g$ for all $t$.*
 
@@ -116,8 +102,6 @@ where $\mu$ is the normalized Haar measure on $U(1)$ and $\phi_\theta = \phi_{\t
 - **$g$ is $G_\mathcal{O}$-invariant**: For any $\phi_s$ in the $U(1)$ action, $(\phi_s^* g)(v, w) = \int_{U(1)} ((\phi_\theta \circ \phi_s)^* g_0)(v, w) \, d\mu(\theta) = g(v, w)$ by translation-invariance of Haar measure on $U(1)$. $\square$
 
 **Remark (Canonical choice).** Theorem 0.1 establishes existence using an arbitrary initial metric. The [Fisher Information Metric](/derivations/thermodynamics-ext/fisher-metric) provides a *canonical* choice: the unique (up to scale) Riemannian metric on $\Sigma$ invariant under sufficient statistics (Čencov's theorem). Since the Fisher metric is already $U(1)$-invariant when $\mathcal{C}$ is constant along orbits (which holds by invariant preservation), it provides a distinguished $G_\mathcal{O}$-invariant metric without averaging.
-
-**Remark (Former Postulates S1 and S2 — both now theorems).** S1 originally assumed smooth manifold structure + compactness + free orbits + finite dimensionality. Each component has been progressively derived: compactness from O1 (Axiom 2), free orbits from Lemma 0.0, smoothness from Theorem 0.0, and now manifold structure + finite dimensionality from Theorem 0.2 (inductive construction from $U(1)$ Lie group orbits via the bootstrap mechanism). S2 originally assumed a $G_\mathcal{O}$-invariant Riemannian metric; this is Theorem 0.1, derived from Theorem 0.0 + compactness + Weyl averaging. **No component of S1 or S2 remains postulated.** The state space's entire structure follows from the axioms plus the constructive mechanism of the bootstrap.
 
 ## Formalization
 
@@ -178,9 +162,7 @@ Therefore, indefinite persistence requires $\phi_T = \text{id}_\Sigma$ for some 
 
 **Corollary 3.1 (Memory-persistence tradeoff).** *Theorem 3.1 has a structural consequence for any observer that absorbs relational invariants. Each Type III interaction permanently expands the state space ([Relational Invariants](/derivations/interactions/relational-invariants), Proposition 6.2), so the dynamics must re-close on a larger manifold than the one on which exact closure was originally established. The original $\phi_T = \text{id}_\Sigma$ no longer holds on the expanded space; the perturbation reintroduces drift $\epsilon > 0$. By Theorem 3.1, exact closure can only be regained at a (possibly nearby) new fixed point of the bootstrap functor. Since the perturbations are permanent and monotonically accumulate, an observer with nonzero memory capacity must eventually fail to re-close — exact persistence and epistemic memory are structurally incompatible. The full statement is the [Memory-Persistence Tradeoff](/derivations/thermodynamics-ext/memory-persistence-tradeoff) (Theorem 4.1). The minimal observer escapes the corollary because its 1-dimensional state space cannot host an additional degree of freedom.*
 
-**Remark (Quasi-periodic flows).** The argument above rules out non-recurrent flows but leaves open the case of quasi-periodic flows — dynamics where the orbit is dense in a higher-dimensional torus $T^k$ ($k > 1$) rather than closing as a circle. For such flows, $\epsilon(T_n) \to 0$ along a sequence with $T_n \to \infty$, and the effective lifetime can be infinite without exact periodicity.
-
-Quasi-periodicity is excluded by the composition argument given in the Operational Grounding section above: a quasi-periodic observer on $T^k$ decomposes into $k$ sub-observers with incommensurate frequencies, their composite must satisfy Axiom 3, and incommensurate frequencies have no common period — contradiction. All observer frequencies must be commensurate, giving exact periodicity on a single fundamental frequency grid.
+**Remark (Quasi-periodic flows).** Theorem 3.1 rules out non-recurrent flows but leaves open the case of quasi-periodic flows on a higher-dimensional torus $T^k$. Quasi-periodicity is excluded by the composition argument in the Operational Grounding section: composite observers must satisfy Axiom 3, forcing all sub-observer frequencies to be commensurate.
 
 **Axiom 3 (Precise statement).** The homomorphism $\phi$ is non-trivial ($\phi \neq \text{const}$), and there exists $T > 0$ such that $\phi_T = \text{id}_\Sigma$.
 
@@ -295,12 +277,12 @@ $$E_\mathcal{O} = \frac{S_\mathcal{O}}{T_\mathcal{O}} \geq \frac{S_{\min}}{T_\ma
 
 ## Consistency Model
 
-**Theorem 9.1.** *The loop closure axiom with structural postulate S1 (and its consequence, Theorem 0.1) is consistent: there exists a concrete model satisfying all conditions.*
+**Theorem 9.1.** *The loop closure axiom is consistent: there exists a concrete model satisfying all conditions.*
 
 **Model**: $\Sigma = S^1$ (unit circle), $g = d\theta^2$ (standard metric), $\mathcal{H} = \mathbb{R}^2 \supset S^1$, $I(\theta) = 1$ (constant — the radius), $\mathcal{B} = S^1$ (the circle as self/non-self boundary), $\phi_t(\theta) = \theta + 2\pi t/T$ (rigid rotation with period $T > 0$), $\mathcal{C}(\theta) = c_0 > 0$ (constant).
 
 *Verification:*
-- **(S1)**: $S^1$ is a compact 1-dimensional topological manifold. The standard rotation action $\phi_t(\theta) = \theta + 2\pi t/T$ is free (no fixed points). ✓
+- **Thm 0.2**: $S^1$ is a compact 1-dimensional smooth manifold. The standard rotation action $\phi_t(\theta) = \theta + 2\pi t/T$ is free (no fixed points). ✓
 - **Thm 0.0**: $S^1$ has a unique smooth structure (elementary). The $U(1)$ action is smooth. ✓
 - **Thm 0.1**: $d\theta^2$ is $\phi_t$-invariant (rotation is an isometry) — consistent with the Weyl-averaged metric, which for this model equals $d\theta^2$. ✓
 - **Def 1.1**: $\phi$ is a smooth homomorphism $\mathbb{R} \to \text{Isom}(S^1)$, preserves $I \equiv 1$. ✓
@@ -324,36 +306,29 @@ $$E_\mathcal{O} = \frac{S_\mathcal{O}}{T_\mathcal{O}} \geq \frac{S_{\min}}{T_\ma
 ## Rigor Assessment
 
 **Fully rigorous:**
-- Definitions 1.1, 2.1–2.2, 4.1, 6.1–6.2, 7.1: Precise mathematical definitions with explicit structural dependencies
-- Proposition 2.3: Drift bound (complete proof by induction + triangle inequality)
-- Proposition 2.5: Exact closure gives persistence (complete proof)
-- Theorem 3.1: Persistence requires exact closure (proof from drift bound + compactness; see Remark on quasi-periodic gap)
-- Proposition 3.2: Minimal period exists (proof via closed/discrete subgroup argument)
-- Proposition 4.2: Loop is a smooth embedding $S^1 \hookrightarrow \Sigma$ (complete proof)
-- Corollary 4.3: Faithful $U(1)$ action (complete proof of homomorphism + faithfulness)
+- Definitions 1.1, 2.1–2.2, 4.1, 6.1–6.2, 7.1: Precise mathematical definitions
+- Theorem 0.2: State space is a finite-dimensional compact smooth manifold (inductive construction from $U(1)$ orbits via composition)
+- Lemma 0.0: Free $U(1)$ orbits (from non-triviality + coherence cost positivity)
+- Theorem 0.0: Smooth structure (from Theorem 0.2 + Lemma 0.0 + equivariant smoothing theorem [Illman, 1983])
+- Theorem 0.1: $G_\mathcal{O}$-invariant Riemannian metric (from Theorem 0.0 + compactness + Weyl averaging)
+- Proposition 2.3: Drift bound (induction + triangle inequality)
+- Proposition 2.5: Exact closure gives persistence
+- Theorem 3.1: Persistence requires exact closure (drift bound + compactness; quasi-periodicity excluded by composition)
+- Proposition 3.2: Minimal period exists (closed/discrete subgroup argument)
+- Proposition 4.2: Loop is a smooth embedding $S^1 \hookrightarrow \Sigma$
+- Corollary 4.3: Faithful $U(1)$ action
 - Proposition 4.4: Orbit decomposition (standard group action theory)
-- Theorem 5.1: Noether pair equivalence (complete proof with explicit symplectic assumption)
-- Proposition 5.2: Logical relationship between Axioms 2 and 3 (precise statement)
-- Proposition 7.2: Positive coherence cost (complete proof from non-degeneracy + positivity)
-- Theorem 9.1: Consistency model fully verified
-
-**Newly proved (this derivation):**
-- Theorem 0.2: State space is a finite-dimensional compact smooth manifold (from inductive construction via $U(1)$ Lie group orbits, bootstrap level-set mechanism, and finite local complexity from aperiodic order; replaces former Structural Postulate S1)
-- Lemma 0.0: Free $U(1)$ orbits on $\Sigma$ (from Axiom 3 non-triviality + coherence cost positivity)
-- Theorem 0.0: Smooth manifold structure on $\Sigma$ (from Theorem 0.2 + Lemma 0.0 + equivariant smoothing theorem)
-- Theorem 0.1: $G_\mathcal{O}$-invariant Riemannian metric exists on $\Sigma$ (from Theorem 0.0 + compactness + Weyl averaging; replaces former Postulate S2)
-- Theorem 3.1: Persistence forces exact closure (from drift bound + compactness; quasi-periodicity excluded by composition argument)
-
-**Now theorems (formerly structural postulates):**
-- S1 (Finite-dimensional manifold): Promoted to Theorem 0.2. Manifold structure derived from the constructive mechanism of observer state spaces: base case $S^1$ (Lie group), inductive step via level sets of relational invariants (regular value theorem), finite dimensionality from Delone finite local complexity.
-- S2 (Invariant Riemannian metric): Promoted to Theorem 0.1 via Weyl averaging.
+- Theorem 5.1: Noether pair equivalence (symplectic structure from composition; see Operational Grounding)
+- Proposition 5.2: Logical relationship between Axioms 2 and 3
+- Proposition 7.2: Positive coherence cost (non-degeneracy + positivity)
+- Theorem 9.1: Consistency model verified
 
 **Deferred to later derivations:**
 - $S_{\min} = \hbar$ (cf. [Action and Planck's Constant](/derivations/thermodynamics/action-planck))
 - $E = \hbar\omega$ numerical content (depends on $S_{\min}$ identification)
 - Mass formula $m = E/c^2$ (depends on speed of light derivation)
 
-**Assessment:** The derivation is structured around the self-reference argument: persistence requires exact closure, which forces periodicity and $U(1)$ symmetry. All claims are proved from the operational definitions and standard mathematical results. Quasi-periodicity is excluded by the composition argument (composite observers must satisfy Axiom 3, forcing commensurate frequencies). Smooth dynamics is forced by the Noether link. Symplectic structure is forced by composition. No additional assumptions remain. Results that depend on later derivations are explicitly deferred.
+**Assessment:** The derivation is structured around the self-reference argument: persistence requires exact closure, which forces periodicity and $U(1)$ symmetry. All claims are proved from the operational definitions and standard mathematical results. Quasi-periodicity is excluded by composition (commensurate frequencies). Smooth dynamics is forced by the Noether link. Symplectic structure is forced by composition. No additional assumptions remain.
 
 ## Open Gaps
 
