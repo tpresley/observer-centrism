@@ -282,6 +282,18 @@ const totalTheorems = leanProofs.reduce((sum, p) => sum + p.theorems.length, 0)
       for (const node of overviewNodes) panelOverview.appendChild(node)
       for (const node of derivationNodes) panelDerivation.appendChild(node)
 
+      // Add "Continue to derivation" link at end of overview
+      const continueLink = document.createElement('a')
+      continueLink.className = 'derivation-continue-link'
+      continueLink.href = '#'
+      continueLink.textContent = 'Continue to derivation \u2192'
+      continueLink.addEventListener('click', (e) => {
+        e.preventDefault()
+        switchTab('derivation')
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      })
+      panelOverview.appendChild(continueLink)
+
       // Insert tab bar and panels before the Enables section (or at end)
       const enablesDiv = children[slotEnd] || null
       article.insertBefore(tabBar, enablesDiv)
