@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-13T22:03:00.411Z",
+    "generatedAt": "2026-04-13T23:00:14.585Z",
     "derivationCount": 76,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -17,7 +17,7 @@
     "derivationCount": 76,
     "predictionCount": 12,
     "edgeCount": 219,
-    "formalObjectCount": 1128,
+    "formalObjectCount": 1129,
     "openGapCount": 231,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
@@ -806,6 +806,12 @@
           "statementPreview": "Under Axiom 3, the minimal period TO = infT > 0 : phiT = idSigma exists, is positive, and satisfies phiTO = idSigma.*"
         },
         {
+          "type": "Corollary",
+          "id": "3.2",
+          "name": "Universal frequency grid",
+          "statementPreview": "All observer frequencies are commensurate. There exists a fundamental frequency omega0 > 0 such that every observer O..."
+        },
+        {
           "type": "Definition",
           "id": "4.1",
           "name": "Observer loop",
@@ -949,12 +955,12 @@
             "context": "Theorem 4.1"
           },
           {
-            "target": "minimal-observer/structure",
-            "context": "Minimal Observer Structure"
-          },
-          {
             "target": "thermodynamics/action-planck",
             "context": "Action and Planck's Constant"
+          },
+          {
+            "target": "minimal-observer/structure",
+            "context": "Minimal Observer Structure"
           },
           {
             "target": "thermodynamics/action-planck",
@@ -22211,6 +22217,13 @@
       "id": "3.2",
       "name": "Minimal period",
       "fullRef": "axioms/loop-closure:Proposition 3.2"
+    },
+    {
+      "derivationId": "axioms/loop-closure",
+      "type": "Corollary",
+      "id": "3.2",
+      "name": "Universal frequency grid",
+      "fullRef": "axioms/loop-closure:Corollary 3.2"
     },
     {
       "derivationId": "axioms/loop-closure",

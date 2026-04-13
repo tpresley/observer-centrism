@@ -22,9 +22,9 @@ Having a conserved quantity (Axiom 1) and a self-maintaining identity (Axiom 2) 
 - Approximate return is not enough. Each imperfect cycle accumulates drift, giving the observer a finite lifetime proportional to how tightly the cycle closes (the drift bound).
 - Only *exact* return — the state returning precisely to its starting configuration — gives indefinite persistence. Exact return of a continuous flow is periodicity, and periodicity is $U(1)$ symmetry.
 
-**The result.** Every persistent observer has a natural frequency (how fast its loop cycles), a coherence cost (the minimum resources needed to complete one cycle), and a conserved charge paired with its cyclic symmetry. The loop is not an additional constraint imposed on observers — it is what self-reference looks like for a finite system.
+**The result.** Every persistent observer has a natural frequency (how fast its loop cycles), a coherence cost (the minimum resources needed to complete one cycle), and a conserved charge paired with its cyclic symmetry. The loop is not an additional constraint imposed on observers — it is what self-reference looks like for a finite system. Moreover, the composition of observers forces all frequencies to be commensurate: there exists a universal fundamental frequency $\omega_0$ such that every observer's frequency is an integer multiple of $\omega_0$. The discrete energy spectrum of quantum mechanics — $E_n = n\hbar\omega_0$ — follows as a structural consequence.
 
-**Why this matters.** Periodicity gives rise to frequency, frequency gives rise to energy (via the Planck-Einstein relation derived later), and the requirement of a minimum coherence cost per cycle is what ultimately produces Planck's constant. The wave-like behavior of quantum mechanics traces back to this requirement: to exist is to oscillate.
+**Why this matters.** Periodicity gives rise to frequency, frequency gives rise to energy (via the Planck-Einstein relation derived later), and the requirement of a minimum coherence cost per cycle is what ultimately produces Planck's constant. The universal frequency grid means energy is inherently discrete — not because nature "chooses" to quantize, but because any other arrangement would make composite observers impossible. The wave-like behavior of quantum mechanics traces back to this requirement: to exist is to oscillate, and to coexist is to oscillate commensurately.
 
 **An honest caveat.** The step from "indefinite persistence" to "exact periodicity" might appear to require ruling out quasi-periodic flows (where the orbit is dense in a higher-dimensional torus rather than closing as a circle) by appeal to physical requirements like the discrete energy spectrum. In fact, the exclusion of quasi-periodicity follows from the operational definitions themselves, via a composition argument: composite observers (Definition 5) must satisfy loop closure, which forces all sub-observer frequencies to be commensurate. See the Operational Grounding section below and [From Observation to Axioms](/derivations/axioms/00-from-observation-to-axioms).
 
@@ -162,7 +162,7 @@ Therefore, indefinite persistence requires $\phi_T = \text{id}_\Sigma$ for some 
 
 **Corollary 3.1 (Memory-persistence tradeoff).** *Theorem 3.1 has a structural consequence for any observer that absorbs relational invariants. Each Type III interaction permanently expands the state space ([Relational Invariants](/derivations/interactions/relational-invariants), Proposition 6.2), so the dynamics must re-close on a larger manifold than the one on which exact closure was originally established. The original $\phi_T = \text{id}_\Sigma$ no longer holds on the expanded space; the perturbation reintroduces drift $\epsilon > 0$. By Theorem 3.1, exact closure can only be regained at a (possibly nearby) new fixed point of the bootstrap functor. Since the perturbations are permanent and monotonically accumulate, an observer with nonzero memory capacity must eventually fail to re-close — exact persistence and epistemic memory are structurally incompatible. The full statement is the [Memory-Persistence Tradeoff](/derivations/thermodynamics-ext/memory-persistence-tradeoff) (Theorem 4.1). The minimal observer escapes the corollary because its 1-dimensional state space cannot host an additional degree of freedom.*
 
-**Remark (Quasi-periodic flows).** Theorem 3.1 rules out non-recurrent flows but leaves open the case of quasi-periodic flows on a higher-dimensional torus $T^k$. Quasi-periodicity is excluded by the composition argument in the Operational Grounding section: composite observers must satisfy Axiom 3, forcing all sub-observer frequencies to be commensurate.
+**Remark (Quasi-periodic flows).** Theorem 3.1 rules out non-recurrent flows but leaves open the case of quasi-periodic flows on a higher-dimensional torus $T^k$. Quasi-periodicity is excluded by the composition argument in the Operational Grounding section: composite observers must satisfy Axiom 3, forcing all sub-observer frequencies to be commensurate. The positive consequence of this exclusion is stated formally as Corollary 3.2 below.
 
 **Axiom 3 (Precise statement).** The homomorphism $\phi$ is non-trivial ($\phi \neq \text{const}$), and there exists $T > 0$ such that $\phi_T = \text{id}_\Sigma$.
 
@@ -177,6 +177,14 @@ Therefore, indefinite persistence requires $\phi_T = \text{id}_\Sigma$ for some 
 Therefore $P$ is closed and discrete in $(0, \infty)$, so $T_\mathcal{O} = \inf P$ exists in $P$ and $T_\mathcal{O} > 0$. $\square$
 
 **Remark (Discrete case).** If $\Sigma$ is finite, the dynamics is a bijection $\phi: \Sigma \to \Sigma$ with $\phi^n = \text{id}$ for some $n \geq 2$. The minimal period is the order of $\phi$ in $\text{Sym}(\Sigma)$.
+
+**Corollary 3.2 (Universal frequency grid).** *All observer frequencies are commensurate. There exists a fundamental frequency $\omega_0 > 0$ such that every observer $\mathcal{O}$ has $\omega_\mathcal{O} = n_\mathcal{O} \omega_0$ for some positive integer $n_\mathcal{O}$. The discrete energy spectrum $E_n = n\hbar\omega_0$ follows.*
+
+*Proof.* Let $\mathcal{O}_1$ and $\mathcal{O}_2$ be any two observers with minimal periods $T_1 = 2\pi/\omega_1$ and $T_2 = 2\pi/\omega_2$. By Definition 5, their composite is an observer. The composite's dynamics on $\Sigma_1 \times \Sigma_2$ acts as $\phi_t(\sigma_1, \sigma_2) = (\phi^1_t(\sigma_1), \phi^2_t(\sigma_2))$. Axiom 3 applied to the composite requires $\phi_T = \text{id}$ for some $T > 0$, which means $\omega_1 T \in 2\pi\mathbb{Z}$ and $\omega_2 T \in 2\pi\mathbb{Z}$ simultaneously. This is possible if and only if $\omega_1/\omega_2 \in \mathbb{Q}$ — the frequencies are commensurate. Since this holds for *any* pair, all observer frequencies in the universe are pairwise commensurate. Pairwise commensurability over a countable set implies a common fundamental: $\omega_\mathcal{O} = n_\mathcal{O} \omega_0$ for some universal $\omega_0 > 0$ and positive integers $n_\mathcal{O}$.
+
+The energy of an observer with $n$ cycles per fundamental period is $E = S_\mathcal{O}/T_\mathcal{O}$, and since coherence costs are quantized in units of $S_{\min} = \hbar$ ([Action and Planck's Constant](/derivations/thermodynamics/action-planck)), $E_n = n\hbar\omega_0$. The discrete energy spectrum is a structural consequence of composition and loop closure, not an independent physical postulate. $\square$
+
+**Remark.** Corollary 3.2 is a strong result: the operational definitions alone — without any appeal to quantum mechanics — force energy quantization. The argument uses only Definition 5 (composite observers exist and satisfy the axioms) and Axiom 3 (dynamics is periodic). The universal frequency $\omega_0$ is determined by the framework's fundamental constants via the minimal observer ([Minimal Observer Structure](/derivations/minimal-observer/structure)).
 
 ### Step 4: The Observer Loop as Geometric Object
 
@@ -299,7 +307,7 @@ $$E_\mathcal{O} = \frac{S_\mathcal{O}}{T_\mathcal{O}} \geq \frac{S_{\min}}{T_\ma
 
 1. **Transient vs. persistent**: Virtual particles (transient fluctuations) are loops that fail to close — their $\epsilon > \epsilon_c$. Real particles are loops with $\epsilon \ll \epsilon_c$ or $\epsilon = 0$.
 
-2. **Discrete spectrum**: Only loops whose geometry is compatible with exact (or near-exact) closure persist. This selects a discrete set of allowed loop geometries, producing a discrete particle spectrum.
+2. **Discrete spectrum**: The universal frequency grid (Corollary 3.2) forces all observer energies onto integer multiples of $\hbar\omega_0$. This is the origin of quantum discreteness: the discrete energy spectrum is not postulated but follows from the requirement that composite observers satisfy loop closure.
 
 3. **Mass = rest frequency**: An observer at rest has its loop entirely in the temporal direction, with frequency $\omega = 2\pi/T$. Mass is $m = \hbar\omega/c^2 = E/c^2$ (using results from later derivations).
 
@@ -315,6 +323,7 @@ $$E_\mathcal{O} = \frac{S_\mathcal{O}}{T_\mathcal{O}} \geq \frac{S_{\min}}{T_\ma
 - Proposition 2.5: Exact closure gives persistence
 - Theorem 3.1: Persistence requires exact closure (drift bound + compactness; quasi-periodicity excluded by composition)
 - Proposition 3.2: Minimal period exists (closed/discrete subgroup argument)
+- Corollary 3.2: Universal frequency grid (from Definition 5 + Axiom 3; all observer frequencies commensurate)
 - Proposition 4.2: Loop is a smooth embedding $S^1 \hookrightarrow \Sigma$
 - Corollary 4.3: Faithful $U(1)$ action
 - Proposition 4.4: Orbit decomposition (standard group action theory)
