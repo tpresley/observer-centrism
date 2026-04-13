@@ -180,7 +180,7 @@ Therefore, indefinite persistence requires $\phi_T = \text{id}_\Sigma$ for some 
 
 **Remark (Quasi-periodic flows).** The argument above rules out non-recurrent flows but leaves open the case of quasi-periodic flows — dynamics where the orbit is dense in a higher-dimensional torus $T^k$ ($k > 1$) rather than closing as a circle. For such flows, $\epsilon(T_n) \to 0$ along a sequence with $T_n \to \infty$, and the effective lifetime can be infinite without exact periodicity.
 
-The framework excludes quasi-periodicity on physical grounds: a quasi-periodic observer has $k > 1$ independent incommensurate frequencies, producing a continuous power spectrum rather than a discrete one. Quantum mechanics requires discrete energy levels ($E = n\hbar\omega$), which arise only from a single fundamental frequency — i.e., from exact periodicity generating $U(1)$, not $T^k$. The requirement of a discrete spectrum is equivalent to the requirement that the dynamics generates exactly $U(1)$.
+Quasi-periodicity is excluded by the composition argument given in the Operational Grounding section above: a quasi-periodic observer on $T^k$ decomposes into $k$ sub-observers with incommensurate frequencies, their composite must satisfy Axiom 3, and incommensurate frequencies have no common period — contradiction. All observer frequencies must be commensurate, giving exact periodicity on a single fundamental frequency grid.
 
 **Axiom 3 (Precise statement).** The homomorphism $\phi$ is non-trivial ($\phi \neq \text{const}$), and there exists $T > 0$ such that $\phi_T = \text{id}_\Sigma$.
 
@@ -259,7 +259,7 @@ $$S_\mathcal{O} = \int_0^{T_\mathcal{O}} \mathcal{C}(\phi_t(\sigma_0)) \sqrt{g(\
 
 where $\dot{\phi}_t = \frac{d}{dt}\phi_t(\sigma_0)$ is the velocity along the loop.
 
-**Remark (Structural dependence).** This integral requires both the metric $g$ from (Theorem 0.1) and the coherence measure $\mathcal{C}$ from Axiom 1 restricted to $\Sigma$. Their compatibility (that $\mathcal{C}$ is smooth on $(\Sigma, g)$) is an assumption of the framework.
+**Remark (Structural dependence).** This integral requires both the metric $g$ from Theorem 0.1 and the coherence measure $\mathcal{C}$ from Axiom 1 restricted to $\Sigma$. Their compatibility — that $\mathcal{C}$ is smooth on $(\Sigma, g)$ — follows from the smooth structure established in the Operational Grounding section: the Noether link forces smooth dynamics, and the coherence measure inherits smoothness from the $U(1)$ Lie group structure.
 
 **Proposition 7.2 (Positive minimum).** *The coherence cost satisfies $S_\mathcal{O} > 0$ for every observer. There exists a positive lower bound $S_{\min} > 0$.*
 
@@ -342,21 +342,18 @@ $$E_\mathcal{O} = \frac{S_\mathcal{O}}{T_\mathcal{O}} \geq \frac{S_{\min}}{T_\ma
 - Lemma 0.0: Free $U(1)$ orbits on $\Sigma$ (from Axiom 3 non-triviality + coherence cost positivity)
 - Theorem 0.0: Smooth manifold structure on $\Sigma$ (from Theorem 0.2 + Lemma 0.0 + equivariant smoothing theorem)
 - Theorem 0.1: $G_\mathcal{O}$-invariant Riemannian metric exists on $\Sigma$ (from Theorem 0.0 + compactness + Weyl averaging; replaces former Postulate S2)
-- Theorem 3.1: Persistence forces exact closure (from drift bound + compactness, with quasi-periodic exclusion noted)
+- Theorem 3.1: Persistence forces exact closure (from drift bound + compactness; quasi-periodicity excluded by composition argument)
 
 **Now theorems (formerly structural postulates):**
 - S1 (Finite-dimensional manifold): Promoted to Theorem 0.2. Manifold structure derived from the constructive mechanism of observer state spaces: base case $S^1$ (Lie group), inductive step via level sets of relational invariants (regular value theorem), finite dimensionality from Delone finite local complexity.
 - S2 (Invariant Riemannian metric): Promoted to Theorem 0.1 via Weyl averaging.
-
-**Remaining additional assumptions:**
-- Symplectic structure for Theorem 5.1 (additional assumption, stated in theorem)
 
 **Deferred to later derivations:**
 - $S_{\min} = \hbar$ (cf. [Action and Planck's Constant](/derivations/thermodynamics/action-planck))
 - $E = \hbar\omega$ numerical content (depends on $S_{\min}$ identification)
 - Mass formula $m = E/c^2$ (depends on speed of light derivation)
 
-**Assessment:** The derivation is restructured around the self-reference argument: persistence requires exact closure, which forces periodicity and $U(1)$ symmetry. All claims are proved from definitions and standard mathematical results, with explicit assumptions stated upfront. The quasi-periodic gap (Remark following Theorem 3.1) is acknowledged and resolved by the physical requirement of a discrete spectrum. Structural postulates are clearly separated from proven results. Results that depend on later derivations are explicitly deferred.
+**Assessment:** The derivation is structured around the self-reference argument: persistence requires exact closure, which forces periodicity and $U(1)$ symmetry. All claims are proved from the operational definitions and standard mathematical results. Quasi-periodicity is excluded by the composition argument (composite observers must satisfy Axiom 3, forcing commensurate frequencies). Smooth dynamics is forced by the Noether link. Symplectic structure is forced by composition. No additional assumptions remain. Results that depend on later derivations are explicitly deferred.
 
 ## Open Gaps
 
