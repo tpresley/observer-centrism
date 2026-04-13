@@ -217,7 +217,7 @@ $$\alpha_{em}^{-1}(M_Z) = \alpha_Y^{-1}(M_Z) + \alpha_2^{-1}(M_Z)$$
 
 ## Open Gaps
 
-1. **Axiom-level derivation of S1**: The algebraic ratio constraint $\alpha_1 : \alpha_2 : \alpha_3 = 4:2:1$ is a structural postulate. Deriving it from the coherence axioms (e.g., showing that the canonical norm on $\mathbb{A}_i$ uniquely determines the coupling ratios) would eliminate the only new assumption in this derivation.
+1. **Axiom-level derivation of S1**: The algebraic ratio constraint $\alpha_1 : \alpha_2 : \alpha_3 = 4:2:1$ is a structural postulate. Deriving it from the coherence conditions (e.g., showing that the canonical norm on $\mathbb{A}_i$ uniquely determines the coupling ratios) would eliminate the only new assumption in this derivation.
 
 2. **Crystallization scales from bootstrap dynamics**: The bootstrap crystallization scales $\Lambda_i$ set the RG boundary conditions. Deriving their values from the [Mass Hierarchy](/derivations/particles/mass-hierarchy) exponential tunneling mechanism would convert the coupling estimates from ranges to precise predictions.
 

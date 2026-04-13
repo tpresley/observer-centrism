@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-12T10:26:18.953Z",
+    "generatedAt": "2026-04-13T00:25:06.449Z",
     "derivationCount": 76,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -182,7 +182,7 @@
         {
           "type": "Definition",
           "id": "1.2",
-          "name": "Coherence axioms",
+          "name": "Coherence conditions",
           "statementPreview": "The coherence measure C satisfies:"
         },
         {
@@ -484,7 +484,7 @@
       "tags": [
         "foundation"
       ],
-      "summary": "Convergence of the coherence axioms with quantum information theory — von Neumann entropy correspondence, operational meaning, and classical limit",
+      "summary": "Convergence of the coherence conditions with quantum information theory — von Neumann entropy correspondence, operational meaning, and classical limit",
       "lastUpdated": "2026-04-12",
       "dependsOn": [
         "axioms/coherence-conservation",
@@ -496,7 +496,7 @@
       "steps": [
         {
           "number": 1,
-          "title": "Coherence Axioms as Entropy Axioms"
+          "title": "Coherence Conditions as Entropy Axioms"
         },
         {
           "number": 2,
@@ -2065,7 +2065,7 @@
         {
           "number": 1,
           "title": "Axiom-level derivation of S1",
-          "description": "The algebraic ratio constraint alpha1 : alpha2 : alpha3 = 4:2:1 is a structural postulate. Deriving it from the coherence axioms (e.g., showing that the canonical norm on Ai uniquely determines the co"
+          "description": "The algebraic ratio constraint alpha1 : alpha2 : alpha3 = 4:2:1 is a structural postulate. Deriving it from the coherence conditions (e.g., showing that the canonical norm on Ai uniquely determines th"
         },
         {
           "number": 2,
@@ -14064,7 +14064,7 @@
           "description": "Derive entanglement growth under unitary evolution and the scrambling time from coherence dynamics."
         }
       ],
-      "assessmentVerdict": "Rigorous. All numbered results (Propositions 1.3–1.4, Theorems 2.1, 3.1, 4.1, Corollary 2.2, Theorem 6.1) have complete proofs combining the coherence axioms with established mathematical theorems (SVD, Shannon–Khinchin uniqueness, Lieb-Ruskai strong subadditivity, CKW). No new structural postulates",
+      "assessmentVerdict": "Rigorous. All numbered results (Propositions 1.3–1.4, Theorems 2.1, 3.1, 4.1, Corollary 2.2, Theorem 6.1) have complete proofs combining the coherence conditions with established mathematical theorems (SVD, Shannon–Khinchin uniqueness, Lieb-Ruskai strong subadditivity, CKW). No new structural postul",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -21930,7 +21930,7 @@
       "derivationId": "axioms/coherence-conservation",
       "type": "Definition",
       "id": "1.2",
-      "name": "Coherence axioms",
+      "name": "Coherence conditions",
       "fullRef": "axioms/coherence-conservation:Definition 1.2"
     },
     {
@@ -29934,7 +29934,7 @@
       "derivationStatus": "provisional",
       "number": 1,
       "title": "Axiom-level derivation of S1",
-      "description": "The algebraic ratio constraint alpha1 : alpha2 : alpha3 = 4:2:1 is a structural postulate. Deriving it from the coherence axioms (e.g., showing that the canonical norm on Ai uniquely determines the co"
+      "description": "The algebraic ratio constraint alpha1 : alpha2 : alpha3 = 4:2:1 is a structural postulate. Deriving it from the coherence conditions (e.g., showing that the canonical norm on Ai uniquely determines th"
     },
     {
       "derivationId": "cosmology/coupling-constants",

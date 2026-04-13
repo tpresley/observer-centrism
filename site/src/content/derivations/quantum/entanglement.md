@@ -85,7 +85,7 @@ $$\rho_1 = \text{Tr}_2(|\Psi\rangle_{12}\langle\Psi|_{12}) = \sum_k \lambda_k |u
 
 where $\{\lambda_k\}$ are the Schmidt coefficients (Proposition 1.4). The coherence accessible to $\mathcal{O}_1$ is $\mathcal{C}(\mathcal{O}_1) = \text{Tr}(\rho_1^2) = \sum_k \lambda_k^2$ — the purity of the reduced state (applying Born Rule S1 to the subsystem).
 
-**Step C (Functional form forced by axioms).** The relational coherence $\mathcal{C}(I_{12})$ must be a function $F(\lambda_1, \ldots, \lambda_d)$ of the Schmidt coefficients alone (since these completely characterize the entanglement). We require $F$ to satisfy three properties inherited from the coherence axioms:
+**Step C (Functional form forced by conditions).** The relational coherence $\mathcal{C}(I_{12})$ must be a function $F(\lambda_1, \ldots, \lambda_d)$ of the Schmidt coefficients alone (since these completely characterize the entanglement). We require $F$ to satisfy three properties inherited from the coherence conditions:
 
 1. **Additivity for independent systems** (from C3): If $|\Psi\rangle_{12} \otimes |\Phi\rangle_{34}$ describes two independent entangled pairs, then $\mathcal{C}(I_{12,34}) = \mathcal{C}(I_{12}) + \mathcal{C}(I_{34})$, so $F(\{\lambda_k \mu_j\}) = F(\{\lambda_k\}) + F(\{\mu_j\})$.
 
@@ -140,7 +140,7 @@ $$S(\rho_A) \leq S(\rho_{AB}) + S(\rho_{AC})$$
 
 *More precisely, the entanglement between $A$ and $B$ limits the entanglement between $A$ and $C$ (and vice versa).*
 
-*Proof.* The argument proceeds from the coherence axioms in three steps.
+*Proof.* The argument proceeds from the coherence conditions in three steps.
 
 **Step 1 (Strong subadditivity from coherence).** By strong subadditivity of the coherence measure (C5 of [Coherence Conservation](/derivations/axioms/coherence-conservation)):
 
@@ -150,7 +150,7 @@ for any three subsystems $A, B, C$. By the coherence-entropy correspondence (The
 
 $$S(\rho_{ABC}) + S(\rho_B) \leq S(\rho_{AB}) + S(\rho_{BC})$$
 
-This is precisely the strong subadditivity of von Neumann entropy [Lieb & Ruskai, 1973]. The framework derives this inequality from the coherence axioms rather than from the operator-algebraic properties of the trace.
+This is precisely the strong subadditivity of von Neumann entropy [Lieb & Ruskai, 1973]. The framework derives this inequality from the coherence conditions rather than from the operator-algebraic properties of the trace.
 
 **Step 2 (Monogamy for pure states).** For a pure state $|\Psi\rangle_{ABC}$, $S(\rho_{ABC}) = 0$ and $S(\rho_{BC}) = S(\rho_A)$ (purification duality: the entropy of a subsystem equals the entropy of its complement for a pure total state). Substituting into the strong subadditivity inequality:
 
@@ -206,7 +206,7 @@ This connection is developed in the [ER=EPR](/derivations/holography/er-epr) der
 **Forward reference (not a result of this derivation):**
 - Remark 5.1: ER=EPR — deferred to the [ER=EPR](/derivations/holography/er-epr) derivation. Stated here only as motivation; does not affect the rigor of any numbered result in this derivation
 
-**Assessment:** Rigorous. All numbered results (Propositions 1.3–1.4, Theorems 2.1, 3.1, 4.1, Corollary 2.2, Theorem 6.1) have complete proofs combining the coherence axioms with established mathematical theorems (SVD, Shannon–Khinchin uniqueness, Lieb-Ruskai strong subadditivity, CKW). No new structural postulates are required — the derivation builds entirely on the existing quantum and interaction infrastructure. The ER=EPR connection (Remark 5.1) is explicitly flagged as a forward reference and does not bear on the rigor of this derivation.
+**Assessment:** Rigorous. All numbered results (Propositions 1.3–1.4, Theorems 2.1, 3.1, 4.1, Corollary 2.2, Theorem 6.1) have complete proofs combining the coherence conditions with established mathematical theorems (SVD, Shannon–Khinchin uniqueness, Lieb-Ruskai strong subadditivity, CKW). No new structural postulates are required — the derivation builds entirely on the existing quantum and interaction infrastructure. The ER=EPR connection (Remark 5.1) is explicitly flagged as a forward reference and does not bear on the rigor of this derivation.
 
 ## Open Gaps
 

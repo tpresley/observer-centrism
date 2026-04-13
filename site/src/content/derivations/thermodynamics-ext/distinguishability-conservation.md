@@ -112,7 +112,7 @@ $$\pi_*\mathcal{C}(S_1' : S_2') = \mathcal{C}(\pi^{-1}(S_1') : \pi^{-1}(S_2'))$$
 
 **Part 2 (Resolution loss).** Coarse-graining reduces the number of distinguishable configurations. Given original subsystems $S_1, S_2 \in \mathcal{A}$, the coarse-grained versions $S_1' = \pi(S_1)$, $S_2' = \pi(S_2)$ satisfy $S_i \subseteq \pi^{-1}(S_i')$, with the preimage potentially containing additional configurations that $\pi$ has merged with elements of $S_i$.
 
-By subadditivity (axiom C4 of [Coherence Conservation](/derivations/axioms/coherence-conservation)), larger subsystems need not have greater relational coherence with a fixed partner. Specifically, if $S_1 \subseteq \pi^{-1}(S_1')$ and we add the merged configurations, the relational coherence can decrease:
+By subadditivity (condition C4 of [Coherence Conservation](/derivations/axioms/coherence-conservation)), larger subsystems need not have greater relational coherence with a fixed partner. Specifically, if $S_1 \subseteq \pi^{-1}(S_1')$ and we add the merged configurations, the relational coherence can decrease:
 
 $$\mathcal{C}(\pi^{-1}(S_1') : \pi^{-1}(S_2')) \leq \mathcal{C}(S_1 : S_2)$$
 
@@ -120,9 +120,9 @@ with equality if and only if $\pi$ does not merge any configurations that distin
 
 Combining Parts 1 and 2: $\pi_*\mathcal{C}(S_1' : S_2') = \mathcal{C}(\pi^{-1}(S_1') : \pi^{-1}(S_2')) \leq \mathcal{C}(S_1 : S_2)$.
 
-**Remark (Assumption in Part 2).** The inequality in Part 2 uses the physical assumption that enlarging a subsystem (by adding merged configurations) cannot increase relational coherence with a fixed partner. This is implied by monotonicity of mutual information in the quantum realization (where $\mathcal{C} = S$), but does not follow from axioms C1–C5 alone — as noted in [Coherence Conservation](/derivations/axioms/coherence-conservation), monotonicity is not guaranteed by subadditivity. The conclusion holds for all physical realizations of Axiom 1 (quantum entropy, Shannon entropy) and is therefore treated as established, but a purely axiomatic proof would require an additional monotonicity hypothesis. $\square$
+**Remark (Assumption in Part 2).** The inequality in Part 2 uses the physical assumption that enlarging a subsystem (by adding merged configurations) cannot increase relational coherence with a fixed partner. This is implied by monotonicity of mutual information in the quantum realization (where $\mathcal{C} = S$), but does not follow from conditions C1–C5 alone — as noted in [Coherence Conservation](/derivations/axioms/coherence-conservation), monotonicity is not guaranteed by subadditivity. The conclusion holds for all physical realizations of Axiom 1 (quantum entropy, Shannon entropy) and is therefore treated as established, but a purely axiomatic proof would require an additional monotonicity hypothesis. $\square$
 
-**Remark.** On the statistical manifold of observer states, this monotonicity is equivalent to the data processing inequality for the Fisher distance: $d_G(\pi(\sigma_1), \pi(\sigma_2)) \leq d_G(\sigma_1, \sigma_2)$ for any Markov map $\pi$ [Amari & Nagaoka, 2000]. The coherence-framework proof above derives this from axiom C4 alone, without requiring the full information-geometric apparatus.
+**Remark.** On the statistical manifold of observer states, this monotonicity is equivalent to the data processing inequality for the Fisher distance: $d_G(\pi(\sigma_1), \pi(\sigma_2)) \leq d_G(\sigma_1, \sigma_2)$ for any Markov map $\pi$ [Amari & Nagaoka, 2000]. The coherence-framework proof above derives this from condition C4 alone, without requiring the full information-geometric apparatus.
 
 **Remark (Bilateral vs. unilateral).** Conservation of distinguishability has two faces:
 - **Bilateral** (Theorem 2.1): Invertible (admissible) transformations preserve distinguishability exactly. This is the framework's version of unitarity.
@@ -148,9 +148,9 @@ This addresses the open gap in the [Fisher Information Metric](/derivations/ther
 - $\mathcal{A}_1 \otimes \mathcal{A}_2$ is the product $\sigma$-algebra
 - The product coherence measure $\mathcal{C}_{12}$ restricts to the factor measures on factor sets: $\mathcal{C}_{12}(S_1 \times \mathcal{H}_2) = \mathcal{C}_1(S_1)$ and $\mathcal{C}_{12}(\mathcal{H}_1 \times S_2) = \mathcal{C}_2(S_2)$
 - For uncorrelated (independent) subsystems: $\mathcal{C}_{12}(S_1 \times S_2) = \mathcal{C}_1(S_1) + \mathcal{C}_2(S_2)$ (additivity)
-- For correlated subsystems: $\mathcal{C}_{12}(S_1 \times S_2) \leq \mathcal{C}_1(S_1) + \mathcal{C}_2(S_2)$ (subadditivity, axiom C4)
+- For correlated subsystems: $\mathcal{C}_{12}(S_1 \times S_2) \leq \mathcal{C}_1(S_1) + \mathcal{C}_2(S_2)$ (subadditivity, condition C4)
 
-**Remark.** The product construction inherits all axioms (C1)–(C5) from the factor spaces. The additivity condition for uncorrelated subsystems is the defining property of independence: subsystems that have never interacted carry zero relational coherence, so $\mathcal{C}(S_1 : S_2) = 0$, which by Definition 2.1 of [Coherence Conservation](/derivations/axioms/coherence-conservation) is equivalent to additivity.
+**Remark.** The product construction inherits all conditions (C1)–(C5) from the factor spaces. The additivity condition for uncorrelated subsystems is the defining property of independence: subsystems that have never interacted carry zero relational coherence, so $\mathcal{C}(S_1 : S_2) = 0$, which by Definition 2.1 of [Coherence Conservation](/derivations/axioms/coherence-conservation) is equivalent to additivity.
 
 **Theorem 5.1 (No-cloning).** *Assume the coherence measure is strictly subadditive on at least one pair of correlated subsystems (i.e., perfect correlation implies positive relational coherence). Then there is no admissible transformation that copies an arbitrary coherence state. Formally: let $\Sigma$ be a state space with $|\Sigma| \geq 2$ and $\sigma_0 \in \Sigma$ a fixed reference state. There is no admissible $T: \Sigma \times \Sigma \to \Sigma \times \Sigma$ satisfying $T(\sigma, \sigma_0) = (\sigma, \sigma)$ for all $\sigma \in \Sigma$.*
 
@@ -204,7 +204,7 @@ From Definition 7.0: $R_A = 1 - S_A / \mathcal{C}(S)$. Differentiating:
 
 $$\frac{dR_A}{d\tau} = -\frac{1}{\mathcal{C}(S)} \frac{dS_A}{d\tau} \leq 0$$
 
-since $\mathcal{C}(S) > 0$ (axiom C2) and $dS_A/d\tau \geq 0$ (second law). Equality holds only when $dS_A/d\tau = 0$ (no entropy production — reversible process). $\square$
+since $\mathcal{C}(S) > 0$ (condition C2) and $dS_A/d\tau \geq 0$ (second law). Equality holds only when $dS_A/d\tau = 0$ (no entropy production — reversible process). $\square$
 
 **Remark.** Note the parallel: globally, distinguishability is *exactly conserved* (Theorem 2.1). Locally (from a bounded observer's perspective), distinguishability is *monotonically lost* (Proposition 7.1). The second law is not about the universe losing structure — it is about observers losing access to structure.
 
@@ -275,7 +275,7 @@ for every Markov map $\pi$ and every tangent vector $v$. No case-by-case verific
 **References standard results (well-established mathematics applied to the framework):**
 - Proposition 4.1: Čencov uniqueness. The chain (Axiom 1 → Theorem 2.1 → Čencov monotonicity → Fisher metric uniqueness) is rigorous. Čencov's theorem itself (1982) is a standard result of information geometry; the framework's contribution is showing that the Čencov monotonicity condition is a *theorem* of Axiom 1, not an additional assumption.
 
-**Assessment:** Rigorous. The core theorem (Theorem 2.1) follows in one line from Axiom 1(i). The deep consequences — no-cloning (Theorem 5.1), no-deleting (Theorem 6.1), monotonicity (Proposition 3.2), and the second law as distinguishability loss (Proposition 7.1) — all have complete proofs. The product-space coherence structure (Definition 5.0) is now explicitly axiomatized, closing the formalization gap. The consistency model verifies all results on the minimal observer pair. No structural postulates are needed — the entire derivation follows from Axiom 1 and the coherence axioms (C1)–(C5).
+**Assessment:** Rigorous. The core theorem (Theorem 2.1) follows in one line from Axiom 1(i). The deep consequences — no-cloning (Theorem 5.1), no-deleting (Theorem 6.1), monotonicity (Proposition 3.2), and the second law as distinguishability loss (Proposition 7.1) — all have complete proofs. The product-space coherence structure (Definition 5.0) is now explicitly axiomatized, closing the formalization gap. The consistency model verifies all results on the minimal observer pair. No structural postulates are needed — the entire derivation follows from Axiom 1 and the coherence conditions (C1)–(C5).
 
 ## Open Gaps
 

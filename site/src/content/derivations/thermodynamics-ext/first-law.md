@@ -48,7 +48,7 @@ where $\mathcal{C}(\mathcal{O}_i : \mathcal{O}_j) = \mathcal{C}(\mathcal{O}_i) +
 
 **Proposition 1.2.** *$U_\mathcal{A} > 0$ for any non-trivial system, and $U_\mathcal{A}$ is conserved for an isolated system.*
 
-*Proof.* Positivity follows from $\mathcal{C} > 0$ on non-empty subsets ([Coherence Conservation](/derivations/axioms/coherence-conservation), axiom C2). Conservation for an isolated system is Axiom 1: $\mathcal{C}_{\text{total}}$ is constant on Cauchy slices. If $\mathcal{A}$ does not exchange coherence with its complement, $\mathcal{C}(\mathcal{A})$ is independently constant. $\square$
+*Proof.* Positivity follows from $\mathcal{C} > 0$ on non-empty subsets ([Coherence Conservation](/derivations/axioms/coherence-conservation), condition C2). Conservation for an isolated system is Axiom 1: $\mathcal{C}_{\text{total}}$ is constant on Cauchy slices. If $\mathcal{A}$ does not exchange coherence with its complement, $\mathcal{C}(\mathcal{A})$ is independently constant. $\square$
 
 ### Step 2: Coherence Exchange Channels
 
@@ -208,7 +208,7 @@ Similarly, $\mathcal{B}$-$\mathcal{C}$ equilibrium gives $T_\mathcal{C}^{(\mathc
 
 **Fully rigorous:**
 - Definition 1.1: Internal coherence energy (well-defined from Axiom 1)
-- Proposition 1.2: Positivity and conservation (from axiom C2 and Axiom 1)
+- Proposition 1.2: Positivity and conservation (from condition C2 and Axiom 1)
 - Definitions 2.1, 2.2, 2.4: Coherence exchange channels, work and heat from interaction type classification
 - Proposition 2.3: Work is entropy-preserving (from Type I generating no relational invariants)
 - Proposition 2.5: Heat is entropy-generating (from Type III generating relational invariants + second law)

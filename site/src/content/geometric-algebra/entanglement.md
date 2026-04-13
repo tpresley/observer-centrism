@@ -248,7 +248,7 @@ $$S(\rho_1) = -\sum_k \lambda_k \ln \lambda_k$$
 
 The GA formulation does not provide an independent entropy measure — it inherits the same Shannon–Khinchin argument. What it provides is a concrete algebraic setting: the eigenvalues $\{\lambda_k\}$ are extracted from the idempotent decomposition of $\rho_1 \in \operatorname{Cl}^+(3,0)$, the partial trace is partial reversion, and the trace is the scalar part. The functional form of the entropy is forced by the same axiomatic argument as in the target derivation.
 
-**Remark (Answering Open Question 3).** There is no natural GA-specific entropy measure that recovers von Neumann entropy independently of the Shannon–Khinchin argument. The scalar part provides a trace, the reversion provides an adjoint, and the idempotent decomposition provides a spectrum — but these are the same ingredients as the Hilbert space formulation, expressed in a different language. The entropy's functional form is fixed by the coherence axioms, not by the algebra.
+**Remark (Answering Open Question 3).** There is no natural GA-specific entropy measure that recovers von Neumann entropy independently of the Shannon–Khinchin argument. The scalar part provides a trace, the reversion provides an adjoint, and the idempotent decomposition provides a spectrum — but these are the same ingredients as the Hilbert space formulation, expressed in a different language. The entropy's functional form is fixed by the coherence conditions, not by the algebra.
 
 ### Step 9: Equivalence of GA and Coherence Entanglement Criteria
 

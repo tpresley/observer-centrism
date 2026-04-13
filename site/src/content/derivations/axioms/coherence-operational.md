@@ -4,7 +4,7 @@ status: "rigorous"
 dependsOn: ["axioms/coherence-conservation", "axioms/loop-closure", "quantum/born-rule"]
 enablesDerivation: []
 tags: ["foundation"]
-summary: "Convergence of the coherence axioms with quantum information theory — von Neumann entropy correspondence, operational meaning, and classical limit"
+summary: "Convergence of the coherence conditions with quantum information theory — von Neumann entropy correspondence, operational meaning, and classical limit"
 rigorLevel: "formal"
 lastUpdated: 2026-04-12
 ---
@@ -38,11 +38,11 @@ The functional uniqueness of coherence on quantum states — that the unique $U(
 
 ## Derivation
 
-### Step 1: Coherence Axioms as Entropy Axioms
+### Step 1: Coherence Conditions as Entropy Axioms
 
 **Theorem 1.1 (Quantum entropy satisfies Axiom 1).** *Let $\rho$ be a density operator on a composite Hilbert space $\mathcal{H} = \bigotimes_i \mathcal{H}_i$. For any subsystem $S$ (a subset of the tensor factors), define $\mathcal{C}(S) = S(\rho_S)$ where $S(\rho_S) = -\text{Tr}(\rho_S \log \rho_S)$ is the von Neumann entropy of the reduced state $\rho_S = \text{Tr}_{\bar{S}}(\rho)$. Then $\mathcal{C}$ satisfies all five conditions (C1)–(C5) of Axiom 1.*
 
-*Proof.* We verify each axiom:
+*Proof.* We verify each condition:
 
 **(C1) Positivity.** $S(\rho_S) \geq 0$ for any density operator $\rho_S$, since the eigenvalues $\lambda_i \in [0,1]$ satisfy $-\lambda_i \log \lambda_i \geq 0$. $\checkmark$
 
