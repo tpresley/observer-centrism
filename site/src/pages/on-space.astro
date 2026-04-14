@@ -1,0 +1,317 @@
+---
+import MainLayout from '../components/layouts/MainLayout.astro'
+import PageTitle from '../components/PageTitle.astro'
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+---
+
+<MainLayout title="On Space">
+  <article class="space-article">
+    <PageTitle
+      title="On Space"
+      subtitle="Why geometry is constituted by observers, not inhabited by them"
+    />
+
+    <p class="lead">
+      Space seems like the most obvious thing in physics &mdash; the container
+      everything else happens in. The framework says it is not a container at all.
+      It is constituted by observers: projected by their correlations, curved by
+      their presence, bounded by their capacity to observe. Every property of
+      space &mdash; its dimensionality, its metric, its information content
+      &mdash; is derived from the axioms rather than assumed. Space is what
+      observer correlations look like when there are enough of them.
+    </p>
+
+    <h2>Why Three Dimensions</h2>
+
+    <p>
+      We take three-dimensionality for granted, but there is no obvious reason
+      why space could not have two dimensions, or four, or ten. The framework
+      shows that <a href={`${base}/derivations/dimensions/three-dimensions`}>three
+      is the unique number</a> consistent with the existence of stable observers.
+      Four independent structural requirements converge on this single answer.
+    </p>
+
+    <p>
+      In one dimension, boundaries are just pairs of points &mdash; they cannot
+      filter interactions selectively, so no observer can maintain a meaningful
+      self/non-self distinction. In two dimensions, the rotation group has
+      infinitely many winding types, preventing the finite particle spectrum that
+      the bootstrap hierarchy requires. In four dimensions, space admits
+      uncountably many inequivalent smooth structures, making loop closure
+      geometrically ambiguous &mdash; an observer cannot know which smoothness
+      it inhabits. In four or more dimensions, no stable bound orbits exist:
+      the gravitational and electromagnetic potentials fall off too steeply for
+      atoms to form.
+    </p>
+
+    <p>
+      Only three survives all four tests. The framework does not explain why
+      the universe chose three dimensions. It shows that observers can only
+      exist in three &mdash; which, for an observer-centric framework, is the
+      same thing.
+    </p>
+
+    <h2>The Speed of Light Is Not a Speed Limit</h2>
+
+    <p>
+      The speed of light is usually presented as a cosmic speed limit &mdash;
+      an empirical constant measured in laboratories. In the framework it is
+      something more fundamental: the rate at which coherence propagates
+      through the observer network.
+    </p>
+
+    <p>
+      Each observer&rsquo;s cycle must close simultaneously in space and in
+      <a href={`${base}/on-time`}>time</a>. The same U(1) phase that completes
+      one temporal period also propagates spatially through the coherence
+      geometry. This dual closure forces a universal ratio between spatial
+      extent and temporal period: <em>L</em>&thinsp;=&thinsp;<em>cT</em>.
+      The speed of light is not imposed from outside. It falls out of the
+      requirement that observers close their loops in both dimensions at once.
+    </p>
+
+    <p>
+      The <a href={`${base}/derivations/spacetime/speed-of-light`}>Minkowski
+      metric</a> &mdash; with its crucial minus sign between space and time
+      &mdash; emerges from the same structure. Space and time share the same
+      coherence budget. An observer that extends further in space must complete
+      its temporal cycle faster, and vice versa. The metric&rsquo;s signature
+      is not a convention. It is the mathematical expression of the competition
+      between spatial and temporal closure.
+    </p>
+
+    <h2>Gravity Is Not a Force</h2>
+
+    <p>
+      <a href={`${base}/derivations/spacetime/gravity`}>Gravity</a> is what
+      happens to geometry when observers are present. The framework derives this
+      through a remarkable duality: the spacetime metric and the coherence
+      Hessian on state space compute the same action.
+    </p>
+
+    <p>
+      The Hessian is, roughly, a measure of how sharply the coherence landscape
+      curves around a given state &mdash; how rapidly the coherence cost of a
+      transformation changes as you move through state space. The action duality
+      says that this state-space curvature and the spacetime metric are two
+      descriptions of the same quantity: the coherence cost of a physical
+      transformation.
+    </p>
+
+    <p>
+      When a massive observer generates a density gradient in the relational
+      invariants that surround it, the coherence landscape on state space
+      changes shape &mdash; the Hessian is modified. By action duality, the
+      spacetime metric must change with it. Geometry curves. Objects follow
+      geodesics &mdash; paths of extremal action through the curved geometry
+      &mdash; which bend toward regions of higher relational invariant density.
+    </p>
+
+    <p>
+      The equivalence principle follows structurally: geodesics depend only on
+      the geometry, not on what travels along them. A feather and a hammer fall
+      the same way because they are both following the same curved spacetime,
+      not because a force is pulling them equally. Gravity is not a force
+      acting through space. It is the shape of space itself, reshaped by the
+      presence of observers.
+    </p>
+
+    <h2>Entanglement Is Connectivity</h2>
+
+    <p>
+      The framework&rsquo;s <a href={`${base}/derivations/holography/er-epr`}>ER=EPR
+      result</a> makes its most dramatic claim about space: entanglement and
+      spatial connectivity are the same thing.
+    </p>
+
+    <p>
+      When two observers interact via a Type III interaction and then separate,
+      the relational invariant they share persists across the distance between
+      them. This single object has two descriptions. Quantum mechanics sees
+      entanglement &mdash; a correlation between distant measurements that
+      cannot be explained by any local hidden variable. General relativity sees
+      a wormhole &mdash; a geometric bridge connecting two separated regions
+      of spacetime.
+    </p>
+
+    <p>
+      These are not analogies. They are two mathematical descriptions of the
+      same structure. The entanglement entropy between the observers equals the
+      wormhole throat area in Planck units divided by four. No-signaling
+      (quantum mechanics forbids using entanglement to send messages) and
+      non-traversability (general relativity forbids sending objects through the
+      wormhole) are dual expressions of the same constraint: the relational
+      invariant saturates the available throat area, leaving zero capacity for
+      independent information transfer.
+    </p>
+
+    <p>
+      Every entangled pair of particles is connected by a tiny wormhole. Not
+      metaphorically &mdash; structurally. The fabric of space is woven from
+      entanglement.
+    </p>
+
+    <h2>Space Has Less Room Than It Appears</h2>
+
+    <p>
+      How much information can fit in a region of space? Intuition says it
+      should scale with volume &mdash; a bigger room holds more stuff. The
+      <a href={`${base}/derivations/holography/area-scaling`}>holographic
+      bound</a> says otherwise: the maximum information content of any region
+      is bounded by its surface area, measured in Planck units.
+    </p>
+
+    <p>
+      The reason is observer-indexing. An external observer can only learn about
+      a region&rsquo;s interior through signals crossing its boundary. Each
+      independent signal requires one minimal observer loop at the boundary
+      surface. Each loop occupies one Planck area. The maximum number of
+      independent bits extractable from the region is therefore the boundary
+      area divided by the Planck area &mdash; regardless of how vast the
+      interior volume may be.
+    </p>
+
+    <p>
+      Even the most information-dense object in the universe &mdash; a black
+      hole &mdash; has finite entropy bounded by the area of its event horizon.
+      A black hole the size of a room contains no more accessible information
+      than can be written on its walls. Volume is real, but it is not the
+      currency of information. The actual information economy of space is
+      written on surfaces.
+    </p>
+
+    <h2>Local and Nonlocal</h2>
+
+    <p>
+      Is physics local? The framework gives another
+      <a href={`${base}/on-determinism`}>level-dependent answer</a>.
+    </p>
+
+    <p>
+      Interactions are local. Every Type I, II, and III interaction occurs at a
+      point in the causal graph &mdash; two observers must be in causal contact
+      to interact. No influence travels faster than light. The causal structure
+      of the interaction graph is Lorentzian, and the speed of light is a
+      structural bound derived from loop closure.
+    </p>
+
+    <p>
+      Correlations are nonlocal. Once a relational invariant is generated by a
+      local interaction, it persists forever on every Cauchy slice of the
+      dependency graph, connecting the two observers even as they separate
+      across vast distances. This is not action at a distance. No signal is
+      sent. No influence propagates. The correlation is the residue of a shared
+      structure created when the observers were together &mdash; a structural
+      feature of the graph, not a message between particles.
+    </p>
+
+    <p>
+      Bell violations are fully respected. There are no hidden local variables
+      to restore classical determinism at the observer level. But there is also
+      no nonlocal signaling &mdash; the correlations cannot transmit independent
+      information. The framework dissolves the locality debate in the same way
+      it dissolves the determinism debate: by showing that &ldquo;is physics
+      local?&rdquo; is level-ambiguous, and both answers are correct at their
+      respective levels.
+    </p>
+
+    <h2>Not a Container</h2>
+
+    <p>
+      The framework&rsquo;s treatment of space parallels its treatment of
+      <a href={`${base}/on-time`}>time</a>. Space is not the stage on which
+      physics happens. It is not an illusion projected by consciousness. It is
+      the geometric structure that observers constitute by correlating with each
+      other &mdash; as real as anything in the framework, and as
+      observer-dependent as time.
+    </p>
+
+    <p>
+      At the Planck scale, space is a discrete aperiodic network of minimal
+      observers. At human scales, it is smooth three-dimensional Riemannian
+      geometry. At cosmic scales, it obeys
+      <a href={`${base}/derivations/spacetime/einstein-equations`}>Einstein&rsquo;s
+      field equations</a>. All three descriptions are simultaneously valid.
+      The discrete layer constrains which smooth geometries are physical. The
+      smooth layer constrains which discrete configurations are viable. The
+      physical universe is the fixed point where both agree.
+    </p>
+
+    <p>
+      Space is not given. It is not waiting to be filled. It is what observer
+      correlations look like when there are enough of them &mdash; constituted
+      by the network, curved by its density, bounded by its capacity, and
+      woven from entanglement.
+    </p>
+
+    <div class="space-links">
+      <a href={`${base}/derivations/dimensions/three-dimensions`}>Three Dimensions</a> &middot;
+      <a href={`${base}/derivations/spacetime/speed-of-light`}>Speed of Light</a> &middot;
+      <a href={`${base}/derivations/spacetime/gravity`}>Gravity</a> &middot;
+      <a href={`${base}/derivations/holography/er-epr`}>ER=EPR</a> &middot;
+      <a href={`${base}/derivations/holography/area-scaling`}>Area Scaling</a> &middot;
+      <a href={`${base}/derivations/foundation/continuous-discrete-duality`}>Continuous-Discrete Duality</a>
+    </div>
+  </article>
+</MainLayout>
+
+<style>
+  .space-article {
+    max-width: 700px;
+  }
+
+  .space-article h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.35rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.5rem;
+  }
+
+  .space-article h2:first-of-type {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .space-article p {
+    margin-bottom: 1rem;
+    line-height: 1.85;
+  }
+
+  .space-article ul {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+  }
+
+  .space-article li {
+    margin-bottom: 0.75rem;
+    line-height: 1.75;
+  }
+
+  .lead {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .space-links {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .space-links a {
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+
+  .space-links a:hover {
+    border-bottom-color: var(--color-accent);
+  }
+</style>
