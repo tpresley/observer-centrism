@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-13T23:00:14.585Z",
+    "generatedAt": "2026-04-14T01:12:27.153Z",
     "derivationCount": 76,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -18,7 +18,7 @@
     "predictionCount": 12,
     "edgeCount": 219,
     "formalObjectCount": 1129,
-    "openGapCount": 231,
+    "openGapCount": 229,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -11832,11 +11832,6 @@
           "number": 1,
           "title": "Non-abelian minimal observers",
           "description": "The minimal observer has GO = U(1). The next-simplest observers would have GO = SU(2) (spin structure) or GO = U(1) U(1) (multiple charges). Classifying the hierarchy of observer complexity connects t"
-        },
-        {
-          "number": 2,
-          "title": "Coherence cost quantization",
-          "description": "The coherence cost SO is bounded below by Smin. Whether the allowed values form a discrete spectrum (quantized action) depends on the topology of the coherence space — this connects to the dimensional"
         }
       ],
       "assessmentVerdict": "The derivation is mathematically rigorous: the minimal observer is the unique simplest object satisfying the three axioms, its structure (U(1) phase oscillator with single conserved charge) follows with mathematical certainty from the axioms, and a consistency model is verified. Physical identificat",
@@ -19239,11 +19234,6 @@
         },
         {
           "number": 2,
-          "title": "Quantization of energy levels",
-          "description": "The existence of a minimum action quantum hbar implies that admissible observer cycles have quantized action nhbar for n in Z 1. This should connect to the quantization of energy levels in bound syste"
-        },
-        {
-          "number": 3,
           "title": "$\\hbar$, $c$, and $G$",
           "description": "The relationship between hbar (coherence cost quantum), c (phase propagation speed from [Speed of Light](/derivations/spacetime/speed-of-light)), and G (gravitational coupling) determines whether the "
         }
@@ -30705,13 +30695,6 @@
       "description": "The minimal observer has GO = U(1). The next-simplest observers would have GO = SU(2) (spin structure) or GO = U(1) U(1) (multiple charges). Classifying the hierarchy of observer complexity connects t"
     },
     {
-      "derivationId": "minimal-observer/structure",
-      "derivationStatus": "rigorous",
-      "number": 2,
-      "title": "Coherence cost quantization",
-      "description": "The coherence cost SO is bounded below by Smin. Whether the allowed values form a discrete spectrum (quantized action) depends on the topology of the coherence space — this connects to the dimensional"
-    },
-    {
       "derivationId": "particles/cpt-theorem",
       "derivationStatus": "provisional",
       "number": 1,
@@ -31380,13 +31363,6 @@
       "derivationId": "thermodynamics/action-planck",
       "derivationStatus": "rigorous",
       "number": 2,
-      "title": "Quantization of energy levels",
-      "description": "The existence of a minimum action quantum hbar implies that admissible observer cycles have quantized action nhbar for n in Z 1. This should connect to the quantization of energy levels in bound syste"
-    },
-    {
-      "derivationId": "thermodynamics/action-planck",
-      "derivationStatus": "rigorous",
-      "number": 3,
       "title": "$\\hbar$, $c$, and $G$",
       "description": "The relationship between hbar (coherence cost quantum), c (phase propagation speed from [Speed of Light](/derivations/spacetime/speed-of-light)), and G (gravitational coupling) determines whether the "
     },

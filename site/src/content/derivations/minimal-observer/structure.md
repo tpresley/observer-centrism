@@ -190,8 +190,8 @@ No additional assumptions are needed.
 ## Open Gaps
 
 1. **Non-abelian minimal observers**: The minimal observer has $G_\mathcal{O} = U(1)$. The next-simplest observers would have $G_\mathcal{O} = SU(2)$ (spin structure) or $G_\mathcal{O} = U(1) \times U(1)$ (multiple charges). Classifying the hierarchy of observer complexity connects to the particle spectrum.
-2. **Coherence cost quantization**: The coherence cost $S_\mathcal{O}$ is bounded below by $S_{\min}$. Whether the allowed values form a discrete spectrum (quantized action) depends on the topology of the coherence space — this connects to the dimensionality derivation.
 
 ## Addressed Gaps
 
 1. **Anti-observers** — *Resolved by [Coherence-Dual Pairs](/derivations/minimal-observer/coherence-dual-pairs) (rigorous)*: The conjugate $U(1)$ representation with charge $-Q_\mathcal{O}$ is fully developed as the particle-antiparticle structure, deriving coherence-dual pairs from the dual representation of the minimal observer's $U(1)$ symmetry.
+2. **Coherence cost quantization** — *Resolved by [Loop Closure](/derivations/axioms/loop-closure), Corollary 3.2*: The universal frequency grid forces all observer frequencies onto integer multiples of a fundamental $\omega_0$, giving quantized action $S_\mathcal{O} = n\hbar$ and discrete energy $E_n = n\hbar\omega_0$. The discrete spectrum does not depend on the topology of the coherence space — it is forced by the requirement that composite observers satisfy loop closure.

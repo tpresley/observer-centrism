@@ -229,8 +229,11 @@ $$\hbar = \min_{\gamma \in \Lambda(\Sigma_{\min})} \oint \mathcal{L} \, dt = 2\p
 ## Open Gaps
 
 1. **Constructing $\mathcal{L}$ from first principles**: The coherence Lagrangian should be uniquely derivable from $\mathcal{C}$ and the observer structure. The Fisher information metric is a natural candidate. This is the key missing link between the abstract framework and concrete dynamics.
-2. **Quantization of energy levels**: The existence of a minimum action quantum $\hbar$ implies that admissible observer cycles have quantized action $n\hbar$ for $n \in \mathbb{Z}_{\geq 1}$. This should connect to the quantization of energy levels in bound systems.
-3. **$\hbar$, $c$, and $G$**: The relationship between $\hbar$ (coherence cost quantum), $c$ (phase propagation speed from [Speed of Light](/derivations/spacetime/speed-of-light)), and $G$ (gravitational coupling) determines whether the framework has zero, one, or two free parameters.
+2. **$\hbar$, $c$, and $G$**: The relationship between $\hbar$ (coherence cost quantum), $c$ (phase propagation speed from [Speed of Light](/derivations/spacetime/speed-of-light)), and $G$ (gravitational coupling) determines whether the framework has zero, one, or two free parameters.
+
+## Addressed Gaps
+
+1. **Quantization of energy levels** — *Resolved by [Loop Closure](/derivations/axioms/loop-closure), Corollary 3.2*: The universal frequency grid — all observer frequencies must be commensurate, forced by the requirement that composite observers satisfy loop closure — gives $E_n = n\hbar\omega_0$. This completes the connection from the minimum action quantum $\hbar$ to the discrete energy spectrum of bound systems.
 
 <!-- References -->
 [Folland & Sitaram, 1997]: /references#folland-sitaram-1997

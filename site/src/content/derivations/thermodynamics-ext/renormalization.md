@@ -219,7 +219,7 @@ Since $\mathcal{C}(S)$ is finite and conserved, $g_i(k)$ is bounded at every sca
 
 **Theorem 7.1.** *The coherence RG is realized in the minimal observer system on $S^1$ with a frequency cutoff.*
 
-**Model**: $\Sigma = S^1$ with coherence dynamics $\theta(\tau) = \omega_0 \tau$ (single frequency $\omega_0$). The coherence spectral density is $\rho_\mathcal{C}(\omega) = C_0 \, \delta(\omega - \omega_0)$.
+**Model**: $\Sigma = S^1$ with coherence dynamics $\theta(\tau) = \omega_0 \tau$ (single frequency $\omega_0$, whose universality is established by [Loop Closure](/derivations/axioms/loop-closure) Corollary 3.2). The coherence spectral density is $\rho_\mathcal{C}(\omega) = C_0 \, \delta(\omega - \omega_0)$.
 
 *Verification:*
 
