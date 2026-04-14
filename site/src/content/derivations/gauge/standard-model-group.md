@@ -44,7 +44,7 @@ In the Standard Model, this gauge group is an empirical input -- chosen because 
 **An honest caveat.** The coupling constants (the relative strengths of the three forces) are not predicted and remain free parameters. The construction cleanly reproduces U(1) and SU(3) quantum numbers for fermions, but the full incorporation of SU(2) weak isospin assignments within a single algebraic framework remains to be completed.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to derived.
 
 ## Statement
 

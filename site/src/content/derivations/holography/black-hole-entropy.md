@@ -24,7 +24,7 @@ The Bekenstein-Hawking entropy formula is one of the most important results in t
 **An honest caveat.** The derivation inherits the Planck-scale resolution postulate from the holographic entropy bound. The factor of one quarter is established through the derivation chain (gravitational stability in the holographic bound, confirmed by thermodynamic integration), but a purely combinatorial derivation from the coherence geometry alone — without routing through the Schwarzschild solution — remains an open goal.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on area-scaling S1 (Planck-scale resolution), speed-of-light S1 (pseudo-Riemannian structure) (see [Area Scaling](/derivations/holography/area-scaling), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on area-scaling S1 (Planck-scale resolution), speed-of-light S1 (pseudo-Riemannian structure) (see [Area Scaling](/derivations/holography/area-scaling), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to derived.
 
 ## Statement
 
@@ -171,7 +171,7 @@ Key differences from standard approaches:
 - The maximal-occupation claim (every Planck cell occupied at the horizon) assumes no other configuration achieves critical density for a given area. This is a consequence of the no-hair theorem — the Schwarzschild geometry is unique for given mass.
 - Neighboring Planck cell independence (Proposition 4.1) assumes no short-range correlations. Such correlations could modify the effective entropy by an $O(1)$ multiplicative factor.
 
-**Assessment:** The Bekenstein-Hawking formula is rigorous given the holographic entropy bound (now rigorous). The horizon is the surface of maximum relational invariant density, saturating the bound. The factor $1/4$ is established by the thermodynamic integration using the Hawking temperature.
+**Assessment:** The Bekenstein-Hawking formula is rigorous given the holographic entropy bound (now derived). The horizon is the surface of maximum relational invariant density, saturating the bound. The factor $1/4$ is established by the thermodynamic integration using the Hawking temperature.
 
 ## Open Gaps
 

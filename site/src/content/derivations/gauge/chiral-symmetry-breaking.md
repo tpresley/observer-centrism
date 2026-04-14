@@ -160,12 +160,12 @@ The non-vanishing of $\Omega$ on the color directions $\text{Im}(\mathbb{O})/\ma
 
 | Result | Status | Notes |
 |---|---|---|
-| Proposition 1.2 ($U(1)_A$ anomaly) | Rigorous | Standard ABJ anomaly; octonionic reinterpretation is structural |
-| Proposition 2.2 (attractive channel) | Rigorous | Casimir calculation is exact |
+| Proposition 1.2 ($U(1)_A$ anomaly) | Derived | Standard ABJ anomaly; octonionic reinterpretation is structural |
+| Proposition 2.2 (attractive channel) | Derived | Casimir calculation is exact |
 | Theorem 3.1 (condensate forms) | Semi-formal | Gap equation analysis is standard (Schwinger-Dyson); relies on Postulate S1 to select the non-trivial solution |
 | Proposition 3.2 (condensate scale) | Semi-formal | Pagels-Stokar formula and lattice cross-check; coefficient depends on IR form of $\alpha_s$ |
-| Theorem 4.1 (Goldstone bosons) | Rigorous | Direct application of Goldstone theorem |
-| Proposition 4.2 (GOR relation) | Rigorous | Standard current-algebra result |
+| Theorem 4.1 (Goldstone bosons) | Derived | Direct application of Goldstone theorem |
+| Proposition 4.2 (GOR relation) | Derived | Standard current-algebra result |
 
 ## Open Gaps
 

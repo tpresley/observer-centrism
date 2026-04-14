@@ -45,17 +45,17 @@ Open gaps in knowledge DB after cleanup: **202** (was 213).
 |-----------|-----|-----------|
 | axioms/coherence-conservation | 3. Conditional coherence | coherence-operational Thm 2.1 |
 | axioms/observer-definition | 1. Composite observers | relational-invariants |
-| flavor/mixing-angles | 3. Neutrino masses | neutrino-masses (rigorous) |
+| flavor/mixing-angles | 3. Neutrino masses | neutrino-masses (derived) |
 | gauge/electromagnetism | 2. Magnetic monopoles | Structural exclusion (prediction) |
 | gauge/electromagnetism | 4. Non-abelian extension | weak-interaction + color-force |
-| gauge/electroweak-breaking | 2. Weinberg angle | weinberg-angle (rigorous) |
-| holography/area-scaling | 5. Holographic noise connection | causal-set-statistics (rigorous) |
-| interactions/relational-invariants | 3. Bootstrap transition | bootstrap (rigorous) |
-| minimal-observer/coherence-dual-pairs | 1. CPT theorem | cpt-theorem (rigorous) |
-| minimal-observer/structure | 3. Anti-observers | coherence-dual-pairs (rigorous) |
-| particles/spin-statistics | 2. Supersymmetry impossible | supersymmetry-impossibility (rigorous) |
-| quantum/entanglement | 1. Quantum teleportation | teleportation (rigorous) |
-| quantum/entanglement | 3. Holographic connection | er-epr (rigorous) |
+| gauge/electroweak-breaking | 2. Weinberg angle | weinberg-angle (derived) |
+| holography/area-scaling | 5. Holographic noise connection | causal-set-statistics (derived) |
+| interactions/relational-invariants | 3. Bootstrap transition | bootstrap (derived) |
+| minimal-observer/coherence-dual-pairs | 1. CPT theorem | cpt-theorem (derived) |
+| minimal-observer/structure | 3. Anti-observers | coherence-dual-pairs (derived) |
+| particles/spin-statistics | 2. Supersymmetry impossible | supersymmetry-impossibility (derived) |
+| quantum/entanglement | 1. Quantum teleportation | teleportation (derived) |
+| quantum/entanglement | 3. Holographic connection | er-epr (derived) |
 
 ---
 

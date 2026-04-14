@@ -1,6 +1,6 @@
 ---
 title: "Three Interaction Types"
-status: "rigorous"
+status: "derived"
 dependsOn: ["minimal-observer/multiplicity"]
 enablesDerivation: ["interactions/relational-invariants", "thermodynamics/time", "quantum/teleportation"]
 tags: ["dynamics"]

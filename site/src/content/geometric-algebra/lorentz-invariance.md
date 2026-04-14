@@ -1,6 +1,6 @@
 ---
 title: "Lorentz Group via STA Rotors"
-status: "rigorous"
+status: "derived"
 gaStructure: "Cl(1,3)"
 targetDerivation: "spacetime/lorentz-invariance"
 dependsOn: []
@@ -27,7 +27,7 @@ This page re-examines the framework's [Lorentz invariance derivation](/derivatio
 
 ## Connection to Framework Derivation
 
-**Target**: [Lorentz Invariance](/derivations/spacetime/lorentz-invariance) (status: rigorous)
+**Target**: [Lorentz Invariance](/derivations/spacetime/lorentz-invariance) (status: derived)
 
 The Lorentz invariance derivation establishes that the symmetry group of spacetime is the proper orthochronous Lorentz group $\mathrm{SO}^+(1,3)$, emerging from loop closure in the coherence geometry. The proof proceeds in 8 steps: Minkowski geometry of loops → time dilation → length contraction → Lorentz group → boosts → speed limit → Poincaré group → discrete symmetries.
 

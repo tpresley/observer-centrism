@@ -28,7 +28,7 @@ The baryogenesis derivation shows that all three Sakharov conditions are satisfi
 **An honest caveat.** The derivation establishes that the observed asymmetry lies within the accessible parameter space, but does not pin down a unique predicted value. The precise prediction depends on the heavy neutrino mass splittings, which the framework constrains but does not fully determine.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure), mass-hierarchy S1 (tunneling-crystallization correspondence) (see [Speed of Light](/derivations/spacetime/speed-of-light), [Mass Hierarchy](/derivations/particles/mass-hierarchy)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure), mass-hierarchy S1 (tunneling-crystallization correspondence) (see [Speed of Light](/derivations/spacetime/speed-of-light), [Mass Hierarchy](/derivations/particles/mass-hierarchy)). If those postulates are promoted to theorems, this derivation would be upgraded to derived.
 
 ## Statement
 
@@ -197,12 +197,12 @@ The observed value $\eta_B^{\text{obs}} \approx 6.1 \times 10^{-10}$ lies betwee
 
 | Result | Status | Notes |
 |---|---|---|
-| Proposition 1.1 (CKM insufficiency) | Rigorous | From Baryogenesis derivation |
-| Proposition 1.2 (Majorana nature) | Rigorous | From Neutrino Masses derivation |
-| Theorem 3.2 (CP asymmetry) | Rigorous | Standard one-loop calculation |
-| Proposition 3.3 (resonant enhancement) | Rigorous | Well-established mechanism [Pilaftsis & Underwood, 2004] |
-| Theorem 5.1 (sphaleron conversion) | Rigorous | Chemical equilibrium calculation |
-| Proposition 6.2 (viability estimate) | Rigorous | The claim is viability (observed $\eta_B$ lies within the resonant parameter space), not precise prediction. Step 6b computes the required $\kappa \cdot \varepsilon_1 = 1.84 \times 10^{-7}$; Step 6c shows this falls within the established resonant window $[10^{-7}, 10^{-1}]$ [Pilaftsis & Underwood, 2004]; [Dev & Mohapatra, 2015] |
+| Proposition 1.1 (CKM insufficiency) | Derived | From Baryogenesis derivation |
+| Proposition 1.2 (Majorana nature) | Derived | From Neutrino Masses derivation |
+| Theorem 3.2 (CP asymmetry) | Derived | Standard one-loop calculation |
+| Proposition 3.3 (resonant enhancement) | Derived | Well-established mechanism [Pilaftsis & Underwood, 2004] |
+| Theorem 5.1 (sphaleron conversion) | Derived | Chemical equilibrium calculation |
+| Proposition 6.2 (viability estimate) | Derived | The claim is viability (observed $\eta_B$ lies within the resonant parameter space), not precise prediction. Step 6b computes the required $\kappa \cdot \varepsilon_1 = 1.84 \times 10^{-7}$; Step 6c shows this falls within the established resonant window $[10^{-7}, 10^{-1}]$ [Pilaftsis & Underwood, 2004]; [Dev & Mohapatra, 2015] |
 
 **Assessment:** Rigorous. All six results are fully rigorous. The derivation establishes that resonant leptogenesis at the electroweak scale is viable: (1) the framework predicts Majorana neutrinos (from pseudo-real $SU(2)$), (2) the heavy Majorana scale is set by electroweak crystallization ($M_R \sim v_{\text{EW}}$), (3) PMNS CP phases guarantee $\varepsilon_1 \neq 0$, (4) resonant enhancement makes EW-scale leptogenesis viable, (5) sphalerons convert lepton asymmetry to baryon asymmetry, and (6) the observed $\eta_B$ lies within the accessible parameter space. The remaining open gaps concern the precise numerical prediction (which depends on the mass splitting ratio $\Delta M / \Gamma_N$), not the mechanism's viability.
 

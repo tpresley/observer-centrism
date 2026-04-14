@@ -37,7 +37,7 @@ The Big Bang should have produced equal amounts of matter and antimatter, which 
 **An honest caveat.** The derivation is qualitatively rigorous, but the Standard Model mechanism alone produces far too little asymmetry (by about eight orders of magnitude). The quantitative shortfall is a known problem shared by all Standard Model baryogenesis approaches, and is addressed separately by the leptogenesis derivation.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to derived.
 
 ## Statement
 
@@ -196,9 +196,9 @@ $$d = 3 \xrightarrow{\text{Three Dims}} \dim SO(3) = 3 \xrightarrow{\text{Three 
 
 **Fully rigorous (no new structural postulates):**
 - Proposition 1.1: Symmetric pair creation from [Coherence-Dual Pairs](/derivations/minimal-observer/coherence-dual-pairs) (rigorous — direct Noether argument)
-- Proposition 2.1: Sphalerons from $\pi_3(SU(2)) = \mathbb{Z}$ — standard topology + gauge theory ['t Hooft, 1976]; [Klinkhamer & Manton, 1984]. The topological structure $\pi_3(S^3) = \mathbb{Z}$ is inherited from the quaternionic phase algebra of [Weak Interaction](/derivations/gauge/weak-interaction) (now rigorous)
+- Proposition 2.1: Sphalerons from $\pi_3(SU(2)) = \mathbb{Z}$ — standard topology + gauge theory ['t Hooft, 1976]; [Klinkhamer & Manton, 1984]. The topological structure $\pi_3(S^3) = \mathbb{Z}$ is inherited from the quaternionic phase algebra of [Weak Interaction](/derivations/gauge/weak-interaction) (now derived)
 - Proposition 3.1: Maximal C violation from chiral coupling — direct consequence of [Chirality Selection](/derivations/gauge/chirality-selection) (now rigorous, via the orientation-consistency theorem)
-- Proposition 3.2: CP violation from $N_g \geq 3$ — the Kobayashi-Maskawa counting argument is standard, and $N_g = 3$ is derived from $\dim SO(3) = 3$ in [Three Generations](/derivations/particles/three-generations) (rigorous)
+- Proposition 3.2: CP violation from $N_g \geq 3$ — the Kobayashi-Maskawa counting argument is standard, and $N_g = 3$ is derived from $\dim SO(3) = 3$ in [Three Generations](/derivations/particles/three-generations) (derived)
 - Proposition 4.1: Bootstrap crystallization as phase transitions — the irreversibility follows from [Entropy](/derivations/thermodynamics/entropy) (Theorem 4.1, rigorous). The existence of phase transitions is a generic consequence of the bootstrap hierarchy's sequential structure
 - Theorem 5.1: Qualitative baryogenesis — all three Sakharov conditions are simultaneously satisfied (logical combination of Props 2.1, 3.1, 3.2, 4.1)
 - Corollary 6.1: $d = 3 \to N_g = 3 \to$ CP violation $\to$ baryogenesis (completely derived chain)

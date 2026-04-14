@@ -12,7 +12,7 @@ lastUpdated: 2026-03-13
 
 ## Connection to Framework Derivation
 
-**Target**: [Bootstrap Division Algebras](/derivations/interactions/bootstrap-division-algebras) (status: rigorous)
+**Target**: [Bootstrap Division Algebras](/derivations/interactions/bootstrap-division-algebras) (status: derived)
 
 The bootstrap-division-algebras derivation establishes that the bootstrap mechanism forces the Cayley-Dickson doubling sequence $\mathbb{R} \to \mathbb{C} \to \mathbb{H} \to \mathbb{O}$, with termination at $\mathbb{O}$ because sedenion zero divisors violate coherence conservation. This derivation eliminates two structural postulates from the gauge chain, promoting them from assumptions to theorems.
 

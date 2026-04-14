@@ -30,7 +30,7 @@ The speed of light is one of the most precisely measured constants in physics an
 **An honest caveat.** The derivation requires a structural postulate that the coherence geometry is pseudo-Riemannian (a smooth metric with a well-behaved quadratic form). The continuum limit from the discrete interaction graph to continuous spacetime relies on a standard conjecture in causal set theory.
 
 
-**Note on status.** This derivation is provisional because it contains speed-of-light S1 (pseudo-Riemannian structure). If that postulate is promoted to a theorem, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because it contains speed-of-light S1 (pseudo-Riemannian structure). If that postulate is promoted to a theorem, this derivation would be upgraded to derived.
 
 ## Statement
 

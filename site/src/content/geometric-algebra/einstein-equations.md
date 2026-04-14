@@ -1,6 +1,6 @@
 ---
 title: "Einstein Equations in STA Form"
-status: "rigorous"
+status: "derived"
 gaStructure: "Cl(1,3)"
 targetDerivation: "spacetime/einstein-equations"
 dependsOn: ["gravity"]
@@ -12,7 +12,7 @@ lastUpdated: 2026-03-13
 
 ## Connection to Framework Derivation
 
-**Target**: [Einstein Field Equations as Fixed-Point Conditions](/derivations/spacetime/einstein-equations) (status: rigorous)
+**Target**: [Einstein Field Equations as Fixed-Point Conditions](/derivations/spacetime/einstein-equations) (status: derived)
 
 The target derivation proves that the Einstein field equations $G_{\mu\nu} + \Lambda g_{\mu\nu} = (8\pi G/c^4) T_{\mu\nu}$ are the unique self-consistency conditions of the coherence geometry. The proof chains three constraints — tensorial structure, covariant conservation (from Axiom 1), and second-order locality (Structural Postulate S1) — through Lovelock's uniqueness theorem (1971) to select the Einstein equations uniquely in $3+1$ dimensions.
 

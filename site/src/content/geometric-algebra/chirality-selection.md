@@ -1,6 +1,6 @@
 ---
 title: "Chirality as Grade Structure"
-status: "rigorous"
+status: "derived"
 gaStructure: "Cl(1,3)"
 targetDerivation: "gauge/chirality-selection"
 dependsOn: ["lorentz-invariance"]
@@ -27,7 +27,7 @@ This page re-examines the framework's [chirality selection derivation](/derivati
 
 ## Connection to Framework Derivation
 
-**Target**: [Chirality Selection](/derivations/gauge/chirality-selection) (status: rigorous)
+**Target**: [Chirality Selection](/derivations/gauge/chirality-selection) (status: derived)
 
 The target derivation proves that the weak interaction couples to exactly one chirality as an algebraic consequence of three facts: quaternion multiplication requires a cyclic orientation ($IJ = K$ vs. $IJ = -K$), relational invariants between observers require shared orientation, and coherence conservation propagates this choice globally. The result is maximal parity violation — zero coupling to the non-selected chirality — while $U(1)$ (commutative) and $SU(3)$ (orientation-inheriting) remain vector-like.
 

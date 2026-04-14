@@ -1,6 +1,6 @@
 ---
 title: "From Observation to Axioms"
-status: "rigorous"
+status: "derived"
 dependsOn: []
 enablesDerivation: ["axioms/coherence-conservation", "axioms/observer-definition", "axioms/loop-closure"]
 tags: ["foundation", "axioms"]

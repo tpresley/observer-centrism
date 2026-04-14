@@ -1,6 +1,6 @@
 ---
 title: "Supersymmetry Impossibility"
-status: "rigorous"
+status: "derived"
 dependsOn: ["particles/spin-statistics", "dimensions/three-dimensions"]
 enablesDerivation: []
 tags: ["particles"]

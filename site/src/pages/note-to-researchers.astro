@@ -20,7 +20,7 @@ const totalPostulates = (postulatesData as any[]).length
 const derivedPostulates = (postulatesData as any[]).filter(p => p.derivedFrom).length
 const activePostulates = totalPostulates - derivedPostulates
 
-const rigorousCount = stats.byStatus.rigorous || 0
+const derivedCount = stats.byStatus.derived || 0
 const provisionalCount = stats.byStatus.provisional || 0
 const nonViableCount = stats.byStatus['non-viable'] || 0
 ---
@@ -73,7 +73,7 @@ const nonViableCount = stats.byStatus['non-viable'] || 0
       Each derivation is a formal argument that begins with the axioms (and any
       explicitly declared additional assumptions) and arrives at a specific physical
       result. Of these {stats.derivationCount} derivations,
-      <strong>{rigorousCount} are assessed as rigorous</strong>,
+      <strong>{derivedCount} are assessed as derived</strong>,
       {provisionalCount > 0 && <>{provisionalCount} as provisional, </>}
       and <strong>{nonViableCount} as non-viable</strong>.
       The framework also makes <strong>{stats.predictionCount} testable predictions</strong>,
@@ -134,7 +134,7 @@ const nonViableCount = stats.byStatus['non-viable'] || 0
     </p>
 
     <ul class="status-list">
-      <li><span class="status-dot" style="color: var(--color-rigorous)">●</span> <strong>Rigorous</strong> &mdash; all steps formally justified, no unresolved gaps in the main argument</li>
+      <li><span class="status-dot" style="color: var(--color-derived)">●</span> <strong>Derived</strong> &mdash; complete derivation chain from axioms, no additional structural postulates required</li>
       <li><span class="status-dot" style="color: var(--color-provisional)">◐</span> <strong>Provisional</strong> &mdash; main structure is sound but some steps rely on conjectures or semi-formal arguments</li>
       <li><span class="status-dot" style="color: var(--color-draft)">○</span> <strong>Draft</strong> &mdash; argument sketched but significant gaps remain</li>
       <li><span class="status-dot" style="color: var(--color-stub)">·</span> <strong>Stub</strong> &mdash; placeholder with direction but little formal content</li>

@@ -38,7 +38,7 @@ const STATUS_OPACITY = {
   stub:         0.4,
   draft:        0.6,
   provisional:  0.8,
-  rigorous:     1.0,
+  derived:      1.0,
 }
 
 // ---- pure helpers (no side-effects, used by both layout and render) --------

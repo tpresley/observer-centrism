@@ -12,7 +12,7 @@ lastUpdated: 2026-03-13
 
 ## Connection to Framework Derivation
 
-**Target**: [ER=EPR from Relational Invariants](/derivations/holography/er-epr) (status: rigorous)
+**Target**: [ER=EPR from Relational Invariants](/derivations/holography/er-epr) (status: derived)
 
 The target derivation proves that relational invariants between spatially separated observers manifest as both entanglement (EPR) and non-traversable wormholes (ER). The coherence channel carrying the relational invariant curves spacetime via the Einstein equations, producing an Einstein-Rosen bridge whose throat area satisfies $A_{\text{ER}} = 4\,\ell_P^2\,S_{\text{ent}}$. Non-traversability follows from area-coherence saturation: the throat carries exactly the coherence of the relational invariant, with no room for independent signals. Rows 1–4 of the correspondence table are rigorous; row 5 (Schmidt ↔ quasi-normal mode) remains conjectural.
 

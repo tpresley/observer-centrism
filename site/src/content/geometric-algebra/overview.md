@@ -70,19 +70,19 @@ Candidates were classified as:
 
 | # | Topic | GA Algebra | Target Derivation | Status |
 |---|---|---|---|---|
-| 1 | [Spin-statistics via rotors](/geometric-algebra/spin-statistics) | $\operatorname{Cl}(3,0)$ | spin-statistics | Rigorous |
-| 2 | [Lorentz group via STA rotors](/geometric-algebra/lorentz-invariance) | $\operatorname{Cl}(1,3)$ | lorentz-invariance | Rigorous |
-| 3 | [CPT as pseudoscalar](/geometric-algebra/cpt-theorem) | $\operatorname{Cl}(1,3)$ | cpt-theorem | Rigorous |
-| 4 | [Maxwell as $\nabla F = J$](/geometric-algebra/electromagnetism) | $\operatorname{Cl}(1,3)$ | electromagnetism | Rigorous |
-| 5 | [Weak interaction via $\mathbb{H}$](/geometric-algebra/weak-interaction) | $\operatorname{Cl}^+(3,0)$ | weak-interaction | Rigorous |
-| 6 | [Chirality as grade structure](/geometric-algebra/chirality-selection) | $\operatorname{Cl}(1,3)$ | chirality-selection | Rigorous |
+| 1 | [Spin-statistics via rotors](/geometric-algebra/spin-statistics) | $\operatorname{Cl}(3,0)$ | spin-statistics | Derived |
+| 2 | [Lorentz group via STA rotors](/geometric-algebra/lorentz-invariance) | $\operatorname{Cl}(1,3)$ | lorentz-invariance | Derived |
+| 3 | [CPT as pseudoscalar](/geometric-algebra/cpt-theorem) | $\operatorname{Cl}(1,3)$ | cpt-theorem | Derived |
+| 4 | [Maxwell as $\nabla F = J$](/geometric-algebra/electromagnetism) | $\operatorname{Cl}(1,3)$ | electromagnetism | Derived |
+| 5 | [Weak interaction via $\mathbb{H}$](/geometric-algebra/weak-interaction) | $\operatorname{Cl}^+(3,0)$ | weak-interaction | Derived |
+| 6 | [Chirality as grade structure](/geometric-algebra/chirality-selection) | $\operatorname{Cl}(1,3)$ | chirality-selection | Derived |
 | 7 | [Cayley-Dickson vs Clifford](/geometric-algebra/division-algebras) | $\operatorname{Cl}(6)$ | bootstrap-division-algebras | Provisional |
-| 8 | [Entanglement via bivector algebra](/geometric-algebra/entanglement) | $\operatorname{Cl}(3,0)$ | entanglement | Rigorous |
-| 9 | [Gravity in STA (GTG)](/geometric-algebra/gravity) | $\operatorname{Cl}(1,3)$ | gravity | Rigorous |
-| 10 | [Einstein equations in STA](/geometric-algebra/einstein-equations) | $\operatorname{Cl}(1,3)$ | einstein-equations | Rigorous |
+| 8 | [Entanglement via bivector algebra](/geometric-algebra/entanglement) | $\operatorname{Cl}(3,0)$ | entanglement | Derived |
+| 9 | [Gravity in STA (GTG)](/geometric-algebra/gravity) | $\operatorname{Cl}(1,3)$ | gravity | Derived |
+| 10 | [Einstein equations in STA](/geometric-algebra/einstein-equations) | $\operatorname{Cl}(1,3)$ | einstein-equations | Derived |
 | 11 | [ER=EPR via Clifford bundles](/geometric-algebra/er-epr) | $\operatorname{Cl}(1,3)$ | er-epr | Provisional |
 
-All eleven explorations have been developed with dedicated pages. Nine have reached rigorous status; two remain provisional (division-algebras and er-epr) due to genuine open gaps — see individual pages for details.
+All eleven explorations have been developed with dedicated pages. Nine have reached derived status; two remain provisional (division-algebras and er-epr) due to genuine open gaps — see individual pages for details.
 
 ## Outcomes Summary
 
@@ -152,4 +152,4 @@ where $a \cdot b = \tfrac{1}{2}(ab + ba)$ is the symmetric (inner) part and $a \
 
 ## Status
 
-This is a **provisional** overview — it accurately summarises the scope, methodology, and outcomes of the GA exploration programme across all eleven topics. Nine of the eleven individual explorations have reached rigorous status; the overview itself is provisional because it does not contain independent mathematical content (it summarises and links to the individual pages). Upgrading to rigorous would require the remaining two explorations (division-algebras, er-epr) to reach rigorous status, which depends on resolving their respective open gaps.
+This is a **provisional** overview — it accurately summarises the scope, methodology, and outcomes of the GA exploration programme across all eleven topics. Nine of the eleven individual explorations have reached derived status; the overview itself is provisional because it does not contain independent mathematical content (it summarises and links to the individual pages). Upgrading to rigorous would require the remaining two explorations (division-algebras, er-epr) to reach rigorous status, which depends on resolving their respective open gaps.

@@ -1,6 +1,6 @@
 ---
 title: "Relational Invariants and the Reverse Noether Mechanism"
-status: "rigorous"
+status: "derived"
 dependsOn: ["interactions/three-types"]
 enablesDerivation: ["interactions/bootstrap", "thermodynamics/entropy", "spacetime/gravity", "quantum/born-rule", "quantum/entanglement", "holography/causal-set-statistics", "thermodynamics-ext/memory-persistence-tradeoff"]
 tags: ["dynamics"]
@@ -211,4 +211,4 @@ The process iterates: $\mathcal{O}_{(12)3}$ is itself an observer (by the same a
 
 ## Addressed Gaps
 
-1. **The bootstrap transition** — *Resolved by [Bootstrap](/derivations/interactions/bootstrap) derivation (rigorous)*: The bootstrap mechanism addresses when relational invariants compound sufficiently to produce a phase transition from isolated observers to a connected network.
+1. **The bootstrap transition** — *Resolved by [Bootstrap](/derivations/interactions/bootstrap) derivation (derived)*: The bootstrap mechanism addresses when relational invariants compound sufficiently to produce a phase transition from isolated observers to a connected network.

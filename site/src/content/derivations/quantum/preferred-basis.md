@@ -28,7 +28,7 @@ Quantum mechanics tells us how to compute probabilities via the Born rule, but t
 **An honest caveat.** The structural correspondence between relational invariants and conserved quantities of the Hamiltonian is forced by the continuous-discrete duality — there is nothing else in the continuous layer for relational invariants to map to. What remains postulated is the explicit construction: the map from a specific interaction configuration to the specific Hamiltonian that governs it.
 
 
-**Note on status.** This derivation is provisional because it contains preferred-basis S1 (interaction-invariant correspondence). If that postulate is promoted to a theorem, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because it contains preferred-basis S1 (interaction-invariant correspondence). If that postulate is promoted to a theorem, this derivation would be upgraded to derived.
 
 ## Statement
 

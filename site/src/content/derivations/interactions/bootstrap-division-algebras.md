@@ -1,6 +1,6 @@
 ---
 title: "Bootstrap → Division Algebras"
-status: "rigorous"
+status: "derived"
 dependsOn: ["interactions/bootstrap"]
 enablesDerivation: []
 tags: ["interactions", "division-algebras"]

@@ -1,6 +1,6 @@
 ---
 title: "Spin-Statistics via Cl(3,0) Rotors"
-status: "rigorous"
+status: "derived"
 gaStructure: "Cl(3,0)"
 targetDerivation: "particles/spin-statistics"
 dependsOn: []
@@ -27,7 +27,7 @@ This page re-examines the framework's [spin-statistics derivation](/derivations/
 
 ## Connection to Framework Derivation
 
-**Target**: [Spin-Statistics](/derivations/particles/spin-statistics) (status: rigorous)
+**Target**: [Spin-Statistics](/derivations/particles/spin-statistics) (status: derived)
 
 The spin-statistics derivation establishes that integer-spin observers are bosons (symmetric exchange) and half-integer-spin observers are fermions (antisymmetric exchange). The proof relies on the topological fact $\pi_1(\mathrm{SO}(3)) = \mathbb{Z}_2$ and the identification of winding class with both spin and exchange symmetry.
 

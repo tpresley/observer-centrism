@@ -1,6 +1,6 @@
 ---
 title: "Entropy as Inaccessible Coherence"
-status: "rigorous"
+status: "derived"
 dependsOn: ["thermodynamics/time", "interactions/relational-invariants", "interactions/bootstrap"]
 enablesDerivation: ["thermodynamics-ext/non-ergodicity", "thermodynamics-ext/biological-non-ergodicity", "cosmology/cosmological-arrow", "thermodynamics-ext/memory-persistence-tradeoff"]
 tags: ["dynamics"]

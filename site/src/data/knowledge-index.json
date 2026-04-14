@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-14T01:12:27.153Z",
+    "generatedAt": "2026-04-14T09:37:11.322Z",
     "derivationCount": 76,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -8,7 +8,7 @@
   },
   "stats": {
     "byStatus": {
-      "rigorous": 27,
+      "derived": 27,
       "provisional": 44,
       "draft": 2,
       "non-viable": 1,
@@ -28,7 +28,7 @@
       "id": "axioms/00-from-observation-to-axioms",
       "filePath": "site/src/content/derivations/axioms/00-from-observation-to-axioms.md",
       "title": "From Observation to Axioms",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "axioms",
       "tags": [
@@ -109,7 +109,7 @@
       "id": "axioms/coherence-conservation",
       "filePath": "site/src/content/derivations/axioms/coherence-conservation.md",
       "title": "Coherence Conservation",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "axioms",
       "tags": [
@@ -478,7 +478,7 @@
       "id": "axioms/coherence-operational",
       "filePath": "site/src/content/derivations/axioms/coherence-operational.md",
       "title": "Coherence as Physical Primitive",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "axioms",
       "tags": [
@@ -650,7 +650,7 @@
       "id": "axioms/loop-closure",
       "filePath": "site/src/content/derivations/axioms/loop-closure.md",
       "title": "Loop Closure",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "axioms",
       "tags": [
@@ -1115,7 +1115,7 @@
       "id": "axioms/observer-definition",
       "filePath": "site/src/content/derivations/axioms/observer-definition.md",
       "title": "The Observer Definition",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "axioms",
       "tags": [
@@ -3791,7 +3791,7 @@
       "id": "dimensions/three-dimensions",
       "filePath": "site/src/content/derivations/dimensions/three-dimensions.md",
       "title": "Three Spatial Dimensions Are Uniquely Stable",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "dimensions",
       "tags": [
@@ -4585,7 +4585,7 @@
       "id": "foundation/coherence-lagrangian",
       "filePath": "site/src/content/derivations/foundation/coherence-lagrangian.md",
       "title": "Coherence Lagrangian",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "foundation",
       "tags": [
@@ -9625,7 +9625,7 @@
       "id": "interactions/bootstrap-division-algebras",
       "filePath": "site/src/content/derivations/interactions/bootstrap-division-algebras.md",
       "title": "Bootstrap → Division Algebras",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "interactions",
       "tags": [
@@ -9905,7 +9905,7 @@
       "id": "interactions/bootstrap",
       "filePath": "site/src/content/derivations/interactions/bootstrap.md",
       "title": "The Bootstrap Mechanism",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "interactions",
       "tags": [
@@ -10305,7 +10305,7 @@
       "id": "interactions/relational-invariants",
       "filePath": "site/src/content/derivations/interactions/relational-invariants.md",
       "title": "Relational Invariants and the Reverse Noether Mechanism",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "interactions",
       "tags": [
@@ -10687,7 +10687,7 @@
       "id": "interactions/three-types",
       "filePath": "site/src/content/derivations/interactions/three-types.md",
       "title": "Three Interaction Types",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "interactions",
       "tags": [
@@ -11020,7 +11020,7 @@
       "id": "minimal-observer/coherence-dual-pairs",
       "filePath": "site/src/content/derivations/minimal-observer/coherence-dual-pairs.md",
       "title": "Coherence-Dual Pairs",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "minimal-observer",
       "tags": [
@@ -11301,7 +11301,7 @@
       "id": "minimal-observer/multiplicity",
       "filePath": "site/src/content/derivations/minimal-observer/multiplicity.md",
       "title": "Multiplicity Is Necessary",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "minimal-observer",
       "tags": [
@@ -11677,7 +11677,7 @@
       "id": "minimal-observer/structure",
       "filePath": "site/src/content/derivations/minimal-observer/structure.md",
       "title": "Minimal Observer Structure",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "minimal-observer",
       "tags": [
@@ -12765,7 +12765,7 @@
       "id": "particles/pauli-exclusion",
       "filePath": "site/src/content/derivations/particles/pauli-exclusion.md",
       "title": "Pauli Exclusion Principle",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "particles",
       "tags": [
@@ -12939,7 +12939,7 @@
       "id": "particles/spin-statistics",
       "filePath": "site/src/content/derivations/particles/spin-statistics.md",
       "title": "Spin and Statistics from Winding Classes",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "particles",
       "tags": [
@@ -13177,7 +13177,7 @@
       "id": "particles/supersymmetry-impossibility",
       "filePath": "site/src/content/derivations/particles/supersymmetry-impossibility.md",
       "title": "Supersymmetry Impossibility",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "particles",
       "tags": [
@@ -13346,7 +13346,7 @@
       "id": "particles/three-generations",
       "filePath": "site/src/content/derivations/particles/three-generations.md",
       "title": "Three Fermion Generations",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "particles",
       "tags": [
@@ -13625,7 +13625,7 @@
       "id": "quantum/born-rule",
       "filePath": "site/src/content/derivations/quantum/born-rule.md",
       "title": "Born Rule from Coherence Conservation",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "quantum",
       "tags": [
@@ -13912,7 +13912,7 @@
       "id": "quantum/entanglement",
       "filePath": "site/src/content/derivations/quantum/entanglement.md",
       "title": "Entanglement from Relational Invariants",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "quantum",
       "tags": [
@@ -17497,7 +17497,7 @@
       "id": "thermodynamics-ext/distinguishability-conservation",
       "filePath": "site/src/content/derivations/thermodynamics-ext/distinguishability-conservation.md",
       "title": "Conservation of Distinguishability",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "thermodynamics-ext",
       "tags": [
@@ -17753,7 +17753,7 @@
       "id": "thermodynamics-ext/first-law",
       "filePath": "site/src/content/derivations/thermodynamics-ext/first-law.md",
       "title": "Coherence First Law",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "thermodynamics-ext",
       "tags": [
@@ -17968,7 +17968,7 @@
       "id": "thermodynamics-ext/fisher-metric",
       "filePath": "site/src/content/derivations/thermodynamics-ext/fisher-metric.md",
       "title": "Fisher Information Metric",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "thermodynamics-ext",
       "tags": [
@@ -18677,7 +18677,7 @@
       "id": "thermodynamics-ext/renormalization",
       "filePath": "site/src/content/derivations/thermodynamics-ext/renormalization.md",
       "title": "Renormalization Group from Coherence",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "thermodynamics-ext",
       "tags": [
@@ -18996,7 +18996,7 @@
       "id": "thermodynamics/action-planck",
       "filePath": "site/src/content/derivations/thermodynamics/action-planck.md",
       "title": "Action and Planck's Constant",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "thermodynamics",
       "tags": [
@@ -19419,7 +19419,7 @@
       "id": "thermodynamics/entropy",
       "filePath": "site/src/content/derivations/thermodynamics/entropy.md",
       "title": "Entropy as Inaccessible Coherence",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "thermodynamics",
       "tags": [
@@ -19757,7 +19757,7 @@
       "id": "thermodynamics/time",
       "filePath": "site/src/content/derivations/thermodynamics/time.md",
       "title": "Time as Phase Ordering",
-      "status": "rigorous",
+      "status": "derived",
       "rigorLevel": "formal",
       "group": "thermodynamics",
       "tags": [
@@ -20198,7 +20198,7 @@
       "id": "chirality-selection",
       "filePath": "site/src/content/geometric-algebra/chirality-selection.md",
       "title": "Chirality as Grade Structure",
-      "status": "rigorous",
+      "status": "derived",
       "gaStructure": "Cl(1,3)",
       "targetDerivation": "gauge/chirality-selection",
       "priority": "high",
@@ -20353,7 +20353,7 @@
       "id": "cpt-theorem",
       "filePath": "site/src/content/geometric-algebra/cpt-theorem.md",
       "title": "CPT as a Single Cl(1,3) Object",
-      "status": "rigorous",
+      "status": "derived",
       "gaStructure": "Cl(1,3)",
       "targetDerivation": "particles/cpt-theorem",
       "priority": "high",
@@ -20649,7 +20649,7 @@
       "id": "einstein-equations",
       "filePath": "site/src/content/geometric-algebra/einstein-equations.md",
       "title": "Einstein Equations in STA Form",
-      "status": "rigorous",
+      "status": "derived",
       "gaStructure": "Cl(1,3)",
       "targetDerivation": "spacetime/einstein-equations",
       "priority": "moderate",
@@ -20764,7 +20764,7 @@
       "id": "electromagnetism",
       "filePath": "site/src/content/geometric-algebra/electromagnetism.md",
       "title": "Maxwell Equations as ∇F = J",
-      "status": "rigorous",
+      "status": "derived",
       "gaStructure": "Cl(1,3)",
       "targetDerivation": "gauge/electromagnetism",
       "priority": "high",
@@ -20925,7 +20925,7 @@
       "id": "entanglement",
       "filePath": "site/src/content/geometric-algebra/entanglement.md",
       "title": "Entanglement via Rotor Pairs",
-      "status": "rigorous",
+      "status": "derived",
       "gaStructure": "Cl(3,0) ⊗ Cl(3,0)",
       "targetDerivation": "quantum/entanglement",
       "priority": "moderate",
@@ -21209,7 +21209,7 @@
       "id": "gravity",
       "filePath": "site/src/content/geometric-algebra/gravity.md",
       "title": "Gravity in STA: Gauge Theory Gravity",
-      "status": "rigorous",
+      "status": "derived",
       "gaStructure": "Cl(1,3)",
       "targetDerivation": "spacetime/gravity",
       "priority": "moderate",
@@ -21348,7 +21348,7 @@
       "id": "lorentz-invariance",
       "filePath": "site/src/content/geometric-algebra/lorentz-invariance.md",
       "title": "Lorentz Group via STA Rotors",
-      "status": "rigorous",
+      "status": "derived",
       "gaStructure": "Cl(1,3)",
       "targetDerivation": "spacetime/lorentz-invariance",
       "priority": "high",
@@ -21556,7 +21556,7 @@
       "id": "spin-statistics",
       "filePath": "site/src/content/geometric-algebra/spin-statistics.md",
       "title": "Spin-Statistics via Cl(3,0) Rotors",
-      "status": "rigorous",
+      "status": "derived",
       "gaStructure": "Cl(3,0)",
       "targetDerivation": "particles/spin-statistics",
       "priority": "high",
@@ -21763,7 +21763,7 @@
       "id": "weak-interaction",
       "filePath": "site/src/content/geometric-algebra/weak-interaction.md",
       "title": "Weak Interaction via H = Cl+(3,0)",
-      "status": "rigorous",
+      "status": "derived",
       "gaStructure": "Cl+(3,0)",
       "targetDerivation": "gauge/weak-interaction",
       "priority": "high",
@@ -21890,7 +21890,7 @@
   "gaStats": {
     "pageCount": 12,
     "byStatus": {
-      "rigorous": 9,
+      "derived": 9,
       "provisional": 3
     },
     "byPriority": {
@@ -29807,63 +29807,63 @@
   "allOpenGaps": [
     {
       "derivationId": "axioms/coherence-conservation",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Uniqueness of $C_0$",
       "description": "Is the total coherence C0 a free parameter or fixed by self-consistency? Without loss of generality, one may normalize C0 = 1 for the abstract theory; the physical value of C0 (if any) would be determ"
     },
     {
       "derivationId": "axioms/coherence-conservation",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 2,
       "title": "Category-theoretic formulation",
       "description": "A more natural formalization may use a functor C: mathbfSub(H) R 0 from the category of subsystems to non-negative reals, with conservation as a constraint on natural transformations."
     },
     {
       "derivationId": "axioms/coherence-operational",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Quantitative $C_0$",
       "description": "The total coherence C0 = S(rhototal) depends on the global state. Whether C0 is a free parameter or determined by self-consistency (the bootstrap fixed point) remains open — see [Bootstrap Mechanism]("
     },
     {
       "derivationId": "axioms/coherence-operational",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 2,
       "title": "Rényi generalization",
       "description": "Axiom 1 is also satisfied by Rényi entropies Salpha(rho) = (1-alpha)-1logTr(rhoalpha) for alpha in (0,1) (strong subadditivity holds in this range). Whether the framework selects von Neumann (alpha = "
     },
     {
       "derivationId": "axioms/coherence-operational",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 3,
       "title": "Algebraic vs. measure-theoretic coherence",
       "description": "The σ-algebra formulation (Axiom 1, conditions C1–C5) and the Hilbert space formulation (C = langlepsi|psirangle) operate at different levels. The former concerns subsystem structure; the latter conce"
     },
     {
       "derivationId": "axioms/loop-closure",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Decoherence",
       "description": "Environmental perturbations increase epsilon over time, eventually breaking approximate closure. A quantitative decoherence rate should follow from the perturbation spectrum acting on the coherence me"
     },
     {
       "derivationId": "axioms/loop-closure",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 2,
       "title": "Non-abelian loops",
       "description": "The formalization assumes U(1) (abelian) symmetry. Non-abelian internal symmetries (SU(2), SU(3)) require replacing the single period T with a representation-theoretic condition on the image of phi in"
     },
     {
       "derivationId": "axioms/loop-closure",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 3,
       "title": "Massless observers",
       "description": "Photons have no rest frame and no rest-frame loop. They are limiting cases where TO 0 and omegaO while SO remains finite. This limit needs formal treatment within the approximate closure framework. <!"
     },
     {
       "derivationId": "axioms/observer-definition",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Graded boundaries",
       "description": "The binary self/non-self partition is an idealization. A generalization to B: Aut(H)|Sigma [0,1] (degree of threat) is physically motivated but not developed."
@@ -30066,21 +30066,21 @@
     },
     {
       "derivationId": "dimensions/three-dimensions",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Time dimension",
       "description": "This derives dspace = 3. The uniqueness of dtime = 1 follows from the partial order structure of [Time as Phase Ordering](/derivations/thermodynamics/time) — a partial order defines a single ordering "
     },
     {
       "derivationId": "dimensions/three-dimensions",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 2,
       "title": "Compactification",
       "description": "Could extra dimensions exist but be compactified at scales below ellP? The framework's conditions apply to the *effective* dimensionality experienced by observers. If compact dimensions are below the "
     },
     {
       "derivationId": "dimensions/three-dimensions",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 3,
       "title": "The $3 + 1 = 4$ coincidence",
       "description": "The total spacetime dimension is 4 — the unique dimension with exotic smooth structures. The spatial dimension is 3 — the unique dimension where this exotic pathology is *absent*. Whether this is coin"
@@ -30136,35 +30136,35 @@
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Uniqueness proof",
       "description": "A complete proof that L is the *unique* Lagrangian consistent with all three axioms, not merely the simplest. This requires classifying all possible terms consistent with the derived symmetries."
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 2,
       "title": "Cosmological constant",
       "description": "The coherence potential allows a constant term V0 (the cosmological constant). Its value should be derivable from the coherence geometry but is not — this connects to the [Cosmological Constant](/deri"
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 3,
       "title": "Path integral measure",
       "description": "The functional integral measure Dphi is not rigorously defined. The coherence framework may provide a natural regularization via the discrete relational invariant network, but this is not yet formaliz"
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 4,
       "title": "Higher-order corrections",
       "description": "The quartic restriction (Theorem 2.2c) holds at tree level; loop corrections generate higher-dimensional operators suppressed by powers of the cutoff. The bootstrap hierarchy structure should organize"
     },
     {
       "derivationId": "foundation/coherence-lagrangian",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 5,
       "title": "Fermion kinetic term",
       "description": "The derivation focuses on scalar fields. Extending to spinor fields requires the Fisher metric on the spinor state space, which should connect to the Dirac Lagrangian psi(igammamu Dmu - m)psi."
@@ -30549,147 +30549,147 @@
     },
     {
       "derivationId": "interactions/bootstrap-division-algebras",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Category-theoretic formulation",
       "description": "A categorical framework (e.g., using the theory of composition algebras over monoidal categories) might make the Cayley-Dickson necessity even more transparent and provide an independent mathematical "
     },
     {
       "derivationId": "interactions/bootstrap-division-algebras",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 2,
       "title": "Level counting",
       "description": "The derivation identifies 4 levels (R, C, H, O) with 4 types of interaction (identity, pairwise, triple, quadruple). Making precise the correspondence between \"number of interacting observers\" and \"Ca"
     },
     {
       "derivationId": "interactions/bootstrap-division-algebras",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 3,
       "title": "Non-associativity and confinement",
       "description": "The connection between octonionic non-associativity and color confinement (Proposition 8.1) is structural but not quantitative. A rigorous confinement proof from the octonionic structure would be a ma"
     },
     {
       "derivationId": "interactions/bootstrap",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Growth rate",
       "description": "The rate of relational invariant generation per interaction determines the cosmological timeline of complexity. This connects to the entropy derivation and the thermodynamic arrow."
     },
     {
       "derivationId": "interactions/bootstrap",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 2,
       "title": "Stability filtering",
       "description": "Not every relational invariant generated will be stable. The persistent hierarchy consists of those relational invariants whose loops close stably. The fraction of stable relational invariants is an i"
     },
     {
       "derivationId": "interactions/bootstrap",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 3,
       "title": "Fixed-point existence",
       "description": "Proving Conjecture 7.1 requires establishing Scott continuity of R and identifying the appropriate category of coherence spaces. See §The Bootstrap Fixed-Point Conjecture above."
     },
     {
       "derivationId": "interactions/bootstrap",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 4,
       "title": "Fixed-point uniqueness",
       "description": "Proving Conjecture 7.2 requires a contraction argument or a rigidity result showing the constraints from Axiom 1 (conditions C1–C5) plus the three axioms admit only one self-consistent solution."
     },
     {
       "derivationId": "interactions/bootstrap",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 5,
       "title": "Geometry functor from the bootstrap map",
       "description": "Promoting R to a full functor on morphisms (§Remark after Proposition 5.1) would enable a **geometry functor** G: mathbfObs mathbfGeom mapping each observer's epistemic horizon to an effective geometr"
     },
     {
       "derivationId": "interactions/relational-invariants",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Entanglement mapping",
       "description": "The identification of I12 with quantum entanglement needs a precise mapping between C(I12) and entanglement entropy S = -Tr(rhoA ln rhoA)."
     },
     {
       "derivationId": "interactions/relational-invariants",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 2,
       "title": "Generation rate",
       "description": "How many relational invariants does a given Type III interaction produce? Likely one per independent component of I12, but this needs the dimensionality of V."
     },
     {
       "derivationId": "interactions/three-types",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Interaction rates",
       "description": "The classification is kinematic (what outcomes are possible). The dynamics (which type occurs, with what probability) requires the Born rule and the full quantum formalism."
     },
     {
       "derivationId": "interactions/three-types",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 2,
       "title": "Energy thresholds",
       "description": "At what energy does Type I give way to Type II? The threshold likely depends on the coherence content of the observers relative to their relational coherence. Similarly, what determines whether a comp"
     },
     {
       "derivationId": "interactions/three-types",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 3,
       "title": "Mixed interactions",
       "description": "The classification assigns a single type per interaction event. Whether superpositions of interaction types are physical (e.g., an interaction that is partly Type I and partly Type III) depends on the"
     },
     {
       "derivationId": "interactions/three-types",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 4,
       "title": "Quantitative decoherence rates",
       "description": "Proposition 7.5 establishes the coherence accounting for decoherence but does not give a rate. The timescale depends on the coupling strength between the pair and the surrounding observers, and on the"
     },
     {
       "derivationId": "interactions/three-types",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 5,
       "title": "Decay selection rules",
       "description": "Which composites are stable and which decay? The framework predicts that stability requires exact loop closure of the composite (epsilon = 0), but the conditions under which a composite's closure para"
     },
     {
       "derivationId": "minimal-observer/coherence-dual-pairs",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Matter-antimatter asymmetry",
       "description": "The pair is symmetric by construction. The observed matter-antimatter asymmetry (baryogenesis) must arise from dynamical processes that break the symmetry of pair creation — this is a question about w"
     },
     {
       "derivationId": "minimal-observer/coherence-dual-pairs",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 2,
       "title": "Pair separation mechanism",
       "description": "The process by which virtual pairs become real (separate and propagate) needs the interaction type classification and the spacetime geometry to be quantitative."
     },
     {
       "derivationId": "minimal-observer/multiplicity",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Minimum number (partially resolved)",
       "description": "Theorem 7.2 proves 3 (pairs are insufficient). Corollary 7.3 shows the bootstrap propagates this into a network. The exact minimum cardinality of a self-consistent observer network remains open — it d"
     },
     {
       "derivationId": "minimal-observer/multiplicity",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 2,
       "title": "Stability of the pair",
       "description": "The pair (O1, O2) must be dynamically stable — neither observer should dissolve the other immediately. This stability condition may constrain the relative coherence allocation C(O1)/C(O2)."
     },
     {
       "derivationId": "minimal-observer/multiplicity",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 3,
       "title": "Asymmetry",
       "description": "Can the pair be asymmetric (C(O1) C(O2))? If so, the asymmetry introduces a direction in coherence space — possibly connecting to charge conjugation asymmetry."
     },
     {
       "derivationId": "minimal-observer/structure",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Non-abelian minimal observers",
       "description": "The minimal observer has GO = U(1). The next-simplest observers would have GO = SU(2) (spin structure) or GO = U(1) U(1) (multiple charges). Classifying the hierarchy of observer complexity connects t"
@@ -30780,105 +30780,105 @@
     },
     {
       "derivationId": "particles/pauli-exclusion",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Fermi-Dirac statistics",
       "description": "The full Fermi-Dirac distribution langle nk rangle = 1/(e(epsilonk - mu)/kBT + 1) should be derivable from the exclusion principle (each state occupied by 0 or 1 fermion) plus the entropy framework (["
     },
     {
       "derivationId": "particles/pauli-exclusion",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 2,
       "title": "Stability of matter",
       "description": "Lieb and Thirring (1975) proved that the stability of ordinary matter (energy extensive in particle number) requires the Pauli exclusion principle. This should be connected to the framework's structur"
     },
     {
       "derivationId": "particles/spin-statistics",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Minimal spin",
       "description": "Why is the minimal fermion spin-1/2 and not spin-3/2? The answer is that s = 1/2 is the fundamental (lowest-dimensional) representation of SU(2), and the minimal observer has the simplest possible loo"
     },
     {
       "derivationId": "particles/spin-statistics",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 2,
       "title": "Higher-spin particles",
       "description": "Which spin values are realized at each level of the bootstrap hierarchy? Spin-1 gauge bosons and spin-2 gravitons should emerge at specific levels — this connects to the gauge structure derivation."
     },
     {
       "derivationId": "particles/supersymmetry-impossibility",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Experimental sharpening",
       "description": "The prediction is that no superpartner exists at *any* energy scale, not merely above the current LHC reach. Future colliders testing higher energies provide continued tests."
     },
     {
       "derivationId": "particles/supersymmetry-impossibility",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 2,
       "title": "Emergent approximate SUSY",
       "description": "Could an approximate algebraic relation between bosonic and fermionic sectors arise dynamically, even though exact SUSY is forbidden? Such an \"accidental SUSY\" would be broken by construction and migh"
     },
     {
       "derivationId": "particles/supersymmetry-impossibility",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 3,
       "title": "Supergravity and string theory",
       "description": "In approaches where supersymmetry is a mathematical framework (string theory, supergravity), does the topological no-go theorem constrain which mathematical structures have physical realizations? <!--"
     },
     {
       "derivationId": "particles/three-generations",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Specific mixing angles and CP phase",
       "description": "Deriving the CKM and PMNS matrix elements — including the CP-violating phase delta 69° — from the winding geometry would be a strong test of the framework. This requires the relative orientations of t"
     },
     {
       "derivationId": "particles/three-generations",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 2,
       "title": "Quark vs. lepton mixing",
       "description": "Why are quark mixing angles small but lepton mixing angles large? This should follow from the different winding geometries of quarks and leptons in the coherence geometry."
     },
     {
       "derivationId": "particles/three-generations",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 3,
       "title": "Sterile neutrinos",
       "description": "If right-handed neutrinos exist as a fourth \"hidden\" winding mode (not a fourth generation but a different chirality), their properties should be predictable."
     },
     {
       "derivationId": "quantum/born-rule",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Two-dimensional systems",
       "description": "Gleason's theorem fails for d = 2. The framework's direct derivation (Theorem 6.1) works for all d 2, providing coverage where Gleason does not. Whether qubits in nature are always embedded in higher-"
     },
     {
       "derivationId": "quantum/born-rule",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 2,
       "title": "Continuous observables",
       "description": "Extension to continuous spectra (dP = |psi(x)|2 dx) follows from the same arguments in the continuum limit, using the measure-theoretic version of coherence conservation."
     },
     {
       "derivationId": "quantum/entanglement",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Quantum error correction",
       "description": "Explore whether coherence conservation imposes fundamental limits on or structures for quantum error-correcting codes."
     },
     {
       "derivationId": "quantum/entanglement",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 2,
       "title": "Multipartite entanglement",
       "description": "Extend beyond the bipartite case to full multipartite classification (W-states, cluster states, SLOCC classes)."
     },
     {
       "derivationId": "quantum/entanglement",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 3,
       "title": "Entanglement dynamics",
       "description": "Derive entanglement growth under unitary evolution and the scrambling time from coherence dynamics."
@@ -31214,63 +31214,63 @@
     },
     {
       "derivationId": "thermodynamics-ext/distinguishability-conservation",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Quantum extension",
       "description": "Extend from the classical Čencov theorem (unique monotone metric) to the quantum Petz classification (family of monotone metrics). In the quantum case, the monotone metrics form a family parameterized"
     },
     {
       "derivationId": "thermodynamics-ext/distinguishability-conservation",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 2,
       "title": "Landauer's principle",
       "description": "The monotonicity direction (Proposition 3.2) implies that erasing information has a minimum thermodynamic cost. Quantify this: the coherence cost of reducing distinguishability by Delta D should be at"
     },
     {
       "derivationId": "thermodynamics-ext/distinguishability-conservation",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 3,
       "title": "No-broadcasting",
       "description": "Generalize no-cloning from pure states to mixed states. Broadcasting (approximately copying) a mixed state is possible classically but impossible quantumly for non-commuting states. The coherence fram"
     },
     {
       "derivationId": "thermodynamics-ext/first-law",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Chemical potential",
       "description": "For systems with variable particle number, the first law extends to dU = TdS - PdV + mu dN. The coherence analog of mu is the coherence cost of adding a minimal observer to A — this should be derivabl"
     },
     {
       "derivationId": "thermodynamics-ext/first-law",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 2,
       "title": "Non-equilibrium thermodynamics",
       "description": "The first law holds for arbitrary processes, not just quasi-static ones. The framework should extend to far-from-equilibrium coherence dynamics, connecting to fluctuation theorems."
     },
     {
       "derivationId": "thermodynamics-ext/first-law",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 3,
       "title": "Negative temperature",
       "description": "In standard thermodynamics, population-inverted systems have T < 0. In the framework, this corresponds to systems where adding coherence *decreases* entropy — which requires a bounded state space wher"
     },
     {
       "derivationId": "thermodynamics-ext/fisher-metric",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Curvature–spacetime bridge",
       "description": "Connect the Fisher curvature on Sigma to the spacetime curvature on M. The [Gravity](/derivations/spacetime/gravity) derivation provides the latter from coherence density gradients; the bridge would n"
     },
     {
       "derivationId": "thermodynamics-ext/fisher-metric",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 2,
       "title": "Quantum Fisher metric",
       "description": "Extend from the classical Fisher metric to the quantum Fisher information (Bures metric / symmetric logarithmic derivative). This is needed for full quantum state spaces. The quantum Čencov theorem [P"
     },
     {
       "derivationId": "thermodynamics-ext/fisher-metric",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 3,
       "title": "Infinite-dimensional extension",
       "description": "The derivation assumes finite-dimensional Sigma. For field theory, the state space is infinite-dimensional and requires functional-analytic care [Pistone & Sempi, 1995]."
@@ -31326,84 +31326,84 @@
     },
     {
       "derivationId": "thermodynamics-ext/renormalization",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Bootstrap–RG correspondence (formal proof)",
       "description": "Prove that bootstrap stability (invariant couplings under the addition of relational observers) implies betai = 0 in the coherence flow. This would make Theorem 4.1 rigorous."
     },
     {
       "derivationId": "thermodynamics-ext/renormalization",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 2,
       "title": "$\\beta$-functions from the coherence spectral density",
       "description": "The one-loop beta-function coefficients for U(1), SU(2), and SU(3) are established by standard methods in the framework's downstream derivations ([Color Force](/derivations/gauge/color-force) Proposit"
     },
     {
       "derivationId": "thermodynamics-ext/renormalization",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 3,
       "title": "Non-perturbative effects",
       "description": "The coherence flow equation (Theorem 3.2) is exact, but extracting non-perturbative physics (confinement, instantons, solitons) requires solving the full functional equation. Connect to the [Mass Hier"
     },
     {
       "derivationId": "thermodynamics-ext/renormalization",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 4,
       "title": "Coherence spectral density from first principles",
       "description": "Derive rhoC(omega) from the axioms and the particle content, rather than postulating its existence (S1). This would make the scale decomposition a theorem rather than a postulate."
     },
     {
       "derivationId": "thermodynamics/action-planck",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Constructing $\\mathcal{L}$ from first principles",
       "description": "The coherence Lagrangian should be uniquely derivable from C and the observer structure. The Fisher information metric is a natural candidate. This is the key missing link between the abstract framewo"
     },
     {
       "derivationId": "thermodynamics/action-planck",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 2,
       "title": "$\\hbar$, $c$, and $G$",
       "description": "The relationship between hbar (coherence cost quantum), c (phase propagation speed from [Speed of Light](/derivations/spacetime/speed-of-light)), and G (gravitational coupling) determines whether the "
     },
     {
       "derivationId": "thermodynamics/entropy",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Fluctuation theorems",
       "description": "The Jarzynski equality langle e-beta Wrangle = e-beta Delta F and Crooks fluctuation theorem describe the probability of entropy-decreasing fluctuations. These should arise as finite-size corrections "
     },
     {
       "derivationId": "thermodynamics/entropy",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 2,
       "title": "Negative entropy flow",
       "description": "Living systems locally decrease their entropy by expanding their coherence domains through structured interactions. The framework predicts this is possible because entropy is observer-relative — what "
     },
     {
       "derivationId": "thermodynamics/entropy",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 3,
       "title": "Quantum entropy",
       "description": "The von Neumann entropy S = -tr(rho ln rho) should be derivable as the inaccessible coherence when A's access is limited to a subsystem of an entangled state."
     },
     {
       "derivationId": "thermodynamics/time",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 1,
       "title": "Metric from order",
       "description": "Recovering the spacetime metric from the partial order requires a volume measure (event counting). This is the central open problem of causal set theory."
     },
     {
       "derivationId": "thermodynamics/time",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 2,
       "title": "Quantum time",
       "description": "The derivation gives a single partial order. Quantum mechanics suggests superpositions of causal orders may be physical (indefinite causal structure). The framework should address this."
     },
     {
       "derivationId": "thermodynamics/time",
-      "derivationStatus": "rigorous",
+      "derivationStatus": "derived",
       "number": 3,
       "title": "Cosmological arrow",
       "description": "The structural arrow (increasing d(v)) is local. The global cosmological arrow (expansion) may require boundary conditions on the fixed-point solution. <!-- References --> [Bombelli et al., 1987]: /re"

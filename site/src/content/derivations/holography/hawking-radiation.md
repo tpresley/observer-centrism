@@ -24,7 +24,7 @@ Classically, nothing escapes a black hole. But quantum effects change the pictur
 **An honest caveat.** The quantitative results (temperature, evaporation rate) match the standard semiclassical calculation. The trans-Planckian problem -- modes blue-shifted to super-Planckian energies near the horizon -- is structurally resolved by the framework's Planck-scale cutoff (no observer loops can close below the Planck length), and the loop-breaking derivation here never requires tracing modes into the trans-Planckian regime. The remaining open elements are the greybody factors and the endpoint of evaporation.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on area-scaling S1 (Planck-scale resolution), speed-of-light S1 (pseudo-Riemannian structure) (see [Area Scaling](/derivations/holography/area-scaling), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on area-scaling S1 (Planck-scale resolution), speed-of-light S1 (pseudo-Riemannian structure) (see [Area Scaling](/derivations/holography/area-scaling), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to derived.
 
 ## Statement
 

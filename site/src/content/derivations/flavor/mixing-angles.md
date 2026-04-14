@@ -29,7 +29,7 @@ In the Standard Model, the CKM matrix (quarks) and PMNS matrix (leptons) describ
 **An honest caveat.** The golden ratio prediction for the solar angle is about 2 degrees below the experimental value, and the specific choice of icosahedral symmetry is a structural postulate (S1) not yet derived from the axioms alone.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on mass-hierarchy S1 (tunneling-crystallization correspondence), speed-of-light S1 (pseudo-Riemannian structure) (see [Mass Hierarchy](/derivations/particles/mass-hierarchy), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on mass-hierarchy S1 (tunneling-crystallization correspondence), speed-of-light S1 (pseudo-Riemannian structure) (see [Mass Hierarchy](/derivations/particles/mass-hierarchy), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to derived.
 
 ## Statement
 
@@ -229,7 +229,7 @@ When $|m_i - m_j| \gg |V_{ij}|$ (strong hierarchy), the mixing angle is small �
 
 ## Addressed Gaps
 
-1. **Neutrino masses** — *Resolved by [Neutrino Masses](/derivations/particles/neutrino-masses) (rigorous)*: The neutrino mass mechanism is now fully derived, establishing Majorana nature, the seesaw mechanism, and normal mass ordering, completing the PMNS matrix structure.
+1. **Neutrino masses** — *Resolved by [Neutrino Masses](/derivations/particles/neutrino-masses) (derived)*: The neutrino mass mechanism is now fully derived, establishing Majorana nature, the seesaw mechanism, and normal mass ordering, completing the PMNS matrix structure.
 
 <!-- References -->
 [Klein, 1884]: /references#klein-1884

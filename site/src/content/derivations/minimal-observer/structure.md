@@ -1,6 +1,6 @@
 ---
 title: "Minimal Observer Structure"
-status: "rigorous"
+status: "derived"
 dependsOn: ["axioms/coherence-conservation", "axioms/observer-definition", "axioms/loop-closure"]
 enablesDerivation: ["minimal-observer/multiplicity", "thermodynamics/time", "dimensions/three-dimensions", "thermodynamics-ext/biological-non-ergodicity", "thermodynamics-ext/memory-persistence-tradeoff"]
 tags: ["foundation"]
@@ -193,5 +193,5 @@ No additional assumptions are needed.
 
 ## Addressed Gaps
 
-1. **Anti-observers** — *Resolved by [Coherence-Dual Pairs](/derivations/minimal-observer/coherence-dual-pairs) (rigorous)*: The conjugate $U(1)$ representation with charge $-Q_\mathcal{O}$ is fully developed as the particle-antiparticle structure, deriving coherence-dual pairs from the dual representation of the minimal observer's $U(1)$ symmetry.
+1. **Anti-observers** — *Resolved by [Coherence-Dual Pairs](/derivations/minimal-observer/coherence-dual-pairs) (derived)*: The conjugate $U(1)$ representation with charge $-Q_\mathcal{O}$ is fully developed as the particle-antiparticle structure, deriving coherence-dual pairs from the dual representation of the minimal observer's $U(1)$ symmetry.
 2. **Coherence cost quantization** — *Resolved by [Loop Closure](/derivations/axioms/loop-closure), Corollary 3.2*: The universal frequency grid forces all observer frequencies onto integer multiples of a fundamental $\omega_0$, giving quantized action $S_\mathcal{O} = n\hbar$ and discrete energy $E_n = n\hbar\omega_0$. The discrete spectrum does not depend on the topology of the coherence space — it is forced by the requirement that composite observers satisfy loop closure.

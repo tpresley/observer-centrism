@@ -244,8 +244,8 @@ For example, one might form the dimensionless products $\kappa_F \cdot \hbar = 2
 
 | Argument | Determines | Via | Key input | Status |
 |---|---|---|---|---|
-| Jacobson thermodynamic | $G = c^4/(4\hbar\eta)$ | Unruh + Clausius + Raychaudhuri | Entropy density $\eta$ | Rigorous |
-| Minimal observer self-consistency | $\ell_{\min}^2 \geq 2G\hbar/c^3$ | Compton $\geq$ Schwarzschild | Self-trapping bound | Rigorous |
+| Jacobson thermodynamic | $G = c^4/(4\hbar\eta)$ | Unruh + Clausius + Raychaudhuri | Entropy density $\eta$ | Derived |
+| Minimal observer self-consistency | $\ell_{\min}^2 \geq 2G\hbar/c^3$ | Compton $\geq$ Schwarzschild | Self-trapping bound | Derived |
 | Curvature bridge | Dimensionless matching | Action duality at 2nd order | Observer embedding | Open (Conjecture 6.3) |
 
 *With $\eta = 1/(4\ell_{\min}^2)$ from boundary counting ([Holographic Entropy Bound](/derivations/holography/area-scaling), Corollary 2.2), both rigorous arguments yield the same structural relation. The convergence confirms the internal consistency of the framework's gravitational structure.*
@@ -524,7 +524,7 @@ Unique ergodicity is strictly weaker; the gap is filled by the locality conditio
 - Proposition 7.1: Convergence of two rigorous arguments (comparison of results)
 - Proposition 8.1: Implications for area-scaling S1 (conditional chain)
 
-**Negative results (rigorous):**
+**Negative results (derived):**
 - Proposition 9.1: Clifford normalization is conventional (rescaling argument)
 - Proposition 9.2: Fisher $\hbar$ absorbed by $mc$ prefactor (dimensional tracking through action duality)
 - Corollary 9.3: Spinor/tetrad route does not determine $G$ (consequence of Propositions 9.1–9.2 + Proposition 5.1)

@@ -1,6 +1,6 @@
 ---
 title: "Maxwell Equations as ∇F = J"
-status: "rigorous"
+status: "derived"
 gaStructure: "Cl(1,3)"
 targetDerivation: "gauge/electromagnetism"
 dependsOn: ["lorentz-invariance"]
@@ -31,7 +31,7 @@ This is not shorthand -- it is a single equation whose vector part gives the two
 
 ## Connection to Framework Derivation
 
-**Target**: [Electromagnetism](/derivations/gauge/electromagnetism) (status: rigorous)
+**Target**: [Electromagnetism](/derivations/gauge/electromagnetism) (status: derived)
 
 The electromagnetism derivation establishes that the $U(1)$ gauge interaction arising from complex-number phase structure produces the full electromagnetic field, with Maxwell's equations emerging from gauge field dynamics and a uniqueness argument. The derivation proceeds: observer phases → local gauge redundancy → connection $A_\mu$ → curvature $F_{\mu\nu}$ → Bianchi identity → Maxwell equations → charge quantization → Lorentz force.
 

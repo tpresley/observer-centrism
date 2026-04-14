@@ -40,7 +40,7 @@ Every derivation file begins with YAML frontmatter:
 ```yaml
 ---
 title: "Descriptive Title"
-status: "draft"                     # stub | draft | provisional | rigorous | non-viable
+status: "draft"                     # stub | draft | provisional | derived | non-viable
 dependsOn:                          # Full paths to upstream derivations
   - "axioms/loop-closure"
   - "thermodynamics/action-planck"
@@ -61,7 +61,7 @@ leanProofs: []                      # Lean 4 verification references (if any)
 | `stub` | Placeholder with direction but little formal content |
 | `draft` | Argument sketched but significant gaps remain |
 | `provisional` | Main structure sound but some steps rely on conjectures |
-| `rigorous` | All steps formally justified, no unresolved gaps |
+| `derived` | All steps formally justified, no unresolved gaps |
 | `non-viable` | Approach assessed as fundamentally blocked |
 
 New contributions should typically start as `draft` or `provisional`. Status upgrades happen through review.
@@ -116,7 +116,7 @@ The main proof body, structured as numbered steps:
 
 An honest evaluation of the derivation's logical strength. Categorize each major result:
 
-- **Fully rigorous** — complete proofs from stated assumptions
+- **Fully derived** — complete proofs from stated assumptions
 - **Rigorous given axioms** — relies on the framework's axioms being correct
 - **Semi-formal** — argument is sound but some steps appeal to physical intuition
 - **Structural** — analogies or motivated arguments rather than proofs

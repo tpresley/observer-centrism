@@ -1,6 +1,6 @@
 ---
 title: "Coherence First Law"
-status: "rigorous"
+status: "derived"
 dependsOn: ["thermodynamics/entropy", "thermodynamics/action-planck"]
 enablesDerivation: []
 tags: ["thermo-ext"]

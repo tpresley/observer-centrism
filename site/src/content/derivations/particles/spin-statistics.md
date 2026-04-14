@@ -1,6 +1,6 @@
 ---
 title: "Spin and Statistics from Winding Classes"
-status: "rigorous"
+status: "derived"
 dependsOn: ["dimensions/three-dimensions"]
 enablesDerivation: ["particles/pauli-exclusion", "particles/three-generations", "particles/supersymmetry-impossibility", "particles/cpt-theorem"]
 tags: ["particles"]
@@ -231,7 +231,7 @@ Higher-dimensional representations of $\mathbb{Z}_2$ decompose into direct sums 
 
 ## Addressed Gaps
 
-1. **Supersymmetry is impossible** — *Resolved by [Supersymmetry Impossibility](/derivations/particles/supersymmetry-impossibility) (rigorous)*: The topological no-go theorem is fully developed — the $\mathbb{Z}_2$ discreteness of winding classes forbids any continuous boson-fermion interpolation, ruling out supersymmetry within the framework.
+1. **Supersymmetry is impossible** — *Resolved by [Supersymmetry Impossibility](/derivations/particles/supersymmetry-impossibility) (derived)*: The topological no-go theorem is fully developed — the $\mathbb{Z}_2$ discreteness of winding classes forbids any continuous boson-fermion interpolation, ruling out supersymmetry within the framework.
 
 <!-- References -->
 [Pauli, 1940]: /references#pauli-1940

@@ -32,7 +32,7 @@ for (const p of predictionEntries) {
 
 function statusColor(status: string): string {
   const colors: Record<string, string> = {
-    rigorous: 'var(--color-rigorous)',
+    derived: 'var(--color-derived)',
     provisional: 'var(--color-provisional)',
     draft: 'var(--color-draft)',
     stub: 'var(--color-stub)',
@@ -43,7 +43,7 @@ function statusColor(status: string): string {
 
 function statusIcon(status: string): string {
   const icons: Record<string, string> = {
-    rigorous: '\u25CF',
+    derived: '\u25CF',
     provisional: '\u25D0',
     draft: '\u25CB',
     stub: '\u00B7',

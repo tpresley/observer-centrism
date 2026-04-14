@@ -30,7 +30,7 @@ Lovelock's uniqueness theorem (1971) then proves that in four spacetime dimensio
 **An honest caveat.** The derivation formerly relied on a structural postulate (second-order locality) that has now been promoted to a theorem via Ostrogradsky's instability theorem ([Coherence Lagrangian](/derivations/foundation/coherence-lagrangian), Theorem 6.0): higher-derivative gravitational Lagrangians violate loop closure stability (Axiom 3). No structural postulates remain in this derivation. The values of Newton's constant and the cosmological constant remain empirical.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to derived.
 
 ## Statement
 

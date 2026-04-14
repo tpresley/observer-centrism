@@ -1,6 +1,6 @@
 ---
 title: "Born Rule from Coherence Conservation"
-status: "rigorous"
+status: "derived"
 dependsOn: ["interactions/relational-invariants", "thermodynamics/time", "thermodynamics/action-planck"]
 enablesDerivation: ["axioms/coherence-operational", "quantum/preferred-basis", "quantum/entanglement"]
 tags: ["quantum"]

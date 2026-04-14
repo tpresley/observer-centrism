@@ -14,7 +14,7 @@ const derivations = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
-    status: z.enum(['stub', 'draft', 'provisional', 'rigorous', 'non-viable']),
+    status: z.enum(['stub', 'draft', 'provisional', 'derived', 'non-viable']),
     dependsOn: z.array(z.string()).default([]),
     enablesDerivation: z.array(z.string()).default([]),
     tags: z.array(z.string()).default([]),
@@ -69,7 +69,7 @@ const geometricAlgebra = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
-    status: z.enum(['stub', 'draft', 'provisional', 'rigorous', 'non-viable']),
+    status: z.enum(['stub', 'draft', 'provisional', 'derived', 'non-viable']),
     gaStructure: z.string(),
     targetDerivation: z.string().optional(),
     dependsOn: z.array(z.string()).default([]),

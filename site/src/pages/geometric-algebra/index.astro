@@ -41,7 +41,7 @@ const modCount = topics.filter(t => t.data.priority === 'moderate').length
 
 function statusIcon(status: string) {
   switch(status) {
-    case 'rigorous': return '\u25CF'
+    case 'derived': return '\u25CF'
     case 'provisional': return '\u25D0'
     case 'draft': return '\u25CB'
     case 'stub': return '\u00B7'
@@ -52,7 +52,7 @@ function statusIcon(status: string) {
 
 function statusColor(status: string) {
   switch(status) {
-    case 'rigorous': return 'var(--color-rigorous)'
+    case 'derived': return 'var(--color-derived)'
     case 'provisional': return 'var(--color-provisional)'
     case 'draft': return 'var(--color-draft)'
     case 'stub': return 'var(--color-stub)'

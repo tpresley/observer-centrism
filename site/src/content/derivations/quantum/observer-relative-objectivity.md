@@ -30,7 +30,7 @@ Standard physics assumes a clear answer: there is one objective reality, and obs
 **An honest caveat.** The comparison with other interpretive frameworks (Step 7) is structural and philosophical rather than mathematical — it positions the framework but does not make formal claims. The core trichotomy (Theorem 6.1) is rigorous given the axioms. A category-theoretic formalization as a functor on Obs would strengthen the result but is not required for the classification itself.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on preferred-basis S1 (interaction-invariant correspondence) (see [Preferred Basis](/derivations/quantum/preferred-basis)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on preferred-basis S1 (interaction-invariant correspondence) (see [Preferred Basis](/derivations/quantum/preferred-basis)). If those postulates are promoted to theorems, this derivation would be upgraded to derived.
 
 ## Statement
 

@@ -1,6 +1,6 @@
 ---
 title: "Coherence Lagrangian"
-status: "rigorous"
+status: "derived"
 dependsOn: ["thermodynamics/action-planck", "thermodynamics-ext/fisher-metric"]
 enablesDerivation: ["particles/cpt-theorem", "spacetime/gravitational-constant"]
 tags: ["foundation", "lagrangian"]

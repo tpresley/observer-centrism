@@ -30,7 +30,7 @@ Electromagnetism arises from a single phase channel -- one direction in which an
 **An honest caveat.** This derivation establishes the gauge structure but not the symmetry breaking that gives W and Z bosons their masses (addressed downstream in [Electroweak Breaking](/derivations/gauge/electroweak-breaking)) or the value of the Weinberg angle (addressed in [Weinberg Angle](/derivations/gauge/weinberg-angle) via the $\mathbb{C} \subset \mathbb{H}$ algebraic embedding). The weak coupling constant $g_W$ remains a free parameter at this stage, with the same status as $e$ in electromagnetism.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to derived.
 
 ## Statement
 
@@ -336,7 +336,7 @@ where $\psi_L = \frac{1}{2}(1 - \gamma_5)\psi$ is the left-handed projection.
 - CKM and PMNS mixing — deferred to [Flavor Mixing](/derivations/flavor/mixing-angles)
 - Chirality *selection* ($L$ over $R$) — addressed in [Chirality Selection](/derivations/gauge/chirality-selection)
 
-**Assessment:** Rigorous. The derivation follows the same template as [Electromagnetism](/derivations/gauge/electromagnetism) (now rigorous): physical motivation (3D rotations are non-abelian) → algebraic necessity (Hurwitz's theorem selects $\mathbb{H}$) → gauge structure (S1 is the uniquely forced implementation, Proposition 3.2b) → field equations (Yang-Mills by uniqueness given S2). The structural postulates S1 (normed division algebra) and S2 (minimal gauge dynamics) are explicit, well-motivated, and follow the same pattern as their electromagnetism counterparts. Most deferred items have since been addressed by downstream derivations (electroweak breaking, Weinberg angle, chirality selection, anomaly cancellation). The remaining free parameter ($g_W$) has the same status as $e$ in electromagnetism and $G$ in gravity.
+**Assessment:** Rigorous. The derivation follows the same template as [Electromagnetism](/derivations/gauge/electromagnetism) (now derived): physical motivation (3D rotations are non-abelian) → algebraic necessity (Hurwitz's theorem selects $\mathbb{H}$) → gauge structure (S1 is the uniquely forced implementation, Proposition 3.2b) → field equations (Yang-Mills by uniqueness given S2). The structural postulates S1 (normed division algebra) and S2 (minimal gauge dynamics) are explicit, well-motivated, and follow the same pattern as their electromagnetism counterparts. Most deferred items have since been addressed by downstream derivations (electroweak breaking, Weinberg angle, chirality selection, anomaly cancellation). The remaining free parameter ($g_W$) has the same status as $e$ in electromagnetism and $G$ in gravity.
 
 ## Open Gaps
 

@@ -1,6 +1,6 @@
 ---
 title: "Time as Phase Ordering"
-status: "rigorous"
+status: "derived"
 dependsOn: ["minimal-observer/structure", "interactions/three-types"]
 enablesDerivation: ["thermodynamics/entropy", "thermodynamics/action-planck", "quantum/born-rule", "thermodynamics-ext/non-ergodicity", "cosmology/cosmological-arrow"]
 tags: ["dynamics"]

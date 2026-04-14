@@ -30,7 +30,7 @@ The electroweak symmetry group, SU(2) x U(1), treats all its gauge bosons as mas
 **An honest caveat.** The precise value of the electroweak scale (246 GeV), the Higgs self-coupling, and the Weinberg angle are not predicted from first principles -- they require input from experiment or from the full renormalization group flow of the coherence Lagrangian, which is not yet completed.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to derived.
 
 ## Statement
 
@@ -190,7 +190,7 @@ replaces the forbidden mass term. When $\phi \to \langle\phi\rangle = (0, v/\sqr
 - Corollary 3.2: $m_W/m_Z = \cos\theta_W$ (kinematic relation, experimentally confirmed)
 - Theorem 1.3: Crystallization mechanism — the Coleman-Weinberg one-loop effective potential is now computed with explicit species sums and SM coupling values ($y_t \approx 1$, $g \approx 0.65$, $\lambda \approx 0.13$), giving $\mu^2 > 0$ with coefficient $4.66 > 0$, robustly positive unless $y_t < 0.40$. The sign determination is a numerical evaluation, not a qualitative argument.
 - Theorem 5.1: Hierarchy protection — formalized as dimensional transmutation (proven for QCD) applied to the bootstrap hierarchy. Step 5a is the standard RG equation $\Lambda = \mu_0 e^{-2\pi/(b_0\alpha)}$; Step 5b identifies the bootstrap level as the natural UV cutoff.
-- Proposition 6.1: Yukawa couplings — the mass formula $m_f = y_f v/\sqrt{2}$ is a proven gauge theory result; the Yukawa hierarchy from winding-axis geometry references [Three Generations](/derivations/particles/three-generations) Theorem 4.2 (rigorous).
+- Proposition 6.1: Yukawa couplings — the mass formula $m_f = y_f v/\sqrt{2}$ is a proven gauge theory result; the Yukawa hierarchy from winding-axis geometry references [Three Generations](/derivations/particles/three-generations) Theorem 4.2 (derived).
 
 **Honest limitation:** The derivation correctly identifies electroweak symmetry breaking as spontaneous symmetry breaking via an effective potential with $\mu^2 > 0$, and recovers all standard Higgs mechanism results (gauge boson masses, Higgs mass, Yukawa couplings). The deeper question — *why* $v \approx 246$ GeV — requires the full renormalization group flow of the coherence Lagrangian. The mechanism is established; the precise scale is input from experiment.
 
@@ -205,7 +205,7 @@ replaces the forbidden mass term. When $\phi \to \langle\phi\rangle = (0, v/\sqr
 
 ## Addressed Gaps
 
-1. **Weinberg angle** — *Resolved by [Weinberg Angle](/derivations/gauge/weinberg-angle) derivation (rigorous)*: The value $\sin^2\theta_W = 0.231$ is derived from the $\mathbb{C} \subset \mathbb{H}$ algebraic boundary condition, eliminating the need for experimental input of the weak mixing angle.
+1. **Weinberg angle** — *Resolved by [Weinberg Angle](/derivations/gauge/weinberg-angle) derivation (derived)*: The value $\sin^2\theta_W = 0.231$ is derived from the $\mathbb{C} \subset \mathbb{H}$ algebraic boundary condition, eliminating the need for experimental input of the weak mixing angle.
 
 <!-- References -->
 [Coleman & Weinberg, 1973]: /references#coleman-weinberg-1973

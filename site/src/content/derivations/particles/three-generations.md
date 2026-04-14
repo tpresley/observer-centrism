@@ -1,6 +1,6 @@
 ---
 title: "Three Fermion Generations"
-status: "rigorous"
+status: "derived"
 dependsOn: ["dimensions/three-dimensions", "particles/spin-statistics", "particles/mass-hierarchy", "minimal-observer/multiplicity", "axioms/coherence-conservation"]
 enablesDerivation: ["particles/neutrino-masses"]
 tags: ["particles"]

@@ -29,7 +29,7 @@ Every other force in nature treats left-handed and right-handed particles identi
 **An honest caveat.** The derivation predicts that one chirality is selected but not which one (left versus right). The choice of "left" is spontaneous, like a coin flip at the birth of the universe. A CPT-conjugate universe would have right-handed weak interactions.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to derived.
 
 ## Statement
 
@@ -215,7 +215,7 @@ In the language of this derivation: the orientation constraint (Theorem 2.1) app
 
 **Fully rigorous (no new structural postulates):**
 - Proposition 1.2: Commutativity and orientation (algebraic fact about division algebras)
-- Theorem 2.1: Orientation-consistency theorem. The core argument is clean: (R1) requires the diagonal $SU(2)$ subgroup, which requires a shared orientation. The formalization uses the [Weak Interaction](/derivations/gauge/weak-interaction) (now rigorous) quaternionic structure and [Relational Invariants](/derivations/interactions/relational-invariants) (rigorous) condition (R1). The identification of $SU(2)^+$ and $SU(2)^-$ with opposite orientations follows from standard Lie algebra theory.
+- Theorem 2.1: Orientation-consistency theorem. The core argument is clean: (R1) requires the diagonal $SU(2)$ subgroup, which requires a shared orientation. The formalization uses the [Weak Interaction](/derivations/gauge/weak-interaction) (now derived) quaternionic structure and [Relational Invariants](/derivations/interactions/relational-invariants) (derived) condition (R1). The identification of $SU(2)^+$ and $SU(2)^-$ with opposite orientations follows from standard Lie algebra theory.
 - Theorem 3.1: Global orientation lock. The inductive argument is rigorous: base case uses relational invariant permanence ([Relational Invariants](/derivations/interactions/relational-invariants), Proposition 6.1, rigorous), inductive step uses the fixed $SU(2)$ copy from Theorem 2.1, and connectedness uses [Multiplicity](/derivations/minimal-observer/multiplicity) (Theorem 2.1, rigorous).
 - Corollary 3.2: Spontaneous chirality selection (symmetry argument — both orientations satisfy all axioms)
 - Proposition 4.1: Orientation maps to chirality via the Lorentz algebra decomposition $\mathfrak{su}(2)_L \oplus \mathfrak{su}(2)_R$ (standard Lie algebra, established in [Weak Interaction](/derivations/gauge/weak-interaction) Proposition 7.1, now rigorous)

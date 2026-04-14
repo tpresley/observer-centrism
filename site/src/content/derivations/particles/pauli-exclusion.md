@@ -1,6 +1,6 @@
 ---
 title: "Pauli Exclusion Principle"
-status: "rigorous"
+status: "derived"
 dependsOn: ["particles/spin-statistics"]
 enablesDerivation: []
 tags: ["particles"]
@@ -172,7 +172,7 @@ This pressure diverges as $V \to 0$ ($n \to \infty$), preventing complete collap
 **Upstream dependency:**
 - The identification of abstract relational invariants $I_{12}$ with quantum-mechanical wavefunctions uses the amplitude–coherence identification (S1 of [Born Rule](/derivations/quantum/born-rule)). Given this identification, the exclusion principle follows with mathematical certainty.
 
-**Assessment:** The Pauli exclusion principle is rigorous. The core theorem (Theorem 4.1) is a pure algebraic identity: antisymmetry + same state → zero. The antisymmetry itself is rigorous (from the spin-statistics connection, now upgraded to rigorous). The physical consequences — shell structure, degeneracy pressure, stability of matter — are standard results following from the algebraic structure.
+**Assessment:** The Pauli exclusion principle is rigorous. The core theorem (Theorem 4.1) is a pure algebraic identity: antisymmetry + same state → zero. The antisymmetry itself is rigorous (from the spin-statistics connection, now upgraded to derived). The physical consequences — shell structure, degeneracy pressure, stability of matter — are standard results following from the algebraic structure.
 
 ## Open Gaps
 

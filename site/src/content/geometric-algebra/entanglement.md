@@ -1,6 +1,6 @@
 ---
 title: "Entanglement via Rotor Pairs"
-status: "rigorous"
+status: "derived"
 gaStructure: "Cl(3,0) ⊗ Cl(3,0)"
 targetDerivation: "quantum/entanglement"
 dependsOn: ["spin-statistics"]
@@ -12,7 +12,7 @@ lastUpdated: 2026-03-13
 
 ## Connection to Framework Derivation
 
-**Target**: [Entanglement from Relational Invariants](/derivations/quantum/entanglement) (status: rigorous)
+**Target**: [Entanglement from Relational Invariants](/derivations/quantum/entanglement) (status: derived)
 
 The target derivation proves that relational invariants between observers map to entangled quantum states in the tensor product Hilbert space. The coherence measure equals the von Neumann entanglement entropy (via Shannon–Khinchin uniqueness), the no-cloning theorem follows from coherence conservation, and entanglement monogamy follows from coherence subadditivity. All numbered results are rigorous, with Lean verification for no-cloning.
 

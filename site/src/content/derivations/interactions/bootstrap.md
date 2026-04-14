@@ -1,6 +1,6 @@
 ---
 title: "The Bootstrap Mechanism"
-status: "rigorous"
+status: "derived"
 dependsOn: ["interactions/relational-invariants"]
 enablesDerivation: ["spacetime/einstein-equations", "particles/mass-hierarchy", "interactions/bootstrap-division-algebras", "thermodynamics-ext/non-ergodicity", "thermodynamics-ext/biological-non-ergodicity", "cosmology/cosmological-arrow", "thermodynamics-ext/memory-persistence-tradeoff"]
 tags: ["dynamics"]

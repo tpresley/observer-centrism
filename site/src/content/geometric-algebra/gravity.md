@@ -1,6 +1,6 @@
 ---
 title: "Gravity in STA: Gauge Theory Gravity"
-status: "rigorous"
+status: "derived"
 gaStructure: "Cl(1,3)"
 targetDerivation: "spacetime/gravity"
 dependsOn: ["lorentz-invariance"]
@@ -12,7 +12,7 @@ lastUpdated: 2026-03-13
 
 ## Connection to Framework Derivation
 
-**Target**: [Gravity as Coherence Geometry Curvature](/derivations/spacetime/gravity) (status: rigorous)
+**Target**: [Gravity as Coherence Geometry Curvature](/derivations/spacetime/gravity) (status: derived)
 
 The target derivation establishes that massive observers curve the coherence geometry, with geodesics as minimum coherence cost paths and the equivalence principle as structural. The proof has three layers: metric-density coupling (Theorem 0.1, from action duality + coherence subadditivity), inverse-square density falloff, and the Schwarzschild solution as the unique spherically symmetric vacuum geometry.
 

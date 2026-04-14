@@ -1,6 +1,6 @@
 ---
 title: "CPT as a Single Cl(1,3) Object"
-status: "rigorous"
+status: "derived"
 gaStructure: "Cl(1,3)"
 targetDerivation: "particles/cpt-theorem"
 dependsOn: ["lorentz-invariance"]
@@ -27,7 +27,7 @@ This page re-examines the framework's [CPT theorem derivation](/derivations/part
 
 ## Connection to Framework Derivation
 
-**Target**: [CPT Theorem](/derivations/particles/cpt-theorem) (status: rigorous)
+**Target**: [CPT Theorem](/derivations/particles/cpt-theorem) (status: derived)
 
 The CPT theorem derivation establishes that the combined operation of charge conjugation (C), parity inversion (P), and time reversal (T) is an exact symmetry of any observer satisfying the three axioms. The proof constructs each discrete symmetry from the framework's structure — $C$ from coherence-dual pairs, $P$ from spatial reflection, $T$ from loop closure phase reversal — then invokes the Jost-Lüders-Pauli theorem to conclude CPT invariance from locality, Lorentz invariance, and the spin-statistics connection.
 

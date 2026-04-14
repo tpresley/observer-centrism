@@ -1,6 +1,6 @@
 ---
 title: "Entanglement from Relational Invariants"
-status: "rigorous"
+status: "derived"
 dependsOn: ["interactions/relational-invariants", "quantum/born-rule"]
 enablesDerivation: ["holography/er-epr", "quantum/teleportation"]
 tags: ["quantum", "information"]
@@ -216,8 +216,8 @@ This connection is developed in the [ER=EPR](/derivations/holography/er-epr) der
 
 ## Addressed Gaps
 
-1. **Quantum teleportation** — *Resolved by [Teleportation](/derivations/quantum/teleportation) (rigorous)*: Teleportation is derived as coherence channel transfer, where the relational invariant provides the channel and classical communication unlocks it.
-2. **Holographic connection** — *Resolved by [ER=EPR](/derivations/holography/er-epr) (rigorous)*: The ER=EPR connection is made rigorous via area scaling and causal set statistics, establishing that entanglement entropy and geometric area are descriptions of the same relational coherence.
+1. **Quantum teleportation** — *Resolved by [Teleportation](/derivations/quantum/teleportation) (derived)*: Teleportation is derived as coherence channel transfer, where the relational invariant provides the channel and classical communication unlocks it.
+2. **Holographic connection** — *Resolved by [ER=EPR](/derivations/holography/er-epr) (derived)*: The ER=EPR connection is made rigorous via area scaling and causal set statistics, establishing that entanglement entropy and geometric area are descriptions of the same relational coherence.
 
 <!-- References -->
 [Lieb & Ruskai, 1973]: /references#lieb-ruskai-1973

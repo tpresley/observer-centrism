@@ -1,6 +1,6 @@
 ---
 title: "Loop Closure"
-status: "rigorous"
+status: "derived"
 dependsOn: ["axioms/00-from-observation-to-axioms", "axioms/coherence-conservation", "axioms/observer-definition"]
 enablesDerivation: ["minimal-observer/structure", "thermodynamics/action-planck", "spacetime/speed-of-light", "thermodynamics-ext/memory-persistence-tradeoff"]
 tags: ["axioms"]

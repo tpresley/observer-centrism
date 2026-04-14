@@ -27,7 +27,7 @@ The top quark is roughly 340,000 times heavier than the electron, and the electr
 **An honest caveat.** The qualitative structure (exponential separation, self-protection) is robust, but the specific particle masses and coupling constants remain empirical inputs. Computing exact masses from the coherence geometry is an open problem.
 
 
-**Note on status.** This derivation is provisional because it contains mass-hierarchy S1 (tunneling-crystallization correspondence). If that postulate is promoted to a theorem, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because it contains mass-hierarchy S1 (tunneling-crystallization correspondence). If that postulate is promoted to a theorem, this derivation would be upgraded to derived.
 
 ## Statement
 

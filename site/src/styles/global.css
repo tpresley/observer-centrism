@@ -6,7 +6,7 @@
   --color-border: #e7e5e4;
   --color-accent: #2563eb;
   --color-accent-light: #dbeafe;
-  --color-rigorous: #16a34a;
+  --color-derived: #16a34a;
   --color-provisional: #ca8a04;
   --color-draft: #ea580c;
   --color-stub: #a8a29e;
@@ -153,12 +153,12 @@ body {
   letter-spacing: 0.03em;
 }
 
-.status-rigorous { background: #dcfce7; color: var(--color-rigorous); }
+.status-derived { background: #dcfce7; color: var(--color-derived); }
 .status-provisional { background: #fef9c3; color: var(--color-provisional); }
 .status-draft { background: #ffedd5; color: var(--color-draft); }
 .status-stub { background: #f5f5f4; color: var(--color-stub); }
 .status-non-viable { background: #fef2f2; color: var(--color-non-viable); }
-.status-quantitative { background: #dcfce7; color: var(--color-rigorous); }
+.status-quantitative { background: #dcfce7; color: var(--color-derived); }
 .status-semi-quantitative { background: #fef9c3; color: var(--color-provisional); }
 .status-qualitative { background: #dbeafe; color: #1d4ed8; }
 

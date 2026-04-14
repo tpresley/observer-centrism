@@ -27,7 +27,7 @@ The standard paradox runs as follows. A black hole forms from a known quantum st
 **An honest caveat.** The explicit quantum error-correcting code that maps interior degrees of freedom to radiation correlations is described structurally but not constructed in computational detail. The connection to the island formula and entanglement wedge reconstruction remains to be formalized.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on area-scaling S1 (Planck-scale resolution), speed-of-light S1 (pseudo-Riemannian structure) (see [Area Scaling](/derivations/holography/area-scaling), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on area-scaling S1 (Planck-scale resolution), speed-of-light S1 (pseudo-Riemannian structure) (see [Area Scaling](/derivations/holography/area-scaling), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to derived.
 
 ## Statement
 

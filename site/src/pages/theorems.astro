@@ -97,7 +97,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 
 function statusIcon(status: string) {
   switch(status) {
-    case 'rigorous': return '●'
+    case 'derived': return '●'
     case 'provisional': return '◐'
     case 'draft': return '○'
     case 'stub': return '·'
@@ -108,7 +108,7 @@ function statusIcon(status: string) {
 
 function statusColor(status: string) {
   switch(status) {
-    case 'rigorous': return 'var(--color-rigorous)'
+    case 'derived': return 'var(--color-derived)'
     case 'provisional': return 'var(--color-provisional)'
     case 'draft': return 'var(--color-draft)'
     case 'stub': return 'var(--color-stub)'

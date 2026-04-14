@@ -1,6 +1,6 @@
 ---
 title: "The Observer Definition"
-status: "rigorous"
+status: "derived"
 dependsOn: ["axioms/00-from-observation-to-axioms", "axioms/coherence-conservation"]
 enablesDerivation: ["axioms/loop-closure", "minimal-observer/structure", "minimal-observer/multiplicity", "dimensions/three-dimensions"]
 tags: ["axioms"]

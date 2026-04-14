@@ -1,6 +1,6 @@
 ---
 title: "Coherence as Physical Primitive"
-status: "rigorous"
+status: "derived"
 dependsOn: ["axioms/coherence-conservation", "axioms/loop-closure", "quantum/born-rule"]
 enablesDerivation: []
 tags: ["foundation"]

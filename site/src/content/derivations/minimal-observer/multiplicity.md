@@ -1,6 +1,6 @@
 ---
 title: "Multiplicity Is Necessary"
-status: "rigorous"
+status: "derived"
 dependsOn: ["minimal-observer/structure", "axioms/observer-definition", "axioms/coherence-conservation"]
 enablesDerivation: ["minimal-observer/coherence-dual-pairs", "interactions/three-types"]
 tags: ["foundation"]

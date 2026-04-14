@@ -27,7 +27,7 @@ The Weinberg angle is a fundamental parameter that controls how the electromagne
 **An honest caveat.** The crystallization scale is currently determined by requiring consistency with the measured Weinberg angle, rather than being independently predicted. An independent derivation of this scale from the bootstrap hierarchy would convert the consistency check into a genuine prediction.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure), mass-hierarchy S1 (tunneling-crystallization correspondence) (see [Speed of Light](/derivations/spacetime/speed-of-light), [Mass Hierarchy](/derivations/particles/mass-hierarchy)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure), mass-hierarchy S1 (tunneling-crystallization correspondence) (see [Speed of Light](/derivations/spacetime/speed-of-light), [Mass Hierarchy](/derivations/particles/mass-hierarchy)). If those postulates are promoted to theorems, this derivation would be upgraded to derived.
 
 ## Statement
 
@@ -188,12 +188,12 @@ At the algebraic scale, $u$ satisfies the boundary condition that $\sin^2\theta_
 
 | Result | Status | Notes |
 |---|---|---|
-| Proposition 1.1 (algebraic boundary) | Rigorous | From Coupling Constants Theorem 1.1 (dimension counting) |
-| Proposition 2.2 ($\beta$-functions) | Rigorous | Standard textbook one-loop computation |
-| Proposition 2.3 (integrated running) | Rigorous | Direct integration |
-| Theorem 3.1 (crystallization scale) | Rigorous | The two-equation algebraic system is solved exactly; one-loop $\beta$-functions are standard and exact at one-loop; two-loop corrections shift $\Lambda_{\text{EW}}$ by $\sim 1$%, within the stated uncertainty |
-| Proposition 4.1 (scale interpretation) | Rigorous | Both the bootstrap hierarchy ratio (explicit numerical calculation: $\alpha_{\text{eff}} = 2\pi/\ln(\Lambda/v) = 0.36$, uniquely determined) and the perturbativity check ($\alpha_2(\Lambda) = 0.026 \ll 1$) are definite computations with no free parameters |
-| Theorem 5.1 (prediction table) | Rigorous | Direct calculation from RG equations |
+| Proposition 1.1 (algebraic boundary) | Derived | From Coupling Constants Theorem 1.1 (dimension counting) |
+| Proposition 2.2 ($\beta$-functions) | Derived | Standard textbook one-loop computation |
+| Proposition 2.3 (integrated running) | Derived | Direct integration |
+| Theorem 3.1 (crystallization scale) | Derived | The two-equation algebraic system is solved exactly; one-loop $\beta$-functions are standard and exact at one-loop; two-loop corrections shift $\Lambda_{\text{EW}}$ by $\sim 1$%, within the stated uncertainty |
+| Proposition 4.1 (scale interpretation) | Derived | Both the bootstrap hierarchy ratio (explicit numerical calculation: $\alpha_{\text{eff}} = 2\pi/\ln(\Lambda/v) = 0.36$, uniquely determined) and the perturbativity check ($\alpha_2(\Lambda) = 0.026 \ll 1$) are definite computations with no free parameters |
+| Theorem 5.1 (prediction table) | Derived | Direct calculation from RG equations |
 
 **Assessment:** Rigorous. All results are fully rigorous: the algebraic boundary condition is exact (dimension counting), the RG evolution uses standard one-loop $\beta$-functions (textbook results), the crystallization scale is determined by exact algebra, and the self-consistency checks are explicit numerical computations. The stated uncertainty ($\sim$ half an order of magnitude in $\Lambda_{\text{EW}}$) honestly reflects known two-loop and threshold corrections, which are perturbative and do not affect the one-loop analysis.
 

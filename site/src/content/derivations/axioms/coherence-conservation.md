@@ -1,6 +1,6 @@
 ---
 title: "Coherence Conservation"
-status: "rigorous"
+status: "derived"
 dependsOn: ["axioms/00-from-observation-to-axioms"]
 enablesDerivation: ["axioms/observer-definition", "axioms/loop-closure", "minimal-observer/structure", "holography/information-paradox", "gauge/anomaly-cancellation"]
 tags: ["axioms"]

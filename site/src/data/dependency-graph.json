@@ -4,85 +4,85 @@
       "id": "axioms/00-from-observation-to-axioms",
       "title": "From Observation to Axioms",
       "group": "foundation",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "axioms/coherence-conservation",
       "title": "Coherence Conservation",
       "group": "foundation",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "axioms/observer-definition",
       "title": "Observer Definition",
       "group": "foundation",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "axioms/loop-closure",
       "title": "Loop Closure",
       "group": "foundation",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "axioms/coherence-operational",
       "title": "Coherence as Physical Primitive",
       "group": "foundation",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "minimal-observer/structure",
       "title": "Minimal Observer Structure",
       "group": "foundation",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "minimal-observer/multiplicity",
       "title": "Multiplicity Is Necessary",
       "group": "foundation",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "minimal-observer/coherence-dual-pairs",
       "title": "Coherence-Dual Pairs",
       "group": "foundation",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "interactions/three-types",
       "title": "Three Interaction Types",
       "group": "dynamics",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "interactions/relational-invariants",
       "title": "Relational Invariants",
       "group": "dynamics",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "interactions/bootstrap",
       "title": "Bootstrap Mechanism",
       "group": "dynamics",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "thermodynamics/time",
       "title": "Time as Phase Ordering",
       "group": "dynamics",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "thermodynamics/entropy",
       "title": "Entropy",
       "group": "dynamics",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "thermodynamics/action-planck",
       "title": "Action and Planck's Constant",
       "group": "dynamics",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "spacetime/speed-of-light",
@@ -112,13 +112,13 @@
       "id": "dimensions/three-dimensions",
       "title": "Three Spatial Dimensions",
       "group": "geometry",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "quantum/born-rule",
       "title": "Born Rule",
       "group": "quantum",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "quantum/preferred-basis",
@@ -136,13 +136,13 @@
       "id": "particles/spin-statistics",
       "title": "Spin and Statistics",
       "group": "particles",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "particles/pauli-exclusion",
       "title": "Pauli Exclusion Principle",
       "group": "particles",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "particles/mass-hierarchy",
@@ -154,7 +154,7 @@
       "id": "particles/three-generations",
       "title": "Three Generations",
       "group": "particles",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "holography/area-scaling",
@@ -232,25 +232,25 @@
       "id": "thermodynamics-ext/first-law",
       "title": "Coherence First Law",
       "group": "thermo-ext",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "thermodynamics-ext/fisher-metric",
       "title": "Fisher Information Metric",
       "group": "thermo-ext",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "thermodynamics-ext/renormalization",
       "title": "Renormalization Group",
       "group": "thermo-ext",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "thermodynamics-ext/distinguishability-conservation",
       "title": "Conservation of Distinguishability",
       "group": "thermo-ext",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "gauge/chirality-selection",
@@ -268,7 +268,7 @@
       "id": "foundation/coherence-lagrangian",
       "title": "Coherence Lagrangian",
       "group": "foundation",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "foundation/aperiodic-order",
@@ -280,13 +280,13 @@
       "id": "interactions/bootstrap-division-algebras",
       "title": "Bootstrap → Division Algebras",
       "group": "dynamics",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "quantum/entanglement",
       "title": "Entanglement from Relational Invariants",
       "group": "quantum",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "gauge/strong-cp",
@@ -352,7 +352,7 @@
       "id": "particles/supersymmetry-impossibility",
       "title": "Supersymmetry Impossibility",
       "group": "particles",
-      "status": "rigorous"
+      "status": "derived"
     },
     {
       "id": "quantum/teleportation",

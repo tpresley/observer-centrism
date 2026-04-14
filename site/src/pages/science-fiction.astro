@@ -248,7 +248,7 @@ const openCount = tropes.filter(t => t.verdict === 'open').length
     color: var(--color-non-viable);
   }
   .sf-stat-allowed .sf-stat-value {
-    color: var(--color-rigorous);
+    color: var(--color-derived);
   }
   .sf-stat-dissolved .sf-stat-value {
     color: #7c6fae;
@@ -279,7 +279,7 @@ const openCount = tropes.filter(t => t.verdict === 'open').length
     border-left: 3px solid color-mix(in srgb, var(--color-non-viable) 50%, var(--color-border));
   }
   .sf-card-allowed {
-    border-left: 3px solid color-mix(in srgb, var(--color-rigorous) 50%, var(--color-border));
+    border-left: 3px solid color-mix(in srgb, var(--color-derived) 50%, var(--color-border));
   }
   .sf-card-dissolved {
     border-left: 3px solid color-mix(in srgb, #7c6fae 50%, var(--color-border));
@@ -310,8 +310,8 @@ const openCount = tropes.filter(t => t.verdict === 'open').length
     color: var(--color-non-viable);
   }
   .sf-badge-allowed {
-    background: color-mix(in srgb, var(--color-rigorous) 12%, transparent);
-    color: var(--color-rigorous);
+    background: color-mix(in srgb, var(--color-derived) 12%, transparent);
+    color: var(--color-derived);
   }
   .sf-badge-dissolved {
     background: color-mix(in srgb, #7c6fae 12%, transparent);

@@ -1,10 +1,10 @@
 ---
-title: "What Rigorous Means Here"
+title: "What Derived Means Here"
 subtitle: "Structural argument, formal proof, and the epistemology of this framework"
 order: 9
-openingQuestion: "When a derivation is marked 'rigorous,' what does that actually mean? Is it a mathematical proof, a physical argument, or something else?"
+openingQuestion: "When a derivation is marked 'derived,' what does that actually mean? Is it a mathematical proof, a physical argument, or something else?"
 physicsQuestions:
-  - "What does 'rigorous' mean in the framework?"
+  - "What does 'derived' mean in the framework?"
   - "How does this differ from a formal mathematical proof?"
   - "What role do structural postulates play?"
   - "Which results have formal Lean proofs?"
@@ -14,11 +14,9 @@ relatedDerivations:
 relatedPredictions: []
 ---
 
-A fair question about any theoretical framework: when you call something "rigorous," what do you mean?
+When the framework marks a result as "derived," it means the derivation chain from axioms to conclusion is complete — every step is written out, every dependency is listed, and no additional structural postulates are required. It does not mean the result has been formally verified by a proof assistant, and it does not mean the result is beyond challenge. It means the *argument* is complete: any error must lie in the axioms themselves or in an upstream derivation, not in a missing step.
 
-In pure mathematics, rigorous means formally proved — every step follows from axioms by rules of inference, checkable by machine. In physics, the standard is different. Einstein's field equations were used for 37 years before Choquet-Bruhat proved their well-posedness in 1952. The Dirac equation predicted the positron before anyone proved that the quantum field theory behind it was mathematically consistent. Physics routinely runs ahead of formal verification, and the results are no less real for it.
-
-Observer-Centrism is a physics framework, not a mathematics paper. But it takes mathematical rigor seriously — more seriously than most physics — and it is explicit about where it achieves formal proof and where it relies on structural argument. This chapter explains the distinction.
+This is a developing research project, not established science. The framework takes mathematical rigor seriously — more seriously than most theoretical physics — but it is also honest about the difference between a complete derivation chain and a formal proof. This chapter explains the distinction and the framework's classification system.
 
 ## Three Tiers of Rigor
 
@@ -35,7 +33,7 @@ Every claim in the framework falls into one of three categories.
 
 When the framework invokes these theorems, the rigor is borrowed from their original proofs. The framework's contribution is showing that the *premises* of these theorems are satisfied by the axioms.
 
-**Tier 2: Rigorous given axioms.** The logical chain from axioms to conclusion is complete, with every step explicit, but one or more structural postulates are required as additional input. These postulates are not derived from the axioms — they are motivated assumptions about the mathematical setting (e.g., smooth manifold structure, symplectic geometry, locality).
+**Tier 2: Complete chain given postulates.** The logical chain from axioms to conclusion is complete, with every step explicit, but one or more structural postulates are required as additional input. These postulates are not derived from the axioms — they are motivated assumptions about the mathematical setting (e.g., smooth manifold structure, symplectic geometry, locality).
 
 The framework currently uses {{activePostulateCount}} active structural postulates. Each is:
 - Named and numbered (e.g., "Electromagnetism S1: Locality of phase comparison")
@@ -49,12 +47,12 @@ The framework currently uses {{activePostulateCount}} active structural postulat
 
 Structural arguments are clearly marked. They typically appear in "Remarks" or carry qualifiers like "this motivates" or "the natural identification is." They are the physics — the insight that connects formal mathematics to the physical world — and they are the parts most in need of future formalization.
 
-## What "Rigorous" Status Means
+## What "Derived" Status Means
 
-A derivation marked "rigorous" satisfies four criteria:
+A derivation marked "derived" satisfies four criteria:
 
 1. **Complete chain.** Every step from axioms to conclusion is written out, with no gaps marked "obvious" or "left to the reader."
-2. **Dependencies explicit.** Every derivation lists its upstream dependencies (`dependsOn`). If derivation B depends on A, then A must itself be at least rigorous.
+2. **Dependencies explicit.** Every derivation lists its upstream dependencies (`dependsOn`). If derivation B depends on A, then A must itself be at least derived.
 3. **Postulates explicit.** Every structural postulate used is named, numbered, and listed on the postulates page.
 4. **Gaps documented.** Open gaps — places where the argument is incomplete or where a stronger result is conjectured — are listed in the "Open Gaps" section.
 
@@ -63,7 +61,9 @@ What it does *not* mean:
 - It does not mean no structural postulates are used
 - It does not mean the result is beyond challenge
 
-The framework distinguishes status ("rigorous") from rigor level ("formal" / "semi-formal" / "informal"), acknowledging that a complete logical chain can still contain semi-formal steps.
+A "derived" result has a complete derivation chain from the three axioms with no additional structural postulates required. This does not mean the result is certainly correct — it means the *argument* is complete, and any error must lie in the axioms themselves or in an upstream derivation, not in a missing step.
+
+The framework distinguishes status ("derived") from rigor level ("formal" / "semi-formal" / "informal"), acknowledging that a complete logical chain can still contain semi-formal steps.
 
 ## Lean Proofs
 
@@ -108,4 +108,4 @@ For the skeptic who finds structural arguments insufficient, the most productive
 3. **Extend the Lean coverage.** Formalize more propositions, particularly the composition and uniqueness arguments in the Born rule and bootstrap derivations.
 4. **Find a counterexample.** Construct a model satisfying the three axioms (including Axiom 1's conditions C1–C5) but producing physics different from the Standard Model. This would show the axioms are insufficient and identify what additional structure is needed.
 
-The framework welcomes all four. What it does not welcome is the conflation of "not formally proved" with "not rigorous." The distinction matters: Einstein's field equations were rigorous physics in 1915, even though they were not formally proved until 1952. The derivations in this framework are held to a comparable standard — complete logical chains with explicit assumptions, awaiting formal verification where it has not yet been achieved.
+The framework welcomes all four. Progress happens when assumptions are reduced, arguments are tightened, and the gap between structural argument and formal proof narrows. The label "derived" is a claim about the completeness of the argument, not a claim about its certainty. The framework puts its reasoning on the table — explicitly, traceably, with every assumption named — and invites scrutiny.

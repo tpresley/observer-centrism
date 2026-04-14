@@ -30,7 +30,7 @@ In the standard approach, Maxwell's equations are taken as given. Here they are 
 **An honest caveat.** The coupling constant (how strong the electromagnetic force is) remains a free parameter. The derivation also relies on two structural postulates about the geometric language connecting phases, which are well-motivated but not derived from the axioms alone.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to derived.
 
 ## Statement
 

@@ -433,7 +433,7 @@ const openCount = mysteries.filter(m => m.status === 'open').length
     font-weight: 700;
   }
   .my-stat-resolved .my-stat-value {
-    color: var(--color-rigorous);
+    color: var(--color-derived);
   }
   .my-stat-open .my-stat-value {
     color: var(--color-non-viable);
@@ -478,8 +478,8 @@ const openCount = mysteries.filter(m => m.status === 'open').length
     flex-shrink: 0;
   }
   .my-badge-resolved {
-    background: color-mix(in srgb, var(--color-rigorous) 12%, transparent);
-    color: var(--color-rigorous);
+    background: color-mix(in srgb, var(--color-derived) 12%, transparent);
+    color: var(--color-derived);
   }
   .my-badge-open {
     background: color-mix(in srgb, var(--color-non-viable) 12%, transparent);
@@ -536,11 +536,11 @@ const openCount = mysteries.filter(m => m.status === 'open').length
   }
 
   .my-pred-link {
-    background: color-mix(in srgb, var(--color-rigorous) 10%, transparent);
-    color: var(--color-rigorous);
+    background: color-mix(in srgb, var(--color-derived) 10%, transparent);
+    color: var(--color-derived);
   }
   .my-pred-link:hover {
-    background: color-mix(in srgb, var(--color-rigorous) 20%, transparent);
+    background: color-mix(in srgb, var(--color-derived) 20%, transparent);
   }
 
   @media (max-width: 768px) {

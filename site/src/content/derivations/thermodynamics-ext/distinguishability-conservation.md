@@ -1,6 +1,6 @@
 ---
 title: "Conservation of Distinguishability"
-status: "rigorous"
+status: "derived"
 dependsOn: ["axioms/coherence-conservation", "thermodynamics/entropy"]
 enablesDerivation: ["thermodynamics-ext/fisher-metric"]
 tags: ["thermo-ext"]

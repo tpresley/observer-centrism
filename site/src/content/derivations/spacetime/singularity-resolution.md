@@ -29,7 +29,7 @@ Classical general relativity predicts that singularities are unavoidable. The Pe
 **An honest caveat.** The qualitative conclusion (no singularities, bounces occur) is robust, but the detailed structure of the bounce and the black hole interior depend on higher-order corrections that have not yet been derived from the framework's coherence Lagrangian.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure), area-scaling S1 (Planck-scale resolution) (see [Speed of Light](/derivations/spacetime/speed-of-light), [Area Scaling](/derivations/holography/area-scaling)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure), area-scaling S1 (Planck-scale resolution) (see [Speed of Light](/derivations/spacetime/speed-of-light), [Area Scaling](/derivations/holography/area-scaling)). If those postulates are promoted to theorems, this derivation would be upgraded to derived.
 
 ## Statement
 
@@ -93,7 +93,7 @@ $$\rho \leq \rho_P = \frac{c^5}{\hbar G^2} \approx 5.16 \times 10^{96}\;\text{kg
 
 **Theorem 4.1 (Cosmological singularity resolution).** *The classical Big Bang singularity ($a(t) \to 0$, $\rho \to \infty$) is replaced by a coherence bounce at the Planck density.*
 
-*Proof.* The argument proceeds in two stages: a model-independent existence proof (rigorous), followed by the leading-order effective parameterization.
+*Proof.* The argument proceeds in two stages: a model-independent existence proof (derived), followed by the leading-order effective parameterization.
 
 **Stage 1: Model-independent bounce existence.**
 

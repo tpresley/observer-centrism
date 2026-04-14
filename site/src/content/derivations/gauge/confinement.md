@@ -27,7 +27,7 @@ Every experiment ever conducted has confirmed that quarks -- the building blocks
 **An honest caveat.** This is a structural explanation for why confinement occurs, not a proof of the Yang-Mills mass gap. The quantitative string tension (how strong the confining force is) is characterized but not computed from first principles.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to derived.
 
 ## Statement
 

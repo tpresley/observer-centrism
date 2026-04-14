@@ -11,7 +11,7 @@ const stats = (knowledgeIndex as any).stats as {
   predictionCount: number
 }
 
-const rigorousCount = stats.byStatus.rigorous || 0
+const derivedCount = stats.byStatus.derived || 0
 const provisionalCount = stats.byStatus.provisional || 0
 const nonViableCount = stats.byStatus['non-viable'] || 0
 ---
@@ -177,7 +177,7 @@ const nonViableCount = stats.byStatus['non-viable'] || 0
     with the hard problem located exactly rather than dissolved or denied.
   </p>
   <p>
-    The derivation chain currently includes {derivedCount} rigorous results{provisionalCount > 0 && `, ${provisionalCount} provisional`}{nonViableCount > 0 && `, and ${nonViableCount} assessed non-viable`}.
+    The derivation chain currently includes {derivedCount} derived results{provisionalCount > 0 && `, ${provisionalCount} provisional`}{nonViableCount > 0 && `, and ${nonViableCount} assessed non-viable`}.
     The framework also makes
     <a href={`${base}/predictions/`}>testable predictions</a> that
     distinguish it from existing theories: a specific angular signature in

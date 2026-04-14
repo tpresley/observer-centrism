@@ -1,6 +1,6 @@
 ---
 title: "Weak Interaction via H = Cl+(3,0)"
-status: "rigorous"
+status: "derived"
 gaStructure: "Cl+(3,0)"
 targetDerivation: "gauge/weak-interaction"
 dependsOn: ["spin-statistics"]
@@ -12,7 +12,7 @@ lastUpdated: 2026-03-13
 
 ## Connection to Framework Derivation
 
-**Target**: [Weak Interaction](/derivations/gauge/weak-interaction) (status: rigorous)
+**Target**: [Weak Interaction](/derivations/gauge/weak-interaction) (status: derived)
 
 The target derivation establishes that three spatial dimensions force three independent phase channels whose composition algebra is the quaternions $\mathbb{H}$ (by Hurwitz's theorem). The unit quaternions form $SU(2)$, which by localization becomes the weak gauge group. The proof proceeds through the $SU(2)$ gauge connection, the Yang-Mills field strength with its non-abelian self-interaction, and the electroweak structure $SU(2)_L \times U(1)_Y$.
 

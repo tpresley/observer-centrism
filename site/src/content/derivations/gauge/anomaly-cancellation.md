@@ -27,7 +27,7 @@ Gauge anomalies are quantum-mechanical inconsistencies that would render a theor
 **An honest caveat.** The proof uses the Fujikawa mechanism (a standard path-integral result) to connect anomalies to coherence violation. A purely algebraic proof that avoids path-integral language would provide an independent perspective but has not yet been constructed.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to derived.
 
 ## Statement
 
@@ -173,11 +173,11 @@ where $\eta_f = +1$ for left-handed and $-1$ for right-handed fermions, and $T_a
 
 | Result | Status | Notes |
 |---|---|---|
-| Theorem 1.2 (coherence → anomaly freedom) | Rigorous | Self-contained three-step proof: (1) gauge invariance of coherence from Axiom 1 + relational invariant structure, (2) Fujikawa mechanism gives gauge-dependent measure Jacobian, (3) contradiction. No longer relies on Fisher metric formulation. |
-| Proposition 2.2 (hypercharge quantization) | Rigorous | Follows from published $\mathbb{C}\ell(6)$ decomposition [Furey, 2016]; [Stoica, 2018] |
-| Theorem 3.1 (anomaly traces vanish) | Rigorous | Pure arithmetic on fixed representations |
-| Proposition 4.1 (generation independence) | Rigorous | Immediate from identical representations |
-| Theorem 5.1 (structural necessity) | Rigorous | Rigidity argument now fully formal: eigenvalue discreteness proved from $\hat{n}_k^2 = \hat{n}_k$ (fermionic idempotency); representation fixed by Hurwitz uniqueness, $\mathbb{C}\ell(6)$ isomorphism, Fock dimension $2^3 = 8$, and $\mathbb{Z}_2$ chirality choice. Each input is a theorem, integer, or discrete choice — no continuous parameters. |
+| Theorem 1.2 (coherence → anomaly freedom) | Derived | Self-contained three-step proof: (1) gauge invariance of coherence from Axiom 1 + relational invariant structure, (2) Fujikawa mechanism gives gauge-dependent measure Jacobian, (3) contradiction. No longer relies on Fisher metric formulation. |
+| Proposition 2.2 (hypercharge quantization) | Derived | Follows from published $\mathbb{C}\ell(6)$ decomposition [Furey, 2016]; [Stoica, 2018] |
+| Theorem 3.1 (anomaly traces vanish) | Derived | Pure arithmetic on fixed representations |
+| Proposition 4.1 (generation independence) | Derived | Immediate from identical representations |
+| Theorem 5.1 (structural necessity) | Derived | Rigidity argument now fully formal: eigenvalue discreteness proved from $\hat{n}_k^2 = \hat{n}_k$ (fermionic idempotency); representation fixed by Hurwitz uniqueness, $\mathbb{C}\ell(6)$ isomorphism, Fock dimension $2^3 = 8$, and $\mathbb{Z}_2$ chirality choice. Each input is a theorem, integer, or discrete choice — no continuous parameters. |
 
 ## Open Gaps
 

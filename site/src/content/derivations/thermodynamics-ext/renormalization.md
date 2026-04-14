@@ -1,6 +1,6 @@
 ---
 title: "Renormalization Group from Coherence"
-status: "rigorous"
+status: "derived"
 dependsOn: ["thermodynamics/entropy", "thermodynamics/action-planck"]
 enablesDerivation: ["cosmology/coupling-constants", "thermodynamics-ext/non-ergodicity"]
 tags: ["thermo-ext"]

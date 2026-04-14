@@ -29,7 +29,7 @@ The wormhole cannot be used to send messages, for the same reason that entanglem
 **An honest caveat.** One row of the correspondence table -- the identification of Schmidt coefficients with the quasi-normal mode spectrum of the wormhole throat -- remains conjectural, motivated by AdS/CFT but not yet derived within the framework.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on area-scaling S1 (Planck-scale resolution), speed-of-light S1 (pseudo-Riemannian structure) (see [Area Scaling](/derivations/holography/area-scaling), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on area-scaling S1 (Planck-scale resolution), speed-of-light S1 (pseudo-Riemannian structure) (see [Area Scaling](/derivations/holography/area-scaling), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to derived.
 
 ## Statement
 
@@ -91,13 +91,13 @@ The coherence channel $\gamma_{12}$ carries a non-zero coherence density $\rho_{
 
 **Step 2 (Continuum limit and topology).** In the continuum limit, the causal set $\mathcal{C}$ approximates a Lorentzian manifold $(M, g)$ ([Causal Set Statistics](/derivations/holography/causal-set-statistics), Theorem 3.1, rigorous). The channel graph $G_{12}$ maps to a region $\Omega_{12} \subset M$ with non-trivial topology: on any Cauchy surface $\Sigma$ intersecting both observer regions, the intersection $\Sigma \cap \Omega_{12}$ is a connected submanifold linking the two disjoint neighborhoods $\Sigma \cap \mathcal{N}_1$ and $\Sigma \cap \mathcal{N}_2$. This connected region has the topology of a tube $D^2 \times [0,1]$ (in 3+1 dimensions) with boundaries at each observer neighborhood. The tube cannot pinch to zero area at any intermediate point, because such a pinch would disconnect the channel graph $G_{12}$, contradicting the irreducibility of $\gamma_{12}$ (Proposition 1.2c).
 
-The coherence energy-momentum tensor $T_{\mu\nu}^{\text{coh}}$ is non-zero in $\Omega_{12}$ (since $\gamma_{12}$ carries coherence $\mathcal{C}(I_{12}) > 0$) and vanishes outside (in the ambient vacuum). By the [Einstein Equations](/derivations/spacetime/einstein-equations) (rigorous), this localized energy distribution curves the geometry within $\Omega_{12}$.
+The coherence energy-momentum tensor $T_{\mu\nu}^{\text{coh}}$ is non-zero in $\Omega_{12}$ (since $\gamma_{12}$ carries coherence $\mathcal{C}(I_{12}) > 0$) and vanishes outside (in the ambient vacuum). By the [Einstein Equations](/derivations/spacetime/einstein-equations) (derived), this localized energy distribution curves the geometry within $\Omega_{12}$.
 
 **Step 3 (Minimal surface).** Within the tube $\Omega_{12}$, consider the family of $(D-2)$-dimensional cross-sections $\sigma(t)$ parameterized along the tube. Each cross-section has area $A(\sigma(t))$. The tube connects two large observer neighborhoods (where it flares out) and has finite coherence content (bounded energy). At the boundaries, $A(t) \to \infty$ (the neighborhoods are extended spatial regions). Since $\gamma_{12}$ carries finite coherence, the coherence density and hence curvature are bounded, so the tube cross-section has a finite positive minimum. By the extreme value theorem (continuous function on a compact set — the tube with identified boundary), there exists a cross-section $\Sigma_{\min}$ of minimum area.
 
 $\Sigma_{\min}$ is a minimal surface: $\delta A / \delta \sigma = 0$ and $\text{tr}(K) = 0$ where $K$ is the extrinsic curvature. This is the defining property of an Einstein-Rosen bridge throat. $\square$
 
-**Remark.** Each step rests on a rigorous upstream result: Step 1 on [Causal Set Statistics](/derivations/holography/causal-set-statistics) (rigorous), Step 2 on the causal set → manifold correspondence (Theorem 3.1, rigorous) and the [Einstein Equations](/derivations/spacetime/einstein-equations) (rigorous), Step 3 on the extreme value theorem (standard analysis). The non-pinching argument (that the tube maintains positive area throughout) follows from the irreducibility of $\gamma_{12}$ — if the tube pinched to zero area at any point, the coherence channel would be disconnected, contradicting Proposition 1.2c.
+**Remark.** Each step rests on a rigorous upstream result: Step 1 on [Causal Set Statistics](/derivations/holography/causal-set-statistics) (derived), Step 2 on the causal set → manifold correspondence (Theorem 3.1, rigorous) and the [Einstein Equations](/derivations/spacetime/einstein-equations) (derived), Step 3 on the extreme value theorem (standard analysis). The non-pinching argument (that the tube maintains positive area throughout) follows from the irreducibility of $\gamma_{12}$ — if the tube pinched to zero area at any point, the coherence channel would be disconnected, contradicting Proposition 1.2c.
 
 **Proposition 3.3 (Throat area from area scaling).** The throat area satisfies:
 
@@ -105,7 +105,7 @@ $$A(\Sigma_{\min}) = 4\,\ell_P^2\,S_{\text{ent}}(I_{12})$$
 
 *Proof.* The proof establishes both the bound and its saturation.
 
-**Upper bound.** The minimal surface $\Sigma_{\min}$ is the bottleneck of the tube $\Omega_{12}$: every causal curve in $\gamma_{12}$ connecting $\mathcal{N}_1$ to $\mathcal{N}_2$ must cross $\Sigma_{\min}$ (it is the unique minimum-area cross-section). By the [Area Scaling](/derivations/holography/area-scaling) derivation (rigorous), the coherence that can cross any surface of area $A$ is bounded by $\mathcal{C} \leq A/(4\ell_P^2)$. Applied to $\Sigma_{\min}$:
+**Upper bound.** The minimal surface $\Sigma_{\min}$ is the bottleneck of the tube $\Omega_{12}$: every causal curve in $\gamma_{12}$ connecting $\mathcal{N}_1$ to $\mathcal{N}_2$ must cross $\Sigma_{\min}$ (it is the unique minimum-area cross-section). By the [Area Scaling](/derivations/holography/area-scaling) derivation (derived), the coherence that can cross any surface of area $A$ is bounded by $\mathcal{C} \leq A/(4\ell_P^2)$. Applied to $\Sigma_{\min}$:
 
 $$\mathcal{C}(I_{12}) \leq \frac{A(\Sigma_{\min})}{4\ell_P^2}$$
 
@@ -158,7 +158,7 @@ Combining the upper and lower bounds: $A(\Sigma_{\min}) = 4\ell_P^2\,S_{\text{en
 
 1. $I_{12} \leftrightarrow \gamma_{12}$: By construction — the coherence channel $\gamma_{12}$ is defined (Definition 1.1) as the causal set carrier of the relational invariant $I_{12}$. The identification is definitional and exact. $\checkmark$
 
-2. $S_{\text{ent}} \leftrightarrow A/(4\ell_P^2)$: Proposition 3.3 establishes $A(\Sigma_{\min}) = 4\ell_P^2\,S_{\text{ent}}$ via upper and lower bounds from area scaling (rigorous). $\checkmark$
+2. $S_{\text{ent}} \leftrightarrow A/(4\ell_P^2)$: Proposition 3.3 establishes $A(\Sigma_{\min}) = 4\ell_P^2\,S_{\text{ent}}$ via upper and lower bounds from area scaling (derived). $\checkmark$
 
 3. No-signaling $\leftrightarrow$ Non-traversability: Proposition 2.2 derives no-signaling from Noether conservation of the relational invariant. Theorem 4.1 derives non-traversability from the area-coherence saturation. Corollary 4.2 establishes these as dual descriptions of the same constraint. $\checkmark$
 
@@ -196,12 +196,12 @@ is the maximally entangled state (for a given temperature $T = 1/\beta$) between
 
 | Result | Status | Notes |
 |---|---|---|
-| Proposition 1.2 (channel properties) | Rigorous | Each property follows from axioms and rigorous upstream results (coherence conservation, relational invariant irreducibility) |
-| Proposition 2.1 (entanglement) | Rigorous | Direct import from [Entanglement](/derivations/quantum/entanglement) (rigorous), Theorem 2.1 |
-| Proposition 2.2 (no-signaling) | Rigorous | Derived from Noether conservation of relational invariants; standard partial trace calculation |
-| Theorem 3.2 (wormhole geometry) | Rigorous | Three-step proof: Step 1 (causal set topology) and Step 2 (continuum limit) rest on [Causal Set Statistics](/derivations/holography/causal-set-statistics) (rigorous); Step 3 (minimal surface) is the extreme value theorem (standard analysis). Non-pinching from irreducibility (Proposition 1.2c) |
-| Proposition 3.3 (throat area) | Rigorous | Upper bound from [Area Scaling](/derivations/holography/area-scaling) (rigorous); lower bound from irreducibility + Planck-scale resolution. Both bounds are tight, giving exact equality |
-| Theorem 4.1 (non-traversability) | Rigorous | Proof by contradiction using area-coherence saturation (Proposition 3.3, rigorous) and the fact that independent signals carry positive coherence (Axiom 3) |
+| Proposition 1.2 (channel properties) | Derived | Each property follows from axioms and rigorous upstream results (coherence conservation, relational invariant irreducibility) |
+| Proposition 2.1 (entanglement) | Derived | Direct import from [Entanglement](/derivations/quantum/entanglement) (derived), Theorem 2.1 |
+| Proposition 2.2 (no-signaling) | Derived | Derived from Noether conservation of relational invariants; standard partial trace calculation |
+| Theorem 3.2 (wormhole geometry) | Derived | Three-step proof: Step 1 (causal set topology) and Step 2 (continuum limit) rest on [Causal Set Statistics](/derivations/holography/causal-set-statistics) (derived); Step 3 (minimal surface) is the extreme value theorem (standard analysis). Non-pinching from irreducibility (Proposition 1.2c) |
+| Proposition 3.3 (throat area) | Derived | Upper bound from [Area Scaling](/derivations/holography/area-scaling) (derived); lower bound from irreducibility + Planck-scale resolution. Both bounds are tight, giving exact equality |
+| Theorem 4.1 (non-traversability) | Derived | Proof by contradiction using area-coherence saturation (Proposition 3.3, rigorous) and the fact that independent signals carry positive coherence (Axiom 3) |
 | Theorem 5.1 (exact correspondence) | Rigorous (rows 1–4) | Rows 1–4 established by rigorous upstream derivations. Row 5 (Schmidt ↔ quasi-normal mode) is conjectural — motivated by AdS/CFT analogy but not derived from framework axioms (see Gap 1) |
 
 ## Open Gaps

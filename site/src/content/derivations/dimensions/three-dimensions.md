@@ -1,6 +1,6 @@
 ---
 title: "Three Spatial Dimensions Are Uniquely Stable"
-status: "rigorous"
+status: "derived"
 dependsOn: ["minimal-observer/structure", "axioms/observer-definition"]
 enablesDerivation: ["particles/spin-statistics", "particles/three-generations", "spacetime/gravity", "spacetime/einstein-equations", "particles/supersymmetry-impossibility"]
 tags: ["geometry"]

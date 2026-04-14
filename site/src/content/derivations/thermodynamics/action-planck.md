@@ -1,6 +1,6 @@
 ---
 title: "Action and Planck's Constant"
-status: "rigorous"
+status: "derived"
 dependsOn: ["axioms/loop-closure", "thermodynamics/time", "thermodynamics-ext/fisher-metric"]
 enablesDerivation: ["spacetime/speed-of-light", "holography/area-scaling", "foundation/coherence-lagrangian", "spacetime/gravitational-constant"]
 tags: ["dynamics"]

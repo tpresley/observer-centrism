@@ -1,6 +1,6 @@
 ---
 title: "Coherence-Dual Pairs"
-status: "rigorous"
+status: "derived"
 dependsOn: ["minimal-observer/multiplicity"]
 enablesDerivation: ["holography/hawking-radiation", "particles/cpt-theorem"]
 tags: ["foundation"]
@@ -183,4 +183,4 @@ The pair persists because each observer independently satisfies the persistence 
 
 ## Addressed Gaps
 
-1. **CPT theorem** — *Resolved by [CPT Theorem](/derivations/particles/cpt-theorem) derivation (rigorous)*: The full CPT theorem is derived from the axioms plus Lorentz invariance and spin-statistics, confirming that $CPT$ is an exact symmetry as anticipated by the coherence-dual pair structure.
+1. **CPT theorem** — *Resolved by [CPT Theorem](/derivations/particles/cpt-theorem) derivation (derived)*: The full CPT theorem is derived from the axioms plus Lorentz invariance and spin-statistics, confirming that $CPT$ is an exact symmetry as anticipated by the coherence-dual pair structure.

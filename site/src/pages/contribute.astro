@@ -79,7 +79,7 @@ leanProofs: []
         <tr><th>Status</th><th>Meaning</th></tr>
       </thead>
       <tbody>
-        <tr><td><span class="status-dot rigorous">●</span> rigorous</td><td>All steps formally justified, no unresolved gaps</td></tr>
+        <tr><td><span class="status-dot derived">●</span> derived</td><td>Complete derivation chain from axioms, no additional structural postulates</td></tr>
         <tr><td><span class="status-dot provisional">◐</span> provisional</td><td>Main structure sound but some steps rely on conjectures</td></tr>
         <tr><td><span class="status-dot draft">○</span> draft</td><td>Argument sketched but significant gaps remain</td></tr>
         <tr><td><span class="status-dot stub">·</span> stub</td><td>Placeholder with direction but little formal content</td></tr>
@@ -317,7 +317,7 @@ leanProofs: []
     font-size: 0.8rem;
     margin-right: 0.25rem;
   }
-  .status-dot.rigorous { color: var(--color-rigorous); }
+  .status-dot.derived { color: var(--color-derived); }
   .status-dot.provisional { color: var(--color-provisional); }
   .status-dot.draft { color: var(--color-draft); }
   .status-dot.stub { color: var(--color-stub); }
