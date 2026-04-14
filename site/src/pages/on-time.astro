@@ -1,0 +1,341 @@
+---
+import MainLayout from '../components/layouts/MainLayout.astro'
+import PageTitle from '../components/PageTitle.astro'
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+---
+
+<MainLayout title="On Time">
+  <article class="time-article">
+    <PageTitle
+      title="On Time"
+      subtitle="Why time is constituted by observers, not inhabited by them"
+    />
+
+    <p class="lead">
+      Time is the most familiar thing in physics and the least understood. We
+      measure it, model it, and build every dynamical law on top of it &mdash;
+      but we never explain where it comes from. The framework does not
+      reinterpret time. It derives it. What emerges is not the time of Newton
+      or Einstein, but something more fundamental: a structural ordering created
+      by the observer network itself, with an arrow that is built in from the
+      start, not bolted on after the fact.
+    </p>
+
+    <h2>The Standard Picture</h2>
+
+    <p>
+      Newton gave us absolute time: a universal clock ticking in the background,
+      indifferent to what happens in it. Einstein replaced this with relative
+      time &mdash; clocks run at different rates depending on motion and gravity
+      &mdash; but time remained a geometric ingredient, a dimension of a
+      manifold assumed from the outset. Quantum mechanics uses time as an
+      external parameter, the variable in Schr&ouml;dinger&rsquo;s equation
+      that the wavefunction evolves along. In every case, time is presupposed.
+      The equations describe what happens <em>in</em> time, not what time
+      <em>is</em>.
+    </p>
+
+    <p>
+      This leaves two deep questions unanswered. First: why does time have a
+      direction? The fundamental equations are time-symmetric &mdash; they work
+      equally well forward and backward &mdash; yet the world clearly runs one
+      way. Second: why is there a temporal ordering at all? What gives events
+      their &ldquo;before&rdquo; and &ldquo;after&rdquo;?
+    </p>
+
+    <p>
+      The framework answers both questions at once, from the same source.
+    </p>
+
+    <h2>Time as Phase Ordering</h2>
+
+    <p>
+      Every observer in the framework is a cyclic structure &mdash; a U(1) loop
+      that advances phase with each internal cycle (Axiom 3). When two observers
+      interact via
+      <a href={`${base}/derivations/interactions/three-types`}>phase transfer</a>,
+      the interaction has an inherent directionality: the positive coherence cost
+      of the transfer prevents backward flow. Each such interaction creates a
+      directed link between two events.
+    </p>
+
+    <p>
+      The collection of all directed links across the entire observer network
+      forms a directed acyclic graph &mdash; a web of events connected by
+      &ldquo;this happened before that&rdquo; relations. The resulting partial
+      order is not a metaphor for time or an approximation of time. It <em>is</em>
+      time &mdash; the complete operational content of temporal ordering, derived
+      from the axioms without any temporal parameter being assumed.
+    </p>
+
+    <p>
+      This has a striking consequence. A universe with no observers would have no
+      interaction graph and therefore no partial order. Time would not exist
+      &mdash; not merely because there would be nobody to notice its absence, but
+      because the ordering structure is constituted by the observer network.
+      <a href={`${base}/derivations/thermodynamics/time`}>Time is constituted by
+      observers, not inhabited by them</a>.
+    </p>
+
+    <p>
+      At scales much larger than the Planck length, the partial order approximates
+      a smooth Lorentzian manifold &mdash; recovering the spacetime geometry of
+      general relativity as a large-scale emergent description. The framework
+      derives the causal structure that causal set theory takes as primitive.
+    </p>
+
+    <h2>The Arrow Is Built In</h2>
+
+    <p>
+      In standard physics, the arrow of time is a puzzle. The fundamental
+      equations are time-symmetric, so the asymmetry must come from somewhere
+      else. The usual answer is statistical: the universe started in an
+      extraordinarily low-entropy state, and entropy has been increasing ever
+      since. But this just pushes the question back &mdash; why did it start
+      that way?
+    </p>
+
+    <p>
+      The framework dissolves the puzzle by building the arrow into the causal
+      structure itself.
+      <a href={`${base}/derivations/quantum/measurement`}>Type III interactions</a>
+      generate relational invariants &mdash; permanent records of correlations
+      between observers. Once generated, a relational invariant cannot be
+      un-generated. This is not a statistical tendency. It is a structural
+      fact: the invariant is a node in the dependency graph, and nodes do not
+      disappear from graphs.
+    </p>
+
+    <p>
+      Along any directed path in the interaction graph, the depth of relational
+      invariants is monotonically non-decreasing. The arrow of time points in the
+      direction of increasing structure &mdash; more correlations, more
+      entanglement, more recorded interactions. This direction is irreversible by
+      definition, not by thermodynamic tendency.
+    </p>
+
+    <p>
+      The Loschmidt paradox &mdash; how can irreversible macroscopic behavior
+      arise from reversible microscopic laws? &mdash; dissolves cleanly.
+      Time-reversal symmetry is preserved in the dynamics of individual
+      interactions. The irreversibility lies not in the dynamics but in the
+      accumulation of relational invariants, which is a structural feature of
+      the graph, not a dynamical one.
+    </p>
+
+    <h2>Entropy Without Statistics</h2>
+
+    <p>
+      The standard account of entropy is statistical. A system has many
+      microscopic configurations (microstates) compatible with its observable
+      properties (macrostate). Entropy counts these configurations. The second
+      law says the system tends toward macrostates with more microstates,
+      because there are more ways to be there. This is compelling but relies on
+      assumptions &mdash; ergodicity, typicality, a well-defined phase space
+      &mdash; that are difficult to justify from first principles.
+    </p>
+
+    <p>
+      The framework replaces this with a
+      <a href={`${base}/derivations/thermodynamics/entropy`}>structural account</a>.
+      Entropy for an observer is defined as total coherence minus that
+      observer&rsquo;s accessible coherence. Coherence is globally conserved
+      (Axiom 1), but every observer is bounded &mdash; it cannot access all the
+      structure in the network. As new relational invariants are continuously
+      generated by Type III interactions, some inevitably fall outside any given
+      observer&rsquo;s domain. The gap between total and accessible coherence
+      grows.
+    </p>
+
+    <p>
+      The second law follows from two facts: coherence is conserved, and every
+      observer is bounded. No statistics, no ergodicity, no phase-space counting.
+      The entropy increase is as inevitable as the fact that a finite window
+      cannot see everything in an expanding landscape.
+    </p>
+
+    <p>
+      This has a remarkable corollary: the universe taken as its own observer
+      &mdash; the unbounded case &mdash; has entropy zero. Total coherence
+      equals accessible coherence when nothing is outside your domain. The
+      second law is a bounded-observer phenomenon, not a cosmic law. Heat
+      death is something that happens <em>to observers</em>, not to the
+      universe.
+    </p>
+
+    <h2>The Cosmological Arrow</h2>
+
+    <p>
+      Roger Penrose pointed out that the early universe&rsquo;s low entropy
+      requires an explanation. The probability of the initial state, measured
+      against the full phase space, is something like one in
+      10<sup>10<sup>120</sup></sup> &mdash; a number so small it dwarfs any
+      other fine-tuning problem in physics. Why did the universe start in such
+      an astronomically special state?
+    </p>
+
+    <p>
+      The framework&rsquo;s answer: it didn&rsquo;t. The early state was not
+      improbable. The concept of &ldquo;improbable relative to the full phase
+      space&rdquo; is inapplicable because the system was never ergodic in the
+      first place. The early universe occupied the only sector that was
+      accessible &mdash; the small set of configurations compatible with the
+      bootstrap hierarchy at that epoch. There was nowhere else for it to be.
+    </p>
+
+    <p>
+      As the universe expanded and cooled, new levels of the
+      <a href={`${base}/derivations/interactions/bootstrap`}>bootstrap hierarchy</a>
+      became stable &mdash; first nuclear bound states, then atoms, then
+      molecules, then macroscopic structures. Each new level opened a vast new
+      region of accessible phase space. The entropy of the universe, measured
+      by any bounded observer, grew monotonically &mdash; not because the
+      system was exploring a pre-existing phase space, but because the
+      accessible phase space itself was growing.
+    </p>
+
+    <p>
+      The structural arrow (increasing relational invariant depth), the
+      thermodynamic arrow (entropy growth), and the
+      <a href={`${base}/derivations/cosmology/cosmological-arrow`}>cosmological
+      arrow</a> (expansion) all point in the same direction. This is not
+      coincidence. Expansion enables hierarchy elaboration, which creates the
+      causal structure that defines the temporal order. The three arrows are
+      aspects of a single process.
+    </p>
+
+    <h2>The Quantum of Time</h2>
+
+    <p>
+      <a href={`${base}/derivations/thermodynamics/action-planck`}>Action</a> is
+      the coherence cost of a transformation. Every path between two interaction
+      events carries a coherence phase proportional to its action. Physical
+      trajectories are selected by coherence resonance &mdash; paths where
+      neighboring paths have nearly equal phase and constructively interfere.
+      This yields the stationary action principle, not as a postulate but as a
+      consequence of coherence accounting.
+    </p>
+
+    <p>
+      Planck&rsquo;s constant is the minimum coherence cost of one observer
+      cycle &mdash; the quantum of action, set by the loop geometry of Axiom 3.
+      The Planck-Einstein relation <em>E</em>&thinsp;=&thinsp;<em>&hbar;&omega;</em>
+      falls directly out: an observer&rsquo;s energy is its coherence cost per
+      cycle, and its frequency is cycles per unit time. Energy and frequency are
+      two descriptions of the same thing &mdash; the cost and the rate of
+      phase advancement.
+    </p>
+
+    <p>
+      The uncertainty principle emerges from the same structure. The phase
+      position of an observer&rsquo;s loop and the cycle count of that loop are
+      conjugate aspects of a single object &mdash; Fourier duals of each other.
+      Knowing one precisely makes the other indeterminate. This is not a
+      limitation of measurement technology. It is the structure of the coherence
+      quantum itself &mdash; a consequence of the fact that a cyclic process
+      cannot simultaneously have a definite position in its cycle and a definite
+      number of completed cycles.
+    </p>
+
+    <h2>Not a Background, Not an Illusion</h2>
+
+    <p>
+      The framework&rsquo;s treatment of time parallels its treatment of
+      <a href={`${base}/on-determinism`}>determinism</a> and
+      <a href={`${base}/on-existence`}>existence</a>: the answer depends on
+      the level of description, and both levels are real.
+    </p>
+
+    <p>
+      At the level of the complete relational invariant network, time is absent.
+      The graph is atemporal &mdash; all nodes present, no flow, no before and
+      after. This is the level at which the block-universe intuition is correct.
+    </p>
+
+    <p>
+      At the level of any bounded observer, time is constitutive and
+      irreversible. The advancing coherence domain defines what facts exist for
+      that observer. The partial order is genuine. The arrow is structural. The
+      passage of time is the inside view of advancing through a dependency
+      structure &mdash; real as experience, and grounded in the physics of
+      relational invariant accumulation.
+    </p>
+
+    <p>
+      Time is not the stage on which physics happens. It is not an illusion
+      projected by consciousness. It is the structural ordering that observers
+      create by interacting &mdash; as real as anything in the framework, and
+      as observer-dependent as
+      <a href={`${base}/derivations/spacetime/gravity`}>geometry</a>.
+    </p>
+
+    <div class="time-links">
+      <a href={`${base}/derivations/thermodynamics/time`}>Time as Phase Ordering</a> &middot;
+      <a href={`${base}/derivations/thermodynamics/entropy`}>Entropy</a> &middot;
+      <a href={`${base}/derivations/thermodynamics/action-planck`}>Action &amp; Planck&rsquo;s Constant</a> &middot;
+      <a href={`${base}/derivations/cosmology/cosmological-arrow`}>Cosmological Arrow</a> &middot;
+      <a href={`${base}/derivations/foundation/continuous-discrete-duality`}>Continuous-Discrete Duality</a>
+    </div>
+  </article>
+</MainLayout>
+
+<style>
+  .time-article {
+    max-width: 700px;
+  }
+
+  .time-article h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.35rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.5rem;
+  }
+
+  .time-article h2:first-of-type {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .time-article p {
+    margin-bottom: 1rem;
+    line-height: 1.85;
+  }
+
+  .time-article ul {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+  }
+
+  .time-article li {
+    margin-bottom: 0.75rem;
+    line-height: 1.75;
+  }
+
+  .lead {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .time-links {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .time-links a {
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+
+  .time-links a:hover {
+    border-bottom-color: var(--color-accent);
+  }
+</style>
