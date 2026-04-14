@@ -4,7 +4,7 @@ status: "provisional"
 dependsOn: ["interactions/relational-invariants", "spacetime/lorentz-invariance", "dimensions/three-dimensions"]
 enablesDerivation: ["spacetime/einstein-equations", "holography/area-scaling", "spacetime/gravitational-constant"]
 tags: ["geometry"]
-summary: "Massive observers generate relational invariant density gradients; geodesics = minimum coherence cost paths; the equivalence principle is structural"
+summary: "Massive observers generate relational invariant density gradients; action duality forces spacetime metric to curve; geodesics follow extremal action; the equivalence principle is structural"
 rigorLevel: "formal"
 lastUpdated: 2026-03-12
 ---
@@ -18,8 +18,8 @@ Newton described gravity as a force pulling masses together. Einstein reframed i
 **The argument.** The coherence measure defines a metric — a way of measuring distances and times — via the Fisher information geometry. When observers are present, the coherence structure changes locally, and this change is reflected in the spacetime metric. The derivation establishes:
 
 - A massive observer creates a gradient in the relational invariant density around it, falling off as the inverse square of distance (a consequence of flux conservation in three spatial dimensions).
-- This density gradient curves the coherence geometry, modifying how loops close at different positions. Clocks tick slower in stronger gravitational fields because the coherence cost per cycle changes.
-- Physical trajectories follow geodesics — paths of minimum coherence cost — which curve toward regions of higher density. This is what we experience as gravitational attraction.
+- This density gradient modifies the coherence Hessian on state space. By action duality (spacetime metric and coherence Hessian compute the same action), the spacetime metric must change in response — geometry curves.
+- Physical trajectories follow geodesics — paths of extremal action through the curved geometry — which bend toward regions of higher density. This is what we experience as gravitational attraction. Clocks tick slower in stronger gravitational fields because proper time depends on the curved metric (Theorem 2.1).
 - The equivalence principle (all objects fall the same way regardless of composition) is structural: geodesics depend only on the geometry, not on the properties of the object following them.
 
 **The result.** Gravity is not a force and not an independent postulate. It is the inevitable geometric consequence of observers curving the coherence geometry they inhabit. The Schwarzschild metric (describing gravity around a spherical mass) emerges as the unique spherically symmetric vacuum solution.
@@ -29,11 +29,11 @@ Newton described gravity as a force pulling masses together. Einstein reframed i
 **An honest caveat.** The coupling constant (Newton's gravitational constant G) remains an empirical parameter. Whether it can be derived from the framework's other constants is an open question.
 
 
-**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to rigorous.
+**Note on status.** This derivation is provisional because its central claims depend on speed-of-light S1 (pseudo-Riemannian structure) (see [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to derived.
 
 ## Statement
 
-**Theorem.** A massive observer generates a relational invariant density gradient in the surrounding coherence geometry. This gradient curves the geometry: the local loop closure condition is modified, geodesics (paths of minimum coherence cost) curve toward higher density, and the equivalence principle follows structurally. The Schwarzschild metric is the unique spherically symmetric vacuum solution.
+**Theorem.** A massive observer generates a relational invariant density gradient in the surrounding coherence geometry. By action duality, this gradient modifies the spacetime metric: geodesics (paths of extremal action) curve toward higher density, and the equivalence principle follows structurally. The Schwarzschild metric is the unique spherically symmetric vacuum solution.
 
 ## Derivation
 
@@ -114,7 +114,9 @@ $$\frac{d^2 x^\mu}{d\tau^2} + \Gamma^\mu_{\alpha\beta} \frac{dx^\alpha}{d\tau} \
 
 *Proof.* By [Action and Planck's Constant](/derivations/thermodynamics/action-planck) (Theorem 5.1), physical paths satisfy $\delta \mathcal{S} = 0$. In the curved metric $g_{\mu\nu}$, $\mathcal{L} = \sqrt{g_{\mu\nu} \dot{x}^\mu \dot{x}^\nu}$. The Euler-Lagrange equations are the geodesic equation (standard differential geometry). $\square$
 
-**Corollary 3.2.** *Near a massive observer, geodesics curve toward the mass. Gravity is not a force — it is a coherence-cost gradient making loop closure easier in one direction.*
+**Corollary 3.2.** *Near a massive observer, geodesics curve toward the mass. Gravity is not a force — it is the curvature of the coherence geometry, forced by the action duality between the spacetime metric and the coherence Hessian (Theorem 0.1).*
+
+**Remark (Interpretive restatement).** Gravitational time dilation (Theorem 2.1) means proper time per cycle is shorter near mass: $T(r) = T_\infty / \sqrt{1 - 2GM/(c^2 r)}$. Since the coherence cost per observer cycle is $E \cdot T$ ([Action and Planck's Constant](/derivations/thermodynamics/action-planck), Proposition 4.1), the cost per cycle varies with position. In this sense, "loops close at different rates at different positions" — but this is a consequence of the derived gravitational time dilation, not the mechanism by which gravity arises. The mechanism is action duality (Theorem 0.1): observer content modifies the coherence Hessian, which forces the spacetime metric to change.
 
 ### Step 4: The Equivalence Principle
 
