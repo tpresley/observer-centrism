@@ -4,7 +4,7 @@ status: "provisional"
 dependsOn: ["holography/hawking-radiation", "axioms/coherence-conservation"]
 enablesDerivation: ["holography/scrambling"]
 tags: ["holography"]
-summary: "Information is globally conserved (coherence conservation) but locally inaccessible — the paradox dissolves when entropy is recognized as observer-indexed"
+summary: "Information is conserved (coherence conservation) but locally inaccessible — the paradox dissolves when entropy is recognized as observer-indexed"
 rigorLevel: "formal"
 lastUpdated: 2026-03-09
 ---
@@ -31,7 +31,7 @@ The standard paradox runs as follows. A black hole forms from a known quantum st
 
 ## Statement
 
-**Theorem.** The black hole information paradox is resolved by the observer-indexed structure of entropy. Coherence is globally conserved (Axiom 1) — information is never destroyed. The information about the black hole interior is encoded in correlations between successive Hawking quanta (inter-quantum relational invariants). The apparent paradox arises from conflating observer-indexed entropy (which increases for individual external observers collecting thermal radiation) with absolute information loss (which does not occur). The Page curve — the entanglement entropy of the radiation rising then falling — follows from coherence conservation. No firewall or stable remnant is required.
+**Theorem.** The black hole information paradox is resolved by the observer-indexed structure of entropy. Coherence is conserved (Axiom 1) — information is never destroyed. The information about the black hole interior is encoded in correlations between successive Hawking quanta (inter-quantum relational invariants). The apparent paradox arises from conflating observer-indexed entropy (which increases for individual external observers collecting thermal radiation) with absolute information loss (which does not occur). The Page curve — the entanglement entropy of the radiation rising then falling — follows from coherence conservation. No firewall or stable remnant is required.
 
 ## Derivation
 
@@ -93,7 +93,7 @@ No single outgoing quantum carries significant information — the information i
 
 The paradox dissolves: $\mathcal{O}_A$ sees information loss because their coherence domain is bounded; $\mathcal{O}_B$ sees unitary evolution because their coherence domain encompasses the full system. Both descriptions are correct for their respective observers. $\square$
 
-**Corollary 4.2.** *"Is information lost?" is not a well-posed question without specifying the observer. The answer is observer-dependent — information is locally inaccessible but globally conserved.*
+**Corollary 4.2.** *"Is information lost?" is not a well-posed question without specifying the observer. The answer is observer-dependent — information is locally inaccessible but conserved on every Cauchy slice.*
 
 ### Step 5: The Page Curve
 

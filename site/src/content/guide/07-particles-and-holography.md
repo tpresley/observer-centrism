@@ -76,7 +76,7 @@ Hawking radiation follows from loop closure applied at the horizon. A minimal ob
 
 As a black hole radiates and shrinks, what happens to the information that fell in? Standard physics has no consensus answer — this is the black hole information paradox, one of the deepest open problems in theoretical physics.
 
-The framework dissolves it. Coherence is globally conserved (Axiom 1) — information is never destroyed. But it can become locally inaccessible. The information that fell into the black hole is encoded in the growing entanglement correlations between successive Hawking quanta. In principle, an observer who collected *all* the radiation from the beginning of evaporation could reconstruct the original information. In practice, no local observer can.
+The framework dissolves it. Coherence is conserved (Axiom 1) — information is never destroyed. But it can become locally inaccessible. The information that fell into the black hole is encoded in the growing entanglement correlations between successive Hawking quanta. In principle, an observer who collected *all* the radiation from the beginning of evaporation could reconstruct the original information. In practice, no local observer can.
 
 Conservation holds globally. Inaccessibility is local. There is no paradox — there is a distinction between what is conserved and what is accessible, a distinction the framework has been making since it defined entropy in [chapter 4](/guide/04-how-things-happen).
 

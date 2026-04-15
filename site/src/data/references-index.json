@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-14T09:37:11.560Z",
+    "generatedAt": "2026-04-14T22:26:50.606Z",
     "totalReferences": 97,
     "totalCitations": 110,
     "citingFiles": 46,
@@ -538,7 +538,7 @@
       "citedIn": [
         {
           "derivationId": "guide/09-epistemology",
-          "title": "What Rigorous Means Here"
+          "title": "What Derived Means Here"
         }
       ],
       "category": "field-theory"

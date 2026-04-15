@@ -137,7 +137,7 @@ This is the alternating sum (or Möbius function) over the three-element partiti
 
 **Remark (Sign of $\delta$).** The correction term $\delta$ decomposes into two parts with opposite signs. Applying (C5) to $A = S_1 \cup S_2$, $B = S_1 \cup S_3$ gives $\mathcal{C}(S_1) - \mathcal{C}(S_1 \cup S_2) - \mathcal{C}(S_1 \cup S_3) + \mathcal{C}(S_1 \cup S_2 \cup S_3) \leq 0$, while (C4) gives $\mathcal{C}(S_2) + \mathcal{C}(S_3) - \mathcal{C}(S_2 \cup S_3) \geq 0$. Since $\delta$ is the sum of these, its sign is model-dependent.
 
-In the physical regime where $\mathcal{C}$ specializes to von Neumann entropy, $\delta$ equals the conditional mutual information $I(S_2; S_3 | S_1) \geq 0$, guaranteed by strong subadditivity. In the general framework, the sign of $\delta$ carries physical meaning: $\delta > 0$ when $S_2$ and $S_3$ redundantly encode their relationship with $S_1$; $\delta < 0$ when they synergistically encode it.
+The quantity $\delta$ is the **interaction information** (or co-information) of the triple $(S_1, S_2, S_3)$. It decomposes as $\delta = \mathcal{C}(S_2 : S_3) - I(S_2; S_3 | S_1)$, where $I(S_2; S_3 | S_1) \geq 0$ is the conditional mutual information (non-negative by C5). The sign of $\delta$ carries physical meaning: $\delta > 0$ when $S_2$ and $S_3$ redundantly encode their relationship with $S_1$ (the pairwise correlations overcount); $\delta < 0$ when they synergistically encode it (the whole exceeds the sum of pairwise parts). This sign-indefiniteness holds even in the von Neumann entropy specialization — interaction information is genuinely sign-indefinite in quantum systems.
 
 ### Step 3: Admissible Transformations and Conservation
 
@@ -161,9 +161,9 @@ $$\sum_{e \in \text{In}(v)} \mathcal{C}(e) = \sum_{e \in \text{Out}(v)} \mathcal
 
 ### Step 4: The Dependency Graph
 
-**Definition 4.1 (Dependency graph).** The **dependency graph** $\mathcal{G} = (V, E)$ is a finite or countable directed acyclic graph (DAG) that is postulated as part of the framework's structure. Vertices $v \in V$ represent interaction events; directed edges $(v_1, v_2) \in E$ encode causal dependence ($v_1$ is an input to $v_2$).
+**Definition 4.1 (Dependency graph).** The **dependency graph** $\mathcal{G} = (V, E)$ is a finite or countable directed acyclic graph (DAG). Vertices $v \in V$ represent interaction events; directed edges $(v_1, v_2) \in E$ encode causal dependence ($v_1$ is an input to $v_2$).
 
-**Remark (Status of $\mathcal{G}$).** The dependency graph $\mathcal{G}$ is a structural postulate — it encodes the logical ordering of interactions. It is not derived from the coherence space alone, and it does not presuppose time. Time is derived later (in [Time as Phase Ordering](/derivations/thermodynamics/time)) as a monotonic parameterization of directed paths in $\mathcal{G}$. The existence of $\mathcal{G}$ is a co-axiom with the coherence space: together, $(\mathcal{H}, \mathcal{A}, \mathcal{C}, \mathcal{G})$ constitute the foundational structure.
+**Remark (Status of $\mathcal{G}$).** The dependency graph is forced by the operational definitions (see Operational Grounding above): directedness follows from the asymmetric "is-input-to" relation inherent in observation (Definition 1), acyclicity follows from "residue remembered" being incompatible with cyclic causation (Definitions 1 and 3), and discreteness follows from observation residues being operationally binary with finite coherence bounding the count. The DAG does not presuppose time — time is derived later (in [Time as Phase Ordering](/derivations/thermodynamics/time)) as a monotonic parameterization of directed paths in $\mathcal{G}$.
 
 **Definition 4.2 (Cauchy slice).** A **Cauchy slice** of $\mathcal{G}$ is a maximal antichain $\Sigma \subset V$: a set such that
 1. **Antichain:** No two elements of $\Sigma$ are related by a directed path in $\mathcal{G}$
@@ -187,7 +187,7 @@ $$\sum_{e \in \text{In}(v)} \mathcal{C}(e) = \sum_{e \in \text{Out}(v)} \mathcal
 
 **Corollary 5.3 (Necessity of strict subadditivity).** *For the framework to support relational invariants (and hence the bootstrap mechanism, composite observers, and interactions), there must exist at least one pair of disjoint subsystems with $\mathcal{C}(S_1 : S_2) > 0$ — i.e., $\mathcal{C}$ must be strictly subadditive on at least one pair.*
 
-**Proposition 5.4 (Cauchy-slice conservation).** *If coherence is locally conserved at every vertex of a finite DAG $\mathcal{G}$ (Axiom 1(ii)), then every Cauchy slice of $\mathcal{G}$ carries the same total coherence.*
+**Proposition 5.4 (Cauchy-slice conservation).** *If coherence is locally conserved at every vertex of a finite DAG $\mathcal{G}$ at a given bootstrap level (Axiom 1(ii)), then every Cauchy slice of $\mathcal{G}$ at that level carries the same total coherence.*
 
 *Proof.* Any two Cauchy slices $\Sigma_1, \Sigma_2$ of a finite DAG are related by a sequence of **elementary swaps**: replacing a vertex $v$ in the slice with either its immediate successors or predecessors (while maintaining the antichain property). It suffices to show each elementary swap preserves the total.
 
@@ -197,9 +197,9 @@ $$\mathcal{C}(\Sigma') - \mathcal{C}(\Sigma) = \sum_{j=1}^{k} \mathcal{C}(w_j) -
 
 The vertices shared between $\Sigma$ and $\Sigma'$ contribute identically to both sums. The only difference is the removal of $v$ and the addition of its successors. But local conservation at $v$ states that the coherence flowing into $v$ equals the coherence flowing out. In a DAG where each vertex's coherence is identified with the coherence it carries, this gives $\mathcal{C}(\Sigma') = \mathcal{C}(\Sigma)$. By induction over a finite sequence of elementary swaps connecting any two Cauchy slices, the result follows. $\square$
 
-**Definition 5.5 (Cauchy-slice total).** The common value of all Cauchy-slice totals within a given interaction network is denoted $C_0$. This is a derived constant of the network, determined by the network's structure — not a free parameter of the axioms.
+**Definition 5.5 (Cauchy-slice total).** The common value of all Cauchy-slice totals within a given bootstrap level's interaction network is denoted $C_0^{(n)}$ for level $n$. This is a derived constant of the network at that level, determined by its structure — not a free parameter of the axioms. Where the level is clear from context, we write $C_0$.
 
-**Proposition 5.6 (Cauchy-slice finiteness).** *On any Cauchy slice of a well-formed interaction network, the total coherence $C_0$ is finite.*
+**Proposition 5.6 (Cauchy-slice finiteness).** *On any Cauchy slice of a well-formed interaction network at a given bootstrap level, the total coherence $C_0^{(n)}$ is finite.*
 
 *Proof.* Each vertex $v$ in the Cauchy slice represents an interaction event involving observers with compact state spaces (O1 of [Observer Definition](/derivations/axioms/observer-definition)). By local finiteness (C2), each vertex carries finite coherence $\mathcal{C}(v) < \infty$. The interaction graph is discrete (countable vertices), and a Cauchy slice of a finite or locally finite DAG contains at most countably many vertices. In the physical realization, the observer network at any given level has finite density per compact region (from the discrete substrate), so the Cauchy slice contains finitely many vertices and $C_0 = \sum_{v \in \Sigma} \mathcal{C}(v) < \infty$. $\square$
 
@@ -282,11 +282,11 @@ This violates (C5). Hence (C5) is independent of (C1)–(C4).
 - Theorem 6.1: Two explicit models demonstrate consistency, with all five axioms verified step by step
 - Proposition 2.5 (chain rule): Full algebraic derivation; the sign issue with $\delta$ is resolved by explicitly noting it requires additional structure and is not a consequence of (C1)–(C5) alone
 
-**Structural assumptions (co-axioms, not derived):**
-- The dependency graph $\mathcal{G}$ is a structural postulate (Definition 4.1, Remark). This is not a gap — it is an acknowledged foundational element alongside the coherence space.
-- The vertex-to-subsystem identification $v \mapsto S_v$ connecting $\mathcal{G}$ to $(\mathcal{H}, \mathcal{A}, \mathcal{C})$ is postulated. Its precise construction requires the interaction types (developed in [Three Interaction Types](/derivations/interactions/three-types)).
+**Derived structural elements:**
+- The dependency graph $\mathcal{G}$ is forced by the operational definitions (Definition 4.1, Remark): directedness from the asymmetric interaction relation, acyclicity from "residue remembered," discreteness from operationally binary residues with finite coherence.
+- The vertex-to-subsystem identification $v \mapsto S_v$ connecting $\mathcal{G}$ to $(\mathcal{H}, \mathcal{A}, \mathcal{C})$ is postulated at this stage. Its precise construction requires the interaction types (developed in [Three Interaction Types](/derivations/interactions/three-types)).
 
-**Assessment:** The axiom is rigorously formalized with complete definitions, proofs, and explicit consistency models. All assumptions are stated. The main structural postulate (the dependency graph) is acknowledged as a co-axiom. Conservation is stated as a single axiom with two parts — transformation isometry (i) and local node conservation (ii). Cauchy-slice conservation and finiteness are derived as theorems (Propositions 5.4 and 5.6). Cross-level coherence generation is characterized in Proposition 5.7.
+**Assessment:** The axiom is rigorously formalized with complete definitions, proofs, and explicit consistency models. All assumptions are stated. The dependency graph structure is forced by the operational definitions, not independently postulated. Conservation is stated as a single axiom with two parts — transformation isometry (i) and local node conservation (ii). Cauchy-slice conservation and finiteness are derived as theorems (Propositions 5.4 and 5.6). Cross-level coherence generation is characterized in Proposition 5.7.
 
 **Remark (Monotonicity as a theorem).** The question of whether monotonicity ($S_1 \subseteq S_2 \Rightarrow \mathcal{C}(S_1) \leq \mathcal{C}(S_2)$) should be added as condition (C6) is resolved by the coherence functional uniqueness result ([Born Rule](/derivations/quantum/born-rule), Theorem 6c.1): under the conditions (C1)–(C5) together with the observer structure (Axiom 2) and the operational constraints (channel additivity, composition, continuity), the coherence functional is uniquely identified with the squared norm $\langle\psi|\psi\rangle$. The corresponding von Neumann entropy is monotone for subsystems of a fixed system — this is a standard consequence of strong subadditivity applied to the purification. Therefore monotonicity follows as a theorem once the operational identification is established and need not be added as a separate axiom.
 

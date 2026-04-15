@@ -6,7 +6,7 @@ enablesDerivation: ["minimal-observer/coherence-dual-pairs", "interactions/three
 tags: ["foundation"]
 summary: "A single observer is vacuous and pairs are insufficient — strong subadditivity requires at least three observers, and the bootstrap propagates this into a full network"
 rigorLevel: "formal"
-lastUpdated: 2026-03-09
+lastUpdated: 2026-04-14
 ---
 
 ## Overview
@@ -56,7 +56,7 @@ In standard physics, there is no principled reason why a single particle or enti
 
 We show $G_\mathcal{O}^c = \emptyset$, which by Proposition 1.2 gives $\mathcal{C}(\Sigma) = 0$.
 
-Every $T \in \text{Aut}(\mathcal{H})$ acts on $\Sigma = \mathcal{H}$ and preserves total coherence $\mathcal{C}(\mathcal{H}) = C_0$ (Axiom 1). Suppose for contradiction that $T \in G_\mathcal{O}^c$ — then $I(T(\sigma)) \neq I(\sigma)$ for some $\sigma$. This means $T$ disrupts the invariant $I$. But since $\Sigma = \mathcal{H}$, there is no complement $\mathcal{H} \setminus \Sigma$ to absorb the coherence displaced from $I$. Specifically: by coherence conservation ([Coherence Conservation](/derivations/axioms/coherence-conservation), Axiom 1(ii)), the total coherence is unchanged, but the portion structured by $I$ has changed. Since there is no other structured degree of freedom in $\mathcal{H}$ (no other observer, no other invariant), the disrupted coherence cannot be reassigned — it is lost, violating $\mathcal{C}(\mathcal{H}) = C_0$.
+Suppose for contradiction that $T \in G_\mathcal{O}^c$ — then $I(T(\sigma)) \neq I(\sigma)$ for some $\sigma$. This means $T$ disrupts the invariant $I$. But since $\Sigma = \mathcal{H}$, there is no complement $\mathcal{H} \setminus \Sigma$ to absorb the coherence displaced from $I$. By local conservation ([Coherence Conservation](/derivations/axioms/coherence-conservation), Axiom 1(ii)), coherence cannot be created or destroyed at any interaction node — it can only be transferred between subsystems. With no other subsystem present, the disrupted coherence has nowhere to go. The transformation $T$ would violate conservation, contradicting its admissibility.
 
 Therefore no $T \in \text{Aut}(\mathcal{H})$ can disrupt $I$: every admissible transformation preserves $I$, so $G_\mathcal{O}^c = \emptyset$. By Proposition 1.2, $\mathcal{C}(\Sigma) = 0$. $\square$
 
@@ -70,11 +70,7 @@ Therefore no $T \in \text{Aut}(\mathcal{H})$ can disrupt $I$: every admissible t
 
 **Constructively**: $\mathcal{C}(\mathcal{O}_1) > 0$ implies $G_{\mathcal{O}_1}^c \neq \emptyset$ (Proposition 1.2). Non-self transformations exist that could disrupt $I_1$. These cannot arise from $\mathcal{O}_1$'s own dynamics (which are in $G_{\mathcal{O}_1}$ by definition). Therefore $\mathcal{H} \setminus \Sigma_1 \neq \emptyset$ — there is structure outside $\mathcal{O}_1$.
 
-The complement carries positive coherence: by subadditivity (C4 of [Coherence Conservation](/derivations/axioms/coherence-conservation)),
-
-$$\mathcal{C}(\Sigma_1) + \mathcal{C}(\mathcal{H} \setminus \Sigma_1) \geq \mathcal{C}(\mathcal{H}) = C_0$$
-
-Since $\mathcal{C}(\Sigma_1) < C_0$ (otherwise $\Sigma_1 = \mathcal{H}$ and we're in the single-observer case), we have $\mathcal{C}(\mathcal{H} \setminus \Sigma_1) > 0$. $\square$
+The complement carries positive coherence. A transformation $T \in G_{\mathcal{O}_1}^c$ that could disrupt $I_1$ must be sourced by structure in $\mathcal{H} \setminus \Sigma_1$. This structure must itself carry positive coherence: a zero-coherence structure has no conserved charge, no invariant, and no capacity to generate transformations that threaten another observer's invariant — it is structurally inert (Corollary 2.2). Threats require substance: only structure with $\mathcal{C} > 0$ can source the non-self transformations that the observer's positive coherence demands. Therefore $\mathcal{C}(\mathcal{H} \setminus \Sigma_1) > 0$. $\square$
 
 **Corollary 3.2 (Observer in the complement).** *If the coherence-maintaining structure in $\mathcal{H} \setminus \Sigma_1$ itself satisfies the observer axioms — i.e., it has a state space, invariant, and boundary — then it constitutes a second observer $\mathcal{O}_2$.*
 
@@ -101,21 +97,21 @@ The minimum configuration is a **mutually defining pair**: two observers in stab
 
 **Proposition 5.1 (Coherence budget).** *For the mutually defining pair $(\mathcal{O}_1, \mathcal{O}_2)$ with $\mathcal{O}_1 \cup \mathcal{O}_2 = \mathcal{H}$:*
 
-$$\mathcal{C}(\mathcal{O}_1) + \mathcal{C}(\mathcal{O}_2) = C_0 + \mathcal{C}(\mathcal{O}_1 : \mathcal{O}_2)$$
+$$\mathcal{C}(\mathcal{O}_1) + \mathcal{C}(\mathcal{O}_2) = \mathcal{C}(\mathcal{H}) + \mathcal{C}(\mathcal{O}_1 : \mathcal{O}_2)$$
 
-*where $\mathcal{C}(\mathcal{O}_1 : \mathcal{O}_2) \geq 0$ is the relational coherence. The sum of individual coherences exceeds the total by exactly the relational coherence.*
+*where $\mathcal{C}(\mathcal{O}_1 : \mathcal{O}_2) \geq 0$ is the relational coherence. The sum of individual coherences exceeds the coherence of their union by exactly the relational coherence.*
 
 *Proof.* By definition of relational coherence ([Coherence Conservation](/derivations/axioms/coherence-conservation), Definition 2.1):
 
 $$\mathcal{C}(\mathcal{O}_1 : \mathcal{O}_2) = \mathcal{C}(\mathcal{O}_1) + \mathcal{C}(\mathcal{O}_2) - \mathcal{C}(\mathcal{O}_1 \cup \mathcal{O}_2)$$
 
-Since $\mathcal{O}_1 \cup \mathcal{O}_2 = \mathcal{H}$, we have $\mathcal{C}(\mathcal{O}_1 \cup \mathcal{O}_2) = C_0$. Substituting:
+Since $\mathcal{O}_1 \cup \mathcal{O}_2 = \mathcal{H}$, we have $\mathcal{C}(\mathcal{O}_1 \cup \mathcal{O}_2) = \mathcal{C}(\mathcal{H})$. Substituting:
 
-$$\mathcal{C}(\mathcal{O}_1 : \mathcal{O}_2) = \mathcal{C}(\mathcal{O}_1) + \mathcal{C}(\mathcal{O}_2) - C_0$$
+$$\mathcal{C}(\mathcal{O}_1 : \mathcal{O}_2) = \mathcal{C}(\mathcal{O}_1) + \mathcal{C}(\mathcal{O}_2) - \mathcal{C}(\mathcal{H})$$
 
-Rearranging: $\mathcal{C}(\mathcal{O}_1) + \mathcal{C}(\mathcal{O}_2) = C_0 + \mathcal{C}(\mathcal{O}_1 : \mathcal{O}_2)$.
+Rearranging: $\mathcal{C}(\mathcal{O}_1) + \mathcal{C}(\mathcal{O}_2) = \mathcal{C}(\mathcal{H}) + \mathcal{C}(\mathcal{O}_1 : \mathcal{O}_2)$.
 
-The relational coherence $\mathcal{C}(\mathcal{O}_1 : \mathcal{O}_2) \geq 0$ by subadditivity (C4), so $\mathcal{C}(\mathcal{O}_1) + \mathcal{C}(\mathcal{O}_2) \geq C_0$. The excess represents shared structure — coherence that is "double-counted" when summing the parts because it resides in the relationship between the observers, not in either one alone. $\square$
+The relational coherence $\mathcal{C}(\mathcal{O}_1 : \mathcal{O}_2) \geq 0$ by subadditivity (C4), so $\mathcal{C}(\mathcal{O}_1) + \mathcal{C}(\mathcal{O}_2) \geq \mathcal{C}(\mathcal{H})$. The excess represents shared structure — coherence that is "double-counted" when summing the parts because it resides in the relationship between the observers, not in either one alone. $\square$
 
 **Corollary 5.2 (Relational coherence is non-trivial).** *For a mutually defining pair with $\mathcal{C}(\mathcal{O}_i) > 0$, the relational coherence $\mathcal{C}(\mathcal{O}_1 : \mathcal{O}_2) > 0$.*
 
@@ -155,7 +151,7 @@ The multiplicity theorem establishes $\geq 2$. But is a pair sufficient? The ans
 
 **Proposition 7.1 (C5 is vacuous on pairs).** *If $\mathcal{H}$ contains exactly two observers $\mathcal{O}_1, \mathcal{O}_2$ with $\Sigma_1 \cup \Sigma_2 = \mathcal{H}$, then strong subadditivity (C5 of [Coherence Conservation](/derivations/axioms/coherence-conservation)) is trivially satisfied — it constrains nothing beyond C4.*
 
-*Proof.* C5 states: for subsystems $A, B, C$, $\mathcal{C}(A \cup B) + \mathcal{C}(B \cup C) \geq \mathcal{C}(A \cup B \cup C) + \mathcal{C}(B)$. With only two independent subsystems $\Sigma_1$ and $\Sigma_2$, every triple $(A, B, C)$ drawn from $\{\Sigma_1, \Sigma_2, \mathcal{H}, \emptyset\}$ reduces C5 to an instance of C4 or a tautology. For example, taking $A = \Sigma_1$, $B = \emptyset$, $C = \Sigma_2$: $\mathcal{C}(\Sigma_1) + \mathcal{C}(\Sigma_2) \geq \mathcal{C}(\mathcal{H}) + \mathcal{C}(\emptyset) = C_0$, which is subadditivity (C4). No non-trivial triple of independent subsystems exists. $\square$
+*Proof.* C5 states: for subsystems $A, B, C$, $\mathcal{C}(A \cup B) + \mathcal{C}(B \cup C) \geq \mathcal{C}(A \cup B \cup C) + \mathcal{C}(B)$. With only two independent subsystems $\Sigma_1$ and $\Sigma_2$, every triple $(A, B, C)$ drawn from $\{\Sigma_1, \Sigma_2, \mathcal{H}, \emptyset\}$ reduces C5 to an instance of C4 or a tautology. For example, taking $A = \Sigma_1$, $B = \emptyset$, $C = \Sigma_2$: $\mathcal{C}(\Sigma_1) + \mathcal{C}(\Sigma_2) \geq \mathcal{C}(\mathcal{H}) + \mathcal{C}(\emptyset) = \mathcal{C}(\mathcal{H})$, which is subadditivity (C4). No non-trivial triple of independent subsystems exists. $\square$
 
 **Theorem 7.2 (Pairs are insufficient).** *The framework requires at least three independent observer subsystems.*
 
@@ -213,14 +209,14 @@ The mutual definition structure maps to:
 
 **Remark.** This model validates Steps 1–6 (pair necessity). A consistency model for the full network result (Step 7) requires at least three oscillators with non-trivial C5 instances — the minimal such model is the bootstrap fixed point itself (see [Bootstrap Mechanism](/derivations/interactions/bootstrap), Conjectures 7.1–7.2).
 
-**Model**: $\mathcal{H} = S^1 \times S^1$, with $\mathcal{O}_1 = (S^1 \times \{0\}, I_1, \mathcal{B}_1)$ and $\mathcal{O}_2 = (\{0\} \times S^1, I_2, \mathcal{B}_2)$, coherence $\mathcal{C}(\mathcal{O}_1) = \mathcal{C}(\mathcal{O}_2) = q > 0$, total $C_0 = 2q - \delta$ for some $0 \leq \delta < 2q$ (relational coherence $\delta$).
+**Model**: $\mathcal{H} = S^1 \times S^1$, with $\mathcal{O}_1 = (S^1 \times \{0\}, I_1, \mathcal{B}_1)$ and $\mathcal{O}_2 = (\{0\} \times S^1, I_2, \mathcal{B}_2)$, coherence $\mathcal{C}(\mathcal{O}_1) = \mathcal{C}(\mathcal{O}_2) = q > 0$, $\mathcal{C}(\mathcal{H}) = 2q - \delta$ for some $0 \leq \delta < 2q$ (relational coherence $\delta$).
 
 *Verification:*
 - Each $\mathcal{O}_i$ is a minimal observer (Proposition 3.1 of [Minimal Observer Structure](/derivations/minimal-observer/structure)). ✓
 - $\mathcal{O}_1$'s dynamics ($\phi_t^{(1)}$ rotating the first $S^1$) does not preserve $I_2$, so $\phi_t^{(1)} \in G_{\mathcal{O}_2}^c$. ✓
 - Symmetrically, $\phi_t^{(2)} \in G_{\mathcal{O}_1}^c$. ✓
 - Each sources the other's non-self transformations (mutual definition). ✓
-- $\mathcal{C}(\mathcal{O}_1) + \mathcal{C}(\mathcal{O}_2) = 2q = C_0 + \delta$ (Proposition 5.1 holds). ✓
+- $\mathcal{C}(\mathcal{O}_1) + \mathcal{C}(\mathcal{O}_2) = 2q = \mathcal{C}(\mathcal{H}) + \delta$ (Proposition 5.1 holds). ✓
 - Relational coherence $\mathcal{C}(\mathcal{O}_1 : \mathcal{O}_2) = \delta > 0$ (Corollary 5.2 holds). ✓ $\square$
 
 ## Rigor Assessment

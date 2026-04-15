@@ -11,7 +11,7 @@ Observer-Centrism rests on three primitive commitments. Everything else — time
 
 ### 2.1 Axiom One: Coherence Conservation
 
-There exists a primitive quantity — coherence — that is globally conserved. Coherence cannot be created from nothing, destroyed, or exported to an external reservoir. The ontology is closed: there is no bath, no sink, no outside into which coherence can flow.
+There exists a primitive quantity — coherence — that is locally conserved at every interaction. Coherence cannot be created from nothing, destroyed into nothing, or exported to an external reservoir. The ontology is closed: there is no bath, no sink, no outside into which coherence can flow.
 
 Coherence is not defined in terms of anything more fundamental. It is the ontic primitive — the substrate from which everything else is constructed. Its conservation is the single constraint that drives all subsequent structure.
 

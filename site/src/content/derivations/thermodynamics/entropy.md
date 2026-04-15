@@ -31,7 +31,7 @@ The standard account treats entropy increase as a statistical tendency -- overwh
 
 ## Statement
 
-**Theorem.** Entropy is observer-indexed: the entropy of a system $S$ relative to observer $A$ is the coherence of $S$ that lies outside $A$'s coherence domain. The second law of thermodynamics — $dS_A/d\tau \geq 0$ — follows from two structural facts: (1) coherence is globally conserved (Axiom 1), and (2) every physical observer is bounded (its coherence domain is a proper subset of the universe). No statistical assumptions, ergodic hypotheses, or special initial conditions are required.
+**Theorem.** Entropy is observer-indexed: the entropy of a system $S$ relative to observer $A$ is the coherence of $S$ that lies outside $A$'s coherence domain. The second law of thermodynamics — $dS_A/d\tau \geq 0$ — follows from two structural facts: (1) coherence is locally conserved (Axiom 1), and (2) every physical observer is bounded (its coherence domain is a proper subset of the universe). No statistical assumptions, ergodic hypotheses, or special initial conditions are required.
 
 ## Derivation
 
@@ -70,7 +70,7 @@ $$\mathcal{C}_A(\tau) = \sum_{v \in \mathcal{D}_A(\tau)} \mathcal{C}(v)$$
 
 **Proposition 2.4.** *Every physical observer is bounded.*
 
-*Proof.* By the Observer Definition ([Observer Definition](/derivations/axioms/observer-definition), Axiom 2), an observer $A = (\Sigma_A, I_A, \mathcal{B}_A)$ has a finite state space $\Sigma_A$ with finite coherence content $\mathcal{C}(\Sigma_A) < C_0$ (strictly less than the total — if $\mathcal{C}(\Sigma_A) = C_0$, then $A$ is the entire universe and has $\mathcal{C} = 0$ by [Multiplicity](/derivations/minimal-observer/multiplicity), Theorem 2.1).
+*Proof.* By the Observer Definition ([Observer Definition](/derivations/axioms/observer-definition), Axiom 2), an observer $A = (\Sigma_A, I_A, \mathcal{B}_A)$ has a compact state space $\Sigma_A$ with finite coherence content $\mathcal{C}(\Sigma_A) < \infty$ (local finiteness, Axiom 1 C2). The observer cannot fill all of $\mathcal{H}$ — if $\Sigma_A = \mathcal{H}$, then $A$ is the entire universe and has $\mathcal{C} = 0$ by [Multiplicity](/derivations/minimal-observer/multiplicity), Theorem 2.1.
 
 An observer's coherence domain $\mathcal{D}_A(\tau)$ is limited by $A$'s causal reach — the set of events causally connected to $A$'s interactions. At any finite $\tau$, $A$ has participated in finitely many interactions (each interaction costs positive coherence by [Time](/derivations/thermodynamics/time), Proposition 2.1, so infinitely many would require infinite coherence). Therefore $|V_A|$ is finite, and $\mathcal{D}_A(\tau)$ is a finite subset of $V$.
 

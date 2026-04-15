@@ -6,7 +6,7 @@ enablesDerivation: ["spacetime/einstein-equations", "particles/mass-hierarchy", 
 tags: ["dynamics"]
 summary: "Relational invariants are themselves observers, generating hierarchy through iterated interaction — complexity is necessary, not contingent"
 rigorLevel: "formal"
-lastUpdated: 2026-03-09
+lastUpdated: 2026-04-14
 ---
 
 ## Overview
@@ -22,7 +22,7 @@ In standard physics, complexity is treated as a contingent outcome of initial co
 - A universe with two or more observers *cannot* remain static -- the only interaction type that sustains mutual existence necessarily generates new relational structure.
 - Each new level of the hierarchy is genuinely irreducible: it introduces conserved quantities that cannot be expressed in terms of lower-level quantities.
 
-**The result.** The bootstrap produces an infinite hierarchy of observer levels (fundamental particles, bound states, molecules, and beyond), bounded below by minimal loops and bounded above by the total available coherence. This hierarchy is not a contingent accident but a structural consequence of the axioms. Moreover, the self-consistency requirement forces the observer network to be boundaryless — either spatially infinite or finite and topologically compact — since a boundary would violate coherence conservation and leave edge observers without the interaction partners that strong subadditivity (C5) requires (see [Multiplicity Is Necessary](/derivations/minimal-observer/multiplicity), Theorem 7.2 and Corollary 7.3).
+**The result.** The bootstrap produces an infinite hierarchy of observer levels (fundamental particles, bound states, molecules, and beyond), bounded below by minimal loops and bounded above by the information capacity of any observer's projected geometry. This hierarchy is not a contingent accident but a structural consequence of the axioms. Moreover, the self-consistency requirement forces the observer network to be boundaryless — either spatially infinite or finite and topologically compact — since a boundary would violate coherence conservation and leave edge observers without the interaction partners that strong subadditivity (C5) requires (see [Multiplicity Is Necessary](/derivations/minimal-observer/multiplicity), Theorem 7.2 and Corollary 7.3).
 
 **Why this matters.** The bootstrap is the engine behind essentially all the framework's predictions about particle physics. It explains why the universe is complex, why bound states exist, and why higher-level sciences (chemistry, biology) are not merely convenient approximations but reflect genuinely irreducible structure.
 
@@ -124,11 +124,11 @@ $$\mathcal{R}(\mathcal{O}_1, \mathcal{O}_2) = \mathcal{O}_{12}$$
 
 **Proposition 6.1 (Floor).** *The hierarchy has a lower bound: the fundamental observers — minimal $U(1)$ loops ([Minimal Observer Structure](/derivations/minimal-observer/structure)). Below this level, no stable loops exist. The pre-observational coherence geometry is the substrate from which the first stable loops crystallize (the quantum vacuum).*
 
-**Proposition 6.2 (Ceiling).** *The hierarchy has no finite upper bound on levels but is bounded by the total coherence. Each relational invariant has positive coherence content $\mathcal{C}(I_{jk}) > 0$ ([Relational Invariants](/derivations/interactions/relational-invariants), Theorem 2.1). Since the total coherence $C_0$ is finite and conserved, the total number of distinct relational invariants $N$ satisfies:*
+**Proposition 6.2 (Ceiling).** *The hierarchy has no finite upper bound on levels, but the number of bootstrap levels resolvable within any observer's projected geometry is finite. Each relational invariant has positive coherence content $\mathcal{C}(I_{jk}) > 0$ ([Relational Invariants](/derivations/interactions/relational-invariants), Theorem 2.1), and each occupies at least one Planck-area cell in the observer's projected geometry. By the holographic bound ([Area Scaling](/derivations/holography/area-scaling)), the information capacity of a causal diamond with boundary area $A$ is at most $A/(4\ell_P^2)$. Therefore the number of distinct relational invariants resolvable within that region satisfies:*
 
-$$N \leq C_0 / \mathcal{C}_{\min}$$
+$$N_{\text{region}} \leq A/(4\ell_P^2)$$
 
-*where $\mathcal{C}_{\min} > 0$ is the minimum coherence content of any relational invariant. Once the [Action and Planck's Constant](/derivations/thermodynamics/action-planck) derivation identifies $\mathcal{C}_{\min}$ with $\hbar$, this becomes $N \leq C_0/\hbar$.*
+*This is an observer-relative, information-theoretic bound: different observers at different bootstrap levels project different geometries and resolve different numbers of levels. The bound is a corollary of holography, not a consequence of a global coherence budget.*
 
 ## Physical Interpretation
 
@@ -150,7 +150,7 @@ $$N \leq C_0 / \mathcal{C}_{\min}$$
 - Theorem 4.1: Irreducibility (follows from definition of relational coherence + condition R2)
 - Proposition 5.1: Bootstrap map well-defined on objects (from Theorem 1.1)
 - Proposition 6.1: Floor (from Minimal Observer Structure)
-- Proposition 6.2: Ceiling bound (from finite total coherence + positive minimum per invariant)
+- Proposition 6.2: Ceiling bound (from holographic information capacity + positive minimum per invariant)
 
 **Deferred to later derivations:**
 - Full functor structure of $\mathcal{R}$ on morphisms (requires naturality of level-set construction)
@@ -176,7 +176,7 @@ $$\mathcal{U} \cong \mathcal{R}(\mathcal{U}, \mathcal{U})$$
 
 *where $\mathcal{R}$ is the bootstrap map (Proposition 5.1). The fixed point $\mathcal{U}$ represents a self-consistent universe that is its own observer.*
 
-**Conjecture 7.2 (Uniqueness).** *The fixed point of Conjecture 7.1 is unique (up to isomorphism in $\mathbf{Obs}$), given the constraint $\mathcal{C}(\mathcal{U}) = C_0$.*
+**Conjecture 7.2 (Uniqueness).** *The fixed point of Conjecture 7.1 is unique (up to isomorphism in $\mathbf{Obs}$), given the axioms and the local conservation constraint. The Cauchy-slice total $C_0$ is an output of the unique fixed point, not an input.*
 
 **Formal structure.** The domain equation $\mathcal{U} \cong \mathcal{R}(\mathcal{U}, \mathcal{U})$ is a *reflexive domain equation* in the sense of Dana Scott (1972). In Scott's theory, reflexive objects exist in categories of continuous lattices where every endomorphism has a fixed point. The key conditions are:
 

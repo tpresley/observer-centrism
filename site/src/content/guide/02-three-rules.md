@@ -21,7 +21,7 @@ Observer-Centrism takes a different approach. Rather than assuming specific phys
 
 ## The Three Axioms
 
-**Axiom 1: Coherence Conservation.** There exists a primitive quantity — coherence — that is globally conserved. It cannot be created from nothing, destroyed, or exported to an external reservoir. The ontology is closed: there is no bath, no sink, no outside.
+**Axiom 1: Coherence Conservation.** There exists a primitive quantity — coherence — that is locally conserved at every interaction. It cannot be created from nothing, destroyed into nothing, or exported to an external reservoir. The ontology is closed: there is no bath, no sink, no outside.
 
 This is the framework's version of a conservation law, but stated at the most fundamental level. Coherence is not defined in terms of energy, momentum, or any other familiar quantity. It is the primitive — the thing from which those quantities will eventually be derived. The name is chosen because coherence in physics usually refers to stable phase relationships, the property that makes interference possible and distinguishes organized structure from noise. The axiom generalizes this to its most abstract form: coherence is whatever it is that organized, persistent, self-maintaining structures conserve.
 

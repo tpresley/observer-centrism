@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-14T09:37:11.322Z",
+    "generatedAt": "2026-04-14T22:26:50.393Z",
     "derivationCount": 76,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -17,8 +17,8 @@
     "derivationCount": 76,
     "predictionCount": 12,
     "edgeCount": 219,
-    "formalObjectCount": 1129,
-    "openGapCount": 229,
+    "formalObjectCount": 1133,
+    "openGapCount": 228,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -115,8 +115,8 @@
       "tags": [
         "axioms"
       ],
-      "summary": "Formalization of the primitive conserved quantity as a subadditive measure on a directed acyclic graph, with conservation stated graph-theoretically without presupposing time",
-      "lastUpdated": "2026-04-11",
+      "summary": "Formalization of the primitive conserved quantity as a subadditive measure on a directed acyclic graph, with local conservation at every interaction node and global conservation derived as a theorem",
+      "lastUpdated": "2026-04-14",
       "dependsOn": [
         "axioms/00-from-observation-to-axioms"
       ],
@@ -164,6 +164,10 @@
         {
           "number": 5,
           "title": "Consequences"
+        },
+        {
+          "number": 6,
+          "title": "Cross-Level Coherence"
         }
       ],
       "formalObjects": [
@@ -171,7 +175,7 @@
           "type": "Axiom",
           "id": "1",
           "name": "Coherence Conservation",
-          "statementPreview": "There exists a primitive quantity C, called **coherence**, defined on the partitions of a coherence space H. The tota..."
+          "statementPreview": "There exists a primitive quantity C, called **coherence**, defined on the partitions of a coherence space H. Coherenc..."
         },
         {
           "type": "Definition",
@@ -282,6 +286,30 @@
           "statementPreview": "For the framework to support relational invariants (and hence the bootstrap mechanism, composite observers, and inter..."
         },
         {
+          "type": "Proposition",
+          "id": "5.4",
+          "name": "Cauchy-slice conservation",
+          "statementPreview": "If coherence is locally conserved at every vertex of a finite DAG G (Axiom 1(ii)), then every Cauchy slice of G carri..."
+        },
+        {
+          "type": "Definition",
+          "id": "5.5",
+          "name": "Cauchy-slice total",
+          "statementPreview": "The common value of all Cauchy-slice totals within a given interaction network is denoted C0. This is a derived const..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.6",
+          "name": "Cauchy-slice finiteness",
+          "statementPreview": "On any Cauchy slice of a well-formed interaction network, the total coherence C0 is finite.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.7",
+          "name": "Cross-level coherence generation",
+          "statementPreview": "A Type III interaction between observers O1 and O2 generates a relational invariant I12 with positive relational cohe..."
+        },
+        {
           "type": "Theorem",
           "id": "6.1",
           "name": "Existence of models",
@@ -292,11 +320,6 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Uniqueness of $C_0$",
-          "description": "Is the total coherence C0 a free parameter or fixed by self-consistency? Without loss of generality, one may normalize C0 = 1 for the abstract theory; the physical value of C0 (if any) would be determ"
-        },
-        {
-          "number": 2,
           "title": "Category-theoretic formulation",
           "description": "A more natural formalization may use a functor C: mathbfSub(H) R 0 from the category of subsystems to non-negative reals, with conservation as a constraint on natural transformations."
         }
@@ -308,6 +331,10 @@
           {
             "target": "axioms/00-from-observation-to-axioms",
             "context": "From Observation to Axioms"
+          },
+          {
+            "target": "axioms/observer-definition",
+            "context": "Observer Definition"
           },
           {
             "target": "axioms/coherence-operational",
@@ -322,6 +349,14 @@
             "context": "Time as Phase Ordering"
           },
           {
+            "target": "interactions/relational-invariants",
+            "context": "Theorem 3.2, reverse Noether"
+          },
+          {
+            "target": "thermodynamics/entropy",
+            "context": "Entropy"
+          },
+          {
             "target": "interactions/three-types",
             "context": "Three Interaction Types"
           },
@@ -332,6 +367,10 @@
           {
             "target": "axioms/coherence-operational",
             "context": "Theorem 2.1"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap Mechanism"
           }
         ],
         "incoming": [
@@ -550,7 +589,7 @@
           "type": "Proposition",
           "id": "3.3",
           "name": "Operational conservation",
-          "statementPreview": "Coherence conservation (C(H) = C0 under admissible transformations) is operationally equivalent to:*"
+          "statementPreview": "Local coherence conservation (inputs equal outputs at every interaction node) is operationally equivalent to:*"
         },
         {
           "type": "Proposition",
@@ -575,8 +614,8 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Quantitative $C_0$",
-          "description": "The total coherence C0 = S(rhototal) depends on the global state. Whether C0 is a free parameter or determined by self-consistency (the bootstrap fixed point) remains open — see [Bootstrap Mechanism]("
+          "title": "Quantitative Cauchy-slice total",
+          "description": "The derived Cauchy-slice total C0 (Proposition 5.5 of [Coherence Conservation](/derivations/axioms/coherence-conservation)) corresponds to S(rhototal) in the quantum realization. Its value is determin"
         },
         {
           "number": 2,
@@ -604,10 +643,6 @@
           {
             "target": "axioms/coherence-conservation",
             "context": "Model 2, strictly subadditive"
-          },
-          {
-            "target": "interactions/bootstrap",
-            "context": "Bootstrap Mechanism"
           }
         ],
         "incoming": [
@@ -1351,6 +1386,10 @@
             "context": "Axiom 2"
           },
           {
+            "source": "axioms/coherence-conservation",
+            "context": "Observer Definition"
+          },
+          {
             "source": "axioms/loop-closure",
             "context": "Observer Definition"
           },
@@ -1603,7 +1642,7 @@
           },
           {
             "target": "gauge/weak-interaction",
-            "context": "now rigorous"
+            "context": "now derived"
           },
           {
             "target": "gauge/chirality-selection",
@@ -1611,7 +1650,7 @@
           },
           {
             "target": "particles/three-generations",
-            "context": "rigorous"
+            "context": "derived"
           },
           {
             "target": "particles/neutrino-masses",
@@ -4247,7 +4286,7 @@
           },
           {
             "target": "particles/neutrino-masses",
-            "context": "rigorous"
+            "context": "derived"
           }
         ],
         "incoming": [
@@ -5488,11 +5527,11 @@
           },
           {
             "target": "gauge/weak-interaction",
-            "context": "now rigorous"
+            "context": "now derived"
           },
           {
             "target": "interactions/relational-invariants",
-            "context": "rigorous"
+            "context": "derived"
           },
           {
             "target": "interactions/relational-invariants",
@@ -6455,7 +6494,7 @@
           },
           {
             "source": "gauge/weak-interaction",
-            "context": "now rigorous"
+            "context": "now derived"
           },
           {
             "source": "interactions/bootstrap-division-algebras",
@@ -7584,7 +7623,7 @@
           "description": "gW is a free parameter, related to alphaem via gW = e/sinthetaW. Its value should follow from the [Coupling Constants](/derivations/cosmology/coupling-constants) derivation. Same status as e in electr"
         }
       ],
-      "assessmentVerdict": "Rigorous. The derivation follows the same template as [Electromagnetism](/derivations/gauge/electromagnetism) (now rigorous): physical motivation (3D rotations are non-abelian) → algebraic necessity (Hurwitz's theorem selects H) → gauge structure (S1 is the uniquely forced implementation, Propositio",
+      "assessmentVerdict": "Rigorous. The derivation follows the same template as [Electromagnetism](/derivations/gauge/electromagnetism) (now derived): physical motivation (3D rotations are non-abelian) → algebraic necessity (Hurwitz's theorem selects H) → gauge structure (S1 is the uniquely forced implementation, Proposition",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -7698,7 +7737,7 @@
           },
           {
             "target": "gauge/electromagnetism",
-            "context": "now rigorous"
+            "context": "now derived"
           },
           {
             "target": "cosmology/coupling-constants",
@@ -7720,7 +7759,7 @@
           },
           {
             "source": "cosmology/baryogenesis",
-            "context": "now rigorous"
+            "context": "now derived"
           },
           {
             "source": "cosmology/coupling-constants",
@@ -7752,7 +7791,7 @@
           },
           {
             "source": "gauge/chirality-selection",
-            "context": "now rigorous"
+            "context": "now derived"
           },
           {
             "source": "gauge/color-force",
@@ -8237,7 +8276,7 @@
           },
           {
             "source": "holography/er-epr",
-            "context": "rigorous"
+            "context": "derived"
           },
           {
             "source": "holography/hawking-radiation",
@@ -8253,6 +8292,10 @@
           },
           {
             "source": "holography/scrambling",
+            "context": "Area Scaling"
+          },
+          {
+            "source": "interactions/bootstrap",
             "context": "Area Scaling"
           },
           {
@@ -8427,7 +8470,7 @@
           "description": "Extremal black holes have TH = 0 but S > 0. The framework should explain this: the horizon still supports minimal observer loops (nonzero entropy) but thermal radiation is suppressed."
         }
       ],
-      "assessmentVerdict": "The Bekenstein-Hawking formula is rigorous given the holographic entropy bound (now rigorous). The horizon is the surface of maximum relational invariant density, saturating the bound. The factor 1/4 is established by the thermodynamic integration using the Hawking temperature.",
+      "assessmentVerdict": "The Bekenstein-Hawking formula is rigorous given the holographic entropy bound (now derived). The horizon is the surface of maximum relational invariant density, saturating the bound. The factor 1/4 is established by the thermodynamic integration using the Hawking temperature.",
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
@@ -8734,7 +8777,7 @@
           },
           {
             "source": "holography/er-epr",
-            "context": "rigorous"
+            "context": "derived"
           },
           {
             "source": "quantum/entanglement",
@@ -8894,11 +8937,11 @@
           },
           {
             "target": "spacetime/einstein-equations",
-            "context": "rigorous"
+            "context": "derived"
           },
           {
             "target": "holography/causal-set-statistics",
-            "context": "rigorous"
+            "context": "derived"
           },
           {
             "target": "quantum/born-rule",
@@ -8906,11 +8949,11 @@
           },
           {
             "target": "quantum/entanglement",
-            "context": "rigorous"
+            "context": "derived"
           },
           {
             "target": "holography/area-scaling",
-            "context": "rigorous"
+            "context": "derived"
           },
           {
             "target": "holography/hawking-radiation",
@@ -8972,7 +9015,7 @@
           },
           {
             "source": "quantum/entanglement",
-            "context": "rigorous"
+            "context": "derived"
           },
           {
             "source": "spacetime/speed-of-light",
@@ -9223,7 +9266,7 @@
       "tags": [
         "holography"
       ],
-      "summary": "Information is globally conserved (coherence conservation) but locally inaccessible — the paradox dissolves when entropy is recognized as observer-indexed",
+      "summary": "Information is conserved (coherence conservation) but locally inaccessible — the paradox dissolves when entropy is recognized as observer-indexed",
       "lastUpdated": "2026-03-09",
       "dependsOn": [
         "holography/hawking-radiation",
@@ -9912,7 +9955,7 @@
         "dynamics"
       ],
       "summary": "Relational invariants are themselves observers, generating hierarchy through iterated interaction — complexity is necessary, not contingent",
-      "lastUpdated": "2026-03-09",
+      "lastUpdated": "2026-04-14",
       "dependsOn": [
         "interactions/relational-invariants"
       ],
@@ -10027,7 +10070,7 @@
           "type": "Proposition",
           "id": "6.2",
           "name": "Ceiling",
-          "statementPreview": "The hierarchy has no finite upper bound on levels but is bounded by the total coherence. Each relational invariant ha..."
+          "statementPreview": "The hierarchy has no finite upper bound on levels, but the number of bootstrap levels resolvable within any observer'..."
         },
         {
           "type": "Corollary",
@@ -10121,8 +10164,8 @@
             "context": "Minimal Observer Structure"
           },
           {
-            "target": "thermodynamics/action-planck",
-            "context": "Action and Planck's Constant"
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
           },
           {
             "target": "cosmology/observer-loop-viability",
@@ -10147,7 +10190,7 @@
         ],
         "incoming": [
           {
-            "source": "axioms/coherence-operational",
+            "source": "axioms/coherence-conservation",
             "context": "Bootstrap Mechanism"
           },
           {
@@ -10525,6 +10568,10 @@
         ],
         "incoming": [
           {
+            "source": "axioms/coherence-conservation",
+            "context": "Theorem 3.2, reverse Noether"
+          },
+          {
             "source": "axioms/loop-closure",
             "context": "Relational Invariants"
           },
@@ -10566,7 +10613,7 @@
           },
           {
             "source": "gauge/chirality-selection",
-            "context": "rigorous"
+            "context": "derived"
           },
           {
             "source": "gauge/chirality-selection",
@@ -11264,7 +11311,7 @@
           },
           {
             "source": "minimal-observer/structure",
-            "context": "rigorous"
+            "context": "derived"
           },
           {
             "source": "particles/cpt-theorem",
@@ -11308,7 +11355,7 @@
         "foundation"
       ],
       "summary": "A single observer is vacuous and pairs are insufficient — strong subadditivity requires at least three observers, and the bootstrap propagates this into a full network",
-      "lastUpdated": "2026-03-09",
+      "lastUpdated": "2026-04-14",
       "dependsOn": [
         "minimal-observer/structure",
         "axioms/observer-definition",
@@ -11856,7 +11903,7 @@
           },
           {
             "target": "minimal-observer/coherence-dual-pairs",
-            "context": "rigorous"
+            "context": "derived"
           }
         ],
         "incoming": [
@@ -12744,7 +12791,7 @@
           },
           {
             "source": "flavor/mixing-angles",
-            "context": "rigorous"
+            "context": "derived"
           },
           {
             "source": "particles/three-generations",
@@ -12895,7 +12942,7 @@
           "description": "Lieb and Thirring (1975) proved that the stability of ordinary matter (energy extensive in particle number) requires the Pauli exclusion principle. This should be connected to the framework's structur"
         }
       ],
-      "assessmentVerdict": "The Pauli exclusion principle is rigorous. The core theorem (Theorem 4.1) is a pure algebraic identity: antisymmetry + same state → zero. The antisymmetry itself is rigorous (from the spin-statistics connection, now upgraded to rigorous). The physical consequences — shell structure, degeneracy press",
+      "assessmentVerdict": "The Pauli exclusion principle is rigorous. The core theorem (Theorem 4.1) is a pure algebraic identity: antisymmetry + same state → zero. The antisymmetry itself is rigorous (from the spin-statistics connection, now upgraded to derived). The physical consequences — shell structure, degeneracy pressu",
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
@@ -13098,7 +13145,7 @@
           },
           {
             "target": "particles/supersymmetry-impossibility",
-            "context": "rigorous"
+            "context": "derived"
           }
         ],
         "incoming": [
@@ -13329,7 +13376,7 @@
           },
           {
             "source": "particles/spin-statistics",
-            "context": "rigorous"
+            "context": "derived"
           }
         ]
       },
@@ -13548,7 +13595,7 @@
           },
           {
             "source": "cosmology/baryogenesis",
-            "context": "rigorous"
+            "context": "derived"
           },
           {
             "source": "cosmology/observer-loop-viability",
@@ -14103,11 +14150,11 @@
           },
           {
             "target": "quantum/teleportation",
-            "context": "rigorous"
+            "context": "derived"
           },
           {
             "target": "holography/er-epr",
-            "context": "rigorous"
+            "context": "derived"
           }
         ],
         "incoming": [
@@ -14117,7 +14164,7 @@
           },
           {
             "source": "holography/er-epr",
-            "context": "rigorous"
+            "context": "derived"
           },
           {
             "source": "quantum/observer-relative-objectivity",
@@ -15345,7 +15392,7 @@
         "incoming": [
           {
             "source": "quantum/entanglement",
-            "context": "rigorous"
+            "context": "derived"
           }
         ]
       },
@@ -15627,7 +15674,7 @@
           },
           {
             "source": "holography/er-epr",
-            "context": "rigorous"
+            "context": "derived"
           },
           {
             "source": "particles/cpt-theorem",
@@ -16119,7 +16166,7 @@
       "tags": [
         "geometry"
       ],
-      "summary": "Massive observers generate relational invariant density gradients; geodesics = minimum coherence cost paths; the equivalence principle is structural",
+      "summary": "Massive observers generate relational invariant density gradients; action duality forces spacetime metric to curve; geodesics follow extremal action; the equivalence principle is structural",
       "lastUpdated": "2026-03-12",
       "dependsOn": [
         "interactions/relational-invariants",
@@ -16204,7 +16251,7 @@
           "type": "Corollary",
           "id": "3.2.",
           "name": "",
-          "statementPreview": "Near a massive observer, geodesics curve toward the mass. Gravity is not a force — it is a coherence-cost gradient ma..."
+          "statementPreview": "Near a massive observer, geodesics curve toward the mass. Gravity is not a force — it is the curvature of the coheren..."
         },
         {
           "type": "Theorem",
@@ -18806,7 +18853,7 @@
           "type": "Proposition",
           "id": "6.1",
           "name": "No Landau poles from coherence conservation",
-          "statementPreview": "In a coherence-conserving theory, the total coherence is finite (Axiom 1). Therefore the coherence spectral density i..."
+          "statementPreview": "In a coherence-conserving theory, each subsystem carries finite coherence (Axiom 1, C2 local finiteness). Therefore t..."
         },
         {
           "type": "Corollary",
@@ -18824,13 +18871,13 @@
           "type": "Definition",
           "id": "1.1",
           "name": "",
-          "statementPreview": ": Ck = C0 1[k < omega0/c]. Below the fundamental frequency, the full coherence is \"resolved.\" Above it, none is. ✓"
+          "statementPreview": ": Ck = q 1[k < omega0/c]. Below the fundamental frequency, the full coherence is \"resolved.\" Above it, none is. ✓"
         },
         {
           "type": "Theorem",
           "id": "2.1",
           "name": "",
-          "statementPreview": ": dCk/d(ln k) = C0 ck delta(ck - omega0) = C0 omega0 , delta(ck - omega0). This is a delta function at k = omega0/c —..."
+          "statementPreview": ": dCk/d(ln k) = q ck delta(ck - omega0) = q omega0 , delta(ck - omega0). This is a delta function at k = omega0/c — t..."
         },
         {
           "type": "Theorem",
@@ -18842,13 +18889,13 @@
           "type": "Theorem",
           "id": "5.2",
           "name": "",
-          "statementPreview": ": c(k) = C0 1[k < omega0/c]. This is non-increasing: c drops from C0 to 0 at k = omega0/c. ✓"
+          "statementPreview": ": c(k) = q 1[k < omega0/c]. This is non-increasing: c drops from q to 0 at k = omega0/c. ✓"
         },
         {
           "type": "Proposition",
           "id": "6.1",
           "name": "",
-          "statementPreview": ": The total coherence C0 is finite. The \"coupling\" (the single relational invariant I12 = cos(theta1 - theta2)) is bo..."
+          "statementPreview": ": The observer's coherence q is finite (local finiteness). The \"coupling\" (the single relational invariant I12 = cos(..."
         }
       ],
       "structuralPostulates": [
@@ -19325,10 +19372,6 @@
             "context": "Action and Planck's Constant"
           },
           {
-            "source": "interactions/bootstrap",
-            "context": "Action and Planck's Constant"
-          },
-          {
             "source": "interactions/three-types",
             "context": "Action and Planck's Constant"
           },
@@ -19650,6 +19693,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "axioms/coherence-conservation",
+            "context": "Entropy"
+          },
           {
             "source": "cosmology/baryogenesis",
             "context": "Theorem 4.1, rigorous"
@@ -20345,7 +20392,7 @@
         },
         {
           "target": "gauge/chirality-selection",
-          "context": "status: rigorous"
+          "context": "status: derived"
         }
       ]
     },
@@ -20536,7 +20583,7 @@
         },
         {
           "target": "particles/cpt-theorem",
-          "context": "status: rigorous"
+          "context": "status: derived"
         }
       ]
     },
@@ -20621,7 +20668,7 @@
       "crossReferences": [
         {
           "target": "interactions/bootstrap-division-algebras",
-          "context": "status: rigorous"
+          "context": "status: derived"
         },
         {
           "target": "gauge/weak-interaction",
@@ -20756,7 +20803,7 @@
       "crossReferences": [
         {
           "target": "spacetime/einstein-equations",
-          "context": "status: rigorous"
+          "context": "status: derived"
         }
       ]
     },
@@ -20917,7 +20964,7 @@
         },
         {
           "target": "gauge/electromagnetism",
-          "context": "status: rigorous"
+          "context": "status: derived"
         }
       ]
     },
@@ -21056,7 +21103,7 @@
       "crossReferences": [
         {
           "target": "quantum/entanglement",
-          "context": "status: rigorous"
+          "context": "status: derived"
         },
         {
           "target": "axioms/coherence-operational",
@@ -21193,7 +21240,7 @@
       "crossReferences": [
         {
           "target": "holography/er-epr",
-          "context": "status: rigorous"
+          "context": "status: derived"
         },
         {
           "target": "holography/causal-set-statistics",
@@ -21328,7 +21375,7 @@
       "crossReferences": [
         {
           "target": "spacetime/gravity",
-          "context": "status: rigorous"
+          "context": "status: derived"
         },
         {
           "target": "interactions/coherence-lagrangian",
@@ -21513,7 +21560,7 @@
         },
         {
           "target": "spacetime/lorentz-invariance",
-          "context": "status: rigorous"
+          "context": "status: derived"
         },
         {
           "target": "axioms/loop-closure",
@@ -21751,7 +21798,7 @@
         },
         {
           "target": "particles/spin-statistics",
-          "context": "status: rigorous"
+          "context": "status: derived"
         },
         {
           "target": "gauge/weak-interaction",
@@ -21882,7 +21929,7 @@
       "crossReferences": [
         {
           "target": "gauge/weak-interaction",
-          "context": "status: rigorous"
+          "context": "status: derived"
         }
       ]
     }
@@ -22032,6 +22079,34 @@
       "id": "5.3",
       "name": "Necessity of strict subadditivity",
       "fullRef": "axioms/coherence-conservation:Corollary 5.3"
+    },
+    {
+      "derivationId": "axioms/coherence-conservation",
+      "type": "Proposition",
+      "id": "5.4",
+      "name": "Cauchy-slice conservation",
+      "fullRef": "axioms/coherence-conservation:Proposition 5.4"
+    },
+    {
+      "derivationId": "axioms/coherence-conservation",
+      "type": "Definition",
+      "id": "5.5",
+      "name": "Cauchy-slice total",
+      "fullRef": "axioms/coherence-conservation:Definition 5.5"
+    },
+    {
+      "derivationId": "axioms/coherence-conservation",
+      "type": "Proposition",
+      "id": "5.6",
+      "name": "Cauchy-slice finiteness",
+      "fullRef": "axioms/coherence-conservation:Proposition 5.6"
+    },
+    {
+      "derivationId": "axioms/coherence-conservation",
+      "type": "Proposition",
+      "id": "5.7",
+      "name": "Cross-level coherence generation",
+      "fullRef": "axioms/coherence-conservation:Proposition 5.7"
     },
     {
       "derivationId": "axioms/coherence-conservation",
@@ -29809,13 +29884,6 @@
       "derivationId": "axioms/coherence-conservation",
       "derivationStatus": "derived",
       "number": 1,
-      "title": "Uniqueness of $C_0$",
-      "description": "Is the total coherence C0 a free parameter or fixed by self-consistency? Without loss of generality, one may normalize C0 = 1 for the abstract theory; the physical value of C0 (if any) would be determ"
-    },
-    {
-      "derivationId": "axioms/coherence-conservation",
-      "derivationStatus": "derived",
-      "number": 2,
       "title": "Category-theoretic formulation",
       "description": "A more natural formalization may use a functor C: mathbfSub(H) R 0 from the category of subsystems to non-negative reals, with conservation as a constraint on natural transformations."
     },
@@ -29823,8 +29891,8 @@
       "derivationId": "axioms/coherence-operational",
       "derivationStatus": "derived",
       "number": 1,
-      "title": "Quantitative $C_0$",
-      "description": "The total coherence C0 = S(rhototal) depends on the global state. Whether C0 is a free parameter or determined by self-consistency (the bootstrap fixed point) remains open — see [Bootstrap Mechanism]("
+      "title": "Quantitative Cauchy-slice total",
+      "description": "The derived Cauchy-slice total C0 (Proposition 5.5 of [Coherence Conservation](/derivations/axioms/coherence-conservation)) corresponds to S(rhototal) in the quantum realization. Its value is determin"
     },
     {
       "derivationId": "axioms/coherence-operational",

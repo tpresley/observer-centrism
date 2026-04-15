@@ -187,15 +187,15 @@ $$\mathcal{C}(S) - c(k) = \mathcal{C}_k(S) \quad \text{(scale bound)}$$
 
 ### Step 6: UV Completeness
 
-**Proposition 6.1 (No Landau poles from coherence conservation).** *In a coherence-conserving theory, the total coherence is finite (Axiom 1). Therefore the coherence spectral density is integrable:*
+**Proposition 6.1 (No Landau poles from coherence conservation).** *In a coherence-conserving theory, each subsystem carries finite coherence (Axiom 1, C2 local finiteness). Therefore the coherence spectral density is integrable over any bounded region:*
 
 $$\int_0^\infty \rho_\mathcal{C}(\omega) \, d\omega = \mathcal{C}(S) < \infty$$
 
 *This implies that the effective couplings cannot diverge at any finite scale — there are no Landau poles.*
 
-*Proof.* A Landau pole occurs when an effective coupling $g_i(k) \to \infty$ at some finite $k = k_L$. In the coherence framework, couplings are relational invariants ([Relational Invariants](/derivations/interactions/relational-invariants)), which are bounded by the total coherence: $|g_i| \leq f(\mathcal{C}(S))$ for some function $f$ determined by the structure of the invariant. This follows from Axiom 1 (finite total coherence) and the definition of relational invariants as continuous functions on compact state spaces (Relational Invariants, Definition 1.1): a continuous function on a compact domain attains its supremum.
+*Proof.* A Landau pole occurs when an effective coupling $g_i(k) \to \infty$ at some finite $k = k_L$. In the coherence framework, couplings are relational invariants ([Relational Invariants](/derivations/interactions/relational-invariants)), which are bounded by the coherence of the subsystem they describe: $|g_i| \leq f(\mathcal{C}(S))$ for some function $f$ determined by the structure of the invariant. This follows from local finiteness (Axiom 1, C2) and the definition of relational invariants as continuous functions on compact state spaces (Relational Invariants, Definition 1.1): a continuous function on a compact domain attains its supremum.
 
-Since $\mathcal{C}(S)$ is finite and conserved, $g_i(k)$ is bounded at every scale. The coupling may grow as $k$ increases, but it must remain finite. $\square$
+Since $\mathcal{C}(S)$ is finite for every subsystem and conserved at every interaction node, $g_i(k)$ is bounded at every scale. The coupling may grow as $k$ increases, but it must remain finite. $\square$
 
 **Remark (Honest assessment).** This argument shows that *couplings don't diverge*, but it does not show that the theory is perturbatively well-defined at all scales. The coherence framework may be UV-complete in a non-perturbative sense (asymptotic safety) while still having perturbative expansions that break down. The precise UV behavior depends on the specific gauge structure and matter content.
 
@@ -212,26 +212,26 @@ Since $\mathcal{C}(S)$ is finite and conserved, $g_i(k)$ is bounded at every sca
 | Bootstrap fixed points | RG fixed points (CFTs) |
 | c-function (Def 5.1) | Zamolodchikov's c-function |
 | Tunneling between levels | RG crossovers |
-| Finite total coherence | UV completeness / no Landau poles |
+| Local finiteness of coherence | UV completeness / no Landau poles |
 | $\hbar$ in flow equation | Loop counting parameter |
 
 ## Consistency Model
 
 **Theorem 7.1.** *The coherence RG is realized in the minimal observer system on $S^1$ with a frequency cutoff.*
 
-**Model**: $\Sigma = S^1$ with coherence dynamics $\theta(\tau) = \omega_0 \tau$ (single frequency $\omega_0$, whose universality is established by [Loop Closure](/derivations/axioms/loop-closure) Corollary 3.2). The coherence spectral density is $\rho_\mathcal{C}(\omega) = C_0 \, \delta(\omega - \omega_0)$.
+**Model**: $\Sigma = S^1$ with coherence dynamics $\theta(\tau) = \omega_0 \tau$ (single frequency $\omega_0$, whose universality is established by [Loop Closure](/derivations/axioms/loop-closure) Corollary 3.2). Let $q = \mathcal{C}(\Sigma)$ be the observer's coherence. The coherence spectral density is $\rho_\mathcal{C}(\omega) = q \, \delta(\omega - \omega_0)$.
 
 *Verification:*
 
-- **Definition 1.1**: $\mathcal{C}_k = C_0 \cdot \mathbb{1}_{[k < \omega_0/c]}$. Below the fundamental frequency, the full coherence is "resolved." Above it, none is. ✓
+- **Definition 1.1**: $\mathcal{C}_k = q \cdot \mathbb{1}_{[k < \omega_0/c]}$. Below the fundamental frequency, the full coherence is "resolved." Above it, none is. ✓
 
-- **Theorem 2.1**: $d\mathcal{C}_k/d(\ln k) = C_0 \cdot ck \cdot \delta(ck - \omega_0) = C_0 \omega_0 \, \delta(ck - \omega_0)$. This is a delta function at $k = \omega_0/c$ — the coherence transfers in one step. ✓
+- **Theorem 2.1**: $d\mathcal{C}_k/d(\ln k) = q \cdot ck \cdot \delta(ck - \omega_0) = q \omega_0 \, \delta(ck - \omega_0)$. This is a delta function at $k = \omega_0/c$ — the coherence transfers in one step. ✓
 
 - **Theorem 4.1**: The single frequency $\omega_0$ is a fixed point of the trivial flow (no coupling to other modes). This corresponds to the minimal observer as a single bootstrap level. ✓
 
-- **Theorem 5.2**: $c(k) = C_0 \cdot \mathbb{1}_{[k < \omega_0/c]}$. This is non-increasing: $c$ drops from $C_0$ to $0$ at $k = \omega_0/c$. ✓
+- **Theorem 5.2**: $c(k) = q \cdot \mathbb{1}_{[k < \omega_0/c]}$. This is non-increasing: $c$ drops from $q$ to $0$ at $k = \omega_0/c$. ✓
 
-- **Proposition 6.1**: The total coherence $C_0$ is finite. The "coupling" (the single relational invariant $I_{12} = \cos(\theta_1 - \theta_2)$) is bounded: $|I_{12}| \leq 1 < \infty$ at all scales. ✓ $\square$
+- **Proposition 6.1**: The observer's coherence $q$ is finite (local finiteness). The "coupling" (the single relational invariant $I_{12} = \cos(\theta_1 - \theta_2)$) is bounded: $|I_{12}| \leq 1 < \infty$ at all scales. ✓ $\square$
 
 **Remark (Limitations of the minimal model).** The minimal observer has a trivial RG flow (one scale, one step). A richer consistency check would use the bootstrap hierarchy with multiple levels — each level contributing a peak in $\rho_\mathcal{C}(\omega)$ at a different frequency. The RG flow would then exhibit crossovers between fixed points, corresponding to transitions between bootstrap levels. The [Coupling Constants](/derivations/cosmology/coupling-constants) derivation now provides this multi-level structure (three bootstrap levels with crystallization scales $\Lambda_1, \Lambda_2, \Lambda_3$, RG running between them, and explicit $\beta$-function coefficients), but uses the standard RG machinery rather than the coherence spectral density formalism developed here. Constructing the explicit multi-peak $\rho_\mathcal{C}(\omega)$ that reproduces the Coupling Constants results remains an open direction (see Open Gap 2).
 
@@ -244,7 +244,7 @@ Since $\mathcal{C}(S)$ is finite and conserved, $g_i(k)$ is bounded at every sca
 - Theorem 4.1: Bootstrap–RG fixed-point correspondence — complete proof (Steps 1–3). Bootstrap stability (closed invariant set) implies scale-independent couplings ($\beta_i = 0$); perturbation analysis classifies fixed-point stability.
 - Theorem 5.2: Coherence c-theorem ($dc/d\ln k \leq 0$, from non-negativity of $\rho_\mathcal{C}$)
 - Corollary 5.3: Entropy–c-function connection — both are measures of inaccessible coherence (observer-bounded vs. scale-bounded), and both are monotonically non-decreasing as access diminishes
-- Proposition 6.1: No Landau poles from finite total coherence (bounded coupling argument)
+- Proposition 6.1: No Landau poles from local finiteness of coherence (bounded coupling argument)
 - Theorem 7.1: Consistency model verified on minimal observer with frequency cutoff
 
 **Structural postulate (explicitly stated):**

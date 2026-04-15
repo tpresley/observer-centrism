@@ -66,7 +66,7 @@ Both are minimal loops (minimizing $S_i$ subject to the axiom constraints) in th
 
 **Before pair creation**: The local region of $\mathcal{H}$ has no observer structure — no $U(1)$ symmetry is broken, no conserved charge is localized. The total charge is $Q_{\text{total}} = 0$.
 
-**After pair creation**: By Axiom 1 ([Coherence Conservation](/derivations/axioms/coherence-conservation)), coherence is conserved on Cauchy slices of the dependency graph. The Noether charge associated with the $U(1)$ symmetry is a component of the coherence measure (by the charge-coherence identification, [Minimal Observer Structure](/derivations/minimal-observer/structure), Proposition 4.2). Since the total coherence on any Cauchy slice is $C_0$ and the $U(1)$ charge is a conserved component of this total, the charge cannot change during the creation event:
+**After pair creation**: By Axiom 1 ([Coherence Conservation](/derivations/axioms/coherence-conservation)), coherence is locally conserved at every node of the dependency graph. The Noether charge associated with the $U(1)$ symmetry is a component of the coherence measure (by the charge-coherence identification, [Minimal Observer Structure](/derivations/minimal-observer/structure), Proposition 4.2). Since local conservation requires inputs to equal outputs at the creation node, the charge cannot change during the creation event:
 
 $$Q_1 + Q_2 = Q_{\text{total}} = 0$$
 

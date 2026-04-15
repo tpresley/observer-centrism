@@ -56,7 +56,7 @@ This derivation makes no reference to quantum field theory on curved spacetime. 
 
 The information paradox &mdash; does a black hole destroy information? &mdash; dissolves when the framework's coherence ontology is applied:
 
-**Information is globally conserved.** Coherence conservation (Axiom 1) is exact on every Cauchy slice. The total coherence of the universe, including the black hole interior, is conserved throughout the evaporation process. Information is never destroyed.
+**Information is conserved.** Coherence conservation (Axiom 1) holds at every interaction node and on every Cauchy slice. The coherence of the universe, including the black hole interior, is conserved throughout the evaporation process. Information is never destroyed.
 
 **Information is locally inaccessible.** The exterior observer cannot access the relational invariants that crossed the horizon. From the exterior perspective, this coherence is entropy &mdash; inaccessible but not destroyed.
 

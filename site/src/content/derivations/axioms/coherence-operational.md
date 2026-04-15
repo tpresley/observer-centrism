@@ -46,7 +46,7 @@ The functional uniqueness of coherence on quantum states — that the unique $U(
 
 **(C1) Positivity.** $S(\rho_S) \geq 0$ for any density operator $\rho_S$, since the eigenvalues $\lambda_i \in [0,1]$ satisfy $-\lambda_i \log \lambda_i \geq 0$. $\checkmark$
 
-**(C2) Normalization.** $\mathcal{C}(\mathcal{H}) = S(\rho)$ is a constant determined by the global state. Under unitary evolution $\rho \mapsto U\rho U^\dagger$, the von Neumann entropy is invariant: $S(U\rho U^\dagger) = S(\rho)$ (since the eigenvalues are preserved by unitary conjugation). So $C_0 = S(\rho)$ is conserved. $\checkmark$
+**(C2) Local finiteness and non-triviality.** For any subsystem $S$ with finite-dimensional Hilbert space, $S(\rho_S) < \infty$ (von Neumann entropy is bounded by $\log \dim \mathcal{H}_S$). And $S(\rho) > 0$ for any mixed global state. Under unitary evolution $\rho \mapsto U\rho U^\dagger$, the von Neumann entropy is invariant: $S(U\rho U^\dagger) = S(\rho)$ (since the eigenvalues are preserved by unitary conjugation). $\checkmark$
 
 **(C3) Null empty set.** The empty subsystem has a one-dimensional Hilbert space ($\mathbb{C}$) with the unique density operator $\rho_\emptyset = 1$. Then $S(\rho_\emptyset) = 0$. $\checkmark$
 
@@ -79,7 +79,7 @@ This is the Lieb–Ruskai theorem (1973), one of the deepest results in quantum 
 | Conditional coherence $\mathcal{C}(A\mid B)$ | $\mathcal{C}(A \cup B) - \mathcal{C}(B)$ | Conditional entropy $S(A\mid B)$ |
 | Chain rule correction $\delta$ | Proposition 2.5 | Conditional mutual information $I(A;C\mid B)$ |
 | Coherence independence | $\mathcal{C}(A:B) = 0$ | Zero mutual information (product state) |
-| Conservation | $\mathcal{C}(\mathcal{H}) = C_0$ | Unitarity ($S(\rho)$ constant) |
+| Conservation | Local conservation at each node | Unitarity ($S(\rho)$ constant under $U\rho U^\dagger$) |
 | Admissible transformation | Isometry of $\mathcal{C}$ | Unitary channel |
 
 *Proof.* Each identification is verified by expanding definitions:
@@ -102,7 +102,7 @@ This is the Lieb–Ruskai theorem (1973), one of the deepest results in quantum 
 
 **Proposition 3.2 (Operational relational coherence).** *Relational coherence $\mathcal{C}(A:B) = I(A:B)$ quantifies the total correlations (both classical and quantum) between $A$ and $B$. It equals the cost in bits of erasing all correlations between $A$ and $B$ while preserving the individual states $\rho_A$ and $\rho_B$ [Groisman, Popescu, Winter, 2005].*
 
-**Proposition 3.3 (Operational conservation).** *Coherence conservation ($\mathcal{C}(\mathcal{H}) = C_0$ under admissible transformations) is operationally equivalent to:*
+**Proposition 3.3 (Operational conservation).** *Local coherence conservation (inputs equal outputs at every interaction node) is operationally equivalent to:*
 
 *(i)* ***No-creation:*** *No physical process can increase the total information content of the universe.*
 
@@ -110,7 +110,7 @@ This is the Lieb–Ruskai theorem (1973), one of the deepest results in quantum 
 
 *(iii)* ***Closed ontology:*** *There is no external reservoir from which information could flow in or to which it could leak out.*
 
-*Proof.* (i) and (ii) are the two directions of $\mathcal{C}(\mathcal{H}) = C_0 = \text{const}$. (iii) follows from the structure of the $\sigma$-algebra: $\mathcal{H}$ is the universe of all configurations, so there is no "outside." $\square$
+*Proof.* (i) and (ii) follow from local conservation at each interaction node: coherence cannot increase (no creation) or decrease (no destruction) through any admissible process. (iii) follows from the structure of the $\sigma$-algebra: $\mathcal{H}$ is the universe of all configurations, so there is no "outside." $\square$
 
 ### Step 4: Classical Limit
 
@@ -128,7 +128,7 @@ The analogy is precise:
 |---|---|---|
 | **Axioms** | Positive, additive, conserved | Positive, subadditive, conserved (Axiom 1: C1–C5) |
 | **Operational meaning** | Resistance to acceleration ($F = ma$) | Information capacity ($S(\rho)$) |
-| **Conservation law** | $\sum m_i = \text{const}$ | $\mathcal{C}(\mathcal{H}) = C_0$ |
+| **Conservation law** | $\sum m_i = \text{const}$ | Local conservation at each interaction node |
 | **Relational quantity** | Gravitational interaction ($Gm_1 m_2/r^2$) | Mutual information ($I(A:B)$) |
 | **Known realizations** | Inertial mass, gravitational mass, relativistic energy | Entropy, inner product, phase space volume |
 
@@ -138,7 +138,7 @@ Like mass, coherence is not "nothing but entropy" or "nothing but the inner prod
 
 **Theorem 7.1.** *A qubit pair $\mathcal{H} = \mathbb{C}^2 \otimes \mathbb{C}^2$ in the Bell state $|\Phi^+\rangle = (|00\rangle + |11\rangle)/\sqrt{2}$ provides a consistency model for all results of this derivation.*
 
-*Verification.* **Note on $C_0$:** A pure global state has $S(\rho) = 0$, which would violate C2's requirement $C_0 > 0$. We therefore use the Bell state as the *accessible* state of a bounded observer, embedded in a larger thermal environment with $C_0 > 0$. Concretely, take the total system in a thermal state $\rho_{\text{total}} = e^{-\beta H}/Z$ with $C_0 = S(\rho_{\text{total}}) = \beta \langle H \rangle + \log Z > 0$, and the Bell pair as a subsystem. The axiom structure is verified on the subsystem:
+*Verification.* **Note on non-triviality:** A pure global state has $S(\rho) = 0$, which would violate C2's requirement $\mathcal{C}(\mathcal{H}) > 0$. We therefore use the Bell state as the *accessible* state of a bounded observer, embedded in a larger thermal environment with $\mathcal{C}(\mathcal{H}) > 0$. Concretely, take the total system in a thermal state $\rho_{\text{total}} = e^{-\beta H}/Z$ with $S(\rho_{\text{total}}) = \beta \langle H \rangle + \log Z > 0$, and the Bell pair as a subsystem. The axiom structure is verified on the subsystem:
 
 - **C1**: $S(\rho_A) = \log 2 \geq 0$. $\checkmark$
 - **C4**: $S(\rho_{AB}) = 0 \leq S(\rho_A) + S(\rho_B) = 2\log 2$. $\checkmark$
@@ -165,7 +165,7 @@ Like mass, coherence is not "nothing but entropy" or "nothing but the inner prod
 
 ## Open Gaps
 
-1. **Quantitative $C_0$**: The total coherence $C_0 = S(\rho_{\text{total}})$ depends on the global state. Whether $C_0$ is a free parameter or determined by self-consistency (the bootstrap fixed point) remains open — see [Bootstrap Mechanism](/derivations/interactions/bootstrap) Gap 3.
+1. **Quantitative Cauchy-slice total**: The derived Cauchy-slice total $C_0$ (Proposition 5.5 of [Coherence Conservation](/derivations/axioms/coherence-conservation)) corresponds to $S(\rho_{\text{total}})$ in the quantum realization. Its value is determined by the bootstrap fixed point — it is an output of the self-consistent solution, not a free parameter.
 2. **Rényi generalization**: Axiom 1 is also satisfied by Rényi entropies $S_\alpha(\rho) = (1-\alpha)^{-1}\log\text{Tr}(\rho^\alpha)$ for $\alpha \in (0,1)$ (strong subadditivity holds in this range). Whether the framework selects von Neumann ($\alpha = 1$) over other Rényi orders, or whether this is a free choice, is open.
 3. **Algebraic vs. measure-theoretic coherence**: The σ-algebra formulation (Axiom 1, conditions C1–C5) and the Hilbert space formulation ($\mathcal{C} = \langle\psi|\psi\rangle$) operate at different levels. The former concerns subsystem structure; the latter concerns state-level properties. A unified formulation treating both as aspects of a single categorical structure (a functor from subsystem inclusions to coherence values) would strengthen the convergence.
 

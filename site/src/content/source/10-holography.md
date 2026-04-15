@@ -33,7 +33,7 @@ Hawking radiation arises from the same structure. The loop closure condition ope
 
 The thermal character of Hawking radiation — the fact that it has a blackbody spectrum — follows from the maximal entropy character of the horizon. The outward-propagating members of each coherence-dual pair are maximally uncorrelated with any specific interior structure, because that interior structure is causally severed from the exterior. They carry only the information encoded on the horizon surface itself.
 
-The black hole information paradox — the apparent loss of information as a black hole evaporates — is dissolved by the framework's distinction between global and local coherence accessibility. Coherence is globally conserved: the information in the black hole interior is not destroyed. It is encoded in the growing entanglement correlations between successive Hawking quanta, accessible in principle to an observer who collected all the radiation from the beginning of evaporation, but inaccessible to any local observer. Conservation holds globally; inaccessibility is local.
+The black hole information paradox — the apparent loss of information as a black hole evaporates — is dissolved by the framework's distinction between conservation and accessibility. Coherence is conserved at every interaction node and on every Cauchy slice: the information in the black hole interior is not destroyed. It is encoded in the growing entanglement correlations between successive Hawking quanta, accessible in principle to an observer who collected all the radiation from the beginning of evaporation, but inaccessible to any local observer. Conservation is exact; inaccessibility is observer-relative.
 
 ### 10.4 The Interior as Coherence Descendant
 
