@@ -18,9 +18,9 @@ The discrete relational invariant network underlying continuum spacetime introdu
 | Quantity | Formula | Value |
 |---|---|---|
 | Position uncertainty (null, length $L$) | $\Delta x = \sqrt{\alpha_H \ell_P L}$ | $4 \times 10^{-16}$ m for $L = 4$ km (at $\alpha_H = 1/4$) |
-| Strain power spectral density | $S_h = \alpha_H \ell_P / c$ | $\leq 5.4 \times 10^{-44}$ Hz$^{-1}$ |
+| Strain power spectral density | $S_h = 2\alpha_H \ell_P / c$ | $\leq 5.4 \times 10^{-44}$ Hz$^{-1}$ |
 | Strain amplitude density | $\sqrt{S_h}$ | $\leq 7.3 \times 10^{-22}$ /√Hz |
-| Amplitude coefficient | $\alpha_H$ | $\lesssim 0.5$ (Holometer constraint) |
+| Amplitude coefficient | $\alpha_H$ | O(1), constrained $\lesssim 0.5$ (Holometer); natural target $\sim 1/4$ |
 | Michelson cross-correlation | $\Gamma(\beta) = \cos\beta$ | Testable angular pattern |
 | Single-arm cross-correlation | $\gamma(\alpha) = \cos^2(\alpha/2)$ | Between arms at angle $\alpha$ |
 | Frequency spectrum | White (flat) for $f < c/(2L)$ | No frequency dependence |
@@ -51,13 +51,13 @@ A spacetime point $P$ in the continuum description corresponds to a cluster of c
 
 $$N_{\text{null}} = \frac{L}{\ell_P}$$
 
-Each element contributes an independent random displacement $\delta x_i$ with $\langle \delta x_i \rangle = 0$ and $\langle \delta x_i^2 \rangle = \alpha_H \ell_P^2$, where $\alpha_H$ is a dimensionless coefficient of order unity encoding the causal set statistics.
+Each element contributes an independent random displacement $\delta x_i$ with $\langle \delta x_i \rangle = 0$ and $\langle \delta x_i^2 \rangle = \alpha_H \ell_P^2$, where $\alpha_H$ is a dimensionless O(1) coefficient encoding the causal set statistics.
 
 By the random walk:
 
 $$\langle (\Delta x)^2 \rangle_{\text{null}} = N \cdot \alpha_H \ell_P^2 = \alpha_H \ell_P L$$
 
-This is the **holographic scaling**: position uncertainty grows as $\sqrt{\ell_P L}$, not as $\ell_P$.
+This is the **holographic scaling**: position uncertainty grows as $\sqrt{\ell_P L}$, not as $\ell_P$. The $\sqrt{\ell_P L}$ scaling is a rigorous consequence of CLT applied to Poisson cells ([Causal Set Statistics](/derivations/holography/causal-set-statistics), Proposition 2.2); the amplitude $\alpha_H$ depends on the specific length estimator and is not yet derived from first principles (see [Causal Set Statistics](/derivations/holography/causal-set-statistics), Heuristic 2.3).
 
 **Spacelike separations.** For two points at spacelike separation, there are no causal chains connecting them. Their position uncertainties are independent:
 
@@ -191,19 +191,17 @@ $$\alpha_H < \frac{8.4 \times 10^{-41}}{1.72 \times 10^{-40}} \approx 0.49$$
 
 **Result:** The Holometer constrains $\alpha_H \lesssim 0.5$. The framework's prediction survives if the dimensionless amplitude coefficient is in the range $0 < \alpha_H \lesssim 0.5$. This is an $O(1)$ constraint — the prediction is not excluded, but the amplitude must be at the lower end of the natural range.
 
-### Why $\alpha_H < 1$ Is Natural
+### Why $\alpha_H \sim 1/4$ Is a Natural Target (Not a Theorem)
 
-The naive random walk ($\alpha_H = 1$) assumes each Planck cell contributes independently. In the causal set, correlations between nearby elements **reduce** the effective number of independent degrees of freedom:
+The holographic bound suggests $\alpha_H \sim 1/4$ as a natural value via the following heuristic: the maximal causal diamond containing a length-$L$ geodesic has boundary area $A_{\max} = L \cdot \ell_P$, which by Bekenstein–Hawking encodes at most $N_{\text{eff}} = A_{\max}/(4\ell_P^2) = L/(4\ell_P)$ independent bits — a factor of $4$ below the naive bulk count. *If* one equates each independent bit with $\ell_P^2$ of length variance, this gives $\delta L^2 = \ell_P L/4$ and therefore $\alpha_H = 1/4$.
 
-1. **Causal correlations**: Elements in the same causal chain have partially correlated positions, reducing the random walk step count
-2. **Holographic consistency**: The strict holographic bound ($S \leq A/4\ell_P^2$) includes the factor $1/4$, which propagates into the noise amplitude
-3. **Geometric packing**: The effective area per degree of freedom on a curved boundary is $4\ell_P^2$, not $\ell_P^2$
+**This is a suggestive target, not a derivation.** The Bekenstein–Hawking bound constrains *information content*, not the variance of a geometric estimator; the "one bit ↔ $\ell_P^2$ variance" bridge rule is not derived from the framework. A rigorous value for $\alpha_H$ requires computing the variance of a specific causet length estimator (Brightwell–Gregory longest-chain or Myrheim–Meyer interval-count) on a Poisson sprinkling — a well-defined mathematical problem with partial results in the causet literature, but not yet completed in this framework (see [Causal Set Statistics](/derivations/holography/causal-set-statistics), Heuristic 2.3 and Open Gap 1).
 
-A natural estimate from the holographic bound gives $\alpha_H = 1/4$, yielding:
+**Current status.** $\alpha_H$ should be treated as an O(1) coefficient in the range $(0, 0.5]$, with the upper end fixed by the Holometer constraint and the natural target $\alpha_H \sim 1/4$ available as a reference point. At the target value:
 
 $$S_h = \frac{\ell_P}{2c} \approx 2.7 \times 10^{-44} \text{ Hz}^{-1}$$
 
-This satisfies the Holometer constraint ($\alpha_H = 0.25 < 0.49$) and gives a concrete target for future experiments.
+satisfies the Holometer bound ($0.25 < 0.49$). Quantitative SNR estimates in this document assume $\alpha_H = 1/4$; they should be understood as accurate to within a factor of $\sim\!2$ in absolute amplitude. **The distinctive angular signature $\Gamma(\beta) = \cos\beta$ — the actual experimental target of this prediction — is independent of $\alpha_H$ entirely** (see Test 1 below).
 
 ## Experimental Tests
 
@@ -221,7 +219,7 @@ $$\frac{S_{12}(0°)}{S_{12}(45°)} = \frac{1}{\cos 45°} = \sqrt{2} \approx 1.41
 
 $$S_{12}(90°) = 0 \quad \text{(null test)}$$
 
-**Key advantage:** The angular RATIO is independent of $\alpha_H$. Even if the absolute amplitude is uncertain, the $\cos\beta$ pattern is a model-independent test. Isotropic noise gives $\Gamma = 1$ for all $\beta$; the framework predicts $\Gamma = \cos\beta$.
+**Key advantage:** The angular RATIO is independent of $\alpha_H$. **This matters especially because $\alpha_H$ itself is currently an O(1) parameter, not a rigorously derived constant** (see "Why $\alpha_H \sim 1/4$" above). The $\cos\beta$ shape is the true experimental target — it tests the structural prediction of the framework without depending on the undetermined amplitude coefficient. Isotropic noise (e.g., Hogan's model) gives $\Gamma = 1$ for all $\beta$; the framework predicts $\Gamma = \cos\beta$. A measured ratio $S_{12}(0°)/S_{12}(45°) = \sqrt{2}$ and null at $90°$ would support the prediction regardless of what absolute amplitude emerges.
 
 **Required sensitivity:** To detect $S_h = \ell_P/(2c)$ in cross-correlation with SNR = 5 over $T = 1$ year at bandwidth $\Delta f = 1$ MHz:
 
@@ -310,32 +308,40 @@ The existing gravitational wave detector network can search for an isotropic sto
 
 ## Derivation Chain Status
 
-All steps in the derivation chain are now at **rigorous** status:
+The derivation chain threads through axioms (derived), multiple rigorous intermediate results, and three structural postulates. Status per step:
 
-1. ✅ [Coherence Conservation](/derivations/axioms/coherence-conservation) (Axiom 1) — rigorous
-2. ✅ [Observer Definition](/derivations/axioms/observer-definition) (Axiom 2) — rigorous
-3. ✅ [Loop Closure](/derivations/axioms/loop-closure) (Axiom 3) — rigorous
-4. ✅ [Minimal Observer](/derivations/minimal-observer/structure) → discrete structure — rigorous
-5. ✅ [Relational Invariants](/derivations/interactions/relational-invariants) → network — rigorous
-6. ✅ [Time](/derivations/thermodynamics/time) → causal ordering — rigorous
-7. ✅ [Speed of Light](/derivations/spacetime/speed-of-light) → null structure — rigorous
-8. ✅ [Gravity](/derivations/spacetime/gravity) → Planck scale — rigorous
-9. ✅ [Holographic Entropy Bound](/derivations/holography/area-scaling) → area scaling → holographic noise amplitude — rigorous
-10. Causal set statistics → amplitude coefficient $\alpha_H$ (requires discrete theory)
-11. Null-direction preference → angular pattern $\Gamma(\beta) = \cos\beta$ (structural)
+1. [Coherence Conservation](/derivations/axioms/coherence-conservation) (Axiom 1) — **derived**
+2. [Observer Definition](/derivations/axioms/observer-definition) (Axiom 2) — **derived**
+3. [Loop Closure](/derivations/axioms/loop-closure) (Axiom 3) — **derived**
+4. [Minimal Observer](/derivations/minimal-observer/structure) → discrete structure — **derived**
+5. [Relational Invariants](/derivations/interactions/relational-invariants) → network — **derived**
+6. [Time](/derivations/thermodynamics/time) → causal ordering — **derived**
+7. [Speed of Light](/derivations/spacetime/speed-of-light) → null structure — **provisional** (depends on speed-of-light-s1)
+8. [Gravity](/derivations/spacetime/gravity) → Planck scale — **provisional**
+9. [Holographic Entropy Bound](/derivations/holography/area-scaling) → area scaling — **provisional** (depends on area-scaling-s1)
+10. [Causal Set Statistics](/derivations/holography/causal-set-statistics) → amplitude coefficient $\alpha_H$ — **provisional** (inherits from 7, 9; $\alpha_H$ itself is an O(1) coefficient with natural target $\sim 1/4$ from a heuristic holographic substitution — not rigorously derived)
+11. Null-direction preference → angular pattern $\Gamma(\beta) = \cos\beta$ — **structural**, with the load-bearing single-arm cross-correlation $\gamma(\alpha) = \cos^2(\alpha/2)$ currently asserted rather than derived (tracked as an open issue)
+
+**This prediction therefore inherits the provisional status of its upstream dependencies.** Two specific open items are most load-bearing:
+
+- **$\alpha_H$ amplitude**: The $\sqrt{\ell_P L}$ *shape* is rigorous; the *amplitude* is an O(1) parameter constrained by Holometer to $\alpha_H \lesssim 0.5$, with $\sim 1/4$ as a suggestive target. A first-principles value requires a causet length-estimator calculation that has not yet been done in this framework.
+- **$\gamma(\alpha)$ angular function**: The cross-correlation between two single arms at relative angle $\alpha$ is asserted as $\cos^2(\alpha/2)$ in Step 5, without derivation from the noise tensor $\sigma^{\mu\nu}$ or from a spacetime correlation function. This is the most important unresolved step in the chain because it determines the distinctive $\Gamma(\beta) = \cos\beta$ angular signature — the actual experimental target.
 
 ## Rigor Assessment
 
 **Rigorously established:**
-- Holographic scaling $\sqrt{\ell_P L}$ (from area-scaling bound, two independent arguments)
+- Holographic $\sqrt{\ell_P L}$ *scaling* (CLT on Poisson causet cells, [Causal Set Statistics](/derivations/holography/causal-set-statistics) Proposition 2.2)
 - White spectrum for $f < c/(2L)$ (from independence of Planck cells at different round trips)
-- Overlap reduction function $\Gamma(\beta) = \cos\beta$ (derived algebraically from the null-correlated noise tensor)
-- Holometer consistency at $\alpha_H \lesssim 0.5$ (numerical comparison with published limit)
+- Step 7 algebraic derivation $\Gamma(\beta) = \cos\beta$ — *given* the single-arm input $C_{ab} = (2\alpha_H\ell_P/c)\cos^2(\alpha_{ab}/2)$, the overlap reduction function follows by mechanical algebra (reverified)
+- Holometer consistency: the numerical comparison at $\alpha_H = 1/4$ is sound (predicted $S_L = 4.3 \times 10^{-41}$ m²/Hz vs. bound $8.4 \times 10^{-41}$ m²/Hz)
 
-**Well-motivated but approximate:**
-- The amplitude coefficient $\alpha_H = 1/4$ (from the $1/4$ in the holographic bound) — the exact value requires solving the causal set Poisson statistics, which gives corrections of order unity
-- The $\cos^2(\alpha/2)$ single-arm cross-correlation (from the null cone overlap fraction) — the exact function may differ at large angles due to higher-order causal set correlations
-- The exponential suppression of spacelike correlations — the decay length may not be exactly $\ell_P$
+**Heuristic / natural-target (not derived):**
+- The amplitude coefficient $\alpha_H \sim 1/4$ — this is a suggestive value from a heuristic substitution (replacing the bulk DOF count $N_{\text{bulk}} = L/\ell_P$ with the holographic count $N_{\text{eff}} = L/(4\ell_P)$ in a variance calculation), but the bridging rule "one bit ↔ $\ell_P^2$ variance" is not derived from the framework. Treat as an O(1) parameter in the range $(0, 0.5]$, Holometer-constrained.
+
+**Asserted but not derived:**
+- The single-arm cross-correlation $\gamma(\alpha) = \cos^2(\alpha/2)$ (Step 5). Presented as a "null cone overlap fraction" but without an explicit calculation from $\sigma^{\mu\nu}$ or from a spacetime noise correlation function. This is the most important unresolved step because it determines the distinctive $\Gamma(\beta) = \cos\beta$ angular signature.
+- The exponential suppression of spacelike correlations $e^{-L/\ell_P}$ (Step 2) — neither the functional form nor the decay length is derived from Poisson causet statistics.
+- The sinc frequency suppression for separated detectors (Step 8) — requires a specified spacetime noise correlation function which has not been committed to.
 
 **Open:**
 - The transition from discrete causal set to continuum noise correlation requires a coarse-graining calculation

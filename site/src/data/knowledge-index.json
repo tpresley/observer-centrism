@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-14T22:26:50.393Z",
+    "generatedAt": "2026-04-15T05:20:36.482Z",
     "derivationCount": 76,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -17,7 +17,7 @@
     "derivationCount": 76,
     "predictionCount": 12,
     "edgeCount": 219,
-    "formalObjectCount": 1133,
+    "formalObjectCount": 1132,
     "openGapCount": 228,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
@@ -247,7 +247,7 @@
           "type": "Definition",
           "id": "4.1",
           "name": "Dependency graph",
-          "statementPreview": "The **dependency graph** G = (V, E) is a finite or countable directed acyclic graph (DAG) that is postulated as part ..."
+          "statementPreview": "The **dependency graph** G = (V, E) is a finite or countable directed acyclic graph (DAG). Vertices v in V represent ..."
         },
         {
           "type": "Definition",
@@ -289,19 +289,19 @@
           "type": "Proposition",
           "id": "5.4",
           "name": "Cauchy-slice conservation",
-          "statementPreview": "If coherence is locally conserved at every vertex of a finite DAG G (Axiom 1(ii)), then every Cauchy slice of G carri..."
+          "statementPreview": "If coherence is locally conserved at every vertex of a finite DAG G at a given bootstrap level (Axiom 1(ii)), then ev..."
         },
         {
           "type": "Definition",
           "id": "5.5",
           "name": "Cauchy-slice total",
-          "statementPreview": "The common value of all Cauchy-slice totals within a given interaction network is denoted C0. This is a derived const..."
+          "statementPreview": "The common value of all Cauchy-slice totals within a given bootstrap level's interaction network is denoted C0(n) for..."
         },
         {
           "type": "Proposition",
           "id": "5.6",
           "name": "Cauchy-slice finiteness",
-          "statementPreview": "On any Cauchy slice of a well-formed interaction network, the total coherence C0 is finite.*"
+          "statementPreview": "On any Cauchy slice of a well-formed interaction network at a given bootstrap level, the total coherence C0(n) is fin..."
         },
         {
           "type": "Proposition",
@@ -324,7 +324,7 @@
           "description": "A more natural formalization may use a functor C: mathbfSub(H) R 0 from the category of subsystems to non-negative reals, with conservation as a constraint on natural transformations."
         }
       ],
-      "assessmentVerdict": "The axiom is rigorously formalized with complete definitions, proofs, and explicit consistency models. All assumptions are stated. The main structural postulate (the dependency graph) is acknowledged as a co-axiom. Conservation is stated as a single axiom with two parts — transformation isometry (i)",
+      "assessmentVerdict": "The axiom is rigorously formalized with complete definitions, proofs, and explicit consistency models. All assumptions are stated. The dependency graph structure is forced by the operational definitions, not independently postulated. Conservation is stated as a single axiom with two parts — transfor",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -8267,10 +8267,6 @@
             "context": "Structural Postulate S1"
           },
           {
-            "source": "holography/causal-set-statistics",
-            "context": "Theorem 5.2"
-          },
-          {
             "source": "holography/er-epr",
             "context": "Area Scaling"
           },
@@ -8559,7 +8555,7 @@
         "causal-sets",
         "statistics"
       ],
-      "summary": "The relational invariant network as a Poisson-sprinkled causal set: derives the holographic noise amplitude α_H = 1/4, the dark matter density fluctuation spectrum, and the Gaussian cutoff in the matter power spectrum. Both primary predictions arise from a single statistical foundation.",
+      "summary": "The relational invariant network as a Poisson-sprinkled causal set: establishes the √(ℓ_P L) scaling of holographic noise (rigorous via CLT), identifies α_H ~ 1/4 as a natural target from the holographic bound (heuristic, not derived), and derives the dark matter density fluctuation spectrum with Gaussian cutoff. Both primary predictions arise from a single statistical foundation.",
       "lastUpdated": "2026-03-12",
       "dependsOn": [
         "holography/area-scaling",
@@ -8631,12 +8627,6 @@
           "statementPreview": "For a Poisson-sprinkled causal set in flat spacetime, the variance of the geodesic length estimator for proper distan..."
         },
         {
-          "type": "Theorem",
-          "id": "2.3",
-          "name": "Holographic bound fixes $\\alpha_H = 1/4$",
-          "statementPreview": "The amplitude coefficient is alphaH = 1/4, determined by the holographic entropy bound.*"
-        },
-        {
           "type": "Corollary",
           "id": "2.4",
           "name": "Strain power spectral density",
@@ -8689,8 +8679,8 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Rigorous geodesic estimator",
-          "description": "The geodesic variance calculation (Proposition 2.2) uses a simplified cell-counting argument. A rigorous derivation should use the Myrheim-Meyer dimension estimator or the Brightwell-Gregory longest-c"
+          "title": "First-principles amplitude $\\alpha_H$",
+          "description": "The amplitude coefficient is currently an O(1) parameter constrained only by Holometer (alphaH lesssim 0.5). A rigorous derivation requires computing the variance of a specific causet length estimator"
         },
         {
           "number": 2,
@@ -8713,7 +8703,7 @@
           "description": "The identification of the discrete relational invariant network with a Poisson causal set relies on a continuum limit that has not been rigorously constructed from the axioms. <!-- References --> [Bom"
         }
       ],
-      "assessmentVerdict": "Rigorous. The causal set foundation is mathematically rigorous (Propositions 1.2, 1.3, 3.2). The holographic noise amplitude alphaH = 1/4 is derived from the Bekenstein-Hawking entropy bound via explicit causal diamond geometry and degree-of-freedom counting. The geodesic variance scaling is proven ",
+      "assessmentVerdict": "The causal set foundation is mathematically rigorous (Propositions 1.2, 1.3, 3.2). The ellP L *scaling* of the geodesic variance is rigorous via CLT on Poisson cells (Proposition 2.2). The *amplitude* alphaH is an O(1) coefficient that depends on the specific choice of length estimator; the holograp",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
@@ -8742,8 +8732,8 @@
             "context": "Structural Postulate S1"
           },
           {
-            "target": "holography/area-scaling",
-            "context": "Theorem 5.2"
+            "target": "thermodynamics-ext/fisher-metric",
+            "context": "Fisher Information Metric"
           },
           {
             "target": "axioms/loop-closure",
@@ -18262,6 +18252,10 @@
             "context": "Fisher Metric"
           },
           {
+            "source": "holography/causal-set-statistics",
+            "context": "Fisher Information Metric"
+          },
+          {
             "source": "minimal-observer/multiplicity",
             "context": "Fisher Information Metric"
           },
@@ -25274,13 +25268,6 @@
     },
     {
       "derivationId": "holography/causal-set-statistics",
-      "type": "Theorem",
-      "id": "2.3",
-      "name": "Holographic bound fixes $\\alpha_H = 1/4$",
-      "fullRef": "holography/causal-set-statistics:Theorem 2.3"
-    },
-    {
-      "derivationId": "holography/causal-set-statistics",
       "type": "Corollary",
       "id": "2.4",
       "name": "Strain power spectral density",
@@ -30493,8 +30480,8 @@
       "derivationId": "holography/causal-set-statistics",
       "derivationStatus": "provisional",
       "number": 1,
-      "title": "Rigorous geodesic estimator",
-      "description": "The geodesic variance calculation (Proposition 2.2) uses a simplified cell-counting argument. A rigorous derivation should use the Myrheim-Meyer dimension estimator or the Brightwell-Gregory longest-c"
+      "title": "First-principles amplitude $\\alpha_H$",
+      "description": "The amplitude coefficient is currently an O(1) parameter constrained only by Holometer (alphaH lesssim 0.5). A rigorous derivation requires computing the variance of a specific causet length estimator"
     },
     {
       "derivationId": "holography/causal-set-statistics",

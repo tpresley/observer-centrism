@@ -4,7 +4,7 @@ status: "provisional"
 dependsOn: ["holography/area-scaling", "interactions/relational-invariants"]
 enablesDerivation: ["holography/er-epr"]
 tags: ["holography", "causal-sets", "statistics"]
-summary: "The relational invariant network as a Poisson-sprinkled causal set: derives the holographic noise amplitude α_H = 1/4, the dark matter density fluctuation spectrum, and the Gaussian cutoff in the matter power spectrum. Both primary predictions arise from a single statistical foundation."
+summary: "The relational invariant network as a Poisson-sprinkled causal set: establishes the √(ℓ_P L) scaling of holographic noise (rigorous via CLT), identifies α_H ~ 1/4 as a natural target from the holographic bound (heuristic, not derived), and derives the dark matter density fluctuation spectrum with Gaussian cutoff. Both primary predictions arise from a single statistical foundation."
 rigorLevel: "formal"
 lastUpdated: 2026-03-12
 ---
@@ -17,10 +17,10 @@ At the Planck scale, spacetime is not the smooth continuum we experience in ever
 
 **The argument.** The relational invariant network satisfies the mathematical axioms of a causal set — a discrete structure encoding "which events can influence which." The distribution of elements in this network must be Lorentz-invariant (no preferred reference frame at the Planck scale), and the unique distribution with this property is a Poisson process — a completely random sprinkling at the Planck density. From this single statistical fact, two predictions emerge:
 
-- **Holographic noise.** Random fluctuations in the number of causal elements along a path produce geodesic length uncertainty scaling as the square root of the path length times the Planck length. The holographic entropy bound fixes the amplitude coefficient to exactly one-quarter, yielding a precise prediction for the strain noise that a sufficiently sensitive interferometer would detect.
+- **Holographic noise.** Random fluctuations in the number of causal elements along a path produce geodesic length uncertainty scaling as the square root of the path length times the Planck length. The amplitude coefficient is an O(1) constant; the holographic entropy bound suggests a natural target value of one-quarter, but the precise value depends on the specific causet estimator and is not yet derived from first principles. The $\sqrt{\ell_P L}$ *scaling* is rigorous; the amplitude is currently constrained by the Holometer experiment to the range $\alpha_H \in (0, 0.5]$.
 - **Dark matter granularity.** The same Poisson fluctuations, at cosmological scales, impose a minimum mass scale for dark matter structure. Below this quantum Jeans mass, loop closure pressure prevents gravitational collapse. The resulting cutoff in the matter power spectrum has a distinctive Gaussian shape, steeper than the power-law cutoff predicted by warm dark matter models.
 
-**The result.** Both primary predictions of the framework — holographic noise and dark matter granularity — arise from the same Poisson statistics of the causal set, observed at different scales. The holographic noise amplitude is uniquely determined to be one-quarter, and the dark matter cutoff follows a Gaussian profile with a characteristic mass scaling as the dark matter particle mass to the negative three-halves power.
+**The result.** Both primary predictions of the framework — holographic noise and dark matter granularity — arise from the same Poisson statistics of the causal set, observed at different scales. The holographic noise amplitude is an O(1) coefficient with a natural target near one-quarter (suggested by the holographic bound but not rigorously derived), constrained by the Holometer to $\alpha_H \lesssim 0.5$. The dark matter cutoff follows a Gaussian profile with a characteristic mass scaling as the dark matter particle mass to the negative three-halves power.
 
 **Why this matters.** This is the derivation that connects the framework's most abstract structures (Planck-scale causal networks) to its most concrete experimental predictions (interferometer noise spectra and galaxy formation thresholds). The fact that two seemingly unrelated predictions share a single statistical origin is a strong internal consistency check.
 
@@ -33,7 +33,7 @@ At the Planck scale, spacetime is not the smooth continuum we experience in ever
 
 **Theorem.** The relational invariant network, treated as a Poisson-sprinkled causal set at the Planck density, provides a unified statistical foundation for both primary predictions of the framework:
 
-1. **Holographic noise**: The geodesic length estimator on a Poisson causal set has variance $\delta L^2 = \alpha_H \ell_P L$, with amplitude coefficient $\alpha_H = 1/4$ determined by the holographic entropy bound.
+1. **Holographic noise**: The geodesic length estimator on a Poisson causal set has variance $\delta L^2 = \alpha_H \ell_P L$. The $\sqrt{\ell_P L}$ scaling is rigorous (CLT on Poisson cells); the amplitude coefficient $\alpha_H$ is an O(1) constant whose value depends on the specific length estimator used, with $\alpha_H \sim 1/4$ as a natural target from the holographic entropy bound.
 
 2. **Dark matter granularity**: The Poisson density fluctuations of the causal set impose a Gaussian cutoff $e^{-(k/k_J)^2}$ on the matter power spectrum at the quantum Jeans scale, with $k_J$ set by loop closure pressure.
 
@@ -87,33 +87,35 @@ $$\text{Var}(\delta \hat{L}) = c^2 \ell_P^2 \cdot N \cdot \text{Var}(n_i) = c^2 
 
 Therefore $\delta L^2 = \alpha \ell_P L$ with $\alpha = c^2$, where $c$ is determined by the specific geodesic estimator. The $\sqrt{\ell_P L}$ scaling is a rigorous consequence of the CLT applied to $N = L/\ell_P$ independent Poisson cells — it holds for any estimator with finite variance per cell. $\square$
 
-**Theorem 2.3 (Holographic bound fixes $\alpha_H = 1/4$).** *The amplitude coefficient is $\alpha_H = 1/4$, determined by the holographic entropy bound.*
+**Heuristic 2.3 (Holographic natural value $\alpha_H \sim 1/4$).** *The amplitude coefficient $\alpha_H$ is an O(1) constant whose precise value depends on the choice of length estimator and the detailed causet dynamics. The holographic bound suggests $\alpha_H \sim 1/4$ as a natural target.*
 
-*Proof.* The argument proceeds in three steps: counting bulk degrees of freedom, applying the holographic bound, and computing the resulting variance.
+*Heuristic argument.* Proposition 2.2 establishes the $\sqrt{\ell_P L}$ scaling rigorously but leaves $\alpha = c^2$ undetermined ($c$ is the slope of the length estimator at the Poisson mean). A suggestive target value comes from the holographic entropy bound ([Area Scaling](/derivations/holography/area-scaling), Theorem 5.2).
 
-**Step 1 (Bulk degrees of freedom).** A geodesic of proper length $L$ through a Poisson causal set at density $\ell_P^{-4}$ crosses $N_{\text{bulk}} = L/\ell_P$ Planck cells. Each cell contributes an independent displacement fluctuation. A naive random walk would give $\delta L^2 = N_{\text{bulk}} \cdot \ell_P^2 = \ell_P L$.
+Construct the minimal causal diamond containing the geodesic: a cylinder of length $L$ and Planck-scale transverse radius $\ell_P$, with maximal cross-sectional area $A_{\max} = L \cdot \ell_P$. The Bekenstein-Hawking bound limits the number of *independent bits* encodable on the boundary of this diamond to:
 
-**Step 2 (Holographic reduction).** The naive CLT gives $\alpha = c^2$ with $c$ depending on the estimator. The holographic entropy bound ([Area Scaling](/derivations/holography/area-scaling), Theorem 5.2) constrains how many of the $N_{\text{bulk}} = L/\ell_P$ cells carry independent information.
+$$N_{\text{eff}} = \frac{A_{\max}}{4\ell_P^2} = \frac{L}{4\ell_P}$$
 
-Construct the minimal causal diamond containing the geodesic: a cylinder of length $L$ and Planck-scale transverse radius $\ell_P$. Its maximal cross-sectional area is $A_{\max} = L \cdot \ell_P$ (the cross-section of the cylinder at the midpoint, where the geodesic is farthest from the boundaries). By the Bekenstein-Hawking formula ([Area Scaling](/derivations/holography/area-scaling), Theorem 5.2), the maximum number of independent degrees of freedom encodable on the boundary of this diamond is:
+a factor of $1/4$ below the naive bulk count $N_{\text{bulk}} = L/\ell_P$.
 
-$$N_{\text{eff}} = \frac{A_{\max}}{4\ell_P^2} = \frac{L \cdot \ell_P}{4\ell_P^2} = \frac{L}{4\ell_P}$$
+*If* one adopts the bridging rule "one independent bit of boundary information corresponds to $\ell_P^2$ of length variance" and sums over the $N_{\text{eff}}$ effective cells, the resulting variance is:
 
-This is $1/4$ of the bulk count $N_{\text{bulk}}$. The factor of $4$ comes directly from the Bekenstein-Hawking entropy $S = A/(4\ell_P^2)$ — a factor fixed by the proportionality constant in [Area Scaling](/derivations/holography/area-scaling) (Theorem 5.2), which is itself derived from coherence conservation. The $N_{\text{bulk}} - N_{\text{eff}}$ remaining cells are not independent — they are holographically constrained by the boundary data.
+$$\delta L^2 = N_{\text{eff}} \cdot \ell_P^2 = \frac{\ell_P L}{4}$$
 
-**Step 3 (Variance computation).** Each of the $N_{\text{eff}}$ independent contributions adds $\ell_P^2$ of position variance (one Planck length per independent degree of freedom). The total geodesic variance is:
+giving $\alpha_H = 1/4$ as a target.
 
-$$\delta L^2 = N_{\text{eff}} \cdot \ell_P^2 = \frac{L}{4\ell_P} \cdot \ell_P^2 = \frac{\ell_P L}{4}$$
+**This is not a proof.** Two gaps remain:
 
-Comparing with $\delta L^2 = \alpha_H \ell_P L$ gives $\alpha_H = 1/4$.
+1. **Information-to-variance bridge is unproven.** The Bekenstein-Hawking bound constrains *information content* (bits), not the *variance of a geometric estimator*. Equating "independent bit" with "$\ell_P^2$ of length variance" requires an additional rule that is not derived from the framework. The Fisher-metric chain ([Fisher Information Metric](/derivations/thermodynamics-ext/fisher-metric)) provides a Cramér–Rao *lower* bound on estimator precision, which is the wrong direction for an *intrinsic* noise floor.
 
-**Consistency check.** The Holometer experiment ([Holographic Noise](/predictions/holographic-noise)) constrains $\alpha_H \lesssim 0.5$ from its perpendicular configuration. The value $\alpha_H = 1/4 = 0.25$ satisfies this bound. $\square$
+2. **Per-cell variance coefficient is arbitrary.** The rule "each DOF contributes $\ell_P^2$" could equally be "$4\ell_P^2$" (the holographic area per bit), in which case the factors cancel and $\alpha_H \sim 1$. Proposition 2.2's CLT argument gives $\alpha = c^2$ with $c = f'(1)$ depending on the estimator; a rigorous derivation would start from a specific estimator (e.g., Brightwell–Gregory longest-chain or Myrheim–Meyer interval-count) and compute $c$ analytically or numerically.
+
+**Status.** Until a first-principles causet calculation pins down $\alpha_H$, the framework should treat it as an O(1) coefficient with $\alpha_H \sim 1/4$ as a suggestive natural value. The Holometer experiment ([Holographic Noise](/predictions/holographic-noise)) constrains $\alpha_H \lesssim 0.5$ from its co-aligned ($\beta = 0$) configuration, so $\alpha_H \in (0, 0.5]$ is the currently allowed range. A value near $1/4$ is consistent but not derived. $\square$
 
 **Corollary 2.4 (Strain power spectral density).** *The single-arm strain PSD from holographic noise is:*
 
-$$S_h = \frac{2\alpha_H \ell_P}{c} = \frac{\ell_P}{2c}$$
+$$S_h = \frac{2\alpha_H \ell_P}{c}$$
 
-*This is white (frequency-independent) and isotropic per arm.*
+*white (frequency-independent) and isotropic per arm. The $\sqrt{\ell_P L}$ scaling is rigorous (Proposition 2.2); the overall amplitude $\alpha_H \in (0, 0.5]$ is an O(1) coefficient with natural target $\sim 1/4$ (Heuristic 2.3), constrained by Holometer.*
 
 ### Step 3: Dark Matter Density Fluctuations
 
@@ -185,12 +187,12 @@ The transfer function $T(k) = \sqrt{P(k)/P_{\text{CDM}}(k)}$ takes the Gaussian 
 
 | Prediction | Scale | Mechanism | Observable |
 |---|---|---|---|
-| Holographic noise | $\ell_P$ (Planck) | Geodesic variance on Poisson causet | Strain PSD $S_h = \ell_P/(2c)$ |
+| Holographic noise | $\ell_P$ (Planck) | Geodesic variance on Poisson causet | Strain PSD $S_h = 2\alpha_H \ell_P/c$, $\alpha_H \in (0, 0.5]$ |
 | Dark matter granularity | $k_J^{-1}$ (kpc) | Density fluctuations of Poisson causet | Gaussian cutoff $e^{-(k/k_J)^2}$ |
 
 *Proof.* Both predictions originate from the Poisson nature of the relational invariant network (Proposition 1.3):
 
-1. **Holographic noise** (§2): The variance $\delta L^2 = \alpha_H \ell_P L$ is a direct consequence of Poisson fluctuations in the number of causet elements along a geodesic, with $\alpha_H = 1/4$ fixed by the holographic bound.
+1. **Holographic noise** (§2): The variance $\delta L^2 = \alpha_H \ell_P L$ is a direct consequence of Poisson fluctuations in the number of causet elements along a geodesic. The $\sqrt{\ell_P L}$ scaling is rigorous (Proposition 2.2); $\alpha_H$ is an O(1) coefficient with natural target $\sim 1/4$ suggested by the holographic bound (Heuristic 2.3).
 
 2. **Dark matter granularity** (§§3–5): The density fluctuations $\langle(\delta\rho/\rho)^2\rangle = 1/N_R$ and the Gaussian cutoff $e^{-(k/k_J)^2}$ arise from the same Poisson sprinkling, but at cosmological scales where loop closure pressure sets the relevant length scale.
 
@@ -205,7 +207,7 @@ The connection: both are consequences of the discrete, Poisson-distributed relat
 - **Causal set axioms** (Proposition 1.2): The sprinkling is a locally finite partial order under the Minkowski causal relation. $\checkmark$
 - **Lorentz invariance** (Proposition 1.3): Poisson sprinkling of $\mathbb{M}^4$ is Lorentz-invariant [Bombelli et al., 1987]. $\checkmark$
 - **Geodesic variance** (Proposition 2.2): Numerical simulations [Dowker et al., 2004] confirm $\delta L^2 \propto \ell_P L$ for the longest-chain estimator on Poisson causets. $\checkmark$
-- **Holographic coefficient** (Theorem 2.3): $\alpha_H = 1/4$ from the holographic bound, consistent with the Holometer constraint $\alpha_H \lesssim 0.5$. $\checkmark$
+- **Holographic coefficient** (Heuristic 2.3): $\alpha_H \sim 1/4$ as a natural target from the holographic bound; not derived. Holometer constrains $\alpha_H \lesssim 0.5$. Consistent with target value.
 - **Poisson density fluctuations** (Proposition 3.2): $\langle(\delta\rho/\rho)^2\rangle_R = (R/\ell_P)^{-3}$ — correct Poisson scaling. $\checkmark$
 - **Gaussian cutoff** (Theorem 5.1): Steeper than WDM power-law — distinguishable in Lyman-$\alpha$ forest data. $\checkmark$ $\square$
 
@@ -215,21 +217,23 @@ The connection: both are consequences of the discrete, Poisson-distributed relat
 - Definition 1.1: Causal set axioms (standard mathematical definition)
 - Proposition 1.2: Network satisfies causal set axioms (follows from the partial order of the dependency DAG and local finiteness from the holographic bound)
 - Proposition 1.3: Poisson sprinkling is the unique Lorentz-invariant point process [Bombelli et al., 1987]
-- Proposition 2.2: Geodesic variance $\delta L^2 = \alpha \ell_P L$ (explicit CLT application: cell decomposition into $N = L/\ell_P$ i.i.d. Poisson cells, linearized length estimator, CLT gives variance $c^2 \ell_P L$. The $\sqrt{\ell_P L}$ scaling is a rigorous consequence of summing independent fluctuations.)
-- Theorem 2.3: $\alpha_H = 1/4$ (holographic reduction: causal diamond boundary area $A_{\max} = L \cdot \ell_P$, Bekenstein-Hawking bound gives $N_{\text{eff}} = A_{\max}/(4\ell_P^2) = L/(4\ell_P)$, variance $\delta L^2 = N_{\text{eff}} \cdot \ell_P^2 = \ell_P L/4$. The factor of 4 is fixed by the Bekenstein-Hawking proportionality constant derived in [Area Scaling](/derivations/holography/area-scaling).)
+- Proposition 2.2: Geodesic variance scaling $\delta L^2 \propto \ell_P L$ (explicit CLT application: cell decomposition into $N = L/\ell_P$ i.i.d. Poisson cells, linearized length estimator, CLT gives variance $c^2 \ell_P L$. The $\sqrt{\ell_P L}$ *shape* is a rigorous consequence of summing independent fluctuations; the coefficient $\alpha = c^2$ depends on the choice of estimator and is not determined by this proposition alone.)
 - Proposition 3.2: Poisson density fluctuations $\langle(\delta\rho/\rho)^2\rangle = 1/N_R$ (elementary probability theory)
 - Theorem 4.2: Quantum Jeans mass $M_J \propto m_{DM}^{-3/2}$ (formal energy balance: gravitational $E_G \sim G\rho^2 R^5$ vs. quantum kinetic $E_Q \sim \rho R^3 \hbar^2/(m_{DM}^2 R^2)$; solving $|E_G| = E_Q$ gives $R_J = (\hbar^2/(G\rho m_{DM}^2))^{1/4}$ and $M_J = (4\pi/3)\rho R_J^3$; numerical evaluation at $\rho_{eq}$ confirms $M_J \sim 3 \times 10^6\,M_\odot$.)
 - Theorem 5.1: Gaussian cutoff (follows from the $\hbar^2 k^4/(4m_{DM}^2)$ quantum pressure term in the dispersion relation; the Gaussian transfer function $T(k) = e^{-(k/k_J)^2/2}$ is the standard result for quantum-pressure-dominated suppression, steeper than WDM power-law.)
 - Corollary 2.4: Strain PSD from geodesic variance (direct computation)
 
+**Heuristic (natural target, not derived):**
+- Heuristic 2.3: $\alpha_H \sim 1/4$ as a natural target (holographic bound suggests $N_{\text{eff}} = L/(4\ell_P)$ independent bits in the causal diamond, and *if* each bit is identified with $\ell_P^2$ of length variance, then $\delta L^2 = \ell_P L/4$. The information-to-variance bridge is not derived from the framework; the per-bit variance coefficient is arbitrary. Holometer constrains the actual value to $\alpha_H \lesssim 0.5$.)
+
 **Semi-formal (qualitative connection, awaits full dynamical treatment):**
 - Theorem 6.1: Cross-prediction (the qualitative connection — both predictions arise from the same Poisson statistics at different scales — is established. The quantitative link between $\alpha_H$ and $k_J$ through $\rho_P$ awaits a full dynamical treatment of how the sprinkling density connects to both observables.)
 
-**Assessment:** Rigorous. The causal set foundation is mathematically rigorous (Propositions 1.2, 1.3, 3.2). The holographic noise amplitude $\alpha_H = 1/4$ is derived from the Bekenstein-Hawking entropy bound via explicit causal diamond geometry and degree-of-freedom counting. The geodesic variance scaling is proven via CLT on Poisson cells. The dark matter predictions use standard Jeans analysis with quantum pressure, fully formalized with explicit energy balance and numerical verification. The Gaussian cutoff follows from the standard quantum-pressure dispersion relation. The only semi-formal element is the qualitative cross-prediction linking both observables through the common Poisson substrate (Theorem 6.1).
+**Assessment:** The causal set foundation is mathematically rigorous (Propositions 1.2, 1.3, 3.2). The $\sqrt{\ell_P L}$ *scaling* of the geodesic variance is rigorous via CLT on Poisson cells (Proposition 2.2). The *amplitude* $\alpha_H$ is an O(1) coefficient that depends on the specific choice of length estimator; the holographic natural target $\alpha_H \sim 1/4$ is a heuristic substitution (Heuristic 2.3), not a theorem — the bridging rule "one bit ↔ $\ell_P^2$ variance" is not derived from the framework. A first-principles derivation requires computing the variance of a specific causet length estimator (e.g., Brightwell–Gregory longest-chain or Myrheim–Meyer interval-count) analytically or via simulation; this is tracked as an open research target. The dark matter predictions use standard Jeans analysis with quantum pressure, fully formalized with explicit energy balance and numerical verification. The Gaussian cutoff follows from the standard quantum-pressure dispersion relation. The qualitative cross-prediction linking both observables through the common Poisson substrate (Theorem 6.1) is semi-formal.
 
 ## Open Gaps
 
-1. **Rigorous geodesic estimator**: The geodesic variance calculation (Proposition 2.2) uses a simplified cell-counting argument. A rigorous derivation should use the Myrheim-Meyer dimension estimator or the Brightwell-Gregory longest-chain estimator on Poisson causets in curved spacetime.
+1. **First-principles amplitude $\alpha_H$**: The amplitude coefficient is currently an O(1) parameter constrained only by Holometer ($\alpha_H \lesssim 0.5$). A rigorous derivation requires computing the variance of a specific causet length estimator — Brightwell–Gregory longest-chain or Myrheim–Meyer interval-count — on a Poisson sprinkling of 4D Minkowski. Partial analytical and numerical results exist in the causet literature (Dowker et al.); adapting them to give an explicit $\alpha_H$ is a well-defined mathematical problem. The holographic natural target $\alpha_H = 1/4$ (Heuristic 2.3) would become a theorem only if: (a) the target estimator yields exactly $c^2 = 1/4$ on a Poisson sprinkling, or (b) a rigorous information-to-variance bridge theorem is established. Tracked in [future-targets.json](site/src/data/future-targets.json).
 2. **Non-flat corrections**: All calculations assume flat (Minkowski) background. The corrections from curvature — particularly near black holes or in the early universe — should modify both $\alpha_H$ and the density fluctuation spectrum.
 3. **Quantitative cross-prediction**: The qualitative link between holographic noise and dark matter granularity (Theorem 6.1) should be made quantitative: given $\alpha_H$, what is the predicted $k_J$? This requires computing how the sprinkling density $\rho_P$ connects to both observables through the specific dynamics of the observer network.
 4. **Deriving Poisson from axioms**: Proposition 1.3 assumes Poisson sprinkling as the unique Lorentz-invariant distribution. Can this be derived from the three axioms, or is it an additional input?
