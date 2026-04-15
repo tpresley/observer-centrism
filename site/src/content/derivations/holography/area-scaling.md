@@ -131,6 +131,8 @@ $$S \leq \frac{A}{4\ell_P^2}$$
 
 *Argument 1 (boundary counting) establishes $S \propto A/\ell_P^2$ from the maximum number of relational invariant crossings. Argument 2 (channel capacity + gravitational stability) fixes the coefficient $1/4$. The bound is tight: it is saturated by black holes ([Black Hole Entropy](/derivations/holography/black-hole-entropy)).*
 
+**Remark (tile-counting interpretation).** Argument 1 derives the bound by literally counting boundary crossings, each contributing one bit (Proposition 3.1). Combined with the integer-valued bootstrap closure ([Bootstrap](/derivations/interactions/bootstrap) Corollary 2.3, [Coherence Conservation](/derivations/axioms/coherence-conservation) Corollary 5.5a), the holographic bound is operationally a *tile-counting* statement: $A/(4\ell_P^2)$ is the maximum number of integer-quantized observer-equivalents (each carrying one $\hbar\omega_0$-unit of coherence content) that can fit on the boundary. The factor $1/4$ from Argument 2 fixes the effective area per tile at $4\ell_P^2$. There is no continuous degree of freedom in the bound itself — it is a discrete count of indistinguishable units, with all distinguishable structure emerging from how those units are arranged into the bootstrap hierarchy.
+
 ### Step 6: The Bekenstein Bound
 
 **Proposition 6.1 (Bekenstein bound).** *For a system of energy $E$ enclosed in a sphere of radius $R$:*

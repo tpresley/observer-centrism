@@ -199,6 +199,16 @@ The vertices shared between $\Sigma$ and $\Sigma'$ contribute identically to bot
 
 **Definition 5.5 (Cauchy-slice total).** The common value of all Cauchy-slice totals within a given bootstrap level's interaction network is denoted $C_0^{(n)}$ for level $n$. This is a derived constant of the network at that level, determined by its structure — not a free parameter of the axioms. Where the level is clear from context, we write $C_0$.
 
+**Corollary 5.5a (Cauchy-slice integer quantization).** *The Cauchy-slice total at every bootstrap level is an integer multiple of $\hbar\omega_0$:*
+
+$$C_0^{(n)} = N^{(n)} \cdot \hbar\omega_0, \qquad N^{(n)} \in \mathbb{Z}_{\geq 0}$$
+
+*where $\omega_0$ is the universal fundamental frequency from [Loop Closure](/derivations/axioms/loop-closure) Corollary 3.2.*
+
+*Proof.* By [Bootstrap](/derivations/interactions/bootstrap) Corollary 2.3, every observer in the bootstrap closure carries coherence content equal to an integer multiple of $\hbar\omega_0$. Each vertex $v$ in the Cauchy slice represents an interaction event whose vertex coherence $\mathcal{C}(v)$ (Definition 4.4) is the level-$n$ contribution of the participating observers. Per Proposition 5.7, level-$n$ relational invariants are tracked at level $n+1$ rather than level $n$, so $\mathcal{C}(v)$ at level $n$ is the sum of individual observer contributions only — each itself an integer multiple of $\hbar\omega_0$. The Cauchy-slice total is therefore a finite sum of integer multiples of $\hbar\omega_0$, which is itself an integer multiple of $\hbar\omega_0$. $\square$
+
+**Remark (level-indexed bookkeeping).** The integer $N^{(n)}$ is level-specific. By Proposition 5.7, Type III interactions at level $n$ generate new relational coherence at level $n+1$, which is not in the level-$n$ accounting. Each level has its own integer count, and counts at different levels are not directly comparable — they are tallied in the same unit ($\hbar\omega_0$) but track distinct conserved quantities. The framework's coherence ledger is integer-valued at every level, with the levels stacked rather than aggregated.
+
 **Proposition 5.6 (Cauchy-slice finiteness).** *On any Cauchy slice of a well-formed interaction network at a given bootstrap level, the total coherence $C_0^{(n)}$ is finite.*
 
 *Proof.* Each vertex $v$ in the Cauchy slice represents an interaction event involving observers with compact state spaces (O1 of [Observer Definition](/derivations/axioms/observer-definition)). By local finiteness (C2), each vertex carries finite coherence $\mathcal{C}(v) < \infty$. The interaction graph is discrete (countable vertices), and a Cauchy slice of a finite or locally finite DAG contains at most countably many vertices. In the physical realization, the observer network at any given level has finite density per compact region (from the discrete substrate), so the Cauchy slice contains finitely many vertices and $C_0 = \sum_{v \in \Sigma} \mathcal{C}(v) < \infty$. $\square$

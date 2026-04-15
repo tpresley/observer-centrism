@@ -82,6 +82,14 @@ $$\vdots$$
 
 *Each level consists of valid observers, and the construction is closed under further interaction.*
 
+**Corollary 2.3 (Integer action across the bootstrap closure).** *Every observer in the bootstrap closure has action quantized in integer multiples of $h = 2\pi\hbar$ over the fundamental period $T_0 = 2\pi/\omega_0$. Equivalently, every observer's coherence content is an integer multiple of $\hbar\omega_0$, where $\omega_0$ is the universal fundamental frequency.*
+
+*Proof.* By [Action and Planck's Constant](/derivations/thermodynamics/action-planck) Proposition 3.3 (action quantization), every observer cycle has action $\mathcal{S} \geq \hbar$, with equality iff the observer is minimal. By [Loop Closure](/derivations/axioms/loop-closure) Corollary 3.2 (universal frequency grid), every observer frequency satisfies $\omega = m\omega_0$ for some positive integer $m$, where $\omega_0$ is the universal fundamental frequency forced by the requirement that composite observers satisfy Axiom 3. Combining these with the action–energy–time relation $\mathcal{S} = E \cdot T$ ([Action and Planck's Constant](/derivations/thermodynamics/action-planck) Proposition 4.1), the coherence content satisfies $E = n\hbar\omega = nm \cdot \hbar\omega_0$ for positive integers $n, m$. The combined integer $N = nm$ is the count of $\hbar\omega_0$-quanta carried by the observer.
+
+By Theorem 1.1, every relational invariant is an observer satisfying (O1)–(O3) and (N1)–(N3). The argument above applies to relational invariants in exactly the same way it applies to fundamental observers: each relational invariant has its own frequency in the universal grid (forced by the same composite-observer argument), its own action quantum, and therefore its own integer-valued $\hbar\omega_0$-count. By Proposition 2.1, this propagates to every level of the iterated bootstrap closure. $\square$
+
+**Remark (combinatorial substrate).** Corollary 2.3 establishes that the framework's coherence ledger is integer-valued at every level. Continuous structures — manifolds, Lie groups, Fisher metrics — emerge from discrete combinatorics on identical $\hbar\omega_0$-units arranged into the bootstrap hierarchy. The state-space continuity ([Action and Planck's Constant](/derivations/thermodynamics/action-planck), [Fisher Information Metric](/derivations/thermodynamics-ext/fisher-metric)) lives on the *interior* of each observer's state space; the *count* of observers and observer-equivalents is a discrete integer at every bootstrap level.
+
 ### Step 3: The Hierarchy Is Necessary
 
 **Theorem 3.1 (Necessity of hierarchy).** *A static configuration — a set of observers with no Type III interactions and no relational invariants beyond the fundamental level — is dynamically impossible if the set contains $\geq 2$ observers.*
@@ -129,6 +137,8 @@ $$\mathcal{R}(\mathcal{O}_1, \mathcal{O}_2) = \mathcal{O}_{12}$$
 $$N_{\text{region}} \leq A/(4\ell_P^2)$$
 
 *This is an observer-relative, information-theoretic bound: different observers at different bootstrap levels project different geometries and resolve different numbers of levels. The bound is a corollary of holography, not a consequence of a global coherence budget.*
+
+**Remark (cross-level horizon consistency).** Proposition 6.2 is a single-level bound: each level $n$ has its own projected geometry with area $A_n$ and capacity $A_n/(4\ell_P^2)$ for level-$n$ relational invariants. Because the bootstrap is *iterative* — level-$(n+1)$ invariants are constituted by Type III interactions among level-$n$ invariants — the levels are not independent. A bootstrap fixed point $\mathcal{U} \cong \mathcal{R}(\mathcal{U}, \mathcal{U})$ must satisfy the holographic bound at *every* level *simultaneously*, with the level-$(n+1)$ invariant count constrained both by its own area capacity and by the level-$n$ interaction count that produces it. Joint satisfaction across all levels is a stronger constraint than satisfying each level's bound independently: it is a self-consistency equation on horizon capacities across the bootstrap hierarchy. Making this precise requires the geometry functor $G: \mathbf{Obs} \to \mathbf{Geom}$ (currently informal; see [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Step 10 and the `hierarchical-geometry` entry in [future-targets.json](site/src/data/future-targets.json)). Once the functor is formalized, the cross-level horizon consistency becomes an explicit constraint that the bootstrap fixed point (Conjectures 7.1–7.2 below) must satisfy.
 
 ## Physical Interpretation
 

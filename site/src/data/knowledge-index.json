@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-15T08:04:24.332Z",
+    "generatedAt": "2026-04-15T08:34:02.525Z",
     "derivationCount": 76,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -17,7 +17,7 @@
     "derivationCount": 76,
     "predictionCount": 12,
     "edgeCount": 219,
-    "formalObjectCount": 1132,
+    "formalObjectCount": 1133,
     "openGapCount": 228,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
@@ -349,6 +349,14 @@
             "context": "Time as Phase Ordering"
           },
           {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap"
+          },
+          {
             "target": "interactions/relational-invariants",
             "context": "Theorem 3.2, reverse Noether"
           },
@@ -413,6 +421,10 @@
           {
             "source": "gauge/standard-model-group",
             "context": "Axiom 1"
+          },
+          {
+            "source": "holography/area-scaling",
+            "context": "Coherence Conservation"
           },
           {
             "source": "holography/information-paradox",
@@ -1010,6 +1022,10 @@
           {
             "source": "axioms/00-from-observation-to-axioms",
             "context": "Axiom 3"
+          },
+          {
+            "source": "axioms/coherence-conservation",
+            "context": "Loop Closure"
           },
           {
             "source": "axioms/observer-definition",
@@ -8201,6 +8217,10 @@
             "context": "Black Hole Entropy"
           },
           {
+            "target": "axioms/coherence-conservation",
+            "context": "Coherence Conservation"
+          },
+          {
             "target": "thermodynamics/action-planck",
             "context": "Action and Planck's Constant"
           },
@@ -10021,6 +10041,12 @@
           "statementPreview": "The bootstrap generates an infinite sequence of observer levels:*"
         },
         {
+          "type": "Corollary",
+          "id": "2.3",
+          "name": "Integer action across the bootstrap closure",
+          "statementPreview": "Every observer in the bootstrap closure has action quantized in integer multiples of h = 2pihbar over the fundamental..."
+        },
+        {
           "type": "Theorem",
           "id": "3.1",
           "name": "Necessity of hierarchy",
@@ -10130,6 +10156,14 @@
             "context": "Relational Invariants"
           },
           {
+            "target": "thermodynamics/action-planck",
+            "context": "Action and Planck's Constant"
+          },
+          {
+            "target": "thermodynamics-ext/fisher-metric",
+            "context": "Fisher Information Metric"
+          },
+          {
             "target": "minimal-observer/multiplicity",
             "context": "Proposition 4.1"
           },
@@ -10179,6 +10213,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "axioms/coherence-conservation",
+            "context": "Bootstrap"
+          },
           {
             "source": "axioms/coherence-conservation",
             "context": "Bootstrap Mechanism"
@@ -18256,6 +18294,10 @@
             "context": "Fisher Information Metric"
           },
           {
+            "source": "interactions/bootstrap",
+            "context": "Fisher Information Metric"
+          },
+          {
             "source": "minimal-observer/multiplicity",
             "context": "Fisher Information Metric"
           },
@@ -19363,6 +19405,10 @@
           },
           {
             "source": "holography/area-scaling",
+            "context": "Action and Planck's Constant"
+          },
+          {
+            "source": "interactions/bootstrap",
             "context": "Action and Planck's Constant"
           },
           {
@@ -25755,6 +25801,13 @@
       "id": "2.2.",
       "name": "",
       "fullRef": "interactions/bootstrap:Corollary 2.2."
+    },
+    {
+      "derivationId": "interactions/bootstrap",
+      "type": "Corollary",
+      "id": "2.3",
+      "name": "Integer action across the bootstrap closure",
+      "fullRef": "interactions/bootstrap:Corollary 2.3"
     },
     {
       "derivationId": "interactions/bootstrap",
