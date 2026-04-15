@@ -111,6 +111,18 @@
       "impact": "Determines whether the framework's natural target α_H ~ 1/4 is the true value (direct implications for the experimental status of the primary prediction). Does NOT affect the distinctive Γ(β) = cos β angular signature (which is independent of α_H). Does NOT require Monte Carlo on Poisson sprinklings — the question is structural rather than statistical."
     },
     {
+      "id": "separated-vertex-cross-correlation",
+      "title": "Cross-correlation of holographic noise between separated beamsplitter vertices",
+      "difficulty": "MODERATE",
+      "priority": "MEDIUM",
+      "status": "OPEN — flagged 2026-04-15 during holographic noise prediction audit",
+      "rationale": "The Step 5 derivation of γ(α) = cos α in holographic-noise.md anchors the noise at a single beamsplitter vertex via the relational invariant generated at one Type III interaction (Step 3, Proposition 3.1). Two distinct beamsplitter vertices at spatial separation d generate distinct relational invariants whose cross-correlation has not been derived. Causality alone gives a coherence cutoff at f ~ c/(2πd), but the exact functional form (rolloff shape, residual correlation below cutoff) is unknown. This is load-bearing for Test 2 (LISA TDI angular channels at 60° between separated spacecraft vertices) and Test 3 (LIGO–Virgo–KAGRA stochastic background search across separated detectors). It is NOT load-bearing for the Holometer test or Test 1, which are both co-located.",
+      "strategy": "Model how the relational invariants generated at two distinct Type III interactions (the two beamsplitters) propagate through the broader observer network. The two beamsplitter events share an upstream coherence source if they are connected by a common laser line, common environmental observer hierarchy, or common past light cone. Derive the cross-correlation function ⟨δX_1(t) · δX_2(t')⟩ between the two vertex displacements as a function of the spatial separation d and time difference t - t'. The expected qualitative behavior: cross-correlation maintained for f << c/(2πd), lost for f >> c/(2πd), with a specific functional form (likely involving the retarded propagation kernel between the two vertices). Compare to standard GW overlap reduction functions for separated detectors.",
+      "dependencies": ["interactions/relational-invariants", "quantum/entanglement", "holography/er-epr"],
+      "addressesGaps": ["predictions/holographic-noise Step 8 (separated detectors)", "predictions/holographic-noise Test 2 quantitative claim", "predictions/holographic-noise Test 3 quantitative claim"],
+      "impact": "Promotes Test 2 (LISA) and Test 3 (LIGO network) from qualitative to quantitative. Does NOT affect the Holometer test or Test 1, which remain rigorous. The qualitative discriminator between holographic noise (rank-1, dipolar) and GW backgrounds (spin-2, quadrupolar) survives independently."
+    },
+    {
       "id": "cpt-theorem",
       "title": "CPT Theorem from Coherence-Dual Pairs",
       "difficulty": "MODERATE",

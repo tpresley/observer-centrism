@@ -58,12 +58,6 @@ $$\langle (\Delta x)^2 \rangle_{\text{null}} = N \cdot \alpha_H \ell_P^2 = \alph
 
 This is the **holographic scaling**: position uncertainty grows as $\sqrt{\ell_P L}$, not as $\ell_P$. The $\sqrt{\ell_P L}$ scaling is a rigorous consequence of CLT applied to Poisson cells ([Causal Set Statistics](/derivations/holography/causal-set-statistics), Proposition 2.2); the amplitude $\alpha_H$ depends on the specific length estimator and is not yet derived from first principles (see [Causal Set Statistics](/derivations/holography/causal-set-statistics), Heuristic 2.3).
 
-**Spacelike separations.** For two points at spacelike separation, there are no causal chains connecting them. Their position uncertainties are independent:
-
-$$\langle (\Delta x)^2 \rangle_{\text{spacelike}} \sim \alpha_H \ell_P^2 \cdot e^{-L/\ell_P}$$
-
-Exponentially suppressed — the uncertainty is essentially uncorrelated at scales $L \gg \ell_P$.
-
 ### Step 3: The Shared-Origin Displacement and the Relational Invariant at the Beamsplitter
 
 The key structural feature that makes holographic noise anisotropic at macroscopic arm lengths — and distinguishes this prediction from Hogan's isotropic model — is that the two arms of a Michelson share a **relational invariant** established at the beamsplitter. This is nonlocal by construction and is the mechanism behind the cross-correlation between arms.
@@ -173,18 +167,41 @@ $$\Gamma(\beta) = \frac{\langle h_1 h_2 \rangle}{S_h^{(\text{Mich})}} = \cos\bet
 | $45°$ | $0.71$ | |
 | $60°$ | $0.50$ | LISA arm pairs |
 | $90°$ | $0.00$ | Perpendicular |
+| $180°$ | $-1.00$ | Anti-parallel arm 1 |
+
+#### Symmetries and Sanity Checks
+
+**Arm convention.** Throughout Steps 3–7 an "arm" is a *directed* line from the beamsplitter vertex to a mirror, parameterized by a unit direction vector $\hat{n}$. The length fluctuation projects the shared-origin displacement onto the arm direction: $\delta L_{\hat{n}} = -\hat{n} \cdot \delta\mathbf{X}$. Reversing the arm direction reverses the sign of the projection: $\delta L_{-\hat{n}} = -\delta L_{\hat{n}}$. Physically, "arm along $-\hat{n}$" means the mirror sits at $-L\hat{n}$ rather than $+L\hat{n}$, which is a different physical configuration (the mirror is on the opposite side of the beamsplitter), not a relabeling of the same arm.
+
+**Behavior under physical rotations of Mich 2.** Let Mich 2's "arm 1" make angle $\beta$ with Mich 1's "arm 1" (so its arm 2 is at $\beta + \pi/2$). Three rotation cases:
+
+- **Rotation by $\pi/2$**: New arm 1 is at $\beta + \pi/2$, new arm 2 is at $\beta + \pi$, which equals $-(\text{old arm 1})$. The new differential strain becomes
+  $$h_2^{\text{new}} = \delta L_{\hat n_2} - \delta L_{-\hat n_1} = \delta L_{\hat n_2} + \delta L_{\hat n_1}$$
+  which is the *sum* (not difference) of the original projections. The cross-correlation works out (using $C_{ab} = (2\alpha_H\ell_P/c)\cos\alpha_{ab}$) to $\Gamma_{\text{new}}(\beta) = -\sin\beta = \cos(\beta + \pi/2)$, consistent with simply replacing $\beta \to \beta + \pi/2$ in the master formula.
+
+- **Rotation by $\pi$**: New arms are $-\hat n_1, -\hat n_2$, so $h_2^{\text{new}} = -\delta L_{\hat n_1} + \delta L_{\hat n_2} = -h_2$. Therefore $\Gamma(\beta + \pi) = -\Gamma(\beta)$, consistent with $\cos(\beta + \pi) = -\cos\beta$.
+
+- **Rotation by $2\pi$**: Trivially $\Gamma(\beta + 2\pi) = \Gamma(\beta)$, consistent with $\cos(\beta + 2\pi) = \cos\beta$.
+
+The full period of $\Gamma(\beta)$ is $2\pi$. There is no shorter period — in particular, $\Gamma$ does NOT return to itself under $\beta \to \beta + \pi/2$.
+
+**Independent check at $\beta = \pi/2$.** A direct calculation that does not invoke the $\gamma(\alpha) = \cos\alpha$ formula: at $\beta = \pi/2$, Mich 2's arms are $\hat y$ and $-\hat x$. Then
+$$h_2 = \delta L_{\hat y} - \delta L_{-\hat x} = \delta L_{\hat y} + \delta L_{\hat x}$$
+and
+$$\langle h_1 h_2\rangle L^2 = \langle (\delta L_{\hat x} - \delta L_{\hat y})(\delta L_{\hat x} + \delta L_{\hat y})\rangle = \langle \delta L_{\hat x}^2\rangle - \langle \delta L_{\hat y}^2\rangle = 0$$
+by isotropy of the shared-origin displacement ($\langle \delta X_i \delta X_j\rangle \propto \delta_{ij}$, so $\langle \delta L_{\hat n}^2\rangle$ is the same for any unit $\hat n$). The cross-terms $\delta L_{\hat x}\delta L_{\hat y}$ and $\delta L_{\hat y}\delta L_{\hat x}$ are equal and cancel exactly. The vanishing of $\Gamma(\pi/2)$ therefore follows from isotropy alone, providing a sanity check independent of the cosine formula.
+
+**Comparison with a stochastic gravitational-wave background.** The angular pattern $\Gamma(\beta) = \cos\beta$ is the response of an interferometer to a vector noise field — a rank-1 (dipolar) object. A standard isotropic stochastic gravitational-wave background, by contrast, is a rank-2 (spin-2 / quadrupolar) tensor field, and its overlap reduction function for two co-located Michelsons has period $\pi/2$ in the relative angle (returning to its starting value when one detector is rotated by $\pi/2$, because GW strain transforms in the spin-2 representation of $SO(2)$). Holographic noise distinguishes itself from a GW background by its *period*: dipolar (period $2\pi$, with a sign flip at $\pi$) rather than quadrupolar (period $\pi/2$). This is a clean qualitative discriminator independent of the absolute amplitude — even a low-statistics measurement of the angular pattern can rule out one or the other.
 
 ### Step 8: Separated Detectors
 
-For two detectors separated by distance $d$, the cross-correlation acquires a frequency-dependent suppression from the light travel time:
+The derivation of $\gamma(\alpha) = \cos\alpha$ in Step 5 relies on the two arms of a Michelson sharing a single random displacement $\delta\mathbf{X}$ at a common beamsplitter vertex. For two interferometers whose beamsplitter vertices are separated by spatial distance $d$, the relevant question is: how do the random displacements at two distinct vertices $\delta\mathbf{X}_1$ and $\delta\mathbf{X}_2$ correlate?
 
-$$\Gamma(\beta, f, d) = \cos\beta \cdot \text{sinc}\!\left(\frac{2\pi f d}{c}\right)$$
+This is a substantive open question in the framework. The shared-origin structure of Step 3 is anchored by the relational invariant generated at a single Type III interaction (the beamsplitter event). Two Type III interactions at distinct spacetime events generate distinct relational invariants $I_{ab}^{(1)}$ and $I_{ab}^{(2)}$, and the cross-correlation between them depends on whether and how the two interactions are connected by the broader observer network — through a common upstream coherence source (the laser line, the local observer hierarchy, etc.). A first-principles derivation of this cross-correlation has not been done.
 
-The coherence is maintained only below the frequency $f_{\text{coh}} = c/(2\pi d)$. For LIGO Hanford-Livingston ($d \approx 3000$ km):
+**Causality argument for the coherence cutoff.** Independent of the detailed correlation function, causality alone gives a frequency scale at which the two-vertex cross-correlation must die off. Two beamsplitter vertices at spatial separation $d$ are causally disconnected over time intervals shorter than $d/c$. Frequency components above $f_{\text{coh}} \sim c/(2\pi d)$ cannot maintain phase coherence between the two vertices, regardless of the underlying noise model. The cross-correlation is therefore expected to be approximately maintained for $f \ll f_{\text{coh}}$ and lost for $f \gg f_{\text{coh}}$. The exact functional form of the rolloff requires the open derivation above.
 
-$$f_{\text{coh}} \approx 16 \text{ Hz}$$
-
-Above 16 Hz, the holographic noise between H and L is uncorrelated regardless of their relative orientation. Since the LIGO detectors are also nearly perpendicular ($\beta \approx 90°$), $\Gamma \approx 0$: LIGO H-L cross-correlation is not a useful probe of this prediction.
+**Implication for LIGO Hanford–Livingston** ($d \approx 3000$ km): the coherence cutoff is $f_{\text{coh}} \approx 16$ Hz. The LIGO sensitive band ($\sim 30$–$1000$ Hz) lies well above this cutoff, so any holographic-noise cross-correlation between H and L is suppressed regardless of the detailed rolloff function. The LIGO detectors are also nearly perpendicular ($\beta \approx 90°$, where $\cos\beta \approx 0$), so the angular factor independently kills the cross-correlation. LIGO H–L is not a useful probe of this prediction on either count.
 
 ## Confrontation with the Holometer
 
@@ -256,25 +273,25 @@ This is achievable with current technology (the Holometer achieved $\sim 10^{-18
 
 ### Test 2: LISA Angular Channels
 
-**Configuration:** LISA's three arms at $60°$ form three independent Michelson-equivalent channels via Time Delay Interferometry (TDI).
+**Configuration:** LISA's three arms at $60°$ form three Michelson-equivalent channels via Time Delay Interferometry (TDI).
 
-**Prediction:** Cross-correlations between the three TDI channels exhibit:
+**Predicted angular structure:** Each TDI channel is anchored at a different spacecraft vertex, so cross-correlations between channels involve cross-correlation between *separated* beamsplitter vertices (Step 8). The angular structure between any two arm pairs at $60°$ would give $\cos 60° = 0.5$ if the cross-correlation between separated vertices were perfectly maintained. At the LISA observation band ($\sim 1$ mHz) and arm length ($d = 2.5 \times 10^9$ m), the causality coherence frequency is $f_{\text{coh}} \sim c/(2\pi d) \approx 0.02$ Hz, comfortably above the observation band, so on causality grounds the cross-correlation is expected to be approximately maintained:
 
-$$\Gamma_{12} = \Gamma_{23} = \Gamma_{13} = \cos 60° = 0.5$$
+$$\Gamma_{12} \approx \Gamma_{23} \approx \Gamma_{13} \approx \cos 60° = 0.5$$
 
-The three channels provide a consistency check: all three cross-correlations should be equal and at half the auto-correlation level.
+This prediction is **conditional on the open separated-vertex derivation in Step 8**: it is the value that obtains if the causality cutoff is the only suppression and the angular structure carries through unchanged. A rigorous separated-vertex calculation could modify this, particularly if the rolloff function is steeper than the causality bound suggests. The qualitative claim — that the three TDI channels should have correlated holographic noise at the level of $\sim 50\%$ of the auto-correlation — depends on this assumption.
 
-**SNR estimate:** With $L = 2.5 \times 10^9$ m, LISA's strain noise $S_n \sim 10^{-40}$ Hz$^{-1}$ at 1 mHz, observation time $T = 4$ years, bandwidth $\Delta f = 10^{-3}$ Hz:
+**Order-of-magnitude SNR estimate** (assuming the angular structure carries through). With $L = 2.5 \times 10^9$ m, LISA's strain noise $S_n \sim 10^{-40}$ Hz$^{-1}$ at 1 mHz, observation time $T = 4$ years, bandwidth $\Delta f = 10^{-3}$ Hz, and $|\Gamma| \approx 0.5$:
 
 $$\text{SNR} \approx 0.5 \times \frac{5.4\times10^{-44}}{10^{-40}} \times \sqrt{2 \times 1.26\times10^8 \times 10^{-3}} \approx 0.014$$
 
-LISA alone cannot detect the signal. However, the angular channel structure provides a **template** for stacking analyses across multiple frequency bins, potentially improving the effective SNR.
+LISA alone cannot detect the signal at this SNR. The three-channel structure could in principle provide a template for stacking analyses across frequency bins, improving the effective SNR — but this only becomes a useful diagnostic if the separated-vertex cross-correlation is established quantitatively.
 
 ### Test 3: LIGO-Virgo-KAGRA Network (Stochastic Background Search)
 
-The existing gravitational wave detector network can search for an isotropic stochastic background. The holographic noise contributes a correlated signal between co-located detectors (if any) but is suppressed between separated detectors at high frequency.
+The existing gravitational wave detector network can search for an isotropic stochastic background. Holographic noise contributes a correlated signal between co-located detectors and is suppressed between separated detectors at frequencies above the causality coherence frequency $f_{\text{coh}} \sim c/(2\pi d)$ (Step 8). For all current LIGO–Virgo–KAGRA pairs (separations $\sim 1000$–$10000$ km) the GW band lies above the corresponding $f_{\text{coh}}$, so direct cross-correlation tests of holographic noise on this network are not viable.
 
-**The key diagnostic:** If an excess stochastic signal is found, its angular dependence (measured by the different detector pair orientations) distinguishes holographic noise ($\Gamma = \cos\beta \cdot \text{sinc}(2\pi fd/c)$) from astrophysical backgrounds (which have a different overlap reduction function determined by the gravitational wave antenna patterns).
+**The qualitative diagnostic:** if an excess stochastic signal is found in the network and is to be interpreted as holographic noise rather than an astrophysical or cosmological GW background, the two backgrounds are distinguishable by the *period* of the angular response (see "Symmetries and Sanity Checks" subsection of Step 7). A spin-2 GW background gives a quadrupolar overlap reduction function (period $\pi/2$); the holographic-noise rank-1 vector field gives a dipolar response (period $2\pi$). These are qualitatively different angular patterns and provide a model-independent discriminator. Quantitative use of this diagnostic for separated detectors awaits the open Step 8 derivation.
 
 ### Test 4: Next-Generation Dedicated Experiment
 
@@ -360,8 +377,9 @@ The derivation chain threads through axioms (derived), multiple rigorous interme
 
 **Modeling assumptions (reasonable but not uniquely forced):**
 - The shared-origin displacement $\delta\mathbf{X}$ is modeled as a pure vector (rank-1). A rotationally-invariant scalar "breathing mode" component would shift $\gamma(\alpha)$ from pure $\cos\alpha$ to affine $a + b\cos\alpha$, without changing the distinctive $\Gamma(\beta) = \cos\beta$ signature. The specific coefficients $a, b$ would require a more detailed model of beamsplitter-substrate interaction; only $\gamma(\alpha) = \cos\alpha$ is used in quantitative estimates.
-- The exponential suppression of spacelike correlations $e^{-L/\ell_P}$ (Step 2) — assumed rather than derived. Not load-bearing for the Holometer test (which is at $d = 0$).
-- The sinc frequency suppression for separated detectors (Step 8) — asserted rather than derived. Not load-bearing for co-located tests but affects separated-detector predictions.
+
+**Open at the framework level:**
+- Cross-correlation between separated beamsplitter vertices (Step 8). The single-beamsplitter derivation in Step 3 anchors the noise at one Type III interaction; two distinct interactions at distinct vertices generate distinct relational invariants whose cross-correlation has not yet been derived. Causality alone gives a coherence cutoff at $f \sim c/(2\pi d)$, but the exact functional form (rolloff shape, residual correlation below cutoff) requires a derivation that does not yet exist. This is load-bearing for Test 2 (LISA) and Test 3 (LIGO–Virgo–KAGRA network), which both make quantitative use of separated-vertex cross-correlations. It is not load-bearing for the Holometer test (which is co-located, $d = 0$) or for Test 1 (the rotatable cross-correlation, also co-located).
 
 **Open:**
 - The transition from discrete causal set to continuum noise correlation requires a coarse-graining calculation
@@ -371,7 +389,7 @@ The derivation chain threads through axioms (derived), multiple rigorous interme
 
 ## Open Gaps
 
-1. **Exact amplitude from causal set statistics**: Computing $\alpha_H$ from first principles requires the variance of the geodesic length estimator in a Poisson-sprinkled causal set. This is a well-posed mathematical problem with existing partial results in the causal set literature. Now highly motivated by the tight Holometer bound $\alpha_H \lesssim 0.24$ — a rigorous value would settle whether the natural target $\sim 1/4$ is achieved or marginally excluded.
+1. **Exact amplitude from causal set statistics**: The first-principles $\alpha_H$ question is structural rather than computational. The framework's $\sqrt{\ell_P L}$ scaling and $\alpha_H \sim 1/4$ both presuppose a count-based estimator (Planck-thickness tube of cells along the path), where the sum-of-independents variance gives $\alpha_H = 1$ trivially and the holographic substitution rule of [Causal Set Statistics](/derivations/holography/causal-set-statistics) Heuristic 2.3 reduces it to $1/4$. Resolving $\alpha_H$ requires either deriving the holographic substitution rule from the framework's axioms or constructing a non-Poisson causet model with explicit holographic correlations. The natural Brightwell–Gregory longest-chain Monte Carlo on Poisson-sprinkled 4D Minkowski is not a route to $\alpha_H$ — the longest-chain length is an extreme-value statistic with sub-linear variance, not a sum-of-independents. See [Causal Set Statistics](/derivations/holography/causal-set-statistics) Open Gap 1 for the current framing.
 2. **Formalize the beamsplitter-as-Type III-interaction lemma**: Proposition 3.1 asserts that a 50/50 beamsplitter generates a relational invariant with the specific shared-displacement structure used in Step 5. This is grounded in standard quantum optics plus the Entanglement and ER=EPR derivations, but a short explicit lemma tying the three together (coherent input → beamsplitter unitary → entangled output → relational invariant with isotropic vector structure) would sharpen the foundation of the γ(α) = cos α result.
 3. **Scalar vs. vector composition of the shared displacement**: The current derivation uses a pure rank-1 vector model (Proposition 3.2), giving $\gamma(\alpha) = \cos\alpha$ exactly. A rotationally-invariant scalar component would produce $\gamma(\alpha) = a + b\cos\alpha$ with $a > 0$. Both give the same $\Gamma(\beta) = \cos\beta$ at the Michelson level, but distinguishing them requires a more detailed substrate model.
 4. **Higher-order correlations**: The prediction focuses on two-point correlations. Higher-point statistics (three-point, four-point) of the holographic noise would provide additional model-independent tests.
