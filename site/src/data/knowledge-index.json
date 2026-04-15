@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-15T05:20:36.482Z",
+    "generatedAt": "2026-04-15T06:24:09.864Z",
     "derivationCount": 76,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -8680,7 +8680,7 @@
         {
           "number": 1,
           "title": "First-principles amplitude $\\alpha_H$",
-          "description": "The amplitude coefficient is currently an O(1) parameter constrained only by Holometer (alphaH lesssim 0.5). A rigorous derivation requires computing the variance of a specific causet length estimator"
+          "description": "The amplitude coefficient is an O(1) parameter constrained by Holometer to alphaH lesssim 0.24. The natural target alphaH sim 1/4 (Heuristic 2.3) sits marginally above this bound, in 3% tension with e"
         },
         {
           "number": 2,
@@ -30481,7 +30481,7 @@
       "derivationStatus": "provisional",
       "number": 1,
       "title": "First-principles amplitude $\\alpha_H$",
-      "description": "The amplitude coefficient is currently an O(1) parameter constrained only by Holometer (alphaH lesssim 0.5). A rigorous derivation requires computing the variance of a specific causet length estimator"
+      "description": "The amplitude coefficient is an O(1) parameter constrained by Holometer to alphaH lesssim 0.24. The natural target alphaH sim 1/4 (Heuristic 2.3) sits marginally above this bound, in 3% tension with e"
     },
     {
       "derivationId": "holography/causal-set-statistics",
