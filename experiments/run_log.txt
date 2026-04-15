@@ -1,0 +1,53 @@
+# Monte Carlo estimate of alpha_H from Brightwell-Gregory longest-chain statistics
+# Sprinkling density rho = 1 (Planck units, ell_P = 1)
+
+     L   trials      <N>    <L_max>   Var(L_max)      Var/L     m_d    alpha_H        SE    time(s)
+----------------------------------------------------------------------------------------------------
+   4.0      200       34      4.315       0.4380    0.10949   1.079     0.0941    0.0094        0.1
+   6.0      200      170      6.770       0.5297    0.08829   1.128     0.0693    0.0070        0.4
+   8.0      200      536      9.235       0.6128    0.07660   1.154     0.0575    0.0058        1.6
+  10.0      200     1309     11.880       0.6086    0.06086   1.188     0.0431    0.0043        7.0
+  12.0      200     2714     14.355       0.5919    0.04933   1.196     0.0345    0.0035       26.9
+  14.0      200     5029     17.135       0.7606    0.05433   1.224     0.0363    0.0036       87.9
+  16.0      150     8579     19.713       0.8233    0.05146   1.232     0.0339    0.0039      191.9
+  18.0      100    13741     22.370       0.7203    0.04002   1.243     0.0259    0.0037      331.4
+
+Total elapsed: 647.1s
+
+Combined estimate (inverse-variance weighted across L):
+    alpha_H = 0.0393 +/- 0.0016
+
+L-dependence check: alpha_H ranges from 0.0259 to 0.0941
+    Relative spread: 173.3%
+    WARNING: large drift suggests Var(L_max) does not scale linearly with L
+             (extreme-value statistics give sub-linear variance)
+
+Variance scaling diagnostic: Var(L_max)/L should be constant if Var ~ L
+    (the framework's CLT prediction); decreasing with L would indicate
+    sub-linear scaling characteristic of extreme-value statistics.
+    L=  4.0  Var=0.4380  Var/L=0.10949
+    L=  6.0  Var=0.5297  Var/L=0.08829
+    L=  8.0  Var=0.6128  Var/L=0.07660
+    L= 10.0  Var=0.6086  Var/L=0.06086
+    L= 12.0  Var=0.5919  Var/L=0.04933
+    L= 14.0  Var=0.7606  Var/L=0.05433
+    L= 16.0  Var=0.8233  Var/L=0.05146
+    L= 18.0  Var=0.7203  Var/L=0.04002
+
+    Power-law fit: Var(L_max) ~ L^0.367
+    (slope = 1 would mean linear scaling; slope = 0 would mean constant)
+
+Reference values for comparison:
+    Heuristic 2.3 natural target:  alpha_H = 1/4 = 0.2500
+    Holometer 95% CL upper bound:  alpha_H <~ 0.24
+
+Diagnostic: m_d = <L_max>/L should approach the BG constant m_4
+    L=  4.0  m_d=1.0788
+    L=  6.0  m_d=1.1283
+    L=  8.0  m_d=1.1544
+    L= 10.0  m_d=1.1880
+    L= 12.0  m_d=1.1963
+    L= 14.0  m_d=1.2239
+    L= 16.0  m_d=1.2321
+    L= 18.0  m_d=1.2428
+    Published reference: m_4 ~ 2.62 (asymptotic)
