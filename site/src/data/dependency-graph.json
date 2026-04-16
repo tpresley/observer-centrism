@@ -1321,6 +1321,18 @@
       "to": "cosmology/cyclic-cosmology"
     },
     {
+      "from": "thermodynamics/time",
+      "to": "cosmology/cyclic-cosmology"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "cosmology/cyclic-cosmology"
+    },
+    {
+      "from": "holography/area-scaling",
+      "to": "cosmology/cyclic-cosmology"
+    },
+    {
       "from": "axioms/loop-closure",
       "to": "thermodynamics-ext/memory-persistence-tradeoff"
     },

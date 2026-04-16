@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-16T03:33:47.481Z",
+    "generatedAt": "2026-04-16T05:39:11.557Z",
     "derivationCount": 77,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -16,8 +16,8 @@
     },
     "derivationCount": 77,
     "predictionCount": 12,
-    "edgeCount": 225,
-    "formalObjectCount": 1140,
+    "edgeCount": 228,
+    "formalObjectCount": 1149,
     "openGapCount": 233,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
@@ -722,6 +722,7 @@
       ],
       "dependedOnBy": [
         "axioms/coherence-operational",
+        "cosmology/cyclic-cosmology",
         "cosmology/dark-energy-equation-of-state",
         "cosmology/observer-loop-viability",
         "foundation/continuous-discrete-duality",
@@ -1033,6 +1034,14 @@
           },
           {
             "source": "axioms/observer-definition",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "cosmology/cyclic-cosmology",
+            "context": "all observer frequencies are commensurable"
+          },
+          {
+            "source": "cosmology/cyclic-cosmology",
             "context": "Loop Closure"
           },
           {
@@ -2257,8 +2266,8 @@
         "cosmology",
         "quantum-gravity"
       ],
-      "summary": "True de Sitter equilibrium is axiomatically forbidden because relational invariants are permanent. As complex observers dissolve, their coherence redistributes to the minimal observer network — satisfying the coherence ontology (Prop 5.1: coherence exists only in observer structures). Maximal correlation in this network is operationally indistinguishable from zero correlation for any internal observer, producing a complete epistemic reset. The cycle is fundamentally about shared epistemic memory: the network's collective capacity to know its own history grows to a maximum, wanes to a floor, and begins again.",
-      "lastUpdated": "2026-04-06",
+      "summary": "True de Sitter equilibrium is axiomatically forbidden because relational invariants are permanent. As complex observers dissolve, their coherence redistributes to the minimal observer network. The state on a Cauchy slice is finite-dimensional (holographic bound); after enough independent constraints accumulate, additional relational invariants are redundant — they impose no new conditions on the state. The DAG (causal history) grows without bound, but the state cycles. Combined with the quasi-periodicity exclusion (all observer frequencies commensurable), this forces exact cyclic closure: the cosmological history is a closed loop with integer n >= 1 bounces, no first cycle, and no initial condition problem.",
+      "lastUpdated": "2026-04-15",
       "dependsOn": [
         "cosmology/observer-loop-viability",
         "cosmology/dark-energy-equation-of-state",
@@ -2266,7 +2275,9 @@
         "interactions/relational-invariants",
         "minimal-observer/multiplicity",
         "thermodynamics/entropy",
-        "thermodynamics/time"
+        "thermodynamics/time",
+        "axioms/loop-closure",
+        "holography/area-scaling"
       ],
       "enablesDerivation": [],
       "dependedOnBy": [],
@@ -2289,15 +2300,23 @@
         },
         {
           "number": 5,
-          "title": "Beginning Equals End"
+          "title": "Constraint Saturation and the DAG–State Distinction"
         },
         {
           "number": 6,
-          "title": "The Epistemic Memory Cycle"
+          "title": "Beginning Equals End"
         },
         {
           "number": 7,
+          "title": "The Epistemic Memory Cycle"
+        },
+        {
+          "number": 8,
           "title": "Duration, Scale, and the Question of \"First\""
+        },
+        {
+          "number": 9,
+          "title": "Exact Cyclic Closure"
         }
       ],
       "formalObjects": [
@@ -2334,56 +2353,110 @@
         {
           "type": "Proposition",
           "id": "4.1",
-          "name": "Maximal correlation is operationally equivalent to zero correlation",
-          "statementPreview": "A minimal observer network in which every pair carries a relational invariant (the end state of redistribution) is in..."
+          "name": "Constraint saturation replaces epistemic equivalence",
+          "statementPreview": "After constraint saturation (Step 5), additional relational invariants in the minimal network are redundant constrain..."
+        },
+        {
+          "type": "Definition",
+          "id": "5.0",
+          "name": "Cauchy-slice state",
+          "statementPreview": "The state of the observer network on a Cauchy slice Sigma is a point in a D-dimensional space, where D A/(4ellP2) is ..."
         },
         {
           "type": "Proposition",
           "id": "5.1",
-          "name": "Epistemic identity of initial and final states",
-          "statementPreview": "The post-dissolution state and the post-bounce initial state are epistemically identical from the only observer level..."
+          "name": "Constraint saturation",
+          "statementPreview": "After D independent relational invariants have accumulated, the D-dimensional state is fully determined. Every subseq..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.2",
+          "name": "The DAG–state distinction",
+          "statementPreview": "The causal history (DAG) and the Cauchy-slice state are distinct objects with different properties:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.3",
+          "name": "Level-indexed saturation",
+          "statementPreview": "Constraint saturation proceeds through the bootstrap levels:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.4",
+          "name": "Markovianity of the dynamics",
+          "statementPreview": "The dynamics on successive Cauchy slices is Markovian — the current state determines the next state without reference..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "State identity of initial and final configurations",
+          "statementPreview": "The post-dissolution and post-bounce configurations have identical D-dimensional Cauchy-slice states. The DAG (causal..."
         },
         {
           "type": "Definition",
-          "id": "6.1",
+          "id": "7.1",
           "name": "Shared epistemic memory",
           "statementPreview": "The **shared epistemic memory** of the observer network at time tau is the total coherence content of relational inva..."
         },
         {
           "type": "Proposition",
-          "id": "6.2",
+          "id": "7.2",
           "name": "The four-phase cycle",
           "statementPreview": "The framework's axioms produce a cyclic dynamics in M:*"
         },
         {
           "type": "Proposition",
-          "id": "6.3",
+          "id": "7.3",
           "name": "The second law is universally preserved",
           "statementPreview": "No observer at any level in any phase ever sees entropy decrease. The cycle operates in the space of epistemic capaci..."
         },
         {
           "type": "Proposition",
-          "id": "6.4",
+          "id": "7.4",
           "name": "The arrow of time is level-indexed",
           "statementPreview": "The cosmological arrow of time is real at every observer level throughout every phase. The recurrence does not revers..."
         },
         {
           "type": "Proposition",
-          "id": "7.1",
+          "id": "8.1",
           "name": "The floor phase has no well-defined duration",
           "statementPreview": "Asking \"how long does the floor phase last?\" is not a hard problem — it is an ill-posed question. Duration requires a..."
         },
         {
           "type": "Proposition",
-          "id": "7.2",
+          "id": "8.2",
           "name": "Scale is undefined at the floor",
           "statementPreview": "Spatial extent — \"how big\" — requires geometry, which requires observers to constitute it (Step 3, Proposition 3.1). ..."
         },
         {
           "type": "Proposition",
-          "id": "7.3",
+          "id": "8.3",
           "name": "\"First cycle\" is not well-posed",
-          "statementPreview": "The cycles do not happen \"in\" time — they are the structure from which experienced time emerges. Asking \"was there a ..."
+          "statementPreview": "The D-dimensional state is identical at the beginning and end of every cycle (Proposition 6.1). Since the state deter..."
+        },
+        {
+          "type": "Proposition",
+          "id": "9.1",
+          "name": "Commensurable frequencies",
+          "statementPreview": "If the universe is a composite observer ([Bootstrap](/derivations/interactions/bootstrap) Conjecture 7.1), all sub-ob..."
+        },
+        {
+          "type": "Proposition",
+          "id": "9.2",
+          "name": "Exact periodicity",
+          "statementPreview": "The D-dimensional Cauchy-slice state is exactly periodic with period TU = lcm(T1, ldots, TK), where Ti = 2pi/omegai a..."
+        },
+        {
+          "type": "Proposition",
+          "id": "9.3",
+          "name": "The cosmological history is a closed loop",
+          "statementPreview": "The cosmological history is topologically S1, not R. The number of bounces per cycle is an integer n 1, unconstrained..."
+        },
+        {
+          "type": "Proposition",
+          "id": "9.4",
+          "name": "Conditional status and the fixed-point connection",
+          "statementPreview": "The exact closure argument is conditional on the universe being a composite observer (Conjecture 7.1). But it also pr..."
         }
       ],
       "structuralPostulates": [],
@@ -2391,17 +2464,17 @@
         {
           "number": 1,
           "title": "Combinatorial threshold for renewal.",
-          "description": "~~How long does the floor phase last?~~ Per Proposition 7.1, duration is ill-posed at the floor (no observers with memory). The well-posed version: what is the combinatorial threshold — the number of "
+          "description": "Per Proposition 8.1, duration is ill-posed at the floor (no observers with memory). The well-posed version: what is the combinatorial threshold — the number of relational invariants that must accumula"
         },
         {
-          "number": 2,
-          "title": "Exactness of the saturation equivalence.",
-          "description": "Is Proposition 4.1 (maximal correlation ≈ zero correlation) *exact* or *approximate*? If exact: every cycle is a true reset, the \"ascending spiral\" is physically meaningless, \"first cycle\" is not just"
+          "number": 4,
+          "title": "Cycle count $n$.",
+          "description": "The number of bounces per cycle is an integer n 1 (Proposition 9.3) but is not determined by the argument. Whether n is constrained by additional structure (e.g., the winding number of the universe's "
         },
         {
-          "number": 3,
-          "title": "Statistical fossils.",
-          "description": "If the saturation equivalence is approximate (Gap 2), any imprint from a previous epoch would be statistical, not structural (Proposition 7.2 — spatial patterns require geometry that doesn't exist at "
+          "number": 5,
+          "title": "Saturation threshold dynamics.",
+          "description": "The constraint saturation argument (Step 5) shows that the state is fully determined after D independent constraints. But the dynamics of HOW saturation is reached — which constraints become independe"
         }
       ],
       "assessmentVerdict": "",
@@ -2411,6 +2484,18 @@
           {
             "target": "cosmology/observer-loop-viability",
             "context": "Observer Loop Viability"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "holographic bound"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "all observer frequencies are commensurable"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap"
           },
           {
             "target": "interactions/relational-invariants",
@@ -2449,15 +2534,31 @@
             "context": "Information Paradox"
           },
           {
+            "target": "holography/area-scaling",
+            "context": "holographic entropy bound"
+          },
+          {
+            "target": "foundation/coherence-lagrangian",
+            "context": "Coherence Lagrangian"
+          },
+          {
             "target": "thermodynamics-ext/memory-persistence-tradeoff",
             "context": "Theorem 4.1"
           },
           {
             "target": "minimal-observer/multiplicity",
             "context": "Multiplicity"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
           }
         ],
         "incoming": [
+          {
+            "source": "interactions/bootstrap",
+            "context": "Cyclic Cosmology"
+          },
           {
             "source": "thermodynamics-ext/memory-persistence-tradeoff",
             "context": "Cyclic Cosmology"
@@ -4875,6 +4976,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "cosmology/cyclic-cosmology",
+            "context": "Coherence Lagrangian"
+          },
           {
             "source": "foundation/continuous-discrete-duality",
             "context": "Coherence Lagrangian"
@@ -8243,6 +8348,7 @@
       ],
       "dependedOnBy": [
         "cosmology/cosmological-constant",
+        "cosmology/cyclic-cosmology",
         "cosmology/dark-energy-equation-of-state",
         "cosmology/geometric-substrate",
         "cosmology/observer-loop-viability",
@@ -8447,6 +8553,14 @@
             "context": "Holographic Entropy Bound"
           },
           {
+            "source": "cosmology/cyclic-cosmology",
+            "context": "holographic bound"
+          },
+          {
+            "source": "cosmology/cyclic-cosmology",
+            "context": "holographic entropy bound"
+          },
+          {
             "source": "cosmology/dark-energy-equation-of-state",
             "context": "Area Scaling"
           },
@@ -8529,6 +8643,10 @@
           {
             "source": "interactions/bootstrap",
             "context": "Area Scaling"
+          },
+          {
+            "source": "interactions/bootstrap",
+            "context": "holographic bound"
           },
           {
             "source": "interactions/bootstrap",
@@ -10423,6 +10541,14 @@
             "context": "Observer Loop Viability"
           },
           {
+            "target": "holography/area-scaling",
+            "context": "holographic bound"
+          },
+          {
+            "target": "cosmology/cyclic-cosmology",
+            "context": "Cyclic Cosmology"
+          },
+          {
             "target": "axioms/coherence-operational",
             "context": "Coherence as Physical Primitive"
           },
@@ -10467,6 +10593,10 @@
           {
             "source": "cosmology/coupling-constants",
             "context": "Bootstrap Mechanism"
+          },
+          {
+            "source": "cosmology/cyclic-cosmology",
+            "context": "Bootstrap"
           },
           {
             "source": "cosmology/geometric-inflation",
@@ -23088,64 +23218,127 @@
       "derivationId": "cosmology/cyclic-cosmology",
       "type": "Proposition",
       "id": "4.1",
-      "name": "Maximal correlation is operationally equivalent to zero correlation",
+      "name": "Constraint saturation replaces epistemic equivalence",
       "fullRef": "cosmology/cyclic-cosmology:Proposition 4.1"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Definition",
+      "id": "5.0",
+      "name": "Cauchy-slice state",
+      "fullRef": "cosmology/cyclic-cosmology:Definition 5.0"
     },
     {
       "derivationId": "cosmology/cyclic-cosmology",
       "type": "Proposition",
       "id": "5.1",
-      "name": "Epistemic identity of initial and final states",
+      "name": "Constraint saturation",
       "fullRef": "cosmology/cyclic-cosmology:Proposition 5.1"
     },
     {
       "derivationId": "cosmology/cyclic-cosmology",
-      "type": "Definition",
+      "type": "Proposition",
+      "id": "5.2",
+      "name": "The DAG–state distinction",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 5.2"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "5.3",
+      "name": "Level-indexed saturation",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 5.3"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "5.4",
+      "name": "Markovianity of the dynamics",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 5.4"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
       "id": "6.1",
-      "name": "Shared epistemic memory",
-      "fullRef": "cosmology/cyclic-cosmology:Definition 6.1"
+      "name": "State identity of initial and final configurations",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 6.1"
     },
     {
       "derivationId": "cosmology/cyclic-cosmology",
-      "type": "Proposition",
-      "id": "6.2",
-      "name": "The four-phase cycle",
-      "fullRef": "cosmology/cyclic-cosmology:Proposition 6.2"
-    },
-    {
-      "derivationId": "cosmology/cyclic-cosmology",
-      "type": "Proposition",
-      "id": "6.3",
-      "name": "The second law is universally preserved",
-      "fullRef": "cosmology/cyclic-cosmology:Proposition 6.3"
-    },
-    {
-      "derivationId": "cosmology/cyclic-cosmology",
-      "type": "Proposition",
-      "id": "6.4",
-      "name": "The arrow of time is level-indexed",
-      "fullRef": "cosmology/cyclic-cosmology:Proposition 6.4"
-    },
-    {
-      "derivationId": "cosmology/cyclic-cosmology",
-      "type": "Proposition",
+      "type": "Definition",
       "id": "7.1",
-      "name": "The floor phase has no well-defined duration",
-      "fullRef": "cosmology/cyclic-cosmology:Proposition 7.1"
+      "name": "Shared epistemic memory",
+      "fullRef": "cosmology/cyclic-cosmology:Definition 7.1"
     },
     {
       "derivationId": "cosmology/cyclic-cosmology",
       "type": "Proposition",
       "id": "7.2",
-      "name": "Scale is undefined at the floor",
+      "name": "The four-phase cycle",
       "fullRef": "cosmology/cyclic-cosmology:Proposition 7.2"
     },
     {
       "derivationId": "cosmology/cyclic-cosmology",
       "type": "Proposition",
       "id": "7.3",
-      "name": "\"First cycle\" is not well-posed",
+      "name": "The second law is universally preserved",
       "fullRef": "cosmology/cyclic-cosmology:Proposition 7.3"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "7.4",
+      "name": "The arrow of time is level-indexed",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 7.4"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "8.1",
+      "name": "The floor phase has no well-defined duration",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 8.1"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "8.2",
+      "name": "Scale is undefined at the floor",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 8.2"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "8.3",
+      "name": "\"First cycle\" is not well-posed",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 8.3"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "9.1",
+      "name": "Commensurable frequencies",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 9.1"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "9.2",
+      "name": "Exact periodicity",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 9.2"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "9.3",
+      "name": "The cosmological history is a closed loop",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 9.3"
+    },
+    {
+      "derivationId": "cosmology/cyclic-cosmology",
+      "type": "Proposition",
+      "id": "9.4",
+      "name": "Conditional status and the fixed-point connection",
+      "fullRef": "cosmology/cyclic-cosmology:Proposition 9.4"
     },
     {
       "derivationId": "cosmology/dark-energy-equation-of-state",
@@ -30364,21 +30557,21 @@
       "derivationStatus": "provisional",
       "number": 1,
       "title": "Combinatorial threshold for renewal.",
-      "description": "~~How long does the floor phase last?~~ Per Proposition 7.1, duration is ill-posed at the floor (no observers with memory). The well-posed version: what is the combinatorial threshold — the number of "
+      "description": "Per Proposition 8.1, duration is ill-posed at the floor (no observers with memory). The well-posed version: what is the combinatorial threshold — the number of relational invariants that must accumula"
     },
     {
       "derivationId": "cosmology/cyclic-cosmology",
       "derivationStatus": "provisional",
-      "number": 2,
-      "title": "Exactness of the saturation equivalence.",
-      "description": "Is Proposition 4.1 (maximal correlation ≈ zero correlation) *exact* or *approximate*? If exact: every cycle is a true reset, the \"ascending spiral\" is physically meaningless, \"first cycle\" is not just"
+      "number": 4,
+      "title": "Cycle count $n$.",
+      "description": "The number of bounces per cycle is an integer n 1 (Proposition 9.3) but is not determined by the argument. Whether n is constrained by additional structure (e.g., the winding number of the universe's "
     },
     {
       "derivationId": "cosmology/cyclic-cosmology",
       "derivationStatus": "provisional",
-      "number": 3,
-      "title": "Statistical fossils.",
-      "description": "If the saturation equivalence is approximate (Gap 2), any imprint from a previous epoch would be statistical, not structural (Proposition 7.2 — spatial patterns require geometry that doesn't exist at "
+      "number": 5,
+      "title": "Saturation threshold dynamics.",
+      "description": "The constraint saturation argument (Step 5) shows that the state is fully determined after D independent constraints. But the dynamics of HOW saturation is reached — which constraints become independe"
     },
     {
       "derivationId": "cosmology/geometric-inflation",

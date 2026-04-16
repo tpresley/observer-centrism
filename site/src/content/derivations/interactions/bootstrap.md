@@ -217,6 +217,8 @@ $$\mathcal{U} \cong \mathcal{R}(\mathcal{U}, \mathcal{U})$$
 
 **Status.** These are conjectures — clearly stated, not claimed as proven. The framework identifies them as the deepest open problems. Progress on Conjectures 7.1–7.2 would resolve the two deepest open questions: fixed-point uniqueness and the cosmological constant.
 
+**Remark (Cyclic reframing of the fixed-point equation).** The fixed-point equation has an equivalent dynamical formulation: the fixed point is a periodic orbit of the cosmological dynamics. If $\mathcal{U}$ is a composite observer, the quasi-periodicity exclusion ([Loop Closure](/derivations/axioms/loop-closure), Corollary 3.2) forces all sub-observer frequencies to be commensurable, and constraint saturation on the finite-dimensional state space (bounded by the [holographic bound](/derivations/holography/area-scaling)) produces exact periodicity. The equation $\mathcal{U} \cong \mathcal{R}(\mathcal{U}, \mathcal{U})$ becomes $\Phi_{T_\mathcal{U}}(\text{state}) = \text{state}$ — a periodic orbit condition. This is more tractable than the Scott-domain approach: periodic orbits in compact finite-dimensional Hamiltonian systems with commensurable frequencies are guaranteed by standard dynamical systems results, given that the system is well-defined. See [Cyclic Cosmology](/derivations/cosmology/cyclic-cosmology) Step 9 for the full argument. The logical status is: either both Conjecture 7.1 and exact cyclic closure hold, or neither does.
+
 ### Topological Consequence: The Network Is Boundaryless
 
 The observer network — whose existence follows from the multiplicity theorem — constrains the topology of the fixed point.
