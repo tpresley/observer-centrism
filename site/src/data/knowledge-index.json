@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-04-16T05:39:11.557Z",
-    "derivationCount": 77,
+    "generatedAt": "2026-04-16T09:32:47.102Z",
+    "derivationCount": 78,
     "predictionCount": 12,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -12,13 +12,13 @@
       "provisional": 44,
       "draft": 2,
       "non-viable": 1,
-      "stub": 3
+      "stub": 4
     },
-    "derivationCount": 77,
+    "derivationCount": 78,
     "predictionCount": 12,
-    "edgeCount": 228,
-    "formalObjectCount": 1149,
-    "openGapCount": 233,
+    "edgeCount": 233,
+    "formalObjectCount": 1157,
+    "openGapCount": 237,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -727,6 +727,7 @@
         "cosmology/observer-loop-viability",
         "foundation/continuous-discrete-duality",
         "gauge/electromagnetism",
+        "holography/horizon-gauge-shell",
         "minimal-observer/structure",
         "spacetime/speed-of-light",
         "thermodynamics-ext/memory-persistence-tradeoff",
@@ -1205,6 +1206,7 @@
         "axioms/loop-closure",
         "dimensions/three-dimensions",
         "foundation/continuous-discrete-duality",
+        "holography/horizon-gauge-shell",
         "minimal-observer/multiplicity",
         "minimal-observer/structure",
         "quantum/observer-relative-objectivity",
@@ -1429,6 +1431,10 @@
           {
             "source": "cosmology/dark-energy-equation-of-state",
             "context": "Axiom 2"
+          },
+          {
+            "source": "holography/horizon-gauge-shell",
+            "context": "Observer Definition"
           },
           {
             "source": "interactions/bootstrap",
@@ -2280,7 +2286,9 @@
         "holography/area-scaling"
       ],
       "enablesDerivation": [],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "holography/horizon-gauge-shell"
+      ],
       "steps": [
         {
           "number": 1,
@@ -2555,6 +2563,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "holography/horizon-gauge-shell",
+            "context": "Cyclic Cosmology"
+          },
           {
             "source": "interactions/bootstrap",
             "context": "Cyclic Cosmology"
@@ -5410,7 +5422,12 @@
             "context": "structural consequence of the Cayley-Dickson tower"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "holography/horizon-gauge-shell",
+            "context": "which identifies specific Chern-Simons levels at each gauge group"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -6239,6 +6256,10 @@
             "context": "Color Force"
           },
           {
+            "source": "holography/horizon-gauge-shell",
+            "context": "Color Force"
+          },
+          {
             "source": "interactions/bootstrap-division-algebras",
             "context": "algebraic saturation at each bootstrap level"
           },
@@ -6822,6 +6843,10 @@
           {
             "source": "gauge/weak-interaction",
             "context": "now derived"
+          },
+          {
+            "source": "holography/horizon-gauge-shell",
+            "context": "Electromagnetism"
           },
           {
             "source": "interactions/bootstrap-division-algebras",
@@ -8163,6 +8188,10 @@
             "context": "Weak Interaction"
           },
           {
+            "source": "holography/horizon-gauge-shell",
+            "context": "Weak Interaction"
+          },
+          {
             "source": "interactions/bootstrap-division-algebras",
             "context": "algebraic completeness of phase structure"
           },
@@ -8355,6 +8384,7 @@
         "holography/black-hole-entropy",
         "holography/causal-set-statistics",
         "holography/er-epr",
+        "holography/horizon-gauge-shell",
         "spacetime/gravitational-constant",
         "spacetime/singularity-resolution"
       ],
@@ -8631,6 +8661,14 @@
           {
             "source": "holography/hawking-radiation",
             "context": "Holographic Entropy Bound"
+          },
+          {
+            "source": "holography/horizon-gauge-shell",
+            "context": "holographic bound"
+          },
+          {
+            "source": "holography/horizon-gauge-shell",
+            "context": "holographic entropy bound"
           },
           {
             "source": "holography/information-paradox",
@@ -9586,6 +9624,10 @@
             "context": "Hawking Radiation"
           },
           {
+            "source": "holography/horizon-gauge-shell",
+            "context": "Hawking Radiation"
+          },
+          {
             "source": "holography/information-paradox",
             "context": "Hawking Radiation"
           },
@@ -9594,6 +9636,163 @@
             "context": "Hawking Radiation"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "holography/horizon-gauge-shell": {
+      "id": "holography/horizon-gauge-shell",
+      "filePath": "site/src/content/derivations/holography/horizon-gauge-shell.md",
+      "title": "Horizon as Gauge Shell",
+      "status": "stub",
+      "rigorLevel": "semi-formal",
+      "group": "holography",
+      "tags": [
+        "holography",
+        "gauge",
+        "foundation"
+      ],
+      "summary": "The cosmological horizon of any observer is a permanent null shell whose entities have gauge boson properties. This follows from the Cauchy slice covering property: during one tick of a level-n observer, Cauchy slices cover the full time index of most observers at levels ≤ n. At the horizon boundary, the transition from timelike (inside) to fully-covered (outside) occurs at the null critical angle. The holographic bound counts the gauge boson modes at this shell.",
+      "lastUpdated": "2026-04-15",
+      "dependsOn": [
+        "cosmology/cyclic-cosmology",
+        "holography/area-scaling",
+        "axioms/loop-closure",
+        "axioms/observer-definition",
+        "interactions/bootstrap"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [],
+      "formalObjects": [
+        {
+          "type": "Proposition",
+          "id": "1.1",
+          "name": "Covering",
+          "statementPreview": "For any observer A at bootstrap level n, during a single A-tick (tk tk+1), there exist observers B at level m n such ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Level-indexed scope",
+          "statementPreview": "The scope of the covering grows monotonically with observer level. A level-n observer's single tick covers:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "Dual perspective",
+          "statementPreview": "The covering property has a reciprocal reading. If B's entire time index is covered by one A-tick, then from B's side..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "Null identification",
+          "statementPreview": "An entity whose single phase loop closure encompasses all of an observer's time indexes traverses that observer's ful..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "The horizon is the null shell",
+          "statementPreview": "The cosmological horizon of observer A is the boundary where the transition from timelike (inside) to fully-covered (..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Permanence",
+          "statementPreview": "The null shell is permanent. Every observer has a self/non-self boundary B (Axiom 2, [Observer Definition](/derivatio..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.2",
+          "name": "The horizon shell has gauge boson properties",
+          "statementPreview": "The entities at the horizon have:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "The holographic bound counts gauge modes at the horizon",
+          "statementPreview": "The [holographic entropy bound](/derivations/holography/area-scaling) states that the number of independent degrees o..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Gauge group at the horizon.",
+          "description": "The horizon shell has gauge boson properties (null, boundary-mediating), but the specific gauge group is not derived. Does the horizon carry U(1) × SU(2) × SU(3) structure from the bootstrap's Cayley-"
+        },
+        {
+          "number": 2,
+          "title": "Spin and statistics.",
+          "description": "The null identification gives masslessness but does not directly derive spin-1 (the defining spin of gauge bosons). The [Spin-Statistics](/derivations/particles/spin-statistics) derivation establishes"
+        },
+        {
+          "number": 3,
+          "title": "Quantitative mode counting.",
+          "description": "Proposition 5.1 identifies the holographic bound as counting gauge modes, but does not compute the mode count independently (from the gauge structure) and compare to A/(4ellP2). A quantitative match w"
+        },
+        {
+          "number": 4,
+          "title": "Gibbons-Hawking connection.",
+          "description": "The Gibbons-Hawking effect (thermal radiation from de Sitter horizons) should follow from the permanent gauge shell: if the horizon is a shell of gauge boson modes, the thermal spectrum is the mode oc"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "cosmology/cyclic-cosmology",
+            "context": "Cyclic Cosmology"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "holographic bound"
+          },
+          {
+            "target": "axioms/observer-definition",
+            "context": "Observer Definition"
+          },
+          {
+            "target": "gauge/electromagnetism",
+            "context": "Electromagnetism"
+          },
+          {
+            "target": "gauge/weak-interaction",
+            "context": "Weak Interaction"
+          },
+          {
+            "target": "gauge/color-force",
+            "context": "Color Force"
+          },
+          {
+            "target": "interactions/bootstrap-division-algebras",
+            "context": "Bootstrap Division Algebras"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "holographic entropy bound"
+          },
+          {
+            "target": "foundation/knot-theoretic-bootstrap",
+            "context": "which identifies specific Chern-Simons levels at each gauge group"
+          },
+          {
+            "target": "particles/spin-statistics",
+            "context": "Spin-Statistics"
+          },
+          {
+            "target": "holography/hawking-radiation",
+            "context": "Hawking Radiation"
+          }
+        ],
+        "incoming": []
       },
       "leanVerification": {
         "hasProofs": false,
@@ -10278,6 +10477,10 @@
             "context": "Theorem 2.3"
           },
           {
+            "source": "holography/horizon-gauge-shell",
+            "context": "Bootstrap Division Algebras"
+          },
+          {
             "source": "particles/mass-hierarchy",
             "context": "Bootstrap $\\to$ Division Algebras"
           }
@@ -10331,6 +10534,7 @@
         "foundation/aperiodic-order",
         "foundation/knot-theoretic-bootstrap",
         "gauge/color-force",
+        "holography/horizon-gauge-shell",
         "interactions/bootstrap-division-algebras",
         "particles/mass-hierarchy",
         "spacetime/einstein-equations",
@@ -13553,6 +13757,10 @@
           {
             "source": "gauge/weak-interaction",
             "context": "Proposition 1.2"
+          },
+          {
+            "source": "holography/horizon-gauge-shell",
+            "context": "Spin-Statistics"
           },
           {
             "source": "minimal-observer/coherence-dual-pairs",
@@ -26022,6 +26230,62 @@
       "fullRef": "holography/hawking-radiation:Theorem 7.1."
     },
     {
+      "derivationId": "holography/horizon-gauge-shell",
+      "type": "Proposition",
+      "id": "1.1",
+      "name": "Covering",
+      "fullRef": "holography/horizon-gauge-shell:Proposition 1.1"
+    },
+    {
+      "derivationId": "holography/horizon-gauge-shell",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "Level-indexed scope",
+      "fullRef": "holography/horizon-gauge-shell:Proposition 1.2"
+    },
+    {
+      "derivationId": "holography/horizon-gauge-shell",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "Dual perspective",
+      "fullRef": "holography/horizon-gauge-shell:Proposition 2.1"
+    },
+    {
+      "derivationId": "holography/horizon-gauge-shell",
+      "type": "Proposition",
+      "id": "2.2",
+      "name": "Null identification",
+      "fullRef": "holography/horizon-gauge-shell:Proposition 2.2"
+    },
+    {
+      "derivationId": "holography/horizon-gauge-shell",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "The horizon is the null shell",
+      "fullRef": "holography/horizon-gauge-shell:Proposition 3.1"
+    },
+    {
+      "derivationId": "holography/horizon-gauge-shell",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "Permanence",
+      "fullRef": "holography/horizon-gauge-shell:Proposition 3.2"
+    },
+    {
+      "derivationId": "holography/horizon-gauge-shell",
+      "type": "Proposition",
+      "id": "4.2",
+      "name": "The horizon shell has gauge boson properties",
+      "fullRef": "holography/horizon-gauge-shell:Proposition 4.2"
+    },
+    {
+      "derivationId": "holography/horizon-gauge-shell",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "The holographic bound counts gauge modes at the horizon",
+      "fullRef": "holography/horizon-gauge-shell:Proposition 5.1"
+    },
+    {
       "derivationId": "holography/information-paradox",
       "type": "Definition",
       "id": "1.1",
@@ -31111,6 +31375,34 @@
       "number": 4,
       "title": "Rotating and charged black holes",
       "description": "The Hawking temperature for Kerr (TH = hbarkappa/(2pi c kB) with modified kappa) and Reissner-Nordström black holes should follow from the same loop-breaking mechanism applied to the modified horizon "
+    },
+    {
+      "derivationId": "holography/horizon-gauge-shell",
+      "derivationStatus": "stub",
+      "number": 1,
+      "title": "Gauge group at the horizon.",
+      "description": "The horizon shell has gauge boson properties (null, boundary-mediating), but the specific gauge group is not derived. Does the horizon carry U(1) × SU(2) × SU(3) structure from the bootstrap's Cayley-"
+    },
+    {
+      "derivationId": "holography/horizon-gauge-shell",
+      "derivationStatus": "stub",
+      "number": 2,
+      "title": "Spin and statistics.",
+      "description": "The null identification gives masslessness but does not directly derive spin-1 (the defining spin of gauge bosons). The [Spin-Statistics](/derivations/particles/spin-statistics) derivation establishes"
+    },
+    {
+      "derivationId": "holography/horizon-gauge-shell",
+      "derivationStatus": "stub",
+      "number": 3,
+      "title": "Quantitative mode counting.",
+      "description": "Proposition 5.1 identifies the holographic bound as counting gauge modes, but does not compute the mode count independently (from the gauge structure) and compare to A/(4ellP2). A quantitative match w"
+    },
+    {
+      "derivationId": "holography/horizon-gauge-shell",
+      "derivationStatus": "stub",
+      "number": 4,
+      "title": "Gibbons-Hawking connection.",
+      "description": "The Gibbons-Hawking effect (thermal radiation from de Sitter horizons) should follow from the permanent gauge shell: if the horizon is a shell of gauge boson modes, the thermal spectrum is the mode oc"
     },
     {
       "derivationId": "holography/information-paradox",

@@ -415,6 +415,12 @@
       "status": "stub"
     },
     {
+      "id": "holography/horizon-gauge-shell",
+      "title": "Horizon as Gauge Shell",
+      "group": "holography",
+      "status": "stub"
+    },
+    {
       "id": "thermodynamics-ext/biological-non-ergodicity",
       "title": "Biological Non-Ergodicity",
       "group": "thermo-ext",
@@ -1179,6 +1185,26 @@
     {
       "from": "holography/information-paradox",
       "to": "holography/scrambling"
+    },
+    {
+      "from": "cosmology/cyclic-cosmology",
+      "to": "holography/horizon-gauge-shell"
+    },
+    {
+      "from": "holography/area-scaling",
+      "to": "holography/horizon-gauge-shell"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "holography/horizon-gauge-shell"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "holography/horizon-gauge-shell"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "holography/horizon-gauge-shell"
     },
     {
       "from": "thermodynamics/entropy",
