@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-04-15T08:34:02.525Z",
-    "derivationCount": 76,
+    "generatedAt": "2026-04-16T03:33:47.481Z",
+    "derivationCount": 77,
     "predictionCount": 12,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -12,13 +12,13 @@
       "provisional": 44,
       "draft": 2,
       "non-viable": 1,
-      "stub": 2
+      "stub": 3
     },
-    "derivationCount": 76,
+    "derivationCount": 77,
     "predictionCount": 12,
-    "edgeCount": 219,
-    "formalObjectCount": 1133,
-    "openGapCount": 228,
+    "edgeCount": 225,
+    "formalObjectCount": 1140,
+    "openGapCount": 233,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -408,6 +408,10 @@
           },
           {
             "source": "foundation/coherence-lagrangian",
+            "context": "Coherence Conservation"
+          },
+          {
+            "source": "foundation/knot-theoretic-bootstrap",
             "context": "Coherence Conservation"
           },
           {
@@ -1041,6 +1045,10 @@
           },
           {
             "source": "foundation/coherence-lagrangian",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "foundation/knot-theoretic-bootstrap",
             "context": "Loop Closure"
           },
           {
@@ -2182,6 +2190,14 @@
           {
             "source": "cosmology/observer-loop-viability",
             "context": "Coupling Constants"
+          },
+          {
+            "source": "foundation/knot-theoretic-bootstrap",
+            "context": "Coupling Constants"
+          },
+          {
+            "source": "foundation/knot-theoretic-bootstrap",
+            "context": "structural consequence of the Cayley-Dickson tower"
           },
           {
             "source": "gauge/color-force",
@@ -4659,6 +4675,7 @@
       ],
       "dependedOnBy": [
         "foundation/continuous-discrete-duality",
+        "foundation/knot-theoretic-bootstrap",
         "particles/cpt-theorem",
         "spacetime/gravitational-constant"
       ],
@@ -4863,6 +4880,10 @@
             "context": "Coherence Lagrangian"
           },
           {
+            "source": "foundation/knot-theoretic-bootstrap",
+            "context": "Coherence Lagrangian"
+          },
+          {
             "source": "gauge/electromagnetism",
             "context": "Coherence Lagrangian"
           },
@@ -4932,7 +4953,9 @@
         "holography/er-epr"
       ],
       "enablesDerivation": [],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "foundation/knot-theoretic-bootstrap"
+      ],
       "steps": [
         {
           "number": 1,
@@ -5093,6 +5116,10 @@
             "context": "Continuous-Discrete Duality"
           },
           {
+            "source": "foundation/knot-theoretic-bootstrap",
+            "context": "Continuous-Discrete Duality"
+          },
+          {
             "source": "holography/area-scaling",
             "context": "Continuous-Discrete Duality"
           },
@@ -5105,6 +5132,180 @@
             "context": "Conjecture 4.1"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "foundation/knot-theoretic-bootstrap": {
+      "id": "foundation/knot-theoretic-bootstrap",
+      "filePath": "site/src/content/derivations/foundation/knot-theoretic-bootstrap.md",
+      "title": "Knot-Theoretic Bootstrap",
+      "status": "stub",
+      "rigorLevel": "semi-formal",
+      "group": "foundation",
+      "tags": [
+        "foundation",
+        "topology",
+        "gauge",
+        "bootstrap"
+      ],
+      "summary": "Observer loops as framed links in a spatial manifold, with relational coherence identified as linking number. The Cayley-Dickson gauge chain maps to a finite sequence of Chern-Simons theories. The bootstrap fixed-point equation becomes self-consistent surgery: the link that produces the manifold is the link the manifold contains.",
+      "lastUpdated": "2026-04-15",
+      "dependsOn": [
+        "interactions/bootstrap",
+        "interactions/bootstrap-division-algebras",
+        "foundation/coherence-lagrangian",
+        "foundation/continuous-discrete-duality",
+        "gauge/electromagnetism",
+        "gauge/strong-cp"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1.",
+          "name": "",
+          "statementPreview": "A **framed link** in a 3-manifold M is a finite collection of disjoint embedded circles L = gamma1 cdots gamman, each..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.5",
+          "name": "Relational coherence = linking number",
+          "statementPreview": "The relational coherence between two observer loops in a spatial 3-manifold equals the absolute linking number times ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.4",
+          "name": "CS level = division algebra dimension",
+          "statementPreview": "The Chern-Simons level at each bootstrap level equals the real dimension of the corresponding division algebra:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.5",
+          "name": "Finite representation content at each level",
+          "statementPreview": "At CS level k, SU(N) Chern-Simons theory has a finite set of integrable representations determined by the Verlinde fo..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "4D Yang-Mills contains 3D Chern-Simons as its topological sector",
+          "statementPreview": "The gauge sector of the [Coherence Lagrangian](/derivations/foundation/coherence-lagrangian) is:"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.3",
+          "name": "$\\theta = 0$ makes the topological sector maximally accessible",
+          "statementPreview": "The [Strong CP](/derivations/gauge/strong-cp) derivation forces theta = 0 exactly (octonionic non-associativity obstr..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.4",
+          "name": "Wilson-loop linking from the topological sector",
+          "statementPreview": "In the topological sector of the coherence Lagrangian's gauge vacuum, the expectation value of two Wilson loops is a ..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Absolute normalization of the CS levels.",
+          "description": "Proposition 2.4 gives k = dim,A (i.e., k = 2, 4, 8), but the specific integer values require the absolute coupling normalization alphaG = 1/dim,A (not just the ratios). This normalization gives alphas"
+        },
+        {
+          "number": 2,
+          "title": "Verlinde formula vs. holographic bound (Open Question 2.6).",
+          "description": "At CS level k with gauge group SU(N), the Verlinde formula gives the Hilbert-space dimension on a genus-g surface. The framework's holographic bound A/(4ellP2) gives a finite count of states on a boun"
+        },
+        {
+          "number": 3,
+          "title": "Embedding of observer loops.",
+          "description": "The framework's observer loops are currently abstract U(1) phases, not embedded curves in a spatial manifold. Making the knot-theoretic program concrete requires a canonical embedding prescription — d"
+        },
+        {
+          "number": 4,
+          "title": "Linking number vs. relational coherence for non-minimal observers.",
+          "description": "Conjecture 1.5 identifies C(O1 : O2) = Lk(gamma1, gamma2) hbaromega0 for minimal U(1) loops. For composite observers at higher bootstrap levels, the \"loop\" is a more complex embedded object (satellite"
+        },
+        {
+          "number": 5,
+          "title": "Surgery convergence.",
+          "description": "The self-consistent surgery iteration (Step 4) must converge. Under what conditions does iterated surgery on a framed link in successive manifolds converge to a fixed point? This is a question in 3-ma"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap"
+          },
+          {
+            "target": "foundation/continuous-discrete-duality",
+            "context": "Continuous-Discrete Duality"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "gauge/electromagnetism",
+            "context": "Electromagnetism"
+          },
+          {
+            "target": "gauge/strong-cp",
+            "context": "Strong CP"
+          },
+          {
+            "target": "interactions/bootstrap-division-algebras",
+            "context": "Bootstrap Division Algebras"
+          },
+          {
+            "target": "interactions/relational-invariants",
+            "context": "Relational Invariants"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
+          },
+          {
+            "target": "axioms/coherence-conservation",
+            "context": "Coherence Conservation"
+          },
+          {
+            "target": "quantum/entanglement",
+            "context": "Entanglement"
+          },
+          {
+            "target": "thermodynamics/entropy",
+            "context": "Entropy"
+          },
+          {
+            "target": "cosmology/coupling-constants",
+            "context": "Coupling Constants"
+          },
+          {
+            "target": "foundation/coherence-lagrangian",
+            "context": "Coherence Lagrangian"
+          },
+          {
+            "target": "holography/er-epr",
+            "context": "ER=EPR"
+          },
+          {
+            "target": "cosmology/coupling-constants",
+            "context": "structural consequence of the Cayley-Dickson tower"
+          }
+        ],
+        "incoming": []
       },
       "leanVerification": {
         "hasProofs": false,
@@ -6163,6 +6364,7 @@
         "gauge/standard-model-group"
       ],
       "dependedOnBy": [
+        "foundation/knot-theoretic-bootstrap",
         "gauge/standard-model-group",
         "gauge/weak-interaction"
       ],
@@ -6463,6 +6665,10 @@
           {
             "source": "foundation/coherence-lagrangian",
             "context": "Theorem 6.1"
+          },
+          {
+            "source": "foundation/knot-theoretic-bootstrap",
+            "context": "Electromagnetism"
           },
           {
             "source": "gauge/color-force",
@@ -7241,7 +7447,9 @@
         "gauge/color-force"
       ],
       "enablesDerivation": [],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "foundation/knot-theoretic-bootstrap"
+      ],
       "steps": [
         {
           "number": 1,
@@ -7361,6 +7569,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "foundation/knot-theoretic-bootstrap",
+            "context": "Strong CP"
+          },
           {
             "source": "gauge/chiral-symmetry-breaking",
             "context": "Strong CP"
@@ -8267,6 +8479,10 @@
             "context": "Area Scaling"
           },
           {
+            "source": "foundation/knot-theoretic-bootstrap",
+            "context": "Area Scaling"
+          },
+          {
             "source": "holography/black-hole-entropy",
             "context": "Area Scaling"
           },
@@ -9008,6 +9224,10 @@
             "context": "ER=EPR"
           },
           {
+            "source": "foundation/knot-theoretic-bootstrap",
+            "context": "ER=EPR"
+          },
+          {
             "source": "holography/information-paradox",
             "context": "ER=EPR from Relational Invariants"
           },
@@ -9691,7 +9911,9 @@
         "interactions/bootstrap"
       ],
       "enablesDerivation": [],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "foundation/knot-theoretic-bootstrap"
+      ],
       "steps": [
         {
           "number": 1,
@@ -9918,6 +10140,10 @@
             "context": "Theorem 7.1 — Hurwitz obstruction"
           },
           {
+            "source": "foundation/knot-theoretic-bootstrap",
+            "context": "Bootstrap Division Algebras"
+          },
+          {
             "source": "gauge/color-force",
             "context": "Theorems 2.2–2.3, 7.1"
           },
@@ -9985,6 +10211,7 @@
         "cosmology/geometric-substrate",
         "cosmology/observer-loop-viability",
         "foundation/aperiodic-order",
+        "foundation/knot-theoretic-bootstrap",
         "gauge/color-force",
         "interactions/bootstrap-division-algebras",
         "particles/mass-hierarchy",
@@ -10271,6 +10498,10 @@
           },
           {
             "source": "foundation/continuous-discrete-duality",
+            "context": "Bootstrap"
+          },
+          {
+            "source": "foundation/knot-theoretic-bootstrap",
             "context": "Bootstrap"
           },
           {
@@ -10621,6 +10852,10 @@
           },
           {
             "source": "foundation/aperiodic-order",
+            "context": "Relational Invariants"
+          },
+          {
+            "source": "foundation/knot-theoretic-bootstrap",
             "context": "Relational Invariants"
           },
           {
@@ -14186,6 +14421,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "foundation/knot-theoretic-bootstrap",
+            "context": "Entanglement"
+          },
           {
             "source": "holography/er-epr",
             "context": "Entanglement"
@@ -19762,6 +20001,10 @@
             "context": "Entropy"
           },
           {
+            "source": "foundation/knot-theoretic-bootstrap",
+            "context": "Entropy"
+          },
+          {
             "source": "holography/area-scaling",
             "context": "Entropy as Inaccessible Coherence"
           },
@@ -23967,6 +24210,55 @@
       "id": "5.1",
       "name": "Reformulation of open problems",
       "fullRef": "foundation/continuous-discrete-duality:Proposition 5.1"
+    },
+    {
+      "derivationId": "foundation/knot-theoretic-bootstrap",
+      "type": "Definition",
+      "id": "1.1.",
+      "name": "",
+      "fullRef": "foundation/knot-theoretic-bootstrap:Definition 1.1."
+    },
+    {
+      "derivationId": "foundation/knot-theoretic-bootstrap",
+      "type": "Proposition",
+      "id": "1.5",
+      "name": "Relational coherence = linking number",
+      "fullRef": "foundation/knot-theoretic-bootstrap:Proposition 1.5"
+    },
+    {
+      "derivationId": "foundation/knot-theoretic-bootstrap",
+      "type": "Proposition",
+      "id": "2.4",
+      "name": "CS level = division algebra dimension",
+      "fullRef": "foundation/knot-theoretic-bootstrap:Proposition 2.4"
+    },
+    {
+      "derivationId": "foundation/knot-theoretic-bootstrap",
+      "type": "Proposition",
+      "id": "2.5",
+      "name": "Finite representation content at each level",
+      "fullRef": "foundation/knot-theoretic-bootstrap:Proposition 2.5"
+    },
+    {
+      "derivationId": "foundation/knot-theoretic-bootstrap",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "4D Yang-Mills contains 3D Chern-Simons as its topological sector",
+      "fullRef": "foundation/knot-theoretic-bootstrap:Proposition 3.2"
+    },
+    {
+      "derivationId": "foundation/knot-theoretic-bootstrap",
+      "type": "Proposition",
+      "id": "3.3",
+      "name": "$\\theta = 0$ makes the topological sector maximally accessible",
+      "fullRef": "foundation/knot-theoretic-bootstrap:Proposition 3.3"
+    },
+    {
+      "derivationId": "foundation/knot-theoretic-bootstrap",
+      "type": "Proposition",
+      "id": "3.4",
+      "name": "Wilson-loop linking from the topological sector",
+      "fullRef": "foundation/knot-theoretic-bootstrap:Proposition 3.4"
     },
     {
       "derivationId": "gauge/anomaly-cancellation",
@@ -30290,6 +30582,41 @@
       "number": 2,
       "title": "Uniqueness of the fixed point.",
       "description": "Even if the compatibility condition is selective, it might admit multiple solutions (multiple manifold-network pairs satisfying all constraints). Whether the axioms + aperiodic order + Lagrangian uniq"
+    },
+    {
+      "derivationId": "foundation/knot-theoretic-bootstrap",
+      "derivationStatus": "stub",
+      "number": 1,
+      "title": "Absolute normalization of the CS levels.",
+      "description": "Proposition 2.4 gives k = dim,A (i.e., k = 2, 4, 8), but the specific integer values require the absolute coupling normalization alphaG = 1/dim,A (not just the ratios). This normalization gives alphas"
+    },
+    {
+      "derivationId": "foundation/knot-theoretic-bootstrap",
+      "derivationStatus": "stub",
+      "number": 2,
+      "title": "Verlinde formula vs. holographic bound (Open Question 2.6).",
+      "description": "At CS level k with gauge group SU(N), the Verlinde formula gives the Hilbert-space dimension on a genus-g surface. The framework's holographic bound A/(4ellP2) gives a finite count of states on a boun"
+    },
+    {
+      "derivationId": "foundation/knot-theoretic-bootstrap",
+      "derivationStatus": "stub",
+      "number": 3,
+      "title": "Embedding of observer loops.",
+      "description": "The framework's observer loops are currently abstract U(1) phases, not embedded curves in a spatial manifold. Making the knot-theoretic program concrete requires a canonical embedding prescription — d"
+    },
+    {
+      "derivationId": "foundation/knot-theoretic-bootstrap",
+      "derivationStatus": "stub",
+      "number": 4,
+      "title": "Linking number vs. relational coherence for non-minimal observers.",
+      "description": "Conjecture 1.5 identifies C(O1 : O2) = Lk(gamma1, gamma2) hbaromega0 for minimal U(1) loops. For composite observers at higher bootstrap levels, the \"loop\" is a more complex embedded object (satellite"
+    },
+    {
+      "derivationId": "foundation/knot-theoretic-bootstrap",
+      "derivationStatus": "stub",
+      "number": 5,
+      "title": "Surgery convergence.",
+      "description": "The self-consistent surgery iteration (Step 4) must converge. Under what conditions does iterated surgery on a framed link in successive manifolds converge to a fixed point? This is a question in 3-ma"
     },
     {
       "derivationId": "gauge/chirality-selection",

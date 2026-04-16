@@ -445,6 +445,12 @@
       "status": "provisional"
     },
     {
+      "id": "foundation/knot-theoretic-bootstrap",
+      "title": "Knot-Theoretic Bootstrap",
+      "group": "foundation",
+      "status": "stub"
+    },
+    {
       "id": "cosmology/cyclic-cosmology",
       "title": "Observer-Centric Cyclic Cosmology",
       "group": "cosmology",
@@ -1333,6 +1339,30 @@
     {
       "from": "thermodynamics/entropy",
       "to": "thermodynamics-ext/memory-persistence-tradeoff"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "foundation/knot-theoretic-bootstrap"
+    },
+    {
+      "from": "interactions/bootstrap-division-algebras",
+      "to": "foundation/knot-theoretic-bootstrap"
+    },
+    {
+      "from": "foundation/coherence-lagrangian",
+      "to": "foundation/knot-theoretic-bootstrap"
+    },
+    {
+      "from": "foundation/continuous-discrete-duality",
+      "to": "foundation/knot-theoretic-bootstrap"
+    },
+    {
+      "from": "gauge/electromagnetism",
+      "to": "foundation/knot-theoretic-bootstrap"
+    },
+    {
+      "from": "gauge/strong-cp",
+      "to": "foundation/knot-theoretic-bootstrap"
     }
   ]
 }

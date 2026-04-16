@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-04-15T08:34:02.823Z",
-    "totalReferences": 97,
-    "totalCitations": 110,
-    "citingFiles": 46,
+    "generatedAt": "2026-04-16T03:33:47.685Z",
+    "totalReferences": 100,
+    "totalCitations": 113,
+    "citingFiles": 47,
     "generator": "scripts/extract-references.mjs"
   },
   "categoryNames": {
@@ -39,7 +39,7 @@
     },
     "quantum-information": {
       "name": "Quantum Information",
-      "count": 14
+      "count": 17
     },
     "field-theory": {
       "name": "Field Theory",
@@ -415,6 +415,21 @@
       "category": "quantum-information"
     },
     {
+      "id": "kirby-1978",
+      "authors": "Kirby",
+      "year": 1978,
+      "citedAs": [
+        "Kirby, 1978"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "foundation/knot-theoretic-bootstrap",
+          "title": "Knot-Theoretic Bootstrap"
+        }
+      ],
+      "category": "quantum-information"
+    },
+    {
       "id": "lagarias-1999",
       "authors": "Lagarias",
       "year": 1999,
@@ -425,6 +440,21 @@
         {
           "derivationId": "foundation/aperiodic-order",
           "title": "Aperiodic Order of the Observer Network"
+        }
+      ],
+      "category": "quantum-information"
+    },
+    {
+      "id": "lickorish-1962",
+      "authors": "Lickorish",
+      "year": 1962,
+      "citedAs": [
+        "Lickorish, 1962"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "foundation/knot-theoretic-bootstrap",
+          "title": "Knot-Theoretic Bootstrap"
         }
       ],
       "category": "quantum-information"
@@ -505,6 +535,21 @@
         {
           "derivationId": "foundation/aperiodic-order",
           "title": "Aperiodic Order of the Observer Network"
+        }
+      ],
+      "category": "quantum-information"
+    },
+    {
+      "id": "wallace-1960",
+      "authors": "Wallace",
+      "year": 1960,
+      "citedAs": [
+        "Wallace, 1960"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "foundation/knot-theoretic-bootstrap",
+          "title": "Knot-Theoretic Bootstrap"
         }
       ],
       "category": "quantum-information"
