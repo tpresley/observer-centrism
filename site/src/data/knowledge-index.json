@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-16T09:32:47.102Z",
+    "generatedAt": "2026-04-16T20:32:33.803Z",
     "derivationCount": 78,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -17,8 +17,8 @@
     "derivationCount": 78,
     "predictionCount": 12,
     "edgeCount": 233,
-    "formalObjectCount": 1157,
-    "openGapCount": 237,
+    "formalObjectCount": 1158,
+    "openGapCount": 238,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -1434,7 +1434,7 @@
           },
           {
             "source": "holography/horizon-gauge-shell",
-            "context": "Observer Definition"
+            "context": "Axiom 2"
           },
           {
             "source": "interactions/bootstrap",
@@ -3268,6 +3268,10 @@
           {
             "source": "holography/area-scaling",
             "context": "Geometric Substrate"
+          },
+          {
+            "source": "holography/horizon-gauge-shell",
+            "context": "Geometric Substrate"
           }
         ]
       },
@@ -3946,6 +3950,10 @@
           },
           {
             "source": "foundation/continuous-discrete-duality",
+            "context": "Observer Loop Viability"
+          },
+          {
+            "source": "holography/horizon-gauge-shell",
             "context": "Observer Loop Viability"
           },
           {
@@ -5425,7 +5433,7 @@
         "incoming": [
           {
             "source": "holography/horizon-gauge-shell",
-            "context": "which identifies specific Chern-Simons levels at each gauge group"
+            "context": "Knot-Theoretic Bootstrap"
           }
         ]
       },
@@ -6256,10 +6264,6 @@
             "context": "Color Force"
           },
           {
-            "source": "holography/horizon-gauge-shell",
-            "context": "Color Force"
-          },
-          {
             "source": "interactions/bootstrap-division-algebras",
             "context": "algebraic saturation at each bootstrap level"
           },
@@ -6843,10 +6847,6 @@
           {
             "source": "gauge/weak-interaction",
             "context": "now derived"
-          },
-          {
-            "source": "holography/horizon-gauge-shell",
-            "context": "Electromagnetism"
           },
           {
             "source": "interactions/bootstrap-division-algebras",
@@ -8185,10 +8185,6 @@
           },
           {
             "source": "gauge/weinberg-angle",
-            "context": "Weak Interaction"
-          },
-          {
-            "source": "holography/horizon-gauge-shell",
             "context": "Weak Interaction"
           },
           {
@@ -9649,7 +9645,7 @@
     "holography/horizon-gauge-shell": {
       "id": "holography/horizon-gauge-shell",
       "filePath": "site/src/content/derivations/holography/horizon-gauge-shell.md",
-      "title": "Horizon as Gauge Shell",
+      "title": "Horizon as Null Boundary Shell",
       "status": "stub",
       "rigorLevel": "semi-formal",
       "group": "holography",
@@ -9658,8 +9654,8 @@
         "gauge",
         "foundation"
       ],
-      "summary": "The cosmological horizon of any observer is a permanent null shell whose entities have gauge boson properties. This follows from the Cauchy slice covering property: during one tick of a level-n observer, Cauchy slices cover the full time index of most observers at levels ≤ n. At the horizon boundary, the transition from timelike (inside) to fully-covered (outside) occurs at the null critical angle. The holographic bound counts the gauge boson modes at this shell.",
-      "lastUpdated": "2026-04-15",
+      "summary": "Every observer's cosmological horizon is a permanent null shell of relational carriers — A–B relations at the distance where Cauchy-slice tilts exactly saturate the cyclic period. Inside this distance the A–B relation is timelike; outside it is fully spacelike; at the saturation distance it is null-tangent. The shell's permanence follows from Axiom 2 (observer boundary); its null character follows from the antichain-boundary structure of the covering property, without invoking a pre-existing Lorentzian metric. The holographic bound counts the independent relational carriers on this shell. Identification of these carriers with specific gauge bosons (spin, group, representation) is an open extension.",
+      "lastUpdated": "2026-04-16",
       "dependsOn": [
         "cosmology/cyclic-cosmology",
         "holography/area-scaling",
@@ -9675,7 +9671,7 @@
           "type": "Proposition",
           "id": "1.1",
           "name": "Covering",
-          "statementPreview": "For any observer A at bootstrap level n, during a single A-tick (tk tk+1), there exist observers B at level m n such ..."
+          "statementPreview": "For observer A at bootstrap level n, during a single A-tick (tk tk+1), there exist observers B at level m n such that..."
         },
         {
           "type": "Proposition",
@@ -9684,39 +9680,45 @@
           "statementPreview": "The scope of the covering grows monotonically with observer level. A level-n observer's single tick covers:*"
         },
         {
+          "type": "Definition",
+          "id": "2.0",
+          "name": "Relational carrier",
+          "statementPreview": "For observers A and B, the **A–B relational carrier** is the set of DAG events lying on A's self/non-self boundary BA..."
+        },
+        {
           "type": "Proposition",
           "id": "2.1",
-          "name": "Dual perspective",
-          "statementPreview": "The covering property has a reciprocal reading. If B's entire time index is covered by one A-tick, then from B's side..."
+          "name": "Three regimes",
+          "statementPreview": "The A–B relational carrier has three kinematic regimes, determined by B's distance d from A:*"
         },
         {
           "type": "Proposition",
           "id": "2.2",
-          "name": "Null identification",
-          "statementPreview": "An entity whose single phase loop closure encompasses all of an observer's time indexes traverses that observer's ful..."
+          "name": "Null character of the horizon carrier",
+          "statementPreview": "The A–B relational carrier at horizon distance has null worldline character.*"
         },
         {
           "type": "Proposition",
           "id": "3.1",
-          "name": "The horizon is the null shell",
-          "statementPreview": "The cosmological horizon of observer A is the boundary where the transition from timelike (inside) to fully-covered (..."
+          "name": "The horizon is a shell of null relational carriers",
+          "statementPreview": "The cosmological horizon of observer A is the locus B : d(A, B) = cTU/2. By Proposition 2.2, every A–B relational car..."
         },
         {
           "type": "Proposition",
           "id": "3.2",
           "name": "Permanence",
-          "statementPreview": "The null shell is permanent. Every observer has a self/non-self boundary B (Axiom 2, [Observer Definition](/derivatio..."
+          "statementPreview": "The null shell is permanent. Every observer has a self/non-self boundary B ([Axiom 2](/derivations/axioms/observer-de..."
         },
         {
           "type": "Proposition",
-          "id": "4.2",
-          "name": "The horizon shell has gauge boson properties",
-          "statementPreview": "The entities at the horizon have:*"
+          "id": "4.1",
+          "name": "The horizon shell's necessary kinematic properties",
+          "statementPreview": "Every A–B relational carrier at the horizon shell exhibits:*"
         },
         {
           "type": "Proposition",
           "id": "5.1",
-          "name": "The holographic bound counts gauge modes at the horizon",
+          "name": "The holographic bound counts horizon shell modes",
           "statementPreview": "The [holographic entropy bound](/derivations/holography/area-scaling) states that the number of independent degrees o..."
         }
       ],
@@ -9724,23 +9726,28 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Gauge group at the horizon.",
-          "description": "The horizon shell has gauge boson properties (null, boundary-mediating), but the specific gauge group is not derived. Does the horizon carry U(1) × SU(2) × SU(3) structure from the bootstrap's Cayley-"
+          "title": "Gauge-group and spin-1 identification.",
+          "description": "The shell has the necessary kinematic properties of gauge bosons (null, boundary-mediating, permanent) but not sufficient. Spin-1 is not derived from horizon structure, and the specific gauge group (U"
         },
         {
           "number": 2,
-          "title": "Spin and statistics.",
-          "description": "The null identification gives masslessness but does not directly derive spin-1 (the defining spin of gauge bosons). The [Spin-Statistics](/derivations/particles/spin-statistics) derivation establishes"
+          "title": "Continuum-limit formalization of antichain-boundary → null-hypersurface.",
+          "description": "Proposition 2.2's discrete DAG argument \"marginal antichain compatibility = null-cone tangency\" is clean but informal. A rigorous continuum limit showing that Jpm on the DAG becomes a null hypersurfac"
         },
         {
           "number": 3,
           "title": "Quantitative mode counting.",
-          "description": "Proposition 5.1 identifies the holographic bound as counting gauge modes, but does not compute the mode count independently (from the gauge structure) and compare to A/(4ellP2). A quantitative match w"
+          "description": "Proposition 5.1 identifies the holographic bound as counting A–B relational carriers but does not independently compute the count. A match between the carrier count (derived from bootstrap structure) "
         },
         {
           "number": 4,
-          "title": "Gibbons-Hawking connection.",
-          "description": "The Gibbons-Hawking effect (thermal radiation from de Sitter horizons) should follow from the permanent gauge shell: if the horizon is a shell of gauge boson modes, the thermal spectrum is the mode oc"
+          "title": "Distinguishing the shell from graviton / bulk-massless content.",
+          "description": "The remark after Proposition 4.1 asserts that the shell carries only Type III relational carriers, not gravitons or bulk massless fields. This type distinction needs to be proved from the framework's "
+        },
+        {
+          "number": 5,
+          "title": "Gibbons–Hawking connection.",
+          "description": "The Gibbons–Hawking thermal spectrum from de Sitter horizons should follow from the permanent null shell: if the horizon carries a permanent population of null relational carriers, the thermal spectru"
         }
       ],
       "assessmentVerdict": "",
@@ -9752,24 +9759,20 @@
             "context": "Cyclic Cosmology"
           },
           {
+            "target": "axioms/observer-definition",
+            "context": "Axiom 2"
+          },
+          {
             "target": "holography/area-scaling",
             "context": "holographic bound"
           },
           {
-            "target": "axioms/observer-definition",
-            "context": "Observer Definition"
+            "target": "cosmology/geometric-substrate",
+            "context": "Geometric Substrate"
           },
           {
-            "target": "gauge/electromagnetism",
-            "context": "Electromagnetism"
-          },
-          {
-            "target": "gauge/weak-interaction",
-            "context": "Weak Interaction"
-          },
-          {
-            "target": "gauge/color-force",
-            "context": "Color Force"
+            "target": "cosmology/observer-loop-viability",
+            "context": "Observer Loop Viability"
           },
           {
             "target": "interactions/bootstrap-division-algebras",
@@ -9781,11 +9784,7 @@
           },
           {
             "target": "foundation/knot-theoretic-bootstrap",
-            "context": "which identifies specific Chern-Simons levels at each gauge group"
-          },
-          {
-            "target": "particles/spin-statistics",
-            "context": "Spin-Statistics"
+            "context": "Knot-Theoretic Bootstrap"
           },
           {
             "target": "holography/hawking-radiation",
@@ -13757,10 +13756,6 @@
           {
             "source": "gauge/weak-interaction",
             "context": "Proposition 1.2"
-          },
-          {
-            "source": "holography/horizon-gauge-shell",
-            "context": "Spin-Statistics"
           },
           {
             "source": "minimal-observer/coherence-dual-pairs",
@@ -26245,23 +26240,30 @@
     },
     {
       "derivationId": "holography/horizon-gauge-shell",
+      "type": "Definition",
+      "id": "2.0",
+      "name": "Relational carrier",
+      "fullRef": "holography/horizon-gauge-shell:Definition 2.0"
+    },
+    {
+      "derivationId": "holography/horizon-gauge-shell",
       "type": "Proposition",
       "id": "2.1",
-      "name": "Dual perspective",
+      "name": "Three regimes",
       "fullRef": "holography/horizon-gauge-shell:Proposition 2.1"
     },
     {
       "derivationId": "holography/horizon-gauge-shell",
       "type": "Proposition",
       "id": "2.2",
-      "name": "Null identification",
+      "name": "Null character of the horizon carrier",
       "fullRef": "holography/horizon-gauge-shell:Proposition 2.2"
     },
     {
       "derivationId": "holography/horizon-gauge-shell",
       "type": "Proposition",
       "id": "3.1",
-      "name": "The horizon is the null shell",
+      "name": "The horizon is a shell of null relational carriers",
       "fullRef": "holography/horizon-gauge-shell:Proposition 3.1"
     },
     {
@@ -26274,15 +26276,15 @@
     {
       "derivationId": "holography/horizon-gauge-shell",
       "type": "Proposition",
-      "id": "4.2",
-      "name": "The horizon shell has gauge boson properties",
-      "fullRef": "holography/horizon-gauge-shell:Proposition 4.2"
+      "id": "4.1",
+      "name": "The horizon shell's necessary kinematic properties",
+      "fullRef": "holography/horizon-gauge-shell:Proposition 4.1"
     },
     {
       "derivationId": "holography/horizon-gauge-shell",
       "type": "Proposition",
       "id": "5.1",
-      "name": "The holographic bound counts gauge modes at the horizon",
+      "name": "The holographic bound counts horizon shell modes",
       "fullRef": "holography/horizon-gauge-shell:Proposition 5.1"
     },
     {
@@ -31380,29 +31382,36 @@
       "derivationId": "holography/horizon-gauge-shell",
       "derivationStatus": "stub",
       "number": 1,
-      "title": "Gauge group at the horizon.",
-      "description": "The horizon shell has gauge boson properties (null, boundary-mediating), but the specific gauge group is not derived. Does the horizon carry U(1) × SU(2) × SU(3) structure from the bootstrap's Cayley-"
+      "title": "Gauge-group and spin-1 identification.",
+      "description": "The shell has the necessary kinematic properties of gauge bosons (null, boundary-mediating, permanent) but not sufficient. Spin-1 is not derived from horizon structure, and the specific gauge group (U"
     },
     {
       "derivationId": "holography/horizon-gauge-shell",
       "derivationStatus": "stub",
       "number": 2,
-      "title": "Spin and statistics.",
-      "description": "The null identification gives masslessness but does not directly derive spin-1 (the defining spin of gauge bosons). The [Spin-Statistics](/derivations/particles/spin-statistics) derivation establishes"
+      "title": "Continuum-limit formalization of antichain-boundary → null-hypersurface.",
+      "description": "Proposition 2.2's discrete DAG argument \"marginal antichain compatibility = null-cone tangency\" is clean but informal. A rigorous continuum limit showing that Jpm on the DAG becomes a null hypersurfac"
     },
     {
       "derivationId": "holography/horizon-gauge-shell",
       "derivationStatus": "stub",
       "number": 3,
       "title": "Quantitative mode counting.",
-      "description": "Proposition 5.1 identifies the holographic bound as counting gauge modes, but does not compute the mode count independently (from the gauge structure) and compare to A/(4ellP2). A quantitative match w"
+      "description": "Proposition 5.1 identifies the holographic bound as counting A–B relational carriers but does not independently compute the count. A match between the carrier count (derived from bootstrap structure) "
     },
     {
       "derivationId": "holography/horizon-gauge-shell",
       "derivationStatus": "stub",
       "number": 4,
-      "title": "Gibbons-Hawking connection.",
-      "description": "The Gibbons-Hawking effect (thermal radiation from de Sitter horizons) should follow from the permanent gauge shell: if the horizon is a shell of gauge boson modes, the thermal spectrum is the mode oc"
+      "title": "Distinguishing the shell from graviton / bulk-massless content.",
+      "description": "The remark after Proposition 4.1 asserts that the shell carries only Type III relational carriers, not gravitons or bulk massless fields. This type distinction needs to be proved from the framework's "
+    },
+    {
+      "derivationId": "holography/horizon-gauge-shell",
+      "derivationStatus": "stub",
+      "number": 5,
+      "title": "Gibbons–Hawking connection.",
+      "description": "The Gibbons–Hawking thermal spectrum from de Sitter horizons should follow from the permanent null shell: if the horizon carries a permanent population of null relational carriers, the thermal spectru"
     },
     {
       "derivationId": "holography/information-paradox",

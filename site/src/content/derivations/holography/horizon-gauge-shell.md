@@ -1,128 +1,145 @@
 ---
-title: "Horizon as Gauge Shell"
+title: "Horizon as Null Boundary Shell"
 status: "stub"
 dependsOn: ["cosmology/cyclic-cosmology", "holography/area-scaling", "axioms/loop-closure", "axioms/observer-definition", "interactions/bootstrap"]
 enablesDerivation: []
 tags: ["holography", "gauge", "foundation"]
-summary: "The cosmological horizon of any observer is a permanent null shell whose entities have gauge boson properties. This follows from the Cauchy slice covering property: during one tick of a level-n observer, Cauchy slices cover the full time index of most observers at levels ≤ n. At the horizon boundary, the transition from timelike (inside) to fully-covered (outside) occurs at the null critical angle. The holographic bound counts the gauge boson modes at this shell."
+summary: "Every observer's cosmological horizon is a permanent null shell of relational carriers — A–B relations at the distance where Cauchy-slice tilts exactly saturate the cyclic period. Inside this distance the A–B relation is timelike; outside it is fully spacelike; at the saturation distance it is null-tangent. The shell's permanence follows from Axiom 2 (observer boundary); its null character follows from the antichain-boundary structure of the covering property, without invoking a pre-existing Lorentzian metric. The holographic bound counts the independent relational carriers on this shell. Identification of these carriers with specific gauge bosons (spin, group, representation) is an open extension."
 rigorLevel: "semi-formal"
-lastUpdated: 2026-04-15
+lastUpdated: 2026-04-16
 ---
 
 ## Overview
 
-This derivation connects three sectors of the framework — holography, gauge structure, and cyclic cosmology — through a single structural observation about what happens at the cosmological horizon.
+This derivation connects holography, inter-observer relations, and cyclic cosmology through a single structural observation about the observer's cosmological horizon.
 
-The starting point is the **Cauchy slice covering property**: during a single tick of a level-$n$ observer, the Cauchy slices through that tick cover the entire time index of most observers at levels $\leq n$ (those that are spacelike-separated, which is the overwhelming majority in a cosmological setting). This follows from the exact cyclic closure ([Cyclic Cosmology](/derivations/cosmology/cyclic-cosmology), Step 9), the temporal completeness of Cauchy slices, and the level-indexed horizon structure.
+The starting point is the **Cauchy slice covering property** ([Cyclic Cosmology](/derivations/cosmology/cyclic-cosmology), Proposition 5.4): during a single tick of a level-$n$ observer $A$, the Cauchy slices through that tick cover the entire time index of most level-$m \leq n$ observers at cosmological distance. This follows from exact cyclic closure (finite $T_\mathcal{U}$), temporal completeness of antichains in the DAG, and the tilt range available at cosmological distance.
 
-The covering has a dual perspective. From observer $A$'s side: $B$'s entire time index fits within one $A$-tick. From $B$'s side: $B$'s single loop closure spans all of $A$'s time. An entity whose single phase loop closure encompasses all of an observer's time traverses that observer's full history in zero proper time — a null worldline. Null worldline = massless.
+The central object is not a free-standing "entity" at the horizon, but the **relational carrier** between $A$ and a distant observer $B$ — the locus of DAG events jointly accessible to both. The A–B relational carrier has three distinct regimes determined by $B$'s distance from $A$:
 
-The cosmological horizon is the exact boundary where this transition occurs. Inside the horizon, entities have multiple ticks per observer-tick (timelike, massive). Outside, entities' full time indexes are covered by one tick (spacelike-separated). At the boundary, entities are at the critical angle between timelike and spacelike — **null**. The horizon is therefore a permanent shell of entities with massless gauge boson properties: null worldlines, mediating interactions at the observer's self/non-self boundary.
+- **Inside the horizon:** tilt range $< T_\mathcal{U}$; some B-events are strictly in A's causal future or past; A–B relation is *timelike*.
+- **Outside the horizon:** tilt range $> T_\mathcal{U}$; every B-event is antichain-compatible with $A(t_k)$ many times over; A–B relation is *fully spacelike*.
+- **At the horizon:** tilt range exactly saturates $T_\mathcal{U}$; every B-event is antichain-compatible with $A(t_k)$ exactly once, at the margin; A–B relation is *null-tangent*.
 
-Since every observer always has a boundary $\mathcal{B}$ (Axiom 2), this shell is permanent — a structural feature of being an observer, not something that forms or dissolves.
+Every observer has a self/non-self boundary $\mathcal{B}$ by [Axiom 2](/derivations/axioms/observer-definition), so this null shell is a permanent structural feature of being an observer, not a transient geometric accident. The [holographic bound](/derivations/holography/area-scaling) counts the independent relational carriers on this shell; the area-scaling of the bound reflects the area-scaling of the null boundary locus.
 
-The punchline: the [holographic bound](/derivations/holography/area-scaling) counts degrees of freedom on the boundary area. The boundary is a shell of gauge boson modes. The holographic bound is counting the gauge structure at the horizon.
+What the derivation establishes is that the horizon's null character is a *derived* consequence of DAG-level antichain structure plus exact cyclic closure — not a metric-geometric input. What it does **not** yet establish is the identification of these null relational carriers with specific gauge bosons. Necessary kinematic properties (massless, boundary-mediating, permanent) are shared by gauge bosons, gravitons, and any massless field; the derivation of the specific gauge group and spin content is deferred to [Open Gap 1](#open-gaps).
 
 ## Step 1: The Cauchy Slice Covering Property
 
-**Proposition 1.1 (Covering).** *For any observer $A$ at bootstrap level $n$, during a single $A$-tick ($t_k \to t_{k+1}$), there exist observers $B$ at level $m \leq n$ such that the Cauchy slices through $A$'s tick cover all of $B$'s time indexes. In a cosmological setting, the majority of level-$m$ observers satisfy this condition.*
+**Proposition 1.1 (Covering).** *For observer $A$ at bootstrap level $n$, during a single A-tick $(t_k \to t_{k+1})$, there exist observers $B$ at level $m \leq n$ such that the Cauchy slices through A's tick cover all of B's time indexes. In a cosmological setting, the majority of level-$m$ observers satisfy this condition.*
 
 *Argument.* Three ingredients:
 
-**(i) Spatial separation.** In a universe with $\sim 10^{122}$ observers, the overwhelming majority are at cosmological distance from $A$ — beyond $A$'s causal cone during a single tick. A minimal observer's tick has Planck-scale causal reach; higher-level observers have proportionally larger but still finite causal cones. Most of the universe is outside.
+**(i) Spatial separation.** In a universe with $\sim 10^{122}$ observers, the overwhelming majority are at cosmological distance from $A$ — beyond A's causal cone during a single tick. Observer counts in 3D grow as $d^2$, so the bulk of the population sits near horizon-scale distances.
 
-**(ii) Incomparability.** For $B$ entirely spacelike-separated from $A$ during $A$'s tick, every pair $(A(t_k), B(\tau))$ is incomparable in the DAG's partial order. Incomparable events can coexist in a Cauchy slice (antichain). Therefore, for each time index $\tau$ of $B$, there exists a Cauchy slice containing both $A(t_k)$ and $B(\tau)$.
+**(ii) Incomparability.** For $B$ entirely outside A's causal future/past during A's tick, every pair $(A(t_k), B(\tau))$ is incomparable in the DAG's partial order. Incomparable events can coexist in an antichain. Therefore, for each time index $\tau$ of $B$, there exists a Cauchy slice containing both $A(t_k)$ and $B(\tau)$.
 
-**(iii) Temporal completeness.** Every Cauchy slice includes nodes from every time index (property of the framework's DAG structure). As the slice varies through $A$'s tick (from slices through $A(t_k)$ to slices through $A(t_{k+1})$), the tilt at $B$'s location sweeps across $B$'s time indexes. For $B$ at cosmological distance $d$, the available tilt is $\pm d/c$, which for $d \sim c \cdot T_\mathcal{U}$ covers $B$'s entire cyclic history. $\square$
+**(iii) Temporal completeness + tilt range.** Every antichain in the framework's DAG includes nodes from every time index ([Cyclic Cosmology](/derivations/cosmology/cyclic-cosmology), Proposition 5.4). Within A's single tick, the Cauchy-slice family has a tilt range $\pm d/c$ at B's location. For $B$ at distance $d \sim cT_\mathcal{U}/2$, the total available tilt range $2d/c$ equals $T_\mathcal{U}$, which is exactly B's cyclic period. Every B-event is therefore reachable by some Cauchy slice through A's tick. $\square$
 
 **Proposition 1.2 (Level-indexed scope).** *The scope of the covering grows monotonically with observer level. A level-$n$ observer's single tick covers:*
 
 - *All level-$0$ observers at cosmological distance (level 0 ticks fastest — most time indexes per cycle)*
 - *All level-$m$ observers at cosmological distance, for $m \leq n$ (lower levels tick faster, more easily covered)*
-- *The scope is bounded by the level-$n$ holographic horizon: $\dim(\text{accessible state space}) \leq A_{\text{horizon}}^{(n)} / (4\ell_P^2)$*
+- *The scope is bounded by the level-$n$ horizon area: $\dim(\text{accessible state space}) \leq A_{\text{horizon}}^{(n)} / (4\ell_P^2)$*
 
-*The covering scope is proportional to the horizon area, which increases monotonically with level.* $\square$
+*The covering scope is proportional to horizon area, which increases monotonically with level.* $\square$
 
-## Step 2: The Dual Perspective and the Null Identification
+## Step 2: The A–B Relational Carrier and its Null Character
 
-**Proposition 2.1 (Dual perspective).** *The covering property has a reciprocal reading. If $B$'s entire time index is covered by one $A$-tick, then from $B$'s side: $B$'s single loop closure encompasses all of $A$'s time. The discrete ($A$'s ticks) and the continuous ($B$'s single loop closure spanning all of $A$'s time) coexist in the same Cauchy slice structure.*
+**Definition 2.0 (Relational carrier).** *For observers $A$ and $B$, the **A–B relational carrier** is the set of DAG events lying on A's self/non-self boundary $\mathcal{B}_A$ that participate in a Type III relation between $A$ and $B$ over one cyclic period $T_\mathcal{U}$. The carrier is a relation, not a particle: it has no intrinsic proper-time loop of its own, and its existence across $T_\mathcal{U}$ is contingent on both A's and B's loop closures (Axiom 3 enters as a precondition on the endpoints, not as a constraint on the carrier).*
 
-**Proposition 2.2 (Null identification).** *An entity whose single phase loop closure encompasses all of an observer's time indexes traverses that observer's full history in zero proper time. Zero proper time for a finite coordinate-time interval requires a null worldline. A null worldline is the defining property of a massless particle.*
+**Proposition 2.1 (Three regimes).** *The A–B relational carrier has three kinematic regimes, determined by B's distance $d$ from $A$:*
 
-*Argument.* The entity's worldline connects events spanning the observer's full cycle ($T_\mathcal{U}$ in coordinate time) in a single loop closure. For the loop to close in one phase cycle while spanning all of coordinate time, the proper time accumulated must be zero — otherwise the entity would need multiple cycles. The only worldlines with zero proper time for finite coordinate separation are null geodesics. $\square$
+1. *$d < cT_\mathcal{U}/2$ (inside horizon):* *tilt range $2d/c < T_\mathcal{U}$; some B-events lie strictly in A's causal future or past (comparable, not antichain-compatible with any A(t_k)); the A–B relation is **timelike**.*
+2. *$d > cT_\mathcal{U}/2$ (outside horizon):* *tilt range $2d/c > T_\mathcal{U}$; every B-event is antichain-compatible with $A(t_k)$ many times over (by cyclic identification); the A–B relation is **fully spacelike**.*
+3. *$d = cT_\mathcal{U}/2$ (at horizon):* *tilt range $2d/c = T_\mathcal{U}$ exactly; every B-event is antichain-compatible with $A(t_k)$ exactly once; the A–B relation is at the **marginal boundary** between timelike and fully spacelike.*
 
-**Remark (Trichotomy).** From any observer $A$'s perspective, the entities in the universe fall into three classes based on their relationship to $A$'s tick:
+*Argument.* The three cases follow directly from comparing the tilt range $2d/c$ to the cyclic period $T_\mathcal{U}$. In the partial order on antichains parameterized by tilt, the horizon distance is the unique value where the set of (A(t_k), B(τ)) antichain configurations has coordinate-measure $T_\mathcal{U}$ — precisely the cycle length, no more, no less. $\square$
 
-| Relationship to $A$'s tick | Entity type | Worldline |
-|---|---|---|
-| Many ticks per $A$-tick | Lower-level observer | Timelike (fast) |
-| $\sim 1$ tick per $A$-tick | Same-level observer | Timelike (comparable) |
-| Single loop closure spans all $A$-time | Massless gauge boson | Null |
+**Proposition 2.2 (Null character of the horizon carrier).** *The A–B relational carrier at horizon distance has null worldline character.*
 
-This is the discrete-continuous duality made concrete: massive observers are the discrete structure (many ticks, countable state updates), massless gauge bosons are the continuous structure (single loop closure spanning all time), and the Cauchy slice covering property bridges them.
+*Argument.* By Proposition 2.1 case 3, at horizon distance every B-event is antichain-compatible with $A(t_k)$ exactly once, at the margin. This marginal compatibility is the DAG-level expression of causal-cone tangency: the A–B relation is incomparable (antichain-compatible) but sits on the boundary of the comparability region. In DAG terms, the horizon-distance locus is $\partial J^\pm(A(t_k))$, the boundary of A's causal future and past. This boundary is the null-cone structure of the DAG — and in any continuum limit where the DAG supports a Lorentzian metric (as developed in the [Geometric Substrate](/derivations/cosmology/geometric-substrate) and [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) derivations), $\partial J^\pm$ is a null hypersurface. The carrier's worldline therefore lies on this null hypersurface.
 
-## Step 3: The Horizon as the Null Transition
+Critically, the null character here is a property of the A–B *pair*, not an intrinsic property of a particle-like entity. The carrier has no proper-time clock of its own to "freeze." Null-ness refers to the tangency of the relation to A's causal cone, and is derived from DAG antichain structure without invoking a pre-existing Lorentzian metric on ambient spacetime. $\square$
 
-**Proposition 3.1 (The horizon is the null shell).** *The cosmological horizon of observer $A$ is the boundary where the transition from timelike (inside) to fully-covered (outside) occurs. At this boundary, entities are at the critical angle between timelike and spacelike — null. The horizon is a shell of entities with null worldlines.*
+**Remark (Why this sidesteps the entity conflation).** An earlier version of this derivation argued that the "entity" at the horizon has zero proper time because its loop closure spans all of A's coordinate time. That framing conflated a relation with a particle. A timelike observer $B$ with proper period $T_B = T_\mathcal{U}$ also satisfies "one loop spans one cycle" but is not null. The correction is to identify the null object as the *relation*, not as $B$ itself: $B$ is a perfectly ordinary observer with its own proper time, but the A–B relational carrier — the boundary locus connecting them — lies on A's null cone.
 
-*Argument.* Inside $A$'s horizon: entities are causally connected to $A$. Their time indexes are NOT fully covered by one $A$-tick (some of their events are in $A$'s causal future or past, hence comparable, not coverable by a single Cauchy slice). These entities have timelike worldlines relative to $A$.
+**Remark (Consistency with GR).** In general relativity, any observer's de Sitter cosmological horizon is a null hypersurface generated by null geodesics. The framework reaches the same conclusion through a different route: the antichain boundary of a DAG with finite cyclic period, not the causal geometry of a presupposed dS metric. Agreement is a consistency check, not an import.
 
-Outside $A$'s horizon: entities are spacelike-separated from $A$. Their full time indexes ARE covered by one $A$-tick (Proposition 1.1). By Proposition 2.2, their single-loop-closure perspective gives them null properties from $A$'s viewpoint.
+## Step 3: The Horizon Shell
 
-At the horizon: entities are at the exact transition. Their worldlines are tangent to the boundary between the causal and acausal regions. This tangent direction is null — the critical case between timelike and spacelike. The horizon is therefore a surface generated by null geodesics, and the entities at the horizon have null (massless) properties. $\square$
+**Proposition 3.1 (The horizon is a shell of null relational carriers).** *The cosmological horizon of observer $A$ is the locus $\{B : d(A, B) = cT_\mathcal{U}/2\}$. By Proposition 2.2, every A–B relational carrier at this locus is null. The horizon is therefore a shell of null carriers.*
 
-**Remark (Consistency with GR).** In general relativity, the de Sitter cosmological horizon IS a null surface — generated by null geodesics. This is a standard result. The framework arrives at the same conclusion from a completely different direction: the Cauchy slice covering property and the observer-level structure, not the causal geometry of de Sitter spacetime. The agreement is a consistency check.
+*Argument.* Direct application of Proposition 2.1 to every B in A's universe. The horizon shell is the 2-sphere of spatial points at distance $cT_\mathcal{U}/2$, populated by one A–B relational carrier per distant observer B. $\square$
 
-**Proposition 3.2 (Permanence).** *The null shell is permanent. Every observer has a self/non-self boundary $\mathcal{B}$ (Axiom 2, [Observer Definition](/derivations/axioms/observer-definition)). The horizon exists at all times for any observer. The shell of null entities at the horizon is therefore a structural feature of being an observer, not a transient phenomenon.*
+**Proposition 3.2 (Permanence).** *The null shell is permanent. Every observer has a self/non-self boundary $\mathcal{B}$ ([Axiom 2](/derivations/axioms/observer-definition)). The horizon exists at all observer times, so the shell of null carriers is a structural feature of being an observer, not a transient phenomenon.*
 
-## Step 4: The Gauge Identification
+**Remark (Observer-universal, not just cosmological).** The argument applies to any observer at any bootstrap level, with the appropriate level-indexed horizon distance (Proposition 1.2). Every observer — minimal or composite — has a null boundary shell. The shell's area scales with the level's horizon, which grounds the level-indexed holographic bound.
 
-**Observation 4.1 (Gauge bosons mediate boundary interactions).** In the framework, Type III interactions are mediated by gauge bosons ([Electromagnetism](/derivations/gauge/electromagnetism), [Weak Interaction](/derivations/gauge/weak-interaction), [Color Force](/derivations/gauge/color-force)). Type III interactions cross the observer's boundary $\mathcal{B}$ — they connect the observer to other observers. The gauge bosons are the carriers of relational structure at the boundary.
+**Remark (On "spacelike" language).** Outside the horizon, A–B events are *causally disconnected* (no signal can propagate between them within $T_\mathcal{U}$) rather than strictly spacelike in the single-interval sense of flat Minkowski space. The framework's DAG captures this via antichain compatibility: outside-horizon events are antichain-compatible cyclically many times, inside-horizon events not at all, at-horizon events exactly once.
 
-**Proposition 4.2 (The horizon shell has gauge boson properties).** *The entities at the horizon have:*
+## Step 4: Kinematic Properties of the Null Shell
 
-1. *Null worldlines (Proposition 3.1) — massless* ✓
-2. *Location at the observer's boundary $\mathcal{B}$ — where Type III interactions are mediated* ✓
-3. *Permanence (Proposition 3.2) — always present* ✓
+**Proposition 4.1 (The horizon shell's necessary kinematic properties).** *Every A–B relational carrier at the horizon shell exhibits:*
 
-*These are the defining properties of massless gauge bosons in the framework: massless carriers of inter-observer interactions, located at the self/non-self boundary.*
+1. *Null worldline character (Proposition 2.2) — **massless***
+2. *Location on A's boundary $\mathcal{B}_A$ (Definition 2.0) — **boundary-mediating***
+3. *Permanence (Proposition 3.2) — **always present***
 
-**Remark (What this does not yet establish).** This derivation identifies the horizon shell as having gauge boson *properties* (null, boundary-mediating, permanent). It does not yet derive the specific gauge *group* (U(1), SU(2), SU(3)) of the horizon modes, nor their spin or statistics. These would require connecting the horizon's gauge structure to the bootstrap's Cayley-Dickson tower ([Bootstrap Division Algebras](/derivations/interactions/bootstrap-division-algebras)), which is an open question.
+*These are the defining kinematic properties of massless, boundary-mediating, persistent relational structure in the framework.*
+
+**Remark (Necessary but not sufficient for gauge-boson identification).** The three properties above are shared by gauge bosons, gravitons, and any massless field mediating boundary interactions. Null worldline + boundary location + permanence does *not* uniquely pick out gauge bosons — it picks out any massless boundary-mediating mode. The further identification of horizon shell modes with specific gauge bosons (U(1), SU(2), SU(3)) requires:
+
+- Derivation of spin-1 (gauge-vector character) from horizon-shell structure
+- Connection to the bootstrap's Cayley-Dickson tower ([Bootstrap Division Algebras](/derivations/interactions/bootstrap-division-algebras))
+- Matching the specific representation content of the Standard Model
+
+These are deferred to Open Gap 1. The present derivation establishes that the horizon shell *carries* massless boundary modes — the identification of those modes with specific gauge bosons is an open extension, not a result.
+
+**Remark (What the shell excludes).** The null shell is not a shell of gravitons, fermions, or other massless objects in general — it is the shell of *A–B relational carriers*, which are Type III boundary relations by construction (Definition 2.0). Gravitons (if present in the framework's geometry) may propagate in the bulk rather than live on the boundary shell; massless fermions are not boundary-mediating in the same relational sense. The type distinction is given by the object's role in the observer structure, not by its kinematics alone.
 
 ## Step 5: The Holographic Connection
 
-**Proposition 5.1 (The holographic bound counts gauge modes at the horizon).** *The [holographic entropy bound](/derivations/holography/area-scaling) states that the number of independent degrees of freedom on a boundary surface of area $A$ is at most $A/(4\ell_P^2)$. By Proposition 3.1, the boundary surface is a shell of null entities with gauge boson properties. The degrees of freedom being counted are the gauge boson modes at the horizon shell.*
+**Proposition 5.1 (The holographic bound counts horizon shell modes).** *The [holographic entropy bound](/derivations/holography/area-scaling) states that the number of independent degrees of freedom on a boundary surface of area $A$ is at most $A/(4\ell_P^2)$. By Propositions 3.1 and 4.1, this boundary is a shell of null A–B relational carriers with massless, boundary-mediating, persistent kinematic character. The bound counts the number of independent such carriers at the horizon.*
 
-*Argument.* The holographic bound counts the maximum number of independent states on the boundary. By Proposition 4.2, the boundary entities are gauge boson-like (null, boundary-mediating). Therefore the independent states counted by the bound are the independent gauge boson configurations at the horizon. The area-proportionality of the bound reflects the area-proportionality of the gauge mode count on a null surface. $\square$
+*Argument.* The holographic bound counts maximal independent states on A's boundary. By construction, the only persistent boundary degrees of freedom are the null relational carriers on the horizon shell (other boundary structures — internal coherence invariants, self-self Type I/II relations — do not occupy the horizon shell). The area-proportionality of the bound reflects the area-proportionality of independent A–B relational carriers, one per distant observer B on the horizon sphere. $\square$
 
-**Remark (Three sectors unified).** This gives a triangular connection between three previously separate sectors:
+**Remark (Quantitative mode counting is open).** Proposition 5.1 identifies what the bound counts but does not independently compute the count and match $A/(4\ell_P^2)$. A quantitative match would require counting independent A–B relational carriers as a function of horizon area, using the level-indexed bootstrap structure. This is Open Gap 3.
 
-1. **Holography** (area-scaling): the bound counts degrees of freedom on the boundary area
-2. **Gauge structure** (electromagnetism, weak, color): gauge bosons mediate interactions at the boundary
-3. **Cyclic cosmology** (exact closure, covering property): the covering property identifies the horizon as a null shell
+**Remark (Three-sector unification).** The derivation links three separately-developed sectors:
 
-The holographic bound is not an independent postulate about information capacity — it is a count of the gauge structure at the observer's horizon, derived from the null transition at the covering boundary.
+1. **Holography** (area-scaling): the bound counts boundary degrees of freedom.
+2. **Relational structure** (Type III interactions): inter-observer relations at $\mathcal{B}$ are the objects counted.
+3. **Cyclic cosmology** (exact closure): finite $T_\mathcal{U}$ produces the tilt-saturation that makes the horizon a null transition.
+
+The holographic bound is reframed not as an independent postulate about information capacity, but as the mode count of null inter-observer relational carriers at A's boundary, derived from DAG-level antichain boundary structure plus cyclic closure.
 
 ## Rigor Assessment
 
-**Structurally grounded:**
-- Proposition 1.1 (covering): follows from exact cyclic closure + temporal completeness + spatial separation (all from existing rigorous or semi-formal derivations)
-- Proposition 3.2 (permanence): follows directly from Axiom 2
+**Structurally grounded (follow from existing rigorous or semi-formal results):**
 
-**Grounded in known results:**
-- Proposition 3.1 (null transition): consistent with GR's null horizon structure
-- Proposition 5.1 (holographic connection): consistent with the standard interpretation of the holographic bound
+- Proposition 1.1 (covering): exact cyclic closure + temporal completeness + 3D observer count scaling.
+- Proposition 2.1 (three regimes): direct comparison of tilt range to cyclic period.
+- Proposition 3.2 (permanence): Axiom 2 directly.
 
-**Semi-formal (structural argument, not yet fully rigorous):**
-- Proposition 2.2 (null identification): the zero-proper-time argument is clean but the precise connection between "single loop closure spanning all time" and "null worldline" needs the full loop-closure formalism applied to non-observer entities
-- Proposition 4.2 (gauge identification): identifies gauge boson *properties* but not the specific gauge group or representation content
+**Semi-formal (structural argument, but relies on implicit continuum-limit step):**
+
+- Proposition 2.2 (null character via antichain boundary): the DAG-level argument "marginal antichain compatibility = causal-cone tangency = null" is clean at the discrete level. The step to a null hypersurface in the continuum limit relies on the framework's emergent-geometry layer (Geometric Substrate, Observer Loop Viability), which is itself semi-formal. Formalizing the continuum limit rigorously is deferred.
+- Proposition 5.1 (holographic count): identifies the object counted but not the count itself; quantitative match to $A/(4\ell_P^2)$ is Open Gap 3.
+
+**Consistency-only (agreement, not derivation):**
+
+- The null character of the horizon is a standard GR result (de Sitter horizon generators are null). Proposition 2.2 derives it independently via antichain structure; agreement is a consistency check, not an import.
 
 ## Open Gaps
 
-1. **Gauge group at the horizon.** The horizon shell has gauge boson properties (null, boundary-mediating), but the specific gauge group is not derived. Does the horizon carry U(1) × SU(2) × SU(3) structure from the bootstrap's Cayley-Dickson tower? Or is the horizon's gauge structure simpler/different? Connecting to the [Knot-Theoretic Bootstrap](/derivations/foundation/knot-theoretic-bootstrap) (which identifies specific Chern-Simons levels at each gauge group) might resolve this. *Difficulty: HARD.*
+1. **Gauge-group and spin-1 identification.** The shell has the necessary kinematic properties of gauge bosons (null, boundary-mediating, permanent) but not sufficient. Spin-1 is not derived from horizon structure, and the specific gauge group (U(1) × SU(2) × SU(3)) is not tied to the shell. Connecting to the [Knot-Theoretic Bootstrap](/derivations/foundation/knot-theoretic-bootstrap) and the Cayley-Dickson tower in [Bootstrap Division Algebras](/derivations/interactions/bootstrap-division-algebras) may supply the missing content, but the connection is not yet drawn. *Difficulty: HARD.*
 
-2. **Spin and statistics.** The null identification gives masslessness but does not directly derive spin-1 (the defining spin of gauge bosons). The [Spin-Statistics](/derivations/particles/spin-statistics) derivation establishes the spin-statistics connection from the axioms, but applying it to horizon entities (which may not be observers in the full Axiom 2 sense) is an open step. *Difficulty: MODERATE.*
+2. **Continuum-limit formalization of antichain-boundary → null-hypersurface.** Proposition 2.2's discrete DAG argument "marginal antichain compatibility = null-cone tangency" is clean but informal. A rigorous continuum limit showing that $\partial J^\pm$ on the DAG becomes a null hypersurface under the emergent-metric correspondence would tighten this step. Likely requires the covering-order topology on antichains, which the framework does not yet formalize. *Difficulty: MODERATE.*
 
-3. **Quantitative mode counting.** Proposition 5.1 identifies the holographic bound as counting gauge modes, but does not compute the mode count independently (from the gauge structure) and compare to $A/(4\ell_P^2)$. A quantitative match would make the connection rigorous. *Difficulty: HARD.*
+3. **Quantitative mode counting.** Proposition 5.1 identifies the holographic bound as counting A–B relational carriers but does not independently compute the count. A match between the carrier count (derived from bootstrap structure) and $A/(4\ell_P^2)$ would make the connection quantitative. *Difficulty: HARD.*
 
-4. **Gibbons-Hawking connection.** The Gibbons-Hawking effect (thermal radiation from de Sitter horizons) should follow from the permanent gauge shell: if the horizon is a shell of gauge boson modes, the thermal spectrum is the mode occupation at the Gibbons-Hawking temperature $T_{GH} = H/(2\pi)$. Deriving this from the framework's horizon-gauge identification would connect to the existing [Hawking Radiation](/derivations/holography/hawking-radiation) derivation. *Difficulty: MODERATE.*
+4. **Distinguishing the shell from graviton / bulk-massless content.** The remark after Proposition 4.1 asserts that the shell carries only Type III relational carriers, not gravitons or bulk massless fields. This type distinction needs to be proved from the framework's structural definitions, not just asserted. *Difficulty: MODERATE.*
+
+5. **Gibbons–Hawking connection.** The Gibbons–Hawking thermal spectrum from de Sitter horizons should follow from the permanent null shell: if the horizon carries a permanent population of null relational carriers, the thermal spectrum is the mode occupation at $T_{GH} = H/(2\pi)$. Deriving this from the shell structure would tie back to the existing [Hawking Radiation](/derivations/holography/hawking-radiation) derivation. *Difficulty: MODERATE.*
