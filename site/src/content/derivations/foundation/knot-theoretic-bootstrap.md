@@ -1,12 +1,12 @@
 ---
 title: "Knot-Theoretic Bootstrap"
 status: "stub"
-dependsOn: ["interactions/bootstrap", "interactions/bootstrap-division-algebras", "foundation/coherence-lagrangian", "foundation/continuous-discrete-duality", "gauge/electromagnetism", "gauge/strong-cp"]
+dependsOn: ["interactions/bootstrap", "interactions/bootstrap-division-algebras", "foundation/coherence-lagrangian", "foundation/continuous-discrete-duality", "gauge/electromagnetism", "gauge/strong-cp", "cosmology/coupling-constants"]
 enablesDerivation: []
 tags: ["foundation", "topology", "gauge", "bootstrap"]
-summary: "Observer loops as framed links in a spatial manifold, with relational coherence identified as linking number. The Cayley-Dickson gauge chain maps to a finite sequence of Chern-Simons theories. The bootstrap fixed-point equation becomes self-consistent surgery: the link that produces the manifold is the link the manifold contains."
+summary: "Observer loops as framed links in a spatial manifold, with relational coherence identified as linking number. The Cayley-Dickson gauge chain maps to a finite sequence of Chern-Simons theories with level ratios k_1 : k_2 : k_3 = 4 : 2 : 1. The bootstrap fixed-point equation becomes self-consistent surgery: the link that produces the manifold is the link the manifold contains."
 rigorLevel: "semi-formal"
-lastUpdated: 2026-04-15
+lastUpdated: 2026-04-16
 ---
 
 ## Overview
@@ -31,11 +31,13 @@ This derivation explores a topological route to the bootstrap fixed-point conjec
 
 ## Step 1: Observer Loops as Framed Links
 
+**Preliminary disclaimer (spatial embedding).** The framework's observer loops are primarily abstract $U(1)$ phase loops on state space, not embedded curves in a spatial manifold. The spatial-embedding picture used throughout Step 1 — and downstream — presupposes the embedding prescription of Open Gap 3 (where each observer is assigned a location $\gamma_\mathcal{O} \subset M$ consistent with the self-referential geometry produced by the network's own surgery structure). All statements in this step are conditional on that prescription being formalized.
+
 **Definition 1.1.** A **framed link** in a 3-manifold $M$ is a finite collection of disjoint embedded circles $L = \gamma_1 \cup \cdots \cup \gamma_n$, each equipped with a framing (a choice of non-zero normal vector field along the curve, or equivalently an integer — the framing number).
 
-**Observation 1.2 (Observers are loops).** Every observer $\mathcal{O} = (\Sigma, I, \mathcal{B})$ has a $U(1)$ phase loop from [Loop Closure](/derivations/axioms/loop-closure). The minimal observer has $\Sigma \cong S^1$. In a spatial manifold, this loop is an embedded circle $\gamma_\mathcal{O} \subset M$.
+**Observation 1.2 (Observers are loops).** Every observer $\mathcal{O} = (\Sigma, I, \mathcal{B})$ has a $U(1)$ phase loop from [Loop Closure](/derivations/axioms/loop-closure). The minimal observer has $\Sigma \cong S^1$. Under the embedding prescription of Open Gap 3, this abstract phase loop is realized as an embedded circle $\gamma_\mathcal{O} \subset M$ in the spatial manifold.
 
-**Observation 1.3 (Natural framing from loop closure).** The $U(1)$ phase of the observer provides a natural framing: the phase direction is tangent to the loop, and the normal direction is determined by the loop's embedding in the spatial geometry produced by the observer network. The framing number is the winding number of the phase relative to a reference section — an integer by loop closure (Axiom 3).
+**Observation 1.3 (Natural framing from loop closure).** The $U(1)$ phase of the observer provides a natural framing, but the tangent-winding of the phase does not directly give a normal-bundle framing — framing requires a normal vector field along the loop, not a tangent winding. The identification proceeds via the normal bundle of $\gamma_\mathcal{O}$ in $M$: for an oriented curve embedded in an orientable 3-manifold, the normal bundle has rank 2 and admits an almost-complex structure (equivalent to an orientation choice), which rotates the tangent direction by $90°$ to produce a normal section. The phase winding (an integer by loop closure, Axiom 3) then induces an integer normal-framing via this almost-complex rotation. The specific almost-complex structure needed — and its consistency with the surgery-produced spatial geometry — is deferred to a follow-up investigation.
 
 **Observation 1.4 (Relational invariants as linking).** When two observers $\mathcal{O}_1$ and $\mathcal{O}_2$ interact via a Type III interaction, generating a relational invariant $I_{12}$, their loops become topologically linked. The linking is irreducible: it cannot be undone by smooth deformation of either loop in the ambient manifold, matching the irreducibility of the relational invariant ([Relational Invariants](/derivations/interactions/relational-invariants) Theorem 4.1).
 
@@ -49,11 +51,16 @@ $$\boxed{\mathcal{C}(\mathcal{O}_1 : \mathcal{O}_2) = |\text{Lk}(\gamma_1, \gamm
 
 **(ii) Each intersection is a boundary crossing.** In the geometric picture, the Seifert surface $\Sigma$ plays the role of the boundary of $\mathcal{O}_1$'s coherence domain — the self/non-self divide for observer 1. Each point where $\gamma_2$ pierces $\Sigma$ is a relational invariant crossing this boundary. By [Area Scaling](/derivations/holography/area-scaling) Proposition 1.2 (boundary mediation), all shared information between $\mathcal{O}_1$ and $\mathcal{O}_2$ is mediated by such crossings. By [Area Scaling](/derivations/holography/area-scaling) Proposition 3.1, each crossing contributes one independent bit of relational information. By [Bootstrap](/derivations/interactions/bootstrap) Corollary 2.3 and [Coherence Conservation](/derivations/axioms/coherence-conservation) Corollary 5.5a, each bit equals one $\hbar\omega_0$ unit.
 
-**(iii) The stable crossing count is $|\text{Lk}|$.** The physical number of crossings in the stable (ground-state) configuration equals the topological minimum $|\text{Lk}|$, by coherence conservation:
+**(iii) The stable crossing count is $|\text{Lk}|$.** The physical number of crossings in the stable (ground-state) configuration equals the topological minimum $|\text{Lk}|$, by coherence conservation. Two explicit assumptions are required:
 
-- **No spontaneous pair creation**: creating a cancelling pair of crossings (one positive, one negative sign) would create two new relational invariants from nothing — violating Axiom 1 (coherence cannot be created).
-- **No pair annihilation**: destroying an existing cancelling pair would destroy two relational invariants — also violating Axiom 1 (coherence cannot be destroyed).
-- **Therefore**: the crossing count is a topological invariant of the configuration, equal to the minimum geometric intersection number $|\text{Lk}(\gamma_1, \gamma_2)|$. At the topological minimum, all crossings have the same sign (all positive or all negative), so unsigned count = $|\text{signed count}| = |\text{Lk}|$.
+- **Assumption A (Sign-independent coherence contribution).** Each crossing contributes $+\hbar\omega_0$ to coherence regardless of its topological sign. Coherence is a non-negative measure (C2 of [Coherence Conservation](/derivations/axioms/coherence-conservation)); the $\pm$ sign of a crossing is a topological label (orientation of the crossing relative to the Seifert surface), not a coherence sign. A pair of cancelling crossings therefore carries $2\hbar\omega_0$ of coherence, not zero.
+- **Assumption B (Isotopy preserves coherence; ground state minimizes count).** Smooth isotopy of the embedded link is a coherence-preserving dynamics: ambient isotopies do not create or destroy relational invariants. The ground state of the two-loop system is the configuration that minimizes the unsigned crossing count subject to the topological linking invariant.
+
+Given these:
+
+- **No spontaneous pair creation**: creating a cancelling pair of crossings from nothing would add $2\hbar\omega_0$ of coherence (Assumption A), violating Axiom 1 (coherence cannot be created).
+- **No pair annihilation**: destroying an existing cancelling pair would remove $2\hbar\omega_0$ of coherence (Assumption A), also violating Axiom 1.
+- **Ground-state minimization**: by Assumption B, the stable configuration realizes the topological minimum unsigned crossing count, which is $|\text{Lk}(\gamma_1, \gamma_2)|$ (standard knot-theory result: cancelling-sign pairs can always be isotoped away to reach the minimum). At the minimum, all crossings have the same sign, so unsigned count = $|\text{signed count}| = |\text{Lk}|$.
 
 Combining (i)–(iii): $\mathcal{C}(\mathcal{O}_1 : \mathcal{O}_2) = |\text{Lk}| \times \hbar\omega_0$. $\square$
 
@@ -89,35 +96,37 @@ is the natural dictionary between the framework's observer-loop language and the
 
 **Observation 2.3 (CS level and integer quantization).** In Chern-Simons theory, the level $k$ is a positive integer required for gauge invariance under large gauge transformations. In the framework, coherence is quantized in $\hbar\omega_0$ units ([Bootstrap](/derivations/interactions/bootstrap) Corollary 2.3). The CS level $k$ and the coherence integer count $N^{(n)}$ are both integer-valued parameters that control the "resolution" of the theory at each level.
 
-**Proposition 2.4 (CS level = division algebra dimension).** *The Chern-Simons level at each bootstrap level equals the real dimension of the corresponding division algebra:*
+**Proposition 2.4 (CS level ratios from the division algebra chain).** *The Chern-Simons level at each bootstrap level is inversely proportional to the real dimension of the corresponding division algebra:*
 
-$$k_G = \dim_\mathbb{R}\,\mathbb{A}_G$$
+$$k_1 : k_2 : k_3 = \frac{1}{\dim_\mathbb{R}\,\mathbb{C}} : \frac{1}{\dim_\mathbb{R}\,\mathbb{H}} : \frac{1}{\dim_\mathbb{R}\,\mathbb{O}} = \frac{1}{2} : \frac{1}{4} : \frac{1}{8} = 4 : 2 : 1$$
 
-| Bootstrap level | Division algebra $\mathbb{A}$ | $\dim_\mathbb{R}$ | Gauge group | **CS level $k$** |
+*Proof.* The standard relationship between a Yang-Mills coupling $\alpha = g^2/(4\pi)$ and the Chern-Simons level is $k = 1/\alpha$ (in conventions where the YM action is $(1/4g^2)\int\text{tr}(F \wedge *F)$). The [Coupling Constants](/derivations/cosmology/coupling-constants) derivation (Structural Postulate S1) constrains the gauge coupling ratios at the algebraic crystallization scale:
+
+$$\alpha_1 : \alpha_2 : \alpha_3 = \dim_\mathbb{R}\,\mathbb{C} : \dim_\mathbb{R}\,\mathbb{H} : \dim_\mathbb{R}\,\mathbb{O} = 1 : 2 : 4$$
+
+(larger algebras → stronger couplings, matching the empirical ordering $\alpha_3 > \alpha_2 > \alpha_Y$). Applying $k = 1/\alpha$ at each level inverts the ratios:
+
+$$k_1 : k_2 : k_3 = \frac{1}{\dim_\mathbb{R}\,\mathbb{A}_1} : \frac{1}{\dim_\mathbb{R}\,\mathbb{A}_2} : \frac{1}{\dim_\mathbb{R}\,\mathbb{A}_3} = 4 : 2 : 1. \quad\square$$
+
+**Status.** The CS-level *ratios* $k_1 : k_2 : k_3 = 4 : 2 : 1$ follow from S1 and the standard $k = 1/\alpha$ identification. The *absolute* integer values are not fixed by S1 alone — any integer multiple $(k_1, k_2, k_3) = (4m, 2m, m)$ for $m \in \mathbb{Z}_{>0}$ satisfies the ratio constraint. Fixing the absolute normalization would require an independent principle such as the Verlinde / holographic-bound correspondence (Open Question 2.6) or a direct derivation of the bootstrap absolute coupling.
+
+| Bootstrap level | Division algebra $\mathbb{A}$ | $\dim_\mathbb{R}$ | Gauge group | CS level $k$ (for normalization $m$) |
 |---|---|---|---|---|
-| 1 | $\mathbb{C}$ | 2 | $U(1)$ | **2** |
-| 2 | $\mathbb{H}$ | 4 | $SU(2)$ | **4** |
-| 3 | $\mathbb{O}$ | 8 | $SU(3)$ | **8** |
+| 1 | $\mathbb{C}$ | 2 | $U(1)$ | $4m$ |
+| 2 | $\mathbb{H}$ | 4 | $SU(2)$ | $2m$ |
+| 3 | $\mathbb{O}$ | 8 | $SU(3)$ | $m$ |
 
-*Proof.* The standard relationship between a Yang-Mills coupling $\alpha = g^2/(4\pi)$ and the Chern-Simons level is $k = 1/\alpha$ (in conventions where the YM action is $(1/4g^2)\int\text{tr}(F \wedge *F)$). The [Coupling Constants](/derivations/cosmology/coupling-constants) derivation (Structural Postulate S1) constrains the gauge couplings at the algebraic crystallization scale:
+The smallest positive integer assignment is $m = 1$, giving $(k_1, k_2, k_3) = (4, 2, 1)$. Downstream propositions reference this smallest case for concreteness; all such statements are conditional on this absolute-normalization choice.
 
-$$\alpha_G(\Lambda) = \frac{1}{\dim_\mathbb{R}\,\mathbb{A}_G}$$
+**Proposition 2.5 (Finite representation content at each level).** *At any CS level $k$, $SU(N)$ Chern-Simons theory has a finite set of integrable representations determined by the Verlinde formula. Conditional on the smallest integer assignment $(k_1, k_2, k_3) = (4, 2, 1)$ from Proposition 2.4:*
 
-The ratio part ($\alpha_1 : \alpha_2 : \alpha_3 = 1/2 : 1/4 : 1/8 = 4 : 2 : 1$) is a structural consequence of the Cayley-Dickson tower. The absolute normalization $\alpha_3 = 1/\dim_\mathbb{R}\,\mathbb{O} = 1/8$ is suggestive: it gives $\alpha_s \approx 0.125$ at the SU(3) crystallization scale, compared to the measured $\alpha_s(M_Z) = 0.118 \pm 0.001$ (6% agreement, noted as suggestive but not independently derived in [Coupling Constants](/derivations/cosmology/coupling-constants) Proposition 6.1).
+- *$U(1)$ at $k = 4$: charge lattice with periodicity 4 — 4 distinct charge classes*
+- *$SU(2)$ at $k = 2$: exactly $k + 1 = 3$ integrable representations (spins $0, \frac{1}{2}, 1$)*
+- *$SU(3)$ at $k = 1$: exactly $\binom{k+2}{2} = 3$ integrable representations (trivial, fundamental, antifundamental)*
 
-Applying $k = 1/\alpha$ at each level: $k_G = \dim_\mathbb{R}\,\mathbb{A}_G$. $\square$
+*The finiteness of the representation content at each level is a topological constraint from the CS structure, matching the framework's expectation that each bootstrap level has finite degrees of freedom (from the holographic bound, [Area Scaling](/derivations/holography/area-scaling) Proposition 6.2 of [Bootstrap](/derivations/interactions/bootstrap)). For larger normalizations $(k_1, k_2, k_3) = (4m, 2m, m)$ the rep counts grow accordingly.*
 
-**Status.** The CS-level ratios $k_1 : k_2 : k_3 = 2 : 4 : 8$ follow from the coupling ratio constraint (Structural Postulate S1 of [Coupling Constants](/derivations/cosmology/coupling-constants)), which is a genuine structural consequence of the Cayley-Dickson tower. The specific integer values (2, 4, 8) additionally require the absolute normalization $\alpha_G = 1/\dim\,\mathbb{A}_G$, which is suggestive but not derived.
-
-**Proposition 2.5 (Finite representation content at each level).** *At CS level $k$, $SU(N)$ Chern-Simons theory has a finite set of integrable representations determined by the Verlinde formula:*
-
-- *$U(1)$ at $k = 2$: charge lattice with periodicity 2*
-- *$SU(2)$ at $k = 4$: exactly $k + 1 = 5$ integrable representations (spins $0, \frac{1}{2}, 1, \frac{3}{2}, 2$)*
-- *$SU(3)$ at $k = 8$: exactly $\binom{k+2}{2} = 45$ integrable representations*
-
-*The finiteness of the representation content at each level is a topological constraint from the CS structure, matching the framework's expectation that each bootstrap level has finite degrees of freedom (from the holographic bound, [Area Scaling](/derivations/holography/area-scaling) Proposition 6.2 of [Bootstrap](/derivations/interactions/bootstrap)).*
-
-**Open question 2.6 (Verlinde formula vs. holographic bound).** For $SU(N)$ CS at level $k$ on a surface of genus $g$, the Verlinde formula gives the dimension of the Hilbert space. The framework's holographic bound gives $A/(4\ell_P^2)$ as the maximum number of independent states on a boundary surface. If these are the same finite-dimensionality condition, then the CS level is fixed by the holographic bound — giving a direct link between the topological (CS) and gravitational (area-scaling) sectors. For genus 1 (torus) with $SU(2)$ at $k = 4$: Verlinde dimension = 5, so $A/(4\ell_P^2) = 5$, giving $A = 20\,\ell_P^2$ as the minimum torus area supporting $SU(2)$ gauge structure at this CS level. Whether this has physical significance in the framework is an open question.
+**Open question 2.6 (Verlinde formula vs. holographic bound).** For $SU(N)$ CS at level $k$ on a surface of genus $g$, the Verlinde formula gives the dimension of the Hilbert space. The framework's holographic bound gives $A/(4\ell_P^2)$ as the maximum number of independent states on a boundary surface. If these are the same finite-dimensionality condition, then the CS level is fixed by the holographic bound — giving both a direct link between the topological (CS) and gravitational (area-scaling) sectors *and* the missing absolute-normalization principle for Proposition 2.4. For genus 1 (torus) with $SU(2)$ at $k = 2$ (smallest assignment): Verlinde dimension = 3, so $A/(4\ell_P^2) = 3$, giving $A = 12\,\ell_P^2$ as the minimum torus area supporting $SU(2)$ gauge structure. Whether this correspondence holds — and whether the smallest integer assignment is the physically correct one — is an open question tracked as a forward direction.
 
 ## Step 3: The Coherence Lagrangian and the Chern-Simons Action
 
@@ -127,11 +136,11 @@ $$\nu = \frac{1}{8\pi^2}\int_{S^3} \text{CS}(A), \qquad \text{CS}(A) = \text{tr}
 
 The framework constrains this term (octonionic non-associativity forces $\theta = 0$), but the Chern-Simons structure is present in the formalism.
 
-**Proposition 3.2 (4D Yang-Mills contains 3D Chern-Simons as its topological sector).** The gauge sector of the [Coherence Lagrangian](/derivations/foundation/coherence-lagrangian) is:
+**Proposition 3.2 (Topological sector of canonical 4D Yang-Mills is labeled by the spatial Chern-Simons functional).** The gauge sector of the [Coherence Lagrangian](/derivations/foundation/coherence-lagrangian) is:
 
 $$\mathcal{L}_{\text{gauge}} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu}$$
 
-In the canonical (Hamiltonian) formulation on a spacetime $\mathbb{R} \times M$ where $M$ is a spatial 3-manifold, the Yang-Mills theory decomposes into:
+In the canonical (Hamiltonian) formulation on a spacetime $\mathbb{R} \times M$ where $M$ is a spatial 3-manifold, gauge-orbit winding sectors are labeled by the Chern-Simons functional of the spatial connection $A_i$. The full 4D Yang-Mills theory decomposes into:
 
 - **Dynamical content**: propagating gauge bosons, governed by the full 4D kinetic term. This is the part responsible for forces between particles.
 - **Topological content**: the classification of gauge orbits on $M$ by their winding number, governed by the Chern-Simons functional of the spatial connection $A_i$:
@@ -142,19 +151,25 @@ Under a large gauge transformation with winding number 1, $W_{\text{CS}}$ shifts
 
 **Proposition 3.3 ($\theta = 0$ makes the topological sector maximally accessible).** The [Strong CP](/derivations/gauge/strong-cp) derivation forces $\theta = 0$ exactly (octonionic non-associativity obstructs non-trivial winding). At $\theta = 0$, the gauge vacuum is an equal-weight superposition over all topological sectors: $|0\rangle = \sum_n |n\rangle$. No sector is suppressed by a phase factor. The topological structure of the gauge vacuum — including the linking invariants of Wilson loops computed by CS theory — is maximally "visible" rather than modulated by an arbitrary phase.
 
-**Proposition 3.4 (Wilson-loop linking from the topological sector).** In the topological sector of the coherence Lagrangian's gauge vacuum, the expectation value of two Wilson loops is a knot/link invariant computed by Chern-Simons theory:
+**Proposition 3.4 (Wilson-loop linking from the topological sector).** In the topological sector of the coherence Lagrangian's gauge vacuum, the expectation value of two Wilson loops is a knot/link invariant computed by Chern-Simons theory. At CS level $k$, $SU(N)$ CS gives:
 
-- For $U(1)$ at $k = 2$ (electromagnetism): $\langle W_{q_1}(\gamma_1)\, W_{q_2}(\gamma_2)\rangle_{\text{top}} \propto e^{2\pi i\, q_1 q_2\, \text{Lk}(\gamma_1, \gamma_2)/2}$, depending only on the linking number. The $k = 2$ periodicity of the phase means linking numbers are detected modulo 2.
-- For $SU(2)$ at $k = 4$ (weak interaction): the expectation value is the Jones polynomial evaluated at $q = e^{2\pi i/6} = e^{i\pi/3}$ — a richer invariant detecting crossing structure beyond linking number.
-- For $SU(3)$ at $k = 8$ (color force): the HOMFLYPT polynomial evaluated at a specific root of unity, detecting the full color-linking structure of the observer network.
+- **$U(1)$ at level $k$**: $\langle W_{q_1}(\gamma_1)\, W_{q_2}(\gamma_2)\rangle_{\text{top}} \propto \exp\!\left(2\pi i\, q_1 q_2\, \text{Lk}(\gamma_1, \gamma_2)/k\right)$, depending only on the linking number modulo $k$.
+- **$SU(2)$ at level $k$**: the Jones polynomial evaluated at $q = e^{2\pi i/(k+2)}$.
+- **$SU(3)$ at level $k$**: the HOMFLYPT polynomial evaluated at a specific root of unity determined by $k$.
 
-The CS levels $k = 2, 4, 8$ are determined by Proposition 2.4 ($k = \dim\,\mathbb{A}$).
+Conditional on the smallest integer assignment $(k_1, k_2, k_3) = (4, 2, 1)$ from Proposition 2.4:
 
-*This is a known mathematical result (Witten 1988) applied to the specific Lagrangian the framework derives. It is not a new conjecture — it is the standard canonical structure of 4D Yang-Mills theory, specialized to the coherence Lagrangian.*
+- **U(1) / electromagnetism at $k = 4$**: linking numbers detected modulo 4; the charge lattice has 4 classes.
+- **SU(2) / weak at $k = 2$**: Jones polynomial at $q = e^{2\pi i/4} = i$ — the fourth root of unity, giving the Kauffman bracket at $A = e^{i\pi/4}$.
+- **SU(3) / color at $k = 1$**: HOMFLYPT at the root of unity corresponding to minimal SU(3) CS, which at $k = 1$ has only three integrable reps (trivial, fundamental, antifundamental).
 
-**Observation 3.5 (The coherence measure has a topological-gauge component).** The full coherence measure $\mathcal{C}$ receives contributions from all sectors of the coherence Lagrangian: matter (Fisher kinetic term), gauge ($F^2$ term), and gravity (Einstein-Hilbert $R$ term). The topological component of the gauge sector — governed by the CS functional on spatial slices — provides the linking-invariant content. This is the component where Conjecture 1.5 (relational coherence = linking number $\times\,\hbar\omega_0$) would live. The dynamical component (propagating gauge bosons) and the other sectors (matter, gravity) contribute additional, non-topological coherence that is distinct from the linking structure.
+For larger integer assignments $(4m, 2m, m)$ the specific roots of unity and polynomial evaluations scale with $m$.
 
-**Observation 3.6 (Specific knot invariants at each level).** With the CS levels from Proposition 2.4 ($k = 2, 4, 8$), the specific knot invariants computed at each gauge sector are determined. The Jones polynomial at $q = e^{i\pi/3}$ (from $SU(2)$ at $k = 4$) has known mathematical properties — it is related to the representation theory of the quantum group $U_q(\mathfrak{su}(2))$ at a 6th root of unity, where the representation category is modular and has exactly 5 simple objects. If this modular category is the correct description of the observer network's topological content at bootstrap level 2, it provides a concrete finite algebraic structure governing the weak-sector linking of observer loops.
+*The underlying relationship between CS theory and knot invariants is a known mathematical result (Witten 1988) applied to the Lagrangian the framework derives. What is conditional — and what requires the absolute-normalization principle of Open Question 2.6 — is the specific integer level $m$ at which the invariants are evaluated.*
+
+**Observation 3.5 (The coherence measure has a topological-gauge component).** The full coherence measure $\mathcal{C}$ receives contributions from all sectors of the coherence Lagrangian: matter (Fisher kinetic term), gauge ($F^2$ term), and gravity (Einstein-Hilbert $R$ term). The topological component of the gauge sector — governed by the CS functional on spatial slices — provides the linking-invariant content. This is the component where Proposition 1.5 (relational coherence = linking number $\times\,\hbar\omega_0$) would live. The dynamical component (propagating gauge bosons) and the other sectors (matter, gravity) contribute additional, non-topological coherence that is distinct from the linking structure.
+
+**Observation 3.6 (Specific knot invariants at the smallest integer assignment).** Under Proposition 2.4's smallest integer assignment $(k_1, k_2, k_3) = (4, 2, 1)$, the Jones polynomial at $q = i$ (from $SU(2)$ at $k = 2$) has known mathematical properties — it is related to the representation theory of the quantum group $U_q(\mathfrak{su}(2))$ at a 4th root of unity (the Kauffman bracket variable $A = e^{i\pi/4}$), where the representation category is modular and has exactly 3 simple objects corresponding to spins $0, 1/2, 1$. If this modular category is the correct description of the observer network's topological content at bootstrap level 2, it provides a concrete finite algebraic structure governing the weak-sector linking of observer loops. Resolution of the absolute-normalization question (Open Question 2.6) would either confirm this assignment or redirect the specific invariants accordingly.
 
 ## Step 4: Surgery as the Geometry Functor
 
@@ -174,7 +189,7 @@ $$M_L \text{ contains } L \text{ as its observer network, and surgery on } L \te
 
 ## Step 5: The ER=EPR Bridge as Topological Tubes
 
-**Observation 5.1 (Wormhole throat as linking tube).** The [ER=EPR](/derivations/holography/er-epr) derivation establishes that the wormhole throat area between two entangled observers satisfies $A = 4\ell_P^2\,\mathcal{C}(I_{12})$, where $\mathcal{C}(I_{12})$ is the coherence content of the relational invariant. In the knot-theoretic picture, two linked loops have a tubular neighborhood of the linking region — a handle connecting the two loops' neighborhoods. The cross-sectional area of this tube scales with the linking number. With the identification of Conjecture 1.5 ($\mathcal{C} = \text{Lk} \cdot \hbar\omega_0$), the ER=EPR throat area becomes:
+**Observation 5.1 (Wormhole throat as linking tube).** The [ER=EPR](/derivations/holography/er-epr) derivation establishes that the wormhole throat area between two entangled observers satisfies $A = 4\ell_P^2\,\mathcal{C}(I_{12})$, where $\mathcal{C}(I_{12})$ is the coherence content of the relational invariant. In the knot-theoretic picture, two linked loops have a tubular neighborhood of the linking region — a handle connecting the two loops' neighborhoods. The cross-sectional area of this tube scales with the linking number. With the identification of Proposition 1.5 ($\mathcal{C} = \text{Lk} \cdot \hbar\omega_0$), the ER=EPR throat area becomes:
 
 $$A = 4\ell_P^2 \cdot \text{Lk}(\gamma_1, \gamma_2) \cdot \hbar\omega_0$$
 
@@ -193,17 +208,18 @@ This is geometrically natural: more linking = thicker tube = bigger wormhole thr
 - Proposition 3.3: θ = 0 (from [Strong CP](/derivations/gauge/strong-cp)) makes the topological sector maximally accessible
 - Proposition 3.4: Wilson-loop expectation values in the topological sector are knot/link invariants (standard CS-TQFT result), with specific CS levels from Proposition 2.4
 
-**Derived from the coupling ratio rule (rigorous given the ratios, suggestive given the absolute normalization):**
-- Proposition 2.4: CS level $k_G = \dim\,\mathbb{A}_G$ — the ratios $k_1 : k_2 : k_3 = 2 : 4 : 8$ follow from Structural Postulate S1 of [Coupling Constants](/derivations/cosmology/coupling-constants) (structural consequence of the Cayley-Dickson tower). The specific integer values additionally require $\alpha_G = 1/\dim\,\mathbb{A}_G$ (suggestive, 6% agreement with measured $\alpha_s$).
-- Proposition 2.5: Finite representation content at each level follows from the Verlinde formula applied at the CS levels from Proposition 2.4 (standard TQFT, no new conjectures)
+**Derived from the coupling ratio rule (rigorous for ratios; absolute integer levels conditional on Open Question 2.6):**
+- Proposition 2.4: CS level ratios $k_1 : k_2 : k_3 = 4 : 2 : 1$ follow from Structural Postulate S1 of [Coupling Constants](/derivations/cosmology/coupling-constants) (structural consequence of the Cayley-Dickson tower, with $\alpha_i \propto \dim \mathbb{A}_i$) and the standard $k = 1/\alpha$ identification. The absolute integer multiplier $m$ in $(k_1, k_2, k_3) = (4m, 2m, m)$ is not determined by S1 alone.
+- Proposition 2.5: Finite representation content at each level follows from the Verlinde formula applied at the CS levels from Proposition 2.4 (standard TQFT). Specific rep counts are conditional on the smallest integer assignment $m = 1$.
+- Proposition 3.4: Wilson-loop knot invariants at specific roots of unity (standard CS-TQFT result [Witten 1988]) — the specific root-of-unity evaluations are conditional on the smallest integer assignment.
 
 **Structurally suggestive (consistent with existing derivations, not yet derived):**
-- Observation 1.3: Natural framing from phase structure
+- Observation 1.3: Natural framing via the normal-bundle almost-complex structure (tangent→normal rotation)
 - Observation 1.4: Relational invariants as topological linking
 - Observation 3.5: The coherence measure decomposes into topological-gauge + dynamical + gravitational components
 
-**Proof sketch (grounded in existing derivations, one geometric identification remains):**
-- Proposition 1.5: Relational coherence = |Lk| × ℏω₀. The argument chains area-scaling boundary counting (Propositions 1.2 + 3.1), integer quantization (Corollary 2.3), and coherence conservation (Axiom 1, preventing creation/annihilation of crossing pairs) through the standard knot-theory fact that the linking number is the minimum geometric intersection number. The one remaining gap is the identification of the observer's coherence-domain boundary with a Seifert surface — a geometric interpretation that becomes a theorem once the loop-embedding picture (Open Gap 3) is formalized.
+**Proof sketch (grounded in existing derivations, two explicit assumptions, one geometric identification remains):**
+- Proposition 1.5: Relational coherence = |Lk| × ℏω₀. The argument chains area-scaling boundary counting (Propositions 1.2 + 3.1), integer quantization (Corollary 2.3), and coherence conservation (Axiom 1) through the standard knot-theory fact that the linking number is the minimum geometric intersection number. Two explicit assumptions (A: sign-independent coherence contribution; B: isotopy preserves coherence and the ground state minimizes crossing count) are stated in the proof. The one remaining gap is the identification of the observer's coherence-domain boundary with a Seifert surface — a geometric interpretation that becomes a theorem once the loop-embedding picture (Open Gap 3) is formalized.
 
 **Conjectural (no proof, requires new formal work):**
 - Conjecture 4.3: Geometry functor = Dehn surgery
@@ -211,13 +227,13 @@ This is geometrically natural: more linking = thicker tube = bigger wormhole thr
 
 ## Open Gaps
 
-1. **Absolute normalization of the CS levels.** Proposition 2.4 gives $k = \dim\,\mathbb{A}$ (i.e., $k = 2, 4, 8$), but the specific integer values require the absolute coupling normalization $\alpha_G = 1/\dim\,\mathbb{A}$ (not just the ratios). This normalization gives $\alpha_s \approx 0.125$ at the SU(3) crystallization scale vs. measured $\alpha_s(M_Z) = 0.118$ — suggestive (6%) but not derived. Deriving the absolute normalization from the axioms would make Proposition 2.4 fully rigorous.
+1. **Absolute normalization of the CS levels.** Proposition 2.4 gives only the *ratios* $k_1 : k_2 : k_3 = 4 : 2 : 1$. The absolute integer multiplier $m$ in $(k_1, k_2, k_3) = (4m, 2m, m)$ is not determined by S1 alone. Fixing $m$ would determine the specific rep counts in Proposition 2.5, the specific roots of unity in Proposition 3.4, and the concrete knot invariants throughout. Two plausible principles could fix $m$: (i) a Verlinde/holographic-bound correspondence (Open Question 2.6), or (ii) an independent bootstrap derivation of one absolute coupling (which would also close Open Gap 1 of [Coupling Constants](/derivations/cosmology/coupling-constants)).
 
-2. **Verlinde formula vs. holographic bound (Open Question 2.6).** At CS level $k$ with gauge group $SU(N)$, the Verlinde formula gives the Hilbert-space dimension on a genus-$g$ surface. The framework's holographic bound $A/(4\ell_P^2)$ gives a finite count of states on a boundary surface. If these are the same constraint, it would directly link the topological (CS) and gravitational (area-scaling) sectors. Checking this requires computing the Verlinde dimensions at $k = 2, 4, 8$ for physically relevant surfaces and comparing to the holographic bound evaluated on the same surfaces.
+2. **Verlinde formula vs. holographic bound (Open Question 2.6).** At CS level $k$ with gauge group $SU(N)$, the Verlinde formula gives the Hilbert-space dimension on a genus-$g$ surface. The framework's holographic bound $A/(4\ell_P^2)$ gives a finite count of states on a boundary surface. If these are the same constraint, it would directly link the topological (CS) and gravitational (area-scaling) sectors *and* fix the absolute integer multiplier $m$ in Proposition 2.4. Checking this requires computing the Verlinde dimensions at candidate $(k_1, k_2, k_3) = (4m, 2m, m)$ for physically relevant surfaces and comparing to the holographic bound evaluated on the same surfaces.
 
 3. **Embedding of observer loops.** The framework's observer loops are currently abstract $U(1)$ phases, not embedded curves in a spatial manifold. Making the knot-theoretic program concrete requires a canonical embedding prescription — determining WHERE in the spatial geometry each observer's loop sits. The self-referential nature of this (the geometry is produced by the loops' surgery, so the loops' positions are determined by the geometry they produce) is exactly the fixed-point equation.
 
-4. **Linking number vs. relational coherence for non-minimal observers.** Conjecture 1.5 identifies $\mathcal{C}(\mathcal{O}_1 : \mathcal{O}_2) = \text{Lk}(\gamma_1, \gamma_2) \cdot \hbar\omega_0$ for minimal $U(1)$ loops. For composite observers at higher bootstrap levels, the "loop" is a more complex embedded object (satellite knot, cable link). The linking number generalizes to satellite linking numbers and Milnor invariants. Does the framework's relational coherence at higher levels match these higher invariants?
+4. **Linking number vs. relational coherence for non-minimal observers.** Proposition 1.5 identifies $\mathcal{C}(\mathcal{O}_1 : \mathcal{O}_2) = \text{Lk}(\gamma_1, \gamma_2) \cdot \hbar\omega_0$ for minimal $U(1)$ loops. For composite observers at higher bootstrap levels, the "loop" is a more complex embedded object (satellite knot, cable link). The linking number generalizes to satellite linking numbers and Milnor invariants. Does the framework's relational coherence at higher levels match these higher invariants?
 
 5. **Surgery convergence.** The self-consistent surgery iteration (Step 4) must converge. Under what conditions does iterated surgery on a framed link in successive manifolds converge to a fixed point? This is a question in 3-manifold topology that may have known answers or may require new results.
 

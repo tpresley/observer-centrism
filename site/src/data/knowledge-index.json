@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-16T23:49:30.171Z",
+    "generatedAt": "2026-04-17T00:07:39.538Z",
     "derivationCount": 78,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -2034,6 +2034,7 @@
         "gauge/proton-stability"
       ],
       "dependedOnBy": [
+        "foundation/knot-theoretic-bootstrap",
         "gauge/proton-stability",
         "gauge/weinberg-angle"
       ],
@@ -2212,7 +2213,7 @@
           },
           {
             "source": "foundation/knot-theoretic-bootstrap",
-            "context": "structural consequence of the Cayley-Dickson tower"
+            "context": "structural consequence of the Cayley-Dickson tower, with $\\alpha_i \\propto \\dim "
           },
           {
             "source": "gauge/color-force",
@@ -5280,15 +5281,16 @@
         "gauge",
         "bootstrap"
       ],
-      "summary": "Observer loops as framed links in a spatial manifold, with relational coherence identified as linking number. The Cayley-Dickson gauge chain maps to a finite sequence of Chern-Simons theories. The bootstrap fixed-point equation becomes self-consistent surgery: the link that produces the manifold is the link the manifold contains.",
-      "lastUpdated": "2026-04-15",
+      "summary": "Observer loops as framed links in a spatial manifold, with relational coherence identified as linking number. The Cayley-Dickson gauge chain maps to a finite sequence of Chern-Simons theories with level ratios k_1 : k_2 : k_3 = 4 : 2 : 1. The bootstrap fixed-point equation becomes self-consistent surgery: the link that produces the manifold is the link the manifold contains.",
+      "lastUpdated": "2026-04-16",
       "dependsOn": [
         "interactions/bootstrap",
         "interactions/bootstrap-division-algebras",
         "foundation/coherence-lagrangian",
         "foundation/continuous-discrete-duality",
         "gauge/electromagnetism",
-        "gauge/strong-cp"
+        "gauge/strong-cp",
+        "cosmology/coupling-constants"
       ],
       "enablesDerivation": [],
       "dependedOnBy": [],
@@ -5309,19 +5311,19 @@
         {
           "type": "Proposition",
           "id": "2.4",
-          "name": "CS level = division algebra dimension",
-          "statementPreview": "The Chern-Simons level at each bootstrap level equals the real dimension of the corresponding division algebra:*"
+          "name": "CS level ratios from the division algebra chain",
+          "statementPreview": "The Chern-Simons level at each bootstrap level is inversely proportional to the real dimension of the corresponding d..."
         },
         {
           "type": "Proposition",
           "id": "2.5",
           "name": "Finite representation content at each level",
-          "statementPreview": "At CS level k, SU(N) Chern-Simons theory has a finite set of integrable representations determined by the Verlinde fo..."
+          "statementPreview": "At any CS level k, SU(N) Chern-Simons theory has a finite set of integrable representations determined by the Verlind..."
         },
         {
           "type": "Proposition",
           "id": "3.2",
-          "name": "4D Yang-Mills contains 3D Chern-Simons as its topological sector",
+          "name": "Topological sector of canonical 4D Yang-Mills is labeled by the spatial Chern-Simons functional",
           "statementPreview": "The gauge sector of the [Coherence Lagrangian](/derivations/foundation/coherence-lagrangian) is:"
         },
         {
@@ -5342,7 +5344,7 @@
         {
           "number": 1,
           "title": "Absolute normalization of the CS levels.",
-          "description": "Proposition 2.4 gives k = dim,A (i.e., k = 2, 4, 8), but the specific integer values require the absolute coupling normalization alphaG = 1/dim,A (not just the ratios). This normalization gives alphas"
+          "description": "Proposition 2.4 gives only the *ratios* k1 : k2 : k3 = 4 : 2 : 1. The absolute integer multiplier m in (k1, k2, k3) = (4m, 2m, m) is not determined by S1 alone. Fixing m would determine the specific r"
         },
         {
           "number": 2,
@@ -5357,7 +5359,7 @@
         {
           "number": 4,
           "title": "Linking number vs. relational coherence for non-minimal observers.",
-          "description": "Conjecture 1.5 identifies C(O1 : O2) = Lk(gamma1, gamma2) hbaromega0 for minimal U(1) loops. For composite observers at higher bootstrap levels, the \"loop\" is a more complex embedded object (satellite"
+          "description": "Proposition 1.5 identifies C(O1 : O2) = Lk(gamma1, gamma2) hbaromega0 for minimal U(1) loops. For composite observers at higher bootstrap levels, the \"loop\" is a more complex embedded object (satellit"
         },
         {
           "number": 5,
@@ -5427,7 +5429,7 @@
           },
           {
             "target": "cosmology/coupling-constants",
-            "context": "structural consequence of the Cayley-Dickson tower"
+            "context": "structural consequence of the Cayley-Dickson tower, with $\\alpha_i \\propto \\dim "
           }
         ],
         "incoming": [
@@ -24625,7 +24627,7 @@
       "derivationId": "foundation/knot-theoretic-bootstrap",
       "type": "Proposition",
       "id": "2.4",
-      "name": "CS level = division algebra dimension",
+      "name": "CS level ratios from the division algebra chain",
       "fullRef": "foundation/knot-theoretic-bootstrap:Proposition 2.4"
     },
     {
@@ -24639,7 +24641,7 @@
       "derivationId": "foundation/knot-theoretic-bootstrap",
       "type": "Proposition",
       "id": "3.2",
-      "name": "4D Yang-Mills contains 3D Chern-Simons as its topological sector",
+      "name": "Topological sector of canonical 4D Yang-Mills is labeled by the spatial Chern-Simons functional",
       "fullRef": "foundation/knot-theoretic-bootstrap:Proposition 3.2"
     },
     {
@@ -31047,7 +31049,7 @@
       "derivationStatus": "stub",
       "number": 1,
       "title": "Absolute normalization of the CS levels.",
-      "description": "Proposition 2.4 gives k = dim,A (i.e., k = 2, 4, 8), but the specific integer values require the absolute coupling normalization alphaG = 1/dim,A (not just the ratios). This normalization gives alphas"
+      "description": "Proposition 2.4 gives only the *ratios* k1 : k2 : k3 = 4 : 2 : 1. The absolute integer multiplier m in (k1, k2, k3) = (4m, 2m, m) is not determined by S1 alone. Fixing m would determine the specific r"
     },
     {
       "derivationId": "foundation/knot-theoretic-bootstrap",
@@ -31068,7 +31070,7 @@
       "derivationStatus": "stub",
       "number": 4,
       "title": "Linking number vs. relational coherence for non-minimal observers.",
-      "description": "Conjecture 1.5 identifies C(O1 : O2) = Lk(gamma1, gamma2) hbaromega0 for minimal U(1) loops. For composite observers at higher bootstrap levels, the \"loop\" is a more complex embedded object (satellite"
+      "description": "Proposition 1.5 identifies C(O1 : O2) = Lk(gamma1, gamma2) hbaromega0 for minimal U(1) loops. For composite observers at higher bootstrap levels, the \"loop\" is a more complex embedded object (satellit"
     },
     {
       "derivationId": "foundation/knot-theoretic-bootstrap",
