@@ -457,6 +457,12 @@
       "status": "stub"
     },
     {
+      "id": "foundation/observer-projected-spacetime",
+      "title": "Observer-Projected Spacetime",
+      "group": "foundation",
+      "status": "stub"
+    },
+    {
       "id": "cosmology/cyclic-cosmology",
       "title": "Observer-Centric Cyclic Cosmology",
       "group": "cosmology",
@@ -1401,6 +1407,34 @@
     {
       "from": "gauge/strong-cp",
       "to": "foundation/knot-theoretic-bootstrap"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "foundation/observer-projected-spacetime"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "foundation/observer-projected-spacetime"
+    },
+    {
+      "from": "minimal-observer/multiplicity",
+      "to": "foundation/observer-projected-spacetime"
+    },
+    {
+      "from": "cosmology/cyclic-cosmology",
+      "to": "foundation/observer-projected-spacetime"
+    },
+    {
+      "from": "holography/horizon-gauge-shell",
+      "to": "foundation/observer-projected-spacetime"
+    },
+    {
+      "from": "cosmology/observer-loop-viability",
+      "to": "foundation/observer-projected-spacetime"
+    },
+    {
+      "from": "foundation/continuous-discrete-duality",
+      "to": "foundation/observer-projected-spacetime"
     }
   ]
 }

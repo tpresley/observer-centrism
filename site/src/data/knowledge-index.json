@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-04-17T02:33:14.767Z",
-    "derivationCount": 78,
+    "generatedAt": "2026-04-17T03:57:59.993Z",
+    "derivationCount": 79,
     "predictionCount": 12,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -12,13 +12,13 @@
       "provisional": 44,
       "draft": 2,
       "non-viable": 1,
-      "stub": 4
+      "stub": 5
     },
-    "derivationCount": 78,
+    "derivationCount": 79,
     "predictionCount": 12,
-    "edgeCount": 233,
-    "formalObjectCount": 1159,
-    "openGapCount": 238,
+    "edgeCount": 240,
+    "formalObjectCount": 1169,
+    "openGapCount": 245,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -726,6 +726,7 @@
         "cosmology/dark-energy-equation-of-state",
         "cosmology/observer-loop-viability",
         "foundation/continuous-discrete-duality",
+        "foundation/observer-projected-spacetime",
         "gauge/electromagnetism",
         "holography/horizon-gauge-shell",
         "minimal-observer/structure",
@@ -1062,6 +1063,10 @@
             "context": "Loop Closure"
           },
           {
+            "source": "foundation/observer-projected-spacetime",
+            "context": "Loop Closure"
+          },
+          {
             "source": "gauge/color-force",
             "context": "Corollary 4.3"
           },
@@ -1206,6 +1211,7 @@
         "axioms/loop-closure",
         "dimensions/three-dimensions",
         "foundation/continuous-discrete-duality",
+        "foundation/observer-projected-spacetime",
         "holography/horizon-gauge-shell",
         "minimal-observer/multiplicity",
         "minimal-observer/structure",
@@ -1431,6 +1437,10 @@
           {
             "source": "cosmology/dark-energy-equation-of-state",
             "context": "Axiom 2"
+          },
+          {
+            "source": "foundation/observer-projected-spacetime",
+            "context": "Observer Definition"
           },
           {
             "source": "holography/horizon-gauge-shell",
@@ -2000,6 +2010,10 @@
           {
             "source": "foundation/coherence-lagrangian",
             "context": "Cosmological Constant"
+          },
+          {
+            "source": "foundation/observer-projected-spacetime",
+            "context": "Cosmological Constant"
           }
         ]
       },
@@ -2288,6 +2302,7 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
+        "foundation/observer-projected-spacetime",
         "holography/horizon-gauge-shell"
       ],
       "steps": [
@@ -3486,7 +3501,8 @@
         "cosmology/cosmological-arrow",
         "cosmology/cyclic-cosmology",
         "cosmology/dark-energy-equation-of-state",
-        "cosmology/geometric-substrate"
+        "cosmology/geometric-substrate",
+        "foundation/observer-projected-spacetime"
       ],
       "steps": [
         {
@@ -3954,6 +3970,10 @@
             "context": "Observer Loop Viability"
           },
           {
+            "source": "foundation/observer-projected-spacetime",
+            "context": "Observer Loop Viability"
+          },
+          {
             "source": "holography/horizon-gauge-shell",
             "context": "Observer Loop Viability"
           },
@@ -4176,6 +4196,10 @@
           {
             "source": "foundation/coherence-lagrangian",
             "context": "Three Spatial Dimensions"
+          },
+          {
+            "source": "foundation/observer-projected-spacetime",
+            "context": "Three Dimensions"
           },
           {
             "source": "gauge/weak-interaction",
@@ -4748,6 +4772,10 @@
             "context": "Proposition 4.1"
           },
           {
+            "source": "foundation/observer-projected-spacetime",
+            "context": "Aperiodic Order"
+          },
+          {
             "source": "holography/area-scaling",
             "context": "Aperiodic Order"
           },
@@ -5080,7 +5108,8 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
-        "foundation/knot-theoretic-bootstrap"
+        "foundation/knot-theoretic-bootstrap",
+        "foundation/observer-projected-spacetime"
       ],
       "steps": [
         {
@@ -5243,6 +5272,10 @@
           },
           {
             "source": "foundation/knot-theoretic-bootstrap",
+            "context": "Continuous-Discrete Duality"
+          },
+          {
+            "source": "foundation/observer-projected-spacetime",
             "context": "Continuous-Discrete Duality"
           },
           {
@@ -5452,6 +5485,193 @@
             "context": "Knot-Theoretic Bootstrap"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "foundation/observer-projected-spacetime": {
+      "id": "foundation/observer-projected-spacetime",
+      "filePath": "site/src/content/derivations/foundation/observer-projected-spacetime.md",
+      "title": "Observer-Projected Spacetime",
+      "status": "stub",
+      "rigorLevel": "informal",
+      "group": "foundation",
+      "tags": [
+        "foundation",
+        "spacetime",
+        "holography",
+        "structure"
+      ],
+      "summary": "The framework's continuous dual is not a single global spacetime but an observer-indexed family of Lorentzian patches. Each observer projects a patch whose geometry is forced by its own intrinsic structure: for a minimal observer, a static de Sitter patch of radius cT/2 with Type III partner lines as null-terminated boundary conditions. Higher-level observers project patches with level-indexed de Sitter radii. The patches are related by restriction maps on shared Type III relations, forming a presheaf on the observer category; the cosmological constant hierarchy is the obstruction class of this presheaf's failure to glue into a single manifold across levels.",
+      "lastUpdated": "2026-04-16",
+      "dependsOn": [
+        "axioms/observer-definition",
+        "axioms/loop-closure",
+        "minimal-observer/multiplicity",
+        "cosmology/cyclic-cosmology",
+        "holography/horizon-gauge-shell",
+        "cosmology/observer-loop-viability",
+        "foundation/continuous-discrete-duality"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Observer-projected continuous dual",
+          "statementPreview": "For an observer A = (SigmaA, IA, BA), the **observer-projected continuous dual** MA is the smooth Lorentzian 4-manifo..."
+        },
+        {
+          "type": "Definition",
+          "id": "1.2",
+          "name": "The projection functor",
+          "statementPreview": "The **observer-projection functor** is M: mathbfObs mathbfLorPatch, assigning to each observer A in mathbfObs its pro..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "Four intrinsic constraints on $M_A$",
+          "statementPreview": "The DAG-level structure of a minimal observer A imposes four consistency conditions on MA:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Immediate consequences of Conjecture 3.1",
+          "statementPreview": "Conditional on Conjecture 3.1, the following are properties of A's projection, intrinsic to A:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Level-indexed projection",
+          "statementPreview": "Let On be an observer at bootstrap level n with characteristic period Tn. Its projected continuous dual MOn has, unde..."
+        },
+        {
+          "type": "Definition",
+          "id": "5.1",
+          "name": "Restriction maps on shared relations",
+          "statementPreview": "For observers A, B connected by a Type III relation IAB, the **restriction map** rhoAB: MA|IAB MB|IAB identifies the ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.2",
+          "name": "Presheaf structure on $\\mathbf{Obs}$",
+          "statementPreview": "The assignment A MA together with restriction maps rhoAB for every shared Type III relation forms a contravariant pre..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Level-mismatched observers cannot glue to a single de Sitter background",
+          "statementPreview": "Let A, B be observers at bootstrap levels nA nB with periods TA, TB. Their projections MA, MB are static de Sitter pa..."
+        },
+        {
+          "type": "Definition",
+          "id": "6.2",
+          "name": "The gluing obstruction class",
+          "statementPreview": "The obstruction class of the observer-indexed spacetime presheaf is the cohomological defect preventing the presheaf ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.3",
+          "name": "The $\\Lambda$ hierarchy is the obstruction class",
+          "statementPreview": "The observed 120-order-of-magnitude hierarchy between the Planck-scale cosmological constant Lambda0 sim 1/ellP2 and ..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Minimal-observer projection theorem.",
+          "description": "Conjecture 3.1 needs a rigorous proof: given the four intrinsic constraints of Proposition 2.1 plus spherical symmetry and time-translation invariance, show that MA is isometric to the static patch of"
+        },
+        {
+          "number": 2,
+          "title": "Generalization to non-minimal observers with localized stress-energy.",
+          "description": "A composite observer On at higher bootstrap level may carry effective stress-energy along gammaOn. The projection generalizes from pure de Sitter to Schwarzschild–de Sitter (or more general dressed ge"
+        },
+        {
+          "number": 3,
+          "title": "Sheaf property of $M$.",
+          "description": "Conjecture 5.3 requires a categorical-semantics setup: what is a cover on mathbfObs? what topology does mathbfObs carry? Given a definition, does local agreement on Type III relations glue uniquely to"
+        },
+        {
+          "number": 4,
+          "title": "Quantitative computation of the obstruction class.",
+          "description": "Proposition 6.3 qualitatively identifies the Lambda hierarchy as the obstruction class. A quantitative computation — compute the class from the bootstrap hierarchy's level structure, translate to a me"
+        },
+        {
+          "number": 5,
+          "title": "What replaces \"the universe\" as a single object?",
+          "description": "If the observer-indexed presheaf M does not reduce to a single manifold (Proposition 6.1), then the framework has no \"universe\" in the manifold sense. Candidate replacements: the colimit in mathbfLorP"
+        },
+        {
+          "number": 6,
+          "title": "Consistency with bootstrap aperiodicity.",
+          "description": "[Aperiodic Order](/derivations/foundation/aperiodic-order) forces the observer network to be an aperiodic substitution tiling. The observer-indexed projection should inherit this aperiodic structure o"
+        },
+        {
+          "number": 7,
+          "title": "Interaction with the continuous-discrete fixed point.",
+          "description": "[Continuous-Discrete Duality](/derivations/foundation/continuous-discrete-duality) identifies the physical universe as the fixed point of mutual compatibility between the continuous and discrete layer"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "axioms/observer-definition",
+            "context": "Observer Definition"
+          },
+          {
+            "target": "holography/horizon-gauge-shell",
+            "context": "Horizon Gauge Shell"
+          },
+          {
+            "target": "cosmology/observer-loop-viability",
+            "context": "Observer Loop Viability"
+          },
+          {
+            "target": "foundation/continuous-discrete-duality",
+            "context": "Continuous-Discrete Duality"
+          },
+          {
+            "target": "minimal-observer/multiplicity",
+            "context": "Multiplicity"
+          },
+          {
+            "target": "dimensions/three-dimensions",
+            "context": "Three Dimensions"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
+          },
+          {
+            "target": "cosmology/cosmological-constant",
+            "context": "Cosmological Constant"
+          },
+          {
+            "target": "holography/hawking-radiation",
+            "context": "Hawking Radiation"
+          },
+          {
+            "target": "foundation/aperiodic-order",
+            "context": "Aperiodic Order"
+          }
+        ],
+        "incoming": []
       },
       "leanVerification": {
         "hasProofs": false,
@@ -8647,6 +8867,10 @@
             "context": "Area Scaling"
           },
           {
+            "source": "foundation/observer-projected-spacetime",
+            "context": "Area Scaling"
+          },
+          {
             "source": "holography/black-hole-entropy",
             "context": "Area Scaling"
           },
@@ -9632,6 +9856,10 @@
         ],
         "incoming": [
           {
+            "source": "foundation/observer-projected-spacetime",
+            "context": "Hawking Radiation"
+          },
+          {
             "source": "holography/area-scaling",
             "context": "Hawking Radiation"
           },
@@ -9688,7 +9916,9 @@
         "interactions/bootstrap"
       ],
       "enablesDerivation": [],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "foundation/observer-projected-spacetime"
+      ],
       "steps": [],
       "formalObjects": [
         {
@@ -9815,7 +10045,12 @@
             "context": "Hawking Radiation"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "foundation/observer-projected-spacetime",
+            "context": "Horizon Gauge Shell"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -11990,6 +12225,7 @@
         "cosmology/geometric-inflation",
         "cosmology/observer-loop-viability",
         "foundation/aperiodic-order",
+        "foundation/observer-projected-spacetime",
         "interactions/three-types",
         "minimal-observer/coherence-dual-pairs",
         "particles/three-generations",
@@ -12251,6 +12487,10 @@
           },
           {
             "source": "foundation/continuous-discrete-duality",
+            "context": "Multiplicity"
+          },
+          {
+            "source": "foundation/observer-projected-spacetime",
             "context": "Multiplicity"
           },
           {
@@ -24688,6 +24928,76 @@
       "fullRef": "foundation/knot-theoretic-bootstrap:Proposition 3.4"
     },
     {
+      "derivationId": "foundation/observer-projected-spacetime",
+      "type": "Definition",
+      "id": "1.1",
+      "name": "Observer-projected continuous dual",
+      "fullRef": "foundation/observer-projected-spacetime:Definition 1.1"
+    },
+    {
+      "derivationId": "foundation/observer-projected-spacetime",
+      "type": "Definition",
+      "id": "1.2",
+      "name": "The projection functor",
+      "fullRef": "foundation/observer-projected-spacetime:Definition 1.2"
+    },
+    {
+      "derivationId": "foundation/observer-projected-spacetime",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "Four intrinsic constraints on $M_A$",
+      "fullRef": "foundation/observer-projected-spacetime:Proposition 2.1"
+    },
+    {
+      "derivationId": "foundation/observer-projected-spacetime",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "Immediate consequences of Conjecture 3.1",
+      "fullRef": "foundation/observer-projected-spacetime:Proposition 3.2"
+    },
+    {
+      "derivationId": "foundation/observer-projected-spacetime",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Level-indexed projection",
+      "fullRef": "foundation/observer-projected-spacetime:Proposition 4.1"
+    },
+    {
+      "derivationId": "foundation/observer-projected-spacetime",
+      "type": "Definition",
+      "id": "5.1",
+      "name": "Restriction maps on shared relations",
+      "fullRef": "foundation/observer-projected-spacetime:Definition 5.1"
+    },
+    {
+      "derivationId": "foundation/observer-projected-spacetime",
+      "type": "Proposition",
+      "id": "5.2",
+      "name": "Presheaf structure on $\\mathbf{Obs}$",
+      "fullRef": "foundation/observer-projected-spacetime:Proposition 5.2"
+    },
+    {
+      "derivationId": "foundation/observer-projected-spacetime",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "Level-mismatched observers cannot glue to a single de Sitter background",
+      "fullRef": "foundation/observer-projected-spacetime:Proposition 6.1"
+    },
+    {
+      "derivationId": "foundation/observer-projected-spacetime",
+      "type": "Definition",
+      "id": "6.2",
+      "name": "The gluing obstruction class",
+      "fullRef": "foundation/observer-projected-spacetime:Definition 6.2"
+    },
+    {
+      "derivationId": "foundation/observer-projected-spacetime",
+      "type": "Proposition",
+      "id": "6.3",
+      "name": "The $\\Lambda$ hierarchy is the obstruction class",
+      "fullRef": "foundation/observer-projected-spacetime:Proposition 6.3"
+    },
+    {
       "derivationId": "gauge/anomaly-cancellation",
       "type": "Definition",
       "id": "1.1",
@@ -31107,6 +31417,55 @@
       "number": 5,
       "title": "Surgery convergence.",
       "description": "The self-consistent surgery iteration (Step 4) must converge. Under what conditions does iterated surgery on a framed link in successive manifolds converge to a fixed point? This is a question in 3-ma"
+    },
+    {
+      "derivationId": "foundation/observer-projected-spacetime",
+      "derivationStatus": "stub",
+      "number": 1,
+      "title": "Minimal-observer projection theorem.",
+      "description": "Conjecture 3.1 needs a rigorous proof: given the four intrinsic constraints of Proposition 2.1 plus spherical symmetry and time-translation invariance, show that MA is isometric to the static patch of"
+    },
+    {
+      "derivationId": "foundation/observer-projected-spacetime",
+      "derivationStatus": "stub",
+      "number": 2,
+      "title": "Generalization to non-minimal observers with localized stress-energy.",
+      "description": "A composite observer On at higher bootstrap level may carry effective stress-energy along gammaOn. The projection generalizes from pure de Sitter to Schwarzschild–de Sitter (or more general dressed ge"
+    },
+    {
+      "derivationId": "foundation/observer-projected-spacetime",
+      "derivationStatus": "stub",
+      "number": 3,
+      "title": "Sheaf property of $M$.",
+      "description": "Conjecture 5.3 requires a categorical-semantics setup: what is a cover on mathbfObs? what topology does mathbfObs carry? Given a definition, does local agreement on Type III relations glue uniquely to"
+    },
+    {
+      "derivationId": "foundation/observer-projected-spacetime",
+      "derivationStatus": "stub",
+      "number": 4,
+      "title": "Quantitative computation of the obstruction class.",
+      "description": "Proposition 6.3 qualitatively identifies the Lambda hierarchy as the obstruction class. A quantitative computation — compute the class from the bootstrap hierarchy's level structure, translate to a me"
+    },
+    {
+      "derivationId": "foundation/observer-projected-spacetime",
+      "derivationStatus": "stub",
+      "number": 5,
+      "title": "What replaces \"the universe\" as a single object?",
+      "description": "If the observer-indexed presheaf M does not reduce to a single manifold (Proposition 6.1), then the framework has no \"universe\" in the manifold sense. Candidate replacements: the colimit in mathbfLorP"
+    },
+    {
+      "derivationId": "foundation/observer-projected-spacetime",
+      "derivationStatus": "stub",
+      "number": 6,
+      "title": "Consistency with bootstrap aperiodicity.",
+      "description": "[Aperiodic Order](/derivations/foundation/aperiodic-order) forces the observer network to be an aperiodic substitution tiling. The observer-indexed projection should inherit this aperiodic structure o"
+    },
+    {
+      "derivationId": "foundation/observer-projected-spacetime",
+      "derivationStatus": "stub",
+      "number": 7,
+      "title": "Interaction with the continuous-discrete fixed point.",
+      "description": "[Continuous-Discrete Duality](/derivations/foundation/continuous-discrete-duality) identifies the physical universe as the fixed point of mutual compatibility between the continuous and discrete layer"
     },
     {
       "derivationId": "gauge/chirality-selection",
