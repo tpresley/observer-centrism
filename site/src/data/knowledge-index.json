@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-04-17T04:58:22.583Z",
-    "derivationCount": 79,
+    "generatedAt": "2026-04-17T09:01:02.706Z",
+    "derivationCount": 80,
     "predictionCount": 12,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -11,13 +11,13 @@
       "derived": 27,
       "provisional": 44,
       "draft": 2,
-      "stub": 6
+      "stub": 7
     },
-    "derivationCount": 79,
+    "derivationCount": 80,
     "predictionCount": 12,
-    "edgeCount": 240,
-    "formalObjectCount": 1177,
-    "openGapCount": 250,
+    "edgeCount": 249,
+    "formalObjectCount": 1188,
+    "openGapCount": 258,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -133,6 +133,7 @@
         "cosmology/dark-energy-equation-of-state",
         "foundation/aperiodic-order",
         "foundation/continuous-discrete-duality",
+        "foundation/observer-holographic-equivalence",
         "gauge/anomaly-cancellation",
         "gauge/chirality-selection",
         "holography/information-paradox",
@@ -411,6 +412,10 @@
           },
           {
             "source": "foundation/knot-theoretic-bootstrap",
+            "context": "Coherence Conservation"
+          },
+          {
+            "source": "foundation/observer-holographic-equivalence",
             "context": "Coherence Conservation"
           },
           {
@@ -725,6 +730,7 @@
         "cosmology/dark-energy-equation-of-state",
         "cosmology/observer-loop-viability",
         "foundation/continuous-discrete-duality",
+        "foundation/observer-holographic-equivalence",
         "foundation/observer-projected-spacetime",
         "gauge/electromagnetism",
         "holography/horizon-gauge-shell",
@@ -1210,6 +1216,7 @@
         "axioms/loop-closure",
         "dimensions/three-dimensions",
         "foundation/continuous-discrete-duality",
+        "foundation/observer-holographic-equivalence",
         "foundation/observer-projected-spacetime",
         "holography/horizon-gauge-shell",
         "minimal-observer/multiplicity",
@@ -1436,6 +1443,10 @@
           {
             "source": "cosmology/dark-energy-equation-of-state",
             "context": "Axiom 2"
+          },
+          {
+            "source": "foundation/observer-holographic-equivalence",
+            "context": "Observer Definition"
           },
           {
             "source": "foundation/observer-projected-spacetime",
@@ -2055,6 +2066,10 @@
             "context": "Cosmological Constant"
           },
           {
+            "source": "foundation/observer-holographic-equivalence",
+            "context": "Cosmological Constant"
+          },
+          {
             "source": "foundation/observer-projected-spacetime",
             "context": "Cosmological Constant"
           }
@@ -2622,6 +2637,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "foundation/observer-holographic-equivalence",
+            "context": "Cyclic Cosmology"
+          },
           {
             "source": "holography/horizon-gauge-shell",
             "context": "Cyclic Cosmology"
@@ -5347,7 +5366,9 @@
         "cosmology/coupling-constants"
       ],
       "enablesDerivation": [],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "foundation/observer-holographic-equivalence"
+      ],
       "steps": [],
       "formalObjects": [
         {
@@ -5502,10 +5523,237 @@
         ],
         "incoming": [
           {
+            "source": "foundation/observer-holographic-equivalence",
+            "context": "Knot-Theoretic Bootstrap"
+          },
+          {
             "source": "holography/horizon-gauge-shell",
             "context": "Knot-Theoretic Bootstrap"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "foundation/observer-holographic-equivalence": {
+      "id": "foundation/observer-holographic-equivalence",
+      "filePath": "site/src/content/derivations/foundation/observer-holographic-equivalence.md",
+      "title": "Observer Holographic Equivalence",
+      "status": "stub",
+      "rigorLevel": "informal",
+      "group": "foundation",
+      "tags": [
+        "foundation",
+        "holography",
+        "structure"
+      ],
+      "summary": "Three complementary theses. (A, time-like) For any observer A and any closed surface Σ enclosing A's coherence domain within its projected continuous dual, the sequenced record of Type III carrier crossings of Σ over A's history determines A's state at each tick. (A', space-like) For any Cauchy slice through the interior of A's coherence domain at tick t_k, the instantaneous configuration of constituents and their space-like correlations determines A's state at t_k. A and A' are unitarily equivalent dual descriptions. (B) Phase discard is a property of null portions of enclosing surfaces: wherever a surface is null, its encoding carries only integer/topological data; wherever it is timelike or spacelike, it carries full continuous phase. The null horizon ∂M_A is entirely null and therefore entirely integer-encoded — the canonical coarsest holographic surface. Consequences: the three-region decomposition of M_A is a phase-resolution ladder, level transitions propagate only integer data across bootstrap levels, and the cosmological constant hierarchy is a combinatorial obstruction class.",
+      "lastUpdated": "2026-04-16",
+      "dependsOn": [
+        "axioms/coherence-conservation",
+        "axioms/observer-definition",
+        "axioms/loop-closure",
+        "holography/area-scaling",
+        "holography/horizon-gauge-shell",
+        "thermodynamics-ext/distinguishability-conservation",
+        "foundation/observer-projected-spacetime",
+        "interactions/bootstrap",
+        "foundation/knot-theoretic-bootstrap"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Enclosing surface",
+          "statementPreview": "For an observer A with coherence-domain boundary BA in projected continuous dual MA, an **enclosing surface** is a cl..."
+        },
+        {
+          "type": "Definition",
+          "id": "1.2",
+          "name": "Sequenced crossing record",
+          "statementPreview": "Let Sigma be an enclosing surface for A and let [tau0, tk] be A's proper-time history up to tick tk. The **sequenced ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "Holographic equivalence",
+          "statementPreview": "For any enclosing surface Sigma of A, the sequenced crossing record RSigma(A, tk) is sufficient to determine A's stat..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Space-like holographic equivalence",
+          "statementPreview": "For a Cauchy slice Xi through the interior of A's coherence domain at tick tk, the instantaneous space-like configura..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Unitary equivalence of A and A'",
+          "statementPreview": "The time-like record RSigma(A, tk) of Thesis A and the space-like configuration KXi(A, tk) of Thesis A' are related b..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Null portions carry integer content",
+          "statementPreview": "Let Sigma be any surface embedded in MA, with null decomposition Sigma = Sigmanull sqcup Sigmanon-null. The encoding ..."
+        },
+        {
+          "type": "Corollary",
+          "id": "4.2",
+          "name": "Distinguished status of $\\partial M_A$",
+          "statementPreview": "The null horizon MA is entirely null by construction ([Horizon Gauge Shell](/derivations/holography/horizon-gauge-she..."
+        },
+        {
+          "type": "Corollary",
+          "id": "5.1",
+          "name": "Horizon as canonical holographic surface",
+          "statementPreview": "The null horizon MA is the **canonical coarsest holographic surface** for observer A: among all enclosing surfaces th..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Phase-resolution ladder",
+          "statementPreview": "The three-region decomposition is a phase-resolution ladder for the holographic encoding of A's state. Enclosing surf..."
+        },
+        {
+          "type": "Corollary",
+          "id": "7.1",
+          "name": "Inter-level integer restriction",
+          "statementPreview": "Bootstrap composition R: mathbfObsn mathbfObsn mathbfObsn+1 that builds level-(n+1) observers from level-n constituen..."
+        },
+        {
+          "type": "Corollary",
+          "id": "8.1",
+          "name": "Obstruction class is combinatorial",
+          "statementPreview": "The gluing obstruction of the observer-indexed spacetime sheaf ([Observer-Projected Spacetime](/derivations/foundatio..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Rigorous reconstruction theorems (Theses A and A').",
+          "description": "Prove that for any enclosing surface Sigma MA, the sequenced crossing record RSigma(A, tk) reconstructs A's state at tk; and for any Cauchy slice Xi, the configuration KXi(A, tk) reconstructs the stat"
+        },
+        {
+          "number": 2,
+          "title": "Unitary equivalence of time-like and space-like descriptions.",
+          "description": "Construct the explicit unitary map U: RSigma leftrightarrow KXi identifying time-like and space-like holographic encodings. This is the framework's version of state-path-integral duality in QFT. *Diff"
+        },
+        {
+          "number": 3,
+          "title": "Classification of phase behavior by causal character.",
+          "description": "Prove Proposition 4.1 rigorously: any null portion of a surface carries only integer encoding, any timelike or spacelike portion carries continuous phase. Requires a structural argument that proper-ti"
+        },
+        {
+          "number": 4,
+          "title": "Quantitative coarse-graining maps.",
+          "description": "The phase-resolution ladder (Proposition 6.1) is qualitative. A quantitative account — what information is lost as an enclosing surface moves outward, and how integer invariants accumulate — would for"
+        },
+        {
+          "number": 5,
+          "title": "Formal statement of inter-level integer restriction.",
+          "description": "Corollary 7.1 asserts that bootstrap composition operates only on integer data across levels. Formalizing this requires specifying the integer-only data type (perhaps a category of integer-augmented o"
+        },
+        {
+          "number": 6,
+          "title": "Combinatorial obstruction class computation.",
+          "description": "Corollary 8.1 identifies the obstruction class as combinatorial. A computation: specify the simplicial / tensor-network / K-theoretic structure on the observer category, identify the cocycle, compute "
+        },
+        {
+          "number": 7,
+          "title": "Shared-horizon theorem for same-level observers.",
+          "description": "State and prove: for two level-n observers A, B at spatial separation d ll Ln within each other's bulk, the horizon integer data R MA and R MB agree to order (d/Ln)2. Corollary: observer identity (the"
+        },
+        {
+          "number": 8,
+          "title": "Connection to Gibbons–Hawking thermodynamics.",
+          "description": "Thesis B identifies horizon thermality as phase-decoherence on a null surface. A derivation that produces the Gibbons–Hawking temperature TGH(A) = hbar/(2pi kB LA) directly from the phase-discard stru"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "axioms/coherence-conservation",
+            "context": "Coherence Conservation"
+          },
+          {
+            "target": "thermodynamics-ext/distinguishability-conservation",
+            "context": "Distinguishability Conservation"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
+          },
+          {
+            "target": "holography/horizon-gauge-shell",
+            "context": "Horizon Gauge Shell"
+          },
+          {
+            "target": "foundation/knot-theoretic-bootstrap",
+            "context": "Knot-Theoretic Bootstrap"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap"
+          },
+          {
+            "target": "holography/causal-set-statistics",
+            "context": "Causal Set Statistics"
+          },
+          {
+            "target": "axioms/observer-definition",
+            "context": "Observer Definition"
+          },
+          {
+            "target": "cosmology/cyclic-cosmology",
+            "context": "Cyclic Cosmology"
+          },
+          {
+            "target": "quantum/entanglement",
+            "context": "Entanglement"
+          },
+          {
+            "target": "quantum/born-rule",
+            "context": "Born Rule"
+          },
+          {
+            "target": "foundation/observer-projected-spacetime",
+            "context": "Observer-Projected Spacetime"
+          },
+          {
+            "target": "interactions/bootstrap-division-algebras",
+            "context": "Bootstrap Division Algebras"
+          },
+          {
+            "target": "particles/three-generations",
+            "context": "Three Generations"
+          },
+          {
+            "target": "interactions/three-types",
+            "context": "Three Interaction Types"
+          },
+          {
+            "target": "cosmology/cosmological-constant",
+            "context": "Cosmological Constant"
+          },
+          {
+            "target": "holography/hawking-radiation",
+            "context": "Hawking Radiation"
+          }
+        ],
+        "incoming": []
       },
       "leanVerification": {
         "hasProofs": false,
@@ -5542,7 +5790,8 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
-        "cosmology/cosmological-constant"
+        "cosmology/cosmological-constant",
+        "foundation/observer-holographic-equivalence"
       ],
       "steps": [],
       "formalObjects": [
@@ -5709,6 +5958,10 @@
           },
           {
             "source": "foundation/coherence-lagrangian",
+            "context": "Observer-Projected Spacetime"
+          },
+          {
+            "source": "foundation/observer-holographic-equivalence",
             "context": "Observer-Projected Spacetime"
           }
         ]
@@ -8661,6 +8914,7 @@
         "cosmology/dark-energy-equation-of-state",
         "cosmology/geometric-substrate",
         "cosmology/observer-loop-viability",
+        "foundation/observer-holographic-equivalence",
         "holography/black-hole-entropy",
         "holography/causal-set-statistics",
         "holography/er-epr",
@@ -8900,6 +9154,10 @@
           },
           {
             "source": "foundation/knot-theoretic-bootstrap",
+            "context": "Area Scaling"
+          },
+          {
+            "source": "foundation/observer-holographic-equivalence",
             "context": "Area Scaling"
           },
           {
@@ -9422,6 +9680,10 @@
             "context": "Causal Set Statistics"
           },
           {
+            "source": "foundation/observer-holographic-equivalence",
+            "context": "Causal Set Statistics"
+          },
+          {
             "source": "gauge/proton-stability",
             "context": "Causal Set Statistics"
           },
@@ -9892,6 +10154,10 @@
         ],
         "incoming": [
           {
+            "source": "foundation/observer-holographic-equivalence",
+            "context": "Hawking Radiation"
+          },
+          {
             "source": "foundation/observer-projected-spacetime",
             "context": "Hawking Radiation"
           },
@@ -9953,6 +10219,7 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
+        "foundation/observer-holographic-equivalence",
         "foundation/observer-projected-spacetime"
       ],
       "steps": [],
@@ -10082,6 +10349,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "foundation/observer-holographic-equivalence",
+            "context": "Horizon Gauge Shell"
+          },
           {
             "source": "foundation/observer-projected-spacetime",
             "context": "Horizon Gauge Shell"
@@ -10751,6 +11022,10 @@
             "context": "Bootstrap Division Algebras"
           },
           {
+            "source": "foundation/observer-holographic-equivalence",
+            "context": "Bootstrap Division Algebras"
+          },
+          {
             "source": "gauge/color-force",
             "context": "Theorems 2.2–2.3, 7.1"
           },
@@ -10823,6 +11098,7 @@
         "cosmology/observer-loop-viability",
         "foundation/aperiodic-order",
         "foundation/knot-theoretic-bootstrap",
+        "foundation/observer-holographic-equivalence",
         "gauge/color-force",
         "holography/horizon-gauge-shell",
         "interactions/bootstrap-division-algebras",
@@ -11126,6 +11402,10 @@
           },
           {
             "source": "foundation/knot-theoretic-bootstrap",
+            "context": "Bootstrap"
+          },
+          {
+            "source": "foundation/observer-holographic-equivalence",
             "context": "Bootstrap"
           },
           {
@@ -11869,6 +12149,10 @@
           },
           {
             "source": "cosmology/observer-loop-viability",
+            "context": "Three Interaction Types"
+          },
+          {
+            "source": "foundation/observer-holographic-equivalence",
             "context": "Three Interaction Types"
           },
           {
@@ -14506,6 +14790,10 @@
             "context": "Three Generations"
           },
           {
+            "source": "foundation/observer-holographic-equivalence",
+            "context": "Three Generations"
+          },
+          {
             "source": "gauge/anomaly-cancellation",
             "context": "Three Generations"
           },
@@ -14789,6 +15077,10 @@
             "context": "Born Rule"
           },
           {
+            "source": "foundation/observer-holographic-equivalence",
+            "context": "Born Rule"
+          },
+          {
             "source": "gauge/electromagnetism",
             "context": "Born Rule"
           },
@@ -15052,6 +15344,10 @@
         "incoming": [
           {
             "source": "foundation/knot-theoretic-bootstrap",
+            "context": "Entanglement"
+          },
+          {
+            "source": "foundation/observer-holographic-equivalence",
             "context": "Entanglement"
           },
           {
@@ -18457,6 +18753,7 @@
       ],
       "dependedOnBy": [
         "cosmology/dark-energy-equation-of-state",
+        "foundation/observer-holographic-equivalence",
         "thermodynamics-ext/fisher-metric"
       ],
       "steps": [
@@ -18660,6 +18957,10 @@
           {
             "source": "cosmology/dark-energy-equation-of-state",
             "context": "Theorem 2.1"
+          },
+          {
+            "source": "foundation/observer-holographic-equivalence",
+            "context": "Distinguishability Conservation"
           },
           {
             "source": "gauge/standard-model-group",
@@ -25006,6 +25307,83 @@
       "id": "3.4",
       "name": "Wilson-loop linking from the topological sector",
       "fullRef": "foundation/knot-theoretic-bootstrap:Proposition 3.4"
+    },
+    {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "type": "Definition",
+      "id": "1.1",
+      "name": "Enclosing surface",
+      "fullRef": "foundation/observer-holographic-equivalence:Definition 1.1"
+    },
+    {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "type": "Definition",
+      "id": "1.2",
+      "name": "Sequenced crossing record",
+      "fullRef": "foundation/observer-holographic-equivalence:Definition 1.2"
+    },
+    {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "Holographic equivalence",
+      "fullRef": "foundation/observer-holographic-equivalence:Proposition 2.1"
+    },
+    {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Space-like holographic equivalence",
+      "fullRef": "foundation/observer-holographic-equivalence:Proposition 3.1"
+    },
+    {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "Unitary equivalence of A and A'",
+      "fullRef": "foundation/observer-holographic-equivalence:Proposition 3.2"
+    },
+    {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Null portions carry integer content",
+      "fullRef": "foundation/observer-holographic-equivalence:Proposition 4.1"
+    },
+    {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "type": "Corollary",
+      "id": "4.2",
+      "name": "Distinguished status of $\\partial M_A$",
+      "fullRef": "foundation/observer-holographic-equivalence:Corollary 4.2"
+    },
+    {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "type": "Corollary",
+      "id": "5.1",
+      "name": "Horizon as canonical holographic surface",
+      "fullRef": "foundation/observer-holographic-equivalence:Corollary 5.1"
+    },
+    {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "Phase-resolution ladder",
+      "fullRef": "foundation/observer-holographic-equivalence:Proposition 6.1"
+    },
+    {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "type": "Corollary",
+      "id": "7.1",
+      "name": "Inter-level integer restriction",
+      "fullRef": "foundation/observer-holographic-equivalence:Corollary 7.1"
+    },
+    {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "type": "Corollary",
+      "id": "8.1",
+      "name": "Obstruction class is combinatorial",
+      "fullRef": "foundation/observer-holographic-equivalence:Corollary 8.1"
     },
     {
       "derivationId": "foundation/observer-projected-spacetime",
@@ -31532,6 +31910,62 @@
       "number": 5,
       "title": "Surgery convergence.",
       "description": "The self-consistent surgery iteration (Step 4) must converge. Under what conditions does iterated surgery on a framed link in successive manifolds converge to a fixed point? This is a question in 3-ma"
+    },
+    {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "derivationStatus": "stub",
+      "number": 1,
+      "title": "Rigorous reconstruction theorems (Theses A and A').",
+      "description": "Prove that for any enclosing surface Sigma MA, the sequenced crossing record RSigma(A, tk) reconstructs A's state at tk; and for any Cauchy slice Xi, the configuration KXi(A, tk) reconstructs the stat"
+    },
+    {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "derivationStatus": "stub",
+      "number": 2,
+      "title": "Unitary equivalence of time-like and space-like descriptions.",
+      "description": "Construct the explicit unitary map U: RSigma leftrightarrow KXi identifying time-like and space-like holographic encodings. This is the framework's version of state-path-integral duality in QFT. *Diff"
+    },
+    {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "derivationStatus": "stub",
+      "number": 3,
+      "title": "Classification of phase behavior by causal character.",
+      "description": "Prove Proposition 4.1 rigorously: any null portion of a surface carries only integer encoding, any timelike or spacelike portion carries continuous phase. Requires a structural argument that proper-ti"
+    },
+    {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "derivationStatus": "stub",
+      "number": 4,
+      "title": "Quantitative coarse-graining maps.",
+      "description": "The phase-resolution ladder (Proposition 6.1) is qualitative. A quantitative account — what information is lost as an enclosing surface moves outward, and how integer invariants accumulate — would for"
+    },
+    {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "derivationStatus": "stub",
+      "number": 5,
+      "title": "Formal statement of inter-level integer restriction.",
+      "description": "Corollary 7.1 asserts that bootstrap composition operates only on integer data across levels. Formalizing this requires specifying the integer-only data type (perhaps a category of integer-augmented o"
+    },
+    {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "derivationStatus": "stub",
+      "number": 6,
+      "title": "Combinatorial obstruction class computation.",
+      "description": "Corollary 8.1 identifies the obstruction class as combinatorial. A computation: specify the simplicial / tensor-network / K-theoretic structure on the observer category, identify the cocycle, compute "
+    },
+    {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "derivationStatus": "stub",
+      "number": 7,
+      "title": "Shared-horizon theorem for same-level observers.",
+      "description": "State and prove: for two level-n observers A, B at spatial separation d ll Ln within each other's bulk, the horizon integer data R MA and R MB agree to order (d/Ln)2. Corollary: observer identity (the"
+    },
+    {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "derivationStatus": "stub",
+      "number": 8,
+      "title": "Connection to Gibbons–Hawking thermodynamics.",
+      "description": "Thesis B identifies horizon thermality as phase-decoherence on a null surface. A derivation that produces the Gibbons–Hawking temperature TGH(A) = hbar/(2pi kB LA) directly from the phase-discard stru"
     },
     {
       "derivationId": "foundation/observer-projected-spacetime",

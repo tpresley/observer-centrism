@@ -463,6 +463,12 @@
       "status": "stub"
     },
     {
+      "id": "foundation/observer-holographic-equivalence",
+      "title": "Observer Holographic Equivalence",
+      "group": "foundation",
+      "status": "stub"
+    },
+    {
       "id": "cosmology/cyclic-cosmology",
       "title": "Observer-Centric Cyclic Cosmology",
       "group": "cosmology",
@@ -1435,6 +1441,42 @@
     {
       "from": "foundation/continuous-discrete-duality",
       "to": "foundation/observer-projected-spacetime"
+    },
+    {
+      "from": "axioms/coherence-conservation",
+      "to": "foundation/observer-holographic-equivalence"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "foundation/observer-holographic-equivalence"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "foundation/observer-holographic-equivalence"
+    },
+    {
+      "from": "holography/area-scaling",
+      "to": "foundation/observer-holographic-equivalence"
+    },
+    {
+      "from": "holography/horizon-gauge-shell",
+      "to": "foundation/observer-holographic-equivalence"
+    },
+    {
+      "from": "thermodynamics-ext/distinguishability-conservation",
+      "to": "foundation/observer-holographic-equivalence"
+    },
+    {
+      "from": "foundation/observer-projected-spacetime",
+      "to": "foundation/observer-holographic-equivalence"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "foundation/observer-holographic-equivalence"
+    },
+    {
+      "from": "foundation/knot-theoretic-bootstrap",
+      "to": "foundation/observer-holographic-equivalence"
     }
   ]
 }
