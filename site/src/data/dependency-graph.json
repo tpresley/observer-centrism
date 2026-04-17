@@ -469,6 +469,12 @@
       "status": "stub"
     },
     {
+      "id": "foundation/minimum-bootstrap-closure",
+      "title": "Minimum Bootstrap Closure",
+      "group": "foundation",
+      "status": "draft"
+    },
+    {
       "id": "cosmology/cyclic-cosmology",
       "title": "Observer-Centric Cyclic Cosmology",
       "group": "cosmology",
@@ -1477,6 +1483,38 @@
     {
       "from": "foundation/knot-theoretic-bootstrap",
       "to": "foundation/observer-holographic-equivalence"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "foundation/minimum-bootstrap-closure"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "foundation/minimum-bootstrap-closure"
+    },
+    {
+      "from": "minimal-observer/structure",
+      "to": "foundation/minimum-bootstrap-closure"
+    },
+    {
+      "from": "minimal-observer/multiplicity",
+      "to": "foundation/minimum-bootstrap-closure"
+    },
+    {
+      "from": "interactions/relational-invariants",
+      "to": "foundation/minimum-bootstrap-closure"
+    },
+    {
+      "from": "interactions/three-types",
+      "to": "foundation/minimum-bootstrap-closure"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "foundation/minimum-bootstrap-closure"
+    },
+    {
+      "from": "foundation/observer-holographic-equivalence",
+      "to": "foundation/minimum-bootstrap-closure"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-04-17T09:01:02.706Z",
-    "derivationCount": 80,
+    "generatedAt": "2026-04-17T18:03:52.873Z",
+    "derivationCount": 81,
     "predictionCount": 12,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -10,15 +10,15 @@
     "byStatus": {
       "derived": 27,
       "provisional": 44,
-      "draft": 2,
+      "draft": 3,
       "stub": 7
     },
-    "derivationCount": 80,
+    "derivationCount": 81,
     "predictionCount": 12,
-    "edgeCount": 249,
-    "formalObjectCount": 1188,
-    "openGapCount": 258,
-    "upgradeEligibleCount": 1,
+    "edgeCount": 257,
+    "formalObjectCount": 1198,
+    "openGapCount": 265,
+    "upgradeEligibleCount": 2,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
   },
@@ -730,6 +730,7 @@
         "cosmology/dark-energy-equation-of-state",
         "cosmology/observer-loop-viability",
         "foundation/continuous-discrete-duality",
+        "foundation/minimum-bootstrap-closure",
         "foundation/observer-holographic-equivalence",
         "foundation/observer-projected-spacetime",
         "gauge/electromagnetism",
@@ -1216,6 +1217,7 @@
         "axioms/loop-closure",
         "dimensions/three-dimensions",
         "foundation/continuous-discrete-duality",
+        "foundation/minimum-bootstrap-closure",
         "foundation/observer-holographic-equivalence",
         "foundation/observer-projected-spacetime",
         "holography/horizon-gauge-shell",
@@ -1443,6 +1445,10 @@
           {
             "source": "cosmology/dark-energy-equation-of-state",
             "context": "Axiom 2"
+          },
+          {
+            "source": "foundation/minimum-bootstrap-closure",
+            "context": "Observer Definition"
           },
           {
             "source": "foundation/observer-holographic-equivalence",
@@ -5523,6 +5529,10 @@
         ],
         "incoming": [
           {
+            "source": "foundation/minimum-bootstrap-closure",
+            "context": "Knot-Theoretic Bootstrap"
+          },
+          {
             "source": "foundation/observer-holographic-equivalence",
             "context": "Knot-Theoretic Bootstrap"
           },
@@ -5539,6 +5549,181 @@
         "propositions": []
       },
       "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "foundation/minimum-bootstrap-closure": {
+      "id": "foundation/minimum-bootstrap-closure",
+      "filePath": "site/src/content/derivations/foundation/minimum-bootstrap-closure.md",
+      "title": "Minimum Bootstrap Closure",
+      "status": "draft",
+      "rigorLevel": "semi-formal",
+      "group": "foundation",
+      "tags": [
+        "foundation",
+        "structure",
+        "topology"
+      ],
+      "summary": "The bootstrap fixed-point conjecture U ≅ R(U, U) (Conjectures 7.1–7.2 of [Bootstrap]) has at least one concrete solution at small scale. The complete graph K_3 on three nodes — representing the minimum-multiplicity observer network (three level-1 observers with all pairwise Type III relations) — is a fixed point of the line-graph functor L, which is the skeletal form of the bootstrap map R capturing only the node/edge structural duality: L(K_3) = K_3. Moreover, K_3 is the unique fixed point of L among complete graphs. This establishes the conjecture's coherence in its simplest form and gives a concrete attackable program (extending L with weights, levels, and phase dynamics) for the full conjecture.",
+      "lastUpdated": "2026-04-17",
+      "dependsOn": [
+        "axioms/observer-definition",
+        "axioms/loop-closure",
+        "minimal-observer/structure",
+        "minimal-observer/multiplicity",
+        "interactions/relational-invariants",
+        "interactions/three-types",
+        "interactions/bootstrap",
+        "foundation/observer-holographic-equivalence"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [],
+      "formalObjects": [
+        {
+          "type": "Theorem",
+          "id": "1",
+          "name": "Fixed-point property of the triangle",
+          "statementPreview": "The complete graph K3 is a fixed point of the line-graph functor: L(K3) cong K3.*"
+        },
+        {
+          "type": "Theorem",
+          "id": "2",
+          "name": "Uniqueness among complete graphs",
+          "statementPreview": "Among complete graphs Kn for n 3, only K3 is a fixed point of L. For n 4, L(Kn) is not a complete graph.*"
+        },
+        {
+          "type": "Corollary",
+          "id": "3",
+          "name": "Coherence of the bootstrap fixed-point conjecture",
+          "statementPreview": "The fixed-point equation U cong R(U, U) has at least one solution when R is taken as the line-graph functor L acting ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.1.",
+          "name": "",
+          "statementPreview": "The smallest observer network consistent with the framework's multiplicity and relational constraints is the complete..."
+        },
+        {
+          "type": "Definition",
+          "id": "2.1",
+          "name": "Line-graph functor",
+          "statementPreview": "For a simple graph G = (V, E), the **line graph** L(G) is the graph whose vertices are the edges of G and whose edges..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "L as skeletal $\\mathcal{R}$",
+          "statementPreview": "The line-graph functor L is a skeletal form of the framework's bootstrap map R: it captures the node/edge structural ..."
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "Fixed-point property",
+          "statementPreview": "L(K3) = K3.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Explicit isomorphism",
+          "statementPreview": "The isomorphism psi: K3 L(K3) can be chosen as psi(A) = BC, psi(B) = CA, psi(C) = AB — each vertex maps to the edge c..."
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "Uniqueness",
+          "statementPreview": "Among complete graphs Kn for n 3, only K3 is a fixed point of L. For n 4, L(Kn) is not a complete graph.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.2",
+          "name": "Extension program",
+          "statementPreview": "The full bootstrap fixed-point conjecture would be approached by extending the line-graph functor L with additional s..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Rigorous specification of $\\mathcal{R}$.",
+          "description": "Proposition 2.2 argues informally that L is the skeletal form of R. A rigorous specification of R — its domain, codomain, action on all structural components of an observer network — is prerequisite f"
+        },
+        {
+          "number": 2,
+          "title": "Weighted-$L$ fixed point.",
+          "description": "Extend L to operate on graphs with integer edge weights representing coherence quanta per relation. Identify weight configurations on K3 (three integer weights nAB, nBC, nCA) for which weighted-L has "
+        },
+        {
+          "number": 3,
+          "title": "Level-indexed extension.",
+          "description": "Extend L to act on category-valued graphs where nodes carry a level index n in 1, 2, 3 and edges carry a level-transition structure. Ask whether a level-indexed triangle or a more elaborate structure "
+        },
+        {
+          "number": 4,
+          "title": "Dynamical-$L$.",
+          "description": "Extend L to carry U(1) phase dynamics at each node (Axiom 3 loop closure). The fixed point is then a *dynamical* network, not just a static graph. Does the triangle with specific phase relations (e.g."
+        },
+        {
+          "number": 5,
+          "title": "Categorical fixed-point theorem.",
+          "description": "Identify a category in which R is Scott-continuous and apply a general fixed-point theorem (Scott's continuous fixpoint, or Lambek's lemma for initial algebras) to establish existence abstractly. This"
+        },
+        {
+          "number": 6,
+          "title": "Convergence from a seed.",
+          "description": "Start with U0 = K1 (a single observer, trivially not closed) or U0 = K2 (two observers, insufficient for C5). Iterate Un+1 = R(Un, Un) with an appropriate closure map bringing the result back into com"
+        },
+        {
+          "number": 7,
+          "title": "Connecting to physical content.",
+          "description": "The triangle result is structural; it does not yet produce any observable quantity (Lambda, coupling constants, masses). Extending the fixed point to carry the framework's integer level structure (Ope"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap"
+          },
+          {
+            "target": "minimal-observer/multiplicity",
+            "context": "Multiplicity"
+          },
+          {
+            "target": "interactions/relational-invariants",
+            "context": "Relational Invariants"
+          },
+          {
+            "target": "interactions/three-types",
+            "context": "Three Interaction Types"
+          },
+          {
+            "target": "axioms/observer-definition",
+            "context": "Observer Definition"
+          },
+          {
+            "target": "foundation/knot-theoretic-bootstrap",
+            "context": "Knot-Theoretic Bootstrap"
+          },
+          {
+            "target": "interactions/bootstrap-division-algebras",
+            "context": "Bootstrap Division Algebras"
+          },
+          {
+            "target": "foundation/observer-holographic-equivalence",
+            "context": "Observer Holographic Equivalence"
+          }
+        ],
+        "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": true,
       "upgradeBlockers": []
     },
     "foundation/observer-holographic-equivalence": {
@@ -5567,7 +5752,9 @@
         "foundation/knot-theoretic-bootstrap"
       ],
       "enablesDerivation": [],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "foundation/minimum-bootstrap-closure"
+      ],
       "steps": [],
       "formalObjects": [
         {
@@ -5753,7 +5940,12 @@
             "context": "Hawking Radiation"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "foundation/minimum-bootstrap-closure",
+            "context": "Observer Holographic Equivalence"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -11022,6 +11214,10 @@
             "context": "Bootstrap Division Algebras"
           },
           {
+            "source": "foundation/minimum-bootstrap-closure",
+            "context": "Bootstrap Division Algebras"
+          },
+          {
             "source": "foundation/observer-holographic-equivalence",
             "context": "Bootstrap Division Algebras"
           },
@@ -11098,6 +11294,7 @@
         "cosmology/observer-loop-viability",
         "foundation/aperiodic-order",
         "foundation/knot-theoretic-bootstrap",
+        "foundation/minimum-bootstrap-closure",
         "foundation/observer-holographic-equivalence",
         "gauge/color-force",
         "holography/horizon-gauge-shell",
@@ -11405,6 +11602,10 @@
             "context": "Bootstrap"
           },
           {
+            "source": "foundation/minimum-bootstrap-closure",
+            "context": "Bootstrap"
+          },
+          {
             "source": "foundation/observer-holographic-equivalence",
             "context": "Bootstrap"
           },
@@ -11534,6 +11735,7 @@
       "dependedOnBy": [
         "cosmology/cyclic-cosmology",
         "cosmology/observer-loop-viability",
+        "foundation/minimum-bootstrap-closure",
         "gauge/chirality-selection",
         "holography/causal-set-statistics",
         "interactions/bootstrap",
@@ -11763,6 +11965,10 @@
             "context": "Relational Invariants"
           },
           {
+            "source": "foundation/minimum-bootstrap-closure",
+            "context": "Relational Invariants"
+          },
+          {
             "source": "gauge/anomaly-cancellation",
             "context": "Relational Invariants"
           },
@@ -11919,6 +12125,7 @@
       ],
       "dependedOnBy": [
         "cosmology/observer-loop-viability",
+        "foundation/minimum-bootstrap-closure",
         "interactions/relational-invariants",
         "quantum/teleportation",
         "thermodynamics/time"
@@ -12149,6 +12356,10 @@
           },
           {
             "source": "cosmology/observer-loop-viability",
+            "context": "Three Interaction Types"
+          },
+          {
+            "source": "foundation/minimum-bootstrap-closure",
             "context": "Three Interaction Types"
           },
           {
@@ -12541,6 +12752,7 @@
         "cosmology/geometric-inflation",
         "cosmology/observer-loop-viability",
         "foundation/aperiodic-order",
+        "foundation/minimum-bootstrap-closure",
         "foundation/observer-projected-spacetime",
         "interactions/three-types",
         "minimal-observer/coherence-dual-pairs",
@@ -12806,6 +13018,10 @@
             "context": "Multiplicity"
           },
           {
+            "source": "foundation/minimum-bootstrap-closure",
+            "context": "Multiplicity"
+          },
+          {
             "source": "foundation/observer-projected-spacetime",
             "context": "Multiplicity"
           },
@@ -12924,6 +13140,7 @@
         "cosmology/geometric-substrate",
         "cosmology/observer-loop-viability",
         "dimensions/three-dimensions",
+        "foundation/minimum-bootstrap-closure",
         "minimal-observer/multiplicity",
         "thermodynamics-ext/biological-non-ergodicity",
         "thermodynamics-ext/memory-persistence-tradeoff",
@@ -25309,6 +25526,76 @@
       "fullRef": "foundation/knot-theoretic-bootstrap:Proposition 3.4"
     },
     {
+      "derivationId": "foundation/minimum-bootstrap-closure",
+      "type": "Theorem",
+      "id": "1",
+      "name": "Fixed-point property of the triangle",
+      "fullRef": "foundation/minimum-bootstrap-closure:Theorem 1"
+    },
+    {
+      "derivationId": "foundation/minimum-bootstrap-closure",
+      "type": "Theorem",
+      "id": "2",
+      "name": "Uniqueness among complete graphs",
+      "fullRef": "foundation/minimum-bootstrap-closure:Theorem 2"
+    },
+    {
+      "derivationId": "foundation/minimum-bootstrap-closure",
+      "type": "Corollary",
+      "id": "3",
+      "name": "Coherence of the bootstrap fixed-point conjecture",
+      "fullRef": "foundation/minimum-bootstrap-closure:Corollary 3"
+    },
+    {
+      "derivationId": "foundation/minimum-bootstrap-closure",
+      "type": "Proposition",
+      "id": "1.1.",
+      "name": "",
+      "fullRef": "foundation/minimum-bootstrap-closure:Proposition 1.1."
+    },
+    {
+      "derivationId": "foundation/minimum-bootstrap-closure",
+      "type": "Definition",
+      "id": "2.1",
+      "name": "Line-graph functor",
+      "fullRef": "foundation/minimum-bootstrap-closure:Definition 2.1"
+    },
+    {
+      "derivationId": "foundation/minimum-bootstrap-closure",
+      "type": "Proposition",
+      "id": "2.2",
+      "name": "L as skeletal $\\mathcal{R}$",
+      "fullRef": "foundation/minimum-bootstrap-closure:Proposition 2.2"
+    },
+    {
+      "derivationId": "foundation/minimum-bootstrap-closure",
+      "type": "Theorem",
+      "id": "3.1",
+      "name": "Fixed-point property",
+      "fullRef": "foundation/minimum-bootstrap-closure:Theorem 3.1"
+    },
+    {
+      "derivationId": "foundation/minimum-bootstrap-closure",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "Explicit isomorphism",
+      "fullRef": "foundation/minimum-bootstrap-closure:Proposition 3.2"
+    },
+    {
+      "derivationId": "foundation/minimum-bootstrap-closure",
+      "type": "Theorem",
+      "id": "4.1",
+      "name": "Uniqueness",
+      "fullRef": "foundation/minimum-bootstrap-closure:Theorem 4.1"
+    },
+    {
+      "derivationId": "foundation/minimum-bootstrap-closure",
+      "type": "Proposition",
+      "id": "5.2",
+      "name": "Extension program",
+      "fullRef": "foundation/minimum-bootstrap-closure:Proposition 5.2"
+    },
+    {
       "derivationId": "foundation/observer-holographic-equivalence",
       "type": "Definition",
       "id": "1.1",
@@ -31912,6 +32199,55 @@
       "description": "The self-consistent surgery iteration (Step 4) must converge. Under what conditions does iterated surgery on a framed link in successive manifolds converge to a fixed point? This is a question in 3-ma"
     },
     {
+      "derivationId": "foundation/minimum-bootstrap-closure",
+      "derivationStatus": "draft",
+      "number": 1,
+      "title": "Rigorous specification of $\\mathcal{R}$.",
+      "description": "Proposition 2.2 argues informally that L is the skeletal form of R. A rigorous specification of R — its domain, codomain, action on all structural components of an observer network — is prerequisite f"
+    },
+    {
+      "derivationId": "foundation/minimum-bootstrap-closure",
+      "derivationStatus": "draft",
+      "number": 2,
+      "title": "Weighted-$L$ fixed point.",
+      "description": "Extend L to operate on graphs with integer edge weights representing coherence quanta per relation. Identify weight configurations on K3 (three integer weights nAB, nBC, nCA) for which weighted-L has "
+    },
+    {
+      "derivationId": "foundation/minimum-bootstrap-closure",
+      "derivationStatus": "draft",
+      "number": 3,
+      "title": "Level-indexed extension.",
+      "description": "Extend L to act on category-valued graphs where nodes carry a level index n in 1, 2, 3 and edges carry a level-transition structure. Ask whether a level-indexed triangle or a more elaborate structure "
+    },
+    {
+      "derivationId": "foundation/minimum-bootstrap-closure",
+      "derivationStatus": "draft",
+      "number": 4,
+      "title": "Dynamical-$L$.",
+      "description": "Extend L to carry U(1) phase dynamics at each node (Axiom 3 loop closure). The fixed point is then a *dynamical* network, not just a static graph. Does the triangle with specific phase relations (e.g."
+    },
+    {
+      "derivationId": "foundation/minimum-bootstrap-closure",
+      "derivationStatus": "draft",
+      "number": 5,
+      "title": "Categorical fixed-point theorem.",
+      "description": "Identify a category in which R is Scott-continuous and apply a general fixed-point theorem (Scott's continuous fixpoint, or Lambek's lemma for initial algebras) to establish existence abstractly. This"
+    },
+    {
+      "derivationId": "foundation/minimum-bootstrap-closure",
+      "derivationStatus": "draft",
+      "number": 6,
+      "title": "Convergence from a seed.",
+      "description": "Start with U0 = K1 (a single observer, trivially not closed) or U0 = K2 (two observers, insufficient for C5). Iterate Un+1 = R(Un, Un) with an appropriate closure map bringing the result back into com"
+    },
+    {
+      "derivationId": "foundation/minimum-bootstrap-closure",
+      "derivationStatus": "draft",
+      "number": 7,
+      "title": "Connecting to physical content.",
+      "description": "The triangle result is structural; it does not yet produce any observable quantity (Lambda, coupling constants, masses). Extending the fixed point to carry the framework's integer level structure (Ope"
+    },
+    {
       "derivationId": "foundation/observer-holographic-equivalence",
       "derivationStatus": "stub",
       "number": 1,
@@ -33279,6 +33615,12 @@
   ],
   "upgradeAnalysis": {
     "eligible": [
+      {
+        "id": "foundation/minimum-bootstrap-closure",
+        "currentStatus": "draft",
+        "gapCount": 7,
+        "formalObjectCount": 10
+      },
       {
         "id": "thermodynamics-ext/non-ergodicity",
         "currentStatus": "draft",
