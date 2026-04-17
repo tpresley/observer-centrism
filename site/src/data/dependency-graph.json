@@ -475,6 +475,12 @@
       "status": "draft"
     },
     {
+      "id": "foundation/observer-level-stack-compactness",
+      "title": "Observer-Level Stack Compactness",
+      "group": "foundation",
+      "status": "stub"
+    },
+    {
       "id": "cosmology/cyclic-cosmology",
       "title": "Observer-Centric Cyclic Cosmology",
       "group": "cosmology",
@@ -1515,6 +1521,38 @@
     {
       "from": "foundation/observer-holographic-equivalence",
       "to": "foundation/minimum-bootstrap-closure"
+    },
+    {
+      "from": "axioms/coherence-conservation",
+      "to": "foundation/observer-level-stack-compactness"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "foundation/observer-level-stack-compactness"
+    },
+    {
+      "from": "minimal-observer/structure",
+      "to": "foundation/observer-level-stack-compactness"
+    },
+    {
+      "from": "holography/area-scaling",
+      "to": "foundation/observer-level-stack-compactness"
+    },
+    {
+      "from": "cosmology/observer-loop-viability",
+      "to": "foundation/observer-level-stack-compactness"
+    },
+    {
+      "from": "thermodynamics-ext/fisher-metric",
+      "to": "foundation/observer-level-stack-compactness"
+    },
+    {
+      "from": "foundation/observer-projected-spacetime",
+      "to": "foundation/observer-level-stack-compactness"
+    },
+    {
+      "from": "foundation/observer-holographic-equivalence",
+      "to": "foundation/observer-level-stack-compactness"
     }
   ]
 }

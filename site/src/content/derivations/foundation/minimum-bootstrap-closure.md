@@ -31,7 +31,9 @@ This is a skeletal result, not a full solution. The line-graph functor captures 
 
 **Corollary 3 (Coherence of the bootstrap fixed-point conjecture).** *The fixed-point equation $\mathcal{U} \cong \mathcal{R}(\mathcal{U}, \mathcal{U})$ has at least one solution when $\mathcal{R}$ is taken as the line-graph functor $L$ acting on simple graphs. Therefore the bootstrap fixed-point conjecture is coherent at its skeletal level — the equation is not vacuous or self-contradictory.*
 
-## Step 1: The Minimum Observer Network
+## Derivation
+
+### Step 1: The Minimum Observer Network
 
 **Proposition 1.1.** *The smallest observer network consistent with the framework's multiplicity and relational constraints is the complete graph $K_3$ on three nodes.*
 
@@ -47,7 +49,7 @@ The smallest graph satisfying (i)–(iii) is three nodes with all three pairwise
 
 **Remark 1.2 (Minimal observers, level 1).** *We work with minimal level-1 observers: each node $A, B, C$ is a $U(1)$ phase loop ($\Sigma \cong S^1$) with a period $T$, a Noether invariant $I$, and a self/non-self boundary $\mathcal{B}$, per [Observer Definition](/derivations/axioms/observer-definition) Axiom 2. At this level, the intrinsic dynamics is the simplest possible; bootstrap composition to higher levels is external to the small-case analysis and deferred to Open Gap 2 below.*
 
-## Step 2: The Line-Graph Functor as a Skeletal Bootstrap Map
+### Step 2: The Line-Graph Functor as a Skeletal Bootstrap Map
 
 **Definition 2.1 (Line-graph functor).** *For a simple graph $G = (V, E)$, the **line graph** $L(G)$ is the graph whose vertices are the edges of $G$ and whose edges connect pairs of $L(G)$-vertices corresponding to $G$-edges that share an endpoint.*
 
@@ -73,7 +75,7 @@ The smallest graph satisfying (i)–(iii) is three nodes with all three pairwise
 
 $L$ is therefore the natural skeletal version of $\mathcal{R}$ — it retains exactly the structural self-reference needed to pose the fixed-point equation, while stripping away framework-specific decorations that do not affect the small-case existence question. $\square$
 
-## Step 3: The Triangle Computation
+### Step 3: The Triangle Computation
 
 **Theorem 3.1 (Fixed-point property).** *$L(K_3) = K_3$.*
 
@@ -102,7 +104,7 @@ Therefore $L(K_3) \cong K_3$. $\square$
 
 **Remark 3.4 (Permutation symmetry).** *The automorphism group of $K_3$ is $S_3$ (the symmetric group on three elements). The isomorphism $\psi$ is equivariant under this symmetry: any permutation of $\{A, B, C\}$ induces the corresponding permutation of $\{BC, CA, AB\}$. The fixed-point structure therefore has the full $S_3$ symmetry expected of a minimum-multiplicity network with no distinguished observer.*
 
-## Step 4: Uniqueness Among Complete Graphs
+### Step 4: Uniqueness Among Complete Graphs
 
 **Theorem 4.1 (Uniqueness).** *Among complete graphs $K_n$ for $n \geq 3$, only $K_3$ is a fixed point of $L$. For $n \geq 4$, $L(K_n)$ is not a complete graph.*
 
@@ -120,11 +122,11 @@ For $n = 3$: $\frac{3 \cdot 2}{2} = 3$ ✓, and Theorem 3.1 shows the edges matc
 
 For $n \geq 4$: $\frac{n(n-1)}{2} > n$, so $L(K_n)$ has strictly more vertices than $K_n$ and cannot be isomorphic to it. More specifically, $L(K_n)$ is the **triangular graph** $T_n$ (also called the Johnson graph $J(n, 2)$ or the line graph of $K_n$), which has $\binom{n}{2}$ vertices, each of degree $2(n-2)$. $T_n$ is not complete for $n \geq 4$ — two edges sharing no vertex give non-adjacent $T_n$-vertices. $\square$
 
-**Remark 4.2 (K_3 as a forced structure).** *Theorem 4.1 strengthens Proposition 1.1's "minimum" into "unique (among complete graphs)." The framework's multiplicity requirement is not merely a lower bound — it corresponds to the unique complete-graph fixed point of the bootstrap self-reference. This is a natural-selection-style uniqueness: of all complete-graph candidate universes, only $K_3$ is bootstrap-closed.*
+**Remark 4.2 ($K_3$ as a forced structure).** *Theorem 4.1 strengthens Proposition 1.1's "minimum" into "unique (among complete graphs)." The framework's multiplicity requirement is not merely a lower bound — it corresponds to the unique complete-graph fixed point of the bootstrap self-reference. This is a natural-selection-style uniqueness: of all complete-graph candidate universes, only $K_3$ is bootstrap-closed.*
 
 **Remark 4.3 (Cycles as an alternative fixed-point family).** *The line-graph functor also has cycle fixed points: $L(C_n) = C_n$ for any $n \geq 3$. However, cycles $C_n$ for $n \geq 4$ are not complete — they have no long-range edges. Under the framework's "all pairs of observers in causal contact participate in Type III relations" constraint, only the complete graph (fully-connected) case is physically relevant, and within that case only $K_3$ is a fixed point. Cycles remain as alternative skeletal fixed points that would correspond to networks where not all pairs of observers are related — a configuration the framework does not admit at a single level.*
 
-## Step 5: Relation to the Framework's Full Bootstrap
+### Step 5: Relation to the Framework's Full Bootstrap
 
 **Remark 5.1 (What is and is not established).** *Theorems 1, 2, 3 give a concrete fixed point for the line-graph functor. They establish:*
 
@@ -147,7 +149,7 @@ For $n \geq 4$: $\frac{n(n-1)}{2} > n$, so $L(K_n)$ has strictly more vertices t
 
 *Each extension is a concrete mathematical target. The triangle result at the skeletal level is the existence proof that makes each extension worth pursuing — extending a structure that is known to have fixed points is a tractable program.*
 
-**Remark 5.3 (Why K_3 + bootstrap extensions might reproduce observed physics).** *If the extensions of Proposition 5.2 preserve the triangle's fixed-point property while adding the framework's algebraic and geometric content, the fixed point at each extension level would carry progressively more physical structure. The small-case result identifies the seed; the question for each extension is whether the seed can be grown. This is structurally similar to how $K_3$ generalizes to simplicial complexes and their higher-dimensional analogs in algebraic topology — the triangle is the smallest instance of a pattern that admits rich extensions.*
+**Remark 5.3 (Why $K_3$ + bootstrap extensions might reproduce observed physics).** *If the extensions of Proposition 5.2 preserve the triangle's fixed-point property while adding the framework's algebraic and geometric content, the fixed point at each extension level would carry progressively more physical structure. The small-case result identifies the seed; the question for each extension is whether the seed can be grown. This is structurally similar to how $K_3$ generalizes to simplicial complexes and their higher-dimensional analogs in algebraic topology — the triangle is the smallest instance of a pattern that admits rich extensions.*
 
 ## Consequences
 

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-04-17T18:03:52.873Z",
-    "derivationCount": 81,
+    "generatedAt": "2026-04-17T19:23:18.250Z",
+    "derivationCount": 82,
     "predictionCount": 12,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -11,13 +11,13 @@
       "derived": 27,
       "provisional": 44,
       "draft": 3,
-      "stub": 7
+      "stub": 8
     },
-    "derivationCount": 81,
+    "derivationCount": 82,
     "predictionCount": 12,
-    "edgeCount": 257,
-    "formalObjectCount": 1198,
-    "openGapCount": 265,
+    "edgeCount": 265,
+    "formalObjectCount": 1200,
+    "openGapCount": 272,
     "upgradeEligibleCount": 2,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -134,6 +134,7 @@
         "foundation/aperiodic-order",
         "foundation/continuous-discrete-duality",
         "foundation/observer-holographic-equivalence",
+        "foundation/observer-level-stack-compactness",
         "gauge/anomaly-cancellation",
         "gauge/chirality-selection",
         "holography/information-paradox",
@@ -416,6 +417,10 @@
           },
           {
             "source": "foundation/observer-holographic-equivalence",
+            "context": "Coherence Conservation"
+          },
+          {
+            "source": "foundation/observer-level-stack-compactness",
             "context": "Coherence Conservation"
           },
           {
@@ -1219,6 +1224,7 @@
         "foundation/continuous-discrete-duality",
         "foundation/minimum-bootstrap-closure",
         "foundation/observer-holographic-equivalence",
+        "foundation/observer-level-stack-compactness",
         "foundation/observer-projected-spacetime",
         "holography/horizon-gauge-shell",
         "minimal-observer/multiplicity",
@@ -3572,6 +3578,7 @@
         "cosmology/cyclic-cosmology",
         "cosmology/dark-energy-equation-of-state",
         "cosmology/geometric-substrate",
+        "foundation/observer-level-stack-compactness",
         "foundation/observer-projected-spacetime"
       ],
       "steps": [
@@ -5715,7 +5722,12 @@
             "context": "Observer Holographic Equivalence"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "foundation/observer-level-stack-compactness",
+            "context": "Minimum Bootstrap Closure"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -5753,7 +5765,8 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
-        "foundation/minimum-bootstrap-closure"
+        "foundation/minimum-bootstrap-closure",
+        "foundation/observer-level-stack-compactness"
       ],
       "steps": [],
       "formalObjects": [
@@ -5944,8 +5957,135 @@
           {
             "source": "foundation/minimum-bootstrap-closure",
             "context": "Observer Holographic Equivalence"
+          },
+          {
+            "source": "foundation/observer-level-stack-compactness",
+            "context": "Observer Holographic Equivalence"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "foundation/observer-level-stack-compactness": {
+      "id": "foundation/observer-level-stack-compactness",
+      "filePath": "site/src/content/derivations/foundation/observer-level-stack-compactness.md",
+      "title": "Observer-Level Stack Compactness",
+      "status": "stub",
+      "rigorLevel": "informal",
+      "group": "foundation",
+      "tags": [
+        "foundation",
+        "structure",
+        "topology"
+      ],
+      "summary": "For each observer A, the hierarchy of observer levels (minimal observers through the bootstrap composite A itself) is naturally fibered over a closed bounded real interval of scalar coherence values [0, C_A]. This base is compact by Heine–Borel. Each fiber is finite by the per-observer holographic bound A_horizon/(4ℓ_P²) (inherited from [Area Scaling] and [Observer-Projected Spacetime]). Under suitable continuity of the fibration — informally argued here, rigorously open — the total space inherits compactness. The result is a lemma for the bootstrap fixed-point program: compactness is the prerequisite for classical fixed-point theorems (Schauder, Kakutani, Scott-continuous) that would give existence of the bootstrap fixed point U without requiring explicit construction.",
+      "lastUpdated": "2026-04-17",
+      "dependsOn": [
+        "axioms/coherence-conservation",
+        "axioms/observer-definition",
+        "minimal-observer/structure",
+        "holography/area-scaling",
+        "cosmology/observer-loop-viability",
+        "thermodynamics-ext/fisher-metric",
+        "foundation/observer-projected-spacetime",
+        "foundation/observer-holographic-equivalence"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [],
+      "formalObjects": [
+        {
+          "type": "Proposition",
+          "id": "1.1",
+          "name": "Compactness of the coherence base",
+          "statementPreview": "For any observer A, the coherence interval [0, CA] is compact.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "Finiteness of each fiber",
+          "statementPreview": "For any observer A and any c in [0, CA], the fiber FA(c) — the set of sub-observer configurations within A's hierarch..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Fibration continuity.",
+          "description": "Informal Proposition 3.1 argues continuity informally via Fisher metric smoothness, integer quantization, and level stratification. A rigorous proof requires (a) specifying the exact topology on the f"
+        },
+        {
+          "number": 2,
+          "title": "Rigorous formulation of the fibered hierarchy.",
+          "description": "The total space HA is described here informally as \"the sub-observer hierarchy fibered over coherence values.\" A rigorous formulation in an appropriate category (bundles of posets, stratified Lie grou"
+        },
+        {
+          "number": 3,
+          "title": "Compactness-preserving maps.",
+          "description": "Even if HA is compact, the bootstrap map R must be continuous and map HA to itself (or a compact subset) for the fixed-point theorems to apply. Formalizing R as an endofunctor of HA and verifying cont"
+        },
+        {
+          "number": 4,
+          "title": "Convexity for Schauder.",
+          "description": "Schauder's theorem requires compact *convex* sets. The observer-level stack is not obviously convex — coherence value is a scalar and the fibers are discrete. A convex-hull construction or an alternat"
+        },
+        {
+          "number": 5,
+          "title": "Cross-observer compactness.",
+          "description": "The theorem is stated observer-relatively: each HA is compact. For the fixed-point to yield a universal U, we need a compatibility condition across observers — either compactness of a total stack that"
+        },
+        {
+          "number": 6,
+          "title": "Topology choice affects what \"compact\" means.",
+          "description": "Different topologies on HA give different compactness statements. The \"right\" topology is the one in which R is continuous and the fixed-point theorem applies — this choice is not yet pinned down. Pre"
+        },
+        {
+          "number": 7,
+          "title": "Dependence on [Area Scaling] postulates.",
+          "description": "Proposition 1.1 and 2.1 both rely on the holographic bound. [Area Scaling](/derivations/holography/area-scaling) itself carries Structural Postulate S1 (area-coherence saturation). Any promotion of S1"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap"
+          },
+          {
+            "target": "foundation/minimum-bootstrap-closure",
+            "context": "Minimum Bootstrap Closure"
+          },
+          {
+            "target": "foundation/observer-projected-spacetime",
+            "context": "Observer-Projected Spacetime"
+          },
+          {
+            "target": "axioms/coherence-conservation",
+            "context": "Coherence Conservation"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
+          },
+          {
+            "target": "foundation/observer-holographic-equivalence",
+            "context": "Observer Holographic Equivalence"
+          },
+          {
+            "target": "thermodynamics-ext/fisher-metric",
+            "context": "Fisher Metric"
+          }
+        ],
+        "incoming": []
       },
       "leanVerification": {
         "hasProofs": false,
@@ -5983,7 +6123,8 @@
       "enablesDerivation": [],
       "dependedOnBy": [
         "cosmology/cosmological-constant",
-        "foundation/observer-holographic-equivalence"
+        "foundation/observer-holographic-equivalence",
+        "foundation/observer-level-stack-compactness"
       ],
       "steps": [],
       "formalObjects": [
@@ -6154,6 +6295,10 @@
           },
           {
             "source": "foundation/observer-holographic-equivalence",
+            "context": "Observer-Projected Spacetime"
+          },
+          {
+            "source": "foundation/observer-level-stack-compactness",
             "context": "Observer-Projected Spacetime"
           }
         ]
@@ -9107,6 +9252,7 @@
         "cosmology/geometric-substrate",
         "cosmology/observer-loop-viability",
         "foundation/observer-holographic-equivalence",
+        "foundation/observer-level-stack-compactness",
         "holography/black-hole-entropy",
         "holography/causal-set-statistics",
         "holography/er-epr",
@@ -9350,6 +9496,10 @@
           },
           {
             "source": "foundation/observer-holographic-equivalence",
+            "context": "Area Scaling"
+          },
+          {
+            "source": "foundation/observer-level-stack-compactness",
             "context": "Area Scaling"
           },
           {
@@ -11610,6 +11760,10 @@
             "context": "Bootstrap"
           },
           {
+            "source": "foundation/observer-level-stack-compactness",
+            "context": "Bootstrap"
+          },
+          {
             "source": "gauge/color-force",
             "context": "Bootstrap Mechanism"
           },
@@ -13141,6 +13295,7 @@
         "cosmology/observer-loop-viability",
         "dimensions/three-dimensions",
         "foundation/minimum-bootstrap-closure",
+        "foundation/observer-level-stack-compactness",
         "minimal-observer/multiplicity",
         "thermodynamics-ext/biological-non-ergodicity",
         "thermodynamics-ext/memory-persistence-tradeoff",
@@ -19450,6 +19605,7 @@
       "dependedOnBy": [
         "foundation/coherence-lagrangian",
         "foundation/continuous-discrete-duality",
+        "foundation/observer-level-stack-compactness",
         "spacetime/gravitational-constant",
         "thermodynamics/action-planck"
       ],
@@ -19673,6 +19829,10 @@
           },
           {
             "source": "foundation/continuous-discrete-duality",
+            "context": "Fisher Metric"
+          },
+          {
+            "source": "foundation/observer-level-stack-compactness",
             "context": "Fisher Metric"
           },
           {
@@ -25671,6 +25831,20 @@
       "id": "8.1",
       "name": "Obstruction class is combinatorial",
       "fullRef": "foundation/observer-holographic-equivalence:Corollary 8.1"
+    },
+    {
+      "derivationId": "foundation/observer-level-stack-compactness",
+      "type": "Proposition",
+      "id": "1.1",
+      "name": "Compactness of the coherence base",
+      "fullRef": "foundation/observer-level-stack-compactness:Proposition 1.1"
+    },
+    {
+      "derivationId": "foundation/observer-level-stack-compactness",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "Finiteness of each fiber",
+      "fullRef": "foundation/observer-level-stack-compactness:Proposition 2.1"
     },
     {
       "derivationId": "foundation/observer-projected-spacetime",
@@ -32302,6 +32476,55 @@
       "number": 8,
       "title": "Connection to Gibbons–Hawking thermodynamics.",
       "description": "Thesis B identifies horizon thermality as phase-decoherence on a null surface. A derivation that produces the Gibbons–Hawking temperature TGH(A) = hbar/(2pi kB LA) directly from the phase-discard stru"
+    },
+    {
+      "derivationId": "foundation/observer-level-stack-compactness",
+      "derivationStatus": "stub",
+      "number": 1,
+      "title": "Fibration continuity.",
+      "description": "Informal Proposition 3.1 argues continuity informally via Fisher metric smoothness, integer quantization, and level stratification. A rigorous proof requires (a) specifying the exact topology on the f"
+    },
+    {
+      "derivationId": "foundation/observer-level-stack-compactness",
+      "derivationStatus": "stub",
+      "number": 2,
+      "title": "Rigorous formulation of the fibered hierarchy.",
+      "description": "The total space HA is described here informally as \"the sub-observer hierarchy fibered over coherence values.\" A rigorous formulation in an appropriate category (bundles of posets, stratified Lie grou"
+    },
+    {
+      "derivationId": "foundation/observer-level-stack-compactness",
+      "derivationStatus": "stub",
+      "number": 3,
+      "title": "Compactness-preserving maps.",
+      "description": "Even if HA is compact, the bootstrap map R must be continuous and map HA to itself (or a compact subset) for the fixed-point theorems to apply. Formalizing R as an endofunctor of HA and verifying cont"
+    },
+    {
+      "derivationId": "foundation/observer-level-stack-compactness",
+      "derivationStatus": "stub",
+      "number": 4,
+      "title": "Convexity for Schauder.",
+      "description": "Schauder's theorem requires compact *convex* sets. The observer-level stack is not obviously convex — coherence value is a scalar and the fibers are discrete. A convex-hull construction or an alternat"
+    },
+    {
+      "derivationId": "foundation/observer-level-stack-compactness",
+      "derivationStatus": "stub",
+      "number": 5,
+      "title": "Cross-observer compactness.",
+      "description": "The theorem is stated observer-relatively: each HA is compact. For the fixed-point to yield a universal U, we need a compatibility condition across observers — either compactness of a total stack that"
+    },
+    {
+      "derivationId": "foundation/observer-level-stack-compactness",
+      "derivationStatus": "stub",
+      "number": 6,
+      "title": "Topology choice affects what \"compact\" means.",
+      "description": "Different topologies on HA give different compactness statements. The \"right\" topology is the one in which R is continuous and the fixed-point theorem applies — this choice is not yet pinned down. Pre"
+    },
+    {
+      "derivationId": "foundation/observer-level-stack-compactness",
+      "derivationStatus": "stub",
+      "number": 7,
+      "title": "Dependence on [Area Scaling] postulates.",
+      "description": "Proposition 1.1 and 2.1 both rely on the holographic bound. [Area Scaling](/derivations/holography/area-scaling) itself carries Structural Postulate S1 (area-coherence saturation). Any promotion of S1"
     },
     {
       "derivationId": "foundation/observer-projected-spacetime",
