@@ -10,6 +10,9 @@ relatedDerivations:
   - "holography/er-epr"
   - "holography/causal-set-statistics"
   - "holography/scrambling"
+  - "holography/horizon-gauge-shell"
+  - "foundation/observer-projected-spacetime"
+  - "foundation/observer-holographic-equivalence"
   - "thermodynamics-ext/distinguishability-conservation"
 relatedPredictions:
   - "holographic-noise"
@@ -21,6 +24,32 @@ relatedPredictions:
 Black hole thermodynamics sits at the intersection of quantum mechanics, general relativity, and information theory &mdash; and it is where all three frameworks show their seams. Why does the entropy of a black hole scale with area rather than volume? What happens to the information that falls in? How does Hawking radiation carry information out if nothing can escape the horizon? Is ER=EPR a conjecture or a theorem? These questions have driven theoretical physics for fifty years without consensus answers.
 
 The framework approaches these questions from an unexpected direction: not from quantum gravity (quantizing the metric) or string theory (extra dimensions and dualities), but from the structural definition of observers. Horizons, in this framework, are not exotic objects &mdash; they are observer boundaries. Every observer has one. A black hole horizon is simply the largest boundary a given mass can sustain. The results follow from coherence conservation applied to these boundaries.
+
+For the philosophical reframing &mdash; *why area-scaling is a definition rather than a duality* &mdash; see [On Holography](/on-holography).
+
+## Horizons Are Observer-Universal
+
+The recent [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) derivation makes the "every observer has a horizon" claim structurally explicit. Each observer $A$ projects its own continuous dual $M_A$ &mdash; a Lorentzian 4-patch-with-boundary in which $A$'s worldline sits at the center and a null horizon $\partial M_A$ sits at proper distance $cT_A/2$. For a minimal observer the conjectured form is a static de Sitter patch with de Sitter radius $L_A = cT_A/2$, effective cosmological constant $\Lambda_A = 12/(cT_A)^2$, and Gibbons&ndash;Hawking temperature $T_{\text{GH}}^{(A)} = \hbar/(2\pi k_B L_A)$.
+
+Each bootstrap level projects its own $L_n$ and its own $\Lambda_n^{\text{eff}}$. The framework does not admit a shared global background &mdash; the continuous dual is an observer-indexed family $\{M_A\}$ of Lorentzian patches, glued by restriction maps on shared Type III relations. The cosmological constant hierarchy becomes the obstruction class of this family's failure to reduce to a single manifold across levels: 120 orders of magnitude of gluing failure, not of fine-tuning.
+
+This reframes every horizon result below. Statements about "the" horizon are, more precisely, statements about the structural features that every observer boundary exhibits.
+
+## Time-like and Space-like Holographic Encodings
+
+[Observer Holographic Equivalence](/derivations/foundation/observer-holographic-equivalence) identifies two complementary complete descriptions of an observer's state, unitarily equivalent under its dynamics:
+
+**Thesis A (time-like).** The sequenced record of Type III carrier crossings of any enclosing surface $\Sigma$ over the observer's history determines the observer's state at each tick. This is the boundary-oriented description &mdash; what has crossed in and out, when, with what content.
+
+**Thesis A' (space-like).** The instantaneous configuration on a Cauchy slice through the interior of the observer's coherence domain &mdash; positions, phases, internal entanglement &mdash; determines the state at a single moment. This is the interior-oriented description.
+
+Neither is prior. Each determines the other under unitary evolution. Bulk-boundary correspondence, in this framework, is the recognition that the 4-manifold's temporal and spatial axes carry the same state as two orthogonal projections.
+
+**Thesis B (null portions carry integer content).** Phase discard is a local property of a surface's causal character. Null portions carry integer/topological data only (linking numbers, Chern&ndash;Simons levels, framings, coherence quanta, Poisson event counts); timelike or spacelike portions carry full continuous phase. The null horizon $\partial M_A$ is entirely null, and its encoding is therefore entirely integer &mdash; making it the canonical coarsest holographic surface.
+
+This explains a pattern that runs through every framework horizon derivation: each description of horizon content has only ever used integers. It is not coincidence. The horizon is null, and null surfaces can only hold discrete content. The coherence-domain boundary $\mathcal{B}_A$ just inside the horizon is timelike, and carries the continuous phase that the horizon has discarded.
+
+**Formal derivations:** [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime), [Observer Holographic Equivalence](/derivations/foundation/observer-holographic-equivalence).
 
 ## The Holographic Entropy Bound
 

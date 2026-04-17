@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-04-17T19:23:18.250Z",
-    "derivationCount": 82,
+    "generatedAt": "2026-04-17T20:03:14.292Z",
+    "derivationCount": 83,
     "predictionCount": 12,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -11,13 +11,13 @@
       "derived": 27,
       "provisional": 44,
       "draft": 3,
-      "stub": 8
+      "stub": 9
     },
-    "derivationCount": 82,
+    "derivationCount": 83,
     "predictionCount": 12,
-    "edgeCount": 265,
-    "formalObjectCount": 1200,
-    "openGapCount": 272,
+    "edgeCount": 271,
+    "formalObjectCount": 1207,
+    "openGapCount": 280,
     "upgradeEligibleCount": 2,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -132,6 +132,7 @@
         "axioms/observer-definition",
         "cosmology/dark-energy-equation-of-state",
         "foundation/aperiodic-order",
+        "foundation/bootstrap-fixed-point-existence",
         "foundation/continuous-discrete-duality",
         "foundation/observer-holographic-equivalence",
         "foundation/observer-level-stack-compactness",
@@ -4851,6 +4852,183 @@
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
+    "foundation/bootstrap-fixed-point-existence": {
+      "id": "foundation/bootstrap-fixed-point-existence",
+      "filePath": "site/src/content/derivations/foundation/bootstrap-fixed-point-existence.md",
+      "title": "Bootstrap Fixed-Point Existence",
+      "status": "stub",
+      "rigorLevel": "informal",
+      "group": "foundation",
+      "tags": [
+        "foundation",
+        "structure",
+        "topology"
+      ],
+      "summary": "Applies the Kleene–Scott fixed-point theorem to derive existence of the bootstrap fixed point U ≅ R(U, U) conditional on three structural prerequisites: (1) compactness of the observer-level stack ([Observer-Level Stack Compactness]), (2) a directed-complete partial order structure on the stack with a bottom element, and (3) Scott continuity of the bootstrap map R. Given the three prerequisites, the fixed point exists and equals the supremum of iterates of R starting from the bottom: U = sup_n R^n(⊥). This is the abstract-existence complement to the explicit small-case construction in [Minimum Bootstrap Closure]. The explicit triangle and the abstract Kleene fixed point are two sides of the same claim: the conjecture has at least one solution, localized either concretely at small scale or abstractly at full scale. Three prerequisites identify specific tractable targets; no new physical prediction emerges until those are tightened.",
+      "lastUpdated": "2026-04-17",
+      "dependsOn": [
+        "axioms/coherence-conservation",
+        "interactions/bootstrap",
+        "foundation/observer-level-stack-compactness",
+        "foundation/minimum-bootstrap-closure",
+        "foundation/observer-projected-spacetime",
+        "foundation/observer-holographic-equivalence"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The Partial Order on the Observer-Level Stack"
+        },
+        {
+          "number": 2,
+          "title": "Scott Continuity of the Bootstrap Map"
+        },
+        {
+          "number": 3,
+          "title": "Applying the Kleene–Scott Fixed-Point Theorem"
+        },
+        {
+          "number": 4,
+          "title": "Consistency with the Explicit Small-Case Result"
+        },
+        {
+          "number": 5,
+          "title": "What This Gives Us and What Remains Open"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Information refinement order",
+          "statementPreview": "For two elements X, Y in HA, say X Y if the sequenced crossing record of X is a prefix/restriction of the sequenced c..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Information refinement is a partial order",
+          "statementPreview": "is a partial order on HA:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "1.3",
+          "name": "Bottom element",
+          "statementPreview": "The observer with empty crossing record bot = emptyset is a least element: for any X in HA, the empty record is a pre..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.4",
+          "name": "Directed-completeness",
+          "statementPreview": "Every directed subset D HA has a supremum sup D in HA.*"
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "Kleene fixed-point theorem",
+          "statementPreview": "Let D be a dcpo with bottom bot and f: D D a Scott-continuous map. Then f has a least fixed point*"
+        },
+        {
+          "type": "Corollary",
+          "id": "3.2",
+          "name": "Conditional existence",
+          "statementPreview": "Conditional on the three prerequisites, the bootstrap fixed-point equation has at least one solution — namely U*.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Triangle as an iterate",
+          "statementPreview": "If R is identified with the line-graph functor L of [Minimum Bootstrap Closure](/derivations/foundation/minimum-boots..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Rigorous specification of $\\mathcal{R}$.",
+          "description": "The key prerequisite (P3) — Scott continuity of R — cannot be checked rigorously until R is rigorously specified. [Minimum Bootstrap Closure](/derivations/foundation/minimum-bootstrap-closure) Open Ga"
+        },
+        {
+          "number": 2,
+          "title": "Scott continuity of $\\mathcal{R}$.",
+          "description": "Once R is rigorously specified, check that it is Scott-continuous on HA. Informal Propositions 2.1 and 2.2 argue this plausibly; a rigorous check is the content of this gap. Likely tools: categorical "
+        },
+        {
+          "number": 3,
+          "title": "Stack compactness rigor.",
+          "description": "Prerequisite (P1) — compactness of HA — inherits [Observer-Level Stack Compactness](/derivations/foundation/observer-level-stack-compactness) Open Gaps 1–7. Of these, Open Gap 1 (fibration continuity)"
+        },
+        {
+          "number": 4,
+          "title": "Uniqueness of the fixed point.",
+          "description": "Kleene gives the *least* fixed point U*; this derivation does not establish that U* is the unique fixed point in HA. Uniqueness would require an additional argument (rigidity, cardinality, or a direct"
+        },
+        {
+          "number": 5,
+          "title": "Iteration initial conditions.",
+          "description": "The Kleene iteration from bot = emptyset may be trivial (Remark 4.2); a non-trivial seed is needed to generate structure. Identifying the correct seed — probably a minimum multiplicity-3 configuration"
+        },
+        {
+          "number": 6,
+          "title": "Extracting physical content.",
+          "description": "The Kleene fixed point U* is an abstract object in a dcpo. Extracting specific physical predictions (Lambda, coupling constants, particle masses) from U* requires understanding its internal structure,"
+        },
+        {
+          "number": 7,
+          "title": "Compatibility with observer-indexing.",
+          "description": "The theorem is stated for a single observer A's stack HA. Under the observer-indexed spacetime sheaf picture ([Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime)), the"
+        },
+        {
+          "number": 8,
+          "title": "Alternative fixed-point theorems.",
+          "description": "If Scott continuity proves intractable, alternative theorems may give existence under different hypotheses: Schauder (compact convex + continuous), Kakutani (compact convex + upper-semicontinuous set-"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap"
+          },
+          {
+            "target": "foundation/minimum-bootstrap-closure",
+            "context": "Minimum Bootstrap Closure"
+          },
+          {
+            "target": "foundation/observer-level-stack-compactness",
+            "context": "its Open Gap 1 is the key technical piece"
+          },
+          {
+            "target": "foundation/observer-level-stack-compactness",
+            "context": "Observer-Level Stack Compactness"
+          },
+          {
+            "target": "foundation/observer-holographic-equivalence",
+            "context": "Observer Holographic Equivalence"
+          },
+          {
+            "target": "minimal-observer/multiplicity",
+            "context": "Multiplicity"
+          },
+          {
+            "target": "foundation/observer-projected-spacetime",
+            "context": "Observer-Projected Spacetime"
+          }
+        ],
+        "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
     "foundation/coherence-lagrangian": {
       "id": "foundation/coherence-lagrangian",
       "filePath": "site/src/content/derivations/foundation/coherence-lagrangian.md",
@@ -5583,8 +5761,31 @@
         "foundation/observer-holographic-equivalence"
       ],
       "enablesDerivation": [],
-      "dependedOnBy": [],
-      "steps": [],
+      "dependedOnBy": [
+        "foundation/bootstrap-fixed-point-existence"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The Minimum Observer Network"
+        },
+        {
+          "number": 2,
+          "title": "The Line-Graph Functor as a Skeletal Bootstrap Map"
+        },
+        {
+          "number": 3,
+          "title": "The Triangle Computation"
+        },
+        {
+          "number": 4,
+          "title": "Uniqueness Among Complete Graphs"
+        },
+        {
+          "number": 5,
+          "title": "Relation to the Framework's Full Bootstrap"
+        }
+      ],
       "formalObjects": [
         {
           "type": "Theorem",
@@ -5724,6 +5925,10 @@
         ],
         "incoming": [
           {
+            "source": "foundation/bootstrap-fixed-point-existence",
+            "context": "Minimum Bootstrap Closure"
+          },
+          {
             "source": "foundation/observer-level-stack-compactness",
             "context": "Minimum Bootstrap Closure"
           }
@@ -5765,6 +5970,7 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
+        "foundation/bootstrap-fixed-point-existence",
         "foundation/minimum-bootstrap-closure",
         "foundation/observer-level-stack-compactness"
       ],
@@ -5955,6 +6161,10 @@
         ],
         "incoming": [
           {
+            "source": "foundation/bootstrap-fixed-point-existence",
+            "context": "Observer Holographic Equivalence"
+          },
+          {
             "source": "foundation/minimum-bootstrap-closure",
             "context": "Observer Holographic Equivalence"
           },
@@ -5998,7 +6208,9 @@
         "foundation/observer-holographic-equivalence"
       ],
       "enablesDerivation": [],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "foundation/bootstrap-fixed-point-existence"
+      ],
       "steps": [],
       "formalObjects": [
         {
@@ -6085,7 +6297,16 @@
             "context": "Fisher Metric"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "foundation/bootstrap-fixed-point-existence",
+            "context": "its Open Gap 1 is the key technical piece"
+          },
+          {
+            "source": "foundation/bootstrap-fixed-point-existence",
+            "context": "Observer-Level Stack Compactness"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -6123,6 +6344,7 @@
       "enablesDerivation": [],
       "dependedOnBy": [
         "cosmology/cosmological-constant",
+        "foundation/bootstrap-fixed-point-existence",
         "foundation/observer-holographic-equivalence",
         "foundation/observer-level-stack-compactness"
       ],
@@ -6288,6 +6510,10 @@
           {
             "source": "cosmology/cosmological-constant",
             "context": "-1, \\infty)$, only $w = -1$ gives zero coherence flux between the accessible and"
+          },
+          {
+            "source": "foundation/bootstrap-fixed-point-existence",
+            "context": "Observer-Projected Spacetime"
           },
           {
             "source": "foundation/coherence-lagrangian",
@@ -11443,6 +11669,7 @@
         "cosmology/geometric-substrate",
         "cosmology/observer-loop-viability",
         "foundation/aperiodic-order",
+        "foundation/bootstrap-fixed-point-existence",
         "foundation/knot-theoretic-bootstrap",
         "foundation/minimum-bootstrap-closure",
         "foundation/observer-holographic-equivalence",
@@ -11738,6 +11965,10 @@
           {
             "source": "foundation/aperiodic-order",
             "context": "Bootstrap Mechanism"
+          },
+          {
+            "source": "foundation/bootstrap-fixed-point-existence",
+            "context": "Bootstrap"
           },
           {
             "source": "foundation/coherence-lagrangian",
@@ -13165,6 +13396,10 @@
           },
           {
             "source": "foundation/aperiodic-order",
+            "context": "Multiplicity"
+          },
+          {
+            "source": "foundation/bootstrap-fixed-point-existence",
             "context": "Multiplicity"
           },
           {
@@ -25497,6 +25732,55 @@
       "fullRef": "foundation/aperiodic-order:Proposition 4.1"
     },
     {
+      "derivationId": "foundation/bootstrap-fixed-point-existence",
+      "type": "Definition",
+      "id": "1.1",
+      "name": "Information refinement order",
+      "fullRef": "foundation/bootstrap-fixed-point-existence:Definition 1.1"
+    },
+    {
+      "derivationId": "foundation/bootstrap-fixed-point-existence",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "Information refinement is a partial order",
+      "fullRef": "foundation/bootstrap-fixed-point-existence:Proposition 1.2"
+    },
+    {
+      "derivationId": "foundation/bootstrap-fixed-point-existence",
+      "type": "Proposition",
+      "id": "1.3",
+      "name": "Bottom element",
+      "fullRef": "foundation/bootstrap-fixed-point-existence:Proposition 1.3"
+    },
+    {
+      "derivationId": "foundation/bootstrap-fixed-point-existence",
+      "type": "Proposition",
+      "id": "1.4",
+      "name": "Directed-completeness",
+      "fullRef": "foundation/bootstrap-fixed-point-existence:Proposition 1.4"
+    },
+    {
+      "derivationId": "foundation/bootstrap-fixed-point-existence",
+      "type": "Theorem",
+      "id": "3.1",
+      "name": "Kleene fixed-point theorem",
+      "fullRef": "foundation/bootstrap-fixed-point-existence:Theorem 3.1"
+    },
+    {
+      "derivationId": "foundation/bootstrap-fixed-point-existence",
+      "type": "Corollary",
+      "id": "3.2",
+      "name": "Conditional existence",
+      "fullRef": "foundation/bootstrap-fixed-point-existence:Corollary 3.2"
+    },
+    {
+      "derivationId": "foundation/bootstrap-fixed-point-existence",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Triangle as an iterate",
+      "fullRef": "foundation/bootstrap-fixed-point-existence:Proposition 4.1"
+    },
+    {
       "derivationId": "foundation/coherence-lagrangian",
       "type": "Definition",
       "id": "1.1.",
@@ -32287,6 +32571,62 @@
       "number": 5,
       "title": "Net entropy $s_{\\text{net}}(\\beta_n)$",
       "description": "Derive the mutual information cost function from the axioms rather than assuming a Gaussian profile. This would fix alpha(betan) numerically. <!-- References --> [Lagarias, 1999]: /references#lagarias"
+    },
+    {
+      "derivationId": "foundation/bootstrap-fixed-point-existence",
+      "derivationStatus": "stub",
+      "number": 1,
+      "title": "Rigorous specification of $\\mathcal{R}$.",
+      "description": "The key prerequisite (P3) — Scott continuity of R — cannot be checked rigorously until R is rigorously specified. [Minimum Bootstrap Closure](/derivations/foundation/minimum-bootstrap-closure) Open Ga"
+    },
+    {
+      "derivationId": "foundation/bootstrap-fixed-point-existence",
+      "derivationStatus": "stub",
+      "number": 2,
+      "title": "Scott continuity of $\\mathcal{R}$.",
+      "description": "Once R is rigorously specified, check that it is Scott-continuous on HA. Informal Propositions 2.1 and 2.2 argue this plausibly; a rigorous check is the content of this gap. Likely tools: categorical "
+    },
+    {
+      "derivationId": "foundation/bootstrap-fixed-point-existence",
+      "derivationStatus": "stub",
+      "number": 3,
+      "title": "Stack compactness rigor.",
+      "description": "Prerequisite (P1) — compactness of HA — inherits [Observer-Level Stack Compactness](/derivations/foundation/observer-level-stack-compactness) Open Gaps 1–7. Of these, Open Gap 1 (fibration continuity)"
+    },
+    {
+      "derivationId": "foundation/bootstrap-fixed-point-existence",
+      "derivationStatus": "stub",
+      "number": 4,
+      "title": "Uniqueness of the fixed point.",
+      "description": "Kleene gives the *least* fixed point U*; this derivation does not establish that U* is the unique fixed point in HA. Uniqueness would require an additional argument (rigidity, cardinality, or a direct"
+    },
+    {
+      "derivationId": "foundation/bootstrap-fixed-point-existence",
+      "derivationStatus": "stub",
+      "number": 5,
+      "title": "Iteration initial conditions.",
+      "description": "The Kleene iteration from bot = emptyset may be trivial (Remark 4.2); a non-trivial seed is needed to generate structure. Identifying the correct seed — probably a minimum multiplicity-3 configuration"
+    },
+    {
+      "derivationId": "foundation/bootstrap-fixed-point-existence",
+      "derivationStatus": "stub",
+      "number": 6,
+      "title": "Extracting physical content.",
+      "description": "The Kleene fixed point U* is an abstract object in a dcpo. Extracting specific physical predictions (Lambda, coupling constants, particle masses) from U* requires understanding its internal structure,"
+    },
+    {
+      "derivationId": "foundation/bootstrap-fixed-point-existence",
+      "derivationStatus": "stub",
+      "number": 7,
+      "title": "Compatibility with observer-indexing.",
+      "description": "The theorem is stated for a single observer A's stack HA. Under the observer-indexed spacetime sheaf picture ([Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime)), the"
+    },
+    {
+      "derivationId": "foundation/bootstrap-fixed-point-existence",
+      "derivationStatus": "stub",
+      "number": 8,
+      "title": "Alternative fixed-point theorems.",
+      "description": "If Scott continuity proves intractable, alternative theorems may give existence under different hypotheses: Schauder (compact convex + continuous), Kakutani (compact convex + upper-semicontinuous set-"
     },
     {
       "derivationId": "foundation/coherence-lagrangian",

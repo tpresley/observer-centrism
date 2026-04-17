@@ -481,6 +481,12 @@
       "status": "stub"
     },
     {
+      "id": "foundation/bootstrap-fixed-point-existence",
+      "title": "Bootstrap Fixed-Point Existence",
+      "group": "foundation",
+      "status": "stub"
+    },
+    {
       "id": "cosmology/cyclic-cosmology",
       "title": "Observer-Centric Cyclic Cosmology",
       "group": "cosmology",
@@ -1553,6 +1559,30 @@
     {
       "from": "foundation/observer-holographic-equivalence",
       "to": "foundation/observer-level-stack-compactness"
+    },
+    {
+      "from": "axioms/coherence-conservation",
+      "to": "foundation/bootstrap-fixed-point-existence"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "foundation/bootstrap-fixed-point-existence"
+    },
+    {
+      "from": "foundation/observer-level-stack-compactness",
+      "to": "foundation/bootstrap-fixed-point-existence"
+    },
+    {
+      "from": "foundation/minimum-bootstrap-closure",
+      "to": "foundation/bootstrap-fixed-point-existence"
+    },
+    {
+      "from": "foundation/observer-projected-spacetime",
+      "to": "foundation/bootstrap-fixed-point-existence"
+    },
+    {
+      "from": "foundation/observer-holographic-equivalence",
+      "to": "foundation/bootstrap-fixed-point-existence"
     }
   ]
 }
