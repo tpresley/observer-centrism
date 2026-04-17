@@ -73,9 +73,9 @@ const nonViableCount = stats.byStatus['non-viable'] || 0
       Each derivation is a formal argument that begins with the axioms (and any
       explicitly declared additional assumptions) and arrives at a specific physical
       result. Of these {stats.derivationCount} derivations,
-      <strong>{derivedCount} are assessed as derived</strong>,
-      {provisionalCount > 0 && <>{provisionalCount} as provisional, </>}
-      and <strong>{nonViableCount} as non-viable</strong>.
+      <strong>{derivedCount} are assessed as derived</strong>
+      {provisionalCount > 0 && <>, {provisionalCount} as provisional</>}
+      {nonViableCount > 0 && <>, and <strong>{nonViableCount} as non-viable</strong></>}.
       The framework also makes <strong>{stats.predictionCount} testable predictions</strong>,
       several of which are accessible to current or near-future experiments.
     </p>
@@ -113,12 +113,14 @@ const nonViableCount = stats.byStatus['non-viable'] || 0
         the derivation chain. These range from straightforward tightening exercises to deep
         open problems in mathematical physics.
       </li>
+      {nonViableCount > 0 && (
       <li>
-        <strong>{nonViableCount} non-viable derivation</strong> &mdash; the attempt to derive the
-        value of the cosmological constant. The site keeps this derivation with an honest
-        assessment of why it fails, what the root causes are, and what would be needed to
-        make progress. Failed attempts are documented rather than deleted.
+        <strong>{nonViableCount} non-viable {nonViableCount === 1 ? 'derivation' : 'derivations'}</strong> &mdash; assessed as
+        structurally blocked within the current framework. Kept with an honest account of why
+        and what would be needed to make progress; unattainable results are documented rather
+        than hidden.
       </li>
+      )}
       <li>
         <strong>1 derivation tied to a Clay Millennium Problem</strong> &mdash; the chiral
         symmetry breaking derivation depends on the Yang-Mills mass gap, which is one of the

@@ -340,14 +340,14 @@
     "symbol": "\\Lambda",
     "name": "Cosmological constant",
     "smValue": "$\\Lambda \\approx 10^{-56}\\;\\text{cm}^{-2}$",
-    "frameworkValue": "Sign: $\\Lambda \\geq 0$ (rigorous, from coherence conservation). Upper bound: $\\Lambda < 3/\\ell_P^2$ (rigorous). Observed tiny value: 120 orders below Planck bound — qualitatively explained but not quantitatively derived.",
-    "status": "non-viable",
-    "accuracy": "Sign and bound correct; value not derived",
+    "frameworkValue": "Observer-level-indexed: at bootstrap level $n$, $\\Lambda_n = 12/(c T_n)^2$. Sign $\\Lambda \\geq 0$ and Planck-scale upper bound $\\Lambda < 3/\\ell_P^2$ are derived. Equation of state $w = -1$ is the unique time-independent fixed point. The $\\sim 10^{122}$ Planck-to-observed ratio is the obstruction class of the observer-indexed spacetime sheaf.",
+    "status": "mechanism-only",
+    "accuracy": "Sign, bound, and equation-of-state derived; per-level formula $\\Lambda_n = 12/(c T_n)^2$; numerical value at our observer level open",
     "group": "cosmological",
-    "derivation": "cosmology/observer-loop-viability",
-    "derivationTitle": "Observer-Loop Viability",
-    "gaps": ["Quantitative $\\Lambda$ (requires geometry functor — hard-open)", "Sharpening to $\\Lambda > 0$"],
-    "notes": "The observed $10^{-122}$ hierarchy is the framework's main quantitative failure, shared with all known approaches."
+    "derivation": "cosmology/cosmological-constant",
+    "derivationTitle": "Cosmological Constant",
+    "gaps": ["Obstruction class computation (hard-open)", "Observer-level identification for the measured $\\Lambda$", "Minimal-observer projection theorem (upstream)"],
+    "notes": "The $\\sim 10^{122}$ hierarchy is reframed as the obstruction class of the observer-indexed spacetime sheaf rather than a fine-tuning puzzle. Computing the class is a concrete categorical-cohomology target."
   },
   {
     "id": "ew-crystallization-axis",

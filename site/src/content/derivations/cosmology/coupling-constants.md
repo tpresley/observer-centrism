@@ -225,7 +225,7 @@ $$\alpha_{em}^{-1}(M_Z) = \alpha_Y^{-1}(M_Z) + \alpha_2^{-1}(M_Z)$$
 **Deferred (not gaps in the derivation logic):**
 - Specific crystallization scales $\Lambda_i$ from bootstrap dynamics — the non-convergence prediction is qualitative and holds for any hierarchy $\Lambda_3 > \Lambda_2 > \Lambda_1$
 - Fermion mass predictions (Yukawa couplings) — a separate question from gauge coupling constants
-- The cosmological constant — marked non-viable in its own derivation
+- The cosmological constant — observer-level-indexed; numerical value requires the obstruction class computation in its own derivation
 
 **Assessment:** Semi-formal. This derivation introduces one structural postulate (S1: algebraic ratio constraint, $\alpha_i \propto \dim \mathbb{A}_i$) and derives the coupling constant relationships: $\sin^2\theta_W = 1/3$ at the algebraic scale, coupling ratios $\alpha_1 : \alpha_2 : \alpha_3 = 1:2:4$, and the non-convergence prediction. The Weinberg angle sector is well-controlled: the ratio constraint determines $\Lambda_{\text{EW}}$ and $\alpha_{em}$ from a single parameter, and two-loop corrections are small (3.3%). The strong coupling sector is honestly assessed: it requires an independent determination of $\Lambda_3$ and does not follow from S1 alone. The most distinctive prediction — that the three couplings do *not* converge to a GUT point — is falsifiable by precision measurements and follows rigorously by delegation to the no-GUT result in [Standard Model Gauge Group](/derivations/gauge/standard-model-group) Theorem 3.1 (no simple group embedding via Hurwitz's theorem).
 

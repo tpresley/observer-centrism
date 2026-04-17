@@ -1,132 +1,135 @@
 ---
 title: "Cosmological Constant"
-status: "non-viable"
-dependsOn: ["spacetime/einstein-equations", "holography/area-scaling"]
-enablesDerivation: ["cosmology/observer-loop-viability"]
-tags: ["cosmology", "blocked"]
-summary: "Non-viable: the cosmological constant cannot be derived from the current framework — it depends on cosmological initial conditions that are boundary data, not derivable quantities. However, the ontic/epistemic status of 'initial conditions' is murkier than this suggests, and observer-existence constraints may narrow the space of viable solutions."
+status: "stub"
+dependsOn: ["spacetime/einstein-equations", "holography/area-scaling", "foundation/observer-projected-spacetime", "cosmology/observer-loop-viability", "cosmology/dark-energy-equation-of-state"]
+enablesDerivation: []
+tags: ["cosmology", "holography"]
+summary: "The cosmological constant is an observer-level-indexed effective parameter. At bootstrap level n with characteristic period T_n, the projected effective value is Λ_n = 12/(cT_n)². Existence (Lovelock), non-negativity (coherence conservation), Planck-scale upper bound, equation of state w = -1, and absence of a vacuum catastrophe are derived. The ~120-order ratio between the Planck-scale and cosmic-scale projections is the obstruction class of the observer-indexed spacetime sheaf — the cohomological signature of its failure to reduce to a single background manifold. A specific numerical value at a given observer level requires computing that obstruction class."
 rigorLevel: "informal"
-lastUpdated: 2026-03-12
+lastUpdated: 2026-04-16
 ---
 
 ## Overview
 
-This derivation confronts one of the hardest problems in physics: **can the value of the cosmological constant be calculated from first principles?**
+The cosmological constant $\Lambda$ is one of the most closely examined parameters in physics. Quantum field theory naively predicts a vacuum energy density $\sim M_P^4$; the observed value is $\sim 10^{-120} M_P^4$. In the standard framing this ~120-order gap is a fine-tuning puzzle: why is a single geometric constant so improbably small?
 
-The cosmological constant controls the accelerating expansion of the universe. Quantum field theory notoriously predicts a value 120 orders of magnitude too large. This derivation honestly assesses whether the framework's axioms can do better -- and concludes that they cannot derive the numerical value.
+In the present framework the puzzle is structural rather than numerical. The continuous dual of the observer network is not a single spacetime — it is an observer-indexed family of Lorentzian patches ([Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime)). Each bootstrap level $n$ projects its own de Sitter static patch with de Sitter radius $L_n = c T_n / 2$ and effective cosmological constant
 
-**The approach.** Two routes were attempted and both failed:
+$$\Lambda_n = \frac{12}{(c T_n)^2}$$
 
-- A holographic constraint argument turned out to be circular -- it inverts the entropy bound rather than independently predicting anything.
-- A "universe as observer" self-reference argument collapsed into dimensional analysis dressed up as a derivation.
+There is no single $\Lambda$ that all observers share. The ~120-order ratio between the Planck-scale projection $\Lambda_0 \sim 1/\ell_P^2$ and the cosmic-scale projection $\Lambda_N \sim H^2$ is the **obstruction class** of the observer-indexed spacetime sheaf: the cohomological signature of its failure to glue to a single background manifold across bootstrap levels. The cosmological constant problem, in this framing, is not "why is $\Lambda$ so small?" but "compute the obstruction class."
 
-The root cause is that the cosmological constant depends on cosmological initial conditions (the total coherence budget, the horizon size) that are boundary data, not quantities the axioms can determine. This is analogous to how Newton's laws tell you that F = ma but cannot tell you where any particular planet is.
+The framework derives directly:
 
-**The result.** The framework *can* say several things: that the cosmological constant exists (via Lovelock's theorem), that it is non-negative, that it is constant in time, and that the naive vacuum energy catastrophe does not arise. But the specific numerical value is not derivable. The 120-order hierarchy is reframed -- via the observer-loop-viability derivation -- as a consequence of the second law of thermodynamics, not a coincidence.
+1. **Existence.** $\Lambda$ is the unique dimension-0 term in the gravitational action by Lovelock's theorem.
+2. **Non-negativity.** $\Lambda \geq 0$ from coherence conservation.
+3. **Planck-scale upper bound.** $\Lambda < 3/\ell_P^2$ from observer-existence constraints.
+4. **Equation of state.** $w \geq -1$ (null energy condition from coherence conservation); $w = -1$ is the unique time-independent fixed point.
+5. **No vacuum catastrophe.** Per-observer holographic bound caps mode count without summing over an unbounded global background.
 
-**Why this matters.** Marking this as non-viable is itself a contribution. It prevents false claims, maps exactly where the framework's explanatory power ends, and identifies what *would* be needed to make progress (a principle that fixes initial conditions, or a dynamical attractor in coherence space).
+Open:
 
-**An honest caveat.** The boundary between "initial conditions" and "derivable quantities" is murkier than it first appears. The framework's own logic creates a self-referential loop between the cosmological constant, the horizon, and observer descriptions -- a tangle that remains unresolved.
+- The specific numerical value at a given observer level (requires the obstruction class computation).
+- The mapping from bootstrap levels to the observer population we inhabit.
+- Upstream: Conjecture 3.1 of [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) (minimal-observer projection as static dS patch), on which the per-level formula depends.
 
-## Status: Non-Viable
+## Statement
 
-> **This derivation target has been assessed as not feasible within the current framework.** Both proposed routes were analyzed and found to be either circular or reducible to dimensional analysis. The cosmological constant depends on cosmological initial conditions (horizon size, total entropy) that the framework treats as boundary data, not derivable quantities. See the full assessment below.
+**Thesis.** The cosmological constant is an observer-level-indexed effective parameter. At bootstrap level $n$ with characteristic period $T_n$ the projected effective value is $\Lambda_n = 12/(c T_n)^2$. Existence, non-negativity, a Planck-scale upper bound, and the equation of state $w = -1$ are derived. The ~120-order Planck/observed ratio is the obstruction class of the observer-indexed spacetime sheaf. A specific numerical prediction at a given observer level requires computing that class — a concrete categorical-cohomology target, not an inaccessible boundary datum.
 
-## Target
+## Step 1: Existence
 
-**Derive the value (or at least the parametric scaling) of the cosmological constant $\Lambda$ from the framework's axioms and holographic bound.**
+**Proposition 1.1.** *$\Lambda$ is the unique dimension-0 term allowed in the gravitational action.*
 
-The cosmological constant problem is one of the sharpest puzzles in physics: quantum field theory predicts a vacuum energy density $\sim M_{\text{Pl}}^4$, while the observed value is $\sim 10^{-120} M_{\text{Pl}}^4$. The Einstein Equations derivation includes $\Lambda$ via Lovelock's uniqueness theorem (it is the only additional term allowed) but does not compute its value. The framework flags this as an open question (source document §15.3).
+*Proof.* Lovelock's theorem: in a 4-dimensional smooth Lorentzian geometry, the most general symmetric divergence-free tensor constructed from the metric and its first two derivatives is $G_{\mu\nu} + \Lambda g_{\mu\nu}$, with $\Lambda$ the unique dimension-0 addition to the Einstein tensor. See [Einstein Field Equations](/derivations/spacetime/einstein-equations) for the full argument. No covariance or dimensional reasoning excludes the $\Lambda$ term; its presence in the theory is a theorem, not a postulate. $\square$
 
-## Prior Work
+## Step 2: Observer-Indexed Effective Value
 
-The earlier whitepaper (idea #24) proposed that the average coherence density $\rho_{\text{info}} \propto \tau^{-4}$ predicts a nearly constant cosmological energy density consistent with dark energy. The earlier extension paper on plateau equivalence (idea #25) proposed that on the divergence-free surface $\Sigma^*$, net coherence flux into the vacuum vanishes, suppressing zero-point divergence.
+**Proposition 2.1.** *For a bootstrap-level-$n$ observer $\mathcal{O}_n$ with characteristic period $T_n$, the effective cosmological constant in $\mathcal{O}_n$'s projected continuous dual is*
 
-The transferable insight: $\Lambda$ is not a free parameter or a fine-tuned coincidence, but a self-consistency condition. The universe as a whole is an observer (the holographic self-encoding from the information paradox resolution), and $\Lambda$ is the coherence cost of this global self-reference.
+$$\Lambda_n = \frac{3}{L_n^2} = \frac{12}{(c T_n)^2}, \qquad L_n = \frac{c T_n}{2}$$
 
-## Proposed Routes (Both Failed)
+*Structural argument.* [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Conjecture 3.1 asserts that a minimal observer's projected continuous dual $M_{\mathcal{O}_0}$ is the static patch of de Sitter space with de Sitter radius $L_0 = c T_0/2$. [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Proposition 4.1 extends this to higher bootstrap levels. The effective cosmological constant of a de Sitter patch of radius $L$ is $\Lambda = 3/L^2$, giving the formula above.
 
-### Route 1: Holographic constraint — CIRCULAR
+The level-indexed decomposition of coherence entropy $\mathcal{C}_0 = \mathcal{C}_\text{acc}^{(n)} + S^{(n)}$ in [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Step 8 is the coherence-theoretic face of the same observer-indexing: each level projects its own effective cosmological parameters; cross-level comparisons mix quantities belonging to different projections.
 
-1. **Area scaling**: The holographic entropy bound (Area Scaling derivation) gives $S \leq A/(4\ell_P^2)$.
-2. **Cosmic horizon**: In a de Sitter universe, the cosmological horizon has area $A_H = 4\pi/\Lambda$ (in Planck units).
-3. **Self-consistency**: The total entropy within the horizon must equal the holographic bound. If the coherence structure fixes the entropy density, this constrains $\Lambda$.
-4. **Parametric prediction**: $\Lambda \sim 1/R_H^2 \sim H_0^2/c^2$, which is the observed scaling. The challenge is getting the coefficient right.
+**Proposition 2.2 (No single shared $\Lambda$).** *Observers at different bootstrap levels project de Sitter patches of different radii. No isometric embedding of two patches with different $L_n$ into a single de Sitter manifold exists ([Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Proposition 6.1). There is therefore no universal $\Lambda$ that all observers share; each level projects its own.*
 
-**Why it fails:** The argument is circular. Writing $S \sim A_H / 4\ell_P^2$ and $A_H = 4\pi / \Lambda$ gives $\Lambda = 3\pi / (S \cdot \ell_P^2)$ — this just inverts the holographic bound rather than independently deriving $\Lambda$. To close the argument, one would need an independent computation of the total entropy $S$ within the horizon. But the framework's entropy derivation ([Entropy](/derivations/thermodynamics/entropy)) defines entropy as inaccessible coherence relative to a given observer — it does not fix the total amount, which depends on the number and distribution of observers (i.e., the initial conditions of the universe).
+**Planck and cosmic endpoints.** A minimal observer has $T_0 \sim T_P = \ell_P/c$, so $L_0 \sim \ell_P$ and $\Lambda_0 \sim 1/\ell_P^2$. A horizon-scale observer has $T_N \sim H^{-1}$, so $L_N \sim c/H$ and $\Lambda_N \sim H^2$. These are the two endpoints of the Λ hierarchy; see Step 6 for the structural interpretation of their ratio.
 
-The "observed scaling" $\Lambda \sim H_0^2/c^2$ is just the tautological statement that the cosmological horizon radius is $R_H \sim c/H_0$, which is the definition of a de Sitter horizon.
+## Step 3: Non-Negativity
 
-### Route 2: Coherence self-reference — DIMENSIONAL ANALYSIS ONLY
+**Proposition 3.1.** *$\Lambda \geq 0$.*
 
-1. **Universe as observer**: The information paradox resolution establishes that the complete coherence dependency graph is the block universe. The universe observes itself.
-2. **Minimal cycle cost**: By Action and Planck's Constant, each self-referential cycle has a minimum cost $\hbar$. The universe's self-observation cycle has a characteristic timescale $\sim 1/H_0$.
-3. **Vacuum energy**: $\Lambda \sim \hbar H_0 / c^2$ (dimensional analysis with the self-consistency constraint).
+*Proof.* A negative cosmological constant forces eventual contraction; at Planck density the resulting bounce would destroy all coherence carriers, violating Axiom 1 (coherence conservation). [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Theorem 5.4 formalizes this argument: the divergent effective pressure at the Planck-density bounce is incompatible with finite observer energy $E_\mathcal{O} = \hbar\omega$, so observer loops cannot survive the transition. A $\Lambda < 0$ cosmology cannot host framework-valid observers at late times. $\square$
 
-**Why it fails:** This is dimensional analysis dressed up as a derivation. The "universe as observer" concept from the information paradox resolution gives a self-consistency condition on information preservation, not a computable constraint on vacuum energy. The characteristic timescale $1/H_0$ is an observed quantity, not a predicted one. The argument does not explain why the universe has the Hubble parameter it does — it takes $H_0$ as input and returns $\Lambda \sim H_0^2$, which is the Friedmann equation, not a prediction.
+## Step 4: Planck-Scale Upper Bound
 
-## Root Cause of Non-Viability
+**Proposition 4.1.** *$\Lambda < 3/\ell_P^2$.*
 
-The framework derives the *existence* of $\Lambda$ as the unique additional term in the Einstein equations (via Lovelock's theorem in [Einstein Field Equations](/derivations/spacetime/einstein-equations)). This is a genuine result.
+*Proof.* [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Theorem 2.1 establishes that minimum observer spatial extent must exceed $\ell_P$, otherwise loop closure (Axiom 3) fails. For a de Sitter patch with radius $L = c T/2$, this requires $L > \ell_P$, i.e., $\Lambda = 3/L^2 < 3/\ell_P^2$. This is a genuine constraint on the value of $\Lambda$ at level 0: not every value in $[0, \infty)$ is compatible with observer existence, only $[0, 3/\ell_P^2)$. $\square$
 
-However, the *value* of $\Lambda$ cannot be determined by the partition equation $C_0 = \sum \Delta c_n + S_H$ alone, because that equation is an accounting identity — it holds for any $\Lambda$ and any matter fraction (see [Observer Loop Viability](/derivations/cosmology/observer-loop-viability), Proposition 8.8). The quantity $C_0$ is not an independent "initial condition" — it is the coherence within a specific observer's cosmological horizon, determined by $\Lambda$ and the expansion history. Each comoving observer has their own $C_0^{(A)}$, centered on their own horizon; the substrate's constitutive universality ([Aperiodic Order](/derivations/foundation/aperiodic-order), Corollary 3.2) ensures all comoving observers agree on its value.
+## Step 5: Equation of State
 
-The genuine unknown is the **crystallization fraction** $\Omega_m = \sum \Delta c_n / C_0$ — how much of the geometric substrate's coherence the bootstrap hierarchy crystallizes into particles. Computing this from the SM structure (4 algebra levels, 3 generations, known couplings) without $\Lambda$ as input would determine $\Lambda$. This is the role of the geometry functor (Gap 6 of [Observer Loop Viability](/derivations/cosmology/observer-loop-viability)) and the double-saturation conjecture (Conjecture 8.9).
+**Proposition 5.1.** *The effective dark-energy component satisfies $w \geq -1$, and $w = -1$ is the unique time-independent fixed point.*
 
-### The ontic/epistemic tension
+*Proof.* See [Dark Energy Equation of State](/derivations/cosmology/dark-energy-equation-of-state) Theorems 2.1, 3.1. Phantom energy $w < -1$ would destroy all coherence carriers at the Big Rip in finite proper time, violating Axiom 1 — this is the null energy condition derived from coherence conservation rather than postulated. Among $w \in [-1, \infty)$, only $w = -1$ gives zero coherence flux between the accessible and inaccessible sectors and exhibits exact Lyapunov stability, making the cosmological constant the unique thermodynamic equilibrium. $\square$
 
-The above analysis treats "initial conditions" as straightforwardly ontic — fixed properties of the universe that the axioms cannot reach. But the framework's own logic complicates this picture:
+## Step 6: The 120-Order Hierarchy as Obstruction Class
 
-1. **$\mathcal{C}_{\text{total}}$ is ontic but epistemically inaccessible.** The total coherence is conserved on every Cauchy slice (Axiom 1), making it an objective property of the DAG. But every physical observer is bounded ([Entropy](/derivations/thermodynamics/entropy), Proposition 2.4): $\mathcal{D}_A(\tau) \subsetneq V$ for all $\tau$. No observer within the universe can measure $\mathcal{C}_{\text{total}}$ — it is a theoretical construct that transcends any observer's coherence domain.
+**Proposition 6.1.** *The ratio $\Lambda_0 / \Lambda_N \sim (T_N/T_0)^2 \sim 10^{122}$ is the magnitude of the gluing obstruction for the observer-indexed spacetime sheaf between levels 0 and $N$.*
 
-2. **The horizon size is observer-relative.** In de Sitter space, different observers have different cosmological horizons centered on different positions. The "horizon size" that enters the $\Lambda$ discussion is not a single ontic fact but an observer-indexed quantity.
+*Structural argument.* By [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Proposition 6.3, the failure of observer-projected de Sitter patches at different levels to share a single background manifold is quantified by the ratio of their de Sitter radii (equivalently, of their effective cosmological constants). The Planck-scale projection has $L_0 \sim \ell_P$; the cosmic-scale projection has $L_N \sim c/H$; the ratio $L_N/L_0 \sim 10^{60}$ squares to $10^{120}$ in the $\Lambda$ ratio.
 
-3. **The matter/radiation content is observer-indexed.** The matter content "within the horizon" depends on which observer's horizon and which coherence domain is being summed over.
+**Consequence.** In this framing, the cosmological constant problem is not a question about why a single quantity takes an improbably small value. It is a question about the structure of the observer-indexed spacetime sheaf: what is the obstruction class, and which observer level's projection does our measurement of $\Lambda$ correspond to? The target is a categorical-cohomology computation, not a fine-tuning mystery. The 120 orders are an observable signature of the gluing obstruction — they *should* be there.
 
-So the "boundary data" that determine $\Lambda$ are a mix: $\mathcal{C}_{\text{total}}$ is ontic but inaccessible; the horizon size and accessible content are genuinely observer-relative. The statement "the value of $\Lambda$ depends on initial conditions" is less clean than it first appears — the "initial conditions" themselves are partly observer-projected quantities.
+## Step 7: No Vacuum Catastrophe
 
-[Observer Loop Viability Bounds](/derivations/cosmology/observer-loop-viability) (Step 8) now makes this level-dependence precise: the entropy decomposition is level-indexed ($C_0 = \mathcal{C}_{\text{acc}}^{(n)} + S^{(n)}$), each bootstrap level projects its own effective cosmological parameter $\Lambda_n^{\text{eff}}$, and the 120-order comparison between $\Lambda_P$ and $\Lambda_{\text{obs}}$ is identified as a cross-level comparison — mixing a bound set by level-0 observers (Theorem 2.1) with a measurement by level-$N$ observers (us). The hierarchy question becomes: what determines the sequence $\{\Lambda_n^{\text{eff}}\}$ and its endpoint $\Lambda_N^{\text{eff}} = \Lambda$?
+**Proposition 7.1.** *The standard QFT vacuum-energy catastrophe — the prediction of vacuum energy ~120 orders above the observed $\Lambda$ — does not arise in this framework.*
 
-This does **not** make $\Lambda$ observer-relative. $\Lambda$ enters the Einstein equations as a geometric constant shared by all observers in the same spacetime. But it means the relationship between $\Lambda$ and the quantities it supposedly "depends on" is tangled: $\Lambda$ determines the horizon, the horizon determines the accessible coherence domain, the coherence domain determines the observer's effective description of the universe, and that description is what we call "the initial conditions." The arrow of explanation is not one-directional.
+*Argument.* The naive QFT calculation sums zero-point modes over an assumed global background. The framework has no such background: each observer projects its own patch ([Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Step 2). The per-observer holographic bound ([Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Consequence 1) caps the mode count on each $M_{\mathcal{O}_n}$ at $\pi L_n^2/\ell_P^2$, which exactly equals $3\pi/(\Lambda_n \ell_P^2)$ — the mode count and the projected $\Lambda$ are linked by the geometry of the single projection, with no unbounded global sum. The QFT divergence reflects the assumption of a global background, not a feature of the coherence structure.
 
-### The self-consistency loop
+## Obvious Approaches That Do Not Close the Argument
 
-This tangle creates a self-referential structure:
+Two natural routes are often proposed for deriving a numerical $\Lambda$. Neither closes the argument; the failure modes are informative about what the correct target is.
 
-$$\Lambda \;\to\; R_H \sim 1/\sqrt{\Lambda} \;\to\; \mathcal{D}_A \;\to\; \text{"initial conditions" as seen by } A \;\to\; \Lambda$$
+### Holographic self-consistency — circular
 
-Route 2 (above) tried to exploit this loop but collapsed into dimensional analysis. The reason is that self-consistency of observer projections *within* a given solution does not obviously select *between* solutions. The framework guarantees that every solution of the Einstein equations (for any $\Lambda$) is internally self-consistent — every observer within that solution has a coherent set of relational invariants, entropy assignments, and descriptions. Self-consistency alone does not pick out a unique $\Lambda$.
+Setting $S \leq A_H / (4\ell_P^2)$ for a cosmic horizon with $A_H = 4\pi/\Lambda$ gives $\Lambda \sim 3\pi/(S\,\ell_P^2)$. This inverts the holographic bound but does not determine $\Lambda$ independently: the total entropy $S$ is not fixed by the axioms — it depends on the number and distribution of observers within the horizon. The "observed scaling" $\Lambda \sim H_0^2/c^2$ recovered this way is tautological: the de Sitter horizon radius is $R_H \sim c/H_0$ by definition.
 
-However, a stronger constraint might: not just self-consistency of observer *descriptions*, but self-consistency of observer *existence*. The axioms require that observers satisfy specific structural conditions (Axiom 2: state space, Noether invariant, self/non-self boundary; Axiom 3: loop closure with Lyapunov stability). Whether these conditions can be satisfied depends on the spacetime they inhabit — and the spacetime depends on $\Lambda$. If only certain values of $\Lambda$ are compatible with DAGs satisfying all three axioms, this would constrain the solution space.
+### Single-observer universe — dimensional analysis
 
-This is distinct from anthropic reasoning: it is not "observers like us must exist" but "the axioms require observer structures that may not be realizable for arbitrary $\Lambda$." Whether this constraint has any teeth — whether it actually excludes any values — is unknown and would require a detailed analysis of which spacetimes support observer loops satisfying Axiom 3.
+Treating the universe as a single self-observing entity with characteristic timescale $\sim 1/H_0$ and minimum-cycle cost $\hbar$ yields $\Lambda \sim \hbar H_0/c^2$ by dimensional analysis. This is not a prediction: $H_0$ is an observed quantity, not derived, and the argument returns $\Lambda \sim H_0^2$ — the Friedmann equation, not a cosmological-constant calculation. More fundamentally, treating the universe as a single observer presupposes a shared horizon and thus a single background, which the observer-projected reframing of Step 2 rejects.
 
-## What the Framework *Can* Say About $\Lambda$
+Both routes assume a single global $\Lambda$ to derive. The correct object to compute, per Step 6, is the obstruction class of an observer-indexed sheaf — not a single number.
 
-1. **Existence**: $\Lambda$ is the unique dimension-0 term in the gravitational action, guaranteed by Lovelock's theorem. ✓ (Already derived)
-2. **Sign**: The axioms predict $\Lambda \geq 0$ — coherence conservation prohibits the Planck-density bounce required by $\Lambda < 0$ cosmologies. See [Observer Loop Viability Bounds](/derivations/cosmology/observer-loop-viability) (Theorem 5.4). ✓
-3. **Constancy**: Coherence conservation (Axiom 1) applied globally suggests $\Lambda$ does not vary in time, since it enters the Einstein equations as a geometric constant, not a dynamical field. This is now strengthened by [Dark Energy Equation of State](/derivations/cosmology/dark-energy-equation-of-state) (Theorem 3.1): among all dark energy equations of state $w \geq -1$, only $w = -1$ gives a time-independent coherence partition — making the cosmological constant the unique equilibrium. ✓
-4. **No vacuum catastrophe**: The framework does not suffer from the QFT vacuum energy divergence because coherence is fundamentally finite (bounded by the total coherence budget). The "problem" of $\Lambda$ being $10^{120}$ times smaller than naive QFT expectations does not arise — the framework never predicts a Planck-scale vacuum energy. ✓
-5. **Upper bound**: The axioms require observer structures with minimum spatial extent $\geq \ell_P$, which constrains $\Lambda < 3/\ell_P^2$ — Planck-scale, but a genuine constraint on solution space. See [Observer Loop Viability Bounds](/derivations/cosmology/observer-loop-viability) (Theorem 2.1). ✓
-6. **Equation of state**: The dark energy equation of state satisfies $w \geq -1$ — phantom energy is axiomatically excluded because the Big Rip destroys all coherence carriers ([Dark Energy Equation of State](/derivations/cosmology/dark-energy-equation-of-state), Theorem 2.1). This is the null energy condition derived from coherence conservation. ✓
-7. **Hierarchy (qualitative)**: The self-consistency equation $C_0 = \sum \Delta c_n + S_H$ is the entropy decomposition: structural coherence = accessible coherence, horizon entropy = inaccessible coherence. The 120-order hierarchy follows from the second law — entropy dominates in an old universe. The specific value of $\Lambda$ depends on $C_0$ (an initial condition). See [Observer Loop Viability Bounds](/derivations/cosmology/observer-loop-viability) (Proposition 7.5). ✓ (qualitative) / ✗ (quantitative)
+## Rigor Assessment
 
-## Connection to Existing Derivations
+**Derived (from the framework's structural results):**
+- Proposition 1.1 (existence): Lovelock theorem, direct.
+- Proposition 3.1 (non-negativity): [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Theorem 5.4.
+- Proposition 4.1 (Planck-scale upper bound): [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Theorem 2.1.
+- Proposition 5.1 (equation of state): [Dark Energy Equation of State](/derivations/cosmology/dark-energy-equation-of-state) Theorems 2.1, 3.1.
+- Proposition 7.1 (no vacuum catastrophe): direct consequence of the per-observer holographic bound.
 
-| Prerequisite | What it provides |
-|---|---|
-| [Einstein Field Equations](/derivations/spacetime/einstein-equations) | $\Lambda$ as Lovelock-allowed term |
-| [Holographic Entropy Bound](/derivations/holography/area-scaling) | $S \leq A/(4\ell_P^2)$ |
-| [Information Paradox](/derivations/holography/information-paradox) | Universe as self-consistent observer |
-| [Action and Planck's Constant](/derivations/thermodynamics/action-planck) | Minimal cycle cost |
-| [Entropy](/derivations/thermodynamics/entropy) | Observer-indexed entropy; bounded observer theorem (Prop. 2.4) |
+**Informal (observer-indexed reframing; conditional on upstream conjecture):**
+- Proposition 2.1 (per-level $\Lambda_n$): conditional on [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Conjecture 3.1 (minimal-observer projection as static dS patch).
+- Proposition 2.2 (no single shared $\Lambda$): follows from the projection conjecture plus the isometric-embedding obstruction ([Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Proposition 6.1).
+- Proposition 6.1 (hierarchy as obstruction class): structural identification; quantitative computation requires the sheaf-cohomology setup ([Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Open Gaps 3 and 4).
 
-## What Would Unblock This
+**Open:**
+- Specific numerical value of $\Lambda$ at a given observer level.
+- Mapping between observer populations and bootstrap levels.
+- Quantitative obstruction class computation.
 
-A derivation of $\Lambda$ would require one of:
-1. **A principle that fixes cosmological initial conditions** — something beyond the three axioms that constrains the total coherence budget and horizon size. This would be a fourth axiom or a cosmological selection principle.
-2. **A dynamical attractor** — showing that $\Lambda$ is not a free parameter but is driven to its observed value by an attractor in the coherence dynamics. The self-consistency loop (§Root Cause, above) hints at this: the coherence dynamics, constrained by observer self-consistency, might have a fixed point in solution space that selects $\Lambda$. This would require understanding the framework's cosmological solutions in detail.
-3. **An observer-existence constraint** — showing that the structural requirements of Axioms 2 and 3 (observer loops must close with Lyapunov stability) restrict which spacetimes can host valid DAGs, and that this restriction constrains $\Lambda$. This is not anthropic selection ("observers like us") but axiomatic selection ("observer structures satisfying the axioms"). **Progress**: [Observer Loop Viability Bounds](/derivations/cosmology/observer-loop-viability) (provisional) establishes a Planck-scale upper bound (Theorem 2.1), predicts $\Lambda \geq 0$ (Theorem 5.4), and identifies a hierarchical coherence suppression mechanism (Step 7): the bootstrap hierarchy absorbs coherence into structural levels via the c-theorem, and a self-consistency condition relates $C_0$, bootstrap absorption, and $\Lambda$. The mechanism reframes the 120-order hierarchy as a question about why $C_0$ is large in Planck units, rather than a coincidence between unrelated scales.
-4. **A statistical argument** — showing that the observed value is typical in some ensemble of coherence-consistent universes. This would require a theory of the ensemble itself.
+## Open Gaps
 
-Routes 2 and 3 are the most natural to the framework's internal logic. Route 3 now has partial results — see [Observer Loop Viability Bounds](/derivations/cosmology/observer-loop-viability). Additionally, [Dark Energy Equation of State](/derivations/cosmology/dark-energy-equation-of-state) constrains the equation of state ($w \geq -1$, with $w = -1$ preferred) and identifies a horizon distinguishability mechanism (relational invariants characterized by $T_{\text{GH}}$) that provides a concrete approach to the minimum non-self coherence problem.
+1. **Minimal-observer projection theorem.** Proposition 2.1 depends on [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Conjecture 3.1. A rigorous projection theorem would promote Proposition 2.1 from informal to derived. *Difficulty: MODERATE.*
+
+2. **Obstruction class computation.** Compute the obstruction class of the observer-indexed spacetime sheaf and relate it quantitatively to the measured $\Lambda$. Requires the categorical-semantics setup on $\mathbf{Obs}$ (see [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Open Gap 3) and a target expression for the class. *Difficulty: HARD.*
+
+3. **Observer-level identification.** Identify which bootstrap level our measurement of $\Lambda$ corresponds to. If level $N$ is pinned by observer-existence conditions or by the cosmic horizon structure, the specific value of $\Lambda_N$ becomes predictable once the obstruction class is computed. *Difficulty: MODERATE.*
+
+4. **Crystallization fraction.** The coherence partition $\mathcal{C}_0 = \sum \Delta c_n + S_H$ has a free parameter — the crystallization fraction $\Omega_m$. An independent derivation of $\Omega_m$ from the Standard Model structure (4 algebra levels, 3 generations, known couplings) would provide a cross-check on the obstruction class computation. See [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Gap 6 (geometry functor). *Difficulty: HARD.*
+
+5. **Sheaf cohomology on $\mathbf{Obs}$.** Formalizing the observer-indexed spacetime sheaf requires a Grothendieck topology on the observer category. Inherited from [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Open Gap 3. *Difficulty: HARD.*

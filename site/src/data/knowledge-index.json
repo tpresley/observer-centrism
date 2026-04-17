@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-17T03:57:59.993Z",
+    "generatedAt": "2026-04-17T04:58:22.583Z",
     "derivationCount": 79,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -11,14 +11,13 @@
       "derived": 27,
       "provisional": 44,
       "draft": 2,
-      "non-viable": 1,
-      "stub": 5
+      "stub": 6
     },
     "derivationCount": 79,
     "predictionCount": 12,
     "edgeCount": 240,
-    "formalObjectCount": 1169,
-    "openGapCount": 245,
+    "formalObjectCount": 1177,
+    "openGapCount": 250,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -1916,34 +1915,114 @@
       "id": "cosmology/cosmological-constant",
       "filePath": "site/src/content/derivations/cosmology/cosmological-constant.md",
       "title": "Cosmological Constant",
-      "status": "non-viable",
+      "status": "stub",
       "rigorLevel": "informal",
       "group": "cosmology",
       "tags": [
         "cosmology",
-        "blocked"
+        "holography"
       ],
-      "summary": "Non-viable: the cosmological constant cannot be derived from the current framework — it depends on cosmological initial conditions that are boundary data, not derivable quantities. However, the ontic/epistemic status of 'initial conditions' is murkier than this suggests, and observer-existence constraints may narrow the space of viable solutions.",
-      "lastUpdated": "2026-03-12",
+      "summary": "The cosmological constant is an observer-level-indexed effective parameter. At bootstrap level n with characteristic period T_n, the projected effective value is Λ_n = 12/(cT_n)². Existence (Lovelock), non-negativity (coherence conservation), Planck-scale upper bound, equation of state w = -1, and absence of a vacuum catastrophe are derived. The ~120-order ratio between the Planck-scale and cosmic-scale projections is the obstruction class of the observer-indexed spacetime sheaf — the cohomological signature of its failure to reduce to a single background manifold. A specific numerical value at a given observer level requires computing that obstruction class.",
+      "lastUpdated": "2026-04-16",
       "dependsOn": [
         "spacetime/einstein-equations",
-        "holography/area-scaling"
+        "holography/area-scaling",
+        "foundation/observer-projected-spacetime",
+        "cosmology/observer-loop-viability",
+        "cosmology/dark-energy-equation-of-state"
       ],
-      "enablesDerivation": [
-        "cosmology/observer-loop-viability"
-      ],
+      "enablesDerivation": [],
       "dependedOnBy": [],
       "steps": [],
-      "formalObjects": [],
+      "formalObjects": [
+        {
+          "type": "Proposition",
+          "id": "1.1.",
+          "name": "",
+          "statementPreview": "Lambda is the unique dimension-0 term allowed in the gravitational action.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1.",
+          "name": "",
+          "statementPreview": "For a bootstrap-level-n observer On with characteristic period Tn, the effective cosmological constant in On's projec..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "No single shared $\\Lambda$",
+          "statementPreview": "Observers at different bootstrap levels project de Sitter patches of different radii. No isometric embedding of two p..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1.",
+          "name": "",
+          "statementPreview": "Lambda 0.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1.",
+          "name": "",
+          "statementPreview": "Lambda < 3/ellP2.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1.",
+          "name": "",
+          "statementPreview": "The effective dark-energy component satisfies w -1, and w = -1 is the unique time-independent fixed point.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1.",
+          "name": "",
+          "statementPreview": "The ratio Lambda0 / LambdaN sim (TN/T0)2 sim 10122 is the magnitude of the gluing obstruction for the observer-indexe..."
+        },
+        {
+          "type": "Proposition",
+          "id": "7.1.",
+          "name": "",
+          "statementPreview": "The standard QFT vacuum-energy catastrophe — the prediction of vacuum energy ~120 orders above the observed Lambda — ..."
+        }
+      ],
       "structuralPostulates": [],
-      "openGaps": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Minimal-observer projection theorem.",
+          "description": "Proposition 2.1 depends on [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Conjecture 3.1. A rigorous projection theorem would promote Proposition 2.1 from informa"
+        },
+        {
+          "number": 2,
+          "title": "Obstruction class computation.",
+          "description": "Compute the obstruction class of the observer-indexed spacetime sheaf and relate it quantitatively to the measured Lambda. Requires the categorical-semantics setup on mathbfObs (see [Observer-Projecte"
+        },
+        {
+          "number": 3,
+          "title": "Observer-level identification.",
+          "description": "Identify which bootstrap level our measurement of Lambda corresponds to. If level N is pinned by observer-existence conditions or by the cosmic horizon structure, the specific value of LambdaN becomes"
+        },
+        {
+          "number": 4,
+          "title": "Crystallization fraction.",
+          "description": "The coherence partition C0 = Delta cn + SH has a free parameter — the crystallization fraction Omegam. An independent derivation of Omegam from the Standard Model structure (4 algebra levels, 3 genera"
+        },
+        {
+          "number": 5,
+          "title": "Sheaf cohomology on $\\mathbf{Obs}$.",
+          "description": "Formalizing the observer-indexed spacetime sheaf requires a Grothendieck topology on the observer category. Inherited from [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spa"
+        }
+      ],
       "assessmentVerdict": "",
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
           {
-            "target": "thermodynamics/entropy",
-            "context": "Entropy"
+            "target": "foundation/observer-projected-spacetime",
+            "context": "Observer-Projected Spacetime"
+          },
+          {
+            "target": "foundation/observer-projected-spacetime",
+            "context": "minimal-observer projection as static dS patch"
           },
           {
             "target": "spacetime/einstein-equations",
@@ -1954,52 +2033,16 @@
             "context": "Observer Loop Viability"
           },
           {
-            "target": "foundation/aperiodic-order",
-            "context": "Aperiodic Order"
-          },
-          {
-            "target": "cosmology/observer-loop-viability",
-            "context": "Step 8"
-          },
-          {
-            "target": "cosmology/observer-loop-viability",
-            "context": "Theorem 5.4"
-          },
-          {
             "target": "cosmology/dark-energy-equation-of-state",
-            "context": "Theorem 3.1"
+            "context": "0, \\infty)$ is compatible with observer existence, only $[0, 3/\\ell_P^2)$. $\\squ"
           },
           {
-            "target": "cosmology/observer-loop-viability",
-            "context": "Theorem 2.1"
+            "target": "foundation/observer-projected-spacetime",
+            "context": "-1, \\infty)$, only $w = -1$ gives zero coherence flux between the accessible and"
           },
           {
             "target": "cosmology/dark-energy-equation-of-state",
             "context": "Dark Energy Equation of State"
-          },
-          {
-            "target": "cosmology/observer-loop-viability",
-            "context": "Proposition 7.5"
-          },
-          {
-            "target": "holography/area-scaling",
-            "context": "Holographic Entropy Bound"
-          },
-          {
-            "target": "holography/information-paradox",
-            "context": "Information Paradox"
-          },
-          {
-            "target": "thermodynamics/action-planck",
-            "context": "Action and Planck's Constant"
-          },
-          {
-            "target": "cosmology/observer-loop-viability",
-            "context": "provisional"
-          },
-          {
-            "target": "cosmology/observer-loop-viability",
-            "context": "Observer Loop Viability Bounds"
           }
         ],
         "incoming": [
@@ -2625,6 +2668,7 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
+        "cosmology/cosmological-constant",
         "cosmology/cyclic-cosmology"
       ],
       "steps": [
@@ -2805,7 +2849,7 @@
         "incoming": [
           {
             "source": "cosmology/cosmological-constant",
-            "context": "Theorem 3.1"
+            "context": "0, \\infty)$ is compatible with observer existence, only $[0, 3/\\ell_P^2)$. $\\squ"
           },
           {
             "source": "cosmology/cosmological-constant",
@@ -3499,6 +3543,7 @@
       ],
       "dependedOnBy": [
         "cosmology/cosmological-arrow",
+        "cosmology/cosmological-constant",
         "cosmology/cyclic-cosmology",
         "cosmology/dark-energy-equation-of-state",
         "cosmology/geometric-substrate",
@@ -3904,30 +3949,6 @@
           {
             "source": "cosmology/cosmological-constant",
             "context": "Observer Loop Viability"
-          },
-          {
-            "source": "cosmology/cosmological-constant",
-            "context": "Step 8"
-          },
-          {
-            "source": "cosmology/cosmological-constant",
-            "context": "Theorem 5.4"
-          },
-          {
-            "source": "cosmology/cosmological-constant",
-            "context": "Theorem 2.1"
-          },
-          {
-            "source": "cosmology/cosmological-constant",
-            "context": "Proposition 7.5"
-          },
-          {
-            "source": "cosmology/cosmological-constant",
-            "context": "provisional"
-          },
-          {
-            "source": "cosmology/cosmological-constant",
-            "context": "Observer Loop Viability Bounds"
           },
           {
             "source": "cosmology/cyclic-cosmology",
@@ -4748,10 +4769,6 @@
             "context": "Aperiodic Order"
           },
           {
-            "source": "cosmology/cosmological-constant",
-            "context": "Aperiodic Order"
-          },
-          {
             "source": "cosmology/geometric-inflation",
             "context": "Aperiodic Order"
           },
@@ -4937,7 +4954,7 @@
         {
           "number": 2,
           "title": "Cosmological constant",
-          "description": "The coherence potential allows a constant term V0 (the cosmological constant). Its value should be derivable from the coherence geometry but is not — this connects to the [Cosmological Constant](/deri"
+          "description": "The coherence potential allows a constant term V0 (the cosmological constant). Its value is observer-level-indexed via the projected de Sitter radius Ln = c Tn/2, giving Lambdan = 12/(c Tn)2 at each b"
         },
         {
           "number": 3,
@@ -5022,6 +5039,10 @@
           {
             "target": "cosmology/cosmological-constant",
             "context": "Cosmological Constant"
+          },
+          {
+            "target": "foundation/observer-projected-spacetime",
+            "context": "Observer-Projected Spacetime"
           }
         ],
         "incoming": [
@@ -5520,7 +5541,9 @@
         "foundation/continuous-discrete-duality"
       ],
       "enablesDerivation": [],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "cosmology/cosmological-constant"
+      ],
       "steps": [],
       "formalObjects": [
         {
@@ -5671,7 +5694,24 @@
             "context": "Aperiodic Order"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "cosmology/cosmological-constant",
+            "context": "Observer-Projected Spacetime"
+          },
+          {
+            "source": "cosmology/cosmological-constant",
+            "context": "minimal-observer projection as static dS patch"
+          },
+          {
+            "source": "cosmology/cosmological-constant",
+            "context": "-1, \\infty)$, only $w = -1$ gives zero coherence flux between the accessible and"
+          },
+          {
+            "source": "foundation/coherence-lagrangian",
+            "context": "Observer-Projected Spacetime"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -8819,10 +8859,6 @@
         ],
         "incoming": [
           {
-            "source": "cosmology/cosmological-constant",
-            "context": "Holographic Entropy Bound"
-          },
-          {
             "source": "cosmology/cyclic-cosmology",
             "context": "holographic bound"
           },
@@ -10244,10 +10280,6 @@
           }
         ],
         "incoming": [
-          {
-            "source": "cosmology/cosmological-constant",
-            "context": "Information Paradox"
-          },
           {
             "source": "cosmology/cyclic-cosmology",
             "context": "Information Paradox"
@@ -20212,10 +20244,6 @@
             "context": "Action and Planck's Constant"
           },
           {
-            "source": "cosmology/cosmological-constant",
-            "context": "Action and Planck's Constant"
-          },
-          {
             "source": "dimensions/three-dimensions",
             "context": "Action and Planck's Constant"
           },
@@ -20580,10 +20608,6 @@
           {
             "source": "cosmology/cosmological-arrow",
             "context": "Entropy as Inaccessible Coherence"
-          },
-          {
-            "source": "cosmology/cosmological-constant",
-            "context": "Entropy"
           },
           {
             "source": "cosmology/cyclic-cosmology",
@@ -23568,6 +23592,62 @@
       "id": "6.1",
       "name": "Structural arrow as local limit",
       "fullRef": "cosmology/cosmological-arrow:Proposition 6.1"
+    },
+    {
+      "derivationId": "cosmology/cosmological-constant",
+      "type": "Proposition",
+      "id": "1.1.",
+      "name": "",
+      "fullRef": "cosmology/cosmological-constant:Proposition 1.1."
+    },
+    {
+      "derivationId": "cosmology/cosmological-constant",
+      "type": "Proposition",
+      "id": "2.1.",
+      "name": "",
+      "fullRef": "cosmology/cosmological-constant:Proposition 2.1."
+    },
+    {
+      "derivationId": "cosmology/cosmological-constant",
+      "type": "Proposition",
+      "id": "2.2",
+      "name": "No single shared $\\Lambda$",
+      "fullRef": "cosmology/cosmological-constant:Proposition 2.2"
+    },
+    {
+      "derivationId": "cosmology/cosmological-constant",
+      "type": "Proposition",
+      "id": "3.1.",
+      "name": "",
+      "fullRef": "cosmology/cosmological-constant:Proposition 3.1."
+    },
+    {
+      "derivationId": "cosmology/cosmological-constant",
+      "type": "Proposition",
+      "id": "4.1.",
+      "name": "",
+      "fullRef": "cosmology/cosmological-constant:Proposition 4.1."
+    },
+    {
+      "derivationId": "cosmology/cosmological-constant",
+      "type": "Proposition",
+      "id": "5.1.",
+      "name": "",
+      "fullRef": "cosmology/cosmological-constant:Proposition 5.1."
+    },
+    {
+      "derivationId": "cosmology/cosmological-constant",
+      "type": "Proposition",
+      "id": "6.1.",
+      "name": "",
+      "fullRef": "cosmology/cosmological-constant:Proposition 6.1."
+    },
+    {
+      "derivationId": "cosmology/cosmological-constant",
+      "type": "Proposition",
+      "id": "7.1.",
+      "name": "",
+      "fullRef": "cosmology/cosmological-constant:Proposition 7.1."
     },
     {
       "derivationId": "cosmology/coupling-constants",
@@ -31125,6 +31205,41 @@
       "description": "This derivation claims to resolve Gap 3. The resolution should be verified: does hierarchy elaboration fully account for the cosmological arrow, or are there additional contributions from boundary con"
     },
     {
+      "derivationId": "cosmology/cosmological-constant",
+      "derivationStatus": "stub",
+      "number": 1,
+      "title": "Minimal-observer projection theorem.",
+      "description": "Proposition 2.1 depends on [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Conjecture 3.1. A rigorous projection theorem would promote Proposition 2.1 from informa"
+    },
+    {
+      "derivationId": "cosmology/cosmological-constant",
+      "derivationStatus": "stub",
+      "number": 2,
+      "title": "Obstruction class computation.",
+      "description": "Compute the obstruction class of the observer-indexed spacetime sheaf and relate it quantitatively to the measured Lambda. Requires the categorical-semantics setup on mathbfObs (see [Observer-Projecte"
+    },
+    {
+      "derivationId": "cosmology/cosmological-constant",
+      "derivationStatus": "stub",
+      "number": 3,
+      "title": "Observer-level identification.",
+      "description": "Identify which bootstrap level our measurement of Lambda corresponds to. If level N is pinned by observer-existence conditions or by the cosmic horizon structure, the specific value of LambdaN becomes"
+    },
+    {
+      "derivationId": "cosmology/cosmological-constant",
+      "derivationStatus": "stub",
+      "number": 4,
+      "title": "Crystallization fraction.",
+      "description": "The coherence partition C0 = Delta cn + SH has a free parameter — the crystallization fraction Omegam. An independent derivation of Omegam from the Standard Model structure (4 algebra levels, 3 genera"
+    },
+    {
+      "derivationId": "cosmology/cosmological-constant",
+      "derivationStatus": "stub",
+      "number": 5,
+      "title": "Sheaf cohomology on $\\mathbf{Obs}$.",
+      "description": "Formalizing the observer-indexed spacetime sheaf requires a Grothendieck topology on the observer category. Inherited from [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spa"
+    },
+    {
       "derivationId": "cosmology/coupling-constants",
       "derivationStatus": "provisional",
       "number": 1,
@@ -31346,7 +31461,7 @@
       "derivationStatus": "derived",
       "number": 2,
       "title": "Cosmological constant",
-      "description": "The coherence potential allows a constant term V0 (the cosmological constant). Its value should be derivable from the coherence geometry but is not — this connects to the [Cosmological Constant](/deri"
+      "description": "The coherence potential allows a constant term V0 (the cosmological constant). Its value is observer-level-indexed via the projected de Sitter radius Ln = c Tn/2, giving Lambdan = 12/(c Tn)2 at each b"
     },
     {
       "derivationId": "foundation/coherence-lagrangian",

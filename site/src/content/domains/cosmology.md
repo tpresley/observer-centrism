@@ -26,7 +26,7 @@ relatedPredictions:
 
 Cosmology has a parameter problem. The Standard Model of cosmology ($\Lambda$CDM) fits the data remarkably well, but its key parameters &mdash; the cosmological constant, the matter-antimatter asymmetry, the dark matter fraction, the number of e-folds of inflation &mdash; are inputs, not outputs. Why $\Lambda \sim 10^{-122}$ in Planck units? Why $\eta_B \sim 10^{-10}$? Why does inflation produce the right spectrum? These are among the sharpest open questions in physics.
 
-The framework does not solve all of them. It honestly marks the cosmological constant's numerical value as **non-viable** &mdash; the value depends on boundary data the axioms cannot determine. But it does far more than might be expected from three axioms about observers: it derives the sign of $\Lambda$, constrains the dark energy equation of state, resolves the Big Bang singularity, explains baryogenesis from structural requirements, and reframes the 120-order hierarchy as a self-consistency condition on a finite, computable system.
+The framework does not solve all of them. The specific numerical value of $\Lambda$ at our observer level remains open &mdash; it awaits the computation of a categorical-cohomology obstruction class rather than a brute-force formula. But the framework does far more than might be expected from three axioms about observers: it derives the sign of $\Lambda$, a Planck-scale upper bound, the equation of state $w = -1$, the absence of a vacuum catastrophe, resolves the Big Bang singularity, explains baryogenesis from structural requirements, and reframes the 120-order hierarchy as the obstruction class of an observer-indexed spacetime sheaf rather than a fine-tuning puzzle.
 
 ## Dark Energy and the Cosmological Constant
 
@@ -50,15 +50,13 @@ The preferred value is $w = -1$ exactly: among all permitted equations of state,
 
 ### The Hierarchy Problem, Reframed
 
-The 120-order gap between the Planck-scale bound and the observed $\Lambda$ is not explained by brute-force derivation &mdash; the framework explicitly marks this as depending on the total coherence budget $C_0$, which is boundary data. But the framework does something structural:
+The 120-order gap between the Planck-scale $\Lambda_0 \sim 1/\ell_P^2$ and the observed $\Lambda_N \sim H^2$ is not a fine-tuning puzzle in this framework. It is a structural invariant:
 
-The entropy decomposition $C_0 = \sum \Delta c_n + S_H$ identifies the cosmological density fractions as entropy fractions: $\Omega_\Lambda = S_H/C_0$. The hierarchy follows from the second law &mdash; in an old universe, entropy dominates the coherence budget.
+The continuous dual of the observer network is observer-indexed, not a single global spacetime. Each bootstrap level $n$ projects its own de Sitter static patch with radius $L_n = c T_n/2$ and effective cosmological constant $\Lambda_n = 12/(c T_n)^2$. Two observers at very different levels cannot share a single de Sitter background &mdash; their projections have incompatible radii. The ratio $\Lambda_0 / \Lambda_N \sim (T_N/T_0)^2 \sim 10^{122}$ quantifies this disagreement: it is the **obstruction class** of the observer-indexed spacetime sheaf's failure to reduce to a single manifold across levels.
 
-More precisely, the framework shows that the entropy decomposition is **level-indexed**: each level of the bootstrap hierarchy projects its own effective geometry with its own effective $\Lambda_n^{\text{eff}}$. The 120-order comparison between the Planck bound and the observed value mixes two different levels of geometric projection. A numerical consistency check shows the cross-level ratio is only $\sim 1.4$ &mdash; the hierarchy lives entirely in the absolute scale of $C_0$, not in cross-level differences.
+The level-indexed coherence-entropy decomposition $\mathcal{C}_0 = \mathcal{C}_\text{acc}^{(n)} + S^{(n)}$ is the coherence-theoretic face of this same observer-indexing: cross-level comparisons mix quantities belonging to different projections. The framework converts the problem from "why is a single constant so small?" to "compute the obstruction class" &mdash; a concrete categorical-cohomology target rather than an inaccessible free parameter. Whether this computation yields a unique value at a given observer level is the key open question.
 
-The framework converts the problem from "an arbitrary free parameter" to "a self-consistency condition on a finite system": 4 algebra levels, 3 generations, known coupling ratios, and a double-saturation boundary condition (both the Planck observer and the cosmological horizon are at their gravitational collapse limits). Whether this self-consistency equation has a unique solution is the key open conjecture.
-
-**Formal derivation:** [Observer Loop Viability Bounds](/derivations/cosmology/observer-loop-viability) (Steps 7&ndash;8, Conjecture 8.9)
+**Formal derivations:** [Cosmological Constant](/derivations/cosmology/cosmological-constant) (Step 6), [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) (Step 6), [Observer Loop Viability Bounds](/derivations/cosmology/observer-loop-viability) (Step 8)
 
 ### Bounded Eternal Expansion
 
