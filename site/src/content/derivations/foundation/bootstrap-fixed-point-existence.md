@@ -1,11 +1,11 @@
 ---
 title: "Bootstrap Fixed-Point Existence"
-status: "stub"
+status: "draft"
 dependsOn: ["axioms/coherence-conservation", "interactions/bootstrap", "foundation/observer-level-stack-compactness", "foundation/minimum-bootstrap-closure", "foundation/observer-projected-spacetime", "foundation/observer-holographic-equivalence"]
 enablesDerivation: []
 tags: ["foundation", "structure", "topology"]
 summary: "Applies the Kleene–Scott fixed-point theorem to derive existence of the bootstrap fixed point U ≅ R(U, U) conditional on three structural prerequisites: (1) compactness of the observer-level stack ([Observer-Level Stack Compactness]), (2) a directed-complete partial order structure on the stack with a bottom element, and (3) Scott continuity of the bootstrap map R. Given the three prerequisites, the fixed point exists and equals the supremum of iterates of R starting from the bottom: U = sup_n R^n(⊥). This is the abstract-existence complement to the explicit small-case construction in [Minimum Bootstrap Closure]. The explicit triangle and the abstract Kleene fixed point are two sides of the same claim: the conjecture has at least one solution, localized either concretely at small scale or abstractly at full scale. Three prerequisites identify specific tractable targets; no new physical prediction emerges until those are tightened."
-rigorLevel: "informal"
+rigorLevel: "semi-formal"
 lastUpdated: 2026-04-17
 ---
 
