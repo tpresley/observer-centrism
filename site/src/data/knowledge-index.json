@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-18T01:54:24.647Z",
+    "generatedAt": "2026-04-18T02:12:20.135Z",
     "derivationCount": 83,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -16,7 +16,7 @@
     "predictionCount": 12,
     "edgeCount": 275,
     "formalObjectCount": 1211,
-    "openGapCount": 279,
+    "openGapCount": 278,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -6430,11 +6430,6 @@
       "structuralPostulates": [],
       "openGaps": [
         {
-          "number": 1,
-          "title": "Tighten Lemma 3.0's no-self-sourcing argument.",
-          "description": "Theorem 3.1 now invokes Birkhoff-with-Lambda (classical, rigorous) plus Lemma 3.0 (MASchw = 0 on the minimal observer's own projection). Lemma 3.0 is argued from three converging commitments — vacuum "
-        },
-        {
           "number": 2,
           "title": "Generalization to non-minimal observers with localized stress-energy.",
           "description": "A composite observer On at higher bootstrap level, viewed externally from a different observer's projection, carries effective stress-energy along gammaOn(A). That external projection generalizes from"
@@ -6486,6 +6481,10 @@
             "context": "Observer Loop Viability"
           },
           {
+            "target": "spacetime/einstein-equations",
+            "context": "Einstein Field Equations"
+          },
+          {
             "target": "foundation/continuous-discrete-duality",
             "context": "Continuous-Discrete Duality"
           },
@@ -6500,10 +6499,6 @@
           {
             "target": "holography/area-scaling",
             "context": "Area Scaling"
-          },
-          {
-            "target": "spacetime/einstein-equations",
-            "context": "Einstein Field Equations"
           },
           {
             "target": "cosmology/cosmological-constant",
@@ -32910,13 +32905,6 @@
       "number": 7,
       "title": "Dependence on [Area Scaling] postulates.",
       "description": "Proposition 1.1 and 2.1 both rely on the holographic bound. [Area Scaling](/derivations/holography/area-scaling) itself carries Structural Postulate S1 (area-coherence saturation). Any promotion of S1"
-    },
-    {
-      "derivationId": "foundation/observer-projected-spacetime",
-      "derivationStatus": "provisional",
-      "number": 1,
-      "title": "Tighten Lemma 3.0's no-self-sourcing argument.",
-      "description": "Theorem 3.1 now invokes Birkhoff-with-Lambda (classical, rigorous) plus Lemma 3.0 (MASchw = 0 on the minimal observer's own projection). Lemma 3.0 is argued from three converging commitments — vacuum "
     },
     {
       "derivationId": "foundation/observer-projected-spacetime",

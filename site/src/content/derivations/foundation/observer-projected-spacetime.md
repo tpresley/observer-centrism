@@ -23,7 +23,7 @@ The program splits naturally into two tracks, which turn out to be two halves of
 
 **Why this reframes long-standing puzzles.** The cosmological constant problem (120 orders of magnitude between Planck and observed $\Lambda$) has resisted derivation because the question "what is $\Lambda$?" presupposes a shared background for $\Lambda$ to live in. Here $\Lambda$ is observer-indexed: level-$n$ observers project $\Lambda_n = 12/(c T_n)^2$. The hierarchy between $\Lambda_0$ (Planck) and $\Lambda_N$ (cosmic) is not a bug; it is the obstruction class of the presheaf's failure to reduce to a single manifold across levels. The 120 orders are a measurement of gluing failure, not of fine-tuning.
 
-**Honest status.** The minimal-observer projection is established as a theorem (Theorem 3.1) via Birkhoff-with-$\Lambda$ plus a framework-internal lemma that the Schwarzschild mass vanishes on the observer's own projection. Lemma 3.0 (no-self-sourcing) remains semi-formal — three converging arguments but not a single knockdown proof — which places the central claim at semi-formal rigor overall. The gluing/sheaf property (Conjecture 5.3) and the quantitative obstruction class (Proposition 6.3) are genuinely conjectural; these are flagged as the remaining open gaps.
+**Honest status.** The minimal-observer projection is established rigorously (Theorem 3.1) via Birkhoff-with-$\Lambda$ plus Lemma 3.0 ($M_A^{\text{Schw}} = 0$ proved by Kretschmann-singularity contradiction against Axiom 3). The gluing/sheaf property (Conjecture 5.3) and the quantitative obstruction class (Proposition 6.3) are genuinely conjectural; these are flagged as the remaining open gaps. The derivation's status remains provisional rather than derived because it inherits the active postulate `speed-of-light-s1` transitively through [Einstein Field Equations](/derivations/spacetime/einstein-equations) — a global-assembly commitment that this derivation itself does not use but cannot shed upstream.
 
 ## Step 1: The Observer-Indexed Projection
 
@@ -73,17 +73,26 @@ $$g_A = -\left(1 - \frac{r^2}{L_A^2}\right) dt^2 + \left(1 - \frac{r^2}{L_A^2}\r
 
 **Lemma 3.0 (Vanishing Schwarzschild mass on own projection).** *In the minimal observer $A$'s own projected continuous dual $M_A$, the Schwarzschild mass parameter that would appear in a spherically symmetric static vacuum solution with $\Lambda > 0$ vanishes: $M_A^{\text{Schw}} = 0$.*
 
-*Framework-internal argument.* Three commitments combine:
+*Proof.* The spherically-symmetric-static-vacuum-with-$\Lambda$ family (Schwarzschild–de Sitter) is parameterized by $M \geq 0$ with metric
 
-**(i) Vacuum away from $\gamma_A$.** A minimal observer carries no bulk matter content outside its own worldline. Type III relational carriers ([Horizon Gauge Shell](/derivations/holography/horizon-gauge-shell) Proposition 3.1) live on the null boundary $\partial M_A$, not in the bulk. The interior $M_A \setminus (\gamma_A \cup \partial M_A)$ therefore satisfies the vacuum Einstein equations with $\Lambda$.
+$$g = -f(r)\, dt^2 + f(r)^{-1} dr^2 + r^2\, d\Omega^2, \qquad f(r) = 1 - \frac{2GM}{c^2 r} - \frac{\Lambda r^2}{3}.$$
 
-**(ii) $\gamma_A$ does not source bulk gravity in its own projection.** The observer is the origin of its own spatial coordinate system — $\gamma_A$ sits at $r = 0$, the center of $M_A$. The stress-energy that a worldline carries in standard GR is measured externally; but in $A$'s self-projection, $\gamma_A$ is not an external body. Its U(1) phase dynamics supply boundary conditions at $r = 0$ (periodic identification with period $T_A$), not a source term in Einstein's equations. This is the minimal observer's analogue of the fact that a reference frame does not gravitate in its own frame.
+We show $M = 0$ by contradiction. Suppose $M > 0$. Then as $r \to 0$, the metric component $f(r) \sim -2GM/(c^2 r) \to -\infty$, and the Kretschmann scalar computes to
 
-**(iii) Coherence already accounted for in $\Lambda$.** [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Step 8 decomposes the observer's coherence budget as $\mathcal{C}_0 = \mathcal{C}_{\text{acc}} + S$, with the horizon-bound component $S$ setting the effective cosmological constant $\Lambda_n^{\text{eff}}$. The coherence associated with $\gamma_A$'s loop closure is part of $\mathcal{C}_{\text{acc}}$ — it is spent maintaining the loop, not available to source additional geometry. The geometric signature of $A$'s own coherence content in its projection is the cosmological constant $\Lambda_A$, not a Schwarzschild mass.
+$$R_{\mu\nu\rho\sigma} R^{\mu\nu\rho\sigma} = \frac{48 G^2 M^2}{c^4 r^6} + O(\Lambda^2)$$
 
-Together (i)–(iii) force the only free mass parameter in a static spherically symmetric vacuum solution with $\Lambda$ to vanish on the minimal observer's own projection. $\square$
+[Wald 1984, §6.4; standard curvature computation]. This diverges like $r^{-6}$ as $r \to 0$ — a true curvature singularity. The point $r = 0$ is therefore geodesically incomplete and no smooth Lorentzian structure extends through it.
 
-*Remark.* The vanishing is specific to a minimal observer's **own** projection. A heavier composite observer $B$ viewed by $A$ appears in $M_A$ as a timelike worldline $\gamma_B^{(A)}$ with partner-line boundary conditions, and from $A$'s external perspective $B$ may contribute to an effective stress-energy (Open Gap 2). The vanishing mass is an intrinsic-perspective statement.
+The framework requires $\gamma_A$ to pass through $r = 0$ as a smooth timelike worldline carrying U(1) phase dynamics $\varphi: \gamma_A \to U(1)$ with $d\varphi/d\tau = \omega$ (Axiom 3), and the phase field to be periodic with period $T_A$. This requires:
+
+1. *Well-defined proper time $\tau$ along $\gamma_A$ at $r = 0$.* At a curvature singularity, the metric is not defined and $\tau$ cannot be consistently assigned.
+2. *Smoothness of the phase field $\varphi$ in a neighborhood of $\gamma_A$.* This requires the ambient metric to be smooth along $\gamma_A$; a Kretschmann divergence is incompatible with smoothness.
+
+Both requirements fail at a Kretschmann singularity. Therefore the assumption $M > 0$ contradicts Axiom 3's commitment that $\gamma_A$ is a smooth timelike worldline with smooth phase dynamics. We conclude $M = 0$. $\square$
+
+*Remark (where the proof lives).* The argument uses only: (a) the Schwarzschild–de Sitter Kretschmann computation (classical GR, Wald §6.4); (b) Axiom 3's smoothness commitment on $\gamma_A$; (c) the framework convention that the observer sits at $r = 0$ in its own projection (Definition 1.1). None of these is a conjecture or structural postulate of observer-projected-spacetime itself, though the conclusion inherits the framework's upstream commitments (Einstein equations, positive $\Lambda$) from [Einstein Field Equations](/derivations/spacetime/einstein-equations) and [Observer Loop Viability](/derivations/cosmology/observer-loop-viability).
+
+*Remark (scope of vanishing).* The vanishing is specific to a minimal observer's **own** projection. A heavier composite observer $B$ viewed by $A$ appears in $M_A$ as a timelike worldline $\gamma_B^{(A)}$ that does *not* sit at $r = 0$ (the origin of $A$'s projection is $\gamma_A$, not $\gamma_B$). From $A$'s external perspective $B$ may contribute to an effective stress-energy without producing a singularity at $A$'s worldline (Open Gap 2). The singularity argument specifically forecloses $M_A^{\text{Schw}} > 0$ on $A$'s own projection; it does not constrain $M$ in other observers' projections of $A$.
 
 **Proof of Theorem 3.1.** Assemble the ingredients:
 
@@ -175,10 +184,11 @@ $$\rho_{AC} = \rho_{BC} \circ \rho_{AB}$$
 - Proposition 2.1 (four intrinsic constraints on $M_A$): each constraint is derived from an established framework result (Axiom 3 for periodicity, Axiom 2 for boundary, [Horizon Gauge Shell](/derivations/holography/horizon-gauge-shell) Prop 2.2 for null horizon, [Multiplicity](/derivations/minimal-observer/multiplicity) Theorem 7.2 for partner count).
 - Proposition 6.1 (level-mismatched observers cannot glue to single dS): elementary isometric-embedding obstruction.
 
-**Semi-formal (rigorous modulo one framework-internal identification):**
+**Rigorous (given framework commitments from provisional upstream derivations):**
 
-- Theorem 3.1 (minimal-observer projection as static dS patch): proved by applying the classical Birkhoff-with-$\Lambda$ theorem (standard GR) to the framework's commitments (Einstein equations in projection, $\Lambda > 0$, spherical symmetry, static, null horizon at prescribed radius), then setting the Schwarzschild mass $M = 0$ via Lemma 3.0. The one remaining semi-formal piece is Lemma 3.0 (no-self-sourcing of $\gamma_A$ in its own projection), supported by three converging arguments but not by a single knockdown theorem. See narrowed Open Gap 1.
-- Proposition 4.1 (level-indexed projection): direct generalization of Theorem 3.1 to level-$n$ periods; consistent with [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Step 8. Inherits the semi-formal status of Lemma 3.0 at each level.
+- Lemma 3.0 ($M_A^{\text{Schw}} = 0$ on own projection): proved by contradiction using the Schwarzschild–de Sitter Kretschmann divergence at $r = 0$ and Axiom 3's smoothness commitment. The proof is classical GR + Axiom 3; no structural postulate of this derivation is invoked.
+- Theorem 3.1 (minimal-observer projection as static dS patch): proved by applying the classical Birkhoff-with-$\Lambda$ theorem (standard GR) to the framework's commitments (Einstein equations in projection, $\Lambda > 0$, spherical symmetry, static, null horizon at prescribed radius), then setting the Schwarzschild mass $M = 0$ via Lemma 3.0. With Lemma 3.0 rigorous, Theorem 3.1 is itself rigorous modulo the upstream provisional status of [Einstein Field Equations](/derivations/spacetime/einstein-equations) and [Observer Loop Viability](/derivations/cosmology/observer-loop-viability).
+- Proposition 4.1 (level-indexed projection): direct generalization of Theorem 3.1 to level-$n$ periods; consistent with [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Step 8. The singularity argument of Lemma 3.0 generalizes level-by-level — at each bootstrap level, an $M_n > 0$ would produce a Kretschmann singularity at $\gamma_{\mathcal{O}_n}$, contradicting Axiom 3.
 
 **Conjectural (central claims, unproved):**
 
@@ -198,7 +208,7 @@ $$\rho_{AC} = \rho_{BC} \circ \rho_{AB}$$
 
 ## Open Gaps
 
-1. **Tighten Lemma 3.0's no-self-sourcing argument.** Theorem 3.1 now invokes Birkhoff-with-$\Lambda$ (classical, rigorous) plus Lemma 3.0 ($M_A^{\text{Schw}} = 0$ on the minimal observer's own projection). Lemma 3.0 is argued from three converging commitments — vacuum away from $\gamma_A$, $\gamma_A$ not sourcing bulk gravity in its own projection, and the coherence budget being absorbed into $\Lambda$. A single rigorous knockdown argument would replace the three-way convergence with a direct proof. Candidate formal routes: (a) an ADM-mass computation on a pure de Sitter static patch showing the ADM mass at the horizon vanishes identically; (b) a self-reference argument showing the reference-worldline stress-energy is gauge-equivalent to zero in the observer's own frame; (c) a bootstrap-cohomology argument tying the vanishing to the coherence partition $\mathcal{C}_0 = \mathcal{C}_{\text{acc}} + S$ of [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Step 8. *Difficulty: MODERATE.* Closing this gap promotes Theorem 3.1 from semi-formal to fully rigorous.
+1. ~~**Tighten Lemma 3.0's no-self-sourcing argument.**~~ *Closed in this revision.* Lemma 3.0 is now proved rigorously via the Schwarzschild–de Sitter Kretschmann-singularity argument: $M > 0$ produces a curvature singularity at $r = 0$ (where $\gamma_A$ sits), contradicting Axiom 3's commitment that $\gamma_A$ is a smooth timelike worldline. Theorem 3.1 is now rigorous given the framework's upstream commitments. The remaining non-rigorous content of this derivation sits in Gaps 3–7 below.
 
 2. **Generalization to non-minimal observers with localized stress-energy.** A composite observer $\mathcal{O}_n$ at higher bootstrap level, viewed externally from a different observer's projection, carries effective stress-energy along $\gamma_{\mathcal{O}_n}^{(A)}$. That external projection generalizes from pure de Sitter (the observer's own projection, Proposition 4.1) to Schwarzschild–de Sitter. Specifying the effective stress-energy as a function of bootstrap level and spatial separation, and working out the corresponding projected geometry, is open. This is distinct from Open Gap 1: Gap 1 concerns the observer's own projection; Gap 2 concerns what the observer looks like from another observer's projection. *Difficulty: MODERATE.*
 
