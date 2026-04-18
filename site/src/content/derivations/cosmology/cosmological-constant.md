@@ -38,13 +38,15 @@ Open:
 
 **Thesis.** The cosmological constant is an observer-level-indexed effective parameter. At bootstrap level $n$ with characteristic period $T_n$ the projected effective value is $\Lambda_n = 12/(c T_n)^2$. Existence, non-negativity, a Planck-scale upper bound, and the equation of state $w = -1$ are derived. The ~120-order Planck/observed ratio is the obstruction class of the observer-indexed spacetime sheaf. A specific numerical prediction at a given observer level requires computing that class — a concrete categorical-cohomology target, not an inaccessible boundary datum.
 
-## Step 1: Existence
+## Derivation
+
+### Step 1: Existence
 
 **Proposition 1.1.** *$\Lambda$ is the unique dimension-0 term allowed in the gravitational action.*
 
 *Proof.* Lovelock's theorem: in a 4-dimensional smooth Lorentzian geometry, the most general symmetric divergence-free tensor constructed from the metric and its first two derivatives is $G_{\mu\nu} + \Lambda g_{\mu\nu}$, with $\Lambda$ the unique dimension-0 addition to the Einstein tensor. See [Einstein Field Equations](/derivations/spacetime/einstein-equations) for the full argument. No covariance or dimensional reasoning excludes the $\Lambda$ term; its presence in the theory is a theorem, not a postulate. $\square$
 
-## Step 2: Observer-Indexed Effective Value
+### Step 2: Observer-Indexed Effective Value
 
 **Proposition 2.1.** *For a bootstrap-level-$n$ observer $\mathcal{O}_n$ with characteristic period $T_n$, the effective cosmological constant in $\mathcal{O}_n$'s projected continuous dual is*
 
@@ -58,25 +60,25 @@ The level-indexed decomposition of coherence entropy $\mathcal{C}_0 = \mathcal{C
 
 **Planck and cosmic endpoints.** A minimal observer has $T_0 \sim T_P = \ell_P/c$, so $L_0 \sim \ell_P$ and $\Lambda_0 \sim 1/\ell_P^2$. A horizon-scale observer has $T_N \sim H^{-1}$, so $L_N \sim c/H$ and $\Lambda_N \sim H^2$. These are the two endpoints of the Λ hierarchy; see Step 6 for the structural interpretation of their ratio.
 
-## Step 3: Non-Negativity
+### Step 3: Non-Negativity
 
 **Proposition 3.1.** *$\Lambda \geq 0$.*
 
 *Proof.* A negative cosmological constant forces eventual contraction; at Planck density the resulting bounce would destroy all coherence carriers, violating Axiom 1 (coherence conservation). [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Theorem 5.4 formalizes this argument: the divergent effective pressure at the Planck-density bounce is incompatible with finite observer energy $E_\mathcal{O} = \hbar\omega$, so observer loops cannot survive the transition. A $\Lambda < 0$ cosmology cannot host framework-valid observers at late times. $\square$
 
-## Step 4: Planck-Scale Upper Bound
+### Step 4: Planck-Scale Upper Bound
 
 **Proposition 4.1.** *$\Lambda < 3/\ell_P^2$.*
 
 *Proof.* [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Theorem 2.1 establishes that minimum observer spatial extent must exceed $\ell_P$, otherwise loop closure (Axiom 3) fails. For a de Sitter patch with radius $L = c T/2$, this requires $L > \ell_P$, i.e., $\Lambda = 3/L^2 < 3/\ell_P^2$. This is a genuine constraint on the value of $\Lambda$ at level 0: not every value in $[0, \infty)$ is compatible with observer existence, only $[0, 3/\ell_P^2)$. $\square$
 
-## Step 5: Equation of State
+### Step 5: Equation of State
 
 **Proposition 5.1.** *The effective dark-energy component satisfies $w \geq -1$, and $w = -1$ is the unique time-independent fixed point.*
 
 *Proof.* See [Dark Energy Equation of State](/derivations/cosmology/dark-energy-equation-of-state) Theorems 2.1, 3.1. Phantom energy $w < -1$ would destroy all coherence carriers at the Big Rip in finite proper time, violating Axiom 1 — this is the null energy condition derived from coherence conservation rather than postulated. Among $w \in [-1, \infty)$, only $w = -1$ gives zero coherence flux between the accessible and inaccessible sectors and exhibits exact Lyapunov stability, making the cosmological constant the unique thermodynamic equilibrium. $\square$
 
-## Step 6: The 120-Order Hierarchy as Obstruction Class
+### Step 6: The 120-Order Hierarchy as Obstruction Class
 
 **Proposition 6.1.** *The ratio $\Lambda_0 / \Lambda_N \sim (T_N/T_0)^2 \sim 10^{122}$ is the magnitude of the gluing obstruction for the observer-indexed spacetime sheaf between levels 0 and $N$.*
 
@@ -84,7 +86,7 @@ The level-indexed decomposition of coherence entropy $\mathcal{C}_0 = \mathcal{C
 
 **Consequence.** In this framing, the cosmological constant problem is not a question about why a single quantity takes an improbably small value. It is a question about the structure of the observer-indexed spacetime sheaf: what is the obstruction class, and which observer level's projection does our measurement of $\Lambda$ correspond to? The target is a categorical-cohomology computation, not a fine-tuning mystery. The 120 orders are an observable signature of the gluing obstruction — they *should* be there.
 
-## Step 7: No Vacuum Catastrophe
+### Step 7: No Vacuum Catastrophe
 
 **Proposition 7.1.** *The standard QFT vacuum-energy catastrophe — the prediction of vacuum energy ~120 orders above the observed $\Lambda$ — does not arise in this framework.*
 

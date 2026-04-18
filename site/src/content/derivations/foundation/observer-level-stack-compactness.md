@@ -33,7 +33,9 @@ Fibering the stack of sub-observers over this coherence interval gives a natural
 
 **Theorem (Observer-level stack compactness).** *Let $A$ be an observer with accessible coherence budget $\mathcal{C}_A$, and let $H_A$ be the fibered hierarchy of sub-observers of $A$ fibered over the scalar coherence interval $[0, \mathcal{C}_A]$, with fiber over $c \in [0, \mathcal{C}_A]$ equal to the finite set of sub-observer configurations realizing coherence value $c$. Given an appropriate continuity assumption on the fibration (Open Gap 1 below), $H_A$ is compact.*
 
-## Step 1: Base Compactness
+## Derivation
+
+### Step 1: Base Compactness
 
 **Proposition 1.1 (Compactness of the coherence base).** *For any observer $A$, the coherence interval $[0, \mathcal{C}_A]$ is compact.*
 
@@ -49,7 +51,7 @@ By Heine–Borel, a closed bounded subset of $\mathbb{R}$ is compact. Therefore 
 
 **Remark 1.2 (Observer-relative, not global).** *$\mathcal{C}_A$ depends on $A$. For a minimal observer, $\mathcal{C}_A$ is Planck-scale ($\sim \hbar\omega_0$). For a horizon-scale observer, $\mathcal{C}_A \sim 10^{122}\hbar\omega_0$. No universal $\mathcal{C}_{\text{total}}$ is needed — each observer works with its own finite coherence interval, consistent with the observer-indexed framing of [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime).*
 
-## Step 2: Fiber Finiteness
+### Step 2: Fiber Finiteness
 
 **Proposition 2.1 (Finiteness of each fiber).** *For any observer $A$ and any $c \in [0, \mathcal{C}_A]$, the fiber $F_A(c)$ — the set of sub-observer configurations within $A$'s hierarchy realizing coherence value $c$ — is finite.*
 
@@ -63,7 +65,7 @@ Therefore $|F_A(c)| < \infty$ for every $c$. $\square$
 
 **Remark 2.3 (Uniform bound on fiber size).** *The fiber size $|F_A(c)|$ varies with $c$ but is bounded uniformly by $|F_A(c)| \leq \binom{N_A + c_{\max}/(\hbar\omega_0) - 1}{c_{\max}/(\hbar\omega_0)}$ where $c_{\max} = \mathcal{C}_A$. This uniform bound is useful for the continuity argument in Step 3.*
 
-## Step 3: Fibration Continuity (Informal)
+### Step 3: Fibration Continuity (Informal)
 
 **Informal Proposition 3.1 (Continuity of the fibration, informal).** *The fibration $\pi: H_A \to [0, \mathcal{C}_A]$ is continuous in the following sense: for any open set $U \subset H_A$, the image $\pi(U)$ is a union of coherence intervals in $[0, \mathcal{C}_A]$; and for any sequence of coherence values $c_i \to c$ in $[0, \mathcal{C}_A]$, the corresponding fibers $F_A(c_i)$ converge to $F_A(c)$ in an appropriate topology on the (finite, discrete) fiber collection.*
 
@@ -77,7 +79,7 @@ Therefore $|F_A(c)| < \infty$ for every $c$. $\square$
 
 Combining (i)–(iii), the fibration is continuous in a discrete-over-continuous sense: the base varies continuously, the fibers vary discretely with continuous-parameterized transitions. A rigorous formulation would specify the exact topology on the fiber collection (probably the discrete topology on a finite set, made continuous by the piecewise-constant stratification); that formulation is the content of Open Gap 1.
 
-## Step 4: Total Stack Compactness
+### Step 4: Total Stack Compactness
 
 **Informal Proposition 4.1 (Total stack compactness, informal).** *Given Propositions 1.1, 2.1, and 3.1, the total fibered hierarchy $H_A$ is compact.*
 
@@ -91,7 +93,7 @@ Therefore $H_A$ is compact. $\square$
 
 **Remark 4.4 (Observer-relative compactness).** *Like the base interval (Remark 1.2), the total stack compactness is observer-relative: $H_A$ is compact, but the compactness is for a specific $A$. Different observers have different-sized stacks, all compact. This is consistent with the [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) observer-indexed sheaf picture — each observer's portion of the universe is its own compact object.*
 
-## Step 5: What This Enables
+### Step 5: What This Enables
 
 **Remark 5.1 (Fixed-point theorems as the target).** *Compactness is the load-bearing hypothesis of several classical fixed-point theorems:*
 

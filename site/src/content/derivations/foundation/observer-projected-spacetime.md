@@ -25,7 +25,9 @@ The program splits naturally into two tracks, which turn out to be two halves of
 
 **Honest status.** The minimal-observer projection is established rigorously (Theorem 3.1) via Birkhoff-with-$\Lambda$ plus Lemma 3.0 ($M_A^{\text{Schw}} = 0$ proved by Kretschmann-singularity contradiction against Axiom 3). The gluing/sheaf property (Conjecture 5.3) and the quantitative obstruction class (Proposition 6.3) are genuinely conjectural; these are flagged as the remaining open gaps. The derivation's status remains provisional rather than derived because it inherits the active postulate `speed-of-light-s1` transitively through [Einstein Field Equations](/derivations/spacetime/einstein-equations) — a global-assembly commitment that this derivation itself does not use but cannot shed upstream.
 
-## Step 1: The Observer-Indexed Projection
+## Derivation
+
+### Step 1: The Observer-Indexed Projection
 
 **Definition 1.1 (Observer-projected continuous dual).** *For an observer $A = (\Sigma_A, I_A, \mathcal{B}_A)$, the **observer-projected continuous dual** $M_A$ is the smooth Lorentzian 4-manifold-with-boundary that represents $A$'s perspectival continuum view of the DAG. It has:*
 
@@ -41,7 +43,7 @@ The program splits naturally into two tracks, which turn out to be two halves of
 
 **Remark 1.4 (Relation to [Continuous-Discrete Duality](/derivations/foundation/continuous-discrete-duality)).** *That derivation argues the continuous and discrete layers are co-formed duals of a single physics, with cosmological parameters living in the fixed point of their mutual compatibility. It treats both layers as global. The present derivation refines this: the "continuous layer" is not a single object; it is a family of observer-projected objects. The fixed point of continuous-discrete-duality is a fixed point of the gluing structure, not of a single smooth manifold.*
 
-## Step 2: Intrinsic Constraints on a Minimal Observer's Projection
+### Step 2: Intrinsic Constraints on a Minimal Observer's Projection
 
 Throughout this step, let $A$ be a minimal observer: $\Sigma_A \cong S^1$, $U(1)$ phase loop with period $T_A$, boundary $\mathcal{B}_A$, exactly two forced Type III partners $B, C$ from [Multiplicity](/derivations/minimal-observer/multiplicity) Theorem 7.2 (C5 non-trivial requires $\geq 3$ observers).
 
@@ -61,7 +63,7 @@ Throughout this step, let $A$ be a minimal observer: $\Sigma_A \cong S^1$, $U(1)
 
 **Remark 2.3 (Why two partners and not more).** *[Multiplicity](/derivations/minimal-observer/multiplicity) Theorem 7.2 forces at least three observers for C5 to be non-trivial. It does not force more at the minimal level. Furthermore, the horizon-area holographic bound ([Area Scaling](/derivations/holography/area-scaling)) at Planck scale is $O(1)$, so a minimal observer's horizon can accommodate only $O(1)$ Type III carriers. The count of 2 forced partners therefore saturates the horizon at the minimal level, with no slack for additional partners. This is a feature, not a constraint to be worked around: minimal observers exist at the edge of the holographic bound.*
 
-## Step 3: The Minimal-Observer Projection Theorem
+### Step 3: The Minimal-Observer Projection Theorem
 
 **Theorem 3.1 (Minimal-observer projection).** *Let $A$ be a minimal observer as in Step 2. Assume the framework's emergent geometry satisfies the vacuum Einstein equations with positive cosmological constant in the projection ([Einstein Field Equations](/derivations/spacetime/einstein-equations), [Observer Loop Viability](/derivations/cosmology/observer-loop-viability)) and that the Schwarzschild mass parameter vanishes in the minimal observer's own projection (Lemma 3.0 below). Then the four intrinsic constraints of Proposition 2.1, together with spherical symmetry of the DAG-level antichain structure around $\gamma_A$ and time-translation invariance within one period, force $M_A$ to be isometric to the static patch of de Sitter space with de Sitter radius*
 
@@ -129,7 +131,7 @@ and the metric takes the form stated in the theorem with $L_A = \sqrt{3/\Lambda_
 
 **Remark 3.4 (Why de Sitter and not Schwarzschild-de Sitter).** *Theorem 3.1 would admit the full Schwarzschild–de Sitter family if the Schwarzschild mass $M$ were non-zero. Lemma 3.0 establishes $M = 0$ on the minimal observer's own projection — three converging framework commitments (vacuum away from $\gamma_A$, no-self-sourcing of the reference worldline, and the coherence budget already accounted for in $\Lambda$) force the reduction. For composite observers viewed externally by $A$, the projection onto $M_A$ does generalize to Schwarzschild–de Sitter; those are the partner lines of Remark 3.3, and their effective stress-energy from $A$'s perspective is Open Gap 2.*
 
-## Step 4: Level-Indexed Generalization
+### Step 4: Level-Indexed Generalization
 
 **Proposition 4.1 (Level-indexed projection).** *Let $\mathcal{O}_n$ be an observer at bootstrap level $n$ with characteristic period $T_n$, viewed in its own projected continuous dual. Under the direct generalization of Theorem 3.1 (Birkhoff-with-$\Lambda$ plus the level-$n$ analogue of Lemma 3.0), $M_{\mathcal{O}_n}$ is isometric to the de Sitter static patch with de Sitter radius $L_n = c T_n / 2$ and effective cosmological constant $\Lambda_n = 12/(c T_n)^2$.*
 
@@ -137,7 +139,7 @@ and the metric takes the form stated in the theorem with $L_A = \sqrt{3/\Lambda_
 
 **Remark 4.2 (Planck and cosmic limits).** *At the Planck end: minimal observer with $T_0 \sim T_P = \ell_P/c$, giving $L_0 \sim \ell_P$ and $\Lambda_0 \sim 1/\ell_P^2 \sim 10^{70}\,\text{m}^{-2}$ (Planck-scale $\Lambda$). At the cosmic end: horizon-scale observer with $T_N \sim H^{-1}$, giving $L_N \sim c/H$ and $\Lambda_N \sim H^2 \sim 10^{-52}\,\text{m}^{-2}$ (observed cosmological $\Lambda$). Ratio: $\Lambda_0/\Lambda_N \sim 10^{122}$ — the canonical cosmological constant hierarchy. In the observer-projected framing this ratio is not a single quantity to be explained but a quotient of two observer-projected quantities at very different levels.*
 
-## Step 5: Gluing Structure
+### Step 5: Gluing Structure
 
 **Definition 5.1 (Restriction maps on shared relations).** *For observers $A, B$ connected by a Type III relation $I_{AB}$, the **restriction map** $\rho_{AB}: M_A|_{I_{AB}} \to M_B|_{I_{AB}}$ identifies the portion of $M_A$ that carries $I_{AB}$ with the portion of $M_B$ that carries the same relation. Concretely, if $I_{AB}$ enters $M_A$ as the partner worldline $\gamma_B^{(A)}$ and enters $M_B$ as the self-worldline $\gamma_B$ (restricted to the segment where the relation is active), then $\rho_{AB}$ is the identification of these two worldline-segments modulo reparameterization.*
 
@@ -153,7 +155,7 @@ $$\rho_{AC} = \rho_{BC} \circ \rho_{AB}$$
 
 *Status.* *Unproved. The sheaf property is delicate in the present setting because (a) the covering is by Type III relations rather than open sets, (b) the presheaf takes values in Lorentzian patches rather than abelian groups, and (c) the framework's DAG is not a topological space in the standard sense. A proof would require a categorical-semantics formulation of "cover" on $\mathbf{Obs}$. This is flagged as Open Gap 3.*
 
-## Step 6: The Gluing Obstruction and the $\Lambda$ Hierarchy
+### Step 6: The Gluing Obstruction and the $\Lambda$ Hierarchy
 
 **Proposition 6.1 (Level-mismatched observers cannot glue to a single de Sitter background).** *Let $A, B$ be observers at bootstrap levels $n_A \neq n_B$ with periods $T_A, T_B$. Their projections $M_A, M_B$ are static de Sitter patches of radii $L_A = c T_A/2, L_B = c T_B/2$. No single de Sitter manifold $M$ admits isometric embeddings of both $M_A$ and $M_B$, because such an embedding would require $M$ to have a single de Sitter radius, and the two patches impose incompatible radii.*
 

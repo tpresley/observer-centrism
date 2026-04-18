@@ -29,7 +29,9 @@ This derivation explores a topological route to the bootstrap fixed-point conjec
 
 **Status.** This is a stub. The connections identified below are structurally suggestive and grounded in existing framework derivations, but no formal proofs are offered. The goal is to establish the contact points between the framework's existing machinery and the topological tools, and to identify the concrete steps needed to formalize the program.
 
-## Step 1: Observer Loops as Framed Links
+## Derivation
+
+### Step 1: Observer Loops as Framed Links
 
 **Preliminary disclaimer (spatial embedding).** The framework's observer loops are primarily abstract $U(1)$ phase loops on state space, not embedded curves in a spatial manifold. The spatial-embedding picture used throughout Step 1 — and downstream — presupposes the embedding prescription of Open Gap 3 (where each observer is assigned a location $\gamma_\mathcal{O} \subset M$ consistent with the self-referential geometry produced by the network's own surgery structure). All statements in this step are conditional on that prescription being formalized.
 
@@ -115,7 +117,7 @@ Combining (i)–(iii): $\mathcal{C}(\mathcal{O}_1 : \mathcal{O}_2) = |\text{Lk}|
 
 **Open gap in the proof.** Step (ii) identifies the Seifert surface $\Sigma$ bounded by $\gamma_1$ with the boundary of $\mathcal{O}_1$'s coherence domain. The [Entropy](/derivations/thermodynamics/entropy) derivation defines the coherence domain as a subset of the relational invariant graph (Definition 2.1), not a spatial surface. The identification of the graph-theoretic domain boundary with a Seifert surface in the embedding manifold is a geometric interpretation that requires the full loop-embedding picture of Step 1 to be formalized. Once observer loops are rigorously embedded in the spatial manifold (Open Gap 3 of this derivation), this identification becomes a theorem rather than an interpretation.
 
-## Step 2: The Cayley-Dickson Gauge Chain as a Chern-Simons Sequence
+### Step 2: The Cayley-Dickson Gauge Chain as a Chern-Simons Sequence
 
 **Observation 2.1 (Gauge groups are CS gauge groups).** The [Bootstrap Division Algebras](/derivations/interactions/bootstrap-division-algebras) derivation forces the gauge group sequence:
 
@@ -168,7 +170,7 @@ The smallest positive integer assignment is $m = 1$, giving $(k_1, k_2, k_3) = (
 
 **Open question 2.6 (Verlinde formula vs. holographic bound).** For $SU(N)$ CS at level $k$ on a surface of genus $g$, the Verlinde formula gives the dimension of the Hilbert space. The framework's holographic bound gives $A/(4\ell_P^2)$ as the maximum number of independent states on a boundary surface. If these are the same finite-dimensionality condition, then the CS level is fixed by the holographic bound — giving both a direct link between the topological (CS) and gravitational (area-scaling) sectors *and* the missing absolute-normalization principle for Proposition 2.4. For genus 1 (torus) with $SU(2)$ at $k = 2$ (smallest assignment): Verlinde dimension = 3, so $A/(4\ell_P^2) = 3$, giving $A = 12\,\ell_P^2$ as the minimum torus area supporting $SU(2)$ gauge structure. Whether this correspondence holds — and whether the smallest integer assignment is the physically correct one — is an open question tracked as a forward direction.
 
-## Step 3: The Coherence Lagrangian and the Chern-Simons Action
+### Step 3: The Coherence Lagrangian and the Chern-Simons Action
 
 **Observation 3.1 (The CS 3-form is already in the framework).** The [Strong CP](/derivations/gauge/strong-cp) derivation (Step 3c) writes the topological charge as:
 
@@ -211,7 +213,7 @@ For larger integer assignments $(4m, 2m, m)$ the specific roots of unity and pol
 
 **Observation 3.6 (Specific knot invariants at the smallest integer assignment).** Under Proposition 2.4's smallest integer assignment $(k_1, k_2, k_3) = (4, 2, 1)$, the Jones polynomial at $q = i$ (from $SU(2)$ at $k = 2$) has known mathematical properties — it is related to the representation theory of the quantum group $U_q(\mathfrak{su}(2))$ at a 4th root of unity (the Kauffman bracket variable $A = e^{i\pi/4}$), where the representation category is modular and has exactly 3 simple objects corresponding to spins $0, 1/2, 1$. If this modular category is the correct description of the observer network's topological content at bootstrap level 2, it provides a concrete finite algebraic structure governing the weak-sector linking of observer loops. Resolution of the absolute-normalization question (Open Question 2.6) would either confirm this assignment or redirect the specific invariants accordingly.
 
-## Step 4: Surgery as the Geometry Functor
+### Step 4: Surgery as the Geometry Functor
 
 **Observation 4.1 (Lickorish-Wallace theorem).** Every closed oriented 3-manifold can be obtained by Dehn surgery on a framed link in $S^3$ [Lickorish, 1962; Wallace, 1960]. Conversely, every framed link in $S^3$ determines a unique closed oriented 3-manifold. This provides a bidirectional dictionary:
 
@@ -227,7 +229,7 @@ $$M_L \text{ contains } L \text{ as its observer network, and surgery on } L \te
 
 **Why this is a fixed-point equation.** Start with a candidate manifold $M_0$. Embed the observer network as a framed link $L_0 \subset M_0$. Perform surgery on $L_0$ to get a new manifold $M_1 = \text{Surgery}(L_0)$. Embed the observer network as a framed link $L_1 \subset M_1$. Iterate. The fixed point is the pair $(M^*, L^*)$ where $\text{Surgery}(L^*) = M^*$ and $L^* \subset M^*$ is the observer network in $M^*$. If the iteration converges, the fixed point is the self-consistent geometry.
 
-## Step 5: The ER=EPR Bridge as Topological Tubes
+### Step 5: The ER=EPR Bridge as Topological Tubes
 
 **Observation 5.1 (Wormhole throat as linking tube).** The [ER=EPR](/derivations/holography/er-epr) derivation establishes that the wormhole throat area between two entangled observers satisfies $A = 4\ell_P^2\,\mathcal{C}(I_{12})$, where $\mathcal{C}(I_{12})$ is the coherence content of the relational invariant. In the knot-theoretic picture, two linked loops have a tubular neighborhood of the linking region — a handle connecting the two loops' neighborhoods. The cross-sectional area of this tube scales with the linking number. With the identification of Proposition 1.5 ($\mathcal{C} = \text{Lk} \cdot \hbar\omega_0$), the ER=EPR throat area becomes:
 

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-18T02:12:20.135Z",
+    "generatedAt": "2026-04-18T02:31:59.585Z",
     "derivationCount": 83,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -1954,7 +1954,36 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [],
-      "steps": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Existence"
+        },
+        {
+          "number": 2,
+          "title": "Observer-Indexed Effective Value"
+        },
+        {
+          "number": 3,
+          "title": "Non-Negativity"
+        },
+        {
+          "number": 4,
+          "title": "Planck-Scale Upper Bound"
+        },
+        {
+          "number": 5,
+          "title": "Equation of State"
+        },
+        {
+          "number": 6,
+          "title": "The 120-Order Hierarchy as Obstruction Class"
+        },
+        {
+          "number": 7,
+          "title": "No Vacuum Catastrophe"
+        }
+      ],
       "formalObjects": [
         {
           "type": "Proposition",
@@ -5557,7 +5586,28 @@
       "dependedOnBy": [
         "foundation/observer-holographic-equivalence"
       ],
-      "steps": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Observer Loops as Framed Links"
+        },
+        {
+          "number": 2,
+          "title": "The Cayley-Dickson Gauge Chain as a Chern-Simons Sequence"
+        },
+        {
+          "number": 3,
+          "title": "The Coherence Lagrangian and the Chern-Simons Action"
+        },
+        {
+          "number": 4,
+          "title": "Surgery as the Geometry Functor"
+        },
+        {
+          "number": 5,
+          "title": "The ER=EPR Bridge as Topological Tubes"
+        }
+      ],
       "formalObjects": [
         {
           "type": "Definition",
@@ -5971,7 +6021,40 @@
         "foundation/minimum-bootstrap-closure",
         "foundation/observer-level-stack-compactness"
       ],
-      "steps": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Enclosing Surfaces and the Crossing Record"
+        },
+        {
+          "number": 2,
+          "title": "Time-Like Holographic Equivalence (Thesis A)"
+        },
+        {
+          "number": 3,
+          "title": "Space-Like Holographic Equivalence (Thesis A')"
+        },
+        {
+          "number": 4,
+          "title": "Null Portions Force Phase Discard (Thesis B)"
+        },
+        {
+          "number": 5,
+          "title": "The Horizon as Canonical Holographic Surface"
+        },
+        {
+          "number": 6,
+          "title": "The Three-Region Decomposition as a Phase-Resolution Ladder"
+        },
+        {
+          "number": 7,
+          "title": "Level Transitions Propagate Only Integer Data"
+        },
+        {
+          "number": 8,
+          "title": "The Obstruction Class as a Combinatorial Invariant"
+        }
+      ],
       "formalObjects": [
         {
           "type": "Definition",
@@ -6215,7 +6298,28 @@
       "dependedOnBy": [
         "foundation/bootstrap-fixed-point-existence"
       ],
-      "steps": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Base Compactness"
+        },
+        {
+          "number": 2,
+          "title": "Fiber Finiteness"
+        },
+        {
+          "number": 3,
+          "title": "Fibration Continuity (Informal)"
+        },
+        {
+          "number": 4,
+          "title": "Total Stack Compactness"
+        },
+        {
+          "number": 5,
+          "title": "What This Enables"
+        }
+      ],
       "formalObjects": [
         {
           "type": "Proposition",
@@ -6352,7 +6456,32 @@
         "foundation/observer-holographic-equivalence",
         "foundation/observer-level-stack-compactness"
       ],
-      "steps": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The Observer-Indexed Projection"
+        },
+        {
+          "number": 2,
+          "title": "Intrinsic Constraints on a Minimal Observer's Projection"
+        },
+        {
+          "number": 3,
+          "title": "The Minimal-Observer Projection Theorem"
+        },
+        {
+          "number": 4,
+          "title": "Level-Indexed Generalization"
+        },
+        {
+          "number": 5,
+          "title": "Gluing Structure"
+        },
+        {
+          "number": 6,
+          "title": "The Gluing Obstruction and the $\\Lambda$ Hierarchy"
+        }
+      ],
       "formalObjects": [
         {
           "type": "Definition",
@@ -10805,7 +10934,28 @@
         "foundation/observer-holographic-equivalence",
         "foundation/observer-projected-spacetime"
       ],
-      "steps": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The Cauchy Slice Covering Property"
+        },
+        {
+          "number": 2,
+          "title": "The A–B Relational Carrier and its Null Character"
+        },
+        {
+          "number": 3,
+          "title": "The Horizon Shell"
+        },
+        {
+          "number": 4,
+          "title": "Kinematic Properties of the Null Shell"
+        },
+        {
+          "number": 5,
+          "title": "The Holographic Connection"
+        }
+      ],
       "formalObjects": [
         {
           "type": "Proposition",

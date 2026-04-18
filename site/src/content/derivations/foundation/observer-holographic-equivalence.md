@@ -39,7 +39,9 @@ Together these resolve the coherence-domain-vs-horizon ambiguity latent in the f
 
 **Thesis B (Null portions carry integer content).** Let $\Sigma$ be any surface embedded in $M_A$, and let $\Sigma = \Sigma_{\text{null}} \sqcup \Sigma_{\text{non-null}}$ be the decomposition of $\Sigma$ into its null and non-null (timelike or spacelike) portions. The encoding of $A$'s state on $\Sigma_{\text{null}}$ reduces to integer/topological data alone — topological invariants (linking, framing), integer quantum numbers (CS levels, coherence quanta counts), Poisson event counts. The encoding on $\Sigma_{\text{non-null}}$ retains full continuous phase. The null horizon $\partial M_A$ is entirely null; its encoding is therefore entirely integer. The coherence-domain boundary $\mathcal{B}_A$ is timelike; its encoding is entirely continuous-phase. Mixed surfaces get mixed encodings.
 
-## Step 1: Enclosing Surfaces and the Crossing Record
+## Derivation
+
+### Step 1: Enclosing Surfaces and the Crossing Record
 
 **Definition 1.1 (Enclosing surface).** *For an observer $A$ with coherence-domain boundary $\mathcal{B}_A$ in projected continuous dual $M_A$, an **enclosing surface** is a closed 2-surface $\Sigma \subset M_A$ such that $\mathcal{B}_A$ lies in the bounded interior of $\Sigma$. The family of enclosing surfaces ranges from $\mathcal{B}_A$ itself (tightest) to $\partial M_A$ (outermost, null).*
 
@@ -56,7 +58,7 @@ Together these resolve the coherence-domain-vs-horizon ambiguity latent in the f
 
 **Remark 1.4 (Intermediate surfaces).** *Any surface $\Sigma$ with $\mathcal{B}_A \subsetneq \mathcal{B}_A \cup \text{int}(\Sigma) \subsetneq M_A$ is an intermediate enclosing surface. Such surfaces live in the bulk of $M_A$ between the coherence-domain boundary and the horizon. Physically these correspond to coarser causal surfaces than the skin but finer than the cosmic horizon — e.g., the boundary of a local environment, a laboratory wall, a room, a planet's gravity well.*
 
-## Step 2: Time-Like Holographic Equivalence (Thesis A)
+### Step 2: Time-Like Holographic Equivalence (Thesis A)
 
 **Proposition 2.1 (Holographic equivalence).** *For any enclosing surface $\Sigma$ of $A$, the sequenced crossing record $R_\Sigma(A, t_k)$ is sufficient to determine $A$'s state at $t_k$.*
 
@@ -72,7 +74,7 @@ Together these resolve the coherence-domain-vs-horizon ambiguity latent in the f
 
 **Remark 2.3 (Correspondence with the holographic bound).** *[Area Scaling](/derivations/holography/area-scaling) bounds the mode count on $\Sigma$ by $\text{Area}(\Sigma)/(4\ell_P^2)$. Proposition 2.1 is the qualitative partner of the quantitative bound: not only is the count bounded, but the data on $\Sigma$ is sufficient to reconstruct the state.*
 
-## Step 3: Space-Like Holographic Equivalence (Thesis A')
+### Step 3: Space-Like Holographic Equivalence (Thesis A')
 
 **Proposition 3.1 (Space-like holographic equivalence).** *For a Cauchy slice $\Xi$ through the interior of $A$'s coherence domain at tick $t_k$, the instantaneous space-like configuration $K_\Xi(A, t_k)$ — the positions, phases, and space-like correlations of $A$'s constituents at $t_k$, together with all Type I and Type II dynamics and internal Type III relations — determines $A$'s state at $t_k$.*
 
@@ -92,7 +94,7 @@ Together these resolve the coherence-domain-vs-horizon ambiguity latent in the f
 
 **Remark 3.4 (Vacuous for minimal observers, non-trivial for composites).** *A minimal observer has no internal space-like structure — its configuration on any Cauchy slice is a single phase value on $S^1$. Thesis A' becomes non-trivial once an observer has level-lower constituents. For a macro observer the space-like configuration at $t_k$ is the full instantaneous arrangement of all its cells, atoms, and their entanglement — a rich, continuous, complex-valued description containing everything that makes the observer what it is at that moment.*
 
-## Step 4: Null Portions Force Phase Discard (Thesis B)
+### Step 4: Null Portions Force Phase Discard (Thesis B)
 
 **Proposition 4.1 (Null portions carry integer content).** *Let $\Sigma$ be any embedded hypersurface in $M_A$, with causal decomposition $\Sigma = \Sigma_{\text{null}} \sqcup \Sigma_{\text{non-null}}$. Let $\varphi: M_A \to U(1)$ be the U(1) phase field satisfying $d\varphi/d\tau = \omega$ along every timelike worldline, where $\tau$ is proper time and $\omega = 2\pi/T_A$ (Axiom 3). Then:*
 
@@ -137,7 +139,7 @@ Since a non-null hypersurface admits a non-degenerate induced metric (Riemannian
 
 **Remark 4.4 (Not a loss of information).** *By Thesis A, the horizon encoding is still sufficient to determine $A$'s state. Thesis B does not contradict this — it specifies the **form** of the encoding on each piece of a surface (integer where null, continuous where non-null) while preserving sufficiency. The observer's state, expressed in horizon variables, is a collection of discrete invariants that combine to reconstruct the full continuous-phase description held at $\mathcal{B}_A$ or on any Cauchy slice through the interior.*
 
-## Step 5: The Horizon as Canonical Holographic Surface
+### Step 5: The Horizon as Canonical Holographic Surface
 
 **Corollary 5.1 (Horizon as canonical holographic surface).** *The null horizon $\partial M_A$ is the **canonical coarsest holographic surface** for observer $A$: among all enclosing surfaces that suffice to encode $A$'s state (Thesis A), it is the only one whose encoding is entirely integer/topological (Corollary 4.2).*
 
@@ -145,7 +147,7 @@ Since a non-null hypersurface admits a non-degenerate induced metric (Riemannian
 
 **Remark 5.2 (Why the framework's horizon derivations have only ever needed integers).** *This corollary explains a pattern visible across existing derivations: whenever a framework derivation describes horizon content (holographic bound, linking numbers, CS levels, framing, causal-set Poisson statistics, coherence quanta), the description is integer. No derivation has needed continuous phase at the horizon. Under Corollary 5.1 this is not coincidence but structural necessity — the horizon description is inherently discrete because it is entirely null.*
 
-## Step 6: The Three-Region Decomposition as a Phase-Resolution Ladder
+### Step 6: The Three-Region Decomposition as a Phase-Resolution Ladder
 
 The projected continuous dual $M_A$ decomposes into three regions distinguished by their enclosing-surface role ([Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Step 1, [Horizon Gauge Shell](/derivations/holography/horizon-gauge-shell) Step 2):
 
@@ -165,7 +167,7 @@ The projected continuous dual $M_A$ decomposes into three regions distinguished 
 
 **Remark 6.2 (Analogy to Wilson coarse-graining).** *The phase-resolution ladder is structurally analogous to Wilsonian renormalization group coarse-graining, where fine-grained high-momentum modes are integrated out as one moves from short to long distance scales. Here the integration is radial within the observer's projection, and the "modes" are crossing-event phases. A quantitative dictionary between the two may be derivable; see Open Gap 3.*
 
-## Step 7: Level Transitions Propagate Only Integer Data
+### Step 7: Level Transitions Propagate Only Integer Data
 
 **Corollary 7.1 (Inter-level integer restriction).** *Bootstrap composition $\mathcal{R}: \mathbf{Obs}_n \times \mathbf{Obs}_n \to \mathbf{Obs}_{n+1}$ that builds level-$(n{+}1)$ observers from level-$n$ constituents operates only on integer/topological data across level boundaries. Continuous phase information does not propagate from level $n$ to level $n{+}1$.*
 
@@ -183,7 +185,7 @@ The projected continuous dual $M_A$ decomposes into three regions distinguished 
 
 **Remark 6.3 (Continuous dynamics is per-level).** *The complementary reading of Corollary 6.1: continuous (complex-valued, phase-carrying) dynamics lives within a single observer's coherence domain. Field theory, smooth evolution, continuous phase evolution — all happen inside $\mathcal{B}_A$ for an observer at a fixed bootstrap level. Cross-level coupling is categorically different: it is combinatorial, topological, integer-valued. This clean separation rescues the framework's discrete-continuous duality from awkwardness: per-level continuous, cross-level discrete, with the horizon as the interface.*
 
-## Step 8: The Obstruction Class as a Combinatorial Invariant
+### Step 8: The Obstruction Class as a Combinatorial Invariant
 
 **Corollary 8.1 (Obstruction class is combinatorial).** *The gluing obstruction of the observer-indexed spacetime sheaf ([Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Step 6) is a combinatorial/topological invariant — specifically, the failure of integer horizon data to piece together consistently across cross-level phase-discard transitions.*
 
