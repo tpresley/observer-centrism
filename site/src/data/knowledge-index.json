@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-18T02:31:59.585Z",
+    "generatedAt": "2026-04-18T04:50:05.763Z",
     "derivationCount": 83,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -15,7 +15,7 @@
     "derivationCount": 83,
     "predictionCount": 12,
     "edgeCount": 275,
-    "formalObjectCount": 1211,
+    "formalObjectCount": 1213,
     "openGapCount": 278,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
@@ -6100,6 +6100,12 @@
         },
         {
           "type": "Corollary",
+          "id": "4.5",
+          "name": "Exterior cancellation",
+          "statementPreview": "Let E denote any content in the exterior of MA — whether realized in a neighboring observer's stalk, an extended anti..."
+        },
+        {
+          "type": "Corollary",
           "id": "5.1",
           "name": "Horizon as canonical holographic surface",
           "statementPreview": "The null horizon MA is the **canonical coarsest holographic surface** for observer A: among all enclosing surfaces th..."
@@ -6133,6 +6139,12 @@
           "id": "4.2",
           "name": "distinguished status of $\\partial M_A$",
           "statementPreview": ": direct application of Proposition 4.1 to the entirely-null horizon."
+        },
+        {
+          "type": "Corollary",
+          "id": "4.5",
+          "name": "exterior cancellation",
+          "statementPreview": ": direct consequence of Thesis A applied to MA as the outermost enclosing surface, combined with Proposition 4.1's in..."
         }
       ],
       "structuralPostulates": [],
@@ -26260,6 +26272,13 @@
     {
       "derivationId": "foundation/observer-holographic-equivalence",
       "type": "Corollary",
+      "id": "4.5",
+      "name": "Exterior cancellation",
+      "fullRef": "foundation/observer-holographic-equivalence:Corollary 4.5"
+    },
+    {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "type": "Corollary",
       "id": "5.1",
       "name": "Horizon as canonical holographic surface",
       "fullRef": "foundation/observer-holographic-equivalence:Corollary 5.1"
@@ -26298,6 +26317,13 @@
       "id": "4.2",
       "name": "distinguished status of $\\partial M_A$",
       "fullRef": "foundation/observer-holographic-equivalence:Corollary 4.2"
+    },
+    {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "type": "Corollary",
+      "id": "4.5",
+      "name": "exterior cancellation",
+      "fullRef": "foundation/observer-holographic-equivalence:Corollary 4.5"
     },
     {
       "derivationId": "foundation/observer-level-stack-compactness",
