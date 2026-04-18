@@ -1,7 +1,7 @@
 ---
 title: "Cosmological Constant"
 status: "provisional"
-dependsOn: ["spacetime/einstein-equations", "holography/area-scaling", "foundation/observer-projected-spacetime", "cosmology/observer-loop-viability", "cosmology/dark-energy-equation-of-state"]
+dependsOn: ["spacetime/einstein-equations", "holography/area-scaling", "foundation/observer-projected-spacetime", "cosmology/observer-loop-viability", "cosmology/dark-energy-equation-of-state", "cosmology/baryogenesis"]
 enablesDerivation: []
 tags: ["cosmology", "holography"]
 summary: "The cosmological constant is an observer-level-indexed effective parameter. At bootstrap level n with characteristic period T_n, the projected effective value is Λ_n = 12/(cT_n)². Existence (Lovelock), non-negativity (coherence conservation), Planck-scale upper bound, equation of state w = -1, and absence of a vacuum catastrophe are derived. The ~120-order ratio between the Planck-scale and cosmic-scale projections is the obstruction class of the observer-indexed spacetime sheaf — the cohomological signature of its failure to reduce to a single background manifold. A specific numerical value at a given observer level requires computing that obstruction class."
@@ -86,6 +86,18 @@ The level-indexed decomposition of coherence entropy $\mathcal{C}_0 = \mathcal{C
 
 **Consequence.** In this framing, the cosmological constant problem is not a question about why a single quantity takes an improbably small value. It is a question about the structure of the observer-indexed spacetime sheaf: what is the obstruction class, and which observer level's projection does our measurement of $\Lambda$ correspond to? The target is a categorical-cohomology computation, not a fine-tuning mystery. The 120 orders are an observable signature of the gluing obstruction — they *should* be there.
 
+**Proposition 6.2 (Obstruction class as Čech 1-cocycle on the bootstrap-graded observer category).** *The gluing obstruction of Proposition 6.1 is realized concretely as a Čech 1-cocycle on the bootstrap-level graph of the observer category, with cocycle values*
+
+$$c(m, n) = \log(L_m / L_n)$$
+
+*for ordered pairs $(m, n)$ of bootstrap levels. Same-level cycles close trivially ($c(n, n) = 0$); cross-level cycles sum to $\log(L_0 / L_N) \approx 140$ between the Planck and cosmic scales, giving $\log(\Lambda_0 / \Lambda_N) = 2 \log(L_N / L_0) \approx 280$ — consistent with the observed $\sim 120$-order $\Lambda$-hierarchy.*
+
+*Argument.* A sheaf's obstruction class is, in Čech cohomology terms, the non-trivial 1-cocycle formed by the transition functions between local identifications [Hartshorne 1977, Ch. III]. Here the local identifications are the within-level sub-sheaves at each bootstrap level, each with its own de Sitter scale $L_n$. Transitions between different-level sub-sheaves require conformal rescaling by $L_m / L_n$ (they cannot be isometric, since dS manifolds of different radii are not isometric). The family $\{L_m / L_n\}$ indexed by ordered level-pairs, expressed as $c(m,n) = \log(L_m / L_n)$, satisfies the cocycle condition $c(m, n) + c(n, p) = c(m, p)$ and is a proper Čech 1-cocycle on the bootstrap-level graph. It is exact iff there exists a single global $L$ with $L_n = L$ for all $n$ — equivalent to all observer levels sharing one de Sitter scale, which is precisely what Proposition 6.1 rules out. The non-triviality of this cocycle IS the $\Lambda$-hierarchy obstruction. $\square$
+
+**Remark 6.3 (What changes from Proposition 6.1).** *Proposition 6.1 identifies the $\Lambda$-hierarchy with "the gluing obstruction" as an abstract description. Proposition 6.2 gives the abstract obstruction a specific categorical home: a Čech 1-cocycle on the bootstrap-graded observer category. The hierarchy magnitude $\log(\Lambda_0/\Lambda_N) \approx 280$ becomes the integrated cocycle value around the Planck-to-cosmic cycle. Quantitative matching to the observed value remains open (see Open Gaps) and requires a first-principles derivation of $L_N/L_0$ from bootstrap structure.*
+
+**Remark 6.4 (Suggestive combinatorial match to the KM CP-phase count).** *[Baryogenesis](/derivations/cosmology/baryogenesis) Proposition 3.2 establishes that an $N_g \times N_g$ unitary mixing matrix has $(N_g - 1)(N_g - 2)/2$ irremovable CP-violating phases, which at $N_g = 3$ gives exactly one — the Kobayashi-Maskawa phase driving CP violation in the Standard Model. The framework's bootstrap has four division-algebra levels ($\mathbb{R}, \mathbb{C}, \mathbb{H}, \mathbb{O}$) and hence three non-trivial cross-level transitions on which the cocycle of Proposition 6.2 lives. The combinatorics align: three bootstrap transitions ↔ three generations ↔ one irremovable CP phase. If the cocycle's antisymmetric part admits a complex structure, it could provide a framework-level realization of the KM CP phase, with the $\Lambda$-hierarchy and the KM phase as different projections of a single sheaf cocycle. Making this precise requires (i) a complex structure on the currently-real-valued cocycle, (ii) explicit identification of the three independent cocycle values with the three generation-transition structures, (iii) matching the antisymmetric part to the Jarlskog-like CP-violating invariant. Flagged as a research target below.*
+
 ### Step 7: No Vacuum Catastrophe
 
 **Proposition 7.1.** *The standard QFT vacuum-energy catastrophe — the prediction of vacuum energy ~120 orders above the observed $\Lambda$ — does not arise in this framework.*
@@ -115,10 +127,14 @@ Both routes assume a single global $\Lambda$ to derive. The correct object to co
 - Proposition 5.1 (equation of state): [Dark Energy Equation of State](/derivations/cosmology/dark-energy-equation-of-state) Theorems 2.1, 3.1.
 - Proposition 7.1 (no vacuum catastrophe): direct consequence of the per-observer holographic bound.
 
-**Informal (observer-indexed reframing; conditional on upstream conjecture):**
+**Semi-formal (inheriting upstream semi-formal results):**
 - Proposition 2.1 (per-level $\Lambda_n$): semi-formal via [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Theorem 3.1 (Birkhoff-with-$\Lambda$ + Lemma 3.0). Inherits the semi-formal status of Lemma 3.0 upstream.
 - Proposition 2.2 (no single shared $\Lambda$): follows from the projection conjecture plus the isometric-embedding obstruction ([Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Proposition 6.1).
 - Proposition 6.1 (hierarchy as obstruction class): structural identification; quantitative computation requires the sheaf-cohomology setup ([Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Open Gaps 3 and 4).
+- Proposition 6.2 (obstruction class as Čech 1-cocycle): gives the abstract obstruction of Proposition 6.1 a concrete categorical form; rigorous given the bootstrap-level scale assignments $L_n = cT_n/2$ and the cocycle condition. Quantitative matching to observed $\Lambda$-hierarchy remains open.
+
+**Research targets (speculative, flagged for future work):**
+- Remark 6.4 (KM CP-phase ↔ cocycle combinatorial match): suggestive combinatorial alignment between the three cross-level cocycle values and the one irremovable KM CP-phase at $N_g = 3$ generations. Not derived; research target below.
 
 **Open:**
 - Specific numerical value of $\Lambda$ at a given observer level.
@@ -127,12 +143,14 @@ Both routes assume a single global $\Lambda$ to derive. The correct object to co
 
 ## Open Gaps
 
-1. **Tighten Lemma 3.0 upstream.** Proposition 2.1 is now established semi-formally via [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Theorem 3.1. The remaining semi-formal piece is [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Lemma 3.0 ($M_A^{\text{Schw}} = 0$ on the observer's own projection); closing its Open Gap 1 would promote Proposition 2.1 from semi-formal to rigorous. *Difficulty: MODERATE.*
+1. **Tighten Lemma 3.0 upstream.** Proposition 2.1 is established semi-formally via [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Theorem 3.1. The remaining semi-formal piece is [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Lemma 3.0 ($M_A^{\text{Schw}} = 0$ on the observer's own projection); closing its Open Gap 1 would promote Proposition 2.1 from semi-formal to rigorous. *Difficulty: MODERATE.*
 
-2. **Obstruction class computation.** Compute the obstruction class of the observer-indexed spacetime sheaf and relate it quantitatively to the measured $\Lambda$. Requires the categorical-semantics setup on $\mathbf{Obs}$ (see [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Open Gap 3) and a target expression for the class. *Difficulty: HARD.*
+2. **Quantitative obstruction class computation.** Proposition 6.2 identifies the obstruction as a Čech 1-cocycle with values $c(m,n) = \log(L_m/L_n)$. A quantitative first-principles derivation of $L_N/L_0 \sim 10^{60}$ from bootstrap structure (4 division-algebra levels, 3 generations, CS levels $4:2:1$) is the target. Requires the categorical-semantics setup on $\mathbf{Obs}$ (see [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Open Gap 3). *Difficulty: HARD.*
 
 3. **Observer-level identification.** Identify which bootstrap level our measurement of $\Lambda$ corresponds to. If level $N$ is pinned by observer-existence conditions or by the cosmic horizon structure, the specific value of $\Lambda_N$ becomes predictable once the obstruction class is computed. *Difficulty: MODERATE.*
 
 4. **Crystallization fraction.** The coherence partition $\mathcal{C}_0 = \sum \Delta c_n + S_H$ has a free parameter — the crystallization fraction $\Omega_m$. An independent derivation of $\Omega_m$ from the Standard Model structure (4 algebra levels, 3 generations, known couplings) would provide a cross-check on the obstruction class computation. See [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Gap 6 (geometry functor). *Difficulty: HARD.*
+
+5. **KM CP-phase ↔ cocycle connection.** Remark 6.4 notes a suggestive combinatorial match between the three cross-level cocycle values of Proposition 6.2 and the one irremovable KM CP-phase (per [Baryogenesis](/derivations/cosmology/baryogenesis) Proposition 3.2) at $N_g = 3$ generations. Making this precise requires (a) a complex structure on the currently-real-valued cocycle, (b) explicit identification of the three independent cocycle values with the three generation-transition structures, (c) matching the cocycle's antisymmetric part to the Jarlskog-like CP-violating invariant. If established, the $\Lambda$-hierarchy and the KM CP phase become different projections of a single sheaf cocycle. *Difficulty: HARD (research target, not a derived claim).*
 
 5. **Sheaf cohomology on $\mathbf{Obs}$.** Formalizing the observer-indexed spacetime sheaf requires a Grothendieck topology on the observer category. Inherited from [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Open Gap 3. *Difficulty: HARD.*

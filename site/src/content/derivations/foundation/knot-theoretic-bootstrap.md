@@ -1,7 +1,7 @@
 ---
 title: "Knot-Theoretic Bootstrap"
 status: "provisional"
-dependsOn: ["interactions/bootstrap", "interactions/bootstrap-division-algebras", "foundation/coherence-lagrangian", "foundation/continuous-discrete-duality", "gauge/electromagnetism", "gauge/strong-cp", "cosmology/coupling-constants"]
+dependsOn: ["interactions/bootstrap", "interactions/bootstrap-division-algebras", "foundation/coherence-lagrangian", "foundation/continuous-discrete-duality", "gauge/electromagnetism", "gauge/strong-cp", "cosmology/coupling-constants", "holography/horizon-gauge-shell", "foundation/observer-projected-spacetime", "foundation/observer-holographic-equivalence", "particles/cpt-theorem"]
 enablesDerivation: []
 tags: ["foundation", "topology", "gauge", "bootstrap"]
 summary: "Observer loops as framed links in a spatial manifold, with relational coherence identified as linking number. The Cayley-Dickson gauge chain maps to a finite sequence of Chern-Simons theories with level ratios k_1 : k_2 : k_3 = 4 : 2 : 1. The bootstrap fixed-point equation becomes self-consistent surgery: the link that produces the manifold is the link the manifold contains."
@@ -237,6 +237,22 @@ $$A = 4\ell_P^2 \cdot \text{Lk}(\gamma_1, \gamma_2) \cdot \hbar\omega_0$$
 
 This is geometrically natural: more linking = thicker tube = bigger wormhole throat.
 
+### Step 6: Modular Equivariance of the Horizon CS Theory
+
+The CS theory of Step 3 lives on the framework's horizon structure — the null boundary $\partial M_A$ of each observer's projection, topologically $S^2 \times S^1$ ([Horizon Gauge Shell](/derivations/holography/horizon-gauge-shell) Proposition 3.1 plus Axiom 3's time compactification). This step identifies the modular symmetry that acts on the CS partition functions.
+
+**Proposition 6.1 (Möbius automorphism group of the horizon).** *The conformal $S^2$ factor of $\partial M_A$ admits the orientation-preserving conformal automorphism group $\mathrm{PSL}(2, \mathbb{C})$ — the Möbius group. Combined with $T_A$-periodic translations on the $S^1$ time factor, the full horizon automorphism group is $\mathrm{PSL}(2, \mathbb{C}) \times U(1)$.*
+
+*Argument.* Classical conformal geometry: $\mathrm{Conf}^+(S^2) = \mathrm{PSL}(2, \mathbb{C})$ [Schottenloher 1997, §2]. The dS static-patch metric ([Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Theorem 3.1) restricted to the Killing horizon $r = L_A$ induces the round conformal structure on the $S^2$ factor [Anderson–Chruściel 2005]. The $S^1$ factor is the $T_A$-periodic time direction from Axiom 3. $\square$
+
+**Proposition 6.2 (Chern–Simons modular equivariance).** *The horizon CS theory at levels $k_1 : k_2 : k_3 = 4 : 2 : 1$ (Proposition 2.4) is equivariant under $\mathrm{SL}(2, \mathbb{Z})$ — the arithmetic subgroup of $\mathrm{PSL}(2, \mathbb{C})$ — via modular transformations on the boundary torus.*
+
+*Argument sketch.* The Chern–Simons partition function on a 3-manifold with $T^2$ boundary is a modular form under $\mathrm{SL}(2, \mathbb{Z})$ [Witten 1989, §4]. CS quantization at integer level produces Verlinde characters that transform under $\mathrm{SL}(2, \mathbb{Z})$ via specific modular matrices [Moore–Seiberg 1989]. For the framework's CS levels, the Verlinde algebras are finite and explicitly modular-covariant. $\square$
+
+**Remark 6.3 (Distinguished involutive elements).** *Two involutions on $\mathrm{SL}(2, \mathbb{Z})$ are physically relevant: the S-transformation $\tau \to -1/\tau$ (modular inversion) and the charge-conjugation element $C$. The CPT operator of [CPT Theorem](/derivations/particles/cpt-theorem) acts on horizon data as an involution preserving the integer residue (cf. [Observer Holographic Equivalence](/derivations/foundation/observer-holographic-equivalence) Corollary 4.5); identifying which specific $\mathrm{SL}(2, \mathbb{Z})$ element this corresponds to is open — see Open Gap 6 below. Resolution requires computing CS modular matrices at the framework's specific levels and matching their action on Verlinde characters to the CPT action.*
+
+**Remark 6.4 (Why the framework's horizon content is integer-valued).** *[Observer Holographic Equivalence](/derivations/foundation/observer-holographic-equivalence) Proposition 4.1 establishes that null surfaces carry only integer/topological data. The modular equivariance here is the natural automorphism group action on that integer data: once the horizon's CS description is fixed (integer levels, Verlinde characters), the only automorphisms it can admit are those preserving integer quantization — i.e., $\mathrm{SL}(2, \mathbb{Z})$ rather than the full continuous $\mathrm{PSL}(2, \mathbb{C})$. This makes the modular structure structurally forced rather than a supplementary choice.*
+
 ## Rigor Assessment
 
 **Structurally grounded (from existing rigorous derivations):**
@@ -261,6 +277,10 @@ This is geometrically natural: more linking = thicker tube = bigger wormhole thr
 - Observation 1.4: Relational invariants as topological linking
 - Observation 3.5: The coherence measure decomposes into topological-gauge + dynamical + gravitational components
 
+**Rigorous (classical mathematics):**
+- Proposition 6.1 (Möbius automorphism group of the horizon): classical conformal geometry of $S^2$ plus the dS static-patch induced metric on the Killing horizon.
+- Proposition 6.2 (CS modular equivariance): standard CS-TQFT result ($\mathrm{SL}(2, \mathbb{Z})$ equivariance of CS partition functions on $T^2$-boundary 3-manifolds) applied to the framework's integer CS levels.
+
 **Proof sketch (grounded in existing derivations, two explicit assumptions, one geometric identification remains):**
 - Proposition 1.5: Relational coherence = |Lk| × ℏω₀. The argument chains area-scaling boundary counting (Propositions 1.2 + 3.1), integer quantization (Corollary 2.3), and coherence conservation (Axiom 1) through the standard knot-theory fact that the linking number is the minimum geometric intersection number. Two explicit assumptions (A: sign-independent coherence contribution; B: isotopy preserves coherence and the ground state minimizes crossing count) are stated in the proof. The one remaining gap is the identification of the observer's coherence-domain boundary with a Seifert surface — a geometric interpretation that becomes a theorem once the loop-embedding picture (Open Gap 3) is formalized.
 
@@ -279,6 +299,8 @@ This is geometrically natural: more linking = thicker tube = bigger wormhole thr
 4. **Linking number vs. relational coherence for non-minimal observers.** Proposition 1.5 identifies $\mathcal{C}(\mathcal{O}_1 : \mathcal{O}_2) = \text{Lk}(\gamma_1, \gamma_2) \cdot \hbar\omega_0$ for minimal $U(1)$ loops. For composite observers at higher bootstrap levels, the "loop" is a more complex embedded object (satellite knot, cable link). The linking number generalizes to satellite linking numbers and Milnor invariants. Does the framework's relational coherence at higher levels match these higher invariants?
 
 5. **Surgery convergence.** The self-consistent surgery iteration (Step 4) must converge. Under what conditions does iterated surgery on a framed link in successive manifolds converge to a fixed point? This is a question in 3-manifold topology that may have known answers or may require new results.
+
+6. **Specific $\mathrm{SL}(2, \mathbb{Z})$ element for CPT.** Proposition 6.2 establishes that the CS theory is modular-equivariant; Remark 6.3 notes that the CPT operator of [CPT Theorem](/derivations/particles/cpt-theorem) acts on horizon integer data as a specific element of $\mathrm{SL}(2, \mathbb{Z})$. Identifying the element (S-inversion $\tau \to -1/\tau$, charge conjugation $C$, product $ST$, or other) requires explicit computation of Verlinde-character modular matrices at the framework's CS levels ($k_n = 4m, 2m, m$) matched to CPT's action on observer structure (per [CPT Theorem](/derivations/particles/cpt-theorem) Theorem 4.1 Step A). Connects to Open Gap 1 (absolute multiplier $m$). *Difficulty: MODERATE.*
 
 <!-- References -->
 [Lickorish, 1962]: /references#lickorish-1962

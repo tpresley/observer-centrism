@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-04-18T07:39:55.445Z",
-    "derivationCount": 84,
+    "generatedAt": "2026-04-18T08:17:22.854Z",
+    "derivationCount": 83,
     "predictionCount": 12,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -9,14 +9,14 @@
   "stats": {
     "byStatus": {
       "derived": 27,
-      "provisional": 56,
+      "provisional": 55,
       "draft": 1
     },
-    "derivationCount": 84,
+    "derivationCount": 83,
     "predictionCount": 12,
-    "edgeCount": 284,
-    "formalObjectCount": 1225,
-    "openGapCount": 284,
+    "edgeCount": 280,
+    "formalObjectCount": 1218,
+    "openGapCount": 281,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -734,7 +734,6 @@
         "cosmology/cyclic-cosmology",
         "cosmology/dark-energy-equation-of-state",
         "cosmology/observer-loop-viability",
-        "foundation/antipodal-stalk-inversion",
         "foundation/continuous-discrete-duality",
         "foundation/minimum-bootstrap-closure",
         "foundation/observer-holographic-equivalence",
@@ -1222,7 +1221,6 @@
       "dependedOnBy": [
         "axioms/loop-closure",
         "dimensions/three-dimensions",
-        "foundation/antipodal-stalk-inversion",
         "foundation/continuous-discrete-duality",
         "foundation/minimum-bootstrap-closure",
         "foundation/observer-holographic-equivalence",
@@ -1545,6 +1543,7 @@
         "cosmology/leptogenesis"
       ],
       "dependedOnBy": [
+        "cosmology/cosmological-constant",
         "cosmology/leptogenesis"
       ],
       "steps": [
@@ -1736,15 +1735,15 @@
         ],
         "incoming": [
           {
+            "source": "cosmology/cosmological-constant",
+            "context": "Baryogenesis"
+          },
+          {
             "source": "cosmology/leptogenesis",
             "context": "Proposition 5.2"
           },
           {
             "source": "cosmology/leptogenesis",
-            "context": "Baryogenesis"
-          },
-          {
-            "source": "foundation/antipodal-stalk-inversion",
             "context": "Baryogenesis"
           },
           {
@@ -1956,7 +1955,8 @@
         "holography/area-scaling",
         "foundation/observer-projected-spacetime",
         "cosmology/observer-loop-viability",
-        "cosmology/dark-energy-equation-of-state"
+        "cosmology/dark-energy-equation-of-state",
+        "cosmology/baryogenesis"
       ],
       "enablesDerivation": [],
       "dependedOnBy": [],
@@ -2035,6 +2035,12 @@
         },
         {
           "type": "Proposition",
+          "id": "6.2",
+          "name": "Obstruction class as Čech 1-cocycle on the bootstrap-graded observer category",
+          "statementPreview": "The gluing obstruction of Proposition 6.1 is realized concretely as a Čech 1-cocycle on the bootstrap-level graph of ..."
+        },
+        {
+          "type": "Proposition",
           "id": "7.1.",
           "name": "",
           "statementPreview": "The standard QFT vacuum-energy catastrophe — the prediction of vacuum energy ~120 orders above the observed Lambda — ..."
@@ -2045,12 +2051,12 @@
         {
           "number": 1,
           "title": "Tighten Lemma 3.0 upstream.",
-          "description": "Proposition 2.1 is now established semi-formally via [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Theorem 3.1. The remaining semi-formal piece is [Observer-Proj"
+          "description": "Proposition 2.1 is established semi-formally via [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Theorem 3.1. The remaining semi-formal piece is [Observer-Projecte"
         },
         {
           "number": 2,
-          "title": "Obstruction class computation.",
-          "description": "Compute the obstruction class of the observer-indexed spacetime sheaf and relate it quantitatively to the measured Lambda. Requires the categorical-semantics setup on mathbfObs (see [Observer-Projecte"
+          "title": "Quantitative obstruction class computation.",
+          "description": "Proposition 6.2 identifies the obstruction as a Čech 1-cocycle with values c(m,n) = log(Lm/Ln). A quantitative first-principles derivation of LN/L0 sim 1060 from bootstrap structure (4 division-algebr"
         },
         {
           "number": 3,
@@ -2061,6 +2067,11 @@
           "number": 4,
           "title": "Crystallization fraction.",
           "description": "The coherence partition C0 = Delta cn + SH has a free parameter — the crystallization fraction Omegam. An independent derivation of Omegam from the Standard Model structure (4 algebra levels, 3 genera"
+        },
+        {
+          "number": 5,
+          "title": "KM CP-phase ↔ cocycle connection.",
+          "description": "Remark 6.4 notes a suggestive combinatorial match between the three cross-level cocycle values of Proposition 6.2 and the one irremovable KM CP-phase (per [Baryogenesis](/derivations/cosmology/baryoge"
         },
         {
           "number": 5,
@@ -2097,6 +2108,10 @@
             "context": "-1, \\infty)$, only $w = -1$ gives zero coherence flux between the accessible and"
           },
           {
+            "target": "cosmology/baryogenesis",
+            "context": "Baryogenesis"
+          },
+          {
             "target": "cosmology/dark-energy-equation-of-state",
             "context": "Dark Energy Equation of State"
           }
@@ -2104,10 +2119,6 @@
         "incoming": [
           {
             "source": "cosmology/observer-loop-viability",
-            "context": "Cosmological Constant"
-          },
-          {
-            "source": "foundation/antipodal-stalk-inversion",
             "context": "Cosmological Constant"
           },
           {
@@ -2326,10 +2337,6 @@
           },
           {
             "source": "cosmology/observer-loop-viability",
-            "context": "Coupling Constants"
-          },
-          {
-            "source": "foundation/antipodal-stalk-inversion",
             "context": "Coupling Constants"
           },
           {
@@ -4597,238 +4604,6 @@
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
-    "foundation/antipodal-stalk-inversion": {
-      "id": "foundation/antipodal-stalk-inversion",
-      "filePath": "site/src/content/derivations/foundation/antipodal-stalk-inversion.md",
-      "title": "Antipodal Stalk Inversion",
-      "status": "provisional",
-      "rigorLevel": "semi-formal",
-      "group": "foundation",
-      "tags": [
-        "foundation",
-        "spacetime",
-        "structure",
-        "holography"
-      ],
-      "summary": "At the sheaf level, the observer-indexed family of stalks admits an antipodal inversion morphism I_A for each observer A, pairing A with its coherence-dual peer A' across a shared horizon. The morphism equals the framework's CPT operator acting on observer structure: its C component is the coherence-dual stalk exchange, its P component is angular antipodal reflection on the horizon S², and its T component is loop-closure phase reversal. Consequences: (1) partner worldlines identified across paired stalks via CPT, (2) the Thesis A / Thesis A' unitary equivalence is implemented by CPT itself, (3) Möbius/Chern-Simons modular-equivariant structure on the horizon, (4) the cross-level Λ-hierarchy as antipodal rescaling cocycle — with suggestive combinatorial match to the Kobayashi-Maskawa CP-phase count. Under Corollary 4.5 of Observer Holographic Equivalence these sheaf-level claims are operationally complete — no manifold extension is needed.",
-      "lastUpdated": "2026-04-17",
-      "dependsOn": [
-        "foundation/observer-projected-spacetime",
-        "foundation/observer-holographic-equivalence",
-        "holography/horizon-gauge-shell",
-        "foundation/knot-theoretic-bootstrap",
-        "minimal-observer/multiplicity",
-        "minimal-observer/coherence-dual-pairs",
-        "particles/cpt-theorem",
-        "axioms/loop-closure",
-        "axioms/observer-definition"
-      ],
-      "enablesDerivation": [],
-      "dependedOnBy": [],
-      "steps": [
-        {
-          "number": 1,
-          "title": "The Sheaf-Level Setting"
-        },
-        {
-          "number": 2,
-          "title": "The Antipodal Morphism"
-        },
-        {
-          "number": 3,
-          "title": "Partner Worldlines Identified Across Paired Stalks"
-        },
-        {
-          "number": 4,
-          "title": "Thesis A ↔ Thesis A' Unitary via $I_A$"
-        },
-        {
-          "number": 5,
-          "title": "Möbius Structure and Chern–Simons Equivariance"
-        },
-        {
-          "number": 6,
-          "title": "Cross-Level Obstruction as Sheaf Cocycle"
-        }
-      ],
-      "formalObjects": [
-        {
-          "type": "Proposition",
-          "id": "1.1",
-          "name": "Operational completeness of the sheaf-level description",
-          "statementPreview": "The observer-indexed sheaf of manifold-with-boundary stalks ([Observer-Projected Spacetime](/derivations/foundation/o..."
-        },
-        {
-          "type": "Definition",
-          "id": "2.1",
-          "name": "Antipodal peer and morphism",
-          "statementPreview": "Let A be an observer at bootstrap level n. The **antipodal peer** A' of A is a same-level observer (bootstrap level n..."
-        },
-        {
-          "type": "Proposition",
-          "id": "2.2",
-          "name": "Properties of $I_A$",
-          "statementPreview": "The antipodal morphism IA satisfies:*"
-        },
-        {
-          "type": "Proposition",
-          "id": "2.3",
-          "name": "$I_A$ is the CPT operator",
-          "statementPreview": "The antipodal morphism IA equals the framework's CPT operator as defined in [CPT Theorem](/derivations/particles/cpt-..."
-        },
-        {
-          "type": "Proposition",
-          "id": "3.1",
-          "name": "Partner-line identification",
-          "statementPreview": "For same-level peer observers A, B sharing a horizon segment, the partner worldline gammaB(A) MA is identified with t..."
-        },
-        {
-          "type": "Corollary",
-          "id": "3.2",
-          "name": "Boundary prescription upgrades to theorem",
-          "statementPreview": "The prescription \"partner worldlines terminate null-tangent at MA\" ([Observer-Projected Spacetime](/derivations/found..."
-        },
-        {
-          "type": "Proposition",
-          "id": "4.1",
-          "name": "$I_A$ implements the Thesis A ↔ Thesis A' unitary",
-          "statementPreview": "For same-level antipodal peers A, A', the sheaf morphism IA — which by Proposition 2.3 is the CPT operator — provides..."
-        },
-        {
-          "type": "Proposition",
-          "id": "5.1",
-          "name": "Möbius automorphism group of the horizon",
-          "statementPreview": "The conformal S2 of MA admits the orientation-preserving conformal automorphism group PSL(2, C) (the Möbius group). C..."
-        },
-        {
-          "type": "Proposition",
-          "id": "5.2",
-          "name": "Chern–Simons equivariance",
-          "statementPreview": "The framework's horizon Chern–Simons theory — with integer level ratios k1 : k2 : k3 = 4 : 2 : 1 per [Knot-Theoretic ..."
-        },
-        {
-          "type": "Proposition",
-          "id": "6.1",
-          "name": "Same-level antipodal composition",
-          "statementPreview": "For observers A, B at the same bootstrap level n (both with de Sitter radius Ln) and their respective antipodal peers..."
-        },
-        {
-          "type": "Proposition",
-          "id": "6.2",
-          "name": "Cross-level rescaling",
-          "statementPreview": "For observers A at level n and B at level m n with Ln Lm, the antipodal morphisms IA and IB act on sub-sheaves with d..."
-        },
-        {
-          "type": "Proposition",
-          "id": "6.3",
-          "name": "Obstruction cocycle",
-          "statementPreview": "The family Lm / Ln indexed by ordered pairs of bootstrap levels forms a Čech 1-cocycle on the bootstrap-graded observ..."
-        }
-      ],
-      "structuralPostulates": [],
-      "openGaps": [
-        {
-          "number": 1,
-          "title": "Upstream closure of [Observer Holographic Equivalence](/derivations/foundation/observer-holographic-equivalence) Open Gap 2.",
-          "description": "Proposition 4.1 supplies the explicit unitary U = CPT, but its rigor depends on (a) promoting Theses A and A' from semi-formal to rigorous in the upstream derivation, and (b) the [CPT Theorem](/deriva"
-        },
-        {
-          "number": 2,
-          "title": "Identification of $I_A = \\mathrm{CPT}$ with specific $\\mathrm{SL}(2, \\mathbb{Z})$ element.",
-          "description": "Proposition 5.2 places IA in the modular group; which specific element (S-inversion tau -1/tau, charge conjugation C, or product) is not yet pinned down. Resolution via explicit computation of CS modu"
-        },
-        {
-          "number": 3,
-          "title": "Čech cohomology on the observer category.",
-          "description": "Proposition 6.3 identifies the obstruction class as a Čech 1-cocycle. Formalizing requires: (a) specifying the cover (observer-pairs with shared/adjacent horizons), (b) computing the cohomology, (c) m"
-        },
-        {
-          "number": 4,
-          "title": "Quantitative match to observed $\\Lambda$.",
-          "description": "Proposition 6.3 predicts log(Lambda0/LambdaN) = 2 log(LN/L0); matching sim 280 requires LN/L0 sim 1060. Deriving this from bootstrap structure (4 division-algebra levels, 3 generations, CS levels 4:2:"
-        },
-        {
-          "number": 5,
-          "title": "KM CP-phase ↔ cocycle connection.",
-          "description": "Remark 6.4 notes a suggestive combinatorial match: 3 bootstrap transitions ↔ 3 generations ↔ 1 irremovable CP phase (per [Baryogenesis](/derivations/cosmology/baryogenesis) Proposition 3.2). Making th"
-        }
-      ],
-      "assessmentVerdict": "",
-      "hasConsistencyModel": true,
-      "crossReferences": {
-        "outgoing": [
-          {
-            "target": "foundation/observer-projected-spacetime",
-            "context": "Observer-Projected Spacetime"
-          },
-          {
-            "target": "foundation/observer-holographic-equivalence",
-            "context": "Observer Holographic Equivalence"
-          },
-          {
-            "target": "minimal-observer/coherence-dual-pairs",
-            "context": "equal mass, opposite charges, conjugate boundaries, forced by multiplicity"
-          },
-          {
-            "target": "particles/cpt-theorem",
-            "context": "CPT Theorem"
-          },
-          {
-            "target": "foundation/observer-holographic-equivalence",
-            "context": "Step 4"
-          },
-          {
-            "target": "foundation/knot-theoretic-bootstrap",
-            "context": "Knot-Theoretic Bootstrap"
-          },
-          {
-            "target": "cosmology/cosmological-constant",
-            "context": "Cosmological Constant"
-          },
-          {
-            "target": "cosmology/baryogenesis",
-            "context": "Baryogenesis"
-          },
-          {
-            "target": "minimal-observer/coherence-dual-pairs",
-            "context": "Theorem 2.1, Theorem 3.1, Proposition 4.1"
-          },
-          {
-            "target": "minimal-observer/coherence-dual-pairs",
-            "context": "Coherence-Dual Pairs"
-          },
-          {
-            "target": "minimal-observer/multiplicity",
-            "context": "Multiplicity Theorem 7.2"
-          },
-          {
-            "target": "minimal-observer/coherence-dual-pairs",
-            "context": "Theorem 2.1 + 3.1"
-          },
-          {
-            "target": "holography/horizon-gauge-shell",
-            "context": "Horizon Gauge Shell"
-          },
-          {
-            "target": "cosmology/coupling-constants",
-            "context": "Coupling Constants"
-          },
-          {
-            "target": "particles/mass-hierarchy",
-            "context": "Mass Hierarchy"
-          }
-        ],
-        "incoming": []
-      },
-      "leanVerification": {
-        "hasProofs": false,
-        "proofCount": 0,
-        "modules": [],
-        "propositions": []
-      },
-      "upgradeEligible": false,
-      "upgradeBlockers": []
-    },
     "foundation/aperiodic-order": {
       "id": "foundation/aperiodic-order",
       "filePath": "site/src/content/derivations/foundation/aperiodic-order.md",
@@ -5826,11 +5601,14 @@
         "foundation/continuous-discrete-duality",
         "gauge/electromagnetism",
         "gauge/strong-cp",
-        "cosmology/coupling-constants"
+        "cosmology/coupling-constants",
+        "holography/horizon-gauge-shell",
+        "foundation/observer-projected-spacetime",
+        "foundation/observer-holographic-equivalence",
+        "particles/cpt-theorem"
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
-        "foundation/antipodal-stalk-inversion",
         "foundation/observer-holographic-equivalence"
       ],
       "steps": [
@@ -5853,6 +5631,10 @@
         {
           "number": 5,
           "title": "The ER=EPR Bridge as Topological Tubes"
+        },
+        {
+          "number": 6,
+          "title": "Modular Equivariance of the Horizon CS Theory"
         }
       ],
       "formalObjects": [
@@ -5903,6 +5685,18 @@
           "id": "3.4",
           "name": "Wilson-loop linking from the topological sector",
           "statementPreview": "In the topological sector of the coherence Lagrangian's gauge vacuum, the expectation value of two Wilson loops is a ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Möbius automorphism group of the horizon",
+          "statementPreview": "The conformal S2 factor of MA admits the orientation-preserving conformal automorphism group PSL(2, C) — the Möbius g..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.2",
+          "name": "Chern–Simons modular equivariance",
+          "statementPreview": "The horizon CS theory at levels k1 : k2 : k3 = 4 : 2 : 1 (Proposition 2.4) is equivariant under SL(2, Z) — the arithm..."
         }
       ],
       "structuralPostulates": [],
@@ -5931,6 +5725,11 @@
           "number": 5,
           "title": "Surgery convergence.",
           "description": "The self-consistent surgery iteration (Step 4) must converge. Under what conditions does iterated surgery on a framed link in successive manifolds converge to a fixed point? This is a question in 3-ma"
+        },
+        {
+          "number": 6,
+          "title": "Specific $\\mathrm{SL}(2, \\mathbb{Z})$ element for CPT.",
+          "description": "Proposition 6.2 establishes that the CS theory is modular-equivariant; Remark 6.3 notes that the CPT operator of [CPT Theorem](/derivations/particles/cpt-theorem) acts on horizon integer data as a spe"
         }
       ],
       "assessmentVerdict": "",
@@ -6002,15 +5801,27 @@
             "context": "ER=EPR"
           },
           {
+            "target": "holography/horizon-gauge-shell",
+            "context": "Horizon Gauge Shell"
+          },
+          {
+            "target": "foundation/observer-projected-spacetime",
+            "context": "Observer-Projected Spacetime"
+          },
+          {
+            "target": "particles/cpt-theorem",
+            "context": "CPT Theorem"
+          },
+          {
+            "target": "foundation/observer-holographic-equivalence",
+            "context": "Observer Holographic Equivalence"
+          },
+          {
             "target": "cosmology/coupling-constants",
             "context": "structural consequence of the Cayley-Dickson tower, with $\\alpha_i \\propto \\dim "
           }
         ],
         "incoming": [
-          {
-            "source": "foundation/antipodal-stalk-inversion",
-            "context": "Knot-Theoretic Bootstrap"
-          },
           {
             "source": "foundation/minimum-bootstrap-closure",
             "context": "Knot-Theoretic Bootstrap"
@@ -6268,8 +6079,8 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
-        "foundation/antipodal-stalk-inversion",
         "foundation/bootstrap-fixed-point-existence",
+        "foundation/knot-theoretic-bootstrap",
         "foundation/minimum-bootstrap-closure",
         "foundation/observer-level-stack-compactness"
       ],
@@ -6358,6 +6169,12 @@
         },
         {
           "type": "Corollary",
+          "id": "4.6",
+          "name": "Operational completeness of the sheaf-level description",
+          "statementPreview": "The observer-indexed sheaf of manifold-with-boundary stalks ([Observer-Projected Spacetime](/derivations/foundation/o..."
+        },
+        {
+          "type": "Corollary",
           "id": "5.1",
           "name": "Horizon as canonical holographic surface",
           "statementPreview": "The null horizon MA is the **canonical coarsest holographic surface** for observer A: among all enclosing surfaces th..."
@@ -6397,6 +6214,12 @@
           "id": "4.5",
           "name": "exterior cancellation",
           "statementPreview": ": direct consequence of Thesis A applied to MA as the outermost enclosing surface, combined with Proposition 4.1's in..."
+        },
+        {
+          "type": "Corollary",
+          "id": "4.6",
+          "name": "operational completeness of the sheaf",
+          "statementPreview": ": universal application of Corollary 4.5 across all observers. Establishes that the framework's manifold-with-boundar..."
         }
       ],
       "structuralPostulates": [],
@@ -6495,6 +6318,10 @@
             "context": "Observer-Projected Spacetime"
           },
           {
+            "target": "minimal-observer/coherence-dual-pairs",
+            "context": "Coherence-Dual Pairs"
+          },
+          {
             "target": "interactions/bootstrap-division-algebras",
             "context": "Bootstrap Division Algebras"
           },
@@ -6517,15 +6344,11 @@
         ],
         "incoming": [
           {
-            "source": "foundation/antipodal-stalk-inversion",
+            "source": "foundation/bootstrap-fixed-point-existence",
             "context": "Observer Holographic Equivalence"
           },
           {
-            "source": "foundation/antipodal-stalk-inversion",
-            "context": "Step 4"
-          },
-          {
-            "source": "foundation/bootstrap-fixed-point-existence",
+            "source": "foundation/knot-theoretic-bootstrap",
             "context": "Observer Holographic Equivalence"
           },
           {
@@ -6729,8 +6552,8 @@
       "enablesDerivation": [],
       "dependedOnBy": [
         "cosmology/cosmological-constant",
-        "foundation/antipodal-stalk-inversion",
         "foundation/bootstrap-fixed-point-existence",
+        "foundation/knot-theoretic-bootstrap",
         "foundation/observer-holographic-equivalence",
         "foundation/observer-level-stack-compactness"
       ],
@@ -6934,15 +6757,15 @@
             "context": "-1, \\infty)$, only $w = -1$ gives zero coherence flux between the accessible and"
           },
           {
-            "source": "foundation/antipodal-stalk-inversion",
-            "context": "Observer-Projected Spacetime"
-          },
-          {
             "source": "foundation/bootstrap-fixed-point-existence",
             "context": "Observer-Projected Spacetime"
           },
           {
             "source": "foundation/coherence-lagrangian",
+            "context": "Observer-Projected Spacetime"
+          },
+          {
+            "source": "foundation/knot-theoretic-bootstrap",
             "context": "Observer-Projected Spacetime"
           },
           {
@@ -11213,7 +11036,7 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
-        "foundation/antipodal-stalk-inversion",
+        "foundation/knot-theoretic-bootstrap",
         "foundation/observer-holographic-equivalence",
         "foundation/observer-projected-spacetime"
       ],
@@ -11366,7 +11189,7 @@
         ],
         "incoming": [
           {
-            "source": "foundation/antipodal-stalk-inversion",
+            "source": "foundation/knot-theoretic-bootstrap",
             "context": "Horizon Gauge Shell"
           },
           {
@@ -13303,7 +13126,6 @@
       ],
       "dependedOnBy": [
         "cosmology/baryogenesis",
-        "foundation/antipodal-stalk-inversion",
         "foundation/aperiodic-order",
         "holography/hawking-radiation",
         "particles/cpt-theorem"
@@ -13502,23 +13324,11 @@
             "context": "rigorous — direct Noether argument"
           },
           {
-            "source": "foundation/antipodal-stalk-inversion",
-            "context": "equal mass, opposite charges, conjugate boundaries, forced by multiplicity"
-          },
-          {
-            "source": "foundation/antipodal-stalk-inversion",
-            "context": "Theorem 2.1, Theorem 3.1, Proposition 4.1"
-          },
-          {
-            "source": "foundation/antipodal-stalk-inversion",
+            "source": "foundation/aperiodic-order",
             "context": "Coherence-Dual Pairs"
           },
           {
-            "source": "foundation/antipodal-stalk-inversion",
-            "context": "Theorem 2.1 + 3.1"
-          },
-          {
-            "source": "foundation/aperiodic-order",
+            "source": "foundation/observer-holographic-equivalence",
             "context": "Coherence-Dual Pairs"
           },
           {
@@ -13605,7 +13415,6 @@
         "cosmology/cyclic-cosmology",
         "cosmology/geometric-inflation",
         "cosmology/observer-loop-viability",
-        "foundation/antipodal-stalk-inversion",
         "foundation/aperiodic-order",
         "foundation/minimum-bootstrap-closure",
         "foundation/observer-projected-spacetime",
@@ -13863,10 +13672,6 @@
           {
             "source": "cosmology/observer-loop-viability",
             "context": "Multiplicity"
-          },
-          {
-            "source": "foundation/antipodal-stalk-inversion",
-            "context": "Multiplicity Theorem 7.2"
           },
           {
             "source": "foundation/aperiodic-order",
@@ -14287,7 +14092,7 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
-        "foundation/antipodal-stalk-inversion"
+        "foundation/knot-theoretic-bootstrap"
       ],
       "steps": [
         {
@@ -14500,7 +14305,7 @@
         ],
         "incoming": [
           {
-            "source": "foundation/antipodal-stalk-inversion",
+            "source": "foundation/knot-theoretic-bootstrap",
             "context": "CPT Theorem"
           },
           {
@@ -14793,10 +14598,6 @@
           },
           {
             "source": "flavor/mixing-angles",
-            "context": "Mass Hierarchy"
-          },
-          {
-            "source": "foundation/antipodal-stalk-inversion",
             "context": "Mass Hierarchy"
           },
           {
@@ -25046,6 +24847,13 @@
     {
       "derivationId": "cosmology/cosmological-constant",
       "type": "Proposition",
+      "id": "6.2",
+      "name": "Obstruction class as Čech 1-cocycle on the bootstrap-graded observer category",
+      "fullRef": "cosmology/cosmological-constant:Proposition 6.2"
+    },
+    {
+      "derivationId": "cosmology/cosmological-constant",
+      "type": "Proposition",
       "id": "7.1.",
       "name": "",
       "fullRef": "cosmology/cosmological-constant:Proposition 7.1."
@@ -26087,90 +25895,6 @@
       "fullRef": "flavor/mixing-angles:Proposition 5.1"
     },
     {
-      "derivationId": "foundation/antipodal-stalk-inversion",
-      "type": "Proposition",
-      "id": "1.1",
-      "name": "Operational completeness of the sheaf-level description",
-      "fullRef": "foundation/antipodal-stalk-inversion:Proposition 1.1"
-    },
-    {
-      "derivationId": "foundation/antipodal-stalk-inversion",
-      "type": "Definition",
-      "id": "2.1",
-      "name": "Antipodal peer and morphism",
-      "fullRef": "foundation/antipodal-stalk-inversion:Definition 2.1"
-    },
-    {
-      "derivationId": "foundation/antipodal-stalk-inversion",
-      "type": "Proposition",
-      "id": "2.2",
-      "name": "Properties of $I_A$",
-      "fullRef": "foundation/antipodal-stalk-inversion:Proposition 2.2"
-    },
-    {
-      "derivationId": "foundation/antipodal-stalk-inversion",
-      "type": "Proposition",
-      "id": "2.3",
-      "name": "$I_A$ is the CPT operator",
-      "fullRef": "foundation/antipodal-stalk-inversion:Proposition 2.3"
-    },
-    {
-      "derivationId": "foundation/antipodal-stalk-inversion",
-      "type": "Proposition",
-      "id": "3.1",
-      "name": "Partner-line identification",
-      "fullRef": "foundation/antipodal-stalk-inversion:Proposition 3.1"
-    },
-    {
-      "derivationId": "foundation/antipodal-stalk-inversion",
-      "type": "Corollary",
-      "id": "3.2",
-      "name": "Boundary prescription upgrades to theorem",
-      "fullRef": "foundation/antipodal-stalk-inversion:Corollary 3.2"
-    },
-    {
-      "derivationId": "foundation/antipodal-stalk-inversion",
-      "type": "Proposition",
-      "id": "4.1",
-      "name": "$I_A$ implements the Thesis A ↔ Thesis A' unitary",
-      "fullRef": "foundation/antipodal-stalk-inversion:Proposition 4.1"
-    },
-    {
-      "derivationId": "foundation/antipodal-stalk-inversion",
-      "type": "Proposition",
-      "id": "5.1",
-      "name": "Möbius automorphism group of the horizon",
-      "fullRef": "foundation/antipodal-stalk-inversion:Proposition 5.1"
-    },
-    {
-      "derivationId": "foundation/antipodal-stalk-inversion",
-      "type": "Proposition",
-      "id": "5.2",
-      "name": "Chern–Simons equivariance",
-      "fullRef": "foundation/antipodal-stalk-inversion:Proposition 5.2"
-    },
-    {
-      "derivationId": "foundation/antipodal-stalk-inversion",
-      "type": "Proposition",
-      "id": "6.1",
-      "name": "Same-level antipodal composition",
-      "fullRef": "foundation/antipodal-stalk-inversion:Proposition 6.1"
-    },
-    {
-      "derivationId": "foundation/antipodal-stalk-inversion",
-      "type": "Proposition",
-      "id": "6.2",
-      "name": "Cross-level rescaling",
-      "fullRef": "foundation/antipodal-stalk-inversion:Proposition 6.2"
-    },
-    {
-      "derivationId": "foundation/antipodal-stalk-inversion",
-      "type": "Proposition",
-      "id": "6.3",
-      "name": "Obstruction cocycle",
-      "fullRef": "foundation/antipodal-stalk-inversion:Proposition 6.3"
-    },
-    {
       "derivationId": "foundation/aperiodic-order",
       "type": "Theorem",
       "id": "1.1",
@@ -26542,6 +26266,20 @@
       "fullRef": "foundation/knot-theoretic-bootstrap:Proposition 3.4"
     },
     {
+      "derivationId": "foundation/knot-theoretic-bootstrap",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "Möbius automorphism group of the horizon",
+      "fullRef": "foundation/knot-theoretic-bootstrap:Proposition 6.1"
+    },
+    {
+      "derivationId": "foundation/knot-theoretic-bootstrap",
+      "type": "Proposition",
+      "id": "6.2",
+      "name": "Chern–Simons modular equivariance",
+      "fullRef": "foundation/knot-theoretic-bootstrap:Proposition 6.2"
+    },
+    {
       "derivationId": "foundation/minimum-bootstrap-closure",
       "type": "Theorem",
       "id": "1",
@@ -26670,6 +26408,13 @@
     {
       "derivationId": "foundation/observer-holographic-equivalence",
       "type": "Corollary",
+      "id": "4.6",
+      "name": "Operational completeness of the sheaf-level description",
+      "fullRef": "foundation/observer-holographic-equivalence:Corollary 4.6"
+    },
+    {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "type": "Corollary",
       "id": "5.1",
       "name": "Horizon as canonical holographic surface",
       "fullRef": "foundation/observer-holographic-equivalence:Corollary 5.1"
@@ -26715,6 +26460,13 @@
       "id": "4.5",
       "name": "exterior cancellation",
       "fullRef": "foundation/observer-holographic-equivalence:Corollary 4.5"
+    },
+    {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "type": "Corollary",
+      "id": "4.6",
+      "name": "operational completeness of the sheaf",
+      "fullRef": "foundation/observer-holographic-equivalence:Corollary 4.6"
     },
     {
       "derivationId": "foundation/observer-level-stack-compactness",
@@ -32946,14 +32698,14 @@
       "derivationStatus": "provisional",
       "number": 1,
       "title": "Tighten Lemma 3.0 upstream.",
-      "description": "Proposition 2.1 is now established semi-formally via [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Theorem 3.1. The remaining semi-formal piece is [Observer-Proj"
+      "description": "Proposition 2.1 is established semi-formally via [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Theorem 3.1. The remaining semi-formal piece is [Observer-Projecte"
     },
     {
       "derivationId": "cosmology/cosmological-constant",
       "derivationStatus": "provisional",
       "number": 2,
-      "title": "Obstruction class computation.",
-      "description": "Compute the obstruction class of the observer-indexed spacetime sheaf and relate it quantitatively to the measured Lambda. Requires the categorical-semantics setup on mathbfObs (see [Observer-Projecte"
+      "title": "Quantitative obstruction class computation.",
+      "description": "Proposition 6.2 identifies the obstruction as a Čech 1-cocycle with values c(m,n) = log(Lm/Ln). A quantitative first-principles derivation of LN/L0 sim 1060 from bootstrap structure (4 division-algebr"
     },
     {
       "derivationId": "cosmology/cosmological-constant",
@@ -32968,6 +32720,13 @@
       "number": 4,
       "title": "Crystallization fraction.",
       "description": "The coherence partition C0 = Delta cn + SH has a free parameter — the crystallization fraction Omegam. An independent derivation of Omegam from the Standard Model structure (4 algebra levels, 3 genera"
+    },
+    {
+      "derivationId": "cosmology/cosmological-constant",
+      "derivationStatus": "provisional",
+      "number": 5,
+      "title": "KM CP-phase ↔ cocycle connection.",
+      "description": "Remark 6.4 notes a suggestive combinatorial match between the three cross-level cocycle values of Proposition 6.2 and the one irremovable KM CP-phase (per [Baryogenesis](/derivations/cosmology/baryoge"
     },
     {
       "derivationId": "cosmology/cosmological-constant",
@@ -33166,41 +32925,6 @@
       "description": "The observation theta12CKM + theta12PMNS pi/4 may be accidental or may reflect a deeper geometric relationship between the quark and lepton sectors. The A5 framework should clarify this."
     },
     {
-      "derivationId": "foundation/antipodal-stalk-inversion",
-      "derivationStatus": "provisional",
-      "number": 1,
-      "title": "Upstream closure of [Observer Holographic Equivalence](/derivations/foundation/observer-holographic-equivalence) Open Gap 2.",
-      "description": "Proposition 4.1 supplies the explicit unitary U = CPT, but its rigor depends on (a) promoting Theses A and A' from semi-formal to rigorous in the upstream derivation, and (b) the [CPT Theorem](/deriva"
-    },
-    {
-      "derivationId": "foundation/antipodal-stalk-inversion",
-      "derivationStatus": "provisional",
-      "number": 2,
-      "title": "Identification of $I_A = \\mathrm{CPT}$ with specific $\\mathrm{SL}(2, \\mathbb{Z})$ element.",
-      "description": "Proposition 5.2 places IA in the modular group; which specific element (S-inversion tau -1/tau, charge conjugation C, or product) is not yet pinned down. Resolution via explicit computation of CS modu"
-    },
-    {
-      "derivationId": "foundation/antipodal-stalk-inversion",
-      "derivationStatus": "provisional",
-      "number": 3,
-      "title": "Čech cohomology on the observer category.",
-      "description": "Proposition 6.3 identifies the obstruction class as a Čech 1-cocycle. Formalizing requires: (a) specifying the cover (observer-pairs with shared/adjacent horizons), (b) computing the cohomology, (c) m"
-    },
-    {
-      "derivationId": "foundation/antipodal-stalk-inversion",
-      "derivationStatus": "provisional",
-      "number": 4,
-      "title": "Quantitative match to observed $\\Lambda$.",
-      "description": "Proposition 6.3 predicts log(Lambda0/LambdaN) = 2 log(LN/L0); matching sim 280 requires LN/L0 sim 1060. Deriving this from bootstrap structure (4 division-algebra levels, 3 generations, CS levels 4:2:"
-    },
-    {
-      "derivationId": "foundation/antipodal-stalk-inversion",
-      "derivationStatus": "provisional",
-      "number": 5,
-      "title": "KM CP-phase ↔ cocycle connection.",
-      "description": "Remark 6.4 notes a suggestive combinatorial match: 3 bootstrap transitions ↔ 3 generations ↔ 1 irremovable CP phase (per [Baryogenesis](/derivations/cosmology/baryogenesis) Proposition 3.2). Making th"
-    },
-    {
       "derivationId": "foundation/aperiodic-order",
       "derivationStatus": "provisional",
       "number": 3,
@@ -33360,6 +33084,13 @@
       "number": 5,
       "title": "Surgery convergence.",
       "description": "The self-consistent surgery iteration (Step 4) must converge. Under what conditions does iterated surgery on a framed link in successive manifolds converge to a fixed point? This is a question in 3-ma"
+    },
+    {
+      "derivationId": "foundation/knot-theoretic-bootstrap",
+      "derivationStatus": "provisional",
+      "number": 6,
+      "title": "Specific $\\mathrm{SL}(2, \\mathbb{Z})$ element for CPT.",
+      "description": "Proposition 6.2 establishes that the CS theory is modular-equivariant; Remark 6.3 notes that the CPT operator of [CPT Theorem](/derivations/particles/cpt-theorem) acts on horizon integer data as a spe"
     },
     {
       "derivationId": "foundation/minimum-bootstrap-closure",
