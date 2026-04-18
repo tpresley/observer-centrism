@@ -1,12 +1,12 @@
 ---
 title: "Cosmological Arrow of Time"
-status: "draft"
+status: "provisional"
 dependsOn: ["thermodynamics/time", "thermodynamics/entropy", "thermodynamics-ext/non-ergodicity", "interactions/bootstrap", "cosmology/observer-loop-viability", "cosmology/geometric-inflation"]
 enablesDerivation: []
 tags: ["cosmology"]
 summary: "The cosmological arrow (expansion correlating with entropy increase) is not explained by an improbable initial condition but by the non-ergodic elaboration of the bootstrap hierarchy — the accessible phase space grows as new hierarchy levels become available, making the 'low-entropy early universe' natural rather than fine-tuned"
 rigorLevel: "semi-formal"
-lastUpdated: 2026-04-01
+lastUpdated: 2026-04-17
 ---
 
 ## Overview

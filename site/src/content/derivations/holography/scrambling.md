@@ -1,12 +1,12 @@
 ---
 title: "Black Hole Scrambling and Non-Ergodicity"
-status: "stub"
+status: "provisional"
 dependsOn: ["holography/black-hole-entropy", "holography/er-epr", "holography/information-paradox", "thermodynamics-ext/non-ergodicity"]
 enablesDerivation: []
 tags: ["holography"]
 summary: "Black holes are fast scramblers within the coherence-saturated sector but non-ergodic in the full Hilbert space — resolving the tension between scrambling and fundamental non-ergodicity via sector-restricted maximal mixing"
 rigorLevel: "semi-formal"
-lastUpdated: 2026-04-01
+lastUpdated: 2026-04-17
 ---
 
 ## Overview

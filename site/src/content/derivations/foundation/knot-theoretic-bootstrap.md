@@ -1,12 +1,12 @@
 ---
 title: "Knot-Theoretic Bootstrap"
-status: "stub"
+status: "provisional"
 dependsOn: ["interactions/bootstrap", "interactions/bootstrap-division-algebras", "foundation/coherence-lagrangian", "foundation/continuous-discrete-duality", "gauge/electromagnetism", "gauge/strong-cp", "cosmology/coupling-constants"]
 enablesDerivation: []
 tags: ["foundation", "topology", "gauge", "bootstrap"]
 summary: "Observer loops as framed links in a spatial manifold, with relational coherence identified as linking number. The Cayley-Dickson gauge chain maps to a finite sequence of Chern-Simons theories with level ratios k_1 : k_2 : k_3 = 4 : 2 : 1. The bootstrap fixed-point equation becomes self-consistent surgery: the link that produces the manifold is the link the manifold contains."
 rigorLevel: "semi-formal"
-lastUpdated: 2026-04-16
+lastUpdated: 2026-04-17
 ---
 
 ## Overview

@@ -1,12 +1,12 @@
 ---
 title: "Observer Holographic Equivalence"
-status: "stub"
+status: "draft"
 dependsOn: ["axioms/coherence-conservation", "axioms/observer-definition", "axioms/loop-closure", "holography/area-scaling", "holography/horizon-gauge-shell", "thermodynamics-ext/distinguishability-conservation", "foundation/observer-projected-spacetime", "interactions/bootstrap", "foundation/knot-theoretic-bootstrap"]
 enablesDerivation: []
 tags: ["foundation", "holography", "structure"]
 summary: "Three complementary theses. (A, time-like) For any observer A and any closed surface Σ enclosing A's coherence domain within its projected continuous dual, the sequenced record of Type III carrier crossings of Σ over A's history determines A's state at each tick. (A', space-like) For any Cauchy slice through the interior of A's coherence domain at tick t_k, the instantaneous configuration of constituents and their space-like correlations determines A's state at t_k. A and A' are unitarily equivalent dual descriptions. (B) Phase discard is a property of null portions of enclosing surfaces: wherever a surface is null, its encoding carries only integer/topological data; wherever it is timelike or spacelike, it carries full continuous phase. The null horizon ∂M_A is entirely null and therefore entirely integer-encoded — the canonical coarsest holographic surface. Consequences: the three-region decomposition of M_A is a phase-resolution ladder, level transitions propagate only integer data across bootstrap levels, and the cosmological constant hierarchy is a combinatorial obstruction class."
-rigorLevel: "informal"
-lastUpdated: 2026-04-16
+rigorLevel: "semi-formal"
+lastUpdated: 2026-04-17
 ---
 
 ## Overview

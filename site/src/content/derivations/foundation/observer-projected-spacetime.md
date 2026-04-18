@@ -1,12 +1,12 @@
 ---
 title: "Observer-Projected Spacetime"
-status: "stub"
+status: "draft"
 dependsOn: ["axioms/observer-definition", "axioms/loop-closure", "minimal-observer/multiplicity", "cosmology/cyclic-cosmology", "holography/horizon-gauge-shell", "cosmology/observer-loop-viability", "foundation/continuous-discrete-duality"]
 enablesDerivation: []
 tags: ["foundation", "spacetime", "holography", "structure"]
 summary: "The framework's continuous dual is not a single global spacetime but an observer-indexed family of Lorentzian patches. Each observer projects a patch whose geometry is forced by its own intrinsic structure: for a minimal observer, a static de Sitter patch of radius cT/2 with Type III partner lines as null-terminated boundary conditions. Higher-level observers project patches with level-indexed de Sitter radii. The patches are related by restriction maps on shared Type III relations, forming a presheaf on the observer category; the cosmological constant hierarchy is the obstruction class of this presheaf's failure to glue into a single manifold across levels."
-rigorLevel: "informal"
-lastUpdated: 2026-04-16
+rigorLevel: "semi-formal"
+lastUpdated: 2026-04-17
 ---
 
 ## Overview

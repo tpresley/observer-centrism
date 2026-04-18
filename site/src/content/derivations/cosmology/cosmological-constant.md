@@ -1,12 +1,12 @@
 ---
 title: "Cosmological Constant"
-status: "stub"
+status: "draft"
 dependsOn: ["spacetime/einstein-equations", "holography/area-scaling", "foundation/observer-projected-spacetime", "cosmology/observer-loop-viability", "cosmology/dark-energy-equation-of-state"]
 enablesDerivation: []
 tags: ["cosmology", "holography"]
 summary: "The cosmological constant is an observer-level-indexed effective parameter. At bootstrap level n with characteristic period T_n, the projected effective value is Λ_n = 12/(cT_n)². Existence (Lovelock), non-negativity (coherence conservation), Planck-scale upper bound, equation of state w = -1, and absence of a vacuum catastrophe are derived. The ~120-order ratio between the Planck-scale and cosmic-scale projections is the obstruction class of the observer-indexed spacetime sheaf — the cohomological signature of its failure to reduce to a single background manifold. A specific numerical value at a given observer level requires computing that obstruction class."
-rigorLevel: "informal"
-lastUpdated: 2026-04-16
+rigorLevel: "semi-formal"
+lastUpdated: 2026-04-17
 ---
 
 ## Overview

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-18T00:49:16.852Z",
+    "generatedAt": "2026-04-18T01:04:38.535Z",
     "derivationCount": 83,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -9,13 +9,13 @@
   "stats": {
     "byStatus": {
       "derived": 27,
-      "provisional": 44,
-      "draft": 3,
-      "stub": 9
+      "provisional": 49,
+      "draft": 6,
+      "stub": 1
     },
     "derivationCount": 83,
     "predictionCount": 12,
-    "edgeCount": 271,
+    "edgeCount": 275,
     "formalObjectCount": 1207,
     "openGapCount": 280,
     "upgradeEligibleCount": 2,
@@ -1771,14 +1771,14 @@
       "id": "cosmology/cosmological-arrow",
       "filePath": "site/src/content/derivations/cosmology/cosmological-arrow.md",
       "title": "Cosmological Arrow of Time",
-      "status": "draft",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "cosmology",
       "tags": [
         "cosmology"
       ],
       "summary": "The cosmological arrow (expansion correlating with entropy increase) is not explained by an improbable initial condition but by the non-ergodic elaboration of the bootstrap hierarchy — the accessible phase space grows as new hierarchy levels become available, making the 'low-entropy early universe' natural rather than fine-tuned",
-      "lastUpdated": "2026-04-01",
+      "lastUpdated": "2026-04-17",
       "dependsOn": [
         "thermodynamics/time",
         "thermodynamics/entropy",
@@ -1931,23 +1931,21 @@
         "propositions": []
       },
       "upgradeEligible": false,
-      "upgradeBlockers": [
-        "thermodynamics-ext/non-ergodicity"
-      ]
+      "upgradeBlockers": []
     },
     "cosmology/cosmological-constant": {
       "id": "cosmology/cosmological-constant",
       "filePath": "site/src/content/derivations/cosmology/cosmological-constant.md",
       "title": "Cosmological Constant",
-      "status": "stub",
-      "rigorLevel": "informal",
+      "status": "draft",
+      "rigorLevel": "semi-formal",
       "group": "cosmology",
       "tags": [
         "cosmology",
         "holography"
       ],
       "summary": "The cosmological constant is an observer-level-indexed effective parameter. At bootstrap level n with characteristic period T_n, the projected effective value is Λ_n = 12/(cT_n)². Existence (Lovelock), non-negativity (coherence conservation), Planck-scale upper bound, equation of state w = -1, and absence of a vacuum catastrophe are derived. The ~120-order ratio between the Planck-scale and cosmic-scale projections is the obstruction class of the observer-indexed spacetime sheaf — the cohomological signature of its failure to reduce to a single background manifold. A specific numerical value at a given observer level requires computing that obstruction class.",
-      "lastUpdated": "2026-04-16",
+      "lastUpdated": "2026-04-17",
       "dependsOn": [
         "spacetime/einstein-equations",
         "holography/area-scaling",
@@ -2095,7 +2093,9 @@
         "propositions": []
       },
       "upgradeEligible": false,
-      "upgradeBlockers": []
+      "upgradeBlockers": [
+        "foundation/observer-projected-spacetime"
+      ]
     },
     "cosmology/coupling-constants": {
       "id": "cosmology/coupling-constants",
@@ -5536,7 +5536,7 @@
       "id": "foundation/knot-theoretic-bootstrap",
       "filePath": "site/src/content/derivations/foundation/knot-theoretic-bootstrap.md",
       "title": "Knot-Theoretic Bootstrap",
-      "status": "stub",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "foundation",
       "tags": [
@@ -5546,7 +5546,7 @@
         "bootstrap"
       ],
       "summary": "Observer loops as framed links in a spatial manifold, with relational coherence identified as linking number. The Cayley-Dickson gauge chain maps to a finite sequence of Chern-Simons theories with level ratios k_1 : k_2 : k_3 = 4 : 2 : 1. The bootstrap fixed-point equation becomes self-consistent surgery: the link that produces the manifold is the link the manifold contains.",
-      "lastUpdated": "2026-04-16",
+      "lastUpdated": "2026-04-17",
       "dependsOn": [
         "interactions/bootstrap",
         "interactions/bootstrap-division-algebras",
@@ -5940,15 +5940,17 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": true,
-      "upgradeBlockers": []
+      "upgradeEligible": false,
+      "upgradeBlockers": [
+        "foundation/observer-holographic-equivalence"
+      ]
     },
     "foundation/observer-holographic-equivalence": {
       "id": "foundation/observer-holographic-equivalence",
       "filePath": "site/src/content/derivations/foundation/observer-holographic-equivalence.md",
       "title": "Observer Holographic Equivalence",
-      "status": "stub",
-      "rigorLevel": "informal",
+      "status": "draft",
+      "rigorLevel": "semi-formal",
       "group": "foundation",
       "tags": [
         "foundation",
@@ -5956,7 +5958,7 @@
         "structure"
       ],
       "summary": "Three complementary theses. (A, time-like) For any observer A and any closed surface Σ enclosing A's coherence domain within its projected continuous dual, the sequenced record of Type III carrier crossings of Σ over A's history determines A's state at each tick. (A', space-like) For any Cauchy slice through the interior of A's coherence domain at tick t_k, the instantaneous configuration of constituents and their space-like correlations determines A's state at t_k. A and A' are unitarily equivalent dual descriptions. (B) Phase discard is a property of null portions of enclosing surfaces: wherever a surface is null, its encoding carries only integer/topological data; wherever it is timelike or spacelike, it carries full continuous phase. The null horizon ∂M_A is entirely null and therefore entirely integer-encoded — the canonical coarsest holographic surface. Consequences: the three-region decomposition of M_A is a phase-resolution ladder, level transitions propagate only integer data across bootstrap levels, and the cosmological constant hierarchy is a combinatorial obstruction class.",
-      "lastUpdated": "2026-04-16",
+      "lastUpdated": "2026-04-17",
       "dependsOn": [
         "axioms/coherence-conservation",
         "axioms/observer-definition",
@@ -6181,14 +6183,16 @@
         "propositions": []
       },
       "upgradeEligible": false,
-      "upgradeBlockers": []
+      "upgradeBlockers": [
+        "foundation/observer-projected-spacetime"
+      ]
     },
     "foundation/observer-level-stack-compactness": {
       "id": "foundation/observer-level-stack-compactness",
       "filePath": "site/src/content/derivations/foundation/observer-level-stack-compactness.md",
       "title": "Observer-Level Stack Compactness",
-      "status": "stub",
-      "rigorLevel": "informal",
+      "status": "draft",
+      "rigorLevel": "semi-formal",
       "group": "foundation",
       "tags": [
         "foundation",
@@ -6315,14 +6319,17 @@
         "propositions": []
       },
       "upgradeEligible": false,
-      "upgradeBlockers": []
+      "upgradeBlockers": [
+        "foundation/observer-projected-spacetime",
+        "foundation/observer-holographic-equivalence"
+      ]
     },
     "foundation/observer-projected-spacetime": {
       "id": "foundation/observer-projected-spacetime",
       "filePath": "site/src/content/derivations/foundation/observer-projected-spacetime.md",
       "title": "Observer-Projected Spacetime",
-      "status": "stub",
-      "rigorLevel": "informal",
+      "status": "draft",
+      "rigorLevel": "semi-formal",
       "group": "foundation",
       "tags": [
         "foundation",
@@ -6331,7 +6338,7 @@
         "structure"
       ],
       "summary": "The framework's continuous dual is not a single global spacetime but an observer-indexed family of Lorentzian patches. Each observer projects a patch whose geometry is forced by its own intrinsic structure: for a minimal observer, a static de Sitter patch of radius cT/2 with Type III partner lines as null-terminated boundary conditions. Higher-level observers project patches with level-indexed de Sitter radii. The patches are related by restriction maps on shared Type III relations, forming a presheaf on the observer category; the cosmological constant hierarchy is the obstruction class of this presheaf's failure to glue into a single manifold across levels.",
-      "lastUpdated": "2026-04-16",
+      "lastUpdated": "2026-04-17",
       "dependsOn": [
         "axioms/observer-definition",
         "axioms/loop-closure",
@@ -6535,7 +6542,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": false,
+      "upgradeEligible": true,
       "upgradeBlockers": []
     },
     "gauge/anomaly-cancellation": {
@@ -10768,7 +10775,7 @@
       "id": "holography/horizon-gauge-shell",
       "filePath": "site/src/content/derivations/holography/horizon-gauge-shell.md",
       "title": "Horizon as Null Boundary Shell",
-      "status": "stub",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "holography",
       "tags": [
@@ -10777,7 +10784,7 @@
         "foundation"
       ],
       "summary": "Every observer's cosmological horizon is a permanent null shell of relational carriers — A–B relations at the distance where Cauchy-slice tilts exactly saturate the cyclic period. Inside this distance the A–B relation is timelike; outside it is fully spacelike; at the saturation distance it is null-tangent. The shell's permanence follows from Axiom 2 (observer boundary); its null character follows from the antichain-boundary structure of the covering property, without invoking a pre-existing Lorentzian metric. The holographic bound counts the independent relational carriers on this shell. Identification of these carriers with specific gauge bosons (spin, group, representation) is an open extension.",
-      "lastUpdated": "2026-04-16",
+      "lastUpdated": "2026-04-17",
       "dependsOn": [
         "cosmology/cyclic-cosmology",
         "holography/area-scaling",
@@ -11158,14 +11165,14 @@
       "id": "holography/scrambling",
       "filePath": "site/src/content/derivations/holography/scrambling.md",
       "title": "Black Hole Scrambling and Non-Ergodicity",
-      "status": "stub",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "holography",
       "tags": [
         "holography"
       ],
       "summary": "Black holes are fast scramblers within the coherence-saturated sector but non-ergodic in the full Hilbert space — resolving the tension between scrambling and fundamental non-ergodicity via sector-restricted maximal mixing",
-      "lastUpdated": "2026-04-01",
+      "lastUpdated": "2026-04-17",
       "dependsOn": [
         "holography/black-hole-entropy",
         "holography/er-epr",
@@ -19171,14 +19178,14 @@
       "id": "thermodynamics-ext/biological-non-ergodicity",
       "filePath": "site/src/content/derivations/thermodynamics-ext/biological-non-ergodicity.md",
       "title": "Biological Non-Ergodicity",
-      "status": "stub",
+      "status": "draft",
       "rigorLevel": "informal",
       "group": "thermodynamics-ext",
       "tags": [
         "thermo-ext"
       ],
       "summary": "Living systems are non-ergodic because the observer boundary B constrains phase-space exploration — connecting the observer definition to the hallmark features of biological organization: self-maintenance, memory, and adaptive expansion of coherence domains",
-      "lastUpdated": "2026-04-01",
+      "lastUpdated": "2026-04-17",
       "dependsOn": [
         "thermodynamics-ext/non-ergodicity",
         "thermodynamics/entropy",
@@ -19336,7 +19343,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": false,
+      "upgradeEligible": true,
       "upgradeBlockers": []
     },
     "thermodynamics-ext/distinguishability-conservation": {
@@ -20292,14 +20299,14 @@
       "id": "thermodynamics-ext/non-ergodicity",
       "filePath": "site/src/content/derivations/thermodynamics-ext/non-ergodicity.md",
       "title": "Non-Ergodicity and Conditional Thermalization",
-      "status": "draft",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "thermodynamics-ext",
       "tags": [
         "thermo-ext"
       ],
       "summary": "Generic systems are non-ergodic: the bootstrap hierarchy, aperiodic matching rules, and coherence correlations partition phase space. Statistical mechanics succeeds because conditional ergodicity holds within matching-rule hulls — deriving the domain of validity of the microcanonical ensemble, eigenstate thermalization conditions, and glassy dynamics as corollaries",
-      "lastUpdated": "2026-04-01",
+      "lastUpdated": "2026-04-17",
       "dependsOn": [
         "thermodynamics/entropy",
         "thermodynamics/time",
@@ -20534,7 +20541,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "thermodynamics-ext/renormalization": {
@@ -32294,70 +32301,70 @@
     },
     {
       "derivationId": "cosmology/cosmological-arrow",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Quantitative phase-space growth rate",
       "description": "Compute dlnvol(Gammaacc)/dtau from the bootstrap dynamics and show it matches the observed entropy growth rate. This requires the binding energies at each hierarchy level, which in turn require the fu"
     },
     {
       "derivationId": "cosmology/cosmological-arrow",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Inflation and the arrow",
       "description": "The geometric inflation derivation ([Geometric Inflation](/derivations/cosmology/geometric-inflation)) provides the initial expansion. The relationship between the inflationary epoch and the first hie"
     },
     {
       "derivationId": "cosmology/cosmological-arrow",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "De Sitter equilibrium",
       "description": "In the far future, the universe approaches de Sitter space with constant temperature TdS sim Lambda. At this point, no further hierarchy levels become available (the temperature stops decreasing). Doe"
     },
     {
       "derivationId": "cosmology/cosmological-arrow",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Arrow reversal",
       "description": "Can the cosmological arrow reverse (in a contracting phase)? The framework predicts no, because contraction would heat the universe, disrupting higher hierarchy levels and *reducing* Gammaacc — the ac"
     },
     {
       "derivationId": "cosmology/cosmological-arrow",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Relationship to Gap 3 of [Time as Phase Ordering](/derivations/thermodynamics/time)",
       "description": "This derivation claims to resolve Gap 3. The resolution should be verified: does hierarchy elaboration fully account for the cosmological arrow, or are there additional contributions from boundary con"
     },
     {
       "derivationId": "cosmology/cosmological-constant",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 1,
       "title": "Minimal-observer projection theorem.",
       "description": "Proposition 2.1 depends on [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Conjecture 3.1. A rigorous projection theorem would promote Proposition 2.1 from informa"
     },
     {
       "derivationId": "cosmology/cosmological-constant",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 2,
       "title": "Obstruction class computation.",
       "description": "Compute the obstruction class of the observer-indexed spacetime sheaf and relate it quantitatively to the measured Lambda. Requires the categorical-semantics setup on mathbfObs (see [Observer-Projecte"
     },
     {
       "derivationId": "cosmology/cosmological-constant",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 3,
       "title": "Observer-level identification.",
       "description": "Identify which bootstrap level our measurement of Lambda corresponds to. If level N is pinned by observer-existence conditions or by the cosmic horizon structure, the specific value of LambdaN becomes"
     },
     {
       "derivationId": "cosmology/cosmological-constant",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 4,
       "title": "Crystallization fraction.",
       "description": "The coherence partition C0 = Delta cn + SH has a free parameter — the crystallization fraction Omegam. An independent derivation of Omegam from the Standard Model structure (4 algebra levels, 3 genera"
     },
     {
       "derivationId": "cosmology/cosmological-constant",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 5,
       "title": "Sheaf cohomology on $\\mathbf{Obs}$.",
       "description": "Formalizing the observer-indexed spacetime sheaf requires a Grothendieck topology on the observer category. Inherited from [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spa"
@@ -32679,35 +32686,35 @@
     },
     {
       "derivationId": "foundation/knot-theoretic-bootstrap",
-      "derivationStatus": "stub",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Absolute normalization of the CS levels.",
       "description": "Proposition 2.4 gives only the *ratios* k1 : k2 : k3 = 4 : 2 : 1. The absolute integer multiplier m in (k1, k2, k3) = (4m, 2m, m) is not determined by S1 alone. Fixing m would determine the specific r"
     },
     {
       "derivationId": "foundation/knot-theoretic-bootstrap",
-      "derivationStatus": "stub",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Verlinde formula vs. holographic bound (Open Question 2.6).",
       "description": "At CS level k with gauge group SU(N), the Verlinde formula gives the Hilbert-space dimension on a genus-g surface. The framework's holographic bound A/(4ellP2) gives a finite count of states on a boun"
     },
     {
       "derivationId": "foundation/knot-theoretic-bootstrap",
-      "derivationStatus": "stub",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Embedding of observer loops.",
       "description": "The framework's observer loops are currently abstract U(1) phases, not embedded curves in a spatial manifold. Making the knot-theoretic program concrete requires a canonical embedding prescription — d"
     },
     {
       "derivationId": "foundation/knot-theoretic-bootstrap",
-      "derivationStatus": "stub",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Linking number vs. relational coherence for non-minimal observers.",
       "description": "Proposition 1.5 identifies C(O1 : O2) = Lk(gamma1, gamma2) hbaromega0 for minimal U(1) loops. For composite observers at higher bootstrap levels, the \"loop\" is a more complex embedded object (satellit"
     },
     {
       "derivationId": "foundation/knot-theoretic-bootstrap",
-      "derivationStatus": "stub",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Surgery convergence.",
       "description": "The self-consistent surgery iteration (Step 4) must converge. Under what conditions does iterated surgery on a framed link in successive manifolds converge to a fixed point? This is a question in 3-ma"
@@ -32763,154 +32770,154 @@
     },
     {
       "derivationId": "foundation/observer-holographic-equivalence",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 1,
       "title": "Rigorous reconstruction theorems (Theses A and A').",
       "description": "Prove that for any enclosing surface Sigma MA, the sequenced crossing record RSigma(A, tk) reconstructs A's state at tk; and for any Cauchy slice Xi, the configuration KXi(A, tk) reconstructs the stat"
     },
     {
       "derivationId": "foundation/observer-holographic-equivalence",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 2,
       "title": "Unitary equivalence of time-like and space-like descriptions.",
       "description": "Construct the explicit unitary map U: RSigma leftrightarrow KXi identifying time-like and space-like holographic encodings. This is the framework's version of state-path-integral duality in QFT. *Diff"
     },
     {
       "derivationId": "foundation/observer-holographic-equivalence",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 3,
       "title": "Classification of phase behavior by causal character.",
       "description": "Prove Proposition 4.1 rigorously: any null portion of a surface carries only integer encoding, any timelike or spacelike portion carries continuous phase. Requires a structural argument that proper-ti"
     },
     {
       "derivationId": "foundation/observer-holographic-equivalence",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 4,
       "title": "Quantitative coarse-graining maps.",
       "description": "The phase-resolution ladder (Proposition 6.1) is qualitative. A quantitative account — what information is lost as an enclosing surface moves outward, and how integer invariants accumulate — would for"
     },
     {
       "derivationId": "foundation/observer-holographic-equivalence",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 5,
       "title": "Formal statement of inter-level integer restriction.",
       "description": "Corollary 7.1 asserts that bootstrap composition operates only on integer data across levels. Formalizing this requires specifying the integer-only data type (perhaps a category of integer-augmented o"
     },
     {
       "derivationId": "foundation/observer-holographic-equivalence",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 6,
       "title": "Combinatorial obstruction class computation.",
       "description": "Corollary 8.1 identifies the obstruction class as combinatorial. A computation: specify the simplicial / tensor-network / K-theoretic structure on the observer category, identify the cocycle, compute "
     },
     {
       "derivationId": "foundation/observer-holographic-equivalence",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 7,
       "title": "Shared-horizon theorem for same-level observers.",
       "description": "State and prove: for two level-n observers A, B at spatial separation d ll Ln within each other's bulk, the horizon integer data R MA and R MB agree to order (d/Ln)2. Corollary: observer identity (the"
     },
     {
       "derivationId": "foundation/observer-holographic-equivalence",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 8,
       "title": "Connection to Gibbons–Hawking thermodynamics.",
       "description": "Thesis B identifies horizon thermality as phase-decoherence on a null surface. A derivation that produces the Gibbons–Hawking temperature TGH(A) = hbar/(2pi kB LA) directly from the phase-discard stru"
     },
     {
       "derivationId": "foundation/observer-level-stack-compactness",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 1,
       "title": "Fibration continuity.",
       "description": "Informal Proposition 3.1 argues continuity informally via Fisher metric smoothness, integer quantization, and level stratification. A rigorous proof requires (a) specifying the exact topology on the f"
     },
     {
       "derivationId": "foundation/observer-level-stack-compactness",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 2,
       "title": "Rigorous formulation of the fibered hierarchy.",
       "description": "The total space HA is described here informally as \"the sub-observer hierarchy fibered over coherence values.\" A rigorous formulation in an appropriate category (bundles of posets, stratified Lie grou"
     },
     {
       "derivationId": "foundation/observer-level-stack-compactness",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 3,
       "title": "Compactness-preserving maps.",
       "description": "Even if HA is compact, the bootstrap map R must be continuous and map HA to itself (or a compact subset) for the fixed-point theorems to apply. Formalizing R as an endofunctor of HA and verifying cont"
     },
     {
       "derivationId": "foundation/observer-level-stack-compactness",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 4,
       "title": "Convexity for Schauder.",
       "description": "Schauder's theorem requires compact *convex* sets. The observer-level stack is not obviously convex — coherence value is a scalar and the fibers are discrete. A convex-hull construction or an alternat"
     },
     {
       "derivationId": "foundation/observer-level-stack-compactness",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 5,
       "title": "Cross-observer compactness.",
       "description": "The theorem is stated observer-relatively: each HA is compact. For the fixed-point to yield a universal U, we need a compatibility condition across observers — either compactness of a total stack that"
     },
     {
       "derivationId": "foundation/observer-level-stack-compactness",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 6,
       "title": "Topology choice affects what \"compact\" means.",
       "description": "Different topologies on HA give different compactness statements. The \"right\" topology is the one in which R is continuous and the fixed-point theorem applies — this choice is not yet pinned down. Pre"
     },
     {
       "derivationId": "foundation/observer-level-stack-compactness",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 7,
       "title": "Dependence on [Area Scaling] postulates.",
       "description": "Proposition 1.1 and 2.1 both rely on the holographic bound. [Area Scaling](/derivations/holography/area-scaling) itself carries Structural Postulate S1 (area-coherence saturation). Any promotion of S1"
     },
     {
       "derivationId": "foundation/observer-projected-spacetime",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 1,
       "title": "Minimal-observer projection theorem.",
       "description": "Conjecture 3.1 needs a rigorous proof: given the four intrinsic constraints of Proposition 2.1 plus spherical symmetry and time-translation invariance, show that MA is isometric to the static patch of"
     },
     {
       "derivationId": "foundation/observer-projected-spacetime",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 2,
       "title": "Generalization to non-minimal observers with localized stress-energy.",
       "description": "A composite observer On at higher bootstrap level may carry effective stress-energy along gammaOn. The projection generalizes from pure de Sitter to Schwarzschild–de Sitter (or more general dressed ge"
     },
     {
       "derivationId": "foundation/observer-projected-spacetime",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 3,
       "title": "Sheaf property of $M$.",
       "description": "Conjecture 5.3 requires a categorical-semantics setup: what is a cover on mathbfObs? what topology does mathbfObs carry? Given a definition, does local agreement on Type III relations glue uniquely to"
     },
     {
       "derivationId": "foundation/observer-projected-spacetime",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 4,
       "title": "Quantitative computation of the obstruction class.",
       "description": "Proposition 6.3 qualitatively identifies the Lambda hierarchy as the obstruction class. A quantitative computation — compute the class from the bootstrap hierarchy's level structure, translate to a me"
     },
     {
       "derivationId": "foundation/observer-projected-spacetime",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 5,
       "title": "What replaces \"the universe\" as a single object?",
       "description": "If the observer-indexed presheaf M does not reduce to a single manifold (Proposition 6.1), then the framework has no \"universe\" in the manifold sense. Candidate replacements: the colimit in mathbfLorP"
     },
     {
       "derivationId": "foundation/observer-projected-spacetime",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 6,
       "title": "Consistency with bootstrap aperiodicity.",
       "description": "[Aperiodic Order](/derivations/foundation/aperiodic-order) forces the observer network to be an aperiodic substitution tiling. The observer-indexed projection should inherit this aperiodic structure o"
     },
     {
       "derivationId": "foundation/observer-projected-spacetime",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 7,
       "title": "Interaction with the continuous-discrete fixed point.",
       "description": "[Continuous-Discrete Duality](/derivations/foundation/continuous-discrete-duality) identifies the physical universe as the fixed point of mutual compatibility between the continuous and discrete layer"
@@ -33218,35 +33225,35 @@
     },
     {
       "derivationId": "holography/horizon-gauge-shell",
-      "derivationStatus": "stub",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Gauge-group and spin-1 identification.",
       "description": "The shell has the necessary kinematic properties of gauge bosons (null, boundary-mediating, permanent) but not sufficient. Spin-1 is not derived from horizon structure, and the specific gauge group (U"
     },
     {
       "derivationId": "holography/horizon-gauge-shell",
-      "derivationStatus": "stub",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Continuum-limit formalization of antichain-boundary → null-hypersurface.",
       "description": "Proposition 2.2's discrete DAG argument \"marginal antichain compatibility = null-cone tangency\" is clean but informal. A rigorous continuum limit showing that Jpm on the DAG becomes a null hypersurfac"
     },
     {
       "derivationId": "holography/horizon-gauge-shell",
-      "derivationStatus": "stub",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Quantitative mode counting.",
       "description": "Proposition 5.1 identifies the holographic bound as counting A–B relational carriers but does not independently compute the count. A match between the carrier count (derived from bootstrap structure) "
     },
     {
       "derivationId": "holography/horizon-gauge-shell",
-      "derivationStatus": "stub",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Distinguishing the shell from graviton / bulk-massless content.",
       "description": "The remark after Proposition 4.1 asserts that the shell carries only Type III relational carriers, not gravitons or bulk massless fields. This type distinction needs to be proved from the framework's "
     },
     {
       "derivationId": "holography/horizon-gauge-shell",
-      "derivationStatus": "stub",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Gibbons–Hawking connection.",
       "description": "The Gibbons–Hawking thermal spectrum from de Sitter horizons should follow from the permanent null shell: if the horizon carries a permanent population of null relational carriers, the thermal spectru"
@@ -33281,35 +33288,35 @@
     },
     {
       "derivationId": "holography/scrambling",
-      "derivationStatus": "stub",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Chaos bound from axioms",
       "description": "Derive the Maldacena-Shenker-Stanford chaos bound lambdaL 2pi T from coherence conservation and the observer axioms, rather than importing it as an external result."
     },
     {
       "derivationId": "holography/scrambling",
-      "derivationStatus": "stub",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Evaporation dynamics",
       "description": "Connect the inter-sector transition rate (hierarchy barrier crossing) to the Hawking evaporation rate Gamma sim TH2. This should give a derivation of the Page curve from the coherence-sector framework"
     },
     {
       "derivationId": "holography/scrambling",
-      "derivationStatus": "stub",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Sub-saturated scrambling",
       "description": "Characterize the scrambling dynamics for states that do not saturate the holographic bound. The scrambling time should increase as the hierarchy becomes more complex (more levels, tighter matching rul"
     },
     {
       "derivationId": "holography/scrambling",
-      "derivationStatus": "stub",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Scrambling and ER=EPR",
       "description": "Make the connection between maximal within-sector mixing and the ER=EPR bridge structure more precise. The complete-graph argument (Step 4) should follow from the ER bridge connectivity derived in [ER"
     },
     {
       "derivationId": "holography/scrambling",
-      "derivationStatus": "stub",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Loop-tilt for other horizons",
       "description": "Extend the loop-tilt mechanism (Step 5) to cosmological horizons (de Sitter), Rindler horizons (uniformly accelerating observers), and inner horizons of rotating black holes (Kerr). The de Sitter case"
@@ -33946,35 +33953,35 @@
     },
     {
       "derivationId": "thermodynamics-ext/biological-non-ergodicity",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 1,
       "title": "Metabolic scaling",
       "description": "Derive the scaling of maintenance cost with hierarchy level ell. If the cost scales as ell hbaromegaell where omegaell is the cycling frequency at level ell, this should connect to Kleiber's law (meta"
     },
     {
       "derivationId": "thermodynamics-ext/biological-non-ergodicity",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 2,
       "title": "$\\Gamma_B$ dimension",
       "description": "Compute the dimension of the B-compatible sector as a function of the complexity of B (number of self/non-self distinctions). This would give a quantitative measure of biological non-ergodicity."
     },
     {
       "derivationId": "thermodynamics-ext/biological-non-ergodicity",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 3,
       "title": "Autopoiesis connection",
       "description": "Make the relationship to Maturana and Varela's autopoiesis theory precise. The observer triple (Sigma, I, B) with active loop closure appears to be a formal version of autopoietic organization; this s"
     },
     {
       "derivationId": "thermodynamics-ext/biological-non-ergodicity",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 4,
       "title": "Evolutionary dynamics",
       "description": "If adaptation is coherence-domain expansion, natural selection should emerge as the process by which observers compete for coherence access. This would connect to the Fisher-Price equation via the Fis"
     },
     {
       "derivationId": "thermodynamics-ext/biological-non-ergodicity",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 5,
       "title": "Abiogenesis",
       "description": "The transition from non-observer chemistry to observer biology is the formation of the first B boundary with active loop closure. The framework should predict conditions under which this transition is"
@@ -34058,35 +34065,35 @@
     },
     {
       "derivationId": "thermodynamics-ext/non-ergodicity",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Mixing theorem",
       "description": "Prove conditional ergodicity (Theorem 5.2) rigorously from the dynamics, not just from the equidistribution of phases. This requires a mixing-time bound for the interaction-driven shuffling of non-pha"
     },
     {
       "derivationId": "thermodynamics-ext/non-ergodicity",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "ETH transition threshold",
       "description": "Quantify the critical inter-level coupling strength at which ETH fails. This should be expressible in terms of the coherence gap DeltaC and the intra-level density of states."
     },
     {
       "derivationId": "thermodynamics-ext/non-ergodicity",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Aging exponents",
       "description": "Derive the specific aging exponents and stretched-exponential parameters beta from the substitution matrix of the aperiodic tiling. The metallic-mean family ([Aperiodic Order](/derivations/foundation/"
     },
     {
       "derivationId": "thermodynamics-ext/non-ergodicity",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Fluctuation theorems",
       "description": "The Jarzynski equality and Crooks theorem should arise as finite-size corrections to the conditional-ergodicity framework. This overlaps with Gap 1 of [Entropy as Inaccessible Coherence](/derivations/"
     },
     {
       "derivationId": "thermodynamics-ext/non-ergodicity",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Quantum conditional ergodicity",
       "description": "Extend Theorem 5.2 to the quantum regime, where the phase torus is replaced by a Hilbert space and Weyl equidistribution by quantum ergodicity of eigenfunctions."
@@ -34179,26 +34186,51 @@
   "upgradeAnalysis": {
     "eligible": [
       {
-        "id": "foundation/minimum-bootstrap-closure",
+        "id": "foundation/observer-projected-spacetime",
         "currentStatus": "draft",
         "gapCount": 7,
         "formalObjectCount": 10
       },
       {
-        "id": "thermodynamics-ext/non-ergodicity",
+        "id": "thermodynamics-ext/biological-non-ergodicity",
         "currentStatus": "draft",
         "gapCount": 5,
-        "formalObjectCount": 16
+        "formalObjectCount": 8
       }
     ],
     "blocked": [
       {
-        "id": "cosmology/cosmological-arrow",
+        "id": "cosmology/cosmological-constant",
         "currentStatus": "draft",
         "blockedBy": [
-          "thermodynamics-ext/non-ergodicity"
+          "foundation/observer-projected-spacetime"
         ],
         "reason": "Depends on 1 draft derivation(s)"
+      },
+      {
+        "id": "foundation/minimum-bootstrap-closure",
+        "currentStatus": "draft",
+        "blockedBy": [
+          "foundation/observer-holographic-equivalence"
+        ],
+        "reason": "Depends on 1 draft derivation(s)"
+      },
+      {
+        "id": "foundation/observer-holographic-equivalence",
+        "currentStatus": "draft",
+        "blockedBy": [
+          "foundation/observer-projected-spacetime"
+        ],
+        "reason": "Depends on 1 draft derivation(s)"
+      },
+      {
+        "id": "foundation/observer-level-stack-compactness",
+        "currentStatus": "draft",
+        "blockedBy": [
+          "foundation/observer-projected-spacetime",
+          "foundation/observer-holographic-equivalence"
+        ],
+        "reason": "Depends on 2 draft derivation(s)"
       }
     ]
   },

@@ -1,12 +1,12 @@
 ---
 title: "Biological Non-Ergodicity"
-status: "stub"
+status: "draft"
 dependsOn: ["thermodynamics-ext/non-ergodicity", "thermodynamics/entropy", "minimal-observer/structure", "interactions/bootstrap"]
 enablesDerivation: []
 tags: ["thermo-ext"]
 summary: "Living systems are non-ergodic because the observer boundary B constrains phase-space exploration — connecting the observer definition to the hallmark features of biological organization: self-maintenance, memory, and adaptive expansion of coherence domains"
 rigorLevel: "informal"
-lastUpdated: 2026-04-01
+lastUpdated: 2026-04-17
 ---
 
 ## Overview

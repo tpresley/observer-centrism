@@ -1,12 +1,12 @@
 ---
 title: "Non-Ergodicity and Conditional Thermalization"
-status: "draft"
+status: "provisional"
 dependsOn: ["thermodynamics/entropy", "thermodynamics/time", "thermodynamics-ext/renormalization", "interactions/bootstrap", "foundation/aperiodic-order"]
 enablesDerivation: ["cosmology/cosmological-arrow", "thermodynamics-ext/biological-non-ergodicity"]
 tags: ["thermo-ext"]
 summary: "Generic systems are non-ergodic: the bootstrap hierarchy, aperiodic matching rules, and coherence correlations partition phase space. Statistical mechanics succeeds because conditional ergodicity holds within matching-rule hulls — deriving the domain of validity of the microcanonical ensemble, eigenstate thermalization conditions, and glassy dynamics as corollaries"
 rigorLevel: "semi-formal"
-lastUpdated: 2026-04-01
+lastUpdated: 2026-04-17
 ---
 
 ## Overview

@@ -1,11 +1,11 @@
 ---
 title: "Observer-Level Stack Compactness"
-status: "stub"
+status: "draft"
 dependsOn: ["axioms/coherence-conservation", "axioms/observer-definition", "minimal-observer/structure", "holography/area-scaling", "cosmology/observer-loop-viability", "thermodynamics-ext/fisher-metric", "foundation/observer-projected-spacetime", "foundation/observer-holographic-equivalence"]
 enablesDerivation: []
 tags: ["foundation", "structure", "topology"]
 summary: "For each observer A, the hierarchy of observer levels (minimal observers through the bootstrap composite A itself) is naturally fibered over a closed bounded real interval of scalar coherence values [0, C_A]. This base is compact by Heine–Borel. Each fiber is finite by the per-observer holographic bound A_horizon/(4ℓ_P²) (inherited from [Area Scaling] and [Observer-Projected Spacetime]). Under suitable continuity of the fibration — informally argued here, rigorously open — the total space inherits compactness. The result is a lemma for the bootstrap fixed-point program: compactness is the prerequisite for classical fixed-point theorems (Schauder, Kakutani, Scott-continuous) that would give existence of the bootstrap fixed point U without requiring explicit construction."
-rigorLevel: "informal"
+rigorLevel: "semi-formal"
 lastUpdated: 2026-04-17
 ---
 

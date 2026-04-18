@@ -214,7 +214,7 @@
       "id": "cosmology/cosmological-constant",
       "title": "Cosmological Constant",
       "group": "cosmology",
-      "status": "non-viable"
+      "status": "draft"
     },
     {
       "id": "cosmology/baryogenesis",
@@ -406,31 +406,31 @@
       "id": "thermodynamics-ext/non-ergodicity",
       "title": "Non-Ergodicity",
       "group": "thermo-ext",
-      "status": "draft"
+      "status": "provisional"
     },
     {
       "id": "holography/scrambling",
       "title": "Black Hole Scrambling",
       "group": "holography",
-      "status": "stub"
+      "status": "provisional"
     },
     {
       "id": "holography/horizon-gauge-shell",
       "title": "Horizon as Null Boundary Shell",
       "group": "holography",
-      "status": "stub"
+      "status": "provisional"
     },
     {
       "id": "thermodynamics-ext/biological-non-ergodicity",
       "title": "Biological Non-Ergodicity",
       "group": "thermo-ext",
-      "status": "stub"
+      "status": "draft"
     },
     {
       "id": "cosmology/cosmological-arrow",
       "title": "Cosmological Arrow",
       "group": "cosmology",
-      "status": "draft"
+      "status": "provisional"
     },
     {
       "id": "cosmology/dark-energy-equation-of-state",
@@ -454,19 +454,19 @@
       "id": "foundation/knot-theoretic-bootstrap",
       "title": "Knot-Theoretic Bootstrap",
       "group": "foundation",
-      "status": "stub"
+      "status": "provisional"
     },
     {
       "id": "foundation/observer-projected-spacetime",
       "title": "Observer-Projected Spacetime",
       "group": "foundation",
-      "status": "stub"
+      "status": "draft"
     },
     {
       "id": "foundation/observer-holographic-equivalence",
       "title": "Observer Holographic Equivalence",
       "group": "foundation",
-      "status": "stub"
+      "status": "draft"
     },
     {
       "id": "foundation/minimum-bootstrap-closure",
@@ -478,7 +478,7 @@
       "id": "foundation/observer-level-stack-compactness",
       "title": "Observer-Level Stack Compactness",
       "group": "foundation",
-      "status": "stub"
+      "status": "draft"
     },
     {
       "id": "foundation/bootstrap-fixed-point-existence",
@@ -770,6 +770,18 @@
     },
     {
       "from": "holography/area-scaling",
+      "to": "cosmology/cosmological-constant"
+    },
+    {
+      "from": "foundation/observer-projected-spacetime",
+      "to": "cosmology/cosmological-constant"
+    },
+    {
+      "from": "cosmology/observer-loop-viability",
+      "to": "cosmology/cosmological-constant"
+    },
+    {
+      "from": "cosmology/dark-energy-equation-of-state",
       "to": "cosmology/cosmological-constant"
     },
     {
@@ -1430,6 +1442,10 @@
     },
     {
       "from": "gauge/strong-cp",
+      "to": "foundation/knot-theoretic-bootstrap"
+    },
+    {
+      "from": "cosmology/coupling-constants",
       "to": "foundation/knot-theoretic-bootstrap"
     },
     {
