@@ -487,6 +487,12 @@
       "status": "provisional"
     },
     {
+      "id": "foundation/antipodal-stalk-inversion",
+      "title": "Antipodal Stalk Inversion",
+      "group": "foundation",
+      "status": "provisional"
+    },
+    {
       "id": "cosmology/cyclic-cosmology",
       "title": "Observer-Centric Cyclic Cosmology",
       "group": "cosmology",
@@ -1599,6 +1605,42 @@
     {
       "from": "foundation/observer-holographic-equivalence",
       "to": "foundation/bootstrap-fixed-point-existence"
+    },
+    {
+      "from": "foundation/observer-projected-spacetime",
+      "to": "foundation/antipodal-stalk-inversion"
+    },
+    {
+      "from": "foundation/observer-holographic-equivalence",
+      "to": "foundation/antipodal-stalk-inversion"
+    },
+    {
+      "from": "holography/horizon-gauge-shell",
+      "to": "foundation/antipodal-stalk-inversion"
+    },
+    {
+      "from": "foundation/knot-theoretic-bootstrap",
+      "to": "foundation/antipodal-stalk-inversion"
+    },
+    {
+      "from": "minimal-observer/multiplicity",
+      "to": "foundation/antipodal-stalk-inversion"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "foundation/antipodal-stalk-inversion"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "foundation/antipodal-stalk-inversion"
+    },
+    {
+      "from": "minimal-observer/coherence-dual-pairs",
+      "to": "foundation/antipodal-stalk-inversion"
+    },
+    {
+      "from": "particles/cpt-theorem",
+      "to": "foundation/antipodal-stalk-inversion"
     }
   ]
 }
