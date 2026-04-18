@@ -240,14 +240,234 @@ function collectDescendants(nodeId, childMap) {
   return visited
 }
 
+/** Tiny seeded PRNG — deterministic layouts across reloads. */
+function mulberry32(seed) {
+  return function () {
+    seed = (seed + 0x6D2B79F5) | 0
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed)
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
+  }
+}
+
+/** Count in + out edges for every node id. */
+function computeDegrees(nodes, edges) {
+  const deg = {}
+  for (const n of nodes) deg[n.id] = 0
+  for (const e of edges) {
+    if (deg[e.from] !== undefined) deg[e.from]++
+    if (deg[e.to] !== undefined) deg[e.to]++
+  }
+  return deg
+}
+
+/** Map degree → radius in [MIN_R, MAX_R]. MAX_R ≈ half the old uniform radius. */
+function radiusForDegree(degree, maxDegree) {
+  const MIN_R = 4
+  const MAX_R = 13
+  if (maxDegree <= 0) return MIN_R
+  const t = Math.sqrt(Math.min(1, degree / maxDegree))
+  return MIN_R + t * (MAX_R - MIN_R)
+}
+
+const BRIDGE_ID = 'axioms/00-from-observation-to-axioms'
+const AXIOM_IDS = ['axioms/coherence-conservation', 'axioms/observer-definition', 'axioms/loop-closure']
+
+/** Force-directed layout. Axioms + bridge are pinned at the top; rest floats.
+ *  Deterministic: fixed seed + fixed iteration count. Cached per-input at module scope. */
+let _forceCache = null
+let _forceCacheKey = null
+function layoutForce(nodes, edges, width, depths, axiomIds, radii) {
+  const cacheKey = `v6|${width}|${nodes.length}|${edges.length}|${nodes.map(n => n.id).join(',').length}`
+  if (_forceCacheKey === cacheKey && _forceCache) return _forceCache
+
+  const TOP_PAD = 220          // room for bridge node + axiom box
+  const LEFT_PAD = 210         // clear the legend
+  const RIGHT_PAD = 60
+  const centerX = (LEFT_PAD + (width - RIGHT_PAD)) / 2
+  const hasBridge = nodes.some(n => n.id === BRIDGE_ID)
+
+  const rand = mulberry32(424242)
+
+  // -- Initial positions --
+  const pos = {}
+  const vel = {}
+  const maxDepth = Math.max(0, ...Object.values(depths))
+
+  for (const n of nodes) {
+    vel[n.id] = { x: 0, y: 0 }
+    if (axiomIds.has(n.id)) {
+      pos[n.id] = { x: 0, y: 0, pinned: true }
+    } else if (n.id === BRIDGE_ID) {
+      pos[n.id] = { x: centerX, y: 80, pinned: true }
+    } else {
+      const d = depths[n.id] ?? 1
+      // Body starts close under the axiom box (gap reduced ~60% from original)
+      const targetY = TOP_PAD + 46 + (d - 1) * 70
+      // Spread nodes across nearly the full canvas width from the start
+      pos[n.id] = {
+        x: LEFT_PAD + 40 + rand() * (width - LEFT_PAD - RIGHT_PAD - 80),
+        y: targetY + (rand() - 0.5) * 140,
+        pinned: false,
+      }
+    }
+  }
+
+  // Pin the three axioms in a row
+  const axiomArr = [...axiomIds]
+  const axiomSpacing = 220
+  axiomArr.forEach((id, i) => {
+    pos[id] = {
+      x: centerX + (i - (axiomArr.length - 1) / 2) * axiomSpacing,
+      y: 190,
+      pinned: true,
+    }
+  })
+  if (hasBridge) pos[BRIDGE_ID] = { x: centerX, y: 80, pinned: true }
+
+  // -- Simulation --
+  const ITERATIONS = 700
+  const DT = 0.9
+  const DAMPING = 0.85
+  const SPRING_K = 0.012
+  const SPRING_REST_CROSS = 160
+  const SPRING_REST_SAME = 95
+  const REPEL_K = 22000
+  const CENTER_K_X = 0             // no horizontal centering — let repulsion spread
+  const Y_GRAVITY = 0.04           // weak depth-based y pull
+  const DIRECTIONAL_K = 0.2        // parent above child
+  const MIN_VERTICAL_GAP = 32
+  const GROUP_K = 0.012            // weak pull toward group centroid
+
+  const nodeIds = nodes.map(n => n.id)
+  const groupById = {}
+  for (const n of nodes) groupById[n.id] = n.group
+
+  // Collect group membership for centroid forces
+  const groupMembers = {}
+  for (const n of nodes) {
+    if (axiomIds.has(n.id) || n.id === BRIDGE_ID) continue
+    if (!groupMembers[n.group]) groupMembers[n.group] = []
+    groupMembers[n.group].push(n.id)
+  }
+
+  for (let iter = 0; iter < ITERATIONS; iter++) {
+    const cool = 1 - (iter / ITERATIONS) * 0.7
+
+    const force = {}
+    for (const id of nodeIds) force[id] = { x: 0, y: 0 }
+
+    // Pairwise repulsion (O(n²) but n ≈ 83 → ~3k pairs, fast enough)
+    for (let i = 0; i < nodeIds.length; i++) {
+      for (let j = i + 1; j < nodeIds.length; j++) {
+        const a = pos[nodeIds[i]], b = pos[nodeIds[j]]
+        let dx = b.x - a.x, dy = b.y - a.y
+        let d2 = dx * dx + dy * dy
+        if (d2 < 1) { dx = (rand() - 0.5) * 0.5; dy = (rand() - 0.5) * 0.5; d2 = 1 }
+        const dist = Math.sqrt(d2)
+        const rSum = (radii[nodeIds[i]] || 10) + (radii[nodeIds[j]] || 10)
+        // Soft-floor to node-radius sum so nodes never intersect
+        const effD2 = Math.max(d2, (rSum + 8) * (rSum + 8))
+        const f = REPEL_K / effD2
+        const ux = dx / dist, uy = dy / dist
+        force[nodeIds[i]].x -= ux * f
+        force[nodeIds[i]].y -= uy * f
+        force[nodeIds[j]].x += ux * f
+        force[nodeIds[j]].y += uy * f
+      }
+    }
+
+    // Edge springs + directional bias (parent above child)
+    for (const e of edges) {
+      const a = pos[e.from], b = pos[e.to]
+      if (!a || !b) continue
+      const sameGroup = groupById[e.from] === groupById[e.to]
+      const rest = sameGroup ? SPRING_REST_SAME : SPRING_REST_CROSS
+      const dx = b.x - a.x, dy = b.y - a.y
+      const dist = Math.sqrt(dx * dx + dy * dy) || 0.01
+      const f = SPRING_K * (dist - rest)
+      force[e.from].x += (dx / dist) * f
+      force[e.from].y += (dy / dist) * f
+      force[e.to].x -= (dx / dist) * f
+      force[e.to].y -= (dy / dist) * f
+
+      // Enforce vertical ordering: parent (from) should be above child (to)
+      const yGap = b.y - a.y
+      if (yGap < MIN_VERTICAL_GAP) {
+        const push = DIRECTIONAL_K * (MIN_VERTICAL_GAP - yGap)
+        force[e.from].y -= push
+        force[e.to].y += push
+      }
+    }
+
+    // Gravity: depth-aware vertical pull
+    for (const id of nodeIds) {
+      force[id].x += CENTER_K_X * (centerX - pos[id].x)
+      const d = depths[id] ?? 1
+      const targetY = TOP_PAD + 46 + (d - 1) * 70
+      force[id].y += Y_GRAVITY * (targetY - pos[id].y)
+    }
+
+    // Weak group clustering: each non-pinned node pulled toward its group's centroid
+    for (const group in groupMembers) {
+      const members = groupMembers[group]
+      if (members.length < 2) continue
+      let cx = 0, cy = 0
+      for (const id of members) { cx += pos[id].x; cy += pos[id].y }
+      cx /= members.length; cy /= members.length
+      for (const id of members) {
+        force[id].x += GROUP_K * (cx - pos[id].x)
+        force[id].y += GROUP_K * (cy - pos[id].y) * 0.3  // weaker on y so depth ordering wins
+      }
+    }
+
+    // Integrate
+    const maxSpeed = 12 * cool
+    for (const id of nodeIds) {
+      if (pos[id].pinned) continue
+      vel[id].x = (vel[id].x + force[id].x * DT) * DAMPING
+      vel[id].y = (vel[id].y + force[id].y * DT) * DAMPING
+      const v2 = vel[id].x * vel[id].x + vel[id].y * vel[id].y
+      if (v2 > maxSpeed * maxSpeed) {
+        const s = maxSpeed / Math.sqrt(v2)
+        vel[id].x *= s; vel[id].y *= s
+      }
+      pos[id].x += vel[id].x * DT
+      pos[id].y += vel[id].y * DT
+
+      // Keep inside the canvas
+      pos[id].x = Math.max(LEFT_PAD + 30, Math.min(width - RIGHT_PAD - 30, pos[id].x))
+      pos[id].y = Math.max(TOP_PAD + 40, pos[id].y)
+    }
+  }
+
+  const maxY = Math.max(...Object.values(pos).map(p => p.y))
+  const height = maxY + 90
+
+  const result = { positions: pos, height }
+  _forceCache = result
+  _forceCacheKey = cacheKey
+  return result
+}
+
 /** Lay out nodes into { id -> {x,y} } positions. */
-function layoutNodes(nodes, edges, width) {
+function layoutNodes(nodes, edges, width, mode) {
   // Only the three foundational axioms belong in the "Axioms" box;
   // other pages in axioms/ (e.g. coherence-operational) are derivations about the axioms.
-  const AXIOM_IDS = ['axioms/coherence-conservation', 'axioms/observer-definition', 'axioms/loop-closure']
   const axiomIds = new Set(AXIOM_IDS.filter(id => nodes.some(n => n.id === id)))
   const depths = computeDepths(nodes, edges, axiomIds)
   const maxDepth = Math.max(0, ...Object.values(depths))
+
+  // Per-node radius from degree (applies to both modes)
+  const degrees = computeDegrees(nodes, edges)
+  const maxDegree = Math.max(1, ...Object.values(degrees))
+  const radii = {}
+  for (const n of nodes) radii[n.id] = radiusForDegree(degrees[n.id] || 0, maxDegree)
+
+  if (mode === 'force') {
+    const { positions, height } = layoutForce(nodes, edges, width, depths, axiomIds, radii)
+    return { positions, height, radii, axiomIds }
+  }
 
   // Group node ids by depth row
   const rows = []
@@ -285,7 +505,12 @@ function layoutNodes(nodes, edges, width) {
   }
 
   const POST_AXIOM_PAD = Math.round(ROW_HEIGHT / 3)
-  return { positions, height: TOP_PAD + (maxDepth + 1) * ROW_HEIGHT + POST_AXIOM_PAD + TOP_PAD, nodeRadius: NODE_RADIUS, axiomIds }
+  return {
+    positions,
+    height: TOP_PAD + (maxDepth + 1) * ROW_HEIGHT + POST_AXIOM_PAD + TOP_PAD,
+    radii,
+    axiomIds,
+  }
 }
 
 // ---- Component -------------------------------------------------------------
@@ -294,8 +519,10 @@ function DependencyGraph({ state, props }) {
   const nodes = props.nodes || []
   const edges = props.edges || []
   const width = props.width || 1350
+  const layoutMode = state.layoutMode || 'layered'
 
-  const { positions, height, nodeRadius, axiomIds } = layoutNodes(nodes, edges, width)
+  const { positions, height, radii, axiomIds } = layoutNodes(nodes, edges, width, layoutMode)
+  const MAX_R = 13  // must match radiusForDegree() ceiling; used for label offsets & box padding
   const parentMap = buildParentMap(edges)
   const childMap = buildChildMap(edges)
   const hoveredId = state.hoveredNode
@@ -335,14 +562,64 @@ function DependencyGraph({ state, props }) {
     .map(n => positions[n.id])
     .filter(Boolean)
   const axiomBox = axiomPositions.length > 0 ? {
-    x: Math.min(...axiomPositions.map(p => p.x)) - nodeRadius - 110,
-    y: Math.min(...axiomPositions.map(p => p.y)) - nodeRadius - 30,
-    x2: Math.max(...axiomPositions.map(p => p.x)) + nodeRadius + 110,
-    y2: Math.max(...axiomPositions.map(p => p.y)) + nodeRadius + 36,
+    x: Math.min(...axiomPositions.map(p => p.x)) - MAX_R - 110,
+    y: Math.min(...axiomPositions.map(p => p.y)) - MAX_R - 30,
+    x2: Math.max(...axiomPositions.map(p => p.x)) + MAX_R + 110,
+    y2: Math.max(...axiomPositions.map(p => p.y)) + MAX_R + 36,
   } : null
 
   return (
     <div className="dependency-graph-wrapper" style={{ position: 'relative' }}>
+      <div
+        className="dep-layout-toggle"
+        role="group"
+        aria-label="Layout mode"
+        style={{
+          display: 'inline-flex',
+          gap: '2px',
+          padding: '3px',
+          marginBottom: '10px',
+          background: '#f1f5f9',
+          border: '1px solid #cbd5e1',
+          borderRadius: '999px',
+          fontSize: '13px',
+          fontFamily: 'Inter, system-ui, sans-serif',
+          userSelect: 'none',
+        }}
+      >
+        <button
+          className="dep-layout-option dep-layout-option--layered"
+          data-mode="layered"
+          style={{
+            padding: '5px 14px',
+            border: 'none',
+            borderRadius: '999px',
+            background: layoutMode === 'layered' ? '#ffffff' : 'transparent',
+            color: layoutMode === 'layered' ? '#1e293b' : '#64748b',
+            fontWeight: layoutMode === 'layered' ? 600 : 500,
+            boxShadow: layoutMode === 'layered' ? '0 1px 2px rgba(0,0,0,0.06)' : 'none',
+            cursor: 'pointer',
+          }}
+        >
+          Layered
+        </button>
+        <button
+          className="dep-layout-option dep-layout-option--force"
+          data-mode="force"
+          style={{
+            padding: '5px 14px',
+            border: 'none',
+            borderRadius: '999px',
+            background: layoutMode === 'force' ? '#ffffff' : 'transparent',
+            color: layoutMode === 'force' ? '#1e293b' : '#64748b',
+            fontWeight: layoutMode === 'force' ? 600 : 500,
+            boxShadow: layoutMode === 'force' ? '0 1px 2px rgba(0,0,0,0.06)' : 'none',
+            cursor: 'pointer',
+          }}
+        >
+          Force-directed
+        </button>
+      </div>
       <svg
         className="dependency-graph-svg"
         viewBox={`0 0 ${width} ${height}`}
@@ -494,6 +771,7 @@ function DependencyGraph({ state, props }) {
         {nodes.map(node => {
           const pos = positions[node.id]
           if (!pos) return null
+          const r = radii[node.id] || 8
           const color = GROUP_COLORS[node.group] || '#888'
           const opacity = STATUS_OPACITY[node.status] || 0.5
           const isStub = node.status === 'stub'
@@ -510,23 +788,25 @@ function DependencyGraph({ state, props }) {
           const dimmedByChain = chainNodes && !chainNodes.has(node.id)
           const dimmed = dimmedByGroup || dimmedByChain
 
-          // Show full title when highlighted, truncated otherwise
-          const displayTitle = highlighted
-            ? node.title
-            : (node.title.length > 18 ? node.title.slice(0, 16) + '...' : node.title)
-
           return (
               <g
                 key={node.id}
                 className={`dep-node dep-node--${node.id.replace(/\//g, '--')}`}
                 style={{ cursor: 'pointer' }}
               >
+                {/* Invisible larger hit area so small nodes are still easy to hover/tap */}
+                <circle
+                  cx={pos.x}
+                  cy={pos.y}
+                  r={Math.max(r + 6, 14)}
+                  fill="transparent"
+                />
                 {/* Highlight ring */}
                 {ringWidth > 0 && (
                   <circle
                     cx={pos.x}
                     cy={pos.y}
-                    r={nodeRadius + 4}
+                    r={r + 4}
                     fill="none"
                     stroke={ringColor}
                     style={{ strokeWidth: ringWidth }}
@@ -536,12 +816,12 @@ function DependencyGraph({ state, props }) {
                 <circle
                   cx={pos.x}
                   cy={pos.y}
-                  r={nodeRadius}
+                  r={r}
                   fill={isNonViable ? '#888' : color}
                   stroke={isNonViable ? '#dc2626' : color}
                   style={{
                     fillOpacity: dimmed ? 0.1 : opacity,
-                    strokeWidth: isStub ? 2 : (isNonViable ? 4 : 1.5),
+                    strokeWidth: isStub ? 2 : (isNonViable ? 3 : 1.5),
                     strokeOpacity: dimmed ? 0.1 : 1,
                     strokeDasharray: isStub ? '4 3' : 'none',
                     transition: 'fill-opacity 0.2s ease, stroke-opacity 0.2s ease',
@@ -551,20 +831,20 @@ function DependencyGraph({ state, props }) {
                 {isNonViable && (
                   <>
                     <line
-                      x1={pos.x - nodeRadius * 0.45}
-                      y1={pos.y - nodeRadius * 0.45}
-                      x2={pos.x + nodeRadius * 0.45}
-                      y2={pos.y + nodeRadius * 0.45}
+                      x1={pos.x - r * 0.45}
+                      y1={pos.y - r * 0.45}
+                      x2={pos.x + r * 0.45}
+                      y2={pos.y + r * 0.45}
                       stroke="#dc2626"
-                      style={{ strokeWidth: 3, strokeLinecap: 'round', pointerEvents: 'none', opacity: dimmed ? 0.1 : 1, transition: 'opacity 0.2s ease' }}
+                      style={{ strokeWidth: 2.5, strokeLinecap: 'round', pointerEvents: 'none', opacity: dimmed ? 0.1 : 1, transition: 'opacity 0.2s ease' }}
                     />
                     <line
-                      x1={pos.x + nodeRadius * 0.45}
-                      y1={pos.y - nodeRadius * 0.45}
-                      x2={pos.x - nodeRadius * 0.45}
-                      y2={pos.y + nodeRadius * 0.45}
+                      x1={pos.x + r * 0.45}
+                      y1={pos.y - r * 0.45}
+                      x2={pos.x - r * 0.45}
+                      y2={pos.y + r * 0.45}
                       stroke="#dc2626"
-                      style={{ strokeWidth: 3, strokeLinecap: 'round', pointerEvents: 'none', opacity: dimmed ? 0.1 : 1, transition: 'opacity 0.2s ease' }}
+                      style={{ strokeWidth: 2.5, strokeLinecap: 'round', pointerEvents: 'none', opacity: dimmed ? 0.1 : 1, transition: 'opacity 0.2s ease' }}
                     />
                   </>
                 )}
@@ -576,18 +856,25 @@ function DependencyGraph({ state, props }) {
         {nodes.map(node => {
           const pos = positions[node.id]
           if (!pos) return null
+          const r = radii[node.id] || 8
           const isHovered2 = hoveredId === node.id
           const isGroupHighlighted2 = hoveredGroup && node.group === hoveredGroup
           const highlighted2 = isHovered2 || isGroupHighlighted2
           const dimmedByGroup2 = hoveredGroup && !isGroupHighlighted2
           const dimmedByChain2 = chainNodes && !chainNodes.has(node.id)
           const dimmed2 = dimmedByGroup2 || dimmedByChain2
+          const isAxiomNode = axiomIds.has(node.id) || node.id === BRIDGE_ID
+
+          // In force mode, only show labels for highlighted / pinned nodes to avoid clutter
+          const showLabel = layoutMode !== 'force' || highlighted2 || isAxiomNode
+          if (!showLabel) return null
+
           const displayTitle2 = highlighted2
             ? node.title
             : (node.title.length > 18 ? node.title.slice(0, 16) + '...' : node.title)
 
-          // Shift label down when highlighted to account for the highlight ring
-          const labelY = pos.y + nodeRadius + (highlighted2 ? 28 : 20)
+          // Shift label down slightly more when highlighted (ring adds a few px)
+          const labelY = pos.y + r + (highlighted2 ? 22 : 16)
 
           return (
             <text
@@ -596,7 +883,7 @@ function DependencyGraph({ state, props }) {
               y={labelY}
               fill={highlighted2 ? '#1e293b' : '#888'}
               style={{
-                fontSize: highlighted2 ? '20px' : '18px',
+                fontSize: highlighted2 ? '20px' : (layoutMode === 'force' ? '15px' : '18px'),
                 pointerEvents: 'none',
                 textAnchor: 'middle',
                 fontWeight: highlighted2 ? 'bold' : 'normal',
@@ -619,6 +906,7 @@ function DependencyGraph({ state, props }) {
 DependencyGraph.initialState = {
   hoveredNode: null,
   hoveredGroup: null,
+  layoutMode: 'layered',
 }
 
 DependencyGraph.intent = ({ DOM }) => ({
@@ -636,6 +924,7 @@ DependencyGraph.intent = ({ DOM }) => ({
   LEAVE_LEGEND: DOM.select('.dep-legend-item').events('pointerout')
                   .filter(ev => ev.pointerType === 'mouse'),
   TAP_LEGEND:  DOM.select('.dep-legend-item').events('click'),
+  TAP_LAYOUT:  DOM.select('.dep-layout-option').events('click'),
 })
 
 DependencyGraph.model = {
@@ -700,6 +989,14 @@ DependencyGraph.model = {
     // Toggle: tap again to deselect
     if (state.hoveredGroup === group) return { ...state, hoveredGroup: null }
     return { ...state, hoveredGroup: group, hoveredNode: null }
+  },
+  TAP_LAYOUT: (state, ev) => {
+    ev.stopPropagation()
+    const btn = ev.target && ev.target.closest ? ev.target.closest('.dep-layout-option') : null
+    if (!btn) return state
+    const mode = btn.getAttribute('data-mode')
+    if (!mode || mode === state.layoutMode) return state
+    return { ...state, layoutMode: mode, hoveredNode: null, hoveredGroup: null }
   },
 }
 

@@ -1,12 +1,12 @@
 ---
 title: "Horizon as Null Boundary Shell"
-status: "stub"
+status: "provisional"
 dependsOn: ["cosmology/cyclic-cosmology", "holography/area-scaling", "axioms/loop-closure", "axioms/observer-definition", "interactions/bootstrap"]
 enablesDerivation: []
 tags: ["holography", "gauge", "foundation"]
 summary: "Every observer's cosmological horizon is a permanent null shell of relational carriers — A–B relations at the distance where Cauchy-slice tilts exactly saturate the cyclic period. Inside this distance the A–B relation is timelike; outside it is fully spacelike; at the saturation distance it is null-tangent. The shell's permanence follows from Axiom 2 (observer boundary); its null character follows from the antichain-boundary structure of the covering property, without invoking a pre-existing Lorentzian metric. The holographic bound counts the independent relational carriers on this shell. Identification of these carriers with specific gauge bosons (spin, group, representation) is an open extension."
 rigorLevel: "semi-formal"
-lastUpdated: 2026-04-16
+lastUpdated: 2026-04-17
 ---
 
 ## Overview
