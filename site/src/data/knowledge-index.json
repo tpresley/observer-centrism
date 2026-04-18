@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-18T01:04:38.535Z",
+    "generatedAt": "2026-04-18T01:22:31.419Z",
     "derivationCount": 83,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -9,14 +9,13 @@
   "stats": {
     "byStatus": {
       "derived": 27,
-      "provisional": 49,
-      "draft": 6,
-      "stub": 1
+      "provisional": 51,
+      "draft": 5
     },
     "derivationCount": 83,
     "predictionCount": 12,
     "edgeCount": 275,
-    "formalObjectCount": 1207,
+    "formalObjectCount": 1209,
     "openGapCount": 280,
     "upgradeEligibleCount": 2,
     "leanVerifiedCount": 8,
@@ -1937,7 +1936,7 @@
       "id": "cosmology/cosmological-constant",
       "filePath": "site/src/content/derivations/cosmology/cosmological-constant.md",
       "title": "Cosmological Constant",
-      "status": "draft",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "cosmology",
       "tags": [
@@ -2010,8 +2009,8 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Minimal-observer projection theorem.",
-          "description": "Proposition 2.1 depends on [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Conjecture 3.1. A rigorous projection theorem would promote Proposition 2.1 from informa"
+          "title": "Tighten Lemma 3.0 upstream.",
+          "description": "Proposition 2.1 is now established semi-formally via [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Theorem 3.1. The remaining semi-formal piece is [Observer-Proj"
         },
         {
           "number": 2,
@@ -2044,7 +2043,7 @@
           },
           {
             "target": "foundation/observer-projected-spacetime",
-            "context": "minimal-observer projection as static dS patch"
+            "context": "$M_A^{\\text{Schw}} = 0$ on the observer's own projection"
           },
           {
             "target": "spacetime/einstein-equations",
@@ -2093,9 +2092,7 @@
         "propositions": []
       },
       "upgradeEligible": false,
-      "upgradeBlockers": [
-        "foundation/observer-projected-spacetime"
-      ]
+      "upgradeBlockers": []
     },
     "cosmology/coupling-constants": {
       "id": "cosmology/coupling-constants",
@@ -4856,8 +4853,8 @@
       "id": "foundation/bootstrap-fixed-point-existence",
       "filePath": "site/src/content/derivations/foundation/bootstrap-fixed-point-existence.md",
       "title": "Bootstrap Fixed-Point Existence",
-      "status": "stub",
-      "rigorLevel": "informal",
+      "status": "draft",
+      "rigorLevel": "semi-formal",
       "group": "foundation",
       "tags": [
         "foundation",
@@ -5027,7 +5024,11 @@
         "propositions": []
       },
       "upgradeEligible": false,
-      "upgradeBlockers": []
+      "upgradeBlockers": [
+        "foundation/observer-level-stack-compactness",
+        "foundation/minimum-bootstrap-closure",
+        "foundation/observer-holographic-equivalence"
+      ]
     },
     "foundation/coherence-lagrangian": {
       "id": "foundation/coherence-lagrangian",
@@ -6182,10 +6183,8 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": false,
-      "upgradeBlockers": [
-        "foundation/observer-projected-spacetime"
-      ]
+      "upgradeEligible": true,
+      "upgradeBlockers": []
     },
     "foundation/observer-level-stack-compactness": {
       "id": "foundation/observer-level-stack-compactness",
@@ -6320,7 +6319,6 @@
       },
       "upgradeEligible": false,
       "upgradeBlockers": [
-        "foundation/observer-projected-spacetime",
         "foundation/observer-holographic-equivalence"
       ]
     },
@@ -6328,7 +6326,7 @@
       "id": "foundation/observer-projected-spacetime",
       "filePath": "site/src/content/derivations/foundation/observer-projected-spacetime.md",
       "title": "Observer-Projected Spacetime",
-      "status": "draft",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "foundation",
       "tags": [
@@ -6376,16 +6374,28 @@
           "statementPreview": "The DAG-level structure of a minimal observer A imposes four consistency conditions on MA:*"
         },
         {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "Minimal-observer projection",
+          "statementPreview": "Let A be a minimal observer as in Step 2. Assume the framework's emergent geometry satisfies the vacuum Einstein equa..."
+        },
+        {
+          "type": "Lemma",
+          "id": "3.0",
+          "name": "Vanishing Schwarzschild mass on own projection",
+          "statementPreview": "In the minimal observer A's own projected continuous dual MA, the Schwarzschild mass parameter that would appear in a..."
+        },
+        {
           "type": "Proposition",
           "id": "3.2",
-          "name": "Immediate consequences of Conjecture 3.1",
-          "statementPreview": "Conditional on Conjecture 3.1, the following are properties of A's projection, intrinsic to A:*"
+          "name": "Immediate consequences of Theorem 3.1",
+          "statementPreview": "Given Theorem 3.1, the following are properties of A's projection, intrinsic to A:*"
         },
         {
           "type": "Proposition",
           "id": "4.1",
           "name": "Level-indexed projection",
-          "statementPreview": "Let On be an observer at bootstrap level n with characteristic period Tn. Its projected continuous dual MOn has, unde..."
+          "statementPreview": "Let On be an observer at bootstrap level n with characteristic period Tn, viewed in its own projected continuous dual..."
         },
         {
           "type": "Definition",
@@ -6422,13 +6432,13 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Minimal-observer projection theorem.",
-          "description": "Conjecture 3.1 needs a rigorous proof: given the four intrinsic constraints of Proposition 2.1 plus spherical symmetry and time-translation invariance, show that MA is isometric to the static patch of"
+          "title": "Tighten Lemma 3.0's no-self-sourcing argument.",
+          "description": "Theorem 3.1 now invokes Birkhoff-with-Lambda (classical, rigorous) plus Lemma 3.0 (MASchw = 0 on the minimal observer's own projection). Lemma 3.0 is argued from three converging commitments — vacuum "
         },
         {
           "number": 2,
           "title": "Generalization to non-minimal observers with localized stress-energy.",
-          "description": "A composite observer On at higher bootstrap level may carry effective stress-energy along gammaOn. The projection generalizes from pure de Sitter to Schwarzschild–de Sitter (or more general dressed ge"
+          "description": "A composite observer On at higher bootstrap level, viewed externally from a different observer's projection, carries effective stress-energy along gammaOn(A). That external projection generalizes from"
         },
         {
           "number": 3,
@@ -6493,6 +6503,10 @@
             "context": "Area Scaling"
           },
           {
+            "target": "spacetime/einstein-equations",
+            "context": "Einstein Field Equations"
+          },
+          {
             "target": "cosmology/cosmological-constant",
             "context": "Cosmological Constant"
           },
@@ -6512,7 +6526,7 @@
           },
           {
             "source": "cosmology/cosmological-constant",
-            "context": "minimal-observer projection as static dS patch"
+            "context": "$M_A^{\\text{Schw}} = 0$ on the observer's own projection"
           },
           {
             "source": "cosmology/cosmological-constant",
@@ -6542,7 +6556,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "gauge/anomaly-cancellation": {
@@ -17459,6 +17473,10 @@
             "context": "Einstein Equations"
           },
           {
+            "source": "foundation/observer-projected-spacetime",
+            "context": "Einstein Field Equations"
+          },
+          {
             "source": "gauge/electromagnetism",
             "context": "Einstein Field Equations"
           },
@@ -26160,9 +26178,23 @@
     },
     {
       "derivationId": "foundation/observer-projected-spacetime",
+      "type": "Theorem",
+      "id": "3.1",
+      "name": "Minimal-observer projection",
+      "fullRef": "foundation/observer-projected-spacetime:Theorem 3.1"
+    },
+    {
+      "derivationId": "foundation/observer-projected-spacetime",
+      "type": "Lemma",
+      "id": "3.0",
+      "name": "Vanishing Schwarzschild mass on own projection",
+      "fullRef": "foundation/observer-projected-spacetime:Lemma 3.0"
+    },
+    {
+      "derivationId": "foundation/observer-projected-spacetime",
       "type": "Proposition",
       "id": "3.2",
-      "name": "Immediate consequences of Conjecture 3.1",
+      "name": "Immediate consequences of Theorem 3.1",
       "fullRef": "foundation/observer-projected-spacetime:Proposition 3.2"
     },
     {
@@ -32336,35 +32368,35 @@
     },
     {
       "derivationId": "cosmology/cosmological-constant",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 1,
-      "title": "Minimal-observer projection theorem.",
-      "description": "Proposition 2.1 depends on [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Conjecture 3.1. A rigorous projection theorem would promote Proposition 2.1 from informa"
+      "title": "Tighten Lemma 3.0 upstream.",
+      "description": "Proposition 2.1 is now established semi-formally via [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Theorem 3.1. The remaining semi-formal piece is [Observer-Proj"
     },
     {
       "derivationId": "cosmology/cosmological-constant",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Obstruction class computation.",
       "description": "Compute the obstruction class of the observer-indexed spacetime sheaf and relate it quantitatively to the measured Lambda. Requires the categorical-semantics setup on mathbfObs (see [Observer-Projecte"
     },
     {
       "derivationId": "cosmology/cosmological-constant",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Observer-level identification.",
       "description": "Identify which bootstrap level our measurement of Lambda corresponds to. If level N is pinned by observer-existence conditions or by the cosmic horizon structure, the specific value of LambdaN becomes"
     },
     {
       "derivationId": "cosmology/cosmological-constant",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Crystallization fraction.",
       "description": "The coherence partition C0 = Delta cn + SH has a free parameter — the crystallization fraction Omegam. An independent derivation of Omegam from the Standard Model structure (4 algebra levels, 3 genera"
     },
     {
       "derivationId": "cosmology/cosmological-constant",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Sheaf cohomology on $\\mathbf{Obs}$.",
       "description": "Formalizing the observer-indexed spacetime sheaf requires a Grothendieck topology on the observer category. Inherited from [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spa"
@@ -32581,56 +32613,56 @@
     },
     {
       "derivationId": "foundation/bootstrap-fixed-point-existence",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 1,
       "title": "Rigorous specification of $\\mathcal{R}$.",
       "description": "The key prerequisite (P3) — Scott continuity of R — cannot be checked rigorously until R is rigorously specified. [Minimum Bootstrap Closure](/derivations/foundation/minimum-bootstrap-closure) Open Ga"
     },
     {
       "derivationId": "foundation/bootstrap-fixed-point-existence",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 2,
       "title": "Scott continuity of $\\mathcal{R}$.",
       "description": "Once R is rigorously specified, check that it is Scott-continuous on HA. Informal Propositions 2.1 and 2.2 argue this plausibly; a rigorous check is the content of this gap. Likely tools: categorical "
     },
     {
       "derivationId": "foundation/bootstrap-fixed-point-existence",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 3,
       "title": "Stack compactness rigor.",
       "description": "Prerequisite (P1) — compactness of HA — inherits [Observer-Level Stack Compactness](/derivations/foundation/observer-level-stack-compactness) Open Gaps 1–7. Of these, Open Gap 1 (fibration continuity)"
     },
     {
       "derivationId": "foundation/bootstrap-fixed-point-existence",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 4,
       "title": "Uniqueness of the fixed point.",
       "description": "Kleene gives the *least* fixed point U*; this derivation does not establish that U* is the unique fixed point in HA. Uniqueness would require an additional argument (rigidity, cardinality, or a direct"
     },
     {
       "derivationId": "foundation/bootstrap-fixed-point-existence",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 5,
       "title": "Iteration initial conditions.",
       "description": "The Kleene iteration from bot = emptyset may be trivial (Remark 4.2); a non-trivial seed is needed to generate structure. Identifying the correct seed — probably a minimum multiplicity-3 configuration"
     },
     {
       "derivationId": "foundation/bootstrap-fixed-point-existence",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 6,
       "title": "Extracting physical content.",
       "description": "The Kleene fixed point U* is an abstract object in a dcpo. Extracting specific physical predictions (Lambda, coupling constants, particle masses) from U* requires understanding its internal structure,"
     },
     {
       "derivationId": "foundation/bootstrap-fixed-point-existence",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 7,
       "title": "Compatibility with observer-indexing.",
       "description": "The theorem is stated for a single observer A's stack HA. Under the observer-indexed spacetime sheaf picture ([Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime)), the"
     },
     {
       "derivationId": "foundation/bootstrap-fixed-point-existence",
-      "derivationStatus": "stub",
+      "derivationStatus": "draft",
       "number": 8,
       "title": "Alternative fixed-point theorems.",
       "description": "If Scott continuity proves intractable, alternative theorems may give existence under different hypotheses: Schauder (compact convex + continuous), Kakutani (compact convex + upper-semicontinuous set-"
@@ -32875,49 +32907,49 @@
     },
     {
       "derivationId": "foundation/observer-projected-spacetime",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 1,
-      "title": "Minimal-observer projection theorem.",
-      "description": "Conjecture 3.1 needs a rigorous proof: given the four intrinsic constraints of Proposition 2.1 plus spherical symmetry and time-translation invariance, show that MA is isometric to the static patch of"
+      "title": "Tighten Lemma 3.0's no-self-sourcing argument.",
+      "description": "Theorem 3.1 now invokes Birkhoff-with-Lambda (classical, rigorous) plus Lemma 3.0 (MASchw = 0 on the minimal observer's own projection). Lemma 3.0 is argued from three converging commitments — vacuum "
     },
     {
       "derivationId": "foundation/observer-projected-spacetime",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Generalization to non-minimal observers with localized stress-energy.",
-      "description": "A composite observer On at higher bootstrap level may carry effective stress-energy along gammaOn. The projection generalizes from pure de Sitter to Schwarzschild–de Sitter (or more general dressed ge"
+      "description": "A composite observer On at higher bootstrap level, viewed externally from a different observer's projection, carries effective stress-energy along gammaOn(A). That external projection generalizes from"
     },
     {
       "derivationId": "foundation/observer-projected-spacetime",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Sheaf property of $M$.",
       "description": "Conjecture 5.3 requires a categorical-semantics setup: what is a cover on mathbfObs? what topology does mathbfObs carry? Given a definition, does local agreement on Type III relations glue uniquely to"
     },
     {
       "derivationId": "foundation/observer-projected-spacetime",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Quantitative computation of the obstruction class.",
       "description": "Proposition 6.3 qualitatively identifies the Lambda hierarchy as the obstruction class. A quantitative computation — compute the class from the bootstrap hierarchy's level structure, translate to a me"
     },
     {
       "derivationId": "foundation/observer-projected-spacetime",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "What replaces \"the universe\" as a single object?",
       "description": "If the observer-indexed presheaf M does not reduce to a single manifold (Proposition 6.1), then the framework has no \"universe\" in the manifold sense. Candidate replacements: the colimit in mathbfLorP"
     },
     {
       "derivationId": "foundation/observer-projected-spacetime",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 6,
       "title": "Consistency with bootstrap aperiodicity.",
       "description": "[Aperiodic Order](/derivations/foundation/aperiodic-order) forces the observer network to be an aperiodic substitution tiling. The observer-indexed projection should inherit this aperiodic structure o"
     },
     {
       "derivationId": "foundation/observer-projected-spacetime",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 7,
       "title": "Interaction with the continuous-discrete fixed point.",
       "description": "[Continuous-Discrete Duality](/derivations/foundation/continuous-discrete-duality) identifies the physical universe as the fixed point of mutual compatibility between the continuous and discrete layer"
@@ -34186,10 +34218,10 @@
   "upgradeAnalysis": {
     "eligible": [
       {
-        "id": "foundation/observer-projected-spacetime",
+        "id": "foundation/observer-holographic-equivalence",
         "currentStatus": "draft",
-        "gapCount": 7,
-        "formalObjectCount": 10
+        "gapCount": 8,
+        "formalObjectCount": 11
       },
       {
         "id": "thermodynamics-ext/biological-non-ergodicity",
@@ -34200,12 +34232,14 @@
     ],
     "blocked": [
       {
-        "id": "cosmology/cosmological-constant",
+        "id": "foundation/bootstrap-fixed-point-existence",
         "currentStatus": "draft",
         "blockedBy": [
-          "foundation/observer-projected-spacetime"
+          "foundation/observer-level-stack-compactness",
+          "foundation/minimum-bootstrap-closure",
+          "foundation/observer-holographic-equivalence"
         ],
-        "reason": "Depends on 1 draft derivation(s)"
+        "reason": "Depends on 3 draft derivation(s)"
       },
       {
         "id": "foundation/minimum-bootstrap-closure",
@@ -34216,21 +34250,12 @@
         "reason": "Depends on 1 draft derivation(s)"
       },
       {
-        "id": "foundation/observer-holographic-equivalence",
-        "currentStatus": "draft",
-        "blockedBy": [
-          "foundation/observer-projected-spacetime"
-        ],
-        "reason": "Depends on 1 draft derivation(s)"
-      },
-      {
         "id": "foundation/observer-level-stack-compactness",
         "currentStatus": "draft",
         "blockedBy": [
-          "foundation/observer-projected-spacetime",
           "foundation/observer-holographic-equivalence"
         ],
-        "reason": "Depends on 2 draft derivation(s)"
+        "reason": "Depends on 1 draft derivation(s)"
       }
     ]
   },

@@ -214,7 +214,7 @@
       "id": "cosmology/cosmological-constant",
       "title": "Cosmological Constant",
       "group": "cosmology",
-      "status": "draft"
+      "status": "provisional"
     },
     {
       "id": "cosmology/baryogenesis",
@@ -460,7 +460,7 @@
       "id": "foundation/observer-projected-spacetime",
       "title": "Observer-Projected Spacetime",
       "group": "foundation",
-      "status": "draft"
+      "status": "provisional"
     },
     {
       "id": "foundation/observer-holographic-equivalence",
@@ -484,7 +484,7 @@
       "id": "foundation/bootstrap-fixed-point-existence",
       "title": "Bootstrap Fixed-Point Existence",
       "group": "foundation",
-      "status": "stub"
+      "status": "draft"
     },
     {
       "id": "cosmology/cyclic-cosmology",

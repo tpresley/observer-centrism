@@ -1,12 +1,13 @@
 ---
 title: "Cosmological Constant"
-status: "draft"
+status: "provisional"
 dependsOn: ["spacetime/einstein-equations", "holography/area-scaling", "foundation/observer-projected-spacetime", "cosmology/observer-loop-viability", "cosmology/dark-energy-equation-of-state"]
 enablesDerivation: []
 tags: ["cosmology", "holography"]
 summary: "The cosmological constant is an observer-level-indexed effective parameter. At bootstrap level n with characteristic period T_n, the projected effective value is Λ_n = 12/(cT_n)². Existence (Lovelock), non-negativity (coherence conservation), Planck-scale upper bound, equation of state w = -1, and absence of a vacuum catastrophe are derived. The ~120-order ratio between the Planck-scale and cosmic-scale projections is the obstruction class of the observer-indexed spacetime sheaf — the cohomological signature of its failure to reduce to a single background manifold. A specific numerical value at a given observer level requires computing that obstruction class."
 rigorLevel: "semi-formal"
 lastUpdated: 2026-04-17
+
 ---
 
 ## Overview
@@ -31,7 +32,7 @@ Open:
 
 - The specific numerical value at a given observer level (requires the obstruction class computation).
 - The mapping from bootstrap levels to the observer population we inhabit.
-- Upstream: Conjecture 3.1 of [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) (minimal-observer projection as static dS patch), on which the per-level formula depends.
+- Upstream: Lemma 3.0 of [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) ($M_A^{\text{Schw}} = 0$ on the observer's own projection), on which the per-level formula depends. Theorem 3.1 (minimal-observer projection as static dS patch) is now established rigorously modulo this lemma.
 
 ## Statement
 
@@ -49,7 +50,7 @@ Open:
 
 $$\Lambda_n = \frac{3}{L_n^2} = \frac{12}{(c T_n)^2}, \qquad L_n = \frac{c T_n}{2}$$
 
-*Structural argument.* [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Conjecture 3.1 asserts that a minimal observer's projected continuous dual $M_{\mathcal{O}_0}$ is the static patch of de Sitter space with de Sitter radius $L_0 = c T_0/2$. [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Proposition 4.1 extends this to higher bootstrap levels. The effective cosmological constant of a de Sitter patch of radius $L$ is $\Lambda = 3/L^2$, giving the formula above.
+*Argument.* [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Theorem 3.1 establishes that a minimal observer's projected continuous dual $M_{\mathcal{O}_0}$ is isometric to the static patch of de Sitter space with de Sitter radius $L_0 = c T_0/2$, via Birkhoff-with-$\Lambda$ plus Lemma 3.0 ($M^{\text{Schw}} = 0$ on the observer's own projection). [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Proposition 4.1 extends this to higher bootstrap levels. The effective cosmological constant of a de Sitter patch of radius $L$ is $\Lambda = 3/L^2$, giving the formula above. The argument is semi-formal: rigorous modulo Lemma 3.0 (three converging framework commitments, not a single knockdown proof).
 
 The level-indexed decomposition of coherence entropy $\mathcal{C}_0 = \mathcal{C}_\text{acc}^{(n)} + S^{(n)}$ in [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Step 8 is the coherence-theoretic face of the same observer-indexing: each level projects its own effective cosmological parameters; cross-level comparisons mix quantities belonging to different projections.
 
@@ -113,7 +114,7 @@ Both routes assume a single global $\Lambda$ to derive. The correct object to co
 - Proposition 7.1 (no vacuum catastrophe): direct consequence of the per-observer holographic bound.
 
 **Informal (observer-indexed reframing; conditional on upstream conjecture):**
-- Proposition 2.1 (per-level $\Lambda_n$): conditional on [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Conjecture 3.1 (minimal-observer projection as static dS patch).
+- Proposition 2.1 (per-level $\Lambda_n$): semi-formal via [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Theorem 3.1 (Birkhoff-with-$\Lambda$ + Lemma 3.0). Inherits the semi-formal status of Lemma 3.0 upstream.
 - Proposition 2.2 (no single shared $\Lambda$): follows from the projection conjecture plus the isometric-embedding obstruction ([Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Proposition 6.1).
 - Proposition 6.1 (hierarchy as obstruction class): structural identification; quantitative computation requires the sheaf-cohomology setup ([Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Open Gaps 3 and 4).
 
@@ -124,7 +125,7 @@ Both routes assume a single global $\Lambda$ to derive. The correct object to co
 
 ## Open Gaps
 
-1. **Minimal-observer projection theorem.** Proposition 2.1 depends on [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Conjecture 3.1. A rigorous projection theorem would promote Proposition 2.1 from informal to derived. *Difficulty: MODERATE.*
+1. **Tighten Lemma 3.0 upstream.** Proposition 2.1 is now established semi-formally via [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Theorem 3.1. The remaining semi-formal piece is [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Lemma 3.0 ($M_A^{\text{Schw}} = 0$ on the observer's own projection); closing its Open Gap 1 would promote Proposition 2.1 from semi-formal to rigorous. *Difficulty: MODERATE.*
 
 2. **Obstruction class computation.** Compute the obstruction class of the observer-indexed spacetime sheaf and relate it quantitatively to the measured $\Lambda$. Requires the categorical-semantics setup on $\mathbf{Obs}$ (see [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Open Gap 3) and a target expression for the class. *Difficulty: HARD.*
 

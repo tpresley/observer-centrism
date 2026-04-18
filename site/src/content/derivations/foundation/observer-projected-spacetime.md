@@ -1,6 +1,6 @@
 ---
 title: "Observer-Projected Spacetime"
-status: "draft"
+status: "provisional"
 dependsOn: ["axioms/observer-definition", "axioms/loop-closure", "minimal-observer/multiplicity", "cosmology/cyclic-cosmology", "holography/horizon-gauge-shell", "cosmology/observer-loop-viability", "foundation/continuous-discrete-duality"]
 enablesDerivation: []
 tags: ["foundation", "spacetime", "holography", "structure"]
@@ -17,13 +17,13 @@ This derivation makes the consequence explicit: **there is no single continuous 
 
 The program splits naturally into two tracks, which turn out to be two halves of a single object:
 
-1. **Stalks (what each observer projects).** For a given observer $A$, the intrinsic DAG-level constraints on $A$ — Axiom 3 periodicity, Axiom 2 boundary, a null horizon shell at $c T_A / 2$, and smooth Lorentzian interior — largely determine $A$'s projected patch $M_A$ up to coordinates. For a minimal observer, the conjectured answer is the static patch of de Sitter space with de Sitter radius $L_A = c T_A / 2$, decorated with Type III partner lines that pierce the interior and terminate on the horizon as null geodesics.
+1. **Stalks (what each observer projects).** For a given observer $A$, the intrinsic DAG-level constraints on $A$ — Axiom 3 periodicity, Axiom 2 boundary, a null horizon shell at $c T_A / 2$, and smooth Lorentzian interior — determine $A$'s projected patch $M_A$ up to coordinates. For a minimal observer, Theorem 3.1 (below) proves the answer is the static patch of de Sitter space with de Sitter radius $L_A = c T_A / 2$, decorated with Type III partner lines that pierce the interior and terminate on the horizon as null geodesics. The proof invokes the classical Birkhoff theorem with positive cosmological constant plus a framework-internal lemma (Lemma 3.0) that the Schwarzschild mass vanishes on the observer's own projection.
 
 2. **Gluing (how the stalks relate).** For observers $A, B$ sharing a Type III relation $I_{AB}$, there is a restriction condition: the portion of $M_A$ carrying $I_{AB}$ must match the portion of $M_B$ carrying the same relation. The collection $\{M_A\}$ with restriction maps forms a presheaf over the observer category. Whether it is a sheaf — i.e., whether local agreement on overlaps suffices — is a property of the framework, not a definition.
 
 **Why this reframes long-standing puzzles.** The cosmological constant problem (120 orders of magnitude between Planck and observed $\Lambda$) has resisted derivation because the question "what is $\Lambda$?" presupposes a shared background for $\Lambda$ to live in. Here $\Lambda$ is observer-indexed: level-$n$ observers project $\Lambda_n = 12/(c T_n)^2$. The hierarchy between $\Lambda_0$ (Planck) and $\Lambda_N$ (cosmic) is not a bug; it is the obstruction class of the presheaf's failure to reduce to a single manifold across levels. The 120 orders are a measurement of gluing failure, not of fine-tuning.
 
-**Honest status.** This is a stub. It identifies the right structural object, states the intrinsic constraints on a minimal observer's projection, conjectures the specific form (static de Sitter patch), and characterizes the gluing obstruction. It does not prove the minimal-observer projection theorem (Step 3 below) nor quantitatively compute the obstruction class. Both are flagged as the central open gaps.
+**Honest status.** The minimal-observer projection is established as a theorem (Theorem 3.1) via Birkhoff-with-$\Lambda$ plus a framework-internal lemma that the Schwarzschild mass vanishes on the observer's own projection. Lemma 3.0 (no-self-sourcing) remains semi-formal — three converging arguments but not a single knockdown proof — which places the central claim at semi-formal rigor overall. The gluing/sheaf property (Conjecture 5.3) and the quantitative obstruction class (Proposition 6.3) are genuinely conjectural; these are flagged as the remaining open gaps.
 
 ## Step 1: The Observer-Indexed Projection
 
@@ -61,19 +61,54 @@ Throughout this step, let $A$ be a minimal observer: $\Sigma_A \cong S^1$, $U(1)
 
 **Remark 2.3 (Why two partners and not more).** *[Multiplicity](/derivations/minimal-observer/multiplicity) Theorem 7.2 forces at least three observers for C5 to be non-trivial. It does not force more at the minimal level. Furthermore, the horizon-area holographic bound ([Area Scaling](/derivations/holography/area-scaling)) at Planck scale is $O(1)$, so a minimal observer's horizon can accommodate only $O(1)$ Type III carriers. The count of 2 forced partners therefore saturates the horizon at the minimal level, with no slack for additional partners. This is a feature, not a constraint to be worked around: minimal observers exist at the edge of the holographic bound.*
 
-## Step 3: The Minimal-Observer Projection Conjecture
+## Step 3: The Minimal-Observer Projection Theorem
 
-**Conjecture 3.1 (Minimal-observer projection).** *Let $A$ be a minimal observer as in Step 2. The four intrinsic constraints of Proposition 2.1, combined with spherical symmetry of the DAG-level antichain structure around $\gamma_A$ and time-translation invariance within one period, imply that $M_A$ is diffeomorphic to the static patch of de Sitter space with de Sitter radius*
+**Theorem 3.1 (Minimal-observer projection).** *Let $A$ be a minimal observer as in Step 2. Assume the framework's emergent geometry satisfies the vacuum Einstein equations with positive cosmological constant in the projection ([Einstein Field Equations](/derivations/spacetime/einstein-equations), [Observer Loop Viability](/derivations/cosmology/observer-loop-viability)) and that the Schwarzschild mass parameter vanishes in the minimal observer's own projection (Lemma 3.0 below). Then the four intrinsic constraints of Proposition 2.1, together with spherical symmetry of the DAG-level antichain structure around $\gamma_A$ and time-translation invariance within one period, force $M_A$ to be isometric to the static patch of de Sitter space with de Sitter radius*
 
-$$L_A = \frac{c T_A}{2}$$
+$$L_A = \frac{c T_A}{2},$$
 
 *decorated with two timelike partner worldlines $\gamma_B^{(A)}, \gamma_C^{(A)}$ that are null-tangent to the horizon. In static-patch coordinates $(t, r, \theta, \phi)$ with $\gamma_A$ at $r = 0$ and the horizon at $r = L_A$:*
 
-$$g_A = -\left(1 - \frac{r^2}{L_A^2}\right) dt^2 + \left(1 - \frac{r^2}{L_A^2}\right)^{-1} dr^2 + r^2\, d\Omega^2$$
+$$g_A = -\left(1 - \frac{r^2}{L_A^2}\right) dt^2 + \left(1 - \frac{r^2}{L_A^2}\right)^{-1} dr^2 + r^2\, d\Omega^2.$$
 
-**Structural argument.** (1) Periodic worldline + smooth Lorentzian interior + null boundary at finite proper distance is the defining collection of features of a static horizon patch. (2) Spherical symmetry reduces the metric to a function of $r$ alone on an angularly isotropic 2-sphere. (3) The requirement that the horizon be null at $r = L_A$ forces $g_{tt}(L_A) = 0$. (4) The requirement of smoothness and Ricci-flatness away from matter sources picks out the de Sitter form over alternatives. (5) The remaining free constant is fixed by $L_A = c T_A / 2$ from Prop 2.1 (2). A rigorous proof requires a uniqueness theorem for static spherically symmetric null-bounded Lorentzian patches with a prescribed horizon radius. This is flagged as Open Gap 1.
+**Lemma 3.0 (Vanishing Schwarzschild mass on own projection).** *In the minimal observer $A$'s own projected continuous dual $M_A$, the Schwarzschild mass parameter that would appear in a spherically symmetric static vacuum solution with $\Lambda > 0$ vanishes: $M_A^{\text{Schw}} = 0$.*
 
-**Proposition 3.2 (Immediate consequences of Conjecture 3.1).** *Conditional on Conjecture 3.1, the following are properties of $A$'s projection, intrinsic to $A$:*
+*Framework-internal argument.* Three commitments combine:
+
+**(i) Vacuum away from $\gamma_A$.** A minimal observer carries no bulk matter content outside its own worldline. Type III relational carriers ([Horizon Gauge Shell](/derivations/holography/horizon-gauge-shell) Proposition 3.1) live on the null boundary $\partial M_A$, not in the bulk. The interior $M_A \setminus (\gamma_A \cup \partial M_A)$ therefore satisfies the vacuum Einstein equations with $\Lambda$.
+
+**(ii) $\gamma_A$ does not source bulk gravity in its own projection.** The observer is the origin of its own spatial coordinate system — $\gamma_A$ sits at $r = 0$, the center of $M_A$. The stress-energy that a worldline carries in standard GR is measured externally; but in $A$'s self-projection, $\gamma_A$ is not an external body. Its U(1) phase dynamics supply boundary conditions at $r = 0$ (periodic identification with period $T_A$), not a source term in Einstein's equations. This is the minimal observer's analogue of the fact that a reference frame does not gravitate in its own frame.
+
+**(iii) Coherence already accounted for in $\Lambda$.** [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Step 8 decomposes the observer's coherence budget as $\mathcal{C}_0 = \mathcal{C}_{\text{acc}} + S$, with the horizon-bound component $S$ setting the effective cosmological constant $\Lambda_n^{\text{eff}}$. The coherence associated with $\gamma_A$'s loop closure is part of $\mathcal{C}_{\text{acc}}$ — it is spent maintaining the loop, not available to source additional geometry. The geometric signature of $A$'s own coherence content in its projection is the cosmological constant $\Lambda_A$, not a Schwarzschild mass.
+
+Together (i)–(iii) force the only free mass parameter in a static spherically symmetric vacuum solution with $\Lambda$ to vanish on the minimal observer's own projection. $\square$
+
+*Remark.* The vanishing is specific to a minimal observer's **own** projection. A heavier composite observer $B$ viewed by $A$ appears in $M_A$ as a timelike worldline $\gamma_B^{(A)}$ with partner-line boundary conditions, and from $A$'s external perspective $B$ may contribute to an effective stress-energy (Open Gap 2). The vanishing mass is an intrinsic-perspective statement.
+
+**Proof of Theorem 3.1.** Assemble the ingredients:
+
+1. *Vacuum Einstein equations with $\Lambda > 0$.* Framework commitments from [Einstein Field Equations](/derivations/spacetime/einstein-equations) and [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Theorem 2.1 ($\Lambda > 0$ Planck-bounded).
+2. *Static, spherically symmetric geometry.* Time-translation invariance within one period (Axiom 3) gives the timelike Killing vector $\partial_t$; spherical symmetry of the DAG-level antichain structure around $\gamma_A$ gives the $SO(3)$ action.
+3. *Smooth Lorentzian interior with null boundary.* Proposition 2.1 constraints (2) and (3) place $M_A \setminus \partial M_A$ in the regularity class of Birkhoff-type uniqueness theorems.
+4. *Vanishing Schwarzschild mass on $\gamma_A$.* Lemma 3.0.
+
+Apply the classical **Birkhoff theorem with cosmological constant** [Birkhoff 1923; Jebsen 1921; Wald 1984, §6.1]: *the unique (up to isometry) static spherically symmetric vacuum solution of Einstein's equations with cosmological constant $\Lambda$ is Schwarzschild–de Sitter, parameterized by mass $M \geq 0$ and the value of $\Lambda$:*
+
+$$g = -f(r)\, dt^2 + f(r)^{-1}\, dr^2 + r^2\, d\Omega^2, \qquad f(r) = 1 - \frac{2GM}{c^2 r} - \frac{\Lambda r^2}{3}.$$
+
+Ingredient (4) sets $M = 0$, reducing to the pure de Sitter static patch
+
+$$f(r) = 1 - \frac{\Lambda r^2}{3}.$$
+
+The de Sitter horizon sits at $f(r) = 0$, i.e., at $r = \sqrt{3/\Lambda}$. Ingredient 3 + Proposition 2.1 constraint (2) fix this horizon radius to $r = L_A = c T_A / 2$. Therefore
+
+$$\Lambda_A = \frac{3}{L_A^2} = \frac{12}{(c T_A)^2},$$
+
+and the metric takes the form stated in the theorem with $L_A = \sqrt{3/\Lambda_A}$. Partner worldlines $\gamma_B^{(A)}, \gamma_C^{(A)}$ enter as prescribed timelike curves with null-tangent endpoints at $r = L_A$ (Remark 3.3 below), consistent with Proposition 2.1 constraint (4). $\square$
+
+**Remark (scope of rigor).** *Ingredients 1–3 are framework commitments from already-provisional derivations; the classical Birkhoff-with-$\Lambda$ theorem is standard GR (Wald §6.1 provides a proof; the positive-$\Lambda$ extension is in Schleich–Witt 2010 and textbooks on de Sitter cosmology). The only framework-internal semi-formal piece is Lemma 3.0 — three converging arguments but not a single knockdown theorem. Theorem 3.1's status therefore rests on Lemma 3.0, and Open Gap 1 has been narrowed accordingly from "prove the full projection theorem" to "tighten Lemma 3.0's no-self-sourcing argument."*
+
+**Proposition 3.2 (Immediate consequences of Theorem 3.1).** *Given Theorem 3.1, the following are properties of $A$'s projection, intrinsic to $A$:*
 
 1. *$A$'s effective cosmological constant: $\Lambda_A = 3/L_A^2 = 12/(c T_A)^2$.*
 2. *$A$'s Gibbons–Hawking temperature: $T_{\text{GH}}^{(A)} = \hbar/(2\pi k_B L_A) = \hbar/(\pi k_B c T_A)$.*
@@ -83,13 +118,13 @@ $$g_A = -\left(1 - \frac{r^2}{L_A^2}\right) dt^2 + \left(1 - \frac{r^2}{L_A^2}\r
 
 **Remark 3.3 (Partner lines as boundary conditions, not bulk fields).** *The partners $\gamma_B^{(A)}, \gamma_C^{(A)}$ enter $M_A$ not as bulk matter fields to be solved for, but as prescribed timelike worldlines with null boundary conditions at $r = L_A$. They are the geometric expression of Type III relations between $A$ and $B, C$. The "dynamics" of $M_A$'s partner lines is not a field-theoretic problem; it is the specification of two null endpoints on the horizon sphere, equivalent to two points in $S^2 \times S^1$ (angular position × horizon traversal time). This is a radical simplification compared to field-theoretic GR.*
 
-**Remark 3.4 (Why de Sitter and not Schwarzschild-de Sitter or general static).** *The minimal observer has no bulk mass content — it is a single $U(1)$ phase loop, not a gravitating body. Its projection is therefore vacuum Einstein with a cosmological constant, and the unique spherically symmetric static vacuum solution with a null horizon at finite proper distance is de Sitter. If the minimal observer were modeled as having a localized energy-momentum content at $\gamma_A$, the projection would generalize to Schwarzschild-de Sitter. The framework's minimal observer has no such localized content in the standard sense — its "mass" is 1 bit of epistemic freedom, not a rest energy in the Einstein-equation sense — and so the de Sitter form is the natural identification at leading order. Generalizations once $\gamma_A$ carries effective stress-energy are flagged as Open Gap 2.*
+**Remark 3.4 (Why de Sitter and not Schwarzschild-de Sitter).** *Theorem 3.1 would admit the full Schwarzschild–de Sitter family if the Schwarzschild mass $M$ were non-zero. Lemma 3.0 establishes $M = 0$ on the minimal observer's own projection — three converging framework commitments (vacuum away from $\gamma_A$, no-self-sourcing of the reference worldline, and the coherence budget already accounted for in $\Lambda$) force the reduction. For composite observers viewed externally by $A$, the projection onto $M_A$ does generalize to Schwarzschild–de Sitter; those are the partner lines of Remark 3.3, and their effective stress-energy from $A$'s perspective is Open Gap 2.*
 
 ## Step 4: Level-Indexed Generalization
 
-**Proposition 4.1 (Level-indexed projection).** *Let $\mathcal{O}_n$ be an observer at bootstrap level $n$ with characteristic period $T_n$. Its projected continuous dual $M_{\mathcal{O}_n}$ has, under the direct generalization of Conjecture 3.1, de Sitter radius $L_n = c T_n / 2$ and effective cosmological constant $\Lambda_n = 12/(c T_n)^2$.*
+**Proposition 4.1 (Level-indexed projection).** *Let $\mathcal{O}_n$ be an observer at bootstrap level $n$ with characteristic period $T_n$, viewed in its own projected continuous dual. Under the direct generalization of Theorem 3.1 (Birkhoff-with-$\Lambda$ plus the level-$n$ analogue of Lemma 3.0), $M_{\mathcal{O}_n}$ is isometric to the de Sitter static patch with de Sitter radius $L_n = c T_n / 2$ and effective cosmological constant $\Lambda_n = 12/(c T_n)^2$.*
 
-**Consistency with [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Step 8.** *That derivation argues the coherence entropy decomposition $\mathcal{C}_0 = \mathcal{C}_{\text{acc}} + S$ is level-indexed — each bootstrap level projects its own effective geometry with its own $\Lambda_n^{\text{eff}}$. Proposition 4.1 supplies the geometric content of that claim: the level-indexed effective geometry is the level-$n$ de Sitter static patch.* $\square$
+**Consistency with [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Step 8.** *That derivation argues the coherence entropy decomposition $\mathcal{C}_0 = \mathcal{C}_{\text{acc}} + S$ is level-indexed — each bootstrap level projects its own effective geometry with its own $\Lambda_n^{\text{eff}}$. Proposition 4.1 supplies the geometric content of that claim: the level-indexed effective geometry is the level-$n$ de Sitter static patch. The Lemma 3.0 argument generalizes level-by-level — at each bootstrap level, the observer's own worldline does not source bulk gravity in its own projection because the worldline's coherence content is absorbed into $\Lambda_n^{\text{eff}}$ for that level.* $\square$
 
 **Remark 4.2 (Planck and cosmic limits).** *At the Planck end: minimal observer with $T_0 \sim T_P = \ell_P/c$, giving $L_0 \sim \ell_P$ and $\Lambda_0 \sim 1/\ell_P^2 \sim 10^{70}\,\text{m}^{-2}$ (Planck-scale $\Lambda$). At the cosmic end: horizon-scale observer with $T_N \sim H^{-1}$, giving $L_N \sim c/H$ and $\Lambda_N \sim H^2 \sim 10^{-52}\,\text{m}^{-2}$ (observed cosmological $\Lambda$). Ratio: $\Lambda_0/\Lambda_N \sim 10^{122}$ — the canonical cosmological constant hierarchy. In the observer-projected framing this ratio is not a single quantity to be explained but a quotient of two observer-projected quantities at very different levels.*
 
@@ -138,12 +173,15 @@ $$\rho_{AC} = \rho_{BC} \circ \rho_{AB}$$
 **Structural argument (not rigorous, but grounded in existing results):**
 
 - Proposition 2.1 (four intrinsic constraints on $M_A$): each constraint is derived from an established framework result (Axiom 3 for periodicity, Axiom 2 for boundary, [Horizon Gauge Shell](/derivations/holography/horizon-gauge-shell) Prop 2.2 for null horizon, [Multiplicity](/derivations/minimal-observer/multiplicity) Theorem 7.2 for partner count).
-- Proposition 4.1 (level-indexed projection): direct generalization of Conjecture 3.1 to level-$n$ periods; consistent with [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Step 8.
 - Proposition 6.1 (level-mismatched observers cannot glue to single dS): elementary isometric-embedding obstruction.
+
+**Semi-formal (rigorous modulo one framework-internal identification):**
+
+- Theorem 3.1 (minimal-observer projection as static dS patch): proved by applying the classical Birkhoff-with-$\Lambda$ theorem (standard GR) to the framework's commitments (Einstein equations in projection, $\Lambda > 0$, spherical symmetry, static, null horizon at prescribed radius), then setting the Schwarzschild mass $M = 0$ via Lemma 3.0. The one remaining semi-formal piece is Lemma 3.0 (no-self-sourcing of $\gamma_A$ in its own projection), supported by three converging arguments but not by a single knockdown theorem. See narrowed Open Gap 1.
+- Proposition 4.1 (level-indexed projection): direct generalization of Theorem 3.1 to level-$n$ periods; consistent with [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Step 8. Inherits the semi-formal status of Lemma 3.0 at each level.
 
 **Conjectural (central claims, unproved):**
 
-- Conjecture 3.1 (minimal-observer projection as static dS patch): structurally motivated but requires a uniqueness theorem for static spherically symmetric null-bounded Lorentzian patches with given horizon radius. See Open Gap 1.
 - Conjecture 5.3 (sheaf property of $M$): requires categorical-semantics formulation of covers on $\mathbf{Obs}$. See Open Gap 3.
 - Proposition 6.3 (cosmological constant hierarchy as obstruction class): qualitatively compelling but without a quantitative match to the observed value. See Open Gap 4.
 
@@ -160,9 +198,9 @@ $$\rho_{AC} = \rho_{BC} \circ \rho_{AB}$$
 
 ## Open Gaps
 
-1. **Minimal-observer projection theorem.** Conjecture 3.1 needs a rigorous proof: given the four intrinsic constraints of Proposition 2.1 plus spherical symmetry and time-translation invariance, show that $M_A$ is isometric to the static patch of de Sitter space with $L_A = c T_A / 2$. A proof requires a uniqueness theorem for static spherically symmetric null-bounded Lorentzian patches with prescribed horizon radius. *Difficulty: MODERATE.* Likely tools: Birkhoff-style uniqueness arguments adapted to finite static patches; Eddington–Finkelstein coordinates near the horizon; standard vacuum Einstein with $\Lambda$.
+1. **Tighten Lemma 3.0's no-self-sourcing argument.** Theorem 3.1 now invokes Birkhoff-with-$\Lambda$ (classical, rigorous) plus Lemma 3.0 ($M_A^{\text{Schw}} = 0$ on the minimal observer's own projection). Lemma 3.0 is argued from three converging commitments — vacuum away from $\gamma_A$, $\gamma_A$ not sourcing bulk gravity in its own projection, and the coherence budget being absorbed into $\Lambda$. A single rigorous knockdown argument would replace the three-way convergence with a direct proof. Candidate formal routes: (a) an ADM-mass computation on a pure de Sitter static patch showing the ADM mass at the horizon vanishes identically; (b) a self-reference argument showing the reference-worldline stress-energy is gauge-equivalent to zero in the observer's own frame; (c) a bootstrap-cohomology argument tying the vanishing to the coherence partition $\mathcal{C}_0 = \mathcal{C}_{\text{acc}} + S$ of [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Step 8. *Difficulty: MODERATE.* Closing this gap promotes Theorem 3.1 from semi-formal to fully rigorous.
 
-2. **Generalization to non-minimal observers with localized stress-energy.** A composite observer $\mathcal{O}_n$ at higher bootstrap level may carry effective stress-energy along $\gamma_{\mathcal{O}_n}$. The projection generalizes from pure de Sitter to Schwarzschild–de Sitter (or more general dressed geometries). Specifying the effective stress-energy as a function of bootstrap level and working out the corresponding projected geometry is open. *Difficulty: MODERATE.*
+2. **Generalization to non-minimal observers with localized stress-energy.** A composite observer $\mathcal{O}_n$ at higher bootstrap level, viewed externally from a different observer's projection, carries effective stress-energy along $\gamma_{\mathcal{O}_n}^{(A)}$. That external projection generalizes from pure de Sitter (the observer's own projection, Proposition 4.1) to Schwarzschild–de Sitter. Specifying the effective stress-energy as a function of bootstrap level and spatial separation, and working out the corresponding projected geometry, is open. This is distinct from Open Gap 1: Gap 1 concerns the observer's own projection; Gap 2 concerns what the observer looks like from another observer's projection. *Difficulty: MODERATE.*
 
 3. **Sheaf property of $M$.** Conjecture 5.3 requires a categorical-semantics setup: what is a cover on $\mathbf{Obs}$? what topology does $\mathbf{Obs}$ carry? Given a definition, does local agreement on Type III relations glue uniquely to a global observer-indexed projection? *Difficulty: HARD.* Likely tools: Grothendieck topologies on $\mathbf{Obs}$; sheaves of Lorentzian patches; possibly $(\infty, 1)$-categorical refinements if strict equality on overlaps is too restrictive.
 
