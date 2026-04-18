@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-18T01:22:31.419Z",
+    "generatedAt": "2026-04-18T01:54:24.647Z",
     "derivationCount": 83,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -9,15 +9,15 @@
   "stats": {
     "byStatus": {
       "derived": 27,
-      "provisional": 51,
-      "draft": 5
+      "provisional": 55,
+      "draft": 1
     },
     "derivationCount": 83,
     "predictionCount": 12,
     "edgeCount": 275,
-    "formalObjectCount": 1209,
-    "openGapCount": 280,
-    "upgradeEligibleCount": 2,
+    "formalObjectCount": 1211,
+    "openGapCount": 279,
+    "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
   },
@@ -4853,7 +4853,7 @@
       "id": "foundation/bootstrap-fixed-point-existence",
       "filePath": "site/src/content/derivations/foundation/bootstrap-fixed-point-existence.md",
       "title": "Bootstrap Fixed-Point Existence",
-      "status": "draft",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "foundation",
       "tags": [
@@ -5024,11 +5024,7 @@
         "propositions": []
       },
       "upgradeEligible": false,
-      "upgradeBlockers": [
-        "foundation/observer-level-stack-compactness",
-        "foundation/minimum-bootstrap-closure",
-        "foundation/observer-holographic-equivalence"
-      ]
+      "upgradeBlockers": []
     },
     "foundation/coherence-lagrangian": {
       "id": "foundation/coherence-lagrangian",
@@ -5741,7 +5737,7 @@
       "id": "foundation/minimum-bootstrap-closure",
       "filePath": "site/src/content/derivations/foundation/minimum-bootstrap-closure.md",
       "title": "Minimum Bootstrap Closure",
-      "status": "draft",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "foundation",
       "tags": [
@@ -5942,15 +5938,13 @@
         "propositions": []
       },
       "upgradeEligible": false,
-      "upgradeBlockers": [
-        "foundation/observer-holographic-equivalence"
-      ]
+      "upgradeBlockers": []
     },
     "foundation/observer-holographic-equivalence": {
       "id": "foundation/observer-holographic-equivalence",
       "filePath": "site/src/content/derivations/foundation/observer-holographic-equivalence.md",
       "title": "Observer Holographic Equivalence",
-      "status": "draft",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "foundation",
       "tags": [
@@ -6013,7 +6007,7 @@
           "type": "Proposition",
           "id": "4.1",
           "name": "Null portions carry integer content",
-          "statementPreview": "Let Sigma be any surface embedded in MA, with null decomposition Sigma = Sigmanull sqcup Sigmanon-null. The encoding ..."
+          "statementPreview": "Let Sigma be any embedded hypersurface in MA, with causal decomposition Sigma = Sigmanull sqcup Sigmanon-null. Let va..."
         },
         {
           "type": "Corollary",
@@ -6044,6 +6038,18 @@
           "id": "8.1",
           "name": "Obstruction class is combinatorial",
           "statementPreview": "The gluing obstruction of the observer-indexed spacetime sheaf ([Observer-Projected Spacetime](/derivations/foundatio..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "null portions classification",
+          "statementPreview": "is proved rigorously in Step 4. The proof uses: (a) Axiom 3's commitment dvarphi/dtau = omega; (b) the classical fact..."
+        },
+        {
+          "type": "Corollary",
+          "id": "4.2",
+          "name": "distinguished status of $\\partial M_A$",
+          "statementPreview": ": direct application of Proposition 4.1 to the entirely-null horizon."
         }
       ],
       "structuralPostulates": [],
@@ -6057,11 +6063,6 @@
           "number": 2,
           "title": "Unitary equivalence of time-like and space-like descriptions.",
           "description": "Construct the explicit unitary map U: RSigma leftrightarrow KXi identifying time-like and space-like holographic encodings. This is the framework's version of state-path-integral duality in QFT. *Diff"
-        },
-        {
-          "number": 3,
-          "title": "Classification of phase behavior by causal character.",
-          "description": "Prove Proposition 4.1 rigorously: any null portion of a surface carries only integer encoding, any timelike or spacelike portion carries continuous phase. Requires a structural argument that proper-ti"
         },
         {
           "number": 4,
@@ -6183,14 +6184,14 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "foundation/observer-level-stack-compactness": {
       "id": "foundation/observer-level-stack-compactness",
       "filePath": "site/src/content/derivations/foundation/observer-level-stack-compactness.md",
       "title": "Observer-Level Stack Compactness",
-      "status": "draft",
+      "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "foundation",
       "tags": [
@@ -6318,9 +6319,7 @@
         "propositions": []
       },
       "upgradeEligible": false,
-      "upgradeBlockers": [
-        "foundation/observer-holographic-equivalence"
-      ]
+      "upgradeBlockers": []
     },
     "foundation/observer-projected-spacetime": {
       "id": "foundation/observer-projected-spacetime",
@@ -26142,6 +26141,20 @@
       "fullRef": "foundation/observer-holographic-equivalence:Corollary 8.1"
     },
     {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "null portions classification",
+      "fullRef": "foundation/observer-holographic-equivalence:Proposition 4.1"
+    },
+    {
+      "derivationId": "foundation/observer-holographic-equivalence",
+      "type": "Corollary",
+      "id": "4.2",
+      "name": "distinguished status of $\\partial M_A$",
+      "fullRef": "foundation/observer-holographic-equivalence:Corollary 4.2"
+    },
+    {
       "derivationId": "foundation/observer-level-stack-compactness",
       "type": "Proposition",
       "id": "1.1",
@@ -32613,56 +32626,56 @@
     },
     {
       "derivationId": "foundation/bootstrap-fixed-point-existence",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Rigorous specification of $\\mathcal{R}$.",
       "description": "The key prerequisite (P3) — Scott continuity of R — cannot be checked rigorously until R is rigorously specified. [Minimum Bootstrap Closure](/derivations/foundation/minimum-bootstrap-closure) Open Ga"
     },
     {
       "derivationId": "foundation/bootstrap-fixed-point-existence",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Scott continuity of $\\mathcal{R}$.",
       "description": "Once R is rigorously specified, check that it is Scott-continuous on HA. Informal Propositions 2.1 and 2.2 argue this plausibly; a rigorous check is the content of this gap. Likely tools: categorical "
     },
     {
       "derivationId": "foundation/bootstrap-fixed-point-existence",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Stack compactness rigor.",
       "description": "Prerequisite (P1) — compactness of HA — inherits [Observer-Level Stack Compactness](/derivations/foundation/observer-level-stack-compactness) Open Gaps 1–7. Of these, Open Gap 1 (fibration continuity)"
     },
     {
       "derivationId": "foundation/bootstrap-fixed-point-existence",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Uniqueness of the fixed point.",
       "description": "Kleene gives the *least* fixed point U*; this derivation does not establish that U* is the unique fixed point in HA. Uniqueness would require an additional argument (rigidity, cardinality, or a direct"
     },
     {
       "derivationId": "foundation/bootstrap-fixed-point-existence",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Iteration initial conditions.",
       "description": "The Kleene iteration from bot = emptyset may be trivial (Remark 4.2); a non-trivial seed is needed to generate structure. Identifying the correct seed — probably a minimum multiplicity-3 configuration"
     },
     {
       "derivationId": "foundation/bootstrap-fixed-point-existence",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 6,
       "title": "Extracting physical content.",
       "description": "The Kleene fixed point U* is an abstract object in a dcpo. Extracting specific physical predictions (Lambda, coupling constants, particle masses) from U* requires understanding its internal structure,"
     },
     {
       "derivationId": "foundation/bootstrap-fixed-point-existence",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 7,
       "title": "Compatibility with observer-indexing.",
       "description": "The theorem is stated for a single observer A's stack HA. Under the observer-indexed spacetime sheaf picture ([Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime)), the"
     },
     {
       "derivationId": "foundation/bootstrap-fixed-point-existence",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 8,
       "title": "Alternative fixed-point theorems.",
       "description": "If Scott continuity proves intractable, alternative theorems may give existence under different hypotheses: Schauder (compact convex + continuous), Kakutani (compact convex + upper-semicontinuous set-"
@@ -32753,154 +32766,147 @@
     },
     {
       "derivationId": "foundation/minimum-bootstrap-closure",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Rigorous specification of $\\mathcal{R}$.",
       "description": "Proposition 2.2 argues informally that L is the skeletal form of R. A rigorous specification of R — its domain, codomain, action on all structural components of an observer network — is prerequisite f"
     },
     {
       "derivationId": "foundation/minimum-bootstrap-closure",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Weighted-$L$ fixed point.",
       "description": "Extend L to operate on graphs with integer edge weights representing coherence quanta per relation. Identify weight configurations on K3 (three integer weights nAB, nBC, nCA) for which weighted-L has "
     },
     {
       "derivationId": "foundation/minimum-bootstrap-closure",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Level-indexed extension.",
       "description": "Extend L to act on category-valued graphs where nodes carry a level index n in 1, 2, 3 and edges carry a level-transition structure. Ask whether a level-indexed triangle or a more elaborate structure "
     },
     {
       "derivationId": "foundation/minimum-bootstrap-closure",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Dynamical-$L$.",
       "description": "Extend L to carry U(1) phase dynamics at each node (Axiom 3 loop closure). The fixed point is then a *dynamical* network, not just a static graph. Does the triangle with specific phase relations (e.g."
     },
     {
       "derivationId": "foundation/minimum-bootstrap-closure",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Categorical fixed-point theorem.",
       "description": "Identify a category in which R is Scott-continuous and apply a general fixed-point theorem (Scott's continuous fixpoint, or Lambek's lemma for initial algebras) to establish existence abstractly. This"
     },
     {
       "derivationId": "foundation/minimum-bootstrap-closure",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 6,
       "title": "Convergence from a seed.",
       "description": "Start with U0 = K1 (a single observer, trivially not closed) or U0 = K2 (two observers, insufficient for C5). Iterate Un+1 = R(Un, Un) with an appropriate closure map bringing the result back into com"
     },
     {
       "derivationId": "foundation/minimum-bootstrap-closure",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 7,
       "title": "Connecting to physical content.",
       "description": "The triangle result is structural; it does not yet produce any observable quantity (Lambda, coupling constants, masses). Extending the fixed point to carry the framework's integer level structure (Ope"
     },
     {
       "derivationId": "foundation/observer-holographic-equivalence",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Rigorous reconstruction theorems (Theses A and A').",
       "description": "Prove that for any enclosing surface Sigma MA, the sequenced crossing record RSigma(A, tk) reconstructs A's state at tk; and for any Cauchy slice Xi, the configuration KXi(A, tk) reconstructs the stat"
     },
     {
       "derivationId": "foundation/observer-holographic-equivalence",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Unitary equivalence of time-like and space-like descriptions.",
       "description": "Construct the explicit unitary map U: RSigma leftrightarrow KXi identifying time-like and space-like holographic encodings. This is the framework's version of state-path-integral duality in QFT. *Diff"
     },
     {
       "derivationId": "foundation/observer-holographic-equivalence",
-      "derivationStatus": "draft",
-      "number": 3,
-      "title": "Classification of phase behavior by causal character.",
-      "description": "Prove Proposition 4.1 rigorously: any null portion of a surface carries only integer encoding, any timelike or spacelike portion carries continuous phase. Requires a structural argument that proper-ti"
-    },
-    {
-      "derivationId": "foundation/observer-holographic-equivalence",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Quantitative coarse-graining maps.",
       "description": "The phase-resolution ladder (Proposition 6.1) is qualitative. A quantitative account — what information is lost as an enclosing surface moves outward, and how integer invariants accumulate — would for"
     },
     {
       "derivationId": "foundation/observer-holographic-equivalence",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Formal statement of inter-level integer restriction.",
       "description": "Corollary 7.1 asserts that bootstrap composition operates only on integer data across levels. Formalizing this requires specifying the integer-only data type (perhaps a category of integer-augmented o"
     },
     {
       "derivationId": "foundation/observer-holographic-equivalence",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 6,
       "title": "Combinatorial obstruction class computation.",
       "description": "Corollary 8.1 identifies the obstruction class as combinatorial. A computation: specify the simplicial / tensor-network / K-theoretic structure on the observer category, identify the cocycle, compute "
     },
     {
       "derivationId": "foundation/observer-holographic-equivalence",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 7,
       "title": "Shared-horizon theorem for same-level observers.",
       "description": "State and prove: for two level-n observers A, B at spatial separation d ll Ln within each other's bulk, the horizon integer data R MA and R MB agree to order (d/Ln)2. Corollary: observer identity (the"
     },
     {
       "derivationId": "foundation/observer-holographic-equivalence",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 8,
       "title": "Connection to Gibbons–Hawking thermodynamics.",
       "description": "Thesis B identifies horizon thermality as phase-decoherence on a null surface. A derivation that produces the Gibbons–Hawking temperature TGH(A) = hbar/(2pi kB LA) directly from the phase-discard stru"
     },
     {
       "derivationId": "foundation/observer-level-stack-compactness",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Fibration continuity.",
       "description": "Informal Proposition 3.1 argues continuity informally via Fisher metric smoothness, integer quantization, and level stratification. A rigorous proof requires (a) specifying the exact topology on the f"
     },
     {
       "derivationId": "foundation/observer-level-stack-compactness",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 2,
       "title": "Rigorous formulation of the fibered hierarchy.",
       "description": "The total space HA is described here informally as \"the sub-observer hierarchy fibered over coherence values.\" A rigorous formulation in an appropriate category (bundles of posets, stratified Lie grou"
     },
     {
       "derivationId": "foundation/observer-level-stack-compactness",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Compactness-preserving maps.",
       "description": "Even if HA is compact, the bootstrap map R must be continuous and map HA to itself (or a compact subset) for the fixed-point theorems to apply. Formalizing R as an endofunctor of HA and verifying cont"
     },
     {
       "derivationId": "foundation/observer-level-stack-compactness",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Convexity for Schauder.",
       "description": "Schauder's theorem requires compact *convex* sets. The observer-level stack is not obviously convex — coherence value is a scalar and the fibers are discrete. A convex-hull construction or an alternat"
     },
     {
       "derivationId": "foundation/observer-level-stack-compactness",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Cross-observer compactness.",
       "description": "The theorem is stated observer-relatively: each HA is compact. For the fixed-point to yield a universal U, we need a compatibility condition across observers — either compactness of a total stack that"
     },
     {
       "derivationId": "foundation/observer-level-stack-compactness",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 6,
       "title": "Topology choice affects what \"compact\" means.",
       "description": "Different topologies on HA give different compactness statements. The \"right\" topology is the one in which R is continuous and the fixed-point theorem applies — this choice is not yet pinned down. Pre"
     },
     {
       "derivationId": "foundation/observer-level-stack-compactness",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 7,
       "title": "Dependence on [Area Scaling] postulates.",
       "description": "Proposition 1.1 and 2.1 both rely on the holographic bound. [Area Scaling](/derivations/holography/area-scaling) itself carries Structural Postulate S1 (area-coherence saturation). Any promotion of S1"
@@ -34218,46 +34224,13 @@
   "upgradeAnalysis": {
     "eligible": [
       {
-        "id": "foundation/observer-holographic-equivalence",
-        "currentStatus": "draft",
-        "gapCount": 8,
-        "formalObjectCount": 11
-      },
-      {
         "id": "thermodynamics-ext/biological-non-ergodicity",
         "currentStatus": "draft",
         "gapCount": 5,
         "formalObjectCount": 8
       }
     ],
-    "blocked": [
-      {
-        "id": "foundation/bootstrap-fixed-point-existence",
-        "currentStatus": "draft",
-        "blockedBy": [
-          "foundation/observer-level-stack-compactness",
-          "foundation/minimum-bootstrap-closure",
-          "foundation/observer-holographic-equivalence"
-        ],
-        "reason": "Depends on 3 draft derivation(s)"
-      },
-      {
-        "id": "foundation/minimum-bootstrap-closure",
-        "currentStatus": "draft",
-        "blockedBy": [
-          "foundation/observer-holographic-equivalence"
-        ],
-        "reason": "Depends on 1 draft derivation(s)"
-      },
-      {
-        "id": "foundation/observer-level-stack-compactness",
-        "currentStatus": "draft",
-        "blockedBy": [
-          "foundation/observer-holographic-equivalence"
-        ],
-        "reason": "Depends on 1 draft derivation(s)"
-      }
-    ]
+    "blocked": []
   },
   "warnings": []
 }

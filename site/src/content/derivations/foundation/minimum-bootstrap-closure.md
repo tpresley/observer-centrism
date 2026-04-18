@@ -1,6 +1,6 @@
 ---
 title: "Minimum Bootstrap Closure"
-status: "draft"
+status: "provisional"
 dependsOn: ["axioms/observer-definition", "axioms/loop-closure", "minimal-observer/structure", "minimal-observer/multiplicity", "interactions/relational-invariants", "interactions/three-types", "interactions/bootstrap", "foundation/observer-holographic-equivalence"]
 enablesDerivation: []
 tags: ["foundation", "structure", "topology"]

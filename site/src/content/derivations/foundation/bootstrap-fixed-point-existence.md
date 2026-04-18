@@ -1,6 +1,6 @@
 ---
 title: "Bootstrap Fixed-Point Existence"
-status: "draft"
+status: "provisional"
 dependsOn: ["axioms/coherence-conservation", "interactions/bootstrap", "foundation/observer-level-stack-compactness", "foundation/minimum-bootstrap-closure", "foundation/observer-projected-spacetime", "foundation/observer-holographic-equivalence"]
 enablesDerivation: []
 tags: ["foundation", "structure", "topology"]

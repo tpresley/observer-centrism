@@ -466,25 +466,25 @@
       "id": "foundation/observer-holographic-equivalence",
       "title": "Observer Holographic Equivalence",
       "group": "foundation",
-      "status": "draft"
+      "status": "provisional"
     },
     {
       "id": "foundation/minimum-bootstrap-closure",
       "title": "Minimum Bootstrap Closure",
       "group": "foundation",
-      "status": "draft"
+      "status": "provisional"
     },
     {
       "id": "foundation/observer-level-stack-compactness",
       "title": "Observer-Level Stack Compactness",
       "group": "foundation",
-      "status": "draft"
+      "status": "provisional"
     },
     {
       "id": "foundation/bootstrap-fixed-point-existence",
       "title": "Bootstrap Fixed-Point Existence",
       "group": "foundation",
-      "status": "draft"
+      "status": "provisional"
     },
     {
       "id": "cosmology/cyclic-cosmology",

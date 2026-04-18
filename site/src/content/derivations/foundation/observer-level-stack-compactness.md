@@ -1,6 +1,6 @@
 ---
 title: "Observer-Level Stack Compactness"
-status: "draft"
+status: "provisional"
 dependsOn: ["axioms/coherence-conservation", "axioms/observer-definition", "minimal-observer/structure", "holography/area-scaling", "cosmology/observer-loop-viability", "thermodynamics-ext/fisher-metric", "foundation/observer-projected-spacetime", "foundation/observer-holographic-equivalence"]
 enablesDerivation: []
 tags: ["foundation", "structure", "topology"]
