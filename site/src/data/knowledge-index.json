@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-04-18T08:17:22.854Z",
-    "derivationCount": 83,
+    "generatedAt": "2026-04-18T10:29:30.341Z",
+    "derivationCount": 84,
     "predictionCount": 12,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -9,14 +9,14 @@
   "stats": {
     "byStatus": {
       "derived": 27,
-      "provisional": 55,
+      "provisional": 56,
       "draft": 1
     },
-    "derivationCount": 83,
+    "derivationCount": 84,
     "predictionCount": 12,
-    "edgeCount": 280,
-    "formalObjectCount": 1218,
-    "openGapCount": 281,
+    "edgeCount": 286,
+    "formalObjectCount": 1229,
+    "openGapCount": 287,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -740,6 +740,7 @@
         "foundation/observer-projected-spacetime",
         "gauge/electromagnetism",
         "holography/horizon-gauge-shell",
+        "interactions/moufang-loop-phase-closure",
         "minimal-observer/structure",
         "spacetime/speed-of-light",
         "thermodynamics-ext/memory-persistence-tradeoff",
@@ -1102,6 +1103,18 @@
             "context": "Loop Closure"
           },
           {
+            "source": "interactions/moufang-loop-phase-closure",
+            "context": "Axiom 3 (Loop Closure)"
+          },
+          {
+            "source": "interactions/moufang-loop-phase-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "interactions/moufang-loop-phase-closure",
+            "context": "Axiom 3"
+          },
+          {
             "source": "interactions/relational-invariants",
             "context": "Operational Grounding"
           },
@@ -1227,6 +1240,7 @@
         "foundation/observer-level-stack-compactness",
         "foundation/observer-projected-spacetime",
         "holography/horizon-gauge-shell",
+        "interactions/moufang-loop-phase-closure",
         "minimal-observer/multiplicity",
         "minimal-observer/structure",
         "quantum/observer-relative-objectivity",
@@ -5833,6 +5847,10 @@
           {
             "source": "holography/horizon-gauge-shell",
             "context": "Knot-Theoretic Bootstrap"
+          },
+          {
+            "source": "interactions/moufang-loop-phase-closure",
+            "context": "Knot-Theoretic Bootstrap"
           }
         ]
       },
@@ -6082,7 +6100,8 @@
         "foundation/bootstrap-fixed-point-existence",
         "foundation/knot-theoretic-bootstrap",
         "foundation/minimum-bootstrap-closure",
-        "foundation/observer-level-stack-compactness"
+        "foundation/observer-level-stack-compactness",
+        "interactions/moufang-loop-phase-closure"
       ],
       "steps": [
         {
@@ -6357,6 +6376,10 @@
           },
           {
             "source": "foundation/observer-level-stack-compactness",
+            "context": "Observer Holographic Equivalence"
+          },
+          {
+            "source": "interactions/moufang-loop-phase-closure",
             "context": "Observer Holographic Equivalence"
           }
         ]
@@ -11633,7 +11656,8 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
-        "foundation/knot-theoretic-bootstrap"
+        "foundation/knot-theoretic-bootstrap",
+        "interactions/moufang-loop-phase-closure"
       ],
       "steps": [
         {
@@ -11893,6 +11917,10 @@
             "context": "Bootstrap Division Algebras"
           },
           {
+            "source": "interactions/moufang-loop-phase-closure",
+            "context": "Bootstrap Division Algebras"
+          },
+          {
             "source": "particles/mass-hierarchy",
             "context": "Bootstrap $\\to$ Division Algebras"
           }
@@ -11951,6 +11979,7 @@
         "gauge/color-force",
         "holography/horizon-gauge-shell",
         "interactions/bootstrap-division-algebras",
+        "interactions/moufang-loop-phase-closure",
         "particles/mass-hierarchy",
         "spacetime/einstein-equations",
         "spacetime/gravitational-constant",
@@ -12358,6 +12387,198 @@
             "context": "Bootstrap"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "interactions/moufang-loop-phase-closure": {
+      "id": "interactions/moufang-loop-phase-closure",
+      "filePath": "site/src/content/derivations/interactions/moufang-loop-phase-closure.md",
+      "title": "Moufang-Loop Phase Closure",
+      "status": "provisional",
+      "rigorLevel": "semi-formal",
+      "group": "interactions",
+      "tags": [
+        "foundation",
+        "bootstrap",
+        "algebra",
+        "topology"
+      ],
+      "summary": "Axiom 3 loop closure requires the phase space at each bootstrap level to admit a closed multiplication — a Moufang-loop structure for n = 3 (octonions) or a Lie group structure for n ≤ 2 (reals, complex, quaternions). This is available exactly for the four real composition algebras ℝ, ℂ, ℍ, 𝕆 (Hurwitz's theorem) and fails at the sedenions 𝕊 because their zero divisors prevent the unit sphere from being closed under multiplication. The bootstrap therefore terminates at 𝕆 as a consequence of Axiom 3 consistency, independent of — and complementary to — the composition-based argument of Bootstrap Division Algebras. A corollary: at each bootstrap level, the phase trajectory admits a ℤ-valued homotopy class invariant (winding at level 1, instanton at levels 2 and 3), giving timelike surfaces at bootstrap-integer scales integer content that complements the Proposition 4.1 null-surface classification of Observer Holographic Equivalence.",
+      "lastUpdated": "2026-04-18",
+      "dependsOn": [
+        "axioms/loop-closure",
+        "axioms/observer-definition",
+        "minimal-observer/structure",
+        "interactions/bootstrap",
+        "interactions/bootstrap-division-algebras",
+        "foundation/observer-holographic-equivalence"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Axiom 3's Operational Content for Phase Dynamics"
+        },
+        {
+          "number": 2,
+          "title": "Moufang-Loop and Lie-Group Structures on Unit Spheres"
+        },
+        {
+          "number": 3,
+          "title": "Hurwitz's Theorem and the Composition-Algebra Classification"
+        },
+        {
+          "number": 4,
+          "title": "Sedenion Zero Divisors Break Axiom 3"
+        },
+        {
+          "number": 5,
+          "title": "Bootstrap Termination from Axiom 3 Consistency"
+        },
+        {
+          "number": 6,
+          "title": "Bootstrap-Scale Integer Invariants"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Proposition",
+          "id": "1.1",
+          "name": "Phase values live in a group-like structure",
+          "statementPreview": "For the flow phitau to satisfy Axiom 3's composition property in a way compatible with the bootstrap's algebraic stru..."
+        },
+        {
+          "type": "Definition",
+          "id": "2.1",
+          "name": "Moufang loop and Lie group",
+          "statementPreview": "A Moufang loop is a (possibly non-associative) quasigroup with identity, satisfying the Moufang identities (xy)(zx) =..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "Unit spheres in composition algebras are Moufang loops or Lie groups",
+          "statementPreview": "For n 2, the unit sphere An* is a Lie group: R* = pm 1 (trivially), C* = U(1) = S1, H* = SU(2) = S3. For n = 3, the u..."
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "Hurwitz, 1898",
+          "statementPreview": "The only finite-dimensional unital real composition algebras — algebras A with multiplicative norm |xy| = |x||y| — ar..."
+        },
+        {
+          "type": "Corollary",
+          "id": "3.2",
+          "name": "Unit-sphere closure classification",
+          "statementPreview": "The real Cayley–Dickson algebras An whose unit spheres are closed under multiplication are exactly A1 = C, A2 = H, A3..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Explicit sedenion zero divisor",
+          "statementPreview": "In the sedenion algebra S, there exist unit-norm elements a, b in S* with a b = 0.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.2",
+          "name": "Axiom 3 inconsistent at sedenion level",
+          "statementPreview": "If a hypothetical level-4 observer had its phase space Sigma4 associated with sedenions S, with phase dynamics realiz..."
+        },
+        {
+          "type": "Theorem",
+          "id": "5.1",
+          "name": "Bootstrap termination at $\\mathbb{O}$",
+          "statementPreview": "The Cayley–Dickson bootstrap, as constrained by Axiom 3, terminates at A3 = O. No level-4 observer can satisfy Axiom ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Integer invariants from homotopy",
+          "statementPreview": "For each bootstrap level n in 1, 2, 3, the phase trajectory phi: S1 Gn (closing after one period Tn by Axiom 3) admit..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.2",
+          "name": "No integer invariant at sedenion level",
+          "statementPreview": "At sedenion level (if it existed), no Z-valued homotopy invariant analogous to the above is available, because no Lie..."
+        },
+        {
+          "type": "Corollary",
+          "id": "6.3",
+          "name": "Bootstrap-scale integer content for timelike surfaces",
+          "statementPreview": "Let Sigma be a timelike surface in MA enclosing observer A at bootstrap level n 3, such that Sigma encloses a traject..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Formal statement of \"Axiom 3 requires unit-sphere closure.\"",
+          "description": "Proposition 1.1 is argued from the natural identification of the phase space with the unit sphere of the level's algebra. A fully rigorous statement would specify: (a) how the state space Sigman is co"
+        },
+        {
+          "number": 2,
+          "title": "Topology of the sedenion zero-divisor locus.",
+          "description": "Proposition 4.2 argues that continuous phase trajectories cannot avoid the sedenion zero-divisor locus. Making this rigorous requires characterizing the zero-divisor locus as a subset of S15 S15 and s"
+        },
+        {
+          "number": 3,
+          "title": "Rigorous formulation of Corollary 6.3.",
+          "description": "The statement \"timelike surfaces at bootstrap-integer scales carry integer content via homotopy classes\" needs a precise definition of \"enclosing a trajectory over integer periods\" and how the enclose"
+        },
+        {
+          "number": 4,
+          "title": "Does this give new consequences?",
+          "description": "The bootstrap termination is equivalent to [Bootstrap Division Algebras](/derivations/interactions/bootstrap-division-algebras). The integer invariants at each level are equivalent to the framework's "
+        },
+        {
+          "number": 5,
+          "title": "Generalized Cayley–Dickson constructions.",
+          "description": "The Cayley–Dickson construction is one specific way to build algebras; others (e.g., twisted Cayley–Dickson with non-trivial norm, alternative algebraic towers) could in principle be consistent with s"
+        },
+        {
+          "number": 6,
+          "title": "Higher-arity generalizations.",
+          "description": "The Moufang-loop structure at O is the minimal weakening from Lie groups (associativity lost). Could the framework in principle admit structures weaker than Moufang loops (e.g., general quasigroups) a"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": true,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "axioms/loop-closure",
+            "context": "Axiom 3 (Loop Closure)"
+          },
+          {
+            "target": "interactions/bootstrap-division-algebras",
+            "context": "Bootstrap Division Algebras"
+          },
+          {
+            "target": "foundation/observer-holographic-equivalence",
+            "context": "Observer Holographic Equivalence"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "foundation/knot-theoretic-bootstrap",
+            "context": "Knot-Theoretic Bootstrap"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Axiom 3"
+          }
+        ],
+        "incoming": []
       },
       "leanVerification": {
         "hasProofs": false,
@@ -13810,6 +14031,7 @@
         "dimensions/three-dimensions",
         "foundation/minimum-bootstrap-closure",
         "foundation/observer-level-stack-compactness",
+        "interactions/moufang-loop-phase-closure",
         "minimal-observer/multiplicity",
         "thermodynamics-ext/biological-non-ergodicity",
         "thermodynamics-ext/memory-persistence-tradeoff",
@@ -28527,6 +28749,83 @@
       "fullRef": "interactions/bootstrap:Corollary 7.3"
     },
     {
+      "derivationId": "interactions/moufang-loop-phase-closure",
+      "type": "Proposition",
+      "id": "1.1",
+      "name": "Phase values live in a group-like structure",
+      "fullRef": "interactions/moufang-loop-phase-closure:Proposition 1.1"
+    },
+    {
+      "derivationId": "interactions/moufang-loop-phase-closure",
+      "type": "Definition",
+      "id": "2.1",
+      "name": "Moufang loop and Lie group",
+      "fullRef": "interactions/moufang-loop-phase-closure:Definition 2.1"
+    },
+    {
+      "derivationId": "interactions/moufang-loop-phase-closure",
+      "type": "Proposition",
+      "id": "2.2",
+      "name": "Unit spheres in composition algebras are Moufang loops or Lie groups",
+      "fullRef": "interactions/moufang-loop-phase-closure:Proposition 2.2"
+    },
+    {
+      "derivationId": "interactions/moufang-loop-phase-closure",
+      "type": "Theorem",
+      "id": "3.1",
+      "name": "Hurwitz, 1898",
+      "fullRef": "interactions/moufang-loop-phase-closure:Theorem 3.1"
+    },
+    {
+      "derivationId": "interactions/moufang-loop-phase-closure",
+      "type": "Corollary",
+      "id": "3.2",
+      "name": "Unit-sphere closure classification",
+      "fullRef": "interactions/moufang-loop-phase-closure:Corollary 3.2"
+    },
+    {
+      "derivationId": "interactions/moufang-loop-phase-closure",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Explicit sedenion zero divisor",
+      "fullRef": "interactions/moufang-loop-phase-closure:Proposition 4.1"
+    },
+    {
+      "derivationId": "interactions/moufang-loop-phase-closure",
+      "type": "Proposition",
+      "id": "4.2",
+      "name": "Axiom 3 inconsistent at sedenion level",
+      "fullRef": "interactions/moufang-loop-phase-closure:Proposition 4.2"
+    },
+    {
+      "derivationId": "interactions/moufang-loop-phase-closure",
+      "type": "Theorem",
+      "id": "5.1",
+      "name": "Bootstrap termination at $\\mathbb{O}$",
+      "fullRef": "interactions/moufang-loop-phase-closure:Theorem 5.1"
+    },
+    {
+      "derivationId": "interactions/moufang-loop-phase-closure",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "Integer invariants from homotopy",
+      "fullRef": "interactions/moufang-loop-phase-closure:Proposition 6.1"
+    },
+    {
+      "derivationId": "interactions/moufang-loop-phase-closure",
+      "type": "Proposition",
+      "id": "6.2",
+      "name": "No integer invariant at sedenion level",
+      "fullRef": "interactions/moufang-loop-phase-closure:Proposition 6.2"
+    },
+    {
+      "derivationId": "interactions/moufang-loop-phase-closure",
+      "type": "Corollary",
+      "id": "6.3",
+      "name": "Bootstrap-scale integer content for timelike surfaces",
+      "fullRef": "interactions/moufang-loop-phase-closure:Corollary 6.3"
+    },
+    {
       "derivationId": "interactions/relational-invariants",
       "type": "Theorem",
       "id": "0.1.",
@@ -33742,6 +34041,48 @@
       "number": 5,
       "title": "Geometry functor from the bootstrap map",
       "description": "Promoting R to a full functor on morphisms (§Remark after Proposition 5.1) would enable a **geometry functor** G: mathbfObs mathbfGeom mapping each observer's epistemic horizon to an effective geometr"
+    },
+    {
+      "derivationId": "interactions/moufang-loop-phase-closure",
+      "derivationStatus": "provisional",
+      "number": 1,
+      "title": "Formal statement of \"Axiom 3 requires unit-sphere closure.\"",
+      "description": "Proposition 1.1 is argued from the natural identification of the phase space with the unit sphere of the level's algebra. A fully rigorous statement would specify: (a) how the state space Sigman is co"
+    },
+    {
+      "derivationId": "interactions/moufang-loop-phase-closure",
+      "derivationStatus": "provisional",
+      "number": 2,
+      "title": "Topology of the sedenion zero-divisor locus.",
+      "description": "Proposition 4.2 argues that continuous phase trajectories cannot avoid the sedenion zero-divisor locus. Making this rigorous requires characterizing the zero-divisor locus as a subset of S15 S15 and s"
+    },
+    {
+      "derivationId": "interactions/moufang-loop-phase-closure",
+      "derivationStatus": "provisional",
+      "number": 3,
+      "title": "Rigorous formulation of Corollary 6.3.",
+      "description": "The statement \"timelike surfaces at bootstrap-integer scales carry integer content via homotopy classes\" needs a precise definition of \"enclosing a trajectory over integer periods\" and how the enclose"
+    },
+    {
+      "derivationId": "interactions/moufang-loop-phase-closure",
+      "derivationStatus": "provisional",
+      "number": 4,
+      "title": "Does this give new consequences?",
+      "description": "The bootstrap termination is equivalent to [Bootstrap Division Algebras](/derivations/interactions/bootstrap-division-algebras). The integer invariants at each level are equivalent to the framework's "
+    },
+    {
+      "derivationId": "interactions/moufang-loop-phase-closure",
+      "derivationStatus": "provisional",
+      "number": 5,
+      "title": "Generalized Cayley–Dickson constructions.",
+      "description": "The Cayley–Dickson construction is one specific way to build algebras; others (e.g., twisted Cayley–Dickson with non-trivial norm, alternative algebraic towers) could in principle be consistent with s"
+    },
+    {
+      "derivationId": "interactions/moufang-loop-phase-closure",
+      "derivationStatus": "provisional",
+      "number": 6,
+      "title": "Higher-arity generalizations.",
+      "description": "The Moufang-loop structure at O is the minimal weakening from Lie groups (associativity lost). Could the framework in principle admit structures weaker than Moufang loops (e.g., general quasigroups) a"
     },
     {
       "derivationId": "interactions/relational-invariants",

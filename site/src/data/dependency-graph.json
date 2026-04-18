@@ -487,6 +487,12 @@
       "status": "provisional"
     },
     {
+      "id": "interactions/moufang-loop-phase-closure",
+      "title": "Moufang-Loop Phase Closure",
+      "group": "dynamics",
+      "status": "provisional"
+    },
+    {
       "id": "cosmology/cyclic-cosmology",
       "title": "Observer-Centric Cyclic Cosmology",
       "group": "cosmology",
@@ -1619,6 +1625,30 @@
     {
       "from": "cosmology/baryogenesis",
       "to": "cosmology/cosmological-constant"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "interactions/moufang-loop-phase-closure"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "interactions/moufang-loop-phase-closure"
+    },
+    {
+      "from": "minimal-observer/structure",
+      "to": "interactions/moufang-loop-phase-closure"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "interactions/moufang-loop-phase-closure"
+    },
+    {
+      "from": "interactions/bootstrap-division-algebras",
+      "to": "interactions/moufang-loop-phase-closure"
+    },
+    {
+      "from": "foundation/observer-holographic-equivalence",
+      "to": "interactions/moufang-loop-phase-closure"
     }
   ]
 }

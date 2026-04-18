@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-04-18T08:17:23.077Z",
-    "totalReferences": 100,
-    "totalCitations": 113,
-    "citingFiles": 47,
+    "generatedAt": "2026-04-18T10:29:30.573Z",
+    "totalReferences": 101,
+    "totalCitations": 116,
+    "citingFiles": 48,
     "generator": "scripts/extract-references.mjs"
   },
   "categoryNames": {
@@ -43,7 +43,7 @@
     },
     "field-theory": {
       "name": "Field Theory",
-      "count": 15
+      "count": 16
     },
     "spacetime-geometry": {
       "name": "Spacetime & Geometry",
@@ -101,6 +101,10 @@
         {
           "derivationId": "interactions/bootstrap-division-algebras",
           "title": "Bootstrap → Division Algebras"
+        },
+        {
+          "derivationId": "interactions/moufang-loop-phase-closure",
+          "title": "Moufang-Loop Phase Closure"
         }
       ],
       "category": "mathematical-foundations"
@@ -689,6 +693,21 @@
         {
           "derivationId": "thermodynamics-ext/renormalization",
           "title": "Renormalization Group from Coherence"
+        }
+      ],
+      "category": "field-theory"
+    },
+    {
+      "id": "moufang-1935",
+      "authors": "Moufang",
+      "year": 1935,
+      "citedAs": [
+        "Moufang, 1935"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "interactions/moufang-loop-phase-closure",
+          "title": "Moufang-Loop Phase Closure"
         }
       ],
       "category": "field-theory"
