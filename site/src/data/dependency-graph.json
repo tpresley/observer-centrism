@@ -499,6 +499,12 @@
       "status": "provisional"
     },
     {
+      "id": "foundation/observer-sm-match",
+      "title": "6. Combined-Machinery Match to the Standard Model Spectrum",
+      "group": "foundation",
+      "status": "provisional"
+    },
+    {
       "id": "foundation/minimum-bootstrap-closure",
       "title": "Minimum Bootstrap Closure",
       "group": "foundation",
@@ -1807,6 +1813,38 @@
     {
       "from": "foundation/coherence-lagrangian",
       "to": "foundation/observer-qec-wkb"
+    },
+    {
+      "from": "foundation/observer-qec-wkb",
+      "to": "foundation/observer-sm-match"
+    },
+    {
+      "from": "foundation/observer-profile-noise",
+      "to": "foundation/observer-sm-match"
+    },
+    {
+      "from": "foundation/observer-code-distances",
+      "to": "foundation/observer-sm-match"
+    },
+    {
+      "from": "foundation/observer-code-family",
+      "to": "foundation/observer-sm-match"
+    },
+    {
+      "from": "foundation/observer-error-correction",
+      "to": "foundation/observer-sm-match"
+    },
+    {
+      "from": "particles/mass-hierarchy",
+      "to": "foundation/observer-sm-match"
+    },
+    {
+      "from": "particles/three-generations",
+      "to": "foundation/observer-sm-match"
+    },
+    {
+      "from": "gauge/confinement",
+      "to": "foundation/observer-sm-match"
     }
   ]
 }

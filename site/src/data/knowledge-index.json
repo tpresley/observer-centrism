@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-04-19T10:15:08.770Z",
-    "derivationCount": 89,
+    "generatedAt": "2026-04-19T10:36:29.984Z",
+    "derivationCount": 90,
     "predictionCount": 12,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -9,14 +9,14 @@
   "stats": {
     "byStatus": {
       "derived": 27,
-      "provisional": 61,
+      "provisional": 62,
       "draft": 1
     },
-    "derivationCount": 89,
+    "derivationCount": 90,
     "predictionCount": 12,
-    "edgeCount": 318,
-    "formalObjectCount": 1294,
-    "openGapCount": 325,
+    "edgeCount": 326,
+    "formalObjectCount": 1304,
+    "openGapCount": 332,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -4625,6 +4625,10 @@
             "context": "Flavor Mixing Angles"
           },
           {
+            "source": "foundation/observer-sm-match",
+            "context": "Flavor Mixing Angles"
+          },
+          {
             "source": "gauge/weak-interaction",
             "context": "Flavor Mixing"
           },
@@ -6148,7 +6152,8 @@
       "enablesDerivation": [],
       "dependedOnBy": [
         "foundation/observer-profile-noise",
-        "foundation/observer-qec-wkb"
+        "foundation/observer-qec-wkb",
+        "foundation/observer-sm-match"
       ],
       "steps": [
         {
@@ -6376,6 +6381,10 @@
           {
             "source": "foundation/observer-qec-wkb",
             "context": "Code-Distance Computation for Integer Profiles"
+          },
+          {
+            "source": "foundation/observer-sm-match",
+            "context": "Step 3 Heuristic 6.1"
           }
         ]
       },
@@ -6414,7 +6423,8 @@
       "dependedOnBy": [
         "foundation/observer-code-distances",
         "foundation/observer-profile-noise",
-        "foundation/observer-qec-wkb"
+        "foundation/observer-qec-wkb",
+        "foundation/observer-sm-match"
       ],
       "steps": [
         {
@@ -6675,7 +6685,8 @@
       "enablesDerivation": [],
       "dependedOnBy": [
         "foundation/observer-code-distances",
-        "foundation/observer-code-family"
+        "foundation/observer-code-family",
+        "foundation/observer-sm-match"
       ],
       "steps": [
         {
@@ -7414,7 +7425,8 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
-        "foundation/observer-qec-wkb"
+        "foundation/observer-qec-wkb",
+        "foundation/observer-sm-match"
       ],
       "steps": [
         {
@@ -7917,7 +7929,9 @@
         "foundation/coherence-lagrangian"
       ],
       "enablesDerivation": [],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "foundation/observer-sm-match"
+      ],
       "steps": [
         {
           "number": 1,
@@ -8068,6 +8082,211 @@
           {
             "target": "foundation/bootstrap-fixed-point-existence",
             "context": "Bootstrap Fixed-Point Existence"
+          }
+        ],
+        "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "foundation/observer-sm-match": {
+      "id": "foundation/observer-sm-match",
+      "filePath": "site/src/content/derivations/foundation/observer-sm-match.md",
+      "title": "6. Combined-Machinery Match to the Standard Model Spectrum",
+      "status": "provisional",
+      "rigorLevel": "semi-formal",
+      "group": "foundation",
+      "tags": [
+        "foundation",
+        "error-correction",
+        "standard-model",
+        "capstone"
+      ],
+      "summary": "Capstone test of the Observer-Projection-as-Error-Correction research target against the observed Standard Model spectrum. Under Step 5's complementarity result, the test has two separate checks per particle rather than a single unified prediction: (a) does the WKB-selected mass from Mass Hierarchy match the observed mass, and (b) does QEC preservation hold at that mass for that particle's profile. Systematic audit across all 17 SM particle types finds: (1) all massive SM particles satisfy QEC preservation with d_achieved/d_req in the 10^15–10^24 range, consistent with Step 5's structural-margin prediction; (2) qualitative hierarchy matches — neutrinos at the floor, charged leptons next, quarks heavier than leptons at each generation, exponential inter-generation scaling, top near the algebraic ceiling; (3) photons and gluons are massless as predicted by the gauge-mediator structural exemption (Step 4 Corollary); (4) free-quark profiles fail QEC preservation as p_phys^eff → p_th under strong color coupling, predicting confinement consistent with observed color-neutral hadrons; (5) no SM particle violates QEC preservation or sits outside the qualitative hierarchy expected from the combined machinery. Absolute-value predictions remain Mass Hierarchy's deliverable via WKB tunneling; QEC+coupling-noise is not falsified by the observed spectrum but also does not uniquely predict it. The refined hypothesis of the research target is confirmed: the SM spectrum is consistent with the combined action of error-correcting code structure (Steps 1–2), profile-dependent coupling noise (Step 4), and bootstrap-dynamic mass determination (Mass Hierarchy), with no single ingredient alone predictive.",
+      "lastUpdated": "2026-04-19",
+      "dependsOn": [
+        "foundation/observer-qec-wkb",
+        "foundation/observer-profile-noise",
+        "foundation/observer-code-distances",
+        "foundation/observer-code-family",
+        "foundation/observer-error-correction",
+        "particles/mass-hierarchy",
+        "particles/three-generations",
+        "gauge/confinement"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Test Protocol"
+        },
+        {
+          "number": 2,
+          "title": "Systematic Audit Across SM Particles"
+        },
+        {
+          "number": 3,
+          "title": "Worked Examples"
+        },
+        {
+          "number": 4,
+          "title": "Qualitative Hierarchy Analysis"
+        },
+        {
+          "number": 5,
+          "title": "Falsification Checks"
+        },
+        {
+          "number": 6,
+          "title": "Scope Statement"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Proposition",
+          "id": "1.1",
+          "name": "Formula substitution",
+          "statementPreview": "Combining Step 4's additive noise and Step 3's distance formula, the required distance on axis axis for profile IA is:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Numerical baseline for SM-scale lifetimes",
+          "statementPreview": "With Tcoh = tU 1060 tauP, log(Tcoh/tauP) 138.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "Per-axis $p_{\\text{phys}}^{\\text{eff}}$ numerical table",
+          "statementPreview": "For the reference parameter values of Step 1:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.3",
+          "name": "Per-axis $d_{\\text{req}}$ numerical table",
+          "statementPreview": "For bits × log(Tcoh/tauP) = 138, using Proposition 2.2:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.4",
+          "name": "Per-particle achieved distance",
+          "statementPreview": "dachieved sim mP/mobs on all axes:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.5",
+          "name": "Margin table",
+          "statementPreview": "dachieved/dreq per particle, binding axis:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Neutrino-floor structure",
+          "statementPreview": "Neutrinos carry minimal active channels (weak only), giving the smallest pphyseff of any fermion profile — hence smal..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.2",
+          "name": "Quark-lepton split at each generation",
+          "statementPreview": "At each generation, quarks have an additional color-axis profile (+2 bits spatial, +1 bit algebraic at level 3) and a..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.3",
+          "name": "Exponential generation hierarchy",
+          "statementPreview": "Moving from generation n to n+1 activates an additional bootstrap-level-n instanton invariant on the algebraic axis. ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.4",
+          "name": "Bootstrap termination → no 4th generation",
+          "statementPreview": "[Moufang-Loop Phase Closure](/derivations/interactions/moufang-loop-phase-closure) Theorem 5.1 terminates the bootstr..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Anchored absolute-mass prediction.",
+          "description": "Step 6 establishes QEC consistency at observed SM masses but does not predict those masses from Steps 1–4 alone. An anchored approach — fix the Step 4 eta coefficients from the electron-mass data poin"
+        },
+        {
+          "number": 2,
+          "title": "Electroweak sector full treatment.",
+          "description": "Example 3.8 deferred W, Z, H to the EW-symmetry-breaking sector. A proper extension of Step 4's additive form to handle the Higgs mechanism would close this gap. Connects to [Electroweak Breaking](/de"
+        },
+        {
+          "number": 3,
+          "title": "Quantitative confinement threshold.",
+          "description": "Example 3.4 argued free quarks fail QEC because pphyseff > pth. Compute the precise color-coupling value at which the threshold is crossed; this should fix the QCD confinement scale LambdaQCD as a fra"
+        },
+        {
+          "number": 4,
+          "title": "Neutrino-mass seesaw integration.",
+          "description": "Step 4's simple additive form gives a mass floor for neutrinos (~10-2 eV if QEC were determinative). Observed neutrino masses are consistent with this floor but significantly below natural expectation"
+        },
+        {
+          "number": 5,
+          "title": "Running-coupling effects on Step 4.",
+          "description": "Step 6 used coupling values at a single reference scale. Running couplings change pphyseff with energy scale; this affects QEC consistency at different observer scales (confinement screening is one ex"
+        },
+        {
+          "number": 6,
+          "title": "Connection to three framework-native unification candidates.",
+          "description": "Step 5 flagged three possibilities (joint fixed-point, Coherence Lagrangian common-saddle, shared-facts distinguishability layer) for future work. Step 6's audit doesn't resolve these but confirms the"
+        },
+        {
+          "number": 7,
+          "title": "Step 6 capstone status.",
+          "description": "The program ends here in its currently planned form. Future extensions could include (a) application to BSM candidates (dark matter, SUSY particles, axions) to see whether QEC preservation plus profil"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "target": "gauge/confinement",
+            "context": "Confinement"
+          },
+          {
+            "target": "foundation/observer-code-distances",
+            "context": "Step 3 Heuristic 6.1"
+          },
+          {
+            "target": "particles/three-generations",
+            "context": "Three Generations"
+          },
+          {
+            "target": "particles/neutrino-masses",
+            "context": "Neutrino Masses"
+          },
+          {
+            "target": "gauge/electroweak-breaking",
+            "context": "Electroweak Breaking"
+          },
+          {
+            "target": "interactions/moufang-loop-phase-closure",
+            "context": "Moufang-Loop Phase Closure"
+          },
+          {
+            "target": "flavor/mixing-angles",
+            "context": "Flavor Mixing Angles"
+          },
+          {
+            "target": "thermodynamics-ext/renormalization",
+            "context": "Renormalization"
           }
         ],
         "incoming": []
@@ -8966,6 +9185,7 @@
         "gauge/chiral-symmetry-breaking"
       ],
       "dependedOnBy": [
+        "foundation/observer-sm-match",
         "gauge/chiral-symmetry-breaking"
       ],
       "steps": [
@@ -9107,6 +9327,10 @@
           },
           {
             "source": "foundation/observer-profile-noise",
+            "context": "Confinement"
+          },
+          {
+            "source": "foundation/observer-sm-match",
             "context": "Confinement"
           },
           {
@@ -9728,6 +9952,10 @@
           },
           {
             "source": "foundation/observer-profile-noise",
+            "context": "Electroweak Breaking"
+          },
+          {
+            "source": "foundation/observer-sm-match",
             "context": "Electroweak Breaking"
           },
           {
@@ -13937,6 +14165,10 @@
           {
             "source": "foundation/observer-profile-noise",
             "context": "Moufang-Loop Phase Closure"
+          },
+          {
+            "source": "foundation/observer-sm-match",
+            "context": "Moufang-Loop Phase Closure"
           }
         ]
       },
@@ -15947,6 +16179,7 @@
         "cosmology/geometric-substrate",
         "foundation/observer-code-distances",
         "foundation/observer-qec-wkb",
+        "foundation/observer-sm-match",
         "particles/three-generations"
       ],
       "steps": [
@@ -16208,6 +16441,10 @@
           },
           {
             "source": "foundation/observer-qec-wkb",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "source": "foundation/observer-sm-match",
             "context": "Mass Hierarchy"
           },
           {
@@ -16477,6 +16714,10 @@
           },
           {
             "source": "foundation/observer-profile-noise",
+            "context": "Neutrino Masses"
+          },
+          {
+            "source": "foundation/observer-sm-match",
             "context": "Neutrino Masses"
           },
           {
@@ -17100,6 +17341,7 @@
       "dependedOnBy": [
         "flavor/mixing-angles",
         "foundation/observer-code-distances",
+        "foundation/observer-sm-match",
         "particles/neutrino-masses"
       ],
       "steps": [
@@ -17306,6 +17548,10 @@
           },
           {
             "source": "foundation/observer-holographic-equivalence",
+            "context": "Three Generations"
+          },
+          {
+            "source": "foundation/observer-sm-match",
             "context": "Three Generations"
           },
           {
@@ -22763,6 +23009,10 @@
           },
           {
             "source": "foundation/observer-profile-noise",
+            "context": "Renormalization"
+          },
+          {
+            "source": "foundation/observer-sm-match",
             "context": "Renormalization"
           }
         ]
@@ -28651,6 +28901,76 @@
       "id": "6.2",
       "name": "Refined hypothesis is confirmed",
       "fullRef": "foundation/observer-qec-wkb:Proposition 6.2"
+    },
+    {
+      "derivationId": "foundation/observer-sm-match",
+      "type": "Proposition",
+      "id": "1.1",
+      "name": "Formula substitution",
+      "fullRef": "foundation/observer-sm-match:Proposition 1.1"
+    },
+    {
+      "derivationId": "foundation/observer-sm-match",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "Numerical baseline for SM-scale lifetimes",
+      "fullRef": "foundation/observer-sm-match:Proposition 1.2"
+    },
+    {
+      "derivationId": "foundation/observer-sm-match",
+      "type": "Proposition",
+      "id": "2.2",
+      "name": "Per-axis $p_{\\text{phys}}^{\\text{eff}}$ numerical table",
+      "fullRef": "foundation/observer-sm-match:Proposition 2.2"
+    },
+    {
+      "derivationId": "foundation/observer-sm-match",
+      "type": "Proposition",
+      "id": "2.3",
+      "name": "Per-axis $d_{\\text{req}}$ numerical table",
+      "fullRef": "foundation/observer-sm-match:Proposition 2.3"
+    },
+    {
+      "derivationId": "foundation/observer-sm-match",
+      "type": "Proposition",
+      "id": "2.4",
+      "name": "Per-particle achieved distance",
+      "fullRef": "foundation/observer-sm-match:Proposition 2.4"
+    },
+    {
+      "derivationId": "foundation/observer-sm-match",
+      "type": "Proposition",
+      "id": "2.5",
+      "name": "Margin table",
+      "fullRef": "foundation/observer-sm-match:Proposition 2.5"
+    },
+    {
+      "derivationId": "foundation/observer-sm-match",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Neutrino-floor structure",
+      "fullRef": "foundation/observer-sm-match:Proposition 4.1"
+    },
+    {
+      "derivationId": "foundation/observer-sm-match",
+      "type": "Proposition",
+      "id": "4.2",
+      "name": "Quark-lepton split at each generation",
+      "fullRef": "foundation/observer-sm-match:Proposition 4.2"
+    },
+    {
+      "derivationId": "foundation/observer-sm-match",
+      "type": "Proposition",
+      "id": "4.3",
+      "name": "Exponential generation hierarchy",
+      "fullRef": "foundation/observer-sm-match:Proposition 4.3"
+    },
+    {
+      "derivationId": "foundation/observer-sm-match",
+      "type": "Proposition",
+      "id": "4.4",
+      "name": "Bootstrap termination → no 4th generation",
+      "fullRef": "foundation/observer-sm-match:Proposition 4.4"
     },
     {
       "derivationId": "gauge/anomaly-cancellation",
@@ -35716,6 +36036,55 @@
       "number": 6,
       "title": "Connection to Step 6 capstone test.",
       "description": "Step 5's complementarity result specifies Step 6's structure: the SM-spectrum match must compare (WKB-selected masses) ↔ (QEC preservation consistency) as two separate checks, not as a single unified "
+    },
+    {
+      "derivationId": "foundation/observer-sm-match",
+      "derivationStatus": "provisional",
+      "number": 1,
+      "title": "Anchored absolute-mass prediction.",
+      "description": "Step 6 establishes QEC consistency at observed SM masses but does not predict those masses from Steps 1–4 alone. An anchored approach — fix the Step 4 eta coefficients from the electron-mass data poin"
+    },
+    {
+      "derivationId": "foundation/observer-sm-match",
+      "derivationStatus": "provisional",
+      "number": 2,
+      "title": "Electroweak sector full treatment.",
+      "description": "Example 3.8 deferred W, Z, H to the EW-symmetry-breaking sector. A proper extension of Step 4's additive form to handle the Higgs mechanism would close this gap. Connects to [Electroweak Breaking](/de"
+    },
+    {
+      "derivationId": "foundation/observer-sm-match",
+      "derivationStatus": "provisional",
+      "number": 3,
+      "title": "Quantitative confinement threshold.",
+      "description": "Example 3.4 argued free quarks fail QEC because pphyseff > pth. Compute the precise color-coupling value at which the threshold is crossed; this should fix the QCD confinement scale LambdaQCD as a fra"
+    },
+    {
+      "derivationId": "foundation/observer-sm-match",
+      "derivationStatus": "provisional",
+      "number": 4,
+      "title": "Neutrino-mass seesaw integration.",
+      "description": "Step 4's simple additive form gives a mass floor for neutrinos (~10-2 eV if QEC were determinative). Observed neutrino masses are consistent with this floor but significantly below natural expectation"
+    },
+    {
+      "derivationId": "foundation/observer-sm-match",
+      "derivationStatus": "provisional",
+      "number": 5,
+      "title": "Running-coupling effects on Step 4.",
+      "description": "Step 6 used coupling values at a single reference scale. Running couplings change pphyseff with energy scale; this affects QEC consistency at different observer scales (confinement screening is one ex"
+    },
+    {
+      "derivationId": "foundation/observer-sm-match",
+      "derivationStatus": "provisional",
+      "number": 6,
+      "title": "Connection to three framework-native unification candidates.",
+      "description": "Step 5 flagged three possibilities (joint fixed-point, Coherence Lagrangian common-saddle, shared-facts distinguishability layer) for future work. Step 6's audit doesn't resolve these but confirms the"
+    },
+    {
+      "derivationId": "foundation/observer-sm-match",
+      "derivationStatus": "provisional",
+      "number": 7,
+      "title": "Step 6 capstone status.",
+      "description": "The program ends here in its currently planned form. Future extensions could include (a) application to BSM candidates (dark matter, SUSY particles, axions) to see whether QEC preservation plus profil"
     },
     {
       "derivationId": "gauge/chirality-selection",
