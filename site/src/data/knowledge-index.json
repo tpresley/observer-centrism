@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-04-19T07:46:31.995Z",
-    "derivationCount": 86,
+    "generatedAt": "2026-04-19T08:03:48.317Z",
+    "derivationCount": 87,
     "predictionCount": 12,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -9,14 +9,14 @@
   "stats": {
     "byStatus": {
       "derived": 27,
-      "provisional": 58,
+      "provisional": 59,
       "draft": 1
     },
-    "derivationCount": 86,
+    "derivationCount": 87,
     "predictionCount": 12,
-    "edgeCount": 299,
-    "formalObjectCount": 1258,
-    "openGapCount": 303,
+    "edgeCount": 306,
+    "formalObjectCount": 1273,
+    "openGapCount": 311,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -4616,6 +4616,10 @@
             "context": "Mixing Angles"
           },
           {
+            "source": "foundation/observer-code-distances",
+            "context": "Flavor Mixing Angles"
+          },
+          {
             "source": "gauge/weak-interaction",
             "context": "Flavor Mixing"
           },
@@ -5104,6 +5108,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "foundation/observer-code-distances",
+            "context": "Bootstrap Fixed-Point Existence"
+          },
           {
             "source": "foundation/observer-code-family",
             "context": "Bootstrap Fixed-Point Existence"
@@ -6099,6 +6107,257 @@
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
+    "foundation/observer-code-distances": {
+      "id": "foundation/observer-code-distances",
+      "filePath": "site/src/content/derivations/foundation/observer-code-distances.md",
+      "title": "3. Code-Distance Computation for Integer Profiles",
+      "status": "provisional",
+      "rigorLevel": "semi-formal",
+      "group": "foundation",
+      "tags": [
+        "foundation",
+        "error-correction",
+        "code-distance",
+        "standard-model"
+      ],
+      "summary": "Given the HaPPY × Kitaev × Floquet product code of Observer Code Family Identification and the framework's holographic noise commitment (α_H ∼ 1/4 per Planck cell), compute per-axis code-distance requirements and achieved distances for SM integer-invariant profiles. Per-cell bit-flip probability is the Gaussian-tail exceedance p_phys = erfc(1/√(2α_H)) ≈ 0.046 — below typical topological-code thresholds, so the codes operate in the protected regime. Per-axis achieved distances scale polynomially in observer mass (d^sp ∼ m_P/m, d^alg ∼ m_P/m_n, d^tmp ∼ m_P/m), while per-axis required distances scale only logarithmically in the coherence lifetime; hence d_achieved ≫ d_required by tens of orders of magnitude for every observed SM particle. This is the derivation's first quantitative result: the SM spectrum is self-consistent under error correction with enormous excess capacity — the minimum mass is NOT set by QEC thresholds alone. Structural predictions that DO survive: three-generation structure as three bootstrap levels of the algebraic axis (with additional instanton-number distance per generation forcing exponential mass-ratio scaling), the algebraic ceiling at level 3 capping the top of the spectrum, and SM completeness (no viable profile beyond three levels). Absolute mass values require bootstrap dynamics (Mass Hierarchy WKB tunneling, Step 5 of the research target); QEC enters as a consistency constraint that every observed SM particle satisfies with room to spare.",
+      "lastUpdated": "2026-04-18",
+      "dependsOn": [
+        "foundation/observer-error-correction",
+        "foundation/observer-code-family",
+        "holography/causal-set-statistics",
+        "holography/area-scaling",
+        "interactions/moufang-loop-phase-closure",
+        "particles/three-generations",
+        "particles/mass-hierarchy"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Planck-Noise Model from Framework Commitments"
+        },
+        {
+          "number": 2,
+          "title": "Per-Axis Distance Requirements"
+        },
+        {
+          "number": 3,
+          "title": "Per-Axis Achieved Distances"
+        },
+        {
+          "number": 4,
+          "title": "The Principal Result — SM Self-Consistency"
+        },
+        {
+          "number": 5,
+          "title": "What QEC Does Predict — Generation Structure and Algebraic Ceiling"
+        },
+        {
+          "number": 6,
+          "title": "SM Profile Content — Heuristic Bit-Counting"
+        },
+        {
+          "number": 7,
+          "title": "Comparison to Observed SM Spectrum"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Proposition",
+          "id": "1.1",
+          "name": "Gaussian per-cell fluctuations",
+          "statementPreview": "The per-cell displacement distribution is Gaussian with variance alphaH ellP2 — a consequence of the central limit th..."
+        },
+        {
+          "type": "Definition",
+          "id": "1.2",
+          "name": "Per-cell bit-flip probability",
+          "statementPreview": "A Planck cell on an observer's null horizon MA records an integer-crossing residue (Type III carrier crossing count)...."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.3",
+          "name": "Per-cell bit-flip probability",
+          "statementPreview": "For per-cell Gaussian noise with variance sigma2 = alphaH ellP2 and a threshold xth = ellP/2 (half-cell exceedance, t..."
+        },
+        {
+          "type": "Corollary",
+          "id": "1.5",
+          "name": "Below-threshold operation",
+          "statementPreview": "For alphaH 0.24 (Holometer bound) with the full-cell convention, pphys 0.041. Standard topological-code thresholds ar..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "Per-axis distance requirement for profile stability",
+          "statementPreview": "Let Tcoh be the observer's coherence lifetime — the duration over which the logical qubit must survive without error ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Spatial-axis achieved distance",
+          "statementPreview": "dspachieved sim NA where NA = AA/4ellP2 is the horizon mode count. Using Schwarzschild rH = 2Gm/c2 for a macroscopic ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Algebraic-axis achieved distance",
+          "statementPreview": "dalgachieved sim Ln/ellP, where Ln is the bootstrap-level-n characteristic scale. For an observer at level n with mas..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.3",
+          "name": "Temporal-axis achieved distance",
+          "statementPreview": "dtmpachieved sim TA/tauP, where TA = 2pihbar/(mA c2) is the Compton period:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "Error-correction self-consistency of the SM",
+          "statementPreview": "For every SM particle X with observed mass mX and a reasonable coherence lifetime Tcoh tU (age of the universe):*"
+        },
+        {
+          "type": "Corollary",
+          "id": "4.2",
+          "name": "QEC does not set the minimum SM mass",
+          "statementPreview": "The observed SM masses are far above any QEC-imposed minimum. A hypothetical lighter particle with identical profile ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Integer-content increment per generation",
+          "statementPreview": "A profile at bootstrap level n carries calg(n) bits of algebraic-axis integer content equal to (or bounded by) dim pi..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.2",
+          "name": "Minimum-viable-code convention forces exponential generation hierarchy",
+          "statementPreview": "Under the convention that an observer type is identified with the *minimum-viable code* — the lowest-mA profile satis..."
+        },
+        {
+          "type": "Corollary",
+          "id": "5.4",
+          "name": "No fourth generation",
+          "statementPreview": "Level-4 pik(G4) is undefined — bootstrap termination at O forbids a level-4 Moufang-loop phase space. The algebraic-a..."
+        },
+        {
+          "type": "Corollary",
+          "id": "5.5",
+          "name": "Algebraic ceiling caps profile complexity",
+          "statementPreview": "At level 3 (O / SU(3)), the maximum instanton-number bit content is calgmax set by the SU(3) π3 structure. No profile..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.2",
+          "name": "Qualitative ordering predicted",
+          "statementPreview": "Under the minimum-viable-code convention (Proposition 5.2) with exponential generation-scaling, the bit-count table p..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Product-code threshold formula.",
+          "description": "The product-code threshold pth inherits from the three factor codes' thresholds under the pairwise-commuting-stabilizer structure of Step 2 Theorem 4.1. Derive the composite threshold rigorously — is "
+        },
+        {
+          "number": 2,
+          "title": "Correlated-error distance formula.",
+          "description": "Correlated errors across axes (Step 2 Open Gap 5) may reduce the effective distance below the min-of-factors bound. Quantify this reduction for the framework's substrate noise. *Difficulty: MODERATE-H"
+        },
+        {
+          "number": 3,
+          "title": "Minimum-viable-code convention justification.",
+          "description": "Proposition 5.2 uses this convention without deriving it from the three axioms. Formalize via bootstrap selection principle — show that the minimum-viable code is the fixed point of a specific bootstr"
+        },
+        {
+          "number": 4,
+          "title": "Rigorous SM profile bit-counts.",
+          "description": "Heuristic 6.1's bit assignments are approximate. Derive exact profile content for each SM particle via the explicit stabilizer-group decomposition — what are the integer invariants on each axis for a "
+        },
+        {
+          "number": 5,
+          "title": "Noise-model threshold-convention commitment.",
+          "description": "Proposition 1.3 leaves xth as a modeling choice. Commit the framework to one convention (ideally derivable from operator-algebra structure on the substrate, not from the Gaussian-tail reading alone). "
+        },
+        {
+          "number": 6,
+          "title": "Coherence-lifetime specification.",
+          "description": "Proposition 2.1 uses Tcoh as an input. Derive Tcoh from the framework's coherence-conservation structure — specifically, how long must a specific integer invariant remain uncorrupted for the observer "
+        },
+        {
+          "number": 7,
+          "title": "Unification with Mass Hierarchy (Research Target Step 5).",
+          "description": "Is the WKB tunneling action S/hbar of [Mass Hierarchy](/derivations/particles/mass-hierarchy) the code-distance requirement dreq of this derivation (in appropriate units)? If yes, Mass Hierarchy's S1 "
+        },
+        {
+          "number": 8,
+          "title": "Anchored absolute-mass prediction (Research Target Step 3b).",
+          "description": "Fix the three prefactors (alphaH, pth, Tcoh) from one observed mass (e.g., electron); predict the other SM masses as consequences. If the predicted spectrum matches within O(1) factors, QEC has predic"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "foundation/observer-code-family",
+            "context": "**Step 2**"
+          },
+          {
+            "target": "interactions/moufang-loop-phase-closure",
+            "context": "Moufang-Loop Phase Closure"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "target": "holography/causal-set-statistics",
+            "context": "Causal Set Statistics"
+          },
+          {
+            "target": "foundation/observer-code-family",
+            "context": "Observer Code Family Identification"
+          },
+          {
+            "target": "particles/neutrino-masses",
+            "context": "Neutrino Masses"
+          },
+          {
+            "target": "flavor/mixing-angles",
+            "context": "Flavor Mixing Angles"
+          },
+          {
+            "target": "gauge/electroweak-breaking",
+            "context": "Electroweak Breaking"
+          },
+          {
+            "target": "gauge/confinement",
+            "context": "Confinement"
+          },
+          {
+            "target": "gauge/color-force",
+            "context": "Color Force"
+          },
+          {
+            "target": "foundation/bootstrap-fixed-point-existence",
+            "context": "Bootstrap Fixed-Point Existence"
+          }
+        ],
+        "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
     "foundation/observer-code-family": {
       "id": "foundation/observer-code-family",
       "filePath": "site/src/content/derivations/foundation/observer-code-family.md",
@@ -6122,7 +6381,9 @@
         "axioms/loop-closure"
       ],
       "enablesDerivation": [],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "foundation/observer-code-distances"
+      ],
       "steps": [
         {
           "number": 1,
@@ -6328,6 +6589,14 @@
         ],
         "incoming": [
           {
+            "source": "foundation/observer-code-distances",
+            "context": "**Step 2**"
+          },
+          {
+            "source": "foundation/observer-code-distances",
+            "context": "Observer Code Family Identification"
+          },
+          {
             "source": "foundation/observer-error-correction",
             "context": "Observer Code Family Identification"
           }
@@ -6369,6 +6638,7 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
+        "foundation/observer-code-distances",
         "foundation/observer-code-family"
       ],
       "steps": [
@@ -8130,6 +8400,10 @@
             "context": "Color Force"
           },
           {
+            "source": "foundation/observer-code-distances",
+            "context": "Color Force"
+          },
+          {
             "source": "gauge/chiral-symmetry-breaking",
             "context": "Color Force"
           },
@@ -8353,6 +8627,10 @@
         "incoming": [
           {
             "source": "foundation/knot-theoretic-bootstrap",
+            "context": "Confinement"
+          },
+          {
+            "source": "foundation/observer-code-distances",
             "context": "Confinement"
           },
           {
@@ -8963,6 +9241,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "foundation/observer-code-distances",
+            "context": "Electroweak Breaking"
+          },
           {
             "source": "gauge/chirality-selection",
             "context": "Electroweak Symmetry Breaking"
@@ -10283,6 +10565,7 @@
         "cosmology/dark-energy-equation-of-state",
         "cosmology/geometric-substrate",
         "cosmology/observer-loop-viability",
+        "foundation/observer-code-distances",
         "foundation/observer-code-family",
         "foundation/observer-error-correction",
         "foundation/observer-holographic-equivalence",
@@ -10881,6 +11164,7 @@
       "dependedOnBy": [
         "cosmology/geometric-inflation",
         "cosmology/geometric-substrate",
+        "foundation/observer-code-distances",
         "holography/er-epr"
       ],
       "steps": [
@@ -11061,6 +11345,10 @@
           },
           {
             "source": "cosmology/geometric-substrate",
+            "context": "Causal Set Statistics"
+          },
+          {
+            "source": "foundation/observer-code-distances",
             "context": "Causal Set Statistics"
           },
           {
@@ -12971,6 +13259,7 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
+        "foundation/observer-code-distances",
         "foundation/observer-code-family",
         "foundation/observer-error-correction"
       ],
@@ -13131,6 +13420,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "foundation/observer-code-distances",
+            "context": "Moufang-Loop Phase Closure"
+          },
           {
             "source": "foundation/observer-code-family",
             "context": "Moufang-Loop Phase Closure"
@@ -15145,6 +15438,7 @@
       "dependedOnBy": [
         "cosmology/coupling-constants",
         "cosmology/geometric-substrate",
+        "foundation/observer-code-distances",
         "particles/three-generations"
       ],
       "steps": [
@@ -15390,6 +15684,10 @@
           },
           {
             "source": "flavor/mixing-angles",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "source": "foundation/observer-code-distances",
             "context": "Mass Hierarchy"
           },
           {
@@ -15656,6 +15954,10 @@
           {
             "source": "flavor/mixing-angles",
             "context": "derived"
+          },
+          {
+            "source": "foundation/observer-code-distances",
+            "context": "Neutrino Masses"
           },
           {
             "source": "particles/three-generations",
@@ -16277,6 +16579,7 @@
       ],
       "dependedOnBy": [
         "flavor/mixing-angles",
+        "foundation/observer-code-distances",
         "particles/neutrino-masses"
       ],
       "steps": [
@@ -27154,6 +27457,111 @@
       "fullRef": "foundation/minimum-bootstrap-closure:Proposition 5.2"
     },
     {
+      "derivationId": "foundation/observer-code-distances",
+      "type": "Proposition",
+      "id": "1.1",
+      "name": "Gaussian per-cell fluctuations",
+      "fullRef": "foundation/observer-code-distances:Proposition 1.1"
+    },
+    {
+      "derivationId": "foundation/observer-code-distances",
+      "type": "Definition",
+      "id": "1.2",
+      "name": "Per-cell bit-flip probability",
+      "fullRef": "foundation/observer-code-distances:Definition 1.2"
+    },
+    {
+      "derivationId": "foundation/observer-code-distances",
+      "type": "Proposition",
+      "id": "1.3",
+      "name": "Per-cell bit-flip probability",
+      "fullRef": "foundation/observer-code-distances:Proposition 1.3"
+    },
+    {
+      "derivationId": "foundation/observer-code-distances",
+      "type": "Corollary",
+      "id": "1.5",
+      "name": "Below-threshold operation",
+      "fullRef": "foundation/observer-code-distances:Corollary 1.5"
+    },
+    {
+      "derivationId": "foundation/observer-code-distances",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "Per-axis distance requirement for profile stability",
+      "fullRef": "foundation/observer-code-distances:Proposition 2.1"
+    },
+    {
+      "derivationId": "foundation/observer-code-distances",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Spatial-axis achieved distance",
+      "fullRef": "foundation/observer-code-distances:Proposition 3.1"
+    },
+    {
+      "derivationId": "foundation/observer-code-distances",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "Algebraic-axis achieved distance",
+      "fullRef": "foundation/observer-code-distances:Proposition 3.2"
+    },
+    {
+      "derivationId": "foundation/observer-code-distances",
+      "type": "Proposition",
+      "id": "3.3",
+      "name": "Temporal-axis achieved distance",
+      "fullRef": "foundation/observer-code-distances:Proposition 3.3"
+    },
+    {
+      "derivationId": "foundation/observer-code-distances",
+      "type": "Theorem",
+      "id": "4.1",
+      "name": "Error-correction self-consistency of the SM",
+      "fullRef": "foundation/observer-code-distances:Theorem 4.1"
+    },
+    {
+      "derivationId": "foundation/observer-code-distances",
+      "type": "Corollary",
+      "id": "4.2",
+      "name": "QEC does not set the minimum SM mass",
+      "fullRef": "foundation/observer-code-distances:Corollary 4.2"
+    },
+    {
+      "derivationId": "foundation/observer-code-distances",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "Integer-content increment per generation",
+      "fullRef": "foundation/observer-code-distances:Proposition 5.1"
+    },
+    {
+      "derivationId": "foundation/observer-code-distances",
+      "type": "Proposition",
+      "id": "5.2",
+      "name": "Minimum-viable-code convention forces exponential generation hierarchy",
+      "fullRef": "foundation/observer-code-distances:Proposition 5.2"
+    },
+    {
+      "derivationId": "foundation/observer-code-distances",
+      "type": "Corollary",
+      "id": "5.4",
+      "name": "No fourth generation",
+      "fullRef": "foundation/observer-code-distances:Corollary 5.4"
+    },
+    {
+      "derivationId": "foundation/observer-code-distances",
+      "type": "Corollary",
+      "id": "5.5",
+      "name": "Algebraic ceiling caps profile complexity",
+      "fullRef": "foundation/observer-code-distances:Corollary 5.5"
+    },
+    {
+      "derivationId": "foundation/observer-code-distances",
+      "type": "Proposition",
+      "id": "6.2",
+      "name": "Qualitative ordering predicted",
+      "fullRef": "foundation/observer-code-distances:Proposition 6.2"
+    },
+    {
       "derivationId": "foundation/observer-code-family",
       "type": "Proposition",
       "id": "1.1",
@@ -34224,6 +34632,62 @@
       "number": 7,
       "title": "Connecting to physical content.",
       "description": "The triangle result is structural; it does not yet produce any observable quantity (Lambda, coupling constants, masses). Extending the fixed point to carry the framework's integer level structure (Ope"
+    },
+    {
+      "derivationId": "foundation/observer-code-distances",
+      "derivationStatus": "provisional",
+      "number": 1,
+      "title": "Product-code threshold formula.",
+      "description": "The product-code threshold pth inherits from the three factor codes' thresholds under the pairwise-commuting-stabilizer structure of Step 2 Theorem 4.1. Derive the composite threshold rigorously — is "
+    },
+    {
+      "derivationId": "foundation/observer-code-distances",
+      "derivationStatus": "provisional",
+      "number": 2,
+      "title": "Correlated-error distance formula.",
+      "description": "Correlated errors across axes (Step 2 Open Gap 5) may reduce the effective distance below the min-of-factors bound. Quantify this reduction for the framework's substrate noise. *Difficulty: MODERATE-H"
+    },
+    {
+      "derivationId": "foundation/observer-code-distances",
+      "derivationStatus": "provisional",
+      "number": 3,
+      "title": "Minimum-viable-code convention justification.",
+      "description": "Proposition 5.2 uses this convention without deriving it from the three axioms. Formalize via bootstrap selection principle — show that the minimum-viable code is the fixed point of a specific bootstr"
+    },
+    {
+      "derivationId": "foundation/observer-code-distances",
+      "derivationStatus": "provisional",
+      "number": 4,
+      "title": "Rigorous SM profile bit-counts.",
+      "description": "Heuristic 6.1's bit assignments are approximate. Derive exact profile content for each SM particle via the explicit stabilizer-group decomposition — what are the integer invariants on each axis for a "
+    },
+    {
+      "derivationId": "foundation/observer-code-distances",
+      "derivationStatus": "provisional",
+      "number": 5,
+      "title": "Noise-model threshold-convention commitment.",
+      "description": "Proposition 1.3 leaves xth as a modeling choice. Commit the framework to one convention (ideally derivable from operator-algebra structure on the substrate, not from the Gaussian-tail reading alone). "
+    },
+    {
+      "derivationId": "foundation/observer-code-distances",
+      "derivationStatus": "provisional",
+      "number": 6,
+      "title": "Coherence-lifetime specification.",
+      "description": "Proposition 2.1 uses Tcoh as an input. Derive Tcoh from the framework's coherence-conservation structure — specifically, how long must a specific integer invariant remain uncorrupted for the observer "
+    },
+    {
+      "derivationId": "foundation/observer-code-distances",
+      "derivationStatus": "provisional",
+      "number": 7,
+      "title": "Unification with Mass Hierarchy (Research Target Step 5).",
+      "description": "Is the WKB tunneling action S/hbar of [Mass Hierarchy](/derivations/particles/mass-hierarchy) the code-distance requirement dreq of this derivation (in appropriate units)? If yes, Mass Hierarchy's S1 "
+    },
+    {
+      "derivationId": "foundation/observer-code-distances",
+      "derivationStatus": "provisional",
+      "number": 8,
+      "title": "Anchored absolute-mass prediction (Research Target Step 3b).",
+      "description": "Fix the three prefactors (alphaH, pth, Tcoh) from one observed mass (e.g., electron); predict the other SM masses as consequences. If the predicted spectrum matches within O(1) factors, QEC has predic"
     },
     {
       "derivationId": "foundation/observer-code-family",

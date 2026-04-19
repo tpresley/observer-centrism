@@ -481,6 +481,12 @@
       "status": "provisional"
     },
     {
+      "id": "foundation/observer-code-distances",
+      "title": "3. Code-Distance Computation for Integer Profiles",
+      "group": "foundation",
+      "status": "provisional"
+    },
+    {
       "id": "foundation/minimum-bootstrap-closure",
       "title": "Minimum Bootstrap Closure",
       "group": "foundation",
@@ -1713,6 +1719,34 @@
     {
       "from": "axioms/loop-closure",
       "to": "foundation/observer-code-family"
+    },
+    {
+      "from": "foundation/observer-error-correction",
+      "to": "foundation/observer-code-distances"
+    },
+    {
+      "from": "foundation/observer-code-family",
+      "to": "foundation/observer-code-distances"
+    },
+    {
+      "from": "holography/causal-set-statistics",
+      "to": "foundation/observer-code-distances"
+    },
+    {
+      "from": "holography/area-scaling",
+      "to": "foundation/observer-code-distances"
+    },
+    {
+      "from": "interactions/moufang-loop-phase-closure",
+      "to": "foundation/observer-code-distances"
+    },
+    {
+      "from": "particles/three-generations",
+      "to": "foundation/observer-code-distances"
+    },
+    {
+      "from": "particles/mass-hierarchy",
+      "to": "foundation/observer-code-distances"
     }
   ]
 }
