@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-04-19T08:03:48.317Z",
-    "derivationCount": 87,
+    "generatedAt": "2026-04-19T09:22:51.376Z",
+    "derivationCount": 88,
     "predictionCount": 12,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -9,14 +9,14 @@
   "stats": {
     "byStatus": {
       "derived": 27,
-      "provisional": 59,
+      "provisional": 60,
       "draft": 1
     },
-    "derivationCount": 87,
+    "derivationCount": 88,
     "predictionCount": 12,
-    "edgeCount": 306,
-    "formalObjectCount": 1273,
-    "openGapCount": 311,
+    "edgeCount": 313,
+    "formalObjectCount": 1283,
+    "openGapCount": 319,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -136,6 +136,7 @@
         "foundation/observer-error-correction",
         "foundation/observer-holographic-equivalence",
         "foundation/observer-level-stack-compactness",
+        "foundation/observer-profile-noise",
         "gauge/anomaly-cancellation",
         "gauge/chirality-selection",
         "holography/information-paradox",
@@ -422,6 +423,10 @@
           },
           {
             "source": "foundation/observer-level-stack-compactness",
+            "context": "Coherence Conservation"
+          },
+          {
+            "source": "foundation/observer-profile-noise",
             "context": "Coherence Conservation"
           },
           {
@@ -6132,7 +6137,9 @@
         "particles/mass-hierarchy"
       ],
       "enablesDerivation": [],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "foundation/observer-profile-noise"
+      ],
       "steps": [
         {
           "number": 1,
@@ -6347,7 +6354,16 @@
             "context": "Bootstrap Fixed-Point Existence"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "foundation/observer-profile-noise",
+            "context": "**Step 3**"
+          },
+          {
+            "source": "foundation/observer-profile-noise",
+            "context": "Step 3"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -6382,7 +6398,8 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
-        "foundation/observer-code-distances"
+        "foundation/observer-code-distances",
+        "foundation/observer-profile-noise"
       ],
       "steps": [
         {
@@ -6598,6 +6615,10 @@
           },
           {
             "source": "foundation/observer-error-correction",
+            "context": "Observer Code Family Identification"
+          },
+          {
+            "source": "foundation/observer-profile-noise",
             "context": "Observer Code Family Identification"
           }
         ]
@@ -7342,6 +7363,243 @@
             "context": "Observer-Level Stack Compactness"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "foundation/observer-profile-noise": {
+      "id": "foundation/observer-profile-noise",
+      "filePath": "site/src/content/derivations/foundation/observer-profile-noise.md",
+      "title": "4. Profile-Dependent Noise from Gauge Couplings",
+      "status": "provisional",
+      "rigorLevel": "semi-formal",
+      "group": "foundation",
+      "tags": [
+        "foundation",
+        "error-correction",
+        "gauge",
+        "noise-model"
+      ],
+      "summary": "Step 3 established that the universal geometric substrate noise α_H ~ 1/4 is far too weak to saturate code thresholds at observed SM masses — achieved code distance exceeds required distance by ~10^19 at every SM particle. This derivation closes that gap by identifying a second, profile-dependent noise channel: each gauge coupling the observer carries contributes an independent additive noise term via Type III carrier exchanges with the vacuum. By the Reverse Noether mechanism of Relational Invariants, gauge interactions are Type III exchanges at per-Planck-cell-per-Planck-tick rate ∝ g², and by Coherence Conservation these independent channels compose additively. The resulting map p_phys^eff(𝓘_A) = p_phys^geom(α_H) + Σ_i g_i² · η_{i,axis} is axis-selective — EM modulates spatial-axis noise (horizon charge-crossings), weak modulates spatial + algebraic (flavor change is algebraic-invariant change), color modulates spatial + algebraic + drives temporal-axis divergence as α_s → 1 (predicting confinement as a QEC consequence). Photons and gluons are structurally exempt — as gauge mediators their profile has no logical content exposed to their own coupling's noise, giving the massless limit by construction rather than by fiat. This map is the mechanism that takes an observer from its equivalence-class profile to its specific code-distance requirement and hence to its specific mass under the minimum-viable convention; it is the bridge between Step 3's self-consistency result and Step 6's SM-spectrum comparison, and prepares Step 5's QEC–WKB identity check.",
+      "lastUpdated": "2026-04-18",
+      "dependsOn": [
+        "foundation/observer-code-distances",
+        "foundation/observer-code-family",
+        "interactions/relational-invariants",
+        "gauge/electromagnetism",
+        "gauge/weak-interaction",
+        "gauge/color-force",
+        "axioms/coherence-conservation"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Gauge Interactions as Type III Carrier Exchanges"
+        },
+        {
+          "number": 2,
+          "title": "Per-Event Noise from Each Gauge Channel"
+        },
+        {
+          "number": 3,
+          "title": "Additive Composition from Coherence Conservation"
+        },
+        {
+          "number": 4,
+          "title": "Axis Selectivity from Coupling Content"
+        },
+        {
+          "number": 5,
+          "title": "Profile → Noise Map — Worked Examples"
+        },
+        {
+          "number": 6,
+          "title": "Link to Step 3 and Step 5"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Proposition",
+          "id": "1.1",
+          "name": "Type III carrier rate per Planck cell",
+          "statementPreview": "For each active gauge channel i in an observer's profile, the rate of Type III carrier exchanges with the substrate v..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "Bit-flip per event",
+          "statementPreview": "Each Type III carrier exchange in channel i flips the observer's integer-invariant record on the axes corresponding t..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "Per-cell per-tick per-channel bit-flip rate",
+          "statementPreview": "Combining Proposition 1.1 and 2.1, the per-Planck-cell, per-Planck-tick bit-flip rate from channel i on axis axis is:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Channel independence at substrate",
+          "statementPreview": "Type III carrier exchanges in different gauge channels are independent Poisson processes at the substrate-noise level..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Additive composition of noise rates",
+          "statementPreview": "For independent noise channels each with per-cell per-tick bit-flip rate pi, the total per-cell per-tick bit-flip rat..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "EM channel — spatial axis only",
+          "statementPreview": "Electromagnetic Type III exchanges test the horizon charge-crossing integer. They do not directly change the tick cou..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.2",
+          "name": "Weak channel — spatial and algebraic axes",
+          "statementPreview": "Weak Type III exchanges carry SU(2)L isospin charge and can flip the observer's weak isospin component (spatial-axis ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.3",
+          "name": "Color channel — spatial, algebraic, and temporal-via-confinement",
+          "statementPreview": "Color Type III exchanges permute color indices (spatial-axis integer change) and can change the observer's algebraic-..."
+        },
+        {
+          "type": "Corollary",
+          "id": "6.1",
+          "name": "Profile-specific minimum-viable mass",
+          "statementPreview": "Under the minimum-viable-code convention of [Step 3](/derivations/foundation/observer-code-distances) and the additiv..."
+        },
+        {
+          "type": "Corollary",
+          "id": "6.3",
+          "name": "Prepared form for Step 5 QEC–WKB identity",
+          "statementPreview": "With Step 4's additive form in hand, the WKB tunneling action S/hbar of [Mass Hierarchy](/derivations/particles/mass-..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Numerical coefficients $\\eta_{i, \\text{axis}}$.",
+          "description": "Compute the axis-specific Type III flip-fraction coefficients from explicit substrate QFT. For EM on the spatial axis: compute the fraction of virtual-photon exchange events that flip the horizon char"
+        },
+        {
+          "number": 2,
+          "title": "Cross-axis correlated errors from channel-shared invariants.",
+          "description": "When a channel tests integer invariants on multiple axes (e.g., weak on both spatial and algebraic), events produce correlated errors. This correlation modifies the product-code threshold analysis of "
+        },
+        {
+          "number": 3,
+          "title": "Multiplicative alternative to additive composition.",
+          "description": "If Step 6's quantitative comparison undershoots the observed hierarchy, the multiplicative form pphyseff = pphysgeom prodi (1 + gi2 etai) becomes the natural upgrade. Derive whether multiplicative com"
+        },
+        {
+          "number": 4,
+          "title": "Electroweak sector (W, Z, Higgs).",
+          "description": "Example 5.8 flagged that the electroweak symmetry-breaking sector requires explicit handling beyond Step 4's structural framework. Extend the profile → noise map to cover W, Z, Higgs masses via [Elect"
+        },
+        {
+          "number": 5,
+          "title": "Running-coupling ↔ effective-noise map.",
+          "description": "The gauge couplings gi entering etai, axis are evaluated at the framework's substrate scale. Relating these to observed low-energy values (via RG flow) requires [Renormalization](/derivations/thermody"
+        },
+        {
+          "number": 6,
+          "title": "Confinement threshold precision.",
+          "description": "Remark 4.4 argues confinement follows from alphas 1 pushing pphyseff to threshold. Compute the precise color-coupling value at which the threshold is crossed — this fixes the QCD confinement scale as "
+        },
+        {
+          "number": 7,
+          "title": "Neutrino-sector mixing and seesaw.",
+          "description": "Example 5.7 sketched neutrino noise as smallest because of minimal channel content. Observed neutrino masses (~0.1 eV) are much smaller than the simplest interpretation would predict. Formalize the ne"
+        },
+        {
+          "number": 8,
+          "title": "Anchored Step 6 comparison (prerequisite for validation test).",
+          "description": "With etai, axis unknown, Step 6's quantitative comparison requires anchoring to one observed mass to fix the coefficients, then predicting others. This is a derived-strategy deliverable for Step 6, no"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "foundation/observer-code-distances",
+            "context": "**Step 3**"
+          },
+          {
+            "target": "holography/causal-set-statistics",
+            "context": "Causal Set Statistics"
+          },
+          {
+            "target": "interactions/relational-invariants",
+            "context": "Relational Invariants"
+          },
+          {
+            "target": "axioms/coherence-conservation",
+            "context": "Coherence Conservation"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "target": "foundation/observer-code-distances",
+            "context": "Step 3"
+          },
+          {
+            "target": "interactions/moufang-loop-phase-closure",
+            "context": "Moufang-Loop Phase Closure"
+          },
+          {
+            "target": "gauge/electromagnetism",
+            "context": "Electromagnetism"
+          },
+          {
+            "target": "gauge/weak-interaction",
+            "context": "Weak Interaction"
+          },
+          {
+            "target": "gauge/color-force",
+            "context": "Color Force"
+          },
+          {
+            "target": "gauge/standard-model-group",
+            "context": "Standard Model Group"
+          },
+          {
+            "target": "foundation/observer-code-family",
+            "context": "Observer Code Family Identification"
+          },
+          {
+            "target": "gauge/confinement",
+            "context": "Confinement"
+          },
+          {
+            "target": "thermodynamics-ext/renormalization",
+            "context": "Renormalization"
+          },
+          {
+            "target": "gauge/electroweak-breaking",
+            "context": "Electroweak Breaking"
+          },
+          {
+            "target": "particles/neutrino-masses",
+            "context": "Neutrino Masses"
+          }
+        ],
+        "incoming": []
       },
       "leanVerification": {
         "hasProofs": false,
@@ -8136,6 +8394,7 @@
         "gauge/chiral-symmetry-breaking"
       ],
       "dependedOnBy": [
+        "foundation/observer-profile-noise",
         "gauge/chiral-symmetry-breaking",
         "gauge/confinement",
         "gauge/standard-model-group",
@@ -8404,6 +8663,10 @@
             "context": "Color Force"
           },
           {
+            "source": "foundation/observer-profile-noise",
+            "context": "Color Force"
+          },
+          {
             "source": "gauge/chiral-symmetry-breaking",
             "context": "Color Force"
           },
@@ -8634,6 +8897,10 @@
             "context": "Confinement"
           },
           {
+            "source": "foundation/observer-profile-noise",
+            "context": "Confinement"
+          },
+          {
             "source": "gauge/chiral-symmetry-breaking",
             "context": "Confinement"
           },
@@ -8679,6 +8946,7 @@
       ],
       "dependedOnBy": [
         "foundation/knot-theoretic-bootstrap",
+        "foundation/observer-profile-noise",
         "gauge/standard-model-group",
         "gauge/weak-interaction"
       ],
@@ -8985,6 +9253,10 @@
             "context": "Electromagnetism"
           },
           {
+            "source": "foundation/observer-profile-noise",
+            "context": "Electromagnetism"
+          },
+          {
             "source": "gauge/color-force",
             "context": "Electromagnetism"
           },
@@ -9243,6 +9515,10 @@
         "incoming": [
           {
             "source": "foundation/observer-code-distances",
+            "context": "Electroweak Breaking"
+          },
+          {
+            "source": "foundation/observer-profile-noise",
             "context": "Electroweak Breaking"
           },
           {
@@ -9712,6 +9988,10 @@
             "context": "Standard Model Group"
           },
           {
+            "source": "foundation/observer-profile-noise",
+            "context": "Standard Model Group"
+          },
+          {
             "source": "gauge/anomaly-cancellation",
             "context": "SM Gauge Group"
           },
@@ -9938,6 +10218,7 @@
       "dependedOnBy": [
         "cosmology/baryogenesis",
         "flavor/mixing-angles",
+        "foundation/observer-profile-noise",
         "gauge/chirality-selection",
         "gauge/color-force",
         "gauge/electroweak-breaking",
@@ -10317,6 +10598,10 @@
           },
           {
             "source": "foundation/coherence-lagrangian",
+            "context": "Weak Interaction"
+          },
+          {
+            "source": "foundation/observer-profile-noise",
             "context": "Weak Interaction"
           },
           {
@@ -11357,6 +11642,10 @@
           },
           {
             "source": "foundation/observer-holographic-equivalence",
+            "context": "Causal Set Statistics"
+          },
+          {
+            "source": "foundation/observer-profile-noise",
             "context": "Causal Set Statistics"
           },
           {
@@ -13435,6 +13724,10 @@
           {
             "source": "foundation/observer-error-correction",
             "context": "Moufang-Loop Phase Closure"
+          },
+          {
+            "source": "foundation/observer-profile-noise",
+            "context": "Moufang-Loop Phase Closure"
           }
         ]
       },
@@ -13475,6 +13768,7 @@
         "cosmology/cyclic-cosmology",
         "cosmology/observer-loop-viability",
         "foundation/minimum-bootstrap-closure",
+        "foundation/observer-profile-noise",
         "gauge/chirality-selection",
         "holography/causal-set-statistics",
         "interactions/bootstrap",
@@ -13705,6 +13999,10 @@
           },
           {
             "source": "foundation/minimum-bootstrap-closure",
+            "context": "Relational Invariants"
+          },
+          {
+            "source": "foundation/observer-profile-noise",
             "context": "Relational Invariants"
           },
           {
@@ -15695,6 +15993,10 @@
             "context": "Mass Hierarchy"
           },
           {
+            "source": "foundation/observer-profile-noise",
+            "context": "Mass Hierarchy"
+          },
+          {
             "source": "gauge/chiral-symmetry-breaking",
             "context": "Mass Hierarchy"
           },
@@ -15957,6 +16259,10 @@
           },
           {
             "source": "foundation/observer-code-distances",
+            "context": "Neutrino Masses"
+          },
+          {
+            "source": "foundation/observer-profile-noise",
             "context": "Neutrino Masses"
           },
           {
@@ -22240,6 +22546,10 @@
           {
             "source": "flavor/mixing-angles",
             "context": "Renormalization Group"
+          },
+          {
+            "source": "foundation/observer-profile-noise",
+            "context": "Renormalization"
           }
         ]
       },
@@ -27896,6 +28206,76 @@
       "id": "2.1",
       "name": "Finiteness of each fiber",
       "fullRef": "foundation/observer-level-stack-compactness:Proposition 2.1"
+    },
+    {
+      "derivationId": "foundation/observer-profile-noise",
+      "type": "Proposition",
+      "id": "1.1",
+      "name": "Type III carrier rate per Planck cell",
+      "fullRef": "foundation/observer-profile-noise:Proposition 1.1"
+    },
+    {
+      "derivationId": "foundation/observer-profile-noise",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "Bit-flip per event",
+      "fullRef": "foundation/observer-profile-noise:Proposition 2.1"
+    },
+    {
+      "derivationId": "foundation/observer-profile-noise",
+      "type": "Proposition",
+      "id": "2.2",
+      "name": "Per-cell per-tick per-channel bit-flip rate",
+      "fullRef": "foundation/observer-profile-noise:Proposition 2.2"
+    },
+    {
+      "derivationId": "foundation/observer-profile-noise",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Channel independence at substrate",
+      "fullRef": "foundation/observer-profile-noise:Proposition 3.1"
+    },
+    {
+      "derivationId": "foundation/observer-profile-noise",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "Additive composition of noise rates",
+      "fullRef": "foundation/observer-profile-noise:Proposition 3.2"
+    },
+    {
+      "derivationId": "foundation/observer-profile-noise",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "EM channel — spatial axis only",
+      "fullRef": "foundation/observer-profile-noise:Proposition 4.1"
+    },
+    {
+      "derivationId": "foundation/observer-profile-noise",
+      "type": "Proposition",
+      "id": "4.2",
+      "name": "Weak channel — spatial and algebraic axes",
+      "fullRef": "foundation/observer-profile-noise:Proposition 4.2"
+    },
+    {
+      "derivationId": "foundation/observer-profile-noise",
+      "type": "Proposition",
+      "id": "4.3",
+      "name": "Color channel — spatial, algebraic, and temporal-via-confinement",
+      "fullRef": "foundation/observer-profile-noise:Proposition 4.3"
+    },
+    {
+      "derivationId": "foundation/observer-profile-noise",
+      "type": "Corollary",
+      "id": "6.1",
+      "name": "Profile-specific minimum-viable mass",
+      "fullRef": "foundation/observer-profile-noise:Corollary 6.1"
+    },
+    {
+      "derivationId": "foundation/observer-profile-noise",
+      "type": "Corollary",
+      "id": "6.3",
+      "name": "Prepared form for Step 5 QEC–WKB identity",
+      "fullRef": "foundation/observer-profile-noise:Corollary 6.3"
     },
     {
       "derivationId": "foundation/observer-projected-spacetime",
@@ -34905,6 +35285,62 @@
       "number": 7,
       "title": "Dependence on [Area Scaling] postulates.",
       "description": "Proposition 1.1 and 2.1 both rely on the holographic bound. [Area Scaling](/derivations/holography/area-scaling) itself carries Structural Postulate S1 (area-coherence saturation). Any promotion of S1"
+    },
+    {
+      "derivationId": "foundation/observer-profile-noise",
+      "derivationStatus": "provisional",
+      "number": 1,
+      "title": "Numerical coefficients $\\eta_{i, \\text{axis}}$.",
+      "description": "Compute the axis-specific Type III flip-fraction coefficients from explicit substrate QFT. For EM on the spatial axis: compute the fraction of virtual-photon exchange events that flip the horizon char"
+    },
+    {
+      "derivationId": "foundation/observer-profile-noise",
+      "derivationStatus": "provisional",
+      "number": 2,
+      "title": "Cross-axis correlated errors from channel-shared invariants.",
+      "description": "When a channel tests integer invariants on multiple axes (e.g., weak on both spatial and algebraic), events produce correlated errors. This correlation modifies the product-code threshold analysis of "
+    },
+    {
+      "derivationId": "foundation/observer-profile-noise",
+      "derivationStatus": "provisional",
+      "number": 3,
+      "title": "Multiplicative alternative to additive composition.",
+      "description": "If Step 6's quantitative comparison undershoots the observed hierarchy, the multiplicative form pphyseff = pphysgeom prodi (1 + gi2 etai) becomes the natural upgrade. Derive whether multiplicative com"
+    },
+    {
+      "derivationId": "foundation/observer-profile-noise",
+      "derivationStatus": "provisional",
+      "number": 4,
+      "title": "Electroweak sector (W, Z, Higgs).",
+      "description": "Example 5.8 flagged that the electroweak symmetry-breaking sector requires explicit handling beyond Step 4's structural framework. Extend the profile → noise map to cover W, Z, Higgs masses via [Elect"
+    },
+    {
+      "derivationId": "foundation/observer-profile-noise",
+      "derivationStatus": "provisional",
+      "number": 5,
+      "title": "Running-coupling ↔ effective-noise map.",
+      "description": "The gauge couplings gi entering etai, axis are evaluated at the framework's substrate scale. Relating these to observed low-energy values (via RG flow) requires [Renormalization](/derivations/thermody"
+    },
+    {
+      "derivationId": "foundation/observer-profile-noise",
+      "derivationStatus": "provisional",
+      "number": 6,
+      "title": "Confinement threshold precision.",
+      "description": "Remark 4.4 argues confinement follows from alphas 1 pushing pphyseff to threshold. Compute the precise color-coupling value at which the threshold is crossed — this fixes the QCD confinement scale as "
+    },
+    {
+      "derivationId": "foundation/observer-profile-noise",
+      "derivationStatus": "provisional",
+      "number": 7,
+      "title": "Neutrino-sector mixing and seesaw.",
+      "description": "Example 5.7 sketched neutrino noise as smallest because of minimal channel content. Observed neutrino masses (~0.1 eV) are much smaller than the simplest interpretation would predict. Formalize the ne"
+    },
+    {
+      "derivationId": "foundation/observer-profile-noise",
+      "derivationStatus": "provisional",
+      "number": 8,
+      "title": "Anchored Step 6 comparison (prerequisite for validation test).",
+      "description": "With etai, axis unknown, Step 6's quantitative comparison requires anchoring to one observed mass to fix the coefficients, then predicting others. This is a derived-strategy deliverable for Step 6, no"
     },
     {
       "derivationId": "foundation/observer-projected-spacetime",

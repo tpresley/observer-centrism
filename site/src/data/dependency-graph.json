@@ -487,6 +487,12 @@
       "status": "provisional"
     },
     {
+      "id": "foundation/observer-profile-noise",
+      "title": "4. Profile-Dependent Noise from Gauge Couplings",
+      "group": "foundation",
+      "status": "provisional"
+    },
+    {
       "id": "foundation/minimum-bootstrap-closure",
       "title": "Minimum Bootstrap Closure",
       "group": "foundation",
@@ -1747,6 +1753,34 @@
     {
       "from": "particles/mass-hierarchy",
       "to": "foundation/observer-code-distances"
+    },
+    {
+      "from": "foundation/observer-code-distances",
+      "to": "foundation/observer-profile-noise"
+    },
+    {
+      "from": "foundation/observer-code-family",
+      "to": "foundation/observer-profile-noise"
+    },
+    {
+      "from": "interactions/relational-invariants",
+      "to": "foundation/observer-profile-noise"
+    },
+    {
+      "from": "gauge/electromagnetism",
+      "to": "foundation/observer-profile-noise"
+    },
+    {
+      "from": "gauge/weak-interaction",
+      "to": "foundation/observer-profile-noise"
+    },
+    {
+      "from": "gauge/color-force",
+      "to": "foundation/observer-profile-noise"
+    },
+    {
+      "from": "axioms/coherence-conservation",
+      "to": "foundation/observer-profile-noise"
     }
   ]
 }
