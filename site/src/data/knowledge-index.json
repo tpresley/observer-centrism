@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-04-18T12:01:28.030Z",
-    "derivationCount": 84,
+    "generatedAt": "2026-04-19T07:46:31.995Z",
+    "derivationCount": 86,
     "predictionCount": 12,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -9,14 +9,14 @@
   "stats": {
     "byStatus": {
       "derived": 27,
-      "provisional": 56,
+      "provisional": 58,
       "draft": 1
     },
-    "derivationCount": 84,
+    "derivationCount": 86,
     "predictionCount": 12,
-    "edgeCount": 286,
-    "formalObjectCount": 1229,
-    "openGapCount": 287,
+    "edgeCount": 299,
+    "formalObjectCount": 1258,
+    "openGapCount": 303,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -133,6 +133,7 @@
         "foundation/aperiodic-order",
         "foundation/bootstrap-fixed-point-existence",
         "foundation/continuous-discrete-duality",
+        "foundation/observer-error-correction",
         "foundation/observer-holographic-equivalence",
         "foundation/observer-level-stack-compactness",
         "gauge/anomaly-cancellation",
@@ -680,6 +681,10 @@
             "context": "Theorem 2.1"
           },
           {
+            "source": "foundation/observer-error-correction",
+            "context": "Axioms of Coherence"
+          },
+          {
             "source": "interactions/bootstrap",
             "context": "Coherence as Physical Primitive"
           },
@@ -736,6 +741,8 @@
         "cosmology/observer-loop-viability",
         "foundation/continuous-discrete-duality",
         "foundation/minimum-bootstrap-closure",
+        "foundation/observer-code-family",
+        "foundation/observer-error-correction",
         "foundation/observer-holographic-equivalence",
         "foundation/observer-projected-spacetime",
         "gauge/electromagnetism",
@@ -1075,6 +1082,14 @@
             "context": "Loop Closure"
           },
           {
+            "source": "foundation/observer-code-family",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "foundation/observer-error-correction",
+            "context": "Loop Closure"
+          },
+          {
             "source": "foundation/observer-projected-spacetime",
             "context": "Loop Closure"
           },
@@ -1236,6 +1251,7 @@
         "dimensions/three-dimensions",
         "foundation/continuous-discrete-duality",
         "foundation/minimum-bootstrap-closure",
+        "foundation/observer-error-correction",
         "foundation/observer-holographic-equivalence",
         "foundation/observer-level-stack-compactness",
         "foundation/observer-projected-spacetime",
@@ -1468,6 +1484,14 @@
           },
           {
             "source": "foundation/minimum-bootstrap-closure",
+            "context": "Observer Definition"
+          },
+          {
+            "source": "foundation/observer-code-family",
+            "context": "Observer Definition"
+          },
+          {
+            "source": "foundation/observer-error-correction",
             "context": "Observer Definition"
           },
           {
@@ -5079,7 +5103,12 @@
             "context": "Observer-Projected Spacetime"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "foundation/observer-code-family",
+            "context": "Bootstrap Fixed-Point Existence"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -6070,6 +6099,501 @@
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
+    "foundation/observer-code-family": {
+      "id": "foundation/observer-code-family",
+      "filePath": "site/src/content/derivations/foundation/observer-code-family.md",
+      "title": "2. Observer Code Family Identification",
+      "status": "provisional",
+      "rigorLevel": "semi-formal",
+      "group": "foundation",
+      "tags": [
+        "foundation",
+        "error-correction",
+        "holography",
+        "topology"
+      ],
+      "summary": "The observer projection CPTP map 𝒫_A of Observer Projection as Error Correction belongs to a hybrid code family factoring as a tensor product of three established quantum-error-correction families along the three integer-stable axes: a HaPPY-style holographic code on the spatial axis (bulk-to-boundary encoding with N = A/4ℓ_P² boundary qubits; exterior cancellation is the subregion-duality condition), a Kitaev-style topological code on the algebraic axis (homotopy-class logical qubits π_k(G_n) at bootstrap level n, with π_1 at level 1 and π_3 at levels 2–3), and a continuous-time Floquet code on the temporal axis (Axiom 3 loop closure as a periodic stabilizer schedule; integer tick count k_A as the dynamically generated logical invariant). The three factors share a compatibility condition — their stabilizer groups pairwise commute on the substrate Hilbert space, and their joint fixed subspace is the code space 𝒞_A of Step 1. The three-axis simultaneous combination is novel as a unified family: each factor is a known code family in quantum information theory, but no prior code combines all three with the specific cross-axis couplings forced by bootstrap level and horizon area. This is Step 2 of the Observer-Projection-as-Error-Correction research target; it sets the stage for Step 3 (code-distance computation) by providing a distance prescription on each factor that the product structure composes multiplicatively modulo correlated error channels.",
+      "lastUpdated": "2026-04-18",
+      "dependsOn": [
+        "foundation/observer-error-correction",
+        "foundation/observer-holographic-equivalence",
+        "interactions/moufang-loop-phase-closure",
+        "holography/area-scaling",
+        "axioms/loop-closure"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Spatial Axis — HaPPY Holographic Code Identification"
+        },
+        {
+          "number": 2,
+          "title": "Algebraic Axis — Kitaev Topological Code Identification"
+        },
+        {
+          "number": 3,
+          "title": "Temporal Axis — Floquet Code Identification"
+        },
+        {
+          "number": 4,
+          "title": "Compatibility — The Three-Axis Product"
+        },
+        {
+          "number": 5,
+          "title": "What Is Novel — The Cross-Axis Couplings"
+        },
+        {
+          "number": 6,
+          "title": "Consistency with Step 1 and Existing Framework Commitments"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Proposition",
+          "id": "1.1",
+          "name": "Spatial-axis isometric encoding",
+          "statementPreview": "The spatial-axis factor PAsp of the observer-projection CPTP map admits an isometric restriction from the interior of..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Spatial-axis subregion duality",
+          "statementPreview": "[Observer Holographic Equivalence](/derivations/foundation/observer-holographic-equivalence) Corollary 4.5 (exterior ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.3",
+          "name": "Spatial-axis boundary-qubit count",
+          "statementPreview": "The horizon mode count NA = AA/4ellP2 of [Area Scaling](/derivations/holography/area-scaling) Theorem 5.2 is the HaPP..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.4",
+          "name": "Spatial-axis distance scaling",
+          "statementPreview": "The code distance on the spatial axis scales as dsp sim NA1/2, matching the standard HaPPY family distance formula (r..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "Algebraic-axis homotopy-class logical content",
+          "statementPreview": "The algebraic-axis factor PAalg encodes logical content as the homotopy class [phi]A in pik(Gn) = Z of the phase traj..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "Level-1 case — 2D toric-code structure",
+          "statementPreview": "At bootstrap level 1, the logical content is the pi1(U(1)) = Z winding number of the phase trajectory. This is isomor..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.3",
+          "name": "Level-2 and level-3 cases — 4D topological / Walker–Wang structure",
+          "statementPreview": "At bootstrap levels 2 and 3, the logical content is the pi3(SU(2)) = Z or pi3(SU(3)) = Z instanton number of the phas..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.4",
+          "name": "Algebraic-axis distance scaling",
+          "statementPreview": "The code distance on the algebraic axis scales as dalg sim Ln, where Ln is the linear size of the bootstrap-scale reg..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Temporal-axis periodic stabilizer schedule",
+          "statementPreview": "The Axiom 3 phase evolution phitau: HA HA is a continuous-time periodic stabilizer schedule with period TA, whose ins..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Temporal-axis dynamically generated logical content",
+          "statementPreview": "The integer tick count kA is a dynamically generated logical invariant: it is not determined by any instantaneous sta..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.3",
+          "name": "Temporal-axis distance scaling",
+          "statementPreview": "The code distance on the temporal axis scales linearly with the number of sub-tick substrate events per period: dtmp ..."
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "Three-axis commuting-stabilizer product",
+          "statementPreview": "The three axis-specific stabilizer groups Ssp (HaPPY on spatial), Salg (Kitaev on algebraic), Stmp(tau) (Floquet on t..."
+        },
+        {
+          "type": "Corollary",
+          "id": "4.3",
+          "name": "Code-rate calculation",
+          "statementPreview": "The product code's rate — logical qubits per physical qubit — is the product of axis-wise rates:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Cross-axis couplings are framework-specific",
+          "statementPreview": "The three-axis product family with pairwise-commuting stabilizers is a known construction in quantum information (3D ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.2",
+          "name": "Minimum additional structure required beyond known families",
+          "statementPreview": "Formalizing the observer-projection code as a specific, named family requires exactly the following additional struct..."
+        },
+        {
+          "type": "Corollary",
+          "id": "5.3",
+          "name": "Implication for Step 3 of the research target",
+          "statementPreview": "Step 3 (code-distance computation for Standard Model integer profiles) can proceed by computing distances on each fac..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Explicit HaPPY tensor-network construction for the spatial factor.",
+          "description": "Give the tensor-network geometry on the horizon (hyperbolic tiling, perfect-tensor choices, bulk-boundary map) that realizes the spatial-axis isometric encoding. Likely tools: AdS-like horizon metric "
+        },
+        {
+          "number": 2,
+          "title": "Explicit Walker–Wang Hamiltonian for the algebraic factor.",
+          "description": "Give the local Hamiltonian on a 4D lattice whose ground-state space realizes the framework's pi3(SU(2)) or pi3(SU(3)) logical content at bootstrap levels 2 and 3. Likely tools: Walker–Wang 2011 for ta"
+        },
+        {
+          "number": 3,
+          "title": "Pairwise-commutation verification on explicit generators.",
+          "description": "Given explicit stabilizer generators from Gaps 1 and 2 (plus a Floquet schedule derived from Axiom 3), verify that the three groups pairwise commute on the full substrate Hilbert space. This checks th"
+        },
+        {
+          "number": 4,
+          "title": "Continuous-time Floquet-code distance formula.",
+          "description": "Derive or cite the distance formula for a continuous-time Floquet code with period TA and single-Planck-tick error rate. Current literature focuses on discrete schedules; the continuous case may requi"
+        },
+        {
+          "number": 5,
+          "title": "Correlated-error analysis across the three axes.",
+          "description": "Analyze correlated errors that simultaneously flip invariants on multiple axes (e.g., a Planck event that changes both kA and R MA). Determines the product code's effective threshold under realistic f"
+        },
+        {
+          "number": 6,
+          "title": "Code-distance computation for specific SM profiles (Research Target Step 3).",
+          "description": "With Gaps 1–5 addressed, compute the minimum horizon area (hence mass) that achieves the required distance on each factor for each SM particle's integer profile. Produces the quantitative predicted sp"
+        },
+        {
+          "number": 7,
+          "title": "Cross-check against Bootstrap Fixed-Point Existence.",
+          "description": "The bootstrap-coupling map mA (NA, Gn, TA) is itself a fixed-point structure (observer mass determines code parameters, which constrain stable-observer spectrum, which determines admissible masses). C"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "foundation/observer-error-correction",
+            "context": "hereafter **Step 1**"
+          },
+          {
+            "target": "foundation/observer-holographic-equivalence",
+            "context": "Observer Holographic Equivalence"
+          },
+          {
+            "target": "foundation/observer-error-correction",
+            "context": "Observer Projection as Error Correction"
+          },
+          {
+            "target": "interactions/moufang-loop-phase-closure",
+            "context": "Moufang-Loop Phase Closure"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "axioms/observer-definition",
+            "context": "Observer Definition"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
+          },
+          {
+            "target": "interactions/moufang-loop-phase-closure",
+            "context": "0, T_A)$. Consequently, the code space $\\mathcal{C}_A$ of Step 1 Proposition 3.3"
+          },
+          {
+            "target": "foundation/bootstrap-fixed-point-existence",
+            "context": "Bootstrap Fixed-Point Existence"
+          }
+        ],
+        "incoming": [
+          {
+            "source": "foundation/observer-error-correction",
+            "context": "Observer Code Family Identification"
+          }
+        ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "foundation/observer-error-correction": {
+      "id": "foundation/observer-error-correction",
+      "filePath": "site/src/content/derivations/foundation/observer-error-correction.md",
+      "title": "1. Observer Projection as Error Correction",
+      "status": "provisional",
+      "rigorLevel": "semi-formal",
+      "group": "foundation",
+      "tags": [
+        "foundation",
+        "structure",
+        "error-correction",
+        "holography"
+      ],
+      "summary": "The discrete observer projection is a completely positive trace-preserving map whose domain is a continuous substrate Hilbert space and whose range is an observer's state space. Under the dual framing articulated here, the observer is the interior slack bounded by integer-stable configurations on three axes — spatial (null horizon, via Observer Holographic Equivalence Proposition 4.1), temporal (Axiom 3 loop closures), and algebraic (bootstrap-scale homotopy classes, via Moufang-Loop Phase Closure Proposition 6.1). Physical qubits are substrate modes with count ~ A/4ℓ_P² (Area Scaling); the logical boundary is the observer's integer-invariant profile (charges, tick counts, homotopy classes); the observer itself is identified with the code-space interior rather than any individual codeword. Theses A and A' of Observer Holographic Equivalence become orthogonal slices through this same interior. This is Step 1 of the Observer-Projection-as-Error-Correction research target; Steps 2–5 (code-family identification, code-distance computation, Standard-Model-spectrum matching, mass-hierarchy tunneling unification) are deferred to future derivations.",
+      "lastUpdated": "2026-04-18",
+      "dependsOn": [
+        "axioms/coherence-conservation",
+        "axioms/observer-definition",
+        "axioms/loop-closure",
+        "foundation/observer-holographic-equivalence",
+        "holography/area-scaling",
+        "interactions/moufang-loop-phase-closure",
+        "minimal-observer/structure",
+        "interactions/bootstrap"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [
+        "foundation/observer-code-family"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The Three Integer-Stable Axes (Consolidation)"
+        },
+        {
+          "number": 2,
+          "title": "The CPTP Map $\\mathcal{P}_A$"
+        },
+        {
+          "number": 3,
+          "title": "Physical and Logical Structure (Error-Correcting Code Correspondence)"
+        },
+        {
+          "number": 4,
+          "title": "Dual Framing — Observer as Code-Space Interior"
+        },
+        {
+          "number": 5,
+          "title": "Consistency with Existing Framework Commitments"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Proposition",
+          "id": "1.1",
+          "name": "Spatial axis — null horizon integer content",
+          "statementPreview": "The null horizon MA of observer A carries integer topological data only: Type III carrier crossings record integer li..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Temporal axis — loop closure integer content",
+          "statementPreview": "The U(1) phase trajectory phitau: HA HA closes exactly after integer multiples of the period TA: phik TA = idHA for e..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.3",
+          "name": "Algebraic axis — bootstrap homotopy integer content",
+          "statementPreview": "At each bootstrap level n in 1, 2, 3, the phase trajectory phi: S1 Gn admits a Z-valued homotopy class: [phi] in pi1(..."
+        },
+        {
+          "type": "Definition",
+          "id": "1.5",
+          "name": "Integer-invariant profile",
+          "statementPreview": "The **integer-invariant profile** of observer A is the triple*"
+        },
+        {
+          "type": "Definition",
+          "id": "2.1",
+          "name": "Substrate Hilbert space",
+          "statementPreview": "The **substrate Hilbert space** Hsubstrate is the space of states on Planck-scale substrate modes within the causal p..."
+        },
+        {
+          "type": "Definition",
+          "id": "2.2",
+          "name": "Observer state space",
+          "statementPreview": "The **observer state space** HA is the Hilbert space of observer A's coherence content, as specified by the intersect..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.3",
+          "name": "Existence of the CPTP map",
+          "statementPreview": "There exists a completely positive trace-preserving map*"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Physical qubits",
+          "statementPreview": "The physical qubits of the observer projection PA are the Planck-scale substrate modes within the causal past of A's ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Logical boundary",
+          "statementPreview": "The logical boundary — the discrete data specifying which observer A is — is the integer-invariant profile IA of Defi..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.3",
+          "name": "Code space",
+          "statementPreview": "The **code space** CA Hsubstrate of observer A is the subspace of substrate states with integer-invariant profile equ..."
+        },
+        {
+          "type": "Corollary",
+          "id": "3.4",
+          "name": "Ratio of physical to logical degrees of freedom",
+          "statementPreview": "The ratio dimCA / dimHAlogical is the code rate's inverse — the redundancy of the observer projection. For a typical ..."
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "Dual framing",
+          "statementPreview": "The observer A is identified with the interior of the code space CA:*"
+        },
+        {
+          "type": "Corollary",
+          "id": "4.3",
+          "name": "Thesis A / Thesis A' as orthogonal slices",
+          "statementPreview": "[Observer Holographic Equivalence](/derivations/foundation/observer-holographic-equivalence)'s Thesis A (time-like ac..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Explicit construction of the CPTP map.",
+          "description": "Construct PA via explicit Kraus operators Kk with sumk Kkdagger Kk = I, such that PA(rhosub) = sumk Kk rhosub Kkdagger factors through the integer-invariant profile. Likely tools: projection onto stab"
+        },
+        {
+          "number": 2,
+          "title": "Category-theoretic statement of the moduli quotient.",
+          "description": "Theorem 4.1 identifies HA with a moduli space under three gauge equivalences. A rigorous category-theoretic formulation would specify the site on which the quotient is taken (observer category mathbfO"
+        },
+        {
+          "number": 3,
+          "title": "Code family identification (Research Target Step 2).",
+          "description": "~~Determine what quantum error-correcting code family PA belongs to: topological (Kitaev-like, natural given homotopy classes), stabilizer (if Clifford-compatible), holographic (HaPPY-like, natural gi"
+        },
+        {
+          "number": 4,
+          "title": "Code-distance computation (Research Target Step 3).",
+          "description": "For each Standard Model particle's integer profile, compute the code distance — the minimum number of independent Planck-mode errors required to flip a logical invariant. *Difficulty: HARD; prerequisi"
+        },
+        {
+          "number": 5,
+          "title": "Standard Model spectrum match (Research Target Step 4).",
+          "description": "Compare predicted minimum-viable scales to observed particle masses. Either consistent (supporting the hypothesis) or not (falsifying it). *Difficulty: HARD; prerequisite is Open Gap 4.*"
+        },
+        {
+          "number": 6,
+          "title": "Mass-hierarchy tunneling unification (Research Target Step 5).",
+          "description": "Check whether the WKB tunneling action of [Mass Hierarchy](/derivations/particles/mass-hierarchy) is equivalent to the code-distance requirement. If equivalent, Mass Hierarchy's S1 postulate is promot"
+        },
+        {
+          "number": 7,
+          "title": "Planck-noise model.",
+          "description": "Formalize the Planck-scale noise model assumed by the error-correction interpretation (one error per mode per tick, or more nuanced). Connects to [Causal Set Statistics](/derivations/holography/causal"
+        },
+        {
+          "number": 8,
+          "title": "Temporal and algebraic qubit counts.",
+          "description": "Proposition 3.1 gives the spatial axis's physical-qubit count via Area Scaling. Analogous counts for the temporal axis (modes per tick interval) and algebraic axis (modes per homotopy-class representa"
+        },
+        {
+          "number": 9,
+          "title": "Relationship to Born rule.",
+          "description": "[Born Rule](/derivations/quantum/born-rule) Theorem 0.1 promotes Born to a theorem via Cauchy multiplicative equation on U(1) + channel additivity + composition + continuity. The present derivation sp"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "foundation/observer-holographic-equivalence",
+            "context": "Observer Holographic Equivalence"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
+          },
+          {
+            "target": "interactions/moufang-loop-phase-closure",
+            "context": "Moufang-Loop Phase Closure"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "target": "particles/three-generations",
+            "context": "Three Generations"
+          },
+          {
+            "target": "axioms/observer-definition",
+            "context": "Observer Definition"
+          },
+          {
+            "target": "axioms/coherence-operational",
+            "context": "Axioms of Coherence"
+          },
+          {
+            "target": "minimal-observer/structure",
+            "context": "Minimal Observer Structure"
+          },
+          {
+            "target": "foundation/observer-code-family",
+            "context": "Observer Code Family Identification"
+          },
+          {
+            "target": "holography/causal-set-statistics",
+            "context": "Causal Set Statistics"
+          },
+          {
+            "target": "quantum/born-rule",
+            "context": "Born Rule"
+          }
+        ],
+        "incoming": [
+          {
+            "source": "foundation/observer-code-family",
+            "context": "hereafter **Step 1**"
+          },
+          {
+            "source": "foundation/observer-code-family",
+            "context": "Observer Projection as Error Correction"
+          }
+        ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
     "foundation/observer-holographic-equivalence": {
       "id": "foundation/observer-holographic-equivalence",
       "filePath": "site/src/content/derivations/foundation/observer-holographic-equivalence.md",
@@ -6100,6 +6624,8 @@
         "foundation/bootstrap-fixed-point-existence",
         "foundation/knot-theoretic-bootstrap",
         "foundation/minimum-bootstrap-closure",
+        "foundation/observer-code-family",
+        "foundation/observer-error-correction",
         "foundation/observer-level-stack-compactness",
         "interactions/moufang-loop-phase-closure"
       ],
@@ -6372,6 +6898,14 @@
           },
           {
             "source": "foundation/minimum-bootstrap-closure",
+            "context": "Observer Holographic Equivalence"
+          },
+          {
+            "source": "foundation/observer-code-family",
+            "context": "Observer Holographic Equivalence"
+          },
+          {
+            "source": "foundation/observer-error-correction",
             "context": "Observer Holographic Equivalence"
           },
           {
@@ -9749,6 +10283,8 @@
         "cosmology/dark-energy-equation-of-state",
         "cosmology/geometric-substrate",
         "cosmology/observer-loop-viability",
+        "foundation/observer-code-family",
+        "foundation/observer-error-correction",
         "foundation/observer-holographic-equivalence",
         "foundation/observer-level-stack-compactness",
         "holography/black-hole-entropy",
@@ -9990,6 +10526,14 @@
           },
           {
             "source": "foundation/knot-theoretic-bootstrap",
+            "context": "Area Scaling"
+          },
+          {
+            "source": "foundation/observer-code-family",
+            "context": "Area Scaling"
+          },
+          {
+            "source": "foundation/observer-error-correction",
             "context": "Area Scaling"
           },
           {
@@ -10517,6 +11061,10 @@
           },
           {
             "source": "cosmology/geometric-substrate",
+            "context": "Causal Set Statistics"
+          },
+          {
+            "source": "foundation/observer-error-correction",
             "context": "Causal Set Statistics"
           },
           {
@@ -11975,6 +12523,7 @@
         "foundation/bootstrap-fixed-point-existence",
         "foundation/knot-theoretic-bootstrap",
         "foundation/minimum-bootstrap-closure",
+        "foundation/observer-error-correction",
         "foundation/observer-holographic-equivalence",
         "gauge/color-force",
         "holography/horizon-gauge-shell",
@@ -12421,7 +12970,10 @@
         "foundation/observer-holographic-equivalence"
       ],
       "enablesDerivation": [],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "foundation/observer-code-family",
+        "foundation/observer-error-correction"
+      ],
       "steps": [
         {
           "number": 1,
@@ -12578,7 +13130,20 @@
             "context": "Axiom 3"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "foundation/observer-code-family",
+            "context": "Moufang-Loop Phase Closure"
+          },
+          {
+            "source": "foundation/observer-code-family",
+            "context": "0, T_A)$. Consequently, the code space $\\mathcal{C}_A$ of Step 1 Proposition 3.3"
+          },
+          {
+            "source": "foundation/observer-error-correction",
+            "context": "Moufang-Loop Phase Closure"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -14030,6 +14595,7 @@
         "cosmology/observer-loop-viability",
         "dimensions/three-dimensions",
         "foundation/minimum-bootstrap-closure",
+        "foundation/observer-error-correction",
         "foundation/observer-level-stack-compactness",
         "interactions/moufang-loop-phase-closure",
         "minimal-observer/multiplicity",
@@ -14213,6 +14779,10 @@
           },
           {
             "source": "foundation/continuous-discrete-duality",
+            "context": "Minimal Observer Structure"
+          },
+          {
+            "source": "foundation/observer-error-correction",
             "context": "Minimal Observer Structure"
           },
           {
@@ -14820,6 +15390,10 @@
           },
           {
             "source": "flavor/mixing-angles",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "source": "foundation/observer-error-correction",
             "context": "Mass Hierarchy"
           },
           {
@@ -15904,6 +16478,10 @@
             "context": "Three Generations"
           },
           {
+            "source": "foundation/observer-error-correction",
+            "context": "Three Generations"
+          },
+          {
             "source": "foundation/observer-holographic-equivalence",
             "context": "Three Generations"
           },
@@ -16188,6 +16766,10 @@
           },
           {
             "source": "foundation/continuous-discrete-duality",
+            "context": "Born Rule"
+          },
+          {
+            "source": "foundation/observer-error-correction",
             "context": "Born Rule"
           },
           {
@@ -26572,6 +27154,209 @@
       "fullRef": "foundation/minimum-bootstrap-closure:Proposition 5.2"
     },
     {
+      "derivationId": "foundation/observer-code-family",
+      "type": "Proposition",
+      "id": "1.1",
+      "name": "Spatial-axis isometric encoding",
+      "fullRef": "foundation/observer-code-family:Proposition 1.1"
+    },
+    {
+      "derivationId": "foundation/observer-code-family",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "Spatial-axis subregion duality",
+      "fullRef": "foundation/observer-code-family:Proposition 1.2"
+    },
+    {
+      "derivationId": "foundation/observer-code-family",
+      "type": "Proposition",
+      "id": "1.3",
+      "name": "Spatial-axis boundary-qubit count",
+      "fullRef": "foundation/observer-code-family:Proposition 1.3"
+    },
+    {
+      "derivationId": "foundation/observer-code-family",
+      "type": "Proposition",
+      "id": "1.4",
+      "name": "Spatial-axis distance scaling",
+      "fullRef": "foundation/observer-code-family:Proposition 1.4"
+    },
+    {
+      "derivationId": "foundation/observer-code-family",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "Algebraic-axis homotopy-class logical content",
+      "fullRef": "foundation/observer-code-family:Proposition 2.1"
+    },
+    {
+      "derivationId": "foundation/observer-code-family",
+      "type": "Proposition",
+      "id": "2.2",
+      "name": "Level-1 case — 2D toric-code structure",
+      "fullRef": "foundation/observer-code-family:Proposition 2.2"
+    },
+    {
+      "derivationId": "foundation/observer-code-family",
+      "type": "Proposition",
+      "id": "2.3",
+      "name": "Level-2 and level-3 cases — 4D topological / Walker–Wang structure",
+      "fullRef": "foundation/observer-code-family:Proposition 2.3"
+    },
+    {
+      "derivationId": "foundation/observer-code-family",
+      "type": "Proposition",
+      "id": "2.4",
+      "name": "Algebraic-axis distance scaling",
+      "fullRef": "foundation/observer-code-family:Proposition 2.4"
+    },
+    {
+      "derivationId": "foundation/observer-code-family",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Temporal-axis periodic stabilizer schedule",
+      "fullRef": "foundation/observer-code-family:Proposition 3.1"
+    },
+    {
+      "derivationId": "foundation/observer-code-family",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "Temporal-axis dynamically generated logical content",
+      "fullRef": "foundation/observer-code-family:Proposition 3.2"
+    },
+    {
+      "derivationId": "foundation/observer-code-family",
+      "type": "Proposition",
+      "id": "3.3",
+      "name": "Temporal-axis distance scaling",
+      "fullRef": "foundation/observer-code-family:Proposition 3.3"
+    },
+    {
+      "derivationId": "foundation/observer-code-family",
+      "type": "Theorem",
+      "id": "4.1",
+      "name": "Three-axis commuting-stabilizer product",
+      "fullRef": "foundation/observer-code-family:Theorem 4.1"
+    },
+    {
+      "derivationId": "foundation/observer-code-family",
+      "type": "Corollary",
+      "id": "4.3",
+      "name": "Code-rate calculation",
+      "fullRef": "foundation/observer-code-family:Corollary 4.3"
+    },
+    {
+      "derivationId": "foundation/observer-code-family",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "Cross-axis couplings are framework-specific",
+      "fullRef": "foundation/observer-code-family:Proposition 5.1"
+    },
+    {
+      "derivationId": "foundation/observer-code-family",
+      "type": "Proposition",
+      "id": "5.2",
+      "name": "Minimum additional structure required beyond known families",
+      "fullRef": "foundation/observer-code-family:Proposition 5.2"
+    },
+    {
+      "derivationId": "foundation/observer-code-family",
+      "type": "Corollary",
+      "id": "5.3",
+      "name": "Implication for Step 3 of the research target",
+      "fullRef": "foundation/observer-code-family:Corollary 5.3"
+    },
+    {
+      "derivationId": "foundation/observer-error-correction",
+      "type": "Proposition",
+      "id": "1.1",
+      "name": "Spatial axis — null horizon integer content",
+      "fullRef": "foundation/observer-error-correction:Proposition 1.1"
+    },
+    {
+      "derivationId": "foundation/observer-error-correction",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "Temporal axis — loop closure integer content",
+      "fullRef": "foundation/observer-error-correction:Proposition 1.2"
+    },
+    {
+      "derivationId": "foundation/observer-error-correction",
+      "type": "Proposition",
+      "id": "1.3",
+      "name": "Algebraic axis — bootstrap homotopy integer content",
+      "fullRef": "foundation/observer-error-correction:Proposition 1.3"
+    },
+    {
+      "derivationId": "foundation/observer-error-correction",
+      "type": "Definition",
+      "id": "1.5",
+      "name": "Integer-invariant profile",
+      "fullRef": "foundation/observer-error-correction:Definition 1.5"
+    },
+    {
+      "derivationId": "foundation/observer-error-correction",
+      "type": "Definition",
+      "id": "2.1",
+      "name": "Substrate Hilbert space",
+      "fullRef": "foundation/observer-error-correction:Definition 2.1"
+    },
+    {
+      "derivationId": "foundation/observer-error-correction",
+      "type": "Definition",
+      "id": "2.2",
+      "name": "Observer state space",
+      "fullRef": "foundation/observer-error-correction:Definition 2.2"
+    },
+    {
+      "derivationId": "foundation/observer-error-correction",
+      "type": "Proposition",
+      "id": "2.3",
+      "name": "Existence of the CPTP map",
+      "fullRef": "foundation/observer-error-correction:Proposition 2.3"
+    },
+    {
+      "derivationId": "foundation/observer-error-correction",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Physical qubits",
+      "fullRef": "foundation/observer-error-correction:Proposition 3.1"
+    },
+    {
+      "derivationId": "foundation/observer-error-correction",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "Logical boundary",
+      "fullRef": "foundation/observer-error-correction:Proposition 3.2"
+    },
+    {
+      "derivationId": "foundation/observer-error-correction",
+      "type": "Proposition",
+      "id": "3.3",
+      "name": "Code space",
+      "fullRef": "foundation/observer-error-correction:Proposition 3.3"
+    },
+    {
+      "derivationId": "foundation/observer-error-correction",
+      "type": "Corollary",
+      "id": "3.4",
+      "name": "Ratio of physical to logical degrees of freedom",
+      "fullRef": "foundation/observer-error-correction:Corollary 3.4"
+    },
+    {
+      "derivationId": "foundation/observer-error-correction",
+      "type": "Theorem",
+      "id": "4.1",
+      "name": "Dual framing",
+      "fullRef": "foundation/observer-error-correction:Theorem 4.1"
+    },
+    {
+      "derivationId": "foundation/observer-error-correction",
+      "type": "Corollary",
+      "id": "4.3",
+      "name": "Thesis A / Thesis A' as orthogonal slices",
+      "fullRef": "foundation/observer-error-correction:Corollary 4.3"
+    },
+    {
       "derivationId": "foundation/observer-holographic-equivalence",
       "type": "Definition",
       "id": "1.1",
@@ -33439,6 +34224,118 @@
       "number": 7,
       "title": "Connecting to physical content.",
       "description": "The triangle result is structural; it does not yet produce any observable quantity (Lambda, coupling constants, masses). Extending the fixed point to carry the framework's integer level structure (Ope"
+    },
+    {
+      "derivationId": "foundation/observer-code-family",
+      "derivationStatus": "provisional",
+      "number": 1,
+      "title": "Explicit HaPPY tensor-network construction for the spatial factor.",
+      "description": "Give the tensor-network geometry on the horizon (hyperbolic tiling, perfect-tensor choices, bulk-boundary map) that realizes the spatial-axis isometric encoding. Likely tools: AdS-like horizon metric "
+    },
+    {
+      "derivationId": "foundation/observer-code-family",
+      "derivationStatus": "provisional",
+      "number": 2,
+      "title": "Explicit Walker–Wang Hamiltonian for the algebraic factor.",
+      "description": "Give the local Hamiltonian on a 4D lattice whose ground-state space realizes the framework's pi3(SU(2)) or pi3(SU(3)) logical content at bootstrap levels 2 and 3. Likely tools: Walker–Wang 2011 for ta"
+    },
+    {
+      "derivationId": "foundation/observer-code-family",
+      "derivationStatus": "provisional",
+      "number": 3,
+      "title": "Pairwise-commutation verification on explicit generators.",
+      "description": "Given explicit stabilizer generators from Gaps 1 and 2 (plus a Floquet schedule derived from Axiom 3), verify that the three groups pairwise commute on the full substrate Hilbert space. This checks th"
+    },
+    {
+      "derivationId": "foundation/observer-code-family",
+      "derivationStatus": "provisional",
+      "number": 4,
+      "title": "Continuous-time Floquet-code distance formula.",
+      "description": "Derive or cite the distance formula for a continuous-time Floquet code with period TA and single-Planck-tick error rate. Current literature focuses on discrete schedules; the continuous case may requi"
+    },
+    {
+      "derivationId": "foundation/observer-code-family",
+      "derivationStatus": "provisional",
+      "number": 5,
+      "title": "Correlated-error analysis across the three axes.",
+      "description": "Analyze correlated errors that simultaneously flip invariants on multiple axes (e.g., a Planck event that changes both kA and R MA). Determines the product code's effective threshold under realistic f"
+    },
+    {
+      "derivationId": "foundation/observer-code-family",
+      "derivationStatus": "provisional",
+      "number": 6,
+      "title": "Code-distance computation for specific SM profiles (Research Target Step 3).",
+      "description": "With Gaps 1–5 addressed, compute the minimum horizon area (hence mass) that achieves the required distance on each factor for each SM particle's integer profile. Produces the quantitative predicted sp"
+    },
+    {
+      "derivationId": "foundation/observer-code-family",
+      "derivationStatus": "provisional",
+      "number": 7,
+      "title": "Cross-check against Bootstrap Fixed-Point Existence.",
+      "description": "The bootstrap-coupling map mA (NA, Gn, TA) is itself a fixed-point structure (observer mass determines code parameters, which constrain stable-observer spectrum, which determines admissible masses). C"
+    },
+    {
+      "derivationId": "foundation/observer-error-correction",
+      "derivationStatus": "provisional",
+      "number": 1,
+      "title": "Explicit construction of the CPTP map.",
+      "description": "Construct PA via explicit Kraus operators Kk with sumk Kkdagger Kk = I, such that PA(rhosub) = sumk Kk rhosub Kkdagger factors through the integer-invariant profile. Likely tools: projection onto stab"
+    },
+    {
+      "derivationId": "foundation/observer-error-correction",
+      "derivationStatus": "provisional",
+      "number": 2,
+      "title": "Category-theoretic statement of the moduli quotient.",
+      "description": "Theorem 4.1 identifies HA with a moduli space under three gauge equivalences. A rigorous category-theoretic formulation would specify the site on which the quotient is taken (observer category mathbfO"
+    },
+    {
+      "derivationId": "foundation/observer-error-correction",
+      "derivationStatus": "provisional",
+      "number": 3,
+      "title": "Code family identification (Research Target Step 2).",
+      "description": "~~Determine what quantum error-correcting code family PA belongs to: topological (Kitaev-like, natural given homotopy classes), stabilizer (if Clifford-compatible), holographic (HaPPY-like, natural gi"
+    },
+    {
+      "derivationId": "foundation/observer-error-correction",
+      "derivationStatus": "provisional",
+      "number": 4,
+      "title": "Code-distance computation (Research Target Step 3).",
+      "description": "For each Standard Model particle's integer profile, compute the code distance — the minimum number of independent Planck-mode errors required to flip a logical invariant. *Difficulty: HARD; prerequisi"
+    },
+    {
+      "derivationId": "foundation/observer-error-correction",
+      "derivationStatus": "provisional",
+      "number": 5,
+      "title": "Standard Model spectrum match (Research Target Step 4).",
+      "description": "Compare predicted minimum-viable scales to observed particle masses. Either consistent (supporting the hypothesis) or not (falsifying it). *Difficulty: HARD; prerequisite is Open Gap 4.*"
+    },
+    {
+      "derivationId": "foundation/observer-error-correction",
+      "derivationStatus": "provisional",
+      "number": 6,
+      "title": "Mass-hierarchy tunneling unification (Research Target Step 5).",
+      "description": "Check whether the WKB tunneling action of [Mass Hierarchy](/derivations/particles/mass-hierarchy) is equivalent to the code-distance requirement. If equivalent, Mass Hierarchy's S1 postulate is promot"
+    },
+    {
+      "derivationId": "foundation/observer-error-correction",
+      "derivationStatus": "provisional",
+      "number": 7,
+      "title": "Planck-noise model.",
+      "description": "Formalize the Planck-scale noise model assumed by the error-correction interpretation (one error per mode per tick, or more nuanced). Connects to [Causal Set Statistics](/derivations/holography/causal"
+    },
+    {
+      "derivationId": "foundation/observer-error-correction",
+      "derivationStatus": "provisional",
+      "number": 8,
+      "title": "Temporal and algebraic qubit counts.",
+      "description": "Proposition 3.1 gives the spatial axis's physical-qubit count via Area Scaling. Analogous counts for the temporal axis (modes per tick interval) and algebraic axis (modes per homotopy-class representa"
+    },
+    {
+      "derivationId": "foundation/observer-error-correction",
+      "derivationStatus": "provisional",
+      "number": 9,
+      "title": "Relationship to Born rule.",
+      "description": "[Born Rule](/derivations/quantum/born-rule) Theorem 0.1 promotes Born to a theorem via Cauchy multiplicative equation on U(1) + channel additivity + composition + continuity. The present derivation sp"
     },
     {
       "derivationId": "foundation/observer-holographic-equivalence",

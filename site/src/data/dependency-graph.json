@@ -469,6 +469,18 @@
       "status": "provisional"
     },
     {
+      "id": "foundation/observer-error-correction",
+      "title": "1. Observer Projection as Error Correction",
+      "group": "foundation",
+      "status": "provisional"
+    },
+    {
+      "id": "foundation/observer-code-family",
+      "title": "2. Observer Code Family Identification",
+      "group": "foundation",
+      "status": "provisional"
+    },
+    {
       "id": "foundation/minimum-bootstrap-closure",
       "title": "Minimum Bootstrap Closure",
       "group": "foundation",
@@ -1649,6 +1661,58 @@
     {
       "from": "foundation/observer-holographic-equivalence",
       "to": "interactions/moufang-loop-phase-closure"
+    },
+    {
+      "from": "axioms/coherence-conservation",
+      "to": "foundation/observer-error-correction"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "foundation/observer-error-correction"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "foundation/observer-error-correction"
+    },
+    {
+      "from": "foundation/observer-holographic-equivalence",
+      "to": "foundation/observer-error-correction"
+    },
+    {
+      "from": "holography/area-scaling",
+      "to": "foundation/observer-error-correction"
+    },
+    {
+      "from": "interactions/moufang-loop-phase-closure",
+      "to": "foundation/observer-error-correction"
+    },
+    {
+      "from": "minimal-observer/structure",
+      "to": "foundation/observer-error-correction"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "foundation/observer-error-correction"
+    },
+    {
+      "from": "foundation/observer-error-correction",
+      "to": "foundation/observer-code-family"
+    },
+    {
+      "from": "foundation/observer-holographic-equivalence",
+      "to": "foundation/observer-code-family"
+    },
+    {
+      "from": "interactions/moufang-loop-phase-closure",
+      "to": "foundation/observer-code-family"
+    },
+    {
+      "from": "holography/area-scaling",
+      "to": "foundation/observer-code-family"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "foundation/observer-code-family"
     }
   ]
 }

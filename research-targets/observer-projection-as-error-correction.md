@@ -34,6 +34,38 @@ If the hypothesis is correct, the framework's particle spectrum is not a catalog
 
 Each axis was previously a separate framework commitment. The hypothesis says they are facets of one mechanism.
 
+## Dual framing: observer as the uncorrected interior
+
+The simplest statement of the hypothesis — "the observer is what error correction produces" — puts the integer-represented endpoint at the center. A sharper **dual statement** puts the continuous interior at the center instead:
+
+**The observer is the locus of continuous, uncorrected content bounded by integer-stable configurations on every available axis.**
+
+The integer-stable boundary configurations are:
+
+- **Spatial**: the null horizon $\partial M_A$, carrying integer topological data only (Observer Holographic Equivalence Proposition 4.1 Part 1).
+- **Temporal**: successive loop closures $\phi_{T_A} = \text{id}_\Sigma$, integer period counts (Axiom 3).
+- **Algebraic (at bootstrap level $n$)**: $\pi_k$-valued homotopy classes on the bootstrap-scale phase trajectory (Moufang-Loop Phase Closure Proposition 6.1 — winding at level 1, instanton at levels 2–3).
+
+Between these integer-stable boundary configurations lies continuous slack — the spacetime bulk of $M_A$, the phase evolution between closures, and the homotopy-class representative rather than the class itself. **The observer is this slack.**
+
+### What the dual framing changes
+
+1. **Theses A and A' are both slices through the same uncorrected interior.** Observer Holographic Equivalence's Thesis A (time-like accumulated record) and Thesis A' (space-like instantaneous configuration) are not two separate descriptions that happen to be equivalent; they are two slices through the same uncorrected interior of the 4-manifold $M_A$, chosen along orthogonal axes. Each axis bounds the interior with integer configurations on its far ends (horizon spatially, loop closures temporally).
+
+2. **The $10^{44}$-modes-for-9-bits ratio reads differently.** Under the standard framing, the $10^{44}$ Planck modes are redundancy protecting a 9-bit logical payload. Under the dual framing, the $10^{44}$ modes *are* the observer's continuous substance, and the 9 bits are the boundary conditions — the integer profile that, if perturbed, would identify the observer as a different observer. The mode count is the observer; the bit count is the frame.
+
+3. **Finite information capacity becomes structural.** The observer has finite capacity because it is the slack itself: once continuous content resolves to integers (upon crossing the horizon outward, or upon loop closure temporally), it leaves the observer and becomes record. The observer's capacity is the 4-volume of the slack region bounded by its integer configurations.
+
+4. **Consistency with Axiom 3 becomes definitional.** Axiom 3's content — discrete ticks emerge from continuous phase evolution with exact closure — is already the dual framing applied to the temporal axis: the phase evolution *between* closures is the observer's continuous temporal existence; the closures themselves are the integer-stable endpoints.
+
+5. **Suggests a specific formal home in QEC.** In standard stabilizer QEC, the code space is the joint fixed subspace of the stabilizer group; logical states are codewords. The dual framing identifies the observer with the **interior of the code space** — the continuous spread spanning stabilizer-preserving deformations between boundary codewords on each axis — rather than with any individual codeword. The CPTP map $\mathcal{P}$ of Step 1 is then not a projection onto a codeword but a localization of the observer within the code space.
+
+### What it does not change
+
+The testable content of the hypothesis is unchanged: Steps 3–4 of the formalization path still ask whether specific integer-invariant profiles admit code distances sufficient to survive Planck-scale noise, and whether the resulting mass-threshold spectrum matches the SM. The dual framing is an ontological refinement — a statement about what the hypothesis *says* — not an empirical refinement.
+
+It is therefore compatible with either success or failure of Step 4: if the predicted spectrum matches, the hypothesis is confirmed with the dual framing built in; if it fails, the dual framing survives as a useful reformulation of Theses A and A' independent of the error-correction claim.
+
 **A concrete information-theoretic framing:**
 
 - The electron has Bekenstein information content $\sim 9$ bits (enough for charge, spin, lepton number, a handful of quantum numbers)
@@ -85,7 +117,7 @@ Concrete steps from hypothesis to derivation:
 
 **Output**: A precise specification of the projection as an error-correcting code in the quantum information sense. Physical qubits = substrate modes; logical qubits = observer integer invariants.
 
-### Step 2. Identify the code family
+### Step 2. Identify the code family — **COMPLETE** (2026-04-18)
 
 **Task**: Determine what family of quantum error-correcting codes the observer projection belongs to.
 
@@ -96,6 +128,8 @@ Concrete steps from hypothesis to derivation:
 - **Novel**: the observer projection might require a new code family not yet studied in quantum information theory.
 
 **Output**: Identification of the code family, or characterization of the projection as a new error-correcting structure.
+
+**Result (2026-04-18)**: A hybrid product family is identified in [Observer Code Family Identification](../site/src/content/derivations/foundation/observer-code-family.md). Each of the three integer-stable axes of Step 1 maps onto an established code family: spatial axis ↔ HaPPY holographic code (boundary-qubit count $N_A = A_A/4\ell_P^2$; exterior cancellation = subregion duality), algebraic axis ↔ Kitaev topological code (homotopy-class logical qubits $\pi_k(G_n)$ with $G_n \in \{U(1), SU(2), SU(3)\}$ at bootstrap levels 1–3), temporal axis ↔ continuous-time Floquet code (Axiom 3 periodic schedule with cycle-averaged integer tick count $k_A$ as the dynamically generated logical invariant). The three axes satisfy a pairwise-commuting stabilizer condition so the code space is their joint fixed subspace. The product structure HaPPY × Kitaev × Floquet with the framework's specific cross-axis couplings (bootstrap-level selecting the Kitaev target group, horizon area fixing the HaPPY qubit count, observer period fixing the Floquet cycle) is novel as a unified family — no prior quantum-information code combines all three with these couplings. Each factor's distance formula is known; their product-level composition under correlated errors is the content of Step 3.
 
 ### Step 3. Compute code distances for specific integer-invariant profiles
 
@@ -191,5 +225,7 @@ This hypothesis emerged during an April 2026 conversation exploring whether the 
 - Sharpening to "why does it take 10^44 Planck modes to encode the electron's handful of quantum numbers?"
 - Proposal: $10^{44}$ is not encoding but redundancy for topological protection
 - Recognition that the framework's discrete projection IS the error correction — the insight that unified the picture
+
+An April 18, 2026 follow-up conversation added the **dual framing** (observer as uncorrected interior rather than as error-corrected endpoint) while planning Step 1 of the formalization. This inversion unifies Theses A and A' of Observer Holographic Equivalence into a single structural picture and is folded into the hypothesis above.
 
 The hypothesis is stated here as articulated but is not yet formalized. Pursuing its formalization is the research target.

@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-04-18T12:01:28.347Z",
-    "totalReferences": 101,
-    "totalCitations": 116,
-    "citingFiles": 48,
+    "generatedAt": "2026-04-19T07:46:32.322Z",
+    "totalReferences": 103,
+    "totalCitations": 118,
+    "citingFiles": 49,
     "generator": "scripts/extract-references.mjs"
   },
   "categoryNames": {
@@ -39,7 +39,7 @@
     },
     "quantum-information": {
       "name": "Quantum Information",
-      "count": 17
+      "count": 19
     },
     "field-theory": {
       "name": "Field Theory",
@@ -404,6 +404,21 @@
       "category": "quantum-information"
     },
     {
+      "id": "hastings-haah-2021",
+      "authors": "Hastings–Haah",
+      "year": 2021,
+      "citedAs": [
+        "Hastings–Haah 2021"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "foundation/observer-code-family",
+          "title": "2. Observer Code Family Identification"
+        }
+      ],
+      "category": "quantum-information"
+    },
+    {
       "id": "illman-1983",
       "authors": "Illman",
       "year": 1983,
@@ -494,6 +509,21 @@
         {
           "derivationId": "axioms/loop-closure",
           "title": "Loop Closure"
+        }
+      ],
+      "category": "quantum-information"
+    },
+    {
+      "id": "pastawski-yoshida-harlow-preskill-2015",
+      "authors": "Pastawski–Yoshida–Harlow–Preskill",
+      "year": 2015,
+      "citedAs": [
+        "Pastawski–Yoshida–Harlow–Preskill 2015"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "foundation/observer-code-family",
+          "title": "2. Observer Code Family Identification"
         }
       ],
       "category": "quantum-information"
