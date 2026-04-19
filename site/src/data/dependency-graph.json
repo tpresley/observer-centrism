@@ -493,6 +493,12 @@
       "status": "provisional"
     },
     {
+      "id": "foundation/observer-qec-wkb",
+      "title": "5. QEC and WKB as Complementary Mechanisms",
+      "group": "foundation",
+      "status": "provisional"
+    },
+    {
       "id": "foundation/minimum-bootstrap-closure",
       "title": "Minimum Bootstrap Closure",
       "group": "foundation",
@@ -1781,6 +1787,26 @@
     {
       "from": "axioms/coherence-conservation",
       "to": "foundation/observer-profile-noise"
+    },
+    {
+      "from": "foundation/observer-profile-noise",
+      "to": "foundation/observer-qec-wkb"
+    },
+    {
+      "from": "foundation/observer-code-distances",
+      "to": "foundation/observer-qec-wkb"
+    },
+    {
+      "from": "foundation/observer-code-family",
+      "to": "foundation/observer-qec-wkb"
+    },
+    {
+      "from": "particles/mass-hierarchy",
+      "to": "foundation/observer-qec-wkb"
+    },
+    {
+      "from": "foundation/coherence-lagrangian",
+      "to": "foundation/observer-qec-wkb"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-04-19T09:22:51.376Z",
-    "derivationCount": 88,
+    "generatedAt": "2026-04-19T10:15:08.770Z",
+    "derivationCount": 89,
     "predictionCount": 12,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -9,14 +9,14 @@
   "stats": {
     "byStatus": {
       "derived": 27,
-      "provisional": 60,
+      "provisional": 61,
       "draft": 1
     },
-    "derivationCount": 88,
+    "derivationCount": 89,
     "predictionCount": 12,
-    "edgeCount": 313,
-    "formalObjectCount": 1283,
-    "openGapCount": 319,
+    "edgeCount": 318,
+    "formalObjectCount": 1294,
+    "openGapCount": 325,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -5120,6 +5120,10 @@
           {
             "source": "foundation/observer-code-family",
             "context": "Bootstrap Fixed-Point Existence"
+          },
+          {
+            "source": "foundation/observer-qec-wkb",
+            "context": "Bootstrap Fixed-Point Existence"
           }
         ]
       },
@@ -5156,6 +5160,7 @@
       "dependedOnBy": [
         "foundation/continuous-discrete-duality",
         "foundation/knot-theoretic-bootstrap",
+        "foundation/observer-qec-wkb",
         "particles/cpt-theorem",
         "spacetime/gravitational-constant"
       ],
@@ -5369,6 +5374,10 @@
           },
           {
             "source": "foundation/knot-theoretic-bootstrap",
+            "context": "Coherence Lagrangian"
+          },
+          {
+            "source": "foundation/observer-qec-wkb",
             "context": "Coherence Lagrangian"
           },
           {
@@ -6138,7 +6147,8 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
-        "foundation/observer-profile-noise"
+        "foundation/observer-profile-noise",
+        "foundation/observer-qec-wkb"
       ],
       "steps": [
         {
@@ -6362,6 +6372,10 @@
           {
             "source": "foundation/observer-profile-noise",
             "context": "Step 3"
+          },
+          {
+            "source": "foundation/observer-qec-wkb",
+            "context": "Code-Distance Computation for Integer Profiles"
           }
         ]
       },
@@ -6399,7 +6413,8 @@
       "enablesDerivation": [],
       "dependedOnBy": [
         "foundation/observer-code-distances",
-        "foundation/observer-profile-noise"
+        "foundation/observer-profile-noise",
+        "foundation/observer-qec-wkb"
       ],
       "steps": [
         {
@@ -7398,7 +7413,9 @@
         "axioms/coherence-conservation"
       ],
       "enablesDerivation": [],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "foundation/observer-qec-wkb"
+      ],
       "steps": [
         {
           "number": 1,
@@ -7599,7 +7616,12 @@
             "context": "Neutrino Masses"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "foundation/observer-qec-wkb",
+            "context": "Profile-Dependent Noise from Gauge Couplings"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -7862,6 +7884,193 @@
             "context": "Observer-Projected Spacetime"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "foundation/observer-qec-wkb": {
+      "id": "foundation/observer-qec-wkb",
+      "filePath": "site/src/content/derivations/foundation/observer-qec-wkb.md",
+      "title": "5. QEC and WKB as Complementary Mechanisms",
+      "status": "provisional",
+      "rigorLevel": "semi-formal",
+      "group": "foundation",
+      "tags": [
+        "foundation",
+        "error-correction",
+        "mass-hierarchy",
+        "structural-obstruction"
+      ],
+      "summary": "Step 5 of the Observer-Projection-as-Error-Correction research target was originally framed as the unification test: confirm that the WKB tunneling action of Mass Hierarchy and the QEC+coupling-noise required distance of Steps 3–4 are one mechanism under two descriptions. The test returns a negative result. WKB suppression scales as e^(-c/g²) — exponential in inverse coupling squared — while the QEC quantity (d_req/2)·log(p_th/p_phys^eff) reduces to log(T_coh/τ_P), independent of coupling entirely. No linear (or any simple) identification matches both scalings across the SM coupling range; the two mechanisms cannot be reduced to one. What IS structurally established: complementarity (WKB selects specific mass via formation probability, QEC validates preservation against substrate noise — different roles, both necessary), compatibility (WKB-selected masses automatically satisfy QEC preservation with the Step 3 excess margin), and a structural explanation of the ~10^19 excess margin itself (it is exactly the ratio of WKB-exponential to QEC-logarithmic scaling at SM couplings). Mass Hierarchy's structural postulate S1 (tunneling-crystallization identification) stays postulated — NOT promoted to theorem — but its role in the framework sharpens: WKB is the mass-determination mechanism, QEC is the consistency framework, and the refined hypothesis of the research target (QEC as compatibility layer, not mass-determination) is confirmed by Step 5's distinctness result.",
+      "lastUpdated": "2026-04-19",
+      "dependsOn": [
+        "foundation/observer-profile-noise",
+        "foundation/observer-code-distances",
+        "foundation/observer-code-family",
+        "particles/mass-hierarchy",
+        "foundation/coherence-lagrangian"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The Two Candidate Mechanisms (Recap)"
+        },
+        {
+          "number": 2,
+          "title": "Compute the QEC Quantity"
+        },
+        {
+          "number": 3,
+          "title": "Compare Functional Dependencies"
+        },
+        {
+          "number": 4,
+          "title": "What Actually Holds — Complementarity"
+        },
+        {
+          "number": 5,
+          "title": "Structural Explanation of the $10^{19}$ Excess Margin"
+        },
+        {
+          "number": 6,
+          "title": "Implications for Mass Hierarchy S1 and the Refined Hypothesis"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "QEC quantity simplifies to a coupling-independent expression",
+          "statementPreview": "Under the Step 3 definition of dreq, the right-hand side of the conjectured identification reduces to:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "WKB depends exponentially on coupling; QEC does not",
+          "statementPreview": "The WKB tunneling action S/hbar = c/g2 is strongly coupling-dependent — doubling g quadruples S/hbar, and small coupl..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "No linear extension repairs the mismatch",
+          "statementPreview": "The generalized identification S/hbar = A clogic log(Tcoh/tauP) + B for constants A, B also fails: the left side reta..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.3",
+          "name": "Monomial extensions also fail",
+          "statementPreview": "Monomial identifications of the form S/hbar = A (dreq/2)alpha [log(pth/pphyseff)]beta do not repair the mismatch for ..."
+        },
+        {
+          "type": "Definition",
+          "id": "4.1",
+          "name": "Formation and preservation",
+          "statementPreview": "For an observer with profile IA and candidate mass mA:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.2",
+          "name": "Both are required for observer existence",
+          "statementPreview": "A profile IA realizes as a stable observer at mass mA if and only if:*"
+        },
+        {
+          "type": "Corollary",
+          "id": "4.3",
+          "name": "The observed SM masses are formation-selected, preservation-compatible",
+          "statementPreview": "At each observed SM mass, WKB tunneling is marginal (formation probability is sim 1 at cosmological time-volume scale..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Excess margin in terms of WKB-QEC scaling mismatch",
+          "statementPreview": "The ratio dachieved/dreq at the WKB-selected mass mk = mP e-ck/gk2 is:*"
+        },
+        {
+          "type": "Corollary",
+          "id": "5.2",
+          "name": "Magnitude estimates for SM particles",
+          "statementPreview": "For electroweak-scale WKB (c/g2 sim 40): ratio sim e40/(sim 102) sim 1015. For Planck-scale ratios (c/g2 sim 60 for l..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "S1 remains a structural postulate",
+          "statementPreview": "The error-correction program of Steps 1–5 does not promote Mass Hierarchy's S1 (tunneling–crystallization corresponde..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.2",
+          "name": "Refined hypothesis is confirmed",
+          "statementPreview": "The research-target's 2026-04-18 refined hypothesis (\"QEC is the consistency framework, not the mass-determination me..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Joint fixed-point consistency as unification candidate.",
+          "description": "The most framework-native alternative to simple-functional identification: WKB formation and QEC preservation rates might enter a joint fixed-point condition selecting observer masses, with each rate "
+        },
+        {
+          "number": 2,
+          "title": "Coherence Lagrangian common-saddle derivation.",
+          "description": "Both WKB and QEC are semiclassical structures. [Coherence Lagrangian](/derivations/foundation/coherence-lagrangian) Theorem 6.0 establishes the framework's Lagrangian dynamics. A careful analysis of W"
+        },
+        {
+          "number": 3,
+          "title": "Shared-facts distinguishability layer.",
+          "description": "A prior conversation flagged that the \"what forces clogic\" question for each profile is not answered within the error-correction program. If distinguishability-conservation specifies a profile-specifi"
+        },
+        {
+          "number": 4,
+          "title": "Mass-information reversal above bootstrap level 3.",
+          "description": "[Mass Hierarchy](/derivations/particles/mass-hierarchy) §7 argues that at bootstrap levels beyond octonions (n > 3), particle identity transitions from topological (compact, boundary-shrinking) to str"
+        },
+        {
+          "number": 5,
+          "title": "Non-linear identifications beyond monomial.",
+          "description": "Propositions 3.1–3.3 rule out linear and monomial identifications. Exotic forms — e.g., S/hbar = exp[QEC quantity] or S/hbar = integral of QEC quantity over some auxiliary parameter — are not explicit"
+        },
+        {
+          "number": 6,
+          "title": "Connection to Step 6 capstone test.",
+          "description": "Step 5's complementarity result specifies Step 6's structure: the SM-spectrum match must compare (WKB-selected masses) ↔ (QEC preservation consistency) as two separate checks, not as a single unified "
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "target": "foundation/observer-code-distances",
+            "context": "Code-Distance Computation for Integer Profiles"
+          },
+          {
+            "target": "foundation/observer-profile-noise",
+            "context": "Profile-Dependent Noise from Gauge Couplings"
+          },
+          {
+            "target": "foundation/coherence-lagrangian",
+            "context": "Coherence Lagrangian"
+          },
+          {
+            "target": "foundation/bootstrap-fixed-point-existence",
+            "context": "Bootstrap Fixed-Point Existence"
+          }
+        ],
+        "incoming": []
       },
       "leanVerification": {
         "hasProofs": false,
@@ -15737,6 +15946,7 @@
         "cosmology/coupling-constants",
         "cosmology/geometric-substrate",
         "foundation/observer-code-distances",
+        "foundation/observer-qec-wkb",
         "particles/three-generations"
       ],
       "steps": [
@@ -15994,6 +16204,10 @@
           },
           {
             "source": "foundation/observer-profile-noise",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "source": "foundation/observer-qec-wkb",
             "context": "Mass Hierarchy"
           },
           {
@@ -28362,6 +28576,83 @@
       "fullRef": "foundation/observer-projected-spacetime:Proposition 6.3"
     },
     {
+      "derivationId": "foundation/observer-qec-wkb",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "QEC quantity simplifies to a coupling-independent expression",
+      "fullRef": "foundation/observer-qec-wkb:Proposition 2.1"
+    },
+    {
+      "derivationId": "foundation/observer-qec-wkb",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "WKB depends exponentially on coupling; QEC does not",
+      "fullRef": "foundation/observer-qec-wkb:Proposition 3.1"
+    },
+    {
+      "derivationId": "foundation/observer-qec-wkb",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "No linear extension repairs the mismatch",
+      "fullRef": "foundation/observer-qec-wkb:Proposition 3.2"
+    },
+    {
+      "derivationId": "foundation/observer-qec-wkb",
+      "type": "Proposition",
+      "id": "3.3",
+      "name": "Monomial extensions also fail",
+      "fullRef": "foundation/observer-qec-wkb:Proposition 3.3"
+    },
+    {
+      "derivationId": "foundation/observer-qec-wkb",
+      "type": "Definition",
+      "id": "4.1",
+      "name": "Formation and preservation",
+      "fullRef": "foundation/observer-qec-wkb:Definition 4.1"
+    },
+    {
+      "derivationId": "foundation/observer-qec-wkb",
+      "type": "Proposition",
+      "id": "4.2",
+      "name": "Both are required for observer existence",
+      "fullRef": "foundation/observer-qec-wkb:Proposition 4.2"
+    },
+    {
+      "derivationId": "foundation/observer-qec-wkb",
+      "type": "Corollary",
+      "id": "4.3",
+      "name": "The observed SM masses are formation-selected, preservation-compatible",
+      "fullRef": "foundation/observer-qec-wkb:Corollary 4.3"
+    },
+    {
+      "derivationId": "foundation/observer-qec-wkb",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "Excess margin in terms of WKB-QEC scaling mismatch",
+      "fullRef": "foundation/observer-qec-wkb:Proposition 5.1"
+    },
+    {
+      "derivationId": "foundation/observer-qec-wkb",
+      "type": "Corollary",
+      "id": "5.2",
+      "name": "Magnitude estimates for SM particles",
+      "fullRef": "foundation/observer-qec-wkb:Corollary 5.2"
+    },
+    {
+      "derivationId": "foundation/observer-qec-wkb",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "S1 remains a structural postulate",
+      "fullRef": "foundation/observer-qec-wkb:Proposition 6.1"
+    },
+    {
+      "derivationId": "foundation/observer-qec-wkb",
+      "type": "Proposition",
+      "id": "6.2",
+      "name": "Refined hypothesis is confirmed",
+      "fullRef": "foundation/observer-qec-wkb:Proposition 6.2"
+    },
+    {
       "derivationId": "gauge/anomaly-cancellation",
       "type": "Definition",
       "id": "1.1",
@@ -35383,6 +35674,48 @@
       "number": 6,
       "title": "Interaction with the continuous-discrete fixed point.",
       "description": "[Continuous-Discrete Duality](/derivations/foundation/continuous-discrete-duality) identifies the physical universe as the fixed point of mutual compatibility between the continuous and discrete layer"
+    },
+    {
+      "derivationId": "foundation/observer-qec-wkb",
+      "derivationStatus": "provisional",
+      "number": 1,
+      "title": "Joint fixed-point consistency as unification candidate.",
+      "description": "The most framework-native alternative to simple-functional identification: WKB formation and QEC preservation rates might enter a joint fixed-point condition selecting observer masses, with each rate "
+    },
+    {
+      "derivationId": "foundation/observer-qec-wkb",
+      "derivationStatus": "provisional",
+      "number": 2,
+      "title": "Coherence Lagrangian common-saddle derivation.",
+      "description": "Both WKB and QEC are semiclassical structures. [Coherence Lagrangian](/derivations/foundation/coherence-lagrangian) Theorem 6.0 establishes the framework's Lagrangian dynamics. A careful analysis of W"
+    },
+    {
+      "derivationId": "foundation/observer-qec-wkb",
+      "derivationStatus": "provisional",
+      "number": 3,
+      "title": "Shared-facts distinguishability layer.",
+      "description": "A prior conversation flagged that the \"what forces clogic\" question for each profile is not answered within the error-correction program. If distinguishability-conservation specifies a profile-specifi"
+    },
+    {
+      "derivationId": "foundation/observer-qec-wkb",
+      "derivationStatus": "provisional",
+      "number": 4,
+      "title": "Mass-information reversal above bootstrap level 3.",
+      "description": "[Mass Hierarchy](/derivations/particles/mass-hierarchy) §7 argues that at bootstrap levels beyond octonions (n > 3), particle identity transitions from topological (compact, boundary-shrinking) to str"
+    },
+    {
+      "derivationId": "foundation/observer-qec-wkb",
+      "derivationStatus": "provisional",
+      "number": 5,
+      "title": "Non-linear identifications beyond monomial.",
+      "description": "Propositions 3.1–3.3 rule out linear and monomial identifications. Exotic forms — e.g., S/hbar = exp[QEC quantity] or S/hbar = integral of QEC quantity over some auxiliary parameter — are not explicit"
+    },
+    {
+      "derivationId": "foundation/observer-qec-wkb",
+      "derivationStatus": "provisional",
+      "number": 6,
+      "title": "Connection to Step 6 capstone test.",
+      "description": "Step 5's complementarity result specifies Step 6's structure: the SM-spectrum match must compare (WKB-selected masses) ↔ (QEC preservation consistency) as two separate checks, not as a single unified "
     },
     {
       "derivationId": "gauge/chirality-selection",

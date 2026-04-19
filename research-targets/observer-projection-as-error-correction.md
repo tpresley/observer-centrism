@@ -207,7 +207,7 @@ $$p_{\text{phys}}^{\text{eff}}(\mathcal{I}_A) \;=\; p_{\text{phys}}^{\text{geom}
 
 **Output**: A derived form of the coupling → noise-rate map, plus its application to each SM profile. Closes the bridging gap between Step 3's self-consistency result and Step 6's spectrum comparison.
 
-### Step 5. Confirm QEC and WKB tunneling are one mechanism — **REFRAMED** (2026-04-18)
+### Step 5. Confirm QEC and WKB tunneling are one mechanism — **COMPLETE** (2026-04-19, structural obstruction found)
 
 **Task**: Show that the WKB tunneling action $S/\hbar$ of [Mass Hierarchy](../site/src/content/derivations/particles/mass-hierarchy.md) and the profile-specific code-distance requirement of Steps 3+4 are not two parallel mechanisms but one mechanism under two descriptions.
 
@@ -218,6 +218,15 @@ $$\frac{S}{\hbar} \;=\; \frac{d_{\text{req}}(\mathcal{I}_A)}{2} \cdot \log\!\lef
 — i.e., the WKB action is the code-distance-times-log-threshold-ratio that makes exponential QEC suppression $(p_{\text{phys}}/p_{th})^{d/2}$ and exponential WKB suppression $e^{-S/\hbar}$ coincide.
 
 **Output**: Either the identification is established (Mass Hierarchy's structural postulate S1 is promoted to a theorem via the error-correction interpretation), or a specific structural obstruction is found (in which case Mass Hierarchy remains a parallel mechanism but with a clear boundary to the QEC story).
+
+**Result (2026-04-19)**: Delivered as [QEC and WKB as Complementary Mechanisms](../site/src/content/derivations/foundation/observer-qec-wkb.md). The identification branch fails: WKB scales as $e^{-c/g^2}$ (exponential in inverse coupling squared), while the QEC quantity $(d_{\text{req}}/2) \log(p_{th}/p_{\text{phys}}^{\text{eff}})$ simplifies algebraically to $c_{\text{logic}} \log(T_{\text{coh}}/\tau_P)$ — **coupling-independent after cancellation**. No linear or monomial identification matches these scalings across the SM coupling range. The structural-obstruction branch is taken:
+
+- **Mass Hierarchy's S1 stays structural** — not promoted to theorem by the error-correction program.
+- **Mechanism complementarity formalized**: WKB controls *formation* probability (selects specific mass), QEC controls *preservation* probability (sets lower bound on viable mass). Different physical roles, both required, neither reducible to the other.
+- **Step 3's ~$10^{19}$ excess margin is structurally explained**: the ratio is $\sim e^{c/g^2}/\log(T_{\text{coh}}/\tau_P)$ at SM couplings — exponential formation competing with logarithmic preservation gives $10^{15}$–$10^{24}$ margins across the SM spectrum. Not arbitrary.
+- **Refined hypothesis confirmed**: "QEC as consistency framework, not mass-determination" is directly validated by the distinctness result.
+
+Three framework-native unification candidates remain open and are flagged as Step 5's Open Gaps (not pursued): (1) joint fixed-point consistency (most framework-native per 2026-04-19 discussion), (2) Coherence Lagrangian common-saddle derivation, (3) shared-facts distinguishability layer.
 
 ### Step 6. Match the combined machinery to the observed SM spectrum — **CAPSTONE** (reframed from original Step 4, 2026-04-18)
 
