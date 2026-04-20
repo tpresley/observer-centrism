@@ -469,38 +469,26 @@
       "status": "provisional"
     },
     {
-      "id": "foundation/observer-error-correction",
-      "title": "1. Observer Projection as Error Correction",
+      "id": "foundation/observer-as-error-correcting-code",
+      "title": "Observer as an Error-Correcting Code",
       "group": "foundation",
       "status": "provisional"
     },
     {
-      "id": "foundation/observer-code-family",
-      "title": "2. Observer Code Family Identification",
+      "id": "foundation/substrate-noise-and-profile-coupling",
+      "title": "Substrate Noise and Profile-Dependent Coupling Modulation",
       "group": "foundation",
       "status": "provisional"
     },
     {
-      "id": "foundation/observer-code-distances",
-      "title": "3. Code-Distance Computation for Integer Profiles",
+      "id": "foundation/formation-and-preservation",
+      "title": "Formation and Preservation as Complementary Mechanisms",
       "group": "foundation",
       "status": "provisional"
     },
     {
-      "id": "foundation/observer-profile-noise",
-      "title": "4. Profile-Dependent Noise from Gauge Couplings",
-      "group": "foundation",
-      "status": "provisional"
-    },
-    {
-      "id": "foundation/observer-qec-wkb",
-      "title": "5. QEC and WKB as Complementary Mechanisms",
-      "group": "foundation",
-      "status": "provisional"
-    },
-    {
-      "id": "foundation/observer-sm-match",
-      "title": "6. Combined-Machinery Match to the Standard Model Spectrum",
+      "id": "foundation/error-correction-and-standard-model",
+      "title": "Error Correction and the Standard Model Spectrum",
       "group": "foundation",
       "status": "provisional"
     },
@@ -1688,163 +1676,119 @@
     },
     {
       "from": "axioms/coherence-conservation",
-      "to": "foundation/observer-error-correction"
+      "to": "foundation/observer-as-error-correcting-code"
     },
     {
       "from": "axioms/observer-definition",
-      "to": "foundation/observer-error-correction"
+      "to": "foundation/observer-as-error-correcting-code"
     },
     {
       "from": "axioms/loop-closure",
-      "to": "foundation/observer-error-correction"
+      "to": "foundation/observer-as-error-correcting-code"
     },
     {
       "from": "foundation/observer-holographic-equivalence",
-      "to": "foundation/observer-error-correction"
+      "to": "foundation/observer-as-error-correcting-code"
     },
     {
       "from": "holography/area-scaling",
-      "to": "foundation/observer-error-correction"
+      "to": "foundation/observer-as-error-correcting-code"
     },
     {
       "from": "interactions/moufang-loop-phase-closure",
-      "to": "foundation/observer-error-correction"
+      "to": "foundation/observer-as-error-correcting-code"
     },
     {
       "from": "minimal-observer/structure",
-      "to": "foundation/observer-error-correction"
+      "to": "foundation/observer-as-error-correcting-code"
     },
     {
       "from": "interactions/bootstrap",
-      "to": "foundation/observer-error-correction"
+      "to": "foundation/observer-as-error-correcting-code"
     },
     {
-      "from": "foundation/observer-error-correction",
-      "to": "foundation/observer-code-family"
-    },
-    {
-      "from": "foundation/observer-holographic-equivalence",
-      "to": "foundation/observer-code-family"
-    },
-    {
-      "from": "interactions/moufang-loop-phase-closure",
-      "to": "foundation/observer-code-family"
-    },
-    {
-      "from": "holography/area-scaling",
-      "to": "foundation/observer-code-family"
-    },
-    {
-      "from": "axioms/loop-closure",
-      "to": "foundation/observer-code-family"
-    },
-    {
-      "from": "foundation/observer-error-correction",
-      "to": "foundation/observer-code-distances"
-    },
-    {
-      "from": "foundation/observer-code-family",
-      "to": "foundation/observer-code-distances"
+      "from": "foundation/observer-as-error-correcting-code",
+      "to": "foundation/substrate-noise-and-profile-coupling"
     },
     {
       "from": "holography/causal-set-statistics",
-      "to": "foundation/observer-code-distances"
+      "to": "foundation/substrate-noise-and-profile-coupling"
     },
     {
       "from": "holography/area-scaling",
-      "to": "foundation/observer-code-distances"
-    },
-    {
-      "from": "interactions/moufang-loop-phase-closure",
-      "to": "foundation/observer-code-distances"
-    },
-    {
-      "from": "particles/three-generations",
-      "to": "foundation/observer-code-distances"
-    },
-    {
-      "from": "particles/mass-hierarchy",
-      "to": "foundation/observer-code-distances"
-    },
-    {
-      "from": "foundation/observer-code-distances",
-      "to": "foundation/observer-profile-noise"
-    },
-    {
-      "from": "foundation/observer-code-family",
-      "to": "foundation/observer-profile-noise"
+      "to": "foundation/substrate-noise-and-profile-coupling"
     },
     {
       "from": "interactions/relational-invariants",
-      "to": "foundation/observer-profile-noise"
+      "to": "foundation/substrate-noise-and-profile-coupling"
     },
     {
       "from": "gauge/electromagnetism",
-      "to": "foundation/observer-profile-noise"
+      "to": "foundation/substrate-noise-and-profile-coupling"
     },
     {
       "from": "gauge/weak-interaction",
-      "to": "foundation/observer-profile-noise"
+      "to": "foundation/substrate-noise-and-profile-coupling"
     },
     {
       "from": "gauge/color-force",
-      "to": "foundation/observer-profile-noise"
+      "to": "foundation/substrate-noise-and-profile-coupling"
     },
     {
       "from": "axioms/coherence-conservation",
-      "to": "foundation/observer-profile-noise"
+      "to": "foundation/substrate-noise-and-profile-coupling"
     },
     {
-      "from": "foundation/observer-profile-noise",
-      "to": "foundation/observer-qec-wkb"
+      "from": "interactions/moufang-loop-phase-closure",
+      "to": "foundation/substrate-noise-and-profile-coupling"
     },
     {
-      "from": "foundation/observer-code-distances",
-      "to": "foundation/observer-qec-wkb"
+      "from": "foundation/substrate-noise-and-profile-coupling",
+      "to": "foundation/formation-and-preservation"
     },
     {
-      "from": "foundation/observer-code-family",
-      "to": "foundation/observer-qec-wkb"
+      "from": "foundation/observer-as-error-correcting-code",
+      "to": "foundation/formation-and-preservation"
     },
     {
       "from": "particles/mass-hierarchy",
-      "to": "foundation/observer-qec-wkb"
+      "to": "foundation/formation-and-preservation"
     },
     {
       "from": "foundation/coherence-lagrangian",
-      "to": "foundation/observer-qec-wkb"
+      "to": "foundation/formation-and-preservation"
     },
     {
-      "from": "foundation/observer-qec-wkb",
-      "to": "foundation/observer-sm-match"
+      "from": "axioms/coherence-conservation",
+      "to": "foundation/formation-and-preservation"
     },
     {
-      "from": "foundation/observer-profile-noise",
-      "to": "foundation/observer-sm-match"
+      "from": "foundation/formation-and-preservation",
+      "to": "foundation/error-correction-and-standard-model"
     },
     {
-      "from": "foundation/observer-code-distances",
-      "to": "foundation/observer-sm-match"
+      "from": "foundation/substrate-noise-and-profile-coupling",
+      "to": "foundation/error-correction-and-standard-model"
     },
     {
-      "from": "foundation/observer-code-family",
-      "to": "foundation/observer-sm-match"
-    },
-    {
-      "from": "foundation/observer-error-correction",
-      "to": "foundation/observer-sm-match"
+      "from": "foundation/observer-as-error-correcting-code",
+      "to": "foundation/error-correction-and-standard-model"
     },
     {
       "from": "particles/mass-hierarchy",
-      "to": "foundation/observer-sm-match"
+      "to": "foundation/error-correction-and-standard-model"
     },
     {
       "from": "particles/three-generations",
-      "to": "foundation/observer-sm-match"
+      "to": "foundation/error-correction-and-standard-model"
     },
     {
       "from": "gauge/confinement",
-      "to": "foundation/observer-sm-match"
+      "to": "foundation/error-correction-and-standard-model"
+    },
+    {
+      "from": "interactions/moufang-loop-phase-closure",
+      "to": "foundation/error-correction-and-standard-model"
     }
   ]
 }

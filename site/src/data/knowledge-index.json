@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-04-19T10:36:29.984Z",
-    "derivationCount": 90,
+    "generatedAt": "2026-04-20T07:11:36.801Z",
+    "derivationCount": 88,
     "predictionCount": 12,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -9,14 +9,14 @@
   "stats": {
     "byStatus": {
       "derived": 27,
-      "provisional": 62,
+      "provisional": 60,
       "draft": 1
     },
-    "derivationCount": 90,
+    "derivationCount": 88,
     "predictionCount": 12,
-    "edgeCount": 326,
-    "formalObjectCount": 1304,
-    "openGapCount": 332,
+    "edgeCount": 315,
+    "formalObjectCount": 1287,
+    "openGapCount": 310,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -133,10 +133,11 @@
         "foundation/aperiodic-order",
         "foundation/bootstrap-fixed-point-existence",
         "foundation/continuous-discrete-duality",
-        "foundation/observer-error-correction",
+        "foundation/formation-and-preservation",
+        "foundation/observer-as-error-correcting-code",
         "foundation/observer-holographic-equivalence",
         "foundation/observer-level-stack-compactness",
-        "foundation/observer-profile-noise",
+        "foundation/substrate-noise-and-profile-coupling",
         "gauge/anomaly-cancellation",
         "gauge/chirality-selection",
         "holography/information-paradox",
@@ -418,6 +419,10 @@
             "context": "Coherence Conservation"
           },
           {
+            "source": "foundation/observer-as-error-correcting-code",
+            "context": "Coherence Conservation"
+          },
+          {
             "source": "foundation/observer-holographic-equivalence",
             "context": "Coherence Conservation"
           },
@@ -426,7 +431,7 @@
             "context": "Coherence Conservation"
           },
           {
-            "source": "foundation/observer-profile-noise",
+            "source": "foundation/substrate-noise-and-profile-coupling",
             "context": "Coherence Conservation"
           },
           {
@@ -686,8 +691,8 @@
             "context": "Theorem 2.1"
           },
           {
-            "source": "foundation/observer-error-correction",
-            "context": "Axioms of Coherence"
+            "source": "foundation/observer-as-error-correcting-code",
+            "context": "Coherence Operational"
           },
           {
             "source": "interactions/bootstrap",
@@ -746,8 +751,7 @@
         "cosmology/observer-loop-viability",
         "foundation/continuous-discrete-duality",
         "foundation/minimum-bootstrap-closure",
-        "foundation/observer-code-family",
-        "foundation/observer-error-correction",
+        "foundation/observer-as-error-correcting-code",
         "foundation/observer-holographic-equivalence",
         "foundation/observer-projected-spacetime",
         "gauge/electromagnetism",
@@ -1087,11 +1091,7 @@
             "context": "Loop Closure"
           },
           {
-            "source": "foundation/observer-code-family",
-            "context": "Loop Closure"
-          },
-          {
-            "source": "foundation/observer-error-correction",
+            "source": "foundation/observer-as-error-correcting-code",
             "context": "Loop Closure"
           },
           {
@@ -1256,7 +1256,7 @@
         "dimensions/three-dimensions",
         "foundation/continuous-discrete-duality",
         "foundation/minimum-bootstrap-closure",
-        "foundation/observer-error-correction",
+        "foundation/observer-as-error-correcting-code",
         "foundation/observer-holographic-equivalence",
         "foundation/observer-level-stack-compactness",
         "foundation/observer-projected-spacetime",
@@ -1492,11 +1492,7 @@
             "context": "Observer Definition"
           },
           {
-            "source": "foundation/observer-code-family",
-            "context": "Observer Definition"
-          },
-          {
-            "source": "foundation/observer-error-correction",
+            "source": "foundation/observer-as-error-correcting-code",
             "context": "Observer Definition"
           },
           {
@@ -4621,11 +4617,7 @@
             "context": "Mixing Angles"
           },
           {
-            "source": "foundation/observer-code-distances",
-            "context": "Flavor Mixing Angles"
-          },
-          {
-            "source": "foundation/observer-sm-match",
+            "source": "foundation/error-correction-and-standard-model",
             "context": "Flavor Mixing Angles"
           },
           {
@@ -5118,15 +5110,7 @@
         ],
         "incoming": [
           {
-            "source": "foundation/observer-code-distances",
-            "context": "Bootstrap Fixed-Point Existence"
-          },
-          {
-            "source": "foundation/observer-code-family",
-            "context": "Bootstrap Fixed-Point Existence"
-          },
-          {
-            "source": "foundation/observer-qec-wkb",
+            "source": "foundation/formation-and-preservation",
             "context": "Bootstrap Fixed-Point Existence"
           }
         ]
@@ -5163,8 +5147,8 @@
       ],
       "dependedOnBy": [
         "foundation/continuous-discrete-duality",
+        "foundation/formation-and-preservation",
         "foundation/knot-theoretic-bootstrap",
-        "foundation/observer-qec-wkb",
         "particles/cpt-theorem",
         "spacetime/gravitational-constant"
       ],
@@ -5377,11 +5361,11 @@
             "context": "Coherence Lagrangian"
           },
           {
-            "source": "foundation/knot-theoretic-bootstrap",
+            "source": "foundation/formation-and-preservation",
             "context": "Coherence Lagrangian"
           },
           {
-            "source": "foundation/observer-qec-wkb",
+            "source": "foundation/knot-theoretic-bootstrap",
             "context": "Coherence Lagrangian"
           },
           {
@@ -5636,6 +5620,394 @@
           {
             "source": "spacetime/speed-of-light",
             "context": "Conjecture 4.1"
+          }
+        ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "foundation/error-correction-and-standard-model": {
+      "id": "foundation/error-correction-and-standard-model",
+      "filePath": "site/src/content/derivations/foundation/error-correction-and-standard-model.md",
+      "title": "Error Correction and the Standard Model Spectrum",
+      "status": "provisional",
+      "rigorLevel": "semi-formal",
+      "group": "foundation",
+      "tags": [
+        "foundation",
+        "error-correction",
+        "standard-model"
+      ],
+      "summary": "Systematic compatibility check of the observer-projection error-correcting code against the observed Standard Model particle spectrum. Under the formation–preservation complementarity, the test has two independent checks per particle: WKB formation consistency with Mass Hierarchy's bootstrap-crystallization scales, and QEC preservation d_achieved(m_obs) ≥ d_req(𝓘_A) under profile-dependent substrate noise. Applied across all 17 SM particle types, every massive particle satisfies preservation with margin d_achieved/d_req in the 10^13–10^28 range — within the structural prediction e^(c/g²)/log(T_coh/τ_P) at SM couplings, not adjusted to match. Structural predictions of the error-correction program are confirmed: photon and gluon masslessness from gauge-mediator structural exemption, free-quark non-viability from color-axis threshold approach (confinement), three-generation completeness from bootstrap-termination at 𝕆, no fourth-generation fermions, qualitative mass ordering (neutrinos at floor, quarks heavier than leptons at same generation, exponential inter-generation scaling). No SM particle violates the combined machinery. The result is a compatibility statement — absolute masses remain Mass Hierarchy's deliverable, and QEC consistency is a necessary but not sufficient condition on candidate spectra — not a unique-prediction claim. Electroweak sector (W, Z, Higgs) requires symmetry-broken-sector treatment flagged as an open gap; neutrino-mass smallness requires seesaw-mechanism integration flagged separately. The compatibility result validates the error-correction program's refined-hypothesis role: QEC is the consistency framework that the framework's mass-hierarchy-selected spectrum inhabits.",
+      "lastUpdated": "2026-04-19",
+      "dependsOn": [
+        "foundation/formation-and-preservation",
+        "foundation/substrate-noise-and-profile-coupling",
+        "foundation/observer-as-error-correcting-code",
+        "particles/mass-hierarchy",
+        "particles/three-generations",
+        "gauge/confinement",
+        "interactions/moufang-loop-phase-closure"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [],
+      "formalObjects": [
+        {
+          "type": "Proposition",
+          "id": "1.1",
+          "name": "Formula substitution",
+          "statementPreview": "Combining the ingredients from the prior derivations:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Per-axis $p_{\\mathrm{phys}}^{\\mathrm{eff}}$",
+          "statementPreview": "For the reference parameter values:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Per-axis $d_{\\mathrm{req}}$",
+          "statementPreview": "For log(Tcoh/tauP) = 138, using Proposition 3.1:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Per-particle achieved distance",
+          "statementPreview": "dachieved sim mP/mobs on all three axes:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.2",
+          "name": "Margin table at binding axis",
+          "statementPreview": "dachieved/dreq per particle:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Neutrino floor structure",
+          "statementPreview": "Neutrinos have the minimal active-channel set (weak only) among fermions. Under the additive noise form, they have th..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.2",
+          "name": "Quark-lepton split at each generation",
+          "statementPreview": "At each generation, quarks have additional color-axis profile content and additional active color channel on multiple..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.3",
+          "name": "Exponential generation hierarchy",
+          "statementPreview": "Moving from generation n to n+1 activates an additional bootstrap-level-n instanton invariant on the algebraic axis (..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.4",
+          "name": "Bootstrap termination → no fourth generation",
+          "statementPreview": "[Moufang-Loop Phase Closure](/derivations/interactions/moufang-loop-phase-closure) Theorem 5.1 terminates the bootstr..."
+        },
+        {
+          "type": "Proposition",
+          "id": "8.1",
+          "name": "What the audit establishes",
+          "statementPreview": "1. *The observer-projection error-correcting code structure is consistent with the observed SM spectrum.*"
+        },
+        {
+          "type": "Proposition",
+          "id": "8.2",
+          "name": "What the audit does NOT establish",
+          "statementPreview": "1. *Absolute mass values (e.g., why me = 0.511 MeV specifically) are not predicted by QEC + coupling-noise alone; spe..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Anchored absolute-mass prediction.",
+          "description": "Fix the numerical etai,axis coefficients from one observed mass (e.g., electron) and predict the other SM masses as consequences. If predicted spectrum matches within O(1) across the full SM, the comb"
+        },
+        {
+          "number": 2,
+          "title": "Electroweak sector completion.",
+          "description": "Example 5.8 deferred W, Z, H to [Electroweak Breaking](/derivations/gauge/electroweak-breaking). Integrate the Higgs mechanism's VEV contributions into the additive noise form to handle gauge-boson ma"
+        },
+        {
+          "number": 3,
+          "title": "Quantitative confinement threshold computation.",
+          "description": "Example 5.4 argued free quarks fail QEC because pphyseff,,sp > pth at Planck-scale alphas. Compute the precise color-coupling value at which the threshold is crossed; this would fix LambdaQCD as a pre"
+        },
+        {
+          "number": 4,
+          "title": "Neutrino-mass seesaw integration.",
+          "description": "The simple additive form gives a mass floor consistent in magnitude with observed neutrino masses but not the specific smallness relative to natural expectations. Integrate with [Neutrino Masses](/der"
+        },
+        {
+          "number": 5,
+          "title": "Running-coupling effects across scales.",
+          "description": "This audit used Planck-scale bare couplings. Running couplings affect pphyseff at different observer scales (confinement screening is one example). Derive the RG flow of the additive noise form. *Diff"
+        },
+        {
+          "number": 6,
+          "title": "BSM and composite-observer extensions.",
+          "description": "The audit covers the observed SM. Beyond-Standard-Model candidates (dark matter, supersymmetric partners, axions) and composite observers at bootstrap levels beyond 3 (where Mass Hierarchy §7's mass-i"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "foundation/observer-as-error-correcting-code",
+            "context": "Observer as an Error-Correcting Code"
+          },
+          {
+            "target": "foundation/substrate-noise-and-profile-coupling",
+            "context": "Substrate Noise and Profile-Dependent Coupling Modulation"
+          },
+          {
+            "target": "foundation/formation-and-preservation",
+            "context": "Formation and Preservation as Complementary Mechanisms"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "target": "particles/three-generations",
+            "context": "Three Generations"
+          },
+          {
+            "target": "flavor/mixing-angles",
+            "context": "Flavor Mixing Angles"
+          },
+          {
+            "target": "particles/neutrino-masses",
+            "context": "Neutrino Masses"
+          },
+          {
+            "target": "foundation/substrate-noise-and-profile-coupling",
+            "context": "EM → spatial; weak → spatial + algebraic; color → spatial + algebraic + temporal"
+          },
+          {
+            "target": "gauge/confinement",
+            "context": "Confinement"
+          },
+          {
+            "target": "interactions/moufang-loop-phase-closure",
+            "context": "Moufang-Loop Phase Closure"
+          },
+          {
+            "target": "gauge/electroweak-breaking",
+            "context": "Electroweak Breaking"
+          },
+          {
+            "target": "foundation/substrate-noise-and-profile-coupling",
+            "context": "multiplicative form"
+          },
+          {
+            "target": "foundation/formation-and-preservation",
+            "context": "joint fixed-point"
+          },
+          {
+            "target": "thermodynamics-ext/renormalization",
+            "context": "Renormalization"
+          }
+        ],
+        "incoming": []
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "foundation/formation-and-preservation": {
+      "id": "foundation/formation-and-preservation",
+      "filePath": "site/src/content/derivations/foundation/formation-and-preservation.md",
+      "title": "Formation and Preservation as Complementary Mechanisms",
+      "status": "provisional",
+      "rigorLevel": "semi-formal",
+      "group": "foundation",
+      "tags": [
+        "foundation",
+        "error-correction",
+        "mass-hierarchy"
+      ],
+      "summary": "Stable observer existence requires two distinct mechanisms, both necessary and neither reducible to the other. Formation, governed by Mass Hierarchy's WKB tunneling through coherence barriers, selects a specific mass for each profile with exponential suppression e^(-c/g²) in the binding coupling. Preservation, governed by the observer-projection error-correcting code under profile-dependent substrate noise, bounds viable mass from below via the condition d_achieved(m) ≥ d_req(𝓘_A) with d_achieved scaling as m_P/m and d_req scaling logarithmically in coherence lifetime. The two mechanisms have incompatible functional dependencies on gauge coupling: the QEC quantity (d_req/2)·log(p_th/p_phys^eff), which is the natural candidate for direct identification with the WKB action S/ℏ, simplifies algebraically to c_logic·log(T_coh/τ_P) — coupling-independent after cancellation — while WKB retains its 1/g² dependence. No linear or monomial identification matches the two across the SM coupling range; the mechanisms are genuinely complementary, not two descriptions of one mechanism. The large preservation margins observed across the SM spectrum (ratio d_achieved/d_req in the 10^15–10^25 range) are the structural consequence of exponential formation competing with logarithmic preservation at SM couplings — a derived quantity rather than arbitrary, and the most visible signature that the two mechanisms operate independently. Three framework-native unification candidates remain open: joint fixed-point selection, Coherence Lagrangian common-saddle derivation, and shared-facts distinguishability layer. None have been formalized; none are required for the complementarity result; each would tighten the combined mechanism story if developed.",
+      "lastUpdated": "2026-04-19",
+      "dependsOn": [
+        "foundation/substrate-noise-and-profile-coupling",
+        "foundation/observer-as-error-correcting-code",
+        "particles/mass-hierarchy",
+        "foundation/coherence-lagrangian",
+        "axioms/coherence-conservation"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [
+        "foundation/error-correction-and-standard-model"
+      ],
+      "steps": [],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Formation",
+          "statementPreview": "The **formation probability** Pform(mA; IA) is the probability per unit cosmological 4-volume that substrate fluctuat..."
+        },
+        {
+          "type": "Definition",
+          "id": "1.2",
+          "name": "Preservation",
+          "statementPreview": "The **preservation probability** Ppreserve(mA; IA, Tcoh) is the probability that a formed observer's code-space integ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.3",
+          "name": "Both conditions required for observer existence",
+          "statementPreview": "For a profile IA to correspond to an observed stable particle at mass mA, both formation and preservation must be sat..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "WKB exponential form",
+          "statementPreview": "[Mass Hierarchy](/derivations/particles/mass-hierarchy) Theorem 3.1 establishes that the crystallization scale at boo..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "QEC candidate simplifies algebraically",
+          "statementPreview": "The natural candidate for functional identification with S/hbar — the QEC exponent (dreq/2) log(pth/pphyseff) — simpl..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Linear identifications fail",
+          "statementPreview": "No identification of the form S/hbar = A (dreq/2) log(pth/pphyseff) + B for constants A, B can match across the SM co..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.2",
+          "name": "Monomial identifications fail",
+          "statementPreview": "Monomial identifications of the form S/hbar = A (dreq)alpha [log(pth/pphyseff)]beta also fail.*"
+        },
+        {
+          "type": "Corollary",
+          "id": "5.1",
+          "name": "Two conditions, not one",
+          "statementPreview": "Formation and preservation are logically independent conditions on (mA, IA). The WKB action S/hbar and the QEC expone..."
+        },
+        {
+          "type": "Corollary",
+          "id": "5.2",
+          "name": "Mass selection is WKB's role",
+          "statementPreview": "Formation picks out a discrete set of viable masses — the crystallization scales Lambdak of [Mass Hierarchy](/derivat..."
+        },
+        {
+          "type": "Corollary",
+          "id": "5.3",
+          "name": "QEC is the consistency framework",
+          "statementPreview": "The error-correction program's contribution is to verify that WKB-selected masses satisfy preservation. It does not, ..."
+        },
+        {
+          "type": "Corollary",
+          "id": "5.4",
+          "name": "S1 of Mass Hierarchy is unchanged by the error-correction program",
+          "statementPreview": "Mass Hierarchy's structural postulate S1 (tunneling–crystallization correspondence) was a candidate for promotion to ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Margin as exponential-over-logarithmic",
+          "statementPreview": "At the WKB-selected mass mk = mP e-ck/gk2 and profile IA:*"
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Joint fixed-point formalization.",
+          "description": "Formalize the joint-fixed-point alternative to simple-functional identification as described in Open thread 7.1. This would require extending [Bootstrap Fixed-Point Existence](/derivations/foundation/"
+        },
+        {
+          "number": 2,
+          "title": "Coherence Lagrangian common-saddle analysis.",
+          "description": "Explicitly compute WKB and QEC as different boundary-condition regimes of one Coherence Lagrangian calculation (Open thread 7.2). Does not reduce the two mechanisms but would show they have one origin"
+        },
+        {
+          "number": 3,
+          "title": "Shared-facts distinguishability derivation.",
+          "description": "Derive the profile's logical-bit content clogic(IA) from distinguishability-conservation principles, and check whether the same quantity appears in WKB's barrier-width definition (Open thread 7.3). *D"
+        },
+        {
+          "number": 4,
+          "title": "Mass-information reversal above bootstrap level 3.",
+          "description": "[Mass Hierarchy](/derivations/particles/mass-hierarchy) §7 argues that at bootstrap levels beyond O (n > 3), particle identity transitions from topological to structural encoding, reversing the mass-i"
+        },
+        {
+          "number": 5,
+          "title": "Explicit formation-rate check at SM masses.",
+          "description": "The complementarity statement establishes both conditions must hold but does not compute Pform numerically for each SM particle. A quantitative check — does the WKB-selected mass satisfy Pform V4cosmo"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "formation"
+          },
+          {
+            "target": "foundation/observer-as-error-correcting-code",
+            "context": "Observer as an Error-Correcting Code"
+          },
+          {
+            "target": "foundation/substrate-noise-and-profile-coupling",
+            "context": "preservation"
+          },
+          {
+            "target": "foundation/substrate-noise-and-profile-coupling",
+            "context": "Substrate Noise and Profile-Dependent Coupling Modulation"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "target": "foundation/bootstrap-fixed-point-existence",
+            "context": "Bootstrap Fixed-Point Existence"
+          },
+          {
+            "target": "foundation/coherence-lagrangian",
+            "context": "Coherence Lagrangian"
+          },
+          {
+            "target": "thermodynamics-ext/distinguishability-conservation",
+            "context": "Distinguishability Conservation"
+          }
+        ],
+        "incoming": [
+          {
+            "source": "foundation/error-correction-and-standard-model",
+            "context": "Formation and Preservation as Complementary Mechanisms"
+          },
+          {
+            "source": "foundation/error-correction-and-standard-model",
+            "context": "joint fixed-point"
+          },
+          {
+            "source": "foundation/substrate-noise-and-profile-coupling",
+            "context": "Formation and Preservation as Complementary Mechanisms"
           }
         ]
       },
@@ -6125,282 +6497,10 @@
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
-    "foundation/observer-code-distances": {
-      "id": "foundation/observer-code-distances",
-      "filePath": "site/src/content/derivations/foundation/observer-code-distances.md",
-      "title": "3. Code-Distance Computation for Integer Profiles",
-      "status": "provisional",
-      "rigorLevel": "semi-formal",
-      "group": "foundation",
-      "tags": [
-        "foundation",
-        "error-correction",
-        "code-distance",
-        "standard-model"
-      ],
-      "summary": "Given the HaPPY × Kitaev × Floquet product code of Observer Code Family Identification and the framework's holographic noise commitment (α_H ∼ 1/4 per Planck cell), compute per-axis code-distance requirements and achieved distances for SM integer-invariant profiles. Per-cell bit-flip probability is the Gaussian-tail exceedance p_phys = erfc(1/√(2α_H)) ≈ 0.046 — below typical topological-code thresholds, so the codes operate in the protected regime. Per-axis achieved distances scale polynomially in observer mass (d^sp ∼ m_P/m, d^alg ∼ m_P/m_n, d^tmp ∼ m_P/m), while per-axis required distances scale only logarithmically in the coherence lifetime; hence d_achieved ≫ d_required by tens of orders of magnitude for every observed SM particle. This is the derivation's first quantitative result: the SM spectrum is self-consistent under error correction with enormous excess capacity — the minimum mass is NOT set by QEC thresholds alone. Structural predictions that DO survive: three-generation structure as three bootstrap levels of the algebraic axis (with additional instanton-number distance per generation forcing exponential mass-ratio scaling), the algebraic ceiling at level 3 capping the top of the spectrum, and SM completeness (no viable profile beyond three levels). Absolute mass values require bootstrap dynamics (Mass Hierarchy WKB tunneling, Step 5 of the research target); QEC enters as a consistency constraint that every observed SM particle satisfies with room to spare.",
-      "lastUpdated": "2026-04-18",
-      "dependsOn": [
-        "foundation/observer-error-correction",
-        "foundation/observer-code-family",
-        "holography/causal-set-statistics",
-        "holography/area-scaling",
-        "interactions/moufang-loop-phase-closure",
-        "particles/three-generations",
-        "particles/mass-hierarchy"
-      ],
-      "enablesDerivation": [],
-      "dependedOnBy": [
-        "foundation/observer-profile-noise",
-        "foundation/observer-qec-wkb",
-        "foundation/observer-sm-match"
-      ],
-      "steps": [
-        {
-          "number": 1,
-          "title": "Planck-Noise Model from Framework Commitments"
-        },
-        {
-          "number": 2,
-          "title": "Per-Axis Distance Requirements"
-        },
-        {
-          "number": 3,
-          "title": "Per-Axis Achieved Distances"
-        },
-        {
-          "number": 4,
-          "title": "The Principal Result — SM Self-Consistency"
-        },
-        {
-          "number": 5,
-          "title": "What QEC Does Predict — Generation Structure and Algebraic Ceiling"
-        },
-        {
-          "number": 6,
-          "title": "SM Profile Content — Heuristic Bit-Counting"
-        },
-        {
-          "number": 7,
-          "title": "Comparison to Observed SM Spectrum"
-        }
-      ],
-      "formalObjects": [
-        {
-          "type": "Proposition",
-          "id": "1.1",
-          "name": "Gaussian per-cell fluctuations",
-          "statementPreview": "The per-cell displacement distribution is Gaussian with variance alphaH ellP2 — a consequence of the central limit th..."
-        },
-        {
-          "type": "Definition",
-          "id": "1.2",
-          "name": "Per-cell bit-flip probability",
-          "statementPreview": "A Planck cell on an observer's null horizon MA records an integer-crossing residue (Type III carrier crossing count)...."
-        },
-        {
-          "type": "Proposition",
-          "id": "1.3",
-          "name": "Per-cell bit-flip probability",
-          "statementPreview": "For per-cell Gaussian noise with variance sigma2 = alphaH ellP2 and a threshold xth = ellP/2 (half-cell exceedance, t..."
-        },
-        {
-          "type": "Corollary",
-          "id": "1.5",
-          "name": "Below-threshold operation",
-          "statementPreview": "For alphaH 0.24 (Holometer bound) with the full-cell convention, pphys 0.041. Standard topological-code thresholds ar..."
-        },
-        {
-          "type": "Proposition",
-          "id": "2.1",
-          "name": "Per-axis distance requirement for profile stability",
-          "statementPreview": "Let Tcoh be the observer's coherence lifetime — the duration over which the logical qubit must survive without error ..."
-        },
-        {
-          "type": "Proposition",
-          "id": "3.1",
-          "name": "Spatial-axis achieved distance",
-          "statementPreview": "dspachieved sim NA where NA = AA/4ellP2 is the horizon mode count. Using Schwarzschild rH = 2Gm/c2 for a macroscopic ..."
-        },
-        {
-          "type": "Proposition",
-          "id": "3.2",
-          "name": "Algebraic-axis achieved distance",
-          "statementPreview": "dalgachieved sim Ln/ellP, where Ln is the bootstrap-level-n characteristic scale. For an observer at level n with mas..."
-        },
-        {
-          "type": "Proposition",
-          "id": "3.3",
-          "name": "Temporal-axis achieved distance",
-          "statementPreview": "dtmpachieved sim TA/tauP, where TA = 2pihbar/(mA c2) is the Compton period:*"
-        },
-        {
-          "type": "Theorem",
-          "id": "4.1",
-          "name": "Error-correction self-consistency of the SM",
-          "statementPreview": "For every SM particle X with observed mass mX and a reasonable coherence lifetime Tcoh tU (age of the universe):*"
-        },
-        {
-          "type": "Corollary",
-          "id": "4.2",
-          "name": "QEC does not set the minimum SM mass",
-          "statementPreview": "The observed SM masses are far above any QEC-imposed minimum. A hypothetical lighter particle with identical profile ..."
-        },
-        {
-          "type": "Proposition",
-          "id": "5.1",
-          "name": "Integer-content increment per generation",
-          "statementPreview": "A profile at bootstrap level n carries calg(n) bits of algebraic-axis integer content equal to (or bounded by) dim pi..."
-        },
-        {
-          "type": "Proposition",
-          "id": "5.2",
-          "name": "Minimum-viable-code convention forces exponential generation hierarchy",
-          "statementPreview": "Under the convention that an observer type is identified with the *minimum-viable code* — the lowest-mA profile satis..."
-        },
-        {
-          "type": "Corollary",
-          "id": "5.4",
-          "name": "No fourth generation",
-          "statementPreview": "Level-4 pik(G4) is undefined — bootstrap termination at O forbids a level-4 Moufang-loop phase space. The algebraic-a..."
-        },
-        {
-          "type": "Corollary",
-          "id": "5.5",
-          "name": "Algebraic ceiling caps profile complexity",
-          "statementPreview": "At level 3 (O / SU(3)), the maximum instanton-number bit content is calgmax set by the SU(3) π3 structure. No profile..."
-        },
-        {
-          "type": "Proposition",
-          "id": "6.2",
-          "name": "Qualitative ordering predicted",
-          "statementPreview": "Under the minimum-viable-code convention (Proposition 5.2) with exponential generation-scaling, the bit-count table p..."
-        }
-      ],
-      "structuralPostulates": [],
-      "openGaps": [
-        {
-          "number": 1,
-          "title": "Product-code threshold formula.",
-          "description": "The product-code threshold pth inherits from the three factor codes' thresholds under the pairwise-commuting-stabilizer structure of Step 2 Theorem 4.1. Derive the composite threshold rigorously — is "
-        },
-        {
-          "number": 2,
-          "title": "Correlated-error distance formula.",
-          "description": "Correlated errors across axes (Step 2 Open Gap 5) may reduce the effective distance below the min-of-factors bound. Quantify this reduction for the framework's substrate noise. *Difficulty: MODERATE-H"
-        },
-        {
-          "number": 3,
-          "title": "Minimum-viable-code convention justification.",
-          "description": "Proposition 5.2 uses this convention without deriving it from the three axioms. Formalize via bootstrap selection principle — show that the minimum-viable code is the fixed point of a specific bootstr"
-        },
-        {
-          "number": 4,
-          "title": "Rigorous SM profile bit-counts.",
-          "description": "Heuristic 6.1's bit assignments are approximate. Derive exact profile content for each SM particle via the explicit stabilizer-group decomposition — what are the integer invariants on each axis for a "
-        },
-        {
-          "number": 5,
-          "title": "Noise-model threshold-convention commitment.",
-          "description": "Proposition 1.3 leaves xth as a modeling choice. Commit the framework to one convention (ideally derivable from operator-algebra structure on the substrate, not from the Gaussian-tail reading alone). "
-        },
-        {
-          "number": 6,
-          "title": "Coherence-lifetime specification.",
-          "description": "Proposition 2.1 uses Tcoh as an input. Derive Tcoh from the framework's coherence-conservation structure — specifically, how long must a specific integer invariant remain uncorrupted for the observer "
-        },
-        {
-          "number": 7,
-          "title": "Unification with Mass Hierarchy (Research Target Step 5).",
-          "description": "Is the WKB tunneling action S/hbar of [Mass Hierarchy](/derivations/particles/mass-hierarchy) the code-distance requirement dreq of this derivation (in appropriate units)? If yes, Mass Hierarchy's S1 "
-        },
-        {
-          "number": 8,
-          "title": "Anchored absolute-mass prediction (Research Target Step 3b).",
-          "description": "Fix the three prefactors (alphaH, pth, Tcoh) from one observed mass (e.g., electron); predict the other SM masses as consequences. If the predicted spectrum matches within O(1) factors, QEC has predic"
-        }
-      ],
-      "assessmentVerdict": "",
-      "hasConsistencyModel": false,
-      "crossReferences": {
-        "outgoing": [
-          {
-            "target": "foundation/observer-code-family",
-            "context": "**Step 2**"
-          },
-          {
-            "target": "interactions/moufang-loop-phase-closure",
-            "context": "Moufang-Loop Phase Closure"
-          },
-          {
-            "target": "particles/mass-hierarchy",
-            "context": "Mass Hierarchy"
-          },
-          {
-            "target": "holography/causal-set-statistics",
-            "context": "Causal Set Statistics"
-          },
-          {
-            "target": "foundation/observer-code-family",
-            "context": "Observer Code Family Identification"
-          },
-          {
-            "target": "particles/neutrino-masses",
-            "context": "Neutrino Masses"
-          },
-          {
-            "target": "flavor/mixing-angles",
-            "context": "Flavor Mixing Angles"
-          },
-          {
-            "target": "gauge/electroweak-breaking",
-            "context": "Electroweak Breaking"
-          },
-          {
-            "target": "gauge/confinement",
-            "context": "Confinement"
-          },
-          {
-            "target": "gauge/color-force",
-            "context": "Color Force"
-          },
-          {
-            "target": "foundation/bootstrap-fixed-point-existence",
-            "context": "Bootstrap Fixed-Point Existence"
-          }
-        ],
-        "incoming": [
-          {
-            "source": "foundation/observer-profile-noise",
-            "context": "**Step 3**"
-          },
-          {
-            "source": "foundation/observer-profile-noise",
-            "context": "Step 3"
-          },
-          {
-            "source": "foundation/observer-qec-wkb",
-            "context": "Code-Distance Computation for Integer Profiles"
-          },
-          {
-            "source": "foundation/observer-sm-match",
-            "context": "Step 3 Heuristic 6.1"
-          }
-        ]
-      },
-      "leanVerification": {
-        "hasProofs": false,
-        "proofCount": 0,
-        "modules": [],
-        "propositions": []
-      },
-      "upgradeEligible": false,
-      "upgradeBlockers": []
-    },
-    "foundation/observer-code-family": {
-      "id": "foundation/observer-code-family",
-      "filePath": "site/src/content/derivations/foundation/observer-code-family.md",
-      "title": "2. Observer Code Family Identification",
+    "foundation/observer-as-error-correcting-code": {
+      "id": "foundation/observer-as-error-correcting-code",
+      "filePath": "site/src/content/derivations/foundation/observer-as-error-correcting-code.md",
+      "title": "Observer as an Error-Correcting Code",
       "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "foundation",
@@ -6410,268 +6510,8 @@
         "holography",
         "topology"
       ],
-      "summary": "The observer projection CPTP map 𝒫_A of Observer Projection as Error Correction belongs to a hybrid code family factoring as a tensor product of three established quantum-error-correction families along the three integer-stable axes: a HaPPY-style holographic code on the spatial axis (bulk-to-boundary encoding with N = A/4ℓ_P² boundary qubits; exterior cancellation is the subregion-duality condition), a Kitaev-style topological code on the algebraic axis (homotopy-class logical qubits π_k(G_n) at bootstrap level n, with π_1 at level 1 and π_3 at levels 2–3), and a continuous-time Floquet code on the temporal axis (Axiom 3 loop closure as a periodic stabilizer schedule; integer tick count k_A as the dynamically generated logical invariant). The three factors share a compatibility condition — their stabilizer groups pairwise commute on the substrate Hilbert space, and their joint fixed subspace is the code space 𝒞_A of Step 1. The three-axis simultaneous combination is novel as a unified family: each factor is a known code family in quantum information theory, but no prior code combines all three with the specific cross-axis couplings forced by bootstrap level and horizon area. This is Step 2 of the Observer-Projection-as-Error-Correction research target; it sets the stage for Step 3 (code-distance computation) by providing a distance prescription on each factor that the product structure composes multiplicatively modulo correlated error channels.",
-      "lastUpdated": "2026-04-18",
-      "dependsOn": [
-        "foundation/observer-error-correction",
-        "foundation/observer-holographic-equivalence",
-        "interactions/moufang-loop-phase-closure",
-        "holography/area-scaling",
-        "axioms/loop-closure"
-      ],
-      "enablesDerivation": [],
-      "dependedOnBy": [
-        "foundation/observer-code-distances",
-        "foundation/observer-profile-noise",
-        "foundation/observer-qec-wkb",
-        "foundation/observer-sm-match"
-      ],
-      "steps": [
-        {
-          "number": 1,
-          "title": "Spatial Axis — HaPPY Holographic Code Identification"
-        },
-        {
-          "number": 2,
-          "title": "Algebraic Axis — Kitaev Topological Code Identification"
-        },
-        {
-          "number": 3,
-          "title": "Temporal Axis — Floquet Code Identification"
-        },
-        {
-          "number": 4,
-          "title": "Compatibility — The Three-Axis Product"
-        },
-        {
-          "number": 5,
-          "title": "What Is Novel — The Cross-Axis Couplings"
-        },
-        {
-          "number": 6,
-          "title": "Consistency with Step 1 and Existing Framework Commitments"
-        }
-      ],
-      "formalObjects": [
-        {
-          "type": "Proposition",
-          "id": "1.1",
-          "name": "Spatial-axis isometric encoding",
-          "statementPreview": "The spatial-axis factor PAsp of the observer-projection CPTP map admits an isometric restriction from the interior of..."
-        },
-        {
-          "type": "Proposition",
-          "id": "1.2",
-          "name": "Spatial-axis subregion duality",
-          "statementPreview": "[Observer Holographic Equivalence](/derivations/foundation/observer-holographic-equivalence) Corollary 4.5 (exterior ..."
-        },
-        {
-          "type": "Proposition",
-          "id": "1.3",
-          "name": "Spatial-axis boundary-qubit count",
-          "statementPreview": "The horizon mode count NA = AA/4ellP2 of [Area Scaling](/derivations/holography/area-scaling) Theorem 5.2 is the HaPP..."
-        },
-        {
-          "type": "Proposition",
-          "id": "1.4",
-          "name": "Spatial-axis distance scaling",
-          "statementPreview": "The code distance on the spatial axis scales as dsp sim NA1/2, matching the standard HaPPY family distance formula (r..."
-        },
-        {
-          "type": "Proposition",
-          "id": "2.1",
-          "name": "Algebraic-axis homotopy-class logical content",
-          "statementPreview": "The algebraic-axis factor PAalg encodes logical content as the homotopy class [phi]A in pik(Gn) = Z of the phase traj..."
-        },
-        {
-          "type": "Proposition",
-          "id": "2.2",
-          "name": "Level-1 case — 2D toric-code structure",
-          "statementPreview": "At bootstrap level 1, the logical content is the pi1(U(1)) = Z winding number of the phase trajectory. This is isomor..."
-        },
-        {
-          "type": "Proposition",
-          "id": "2.3",
-          "name": "Level-2 and level-3 cases — 4D topological / Walker–Wang structure",
-          "statementPreview": "At bootstrap levels 2 and 3, the logical content is the pi3(SU(2)) = Z or pi3(SU(3)) = Z instanton number of the phas..."
-        },
-        {
-          "type": "Proposition",
-          "id": "2.4",
-          "name": "Algebraic-axis distance scaling",
-          "statementPreview": "The code distance on the algebraic axis scales as dalg sim Ln, where Ln is the linear size of the bootstrap-scale reg..."
-        },
-        {
-          "type": "Proposition",
-          "id": "3.1",
-          "name": "Temporal-axis periodic stabilizer schedule",
-          "statementPreview": "The Axiom 3 phase evolution phitau: HA HA is a continuous-time periodic stabilizer schedule with period TA, whose ins..."
-        },
-        {
-          "type": "Proposition",
-          "id": "3.2",
-          "name": "Temporal-axis dynamically generated logical content",
-          "statementPreview": "The integer tick count kA is a dynamically generated logical invariant: it is not determined by any instantaneous sta..."
-        },
-        {
-          "type": "Proposition",
-          "id": "3.3",
-          "name": "Temporal-axis distance scaling",
-          "statementPreview": "The code distance on the temporal axis scales linearly with the number of sub-tick substrate events per period: dtmp ..."
-        },
-        {
-          "type": "Theorem",
-          "id": "4.1",
-          "name": "Three-axis commuting-stabilizer product",
-          "statementPreview": "The three axis-specific stabilizer groups Ssp (HaPPY on spatial), Salg (Kitaev on algebraic), Stmp(tau) (Floquet on t..."
-        },
-        {
-          "type": "Corollary",
-          "id": "4.3",
-          "name": "Code-rate calculation",
-          "statementPreview": "The product code's rate — logical qubits per physical qubit — is the product of axis-wise rates:*"
-        },
-        {
-          "type": "Proposition",
-          "id": "5.1",
-          "name": "Cross-axis couplings are framework-specific",
-          "statementPreview": "The three-axis product family with pairwise-commuting stabilizers is a known construction in quantum information (3D ..."
-        },
-        {
-          "type": "Proposition",
-          "id": "5.2",
-          "name": "Minimum additional structure required beyond known families",
-          "statementPreview": "Formalizing the observer-projection code as a specific, named family requires exactly the following additional struct..."
-        },
-        {
-          "type": "Corollary",
-          "id": "5.3",
-          "name": "Implication for Step 3 of the research target",
-          "statementPreview": "Step 3 (code-distance computation for Standard Model integer profiles) can proceed by computing distances on each fac..."
-        }
-      ],
-      "structuralPostulates": [],
-      "openGaps": [
-        {
-          "number": 1,
-          "title": "Explicit HaPPY tensor-network construction for the spatial factor.",
-          "description": "Give the tensor-network geometry on the horizon (hyperbolic tiling, perfect-tensor choices, bulk-boundary map) that realizes the spatial-axis isometric encoding. Likely tools: AdS-like horizon metric "
-        },
-        {
-          "number": 2,
-          "title": "Explicit Walker–Wang Hamiltonian for the algebraic factor.",
-          "description": "Give the local Hamiltonian on a 4D lattice whose ground-state space realizes the framework's pi3(SU(2)) or pi3(SU(3)) logical content at bootstrap levels 2 and 3. Likely tools: Walker–Wang 2011 for ta"
-        },
-        {
-          "number": 3,
-          "title": "Pairwise-commutation verification on explicit generators.",
-          "description": "Given explicit stabilizer generators from Gaps 1 and 2 (plus a Floquet schedule derived from Axiom 3), verify that the three groups pairwise commute on the full substrate Hilbert space. This checks th"
-        },
-        {
-          "number": 4,
-          "title": "Continuous-time Floquet-code distance formula.",
-          "description": "Derive or cite the distance formula for a continuous-time Floquet code with period TA and single-Planck-tick error rate. Current literature focuses on discrete schedules; the continuous case may requi"
-        },
-        {
-          "number": 5,
-          "title": "Correlated-error analysis across the three axes.",
-          "description": "Analyze correlated errors that simultaneously flip invariants on multiple axes (e.g., a Planck event that changes both kA and R MA). Determines the product code's effective threshold under realistic f"
-        },
-        {
-          "number": 6,
-          "title": "Code-distance computation for specific SM profiles (Research Target Step 3).",
-          "description": "With Gaps 1–5 addressed, compute the minimum horizon area (hence mass) that achieves the required distance on each factor for each SM particle's integer profile. Produces the quantitative predicted sp"
-        },
-        {
-          "number": 7,
-          "title": "Cross-check against Bootstrap Fixed-Point Existence.",
-          "description": "The bootstrap-coupling map mA (NA, Gn, TA) is itself a fixed-point structure (observer mass determines code parameters, which constrain stable-observer spectrum, which determines admissible masses). C"
-        }
-      ],
-      "assessmentVerdict": "",
-      "hasConsistencyModel": false,
-      "crossReferences": {
-        "outgoing": [
-          {
-            "target": "foundation/observer-error-correction",
-            "context": "hereafter **Step 1**"
-          },
-          {
-            "target": "foundation/observer-holographic-equivalence",
-            "context": "Observer Holographic Equivalence"
-          },
-          {
-            "target": "foundation/observer-error-correction",
-            "context": "Observer Projection as Error Correction"
-          },
-          {
-            "target": "interactions/moufang-loop-phase-closure",
-            "context": "Moufang-Loop Phase Closure"
-          },
-          {
-            "target": "axioms/loop-closure",
-            "context": "Loop Closure"
-          },
-          {
-            "target": "axioms/observer-definition",
-            "context": "Observer Definition"
-          },
-          {
-            "target": "holography/area-scaling",
-            "context": "Area Scaling"
-          },
-          {
-            "target": "interactions/moufang-loop-phase-closure",
-            "context": "0, T_A)$. Consequently, the code space $\\mathcal{C}_A$ of Step 1 Proposition 3.3"
-          },
-          {
-            "target": "foundation/bootstrap-fixed-point-existence",
-            "context": "Bootstrap Fixed-Point Existence"
-          }
-        ],
-        "incoming": [
-          {
-            "source": "foundation/observer-code-distances",
-            "context": "**Step 2**"
-          },
-          {
-            "source": "foundation/observer-code-distances",
-            "context": "Observer Code Family Identification"
-          },
-          {
-            "source": "foundation/observer-error-correction",
-            "context": "Observer Code Family Identification"
-          },
-          {
-            "source": "foundation/observer-profile-noise",
-            "context": "Observer Code Family Identification"
-          }
-        ]
-      },
-      "leanVerification": {
-        "hasProofs": false,
-        "proofCount": 0,
-        "modules": [],
-        "propositions": []
-      },
-      "upgradeEligible": false,
-      "upgradeBlockers": []
-    },
-    "foundation/observer-error-correction": {
-      "id": "foundation/observer-error-correction",
-      "filePath": "site/src/content/derivations/foundation/observer-error-correction.md",
-      "title": "1. Observer Projection as Error Correction",
-      "status": "provisional",
-      "rigorLevel": "semi-formal",
-      "group": "foundation",
-      "tags": [
-        "foundation",
-        "structure",
-        "error-correction",
-        "holography"
-      ],
-      "summary": "The discrete observer projection is a completely positive trace-preserving map whose domain is a continuous substrate Hilbert space and whose range is an observer's state space. Under the dual framing articulated here, the observer is the interior slack bounded by integer-stable configurations on three axes — spatial (null horizon, via Observer Holographic Equivalence Proposition 4.1), temporal (Axiom 3 loop closures), and algebraic (bootstrap-scale homotopy classes, via Moufang-Loop Phase Closure Proposition 6.1). Physical qubits are substrate modes with count ~ A/4ℓ_P² (Area Scaling); the logical boundary is the observer's integer-invariant profile (charges, tick counts, homotopy classes); the observer itself is identified with the code-space interior rather than any individual codeword. Theses A and A' of Observer Holographic Equivalence become orthogonal slices through this same interior. This is Step 1 of the Observer-Projection-as-Error-Correction research target; Steps 2–5 (code-family identification, code-distance computation, Standard-Model-spectrum matching, mass-hierarchy tunneling unification) are deferred to future derivations.",
-      "lastUpdated": "2026-04-18",
+      "summary": "The observer-projection is a completely positive trace-preserving map from the continuous substrate Hilbert space to the observer's state space, factoring through an integer-invariant profile on three orthogonal axes — spatial (null horizon), temporal (loop closures), and algebraic (bootstrap-scale homotopy classes). The observer is identified with the interior of the code space cut out by these stabilizer-like constraints rather than with any individual codeword: a dual framing that unifies the time-like and space-like holographic theses of Observer Holographic Equivalence as orthogonal slices through the same object. The code family is a tensor product of three established quantum-information code families — HaPPY holographic on the spatial axis (exterior cancellation as subregion duality, horizon mode count as boundary-qubit count), Kitaev topological on the algebraic axis (homotopy-class logical qubits at the bootstrap-level gauge group), and continuous-time Floquet on the temporal axis (Axiom 3 periodic schedule with integer tick count as the dynamically generated logical invariant). The three factors compose under a pairwise-commuting stabilizer condition, and the cross-axis couplings (horizon area fixes spatial qubit count, bootstrap level fixes algebraic target group, observer period fixes Floquet cycle) are framework-specific and novel as a unified family.",
+      "lastUpdated": "2026-04-19",
       "dependsOn": [
         "axioms/coherence-conservation",
         "axioms/observer-definition",
@@ -6684,32 +6524,11 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
-        "foundation/observer-code-distances",
-        "foundation/observer-code-family",
-        "foundation/observer-sm-match"
+        "foundation/error-correction-and-standard-model",
+        "foundation/formation-and-preservation",
+        "foundation/substrate-noise-and-profile-coupling"
       ],
-      "steps": [
-        {
-          "number": 1,
-          "title": "The Three Integer-Stable Axes (Consolidation)"
-        },
-        {
-          "number": 2,
-          "title": "The CPTP Map $\\mathcal{P}_A$"
-        },
-        {
-          "number": 3,
-          "title": "Physical and Logical Structure (Error-Correcting Code Correspondence)"
-        },
-        {
-          "number": 4,
-          "title": "Dual Framing — Observer as Code-Space Interior"
-        },
-        {
-          "number": 5,
-          "title": "Consistency with Existing Framework Commitments"
-        }
-      ],
+      "steps": [],
       "formalObjects": [
         {
           "type": "Proposition",
@@ -6721,19 +6540,13 @@
           "type": "Proposition",
           "id": "1.2",
           "name": "Temporal axis — loop closure integer content",
-          "statementPreview": "The U(1) phase trajectory phitau: HA HA closes exactly after integer multiples of the period TA: phik TA = idHA for e..."
+          "statementPreview": "The U(1) phase trajectory phitau: HA HA closes exactly at integer multiples of the period TA: phik TA = idHA for each..."
         },
         {
           "type": "Proposition",
           "id": "1.3",
           "name": "Algebraic axis — bootstrap homotopy integer content",
-          "statementPreview": "At each bootstrap level n in 1, 2, 3, the phase trajectory phi: S1 Gn admits a Z-valued homotopy class: [phi] in pi1(..."
-        },
-        {
-          "type": "Definition",
-          "id": "1.5",
-          "name": "Integer-invariant profile",
-          "statementPreview": "The **integer-invariant profile** of observer A is the triple*"
+          "statementPreview": "At each bootstrap level n in 1, 2, 3, the phase trajectory phi: S1 Gn admits a Z-valued homotopy class invariant: pi1..."
         },
         {
           "type": "Definition",
@@ -6745,97 +6558,106 @@
           "type": "Definition",
           "id": "2.2",
           "name": "Observer state space",
-          "statementPreview": "The **observer state space** HA is the Hilbert space of observer A's coherence content, as specified by the intersect..."
+          "statementPreview": "The **observer state space** HA is the Hilbert space of observer A's coherence content, as specified by [Observer Def..."
         },
         {
-          "type": "Proposition",
+          "type": "Theorem",
           "id": "2.3",
-          "name": "Existence of the CPTP map",
+          "name": "CPTP factorization",
           "statementPreview": "There exists a completely positive trace-preserving map*"
         },
         {
-          "type": "Proposition",
+          "type": "Definition",
           "id": "3.1",
-          "name": "Physical qubits",
-          "statementPreview": "The physical qubits of the observer projection PA are the Planck-scale substrate modes within the causal past of A's ..."
-        },
-        {
-          "type": "Proposition",
-          "id": "3.2",
-          "name": "Logical boundary",
-          "statementPreview": "The logical boundary — the discrete data specifying which observer A is — is the integer-invariant profile IA of Defi..."
-        },
-        {
-          "type": "Proposition",
-          "id": "3.3",
           "name": "Code space",
           "statementPreview": "The **code space** CA Hsubstrate of observer A is the subspace of substrate states with integer-invariant profile equ..."
         },
         {
+          "type": "Theorem",
+          "id": "3.2",
+          "name": "Dual framing",
+          "statementPreview": "The observer A is identified with the interior of the code space modulo three gauge equivalences:*"
+        },
+        {
           "type": "Corollary",
           "id": "3.4",
-          "name": "Ratio of physical to logical degrees of freedom",
-          "statementPreview": "The ratio dimCA / dimHAlogical is the code rate's inverse — the redundancy of the observer projection. For a typical ..."
+          "name": "Theses A and A' as orthogonal slices",
+          "statementPreview": "[Observer Holographic Equivalence](/derivations/foundation/observer-holographic-equivalence)'s Theses A and A' parame..."
+        },
+        {
+          "type": "Corollary",
+          "id": "3.5",
+          "name": "Finite capacity as 4-volume of slack",
+          "statementPreview": "An observer's finite information capacity is the 4-volume of the code-space interior HA: the product of continuous sl..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Spatial axis as HaPPY holographic code",
+          "statementPreview": "The spatial-axis factor of PA is a HaPPY holographic code (Pastawski–Yoshida–Harlow–Preskill 2015, \"Holographic quant..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.2",
+          "name": "Algebraic axis as Kitaev topological code",
+          "statementPreview": "The algebraic-axis factor of PA is a Kitaev topological code (Kitaev 2003, \"Fault-tolerant quantum computation by any..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.3",
+          "name": "Temporal axis as continuous-time Floquet code",
+          "statementPreview": "The temporal-axis factor of PA is a dynamically generated Floquet code (Hastings–Haah 2021, \"Dynamically generated lo..."
         },
         {
           "type": "Theorem",
-          "id": "4.1",
-          "name": "Dual framing",
-          "statementPreview": "The observer A is identified with the interior of the code space CA:*"
+          "id": "5.1",
+          "name": "Pairwise-commuting stabilizer product",
+          "statementPreview": "Let Ssp denote the HaPPY stabilizer group on the spatial axis, Salg the Kitaev stabilizer group on the algebraic axis..."
+        },
+        {
+          "type": "Theorem",
+          "id": "5.3",
+          "name": "Cross-axis couplings make the product framework-specific",
+          "statementPreview": "The three-axis factors share a single underlying observer parameter: each factor's characteristic scale is set by the..."
         },
         {
           "type": "Corollary",
-          "id": "4.3",
-          "name": "Thesis A / Thesis A' as orthogonal slices",
-          "statementPreview": "[Observer Holographic Equivalence](/derivations/foundation/observer-holographic-equivalence)'s Thesis A (time-like ac..."
+          "id": "5.4",
+          "name": "Product structure with framework couplings is novel",
+          "statementPreview": "The product family above is not a known quantum-information code family in the combined form. Each factor is drawn fr..."
         }
       ],
       "structuralPostulates": [],
       "openGaps": [
         {
           "number": 1,
-          "title": "Explicit construction of the CPTP map.",
-          "description": "Construct PA via explicit Kraus operators Kk with sumk Kkdagger Kk = I, such that PA(rhosub) = sumk Kk rhosub Kkdagger factors through the integer-invariant profile. Likely tools: projection onto stab"
+          "title": "Explicit Kraus operator construction.",
+          "description": "Construct PA(rho) = sumk Kk rho Kkdagger via explicit Kraus operators annihilating substrate content orthogonal to the integer-invariant profile on all three axes simultaneously. *Difficulty: MODERATE"
         },
         {
           "number": 2,
-          "title": "Category-theoretic statement of the moduli quotient.",
-          "description": "Theorem 4.1 identifies HA with a moduli space under three gauge equivalences. A rigorous category-theoretic formulation would specify the site on which the quotient is taken (observer category mathbfO"
+          "title": "Explicit HaPPY tensor-network construction on the horizon.",
+          "description": "Give the hyperbolic tiling, perfect-tensor choices, and bulk-boundary map that realize the spatial-axis isometric encoding. *Difficulty: MODERATE.*"
         },
         {
           "number": 3,
-          "title": "Code family identification (Research Target Step 2).",
-          "description": "~~Determine what quantum error-correcting code family PA belongs to: topological (Kitaev-like, natural given homotopy classes), stabilizer (if Clifford-compatible), holographic (HaPPY-like, natural gi"
+          "title": "Explicit Walker–Wang realization for algebraic-axis code.",
+          "description": "Give the local 4D lattice Hamiltonian whose ground-state space realizes the framework's pi3(SU(2)) or pi3(SU(3)) logical content at bootstrap levels 2 and 3. *Difficulty: MODERATE-HARD.*"
         },
         {
           "number": 4,
-          "title": "Code-distance computation (Research Target Step 3).",
-          "description": "For each Standard Model particle's integer profile, compute the code distance — the minimum number of independent Planck-mode errors required to flip a logical invariant. *Difficulty: HARD; prerequisi"
+          "title": "Continuous-time Floquet-code formalism.",
+          "description": "The Hastings–Haah 2021 framework is discrete-measurement; the framework's Axiom 3 phase evolution is continuous. Formalize the continuous-time extension, including the distance formula on the temporal"
         },
         {
           "number": 5,
-          "title": "Standard Model spectrum match (Research Target Step 4).",
-          "description": "Compare predicted minimum-viable scales to observed particle masses. Either consistent (supporting the hypothesis) or not (falsifying it). *Difficulty: HARD; prerequisite is Open Gap 4.*"
+          "title": "Category-theoretic moduli quotient.",
+          "description": "Theorem 3.2 identifies HA with a moduli space under three gauge equivalences. A rigorous category-theoretic formulation would specify the site (observer category or substrate-lift), the gauge groupoid"
         },
         {
           "number": 6,
-          "title": "Mass-hierarchy tunneling unification (Research Target Step 5).",
-          "description": "Check whether the WKB tunneling action of [Mass Hierarchy](/derivations/particles/mass-hierarchy) is equivalent to the code-distance requirement. If equivalent, Mass Hierarchy's S1 postulate is promot"
-        },
-        {
-          "number": 7,
-          "title": "Planck-noise model.",
-          "description": "Formalize the Planck-scale noise model assumed by the error-correction interpretation (one error per mode per tick, or more nuanced). Connects to [Causal Set Statistics](/derivations/holography/causal"
-        },
-        {
-          "number": 8,
-          "title": "Temporal and algebraic qubit counts.",
-          "description": "Proposition 3.1 gives the spatial axis's physical-qubit count via Area Scaling. Analogous counts for the temporal axis (modes per tick interval) and algebraic axis (modes per homotopy-class representa"
-        },
-        {
-          "number": 9,
-          "title": "Relationship to Born rule.",
-          "description": "[Born Rule](/derivations/quantum/born-rule) Theorem 0.1 promotes Born to a theorem via Cauchy multiplicative equation on U(1) + channel additivity + composition + continuity. The present derivation sp"
+          "title": "Explicit verification of pairwise commutation on generators.",
+          "description": "Given Gaps 2 and 3 (explicit HaPPY and Walker–Wang generators), verify directly that the three stabilizer groups pairwise commute on the substrate Hilbert space. Structural argument for commutation is"
         }
       ],
       "assessmentVerdict": "",
@@ -6848,7 +6670,11 @@
           },
           {
             "target": "foundation/observer-holographic-equivalence",
-            "context": "Observer Holographic Equivalence"
+            "context": "null surfaces carry only integer topological data"
+          },
+          {
+            "target": "foundation/observer-holographic-equivalence",
+            "context": "continuous exterior content is operationally invisible"
           },
           {
             "target": "holography/area-scaling",
@@ -6856,49 +6682,57 @@
           },
           {
             "target": "interactions/moufang-loop-phase-closure",
+            "context": "bootstrap-level homotopy invariants $\\pi_1, \\pi_3$"
+          },
+          {
+            "target": "foundation/observer-holographic-equivalence",
+            "context": "Observer Holographic Equivalence"
+          },
+          {
+            "target": "interactions/moufang-loop-phase-closure",
             "context": "Moufang-Loop Phase Closure"
-          },
-          {
-            "target": "particles/mass-hierarchy",
-            "context": "Mass Hierarchy"
-          },
-          {
-            "target": "particles/three-generations",
-            "context": "Three Generations"
           },
           {
             "target": "axioms/observer-definition",
             "context": "Observer Definition"
           },
           {
+            "target": "axioms/coherence-conservation",
+            "context": "Coherence Conservation"
+          },
+          {
             "target": "axioms/coherence-operational",
-            "context": "Axioms of Coherence"
+            "context": "Coherence Operational"
           },
           {
             "target": "minimal-observer/structure",
             "context": "Minimal Observer Structure"
           },
           {
-            "target": "foundation/observer-code-family",
-            "context": "Observer Code Family Identification"
+            "target": "interactions/moufang-loop-phase-closure",
+            "context": "0, T_A)$. The code space $\\mathcal{C}_A$ is their joint fixed subspace:*\n\n$$\\mat"
           },
           {
-            "target": "holography/causal-set-statistics",
-            "context": "Causal Set Statistics"
-          },
-          {
-            "target": "quantum/born-rule",
-            "context": "Born Rule"
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
           }
         ],
         "incoming": [
           {
-            "source": "foundation/observer-code-family",
-            "context": "hereafter **Step 1**"
+            "source": "foundation/error-correction-and-standard-model",
+            "context": "Observer as an Error-Correcting Code"
           },
           {
-            "source": "foundation/observer-code-family",
-            "context": "Observer Projection as Error Correction"
+            "source": "foundation/formation-and-preservation",
+            "context": "Observer as an Error-Correcting Code"
+          },
+          {
+            "source": "foundation/observer-holographic-equivalence",
+            "context": "Corollary 3.4"
+          },
+          {
+            "source": "foundation/substrate-noise-and-profile-coupling",
+            "context": "Observer as an Error-Correcting Code"
           }
         ]
       },
@@ -6941,8 +6775,7 @@
         "foundation/bootstrap-fixed-point-existence",
         "foundation/knot-theoretic-bootstrap",
         "foundation/minimum-bootstrap-closure",
-        "foundation/observer-code-family",
-        "foundation/observer-error-correction",
+        "foundation/observer-as-error-correcting-code",
         "foundation/observer-level-stack-compactness",
         "interactions/moufang-loop-phase-closure"
       ],
@@ -7176,6 +7009,10 @@
             "context": "Born Rule"
           },
           {
+            "target": "foundation/observer-as-error-correcting-code",
+            "context": "Corollary 3.4"
+          },
+          {
             "target": "foundation/observer-projected-spacetime",
             "context": "Observer-Projected Spacetime"
           },
@@ -7218,11 +7055,15 @@
             "context": "Observer Holographic Equivalence"
           },
           {
-            "source": "foundation/observer-code-family",
-            "context": "Observer Holographic Equivalence"
+            "source": "foundation/observer-as-error-correcting-code",
+            "context": "null surfaces carry only integer topological data"
           },
           {
-            "source": "foundation/observer-error-correction",
+            "source": "foundation/observer-as-error-correcting-code",
+            "context": "continuous exterior content is operationally invisible"
+          },
+          {
+            "source": "foundation/observer-as-error-correcting-code",
             "context": "Observer Holographic Equivalence"
           },
           {
@@ -7387,251 +7228,6 @@
           {
             "source": "foundation/bootstrap-fixed-point-existence",
             "context": "Observer-Level Stack Compactness"
-          }
-        ]
-      },
-      "leanVerification": {
-        "hasProofs": false,
-        "proofCount": 0,
-        "modules": [],
-        "propositions": []
-      },
-      "upgradeEligible": false,
-      "upgradeBlockers": []
-    },
-    "foundation/observer-profile-noise": {
-      "id": "foundation/observer-profile-noise",
-      "filePath": "site/src/content/derivations/foundation/observer-profile-noise.md",
-      "title": "4. Profile-Dependent Noise from Gauge Couplings",
-      "status": "provisional",
-      "rigorLevel": "semi-formal",
-      "group": "foundation",
-      "tags": [
-        "foundation",
-        "error-correction",
-        "gauge",
-        "noise-model"
-      ],
-      "summary": "Step 3 established that the universal geometric substrate noise α_H ~ 1/4 is far too weak to saturate code thresholds at observed SM masses — achieved code distance exceeds required distance by ~10^19 at every SM particle. This derivation closes that gap by identifying a second, profile-dependent noise channel: each gauge coupling the observer carries contributes an independent additive noise term via Type III carrier exchanges with the vacuum. By the Reverse Noether mechanism of Relational Invariants, gauge interactions are Type III exchanges at per-Planck-cell-per-Planck-tick rate ∝ g², and by Coherence Conservation these independent channels compose additively. The resulting map p_phys^eff(𝓘_A) = p_phys^geom(α_H) + Σ_i g_i² · η_{i,axis} is axis-selective — EM modulates spatial-axis noise (horizon charge-crossings), weak modulates spatial + algebraic (flavor change is algebraic-invariant change), color modulates spatial + algebraic + drives temporal-axis divergence as α_s → 1 (predicting confinement as a QEC consequence). Photons and gluons are structurally exempt — as gauge mediators their profile has no logical content exposed to their own coupling's noise, giving the massless limit by construction rather than by fiat. This map is the mechanism that takes an observer from its equivalence-class profile to its specific code-distance requirement and hence to its specific mass under the minimum-viable convention; it is the bridge between Step 3's self-consistency result and Step 6's SM-spectrum comparison, and prepares Step 5's QEC–WKB identity check.",
-      "lastUpdated": "2026-04-18",
-      "dependsOn": [
-        "foundation/observer-code-distances",
-        "foundation/observer-code-family",
-        "interactions/relational-invariants",
-        "gauge/electromagnetism",
-        "gauge/weak-interaction",
-        "gauge/color-force",
-        "axioms/coherence-conservation"
-      ],
-      "enablesDerivation": [],
-      "dependedOnBy": [
-        "foundation/observer-qec-wkb",
-        "foundation/observer-sm-match"
-      ],
-      "steps": [
-        {
-          "number": 1,
-          "title": "Gauge Interactions as Type III Carrier Exchanges"
-        },
-        {
-          "number": 2,
-          "title": "Per-Event Noise from Each Gauge Channel"
-        },
-        {
-          "number": 3,
-          "title": "Additive Composition from Coherence Conservation"
-        },
-        {
-          "number": 4,
-          "title": "Axis Selectivity from Coupling Content"
-        },
-        {
-          "number": 5,
-          "title": "Profile → Noise Map — Worked Examples"
-        },
-        {
-          "number": 6,
-          "title": "Link to Step 3 and Step 5"
-        }
-      ],
-      "formalObjects": [
-        {
-          "type": "Proposition",
-          "id": "1.1",
-          "name": "Type III carrier rate per Planck cell",
-          "statementPreview": "For each active gauge channel i in an observer's profile, the rate of Type III carrier exchanges with the substrate v..."
-        },
-        {
-          "type": "Proposition",
-          "id": "2.1",
-          "name": "Bit-flip per event",
-          "statementPreview": "Each Type III carrier exchange in channel i flips the observer's integer-invariant record on the axes corresponding t..."
-        },
-        {
-          "type": "Proposition",
-          "id": "2.2",
-          "name": "Per-cell per-tick per-channel bit-flip rate",
-          "statementPreview": "Combining Proposition 1.1 and 2.1, the per-Planck-cell, per-Planck-tick bit-flip rate from channel i on axis axis is:*"
-        },
-        {
-          "type": "Proposition",
-          "id": "3.1",
-          "name": "Channel independence at substrate",
-          "statementPreview": "Type III carrier exchanges in different gauge channels are independent Poisson processes at the substrate-noise level..."
-        },
-        {
-          "type": "Proposition",
-          "id": "3.2",
-          "name": "Additive composition of noise rates",
-          "statementPreview": "For independent noise channels each with per-cell per-tick bit-flip rate pi, the total per-cell per-tick bit-flip rat..."
-        },
-        {
-          "type": "Proposition",
-          "id": "4.1",
-          "name": "EM channel — spatial axis only",
-          "statementPreview": "Electromagnetic Type III exchanges test the horizon charge-crossing integer. They do not directly change the tick cou..."
-        },
-        {
-          "type": "Proposition",
-          "id": "4.2",
-          "name": "Weak channel — spatial and algebraic axes",
-          "statementPreview": "Weak Type III exchanges carry SU(2)L isospin charge and can flip the observer's weak isospin component (spatial-axis ..."
-        },
-        {
-          "type": "Proposition",
-          "id": "4.3",
-          "name": "Color channel — spatial, algebraic, and temporal-via-confinement",
-          "statementPreview": "Color Type III exchanges permute color indices (spatial-axis integer change) and can change the observer's algebraic-..."
-        },
-        {
-          "type": "Corollary",
-          "id": "6.1",
-          "name": "Profile-specific minimum-viable mass",
-          "statementPreview": "Under the minimum-viable-code convention of [Step 3](/derivations/foundation/observer-code-distances) and the additiv..."
-        },
-        {
-          "type": "Corollary",
-          "id": "6.3",
-          "name": "Prepared form for Step 5 QEC–WKB identity",
-          "statementPreview": "With Step 4's additive form in hand, the WKB tunneling action S/hbar of [Mass Hierarchy](/derivations/particles/mass-..."
-        }
-      ],
-      "structuralPostulates": [],
-      "openGaps": [
-        {
-          "number": 1,
-          "title": "Numerical coefficients $\\eta_{i, \\text{axis}}$.",
-          "description": "Compute the axis-specific Type III flip-fraction coefficients from explicit substrate QFT. For EM on the spatial axis: compute the fraction of virtual-photon exchange events that flip the horizon char"
-        },
-        {
-          "number": 2,
-          "title": "Cross-axis correlated errors from channel-shared invariants.",
-          "description": "When a channel tests integer invariants on multiple axes (e.g., weak on both spatial and algebraic), events produce correlated errors. This correlation modifies the product-code threshold analysis of "
-        },
-        {
-          "number": 3,
-          "title": "Multiplicative alternative to additive composition.",
-          "description": "If Step 6's quantitative comparison undershoots the observed hierarchy, the multiplicative form pphyseff = pphysgeom prodi (1 + gi2 etai) becomes the natural upgrade. Derive whether multiplicative com"
-        },
-        {
-          "number": 4,
-          "title": "Electroweak sector (W, Z, Higgs).",
-          "description": "Example 5.8 flagged that the electroweak symmetry-breaking sector requires explicit handling beyond Step 4's structural framework. Extend the profile → noise map to cover W, Z, Higgs masses via [Elect"
-        },
-        {
-          "number": 5,
-          "title": "Running-coupling ↔ effective-noise map.",
-          "description": "The gauge couplings gi entering etai, axis are evaluated at the framework's substrate scale. Relating these to observed low-energy values (via RG flow) requires [Renormalization](/derivations/thermody"
-        },
-        {
-          "number": 6,
-          "title": "Confinement threshold precision.",
-          "description": "Remark 4.4 argues confinement follows from alphas 1 pushing pphyseff to threshold. Compute the precise color-coupling value at which the threshold is crossed — this fixes the QCD confinement scale as "
-        },
-        {
-          "number": 7,
-          "title": "Neutrino-sector mixing and seesaw.",
-          "description": "Example 5.7 sketched neutrino noise as smallest because of minimal channel content. Observed neutrino masses (~0.1 eV) are much smaller than the simplest interpretation would predict. Formalize the ne"
-        },
-        {
-          "number": 8,
-          "title": "Anchored Step 6 comparison (prerequisite for validation test).",
-          "description": "With etai, axis unknown, Step 6's quantitative comparison requires anchoring to one observed mass to fix the coefficients, then predicting others. This is a derived-strategy deliverable for Step 6, no"
-        }
-      ],
-      "assessmentVerdict": "",
-      "hasConsistencyModel": false,
-      "crossReferences": {
-        "outgoing": [
-          {
-            "target": "foundation/observer-code-distances",
-            "context": "**Step 3**"
-          },
-          {
-            "target": "holography/causal-set-statistics",
-            "context": "Causal Set Statistics"
-          },
-          {
-            "target": "interactions/relational-invariants",
-            "context": "Relational Invariants"
-          },
-          {
-            "target": "axioms/coherence-conservation",
-            "context": "Coherence Conservation"
-          },
-          {
-            "target": "particles/mass-hierarchy",
-            "context": "Mass Hierarchy"
-          },
-          {
-            "target": "foundation/observer-code-distances",
-            "context": "Step 3"
-          },
-          {
-            "target": "interactions/moufang-loop-phase-closure",
-            "context": "Moufang-Loop Phase Closure"
-          },
-          {
-            "target": "gauge/electromagnetism",
-            "context": "Electromagnetism"
-          },
-          {
-            "target": "gauge/weak-interaction",
-            "context": "Weak Interaction"
-          },
-          {
-            "target": "gauge/color-force",
-            "context": "Color Force"
-          },
-          {
-            "target": "gauge/standard-model-group",
-            "context": "Standard Model Group"
-          },
-          {
-            "target": "foundation/observer-code-family",
-            "context": "Observer Code Family Identification"
-          },
-          {
-            "target": "gauge/confinement",
-            "context": "Confinement"
-          },
-          {
-            "target": "thermodynamics-ext/renormalization",
-            "context": "Renormalization"
-          },
-          {
-            "target": "gauge/electroweak-breaking",
-            "context": "Electroweak Breaking"
-          },
-          {
-            "target": "particles/neutrino-masses",
-            "context": "Neutrino Masses"
-          }
-        ],
-        "incoming": [
-          {
-            "source": "foundation/observer-qec-wkb",
-            "context": "Profile-Dependent Noise from Gauge Couplings"
           }
         ]
       },
@@ -7906,346 +7502,185 @@
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
-    "foundation/observer-qec-wkb": {
-      "id": "foundation/observer-qec-wkb",
-      "filePath": "site/src/content/derivations/foundation/observer-qec-wkb.md",
-      "title": "5. QEC and WKB as Complementary Mechanisms",
+    "foundation/substrate-noise-and-profile-coupling": {
+      "id": "foundation/substrate-noise-and-profile-coupling",
+      "filePath": "site/src/content/derivations/foundation/substrate-noise-and-profile-coupling.md",
+      "title": "Substrate Noise and Profile-Dependent Coupling Modulation",
       "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "foundation",
       "tags": [
         "foundation",
         "error-correction",
-        "mass-hierarchy",
-        "structural-obstruction"
+        "noise-model",
+        "gauge"
       ],
-      "summary": "Step 5 of the Observer-Projection-as-Error-Correction research target was originally framed as the unification test: confirm that the WKB tunneling action of Mass Hierarchy and the QEC+coupling-noise required distance of Steps 3–4 are one mechanism under two descriptions. The test returns a negative result. WKB suppression scales as e^(-c/g²) — exponential in inverse coupling squared — while the QEC quantity (d_req/2)·log(p_th/p_phys^eff) reduces to log(T_coh/τ_P), independent of coupling entirely. No linear (or any simple) identification matches both scalings across the SM coupling range; the two mechanisms cannot be reduced to one. What IS structurally established: complementarity (WKB selects specific mass via formation probability, QEC validates preservation against substrate noise — different roles, both necessary), compatibility (WKB-selected masses automatically satisfy QEC preservation with the Step 3 excess margin), and a structural explanation of the ~10^19 excess margin itself (it is exactly the ratio of WKB-exponential to QEC-logarithmic scaling at SM couplings). Mass Hierarchy's structural postulate S1 (tunneling-crystallization identification) stays postulated — NOT promoted to theorem — but its role in the framework sharpens: WKB is the mass-determination mechanism, QEC is the consistency framework, and the refined hypothesis of the research target (QEC as compatibility layer, not mass-determination) is confirmed by Step 5's distinctness result.",
+      "summary": "The observer-projection error-correcting code operates under substrate noise with two additive components. Universal geometric noise from Planck-scale spacetime fluctuations: each Planck cell carries displacement variance α_H ℓ_P² (Causal Set Statistics / Holographic Noise, with α_H ∼ 1/4 the natural target), giving per-cell per-tick bit-flip probability p_phys^geom = erfc(1/√(8α_H)) ≈ 0.05 at α_H = 1/4 under a full-cell-exceedance threshold convention — below typical topological-code thresholds and placing the code in the protected regime. Profile-dependent gauge-coupling noise: each active gauge channel in an observer's profile contributes an additional additive term at per-cell rate g²·η, via Type III carrier exchanges with the vacuum at Poisson-density-matched rate, composed additively by Coherence Conservation subadditivity and Standard Model gauge group's direct-product channel independence. Per-axis achieved code distances scale polynomially (d_achieved ∼ m_P/m) while required distances scale logarithmically in coherence lifetime, giving the observed enormous preservation margins. The additive profile map is axis-selective: EM modulates spatial axis only (horizon charge-crossings), weak modulates spatial plus algebraic (flavor change is algebraic-invariant change), color modulates spatial plus algebraic and drives temporal-axis divergence as α_s → 1 — predicting confinement as a QEC threshold mechanism. Gauge-mediator profiles (photon, gluon) are structurally exempt from their own channel's noise because their profile has no logical content exposed to the coupling they mediate, giving the massless vector boson limit by construction.",
       "lastUpdated": "2026-04-19",
       "dependsOn": [
-        "foundation/observer-profile-noise",
-        "foundation/observer-code-distances",
-        "foundation/observer-code-family",
-        "particles/mass-hierarchy",
-        "foundation/coherence-lagrangian"
+        "foundation/observer-as-error-correcting-code",
+        "holography/causal-set-statistics",
+        "holography/area-scaling",
+        "interactions/relational-invariants",
+        "gauge/electromagnetism",
+        "gauge/weak-interaction",
+        "gauge/color-force",
+        "axioms/coherence-conservation",
+        "interactions/moufang-loop-phase-closure"
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
-        "foundation/observer-sm-match"
+        "foundation/error-correction-and-standard-model",
+        "foundation/formation-and-preservation"
       ],
-      "steps": [
-        {
-          "number": 1,
-          "title": "The Two Candidate Mechanisms (Recap)"
-        },
-        {
-          "number": 2,
-          "title": "Compute the QEC Quantity"
-        },
-        {
-          "number": 3,
-          "title": "Compare Functional Dependencies"
-        },
-        {
-          "number": 4,
-          "title": "What Actually Holds — Complementarity"
-        },
-        {
-          "number": 5,
-          "title": "Structural Explanation of the $10^{19}$ Excess Margin"
-        },
-        {
-          "number": 6,
-          "title": "Implications for Mass Hierarchy S1 and the Refined Hypothesis"
-        }
-      ],
-      "formalObjects": [
-        {
-          "type": "Proposition",
-          "id": "2.1",
-          "name": "QEC quantity simplifies to a coupling-independent expression",
-          "statementPreview": "Under the Step 3 definition of dreq, the right-hand side of the conjectured identification reduces to:*"
-        },
-        {
-          "type": "Proposition",
-          "id": "3.1",
-          "name": "WKB depends exponentially on coupling; QEC does not",
-          "statementPreview": "The WKB tunneling action S/hbar = c/g2 is strongly coupling-dependent — doubling g quadruples S/hbar, and small coupl..."
-        },
-        {
-          "type": "Proposition",
-          "id": "3.2",
-          "name": "No linear extension repairs the mismatch",
-          "statementPreview": "The generalized identification S/hbar = A clogic log(Tcoh/tauP) + B for constants A, B also fails: the left side reta..."
-        },
-        {
-          "type": "Proposition",
-          "id": "3.3",
-          "name": "Monomial extensions also fail",
-          "statementPreview": "Monomial identifications of the form S/hbar = A (dreq/2)alpha [log(pth/pphyseff)]beta do not repair the mismatch for ..."
-        },
-        {
-          "type": "Definition",
-          "id": "4.1",
-          "name": "Formation and preservation",
-          "statementPreview": "For an observer with profile IA and candidate mass mA:*"
-        },
-        {
-          "type": "Proposition",
-          "id": "4.2",
-          "name": "Both are required for observer existence",
-          "statementPreview": "A profile IA realizes as a stable observer at mass mA if and only if:*"
-        },
-        {
-          "type": "Corollary",
-          "id": "4.3",
-          "name": "The observed SM masses are formation-selected, preservation-compatible",
-          "statementPreview": "At each observed SM mass, WKB tunneling is marginal (formation probability is sim 1 at cosmological time-volume scale..."
-        },
-        {
-          "type": "Proposition",
-          "id": "5.1",
-          "name": "Excess margin in terms of WKB-QEC scaling mismatch",
-          "statementPreview": "The ratio dachieved/dreq at the WKB-selected mass mk = mP e-ck/gk2 is:*"
-        },
-        {
-          "type": "Corollary",
-          "id": "5.2",
-          "name": "Magnitude estimates for SM particles",
-          "statementPreview": "For electroweak-scale WKB (c/g2 sim 40): ratio sim e40/(sim 102) sim 1015. For Planck-scale ratios (c/g2 sim 60 for l..."
-        },
-        {
-          "type": "Proposition",
-          "id": "6.1",
-          "name": "S1 remains a structural postulate",
-          "statementPreview": "The error-correction program of Steps 1–5 does not promote Mass Hierarchy's S1 (tunneling–crystallization corresponde..."
-        },
-        {
-          "type": "Proposition",
-          "id": "6.2",
-          "name": "Refined hypothesis is confirmed",
-          "statementPreview": "The research-target's 2026-04-18 refined hypothesis (\"QEC is the consistency framework, not the mass-determination me..."
-        }
-      ],
-      "structuralPostulates": [],
-      "openGaps": [
-        {
-          "number": 1,
-          "title": "Joint fixed-point consistency as unification candidate.",
-          "description": "The most framework-native alternative to simple-functional identification: WKB formation and QEC preservation rates might enter a joint fixed-point condition selecting observer masses, with each rate "
-        },
-        {
-          "number": 2,
-          "title": "Coherence Lagrangian common-saddle derivation.",
-          "description": "Both WKB and QEC are semiclassical structures. [Coherence Lagrangian](/derivations/foundation/coherence-lagrangian) Theorem 6.0 establishes the framework's Lagrangian dynamics. A careful analysis of W"
-        },
-        {
-          "number": 3,
-          "title": "Shared-facts distinguishability layer.",
-          "description": "A prior conversation flagged that the \"what forces clogic\" question for each profile is not answered within the error-correction program. If distinguishability-conservation specifies a profile-specifi"
-        },
-        {
-          "number": 4,
-          "title": "Mass-information reversal above bootstrap level 3.",
-          "description": "[Mass Hierarchy](/derivations/particles/mass-hierarchy) §7 argues that at bootstrap levels beyond octonions (n > 3), particle identity transitions from topological (compact, boundary-shrinking) to str"
-        },
-        {
-          "number": 5,
-          "title": "Non-linear identifications beyond monomial.",
-          "description": "Propositions 3.1–3.3 rule out linear and monomial identifications. Exotic forms — e.g., S/hbar = exp[QEC quantity] or S/hbar = integral of QEC quantity over some auxiliary parameter — are not explicit"
-        },
-        {
-          "number": 6,
-          "title": "Connection to Step 6 capstone test.",
-          "description": "Step 5's complementarity result specifies Step 6's structure: the SM-spectrum match must compare (WKB-selected masses) ↔ (QEC preservation consistency) as two separate checks, not as a single unified "
-        }
-      ],
-      "assessmentVerdict": "",
-      "hasConsistencyModel": false,
-      "crossReferences": {
-        "outgoing": [
-          {
-            "target": "particles/mass-hierarchy",
-            "context": "Mass Hierarchy"
-          },
-          {
-            "target": "foundation/observer-code-distances",
-            "context": "Code-Distance Computation for Integer Profiles"
-          },
-          {
-            "target": "foundation/observer-profile-noise",
-            "context": "Profile-Dependent Noise from Gauge Couplings"
-          },
-          {
-            "target": "foundation/coherence-lagrangian",
-            "context": "Coherence Lagrangian"
-          },
-          {
-            "target": "foundation/bootstrap-fixed-point-existence",
-            "context": "Bootstrap Fixed-Point Existence"
-          }
-        ],
-        "incoming": []
-      },
-      "leanVerification": {
-        "hasProofs": false,
-        "proofCount": 0,
-        "modules": [],
-        "propositions": []
-      },
-      "upgradeEligible": false,
-      "upgradeBlockers": []
-    },
-    "foundation/observer-sm-match": {
-      "id": "foundation/observer-sm-match",
-      "filePath": "site/src/content/derivations/foundation/observer-sm-match.md",
-      "title": "6. Combined-Machinery Match to the Standard Model Spectrum",
-      "status": "provisional",
-      "rigorLevel": "semi-formal",
-      "group": "foundation",
-      "tags": [
-        "foundation",
-        "error-correction",
-        "standard-model",
-        "capstone"
-      ],
-      "summary": "Capstone test of the Observer-Projection-as-Error-Correction research target against the observed Standard Model spectrum. Under Step 5's complementarity result, the test has two separate checks per particle rather than a single unified prediction: (a) does the WKB-selected mass from Mass Hierarchy match the observed mass, and (b) does QEC preservation hold at that mass for that particle's profile. Systematic audit across all 17 SM particle types finds: (1) all massive SM particles satisfy QEC preservation with d_achieved/d_req in the 10^15–10^24 range, consistent with Step 5's structural-margin prediction; (2) qualitative hierarchy matches — neutrinos at the floor, charged leptons next, quarks heavier than leptons at each generation, exponential inter-generation scaling, top near the algebraic ceiling; (3) photons and gluons are massless as predicted by the gauge-mediator structural exemption (Step 4 Corollary); (4) free-quark profiles fail QEC preservation as p_phys^eff → p_th under strong color coupling, predicting confinement consistent with observed color-neutral hadrons; (5) no SM particle violates QEC preservation or sits outside the qualitative hierarchy expected from the combined machinery. Absolute-value predictions remain Mass Hierarchy's deliverable via WKB tunneling; QEC+coupling-noise is not falsified by the observed spectrum but also does not uniquely predict it. The refined hypothesis of the research target is confirmed: the SM spectrum is consistent with the combined action of error-correcting code structure (Steps 1–2), profile-dependent coupling noise (Step 4), and bootstrap-dynamic mass determination (Mass Hierarchy), with no single ingredient alone predictive.",
-      "lastUpdated": "2026-04-19",
-      "dependsOn": [
-        "foundation/observer-qec-wkb",
-        "foundation/observer-profile-noise",
-        "foundation/observer-code-distances",
-        "foundation/observer-code-family",
-        "foundation/observer-error-correction",
-        "particles/mass-hierarchy",
-        "particles/three-generations",
-        "gauge/confinement"
-      ],
-      "enablesDerivation": [],
-      "dependedOnBy": [],
-      "steps": [
-        {
-          "number": 1,
-          "title": "Test Protocol"
-        },
-        {
-          "number": 2,
-          "title": "Systematic Audit Across SM Particles"
-        },
-        {
-          "number": 3,
-          "title": "Worked Examples"
-        },
-        {
-          "number": 4,
-          "title": "Qualitative Hierarchy Analysis"
-        },
-        {
-          "number": 5,
-          "title": "Falsification Checks"
-        },
-        {
-          "number": 6,
-          "title": "Scope Statement"
-        }
-      ],
+      "steps": [],
       "formalObjects": [
         {
           "type": "Proposition",
           "id": "1.1",
-          "name": "Formula substitution",
-          "statementPreview": "Combining Step 4's additive noise and Step 3's distance formula, the required distance on axis axis for profile IA is:*"
+          "name": "Poisson density and per-cell displacement variance",
+          "statementPreview": "The causal set underlying the substrate is Poisson-sprinkled at density rhoP = ellP-4 — one element per Planck 4-volu..."
         },
         {
           "type": "Proposition",
           "id": "1.2",
-          "name": "Numerical baseline for SM-scale lifetimes",
-          "statementPreview": "With Tcoh = tU 1060 tauP, log(Tcoh/tauP) 138.*"
+          "name": "Gaussian per-cell distribution",
+          "statementPreview": "The per-cell displacement is Gaussian with variance alphaH ellP2, by central-limit-theorem on the Poisson sub-structu..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.3",
+          "name": "Per-cell bit-flip probability",
+          "statementPreview": "Under a threshold convention xth for flipping the cell's integer-crossing residue, the per-cell per-Planck-tick bit-f..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.6",
+          "name": "Below-threshold operation",
+          "statementPreview": "For alphaH 0.24 (Holometer-constrained upper bound) under the full-cell convention, pphysgeom 0.041. Standard topolog..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "Spatial-axis achieved distance",
+          "statementPreview": "From [Observer as an Error-Correcting Code](/derivations/foundation/observer-as-error-correcting-code) Theorem 5.3 an..."
         },
         {
           "type": "Proposition",
           "id": "2.2",
-          "name": "Per-axis $p_{\\text{phys}}^{\\text{eff}}$ numerical table",
-          "statementPreview": "For the reference parameter values of Step 1:*"
+          "name": "Algebraic-axis achieved distance",
+          "statementPreview": "From [Observer as an Error-Correcting Code](/derivations/foundation/observer-as-error-correcting-code) Theorem 5.3 an..."
         },
         {
           "type": "Proposition",
           "id": "2.3",
-          "name": "Per-axis $d_{\\text{req}}$ numerical table",
-          "statementPreview": "For bits × log(Tcoh/tauP) = 138, using Proposition 2.2:*"
-        },
-        {
-          "type": "Proposition",
-          "id": "2.4",
-          "name": "Per-particle achieved distance",
-          "statementPreview": "dachieved sim mP/mobs on all axes:*"
+          "name": "Temporal-axis achieved distance",
+          "statementPreview": "From [Observer as an Error-Correcting Code](/derivations/foundation/observer-as-error-correcting-code) Theorem 5.3 an..."
         },
         {
           "type": "Proposition",
           "id": "2.5",
-          "name": "Margin table",
-          "statementPreview": "dachieved/dreq per particle, binding axis:*"
+          "name": "Per-axis required distance",
+          "statementPreview": "For a topological stabilizer code operating at per-cell noise rate pphys below threshold pth, the logical error proba..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Gauge interactions as Type III carrier exchanges",
+          "statementPreview": "From [Relational Invariants](/derivations/interactions/relational-invariants), Type III interactions generate relatio..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Per-Planck-cell per-Planck-tick exchange rate",
+          "statementPreview": "For each active gauge channel i, the expected number of Type III carrier exchanges with the substrate vacuum per Plan..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.3",
+          "name": "Bit-flip per Type III event",
+          "statementPreview": "Each Type III exchange in channel i flips the observer's integer-invariant record on the axes corresponding to the ga..."
         },
         {
           "type": "Proposition",
           "id": "4.1",
-          "name": "Neutrino-floor structure",
-          "statementPreview": "Neutrinos carry minimal active channels (weak only), giving the smallest pphyseff of any fermion profile — hence smal..."
+          "name": "Channel independence at substrate level",
+          "statementPreview": "Type III carrier exchanges in different gauge channels are independent Poisson processes: the joint probability of a ..."
         },
         {
           "type": "Proposition",
           "id": "4.2",
-          "name": "Quark-lepton split at each generation",
-          "statementPreview": "At each generation, quarks have an additional color-axis profile (+2 bits spatial, +1 bit algebraic at level 3) and a..."
+          "name": "Additive composition at low rate",
+          "statementPreview": "For independent per-cell per-tick bit-flip rates pi across multiple channels, the composite rate on a shared axis (wh..."
         },
         {
-          "type": "Proposition",
+          "type": "Corollary",
           "id": "4.3",
-          "name": "Exponential generation hierarchy",
-          "statementPreview": "Moving from generation n to n+1 activates an additional bootstrap-level-n instanton invariant on the algebraic axis. ..."
+          "name": "Additive form of $p_{\\mathrm{phys}}^{\\mathrm{eff}}$",
+          "statementPreview": "Combining Propositions 3.3 and 4.2:*"
         },
         {
           "type": "Proposition",
-          "id": "4.4",
-          "name": "Bootstrap termination → no 4th generation",
-          "statementPreview": "[Moufang-Loop Phase Closure](/derivations/interactions/moufang-loop-phase-closure) Theorem 5.1 terminates the bootstr..."
+          "id": "5.1",
+          "name": "EM channel — spatial axis only",
+          "statementPreview": "Electromagnetic Type III exchanges test horizon-crossing electric-charge integer residue. They do not directly change..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.2",
+          "name": "Weak channel — spatial and algebraic axes",
+          "statementPreview": "Weak Type III exchanges carry SU(2)L isospin charge. Charged-current (Wpm) events change flavor — an algebraic-axis i..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.3",
+          "name": "Color channel — spatial, algebraic, and temporal-via-confinement",
+          "statementPreview": "Gluon exchanges permute color indices (spatial-axis invariant change) and can change the observer's algebraic-axis in..."
+        },
+        {
+          "type": "Corollary",
+          "id": "6.1",
+          "name": "Massless gauge mediators",
+          "statementPreview": "Gauge-boson profiles carry no logical content exposed to the coupling they mediate. For the photon: profile electric ..."
+        },
+        {
+          "type": "Corollary",
+          "id": "6.2",
+          "name": "Confinement as noise threshold",
+          "statementPreview": "For color-charged profiles (quarks), the spatial-axis noise term is:*"
         }
       ],
       "structuralPostulates": [],
       "openGaps": [
         {
           "number": 1,
-          "title": "Anchored absolute-mass prediction.",
-          "description": "Step 6 establishes QEC consistency at observed SM masses but does not predict those masses from Steps 1–4 alone. An anchored approach — fix the Step 4 eta coefficients from the electron-mass data poin"
+          "title": "Numerical $\\eta_{i,\\mathrm{axis}}$ coefficients.",
+          "description": "Compute the axis-specific invariant-flip fractions for each gauge channel via substrate-scale QFT. For EM on the spatial axis: fraction of virtual-photon events that flip the horizon charge-crossing i"
         },
         {
           "number": 2,
-          "title": "Electroweak sector full treatment.",
-          "description": "Example 3.8 deferred W, Z, H to the EW-symmetry-breaking sector. A proper extension of Step 4's additive form to handle the Higgs mechanism would close this gap. Connects to [Electroweak Breaking](/de"
+          "title": "Cross-channel correlated errors from mixed anomalies.",
+          "description": "Framework-level cross-channel interactions (e.g., mixed anomaly structures, Wess–Zumino-Witten terms) could modify the additive form to multiplicative or to a specific mixed composition. Derive whethe"
         },
         {
           "number": 3,
-          "title": "Quantitative confinement threshold.",
-          "description": "Example 3.4 argued free quarks fail QEC because pphyseff > pth. Compute the precise color-coupling value at which the threshold is crossed; this should fix the QCD confinement scale LambdaQCD as a fra"
+          "title": "Electroweak sector handling.",
+          "description": "The additive form applies to gauge couplings in the unbroken-phase regime. Physical W, Z, Higgs are electroweak symmetry-broken states with mixed weak-hypercharge quantum numbers and Higgs-VEV-generat"
         },
         {
           "number": 4,
-          "title": "Neutrino-mass seesaw integration.",
-          "description": "Step 4's simple additive form gives a mass floor for neutrinos (~10-2 eV if QEC were determinative). Observed neutrino masses are consistent with this floor but significantly below natural expectation"
+          "title": "Running-coupling scale dependence.",
+          "description": "Gauge couplings run with energy scale. The noise formula as stated uses Planck-scale bare couplings; relating to low-energy effective couplings (e.g., for the confinement-screening argument of Corolla"
         },
         {
           "number": 5,
-          "title": "Running-coupling effects on Step 4.",
-          "description": "Step 6 used coupling values at a single reference scale. Running couplings change pphyseff with energy scale; this affects QEC consistency at different observer scales (confinement screening is one ex"
+          "title": "Explicit confinement-threshold computation.",
+          "description": "Corollary 6.2's alphas 1-drives-pphyseff pth argument is structural. Compute the precise alphas value and Planck-scale-to-LambdaQCD ratio at which the threshold is crossed; compare to observed LambdaQ"
         },
         {
           "number": 6,
-          "title": "Connection to three framework-native unification candidates.",
-          "description": "Step 5 flagged three possibilities (joint fixed-point, Coherence Lagrangian common-saddle, shared-facts distinguishability layer) for future work. Step 6's audit doesn't resolve these but confirms the"
-        },
-        {
-          "number": 7,
-          "title": "Step 6 capstone status.",
-          "description": "The program ends here in its currently planned form. Future extensions could include (a) application to BSM candidates (dark matter, SUSY particles, axions) to see whether QEC preservation plus profil"
+          "title": "Neutrino-sector seesaw integration.",
+          "description": "Minimal-coupling profiles (neutrinos) have smallest pphyseff and smallest dreq. Observed neutrino masses (sim 10-30 mP) are far below any naive mass floor this derivation would predict. Integrate with"
         }
       ],
       "assessmentVerdict": "",
@@ -8253,43 +7688,84 @@
       "crossReferences": {
         "outgoing": [
           {
-            "target": "particles/mass-hierarchy",
-            "context": "Mass Hierarchy"
+            "target": "foundation/observer-as-error-correcting-code",
+            "context": "Observer as an Error-Correcting Code"
+          },
+          {
+            "target": "holography/causal-set-statistics",
+            "context": "Causal Set Statistics"
           },
           {
             "target": "gauge/confinement",
             "context": "Confinement"
           },
           {
-            "target": "foundation/observer-code-distances",
-            "context": "Step 3 Heuristic 6.1"
+            "target": "foundation/formation-and-preservation",
+            "context": "Formation and Preservation as Complementary Mechanisms"
           },
           {
-            "target": "particles/three-generations",
-            "context": "Three Generations"
+            "target": "interactions/relational-invariants",
+            "context": "Relational Invariants"
           },
           {
-            "target": "particles/neutrino-masses",
-            "context": "Neutrino Masses"
+            "target": "gauge/electromagnetism",
+            "context": "Electromagnetism"
+          },
+          {
+            "target": "gauge/weak-interaction",
+            "context": "Weak Interaction"
+          },
+          {
+            "target": "gauge/color-force",
+            "context": "Color Force"
+          },
+          {
+            "target": "gauge/standard-model-group",
+            "context": "Standard Model Group"
+          },
+          {
+            "target": "axioms/coherence-conservation",
+            "context": "Coherence Conservation"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
           },
           {
             "target": "gauge/electroweak-breaking",
             "context": "Electroweak Breaking"
           },
           {
-            "target": "interactions/moufang-loop-phase-closure",
-            "context": "Moufang-Loop Phase Closure"
-          },
-          {
-            "target": "flavor/mixing-angles",
-            "context": "Flavor Mixing Angles"
-          },
-          {
             "target": "thermodynamics-ext/renormalization",
             "context": "Renormalization"
+          },
+          {
+            "target": "particles/neutrino-masses",
+            "context": "Neutrino Masses"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "foundation/error-correction-and-standard-model",
+            "context": "Substrate Noise and Profile-Dependent Coupling Modulation"
+          },
+          {
+            "source": "foundation/error-correction-and-standard-model",
+            "context": "EM → spatial; weak → spatial + algebraic; color → spatial + algebraic + temporal"
+          },
+          {
+            "source": "foundation/error-correction-and-standard-model",
+            "context": "multiplicative form"
+          },
+          {
+            "source": "foundation/formation-and-preservation",
+            "context": "preservation"
+          },
+          {
+            "source": "foundation/formation-and-preservation",
+            "context": "Substrate Noise and Profile-Dependent Coupling Modulation"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": false,
@@ -8822,7 +8298,7 @@
         "gauge/chiral-symmetry-breaking"
       ],
       "dependedOnBy": [
-        "foundation/observer-profile-noise",
+        "foundation/substrate-noise-and-profile-coupling",
         "gauge/chiral-symmetry-breaking",
         "gauge/confinement",
         "gauge/standard-model-group",
@@ -9087,11 +8563,7 @@
             "context": "Color Force"
           },
           {
-            "source": "foundation/observer-code-distances",
-            "context": "Color Force"
-          },
-          {
-            "source": "foundation/observer-profile-noise",
+            "source": "foundation/substrate-noise-and-profile-coupling",
             "context": "Color Force"
           },
           {
@@ -9185,7 +8657,7 @@
         "gauge/chiral-symmetry-breaking"
       ],
       "dependedOnBy": [
-        "foundation/observer-sm-match",
+        "foundation/error-correction-and-standard-model",
         "gauge/chiral-symmetry-breaking"
       ],
       "steps": [
@@ -9318,19 +8790,15 @@
         ],
         "incoming": [
           {
+            "source": "foundation/error-correction-and-standard-model",
+            "context": "Confinement"
+          },
+          {
             "source": "foundation/knot-theoretic-bootstrap",
             "context": "Confinement"
           },
           {
-            "source": "foundation/observer-code-distances",
-            "context": "Confinement"
-          },
-          {
-            "source": "foundation/observer-profile-noise",
-            "context": "Confinement"
-          },
-          {
-            "source": "foundation/observer-sm-match",
+            "source": "foundation/substrate-noise-and-profile-coupling",
             "context": "Confinement"
           },
           {
@@ -9379,7 +8847,7 @@
       ],
       "dependedOnBy": [
         "foundation/knot-theoretic-bootstrap",
-        "foundation/observer-profile-noise",
+        "foundation/substrate-noise-and-profile-coupling",
         "gauge/standard-model-group",
         "gauge/weak-interaction"
       ],
@@ -9686,7 +9154,7 @@
             "context": "Electromagnetism"
           },
           {
-            "source": "foundation/observer-profile-noise",
+            "source": "foundation/substrate-noise-and-profile-coupling",
             "context": "Electromagnetism"
           },
           {
@@ -9947,15 +9415,11 @@
         ],
         "incoming": [
           {
-            "source": "foundation/observer-code-distances",
+            "source": "foundation/error-correction-and-standard-model",
             "context": "Electroweak Breaking"
           },
           {
-            "source": "foundation/observer-profile-noise",
-            "context": "Electroweak Breaking"
-          },
-          {
-            "source": "foundation/observer-sm-match",
+            "source": "foundation/substrate-noise-and-profile-coupling",
             "context": "Electroweak Breaking"
           },
           {
@@ -10425,7 +9889,7 @@
             "context": "Standard Model Group"
           },
           {
-            "source": "foundation/observer-profile-noise",
+            "source": "foundation/substrate-noise-and-profile-coupling",
             "context": "Standard Model Group"
           },
           {
@@ -10655,7 +10119,7 @@
       "dependedOnBy": [
         "cosmology/baryogenesis",
         "flavor/mixing-angles",
-        "foundation/observer-profile-noise",
+        "foundation/substrate-noise-and-profile-coupling",
         "gauge/chirality-selection",
         "gauge/color-force",
         "gauge/electroweak-breaking",
@@ -11038,7 +10502,7 @@
             "context": "Weak Interaction"
           },
           {
-            "source": "foundation/observer-profile-noise",
+            "source": "foundation/substrate-noise-and-profile-coupling",
             "context": "Weak Interaction"
           },
           {
@@ -11287,11 +10751,10 @@
         "cosmology/dark-energy-equation-of-state",
         "cosmology/geometric-substrate",
         "cosmology/observer-loop-viability",
-        "foundation/observer-code-distances",
-        "foundation/observer-code-family",
-        "foundation/observer-error-correction",
+        "foundation/observer-as-error-correcting-code",
         "foundation/observer-holographic-equivalence",
         "foundation/observer-level-stack-compactness",
+        "foundation/substrate-noise-and-profile-coupling",
         "holography/black-hole-entropy",
         "holography/causal-set-statistics",
         "holography/er-epr",
@@ -11534,11 +10997,7 @@
             "context": "Area Scaling"
           },
           {
-            "source": "foundation/observer-code-family",
-            "context": "Area Scaling"
-          },
-          {
-            "source": "foundation/observer-error-correction",
+            "source": "foundation/observer-as-error-correcting-code",
             "context": "Area Scaling"
           },
           {
@@ -11886,7 +11345,7 @@
       "dependedOnBy": [
         "cosmology/geometric-inflation",
         "cosmology/geometric-substrate",
-        "foundation/observer-code-distances",
+        "foundation/substrate-noise-and-profile-coupling",
         "holography/er-epr"
       ],
       "steps": [
@@ -12070,19 +11529,11 @@
             "context": "Causal Set Statistics"
           },
           {
-            "source": "foundation/observer-code-distances",
-            "context": "Causal Set Statistics"
-          },
-          {
-            "source": "foundation/observer-error-correction",
-            "context": "Causal Set Statistics"
-          },
-          {
             "source": "foundation/observer-holographic-equivalence",
             "context": "Causal Set Statistics"
           },
           {
-            "source": "foundation/observer-profile-noise",
+            "source": "foundation/substrate-noise-and-profile-coupling",
             "context": "Causal Set Statistics"
           },
           {
@@ -13537,7 +12988,7 @@
         "foundation/bootstrap-fixed-point-existence",
         "foundation/knot-theoretic-bootstrap",
         "foundation/minimum-bootstrap-closure",
-        "foundation/observer-error-correction",
+        "foundation/observer-as-error-correcting-code",
         "foundation/observer-holographic-equivalence",
         "gauge/color-force",
         "holography/horizon-gauge-shell",
@@ -13985,9 +13436,9 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
-        "foundation/observer-code-distances",
-        "foundation/observer-code-family",
-        "foundation/observer-error-correction"
+        "foundation/error-correction-and-standard-model",
+        "foundation/observer-as-error-correcting-code",
+        "foundation/substrate-noise-and-profile-coupling"
       ],
       "steps": [
         {
@@ -14147,28 +13598,20 @@
         ],
         "incoming": [
           {
-            "source": "foundation/observer-code-distances",
+            "source": "foundation/error-correction-and-standard-model",
             "context": "Moufang-Loop Phase Closure"
           },
           {
-            "source": "foundation/observer-code-family",
+            "source": "foundation/observer-as-error-correcting-code",
+            "context": "bootstrap-level homotopy invariants $\\pi_1, \\pi_3$"
+          },
+          {
+            "source": "foundation/observer-as-error-correcting-code",
             "context": "Moufang-Loop Phase Closure"
           },
           {
-            "source": "foundation/observer-code-family",
-            "context": "0, T_A)$. Consequently, the code space $\\mathcal{C}_A$ of Step 1 Proposition 3.3"
-          },
-          {
-            "source": "foundation/observer-error-correction",
-            "context": "Moufang-Loop Phase Closure"
-          },
-          {
-            "source": "foundation/observer-profile-noise",
-            "context": "Moufang-Loop Phase Closure"
-          },
-          {
-            "source": "foundation/observer-sm-match",
-            "context": "Moufang-Loop Phase Closure"
+            "source": "foundation/observer-as-error-correcting-code",
+            "context": "0, T_A)$. The code space $\\mathcal{C}_A$ is their joint fixed subspace:*\n\n$$\\mat"
           }
         ]
       },
@@ -14209,7 +13652,7 @@
         "cosmology/cyclic-cosmology",
         "cosmology/observer-loop-viability",
         "foundation/minimum-bootstrap-closure",
-        "foundation/observer-profile-noise",
+        "foundation/substrate-noise-and-profile-coupling",
         "gauge/chirality-selection",
         "holography/causal-set-statistics",
         "interactions/bootstrap",
@@ -14443,7 +13886,7 @@
             "context": "Relational Invariants"
           },
           {
-            "source": "foundation/observer-profile-noise",
+            "source": "foundation/substrate-noise-and-profile-coupling",
             "context": "Relational Invariants"
           },
           {
@@ -15627,7 +15070,7 @@
         "cosmology/observer-loop-viability",
         "dimensions/three-dimensions",
         "foundation/minimum-bootstrap-closure",
-        "foundation/observer-error-correction",
+        "foundation/observer-as-error-correcting-code",
         "foundation/observer-level-stack-compactness",
         "interactions/moufang-loop-phase-closure",
         "minimal-observer/multiplicity",
@@ -15814,7 +15257,7 @@
             "context": "Minimal Observer Structure"
           },
           {
-            "source": "foundation/observer-error-correction",
+            "source": "foundation/observer-as-error-correcting-code",
             "context": "Minimal Observer Structure"
           },
           {
@@ -16177,9 +15620,8 @@
       "dependedOnBy": [
         "cosmology/coupling-constants",
         "cosmology/geometric-substrate",
-        "foundation/observer-code-distances",
-        "foundation/observer-qec-wkb",
-        "foundation/observer-sm-match",
+        "foundation/error-correction-and-standard-model",
+        "foundation/formation-and-preservation",
         "particles/three-generations"
       ],
       "steps": [
@@ -16428,23 +15870,23 @@
             "context": "Mass Hierarchy"
           },
           {
-            "source": "foundation/observer-code-distances",
+            "source": "foundation/error-correction-and-standard-model",
             "context": "Mass Hierarchy"
           },
           {
-            "source": "foundation/observer-error-correction",
+            "source": "foundation/formation-and-preservation",
+            "context": "formation"
+          },
+          {
+            "source": "foundation/formation-and-preservation",
             "context": "Mass Hierarchy"
           },
           {
-            "source": "foundation/observer-profile-noise",
+            "source": "foundation/observer-as-error-correcting-code",
             "context": "Mass Hierarchy"
           },
           {
-            "source": "foundation/observer-qec-wkb",
-            "context": "Mass Hierarchy"
-          },
-          {
-            "source": "foundation/observer-sm-match",
+            "source": "foundation/substrate-noise-and-profile-coupling",
             "context": "Mass Hierarchy"
           },
           {
@@ -16709,15 +16151,11 @@
             "context": "derived"
           },
           {
-            "source": "foundation/observer-code-distances",
+            "source": "foundation/error-correction-and-standard-model",
             "context": "Neutrino Masses"
           },
           {
-            "source": "foundation/observer-profile-noise",
-            "context": "Neutrino Masses"
-          },
-          {
-            "source": "foundation/observer-sm-match",
+            "source": "foundation/substrate-noise-and-profile-coupling",
             "context": "Neutrino Masses"
           },
           {
@@ -17340,8 +16778,7 @@
       ],
       "dependedOnBy": [
         "flavor/mixing-angles",
-        "foundation/observer-code-distances",
-        "foundation/observer-sm-match",
+        "foundation/error-correction-and-standard-model",
         "particles/neutrino-masses"
       ],
       "steps": [
@@ -17543,15 +16980,11 @@
             "context": "Three Generations"
           },
           {
-            "source": "foundation/observer-error-correction",
+            "source": "foundation/error-correction-and-standard-model",
             "context": "Three Generations"
           },
           {
             "source": "foundation/observer-holographic-equivalence",
-            "context": "Three Generations"
-          },
-          {
-            "source": "foundation/observer-sm-match",
             "context": "Three Generations"
           },
           {
@@ -17835,10 +17268,6 @@
           },
           {
             "source": "foundation/continuous-discrete-duality",
-            "context": "Born Rule"
-          },
-          {
-            "source": "foundation/observer-error-correction",
             "context": "Born Rule"
           },
           {
@@ -21728,6 +21157,10 @@
             "context": "Theorem 2.1"
           },
           {
+            "source": "foundation/formation-and-preservation",
+            "context": "Distinguishability Conservation"
+          },
+          {
             "source": "foundation/observer-holographic-equivalence",
             "context": "Distinguishability Conservation"
           },
@@ -23008,11 +22441,11 @@
             "context": "Renormalization Group"
           },
           {
-            "source": "foundation/observer-profile-noise",
+            "source": "foundation/error-correction-and-standard-model",
             "context": "Renormalization"
           },
           {
-            "source": "foundation/observer-sm-match",
+            "source": "foundation/substrate-noise-and-profile-coupling",
             "context": "Renormalization"
           }
         ]
@@ -28091,6 +27524,167 @@
       "fullRef": "foundation/continuous-discrete-duality:Proposition 5.1"
     },
     {
+      "derivationId": "foundation/error-correction-and-standard-model",
+      "type": "Proposition",
+      "id": "1.1",
+      "name": "Formula substitution",
+      "fullRef": "foundation/error-correction-and-standard-model:Proposition 1.1"
+    },
+    {
+      "derivationId": "foundation/error-correction-and-standard-model",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Per-axis $p_{\\mathrm{phys}}^{\\mathrm{eff}}$",
+      "fullRef": "foundation/error-correction-and-standard-model:Proposition 3.1"
+    },
+    {
+      "derivationId": "foundation/error-correction-and-standard-model",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "Per-axis $d_{\\mathrm{req}}$",
+      "fullRef": "foundation/error-correction-and-standard-model:Proposition 3.2"
+    },
+    {
+      "derivationId": "foundation/error-correction-and-standard-model",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Per-particle achieved distance",
+      "fullRef": "foundation/error-correction-and-standard-model:Proposition 4.1"
+    },
+    {
+      "derivationId": "foundation/error-correction-and-standard-model",
+      "type": "Proposition",
+      "id": "4.2",
+      "name": "Margin table at binding axis",
+      "fullRef": "foundation/error-correction-and-standard-model:Proposition 4.2"
+    },
+    {
+      "derivationId": "foundation/error-correction-and-standard-model",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "Neutrino floor structure",
+      "fullRef": "foundation/error-correction-and-standard-model:Proposition 6.1"
+    },
+    {
+      "derivationId": "foundation/error-correction-and-standard-model",
+      "type": "Proposition",
+      "id": "6.2",
+      "name": "Quark-lepton split at each generation",
+      "fullRef": "foundation/error-correction-and-standard-model:Proposition 6.2"
+    },
+    {
+      "derivationId": "foundation/error-correction-and-standard-model",
+      "type": "Proposition",
+      "id": "6.3",
+      "name": "Exponential generation hierarchy",
+      "fullRef": "foundation/error-correction-and-standard-model:Proposition 6.3"
+    },
+    {
+      "derivationId": "foundation/error-correction-and-standard-model",
+      "type": "Proposition",
+      "id": "6.4",
+      "name": "Bootstrap termination → no fourth generation",
+      "fullRef": "foundation/error-correction-and-standard-model:Proposition 6.4"
+    },
+    {
+      "derivationId": "foundation/error-correction-and-standard-model",
+      "type": "Proposition",
+      "id": "8.1",
+      "name": "What the audit establishes",
+      "fullRef": "foundation/error-correction-and-standard-model:Proposition 8.1"
+    },
+    {
+      "derivationId": "foundation/error-correction-and-standard-model",
+      "type": "Proposition",
+      "id": "8.2",
+      "name": "What the audit does NOT establish",
+      "fullRef": "foundation/error-correction-and-standard-model:Proposition 8.2"
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "type": "Definition",
+      "id": "1.1",
+      "name": "Formation",
+      "fullRef": "foundation/formation-and-preservation:Definition 1.1"
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "type": "Definition",
+      "id": "1.2",
+      "name": "Preservation",
+      "fullRef": "foundation/formation-and-preservation:Definition 1.2"
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "type": "Proposition",
+      "id": "1.3",
+      "name": "Both conditions required for observer existence",
+      "fullRef": "foundation/formation-and-preservation:Proposition 1.3"
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "WKB exponential form",
+      "fullRef": "foundation/formation-and-preservation:Proposition 2.1"
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "QEC candidate simplifies algebraically",
+      "fullRef": "foundation/formation-and-preservation:Proposition 3.1"
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Linear identifications fail",
+      "fullRef": "foundation/formation-and-preservation:Proposition 4.1"
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "type": "Proposition",
+      "id": "4.2",
+      "name": "Monomial identifications fail",
+      "fullRef": "foundation/formation-and-preservation:Proposition 4.2"
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "type": "Corollary",
+      "id": "5.1",
+      "name": "Two conditions, not one",
+      "fullRef": "foundation/formation-and-preservation:Corollary 5.1"
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "type": "Corollary",
+      "id": "5.2",
+      "name": "Mass selection is WKB's role",
+      "fullRef": "foundation/formation-and-preservation:Corollary 5.2"
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "type": "Corollary",
+      "id": "5.3",
+      "name": "QEC is the consistency framework",
+      "fullRef": "foundation/formation-and-preservation:Corollary 5.3"
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "type": "Corollary",
+      "id": "5.4",
+      "name": "S1 of Mass Hierarchy is unchanged by the error-correction program",
+      "fullRef": "foundation/formation-and-preservation:Corollary 5.4"
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "Margin as exponential-over-logarithmic",
+      "fullRef": "foundation/formation-and-preservation:Proposition 6.1"
+    },
+    {
       "derivationId": "foundation/knot-theoretic-bootstrap",
       "type": "Definition",
       "id": "1.1.",
@@ -28231,312 +27825,116 @@
       "fullRef": "foundation/minimum-bootstrap-closure:Proposition 5.2"
     },
     {
-      "derivationId": "foundation/observer-code-distances",
-      "type": "Proposition",
-      "id": "1.1",
-      "name": "Gaussian per-cell fluctuations",
-      "fullRef": "foundation/observer-code-distances:Proposition 1.1"
-    },
-    {
-      "derivationId": "foundation/observer-code-distances",
-      "type": "Definition",
-      "id": "1.2",
-      "name": "Per-cell bit-flip probability",
-      "fullRef": "foundation/observer-code-distances:Definition 1.2"
-    },
-    {
-      "derivationId": "foundation/observer-code-distances",
-      "type": "Proposition",
-      "id": "1.3",
-      "name": "Per-cell bit-flip probability",
-      "fullRef": "foundation/observer-code-distances:Proposition 1.3"
-    },
-    {
-      "derivationId": "foundation/observer-code-distances",
-      "type": "Corollary",
-      "id": "1.5",
-      "name": "Below-threshold operation",
-      "fullRef": "foundation/observer-code-distances:Corollary 1.5"
-    },
-    {
-      "derivationId": "foundation/observer-code-distances",
-      "type": "Proposition",
-      "id": "2.1",
-      "name": "Per-axis distance requirement for profile stability",
-      "fullRef": "foundation/observer-code-distances:Proposition 2.1"
-    },
-    {
-      "derivationId": "foundation/observer-code-distances",
-      "type": "Proposition",
-      "id": "3.1",
-      "name": "Spatial-axis achieved distance",
-      "fullRef": "foundation/observer-code-distances:Proposition 3.1"
-    },
-    {
-      "derivationId": "foundation/observer-code-distances",
-      "type": "Proposition",
-      "id": "3.2",
-      "name": "Algebraic-axis achieved distance",
-      "fullRef": "foundation/observer-code-distances:Proposition 3.2"
-    },
-    {
-      "derivationId": "foundation/observer-code-distances",
-      "type": "Proposition",
-      "id": "3.3",
-      "name": "Temporal-axis achieved distance",
-      "fullRef": "foundation/observer-code-distances:Proposition 3.3"
-    },
-    {
-      "derivationId": "foundation/observer-code-distances",
-      "type": "Theorem",
-      "id": "4.1",
-      "name": "Error-correction self-consistency of the SM",
-      "fullRef": "foundation/observer-code-distances:Theorem 4.1"
-    },
-    {
-      "derivationId": "foundation/observer-code-distances",
-      "type": "Corollary",
-      "id": "4.2",
-      "name": "QEC does not set the minimum SM mass",
-      "fullRef": "foundation/observer-code-distances:Corollary 4.2"
-    },
-    {
-      "derivationId": "foundation/observer-code-distances",
-      "type": "Proposition",
-      "id": "5.1",
-      "name": "Integer-content increment per generation",
-      "fullRef": "foundation/observer-code-distances:Proposition 5.1"
-    },
-    {
-      "derivationId": "foundation/observer-code-distances",
-      "type": "Proposition",
-      "id": "5.2",
-      "name": "Minimum-viable-code convention forces exponential generation hierarchy",
-      "fullRef": "foundation/observer-code-distances:Proposition 5.2"
-    },
-    {
-      "derivationId": "foundation/observer-code-distances",
-      "type": "Corollary",
-      "id": "5.4",
-      "name": "No fourth generation",
-      "fullRef": "foundation/observer-code-distances:Corollary 5.4"
-    },
-    {
-      "derivationId": "foundation/observer-code-distances",
-      "type": "Corollary",
-      "id": "5.5",
-      "name": "Algebraic ceiling caps profile complexity",
-      "fullRef": "foundation/observer-code-distances:Corollary 5.5"
-    },
-    {
-      "derivationId": "foundation/observer-code-distances",
-      "type": "Proposition",
-      "id": "6.2",
-      "name": "Qualitative ordering predicted",
-      "fullRef": "foundation/observer-code-distances:Proposition 6.2"
-    },
-    {
-      "derivationId": "foundation/observer-code-family",
-      "type": "Proposition",
-      "id": "1.1",
-      "name": "Spatial-axis isometric encoding",
-      "fullRef": "foundation/observer-code-family:Proposition 1.1"
-    },
-    {
-      "derivationId": "foundation/observer-code-family",
-      "type": "Proposition",
-      "id": "1.2",
-      "name": "Spatial-axis subregion duality",
-      "fullRef": "foundation/observer-code-family:Proposition 1.2"
-    },
-    {
-      "derivationId": "foundation/observer-code-family",
-      "type": "Proposition",
-      "id": "1.3",
-      "name": "Spatial-axis boundary-qubit count",
-      "fullRef": "foundation/observer-code-family:Proposition 1.3"
-    },
-    {
-      "derivationId": "foundation/observer-code-family",
-      "type": "Proposition",
-      "id": "1.4",
-      "name": "Spatial-axis distance scaling",
-      "fullRef": "foundation/observer-code-family:Proposition 1.4"
-    },
-    {
-      "derivationId": "foundation/observer-code-family",
-      "type": "Proposition",
-      "id": "2.1",
-      "name": "Algebraic-axis homotopy-class logical content",
-      "fullRef": "foundation/observer-code-family:Proposition 2.1"
-    },
-    {
-      "derivationId": "foundation/observer-code-family",
-      "type": "Proposition",
-      "id": "2.2",
-      "name": "Level-1 case — 2D toric-code structure",
-      "fullRef": "foundation/observer-code-family:Proposition 2.2"
-    },
-    {
-      "derivationId": "foundation/observer-code-family",
-      "type": "Proposition",
-      "id": "2.3",
-      "name": "Level-2 and level-3 cases — 4D topological / Walker–Wang structure",
-      "fullRef": "foundation/observer-code-family:Proposition 2.3"
-    },
-    {
-      "derivationId": "foundation/observer-code-family",
-      "type": "Proposition",
-      "id": "2.4",
-      "name": "Algebraic-axis distance scaling",
-      "fullRef": "foundation/observer-code-family:Proposition 2.4"
-    },
-    {
-      "derivationId": "foundation/observer-code-family",
-      "type": "Proposition",
-      "id": "3.1",
-      "name": "Temporal-axis periodic stabilizer schedule",
-      "fullRef": "foundation/observer-code-family:Proposition 3.1"
-    },
-    {
-      "derivationId": "foundation/observer-code-family",
-      "type": "Proposition",
-      "id": "3.2",
-      "name": "Temporal-axis dynamically generated logical content",
-      "fullRef": "foundation/observer-code-family:Proposition 3.2"
-    },
-    {
-      "derivationId": "foundation/observer-code-family",
-      "type": "Proposition",
-      "id": "3.3",
-      "name": "Temporal-axis distance scaling",
-      "fullRef": "foundation/observer-code-family:Proposition 3.3"
-    },
-    {
-      "derivationId": "foundation/observer-code-family",
-      "type": "Theorem",
-      "id": "4.1",
-      "name": "Three-axis commuting-stabilizer product",
-      "fullRef": "foundation/observer-code-family:Theorem 4.1"
-    },
-    {
-      "derivationId": "foundation/observer-code-family",
-      "type": "Corollary",
-      "id": "4.3",
-      "name": "Code-rate calculation",
-      "fullRef": "foundation/observer-code-family:Corollary 4.3"
-    },
-    {
-      "derivationId": "foundation/observer-code-family",
-      "type": "Proposition",
-      "id": "5.1",
-      "name": "Cross-axis couplings are framework-specific",
-      "fullRef": "foundation/observer-code-family:Proposition 5.1"
-    },
-    {
-      "derivationId": "foundation/observer-code-family",
-      "type": "Proposition",
-      "id": "5.2",
-      "name": "Minimum additional structure required beyond known families",
-      "fullRef": "foundation/observer-code-family:Proposition 5.2"
-    },
-    {
-      "derivationId": "foundation/observer-code-family",
-      "type": "Corollary",
-      "id": "5.3",
-      "name": "Implication for Step 3 of the research target",
-      "fullRef": "foundation/observer-code-family:Corollary 5.3"
-    },
-    {
-      "derivationId": "foundation/observer-error-correction",
+      "derivationId": "foundation/observer-as-error-correcting-code",
       "type": "Proposition",
       "id": "1.1",
       "name": "Spatial axis — null horizon integer content",
-      "fullRef": "foundation/observer-error-correction:Proposition 1.1"
+      "fullRef": "foundation/observer-as-error-correcting-code:Proposition 1.1"
     },
     {
-      "derivationId": "foundation/observer-error-correction",
+      "derivationId": "foundation/observer-as-error-correcting-code",
       "type": "Proposition",
       "id": "1.2",
       "name": "Temporal axis — loop closure integer content",
-      "fullRef": "foundation/observer-error-correction:Proposition 1.2"
+      "fullRef": "foundation/observer-as-error-correcting-code:Proposition 1.2"
     },
     {
-      "derivationId": "foundation/observer-error-correction",
+      "derivationId": "foundation/observer-as-error-correcting-code",
       "type": "Proposition",
       "id": "1.3",
       "name": "Algebraic axis — bootstrap homotopy integer content",
-      "fullRef": "foundation/observer-error-correction:Proposition 1.3"
+      "fullRef": "foundation/observer-as-error-correcting-code:Proposition 1.3"
     },
     {
-      "derivationId": "foundation/observer-error-correction",
-      "type": "Definition",
-      "id": "1.5",
-      "name": "Integer-invariant profile",
-      "fullRef": "foundation/observer-error-correction:Definition 1.5"
-    },
-    {
-      "derivationId": "foundation/observer-error-correction",
+      "derivationId": "foundation/observer-as-error-correcting-code",
       "type": "Definition",
       "id": "2.1",
       "name": "Substrate Hilbert space",
-      "fullRef": "foundation/observer-error-correction:Definition 2.1"
+      "fullRef": "foundation/observer-as-error-correcting-code:Definition 2.1"
     },
     {
-      "derivationId": "foundation/observer-error-correction",
+      "derivationId": "foundation/observer-as-error-correcting-code",
       "type": "Definition",
       "id": "2.2",
       "name": "Observer state space",
-      "fullRef": "foundation/observer-error-correction:Definition 2.2"
+      "fullRef": "foundation/observer-as-error-correcting-code:Definition 2.2"
     },
     {
-      "derivationId": "foundation/observer-error-correction",
-      "type": "Proposition",
+      "derivationId": "foundation/observer-as-error-correcting-code",
+      "type": "Theorem",
       "id": "2.3",
-      "name": "Existence of the CPTP map",
-      "fullRef": "foundation/observer-error-correction:Proposition 2.3"
+      "name": "CPTP factorization",
+      "fullRef": "foundation/observer-as-error-correcting-code:Theorem 2.3"
     },
     {
-      "derivationId": "foundation/observer-error-correction",
-      "type": "Proposition",
+      "derivationId": "foundation/observer-as-error-correcting-code",
+      "type": "Definition",
       "id": "3.1",
-      "name": "Physical qubits",
-      "fullRef": "foundation/observer-error-correction:Proposition 3.1"
-    },
-    {
-      "derivationId": "foundation/observer-error-correction",
-      "type": "Proposition",
-      "id": "3.2",
-      "name": "Logical boundary",
-      "fullRef": "foundation/observer-error-correction:Proposition 3.2"
-    },
-    {
-      "derivationId": "foundation/observer-error-correction",
-      "type": "Proposition",
-      "id": "3.3",
       "name": "Code space",
-      "fullRef": "foundation/observer-error-correction:Proposition 3.3"
+      "fullRef": "foundation/observer-as-error-correcting-code:Definition 3.1"
     },
     {
-      "derivationId": "foundation/observer-error-correction",
+      "derivationId": "foundation/observer-as-error-correcting-code",
+      "type": "Theorem",
+      "id": "3.2",
+      "name": "Dual framing",
+      "fullRef": "foundation/observer-as-error-correcting-code:Theorem 3.2"
+    },
+    {
+      "derivationId": "foundation/observer-as-error-correcting-code",
       "type": "Corollary",
       "id": "3.4",
-      "name": "Ratio of physical to logical degrees of freedom",
-      "fullRef": "foundation/observer-error-correction:Corollary 3.4"
+      "name": "Theses A and A' as orthogonal slices",
+      "fullRef": "foundation/observer-as-error-correcting-code:Corollary 3.4"
     },
     {
-      "derivationId": "foundation/observer-error-correction",
-      "type": "Theorem",
-      "id": "4.1",
-      "name": "Dual framing",
-      "fullRef": "foundation/observer-error-correction:Theorem 4.1"
-    },
-    {
-      "derivationId": "foundation/observer-error-correction",
+      "derivationId": "foundation/observer-as-error-correcting-code",
       "type": "Corollary",
+      "id": "3.5",
+      "name": "Finite capacity as 4-volume of slack",
+      "fullRef": "foundation/observer-as-error-correcting-code:Corollary 3.5"
+    },
+    {
+      "derivationId": "foundation/observer-as-error-correcting-code",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Spatial axis as HaPPY holographic code",
+      "fullRef": "foundation/observer-as-error-correcting-code:Proposition 4.1"
+    },
+    {
+      "derivationId": "foundation/observer-as-error-correcting-code",
+      "type": "Proposition",
+      "id": "4.2",
+      "name": "Algebraic axis as Kitaev topological code",
+      "fullRef": "foundation/observer-as-error-correcting-code:Proposition 4.2"
+    },
+    {
+      "derivationId": "foundation/observer-as-error-correcting-code",
+      "type": "Proposition",
       "id": "4.3",
-      "name": "Thesis A / Thesis A' as orthogonal slices",
-      "fullRef": "foundation/observer-error-correction:Corollary 4.3"
+      "name": "Temporal axis as continuous-time Floquet code",
+      "fullRef": "foundation/observer-as-error-correcting-code:Proposition 4.3"
+    },
+    {
+      "derivationId": "foundation/observer-as-error-correcting-code",
+      "type": "Theorem",
+      "id": "5.1",
+      "name": "Pairwise-commuting stabilizer product",
+      "fullRef": "foundation/observer-as-error-correcting-code:Theorem 5.1"
+    },
+    {
+      "derivationId": "foundation/observer-as-error-correcting-code",
+      "type": "Theorem",
+      "id": "5.3",
+      "name": "Cross-axis couplings make the product framework-specific",
+      "fullRef": "foundation/observer-as-error-correcting-code:Theorem 5.3"
+    },
+    {
+      "derivationId": "foundation/observer-as-error-correcting-code",
+      "type": "Corollary",
+      "id": "5.4",
+      "name": "Product structure with framework couplings is novel",
+      "fullRef": "foundation/observer-as-error-correcting-code:Corollary 5.4"
     },
     {
       "derivationId": "foundation/observer-holographic-equivalence",
@@ -28672,76 +28070,6 @@
       "fullRef": "foundation/observer-level-stack-compactness:Proposition 2.1"
     },
     {
-      "derivationId": "foundation/observer-profile-noise",
-      "type": "Proposition",
-      "id": "1.1",
-      "name": "Type III carrier rate per Planck cell",
-      "fullRef": "foundation/observer-profile-noise:Proposition 1.1"
-    },
-    {
-      "derivationId": "foundation/observer-profile-noise",
-      "type": "Proposition",
-      "id": "2.1",
-      "name": "Bit-flip per event",
-      "fullRef": "foundation/observer-profile-noise:Proposition 2.1"
-    },
-    {
-      "derivationId": "foundation/observer-profile-noise",
-      "type": "Proposition",
-      "id": "2.2",
-      "name": "Per-cell per-tick per-channel bit-flip rate",
-      "fullRef": "foundation/observer-profile-noise:Proposition 2.2"
-    },
-    {
-      "derivationId": "foundation/observer-profile-noise",
-      "type": "Proposition",
-      "id": "3.1",
-      "name": "Channel independence at substrate",
-      "fullRef": "foundation/observer-profile-noise:Proposition 3.1"
-    },
-    {
-      "derivationId": "foundation/observer-profile-noise",
-      "type": "Proposition",
-      "id": "3.2",
-      "name": "Additive composition of noise rates",
-      "fullRef": "foundation/observer-profile-noise:Proposition 3.2"
-    },
-    {
-      "derivationId": "foundation/observer-profile-noise",
-      "type": "Proposition",
-      "id": "4.1",
-      "name": "EM channel — spatial axis only",
-      "fullRef": "foundation/observer-profile-noise:Proposition 4.1"
-    },
-    {
-      "derivationId": "foundation/observer-profile-noise",
-      "type": "Proposition",
-      "id": "4.2",
-      "name": "Weak channel — spatial and algebraic axes",
-      "fullRef": "foundation/observer-profile-noise:Proposition 4.2"
-    },
-    {
-      "derivationId": "foundation/observer-profile-noise",
-      "type": "Proposition",
-      "id": "4.3",
-      "name": "Color channel — spatial, algebraic, and temporal-via-confinement",
-      "fullRef": "foundation/observer-profile-noise:Proposition 4.3"
-    },
-    {
-      "derivationId": "foundation/observer-profile-noise",
-      "type": "Corollary",
-      "id": "6.1",
-      "name": "Profile-specific minimum-viable mass",
-      "fullRef": "foundation/observer-profile-noise:Corollary 6.1"
-    },
-    {
-      "derivationId": "foundation/observer-profile-noise",
-      "type": "Corollary",
-      "id": "6.3",
-      "name": "Prepared form for Step 5 QEC–WKB identity",
-      "fullRef": "foundation/observer-profile-noise:Corollary 6.3"
-    },
-    {
       "derivationId": "foundation/observer-projected-spacetime",
       "type": "Definition",
       "id": "1.1",
@@ -28826,151 +28154,137 @@
       "fullRef": "foundation/observer-projected-spacetime:Proposition 6.3"
     },
     {
-      "derivationId": "foundation/observer-qec-wkb",
-      "type": "Proposition",
-      "id": "2.1",
-      "name": "QEC quantity simplifies to a coupling-independent expression",
-      "fullRef": "foundation/observer-qec-wkb:Proposition 2.1"
-    },
-    {
-      "derivationId": "foundation/observer-qec-wkb",
-      "type": "Proposition",
-      "id": "3.1",
-      "name": "WKB depends exponentially on coupling; QEC does not",
-      "fullRef": "foundation/observer-qec-wkb:Proposition 3.1"
-    },
-    {
-      "derivationId": "foundation/observer-qec-wkb",
-      "type": "Proposition",
-      "id": "3.2",
-      "name": "No linear extension repairs the mismatch",
-      "fullRef": "foundation/observer-qec-wkb:Proposition 3.2"
-    },
-    {
-      "derivationId": "foundation/observer-qec-wkb",
-      "type": "Proposition",
-      "id": "3.3",
-      "name": "Monomial extensions also fail",
-      "fullRef": "foundation/observer-qec-wkb:Proposition 3.3"
-    },
-    {
-      "derivationId": "foundation/observer-qec-wkb",
-      "type": "Definition",
-      "id": "4.1",
-      "name": "Formation and preservation",
-      "fullRef": "foundation/observer-qec-wkb:Definition 4.1"
-    },
-    {
-      "derivationId": "foundation/observer-qec-wkb",
-      "type": "Proposition",
-      "id": "4.2",
-      "name": "Both are required for observer existence",
-      "fullRef": "foundation/observer-qec-wkb:Proposition 4.2"
-    },
-    {
-      "derivationId": "foundation/observer-qec-wkb",
-      "type": "Corollary",
-      "id": "4.3",
-      "name": "The observed SM masses are formation-selected, preservation-compatible",
-      "fullRef": "foundation/observer-qec-wkb:Corollary 4.3"
-    },
-    {
-      "derivationId": "foundation/observer-qec-wkb",
-      "type": "Proposition",
-      "id": "5.1",
-      "name": "Excess margin in terms of WKB-QEC scaling mismatch",
-      "fullRef": "foundation/observer-qec-wkb:Proposition 5.1"
-    },
-    {
-      "derivationId": "foundation/observer-qec-wkb",
-      "type": "Corollary",
-      "id": "5.2",
-      "name": "Magnitude estimates for SM particles",
-      "fullRef": "foundation/observer-qec-wkb:Corollary 5.2"
-    },
-    {
-      "derivationId": "foundation/observer-qec-wkb",
-      "type": "Proposition",
-      "id": "6.1",
-      "name": "S1 remains a structural postulate",
-      "fullRef": "foundation/observer-qec-wkb:Proposition 6.1"
-    },
-    {
-      "derivationId": "foundation/observer-qec-wkb",
-      "type": "Proposition",
-      "id": "6.2",
-      "name": "Refined hypothesis is confirmed",
-      "fullRef": "foundation/observer-qec-wkb:Proposition 6.2"
-    },
-    {
-      "derivationId": "foundation/observer-sm-match",
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
       "type": "Proposition",
       "id": "1.1",
-      "name": "Formula substitution",
-      "fullRef": "foundation/observer-sm-match:Proposition 1.1"
+      "name": "Poisson density and per-cell displacement variance",
+      "fullRef": "foundation/substrate-noise-and-profile-coupling:Proposition 1.1"
     },
     {
-      "derivationId": "foundation/observer-sm-match",
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
       "type": "Proposition",
       "id": "1.2",
-      "name": "Numerical baseline for SM-scale lifetimes",
-      "fullRef": "foundation/observer-sm-match:Proposition 1.2"
+      "name": "Gaussian per-cell distribution",
+      "fullRef": "foundation/substrate-noise-and-profile-coupling:Proposition 1.2"
     },
     {
-      "derivationId": "foundation/observer-sm-match",
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
+      "type": "Proposition",
+      "id": "1.3",
+      "name": "Per-cell bit-flip probability",
+      "fullRef": "foundation/substrate-noise-and-profile-coupling:Proposition 1.3"
+    },
+    {
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
+      "type": "Proposition",
+      "id": "1.6",
+      "name": "Below-threshold operation",
+      "fullRef": "foundation/substrate-noise-and-profile-coupling:Proposition 1.6"
+    },
+    {
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "Spatial-axis achieved distance",
+      "fullRef": "foundation/substrate-noise-and-profile-coupling:Proposition 2.1"
+    },
+    {
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
       "type": "Proposition",
       "id": "2.2",
-      "name": "Per-axis $p_{\\text{phys}}^{\\text{eff}}$ numerical table",
-      "fullRef": "foundation/observer-sm-match:Proposition 2.2"
+      "name": "Algebraic-axis achieved distance",
+      "fullRef": "foundation/substrate-noise-and-profile-coupling:Proposition 2.2"
     },
     {
-      "derivationId": "foundation/observer-sm-match",
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
       "type": "Proposition",
       "id": "2.3",
-      "name": "Per-axis $d_{\\text{req}}$ numerical table",
-      "fullRef": "foundation/observer-sm-match:Proposition 2.3"
+      "name": "Temporal-axis achieved distance",
+      "fullRef": "foundation/substrate-noise-and-profile-coupling:Proposition 2.3"
     },
     {
-      "derivationId": "foundation/observer-sm-match",
-      "type": "Proposition",
-      "id": "2.4",
-      "name": "Per-particle achieved distance",
-      "fullRef": "foundation/observer-sm-match:Proposition 2.4"
-    },
-    {
-      "derivationId": "foundation/observer-sm-match",
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
       "type": "Proposition",
       "id": "2.5",
-      "name": "Margin table",
-      "fullRef": "foundation/observer-sm-match:Proposition 2.5"
+      "name": "Per-axis required distance",
+      "fullRef": "foundation/substrate-noise-and-profile-coupling:Proposition 2.5"
     },
     {
-      "derivationId": "foundation/observer-sm-match",
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Gauge interactions as Type III carrier exchanges",
+      "fullRef": "foundation/substrate-noise-and-profile-coupling:Proposition 3.1"
+    },
+    {
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "Per-Planck-cell per-Planck-tick exchange rate",
+      "fullRef": "foundation/substrate-noise-and-profile-coupling:Proposition 3.2"
+    },
+    {
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
+      "type": "Proposition",
+      "id": "3.3",
+      "name": "Bit-flip per Type III event",
+      "fullRef": "foundation/substrate-noise-and-profile-coupling:Proposition 3.3"
+    },
+    {
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
       "type": "Proposition",
       "id": "4.1",
-      "name": "Neutrino-floor structure",
-      "fullRef": "foundation/observer-sm-match:Proposition 4.1"
+      "name": "Channel independence at substrate level",
+      "fullRef": "foundation/substrate-noise-and-profile-coupling:Proposition 4.1"
     },
     {
-      "derivationId": "foundation/observer-sm-match",
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
       "type": "Proposition",
       "id": "4.2",
-      "name": "Quark-lepton split at each generation",
-      "fullRef": "foundation/observer-sm-match:Proposition 4.2"
+      "name": "Additive composition at low rate",
+      "fullRef": "foundation/substrate-noise-and-profile-coupling:Proposition 4.2"
     },
     {
-      "derivationId": "foundation/observer-sm-match",
-      "type": "Proposition",
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
+      "type": "Corollary",
       "id": "4.3",
-      "name": "Exponential generation hierarchy",
-      "fullRef": "foundation/observer-sm-match:Proposition 4.3"
+      "name": "Additive form of $p_{\\mathrm{phys}}^{\\mathrm{eff}}$",
+      "fullRef": "foundation/substrate-noise-and-profile-coupling:Corollary 4.3"
     },
     {
-      "derivationId": "foundation/observer-sm-match",
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
       "type": "Proposition",
-      "id": "4.4",
-      "name": "Bootstrap termination → no 4th generation",
-      "fullRef": "foundation/observer-sm-match:Proposition 4.4"
+      "id": "5.1",
+      "name": "EM channel — spatial axis only",
+      "fullRef": "foundation/substrate-noise-and-profile-coupling:Proposition 5.1"
+    },
+    {
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
+      "type": "Proposition",
+      "id": "5.2",
+      "name": "Weak channel — spatial and algebraic axes",
+      "fullRef": "foundation/substrate-noise-and-profile-coupling:Proposition 5.2"
+    },
+    {
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
+      "type": "Proposition",
+      "id": "5.3",
+      "name": "Color channel — spatial, algebraic, and temporal-via-confinement",
+      "fullRef": "foundation/substrate-noise-and-profile-coupling:Proposition 5.3"
+    },
+    {
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
+      "type": "Corollary",
+      "id": "6.1",
+      "name": "Massless gauge mediators",
+      "fullRef": "foundation/substrate-noise-and-profile-coupling:Corollary 6.1"
+    },
+    {
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
+      "type": "Corollary",
+      "id": "6.2",
+      "name": "Confinement as noise threshold",
+      "fullRef": "foundation/substrate-noise-and-profile-coupling:Corollary 6.2"
     },
     {
       "derivationId": "gauge/anomaly-cancellation",
@@ -35534,6 +34848,83 @@
       "description": "Even if the compatibility condition is selective, it might admit multiple solutions (multiple manifold-network pairs satisfying all constraints). Whether the axioms + aperiodic order + Lagrangian uniq"
     },
     {
+      "derivationId": "foundation/error-correction-and-standard-model",
+      "derivationStatus": "provisional",
+      "number": 1,
+      "title": "Anchored absolute-mass prediction.",
+      "description": "Fix the numerical etai,axis coefficients from one observed mass (e.g., electron) and predict the other SM masses as consequences. If predicted spectrum matches within O(1) across the full SM, the comb"
+    },
+    {
+      "derivationId": "foundation/error-correction-and-standard-model",
+      "derivationStatus": "provisional",
+      "number": 2,
+      "title": "Electroweak sector completion.",
+      "description": "Example 5.8 deferred W, Z, H to [Electroweak Breaking](/derivations/gauge/electroweak-breaking). Integrate the Higgs mechanism's VEV contributions into the additive noise form to handle gauge-boson ma"
+    },
+    {
+      "derivationId": "foundation/error-correction-and-standard-model",
+      "derivationStatus": "provisional",
+      "number": 3,
+      "title": "Quantitative confinement threshold computation.",
+      "description": "Example 5.4 argued free quarks fail QEC because pphyseff,,sp > pth at Planck-scale alphas. Compute the precise color-coupling value at which the threshold is crossed; this would fix LambdaQCD as a pre"
+    },
+    {
+      "derivationId": "foundation/error-correction-and-standard-model",
+      "derivationStatus": "provisional",
+      "number": 4,
+      "title": "Neutrino-mass seesaw integration.",
+      "description": "The simple additive form gives a mass floor consistent in magnitude with observed neutrino masses but not the specific smallness relative to natural expectations. Integrate with [Neutrino Masses](/der"
+    },
+    {
+      "derivationId": "foundation/error-correction-and-standard-model",
+      "derivationStatus": "provisional",
+      "number": 5,
+      "title": "Running-coupling effects across scales.",
+      "description": "This audit used Planck-scale bare couplings. Running couplings affect pphyseff at different observer scales (confinement screening is one example). Derive the RG flow of the additive noise form. *Diff"
+    },
+    {
+      "derivationId": "foundation/error-correction-and-standard-model",
+      "derivationStatus": "provisional",
+      "number": 6,
+      "title": "BSM and composite-observer extensions.",
+      "description": "The audit covers the observed SM. Beyond-Standard-Model candidates (dark matter, supersymmetric partners, axions) and composite observers at bootstrap levels beyond 3 (where Mass Hierarchy §7's mass-i"
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "derivationStatus": "provisional",
+      "number": 1,
+      "title": "Joint fixed-point formalization.",
+      "description": "Formalize the joint-fixed-point alternative to simple-functional identification as described in Open thread 7.1. This would require extending [Bootstrap Fixed-Point Existence](/derivations/foundation/"
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "derivationStatus": "provisional",
+      "number": 2,
+      "title": "Coherence Lagrangian common-saddle analysis.",
+      "description": "Explicitly compute WKB and QEC as different boundary-condition regimes of one Coherence Lagrangian calculation (Open thread 7.2). Does not reduce the two mechanisms but would show they have one origin"
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "derivationStatus": "provisional",
+      "number": 3,
+      "title": "Shared-facts distinguishability derivation.",
+      "description": "Derive the profile's logical-bit content clogic(IA) from distinguishability-conservation principles, and check whether the same quantity appears in WKB's barrier-width definition (Open thread 7.3). *D"
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "derivationStatus": "provisional",
+      "number": 4,
+      "title": "Mass-information reversal above bootstrap level 3.",
+      "description": "[Mass Hierarchy](/derivations/particles/mass-hierarchy) §7 argues that at bootstrap levels beyond O (n > 3), particle identity transitions from topological to structural encoding, reversing the mass-i"
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "derivationStatus": "provisional",
+      "number": 5,
+      "title": "Explicit formation-rate check at SM masses.",
+      "description": "The complementarity statement establishes both conditions must hold but does not compute Pform numerically for each SM particle. A quantitative check — does the WKB-selected mass satisfy Pform V4cosmo"
+    },
+    {
       "derivationId": "foundation/knot-theoretic-bootstrap",
       "derivationStatus": "provisional",
       "number": 1,
@@ -35625,172 +35016,46 @@
       "description": "The triangle result is structural; it does not yet produce any observable quantity (Lambda, coupling constants, masses). Extending the fixed point to carry the framework's integer level structure (Ope"
     },
     {
-      "derivationId": "foundation/observer-code-distances",
+      "derivationId": "foundation/observer-as-error-correcting-code",
       "derivationStatus": "provisional",
       "number": 1,
-      "title": "Product-code threshold formula.",
-      "description": "The product-code threshold pth inherits from the three factor codes' thresholds under the pairwise-commuting-stabilizer structure of Step 2 Theorem 4.1. Derive the composite threshold rigorously — is "
+      "title": "Explicit Kraus operator construction.",
+      "description": "Construct PA(rho) = sumk Kk rho Kkdagger via explicit Kraus operators annihilating substrate content orthogonal to the integer-invariant profile on all three axes simultaneously. *Difficulty: MODERATE"
     },
     {
-      "derivationId": "foundation/observer-code-distances",
+      "derivationId": "foundation/observer-as-error-correcting-code",
       "derivationStatus": "provisional",
       "number": 2,
-      "title": "Correlated-error distance formula.",
-      "description": "Correlated errors across axes (Step 2 Open Gap 5) may reduce the effective distance below the min-of-factors bound. Quantify this reduction for the framework's substrate noise. *Difficulty: MODERATE-H"
+      "title": "Explicit HaPPY tensor-network construction on the horizon.",
+      "description": "Give the hyperbolic tiling, perfect-tensor choices, and bulk-boundary map that realize the spatial-axis isometric encoding. *Difficulty: MODERATE.*"
     },
     {
-      "derivationId": "foundation/observer-code-distances",
+      "derivationId": "foundation/observer-as-error-correcting-code",
       "derivationStatus": "provisional",
       "number": 3,
-      "title": "Minimum-viable-code convention justification.",
-      "description": "Proposition 5.2 uses this convention without deriving it from the three axioms. Formalize via bootstrap selection principle — show that the minimum-viable code is the fixed point of a specific bootstr"
+      "title": "Explicit Walker–Wang realization for algebraic-axis code.",
+      "description": "Give the local 4D lattice Hamiltonian whose ground-state space realizes the framework's pi3(SU(2)) or pi3(SU(3)) logical content at bootstrap levels 2 and 3. *Difficulty: MODERATE-HARD.*"
     },
     {
-      "derivationId": "foundation/observer-code-distances",
+      "derivationId": "foundation/observer-as-error-correcting-code",
       "derivationStatus": "provisional",
       "number": 4,
-      "title": "Rigorous SM profile bit-counts.",
-      "description": "Heuristic 6.1's bit assignments are approximate. Derive exact profile content for each SM particle via the explicit stabilizer-group decomposition — what are the integer invariants on each axis for a "
+      "title": "Continuous-time Floquet-code formalism.",
+      "description": "The Hastings–Haah 2021 framework is discrete-measurement; the framework's Axiom 3 phase evolution is continuous. Formalize the continuous-time extension, including the distance formula on the temporal"
     },
     {
-      "derivationId": "foundation/observer-code-distances",
+      "derivationId": "foundation/observer-as-error-correcting-code",
       "derivationStatus": "provisional",
       "number": 5,
-      "title": "Noise-model threshold-convention commitment.",
-      "description": "Proposition 1.3 leaves xth as a modeling choice. Commit the framework to one convention (ideally derivable from operator-algebra structure on the substrate, not from the Gaussian-tail reading alone). "
+      "title": "Category-theoretic moduli quotient.",
+      "description": "Theorem 3.2 identifies HA with a moduli space under three gauge equivalences. A rigorous category-theoretic formulation would specify the site (observer category or substrate-lift), the gauge groupoid"
     },
     {
-      "derivationId": "foundation/observer-code-distances",
+      "derivationId": "foundation/observer-as-error-correcting-code",
       "derivationStatus": "provisional",
       "number": 6,
-      "title": "Coherence-lifetime specification.",
-      "description": "Proposition 2.1 uses Tcoh as an input. Derive Tcoh from the framework's coherence-conservation structure — specifically, how long must a specific integer invariant remain uncorrupted for the observer "
-    },
-    {
-      "derivationId": "foundation/observer-code-distances",
-      "derivationStatus": "provisional",
-      "number": 7,
-      "title": "Unification with Mass Hierarchy (Research Target Step 5).",
-      "description": "Is the WKB tunneling action S/hbar of [Mass Hierarchy](/derivations/particles/mass-hierarchy) the code-distance requirement dreq of this derivation (in appropriate units)? If yes, Mass Hierarchy's S1 "
-    },
-    {
-      "derivationId": "foundation/observer-code-distances",
-      "derivationStatus": "provisional",
-      "number": 8,
-      "title": "Anchored absolute-mass prediction (Research Target Step 3b).",
-      "description": "Fix the three prefactors (alphaH, pth, Tcoh) from one observed mass (e.g., electron); predict the other SM masses as consequences. If the predicted spectrum matches within O(1) factors, QEC has predic"
-    },
-    {
-      "derivationId": "foundation/observer-code-family",
-      "derivationStatus": "provisional",
-      "number": 1,
-      "title": "Explicit HaPPY tensor-network construction for the spatial factor.",
-      "description": "Give the tensor-network geometry on the horizon (hyperbolic tiling, perfect-tensor choices, bulk-boundary map) that realizes the spatial-axis isometric encoding. Likely tools: AdS-like horizon metric "
-    },
-    {
-      "derivationId": "foundation/observer-code-family",
-      "derivationStatus": "provisional",
-      "number": 2,
-      "title": "Explicit Walker–Wang Hamiltonian for the algebraic factor.",
-      "description": "Give the local Hamiltonian on a 4D lattice whose ground-state space realizes the framework's pi3(SU(2)) or pi3(SU(3)) logical content at bootstrap levels 2 and 3. Likely tools: Walker–Wang 2011 for ta"
-    },
-    {
-      "derivationId": "foundation/observer-code-family",
-      "derivationStatus": "provisional",
-      "number": 3,
-      "title": "Pairwise-commutation verification on explicit generators.",
-      "description": "Given explicit stabilizer generators from Gaps 1 and 2 (plus a Floquet schedule derived from Axiom 3), verify that the three groups pairwise commute on the full substrate Hilbert space. This checks th"
-    },
-    {
-      "derivationId": "foundation/observer-code-family",
-      "derivationStatus": "provisional",
-      "number": 4,
-      "title": "Continuous-time Floquet-code distance formula.",
-      "description": "Derive or cite the distance formula for a continuous-time Floquet code with period TA and single-Planck-tick error rate. Current literature focuses on discrete schedules; the continuous case may requi"
-    },
-    {
-      "derivationId": "foundation/observer-code-family",
-      "derivationStatus": "provisional",
-      "number": 5,
-      "title": "Correlated-error analysis across the three axes.",
-      "description": "Analyze correlated errors that simultaneously flip invariants on multiple axes (e.g., a Planck event that changes both kA and R MA). Determines the product code's effective threshold under realistic f"
-    },
-    {
-      "derivationId": "foundation/observer-code-family",
-      "derivationStatus": "provisional",
-      "number": 6,
-      "title": "Code-distance computation for specific SM profiles (Research Target Step 3).",
-      "description": "With Gaps 1–5 addressed, compute the minimum horizon area (hence mass) that achieves the required distance on each factor for each SM particle's integer profile. Produces the quantitative predicted sp"
-    },
-    {
-      "derivationId": "foundation/observer-code-family",
-      "derivationStatus": "provisional",
-      "number": 7,
-      "title": "Cross-check against Bootstrap Fixed-Point Existence.",
-      "description": "The bootstrap-coupling map mA (NA, Gn, TA) is itself a fixed-point structure (observer mass determines code parameters, which constrain stable-observer spectrum, which determines admissible masses). C"
-    },
-    {
-      "derivationId": "foundation/observer-error-correction",
-      "derivationStatus": "provisional",
-      "number": 1,
-      "title": "Explicit construction of the CPTP map.",
-      "description": "Construct PA via explicit Kraus operators Kk with sumk Kkdagger Kk = I, such that PA(rhosub) = sumk Kk rhosub Kkdagger factors through the integer-invariant profile. Likely tools: projection onto stab"
-    },
-    {
-      "derivationId": "foundation/observer-error-correction",
-      "derivationStatus": "provisional",
-      "number": 2,
-      "title": "Category-theoretic statement of the moduli quotient.",
-      "description": "Theorem 4.1 identifies HA with a moduli space under three gauge equivalences. A rigorous category-theoretic formulation would specify the site on which the quotient is taken (observer category mathbfO"
-    },
-    {
-      "derivationId": "foundation/observer-error-correction",
-      "derivationStatus": "provisional",
-      "number": 3,
-      "title": "Code family identification (Research Target Step 2).",
-      "description": "~~Determine what quantum error-correcting code family PA belongs to: topological (Kitaev-like, natural given homotopy classes), stabilizer (if Clifford-compatible), holographic (HaPPY-like, natural gi"
-    },
-    {
-      "derivationId": "foundation/observer-error-correction",
-      "derivationStatus": "provisional",
-      "number": 4,
-      "title": "Code-distance computation (Research Target Step 3).",
-      "description": "For each Standard Model particle's integer profile, compute the code distance — the minimum number of independent Planck-mode errors required to flip a logical invariant. *Difficulty: HARD; prerequisi"
-    },
-    {
-      "derivationId": "foundation/observer-error-correction",
-      "derivationStatus": "provisional",
-      "number": 5,
-      "title": "Standard Model spectrum match (Research Target Step 4).",
-      "description": "Compare predicted minimum-viable scales to observed particle masses. Either consistent (supporting the hypothesis) or not (falsifying it). *Difficulty: HARD; prerequisite is Open Gap 4.*"
-    },
-    {
-      "derivationId": "foundation/observer-error-correction",
-      "derivationStatus": "provisional",
-      "number": 6,
-      "title": "Mass-hierarchy tunneling unification (Research Target Step 5).",
-      "description": "Check whether the WKB tunneling action of [Mass Hierarchy](/derivations/particles/mass-hierarchy) is equivalent to the code-distance requirement. If equivalent, Mass Hierarchy's S1 postulate is promot"
-    },
-    {
-      "derivationId": "foundation/observer-error-correction",
-      "derivationStatus": "provisional",
-      "number": 7,
-      "title": "Planck-noise model.",
-      "description": "Formalize the Planck-scale noise model assumed by the error-correction interpretation (one error per mode per tick, or more nuanced). Connects to [Causal Set Statistics](/derivations/holography/causal"
-    },
-    {
-      "derivationId": "foundation/observer-error-correction",
-      "derivationStatus": "provisional",
-      "number": 8,
-      "title": "Temporal and algebraic qubit counts.",
-      "description": "Proposition 3.1 gives the spatial axis's physical-qubit count via Area Scaling. Analogous counts for the temporal axis (modes per tick interval) and algebraic axis (modes per homotopy-class representa"
-    },
-    {
-      "derivationId": "foundation/observer-error-correction",
-      "derivationStatus": "provisional",
-      "number": 9,
-      "title": "Relationship to Born rule.",
-      "description": "[Born Rule](/derivations/quantum/born-rule) Theorem 0.1 promotes Born to a theorem via Cauchy multiplicative equation on U(1) + channel additivity + composition + continuity. The present derivation sp"
+      "title": "Explicit verification of pairwise commutation on generators.",
+      "description": "Given Gaps 2 and 3 (explicit HaPPY and Walker–Wang generators), verify directly that the three stabilizer groups pairwise commute on the substrate Hilbert space. Structural argument for commutation is"
     },
     {
       "derivationId": "foundation/observer-holographic-equivalence",
@@ -35898,62 +35163,6 @@
       "description": "Proposition 1.1 and 2.1 both rely on the holographic bound. [Area Scaling](/derivations/holography/area-scaling) itself carries Structural Postulate S1 (area-coherence saturation). Any promotion of S1"
     },
     {
-      "derivationId": "foundation/observer-profile-noise",
-      "derivationStatus": "provisional",
-      "number": 1,
-      "title": "Numerical coefficients $\\eta_{i, \\text{axis}}$.",
-      "description": "Compute the axis-specific Type III flip-fraction coefficients from explicit substrate QFT. For EM on the spatial axis: compute the fraction of virtual-photon exchange events that flip the horizon char"
-    },
-    {
-      "derivationId": "foundation/observer-profile-noise",
-      "derivationStatus": "provisional",
-      "number": 2,
-      "title": "Cross-axis correlated errors from channel-shared invariants.",
-      "description": "When a channel tests integer invariants on multiple axes (e.g., weak on both spatial and algebraic), events produce correlated errors. This correlation modifies the product-code threshold analysis of "
-    },
-    {
-      "derivationId": "foundation/observer-profile-noise",
-      "derivationStatus": "provisional",
-      "number": 3,
-      "title": "Multiplicative alternative to additive composition.",
-      "description": "If Step 6's quantitative comparison undershoots the observed hierarchy, the multiplicative form pphyseff = pphysgeom prodi (1 + gi2 etai) becomes the natural upgrade. Derive whether multiplicative com"
-    },
-    {
-      "derivationId": "foundation/observer-profile-noise",
-      "derivationStatus": "provisional",
-      "number": 4,
-      "title": "Electroweak sector (W, Z, Higgs).",
-      "description": "Example 5.8 flagged that the electroweak symmetry-breaking sector requires explicit handling beyond Step 4's structural framework. Extend the profile → noise map to cover W, Z, Higgs masses via [Elect"
-    },
-    {
-      "derivationId": "foundation/observer-profile-noise",
-      "derivationStatus": "provisional",
-      "number": 5,
-      "title": "Running-coupling ↔ effective-noise map.",
-      "description": "The gauge couplings gi entering etai, axis are evaluated at the framework's substrate scale. Relating these to observed low-energy values (via RG flow) requires [Renormalization](/derivations/thermody"
-    },
-    {
-      "derivationId": "foundation/observer-profile-noise",
-      "derivationStatus": "provisional",
-      "number": 6,
-      "title": "Confinement threshold precision.",
-      "description": "Remark 4.4 argues confinement follows from alphas 1 pushing pphyseff to threshold. Compute the precise color-coupling value at which the threshold is crossed — this fixes the QCD confinement scale as "
-    },
-    {
-      "derivationId": "foundation/observer-profile-noise",
-      "derivationStatus": "provisional",
-      "number": 7,
-      "title": "Neutrino-sector mixing and seesaw.",
-      "description": "Example 5.7 sketched neutrino noise as smallest because of minimal channel content. Observed neutrino masses (~0.1 eV) are much smaller than the simplest interpretation would predict. Formalize the ne"
-    },
-    {
-      "derivationId": "foundation/observer-profile-noise",
-      "derivationStatus": "provisional",
-      "number": 8,
-      "title": "Anchored Step 6 comparison (prerequisite for validation test).",
-      "description": "With etai, axis unknown, Step 6's quantitative comparison requires anchoring to one observed mass to fix the coefficients, then predicting others. This is a derived-strategy deliverable for Step 6, no"
-    },
-    {
       "derivationId": "foundation/observer-projected-spacetime",
       "derivationStatus": "provisional",
       "number": 1,
@@ -35996,95 +35205,46 @@
       "description": "[Continuous-Discrete Duality](/derivations/foundation/continuous-discrete-duality) identifies the physical universe as the fixed point of mutual compatibility between the continuous and discrete layer"
     },
     {
-      "derivationId": "foundation/observer-qec-wkb",
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
       "derivationStatus": "provisional",
       "number": 1,
-      "title": "Joint fixed-point consistency as unification candidate.",
-      "description": "The most framework-native alternative to simple-functional identification: WKB formation and QEC preservation rates might enter a joint fixed-point condition selecting observer masses, with each rate "
+      "title": "Numerical $\\eta_{i,\\mathrm{axis}}$ coefficients.",
+      "description": "Compute the axis-specific invariant-flip fractions for each gauge channel via substrate-scale QFT. For EM on the spatial axis: fraction of virtual-photon events that flip the horizon charge-crossing i"
     },
     {
-      "derivationId": "foundation/observer-qec-wkb",
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
       "derivationStatus": "provisional",
       "number": 2,
-      "title": "Coherence Lagrangian common-saddle derivation.",
-      "description": "Both WKB and QEC are semiclassical structures. [Coherence Lagrangian](/derivations/foundation/coherence-lagrangian) Theorem 6.0 establishes the framework's Lagrangian dynamics. A careful analysis of W"
+      "title": "Cross-channel correlated errors from mixed anomalies.",
+      "description": "Framework-level cross-channel interactions (e.g., mixed anomaly structures, Wess–Zumino-Witten terms) could modify the additive form to multiplicative or to a specific mixed composition. Derive whethe"
     },
     {
-      "derivationId": "foundation/observer-qec-wkb",
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
       "derivationStatus": "provisional",
       "number": 3,
-      "title": "Shared-facts distinguishability layer.",
-      "description": "A prior conversation flagged that the \"what forces clogic\" question for each profile is not answered within the error-correction program. If distinguishability-conservation specifies a profile-specifi"
+      "title": "Electroweak sector handling.",
+      "description": "The additive form applies to gauge couplings in the unbroken-phase regime. Physical W, Z, Higgs are electroweak symmetry-broken states with mixed weak-hypercharge quantum numbers and Higgs-VEV-generat"
     },
     {
-      "derivationId": "foundation/observer-qec-wkb",
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
       "derivationStatus": "provisional",
       "number": 4,
-      "title": "Mass-information reversal above bootstrap level 3.",
-      "description": "[Mass Hierarchy](/derivations/particles/mass-hierarchy) §7 argues that at bootstrap levels beyond octonions (n > 3), particle identity transitions from topological (compact, boundary-shrinking) to str"
+      "title": "Running-coupling scale dependence.",
+      "description": "Gauge couplings run with energy scale. The noise formula as stated uses Planck-scale bare couplings; relating to low-energy effective couplings (e.g., for the confinement-screening argument of Corolla"
     },
     {
-      "derivationId": "foundation/observer-qec-wkb",
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
       "derivationStatus": "provisional",
       "number": 5,
-      "title": "Non-linear identifications beyond monomial.",
-      "description": "Propositions 3.1–3.3 rule out linear and monomial identifications. Exotic forms — e.g., S/hbar = exp[QEC quantity] or S/hbar = integral of QEC quantity over some auxiliary parameter — are not explicit"
+      "title": "Explicit confinement-threshold computation.",
+      "description": "Corollary 6.2's alphas 1-drives-pphyseff pth argument is structural. Compute the precise alphas value and Planck-scale-to-LambdaQCD ratio at which the threshold is crossed; compare to observed LambdaQ"
     },
     {
-      "derivationId": "foundation/observer-qec-wkb",
+      "derivationId": "foundation/substrate-noise-and-profile-coupling",
       "derivationStatus": "provisional",
       "number": 6,
-      "title": "Connection to Step 6 capstone test.",
-      "description": "Step 5's complementarity result specifies Step 6's structure: the SM-spectrum match must compare (WKB-selected masses) ↔ (QEC preservation consistency) as two separate checks, not as a single unified "
-    },
-    {
-      "derivationId": "foundation/observer-sm-match",
-      "derivationStatus": "provisional",
-      "number": 1,
-      "title": "Anchored absolute-mass prediction.",
-      "description": "Step 6 establishes QEC consistency at observed SM masses but does not predict those masses from Steps 1–4 alone. An anchored approach — fix the Step 4 eta coefficients from the electron-mass data poin"
-    },
-    {
-      "derivationId": "foundation/observer-sm-match",
-      "derivationStatus": "provisional",
-      "number": 2,
-      "title": "Electroweak sector full treatment.",
-      "description": "Example 3.8 deferred W, Z, H to the EW-symmetry-breaking sector. A proper extension of Step 4's additive form to handle the Higgs mechanism would close this gap. Connects to [Electroweak Breaking](/de"
-    },
-    {
-      "derivationId": "foundation/observer-sm-match",
-      "derivationStatus": "provisional",
-      "number": 3,
-      "title": "Quantitative confinement threshold.",
-      "description": "Example 3.4 argued free quarks fail QEC because pphyseff > pth. Compute the precise color-coupling value at which the threshold is crossed; this should fix the QCD confinement scale LambdaQCD as a fra"
-    },
-    {
-      "derivationId": "foundation/observer-sm-match",
-      "derivationStatus": "provisional",
-      "number": 4,
-      "title": "Neutrino-mass seesaw integration.",
-      "description": "Step 4's simple additive form gives a mass floor for neutrinos (~10-2 eV if QEC were determinative). Observed neutrino masses are consistent with this floor but significantly below natural expectation"
-    },
-    {
-      "derivationId": "foundation/observer-sm-match",
-      "derivationStatus": "provisional",
-      "number": 5,
-      "title": "Running-coupling effects on Step 4.",
-      "description": "Step 6 used coupling values at a single reference scale. Running couplings change pphyseff with energy scale; this affects QEC consistency at different observer scales (confinement screening is one ex"
-    },
-    {
-      "derivationId": "foundation/observer-sm-match",
-      "derivationStatus": "provisional",
-      "number": 6,
-      "title": "Connection to three framework-native unification candidates.",
-      "description": "Step 5 flagged three possibilities (joint fixed-point, Coherence Lagrangian common-saddle, shared-facts distinguishability layer) for future work. Step 6's audit doesn't resolve these but confirms the"
-    },
-    {
-      "derivationId": "foundation/observer-sm-match",
-      "derivationStatus": "provisional",
-      "number": 7,
-      "title": "Step 6 capstone status.",
-      "description": "The program ends here in its currently planned form. Future extensions could include (a) application to BSM candidates (dark matter, SUSY particles, axions) to see whether QEC preservation plus profil"
+      "title": "Neutrino-sector seesaw integration.",
+      "description": "Minimal-coupling profiles (neutrinos) have smallest pphyseff and smallest dreq. Observed neutrino masses (sim 10-30 mP) are far below any naive mass floor this derivation would predict. Integrate with"
     },
     {
       "derivationId": "gauge/chirality-selection",

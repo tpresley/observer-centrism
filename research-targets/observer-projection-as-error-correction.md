@@ -1,8 +1,17 @@
 # Observer Projection as Error Correction
 
-**Type**: Research target (hypothesis, partially formalized)
-**Status**: Steps 1–3 complete as derivations; Steps 4–6 remaining
-**Last updated**: 2026-04-18
+**Type**: Research target (hypothesis, formalized)
+**Status**: Program complete; results consolidated into four standalone derivations
+**Last updated**: 2026-04-19
+
+> **Note on consolidation (2026-04-19)**: This document is the historical record of the six-step research program as it was explored, including its reversals and negative results. The program's outputs have been consolidated into four standalone derivations presenting current understanding rather than step-by-step narrative:
+>
+> - Steps 1 + 2 → [Observer as an Error-Correcting Code](../site/src/content/derivations/foundation/observer-as-error-correcting-code.md)
+> - Steps 3 + 4 → [Substrate Noise and Profile-Dependent Coupling Modulation](../site/src/content/derivations/foundation/substrate-noise-and-profile-coupling.md)
+> - Step 5 → [Formation and Preservation as Complementary Mechanisms](../site/src/content/derivations/foundation/formation-and-preservation.md)
+> - Step 6 → [Error Correction and the Standard Model Spectrum](../site/src/content/derivations/foundation/error-correction-and-standard-model.md)
+>
+> The per-step "Result" entries below link to the consolidated derivation that now contains each step's content.
 
 ## The hypothesis
 
@@ -128,7 +137,7 @@ Concrete steps from hypothesis to derivation. The plan was restructured on 2026-
 
 **Output**: A precise specification of the projection as an error-correcting code in the quantum information sense. Physical qubits = substrate modes; logical qubits = observer integer invariants.
 
-**Result (2026-04-18)**: Delivered as [Observer Projection as Error Correction](../site/src/content/derivations/foundation/observer-error-correction.md). Specifies $\mathcal{P}_A: \mathcal{B}(\mathcal{H}_{\text{substrate}}) \to \mathcal{B}(\mathcal{H}_A)$ factoring through the integer-invariant profile $\mathcal{I}_A = (R_{\partial M_A}, k_A, [\phi]_A)$ on three orthogonal axes (spatial / temporal / algebraic). Includes the dual framing (observer as code-space interior rather than codeword endpoint) and unification of Observer Holographic Equivalence Theses A/A' as orthogonal slices through the same interior. Rigor: semi-formal (consolidation with explicit open gaps).
+**Result (2026-04-18; consolidated into [Observer as an Error-Correcting Code](../site/src/content/derivations/foundation/observer-as-error-correcting-code.md))**: Specifies $\mathcal{P}_A: \mathcal{B}(\mathcal{H}_{\text{substrate}}) \to \mathcal{B}(\mathcal{H}_A)$ factoring through the integer-invariant profile $\mathcal{I}_A = (R_{\partial M_A}, k_A, [\phi]_A)$ on three orthogonal axes (spatial / temporal / algebraic). Includes the dual framing (observer as code-space interior rather than codeword endpoint) and unification of Observer Holographic Equivalence Theses A/A' as orthogonal slices through the same interior. Rigor: semi-formal (consolidation with explicit open gaps).
 
 ### Step 2. Identify the code family — **COMPLETE** (2026-04-18)
 
@@ -142,7 +151,7 @@ Concrete steps from hypothesis to derivation. The plan was restructured on 2026-
 
 **Output**: Identification of the code family, or characterization of the projection as a new error-correcting structure.
 
-**Result (2026-04-18)**: A hybrid product family is identified in [Observer Code Family Identification](../site/src/content/derivations/foundation/observer-code-family.md). Each of the three integer-stable axes of Step 1 maps onto an established code family: spatial axis ↔ HaPPY holographic code (boundary-qubit count $N_A = A_A/4\ell_P^2$; exterior cancellation = subregion duality), algebraic axis ↔ Kitaev topological code (homotopy-class logical qubits $\pi_k(G_n)$ with $G_n \in \{U(1), SU(2), SU(3)\}$ at bootstrap levels 1–3), temporal axis ↔ continuous-time Floquet code (Axiom 3 periodic schedule with cycle-averaged integer tick count $k_A$ as the dynamically generated logical invariant). The three axes satisfy a pairwise-commuting stabilizer condition so the code space is their joint fixed subspace. The product structure HaPPY × Kitaev × Floquet with the framework's specific cross-axis couplings (bootstrap-level selecting the Kitaev target group, horizon area fixing the HaPPY qubit count, observer period fixing the Floquet cycle) is novel as a unified family — no prior quantum-information code combines all three with these couplings. Each factor's distance formula is known; their product-level composition under correlated errors is the content of Step 3.
+**Result (2026-04-18; consolidated into [Observer as an Error-Correcting Code](../site/src/content/derivations/foundation/observer-as-error-correcting-code.md))**: A hybrid product family is identified. Each of the three integer-stable axes of Step 1 maps onto an established code family: spatial axis ↔ HaPPY holographic code (boundary-qubit count $N_A = A_A/4\ell_P^2$; exterior cancellation = subregion duality), algebraic axis ↔ Kitaev topological code (homotopy-class logical qubits $\pi_k(G_n)$ with $G_n \in \{U(1), SU(2), SU(3)\}$ at bootstrap levels 1–3), temporal axis ↔ continuous-time Floquet code (Axiom 3 periodic schedule with cycle-averaged integer tick count $k_A$ as the dynamically generated logical invariant). The three axes satisfy a pairwise-commuting stabilizer condition so the code space is their joint fixed subspace. The product structure HaPPY × Kitaev × Floquet with the framework's specific cross-axis couplings (bootstrap-level selecting the Kitaev target group, horizon area fixing the HaPPY qubit count, observer period fixing the Floquet cycle) is novel as a unified family — no prior quantum-information code combines all three with these couplings. Each factor's distance formula is known; their product-level composition under correlated errors is the content of Step 3.
 
 ### Step 3. Compute code distances for specific integer-invariant profiles — **COMPLETE** (2026-04-18)
 
@@ -161,7 +170,7 @@ This fixes the noise amplitude but leaves the per-mode bit-flip probability depe
 
 **Output**: A predicted minimum-viable scale for each integer-invariant profile, expressed as a scaling formula $m_{\min}(\mathcal{I}_A; \alpha_H, p_{th}, T_{\text{coh}})$.
 
-**Result (2026-04-18)**: Delivered as [Code-Distance Computation for Integer Profiles](../site/src/content/derivations/foundation/observer-code-distances.md). **The principal finding is a surprising negative result**: for every observed SM particle, achieved code distances on all three axes exceed required distances by ~$10^{19}$, with no threshold saturation at any observed mass. The strong form of the original hypothesis — "QEC thresholds set SM masses" — is falsified in its direct-saturation reading. What *does* survive from the QEC analysis: three-generation structure from three bootstrap levels on the algebraic axis, SM completeness (no fourth generation from Moufang-Loop termination), qualitative ordering predictions (neutrinos at floor, quarks heavier than leptons at same generation, top near algebraic ceiling). The mass-determination mechanism must lie elsewhere — reframed and addressed in the new Steps 4 and 5 below.
+**Result (2026-04-18; consolidated into [Substrate Noise and Profile-Dependent Coupling Modulation](../site/src/content/derivations/foundation/substrate-noise-and-profile-coupling.md))**: **The principal finding is a surprising negative result**: for every observed SM particle, achieved code distances on all three axes exceed required distances by ~$10^{19}$, with no threshold saturation at any observed mass. The strong form of the original hypothesis — "QEC thresholds set SM masses" — is falsified in its direct-saturation reading. What *does* survive from the QEC analysis: three-generation structure from three bootstrap levels on the algebraic axis, SM completeness (no fourth generation from Moufang-Loop termination), qualitative ordering predictions (neutrinos at floor, quarks heavier than leptons at same generation, top near algebraic ceiling). The mass-determination mechanism must lie elsewhere — reframed and addressed in the new Steps 4 and 5 below.
 
 Closes or advances:
 - Step 1 Open Gap 7 (Planck-noise model) — formalized within Step 3
@@ -219,7 +228,7 @@ $$\frac{S}{\hbar} \;=\; \frac{d_{\text{req}}(\mathcal{I}_A)}{2} \cdot \log\!\lef
 
 **Output**: Either the identification is established (Mass Hierarchy's structural postulate S1 is promoted to a theorem via the error-correction interpretation), or a specific structural obstruction is found (in which case Mass Hierarchy remains a parallel mechanism but with a clear boundary to the QEC story).
 
-**Result (2026-04-19)**: Delivered as [QEC and WKB as Complementary Mechanisms](../site/src/content/derivations/foundation/observer-qec-wkb.md). The identification branch fails: WKB scales as $e^{-c/g^2}$ (exponential in inverse coupling squared), while the QEC quantity $(d_{\text{req}}/2) \log(p_{th}/p_{\text{phys}}^{\text{eff}})$ simplifies algebraically to $c_{\text{logic}} \log(T_{\text{coh}}/\tau_P)$ — **coupling-independent after cancellation**. No linear or monomial identification matches these scalings across the SM coupling range. The structural-obstruction branch is taken:
+**Result (2026-04-19; consolidated into [Formation and Preservation as Complementary Mechanisms](../site/src/content/derivations/foundation/formation-and-preservation.md))**: The identification branch fails: WKB scales as $e^{-c/g^2}$ (exponential in inverse coupling squared), while the QEC quantity $(d_{\text{req}}/2) \log(p_{th}/p_{\text{phys}}^{\text{eff}})$ simplifies algebraically to $c_{\text{logic}} \log(T_{\text{coh}}/\tau_P)$ — **coupling-independent after cancellation**. No linear or monomial identification matches these scalings across the SM coupling range. The structural-obstruction branch is taken:
 
 - **Mass Hierarchy's S1 stays structural** — not promoted to theorem by the error-correction program.
 - **Mechanism complementarity formalized**: WKB controls *formation* probability (selects specific mass), QEC controls *preservation* probability (sets lower bound on viable mass). Different physical roles, both required, neither reducible to the other.
@@ -241,7 +250,7 @@ Three framework-native unification candidates remain open and are flagged as Ste
 - If predicted masses mismatch in a systematic way (e.g., wrong hierarchy between generations, wrong ordering within a generation), the specific form of Step 4's coupling → noise map is falsified and the machinery needs refinement.
 - If predicted masses qualitatively match (ordering, hierarchy) but quantitatively drift, the refined hypothesis is supported as a structural story but not as a quantitative-predictor story.
 
-**Result (2026-04-19)**: Delivered as [Combined-Machinery Match to the Standard Model Spectrum](../site/src/content/derivations/foundation/observer-sm-match.md). Under the Step 5 complementarity result, the test was restructured: rather than a single unified prediction, Step 6 runs two separate checks per particle — (a) WKB formation consistent with Mass Hierarchy's bootstrap-tunneling structure, (b) QEC preservation $d_{\text{achieved}}(m_{\text{obs}}) \geq d_{\text{req}}(\mathcal{I}_A)$ — across all 17 SM particle types.
+**Result (2026-04-19; consolidated into [Error Correction and the Standard Model Spectrum](../site/src/content/derivations/foundation/error-correction-and-standard-model.md))**: Under the Step 5 complementarity result, the test was restructured: rather than a single unified prediction, Step 6 runs two separate checks per particle — (a) WKB formation consistent with Mass Hierarchy's bootstrap-tunneling structure, (b) QEC preservation $d_{\text{achieved}}(m_{\text{obs}}) \geq d_{\text{req}}(\mathcal{I}_A)$ — across all 17 SM particle types.
 
 **Findings**:
 
@@ -311,10 +320,11 @@ A successful formalization would significantly reshape how the framework present
 
 ## Next steps
 
-**Completed (2026-04-18)**:
-- Step 1 (CPTP projection formalized) → [Observer Projection as Error Correction](../site/src/content/derivations/foundation/observer-error-correction.md)
-- Step 2 (code family identified as HaPPY × Kitaev × Floquet) → [Observer Code Family Identification](../site/src/content/derivations/foundation/observer-code-family.md)
-- Step 3 (code distances computed; SM self-consistency established; strong-form hypothesis falsified) → [Code-Distance Computation for Integer Profiles](../site/src/content/derivations/foundation/observer-code-distances.md)
+**Completed (consolidated 2026-04-19)**:
+- Steps 1, 2 → [Observer as an Error-Correcting Code](../site/src/content/derivations/foundation/observer-as-error-correcting-code.md) (CPTP map, dual framing, three-axis product code family)
+- Steps 3, 4 → [Substrate Noise and Profile-Dependent Coupling Modulation](../site/src/content/derivations/foundation/substrate-noise-and-profile-coupling.md) (per-cell noise, additive gauge-coupling modulation, axis selectivity, massless-mediator and confinement corollaries)
+- Step 5 → [Formation and Preservation as Complementary Mechanisms](../site/src/content/derivations/foundation/formation-and-preservation.md) (mechanism distinctness, structural margin ratio)
+- Step 6 → [Error Correction and the Standard Model Spectrum](../site/src/content/derivations/foundation/error-correction-and-standard-model.md) (systematic compatibility audit)
 
 **Short-term (next work, following the refined plan)**:
 - **Step 4 (profile-dependent noise from gauge couplings)** — the key bridge between the code-structure work of Steps 1–3 and the spectrum test of Step 6. Deliverable: derivation of the coupling → effective-noise map, with application to each SM profile. Prerequisite for any quantitative SM test.

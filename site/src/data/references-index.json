@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-04-19T10:36:30.304Z",
-    "totalReferences": 103,
-    "totalCitations": 118,
+    "generatedAt": "2026-04-20T07:11:37.123Z",
+    "totalReferences": 102,
+    "totalCitations": 117,
     "citingFiles": 49,
     "generator": "scripts/extract-references.mjs"
   },
@@ -39,7 +39,7 @@
     },
     "quantum-information": {
       "name": "Quantum Information",
-      "count": 19
+      "count": 18
     },
     "field-theory": {
       "name": "Field Theory",
@@ -359,6 +359,21 @@
       "category": "quantum-information"
     },
     {
+      "id": "dennis-kitaev-landahl-preskill-2002",
+      "authors": "Dennis–Kitaev–Landahl–Preskill",
+      "year": 2002,
+      "citedAs": [
+        "Dennis–Kitaev–Landahl–Preskill 2002"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "foundation/substrate-noise-and-profile-coupling",
+          "title": "Substrate Noise and Profile-Dependent Coupling Modulation"
+        }
+      ],
+      "category": "quantum-information"
+    },
+    {
       "id": "fujishige-2005",
       "authors": "Fujishige",
       "year": 2005,
@@ -399,21 +414,6 @@
         {
           "derivationId": "axioms/coherence-operational",
           "title": "Coherence as Physical Primitive"
-        }
-      ],
-      "category": "quantum-information"
-    },
-    {
-      "id": "hastings-haah-2021",
-      "authors": "Hastings–Haah",
-      "year": 2021,
-      "citedAs": [
-        "Hastings–Haah 2021"
-      ],
-      "citedIn": [
-        {
-          "derivationId": "foundation/observer-code-family",
-          "title": "2. Observer Code Family Identification"
         }
       ],
       "category": "quantum-information"
@@ -509,21 +509,6 @@
         {
           "derivationId": "axioms/loop-closure",
           "title": "Loop Closure"
-        }
-      ],
-      "category": "quantum-information"
-    },
-    {
-      "id": "pastawski-yoshida-harlow-preskill-2015",
-      "authors": "Pastawski–Yoshida–Harlow–Preskill",
-      "year": 2015,
-      "citedAs": [
-        "Pastawski–Yoshida–Harlow–Preskill 2015"
-      ],
-      "citedIn": [
-        {
-          "derivationId": "foundation/observer-code-family",
-          "title": "2. Observer Code Family Identification"
         }
       ],
       "category": "quantum-information"
