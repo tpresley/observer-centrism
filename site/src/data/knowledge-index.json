@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-04-20T07:11:36.801Z",
-    "derivationCount": 88,
+    "generatedAt": "2026-04-21T21:53:19.842Z",
+    "derivationCount": 91,
     "predictionCount": 12,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -9,14 +9,14 @@
   "stats": {
     "byStatus": {
       "derived": 27,
-      "provisional": 60,
+      "provisional": 63,
       "draft": 1
     },
-    "derivationCount": 88,
+    "derivationCount": 91,
     "predictionCount": 12,
-    "edgeCount": 315,
-    "formalObjectCount": 1287,
-    "openGapCount": 310,
+    "edgeCount": 333,
+    "formalObjectCount": 1325,
+    "openGapCount": 327,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -1095,6 +1095,10 @@
             "context": "Loop Closure"
           },
           {
+            "source": "foundation/observer-edges-and-mutual-opacity",
+            "context": "Loop Closure"
+          },
+          {
             "source": "foundation/observer-projected-spacetime",
             "context": "Loop Closure"
           },
@@ -1257,8 +1261,10 @@
         "foundation/continuous-discrete-duality",
         "foundation/minimum-bootstrap-closure",
         "foundation/observer-as-error-correcting-code",
+        "foundation/observer-edges-and-mutual-opacity",
         "foundation/observer-holographic-equivalence",
         "foundation/observer-level-stack-compactness",
+        "foundation/observer-pattern-signal",
         "foundation/observer-projected-spacetime",
         "holography/horizon-gauge-shell",
         "interactions/moufang-loop-phase-closure",
@@ -1496,7 +1502,15 @@
             "context": "Observer Definition"
           },
           {
+            "source": "foundation/observer-edges-and-mutual-opacity",
+            "context": "Observer Definition"
+          },
+          {
             "source": "foundation/observer-holographic-equivalence",
+            "context": "Observer Definition"
+          },
+          {
+            "source": "foundation/observer-pattern-signal",
             "context": "Observer Definition"
           },
           {
@@ -5149,6 +5163,7 @@
         "foundation/continuous-discrete-duality",
         "foundation/formation-and-preservation",
         "foundation/knot-theoretic-bootstrap",
+        "foundation/observer-pattern-signal",
         "particles/cpt-theorem",
         "spacetime/gravitational-constant"
       ],
@@ -5366,6 +5381,10 @@
           },
           {
             "source": "foundation/knot-theoretic-bootstrap",
+            "context": "Coherence Lagrangian"
+          },
+          {
+            "source": "foundation/observer-pattern-signal",
             "context": "Coherence Lagrangian"
           },
           {
@@ -5834,20 +5853,24 @@
     "foundation/formation-and-preservation": {
       "id": "foundation/formation-and-preservation",
       "filePath": "site/src/content/derivations/foundation/formation-and-preservation.md",
-      "title": "Formation and Preservation as Complementary Mechanisms",
+      "title": "Observer Viability: Formation, Preservation, and Detection",
       "status": "provisional",
       "rigorLevel": "semi-formal",
       "group": "foundation",
       "tags": [
         "foundation",
-        "error-correction",
-        "mass-hierarchy"
+        "observer-structure",
+        "mass-hierarchy",
+        "viability"
       ],
-      "summary": "Stable observer existence requires two distinct mechanisms, both necessary and neither reducible to the other. Formation, governed by Mass Hierarchy's WKB tunneling through coherence barriers, selects a specific mass for each profile with exponential suppression e^(-c/g²) in the binding coupling. Preservation, governed by the observer-projection error-correcting code under profile-dependent substrate noise, bounds viable mass from below via the condition d_achieved(m) ≥ d_req(𝓘_A) with d_achieved scaling as m_P/m and d_req scaling logarithmically in coherence lifetime. The two mechanisms have incompatible functional dependencies on gauge coupling: the QEC quantity (d_req/2)·log(p_th/p_phys^eff), which is the natural candidate for direct identification with the WKB action S/ℏ, simplifies algebraically to c_logic·log(T_coh/τ_P) — coupling-independent after cancellation — while WKB retains its 1/g² dependence. No linear or monomial identification matches the two across the SM coupling range; the mechanisms are genuinely complementary, not two descriptions of one mechanism. The large preservation margins observed across the SM spectrum (ratio d_achieved/d_req in the 10^15–10^25 range) are the structural consequence of exponential formation competing with logarithmic preservation at SM couplings — a derived quantity rather than arbitrary, and the most visible signature that the two mechanisms operate independently. Three framework-native unification candidates remain open: joint fixed-point selection, Coherence Lagrangian common-saddle derivation, and shared-facts distinguishability layer. None have been formalized; none are required for the complementarity result; each would tighten the combined mechanism story if developed.",
-      "lastUpdated": "2026-04-19",
+      "summary": "An observer is viable iff three independent conditions all hold: (F) Formation — the mass is a WKB crystallization scale at some bootstrap level, with substrate tunneling into the code space occurring in cosmological history; (P) Preservation — the three-axis QEC code's achieved distance exceeds required distance under substrate noise; (D) Detection — the edge equation has a finite-r solution for the profile's signal structure, i.e., the observer has a well-defined operational edge. The three mechanisms operate in structurally distinct regimes (formation-time substrate-to-code transition; lifetime-long preservation under noise; spatial-instantaneous inter-observer resolution), with incompatible functional dependencies on coupling (exponential e^(-c/g²) for formation; logarithmic log(T_coh/τ_P) after algebraic cancellation for preservation; Compton-scale r_C = ℏ/(mc) for detection). No two are reducible to each other — the scaling-mismatch arguments rule out simple-functional identifications pairwise. The observed Standard Model spectrum is the simultaneous-satisfaction set of all three conditions. The structural preservation-margin ratio d_achieved/d_req ~ e^(c/g²) / log(T_coh/τ_P) gives the observed 10^15–10^25 preservation margins across the SM spectrum as a derived quantity rather than a coincidence. Free quarks fail (D) alone — confinement is a detection-axis-specific failure, complementary to the Wilson-loop and QEC-threshold pictures.",
+      "lastUpdated": "2026-04-21",
       "dependsOn": [
         "foundation/substrate-noise-and-profile-coupling",
         "foundation/observer-as-error-correcting-code",
+        "foundation/observer-pattern-signal",
+        "foundation/observer-edges-and-mutual-opacity",
+        "foundation/profile-dependent-edges-and-confinement",
         "particles/mass-hierarchy",
         "foundation/coherence-lagrangian",
         "axioms/coherence-conservation"
@@ -5856,7 +5879,36 @@
       "dependedOnBy": [
         "foundation/error-correction-and-standard-model"
       ],
-      "steps": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The three mechanisms"
+        },
+        {
+          "number": 2,
+          "title": "Pairwise distinctness — scaling arguments"
+        },
+        {
+          "number": 3,
+          "title": "Necessity of each condition"
+        },
+        {
+          "number": 4,
+          "title": "Joint sufficiency"
+        },
+        {
+          "number": 5,
+          "title": "Structural preservation margin"
+        },
+        {
+          "number": 6,
+          "title": "SM spectrum as simultaneous-satisfaction set"
+        },
+        {
+          "number": 7,
+          "title": "Detection and the earlier-open joint-fixed-point thread"
+        }
+      ],
       "formalObjects": [
         {
           "type": "Definition",
@@ -5868,120 +5920,150 @@
           "type": "Definition",
           "id": "1.2",
           "name": "Preservation",
-          "statementPreview": "The **preservation probability** Ppreserve(mA; IA, Tcoh) is the probability that a formed observer's code-space integ..."
+          "statementPreview": "The **preservation condition** is the QEC viability inequality*"
         },
         {
-          "type": "Proposition",
+          "type": "Definition",
           "id": "1.3",
-          "name": "Both conditions required for observer existence",
-          "statementPreview": "For a profile IA to correspond to an observed stable particle at mass mA, both formation and preservation must be sat..."
+          "name": "Detection",
+          "statementPreview": "The **detection condition** is that the edge equation*"
         },
         {
           "type": "Proposition",
           "id": "2.1",
-          "name": "WKB exponential form",
-          "statementPreview": "[Mass Hierarchy](/derivations/particles/mass-hierarchy) Theorem 3.1 establishes that the crystallization scale at boo..."
+          "name": "Formation ≠ Preservation",
+          "statementPreview": "WKB action: S/hbar = c/g2, exponential in 1/g2. QEC candidate: (dreq/2)log(pth/pphyseff), which by direct substitutio..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "Preservation ≠ Detection",
+          "statementPreview": "Preservation quantities cancel coupling dependence (Proposition 2.1); detection edge redge W(1) rC = W(1) hbar/(mc) i..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.3",
+          "name": "Formation ≠ Detection",
+          "statementPreview": "Formation: Pform sim e-c/g2, exponential in coupling. Detection: redge sim rC, Compton-linear in 1/m. Different scali..."
         },
         {
           "type": "Proposition",
           "id": "3.1",
-          "name": "QEC candidate simplifies algebraically",
-          "statementPreview": "The natural candidate for functional identification with S/hbar — the QEC exponent (dreq/2) log(pth/pphyseff) — simpl..."
+          "name": "Formation is necessary",
+          "statementPreview": "A profile that fails (F) never crystallizes from substrate in cosmological history. Even if it would preserve and hav..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Preservation is necessary",
+          "statementPreview": "A profile that fails (P) — dachieved < dreq on some axis — decoheres under substrate noise within its intended cohere..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.3",
+          "name": "Detection is necessary",
+          "statementPreview": "A profile that fails (D) — no finite-r edge solution — lacks a well-defined spatial boundary as a pattern. By [Observ..."
+        },
+        {
+          "type": "Corollary",
+          "id": "3.4",
+          "name": "Tripartite necessity",
+          "statementPreview": "All three conditions are necessary for observer viability; no single condition implies the others.*"
         },
         {
           "type": "Proposition",
           "id": "4.1",
-          "name": "Linear identifications fail",
-          "statementPreview": "No identification of the form S/hbar = A (dreq/2) log(pth/pphyseff) + B for constants A, B can match across the SM co..."
+          "name": "Joint sufficiency",
+          "statementPreview": "Under the framework's current commitments — Axioms 1–3, bootstrap hierarchy, three-axis QEC code, pattern-edge struct..."
         },
         {
           "type": "Proposition",
-          "id": "4.2",
-          "name": "Monomial identifications fail",
-          "statementPreview": "Monomial identifications of the form S/hbar = A (dreq)alpha [log(pth/pphyseff)]beta also fail.*"
-        },
-        {
-          "type": "Corollary",
           "id": "5.1",
-          "name": "Two conditions, not one",
-          "statementPreview": "Formation and preservation are logically independent conditions on (mA, IA). The WKB action S/hbar and the QEC expone..."
-        },
-        {
-          "type": "Corollary",
-          "id": "5.2",
-          "name": "Mass selection is WKB's role",
-          "statementPreview": "Formation picks out a discrete set of viable masses — the crystallization scales Lambdak of [Mass Hierarchy](/derivat..."
-        },
-        {
-          "type": "Corollary",
-          "id": "5.3",
-          "name": "QEC is the consistency framework",
-          "statementPreview": "The error-correction program's contribution is to verify that WKB-selected masses satisfy preservation. It does not, ..."
-        },
-        {
-          "type": "Corollary",
-          "id": "5.4",
-          "name": "S1 of Mass Hierarchy is unchanged by the error-correction program",
-          "statementPreview": "Mass Hierarchy's structural postulate S1 (tunneling–crystallization correspondence) was a candidate for promotion to ..."
+          "name": "Margin as exponential-over-logarithmic",
+          "statementPreview": "At the WKB-selected mass mk = mP e-ck/gk2 and profile IA:*"
         },
         {
           "type": "Proposition",
           "id": "6.1",
-          "name": "Margin as exponential-over-logarithmic",
-          "statementPreview": "At the WKB-selected mass mk = mP e-ck/gk2 and profile IA:*"
+          "name": "SM satisfies all three conditions",
+          "statementPreview": "Each observed SM particle passes (F), (P), and (D):*"
+        },
+        {
+          "type": "Proposition",
+          "id": "6.3",
+          "name": "Color-neutral hadrons satisfy all three",
+          "statementPreview": "Hadrons satisfy (F) by binding at QCD scale, (P) with preservation margin, (D) with Yukawa-screened exterior color si..."
         }
       ],
       "structuralPostulates": [],
       "openGaps": [
         {
           "number": 1,
-          "title": "Joint fixed-point formalization.",
-          "description": "Formalize the joint-fixed-point alternative to simple-functional identification as described in Open thread 7.1. This would require extending [Bootstrap Fixed-Point Existence](/derivations/foundation/"
+          "title": "Framework-completeness of the triplet.",
+          "description": "Joint sufficiency (Proposition 4.1) asserts no fourth viability axis; this is not proved. Investigating whether bootstrap composition, internal consistency (Axiom 3 loop closure), or other framework c"
         },
         {
           "number": 2,
-          "title": "Coherence Lagrangian common-saddle analysis.",
-          "description": "Explicitly compute WKB and QEC as different boundary-condition regimes of one Coherence Lagrangian calculation (Open thread 7.2). Does not reduce the two mechanisms but would show they have one origin"
+          "title": "Per-particle verification.",
+          "description": "For each SM particle, compute (F), (P), (D) quantitatively and verify simultaneous satisfaction. This would provide a framework-level prediction of the SM mass spectrum given the three mechanisms as i"
         },
         {
           "number": 3,
-          "title": "Shared-facts distinguishability derivation.",
-          "description": "Derive the profile's logical-bit content clogic(IA) from distinguishability-conservation principles, and check whether the same quantity appears in WKB's barrier-width definition (Open thread 7.3). *D"
+          "title": "Non-SM profiles.",
+          "description": "Could there be profiles satisfying (F) ∧ (P) ∧ (D) that we have not observed — hypothetical dark matter candidates, other stable structures? The triplet predicts the set of viable observers; matching "
         },
         {
           "number": 4,
-          "title": "Mass-information reversal above bootstrap level 3.",
-          "description": "[Mass Hierarchy](/derivations/particles/mass-hierarchy) §7 argues that at bootstrap levels beyond O (n > 3), particle identity transitions from topological to structural encoding, reversing the mass-i"
+          "title": "Composite observers and cross-level viability.",
+          "description": "Bootstrap composition creates higher-level observers from collections of lower-level ones. Whether the higher-level observer's viability requires its own (F), (P), (D) satisfaction independently is a "
         },
         {
           "number": 5,
-          "title": "Explicit formation-rate check at SM masses.",
-          "description": "The complementarity statement establishes both conditions must hold but does not compute Pform numerically for each SM particle. A quantitative check — does the WKB-selected mass satisfy Pform V4cosmo"
+          "title": "Macroscopic observers and mass-information reversal.",
+          "description": "[Mass Hierarchy](/derivations/particles/mass-hierarchy) §7 notes a mass-information reversal at bootstrap level 3: composite observers transition from topological to structural encoding. The triplet a"
+        },
+        {
+          "number": 6,
+          "title": "Relation to the bootstrap fixed-point structure.",
+          "description": "[Bootstrap Fixed-Point Existence](/derivations/foundation/bootstrap-fixed-point-existence) establishes the universe as a Kleene fixed point under compactness, dcpo, and Scott continuity prerequisites."
+        },
+        {
+          "number": 7,
+          "title": "Coherence Lagrangian common-saddle analysis.",
+          "description": "Whether (F), (P), (D) can be understood as different boundary-condition regimes of one Coherence Lagrangian calculation — a shared-origin view that doesn't reduce them but shows common structural orig"
         }
       ],
-      "assessmentVerdict": "",
+      "assessmentVerdict": "Semi-formal. Each of (F), (P), (D) is a well-established condition from existing derivations; this theorem asserts their joint structure. Distinctness of each pair is rigorous via scaling arguments; necessity of each is rigorous given the source derivations; joint sufficiency is a completeness asser",
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
           {
             "target": "particles/mass-hierarchy",
-            "context": "formation"
-          },
-          {
-            "target": "foundation/observer-as-error-correcting-code",
-            "context": "Observer as an Error-Correcting Code"
-          },
-          {
-            "target": "foundation/substrate-noise-and-profile-coupling",
-            "context": "preservation"
+            "context": "Mass Hierarchy"
           },
           {
             "target": "foundation/substrate-noise-and-profile-coupling",
             "context": "Substrate Noise and Profile-Dependent Coupling Modulation"
           },
           {
-            "target": "particles/mass-hierarchy",
-            "context": "Mass Hierarchy"
+            "target": "foundation/observer-as-error-correcting-code",
+            "context": "Observer as an Error-Correcting Code"
+          },
+          {
+            "target": "foundation/observer-edges-and-mutual-opacity",
+            "context": "Observer Edges and Mutual Opacity"
+          },
+          {
+            "target": "foundation/profile-dependent-edges-and-confinement",
+            "context": "Profile-Dependent Edges and Confinement"
+          },
+          {
+            "target": "foundation/observer-pattern-signal",
+            "context": "Observer Pattern Signal"
+          },
+          {
+            "target": "foundation/observer-holographic-equivalence",
+            "context": "Observer Holographic Equivalence"
           },
           {
             "target": "foundation/bootstrap-fixed-point-existence",
@@ -5990,10 +6072,6 @@
           {
             "target": "foundation/coherence-lagrangian",
             "context": "Coherence Lagrangian"
-          },
-          {
-            "target": "thermodynamics-ext/distinguishability-conservation",
-            "context": "Distinguishability Conservation"
           }
         ],
         "incoming": [
@@ -6004,6 +6082,10 @@
           {
             "source": "foundation/error-correction-and-standard-model",
             "context": "joint fixed-point"
+          },
+          {
+            "source": "foundation/observer-edges-and-mutual-opacity",
+            "context": "Formation and Preservation"
           },
           {
             "source": "foundation/substrate-noise-and-profile-coupling",
@@ -6045,7 +6127,6 @@
         "cosmology/coupling-constants",
         "holography/horizon-gauge-shell",
         "foundation/observer-projected-spacetime",
-        "foundation/observer-holographic-equivalence",
         "particles/cpt-theorem"
       ],
       "enablesDerivation": [],
@@ -6265,6 +6346,10 @@
         "incoming": [
           {
             "source": "foundation/minimum-bootstrap-closure",
+            "context": "Knot-Theoretic Bootstrap"
+          },
+          {
+            "source": "foundation/observer-edges-and-mutual-opacity",
             "context": "Knot-Theoretic Bootstrap"
           },
           {
@@ -6526,6 +6611,7 @@
       "dependedOnBy": [
         "foundation/error-correction-and-standard-model",
         "foundation/formation-and-preservation",
+        "foundation/observer-pattern-signal",
         "foundation/substrate-noise-and-profile-coupling"
       ],
       "steps": [],
@@ -6727,12 +6813,306 @@
             "context": "Observer as an Error-Correcting Code"
           },
           {
+            "source": "foundation/observer-edges-and-mutual-opacity",
+            "context": "Observer as an Error-Correcting Code"
+          },
+          {
             "source": "foundation/observer-holographic-equivalence",
             "context": "Corollary 3.4"
           },
           {
+            "source": "foundation/profile-dependent-edges-and-confinement",
+            "context": "Observer as an Error-Correcting Code"
+          },
+          {
             "source": "foundation/substrate-noise-and-profile-coupling",
             "context": "Observer as an Error-Correcting Code"
+          }
+        ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "foundation/observer-edges-and-mutual-opacity": {
+      "id": "foundation/observer-edges-and-mutual-opacity",
+      "filePath": "site/src/content/derivations/foundation/observer-edges-and-mutual-opacity.md",
+      "title": "Observer Edges and Mutual Opacity",
+      "status": "provisional",
+      "rigorLevel": "semi-formal",
+      "group": "foundation",
+      "tags": [
+        "foundation",
+        "observer-structure",
+        "holography"
+      ],
+      "summary": "An observer's operational edge is the radius at which another observer's pattern signal falls to the detecting observer's own Heisenberg-like resolution threshold — set by the observer's coherence content 𝒞(Σ) = mc² via the Cramér-Rao bound on Fisher information. Solving the edge equation with the Yukawa signal gives r_edge ≈ W(1) r_C for same-mass pairs (the Lambert W evaluated at 1 — the Omega constant), exactly Compton-scale with no log enhancement. Asymmetric-mass pairs give mass-ratio-dependent edges via the same equation. Bidirectional symmetry is automatic for same-mass pairs, providing the structural ground for mutual opacity: for any two observers beyond their mutual edge, each other's continuous interior state is operationally inaccessible, and all inter-observer information is carried exclusively by integer surface residues — electric charge, weak isospin, color, windings, Chern-Simons levels, framings, tick counts, linking numbers, Poisson crossing counts, instanton sectors. The mutual opacity theorem arises from two independent and mutually reinforcing mechanisms: the horizon null-generator quotient of Observer Holographic Equivalence Proposition 4.1 (which integer-encodes all horizon-crossing data symmetrically) and the detection-threshold argument derived here (which filters continuous interior variations below the detector's resolution). Quantum-mechanical measurement — the Heisenberg cut between quantum system and apparatus — is structurally identified with the mutual-opacity edge; Born-rule probabilities govern the integer-channel readouts. The detection-noise quantity mc² here should not be confused with the preservation-noise quantity p_phys^eff of Substrate Noise and Profile-Dependent Coupling Modulation: the two operate in different regimes (detection vs. QEC preservation) and are operationally distinct.",
+      "lastUpdated": "2026-04-21",
+      "dependsOn": [
+        "foundation/observer-pattern-signal",
+        "foundation/observer-holographic-equivalence",
+        "axioms/observer-definition",
+        "particles/mass-hierarchy",
+        "thermodynamics-ext/fisher-metric",
+        "thermodynamics-ext/distinguishability-conservation"
+      ],
+      "enablesDerivation": [
+        "foundation/profile-dependent-edges-and-confinement",
+        "foundation/formation-and-preservation"
+      ],
+      "dependedOnBy": [
+        "foundation/formation-and-preservation",
+        "foundation/profile-dependent-edges-and-confinement"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Detection-noise floor from observer coherence"
+        },
+        {
+          "number": 2,
+          "title": "The edge equation"
+        },
+        {
+          "number": 3,
+          "title": "The same-mass case"
+        },
+        {
+          "number": 4,
+          "title": "The asymmetric case"
+        },
+        {
+          "number": 5,
+          "title": "Bidirectional symmetry"
+        },
+        {
+          "number": 6,
+          "title": "Mutual opacity — the symmetric extension"
+        },
+        {
+          "number": 7,
+          "title": "Integer channel inventory"
+        },
+        {
+          "number": 8,
+          "title": "Quantum measurement as inter-observer integer readout"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Proposition",
+          "id": "1.1",
+          "name": "Heisenberg-like resolution from coherence",
+          "statementPreview": "For an observer A with state space SigmaA, invariant IA, and coherence content C(SigmaA), the minimum distinguishable..."
+        },
+        {
+          "type": "Definition",
+          "id": "2.1",
+          "name": "Operational edge",
+          "statementPreview": "For observer A (at origin) and observer B (at radial distance r), the **operational edge of B as seen by A** is*"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "Explicit edge equation",
+          "statementPreview": "With the Yukawa signal AB(r) = mB c2 (rC,B/r) e-r/rC,B:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "Same-mass edge at Compton",
+          "statementPreview": "For mA = mB = m, the edge equation becomes e-x/x = 1 with x = r/rC. The unique solution is x* = W(1), the Lambert W f..."
+        },
+        {
+          "type": "Corollary",
+          "id": "3.2",
+          "name": "Exact mass-independence in Compton units",
+          "statementPreview": "The same-mass edge is a specific Compton-scale O(1) multiple of rC — the Omega constant. The edge is genuinely mass-i..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Asymmetric edge — analytic limits",
+          "statementPreview": "For y = mA/mB > 0 with y 1:*"
+        },
+        {
+          "type": "Corollary",
+          "id": "4.3",
+          "name": "Massless mediators give formally infinite edge",
+          "statementPreview": "For mB 0 (massless mediator): rC,B and the Yukawa degenerates to Coulomb 1/r. The edge redge formally diverges — mass..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Symmetry of the edge condition for same-mass pairs",
+          "statementPreview": "For mA = mB, swapping A leftrightarrow B in the edge equation gives the identical equation (rC/r) e-r/rC = 1. The edg..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Horizon-integer mechanism — symmetric",
+          "statementPreview": "Consider observer B receiving information about A. Any A-B interaction is a Type III relational-carrier exchange that..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.2",
+          "name": "Detection-threshold mechanism",
+          "statementPreview": "By Step 2, B's resolution threshold is NB = mB c2. Continuous variations of A's interior state that produce signal-am..."
+        },
+        {
+          "type": "Theorem",
+          "id": "6.3",
+          "name": "Mutual Opacity — same-level pairs",
+          "statementPreview": "For two same-level observers A, B at spatial separation r > redge(A, B): the continuous interior state of each is ope..."
+        },
+        {
+          "type": "Corollary",
+          "id": "6.4",
+          "name": "Cross-level opacity",
+          "statementPreview": "For observers at different bootstrap levels, cross-level opacity inherits from [Observer Holographic Equivalence](/de..."
+        },
+        {
+          "type": "Proposition",
+          "id": "7.1",
+          "name": "Integer channel inventory",
+          "statementPreview": "The integer surface residues carrying inter-observer information are drawn from:*"
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Precise Cramér-Rao normalization.",
+          "description": "The identification NA = mA c2 is dimensionally correct but the overall O(1) prefactor depends on specific Fisher-information normalization conventions. *Difficulty: MODERATE.*"
+        },
+        {
+          "number": 2,
+          "title": "Intermediate-distance (inside-edge) regime.",
+          "description": "For r < redge, mutual opacity does not hold — observers inside each other's edge can have partial continuous-content access. Coherent multi-observer phenomena (entanglement, superposition, interferenc"
+        },
+        {
+          "number": 3,
+          "title": "Multi-observer networks.",
+          "description": "The mutual opacity theorem is stated for pairs. For populations of 3+ observers, opacity is not simply pairwise — collective effects can persist even when all pairs are mutually opaque. *Difficulty: M"
+        },
+        {
+          "number": 4,
+          "title": "Rigorous QM-measurement embedding.",
+          "description": "Step 8's remarks identify measurement as an integer-channel readout between observer levels. A rigorous construction — specifying the apparatus's integer-channel structure, showing that Born-rule prob"
+        },
+        {
+          "number": 5,
+          "title": "Macroscopic observer regime.",
+          "description": "At the mass-information-reversal boundary (m sim LambdaQCD, [Mass Hierarchy](/derivations/particles/mass-hierarchy) §7), observers transition from topological to structural encoding. The detection-noi"
+        },
+        {
+          "number": 6,
+          "title": "Exhaustiveness of the integer channel inventory.",
+          "description": "Proposition 7.1 enumerates ten channels from existing framework derivations. A rigorous proof that no other integer channels exist would require classifying all topological / integer-valued inter-obse"
+        }
+      ],
+      "assessmentVerdict": "Semi-formal. The Lambert W closed-form is rigorous; the framework-level commitments (Identification 5.3, Fisher–Cramér-Rao on observer state space, Proposition 4.1 of OHE) are existing derivations. The assembly into the edge equation, the bidirectional-symmetry mutual opacity theorem, and the detect",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "foundation/observer-holographic-equivalence",
+            "context": "Observer Holographic Equivalence"
+          },
+          {
+            "target": "axioms/observer-definition",
+            "context": "Observer Definition"
+          },
+          {
+            "target": "foundation/observer-pattern-signal",
+            "context": "Observer Pattern Signal"
+          },
+          {
+            "target": "foundation/substrate-noise-and-profile-coupling",
+            "context": "substrate bit-flip rate on the observer's QEC code"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "target": "thermodynamics-ext/fisher-metric",
+            "context": "Fisher Information Metric"
+          },
+          {
+            "target": "foundation/substrate-noise-and-profile-coupling",
+            "context": "Substrate Noise and Profile-Dependent Coupling Modulation"
+          },
+          {
+            "target": "holography/horizon-gauge-shell",
+            "context": "Horizon Gauge Shell"
+          },
+          {
+            "target": "foundation/knot-theoretic-bootstrap",
+            "context": "Knot-Theoretic Bootstrap"
+          },
+          {
+            "target": "gauge/electromagnetism",
+            "context": "Electromagnetism"
+          },
+          {
+            "target": "gauge/weak-interaction",
+            "context": "Weak Interaction"
+          },
+          {
+            "target": "gauge/color-force",
+            "context": "Color Force"
+          },
+          {
+            "target": "foundation/observer-as-error-correcting-code",
+            "context": "Observer as an Error-Correcting Code"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "holography/causal-set-statistics",
+            "context": "Causal Set Statistics"
+          },
+          {
+            "target": "foundation/formation-and-preservation",
+            "context": "Formation and Preservation"
+          },
+          {
+            "target": "quantum/entanglement",
+            "context": "Entanglement"
+          },
+          {
+            "target": "holography/er-epr",
+            "context": "ER=EPR"
+          },
+          {
+            "target": "thermodynamics-ext/distinguishability-conservation",
+            "context": "Distinguishability Conservation"
+          }
+        ],
+        "incoming": [
+          {
+            "source": "foundation/formation-and-preservation",
+            "context": "Observer Edges and Mutual Opacity"
+          },
+          {
+            "source": "foundation/observer-holographic-equivalence",
+            "context": "Observer Edges and Mutual Opacity"
+          },
+          {
+            "source": "foundation/observer-pattern-signal",
+            "context": "Observer Edges and Mutual Opacity"
+          },
+          {
+            "source": "foundation/profile-dependent-edges-and-confinement",
+            "context": "Observer Edges and Mutual Opacity"
           }
         ]
       },
@@ -6773,9 +7153,9 @@
       "enablesDerivation": [],
       "dependedOnBy": [
         "foundation/bootstrap-fixed-point-existence",
-        "foundation/knot-theoretic-bootstrap",
         "foundation/minimum-bootstrap-closure",
         "foundation/observer-as-error-correcting-code",
+        "foundation/observer-edges-and-mutual-opacity",
         "foundation/observer-level-stack-compactness",
         "interactions/moufang-loop-phase-closure"
       ],
@@ -6914,7 +7294,7 @@
           "type": "Corollary",
           "id": "4.6",
           "name": "operational completeness of the sheaf",
-          "statementPreview": ": universal application of Corollary 4.5 across all observers. Establishes that the framework's manifold-with-boundar..."
+          "statementPreview": ": universal application of Corollary 4.5 and 4.5bis across all observers. Establishes that the framework's manifold-w..."
         }
       ],
       "structuralPostulates": [],
@@ -7017,6 +7397,10 @@
             "context": "Observer-Projected Spacetime"
           },
           {
+            "target": "foundation/observer-edges-and-mutual-opacity",
+            "context": "Observer Edges and Mutual Opacity"
+          },
+          {
             "target": "minimal-observer/coherence-dual-pairs",
             "context": "Coherence-Dual Pairs"
           },
@@ -7047,6 +7431,10 @@
             "context": "Observer Holographic Equivalence"
           },
           {
+            "source": "foundation/formation-and-preservation",
+            "context": "Observer Holographic Equivalence"
+          },
+          {
             "source": "foundation/knot-theoretic-bootstrap",
             "context": "Observer Holographic Equivalence"
           },
@@ -7067,7 +7455,15 @@
             "context": "Observer Holographic Equivalence"
           },
           {
+            "source": "foundation/observer-edges-and-mutual-opacity",
+            "context": "Observer Holographic Equivalence"
+          },
+          {
             "source": "foundation/observer-level-stack-compactness",
+            "context": "Observer Holographic Equivalence"
+          },
+          {
+            "source": "foundation/observer-pattern-signal",
             "context": "Observer Holographic Equivalence"
           },
           {
@@ -7228,6 +7624,235 @@
           {
             "source": "foundation/bootstrap-fixed-point-existence",
             "context": "Observer-Level Stack Compactness"
+          }
+        ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "foundation/observer-pattern-signal": {
+      "id": "foundation/observer-pattern-signal",
+      "filePath": "site/src/content/derivations/foundation/observer-pattern-signal.md",
+      "title": "Observer Pattern Signal",
+      "status": "provisional",
+      "rigorLevel": "semi-formal",
+      "group": "foundation",
+      "tags": [
+        "foundation",
+        "observer-structure"
+      ],
+      "summary": "An observer localized on a worldline sources a coherence-field configuration whose amplitude at radial distance r is the static Green's function of the Klein-Gordon operator derived from the Coherence Lagrangian. For a fundamental massive observer of mass m the pattern signal takes the Yukawa form A(r) = mc² · (r_C/r) · exp(−r/r_C) with decay scale r_C = ℏ/(mc) — the Compton length forced by the Klein-Gordon mass parameter. For composite observers with active gauge channels, additional Yukawa components contribute additively at each mediator's mass scale, with massless mediators (EM) giving 1/r Coulomb tails and massive mediators (W, Z, color-within-hadrons) giving short-range exponential suppression. The Compton decay length coincides with three independently-derived framework scales — the epistemic boundary of Mass Hierarchy §7, the null horizon of Horizon Gauge Shell, and the Yukawa decay length derived here — a consistency signature of the Compton as the framework's natural length for a massive observer.",
+      "lastUpdated": "2026-04-21",
+      "dependsOn": [
+        "foundation/coherence-lagrangian",
+        "axioms/observer-definition",
+        "particles/mass-hierarchy",
+        "thermodynamics/action-planck",
+        "foundation/observer-as-error-correcting-code"
+      ],
+      "enablesDerivation": [
+        "foundation/observer-edges-and-mutual-opacity",
+        "foundation/profile-dependent-edges-and-confinement",
+        "foundation/formation-and-preservation"
+      ],
+      "dependedOnBy": [
+        "foundation/formation-and-preservation",
+        "foundation/observer-edges-and-mutual-opacity",
+        "foundation/profile-dependent-edges-and-confinement"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The observer as a source of the coherence field"
+        },
+        {
+          "number": 2,
+          "title": "The Klein-Gordon equation as the field equation"
+        },
+        {
+          "number": 3,
+          "title": "The Yukawa Green's function"
+        },
+        {
+          "number": 4,
+          "title": "The pattern signal amplitude"
+        },
+        {
+          "number": 5,
+          "title": "The Compton scale is forced, not postulated"
+        },
+        {
+          "number": 6,
+          "title": "Profile-dependent composite extension"
+        },
+        {
+          "number": 7,
+          "title": "Strong-coupling/confined channel treatment"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Pattern signal",
+          "statementPreview": "The **pattern signal** A(x) of observer A at spacetime point x is the amplitude of the coherence field phi(x) sourced..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Observer sources the coherence field",
+          "statementPreview": "Every observer has finite coherence C(SigmaA) > 0 (Axiom 2 O1). By [Action and Planck's Constant](/derivations/thermo..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "Coherence field satisfies Klein-Gordon",
+          "statementPreview": "The linearized Euler-Lagrange equation of the Coherence Lagrangian is the Klein-Gordon equation ([Coherence Lagrangia..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "Static form",
+          "statementPreview": "For a static source on a timelike worldline, the Klein-Gordon equation reduces to*"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Green's function of the static Klein-Gordon operator",
+          "statementPreview": "The fundamental solution of (-2 + 1/rC2) G = delta3(mathbfr) in three spatial dimensions is*"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Pattern signal for a point-source observer",
+          "statementPreview": "For an observer localized at the origin with source strength JA = mA c2 delta3(mathbfr) (up to a unit-setting O(1) co..."
+        },
+        {
+          "type": "Corollary",
+          "id": "4.3",
+          "name": "Dimensionless form",
+          "statementPreview": "Defining x = r/rC,A, the pattern signal is A(x) = mA c2 f(x) with f(x) = e-x/x. The shape f(x) is universal; the ampl..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Gauge-channel contributions",
+          "statementPreview": "For each active gauge channel i with mediator mass Mi and coupling gi, the channel's contribution to the pattern sign..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.2",
+          "name": "Massless mediator limit — Coulomb tails",
+          "statementPreview": "As Mi 0 (photon case), ri and e-r/ri 1 for all finite r. The Yukawa component reduces to $AEM(r) = gEM2 LambdaEM r0/r"
+        },
+        {
+          "type": "Proposition",
+          "id": "6.3",
+          "name": "Composite pattern signal",
+          "statementPreview": "For an observer with profile IA having active channels i, the total pattern signal amplitude is*"
+        },
+        {
+          "type": "Proposition",
+          "id": "7.1",
+          "name": "Color channel effective Yukawa for color-neutral composites",
+          "statementPreview": "For color-neutral composites (hadrons), the long-distance color-channel pattern signal is effectively Yukawa with scr..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Precise amplitude coefficient.",
+          "description": "The overall O(1) prefactor in A(r) = mA c2 (rC,A/r) e-r/rC,A depends on the Lagrangian's source-coupling normalization convention. *Difficulty: MODERATE.*"
+        },
+        {
+          "number": 2,
+          "title": "Spinor (Dirac) extension.",
+          "description": "Extending to spinor observers requires the Dirac Lagrangian treatment; the pattern signal is expected to take a spinor-weighted form reducing to the scalar Yukawa in the spin-averaged limit. *Difficul"
+        },
+        {
+          "number": 3,
+          "title": "Short-distance substrate regularization.",
+          "description": "The 1/r Green's function singularity at r 0 is regulated at Planck scale by the substrate discretization ([Causal Set Statistics](/derivations/holography/causal-set-statistics)), but the precise match"
+        },
+        {
+          "number": 4,
+          "title": "Non-perturbative color-channel treatment.",
+          "description": "Proposition 7.1 uses a screened-coupling heuristic for color. A rigorous treatment via non-perturbative QCD or the framework's non-associativity confinement picture would pin down the color pattern si"
+        },
+        {
+          "number": 5,
+          "title": "Curved-regime Yukawa on $M_A$.",
+          "description": "The flat-spacetime Yukawa form is the leading-order result in the approximately-flat regime of MA. In the curved-regime (near horizons, near strong-coherence sources, at cosmological scales), the Klei"
+        }
+      ],
+      "assessmentVerdict": "Semi-formal. The classical PDE content (Klein-Gordon Yukawa) is fully rigorous. The framework-specific content (Coherence Lagrangian is the right field equation, observer's coherence content is the source, mA c2 sets the amplitude scale) combines existing derivations — each rigorous or semi-formal —",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "foundation/coherence-lagrangian",
+            "context": "Coherence Lagrangian"
+          },
+          {
+            "target": "foundation/observer-projected-spacetime",
+            "context": "Observer-Projected Spacetime"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "target": "holography/horizon-gauge-shell",
+            "context": "Horizon Gauge Shell"
+          },
+          {
+            "target": "axioms/observer-definition",
+            "context": "Observer Definition"
+          },
+          {
+            "target": "foundation/substrate-noise-and-profile-coupling",
+            "context": "Substrate Noise and Profile-Dependent Coupling Modulation"
+          },
+          {
+            "target": "thermodynamics/action-planck",
+            "context": "Action and Planck's Constant"
+          },
+          {
+            "target": "foundation/observer-holographic-equivalence",
+            "context": "Observer Holographic Equivalence"
+          },
+          {
+            "target": "foundation/observer-edges-and-mutual-opacity",
+            "context": "Observer Edges and Mutual Opacity"
+          },
+          {
+            "target": "foundation/profile-dependent-edges-and-confinement",
+            "context": "Profile-Dependent Edges and Confinement"
+          },
+          {
+            "target": "holography/causal-set-statistics",
+            "context": "Causal Set Statistics"
+          }
+        ],
+        "incoming": [
+          {
+            "source": "foundation/formation-and-preservation",
+            "context": "Observer Pattern Signal"
+          },
+          {
+            "source": "foundation/observer-edges-and-mutual-opacity",
+            "context": "Observer Pattern Signal"
+          },
+          {
+            "source": "foundation/profile-dependent-edges-and-confinement",
+            "context": "Observer Pattern Signal"
           }
         ]
       },
@@ -7490,6 +8115,234 @@
           {
             "source": "foundation/observer-level-stack-compactness",
             "context": "Observer-Projected Spacetime"
+          },
+          {
+            "source": "foundation/observer-pattern-signal",
+            "context": "Observer-Projected Spacetime"
+          }
+        ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "foundation/profile-dependent-edges-and-confinement": {
+      "id": "foundation/profile-dependent-edges-and-confinement",
+      "filePath": "site/src/content/derivations/foundation/profile-dependent-edges-and-confinement.md",
+      "title": "Profile-Dependent Edges and Confinement",
+      "status": "provisional",
+      "rigorLevel": "semi-formal",
+      "group": "foundation",
+      "tags": [
+        "foundation",
+        "observer-structure",
+        "gauge",
+        "confinement"
+      ],
+      "summary": "For observers with active gauge channels, the pattern signal is a sum of Yukawa contributions at each mediator's mass scale. The detection-noise edge equation solves against this composite signal, giving profile-dependent edges whose dominant channel depends on distance regime: short-range weak and color contributions at sub-weak scales, Coulomb-like EM at long distances. The observed interaction-range hierarchy — EM infinite, weak ~10⁻¹⁸ m, strong ~1 fm — emerges from the mediator mass hierarchy via the Yukawa range r_i = ℏ/(M_i c). For isolated color-charged profiles (free quarks) the color channel is structurally different: color flux has nowhere to terminate except at another color-charge, giving a linear confinement potential V ~ σr rather than Yukawa decay. The edge equation has no finite-r solution with this divergent signal — the isolated color-charged profile fails the edge-viability criterion. Color-neutral composites (hadrons) terminate internal flux tubes within the composite, giving exterior color signals Yukawa-screened at the Λ_QCD scale; hadrons have well-defined edges at ~1 fm. Confinement — the observed non-existence of free quarks — is thereby derived as a consequence of edge-viability failure, complementary to the Wilson-loop area-law picture of Confinement and the QEC-threshold picture of Substrate Noise Corollary 6.2. Three mutually-consistent mechanisms land on the same conclusion via different routes.",
+      "lastUpdated": "2026-04-21",
+      "dependsOn": [
+        "foundation/observer-pattern-signal",
+        "foundation/observer-edges-and-mutual-opacity",
+        "gauge/confinement",
+        "foundation/substrate-noise-and-profile-coupling",
+        "gauge/color-force"
+      ],
+      "enablesDerivation": [
+        "foundation/formation-and-preservation"
+      ],
+      "dependedOnBy": [
+        "foundation/formation-and-preservation"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Composite-profile edge equation"
+        },
+        {
+          "number": 2,
+          "title": "Short-range regime — massive-mediator channels"
+        },
+        {
+          "number": 3,
+          "title": "Long-range regime — EM Coulomb dominates"
+        },
+        {
+          "number": 4,
+          "title": "The color channel — pathological for isolated sources"
+        },
+        {
+          "number": 5,
+          "title": "The edge equation has no finite-$r$ solution for isolated color"
+        },
+        {
+          "number": 6,
+          "title": "Hadrons recover viability"
+        },
+        {
+          "number": 7,
+          "title": "Confinement as edge-viability failure"
+        },
+        {
+          "number": 8,
+          "title": "Interaction range hierarchy from mediator mass hierarchy"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Proposition",
+          "id": "1.1",
+          "name": "Composite edge equation",
+          "statementPreview": "Combining this with the edge condition A(redge) = mB c2 from [Observer Edges and Mutual Opacity](/derivations/foundat..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "Short-range dominance",
+          "statementPreview": "At distances r much smaller than all channel ranges ri, each channel contributes its near-source form Ai(r) gi2 Lambd..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Long-distance edge determined by EM",
+          "statementPreview": "At distances r gg rW, the only surviving channel is EM. The edge equation simplifies to*"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Color channel has no Yukawa-like isolated-source form",
+          "statementPreview": "For an isolated color-charged profile (a single quark with no color-partner), the color-channel signal does not take ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Edge equation fails for isolated color-charged source",
+          "statementPreview": "For an isolated color-charged profile, the color-channel contribution to A(r) is not Acolor(r) = gs2 Lambdas (rs/r) e..."
+        },
+        {
+          "type": "Corollary",
+          "id": "5.3",
+          "name": "Free quark is not a viable isolated observer",
+          "statementPreview": "The isolated color-charged profile fails the edge-viability criterion. Free quarks do not exist as asymptotic observe..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Color-neutral composites have terminating flux tubes",
+          "statementPreview": "For a color-neutral composite, color flux between constituents terminates within the composite. There is no net exter..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.2",
+          "name": "Exterior color signal Yukawa-screened at $\\Lambda_{\\mathrm{QCD}}$",
+          "statementPreview": "The hadron's exterior color-dipole signal has effective screening length rs sim hbar/(LambdaQCD/c) sim 0.7 fm ([Obser..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.3",
+          "name": "Hadron edge is at the hadron scale",
+          "statementPreview": "For a color-neutral composite with direct-coherence mass mhadron and Yukawa-screened color channel, the composite edg..."
+        },
+        {
+          "type": "Theorem",
+          "id": "7.1",
+          "name": "Confinement from edge-viability",
+          "statementPreview": "QCD confinement — the observed non-existence of free quarks — is a consequence of the edge-viability requirement appl..."
+        },
+        {
+          "type": "Proposition",
+          "id": "8.1",
+          "name": "Yukawa range formula",
+          "statementPreview": "For each gauge channel with mediator mass Mi, the channel's signal falls off exponentially at distances r gtrsim ri =..."
+        },
+        {
+          "type": "Theorem",
+          "id": "8.2",
+          "name": "Observed range hierarchy matches framework prediction",
+          "statementPreview": "The observed interaction-range hierarchy — EM infinite, weak sim 10-18 m, strong sim 1 fm — matches the Yukawa range ..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "First-principles linear-potential derivation.",
+          "description": "The linear confinement potential V(r) sim sigma r is taken as input from standard QCD. A fully framework-internal first-principles derivation of sigma would tighten this derivation. *Difficulty: HARD;"
+        },
+        {
+          "number": 2,
+          "title": "Explicit hadron-edge computation.",
+          "description": "The hadron edge at sim 1 fm is asserted from the LambdaQCD screening scale. A specific computation for each hadron (proton, neutron, pion, Delta-baryon) deriving the precise redge as a function of qua"
+        },
+        {
+          "number": 3,
+          "title": "Short-range weak-channel dominance regime.",
+          "description": "At distances r sim rW, the weak channel is at its peak relative contribution. Deriving observed short-range weak physics (beta decay, neutrino interactions) from the framework's edge structure would b"
+        },
+        {
+          "number": 4,
+          "title": "Gravitational channel.",
+          "description": "A gravitational channel is not explicitly treated here. For macroscopic observers, gravitational effects can dominate the signal at large distances. Extending to gravitational signals requires integra"
+        }
+      ],
+      "assessmentVerdict": "Semi-formal. The core structural content — composite signal as multi-channel Yukawa sum, color-channel pathology for isolated sources, edge-viability failure giving confinement — follows from [Observer Pattern Signal](/derivations/foundation/observer-pattern-signal) and [Observer Edges and Mutual Op",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "foundation/observer-pattern-signal",
+            "context": "Observer Pattern Signal"
+          },
+          {
+            "target": "foundation/observer-edges-and-mutual-opacity",
+            "context": "Observer Edges and Mutual Opacity"
+          },
+          {
+            "target": "gauge/confinement",
+            "context": "Confinement"
+          },
+          {
+            "target": "foundation/substrate-noise-and-profile-coupling",
+            "context": "Substrate Noise and Profile-Dependent Coupling Modulation"
+          },
+          {
+            "target": "spacetime/gravity",
+            "context": "Gravity"
+          },
+          {
+            "target": "spacetime/einstein-equations",
+            "context": "Einstein Field Equations"
+          },
+          {
+            "target": "gauge/color-force",
+            "context": "Color Force"
+          },
+          {
+            "target": "foundation/observer-as-error-correcting-code",
+            "context": "Observer as an Error-Correcting Code"
+          }
+        ],
+        "incoming": [
+          {
+            "source": "foundation/formation-and-preservation",
+            "context": "Profile-Dependent Edges and Confinement"
+          },
+          {
+            "source": "foundation/observer-pattern-signal",
+            "context": "Profile-Dependent Edges and Confinement"
+          },
+          {
+            "source": "foundation/substrate-noise-and-profile-coupling",
+            "context": "Profile-Dependent Edges and Confinement"
+          },
+          {
+            "source": "gauge/confinement",
+            "context": "Profile-Dependent Edges and Confinement"
           }
         ]
       },
@@ -7531,7 +8384,8 @@
       "enablesDerivation": [],
       "dependedOnBy": [
         "foundation/error-correction-and-standard-model",
-        "foundation/formation-and-preservation"
+        "foundation/formation-and-preservation",
+        "foundation/profile-dependent-edges-and-confinement"
       ],
       "steps": [],
       "formalObjects": [
@@ -7736,6 +8590,10 @@
             "context": "Electroweak Breaking"
           },
           {
+            "target": "foundation/profile-dependent-edges-and-confinement",
+            "context": "Profile-Dependent Edges and Confinement"
+          },
+          {
             "target": "thermodynamics-ext/renormalization",
             "context": "Renormalization"
           },
@@ -7759,10 +8617,26 @@
           },
           {
             "source": "foundation/formation-and-preservation",
-            "context": "preservation"
+            "context": "Substrate Noise and Profile-Dependent Coupling Modulation"
           },
           {
-            "source": "foundation/formation-and-preservation",
+            "source": "foundation/observer-edges-and-mutual-opacity",
+            "context": "substrate bit-flip rate on the observer's QEC code"
+          },
+          {
+            "source": "foundation/observer-edges-and-mutual-opacity",
+            "context": "Substrate Noise and Profile-Dependent Coupling Modulation"
+          },
+          {
+            "source": "foundation/observer-pattern-signal",
+            "context": "Substrate Noise and Profile-Dependent Coupling Modulation"
+          },
+          {
+            "source": "foundation/profile-dependent-edges-and-confinement",
+            "context": "Substrate Noise and Profile-Dependent Coupling Modulation"
+          },
+          {
+            "source": "gauge/confinement",
             "context": "Substrate Noise and Profile-Dependent Coupling Modulation"
           }
         ]
@@ -8298,6 +9172,7 @@
         "gauge/chiral-symmetry-breaking"
       ],
       "dependedOnBy": [
+        "foundation/profile-dependent-edges-and-confinement",
         "foundation/substrate-noise-and-profile-coupling",
         "gauge/chiral-symmetry-breaking",
         "gauge/confinement",
@@ -8563,6 +9438,14 @@
             "context": "Color Force"
           },
           {
+            "source": "foundation/observer-edges-and-mutual-opacity",
+            "context": "Color Force"
+          },
+          {
+            "source": "foundation/profile-dependent-edges-and-confinement",
+            "context": "Color Force"
+          },
+          {
             "source": "foundation/substrate-noise-and-profile-coupling",
             "context": "Color Force"
           },
@@ -8658,6 +9541,7 @@
       ],
       "dependedOnBy": [
         "foundation/error-correction-and-standard-model",
+        "foundation/profile-dependent-edges-and-confinement",
         "gauge/chiral-symmetry-breaking"
       ],
       "steps": [
@@ -8786,6 +9670,14 @@
           {
             "target": "gauge/color-force",
             "context": "Color Force"
+          },
+          {
+            "target": "foundation/substrate-noise-and-profile-coupling",
+            "context": "Substrate Noise and Profile-Dependent Coupling Modulation"
+          },
+          {
+            "target": "foundation/profile-dependent-edges-and-confinement",
+            "context": "Profile-Dependent Edges and Confinement"
           }
         ],
         "incoming": [
@@ -8795,6 +9687,10 @@
           },
           {
             "source": "foundation/knot-theoretic-bootstrap",
+            "context": "Confinement"
+          },
+          {
+            "source": "foundation/profile-dependent-edges-and-confinement",
             "context": "Confinement"
           },
           {
@@ -9151,6 +10047,10 @@
           },
           {
             "source": "foundation/knot-theoretic-bootstrap",
+            "context": "Electromagnetism"
+          },
+          {
+            "source": "foundation/observer-edges-and-mutual-opacity",
             "context": "Electromagnetism"
           },
           {
@@ -10502,6 +11402,10 @@
             "context": "Weak Interaction"
           },
           {
+            "source": "foundation/observer-edges-and-mutual-opacity",
+            "context": "Weak Interaction"
+          },
+          {
             "source": "foundation/substrate-noise-and-profile-coupling",
             "context": "Weak Interaction"
           },
@@ -11529,7 +12433,15 @@
             "context": "Causal Set Statistics"
           },
           {
+            "source": "foundation/observer-edges-and-mutual-opacity",
+            "context": "Causal Set Statistics"
+          },
+          {
             "source": "foundation/observer-holographic-equivalence",
+            "context": "Causal Set Statistics"
+          },
+          {
+            "source": "foundation/observer-pattern-signal",
             "context": "Causal Set Statistics"
           },
           {
@@ -11776,6 +12688,10 @@
           },
           {
             "source": "foundation/knot-theoretic-bootstrap",
+            "context": "ER=EPR"
+          },
+          {
+            "source": "foundation/observer-edges-and-mutual-opacity",
             "context": "ER=EPR"
           },
           {
@@ -12229,7 +13145,15 @@
             "context": "Horizon Gauge Shell"
           },
           {
+            "source": "foundation/observer-edges-and-mutual-opacity",
+            "context": "Horizon Gauge Shell"
+          },
+          {
             "source": "foundation/observer-holographic-equivalence",
+            "context": "Horizon Gauge Shell"
+          },
+          {
+            "source": "foundation/observer-pattern-signal",
             "context": "Horizon Gauge Shell"
           },
           {
@@ -15622,6 +16546,8 @@
         "cosmology/geometric-substrate",
         "foundation/error-correction-and-standard-model",
         "foundation/formation-and-preservation",
+        "foundation/observer-edges-and-mutual-opacity",
+        "foundation/observer-pattern-signal",
         "particles/three-generations"
       ],
       "steps": [
@@ -15875,14 +16801,18 @@
           },
           {
             "source": "foundation/formation-and-preservation",
-            "context": "formation"
-          },
-          {
-            "source": "foundation/formation-and-preservation",
             "context": "Mass Hierarchy"
           },
           {
             "source": "foundation/observer-as-error-correcting-code",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "source": "foundation/observer-edges-and-mutual-opacity",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "source": "foundation/observer-pattern-signal",
             "context": "Mass Hierarchy"
           },
           {
@@ -17541,6 +18471,10 @@
             "context": "Entanglement"
           },
           {
+            "source": "foundation/observer-edges-and-mutual-opacity",
+            "context": "Entanglement"
+          },
+          {
             "source": "foundation/observer-holographic-equivalence",
             "context": "Entanglement"
           },
@@ -19043,6 +19977,10 @@
             "context": "Einstein Field Equations"
           },
           {
+            "source": "foundation/profile-dependent-edges-and-confinement",
+            "context": "Einstein Field Equations"
+          },
+          {
             "source": "gauge/electromagnetism",
             "context": "Einstein Field Equations"
           },
@@ -19762,6 +20700,10 @@
         "incoming": [
           {
             "source": "cosmology/geometric-inflation",
+            "context": "Gravity"
+          },
+          {
+            "source": "foundation/profile-dependent-edges-and-confinement",
             "context": "Gravity"
           },
           {
@@ -20951,6 +21893,7 @@
       ],
       "dependedOnBy": [
         "cosmology/dark-energy-equation-of-state",
+        "foundation/observer-edges-and-mutual-opacity",
         "foundation/observer-holographic-equivalence",
         "thermodynamics-ext/fisher-metric"
       ],
@@ -21157,7 +22100,7 @@
             "context": "Theorem 2.1"
           },
           {
-            "source": "foundation/formation-and-preservation",
+            "source": "foundation/observer-edges-and-mutual-opacity",
             "context": "Distinguishability Conservation"
           },
           {
@@ -21435,6 +22378,7 @@
       "dependedOnBy": [
         "foundation/coherence-lagrangian",
         "foundation/continuous-discrete-duality",
+        "foundation/observer-edges-and-mutual-opacity",
         "foundation/observer-level-stack-compactness",
         "spacetime/gravitational-constant",
         "thermodynamics/action-planck"
@@ -21660,6 +22604,10 @@
           {
             "source": "foundation/continuous-discrete-duality",
             "context": "Fisher Metric"
+          },
+          {
+            "source": "foundation/observer-edges-and-mutual-opacity",
+            "context": "Fisher Information Metric"
           },
           {
             "source": "foundation/observer-level-stack-compactness",
@@ -22484,6 +23432,7 @@
       ],
       "dependedOnBy": [
         "foundation/coherence-lagrangian",
+        "foundation/observer-pattern-signal",
         "holography/area-scaling",
         "quantum/born-rule",
         "spacetime/gravitational-constant",
@@ -22770,6 +23719,10 @@
           {
             "source": "foundation/coherence-lagrangian",
             "context": "Theorem 5.1"
+          },
+          {
+            "source": "foundation/observer-pattern-signal",
+            "context": "Action and Planck's Constant"
           },
           {
             "source": "gauge/anomaly-cancellation",
@@ -27616,73 +28569,87 @@
     },
     {
       "derivationId": "foundation/formation-and-preservation",
-      "type": "Proposition",
+      "type": "Definition",
       "id": "1.3",
-      "name": "Both conditions required for observer existence",
-      "fullRef": "foundation/formation-and-preservation:Proposition 1.3"
+      "name": "Detection",
+      "fullRef": "foundation/formation-and-preservation:Definition 1.3"
     },
     {
       "derivationId": "foundation/formation-and-preservation",
       "type": "Proposition",
       "id": "2.1",
-      "name": "WKB exponential form",
+      "name": "Formation ≠ Preservation",
       "fullRef": "foundation/formation-and-preservation:Proposition 2.1"
     },
     {
       "derivationId": "foundation/formation-and-preservation",
       "type": "Proposition",
+      "id": "2.2",
+      "name": "Preservation ≠ Detection",
+      "fullRef": "foundation/formation-and-preservation:Proposition 2.2"
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "type": "Proposition",
+      "id": "2.3",
+      "name": "Formation ≠ Detection",
+      "fullRef": "foundation/formation-and-preservation:Proposition 2.3"
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "type": "Proposition",
       "id": "3.1",
-      "name": "QEC candidate simplifies algebraically",
+      "name": "Formation is necessary",
       "fullRef": "foundation/formation-and-preservation:Proposition 3.1"
     },
     {
       "derivationId": "foundation/formation-and-preservation",
       "type": "Proposition",
+      "id": "3.2",
+      "name": "Preservation is necessary",
+      "fullRef": "foundation/formation-and-preservation:Proposition 3.2"
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "type": "Proposition",
+      "id": "3.3",
+      "name": "Detection is necessary",
+      "fullRef": "foundation/formation-and-preservation:Proposition 3.3"
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "type": "Corollary",
+      "id": "3.4",
+      "name": "Tripartite necessity",
+      "fullRef": "foundation/formation-and-preservation:Corollary 3.4"
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "type": "Proposition",
       "id": "4.1",
-      "name": "Linear identifications fail",
+      "name": "Joint sufficiency",
       "fullRef": "foundation/formation-and-preservation:Proposition 4.1"
     },
     {
       "derivationId": "foundation/formation-and-preservation",
       "type": "Proposition",
-      "id": "4.2",
-      "name": "Monomial identifications fail",
-      "fullRef": "foundation/formation-and-preservation:Proposition 4.2"
-    },
-    {
-      "derivationId": "foundation/formation-and-preservation",
-      "type": "Corollary",
       "id": "5.1",
-      "name": "Two conditions, not one",
-      "fullRef": "foundation/formation-and-preservation:Corollary 5.1"
-    },
-    {
-      "derivationId": "foundation/formation-and-preservation",
-      "type": "Corollary",
-      "id": "5.2",
-      "name": "Mass selection is WKB's role",
-      "fullRef": "foundation/formation-and-preservation:Corollary 5.2"
-    },
-    {
-      "derivationId": "foundation/formation-and-preservation",
-      "type": "Corollary",
-      "id": "5.3",
-      "name": "QEC is the consistency framework",
-      "fullRef": "foundation/formation-and-preservation:Corollary 5.3"
-    },
-    {
-      "derivationId": "foundation/formation-and-preservation",
-      "type": "Corollary",
-      "id": "5.4",
-      "name": "S1 of Mass Hierarchy is unchanged by the error-correction program",
-      "fullRef": "foundation/formation-and-preservation:Corollary 5.4"
+      "name": "Margin as exponential-over-logarithmic",
+      "fullRef": "foundation/formation-and-preservation:Proposition 5.1"
     },
     {
       "derivationId": "foundation/formation-and-preservation",
       "type": "Proposition",
       "id": "6.1",
-      "name": "Margin as exponential-over-logarithmic",
+      "name": "SM satisfies all three conditions",
       "fullRef": "foundation/formation-and-preservation:Proposition 6.1"
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "type": "Proposition",
+      "id": "6.3",
+      "name": "Color-neutral hadrons satisfy all three",
+      "fullRef": "foundation/formation-and-preservation:Proposition 6.3"
     },
     {
       "derivationId": "foundation/knot-theoretic-bootstrap",
@@ -27937,6 +28904,97 @@
       "fullRef": "foundation/observer-as-error-correcting-code:Corollary 5.4"
     },
     {
+      "derivationId": "foundation/observer-edges-and-mutual-opacity",
+      "type": "Proposition",
+      "id": "1.1",
+      "name": "Heisenberg-like resolution from coherence",
+      "fullRef": "foundation/observer-edges-and-mutual-opacity:Proposition 1.1"
+    },
+    {
+      "derivationId": "foundation/observer-edges-and-mutual-opacity",
+      "type": "Definition",
+      "id": "2.1",
+      "name": "Operational edge",
+      "fullRef": "foundation/observer-edges-and-mutual-opacity:Definition 2.1"
+    },
+    {
+      "derivationId": "foundation/observer-edges-and-mutual-opacity",
+      "type": "Proposition",
+      "id": "2.2",
+      "name": "Explicit edge equation",
+      "fullRef": "foundation/observer-edges-and-mutual-opacity:Proposition 2.2"
+    },
+    {
+      "derivationId": "foundation/observer-edges-and-mutual-opacity",
+      "type": "Theorem",
+      "id": "3.1",
+      "name": "Same-mass edge at Compton",
+      "fullRef": "foundation/observer-edges-and-mutual-opacity:Theorem 3.1"
+    },
+    {
+      "derivationId": "foundation/observer-edges-and-mutual-opacity",
+      "type": "Corollary",
+      "id": "3.2",
+      "name": "Exact mass-independence in Compton units",
+      "fullRef": "foundation/observer-edges-and-mutual-opacity:Corollary 3.2"
+    },
+    {
+      "derivationId": "foundation/observer-edges-and-mutual-opacity",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Asymmetric edge — analytic limits",
+      "fullRef": "foundation/observer-edges-and-mutual-opacity:Proposition 4.1"
+    },
+    {
+      "derivationId": "foundation/observer-edges-and-mutual-opacity",
+      "type": "Corollary",
+      "id": "4.3",
+      "name": "Massless mediators give formally infinite edge",
+      "fullRef": "foundation/observer-edges-and-mutual-opacity:Corollary 4.3"
+    },
+    {
+      "derivationId": "foundation/observer-edges-and-mutual-opacity",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "Symmetry of the edge condition for same-mass pairs",
+      "fullRef": "foundation/observer-edges-and-mutual-opacity:Proposition 5.1"
+    },
+    {
+      "derivationId": "foundation/observer-edges-and-mutual-opacity",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "Horizon-integer mechanism — symmetric",
+      "fullRef": "foundation/observer-edges-and-mutual-opacity:Proposition 6.1"
+    },
+    {
+      "derivationId": "foundation/observer-edges-and-mutual-opacity",
+      "type": "Proposition",
+      "id": "6.2",
+      "name": "Detection-threshold mechanism",
+      "fullRef": "foundation/observer-edges-and-mutual-opacity:Proposition 6.2"
+    },
+    {
+      "derivationId": "foundation/observer-edges-and-mutual-opacity",
+      "type": "Theorem",
+      "id": "6.3",
+      "name": "Mutual Opacity — same-level pairs",
+      "fullRef": "foundation/observer-edges-and-mutual-opacity:Theorem 6.3"
+    },
+    {
+      "derivationId": "foundation/observer-edges-and-mutual-opacity",
+      "type": "Corollary",
+      "id": "6.4",
+      "name": "Cross-level opacity",
+      "fullRef": "foundation/observer-edges-and-mutual-opacity:Corollary 6.4"
+    },
+    {
+      "derivationId": "foundation/observer-edges-and-mutual-opacity",
+      "type": "Proposition",
+      "id": "7.1",
+      "name": "Integer channel inventory",
+      "fullRef": "foundation/observer-edges-and-mutual-opacity:Proposition 7.1"
+    },
+    {
       "derivationId": "foundation/observer-holographic-equivalence",
       "type": "Definition",
       "id": "1.1",
@@ -28070,6 +29128,83 @@
       "fullRef": "foundation/observer-level-stack-compactness:Proposition 2.1"
     },
     {
+      "derivationId": "foundation/observer-pattern-signal",
+      "type": "Definition",
+      "id": "1.1",
+      "name": "Pattern signal",
+      "fullRef": "foundation/observer-pattern-signal:Definition 1.1"
+    },
+    {
+      "derivationId": "foundation/observer-pattern-signal",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "Observer sources the coherence field",
+      "fullRef": "foundation/observer-pattern-signal:Proposition 1.2"
+    },
+    {
+      "derivationId": "foundation/observer-pattern-signal",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "Coherence field satisfies Klein-Gordon",
+      "fullRef": "foundation/observer-pattern-signal:Proposition 2.1"
+    },
+    {
+      "derivationId": "foundation/observer-pattern-signal",
+      "type": "Proposition",
+      "id": "2.2",
+      "name": "Static form",
+      "fullRef": "foundation/observer-pattern-signal:Proposition 2.2"
+    },
+    {
+      "derivationId": "foundation/observer-pattern-signal",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Green's function of the static Klein-Gordon operator",
+      "fullRef": "foundation/observer-pattern-signal:Proposition 3.1"
+    },
+    {
+      "derivationId": "foundation/observer-pattern-signal",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Pattern signal for a point-source observer",
+      "fullRef": "foundation/observer-pattern-signal:Proposition 4.1"
+    },
+    {
+      "derivationId": "foundation/observer-pattern-signal",
+      "type": "Corollary",
+      "id": "4.3",
+      "name": "Dimensionless form",
+      "fullRef": "foundation/observer-pattern-signal:Corollary 4.3"
+    },
+    {
+      "derivationId": "foundation/observer-pattern-signal",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "Gauge-channel contributions",
+      "fullRef": "foundation/observer-pattern-signal:Proposition 6.1"
+    },
+    {
+      "derivationId": "foundation/observer-pattern-signal",
+      "type": "Proposition",
+      "id": "6.2",
+      "name": "Massless mediator limit — Coulomb tails",
+      "fullRef": "foundation/observer-pattern-signal:Proposition 6.2"
+    },
+    {
+      "derivationId": "foundation/observer-pattern-signal",
+      "type": "Proposition",
+      "id": "6.3",
+      "name": "Composite pattern signal",
+      "fullRef": "foundation/observer-pattern-signal:Proposition 6.3"
+    },
+    {
+      "derivationId": "foundation/observer-pattern-signal",
+      "type": "Proposition",
+      "id": "7.1",
+      "name": "Color channel effective Yukawa for color-neutral composites",
+      "fullRef": "foundation/observer-pattern-signal:Proposition 7.1"
+    },
+    {
       "derivationId": "foundation/observer-projected-spacetime",
       "type": "Definition",
       "id": "1.1",
@@ -28152,6 +29287,90 @@
       "id": "6.3",
       "name": "The $\\Lambda$ hierarchy is the obstruction class",
       "fullRef": "foundation/observer-projected-spacetime:Proposition 6.3"
+    },
+    {
+      "derivationId": "foundation/profile-dependent-edges-and-confinement",
+      "type": "Proposition",
+      "id": "1.1",
+      "name": "Composite edge equation",
+      "fullRef": "foundation/profile-dependent-edges-and-confinement:Proposition 1.1"
+    },
+    {
+      "derivationId": "foundation/profile-dependent-edges-and-confinement",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "Short-range dominance",
+      "fullRef": "foundation/profile-dependent-edges-and-confinement:Proposition 2.1"
+    },
+    {
+      "derivationId": "foundation/profile-dependent-edges-and-confinement",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Long-distance edge determined by EM",
+      "fullRef": "foundation/profile-dependent-edges-and-confinement:Proposition 3.1"
+    },
+    {
+      "derivationId": "foundation/profile-dependent-edges-and-confinement",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Color channel has no Yukawa-like isolated-source form",
+      "fullRef": "foundation/profile-dependent-edges-and-confinement:Proposition 4.1"
+    },
+    {
+      "derivationId": "foundation/profile-dependent-edges-and-confinement",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "Edge equation fails for isolated color-charged source",
+      "fullRef": "foundation/profile-dependent-edges-and-confinement:Proposition 5.1"
+    },
+    {
+      "derivationId": "foundation/profile-dependent-edges-and-confinement",
+      "type": "Corollary",
+      "id": "5.3",
+      "name": "Free quark is not a viable isolated observer",
+      "fullRef": "foundation/profile-dependent-edges-and-confinement:Corollary 5.3"
+    },
+    {
+      "derivationId": "foundation/profile-dependent-edges-and-confinement",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "Color-neutral composites have terminating flux tubes",
+      "fullRef": "foundation/profile-dependent-edges-and-confinement:Proposition 6.1"
+    },
+    {
+      "derivationId": "foundation/profile-dependent-edges-and-confinement",
+      "type": "Proposition",
+      "id": "6.2",
+      "name": "Exterior color signal Yukawa-screened at $\\Lambda_{\\mathrm{QCD}}$",
+      "fullRef": "foundation/profile-dependent-edges-and-confinement:Proposition 6.2"
+    },
+    {
+      "derivationId": "foundation/profile-dependent-edges-and-confinement",
+      "type": "Proposition",
+      "id": "6.3",
+      "name": "Hadron edge is at the hadron scale",
+      "fullRef": "foundation/profile-dependent-edges-and-confinement:Proposition 6.3"
+    },
+    {
+      "derivationId": "foundation/profile-dependent-edges-and-confinement",
+      "type": "Theorem",
+      "id": "7.1",
+      "name": "Confinement from edge-viability",
+      "fullRef": "foundation/profile-dependent-edges-and-confinement:Theorem 7.1"
+    },
+    {
+      "derivationId": "foundation/profile-dependent-edges-and-confinement",
+      "type": "Proposition",
+      "id": "8.1",
+      "name": "Yukawa range formula",
+      "fullRef": "foundation/profile-dependent-edges-and-confinement:Proposition 8.1"
+    },
+    {
+      "derivationId": "foundation/profile-dependent-edges-and-confinement",
+      "type": "Theorem",
+      "id": "8.2",
+      "name": "Observed range hierarchy matches framework prediction",
+      "fullRef": "foundation/profile-dependent-edges-and-confinement:Theorem 8.2"
     },
     {
       "derivationId": "foundation/substrate-noise-and-profile-coupling",
@@ -34893,36 +36112,50 @@
       "derivationId": "foundation/formation-and-preservation",
       "derivationStatus": "provisional",
       "number": 1,
-      "title": "Joint fixed-point formalization.",
-      "description": "Formalize the joint-fixed-point alternative to simple-functional identification as described in Open thread 7.1. This would require extending [Bootstrap Fixed-Point Existence](/derivations/foundation/"
+      "title": "Framework-completeness of the triplet.",
+      "description": "Joint sufficiency (Proposition 4.1) asserts no fourth viability axis; this is not proved. Investigating whether bootstrap composition, internal consistency (Axiom 3 loop closure), or other framework c"
     },
     {
       "derivationId": "foundation/formation-and-preservation",
       "derivationStatus": "provisional",
       "number": 2,
-      "title": "Coherence Lagrangian common-saddle analysis.",
-      "description": "Explicitly compute WKB and QEC as different boundary-condition regimes of one Coherence Lagrangian calculation (Open thread 7.2). Does not reduce the two mechanisms but would show they have one origin"
+      "title": "Per-particle verification.",
+      "description": "For each SM particle, compute (F), (P), (D) quantitatively and verify simultaneous satisfaction. This would provide a framework-level prediction of the SM mass spectrum given the three mechanisms as i"
     },
     {
       "derivationId": "foundation/formation-and-preservation",
       "derivationStatus": "provisional",
       "number": 3,
-      "title": "Shared-facts distinguishability derivation.",
-      "description": "Derive the profile's logical-bit content clogic(IA) from distinguishability-conservation principles, and check whether the same quantity appears in WKB's barrier-width definition (Open thread 7.3). *D"
+      "title": "Non-SM profiles.",
+      "description": "Could there be profiles satisfying (F) ∧ (P) ∧ (D) that we have not observed — hypothetical dark matter candidates, other stable structures? The triplet predicts the set of viable observers; matching "
     },
     {
       "derivationId": "foundation/formation-and-preservation",
       "derivationStatus": "provisional",
       "number": 4,
-      "title": "Mass-information reversal above bootstrap level 3.",
-      "description": "[Mass Hierarchy](/derivations/particles/mass-hierarchy) §7 argues that at bootstrap levels beyond O (n > 3), particle identity transitions from topological to structural encoding, reversing the mass-i"
+      "title": "Composite observers and cross-level viability.",
+      "description": "Bootstrap composition creates higher-level observers from collections of lower-level ones. Whether the higher-level observer's viability requires its own (F), (P), (D) satisfaction independently is a "
     },
     {
       "derivationId": "foundation/formation-and-preservation",
       "derivationStatus": "provisional",
       "number": 5,
-      "title": "Explicit formation-rate check at SM masses.",
-      "description": "The complementarity statement establishes both conditions must hold but does not compute Pform numerically for each SM particle. A quantitative check — does the WKB-selected mass satisfy Pform V4cosmo"
+      "title": "Macroscopic observers and mass-information reversal.",
+      "description": "[Mass Hierarchy](/derivations/particles/mass-hierarchy) §7 notes a mass-information reversal at bootstrap level 3: composite observers transition from topological to structural encoding. The triplet a"
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "derivationStatus": "provisional",
+      "number": 6,
+      "title": "Relation to the bootstrap fixed-point structure.",
+      "description": "[Bootstrap Fixed-Point Existence](/derivations/foundation/bootstrap-fixed-point-existence) establishes the universe as a Kleene fixed point under compactness, dcpo, and Scott continuity prerequisites."
+    },
+    {
+      "derivationId": "foundation/formation-and-preservation",
+      "derivationStatus": "provisional",
+      "number": 7,
+      "title": "Coherence Lagrangian common-saddle analysis.",
+      "description": "Whether (F), (P), (D) can be understood as different boundary-condition regimes of one Coherence Lagrangian calculation — a shared-origin view that doesn't reduce them but shows common structural orig"
     },
     {
       "derivationId": "foundation/knot-theoretic-bootstrap",
@@ -35058,6 +36291,48 @@
       "description": "Given Gaps 2 and 3 (explicit HaPPY and Walker–Wang generators), verify directly that the three stabilizer groups pairwise commute on the substrate Hilbert space. Structural argument for commutation is"
     },
     {
+      "derivationId": "foundation/observer-edges-and-mutual-opacity",
+      "derivationStatus": "provisional",
+      "number": 1,
+      "title": "Precise Cramér-Rao normalization.",
+      "description": "The identification NA = mA c2 is dimensionally correct but the overall O(1) prefactor depends on specific Fisher-information normalization conventions. *Difficulty: MODERATE.*"
+    },
+    {
+      "derivationId": "foundation/observer-edges-and-mutual-opacity",
+      "derivationStatus": "provisional",
+      "number": 2,
+      "title": "Intermediate-distance (inside-edge) regime.",
+      "description": "For r < redge, mutual opacity does not hold — observers inside each other's edge can have partial continuous-content access. Coherent multi-observer phenomena (entanglement, superposition, interferenc"
+    },
+    {
+      "derivationId": "foundation/observer-edges-and-mutual-opacity",
+      "derivationStatus": "provisional",
+      "number": 3,
+      "title": "Multi-observer networks.",
+      "description": "The mutual opacity theorem is stated for pairs. For populations of 3+ observers, opacity is not simply pairwise — collective effects can persist even when all pairs are mutually opaque. *Difficulty: M"
+    },
+    {
+      "derivationId": "foundation/observer-edges-and-mutual-opacity",
+      "derivationStatus": "provisional",
+      "number": 4,
+      "title": "Rigorous QM-measurement embedding.",
+      "description": "Step 8's remarks identify measurement as an integer-channel readout between observer levels. A rigorous construction — specifying the apparatus's integer-channel structure, showing that Born-rule prob"
+    },
+    {
+      "derivationId": "foundation/observer-edges-and-mutual-opacity",
+      "derivationStatus": "provisional",
+      "number": 5,
+      "title": "Macroscopic observer regime.",
+      "description": "At the mass-information-reversal boundary (m sim LambdaQCD, [Mass Hierarchy](/derivations/particles/mass-hierarchy) §7), observers transition from topological to structural encoding. The detection-noi"
+    },
+    {
+      "derivationId": "foundation/observer-edges-and-mutual-opacity",
+      "derivationStatus": "provisional",
+      "number": 6,
+      "title": "Exhaustiveness of the integer channel inventory.",
+      "description": "Proposition 7.1 enumerates ten channels from existing framework derivations. A rigorous proof that no other integer channels exist would require classifying all topological / integer-valued inter-obse"
+    },
+    {
       "derivationId": "foundation/observer-holographic-equivalence",
       "derivationStatus": "provisional",
       "number": 1,
@@ -35163,6 +36438,41 @@
       "description": "Proposition 1.1 and 2.1 both rely on the holographic bound. [Area Scaling](/derivations/holography/area-scaling) itself carries Structural Postulate S1 (area-coherence saturation). Any promotion of S1"
     },
     {
+      "derivationId": "foundation/observer-pattern-signal",
+      "derivationStatus": "provisional",
+      "number": 1,
+      "title": "Precise amplitude coefficient.",
+      "description": "The overall O(1) prefactor in A(r) = mA c2 (rC,A/r) e-r/rC,A depends on the Lagrangian's source-coupling normalization convention. *Difficulty: MODERATE.*"
+    },
+    {
+      "derivationId": "foundation/observer-pattern-signal",
+      "derivationStatus": "provisional",
+      "number": 2,
+      "title": "Spinor (Dirac) extension.",
+      "description": "Extending to spinor observers requires the Dirac Lagrangian treatment; the pattern signal is expected to take a spinor-weighted form reducing to the scalar Yukawa in the spin-averaged limit. *Difficul"
+    },
+    {
+      "derivationId": "foundation/observer-pattern-signal",
+      "derivationStatus": "provisional",
+      "number": 3,
+      "title": "Short-distance substrate regularization.",
+      "description": "The 1/r Green's function singularity at r 0 is regulated at Planck scale by the substrate discretization ([Causal Set Statistics](/derivations/holography/causal-set-statistics)), but the precise match"
+    },
+    {
+      "derivationId": "foundation/observer-pattern-signal",
+      "derivationStatus": "provisional",
+      "number": 4,
+      "title": "Non-perturbative color-channel treatment.",
+      "description": "Proposition 7.1 uses a screened-coupling heuristic for color. A rigorous treatment via non-perturbative QCD or the framework's non-associativity confinement picture would pin down the color pattern si"
+    },
+    {
+      "derivationId": "foundation/observer-pattern-signal",
+      "derivationStatus": "provisional",
+      "number": 5,
+      "title": "Curved-regime Yukawa on $M_A$.",
+      "description": "The flat-spacetime Yukawa form is the leading-order result in the approximately-flat regime of MA. In the curved-regime (near horizons, near strong-coherence sources, at cosmological scales), the Klei"
+    },
+    {
       "derivationId": "foundation/observer-projected-spacetime",
       "derivationStatus": "provisional",
       "number": 1,
@@ -35203,6 +36513,34 @@
       "number": 6,
       "title": "Interaction with the continuous-discrete fixed point.",
       "description": "[Continuous-Discrete Duality](/derivations/foundation/continuous-discrete-duality) identifies the physical universe as the fixed point of mutual compatibility between the continuous and discrete layer"
+    },
+    {
+      "derivationId": "foundation/profile-dependent-edges-and-confinement",
+      "derivationStatus": "provisional",
+      "number": 1,
+      "title": "First-principles linear-potential derivation.",
+      "description": "The linear confinement potential V(r) sim sigma r is taken as input from standard QCD. A fully framework-internal first-principles derivation of sigma would tighten this derivation. *Difficulty: HARD;"
+    },
+    {
+      "derivationId": "foundation/profile-dependent-edges-and-confinement",
+      "derivationStatus": "provisional",
+      "number": 2,
+      "title": "Explicit hadron-edge computation.",
+      "description": "The hadron edge at sim 1 fm is asserted from the LambdaQCD screening scale. A specific computation for each hadron (proton, neutron, pion, Delta-baryon) deriving the precise redge as a function of qua"
+    },
+    {
+      "derivationId": "foundation/profile-dependent-edges-and-confinement",
+      "derivationStatus": "provisional",
+      "number": 3,
+      "title": "Short-range weak-channel dominance regime.",
+      "description": "At distances r sim rW, the weak channel is at its peak relative contribution. Deriving observed short-range weak physics (beta decay, neutrino interactions) from the framework's edge structure would b"
+    },
+    {
+      "derivationId": "foundation/profile-dependent-edges-and-confinement",
+      "derivationStatus": "provisional",
+      "number": 4,
+      "title": "Gravitational channel.",
+      "description": "A gravitational channel is not explicitly treated here. For macroscopic observers, gravitational effects can dominate the signal at large distances. Extending to gravitational signals requires integra"
     },
     {
       "derivationId": "foundation/substrate-noise-and-profile-coupling",

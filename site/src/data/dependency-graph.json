@@ -278,7 +278,7 @@
     },
     {
       "id": "interactions/bootstrap-division-algebras",
-      "title": "Bootstrap → Division Algebras",
+      "title": "Bootstrap \u2192 Division Algebras",
       "group": "dynamics",
       "status": "derived"
     },
@@ -482,7 +482,7 @@
     },
     {
       "id": "foundation/formation-and-preservation",
-      "title": "Formation and Preservation as Complementary Mechanisms",
+      "title": "Observer Viability: Formation, Preservation, and Detection",
       "group": "foundation",
       "status": "provisional"
     },
@@ -526,6 +526,24 @@
       "id": "thermodynamics-ext/memory-persistence-tradeoff",
       "title": "The Memory-Persistence Tradeoff",
       "group": "thermo-ext",
+      "status": "provisional"
+    },
+    {
+      "id": "foundation/observer-pattern-signal",
+      "title": "Observer Pattern Signal",
+      "group": "foundation",
+      "status": "provisional"
+    },
+    {
+      "id": "foundation/observer-edges-and-mutual-opacity",
+      "title": "Observer Edges and Mutual Opacity",
+      "group": "foundation",
+      "status": "provisional"
+    },
+    {
+      "id": "foundation/profile-dependent-edges-and-confinement",
+      "title": "Profile-Dependent Edges and Confinement",
+      "group": "foundation",
       "status": "provisional"
     }
   ],
@@ -1539,10 +1557,6 @@
       "to": "foundation/observer-holographic-equivalence"
     },
     {
-      "from": "foundation/knot-theoretic-bootstrap",
-      "to": "foundation/observer-holographic-equivalence"
-    },
-    {
       "from": "axioms/observer-definition",
       "to": "foundation/minimum-bootstrap-closure"
     },
@@ -1789,6 +1803,82 @@
     {
       "from": "interactions/moufang-loop-phase-closure",
       "to": "foundation/error-correction-and-standard-model"
+    },
+    {
+      "from": "foundation/coherence-lagrangian",
+      "to": "foundation/observer-pattern-signal"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "foundation/observer-pattern-signal"
+    },
+    {
+      "from": "particles/mass-hierarchy",
+      "to": "foundation/observer-pattern-signal"
+    },
+    {
+      "from": "thermodynamics/action-planck",
+      "to": "foundation/observer-pattern-signal"
+    },
+    {
+      "from": "foundation/observer-as-error-correcting-code",
+      "to": "foundation/observer-pattern-signal"
+    },
+    {
+      "from": "foundation/observer-pattern-signal",
+      "to": "foundation/observer-edges-and-mutual-opacity"
+    },
+    {
+      "from": "foundation/observer-holographic-equivalence",
+      "to": "foundation/observer-edges-and-mutual-opacity"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "foundation/observer-edges-and-mutual-opacity"
+    },
+    {
+      "from": "particles/mass-hierarchy",
+      "to": "foundation/observer-edges-and-mutual-opacity"
+    },
+    {
+      "from": "thermodynamics-ext/fisher-metric",
+      "to": "foundation/observer-edges-and-mutual-opacity"
+    },
+    {
+      "from": "thermodynamics-ext/distinguishability-conservation",
+      "to": "foundation/observer-edges-and-mutual-opacity"
+    },
+    {
+      "from": "foundation/observer-pattern-signal",
+      "to": "foundation/profile-dependent-edges-and-confinement"
+    },
+    {
+      "from": "foundation/observer-edges-and-mutual-opacity",
+      "to": "foundation/profile-dependent-edges-and-confinement"
+    },
+    {
+      "from": "gauge/confinement",
+      "to": "foundation/profile-dependent-edges-and-confinement"
+    },
+    {
+      "from": "foundation/substrate-noise-and-profile-coupling",
+      "to": "foundation/profile-dependent-edges-and-confinement"
+    },
+    {
+      "from": "gauge/color-force",
+      "to": "foundation/profile-dependent-edges-and-confinement"
+    },
+    {
+      "from": "foundation/observer-pattern-signal",
+      "to": "foundation/formation-and-preservation"
+    },
+    {
+      "from": "foundation/observer-edges-and-mutual-opacity",
+      "to": "foundation/formation-and-preservation"
+    },
+    {
+      "from": "foundation/profile-dependent-edges-and-confinement",
+      "to": "foundation/formation-and-preservation"
     }
   ]
 }

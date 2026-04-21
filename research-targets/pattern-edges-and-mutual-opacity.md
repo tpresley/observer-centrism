@@ -1,8 +1,19 @@
 # Pattern Edges and Mutual Opacity
 
-**Type**: Research target (hypothesis, not yet formalized)
-**Status**: Informally articulated, not formalized
-**Last updated**: 2026-04-20
+**Type**: Research target (historical record — program complete)
+**Status**: Consolidated into framework derivations; this document retained for historical reference
+**Last updated**: 2026-04-21
+
+> **Note (2026-04-21).** This research program is complete. Its findings have been consolidated into four framework derivations:
+>
+> - [Observer Pattern Signal](../site/src/content/derivations/foundation/observer-pattern-signal.md) — Yukawa signal form from the Coherence Lagrangian.
+> - [Observer Edges and Mutual Opacity](../site/src/content/derivations/foundation/observer-edges-and-mutual-opacity.md) — detection-noise edge at Compton scale; symmetric mutual opacity.
+> - [Profile-Dependent Edges and Confinement](../site/src/content/derivations/foundation/profile-dependent-edges-and-confinement.md) — multi-channel composite edges; confinement as edge pathology.
+> - [Observer Viability: Formation, Preservation, and Detection](../site/src/content/derivations/foundation/formation-and-preservation.md) — the tripartite viability theorem, extending the earlier Formation-and-Preservation pair theorem with detection as the third mechanism.
+>
+> Additionally, [Observer Holographic Equivalence](../site/src/content/derivations/foundation/observer-holographic-equivalence.md) was extended with Corollary 4.5bis (symmetric interior cancellation), and [Confinement](../site/src/content/derivations/gauge/confinement.md) and [Substrate Noise and Profile-Dependent Coupling Modulation](../site/src/content/derivations/foundation/substrate-noise-and-profile-coupling.md) received cross-reference notes acknowledging the three-way consistency of confinement arguments.
+>
+> The document below is retained as a historical record of the research program — including its initial substrate-noise formulation (replaced during Formalization 2 by a detection-noise formulation consistent with the framework's observer-centrism), the edge fixed-point isomorphism conjecture (found to have no positive solution, productively redirecting to the tripartite viability theorem), and its revision notes. The canonical framework content is in the four derivations listed above.
 
 ## The hypothesis
 

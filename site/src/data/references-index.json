@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-04-20T07:11:37.123Z",
-    "totalReferences": 102,
-    "totalCitations": 117,
-    "citingFiles": 49,
+    "generatedAt": "2026-04-21T21:53:20.091Z",
+    "totalReferences": 103,
+    "totalCitations": 118,
+    "citingFiles": 50,
     "generator": "scripts/extract-references.mjs"
   },
   "categoryNames": {
@@ -39,7 +39,7 @@
     },
     "quantum-information": {
       "name": "Quantum Information",
-      "count": 18
+      "count": 19
     },
     "field-theory": {
       "name": "Field Theory",
@@ -569,6 +569,21 @@
         {
           "derivationId": "foundation/knot-theoretic-bootstrap",
           "title": "Knot-Theoretic Bootstrap"
+        }
+      ],
+      "category": "quantum-information"
+    },
+    {
+      "id": "yukawa-1935",
+      "authors": "Yukawa",
+      "year": 1935,
+      "citedAs": [
+        "Yukawa 1935"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "foundation/observer-pattern-signal",
+          "title": "Observer Pattern Signal"
         }
       ],
       "category": "quantum-information"
