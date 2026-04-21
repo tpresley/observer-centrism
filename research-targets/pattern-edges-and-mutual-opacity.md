@@ -6,11 +6,13 @@
 
 ## The hypothesis
 
-**Observer edges are operational, not ontic. An observer's boundary is located where its pattern's signal drops to the substrate's noise floor — and this is symmetric, so each observer's interior is mutually invisible to every other observer except through the integer residues its surface projects.**
+**Observer edges are operational, not ontic. An observer's boundary is located where another observer's pattern signal drops to the detecting observer's own resolution floor — and this is symmetric, so each observer's interior is mutually invisible to every other observer except through the integer residues its surface projects.**
 
-The framework already treats observers as patterns rather than things (coherence configurations in the dual framing of [Observer as an Error-Correcting Code](../site/src/content/derivations/foundation/observer-as-error-correcting-code.md), triples $(\Sigma, I, B)$ in [Observer Definition](../site/src/content/derivations/axioms/observer-definition.md)). Whirlpools are a better intuition than solid objects. But the framework has not yet stated explicitly *where* the pattern ends and *how* that location depends on the substrate — the questions that drive the rest of this target.
+The framework already treats observers as patterns rather than things (coherence configurations in the dual framing of [Observer as an Error-Correcting Code](../site/src/content/derivations/foundation/observer-as-error-correcting-code.md), triples $(\Sigma, I, B)$ in [Observer Definition](../site/src/content/derivations/axioms/observer-definition.md)). Whirlpools are a better intuition than solid objects. But the framework has not yet stated explicitly *where* the pattern ends and *how* that location depends on the detecting observer — the questions that drive the rest of this target.
 
-The proposed answer: the edge is the locus where pattern signal crosses substrate noise, and below that crossover the pattern content is operationally invisible (on either side). This makes the familiar horizon radius $r_H \sim \hbar/(mc)$ not a Schwarzschild-by-analogy substitution but a structural consequence of signal-to-noise geometry, makes confinement a profile-specific edge-collapse, and makes the fact that "observers only access each other through well-defined surface channels" a theorem rather than a convention.
+The proposed answer: the edge is the locus where the signal from observer B reaches the detecting observer A's Heisenberg-like resolution threshold $\mathcal{N}_A = m_A c^2$ (set by $A$'s coherence content via Identification 5.3 of [Observer Definition](../site/src/content/derivations/axioms/observer-definition.md)). Below that crossover the pattern content is operationally invisible (on either side). This makes the familiar horizon radius $r_H \sim \hbar/(mc)$ not a Schwarzschild-by-analogy substitution but a structural consequence of signal-to-resolution geometry, makes confinement a profile-specific edge-collapse, and makes the fact that "observers only access each other through well-defined surface channels" a theorem rather than a convention.
+
+**Note on the "noise floor" language** (added 2026-04-20 during Formalization 2 work). An earlier draft of this target referred to a substrate noise floor as the comparator for the edge definition. Under the framework's observer-centrism, only observers and their relations are epistemically primary ([Observer Holographic Equivalence](../site/src/content/derivations/foundation/observer-holographic-equivalence.md) Corollary 4.6 — operational completeness of the sheaf), and a "substrate noise floor" as a free-standing ontological entity is a category error. The correct formulation is: the noise the observer *actually experiences* for the purpose of detection is its own Heisenberg-like resolution limit $m_A c^2$, set by the Cramér-Rao bound on its internal Fisher information. This separates two operationally distinct regimes cleanly: **preservation noise** (substrate bit-flips on the observer's QEC code, filtered through profile — the $p_{\mathrm{phys}}^{\mathrm{eff}}$ of [Substrate Noise and Profile-Dependent Coupling Modulation](../site/src/content/derivations/foundation/substrate-noise-and-profile-coupling.md)) and **detection noise** (observer's own resolution on external signals — the $m_A c^2$ used here). Both are real; they govern different things. The research program below uses detection noise; Formation & Preservation uses preservation noise.
 
 ## Why the hypothesis is plausible
 
@@ -44,7 +46,7 @@ Each piece is a separate framework commitment. The hypothesis says they share on
 
 If the hypothesis is correct:
 
-1. **Compton/horizon radius as signal-to-noise crossover.** For a fundamental particle with mass $m$, the pattern signal decays as some power of $r$ (to be derived, plausibly $1/r$ or $1/r^2$) with amplitude set by $m c^2$. Crossing the noise floor $\alpha_H \hbar/\tau_P$ at radius $r$ gives $r_{\mathrm{edge}}(m) \sim \hbar/(mc)$ up to O(1) factors — the Compton wavelength, structurally.
+1. **Compton/horizon radius as signal-to-resolution crossover.** For a fundamental particle with mass $m$, the pattern signal decays as some form of $r$ (Yukawa for massive, Coulomb-like for massless mediators) with amplitude set by $m c^2$. Crossing the detecting observer's resolution $m_A c^2$ at radius $r$ gives $r_{\mathrm{edge}}(m) \sim \hbar/(mc)$ up to O(1) factors for same-mass pairs — the Compton wavelength, structurally. **Note**: under the detection-noise formulation (added 2026-04-20), the edge at 0.57 $r_C$ is a structurally-distinct quantity from the horizon at $\pi r_C$, differing by an O(1) factor; both are Compton-scale but they measure different physical thresholds (resolution-crossing vs. antichain-saturation).
 
 2. **Coupling-dependent effective edges.** Profiles with stronger gauge couplings have shrunk effective edges. Specifically: $r_{\mathrm{edge}}^{\mathrm{eff}}(\mathcal{I}_A) < r_H(m_A)$ when $p_{\mathrm{phys}}^{\mathrm{eff}}(\mathcal{I}_A) > p_{\mathrm{phys}}^{\mathrm{geom}}$.
 
@@ -86,13 +88,13 @@ Concrete derivations that would realize the hypothesis:
 
 **Expected form** (to be verified, not assumed): $A(r) \sim mc^2 \cdot f(r/r_0)$ where $f$ is a specific decay function and $r_0$ is a profile-specific scale. Possibilities: $f(x) \sim e^{-x}$ (exponential decay, characteristic of massive fields), $f(x) \sim 1/x$ (long-range decay, characteristic of massless fields), or profile-dependent mixtures.
 
-### 2. Observer edge as signal-to-noise crossover
+### 2. Observer edge as signal-resolution crossover
 
-**Task**: Define the operational edge of an observer as the radius where pattern signal amplitude equals substrate noise floor. Verify that this matches the framework's null horizon $r_H \sim \hbar/(mc)$ at the level of fundamental particles.
+**Task**: Define the operational edge of an observer as the radius where the pattern signal reaches the detecting observer's Heisenberg-like resolution threshold. Verify that this matches the framework's Compton scale at the level of fundamental particles.
 
-**Tools**: Formalization 1 above + [Holographic Noise](../site/src/content/predictions/holographic-noise.md) amplitude + [Substrate Noise and Profile-Dependent Coupling Modulation](../site/src/content/derivations/foundation/substrate-noise-and-profile-coupling.md) profile-dependent noise.
+**Tools**: Formalization 1 above + [Observer Definition](../site/src/content/derivations/axioms/observer-definition.md) Identification 5.3 ($\mathcal{C}(\Sigma) = \|I\|$) + [Mass Hierarchy](../site/src/content/derivations/particles/mass-hierarchy.md) Definition 1.1 ($m = \hbar\omega/c^2$).
 
-**Output**: $r_{\mathrm{edge}}(\mathcal{I}_A) = \{r : A(r; \mathcal{I}_A) = \mathcal{N}(\mathcal{I}_A)\}$ where $\mathcal{N}$ is the profile's effective noise floor. Comparison to Compton $\hbar/(mc)$ and Schwarzschild $2Gm/c^2$ radii across mass regimes.
+**Output**: $r_{\mathrm{edge}}(B; A) = \{r : A_B(r) = m_A c^2\}$ where $A_B(r)$ is B's pattern signal at A's location (Formalization 1) and $m_A c^2$ is A's detection resolution. The edge is bidirectional: for same-mass pairs, $r_{\mathrm{edge}} \sim r_C$ exactly (Compton-scale). Comparison to horizon $r_H = \pi r_C$ and Schwarzschild $2Gm/c^2$ radii across mass regimes.
 
 ### 3. Mutual opacity theorem
 
