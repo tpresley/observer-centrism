@@ -1,22 +1,22 @@
 {
   "meta": {
-    "generatedAt": "2026-04-21T21:53:19.842Z",
-    "derivationCount": 91,
+    "generatedAt": "2026-04-22T09:54:43.077Z",
+    "derivationCount": 93,
     "predictionCount": 12,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
   },
   "stats": {
     "byStatus": {
-      "derived": 27,
+      "derived": 29,
       "provisional": 63,
       "draft": 1
     },
-    "derivationCount": 91,
+    "derivationCount": 93,
     "predictionCount": 12,
-    "edgeCount": 333,
-    "formalObjectCount": 1325,
-    "openGapCount": 327,
+    "edgeCount": 349,
+    "formalObjectCount": 1362,
+    "openGapCount": 328,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -527,6 +527,10 @@
             "context": "Coherence Conservation"
           },
           {
+            "source": "thermodynamics-ext/quantum-fisher-metric",
+            "context": "Coherence Conservation"
+          },
+          {
             "source": "thermodynamics/action-planck",
             "context": "Coherence Conservation"
           },
@@ -567,7 +571,9 @@
         "quantum/born-rule"
       ],
       "enablesDerivation": [],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "thermodynamics-ext/quantum-fisher-metric"
+      ],
       "steps": [
         {
           "number": 1,
@@ -704,6 +710,10 @@
           },
           {
             "source": "thermodynamics-ext/fisher-metric",
+            "context": "Coherence as Physical Primitive"
+          },
+          {
+            "source": "thermodynamics-ext/quantum-fisher-metric",
             "context": "Coherence as Physical Primitive"
           },
           {
@@ -1103,6 +1113,10 @@
             "context": "Loop Closure"
           },
           {
+            "source": "foundation/spinor-coherence-lagrangian",
+            "context": "Loop Closure"
+          },
+          {
             "source": "gauge/color-force",
             "context": "Corollary 4.3"
           },
@@ -1211,6 +1225,10 @@
             "context": "Loop Closure"
           },
           {
+            "source": "thermodynamics-ext/quantum-fisher-metric",
+            "context": "Loop Closure"
+          },
+          {
             "source": "thermodynamics-ext/renormalization",
             "context": "Loop Closure"
           },
@@ -1266,6 +1284,7 @@
         "foundation/observer-level-stack-compactness",
         "foundation/observer-pattern-signal",
         "foundation/observer-projected-spacetime",
+        "foundation/spinor-coherence-lagrangian",
         "holography/horizon-gauge-shell",
         "interactions/moufang-loop-phase-closure",
         "minimal-observer/multiplicity",
@@ -1515,6 +1534,10 @@
           },
           {
             "source": "foundation/observer-projected-spacetime",
+            "context": "Observer Definition"
+          },
+          {
+            "source": "foundation/spinor-coherence-lagrangian",
             "context": "Observer Definition"
           },
           {
@@ -3620,6 +3643,10 @@
           {
             "target": "cosmology/baryogenesis",
             "context": "Baryogenesis"
+          },
+          {
+            "target": "foundation/spinor-coherence-lagrangian",
+            "context": "Spinor Coherence Lagrangian"
           }
         ],
         "incoming": [
@@ -4356,6 +4383,10 @@
             "context": "Three Dimensions"
           },
           {
+            "source": "foundation/spinor-coherence-lagrangian",
+            "context": "Three Dimensions"
+          },
+          {
             "source": "gauge/weak-interaction",
             "context": "Proposition 3.1"
           },
@@ -4633,6 +4664,10 @@
           {
             "source": "foundation/error-correction-and-standard-model",
             "context": "Flavor Mixing Angles"
+          },
+          {
+            "source": "foundation/spinor-coherence-lagrangian",
+            "context": "Mixing Angles"
           },
           {
             "source": "gauge/weak-interaction",
@@ -5149,21 +5184,23 @@
         "foundation",
         "lagrangian"
       ],
-      "summary": "The coherence Lagrangian is constructed from two ingredients: the Fisher information metric provides the unique kinetic term (via Čencov's theorem), and coherence conservation constrains the potential. The resulting action principle S = ∫ℒ reproduces the Euler-Lagrange dynamics of the framework and connects the discrete axiom structure to continuum field theory.",
-      "lastUpdated": "2026-03-12",
+      "summary": "The coherence Lagrangian is constructed from two ingredients: the Fisher information metric provides the unique kinetic term (via Čencov's theorem), and coherence conservation constrains the potential. The resulting action principle S = ∫ℒ reproduces the Euler-Lagrange dynamics of the framework and connects the discrete axiom structure to continuum field theory. The spinor (fermion) sector is derived separately in Spinor Coherence Lagrangian.",
+      "lastUpdated": "2026-04-21",
       "dependsOn": [
         "thermodynamics/action-planck",
         "thermodynamics-ext/fisher-metric"
       ],
       "enablesDerivation": [
         "particles/cpt-theorem",
-        "spacetime/gravitational-constant"
+        "spacetime/gravitational-constant",
+        "foundation/spinor-coherence-lagrangian"
       ],
       "dependedOnBy": [
         "foundation/continuous-discrete-duality",
         "foundation/formation-and-preservation",
         "foundation/knot-theoretic-bootstrap",
         "foundation/observer-pattern-signal",
+        "foundation/spinor-coherence-lagrangian",
         "particles/cpt-theorem",
         "spacetime/gravitational-constant"
       ],
@@ -5286,17 +5323,20 @@
           "number": 4,
           "title": "Higher-order corrections",
           "description": "The quartic restriction (Theorem 2.2c) holds at tree level; loop corrections generate higher-dimensional operators suppressed by powers of the cutoff. The bootstrap hierarchy structure should organize"
-        },
-        {
-          "number": 5,
-          "title": "Fermion kinetic term",
-          "description": "The derivation focuses on scalar fields. Extending to spinor fields requires the Fisher metric on the spinor state space, which should connect to the Dirac Lagrangian psi(igammamu Dmu - m)psi."
         }
       ],
       "assessmentVerdict": "Rigorous. The Lagrangian is uniquely assembled from individually unique sectors: the Fisher-metric kinetic term (Čencov's theorem), the quartic potential (dimensional analysis in d = 4), gauge kinetic terms (Lorentz + gauge invariance), and the Einstein-Hilbert gravitational term (diffeomorphism inv",
       "hasConsistencyModel": true,
       "crossReferences": {
         "outgoing": [
+          {
+            "target": "foundation/spinor-coherence-lagrangian",
+            "context": "Spinor Coherence Lagrangian"
+          },
+          {
+            "target": "thermodynamics-ext/quantum-fisher-metric",
+            "context": "Quantum Fisher Metric"
+          },
           {
             "target": "thermodynamics-ext/fisher-metric",
             "context": "Proposition 4.1"
@@ -5385,6 +5425,10 @@
           },
           {
             "source": "foundation/observer-pattern-signal",
+            "context": "Coherence Lagrangian"
+          },
+          {
+            "source": "foundation/spinor-coherence-lagrangian",
             "context": "Coherence Lagrangian"
           },
           {
@@ -6068,6 +6112,10 @@
           {
             "target": "foundation/bootstrap-fixed-point-existence",
             "context": "Bootstrap Fixed-Point Existence"
+          },
+          {
+            "target": "foundation/spinor-coherence-lagrangian",
+            "context": "Spinor Coherence Lagrangian"
           },
           {
             "target": "foundation/coherence-lagrangian",
@@ -7113,6 +7161,10 @@
           {
             "source": "foundation/profile-dependent-edges-and-confinement",
             "context": "Observer Edges and Mutual Opacity"
+          },
+          {
+            "source": "thermodynamics-ext/quantum-fisher-metric",
+            "context": "Observer Edges and Mutual Opacity"
           }
         ]
       },
@@ -7773,21 +7825,16 @@
         },
         {
           "number": 2,
-          "title": "Spinor (Dirac) extension.",
-          "description": "Extending to spinor observers requires the Dirac Lagrangian treatment; the pattern signal is expected to take a spinor-weighted form reducing to the scalar Yukawa in the spin-averaged limit. *Difficul"
-        },
-        {
-          "number": 3,
           "title": "Short-distance substrate regularization.",
           "description": "The 1/r Green's function singularity at r 0 is regulated at Planck scale by the substrate discretization ([Causal Set Statistics](/derivations/holography/causal-set-statistics)), but the precise match"
         },
         {
-          "number": 4,
+          "number": 3,
           "title": "Non-perturbative color-channel treatment.",
           "description": "Proposition 7.1 uses a screened-coupling heuristic for color. A rigorous treatment via non-perturbative QCD or the framework's non-associativity confinement picture would pin down the color pattern si"
         },
         {
-          "number": 5,
+          "number": 4,
           "title": "Curved-regime Yukawa on $M_A$.",
           "description": "The flat-spacetime Yukawa form is the leading-order result in the approximately-flat regime of MA. In the curved-regime (near horizons, near strong-coherence sources, at cosmological scales), the Klei"
         }
@@ -7815,6 +7862,10 @@
           {
             "target": "axioms/observer-definition",
             "context": "Observer Definition"
+          },
+          {
+            "target": "foundation/spinor-coherence-lagrangian",
+            "context": "Spinor Coherence Lagrangian"
           },
           {
             "target": "foundation/substrate-noise-and-profile-coupling",
@@ -7852,6 +7903,14 @@
           },
           {
             "source": "foundation/profile-dependent-edges-and-confinement",
+            "context": "Observer Pattern Signal"
+          },
+          {
+            "source": "foundation/spinor-coherence-lagrangian",
+            "context": "Observer Pattern Signal"
+          },
+          {
+            "source": "thermodynamics-ext/quantum-fisher-metric",
             "context": "Observer Pattern Signal"
           }
         ]
@@ -7895,7 +7954,9 @@
         "foundation/bootstrap-fixed-point-existence",
         "foundation/knot-theoretic-bootstrap",
         "foundation/observer-holographic-equivalence",
-        "foundation/observer-level-stack-compactness"
+        "foundation/observer-level-stack-compactness",
+        "foundation/spinor-coherence-lagrangian",
+        "thermodynamics-ext/quantum-fisher-metric"
       ],
       "steps": [
         {
@@ -8119,6 +8180,14 @@
           {
             "source": "foundation/observer-pattern-signal",
             "context": "Observer-Projected Spacetime"
+          },
+          {
+            "source": "foundation/spinor-coherence-lagrangian",
+            "context": "Observer-Projected Spacetime"
+          },
+          {
+            "source": "thermodynamics-ext/quantum-fisher-metric",
+            "context": "Observer-Projected Spacetime"
           }
         ]
       },
@@ -8319,6 +8388,10 @@
             "context": "Einstein Field Equations"
           },
           {
+            "target": "foundation/spinor-coherence-lagrangian",
+            "context": "Spinor Coherence Lagrangian"
+          },
+          {
             "target": "gauge/color-force",
             "context": "Color Force"
           },
@@ -8343,6 +8416,340 @@
           {
             "source": "gauge/confinement",
             "context": "Profile-Dependent Edges and Confinement"
+          }
+        ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "foundation/spinor-coherence-lagrangian": {
+      "id": "foundation/spinor-coherence-lagrangian",
+      "filePath": "site/src/content/derivations/foundation/spinor-coherence-lagrangian.md",
+      "title": "Spinor Sector of the Coherence Lagrangian",
+      "status": "derived",
+      "rigorLevel": "formal",
+      "group": "foundation",
+      "tags": [
+        "foundation",
+        "lagrangian",
+        "spinors",
+        "fermions"
+      ],
+      "summary": "The spinor sector of the Coherence Lagrangian is the Dirac Lagrangian i ℏ ψ̄ γ^μ ∇_μ ψ − m c² ψ̄ ψ, derived from the BKM quantum Fisher metric pulled back along spacetime-varying field configurations, with spin-statistics forcing the first-order form and Identification 5.3 forcing the mass term. The Clifford ℤ₂ grading splits the Dirac spinor into Weyl components; bootstrap level 2 pseudo-reality produces the Majorana form for neutrinos; three-generation replication follows from so(3) winding classes. Spin-statistics, Pauli exclusion, CPT invariance, and the Lichnerowicz curvature identity are all structural consequences of the derived Lagrangian.",
+      "lastUpdated": "2026-04-21",
+      "dependsOn": [
+        "foundation/coherence-lagrangian",
+        "thermodynamics-ext/quantum-fisher-metric",
+        "particles/spin-statistics",
+        "particles/three-generations",
+        "gauge/chirality-selection",
+        "particles/neutrino-masses",
+        "particles/cpt-theorem",
+        "particles/pauli-exclusion",
+        "foundation/observer-projected-spacetime",
+        "axioms/observer-definition",
+        "interactions/bootstrap-division-algebras"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The Spinor Observer and Its State Space"
+        },
+        {
+          "number": 2,
+          "title": "The Kinetic Term"
+        },
+        {
+          "number": 3,
+          "title": "The Mass Term"
+        },
+        {
+          "number": 4,
+          "title": "Chirality Structure from the Clifford $\\mathbb{Z}_2$ Grading"
+        },
+        {
+          "number": 5,
+          "title": "Majorana Form at Bootstrap Level 2"
+        },
+        {
+          "number": 6,
+          "title": "Three-Generation Replication"
+        },
+        {
+          "number": 7,
+          "title": "Consistency — Spin-Statistics, Pauli Exclusion, CPT, and Stress-Energy"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Spinor observer",
+          "statementPreview": "A **spinor observer** at bootstrap level 1 is an observer A = (SigmaA, IA, BA) whose state space is a Clifford module:"
+        },
+        {
+          "type": "Definition",
+          "id": "1.2",
+          "name": "Field configuration",
+          "statementPreview": "A **spinor field** on observer-projected spacetime MA (from [Observer-Projected Spacetime](/derivations/foundation/ob..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "BKM pullback on spinor field configurations",
+          "statementPreview": "The BKM metric on pure spinor states (from [Quantum Fisher Metric](/derivations/thermodynamics-ext/quantum-fisher-met..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "Ostrogradsky exclusion applies",
+          "statementPreview": "By [Coherence Lagrangian](/derivations/foundation/coherence-lagrangian) Theorem 6.0 (Ostrogradsky exclusion from Axio..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.3",
+          "name": "Spin-statistics forces linear-in-$\\nabla\\psi$",
+          "statementPreview": "A Lagrangian quadratic in psi yields bosonic commutation relations upon canonical quantization, contradicting [Spin a..."
+        },
+        {
+          "type": "Theorem",
+          "id": "2.4",
+          "name": "Uniqueness of the Dirac kinetic term",
+          "statementPreview": "The unique Lagrangian density on MA satisfying: (i) linear in nablamupsi; (ii) bilinear in (psi, psi) with psi = psid..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.5",
+          "name": "Clifford factorization of the BKM pullback",
+          "statementPreview": "The BKM-pullback quadratic form (Prop 2.1) and the Dirac first-order form (Theorem 2.4) are related by Clifford facto..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Mass from rest-cycle coherence content",
+          "statementPreview": "By [Observer Definition](/derivations/axioms/observer-definition) Identification 5.3, the observer's accessible coher..."
+        },
+        {
+          "type": "Theorem",
+          "id": "3.2",
+          "name": "Mass term",
+          "statementPreview": "The spinor mass term in the Coherence Lagrangian is*"
+        },
+        {
+          "type": "Definition",
+          "id": "4.1",
+          "name": "Chirality operator",
+          "statementPreview": "The volume element"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.2",
+          "name": "Weyl decomposition",
+          "statementPreview": "The Dirac spinor decomposes as a direct sum of Spin(3,1)-irreducible representations:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.3",
+          "name": "Chirality decomposition of the kinetic term",
+          "statementPreview": "Under psi = psiL + psiR, the Dirac kinetic term decomposes block-diagonally:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.4",
+          "name": "Chirality decomposition of the mass term",
+          "statementPreview": "The Dirac mass term mixes the two Weyl components:*"
+        },
+        {
+          "type": "Corollary",
+          "id": "4.5",
+          "name": "Massless-to-massive transition",
+          "statementPreview": "For m = 0, the Dirac Lagrangian decouples into two independent Weyl Lagrangians (kinetic only, one per chirality). Fo..."
+        },
+        {
+          "type": "Proposition",
+          "id": "4.6",
+          "name": "Gauge-coupling chirality from Chirality Selection",
+          "statementPreview": "By [Chirality Selection](/derivations/gauge/chirality-selection) Theorem 3.1 (global quaternionic orientation lock) a..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Pseudo-real structure of the weak doublet",
+          "statementPreview": "The SU(2)L fundamental representation on C2 carries a canonical quaternionic (anti-linear) structure*"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.2",
+          "name": "Majorana condition",
+          "statementPreview": "For an SU(2)L-doublet that carries no other distinguishing charges (electrically neutral, colorless — i.e., a neutrin..."
+        },
+        {
+          "type": "Theorem",
+          "id": "5.3",
+          "name": "Majorana mass term",
+          "statementPreview": "For a Jepsilon-invariant (Majorana) neutrino, the unique Lorentz-scalar, non-derivative, bilinear mass term consisten..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "Generation replication from winding classes",
+          "statementPreview": "By [Three Generations](/derivations/particles/three-generations) Theorem 0.1, exactly three winding-direction classes..."
+        },
+        {
+          "type": "Proposition",
+          "id": "7.1",
+          "name": "Spin-statistics from energy positivity",
+          "statementPreview": "Canonical quantization of Lspinor with bosonic commutators yields a Hamiltonian unbounded below. With fermionic antic..."
+        },
+        {
+          "type": "Proposition",
+          "id": "7.2",
+          "name": "Pauli exclusion",
+          "statementPreview": "The fermionic anticommutators adaggerp,s, adaggerp',s' = 0 of Proposition 7.1 give (adaggerp,s)2 = 0 for any single m..."
+        },
+        {
+          "type": "Proposition",
+          "id": "7.3",
+          "name": "CPT invariance",
+          "statementPreview": "The composite Lagrangian (Dirac kinetic + Dirac mass + Majorana mass + three-generation replication + Chirality Selec..."
+        },
+        {
+          "type": "Proposition",
+          "id": "7.4",
+          "name": "Stress-energy tensor",
+          "statementPreview": "Variation of Lspinor with respect to the MA metric gmunuA gives the Dirac stress-energy tensor*"
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Level-3 ($\\mathbb{O}$) spinor sector.",
+          "description": "Non-associativity breaks (a) the BKM operator-mean construction ([Quantum Fisher Metric](/derivations/thermodynamics-ext/quantum-fisher-metric) Open Gap 1), (b) the standard gammamu Clifford algebra, "
+        },
+        {
+          "number": 2,
+          "title": "Infinite-dimensional extension.",
+          "description": "The derivation assumes finite-dimensional spinor state spaces. Quantum-field-theoretic extension to infinite-dimensional Fock spaces is standard but requires explicit verification that the BKM selecti"
+        }
+      ],
+      "assessmentVerdict": "Derived. The derivation is tight: every step traces either to the BKM selection of Quantum Fisher Metric, to already-derived framework theorems (Spin and Statistics, Chirality Selection, Neutrino Masses, Three Generations, CPT Theorem, Pauli Exclusion), or to standard representation theory. The cons",
+      "hasConsistencyModel": true,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "foundation/coherence-lagrangian",
+            "context": "Coherence Lagrangian"
+          },
+          {
+            "target": "thermodynamics-ext/quantum-fisher-metric",
+            "context": "Quantum Fisher Metric"
+          },
+          {
+            "target": "spacetime/einstein-equations",
+            "context": "Einstein Field Equations"
+          },
+          {
+            "target": "gauge/color-force",
+            "context": "Color Force"
+          },
+          {
+            "target": "gauge/chirality-selection",
+            "context": "Chirality Selection"
+          },
+          {
+            "target": "particles/three-generations",
+            "context": "Three Generations"
+          },
+          {
+            "target": "dimensions/three-dimensions",
+            "context": "Three Dimensions"
+          },
+          {
+            "target": "foundation/observer-projected-spacetime",
+            "context": "Observer-Projected Spacetime"
+          },
+          {
+            "target": "particles/spin-statistics",
+            "context": "Spin and Statistics"
+          },
+          {
+            "target": "axioms/observer-definition",
+            "context": "Observer Definition"
+          },
+          {
+            "target": "interactions/bootstrap-division-algebras",
+            "context": "Bootstrap Division Algebras"
+          },
+          {
+            "target": "minimal-observer/coherence-dual-pairs",
+            "context": "Coherence-Dual Pairs"
+          },
+          {
+            "target": "particles/neutrino-masses",
+            "context": "Neutrino Masses"
+          },
+          {
+            "target": "flavor/mixing-angles",
+            "context": "Mixing Angles"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          },
+          {
+            "target": "particles/pauli-exclusion",
+            "context": "Pauli Exclusion"
+          },
+          {
+            "target": "particles/cpt-theorem",
+            "context": "CPT Theorem"
+          },
+          {
+            "target": "foundation/observer-pattern-signal",
+            "context": "Observer Pattern Signal"
+          }
+        ],
+        "incoming": [
+          {
+            "source": "cosmology/leptogenesis",
+            "context": "Spinor Coherence Lagrangian"
+          },
+          {
+            "source": "foundation/coherence-lagrangian",
+            "context": "Spinor Coherence Lagrangian"
+          },
+          {
+            "source": "foundation/formation-and-preservation",
+            "context": "Spinor Coherence Lagrangian"
+          },
+          {
+            "source": "foundation/observer-pattern-signal",
+            "context": "Spinor Coherence Lagrangian"
+          },
+          {
+            "source": "foundation/profile-dependent-edges-and-confinement",
+            "context": "Spinor Coherence Lagrangian"
+          },
+          {
+            "source": "gauge/weinberg-angle",
+            "context": "Spinor Coherence Lagrangian"
+          },
+          {
+            "source": "particles/neutrino-masses",
+            "context": "Spinor Coherence Lagrangian"
+          },
+          {
+            "source": "thermodynamics-ext/quantum-fisher-metric",
+            "context": "Spinor Coherence Lagrangian"
           }
         ]
       },
@@ -8930,6 +9337,7 @@
         "gauge/anomaly-cancellation"
       ],
       "dependedOnBy": [
+        "foundation/spinor-coherence-lagrangian",
         "gauge/anomaly-cancellation"
       ],
       "steps": [
@@ -9113,6 +9521,10 @@
           {
             "source": "cosmology/baryogenesis",
             "context": "now rigorous, via the orientation-consistency theorem"
+          },
+          {
+            "source": "foundation/spinor-coherence-lagrangian",
+            "context": "Chirality Selection"
           },
           {
             "source": "gauge/anomaly-cancellation",
@@ -9446,6 +9858,10 @@
             "context": "Color Force"
           },
           {
+            "source": "foundation/spinor-coherence-lagrangian",
+            "context": "Color Force"
+          },
+          {
             "source": "foundation/substrate-noise-and-profile-coupling",
             "context": "Color Force"
           },
@@ -9496,6 +9912,10 @@
           {
             "source": "interactions/bootstrap-division-algebras",
             "context": "algebraic saturation"
+          },
+          {
+            "source": "thermodynamics-ext/quantum-fisher-metric",
+            "context": "Color Force"
           },
           {
             "source": "thermodynamics-ext/renormalization",
@@ -11599,6 +12019,10 @@
             "context": "Electroweak Breaking"
           },
           {
+            "target": "foundation/spinor-coherence-lagrangian",
+            "context": "Spinor Coherence Lagrangian"
+          },
+          {
             "target": "gauge/weak-interaction",
             "context": "Weak Interaction"
           }
@@ -13594,7 +14018,9 @@
       "enablesDerivation": [],
       "dependedOnBy": [
         "foundation/knot-theoretic-bootstrap",
-        "interactions/moufang-loop-phase-closure"
+        "foundation/spinor-coherence-lagrangian",
+        "interactions/moufang-loop-phase-closure",
+        "thermodynamics-ext/quantum-fisher-metric"
       ],
       "steps": [
         {
@@ -13834,6 +14260,10 @@
             "context": "Bootstrap Division Algebras"
           },
           {
+            "source": "foundation/spinor-coherence-lagrangian",
+            "context": "Bootstrap Division Algebras"
+          },
+          {
             "source": "gauge/color-force",
             "context": "Theorems 2.2–2.3, 7.1"
           },
@@ -13860,6 +14290,10 @@
           {
             "source": "particles/mass-hierarchy",
             "context": "Bootstrap $\\to$ Division Algebras"
+          },
+          {
+            "source": "thermodynamics-ext/quantum-fisher-metric",
+            "context": "Bootstrap Division Algebras"
           }
         ]
       },
@@ -15517,6 +15951,10 @@
             "context": "Coherence-Dual Pairs"
           },
           {
+            "source": "foundation/spinor-coherence-lagrangian",
+            "context": "Coherence-Dual Pairs"
+          },
+          {
             "source": "gauge/chirality-selection",
             "context": "Definition 6.1"
           },
@@ -16283,7 +16721,8 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
-        "foundation/knot-theoretic-bootstrap"
+        "foundation/knot-theoretic-bootstrap",
+        "foundation/spinor-coherence-lagrangian"
       ],
       "steps": [
         {
@@ -16497,6 +16936,10 @@
         "incoming": [
           {
             "source": "foundation/knot-theoretic-bootstrap",
+            "context": "CPT Theorem"
+          },
+          {
+            "source": "foundation/spinor-coherence-lagrangian",
             "context": "CPT Theorem"
           },
           {
@@ -16891,7 +17334,8 @@
         "cosmology/leptogenesis"
       ],
       "dependedOnBy": [
-        "cosmology/leptogenesis"
+        "cosmology/leptogenesis",
+        "foundation/spinor-coherence-lagrangian"
       ],
       "steps": [
         {
@@ -17065,6 +17509,10 @@
           {
             "target": "cosmology/leptogenesis",
             "context": "Leptogenesis"
+          },
+          {
+            "target": "foundation/spinor-coherence-lagrangian",
+            "context": "Spinor Coherence Lagrangian"
           }
         ],
         "incoming": [
@@ -17082,6 +17530,10 @@
           },
           {
             "source": "foundation/error-correction-and-standard-model",
+            "context": "Neutrino Masses"
+          },
+          {
+            "source": "foundation/spinor-coherence-lagrangian",
             "context": "Neutrino Masses"
           },
           {
@@ -17119,7 +17571,9 @@
         "particles/spin-statistics"
       ],
       "enablesDerivation": [],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "foundation/spinor-coherence-lagrangian"
+      ],
       "steps": [
         {
           "number": 1,
@@ -17262,7 +17716,12 @@
             "context": "Entropy"
           }
         ],
-        "incoming": []
+        "incoming": [
+          {
+            "source": "foundation/spinor-coherence-lagrangian",
+            "context": "Pauli Exclusion"
+          }
+        ]
       },
       "leanVerification": {
         "hasProofs": true,
@@ -17299,6 +17758,7 @@
         "particles/cpt-theorem"
       ],
       "dependedOnBy": [
+        "foundation/spinor-coherence-lagrangian",
         "gauge/weak-interaction",
         "particles/cpt-theorem",
         "particles/pauli-exclusion",
@@ -17445,6 +17905,10 @@
         ],
         "incoming": [
           {
+            "source": "foundation/spinor-coherence-lagrangian",
+            "context": "Spin and Statistics"
+          },
+          {
             "source": "gauge/standard-model-group",
             "context": "Spin and Statistics"
           },
@@ -17499,6 +17963,10 @@
           {
             "source": "spacetime/lorentz-invariance",
             "context": "forward dependency, honestly flagged"
+          },
+          {
+            "source": "thermodynamics-ext/quantum-fisher-metric",
+            "context": "Spin and Statistics"
           }
         ]
       },
@@ -17709,6 +18177,7 @@
       "dependedOnBy": [
         "flavor/mixing-angles",
         "foundation/error-correction-and-standard-model",
+        "foundation/spinor-coherence-lagrangian",
         "particles/neutrino-masses"
       ],
       "steps": [
@@ -17918,6 +18387,10 @@
             "context": "Three Generations"
           },
           {
+            "source": "foundation/spinor-coherence-lagrangian",
+            "context": "Three Generations"
+          },
+          {
             "source": "gauge/anomaly-cancellation",
             "context": "Three Generations"
           },
@@ -17999,7 +18472,8 @@
         "quantum/entanglement",
         "quantum/observer-relative-objectivity",
         "quantum/preferred-basis",
-        "quantum/sheaf-section-uniqueness"
+        "quantum/sheaf-section-uniqueness",
+        "thermodynamics-ext/quantum-fisher-metric"
       ],
       "steps": [
         {
@@ -18246,6 +18720,10 @@
           },
           {
             "source": "thermodynamics-ext/fisher-metric",
+            "context": "Born Rule"
+          },
+          {
+            "source": "thermodynamics-ext/quantum-fisher-metric",
             "context": "Born Rule"
           },
           {
@@ -19978,6 +20456,10 @@
           },
           {
             "source": "foundation/profile-dependent-edges-and-confinement",
+            "context": "Einstein Field Equations"
+          },
+          {
+            "source": "foundation/spinor-coherence-lagrangian",
             "context": "Einstein Field Equations"
           },
           {
@@ -22363,8 +22845,8 @@
       "tags": [
         "thermo-ext"
       ],
-      "summary": "The Fisher information metric is the unique natural Riemannian geometry on the space of coherence states, identified with the Hessian metric of Action-Planck via Čencov's theorem",
-      "lastUpdated": "2026-03-10",
+      "summary": "The Fisher information metric is the unique natural Riemannian geometry on the space of coherence states, identified with the Hessian metric of Action-Planck via Čencov's theorem. The quantum extension — and the Petz-family resolution — is handled in Quantum Fisher Metric.",
+      "lastUpdated": "2026-04-21",
       "dependsOn": [
         "thermodynamics/action-planck",
         "thermodynamics/entropy",
@@ -22372,6 +22854,7 @@
       ],
       "enablesDerivation": [
         "thermodynamics-ext/renormalization",
+        "thermodynamics-ext/quantum-fisher-metric",
         "foundation/coherence-lagrangian",
         "spacetime/gravitational-constant"
       ],
@@ -22381,6 +22864,7 @@
         "foundation/observer-edges-and-mutual-opacity",
         "foundation/observer-level-stack-compactness",
         "spacetime/gravitational-constant",
+        "thermodynamics-ext/quantum-fisher-metric",
         "thermodynamics/action-planck"
       ],
       "steps": [
@@ -22534,11 +23018,6 @@
         },
         {
           "number": 2,
-          "title": "Quantum Fisher metric",
-          "description": "Extend from the classical Fisher metric to the quantum Fisher information (Bures metric / symmetric logarithmic derivative). This is needed for full quantum state spaces. The quantum Čencov theorem [P"
-        },
-        {
-          "number": 3,
           "title": "Infinite-dimensional extension",
           "description": "The derivation assumes finite-dimensional Sigma. For field theory, the state space is infinite-dimensional and requires functional-analytic care [Pistone & Sempi, 1995]."
         }
@@ -22582,6 +23061,10 @@
           {
             "target": "thermodynamics-ext/distinguishability-conservation",
             "context": "Proposition 4.1, now rigorous"
+          },
+          {
+            "target": "thermodynamics-ext/quantum-fisher-metric",
+            "context": "Quantum Fisher Metric"
           },
           {
             "target": "thermodynamics-ext/distinguishability-conservation",
@@ -22636,6 +23119,10 @@
           {
             "source": "thermodynamics-ext/distinguishability-conservation",
             "context": "Proposition 4.1"
+          },
+          {
+            "source": "thermodynamics-ext/quantum-fisher-metric",
+            "context": "Fisher Information Metric"
           },
           {
             "source": "thermodynamics-ext/renormalization",
@@ -23068,6 +23555,238 @@
           {
             "source": "thermodynamics-ext/biological-non-ergodicity",
             "context": "Non-Ergodicity"
+          }
+        ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "thermodynamics-ext/quantum-fisher-metric": {
+      "id": "thermodynamics-ext/quantum-fisher-metric",
+      "filePath": "site/src/content/derivations/thermodynamics-ext/quantum-fisher-metric.md",
+      "title": "Quantum Fisher Metric",
+      "status": "derived",
+      "rigorLevel": "formal",
+      "group": "thermodynamics-ext",
+      "tags": [
+        "thermo-ext",
+        "quantum"
+      ],
+      "summary": "On quantum state spaces the classical Čencov uniqueness fails: monotone Riemannian metrics form the Petz family parameterized by operator-monotone functions. The framework's coherence-operational identification of C with von Neumann entropy and the Gibbons-Hawking KMS structure on observer-projected spacetime jointly single out the Bogoliubov–Kubo–Mori (BKM) metric as the unique quantum Fisher metric compatible with all framework commitments. SLD (Bures–Helstrom) remains in play for a distinct role — detection-resolution edges — where Cramér–Rao saturation is the relevant property.",
+      "lastUpdated": "2026-04-21",
+      "dependsOn": [
+        "thermodynamics-ext/fisher-metric",
+        "axioms/coherence-operational",
+        "quantum/born-rule",
+        "foundation/observer-projected-spacetime",
+        "interactions/bootstrap-division-algebras"
+      ],
+      "enablesDerivation": [
+        "foundation/spinor-coherence-lagrangian"
+      ],
+      "dependedOnBy": [
+        "foundation/spinor-coherence-lagrangian"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "title": "The Petz Family"
+        },
+        {
+          "number": 2,
+          "title": "Framework Commitments as Selection Sources"
+        },
+        {
+          "number": 3,
+          "title": "Selection — Hessian of the Coherence Functional Forces BKM"
+        },
+        {
+          "number": 4,
+          "title": "Independent Selection — KMS Modular Flow Forces BKM"
+        },
+        {
+          "number": 5,
+          "title": "Commitments (3) and (4) Are Non-Selective"
+        },
+        {
+          "number": 6,
+          "title": "The Two-Metric Picture — BKM and SLD Play Distinct Roles"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Density-matrix state manifold",
+          "statementPreview": "For a finite-dimensional observer with Hilbert space H of dimension n, the **state manifold** is the set of strictly ..."
+        },
+        {
+          "type": "Definition",
+          "id": "1.2",
+          "name": "Operator-monotone function",
+          "statementPreview": "A function f : (0, ) (0, ) is **operator-monotone** if for all positive operators A, B with A B, the relation f(A) f(..."
+        },
+        {
+          "type": "Theorem",
+          "id": "1.3",
+          "name": "Petz classification",
+          "statementPreview": "Every monotone Riemannian metric on mathfrakD(H)circ — i.e., every metric satisfying grho(T*A, T*A) gTrho(A, A) for a..."
+        },
+        {
+          "type": "Definition",
+          "id": "1.4",
+          "name": "Canonical Petz members",
+          "statementPreview": "The Petz family contains the following canonical members:"
+        },
+        {
+          "type": "Proposition",
+          "id": "1.5",
+          "name": "BKM is the entropy Hessian",
+          "statementPreview": "The BKM metric is the Hessian of the von Neumann entropy S(rho) = -Tr(rho ln rho):*"
+        },
+        {
+          "type": "Proposition",
+          "id": "1.6",
+          "name": "BKM is the Kubo–Mori metric",
+          "statementPreview": "The BKM inner product equals the Kubo–Mori inner product of quantum statistical mechanics:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "Hessian-identity narrowing",
+          "statementPreview": "Under commitments (1) and (2), the quantum Fisher metric on mixed states must equal the Hessian of the coherence func..."
+        },
+        {
+          "type": "Theorem",
+          "id": "4.1",
+          "name": "KMS/Gibbons–Hawking narrowing",
+          "statementPreview": "Under commitment (5), each observer's state is naturally a KMS thermal state on its projected de Sitter patch MA. The..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Spin-statistics is non-selective at this layer",
+          "statementPreview": "Commitment (3) — spin-statistics via Laidlaw–DeWitt on configuration space — imposes holonomy constraints on wave-fun..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.2",
+          "name": "Bootstrap hierarchy reinforces but does not alone select",
+          "statementPreview": "Commitment (4) — Cayley–Dickson reality-structure compatibility — restricts the family of Petz members admissible at ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.1",
+          "name": "SLD role",
+          "statementPreview": "The symmetric-logarithmic-derivative metric gSLDrho, defined by gSLDrho(A, B) = Tr(A L) with the SLD L satisfying tfr..."
+        },
+        {
+          "type": "Proposition",
+          "id": "6.2",
+          "name": "Role separation",
+          "statementPreview": "BKM governs the Hessian / Lagrangian / thermodynamic-distance role: distances between states on the mixed-state manif..."
+        },
+        {
+          "type": "Theorem",
+          "id": "7.1",
+          "name": "Classical limit recovery",
+          "statementPreview": "On classical (diagonal, commuting) submanifolds of the density-matrix state space, gBKMrho reduces to the classical F..."
+        },
+        {
+          "type": "Theorem",
+          "id": "7.2",
+          "name": "Pure-state limit",
+          "statementPreview": "On pure states, gBKMrho reduces to the Fubini–Study metric (up to the same hbar normalization).*"
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Level 3 ($\\mathbb{O}$) non-associative sector.",
+          "description": "The Petz construction relies on the operator algebra End(H) being associative. At bootstrap level 3 (octonionic), O is non-associative and the operator-mean definition cf(Lrho, Rrho) does not straight"
+        },
+        {
+          "number": 2,
+          "title": "Infinite-dimensional extension.",
+          "description": "The derivation assumes finite-dimensional observer Hilbert space ([Loop Closure](/derivations/axioms/loop-closure) Theorem 0.2). For quantum field theory (infinite-dimensional state spaces), the Petz "
+        }
+      ],
+      "assessmentVerdict": "Derived. The selection argument is tight: two independent framework routes (entropy-Hessian and KMS-modular-flow) each narrow the Petz family to BKM; their agreement is a consistency check rather than a tautology.",
+      "hasConsistencyModel": true,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "thermodynamics-ext/fisher-metric",
+            "context": "Fisher Information Metric"
+          },
+          {
+            "target": "foundation/observer-edges-and-mutual-opacity",
+            "context": "Observer Edges and Mutual Opacity"
+          },
+          {
+            "target": "axioms/coherence-conservation",
+            "context": "Coherence Conservation"
+          },
+          {
+            "target": "quantum/born-rule",
+            "context": "Born Rule"
+          },
+          {
+            "target": "axioms/coherence-operational",
+            "context": "Coherence as Physical Primitive"
+          },
+          {
+            "target": "particles/spin-statistics",
+            "context": "Spin and Statistics"
+          },
+          {
+            "target": "interactions/bootstrap-division-algebras",
+            "context": "Bootstrap Division Algebras"
+          },
+          {
+            "target": "foundation/observer-projected-spacetime",
+            "context": "Observer-Projected Spacetime"
+          },
+          {
+            "target": "thermodynamics/action-planck",
+            "context": "Action and Planck's Constant"
+          },
+          {
+            "target": "foundation/spinor-coherence-lagrangian",
+            "context": "Spinor Coherence Lagrangian"
+          },
+          {
+            "target": "foundation/observer-pattern-signal",
+            "context": "Observer Pattern Signal"
+          },
+          {
+            "target": "gauge/color-force",
+            "context": "Color Force"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
+          }
+        ],
+        "incoming": [
+          {
+            "source": "foundation/coherence-lagrangian",
+            "context": "Quantum Fisher Metric"
+          },
+          {
+            "source": "foundation/spinor-coherence-lagrangian",
+            "context": "Quantum Fisher Metric"
+          },
+          {
+            "source": "thermodynamics-ext/fisher-metric",
+            "context": "Quantum Fisher Metric"
           }
         ]
       },
@@ -23806,6 +24525,10 @@
           },
           {
             "source": "thermodynamics-ext/non-ergodicity",
+            "context": "Action and Planck's Constant"
+          },
+          {
+            "source": "thermodynamics-ext/quantum-fisher-metric",
             "context": "Action and Planck's Constant"
           },
           {
@@ -29371,6 +30094,167 @@
       "id": "8.2",
       "name": "Observed range hierarchy matches framework prediction",
       "fullRef": "foundation/profile-dependent-edges-and-confinement:Theorem 8.2"
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "type": "Definition",
+      "id": "1.1",
+      "name": "Spinor observer",
+      "fullRef": "foundation/spinor-coherence-lagrangian:Definition 1.1"
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "type": "Definition",
+      "id": "1.2",
+      "name": "Field configuration",
+      "fullRef": "foundation/spinor-coherence-lagrangian:Definition 1.2"
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "BKM pullback on spinor field configurations",
+      "fullRef": "foundation/spinor-coherence-lagrangian:Proposition 2.1"
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "type": "Proposition",
+      "id": "2.2",
+      "name": "Ostrogradsky exclusion applies",
+      "fullRef": "foundation/spinor-coherence-lagrangian:Proposition 2.2"
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "type": "Proposition",
+      "id": "2.3",
+      "name": "Spin-statistics forces linear-in-$\\nabla\\psi$",
+      "fullRef": "foundation/spinor-coherence-lagrangian:Proposition 2.3"
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "type": "Theorem",
+      "id": "2.4",
+      "name": "Uniqueness of the Dirac kinetic term",
+      "fullRef": "foundation/spinor-coherence-lagrangian:Theorem 2.4"
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "type": "Proposition",
+      "id": "2.5",
+      "name": "Clifford factorization of the BKM pullback",
+      "fullRef": "foundation/spinor-coherence-lagrangian:Proposition 2.5"
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Mass from rest-cycle coherence content",
+      "fullRef": "foundation/spinor-coherence-lagrangian:Proposition 3.1"
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "type": "Theorem",
+      "id": "3.2",
+      "name": "Mass term",
+      "fullRef": "foundation/spinor-coherence-lagrangian:Theorem 3.2"
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "type": "Definition",
+      "id": "4.1",
+      "name": "Chirality operator",
+      "fullRef": "foundation/spinor-coherence-lagrangian:Definition 4.1"
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "type": "Proposition",
+      "id": "4.2",
+      "name": "Weyl decomposition",
+      "fullRef": "foundation/spinor-coherence-lagrangian:Proposition 4.2"
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "type": "Proposition",
+      "id": "4.3",
+      "name": "Chirality decomposition of the kinetic term",
+      "fullRef": "foundation/spinor-coherence-lagrangian:Proposition 4.3"
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "type": "Proposition",
+      "id": "4.4",
+      "name": "Chirality decomposition of the mass term",
+      "fullRef": "foundation/spinor-coherence-lagrangian:Proposition 4.4"
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "type": "Corollary",
+      "id": "4.5",
+      "name": "Massless-to-massive transition",
+      "fullRef": "foundation/spinor-coherence-lagrangian:Corollary 4.5"
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "type": "Proposition",
+      "id": "4.6",
+      "name": "Gauge-coupling chirality from Chirality Selection",
+      "fullRef": "foundation/spinor-coherence-lagrangian:Proposition 4.6"
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "Pseudo-real structure of the weak doublet",
+      "fullRef": "foundation/spinor-coherence-lagrangian:Proposition 5.1"
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "type": "Proposition",
+      "id": "5.2",
+      "name": "Majorana condition",
+      "fullRef": "foundation/spinor-coherence-lagrangian:Proposition 5.2"
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "type": "Theorem",
+      "id": "5.3",
+      "name": "Majorana mass term",
+      "fullRef": "foundation/spinor-coherence-lagrangian:Theorem 5.3"
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "Generation replication from winding classes",
+      "fullRef": "foundation/spinor-coherence-lagrangian:Proposition 6.1"
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "type": "Proposition",
+      "id": "7.1",
+      "name": "Spin-statistics from energy positivity",
+      "fullRef": "foundation/spinor-coherence-lagrangian:Proposition 7.1"
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "type": "Proposition",
+      "id": "7.2",
+      "name": "Pauli exclusion",
+      "fullRef": "foundation/spinor-coherence-lagrangian:Proposition 7.2"
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "type": "Proposition",
+      "id": "7.3",
+      "name": "CPT invariance",
+      "fullRef": "foundation/spinor-coherence-lagrangian:Proposition 7.3"
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "type": "Proposition",
+      "id": "7.4",
+      "name": "Stress-energy tensor",
+      "fullRef": "foundation/spinor-coherence-lagrangian:Proposition 7.4"
     },
     {
       "derivationId": "foundation/substrate-noise-and-profile-coupling",
@@ -35064,6 +35948,104 @@
       "fullRef": "thermodynamics-ext/non-ergodicity:Corollary 7.4"
     },
     {
+      "derivationId": "thermodynamics-ext/quantum-fisher-metric",
+      "type": "Definition",
+      "id": "1.1",
+      "name": "Density-matrix state manifold",
+      "fullRef": "thermodynamics-ext/quantum-fisher-metric:Definition 1.1"
+    },
+    {
+      "derivationId": "thermodynamics-ext/quantum-fisher-metric",
+      "type": "Definition",
+      "id": "1.2",
+      "name": "Operator-monotone function",
+      "fullRef": "thermodynamics-ext/quantum-fisher-metric:Definition 1.2"
+    },
+    {
+      "derivationId": "thermodynamics-ext/quantum-fisher-metric",
+      "type": "Theorem",
+      "id": "1.3",
+      "name": "Petz classification",
+      "fullRef": "thermodynamics-ext/quantum-fisher-metric:Theorem 1.3"
+    },
+    {
+      "derivationId": "thermodynamics-ext/quantum-fisher-metric",
+      "type": "Definition",
+      "id": "1.4",
+      "name": "Canonical Petz members",
+      "fullRef": "thermodynamics-ext/quantum-fisher-metric:Definition 1.4"
+    },
+    {
+      "derivationId": "thermodynamics-ext/quantum-fisher-metric",
+      "type": "Proposition",
+      "id": "1.5",
+      "name": "BKM is the entropy Hessian",
+      "fullRef": "thermodynamics-ext/quantum-fisher-metric:Proposition 1.5"
+    },
+    {
+      "derivationId": "thermodynamics-ext/quantum-fisher-metric",
+      "type": "Proposition",
+      "id": "1.6",
+      "name": "BKM is the Kubo–Mori metric",
+      "fullRef": "thermodynamics-ext/quantum-fisher-metric:Proposition 1.6"
+    },
+    {
+      "derivationId": "thermodynamics-ext/quantum-fisher-metric",
+      "type": "Theorem",
+      "id": "3.1",
+      "name": "Hessian-identity narrowing",
+      "fullRef": "thermodynamics-ext/quantum-fisher-metric:Theorem 3.1"
+    },
+    {
+      "derivationId": "thermodynamics-ext/quantum-fisher-metric",
+      "type": "Theorem",
+      "id": "4.1",
+      "name": "KMS/Gibbons–Hawking narrowing",
+      "fullRef": "thermodynamics-ext/quantum-fisher-metric:Theorem 4.1"
+    },
+    {
+      "derivationId": "thermodynamics-ext/quantum-fisher-metric",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "Spin-statistics is non-selective at this layer",
+      "fullRef": "thermodynamics-ext/quantum-fisher-metric:Proposition 5.1"
+    },
+    {
+      "derivationId": "thermodynamics-ext/quantum-fisher-metric",
+      "type": "Proposition",
+      "id": "5.2",
+      "name": "Bootstrap hierarchy reinforces but does not alone select",
+      "fullRef": "thermodynamics-ext/quantum-fisher-metric:Proposition 5.2"
+    },
+    {
+      "derivationId": "thermodynamics-ext/quantum-fisher-metric",
+      "type": "Proposition",
+      "id": "6.1",
+      "name": "SLD role",
+      "fullRef": "thermodynamics-ext/quantum-fisher-metric:Proposition 6.1"
+    },
+    {
+      "derivationId": "thermodynamics-ext/quantum-fisher-metric",
+      "type": "Proposition",
+      "id": "6.2",
+      "name": "Role separation",
+      "fullRef": "thermodynamics-ext/quantum-fisher-metric:Proposition 6.2"
+    },
+    {
+      "derivationId": "thermodynamics-ext/quantum-fisher-metric",
+      "type": "Theorem",
+      "id": "7.1",
+      "name": "Classical limit recovery",
+      "fullRef": "thermodynamics-ext/quantum-fisher-metric:Theorem 7.1"
+    },
+    {
+      "derivationId": "thermodynamics-ext/quantum-fisher-metric",
+      "type": "Theorem",
+      "id": "7.2",
+      "name": "Pure-state limit",
+      "fullRef": "thermodynamics-ext/quantum-fisher-metric:Theorem 7.2"
+    },
+    {
       "derivationId": "thermodynamics-ext/renormalization",
       "type": "Structural Postulate",
       "id": "S1",
@@ -36046,13 +37028,6 @@
       "description": "The quartic restriction (Theorem 2.2c) holds at tree level; loop corrections generate higher-dimensional operators suppressed by powers of the cutoff. The bootstrap hierarchy structure should organize"
     },
     {
-      "derivationId": "foundation/coherence-lagrangian",
-      "derivationStatus": "derived",
-      "number": 5,
-      "title": "Fermion kinetic term",
-      "description": "The derivation focuses on scalar fields. Extending to spinor fields requires the Fisher metric on the spinor state space, which should connect to the Dirac Lagrangian psi(igammamu Dmu - m)psi."
-    },
-    {
       "derivationId": "foundation/continuous-discrete-duality",
       "derivationStatus": "provisional",
       "number": 1,
@@ -36448,27 +37423,20 @@
       "derivationId": "foundation/observer-pattern-signal",
       "derivationStatus": "provisional",
       "number": 2,
-      "title": "Spinor (Dirac) extension.",
-      "description": "Extending to spinor observers requires the Dirac Lagrangian treatment; the pattern signal is expected to take a spinor-weighted form reducing to the scalar Yukawa in the spin-averaged limit. *Difficul"
-    },
-    {
-      "derivationId": "foundation/observer-pattern-signal",
-      "derivationStatus": "provisional",
-      "number": 3,
       "title": "Short-distance substrate regularization.",
       "description": "The 1/r Green's function singularity at r 0 is regulated at Planck scale by the substrate discretization ([Causal Set Statistics](/derivations/holography/causal-set-statistics)), but the precise match"
     },
     {
       "derivationId": "foundation/observer-pattern-signal",
       "derivationStatus": "provisional",
-      "number": 4,
+      "number": 3,
       "title": "Non-perturbative color-channel treatment.",
       "description": "Proposition 7.1 uses a screened-coupling heuristic for color. A rigorous treatment via non-perturbative QCD or the framework's non-associativity confinement picture would pin down the color pattern si"
     },
     {
       "derivationId": "foundation/observer-pattern-signal",
       "derivationStatus": "provisional",
-      "number": 5,
+      "number": 4,
       "title": "Curved-regime Yukawa on $M_A$.",
       "description": "The flat-spacetime Yukawa form is the leading-order result in the approximately-flat regime of MA. In the curved-regime (near horizons, near strong-coherence sources, at cosmological scales), the Klei"
     },
@@ -36541,6 +37509,20 @@
       "number": 4,
       "title": "Gravitational channel.",
       "description": "A gravitational channel is not explicitly treated here. For macroscopic observers, gravitational effects can dominate the signal at large distances. Extending to gravitational signals requires integra"
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "derivationStatus": "derived",
+      "number": 1,
+      "title": "Level-3 ($\\mathbb{O}$) spinor sector.",
+      "description": "Non-associativity breaks (a) the BKM operator-mean construction ([Quantum Fisher Metric](/derivations/thermodynamics-ext/quantum-fisher-metric) Open Gap 1), (b) the standard gammamu Clifford algebra, "
+    },
+    {
+      "derivationId": "foundation/spinor-coherence-lagrangian",
+      "derivationStatus": "derived",
+      "number": 2,
+      "title": "Infinite-dimensional extension.",
+      "description": "The derivation assumes finite-dimensional spinor state spaces. Quantum-field-theoretic extension to infinite-dimensional Fock spaces is standard but requires explicit verification that the BKM selecti"
     },
     {
       "derivationId": "foundation/substrate-noise-and-profile-coupling",
@@ -37743,13 +38725,6 @@
       "derivationId": "thermodynamics-ext/fisher-metric",
       "derivationStatus": "derived",
       "number": 2,
-      "title": "Quantum Fisher metric",
-      "description": "Extend from the classical Fisher metric to the quantum Fisher information (Bures metric / symmetric logarithmic derivative). This is needed for full quantum state spaces. The quantum Čencov theorem [P"
-    },
-    {
-      "derivationId": "thermodynamics-ext/fisher-metric",
-      "derivationStatus": "derived",
-      "number": 3,
       "title": "Infinite-dimensional extension",
       "description": "The derivation assumes finite-dimensional Sigma. For field theory, the state space is infinite-dimensional and requires functional-analytic care [Pistone & Sempi, 1995]."
     },
@@ -37801,6 +38776,20 @@
       "number": 5,
       "title": "Quantum conditional ergodicity",
       "description": "Extend Theorem 5.2 to the quantum regime, where the phase torus is replaced by a Hilbert space and Weyl equidistribution by quantum ergodicity of eigenfunctions."
+    },
+    {
+      "derivationId": "thermodynamics-ext/quantum-fisher-metric",
+      "derivationStatus": "derived",
+      "number": 1,
+      "title": "Level 3 ($\\mathbb{O}$) non-associative sector.",
+      "description": "The Petz construction relies on the operator algebra End(H) being associative. At bootstrap level 3 (octonionic), O is non-associative and the operator-mean definition cf(Lrho, Rrho) does not straight"
+    },
+    {
+      "derivationId": "thermodynamics-ext/quantum-fisher-metric",
+      "derivationStatus": "derived",
+      "number": 2,
+      "title": "Infinite-dimensional extension.",
+      "description": "The derivation assumes finite-dimensional observer Hilbert space ([Loop Closure](/derivations/axioms/loop-closure) Theorem 0.2). For quantum field theory (infinite-dimensional state spaces), the Petz "
     },
     {
       "derivationId": "thermodynamics-ext/renormalization",

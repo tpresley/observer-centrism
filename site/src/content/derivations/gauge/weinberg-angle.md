@@ -207,6 +207,8 @@ At the algebraic scale, $u$ satisfies the boundary condition that $\sin^2\theta_
 
 **Gap 4.** The relationship between $\Lambda_{\text{EW}} \sim 10^{10}$ GeV and the [Coupling Constants](/derivations/cosmology/coupling-constants) algebraic normalization $\alpha_2 = 1/4$ should be clarified. The values $\alpha_2(\Lambda) = 0.026$ (from the Weinberg angle analysis) and $\alpha_2 = 1/4 = 0.25$ (from Structural Postulate S1 of Coupling Constants) differ by an order of magnitude, suggesting these refer to different aspects of the crystallization process.
 
+**Addressed Gap.** *Fermion electroweak currents at the Lagrangian level* — Resolved by [Spinor Coherence Lagrangian](/derivations/foundation/spinor-coherence-lagrangian). The vector and axial-vector currents entering the RG $\beta$-function coefficients used in Theorem 3.1 are now explicit consequences of the derived fermion Lagrangian: the $SU(2)_L$ current $\bar\psi_L\gamma^\mu T^a\psi_L$ emerges directly from Spinor Coherence Lagrangian Proposition 4.6 (gauge-coupling chirality restriction combined with the block-diagonal kinetic term of Proposition 4.3). The particle content previously referenced from Chirality Selection + Three Generations is therefore Lagrangian-rigorous rather than assumed at the current-level.
+
 ## Addresses Gaps In
 
 - [Weak Interaction](/derivations/gauge/weak-interaction), Gap: "The Weinberg angle $\sin^2\theta_W \approx 0.231$ at the $Z$ mass is an empirical parameter... value should ultimately follow from the Coupling Constants derivation" — **Partially resolved**: RG evolution from the algebraic boundary determines $\sin^2\theta_W(M_Z)$ as a function of the crystallization scale; self-consistency gives $\Lambda \sim 10^{10}$ GeV.

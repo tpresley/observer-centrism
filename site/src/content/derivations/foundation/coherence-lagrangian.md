@@ -2,11 +2,11 @@
 title: "Coherence Lagrangian"
 status: "derived"
 dependsOn: ["thermodynamics/action-planck", "thermodynamics-ext/fisher-metric"]
-enablesDerivation: ["particles/cpt-theorem", "spacetime/gravitational-constant"]
+enablesDerivation: ["particles/cpt-theorem", "spacetime/gravitational-constant", "foundation/spinor-coherence-lagrangian"]
 tags: ["foundation", "lagrangian"]
-summary: "The coherence Lagrangian is constructed from two ingredients: the Fisher information metric provides the unique kinetic term (via Čencov's theorem), and coherence conservation constrains the potential. The resulting action principle S = ∫ℒ reproduces the Euler-Lagrange dynamics of the framework and connects the discrete axiom structure to continuum field theory."
+summary: "The coherence Lagrangian is constructed from two ingredients: the Fisher information metric provides the unique kinetic term (via Čencov's theorem), and coherence conservation constrains the potential. The resulting action principle S = ∫ℒ reproduces the Euler-Lagrange dynamics of the framework and connects the discrete axiom structure to continuum field theory. The spinor (fermion) sector is derived separately in Spinor Coherence Lagrangian."
 rigorLevel: "formal"
-lastUpdated: 2026-03-12
+lastUpdated: 2026-04-21
 ---
 
 ## Overview
@@ -27,7 +27,7 @@ In standard physics, the Lagrangian (the function that encodes all dynamics) is 
 
 **Why this matters.** If correct, this means the laws of physics are not contingent choices but necessary consequences of self-consistent observation. The Lagrangian is not "designed" -- it is the only one that works.
 
-**An honest caveat.** The derivation focuses on scalar fields; extending rigorously to spinor fields (fermions) requires additional work. The path integral measure also inherits the standard mathematical ambiguity shared by all continuum quantum field theories.
+**An honest caveat.** This derivation presents the scalar + gauge + gravity sectors. The spinor (fermion) sector is derived separately in [Spinor Coherence Lagrangian](/derivations/foundation/spinor-coherence-lagrangian) using the quantum Fisher metric ([Quantum Fisher Metric](/derivations/thermodynamics-ext/quantum-fisher-metric)); together the two derivations cover the full Standard Model fermion and boson content. The path integral measure inherits the standard mathematical ambiguity shared by all continuum quantum field theories.
 
 
 ## Statement
@@ -221,4 +221,6 @@ $$T_{\mu\nu} = -\frac{2}{\sqrt{-g}}\frac{\delta(\sqrt{-g}\,\mathcal{L}_{\text{ma
 2. **Cosmological constant**: The coherence potential allows a constant term $V_0$ (the cosmological constant). Its value is observer-level-indexed via the projected de Sitter radius $L_n = c T_n/2$, giving $\Lambda_n = 12/(c T_n)^2$ at each bootstrap level; the numerical value at our observer level awaits the obstruction class computation. See [Cosmological Constant](/derivations/cosmology/cosmological-constant) and [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime).
 3. **Path integral measure**: The functional integral measure $\mathcal{D}\phi$ is not rigorously defined. The coherence framework may provide a natural regularization via the discrete relational invariant network, but this is not yet formalized.
 4. **Higher-order corrections**: The quartic restriction (Theorem 2.2c) holds at tree level; loop corrections generate higher-dimensional operators suppressed by powers of the cutoff. The bootstrap hierarchy structure should organize these corrections, but the explicit renormalization group flow of the coherence Lagrangian is not computed.
-5. **Fermion kinetic term**: The derivation focuses on scalar fields. Extending to spinor fields requires the Fisher metric on the spinor state space, which should connect to the Dirac Lagrangian $\bar{\psi}(i\gamma^\mu D_\mu - m)\psi$.
+## Addressed Gaps
+
+1. **Fermion kinetic term** — *Resolved by [Spinor Coherence Lagrangian](/derivations/foundation/spinor-coherence-lagrangian)* (Theorems 2.4 and 3.2). The quantum Fisher metric on spinor state spaces is BKM ([Quantum Fisher Metric](/derivations/thermodynamics-ext/quantum-fisher-metric)); pulled back along field configurations and combined with spin-statistics (forcing first-order kinetic form) and the Identification 5.3 mass mechanism, the Dirac Lagrangian $i\hbar\bar\psi\gamma^\mu\nabla_\mu\psi - mc^2\bar\psi\psi$ is the unique spinor sector. Chirality structure, Majorana neutrinos, and three-generation replication follow structurally.

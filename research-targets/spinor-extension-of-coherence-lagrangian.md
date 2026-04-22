@@ -1,7 +1,7 @@
 # Spinor Extension of the Coherence Lagrangian
 
 **Type**: Research target (in progress)
-**Status**: Steps 1–4 complete. Step 5 (consolidation) pending. Step 6 (downstream propagation) pending.
+**Status**: Program complete. All six steps delivered.
 **Last updated**: 2026-04-21
 
 ## The goal
@@ -296,14 +296,14 @@ with $\nabla_\mu = \partial_\mu + \tfrac14\omega_\mu^{ab}\gamma_a\gamma_b + igA_
 
 **Formally articulated**: yes (this document).
 
-**Formalized**: Steps 1–4 complete (2026-04-21). Step 5 (consolidation) pending; Step 6 (downstream propagation) pending.
+**Formalized**: All six steps complete (2026-04-21).
 
 - **Step 1 complete**: BKM Fisher metric selected by intersection of arguments (2) + (5), reinforced by (1). No spinor-fisher-s1 postulate required. Two-metric picture identified: BKM for Lagrangians, SLD for detection edges.
 - **Step 2 complete**: Dirac kinetic term $i\hbar\bar\psi\gamma^\mu\nabla_\mu\psi$ derived from BKM pullback + spin-statistics (forcing first-order) + Lorentz scalar uniqueness. Mass term $-mc^2\bar\psi\psi$ derived from Identification 5.3. No new postulates introduced.
 - **Step 3 complete**: Kinematic chirality split $\psi = \psi_L + \psi_R$ from Clifford $\mathbb{Z}_2$ grading. Gauge-coupling chirality wired in from existing Chirality Selection. Majorana mass term $\tfrac12 m(\nu^T C\nu + \text{h.c.})$ at level 2 from $J_\epsilon$-invariance. Three-generation replication via $\mathfrak{so}(3)$ winding classes. Level 3 ($\mathbb{O}$) flagged open (but color is level-1-with-color-factor, not a level-3 spinor, so not blocking). Research target B5 corrected: no `chirality-selection-s1` exists on the active postulate list. No new postulates introduced.
 - **Step 4 complete**: All four consistency targets pass. Spin-statistics circle closed via energy positivity (Prop 4.1); Lichnerowicz $R/4$ confirmed as on-shell only (Prop 4.2–4.3); CPT invariance of composite Lagrangian verified (Prop 4.4); Pauli exclusion re-derived from Fock construction (Prop 4.5). No new postulates introduced.
-- **Step 5 pending**: Consolidation into framework-level derivations. Decision point on derivation file list.
-- **Step 6 pending**: Downstream propagation.
+- **Step 5 complete**: Two new derivations consolidated into the framework: [Quantum Fisher Metric](../site/src/content/derivations/thermodynamics-ext/quantum-fisher-metric.md) (derived, closes Open Research Direction 2 of Fisher Information Metric) and [Spinor Coherence Lagrangian](../site/src/content/derivations/foundation/spinor-coherence-lagrangian.md) (derived, closes Open Gap 5 of Coherence Lagrangian). Existing derivations updated with cross-references: Coherence Lagrangian, Fisher Information Metric. Sidebar, derivations index, and dependency graph extended. Knowledge index regenerated clean.
+- **Step 6 complete**: Downstream propagation to six affected derivations. Addressed-gap entries added to: [Observer Pattern Signal](../site/src/content/derivations/foundation/observer-pattern-signal.md) (Open Gap 2 retired; scalar caveat removed from Overview), [Profile-Dependent Edges and Confinement](../site/src/content/derivations/foundation/profile-dependent-edges-and-confinement.md) (fermion-profile edges), [Observer Viability](../site/src/content/derivations/foundation/formation-and-preservation.md) (triplet verification prerequisite), [Weinberg Angle](../site/src/content/derivations/gauge/weinberg-angle.md) (fermion EW currents), [Neutrino Masses](../site/src/content/derivations/particles/neutrino-masses.md) (Majorana Lagrangian embedding), [Leptogenesis](../site/src/content/derivations/cosmology/leptogenesis.md) (spinor-level foundations).
 
 **Tractability (updated)**: Steps 1–2 took one session; Step 3 looks tractable at similar scope. Consistency checks (Step 4) should be mostly verification but include one non-trivial closing-the-circle task (spin-statistics re-derivation from the Lagrangian). Downstream propagation (Step 5) is mechanical but broad.
 

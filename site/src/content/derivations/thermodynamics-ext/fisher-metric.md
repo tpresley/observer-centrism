@@ -2,11 +2,11 @@
 title: "Fisher Information Metric"
 status: "derived"
 dependsOn: ["thermodynamics/action-planck", "thermodynamics/entropy", "thermodynamics-ext/distinguishability-conservation"]
-enablesDerivation: ["thermodynamics-ext/renormalization", "foundation/coherence-lagrangian", "spacetime/gravitational-constant"]
+enablesDerivation: ["thermodynamics-ext/renormalization", "thermodynamics-ext/quantum-fisher-metric", "foundation/coherence-lagrangian", "spacetime/gravitational-constant"]
 tags: ["thermo-ext"]
-summary: "The Fisher information metric is the unique natural Riemannian geometry on the space of coherence states, identified with the Hessian metric of Action-Planck via Čencov's theorem"
+summary: "The Fisher information metric is the unique natural Riemannian geometry on the space of coherence states, identified with the Hessian metric of Action-Planck via Čencov's theorem. The quantum extension — and the Petz-family resolution — is handled in Quantum Fisher Metric."
 rigorLevel: "formal"
-lastUpdated: 2026-03-10
+lastUpdated: 2026-04-21
 ---
 
 ## Overview
@@ -226,20 +226,21 @@ $$R^{(0)}_{ijkl} = \frac{1}{4}(C_{ikm}G^{mn}C_{jln} - C_{ilm}G^{mn}C_{jkn})$$
 
 **Open research directions (not gaps in the derivation logic):**
 - Curvature-spacetime bridge: Fisher curvature on $\Sigma$ vs. spacetime curvature on $\mathcal{M}$ — these are geometries on different spaces, and the bridge is an open research problem
-- Quantum Fisher metric: Extension to Bures metric / symmetric logarithmic derivative (Petz classification)
 - Infinite-dimensional extension: Functional-analytic setting for field theory
+
+**Quantum extension:** The extension of Čencov's theorem to quantum state spaces (Petz family of monotone metrics) is addressed in [Quantum Fisher Metric](/derivations/thermodynamics-ext/quantum-fisher-metric); framework commitments narrow the Petz family to BKM.
 
 **Assessment:** Rigorous. The core identification (Čencov uniqueness → Fisher metric = coherence geometry up to $\hbar$) is now fully rigorous. The critical gap (monotonicity of the Hessian metric) has been closed by the now-rigorous [Conservation of Distinguishability](/derivations/thermodynamics-ext/distinguishability-conservation) (Proposition 4.1): Axiom 1 → conservation of distinguishability → Čencov monotonicity → $g = \hbar G$. The structural postulate S1 (statistical regularity) is strongly motivated by the Born Rule and holds automatically for finite-dimensional quantum systems. The remaining open items (curvature bridge, quantum extension, infinite dimensions) are extensions of the result, not defects in the derivation.
 
 ## Open Gaps
 
 1. **Curvature–spacetime bridge**: Connect the Fisher curvature on $\Sigma$ to the spacetime curvature on $\mathcal{M}$. The [Gravity](/derivations/spacetime/gravity) derivation provides the latter from coherence density gradients; the bridge would need to show how the observer embedding $\iota: \Sigma \to \mathcal{M}$ translates one curvature to the other. This is a research direction, not a derivation gap.
-2. **Quantum Fisher metric**: Extend from the classical Fisher metric to the quantum Fisher information (Bures metric / symmetric logarithmic derivative). This is needed for full quantum state spaces. The quantum Čencov theorem [Petz, 1996] classifies monotone metrics but there is a family rather than a unique metric.
-3. **Infinite-dimensional extension**: The derivation assumes finite-dimensional $\Sigma$. For field theory, the state space is infinite-dimensional and requires functional-analytic care [Pistone & Sempi, 1995].
+2. **Infinite-dimensional extension**: The derivation assumes finite-dimensional $\Sigma$. For field theory, the state space is infinite-dimensional and requires functional-analytic care [Pistone & Sempi, 1995].
 
 ## Addressed Gaps
 
 1. **Monotonicity of the Hessian metric** — Proved by [Conservation of Distinguishability](/derivations/thermodynamics-ext/distinguishability-conservation) (Proposition 4.1): Axiom 1(i) → isometries → Čencov monotonicity. The identification $g = \hbar G$ is fully rigorous.
+2. **Quantum Fisher metric** — *Resolved by [Quantum Fisher Metric](/derivations/thermodynamics-ext/quantum-fisher-metric)*. The Petz family of monotone metrics on density-matrix state spaces is narrowed to the BKM (Bogoliubov–Kubo–Mori) metric by the intersection of framework commitments (coherence-operational identification of $\mathcal{C}$ with von Neumann entropy forces BKM as the entropy Hessian; the Gibbons–Hawking KMS structure on observer-projected spacetime forces BKM as the modular-flow metric). The SLD (Bures) metric remains in play for a distinct role — inter-observer detection-resolution via Cramér–Rao saturation — where its specific property is the operative content. The two metrics coincide on pure states and classical submanifolds.
 
 <!-- References -->
 [Rao, 1945]: /references#rao-1945

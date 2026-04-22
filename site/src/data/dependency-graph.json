@@ -241,6 +241,18 @@
       "status": "derived"
     },
     {
+      "id": "thermodynamics-ext/quantum-fisher-metric",
+      "title": "Quantum Fisher Metric",
+      "group": "thermo-ext",
+      "status": "derived"
+    },
+    {
+      "id": "foundation/spinor-coherence-lagrangian",
+      "title": "Spinor Sector of the Coherence Lagrangian",
+      "group": "foundation",
+      "status": "derived"
+    },
+    {
       "id": "thermodynamics-ext/renormalization",
       "title": "Renormalization Group",
       "group": "thermo-ext",
@@ -911,6 +923,70 @@
     {
       "from": "thermodynamics-ext/fisher-metric",
       "to": "foundation/coherence-lagrangian"
+    },
+    {
+      "from": "thermodynamics-ext/fisher-metric",
+      "to": "thermodynamics-ext/quantum-fisher-metric"
+    },
+    {
+      "from": "axioms/coherence-operational",
+      "to": "thermodynamics-ext/quantum-fisher-metric"
+    },
+    {
+      "from": "quantum/born-rule",
+      "to": "thermodynamics-ext/quantum-fisher-metric"
+    },
+    {
+      "from": "foundation/observer-projected-spacetime",
+      "to": "thermodynamics-ext/quantum-fisher-metric"
+    },
+    {
+      "from": "interactions/bootstrap-division-algebras",
+      "to": "thermodynamics-ext/quantum-fisher-metric"
+    },
+    {
+      "from": "foundation/coherence-lagrangian",
+      "to": "foundation/spinor-coherence-lagrangian"
+    },
+    {
+      "from": "thermodynamics-ext/quantum-fisher-metric",
+      "to": "foundation/spinor-coherence-lagrangian"
+    },
+    {
+      "from": "particles/spin-statistics",
+      "to": "foundation/spinor-coherence-lagrangian"
+    },
+    {
+      "from": "particles/three-generations",
+      "to": "foundation/spinor-coherence-lagrangian"
+    },
+    {
+      "from": "gauge/chirality-selection",
+      "to": "foundation/spinor-coherence-lagrangian"
+    },
+    {
+      "from": "particles/neutrino-masses",
+      "to": "foundation/spinor-coherence-lagrangian"
+    },
+    {
+      "from": "particles/cpt-theorem",
+      "to": "foundation/spinor-coherence-lagrangian"
+    },
+    {
+      "from": "particles/pauli-exclusion",
+      "to": "foundation/spinor-coherence-lagrangian"
+    },
+    {
+      "from": "foundation/observer-projected-spacetime",
+      "to": "foundation/spinor-coherence-lagrangian"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "foundation/spinor-coherence-lagrangian"
+    },
+    {
+      "from": "interactions/bootstrap-division-algebras",
+      "to": "foundation/spinor-coherence-lagrangian"
     },
     {
       "from": "interactions/bootstrap",

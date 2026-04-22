@@ -241,6 +241,10 @@ Earlier framing of this derivation (when it was a pair theorem) flagged a "joint
 
 7. **Coherence Lagrangian common-saddle analysis.** Whether (F), (P), (D) can be understood as different boundary-condition regimes of one Coherence Lagrangian calculation — a shared-origin view that doesn't reduce them but shows common structural origin. *Difficulty: HARD.*
 
+## Addressed Gaps
+
+1. **Fermion triplet verification at the Lagrangian level** — *Enabled by [Spinor Coherence Lagrangian](/derivations/foundation/spinor-coherence-lagrangian)*. Each SM fermion (charged leptons, neutrinos, quarks, across all three generations) now has an explicit Lagrangian realization via Spinor Coherence Lagrangian Theorem 2.7 (Dirac kinetic + mass), Theorem 5.3 (Majorana for neutrinos), and Proposition 6.1 (three-generation replication). The triplet (F) ∧ (P) ∧ (D) can therefore be verified against this derived Lagrangian rather than imposed structurally: (F) formation comes from WKB tunneling of the derived mass term; (P) preservation from QEC on the Dirac-field substrate; (D) detection via the Dirac source in [Observer Pattern Signal](/derivations/foundation/observer-pattern-signal) producing Compton-scale Yukawa edges. Full quantitative per-fermion verification remains Open Gap 2 above; what this gap addresses is the prerequisite Lagrangian content.
+
 ## References and further reading
 
 **Framework inputs.**

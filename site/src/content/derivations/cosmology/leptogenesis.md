@@ -216,6 +216,8 @@ The observed value $\eta_B^{\text{obs}} \approx 6.1 \times 10^{-10}$ lies betwee
 
 **Gap 4.** Gravitational leptogenesis (from the gravitational anomaly) could provide an additional contribution. The framework's prediction of the Einstein equations from coherence dynamics suggests a gravitational anomaly term that contributes to $\eta_L$.
 
+**Addressed Gap.** *Spinor-level Lagrangian treatment of heavy Majorana neutrinos* — Resolved by [Spinor Coherence Lagrangian](/derivations/foundation/spinor-coherence-lagrangian) Theorem 5.3. The heavy right-handed Majorana mass term $M_R\nu_R^T C\nu_R$ used in Definition 3.1 and Proposition 4.1 is now framework-derived at the Lagrangian level rather than imported from standard neutrino physics: the $J_\epsilon$-invariance of the bootstrap-level-2 pseudo-real structure forces both the Majorana condition and the form of the mass term. The Dirac Yukawa coupling $Y_\nu\bar L H\nu_R$ driving the decay channels is the standard minimal-coupling extension of Spinor Coherence Lagrangian Theorem 2.7's covariant derivative. The leptogenesis mechanism's spinor-level foundations are therefore fully embedded in the derived Lagrangian framework.
+
 ## Addresses Gaps In
 
 - [Baryogenesis](/derivations/cosmology/baryogenesis), Gap: "If neutrinos are Majorana... right-handed neutrino decays could generate $\eta_B$ through leptogenesis. Derive the neutrino mass mechanism and the lepton CP phases." — **Resolved**: Full leptogenesis mechanism derived using framework-predicted Majorana neutrinos and PMNS CP phases.

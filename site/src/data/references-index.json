@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-04-21T21:53:20.091Z",
-    "totalReferences": 103,
-    "totalCitations": 118,
-    "citingFiles": 50,
+    "generatedAt": "2026-04-22T09:54:43.318Z",
+    "totalReferences": 106,
+    "totalCitations": 124,
+    "citingFiles": 52,
     "generator": "scripts/extract-references.mjs"
   },
   "categoryNames": {
@@ -39,11 +39,11 @@
     },
     "quantum-information": {
       "name": "Quantum Information",
-      "count": 19
+      "count": 20
     },
     "field-theory": {
       "name": "Field Theory",
-      "count": 16
+      "count": 18
     },
     "spacetime-geometry": {
       "name": "Spacetime & Geometry",
@@ -464,6 +464,21 @@
       "category": "quantum-information"
     },
     {
+      "id": "lichnerowicz-1963",
+      "authors": "Lichnerowicz",
+      "year": 1963,
+      "citedAs": [
+        "Lichnerowicz, 1963"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "foundation/spinor-coherence-lagrangian",
+          "title": "Spinor Sector of the Coherence Lagrangian"
+        }
+      ],
+      "category": "quantum-information"
+    },
+    {
       "id": "lickorish-1962",
       "authors": "Lickorish",
       "year": 1962,
@@ -494,6 +509,10 @@
         {
           "derivationId": "quantum/entanglement",
           "title": "Entanglement from Relational Invariants"
+        },
+        {
+          "derivationId": "thermodynamics-ext/quantum-fisher-metric",
+          "title": "Quantum Fisher Metric"
         }
       ],
       "category": "quantum-information"
@@ -524,6 +543,10 @@
         {
           "derivationId": "thermodynamics-ext/fisher-metric",
           "title": "Fisher Information Metric"
+        },
+        {
+          "derivationId": "thermodynamics-ext/quantum-fisher-metric",
+          "title": "Quantum Fisher Metric"
         }
       ],
       "category": "quantum-information"
@@ -698,6 +721,21 @@
       "category": "field-theory"
     },
     {
+      "id": "kubo-1957",
+      "authors": "Kubo",
+      "year": 1957,
+      "citedAs": [
+        "Kubo, 1957"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "thermodynamics-ext/quantum-fisher-metric",
+          "title": "Quantum Fisher Metric"
+        }
+      ],
+      "category": "field-theory"
+    },
+    {
       "id": "machacek-vaughn-1984",
       "authors": "Machacek & Vaughn",
       "year": 1984,
@@ -743,6 +781,21 @@
       "category": "field-theory"
     },
     {
+      "id": "petz-toth-1993",
+      "authors": "Petz & Toth",
+      "year": 1993,
+      "citedAs": [
+        "Petz & Toth, 1993"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "thermodynamics-ext/quantum-fisher-metric",
+          "title": "Quantum Fisher Metric"
+        }
+      ],
+      "category": "field-theory"
+    },
+    {
       "id": "pistone-sempi-1995",
       "authors": "Pistone & Sempi",
       "year": 1995,
@@ -753,6 +806,10 @@
         {
           "derivationId": "thermodynamics-ext/fisher-metric",
           "title": "Fisher Information Metric"
+        },
+        {
+          "derivationId": "thermodynamics-ext/quantum-fisher-metric",
+          "title": "Quantum Fisher Metric"
         }
       ],
       "category": "field-theory"

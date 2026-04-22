@@ -196,6 +196,7 @@ The ordering of $m_{\nu_k}$ depends on $y_{\nu_k}^2 / y_{R,k}$. If $y_{R,k}$ is 
 ## Addressed Gaps
 
 1. **Leptogenesis connection** *(resolved — downstream)*: Fully addressed by [Leptogenesis](/derivations/cosmology/leptogenesis), which establishes the viability of electroweak-scale resonant leptogenesis using framework-predicted Majorana neutrinos and PMNS CP phases.
+2. **Lagrangian embedding of the Majorana condition** *(resolved — [Spinor Coherence Lagrangian](/derivations/foundation/spinor-coherence-lagrangian) Theorem 5.3)*: The pseudo-real structure argument of Theorem 1.3 above is now realized explicitly at the Lagrangian level: the $J_\epsilon$-invariance of the $SU(2)_L$ doublet (Spinor Coherence Lagrangian Proposition 5.1) forces the Majorana condition $\nu^c = \nu$, and the unique Lorentz-scalar non-derivative bilinear consistent with this invariance is the Majorana mass term $\tfrac12 m_\nu(\nu^T C\nu + \mathrm{h.c.})$ (Spinor Coherence Lagrangian Theorem 5.3). The seesaw mass matrix of Theorem 2.2 above is now understood as combining a Dirac mass term from Spinor Coherence Lagrangian Theorem 3.2 (applicable to the charged-lepton sector) with the Majorana mass term from Spinor Coherence Lagrangian Theorem 5.3 (applicable to neutrinos). Both mass terms arise from the same Identification 5.3 mechanism acting at different bootstrap levels.
 
 <!-- References -->
 [Planck, 2018]: /references#planck-2018

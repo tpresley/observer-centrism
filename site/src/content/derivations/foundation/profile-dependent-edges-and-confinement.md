@@ -209,6 +209,10 @@ $$r_{\mathrm{edge}}^{\mathrm{hadron}} \;\approx\; \min\!\left(r_{C,\mathrm{hadro
 
 4. **Gravitational channel.** A gravitational channel is not explicitly treated here. For macroscopic observers, gravitational effects can dominate the signal at large distances. Extending to gravitational signals requires integration with [Gravity](/derivations/spacetime/gravity) and [Einstein Field Equations](/derivations/spacetime/einstein-equations). *Difficulty: HARD.*
 
+## Addressed Gaps
+
+1. **Fermion profiles** — *Resolved by [Spinor Coherence Lagrangian](/derivations/foundation/spinor-coherence-lagrangian)* via [Observer Pattern Signal](/derivations/foundation/observer-pattern-signal) Addressed Gap 1. The composite-profile edge equation is agnostic to the spin structure of the source: it takes as input the channel-wise Yukawa contributions from the upstream pattern-signal derivation, and the spin-averaged Dirac source produces the same radial Yukawa form $A_i(r) = g_i m c^2 (r_i/r) e^{-r/r_i}$ that the scalar source produces. The composite-profile derivation therefore applies unchanged to fermion observers (electrons, neutrinos, quarks within color-neutral composites). The confinement analysis for isolated color charges is similarly source-agnostic — the structural content is color-flux termination, not the spin of the colored source.
+
 ## References and further reading
 
 **Framework inputs.**
