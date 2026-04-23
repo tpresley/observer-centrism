@@ -32,14 +32,14 @@
     "symbol": "G",
     "name": "Newton's gravitational constant",
     "smValue": "$6.674 \\times 10^{-11}\\;\\text{m}^3\\text{kg}^{-1}\\text{s}^{-2}$",
-    "frameworkValue": "Constrained: $G = \\ell_{\\min}^2 c^3/\\hbar$ where $\\ell_{\\min}$ is the minimum resolvable scale. Three convergent arguments (Jacobson thermodynamic, minimal observer self-consistency, curvature-spacetime bridge) establish this relationship. Full derivation requires independent determination of $\\ell_{\\min}$.",
+    "frameworkValue": "Constrained: $G = \\ell_{\\min}^2 c^3/\\hbar$ where $\\ell_{\\min}$ is the minimum resolvable scale. The Jacobson thermodynamic argument (Theorem 3.3) and self-consistency bound (Proposition 4.1) are rigorous; full derivation reduces to fixed-point uniqueness (Conjecture 6.3), jointly reducible with area-scaling S1 to Bootstrap Conjectures 7.1–7.2.",
     "status": "constrained",
     "accuracy": null,
     "group": "fundamental-constants",
     "derivation": "spacetime/gravitational-constant",
     "derivationTitle": "Gravitational Coupling from Coherence Geometry",
-    "gaps": ["Independent derivation of $\\ell_{\\min}$ from axioms (curvature-spacetime bridge conjecture)"],
-    "notes": "Three independent arguments converge on $G = \\ell_{\\min}^2 c^3/\\hbar$. The coupling strength is structurally constrained by the coherence Lagrangian, not fully free. Draft status: the curvature-spacetime bridge conjecture (Conjecture 5.3) would complete the derivation."
+    "gaps": ["Fixed-point uniqueness (Conjecture 6.3) — three concrete formulations (Theorem 11.4 self-consistency map, Proposition 11.5 variational, Theorem 12.6 multi-scale RG fixed point)"],
+    "notes": "Multi-scale self-consistency of $G$ across all bootstrap levels forces the observer network to be quasicrystalline (Pisot metallic-mean substitution matrix). The coupling strength is structurally constrained by the coherence Lagrangian, not fully free. Spinor/tetrad route rigorously ruled out."
   },
   {
     "id": "fine-structure-constant",
@@ -144,14 +144,14 @@
     "symbol": "m_t",
     "name": "Top quark mass",
     "smValue": "$m_t = 172.69 \\pm 0.30$ GeV",
-    "frameworkValue": "$m_t = y_t v/\\sqrt{2}$ where $y_t \\propto \\exp(-\\alpha_3/g_{\\text{EW}}^2)$. Third generation most aligned with EW axis, hence heaviest.",
+    "frameworkValue": "$m_t = y_t v/\\sqrt{2}$ where $y_t \\propto \\exp(-\\alpha_3/g_{\\text{EW}}^2)$. Third generation most aligned with EW axis, hence heaviest. Now sharpened at the Lagrangian level by [Coherence Bounces](/derivations/particles/coherence-bounces) (Class A bounces): $\\alpha_k$ identified with Euclidean bounce actions in winding-angle configuration space.",
     "status": "mechanism-only",
     "accuracy": null,
     "group": "quark-masses",
     "derivation": "particles/three-generations",
     "derivationTitle": "Three Fermion Generations",
     "gaps": ["Winding geometry computation of $\\alpha_3$"],
-    "notes": "All quark masses share the same mechanism: $y_k \\propto \\exp(-\\alpha_k/g^2)$, with $\\alpha_1 > \\alpha_2 > \\alpha_3$. The exponential hierarchy is rigorous; the specific angles are not."
+    "notes": "All quark masses share the same mechanism: $y_k \\propto \\exp(-\\alpha_k/g^2)$, with $\\alpha_1 > \\alpha_2 > \\alpha_3$. The exponential hierarchy is rigorous; the WKB (Euclidean bounce) structure is now explicit at the Lagrangian level via [Coherence Bounces](/derivations/particles/coherence-bounces) Step 3. Specific $\\alpha_k$ values remain to be computed from winding geometry."
   },
   {
     "id": "charm-mass",
@@ -270,14 +270,14 @@
     "symbol": "m_\\nu",
     "name": "Neutrino masses (3)",
     "smValue": "$\\Delta m^2_{21} = 7.5 \\times 10^{-5}$ eV², $|\\Delta m^2_{32}| = 2.5 \\times 10^{-3}$ eV²",
-    "frameworkValue": "Type-I seesaw: $m_\\nu = m_D^2/M_R$ with $M_R \\sim y_R v$ at EW scale (not GUT). Normal ordering $m_1 < m_2 < m_3$ rigorously derived. Majorana nature from pseudo-real $\\text{SU}(2)$. Absolute scale requires $\\varepsilon_\\nu$ overlap coefficient.",
+    "frameworkValue": "Type-I seesaw: $m_\\nu = m_D^2/M_R$ with $M_R \\sim y_R v$ at EW scale (not GUT). Normal ordering $m_1 < m_2 < m_3$ rigorously derived. Majorana nature from pseudo-real $\\text{SU}(2)_L$, now realized at the Lagrangian level by [Spinor Coherence Lagrangian](/derivations/foundation/spinor-coherence-lagrangian) Theorem 5.3. Seesaw ratio identified with a ratio of Euclidean WKB bounce actions ([Coherence Bounces](/derivations/particles/coherence-bounces) Proposition 4.2). Absolute scale requires $\\varepsilon_\\nu$ overlap coefficient.",
     "status": "constrained",
     "accuracy": "Ordering derived; absolute scale open",
     "group": "lepton-masses",
     "derivation": "particles/neutrino-masses",
     "derivationTitle": "Neutrino Masses",
-    "gaps": ["Absolute mass scale from winding geometry", "Majorana phases from $A_5$ breaking"],
-    "notes": "Falsifiable: predicts Majorana nature (testable via $0\\nu\\beta\\beta$), normal ordering (JUNO/DUNE), and $M_R \\sim 100$–$1000$ GeV (colliders)."
+    "gaps": ["Absolute mass scale from winding geometry ($\\varepsilon_\\nu$ coefficient)", "Majorana phases $\\alpha_1, \\alpha_2$ from $A_5$ breaking (extends [Mixing Angles](/derivations/flavor/mixing-angles) Step 6, currently covering only Dirac phase $\\delta$)"],
+    "notes": "Framework-distinctive prediction: $M_R \\sim 10^2$–$10^3$ GeV — **eleven orders of magnitude below standard GUT seesaw** ($\\sim 10^{14}$ GeV). Accessible to LHC / HL-LHC / FCC sterile-neutrino searches. Also falsifiable via Majorana nature ($0\\nu\\beta\\beta$ at LEGEND-1000, nEXO) and normal ordering (JUNO/DUNE)."
   },
   {
     "id": "ckm-angles",
@@ -340,14 +340,14 @@
     "symbol": "\\Lambda",
     "name": "Cosmological constant",
     "smValue": "$\\Lambda \\approx 10^{-56}\\;\\text{cm}^{-2}$",
-    "frameworkValue": "Observer-level-indexed: at bootstrap level $n$, $\\Lambda_n = 12/(c T_n)^2$. Sign $\\Lambda \\geq 0$ and Planck-scale upper bound $\\Lambda < 3/\\ell_P^2$ are derived. Equation of state $w = -1$ is the unique time-independent fixed point. The $\\sim 10^{122}$ Planck-to-observed ratio is the obstruction class of the observer-indexed spacetime sheaf.",
+    "frameworkValue": "Observer-level-indexed: at bootstrap level $n$, $\\Lambda_n = 12/(c T_n)^2$, equivalently $\\Lambda_n^{\\text{eff}} = 3\\pi/(S^{(n)}\\ell_P^2)$ ([Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Step 8 Definition 8.2). Sign $\\Lambda \\geq 0$ and Planck-scale upper bound $\\Lambda < 3/\\ell_P^2$ are derived. Equation of state $w = -1$ is the unique time-independent fixed point. The $\\sim 10^{122}$ Planck-to-observed ratio is the obstruction class of the observer-indexed spacetime sheaf; cross-level ratio within a given level is $\\sim 1/\\Omega_\\Lambda \\approx 1.43$ (OLV Proposition 8.7).",
     "status": "mechanism-only",
     "accuracy": "Sign, bound, and equation-of-state derived; per-level formula $\\Lambda_n = 12/(c T_n)^2$; numerical value at our observer level open",
     "group": "cosmological",
     "derivation": "cosmology/cosmological-constant",
     "derivationTitle": "Cosmological Constant",
-    "gaps": ["Obstruction class computation (hard-open)", "Observer-level identification for the measured $\\Lambda$", "Minimal-observer projection theorem (upstream)"],
-    "notes": "The $\\sim 10^{122}$ hierarchy is reframed as the obstruction class of the observer-indexed spacetime sheaf rather than a fine-tuning puzzle. Computing the class is a concrete categorical-cohomology target."
+    "gaps": ["Obstruction class computation (hard-open)", "Observer-level identification for the measured $\\Lambda$", "Double-saturation boundary condition (OLV Conjecture 8.9) — Planck-end + cosmological-end gravitational saturation would pin $\\sum \\Delta c_n$ independently of $\\Lambda$, providing the missing constraint on the partition equation"],
+    "notes": "The $\\sim 10^{122}$ hierarchy is reframed as the obstruction class of the observer-indexed spacetime sheaf rather than a fine-tuning puzzle. Computing the class is a concrete categorical-cohomology target. The partition equation $C_0 = \\sum\\Delta c_n + S_H$ is an identity (OLV Proposition 8.8) — a genuine constraint requires computing $\\sum\\Delta c_n$ independently from SM structure; double-saturation is the most concrete proposed route."
   },
   {
     "id": "ew-crystallization-axis",

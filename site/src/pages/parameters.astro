@@ -162,7 +162,12 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '')
     String theory similarly claims all parameters are determined once the vacuum is selected, but
     the vacuum selection problem remains open. GUTs reduce parameters through group-theoretic
     constraints but do not explain Yukawa couplings. No framework has yet computed all SM
-    parameters from first principles.
+    parameters from first principles. For observer-centrism specifically, the <strong>{determinedInPrinciple}</strong> &ldquo;determined
+    in principle&rdquo; parameters break down as <strong>{derivedCount}</strong> fully derived,
+    <strong>{constrainedCount}</strong> structurally constrained, and <strong>{mechanismCount}</strong> with
+    mechanism identified but numerical values pending. Other frameworks on this table typically
+    don&rsquo;t distinguish these internal buckets, so head-to-head comparison on a strict &ldquo;derived&rdquo;
+    column would be methodologically inconsistent.
   </p>
 
   {Object.entries(groups).map(([group, params]) => (
