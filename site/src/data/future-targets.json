@@ -3,7 +3,6 @@
     "description": "Tracking artifact for plausible postulate promotions, gap closures, and new derivation targets. Updated 2026-03-12. Loop Closure S2 and Gravity S1 promoted to Theorem 0.1.",
     "instructions": "Each item has a difficulty rating (LOW/MODERATE/HARD/BLOCKED), a category, and enough context for a new session to pick up the work."
   },
-
   "postulatePromotions": [
     {
       "id": "lorentz-invariance-s1",
@@ -12,11 +11,15 @@
       "derivation": "spacetime/lorentz-invariance",
       "difficulty": "LOW",
       "tier": 1,
-      "status": "COMPLETED — promoted to Theorem 0.1 in lorentz-invariance.md, structural-postulates.json updated with derivedFrom",
+      "status": "COMPLETED \u2014 promoted to Theorem 0.1 in lorentz-invariance.md, structural-postulates.json updated with derivedFrom",
       "completedDate": "2026-03-12",
       "rationale": "The postulate's own justification already states the argument: 'Follows from the axioms' location-independence: coherence conservation and observer definitions do not reference absolute position, so the derived geometry inherits translation symmetry.' If the axioms genuinely contain no absolute position parameter, homogeneity is a theorem, not an assumption.",
-      "strategy": "Write a short formal proof (or a new section within the existing Lorentz Invariance derivation) showing: (1) Axiom 1 (coherence conservation) is stated without reference to spacetime position — the σ-algebra and subadditivity are position-independent. (2) Axiom 2 (observer definition) specifies (Σ, I, B) without embedding in a background spacetime. (3) Axiom 3 (loop closure) specifies U(1) dynamics with period T, without position dependence. (4) Therefore, the coherence measure C and the derived metric g are invariant under translations x^μ → x^μ + a^μ. This is essentially a symmetry inheritance argument.",
-      "dependencies": ["axioms/coherence-conservation", "axioms/observer-definition", "axioms/loop-closure"],
+      "strategy": "Write a short formal proof (or a new section within the existing Lorentz Invariance derivation) showing: (1) Axiom 1 (coherence conservation) is stated without reference to spacetime position \u2014 the \u03c3-algebra and subadditivity are position-independent. (2) Axiom 2 (observer definition) specifies (\u03a3, I, B) without embedding in a background spacetime. (3) Axiom 3 (loop closure) specifies U(1) dynamics with period T, without position dependence. (4) Therefore, the coherence measure C and the derived metric g are invariant under translations x^\u03bc \u2192 x^\u03bc + a^\u03bc. This is essentially a symmetry inheritance argument.",
+      "dependencies": [
+        "axioms/coherence-conservation",
+        "axioms/observer-definition",
+        "axioms/loop-closure"
+      ],
       "impact": "Reduces active postulates from 18 to 17. Strengthens the 'three axioms suffice' narrative."
     },
     {
@@ -26,23 +29,29 @@
       "derivation": "thermodynamics/action-planck",
       "difficulty": "MODERATE",
       "tier": 1,
-      "rationale": "This postulate says C is C² with positive-definite Hessian. The Fisher Information Metric derivation (derived) already proves the coherence Hessian is a metric via Čencov's uniqueness theorem. If the Fisher metric argument can be shown to produce a C² coherence measure with positive-definite Hessian from the Loop Closure S2 Riemannian metric, this postulate becomes redundant.",
-      "strategy": "Show: (1) Loop Closure S2 provides a Riemannian metric g on Σ. (2) Fisher metric derivation proves the coherence Hessian H_ij = ∂²C/∂σ^i∂σ^j is a metric (Čencov uniqueness). (3) For H to be a metric, C must be at least C² (otherwise the Hessian doesn't exist) and H must be positive-definite. (4) Therefore S1 follows from S2 + Fisher metric. Key subtlety: does Čencov require C² as input, or does it produce it as output?",
-      "dependencies": ["axioms/loop-closure", "thermodynamics-ext/fisher-metric"],
+      "rationale": "This postulate says C is C\u00b2 with positive-definite Hessian. The Fisher Information Metric derivation (derived) already proves the coherence Hessian is a metric via \u010cencov's uniqueness theorem. If the Fisher metric argument can be shown to produce a C\u00b2 coherence measure with positive-definite Hessian from the Loop Closure S2 Riemannian metric, this postulate becomes redundant.",
+      "strategy": "Show: (1) Loop Closure S2 provides a Riemannian metric g on \u03a3. (2) Fisher metric derivation proves the coherence Hessian H_ij = \u2202\u00b2C/\u2202\u03c3^i\u2202\u03c3^j is a metric (\u010cencov uniqueness). (3) For H to be a metric, C must be at least C\u00b2 (otherwise the Hessian doesn't exist) and H must be positive-definite. (4) Therefore S1 follows from S2 + Fisher metric. Key subtlety: does \u010cencov require C\u00b2 as input, or does it produce it as output?",
+      "dependencies": [
+        "axioms/loop-closure",
+        "thermodynamics-ext/fisher-metric"
+      ],
       "impact": "Reduces active postulates. Tightens the thermodynamics-foundation connection."
     },
     {
       "id": "gravity-s1",
       "postulateId": "S1",
-      "shortName": "Metric–density coupling",
+      "shortName": "Metric\u2013density coupling",
       "derivation": "spacetime/gravity",
       "difficulty": "MODERATE",
       "tier": 1,
-      "status": "COMPLETED — promoted to Theorem 0.1 in gravity.md. Derived from action duality + coherence subadditivity (Axiom 1, C4) + action equality. structural-postulates.json updated with derivedFrom.",
+      "status": "COMPLETED \u2014 promoted to Theorem 0.1 in gravity.md. Derived from action duality + coherence subadditivity (Axiom 1, C4) + action equality. structural-postulates.json updated with derivedFrom.",
       "completedDate": "2026-03-12",
       "rationale": "The justification says: 'Since observers curve the coherence geometry through their concentration, the metric must respond to observer density. This is the minimal local coupling assumption.' The 'must respond' language suggests this follows from coherence conservation. If the metric is determined by the coherence distribution (as the entire geometric chain argues), then metric-density coupling is a consequence, not an input.",
-      "strategy": "Argument: (1) The coherence geometry (Speed of Light S1) has a pseudo-Riemannian metric g. (2) Coherence conservation (Axiom 1) requires the total coherence on Cauchy slices to be conserved. (3) If the metric were independent of the coherence density ρ_I, then redistributing observers (changing ρ_I) would leave the geometry unchanged — but the path lengths in g determine coherence costs, so coherence conservation would be violated unless g responds to ρ_I. (4) Therefore g must be locally determined by ρ_I. The hard part: making step (3) rigorous — showing that a position-independent metric actually leads to inconsistency.",
-      "dependencies": ["spacetime/speed-of-light", "axioms/coherence-conservation"],
+      "strategy": "Argument: (1) The coherence geometry (Speed of Light S1) has a pseudo-Riemannian metric g. (2) Coherence conservation (Axiom 1) requires the total coherence on Cauchy slices to be conserved. (3) If the metric were independent of the coherence density \u03c1_I, then redistributing observers (changing \u03c1_I) would leave the geometry unchanged \u2014 but the path lengths in g determine coherence costs, so coherence conservation would be violated unless g responds to \u03c1_I. (4) Therefore g must be locally determined by \u03c1_I. The hard part: making step (3) rigorous \u2014 showing that a position-independent metric actually leads to inconsistency.",
+      "dependencies": [
+        "spacetime/speed-of-light",
+        "axioms/coherence-conservation"
+      ],
       "impact": "Reduces active postulates. Connects gravity more tightly to axioms."
     },
     {
@@ -52,11 +61,14 @@
       "derivation": "axioms/loop-closure",
       "difficulty": "MODERATE",
       "tier": 1,
-      "status": "COMPLETED — S1 weakened to 'topological manifold + free orbits', smooth structure derived as Theorem 0.0 via equivariant smoothing theorem",
+      "status": "COMPLETED \u2014 S1 weakened to 'topological manifold + free orbits', smooth structure derived as Theorem 0.0 via equivariant smoothing theorem",
       "completedDate": "2026-03-13",
-      "rationale": "S1 originally assumed smooth (C^∞) manifold structure. But smoothness follows from the combination of (1) topological manifold structure (finite-dimensional, locally Euclidean) and (2) the continuous U(1) action from Axiom 3. The equivariant smoothing theorem (Illman, 1978) guarantees that any continuous compact Lie group action on a topological manifold admits a compatible smooth structure, and in dimensions ≤ 3 the smooth structure is unique (Radó, Moise). Two independent arguments strengthen the case: (a) the Noether coherence argument (non-smooth structure severs the Noether mechanism linking the three axioms), and (b) the Montgomery-Zippin route (constructive derivation of smooth structure from the U(1) action).",
-      "strategy": "(1) Weaken S1 to: compact topological manifold of finite dimension with free U(1) orbits. (2) Add axiom coherence argument: without smooth structure, the Noether pair (Theorem 3.1) cannot connect Axioms 1–3, making the axiom system internally incoherent. (3) Derive Theorem 0.0: equivariant smoothing theorem gives existence, Moise/Radó/Whitney give uniqueness.",
-      "dependencies": ["axioms/loop-closure", "axioms/observer-definition"],
+      "rationale": "S1 originally assumed smooth (C^\u221e) manifold structure. But smoothness follows from the combination of (1) topological manifold structure (finite-dimensional, locally Euclidean) and (2) the continuous U(1) action from Axiom 3. The equivariant smoothing theorem (Illman, 1978) guarantees that any continuous compact Lie group action on a topological manifold admits a compatible smooth structure, and in dimensions \u2264 3 the smooth structure is unique (Rad\u00f3, Moise). Two independent arguments strengthen the case: (a) the Noether coherence argument (non-smooth structure severs the Noether mechanism linking the three axioms), and (b) the Montgomery-Zippin route (constructive derivation of smooth structure from the U(1) action).",
+      "strategy": "(1) Weaken S1 to: compact topological manifold of finite dimension with free U(1) orbits. (2) Add axiom coherence argument: without smooth structure, the Noether pair (Theorem 3.1) cannot connect Axioms 1\u20133, making the axiom system internally incoherent. (3) Derive Theorem 0.0: equivariant smoothing theorem gives existence, Moise/Rad\u00f3/Whitney give uniqueness.",
+      "dependencies": [
+        "axioms/loop-closure",
+        "axioms/observer-definition"
+      ],
       "impact": "Reduces the content of S1 from 'smooth manifold' to 'finite-dimensional topological manifold + free orbits'. Smoothness becomes a theorem. Strengthens the axiom-to-structure chain."
     },
     {
@@ -66,49 +78,77 @@
       "derivation": "interactions/relational-invariants",
       "difficulty": "HARD",
       "tier": 2,
-      "rationale": "Symplectic structure is the minimal geometric setting for Noether's theorem. The loop closure axiom provides U(1) actions on each observer's state space. On the joint space Σ₁ × Σ₂, the two U(1) actions, combined with the Riemannian structure from Loop Closure S2, might naturally induce a symplectic form via the Kähler construction (Riemannian + complex structure → symplectic).",
-      "strategy": "Attempt: (1) Each observer has U(1) action φ_t on Σ. This defines a vector field V on Σ. (2) With the Riemannian metric g (S2), define ω(X,Y) = g(JX, Y) where J is the almost-complex structure from the U(1) action. (3) Show ω is closed (dω = 0) and non-degenerate, hence symplectic. Key difficulty: this works on individual observer spaces (which are even-dimensional by the U(1) action), but the joint space needs the product symplectic form. Also: does the U(1) action define a genuine complex structure, or only an almost-complex structure?",
-      "dependencies": ["axioms/loop-closure", "axioms/loop-closure"],
+      "rationale": "Symplectic structure is the minimal geometric setting for Noether's theorem. The loop closure axiom provides U(1) actions on each observer's state space. On the joint space \u03a3\u2081 \u00d7 \u03a3\u2082, the two U(1) actions, combined with the Riemannian structure from Loop Closure S2, might naturally induce a symplectic form via the K\u00e4hler construction (Riemannian + complex structure \u2192 symplectic).",
+      "strategy": "Attempt: (1) Each observer has U(1) action \u03c6_t on \u03a3. This defines a vector field V on \u03a3. (2) With the Riemannian metric g (S2), define \u03c9(X,Y) = g(JX, Y) where J is the almost-complex structure from the U(1) action. (3) Show \u03c9 is closed (d\u03c9 = 0) and non-degenerate, hence symplectic. Key difficulty: this works on individual observer spaces (which are even-dimensional by the U(1) action), but the joint space needs the product symplectic form. Also: does the U(1) action define a genuine complex structure, or only an almost-complex structure?",
+      "dependencies": [
+        "axioms/loop-closure",
+        "axioms/loop-closure"
+      ],
       "impact": "Would eliminate a dynamics postulate. Strengthens the axiom-to-Noether chain."
     },
     {
       "id": "second-order-locality-family",
-      "postulateIds": ["einstein-equations-s1", "electromagnetism-s2", "weak-interaction-s2"],
-      "shortNames": ["Second-order locality", "Minimal gauge dynamics", "Minimal non-abelian gauge dynamics"],
-      "derivations": ["spacetime/einstein-equations", "gauge/electromagnetism", "gauge/weak-interaction"],
+      "postulateIds": [
+        "einstein-equations-s1",
+        "electromagnetism-s2",
+        "weak-interaction-s2"
+      ],
+      "shortNames": [
+        "Second-order locality",
+        "Minimal gauge dynamics",
+        "Minimal non-abelian gauge dynamics"
+      ],
+      "derivations": [
+        "spacetime/einstein-equations",
+        "gauge/electromagnetism",
+        "gauge/weak-interaction"
+      ],
       "difficulty": "HARD",
       "tier": 2,
       "rationale": "All three share identical motivation: 'Higher-derivative equations would couple the field to non-local coherence information, violating the principle that the interaction graph determines dynamics locally.' If interaction-graph locality can be formalized as a theorem from the causal set structure, all three postulates fall simultaneously. This would eliminate 3 postulates at once.",
-      "strategy": "The argument would need: (1) Define 'local' precisely in terms of the causal set: field equations at a point p depend only on causal set elements within a bounded causal diamond of p. (2) Show that nth-order derivatives require information from n-step neighbors in the causal set. (3) Show that the Planck-scale discreteness means only 1st and 2nd derivatives are accessible within a single Planck cell. (4) Therefore field equations are at most second-order. This is speculative — it requires developing the discrete calculus on causal sets more carefully.",
-      "dependencies": ["holography/causal-set-statistics", "holography/area-scaling"],
+      "strategy": "The argument would need: (1) Define 'local' precisely in terms of the causal set: field equations at a point p depend only on causal set elements within a bounded causal diamond of p. (2) Show that nth-order derivatives require information from n-step neighbors in the causal set. (3) Show that the Planck-scale discreteness means only 1st and 2nd derivatives are accessible within a single Planck cell. (4) Therefore field equations are at most second-order. This is speculative \u2014 it requires developing the discrete calculus on causal sets more carefully.",
+      "dependencies": [
+        "holography/causal-set-statistics",
+        "holography/area-scaling"
+      ],
       "impact": "Eliminates 3 postulates simultaneously. Major structural simplification."
     },
     {
       "id": "born-rule-s1",
       "postulateId": "S1",
-      "shortName": "Amplitude–coherence identification",
+      "shortName": "Amplitude\u2013coherence identification",
       "derivation": "quantum/born-rule",
       "difficulty": "HARD",
       "tier": 3,
-      "rationale": "This bridges the abstract coherence framework and quantum mechanics: C(|ψ⟩) = ⟨ψ|ψ⟩. The Fisher metric derivation identifies the coherence Hessian as the Fisher information metric, and the entanglement derivation maps coherence to von Neumann entropy. If the Hilbert space norm can be shown to be the unique norm compatible with coherence conservation, this postulate would be derived.",
-      "strategy": "Requires showing: (1) The coherence measure C restricted to pure states must be a quadratic form (from subadditivity + conservation). (2) Quadratic form on a vector space = inner product = Hilbert space norm. (3) Therefore C(|ψ⟩) = ⟨ψ|ψ⟩. Step (1) is the hard part — Gleason's theorem gives this for d ≥ 3, but the derivation should ideally work from coherence axioms alone.",
-      "dependencies": ["axioms/coherence-conservation", "quantum/born-rule"],
+      "rationale": "This bridges the abstract coherence framework and quantum mechanics: C(|\u03c8\u27e9) = \u27e8\u03c8|\u03c8\u27e9. The Fisher metric derivation identifies the coherence Hessian as the Fisher information metric, and the entanglement derivation maps coherence to von Neumann entropy. If the Hilbert space norm can be shown to be the unique norm compatible with coherence conservation, this postulate would be derived.",
+      "strategy": "Requires showing: (1) The coherence measure C restricted to pure states must be a quadratic form (from subadditivity + conservation). (2) Quadratic form on a vector space = inner product = Hilbert space norm. (3) Therefore C(|\u03c8\u27e9) = \u27e8\u03c8|\u03c8\u27e9. Step (1) is the hard part \u2014 Gleason's theorem gives this for d \u2265 3, but the derivation should ideally work from coherence axioms alone.",
+      "dependencies": [
+        "axioms/coherence-conservation",
+        "quantum/born-rule"
+      ],
       "impact": "Would derive the quantum formalism from coherence. Extremely high impact but very difficult."
     }
   ],
-
   "newDerivationTargets": [
     {
       "id": "rg-reinterpretation-of-bootstrap-iteration",
       "title": "RG Reinterpretation of Bootstrap Iteration",
       "difficulty": "HARD",
       "priority": "MEDIUM",
-      "status": "OPEN — flagged 2026-04-21 during WKB bounce program Step 3a (option-ii exploration)",
-      "rationale": "Mass Hierarchy Theorem 3.1's formula Λ_n/Λ_{n-1} = exp(-c_n/g_n²) has the same functional form as standard RG dimensional transmutation (e.g., Λ_QCD ~ M_Z · exp(-c/α_s)). The WKB bounce program's option-ii exploration identified that if the bootstrap map R is structurally an RG flow step (integrating out modes between adjacent crystallization scales), then Mass Hierarchy's 'barrier tunneling' language may be a reparaphrase of RG running rather than a distinct physical mechanism. If the identification holds, mass-hierarchy-s1's barrier-tunneling formulation would be a *restatement* rather than an additional postulate: the postulate's irreducible content dissolves into the standard RG story once the bootstrap-is-RG identification is rigorously established.",
-      "strategy": "(1) Formalize the candidate identification R ~ RG step: what does it mean for the bootstrap map to be Scott-continuous *and* to generate the $\\beta$-function of the level-n effective theory? (2) Derive framework-internal $\\beta$-function coefficients from the Coherence Lagrangian + Spinor Coherence Lagrangian content (SM gauge content + three generations). (3) Check whether the framework $\\beta$-function applied between levels Λ_{n-1} and Λ_n reproduces the specific c_n/g_n² exponent structure claimed in Mass Hierarchy Theorem 3.1. (4) If yes, restate mass-hierarchy-s1 as 'bootstrap iteration IS RG flow' with the tunneling language understood as heuristic. (5) Evaluate whether this restatement preserves or weakens the postulate's content.",
-      "dependencies": ["particles/mass-hierarchy", "interactions/bootstrap", "foundation/coherence-lagrangian", "foundation/spinor-coherence-lagrangian"],
-      "addressesGaps": ["particles/mass-hierarchy S1 irreducible content", "particles/coherence-bounces §Candidate promotion routes Route 3"],
-      "impact": "If successful: restates mass-hierarchy-s1 in RG-theoretic terms, potentially eliminating the barrier-identification postulate content by identifying it as a special case of running couplings. Does NOT retire the postulate if the RG identification itself is a postulate. Estimated scope 2–6 months.",
+      "status": "OPEN \u2014 flagged 2026-04-21 during WKB bounce program Step 3a (option-ii exploration)",
+      "rationale": "Mass Hierarchy Theorem 3.1's formula \u039b_n/\u039b_{n-1} = exp(-c_n/g_n\u00b2) has the same functional form as standard RG dimensional transmutation (e.g., \u039b_QCD ~ M_Z \u00b7 exp(-c/\u03b1_s)). The WKB bounce program's option-ii exploration identified that if the bootstrap map R is structurally an RG flow step (integrating out modes between adjacent crystallization scales), then Mass Hierarchy's 'barrier tunneling' language may be a reparaphrase of RG running rather than a distinct physical mechanism. If the identification holds, mass-hierarchy-s1's barrier-tunneling formulation would be a *restatement* rather than an additional postulate: the postulate's irreducible content dissolves into the standard RG story once the bootstrap-is-RG identification is rigorously established.",
+      "strategy": "(1) Formalize the candidate identification R ~ RG step: what does it mean for the bootstrap map to be Scott-continuous *and* to generate the $\\beta$-function of the level-n effective theory? (2) Derive framework-internal $\\beta$-function coefficients from the Coherence Lagrangian + Spinor Coherence Lagrangian content (SM gauge content + three generations). (3) Check whether the framework $\\beta$-function applied between levels \u039b_{n-1} and \u039b_n reproduces the specific c_n/g_n\u00b2 exponent structure claimed in Mass Hierarchy Theorem 3.1. (4) If yes, restate mass-hierarchy-s1 as 'bootstrap iteration IS RG flow' with the tunneling language understood as heuristic. (5) Evaluate whether this restatement preserves or weakens the postulate's content.",
+      "dependencies": [
+        "particles/mass-hierarchy",
+        "interactions/bootstrap",
+        "foundation/coherence-lagrangian",
+        "foundation/spinor-coherence-lagrangian"
+      ],
+      "addressesGaps": [
+        "particles/mass-hierarchy S1 irreducible content",
+        "particles/coherence-bounces \u00a7Candidate promotion routes Route 3"
+      ],
+      "impact": "If successful: restates mass-hierarchy-s1 in RG-theoretic terms, potentially eliminating the barrier-identification postulate content by identifying it as a special case of running couplings. Does NOT retire the postulate if the RG identification itself is a postulate. Estimated scope 2\u20136 months.",
       "surfacedBy": "wkb-bounce-in-coherence-lagrangian Step 3a"
     },
     {
@@ -116,216 +156,354 @@
       "title": "Fisher Distance on Bootstrap Fixed-Point Manifold",
       "difficulty": "HARD",
       "priority": "MEDIUM",
-      "status": "OPEN — flagged 2026-04-21 during WKB bounce program Step 3a",
-      "rationale": "Mass Hierarchy's coherence-geometric barrier parameters (V ~ Λ_{n-1}/g_n², a ~ 1/Λ_{n-1}) should be derivable from the Fisher distance between adjacent bootstrap fixed points on the state-space manifold. At weak coupling g_n << 1, standard gauge-theoretic intuition suggests the Fisher distance between adjacent fixed points in the BKM metric scales as ~1/g_n (compare: vacuum-manifold extent, instanton size, 't Hooft-Polyakov monopole size, etc.). If this scaling can be rigorously established using framework content (Quantum Fisher Metric BKM, Bootstrap Mechanism fixed-point data, geometry functor formalization), the barrier height V ~ Λ_{n-1}/g_n² follows from kinetic-energy-times-distance-squared on the Riemannian fixed-point manifold.",
-      "strategy": "(1) Formalize the geometry functor G: Obs → Geom (prerequisite, itself a separate future target — see 'hierarchical-geometry' entry). (2) Compute the Fisher (BKM) distance between adjacent bootstrap fixed points in the framework's specific gauge content (U(1), SU(2), SU(3) from Bootstrap Division Algebras). (3) Verify the distance scales as ~1/g_n with a computable O(1) prefactor. (4) Derive the barrier height V and width a from the Fisher geometry. (5) Compute c_n values and compare against the consistency-check table of Coherence Bounces §Empirical Consistency.",
-      "dependencies": ["interactions/bootstrap", "thermodynamics-ext/quantum-fisher-metric", "foundation/observer-projected-spacetime"],
-      "addressesGaps": ["particles/mass-hierarchy S1 irreducible content", "particles/coherence-bounces §Candidate promotion routes Route 1"],
-      "impact": "If successful: derives the barrier shape of mass-hierarchy-s1 from framework content, promoting component (2) of the sharpened postulate (the barrier identification) from postulate to theorem. Joint promotion with area-scaling-s1 via shared dependency on Conjectures 7.1–7.2. Would retire two active postulates together. Estimated scope 1–3 months once geometry functor is formalized.",
+      "status": "OPEN \u2014 flagged 2026-04-21 during WKB bounce program Step 3a",
+      "rationale": "Mass Hierarchy's coherence-geometric barrier parameters (V ~ \u039b_{n-1}/g_n\u00b2, a ~ 1/\u039b_{n-1}) should be derivable from the Fisher distance between adjacent bootstrap fixed points on the state-space manifold. At weak coupling g_n << 1, standard gauge-theoretic intuition suggests the Fisher distance between adjacent fixed points in the BKM metric scales as ~1/g_n (compare: vacuum-manifold extent, instanton size, 't Hooft-Polyakov monopole size, etc.). If this scaling can be rigorously established using framework content (Quantum Fisher Metric BKM, Bootstrap Mechanism fixed-point data, geometry functor formalization), the barrier height V ~ \u039b_{n-1}/g_n\u00b2 follows from kinetic-energy-times-distance-squared on the Riemannian fixed-point manifold.",
+      "strategy": "(1) Formalize the geometry functor G: Obs \u2192 Geom (prerequisite, itself a separate future target \u2014 see 'hierarchical-geometry' entry). (2) Compute the Fisher (BKM) distance between adjacent bootstrap fixed points in the framework's specific gauge content (U(1), SU(2), SU(3) from Bootstrap Division Algebras). (3) Verify the distance scales as ~1/g_n with a computable O(1) prefactor. (4) Derive the barrier height V and width a from the Fisher geometry. (5) Compute c_n values and compare against the consistency-check table of Coherence Bounces \u00a7Empirical Consistency.",
+      "dependencies": [
+        "interactions/bootstrap",
+        "thermodynamics-ext/quantum-fisher-metric",
+        "foundation/observer-projected-spacetime"
+      ],
+      "addressesGaps": [
+        "particles/mass-hierarchy S1 irreducible content",
+        "particles/coherence-bounces \u00a7Candidate promotion routes Route 1"
+      ],
+      "impact": "If successful: derives the barrier shape of mass-hierarchy-s1 from framework content, promoting component (2) of the sharpened postulate (the barrier identification) from postulate to theorem. Joint promotion with area-scaling-s1 via shared dependency on Conjectures 7.1\u20137.2. Would retire two active postulates together. Estimated scope 1\u20133 months once geometry functor is formalized.",
       "surfacedBy": "wkb-bounce-in-coherence-lagrangian Step 3a"
     },
     {
       "id": "holographic-noise-amplitude",
-      "title": "First-principles α_H: structural resolution of the holographic substitution rule",
+      "title": "First-principles \u03b1_H: structural resolution of the holographic substitution rule",
       "difficulty": "HARD",
       "priority": "HIGH",
-      "status": "OPEN — reframed 2026-04-14 after Monte Carlo experiment (experiments/alpha_H_monte_carlo.py) verified that the Brightwell–Gregory longest-chain estimator has Var ~ L^0.37 (extreme-value statistics) and cannot validate the framework's CLT-based Var ~ L prediction. The first-principles α_H question is structural, not computational.",
-      "rationale": "The holographic noise amplitude coefficient α_H is an O(1) parameter, with α_H ~ 1/4 asserted as a 'natural target' from the holographic bound via a heuristic substitution (Heuristic 2.3 of causal-set-statistics.md). The substitution equates 'one independent bit of boundary information' with 'ℓ_P² of length variance', a bridging rule that is not derived from the framework. With the rigorous γ(α) = cos α derivation (Theorem 5.1 of holographic-noise.md), the Holometer constrains α_H ≲ 0.24, placing the natural target 1/4 in marginal 3% tension with experiment. The framework's √(ℓ_P L) scaling and the heuristic value α_H ~ 1/4 both presuppose a count-based estimator: the interferometer accumulates phase along its arm by sampling a Planck-thickness tube of causet elements, with Poisson variance giving Var ∝ L by construction. For such an estimator α_H = 1 trivially without the holographic substitution, and α_H = 1/4 with it. Resolving α_H requires either deriving the holographic substitution rule from the framework's axioms, or constructing a non-Poisson causet model where holographic correlations are explicit and reduce the naive α_H = 1 to a calculable smaller value. The Brightwell–Gregory longest-chain Monte Carlo on Poisson-sprinkled 4D Minkowski has been tested (experiments/alpha_H_monte_carlo.py, L = 4..18, ~10 minutes runtime) and confirmed NOT to be a route to α_H — the longest-chain length is an extreme-value statistic with Var ~ L^0.37, not a sum-of-independents with Var ~ L, and gives a drifting 'α_H' that scales as L^(-0.63) and never approaches the heuristic target.",
-      "strategy": "Option A (axiomatic derivation of holographic substitution): Derive the bridge rule 'one bit of holographic boundary information ↔ ℓ_P² of length variance' from coherence conservation, the area-scaling derivation, and the Fisher metric chain. This would convert Heuristic 2.3 into a theorem. Currently the bridge appears to be an additional assumption beyond what Poisson causet statistics provide. Option B (non-Poisson causet model): Construct an explicit causet model where elements are NOT independently Poisson-sprinkled but instead have correlations enforced by the holographic boundary structure (e.g., a sprinkling in which the number of elements within any causal diamond is constrained by the Bekenstein–Hawking bound rather than the bulk Planck-cell count). Compute the count-based length variance in such a model; if the holographic correlations reduce it from the naive Poisson value by a factor of 4, this gives a first-principles α_H = 1/4. Option C (alternative geometric estimator): Identify an estimator that physically corresponds to interferometer phase accumulation AND is computable on a Poisson causet AND has Var ~ L by construction. Such an estimator must be a sum of local contributions (to satisfy CLT) rather than a global topological feature like the longest chain. The Myrheim–Meyer interval-count is a candidate but should be verified to scale linearly before investing significant effort.",
-      "dependencies": ["holography/causal-set-statistics", "holography/area-scaling", "thermodynamics-ext/fisher-metric"],
-      "addressesGaps": ["holography/causal-set-statistics Open Gap 1 (first-principles α_H)", "predictions/holographic-noise amplitude tension with Holometer"],
-      "impact": "Determines whether the framework's natural target α_H ~ 1/4 is the true value (direct implications for the experimental status of the primary prediction). Does NOT affect the distinctive Γ(β) = cos β angular signature (which is independent of α_H). Does NOT require Monte Carlo on Poisson sprinklings — the question is structural rather than statistical."
+      "status": "OPEN \u2014 reframed 2026-04-14 after Monte Carlo experiment (experiments/alpha_H_monte_carlo.py) verified that the Brightwell\u2013Gregory longest-chain estimator has Var ~ L^0.37 (extreme-value statistics) and cannot validate the framework's CLT-based Var ~ L prediction. The first-principles \u03b1_H question is structural, not computational.",
+      "rationale": "The holographic noise amplitude coefficient \u03b1_H is an O(1) parameter, with \u03b1_H ~ 1/4 asserted as a 'natural target' from the holographic bound via a heuristic substitution (Heuristic 2.3 of causal-set-statistics.md). The substitution equates 'one independent bit of boundary information' with '\u2113_P\u00b2 of length variance', a bridging rule that is not derived from the framework. With the rigorous \u03b3(\u03b1) = cos \u03b1 derivation (Theorem 5.1 of holographic-noise.md), the Holometer constrains \u03b1_H \u2272 0.24, placing the natural target 1/4 in marginal 3% tension with experiment. The framework's \u221a(\u2113_P L) scaling and the heuristic value \u03b1_H ~ 1/4 both presuppose a count-based estimator: the interferometer accumulates phase along its arm by sampling a Planck-thickness tube of causet elements, with Poisson variance giving Var \u221d L by construction. For such an estimator \u03b1_H = 1 trivially without the holographic substitution, and \u03b1_H = 1/4 with it. Resolving \u03b1_H requires either deriving the holographic substitution rule from the framework's axioms, or constructing a non-Poisson causet model where holographic correlations are explicit and reduce the naive \u03b1_H = 1 to a calculable smaller value. The Brightwell\u2013Gregory longest-chain Monte Carlo on Poisson-sprinkled 4D Minkowski has been tested (experiments/alpha_H_monte_carlo.py, L = 4..18, ~10 minutes runtime) and confirmed NOT to be a route to \u03b1_H \u2014 the longest-chain length is an extreme-value statistic with Var ~ L^0.37, not a sum-of-independents with Var ~ L, and gives a drifting '\u03b1_H' that scales as L^(-0.63) and never approaches the heuristic target.",
+      "strategy": "Option A (axiomatic derivation of holographic substitution): Derive the bridge rule 'one bit of holographic boundary information \u2194 \u2113_P\u00b2 of length variance' from coherence conservation, the area-scaling derivation, and the Fisher metric chain. This would convert Heuristic 2.3 into a theorem. Currently the bridge appears to be an additional assumption beyond what Poisson causet statistics provide. Option B (non-Poisson causet model): Construct an explicit causet model where elements are NOT independently Poisson-sprinkled but instead have correlations enforced by the holographic boundary structure (e.g., a sprinkling in which the number of elements within any causal diamond is constrained by the Bekenstein\u2013Hawking bound rather than the bulk Planck-cell count). Compute the count-based length variance in such a model; if the holographic correlations reduce it from the naive Poisson value by a factor of 4, this gives a first-principles \u03b1_H = 1/4. Option C (alternative geometric estimator): Identify an estimator that physically corresponds to interferometer phase accumulation AND is computable on a Poisson causet AND has Var ~ L by construction. Such an estimator must be a sum of local contributions (to satisfy CLT) rather than a global topological feature like the longest chain. The Myrheim\u2013Meyer interval-count is a candidate but should be verified to scale linearly before investing significant effort.",
+      "dependencies": [
+        "holography/causal-set-statistics",
+        "holography/area-scaling",
+        "thermodynamics-ext/fisher-metric"
+      ],
+      "addressesGaps": [
+        "holography/causal-set-statistics Open Gap 1 (first-principles \u03b1_H)",
+        "predictions/holographic-noise amplitude tension with Holometer"
+      ],
+      "impact": "Determines whether the framework's natural target \u03b1_H ~ 1/4 is the true value (direct implications for the experimental status of the primary prediction). Does NOT affect the distinctive \u0393(\u03b2) = cos \u03b2 angular signature (which is independent of \u03b1_H). Does NOT require Monte Carlo on Poisson sprinklings \u2014 the question is structural rather than statistical."
     },
     {
       "id": "separated-vertex-cross-correlation",
       "title": "Cross-correlation of holographic noise between separated beamsplitter vertices",
       "difficulty": "MODERATE",
       "priority": "MEDIUM",
-      "status": "OPEN — flagged 2026-04-15 during holographic noise prediction audit",
-      "rationale": "The Step 5 derivation of γ(α) = cos α in holographic-noise.md anchors the noise at a single beamsplitter vertex via the relational invariant generated at one Type III interaction (Step 3, Proposition 3.1). Two distinct beamsplitter vertices at spatial separation d generate distinct relational invariants whose cross-correlation has not been derived. Causality alone gives a coherence cutoff at f ~ c/(2πd), but the exact functional form (rolloff shape, residual correlation below cutoff) is unknown. This is load-bearing for Test 2 (LISA TDI angular channels at 60° between separated spacecraft vertices) and Test 3 (LIGO–Virgo–KAGRA stochastic background search across separated detectors). It is NOT load-bearing for the Holometer test or Test 1, which are both co-located.",
-      "strategy": "Model how the relational invariants generated at two distinct Type III interactions (the two beamsplitters) propagate through the broader observer network. The two beamsplitter events share an upstream coherence source if they are connected by a common laser line, common environmental observer hierarchy, or common past light cone. Derive the cross-correlation function ⟨δX_1(t) · δX_2(t')⟩ between the two vertex displacements as a function of the spatial separation d and time difference t - t'. The expected qualitative behavior: cross-correlation maintained for f << c/(2πd), lost for f >> c/(2πd), with a specific functional form (likely involving the retarded propagation kernel between the two vertices). Compare to standard GW overlap reduction functions for separated detectors.",
-      "dependencies": ["interactions/relational-invariants", "quantum/entanglement", "holography/er-epr"],
-      "addressesGaps": ["predictions/holographic-noise Step 8 (separated detectors)", "predictions/holographic-noise Test 2 quantitative claim", "predictions/holographic-noise Test 3 quantitative claim"],
-      "impact": "Promotes Test 2 (LISA) and Test 3 (LIGO network) from qualitative to quantitative. Does NOT affect the Holometer test or Test 1, which remain rigorous. The qualitative discriminator between holographic noise (rank-1, dipolar) and GW backgrounds (spin-2, quadrupolar) survives independently."
+      "status": "COMPLETED 2026-04-22 \u2014 resolved as Theorem 8.1 in predictions/holographic-noise.md. Framework forces zero cross-correlation between separated beamsplitter vertices at leading order (stronger than causality-only cutoff), because distinct Type III interactions generate independent relational invariants by Relational Invariants Theorem 4.1 (irreducibility). Tests 2 (LISA) and 3 (LIGO network) now predict null cross-correlation \u2014 the target original scope assumed a quantitative non-zero rolloff function, but the framework supplies a stronger null answer. Separated-detector behavior added to the holographic-noise vs GW-background discriminator table (dipolar co-located + zero separated, vs quadrupolar with non-zero separated overlap reduction).",
+      "rationale": "The Step 5 derivation of \u03b3(\u03b1) = cos \u03b1 in holographic-noise.md anchors the noise at a single beamsplitter vertex via the relational invariant generated at one Type III interaction (Step 3, Proposition 3.1). Two distinct beamsplitter vertices at spatial separation d generate distinct relational invariants whose cross-correlation has not been derived. Causality alone gives a coherence cutoff at f ~ c/(2\u03c0d), but the exact functional form (rolloff shape, residual correlation below cutoff) is unknown. This is load-bearing for Test 2 (LISA TDI angular channels at 60\u00b0 between separated spacecraft vertices) and Test 3 (LIGO\u2013Virgo\u2013KAGRA stochastic background search across separated detectors). It is NOT load-bearing for the Holometer test or Test 1, which are both co-located.",
+      "strategy": "Model how the relational invariants generated at two distinct Type III interactions (the two beamsplitters) propagate through the broader observer network. The two beamsplitter events share an upstream coherence source if they are connected by a common laser line, common environmental observer hierarchy, or common past light cone. Derive the cross-correlation function \u27e8\u03b4X_1(t) \u00b7 \u03b4X_2(t')\u27e9 between the two vertex displacements as a function of the spatial separation d and time difference t - t'. The expected qualitative behavior: cross-correlation maintained for f << c/(2\u03c0d), lost for f >> c/(2\u03c0d), with a specific functional form (likely involving the retarded propagation kernel between the two vertices). Compare to standard GW overlap reduction functions for separated detectors.",
+      "dependencies": [
+        "interactions/relational-invariants",
+        "quantum/entanglement",
+        "holography/er-epr"
+      ],
+      "addressesGaps": [
+        "predictions/holographic-noise Step 8 (separated detectors)",
+        "predictions/holographic-noise Test 2 quantitative claim",
+        "predictions/holographic-noise Test 3 quantitative claim"
+      ],
+      "impact": "Promotes Test 2 (LISA) and Test 3 (LIGO network) from qualitative to quantitative. Does NOT affect the Holometer test or Test 1, which remain rigorous. The qualitative discriminator between holographic noise (rank-1, dipolar) and GW backgrounds (spin-2, quadrupolar) survives independently.",
+      "completedDate": "2026-04-22"
     },
     {
       "id": "cpt-theorem",
       "title": "CPT Theorem from Coherence-Dual Pairs",
       "difficulty": "MODERATE",
-      "status": "COMPLETED — created particles/cpt-theorem.md (derived), addresses coherence-dual-pairs Gap 1",
+      "status": "COMPLETED \u2014 created particles/cpt-theorem.md (derived), addresses coherence-dual-pairs Gap 1",
       "completedDate": "2026-03-12",
-      "rationale": "Referenced as open gaps in coherence-dual-pairs (Gap 1) and chirality-selection (Gap 3, 'proof sketch'). The ingredients exist: coherence-dual pairs give C and P separately (particle ↔ antiparticle), Lorentz invariance gives the spacetime structure, and time reversal comes from loop closure phase reversal.",
-      "strategy": "Formalize Proposition 6.1 of chirality-selection into a standalone derivation: (1) C from coherence-dual pairs (derived). (2) P from spatial reflection of the winding structure. (3) T from loop closure phase conjugation (φ_t → φ_{-t}). (4) Show CPT is an exact symmetry of the coherence Lagrangian. The Lagrangian derivation (derived) provides the target object.",
-      "dependencies": ["minimal-observer/coherence-dual-pairs", "gauge/chirality-selection", "spacetime/lorentz-invariance", "foundation/coherence-lagrangian"],
-      "addressesGaps": ["minimal-observer/coherence-dual-pairs Gap 1", "gauge/chirality-selection Gap 3"],
+      "rationale": "Referenced as open gaps in coherence-dual-pairs (Gap 1) and chirality-selection (Gap 3, 'proof sketch'). The ingredients exist: coherence-dual pairs give C and P separately (particle \u2194 antiparticle), Lorentz invariance gives the spacetime structure, and time reversal comes from loop closure phase reversal.",
+      "strategy": "Formalize Proposition 6.1 of chirality-selection into a standalone derivation: (1) C from coherence-dual pairs (derived). (2) P from spatial reflection of the winding structure. (3) T from loop closure phase conjugation (\u03c6_t \u2192 \u03c6_{-t}). (4) Show CPT is an exact symmetry of the coherence Lagrangian. The Lagrangian derivation (derived) provides the target object.",
+      "dependencies": [
+        "minimal-observer/coherence-dual-pairs",
+        "gauge/chirality-selection",
+        "spacetime/lorentz-invariance",
+        "foundation/coherence-lagrangian"
+      ],
+      "addressesGaps": [
+        "minimal-observer/coherence-dual-pairs Gap 1",
+        "gauge/chirality-selection Gap 3"
+      ],
       "impact": "New derivation page. Resolves 2 open gaps. Strengthens particle physics sector."
     },
     {
       "id": "supersymmetry-impossibility",
       "title": "Supersymmetry Impossibility",
       "difficulty": "LOW",
-      "status": "COMPLETED — created particles/supersymmetry-impossibility.md (derived), addresses spin-statistics Gap 2",
+      "status": "COMPLETED \u2014 created particles/supersymmetry-impossibility.md (derived), addresses spin-statistics Gap 2",
       "completedDate": "2026-03-12",
-      "rationale": "Spin-statistics Gap 2 notes: 'A continuous symmetry rotating bosons into fermions would require a continuous path from [0] to [1] in Z₂, which does not exist.' This is a distinctive negative prediction that could be formalized as a derivation page.",
-      "strategy": "Short derivation: (1) Spin-statistics (derived) classifies particles by winding class [n] ∈ π₁(SO(3)) ≅ ℤ₂. (2) Bosons have [0] (trivial), fermions have [1] (non-trivial). (3) A supersymmetry generator Q would require a continuous family Q(t) connecting [0] and [1]. (4) But π₁(SO(3)) = ℤ₂ is discrete — no continuous path exists. (5) Therefore supersymmetry is topologically forbidden in d = 3 spatial dimensions. This is a clean no-go theorem.",
-      "dependencies": ["particles/spin-statistics", "dimensions/three-dimensions"],
-      "addressesGaps": ["particles/spin-statistics Gap 2"],
+      "rationale": "Spin-statistics Gap 2 notes: 'A continuous symmetry rotating bosons into fermions would require a continuous path from [0] to [1] in Z\u2082, which does not exist.' This is a distinctive negative prediction that could be formalized as a derivation page.",
+      "strategy": "Short derivation: (1) Spin-statistics (derived) classifies particles by winding class [n] \u2208 \u03c0\u2081(SO(3)) \u2245 \u2124\u2082. (2) Bosons have [0] (trivial), fermions have [1] (non-trivial). (3) A supersymmetry generator Q would require a continuous family Q(t) connecting [0] and [1]. (4) But \u03c0\u2081(SO(3)) = \u2124\u2082 is discrete \u2014 no continuous path exists. (5) Therefore supersymmetry is topologically forbidden in d = 3 spatial dimensions. This is a clean no-go theorem.",
+      "dependencies": [
+        "particles/spin-statistics",
+        "dimensions/three-dimensions"
+      ],
+      "addressesGaps": [
+        "particles/spin-statistics Gap 2"
+      ],
       "impact": "New derivation. Distinctive negative prediction (no SUSY partners at any energy). Testable by LHC absence of superpartners."
     },
     {
       "id": "proton-stability",
       "title": "Proton Stability",
       "difficulty": "MODERATE",
-      "status": "COMPLETED — created gauge/proton-stability.md (derived), addresses standard-model-group Gap 4",
+      "status": "COMPLETED \u2014 created gauge/proton-stability.md (derived), addresses standard-model-group Gap 4",
       "completedDate": "2026-03-12",
       "rationale": "Standard-model-group Gap 4 notes: 'The framework predicts absolute proton stability (no GUT bosons). A quantitative bound on the proton lifetime from residual gravitational or higher-order effects would sharpen this into a testable prediction.' The non-convergence of couplings (from coupling-constants) means no GUT unification, hence no GUT-mediated proton decay.",
-      "strategy": "(1) Non-convergence of α₁, α₂, α₃ (Coupling Constants, rigorous) means no GUT scale. (2) No GUT gauge bosons → no B-violating gauge interactions. (3) B is an exact symmetry of the framework's gauge structure (proven by the division algebra chain: each level preserves baryon number). (4) Only gravitational effects could violate B, suppressed by (m_p/M_P)⁴ → τ_p > 10⁶⁴ years. (5) This exceeds current experimental bounds (τ_p > 10³⁴ years) by 30 orders of magnitude.",
-      "dependencies": ["gauge/standard-model-group", "cosmology/coupling-constants"],
-      "addressesGaps": ["gauge/standard-model-group Gap 4"],
+      "strategy": "(1) Non-convergence of \u03b1\u2081, \u03b1\u2082, \u03b1\u2083 (Coupling Constants, rigorous) means no GUT scale. (2) No GUT gauge bosons \u2192 no B-violating gauge interactions. (3) B is an exact symmetry of the framework's gauge structure (proven by the division algebra chain: each level preserves baryon number). (4) Only gravitational effects could violate B, suppressed by (m_p/M_P)\u2074 \u2192 \u03c4_p > 10\u2076\u2074 years. (5) This exceeds current experimental bounds (\u03c4_p > 10\u00b3\u2074 years) by 30 orders of magnitude.",
+      "dependencies": [
+        "gauge/standard-model-group",
+        "cosmology/coupling-constants"
+      ],
+      "addressesGaps": [
+        "gauge/standard-model-group Gap 4"
+      ],
       "impact": "New prediction page + possible derivation page. Distinctive prediction (absolute stability vs. GUT decay)."
     },
     {
       "id": "quantum-teleportation",
       "title": "Quantum Teleportation as Coherence Channel Transfer",
       "difficulty": "LOW",
-      "status": "COMPLETED — created quantum/teleportation.md (derived), addresses entanglement Gap 1",
+      "status": "COMPLETED \u2014 created quantum/teleportation.md (derived), addresses entanglement Gap 1",
       "completedDate": "2026-03-12",
       "rationale": "Entanglement Gap 1: 'Derive teleportation as coherence channel transfer.' The entanglement derivation (derived) provides all ingredients: relational invariants map to entangled states, coherence conservation ensures no-cloning, and Type III interactions generate new relational invariants.",
       "strategy": "(1) Alice and Bob share relational invariant I_AB (entangled state). (2) Alice performs Type III interaction with system S, generating I_AS. (3) Alice's local measurement (preferred basis) generates a classical relational invariant (measurement outcome). (4) Bob applies conditional unitary (local operation on his loop). (5) The net effect: I_AS is transferred to I_BS. Coherence conservation ensures the original I_AS is destroyed (no-cloning). This is the teleportation protocol reinterpreted in framework language.",
-      "dependencies": ["quantum/entanglement", "quantum/measurement", "interactions/three-types"],
-      "addressesGaps": ["quantum/entanglement Gap 1"],
+      "dependencies": [
+        "quantum/entanglement",
+        "quantum/measurement",
+        "interactions/three-types"
+      ],
+      "addressesGaps": [
+        "quantum/entanglement Gap 1"
+      ],
       "impact": "New derivation page. Demonstrates framework can reproduce quantum information protocols."
     },
     {
       "id": "observer-loop-viability",
       "title": "Observer Loop Viability Bounds",
       "difficulty": "HARD",
-      "status": "PROVISIONAL — Planck-scale upper bound (Thm 2.1), sign prediction Λ ≥ 0 (Thm 5.4), bounce dissolution (Thm 4.1), coherence ontology excludes bounce (Thm 5.2), Type II fusion reinforcement (Prop 5.3), epistemic horizons (Prop 1.5–1.6), entropy-hierarchy identification (Prop 7.5: self-consistency equation = entropy decomposition, 2nd law explains 120-order hierarchy), level-dependent coherence partition (Step 8: defines level-indexed Λ_n^eff, identifies Prop 7.5 approximation breakdown at low bootstrap levels, reframes 120-order gap as cross-level comparison). Key open gaps: sharpening to Λ > 0 (Gap 3), minimum non-self coherence (Gap 2), quantitative Λ via geometry functor with level-indexed Λ_n^eff (Gap 6), coincidence problem.",
+      "status": "PROVISIONAL \u2014 Planck-scale upper bound (Thm 2.1), sign prediction \u039b \u2265 0 (Thm 5.4), bounce dissolution (Thm 4.1), coherence ontology excludes bounce (Thm 5.2), Type II fusion reinforcement (Prop 5.3), epistemic horizons (Prop 1.5\u20131.6), entropy-hierarchy identification (Prop 7.5: self-consistency equation = entropy decomposition, 2nd law explains 120-order hierarchy), level-dependent coherence partition (Step 8: defines level-indexed \u039b_n^eff, identifies Prop 7.5 approximation breakdown at low bootstrap levels, reframes 120-order gap as cross-level comparison). Key open gaps: sharpening to \u039b > 0 (Gap 3), minimum non-self coherence (Gap 2), quantitative \u039b via geometry functor with level-indexed \u039b_n^eff (Gap 6), coincidence problem.",
       "createdDate": "2026-03-12",
-      "rationale": "The cosmological constant derivation (non-viable) identifies Route 3: observer-existence constraints may restrict which spacetimes host valid DAGs. The axioms require observer loops with Lyapunov stability (Axiom 3), which may not be achievable for arbitrary Λ. Even a Planck-scale upper bound establishes the principle that axioms constrain solutions, not just dynamics. A sign prediction (Λ > 0) would be a real result.",
-      "strategy": "(1) Formalize Lyapunov stability in de Sitter spacetime — coherence at observer boundary redshifts at rate H = √(Λ/3). (2) Derive viability condition: coherence refreshed per cycle > coherence lost to expansion. (3) Analyze Λ < 0 (AdS): observer loops must survive Planck-density bounce — can Noether invariant I be preserved? (4) Sign argument: structural arrow (growing DAG) requires expanding geometry → Λ ≥ 0; cosmological arrow stability → Λ > 0.",
-      "dependencies": ["spacetime/singularity-resolution", "holography/area-scaling", "minimal-observer/structure", "axioms/loop-closure"],
-      "addressesGaps": ["cosmology/cosmological-constant Route 3"],
-      "impact": "Constrains Λ from axioms. Even partial results (sign prediction) upgrade cosmological constant page. Establishes axiom-to-solution-space principle."
+      "rationale": "The cosmological constant derivation (non-viable) identifies Route 3: observer-existence constraints may restrict which spacetimes host valid DAGs. The axioms require observer loops with Lyapunov stability (Axiom 3), which may not be achievable for arbitrary \u039b. Even a Planck-scale upper bound establishes the principle that axioms constrain solutions, not just dynamics. A sign prediction (\u039b > 0) would be a real result.",
+      "strategy": "(1) Formalize Lyapunov stability in de Sitter spacetime \u2014 coherence at observer boundary redshifts at rate H = \u221a(\u039b/3). (2) Derive viability condition: coherence refreshed per cycle > coherence lost to expansion. (3) Analyze \u039b < 0 (AdS): observer loops must survive Planck-density bounce \u2014 can Noether invariant I be preserved? (4) Sign argument: structural arrow (growing DAG) requires expanding geometry \u2192 \u039b \u2265 0; cosmological arrow stability \u2192 \u039b > 0.",
+      "dependencies": [
+        "spacetime/singularity-resolution",
+        "holography/area-scaling",
+        "minimal-observer/structure",
+        "axioms/loop-closure"
+      ],
+      "addressesGaps": [
+        "cosmology/cosmological-constant Route 3"
+      ],
+      "impact": "Constrains \u039b from axioms. Even partial results (sign prediction) upgrade cosmological constant page. Establishes axiom-to-solution-space principle."
     },
     {
       "id": "hierarchical-geometry",
       "title": "Hierarchical Geometry Functor and Cross-Level Horizon Consistency",
       "difficulty": "HARD",
-      "status": "Future target — formalizes observer-loop-viability Steps 7–8 and Gap 6, and grounds the cross-level horizon consistency remarked at bootstrap.md Proposition 6.2. Step 8 defines level-indexed Λ_n^eff; Conjecture 8.9 identifies the double-saturation boundary condition (both Planck and cosmological endpoints at gravitational saturation). The functor must produce level-indexed Λ_n^eff, compute Δc_n at each level, and solve the fixed-point equation for uniqueness.",
-      "rationale": "The observer hierarchy (bootstrap) generates observers at every scale. Each observer projects an effective geometry through its epistemic horizon (holographic bound) with its own effective cosmological parameter Λ_n^eff (Step 8, Definition 8.2) and its own area capacity A_n/(4ℓ_P²) for level-n relational invariants (bootstrap.md Proposition 6.2). ER=EPR says relational invariants create geometry. Because the bootstrap is iterative — level-(n+1) invariants are constituted by Type III interactions among level-n invariants — the levels are not independent. A bootstrap fixed point U ≅ R(U,U) must satisfy the holographic bound at every level simultaneously, with the level-(n+1) invariant count constrained both by its own area capacity and by the level-n interaction count that produces it. This cross-level horizon consistency (remarked at bootstrap.md Proposition 6.2) is a self-consistency equation on horizon capacities across the bootstrap hierarchy. Cross-level consistency (Proposition 8.3: functoriality of the bootstrap map R on the geometry) constrains the sequence {Λ_n^eff}. The constraint is not that all levels agree on a single Λ, but that the increments ΔS_n (coherence absorbed at each level) produce a consistent endpoint Λ_N^eff = Λ. Formalizing this requires promoting R to a functor on morphisms (bootstrap.md Gap 4) and defining the geometry functor G: Obs → Geom.",
-      "strategy": "(1) Promote R to full functor on Obs morphisms (naturality of level-set construction). (2) Define G: Obs → Geom mapping each observer's boundary area to an effective local geometry via ER=EPR, producing level-indexed Λ_n^eff (Step 8, Def 8.2). (3) Show G ∘ R satisfies cross-level consistency (Prop 8.3): geometry at level n+1 restricted to scale λ_n reduces to geometry at level n, with Λ_{n+1}^eff > Λ_n^eff. (4) State the cross-level horizon capacity constraint precisely: for each n, the integer count N^(n) of level-n relational invariants (Coherence Conservation Corollary 5.5a) must satisfy both N^(n) ≤ A_n/(4ℓ_P²) and the inheritance relation N^(n+1) = f(N^(n)) where f is determined by the Type III interaction rate at level n. Joint satisfaction across all levels is the cross-level horizon consistency. (5) Prove that this consistency constrains the relationship between C₀, the increments ΔS_n, and the endpoint Λ = Λ_N^eff. (6) Compute ΔS_n from the known bootstrap structure (division algebra chain, mass hierarchy tunneling factors).",
-      "dependencies": ["interactions/bootstrap", "holography/er-epr", "thermodynamics-ext/renormalization", "holography/area-scaling", "cosmology/observer-loop-viability", "axioms/coherence-conservation"],
-      "addressesGaps": ["cosmology/observer-loop-viability Gap 6", "interactions/bootstrap Gap 4", "interactions/bootstrap Proposition 6.2 cross-level remark"],
-      "impact": "Could transform the cosmological constant from non-viable to a self-consistency prediction. Connects bootstrap, holography, and RG into a unified geometric framework. Promotes the cross-level horizon consistency remark on Proposition 6.2 from informal observation to a precise constraint that bootstrap fixed points must satisfy. UPDATE (2026-04-21): also prerequisite for the barrier-shape derivation of mass-hierarchy-s1 (see 'fisher-distance-on-bootstrap-fixed-point-manifold' future target) — both area-scaling-s1 and mass-hierarchy-s1 jointly depend on the geometry functor formalization. Formalizing G would enable joint retirement of two active structural postulates rather than one."
+      "status": "Future target \u2014 formalizes observer-loop-viability Steps 7\u20138 and Gap 6, and grounds the cross-level horizon consistency remarked at bootstrap.md Proposition 6.2. Step 8 defines level-indexed \u039b_n^eff; Conjecture 8.9 identifies the double-saturation boundary condition (both Planck and cosmological endpoints at gravitational saturation). The functor must produce level-indexed \u039b_n^eff, compute \u0394c_n at each level, and solve the fixed-point equation for uniqueness.",
+      "rationale": "The observer hierarchy (bootstrap) generates observers at every scale. Each observer projects an effective geometry through its epistemic horizon (holographic bound) with its own effective cosmological parameter \u039b_n^eff (Step 8, Definition 8.2) and its own area capacity A_n/(4\u2113_P\u00b2) for level-n relational invariants (bootstrap.md Proposition 6.2). ER=EPR says relational invariants create geometry. Because the bootstrap is iterative \u2014 level-(n+1) invariants are constituted by Type III interactions among level-n invariants \u2014 the levels are not independent. A bootstrap fixed point U \u2245 R(U,U) must satisfy the holographic bound at every level simultaneously, with the level-(n+1) invariant count constrained both by its own area capacity and by the level-n interaction count that produces it. This cross-level horizon consistency (remarked at bootstrap.md Proposition 6.2) is a self-consistency equation on horizon capacities across the bootstrap hierarchy. Cross-level consistency (Proposition 8.3: functoriality of the bootstrap map R on the geometry) constrains the sequence {\u039b_n^eff}. The constraint is not that all levels agree on a single \u039b, but that the increments \u0394S_n (coherence absorbed at each level) produce a consistent endpoint \u039b_N^eff = \u039b. Formalizing this requires promoting R to a functor on morphisms (bootstrap.md Gap 4) and defining the geometry functor G: Obs \u2192 Geom.",
+      "strategy": "(1) Promote R to full functor on Obs morphisms (naturality of level-set construction). (2) Define G: Obs \u2192 Geom mapping each observer's boundary area to an effective local geometry via ER=EPR, producing level-indexed \u039b_n^eff (Step 8, Def 8.2). (3) Show G \u2218 R satisfies cross-level consistency (Prop 8.3): geometry at level n+1 restricted to scale \u03bb_n reduces to geometry at level n, with \u039b_{n+1}^eff > \u039b_n^eff. (4) State the cross-level horizon capacity constraint precisely: for each n, the integer count N^(n) of level-n relational invariants (Coherence Conservation Corollary 5.5a) must satisfy both N^(n) \u2264 A_n/(4\u2113_P\u00b2) and the inheritance relation N^(n+1) = f(N^(n)) where f is determined by the Type III interaction rate at level n. Joint satisfaction across all levels is the cross-level horizon consistency. (5) Prove that this consistency constrains the relationship between C\u2080, the increments \u0394S_n, and the endpoint \u039b = \u039b_N^eff. (6) Compute \u0394S_n from the known bootstrap structure (division algebra chain, mass hierarchy tunneling factors).",
+      "dependencies": [
+        "interactions/bootstrap",
+        "holography/er-epr",
+        "thermodynamics-ext/renormalization",
+        "holography/area-scaling",
+        "cosmology/observer-loop-viability",
+        "axioms/coherence-conservation"
+      ],
+      "addressesGaps": [
+        "cosmology/observer-loop-viability Gap 6",
+        "interactions/bootstrap Gap 4",
+        "interactions/bootstrap Proposition 6.2 cross-level remark"
+      ],
+      "impact": "Could transform the cosmological constant from non-viable to a self-consistency prediction. Connects bootstrap, holography, and RG into a unified geometric framework. Promotes the cross-level horizon consistency remark on Proposition 6.2 from informal observation to a precise constraint that bootstrap fixed points must satisfy. UPDATE (2026-04-21): also prerequisite for the barrier-shape derivation of mass-hierarchy-s1 (see 'fisher-distance-on-bootstrap-fixed-point-manifold' future target) \u2014 both area-scaling-s1 and mass-hierarchy-s1 jointly depend on the geometry functor formalization. Formalizing G would enable joint retirement of two active structural postulates rather than one."
     },
     {
       "id": "combinatorial-bootstrap-fixed-point",
       "title": "Combinatorial Reformulation of the Bootstrap Fixed-Point Conjectures",
       "difficulty": "HARD",
-      "status": "Future target — the integer-quantization of coherence at every bootstrap level (Coherence Conservation Corollary 5.5a, Bootstrap Corollary 2.3) suggests that Conjectures 7.1–7.2 of bootstrap.md (existence and uniqueness of the bootstrap fixed point U ≅ R(U,U)) admit a combinatorial restatement.",
-      "rationale": "Conjectures 7.1 and 7.2 of bootstrap.md are stated in terms of a categorical fixed point of the bootstrap map R: Obs → Obs. The proof strategies currently identified rely on Dana Scott domain theory (continuous fixed-point theorems on Scott-continuous maps over partial orders). The integer-quantization corollaries of the bootstrap closure suggest an alternative framing: every observer in U carries an integer count of ℏω₀-units, and R generates new observers from existing ones according to specific combinatorial rules (Type III interactions produce one new relational invariant per pair of compatible observers). The fixed-point equation U ≅ R(U,U) becomes a self-consistency equation on integer counts at each level. Combinatorial fixed-point equations are often easier to analyze than continuous ones — uniqueness can sometimes be established by counting arguments rather than topological methods. If this reformulation is equivalent (or sharper), it may lead to a proof of Conjectures 7.1–7.2 by combinatorial methods.",
-      "strategy": "(1) State the bootstrap fixed-point conjectures in the integer-counting framework: U is characterized by a sequence of integer counts {N^(n)} at each level, satisfying a recurrence determined by R (the level-n+1 count is determined by the Type III interaction rate among level-n observers). (2) Identify whether the recurrence has a unique solution under the cross-level horizon consistency constraint (combined with the hierarchical-geometry future-target). (3) Compare to the continuous Scott-domain formulation in bootstrap.md Conjecture 7.1 — show they are equivalent, or identify which formulation is sharper. (4) If the combinatorial formulation yields a uniqueness proof, port it to the main bootstrap.md derivation as a proof of Conjectures 7.1–7.2. The result, if established, would convert area-scaling-s1 (the last remaining structural postulate that is equivalent to bootstrap fixed-point uniqueness) into a theorem.",
-      "dependencies": ["interactions/bootstrap", "axioms/coherence-conservation", "holography/area-scaling"],
-      "addressesGaps": ["interactions/bootstrap Conjectures 7.1 and 7.2", "holography/area-scaling structural postulate S1"],
-      "impact": "If successful: promotes Conjectures 7.1–7.2 to theorems and converts area-scaling-s1 to a theorem (the last structural postulate in the holography chain). Reframes the framework's fixed-point question from a continuous topological problem to a discrete combinatorial one, which may be more tractable. Speculative until the combinatorial recurrence is written down explicitly and shown to admit (or fail to admit) a unique solution."
+      "status": "Future target \u2014 the integer-quantization of coherence at every bootstrap level (Coherence Conservation Corollary 5.5a, Bootstrap Corollary 2.3) suggests that Conjectures 7.1\u20137.2 of bootstrap.md (existence and uniqueness of the bootstrap fixed point U \u2245 R(U,U)) admit a combinatorial restatement.",
+      "rationale": "Conjectures 7.1 and 7.2 of bootstrap.md are stated in terms of a categorical fixed point of the bootstrap map R: Obs \u2192 Obs. The proof strategies currently identified rely on Dana Scott domain theory (continuous fixed-point theorems on Scott-continuous maps over partial orders). The integer-quantization corollaries of the bootstrap closure suggest an alternative framing: every observer in U carries an integer count of \u210f\u03c9\u2080-units, and R generates new observers from existing ones according to specific combinatorial rules (Type III interactions produce one new relational invariant per pair of compatible observers). The fixed-point equation U \u2245 R(U,U) becomes a self-consistency equation on integer counts at each level. Combinatorial fixed-point equations are often easier to analyze than continuous ones \u2014 uniqueness can sometimes be established by counting arguments rather than topological methods. If this reformulation is equivalent (or sharper), it may lead to a proof of Conjectures 7.1\u20137.2 by combinatorial methods.",
+      "strategy": "(1) State the bootstrap fixed-point conjectures in the integer-counting framework: U is characterized by a sequence of integer counts {N^(n)} at each level, satisfying a recurrence determined by R (the level-n+1 count is determined by the Type III interaction rate among level-n observers). (2) Identify whether the recurrence has a unique solution under the cross-level horizon consistency constraint (combined with the hierarchical-geometry future-target). (3) Compare to the continuous Scott-domain formulation in bootstrap.md Conjecture 7.1 \u2014 show they are equivalent, or identify which formulation is sharper. (4) If the combinatorial formulation yields a uniqueness proof, port it to the main bootstrap.md derivation as a proof of Conjectures 7.1\u20137.2. The result, if established, would convert area-scaling-s1 (the last remaining structural postulate that is equivalent to bootstrap fixed-point uniqueness) into a theorem.",
+      "dependencies": [
+        "interactions/bootstrap",
+        "axioms/coherence-conservation",
+        "holography/area-scaling"
+      ],
+      "addressesGaps": [
+        "interactions/bootstrap Conjectures 7.1 and 7.2",
+        "holography/area-scaling structural postulate S1"
+      ],
+      "impact": "If successful: promotes Conjectures 7.1\u20137.2 to theorems and converts area-scaling-s1 to a theorem (the last structural postulate in the holography chain). Reframes the framework's fixed-point question from a continuous topological problem to a discrete combinatorial one, which may be more tractable. Speculative until the combinatorial recurrence is written down explicitly and shown to admit (or fail to admit) a unique solution."
     },
     {
       "id": "knot-theoretic-fixed-point",
       "title": "Knot-Theoretic Route to the Bootstrap Fixed Point via Surgery and Chern-Simons Theory",
       "difficulty": "HARD",
       "priority": "HIGH",
-      "status": "ACTIVE EXPLORATION — identified 2026-04-15 as a potential proof strategy. Initial exploration (2026-04-15) found four concrete connection points already in the framework: (1) Chern-Simons 3-form already appears in the strong-CP derivation (Step 3c), (2) Wilson loops already appear in the electromagnetism derivation (Prop 2.2), (3) the Cayley-Dickson gauge chain maps to a specific CS theory sequence (U(1)/SU(2)/SU(3) CS at bootstrap levels 1/2/3), (4) the identification 'relational coherence = linking number × ℏω₀' is structurally consistent with the entanglement derivation (Theorem 2.1: relational coherence = entanglement entropy) and with known results in topological quantum computing (linking of anyonic worldlines = entanglement). A new derivation page (foundation/knot-theoretic-bootstrap) captures the exploration. CHECKED AND REJECTED (2026-04-15): Kirby calculus uniqueness route — proposed that coherence conservation restricts Kirby moves (stabilization blocked, handle slides restricted) enough to force a unique surgery presentation. Stabilization-blocking holds (adding/removing components creates/destroys coherence, violating Axiom 1). But handle slides do NOT preserve total |Lk| (linking matrix transforms by congruence; total |Lk| is not a congruence invariant — handle slides can convert framing into linking). Bounded coherence also does not bound knot complexity (trefoil vs unknot with same framing have same coherence but produce different surgery manifolds). Search space is not finite, so combinatorial fixed-point argument fails. PROMISING LEAD: Cosmetic surgery conjecture (Hanselman 2023 theorem for knots in S³: non-trivial surgery on a non-trivial knot cannot reproduce S³) — directly constrains self-consistent surgery, but multi-component generalization is open. Next step: check whether the gauge sector of the coherence Lagrangian reduces to a CS action on a 3D Cauchy slice.",
-      "rationale": "The framework's minimal observers are U(1) phase loops. In a spatial manifold, loops can knot and link. Two observers connected by a relational invariant (Type III interaction) are topologically linked — their loops are intertwined in a way that can't be undone by smooth deformation. The linking number is a topological invariant measuring exactly the kind of irreducible mutual dependence the framework calls relational coherence. The Lickorish-Wallace theorem (surgery theory) provides a PROVEN bidirectional discrete-continuous bridge: every closed oriented 3-manifold can be obtained by Dehn surgery on a framed link in S³, and every 3-manifold has such a presentation. The Kirby calculus tells you when two link diagrams give the same manifold. The bootstrap fixed-point equation U ≅ R(U,U) would become: the framed link that produces the manifold (via surgery) is the same link that the manifold contains. Self-consistency of this self-reference is the fixed-point condition. Additionally, Witten (1989) showed that quantum Chern-Simons theory computes knot invariants as path integrals — continuous field-theoretic calculations producing discrete topological data. The framework's gauge chain (U(1) → SU(2) → SU(3) from bootstrap-division-algebras) maps naturally to gauge groups of Chern-Simons theories at different levels. The Chern-Simons partition function might serve as the geometry functor G: Obs → Geom, and the framework's coherence measure might be identified with the Chern-Simons action. The bidirectionality of the discrete-continuous duality (each side constraining the other) is a feature, not a bug: the combined constraints reduce the solution space, potentially to a unique fixed point.",
-      "strategy": "Three entry points, each independently valuable, all converging on the fixed point: (1) GAUGE-GROUP CORRESPONDENCE: Connect the framework's gauge structure (U(1) at level 0, SU(2) at level 1, SU(3) at level 2 — from bootstrap-division-algebras) to the gauge group of Chern-Simons theory on the observer network at each bootstrap level. The CS level k (an integer) should relate to the bootstrap level via the integer-action quantization (Corollary 2.3). The framework's coherence Lagrangian may BE a Chern-Simons action in disguise. (2) OBSERVER LOOPS AS FRAMED LINKS: Show that the observer loops embedded in the spatial geometry they produce have a natural framing (from the U(1) phase structure) and that Type III interactions correspond to linking operations. The bootstrap hierarchy maps to the satellite-knot hierarchy (cables, connected sums). The integer coherence content of each relational invariant is the linking number. (3) SURGERY AS THE GEOMETRY FUNCTOR: Identify the geometry functor G: Obs → Geom with Dehn surgery. The observer network (a framed link) determines the spatial manifold (via Lickorish-Wallace). The fixed-point equation becomes: the manifold produced by surgery on the link is the same manifold the link lives in. Surgery theory and Kirby calculus provide the tools to analyze this self-referential equation. The bidirectionality of the discrete-continuous duality corresponds to the two directions of the Lickorish-Wallace theorem.",
-      "dependencies": ["interactions/bootstrap", "interactions/bootstrap-division-algebras", "foundation/coherence-lagrangian", "foundation/continuous-discrete-duality", "spacetime/gravity"],
-      "addressesGaps": ["interactions/bootstrap Conjectures 7.1 and 7.2", "holography/area-scaling structural postulate S1", "foundation/continuous-discrete-duality (the bidirectional bridge)", "cosmology/cyclic-cosmology Gap 2 (saturation exactness — RESOLVED via constraint saturation)", "cosmology/cyclic-cosmology Gap 3 (statistical fossils — RESOLVED: none, state identical)"],
-      "findings": "Exploration (2026-04-15) established: (a) The CS 3-form tr(A∧dA + (2/3)A∧A∧A) already appears in the strong CP derivation's topological charge formula ν = (1/8π²)∫CS(A). (b) Wilson loops W(γ) = P exp(-ig∮A dx) already appear in the electromagnetism derivation and serve as the framework's 'observer loops carrying gauge phase'. (c) The Cayley-Dickson tower ℝ→ℂ→ℍ→𝕆 maps to a specific finite sequence of CS theories: U(1) CS, SU(2) CS, SU(3) CS, terminated at 𝕆 by zero-divisor obstruction (sedenions). (d) The identification 'relational coherence C(O₁:O₂) = Lk(γ₁,γ₂)·ℏω₀' (linking number × coherence quantum) is structurally consistent: both are integer-valued, both are conserved under smooth/admissible deformations, both measure irreducible mutual dependence, and the entanglement derivation already identifies relational coherence with von Neumann entropy (Theorem 2.1). In topological quantum computing, linking of anyonic worldlines IS entanglement — this is a known result. (e) The ER=EPR bridge has a natural topological realization: the wormhole throat area A=4ℓ_P²S_ent maps to the cross-sectional area of the tube connecting two linked loops, scaling with linking number. (f) The coherence Lagrangian's gauge sector (-¼F²) may reduce to a CS action on a 3D Cauchy slice via the known relationship between 4D Yang-Mills and 3D Chern-Simons (the CS functional is the Hamiltonian of 4D YM restricted to a spatial slice). (g) CYCLIC REFRAMING (2026-04-15): The bootstrap fixed-point equation U ≅ R(U,U) has an equivalent dynamical formulation as a periodic orbit condition Φ_T(state) = state. Three ingredients force exact cyclic closure: (i) quasi-periodicity exclusion → commensurable frequencies, (ii) holographic bound → finite-dimensional state space (D ~ A/4ℓ_P²), (iii) constraint saturation → after D independent relational invariants, additional ones are redundant tautologies. The DAG (causal history) grows without bound (Axiom 1 satisfied), but the D-dimensional Cauchy-slice state cycles exactly. This resolves cyclic-cosmology Gap 2 (saturation is exact, by constraint redundancy, not epistemic equivalence) and Gap 3 (no statistical fossils — state identical across cycles). The cyclic closure is conditional on Conjecture 7.1 but also provides the candidate fixed point. Either both hold or neither does. See cyclic-cosmology.md Step 9.",
+      "status": "ACTIVE EXPLORATION \u2014 identified 2026-04-15 as a potential proof strategy. Initial exploration (2026-04-15) found four concrete connection points already in the framework: (1) Chern-Simons 3-form already appears in the strong-CP derivation (Step 3c), (2) Wilson loops already appear in the electromagnetism derivation (Prop 2.2), (3) the Cayley-Dickson gauge chain maps to a specific CS theory sequence (U(1)/SU(2)/SU(3) CS at bootstrap levels 1/2/3), (4) the identification 'relational coherence = linking number \u00d7 \u210f\u03c9\u2080' is structurally consistent with the entanglement derivation (Theorem 2.1: relational coherence = entanglement entropy) and with known results in topological quantum computing (linking of anyonic worldlines = entanglement). A new derivation page (foundation/knot-theoretic-bootstrap) captures the exploration. CHECKED AND REJECTED (2026-04-15): Kirby calculus uniqueness route \u2014 proposed that coherence conservation restricts Kirby moves (stabilization blocked, handle slides restricted) enough to force a unique surgery presentation. Stabilization-blocking holds (adding/removing components creates/destroys coherence, violating Axiom 1). But handle slides do NOT preserve total |Lk| (linking matrix transforms by congruence; total |Lk| is not a congruence invariant \u2014 handle slides can convert framing into linking). Bounded coherence also does not bound knot complexity (trefoil vs unknot with same framing have same coherence but produce different surgery manifolds). Search space is not finite, so combinatorial fixed-point argument fails. PROMISING LEAD: Cosmetic surgery conjecture (Hanselman 2023 theorem for knots in S\u00b3: non-trivial surgery on a non-trivial knot cannot reproduce S\u00b3) \u2014 directly constrains self-consistent surgery, but multi-component generalization is open. Next step: check whether the gauge sector of the coherence Lagrangian reduces to a CS action on a 3D Cauchy slice.",
+      "rationale": "The framework's minimal observers are U(1) phase loops. In a spatial manifold, loops can knot and link. Two observers connected by a relational invariant (Type III interaction) are topologically linked \u2014 their loops are intertwined in a way that can't be undone by smooth deformation. The linking number is a topological invariant measuring exactly the kind of irreducible mutual dependence the framework calls relational coherence. The Lickorish-Wallace theorem (surgery theory) provides a PROVEN bidirectional discrete-continuous bridge: every closed oriented 3-manifold can be obtained by Dehn surgery on a framed link in S\u00b3, and every 3-manifold has such a presentation. The Kirby calculus tells you when two link diagrams give the same manifold. The bootstrap fixed-point equation U \u2245 R(U,U) would become: the framed link that produces the manifold (via surgery) is the same link that the manifold contains. Self-consistency of this self-reference is the fixed-point condition. Additionally, Witten (1989) showed that quantum Chern-Simons theory computes knot invariants as path integrals \u2014 continuous field-theoretic calculations producing discrete topological data. The framework's gauge chain (U(1) \u2192 SU(2) \u2192 SU(3) from bootstrap-division-algebras) maps naturally to gauge groups of Chern-Simons theories at different levels. The Chern-Simons partition function might serve as the geometry functor G: Obs \u2192 Geom, and the framework's coherence measure might be identified with the Chern-Simons action. The bidirectionality of the discrete-continuous duality (each side constraining the other) is a feature, not a bug: the combined constraints reduce the solution space, potentially to a unique fixed point.",
+      "strategy": "Three entry points, each independently valuable, all converging on the fixed point: (1) GAUGE-GROUP CORRESPONDENCE: Connect the framework's gauge structure (U(1) at level 0, SU(2) at level 1, SU(3) at level 2 \u2014 from bootstrap-division-algebras) to the gauge group of Chern-Simons theory on the observer network at each bootstrap level. The CS level k (an integer) should relate to the bootstrap level via the integer-action quantization (Corollary 2.3). The framework's coherence Lagrangian may BE a Chern-Simons action in disguise. (2) OBSERVER LOOPS AS FRAMED LINKS: Show that the observer loops embedded in the spatial geometry they produce have a natural framing (from the U(1) phase structure) and that Type III interactions correspond to linking operations. The bootstrap hierarchy maps to the satellite-knot hierarchy (cables, connected sums). The integer coherence content of each relational invariant is the linking number. (3) SURGERY AS THE GEOMETRY FUNCTOR: Identify the geometry functor G: Obs \u2192 Geom with Dehn surgery. The observer network (a framed link) determines the spatial manifold (via Lickorish-Wallace). The fixed-point equation becomes: the manifold produced by surgery on the link is the same manifold the link lives in. Surgery theory and Kirby calculus provide the tools to analyze this self-referential equation. The bidirectionality of the discrete-continuous duality corresponds to the two directions of the Lickorish-Wallace theorem.",
+      "dependencies": [
+        "interactions/bootstrap",
+        "interactions/bootstrap-division-algebras",
+        "foundation/coherence-lagrangian",
+        "foundation/continuous-discrete-duality",
+        "spacetime/gravity"
+      ],
+      "addressesGaps": [
+        "interactions/bootstrap Conjectures 7.1 and 7.2",
+        "holography/area-scaling structural postulate S1",
+        "foundation/continuous-discrete-duality (the bidirectional bridge)",
+        "cosmology/cyclic-cosmology Gap 2 (saturation exactness \u2014 RESOLVED via constraint saturation)",
+        "cosmology/cyclic-cosmology Gap 3 (statistical fossils \u2014 RESOLVED: none, state identical)"
+      ],
+      "findings": "Exploration (2026-04-15) established: (a) The CS 3-form tr(A\u2227dA + (2/3)A\u2227A\u2227A) already appears in the strong CP derivation's topological charge formula \u03bd = (1/8\u03c0\u00b2)\u222bCS(A). (b) Wilson loops W(\u03b3) = P exp(-ig\u222eA dx) already appear in the electromagnetism derivation and serve as the framework's 'observer loops carrying gauge phase'. (c) The Cayley-Dickson tower \u211d\u2192\u2102\u2192\u210d\u2192\ud835\udd46 maps to a specific finite sequence of CS theories: U(1) CS, SU(2) CS, SU(3) CS, terminated at \ud835\udd46 by zero-divisor obstruction (sedenions). (d) The identification 'relational coherence C(O\u2081:O\u2082) = Lk(\u03b3\u2081,\u03b3\u2082)\u00b7\u210f\u03c9\u2080' (linking number \u00d7 coherence quantum) is structurally consistent: both are integer-valued, both are conserved under smooth/admissible deformations, both measure irreducible mutual dependence, and the entanglement derivation already identifies relational coherence with von Neumann entropy (Theorem 2.1). In topological quantum computing, linking of anyonic worldlines IS entanglement \u2014 this is a known result. (e) The ER=EPR bridge has a natural topological realization: the wormhole throat area A=4\u2113_P\u00b2S_ent maps to the cross-sectional area of the tube connecting two linked loops, scaling with linking number. (f) The coherence Lagrangian's gauge sector (-\u00bcF\u00b2) may reduce to a CS action on a 3D Cauchy slice via the known relationship between 4D Yang-Mills and 3D Chern-Simons (the CS functional is the Hamiltonian of 4D YM restricted to a spatial slice). (g) CYCLIC REFRAMING (2026-04-15): The bootstrap fixed-point equation U \u2245 R(U,U) has an equivalent dynamical formulation as a periodic orbit condition \u03a6_T(state) = state. Three ingredients force exact cyclic closure: (i) quasi-periodicity exclusion \u2192 commensurable frequencies, (ii) holographic bound \u2192 finite-dimensional state space (D ~ A/4\u2113_P\u00b2), (iii) constraint saturation \u2192 after D independent relational invariants, additional ones are redundant tautologies. The DAG (causal history) grows without bound (Axiom 1 satisfied), but the D-dimensional Cauchy-slice state cycles exactly. This resolves cyclic-cosmology Gap 2 (saturation is exact, by constraint redundancy, not epistemic equivalence) and Gap 3 (no statistical fossils \u2014 state identical across cycles). The cyclic closure is conditional on Conjecture 7.1 but also provides the candidate fixed point. Either both hold or neither does. See cyclic-cosmology.md Step 9.",
       "impact": "If successful: provides a concrete mathematical framework for the fixed-point proof, potentially the most direct path to establishing the consistency of the axioms. Connects the framework to well-developed mathematical tools (3-manifold topology, TQFT, quantum groups). The gauge-group entry point (strategy 1) is the most immediately tractable and connects to existing derivations (bootstrap-division-algebras, coherence-lagrangian). The surgery entry point (strategy 3) most directly addresses the fixed-point equation. The combined approach through all three entry points is the strongest."
     },
     {
       "id": "cosmological-arrow",
       "title": "Cosmological Arrow without Initial Conditions",
       "difficulty": "MODERATE-HARD",
-      "status": "Future target — addresses thermodynamics/time Gap 3",
-      "rationale": "The structural arrow of time (increasing relational invariant depth) is already derived without initial conditions. But the cosmological arrow (expansion) is flagged as potentially requiring boundary conditions (time Gap 3). If a growing DAG needs increasing 'room' in the coherence geometry (Planck-density bound prevents packing), the structural arrow implies expansion. This would link the arrow of time to Λ > 0 and potentially give the sign of Λ.",
-      "strategy": "(1) Show that monotonically increasing relational invariant count requires monotonically increasing 4-volume (from Planck-density bound, singularity-resolution Corollary 2.2). (2) Increasing 4-volume in an FRW spacetime means expansion: da/dt > 0. (3) Eternal expansion requires Λ > 0 (Λ = 0 decelerates to zero, Λ < 0 recollapses). This gives the sign prediction. Key subtlety: does the DAG growth rate actually require eternal expansion, or just initial expansion?",
-      "dependencies": ["thermodynamics/time", "spacetime/singularity-resolution", "foundation/coherence-lagrangian"],
-      "addressesGaps": ["thermodynamics/time Gap 3"],
-      "impact": "Sign of Λ from structural arrow. Resolves time Gap 3. Connects thermodynamics to cosmology without initial conditions."
+      "status": "SCOPED 2026-04-22 \u2014 research target doc at research-targets/cosmological-arrow-lambda-sign.md. Exploratory pass found the originally-stated strategy has a gap at step 1 (DAG growth does not by itself force 4-volume growth \u2014 it accumulates in any spacetime including static Minkowski). A sharper argument exists via event-generation rates (matter dilution in \u039b=0 gives finite total events; Gibbons-Hawking bath in \u039b>0 gives divergent events), but this requires showing the axioms force the arrow to be STRICTLY eternal, which is not obviously the case. Route E (Continuous-Discrete Duality: aperiodic-order substrate density lower bound) identified as the most promising concrete path. Estimated scope 2-6 weeks if picked up.",
+      "rationale": "The structural arrow of time (increasing relational invariant depth) is already derived without initial conditions. But the cosmological arrow (expansion) is flagged as potentially requiring boundary conditions (time Gap 3). If a growing DAG needs increasing 'room' in the coherence geometry (Planck-density bound prevents packing), the structural arrow implies expansion. This would link the arrow of time to \u039b > 0 and potentially give the sign of \u039b.",
+      "strategy": "(1) Show that monotonically increasing relational invariant count requires monotonically increasing 4-volume (from Planck-density bound, singularity-resolution Corollary 2.2). (2) Increasing 4-volume in an FRW spacetime means expansion: da/dt > 0. (3) Eternal expansion requires \u039b > 0 (\u039b = 0 decelerates to zero, \u039b < 0 recollapses). This gives the sign prediction. Key subtlety: does the DAG growth rate actually require eternal expansion, or just initial expansion?",
+      "dependencies": [
+        "thermodynamics/time",
+        "spacetime/singularity-resolution",
+        "foundation/coherence-lagrangian"
+      ],
+      "addressesGaps": [
+        "thermodynamics/time Gap 3"
+      ],
+      "impact": "Sign of \u039b from structural arrow. Resolves time Gap 3. Connects thermodynamics to cosmology without initial conditions.",
+      "scopingDate": "2026-04-22"
     },
     {
       "id": "de-sitter-core-lambda",
-      "title": "De Sitter Core ↔ Asymptotic Λ Connection",
+      "title": "De Sitter Core \u2194 Asymptotic \u039b Connection",
       "difficulty": "HARD",
-      "status": "Future target — addresses singularity-resolution Gap 4",
-      "rationale": "The coherence bounce replaces the Big Bang with a Planck-density core that should approach de Sitter geometry (constant positive curvature). If the de Sitter radius of the bounce core is related to the asymptotic Λ, this connects quantum gravity to dark energy. The self-consistency loop (Λ → R_H → D_A → 'initial conditions' → Λ) might have a concrete realization through the bounce: the Planck-density initial state sets the coherence budget, which determines the horizon, which determines Λ.",
-      "strategy": "(1) Show the bounce core approaches de Sitter geometry with curvature ~ ℓ_P^{-2} (from curvature bound, Theorem 3.1). (2) The core has effective Λ_core ~ ℓ_P^{-2}. (3) During expansion, Λ_eff must decrease from Λ_core to the asymptotic Λ_obs. (4) If Λ is truly constant (Lovelock), the 'decrease' is reinterpreted as the matter content diluting — Λ was always the asymptotic value, and the core's high curvature was matter-dominated. (5) The self-consistency condition: the total coherence budget set at the bounce must be compatible with the asymptotic Λ through the Friedmann equations.",
-      "dependencies": ["spacetime/singularity-resolution", "spacetime/einstein-equations", "holography/area-scaling"],
-      "addressesGaps": ["spacetime/singularity-resolution Gap 4"],
+      "status": "Future target \u2014 addresses singularity-resolution Gap 4",
+      "rationale": "The coherence bounce replaces the Big Bang with a Planck-density core that should approach de Sitter geometry (constant positive curvature). If the de Sitter radius of the bounce core is related to the asymptotic \u039b, this connects quantum gravity to dark energy. The self-consistency loop (\u039b \u2192 R_H \u2192 D_A \u2192 'initial conditions' \u2192 \u039b) might have a concrete realization through the bounce: the Planck-density initial state sets the coherence budget, which determines the horizon, which determines \u039b.",
+      "strategy": "(1) Show the bounce core approaches de Sitter geometry with curvature ~ \u2113_P^{-2} (from curvature bound, Theorem 3.1). (2) The core has effective \u039b_core ~ \u2113_P^{-2}. (3) During expansion, \u039b_eff must decrease from \u039b_core to the asymptotic \u039b_obs. (4) If \u039b is truly constant (Lovelock), the 'decrease' is reinterpreted as the matter content diluting \u2014 \u039b was always the asymptotic value, and the core's high curvature was matter-dominated. (5) The self-consistency condition: the total coherence budget set at the bounce must be compatible with the asymptotic \u039b through the Friedmann equations.",
+      "dependencies": [
+        "spacetime/singularity-resolution",
+        "spacetime/einstein-equations",
+        "holography/area-scaling"
+      ],
+      "addressesGaps": [
+        "spacetime/singularity-resolution Gap 4"
+      ],
       "impact": "Connects bounce to dark energy. Makes the self-consistency loop concrete."
     },
     {
       "id": "dark-energy-equation-of-state",
       "title": "Dark Energy Equation of State from Distinguishability Conservation",
       "difficulty": "MODERATE",
-      "status": "COMPLETED — created cosmology/dark-energy-equation-of-state.md (provisional). Phantom exclusion w ≥ -1 (Thm 2.1, rigorous), constancy preference w = -1 (Thm 3.1, rigorous), horizon distinguishability bound (Prop 4.4, semi-formal).",
+      "status": "COMPLETED \u2014 created cosmology/dark-energy-equation-of-state.md (provisional). Phantom exclusion w \u2265 -1 (Thm 2.1, rigorous), constancy preference w = -1 (Thm 3.1, rigorous), horizon distinguishability bound (Prop 4.4, semi-formal).",
       "completedDate": "2026-04-03",
-      "rationale": "Distinguishability conservation (derived) constrains the dark energy equation of state, not just the value of Λ. The Big Rip (w < -1) destroys all coherence carriers at finite time — the expansion-side mirror of the bounce dissolution that excludes Λ < 0. The constancy preference (w = -1 is the unique equilibrium) follows from the time-independence of the de Sitter static patch.",
-      "strategy": "(1) Define coherence partition across cosmological horizon. (2) Show phantom energy (w < -1) produces Big Rip → carrier destruction → Axiom 1 violation (three independent arguments: carrier destruction, geodesic incompleteness, horizon shrinkage). (3) Show w = -1 is unique fixed point: only equation of state with time-independent partition, exact Lyapunov stability, and zero coherence flux. (4) Horizon distinguishability of non-self relational invariants (characterized by Gibbons-Hawking temperature) gives two-sided Λ bound (semi-formal). (5) Cross-predictions: bounded eternal expansion, connection to holographic noise.",
-      "dependencies": ["thermodynamics-ext/distinguishability-conservation", "cosmology/observer-loop-viability", "axioms/coherence-conservation", "axioms/loop-closure", "holography/area-scaling", "spacetime/singularity-resolution"],
-      "addressesGaps": ["cosmology/observer-loop-viability Gap 2 (partial — provides mechanism via horizon distinguishability)"],
+      "rationale": "Distinguishability conservation (derived) constrains the dark energy equation of state, not just the value of \u039b. The Big Rip (w < -1) destroys all coherence carriers at finite time \u2014 the expansion-side mirror of the bounce dissolution that excludes \u039b < 0. The constancy preference (w = -1 is the unique equilibrium) follows from the time-independence of the de Sitter static patch.",
+      "strategy": "(1) Define coherence partition across cosmological horizon. (2) Show phantom energy (w < -1) produces Big Rip \u2192 carrier destruction \u2192 Axiom 1 violation (three independent arguments: carrier destruction, geodesic incompleteness, horizon shrinkage). (3) Show w = -1 is unique fixed point: only equation of state with time-independent partition, exact Lyapunov stability, and zero coherence flux. (4) Horizon distinguishability of non-self relational invariants (characterized by Gibbons-Hawking temperature) gives two-sided \u039b bound (semi-formal). (5) Cross-predictions: bounded eternal expansion, connection to holographic noise.",
+      "dependencies": [
+        "thermodynamics-ext/distinguishability-conservation",
+        "cosmology/observer-loop-viability",
+        "axioms/coherence-conservation",
+        "axioms/loop-closure",
+        "holography/area-scaling",
+        "spacetime/singularity-resolution"
+      ],
+      "addressesGaps": [
+        "cosmology/observer-loop-viability Gap 2 (partial \u2014 provides mechanism via horizon distinguishability)"
+      ],
       "impact": "New derivation. Constrains dark energy equation of state from axioms. Derives null energy condition. Provides concrete mechanism for observer-loop-viability Gap 2."
     },
     {
       "id": "observer-projection-as-error-correction",
-      "title": "Observer Projection as Error Correction — particle spectrum as viable error-correcting codes",
+      "title": "Observer Projection as Error Correction \u2014 particle spectrum as viable error-correcting codes",
       "difficulty": "HARD",
       "priority": "HIGH",
-      "status": "RESEARCH TARGET — hypothesis articulated but not formalized. Standalone document at research-targets/observer-projection-as-error-correction.md describes the hypothesis and enumerates the formalization steps.",
+      "status": "RESEARCH TARGET \u2014 hypothesis articulated but not formalized. Standalone document at research-targets/observer-projection-as-error-correction.md describes the hypothesis and enumerates the formalization steps.",
       "rationale": "Several framework commitments independently describe discreteness arising from continuous substrate: Axiom 3 (temporal ticks from continuous phase), Observer Holographic Equivalence Proposition 4.1 (null-generator quotient to integer topological data), Corollary 4.5 (exterior cancellation leaving only integer horizon residue), and area-scaling (horizon mode count as encoding capacity). The hypothesis is that these are manifestations of a single underlying mechanism: the discrete observer projection IS an error-correcting code from the continuous Planck-scale substrate to the observer's logical integer invariants. Under this hypothesis, the SM particle spectrum = the spectrum of viable error-correcting codes for integer-invariant profiles under Planck-scale noise, with each particle sitting at the minimum-viable scale for its quantum-number tuple. This would unify multiple existing derivations into a single mechanism and potentially promote mass-hierarchy's S1 postulate (tunneling-crystallization correspondence) to a theorem by identifying WKB tunneling with error-correction threshold crossing.",
-      "strategy": "Five-step formalization (detailed in research-targets/observer-projection-as-error-correction.md): (1) Formalize the discrete observer projection as a CPTP map from continuous substrate Hilbert space to discrete observer state space, consolidating existing framework commitments. (2) Identify the error-correcting code family — candidates include topological codes (Kitaev-style, natural given Proposition 4.1), stabilizer codes, holographic codes (HaPPY), or a novel family. (3) Compute code distances for specific SM particle integer-invariant profiles (charge, spin, lepton number, weak isospin, color). (4) Compare predicted minimum-viable scales to observed particle masses — the key validation check. (5) Unify with mass-hierarchy: conjecture that WKB tunneling action = code-distance requirement, exponential suppression = code failure probability.",
-      "dependencies": ["axioms/loop-closure", "foundation/observer-holographic-equivalence", "holography/area-scaling", "particles/mass-hierarchy", "interactions/moufang-loop-phase-closure", "minimal-observer/coherence-dual-pairs"],
-      "addressesGaps": ["particles/mass-hierarchy S1 (tunneling-crystallization correspondence) — candidate promotion to theorem via error-correction threshold identification", "Hierarchy-problem-style gap (no framework derivation of Planck-to-SM scale gap from first principles)"],
-      "impact": "If formalization succeeds, reshapes how the framework presents particle physics — from catalogue of bootstrap crystallizations to derived spectrum of viable error-correcting codes. Unifies Axiom 3, Proposition 4.1, Corollary 4.5, area-scaling, and mass-hierarchy into a single mechanism. Generates falsifiable predictions (discrete particle spectrum, hierarchical mass ordering, mass floor set by minimal integer-invariant profile). Step 4 (match to SM) is the key validation test — success supports the hypothesis, failure falsifies it. Intellectual origin: April 2026 conversation sharpening the question 'why does it take 10^44 Planck modes to encode the electron's handful of quantum numbers?'"
+      "strategy": "Five-step formalization (detailed in research-targets/observer-projection-as-error-correction.md): (1) Formalize the discrete observer projection as a CPTP map from continuous substrate Hilbert space to discrete observer state space, consolidating existing framework commitments. (2) Identify the error-correcting code family \u2014 candidates include topological codes (Kitaev-style, natural given Proposition 4.1), stabilizer codes, holographic codes (HaPPY), or a novel family. (3) Compute code distances for specific SM particle integer-invariant profiles (charge, spin, lepton number, weak isospin, color). (4) Compare predicted minimum-viable scales to observed particle masses \u2014 the key validation check. (5) Unify with mass-hierarchy: conjecture that WKB tunneling action = code-distance requirement, exponential suppression = code failure probability.",
+      "dependencies": [
+        "axioms/loop-closure",
+        "foundation/observer-holographic-equivalence",
+        "holography/area-scaling",
+        "particles/mass-hierarchy",
+        "interactions/moufang-loop-phase-closure",
+        "minimal-observer/coherence-dual-pairs"
+      ],
+      "addressesGaps": [
+        "particles/mass-hierarchy S1 (tunneling-crystallization correspondence) \u2014 candidate promotion to theorem via error-correction threshold identification",
+        "Hierarchy-problem-style gap (no framework derivation of Planck-to-SM scale gap from first principles)"
+      ],
+      "impact": "If formalization succeeds, reshapes how the framework presents particle physics \u2014 from catalogue of bootstrap crystallizations to derived spectrum of viable error-correcting codes. Unifies Axiom 3, Proposition 4.1, Corollary 4.5, area-scaling, and mass-hierarchy into a single mechanism. Generates falsifiable predictions (discrete particle spectrum, hierarchical mass ordering, mass floor set by minimal integer-invariant profile). Step 4 (match to SM) is the key validation test \u2014 success supports the hypothesis, failure falsifies it. Intellectual origin: April 2026 conversation sharpening the question 'why does it take 10^44 Planck modes to encode the electron's handful of quantum numbers?'"
     }
   ],
-
   "gapClusters": [
     {
       "id": "deriving-G",
       "title": "Deriving Newton's Constant",
       "difficulty": "BLOCKED",
-      "gaps": ["spacetime/gravity Gap 1", "spacetime/einstein-equations Gap 2", "thermodynamics/action-planck Gap 3"],
-      "rationale": "Three independent gaps all ask: is G derivable from ℏ and c? If yes, the framework has zero free gravitational parameters. This is the 'zero free parameters' question.",
-      "strategy": "Requires showing that the coherence geometry's curvature scale is set by the Planck length ℓ_P = √(ℏG/c³), and that ℓ_P is determined by the loop closure period T₀ of the minimal observer. If T₀ is computable from the axioms, then G = ℏ/T₀²c (schematically). Currently no clear path.",
+      "gaps": [
+        "spacetime/gravity Gap 1",
+        "spacetime/einstein-equations Gap 2",
+        "thermodynamics/action-planck Gap 3"
+      ],
+      "rationale": "Three independent gaps all ask: is G derivable from \u210f and c? If yes, the framework has zero free gravitational parameters. This is the 'zero free parameters' question.",
+      "strategy": "Requires showing that the coherence geometry's curvature scale is set by the Planck length \u2113_P = \u221a(\u210fG/c\u00b3), and that \u2113_P is determined by the loop closure period T\u2080 of the minimal observer. If T\u2080 is computable from the axioms, then G = \u210f/T\u2080\u00b2c (schematically). Currently no clear path.",
       "status": "No clear path. Research direction."
     },
     {
       "id": "cosmological-constant",
       "title": "Cosmological Constant",
       "difficulty": "BLOCKED (value) / HARD (sign, bounds, and hierarchy mechanism)",
-      "gaps": ["spacetime/einstein-equations Gap 1", "particles/mass-hierarchy Gap 4", "foundation/coherence-lagrangian Gap 2", "thermodynamics/time Gap 3", "spacetime/singularity-resolution Gap 4", "cosmology/observer-loop-viability Gap 6"],
-      "rationale": "Six gaps reference the Λ problem or connect to it. The cosmological-constant derivation is non-viable for computing the value, but four directions are active: (1) observer-loop-viability (provisional) establishes a Planck-scale upper bound and predicts Λ ≥ 0 (sign prediction via coherence conservation), (2) hierarchical coherence suppression (Step 7) identifies a mechanism connecting bootstrap, c-theorem, and ER=EPR to a self-consistency condition for Λ — needs the geometry functor (Gap 6), (3) cosmological arrow (time Gap 3) may sharpen to Λ > 0, (4) de Sitter core connection (singularity-resolution Gap 4) may make the self-consistency loop concrete.",
-      "relatedDerivations": ["cosmology/observer-loop-viability", "cosmology/cosmological-constant", "interactions/bootstrap", "thermodynamics-ext/renormalization", "holography/er-epr"],
-      "status": "Value blocked. Upper bound established at Planck scale. Sign prediction Λ ≥ 0 established (Thm 5.4). Qualitative hierarchy explained (Prop 7.5): self-consistency equation = entropy decomposition, 2nd law drives S_H/C₀ → 1. Step 8 introduces level-indexed Λ_n^eff: entropy decomposition is genuinely level-dependent, 120-order gap reframed as cross-level comparison between Planck bound (level 0) and observed value (level N). Remaining open: quantitative Λ (requires geometry functor with level-indexed Λ_n^eff, Gap 6), sharpening to Λ > 0, coincidence problem (why Ω_m ~ Ω_Λ now)."
+      "gaps": [
+        "spacetime/einstein-equations Gap 1",
+        "particles/mass-hierarchy Gap 4",
+        "foundation/coherence-lagrangian Gap 2",
+        "thermodynamics/time Gap 3",
+        "spacetime/singularity-resolution Gap 4",
+        "cosmology/observer-loop-viability Gap 6"
+      ],
+      "rationale": "Six gaps reference the \u039b problem or connect to it. The cosmological-constant derivation is non-viable for computing the value, but four directions are active: (1) observer-loop-viability (provisional) establishes a Planck-scale upper bound and predicts \u039b \u2265 0 (sign prediction via coherence conservation), (2) hierarchical coherence suppression (Step 7) identifies a mechanism connecting bootstrap, c-theorem, and ER=EPR to a self-consistency condition for \u039b \u2014 needs the geometry functor (Gap 6), (3) cosmological arrow (time Gap 3) may sharpen to \u039b > 0, (4) de Sitter core connection (singularity-resolution Gap 4) may make the self-consistency loop concrete.",
+      "relatedDerivations": [
+        "cosmology/observer-loop-viability",
+        "cosmology/cosmological-constant",
+        "interactions/bootstrap",
+        "thermodynamics-ext/renormalization",
+        "holography/er-epr"
+      ],
+      "status": "Value blocked. Upper bound established at Planck scale. Sign prediction \u039b \u2265 0 established (Thm 5.4). Qualitative hierarchy explained (Prop 7.5): self-consistency equation = entropy decomposition, 2nd law drives S_H/C\u2080 \u2192 1. Step 8 introduces level-indexed \u039b_n^eff: entropy decomposition is genuinely level-dependent, 120-order gap reframed as cross-level comparison between Planck bound (level 0) and observed value (level N). Remaining open: quantitative \u039b (requires geometry functor with level-indexed \u039b_n^eff, Gap 6), sharpening to \u039b > 0, coincidence problem (why \u03a9_m ~ \u03a9_\u039b now)."
     },
     {
       "id": "quantitative-eta-B",
       "title": "Quantitative Baryon Asymmetry",
       "difficulty": "HARD",
-      "gaps": ["cosmology/baryogenesis Gap 3", "cosmology/leptogenesis Gap 2"],
-      "rationale": "Both baryogenesis and leptogenesis have rigorous qualitative arguments but cannot compute the exact baryon-to-photon ratio η_B without solving coupled Boltzmann equations with framework-specific Yukawa textures.",
+      "gaps": [
+        "cosmology/baryogenesis Gap 3",
+        "cosmology/leptogenesis Gap 2"
+      ],
+      "rationale": "Both baryogenesis and leptogenesis have rigorous qualitative arguments but cannot compute the exact baryon-to-photon ratio \u03b7_B without solving coupled Boltzmann equations with framework-specific Yukawa textures.",
       "strategy": "Numerical computation: solve the resonant leptogenesis Boltzmann equations with the framework's predicted parameters (Majorana masses ~ v, PMNS phases). This is computationally feasible but requires careful treatment of washout processes.",
       "status": "Feasible but technically demanding. Research direction."
     },
     {
       "id": "alpha-1-4-first-principles",
-      "title": "Holographic Coefficient α_H = 1/4 from First Principles",
+      "title": "Holographic Coefficient \u03b1_H = 1/4 from First Principles",
       "difficulty": "HARD",
-      "gaps": ["holography/area-scaling Gap 1", "holography/black-hole-entropy Gap 1"],
+      "gaps": [
+        "holography/area-scaling Gap 1",
+        "holography/black-hole-entropy Gap 1"
+      ],
       "rationale": "Both area-scaling and black-hole-entropy note that the factor 1/4 is obtained via the Schwarzschild consistency model rather than from pure coherence geometry. A first-principles derivation would strengthen the holographic sector.",
-      "strategy": "The causal-set-statistics derivation already obtains α_H = 1/4 from Poisson sprinkling statistics (derived). The question is whether this can be pushed upstream to area-scaling without invoking the Schwarzschild solution. One approach: use the Planck-scale resolution postulate (S1) directly — each ℓ_P² cell contributes exactly 1 bit of coherence capacity, giving S = A/(4ℓ_P²) by definition of ℓ_P.",
+      "strategy": "The causal-set-statistics derivation already obtains \u03b1_H = 1/4 from Poisson sprinkling statistics (derived). The question is whether this can be pushed upstream to area-scaling without invoking the Schwarzschild solution. One approach: use the Planck-scale resolution postulate (S1) directly \u2014 each \u2113_P\u00b2 cell contributes exactly 1 bit of coherence capacity, giving S = A/(4\u2113_P\u00b2) by definition of \u2113_P.",
       "status": "Plausible but requires careful argument."
     },
     {
@@ -335,21 +513,22 @@
       "status": "COMPLETED"
     }
   ],
-
   "permanentlyOpen": [
     {
       "id": "chiral-symmetry-breaking",
       "title": "Chiral Symmetry Breaking (provisional status)",
-      "reason": "Gap 1 is equivalent to the Yang-Mills mass gap — a Clay Millennium Problem. Unless the mass gap is solved, this derivation stays at provisional."
+      "reason": "Gap 1 is equivalent to the Yang-Mills mass gap \u2014 a Clay Millennium Problem. Unless the mass gap is solved, this derivation stays at provisional."
     },
     {
       "id": "cosmological-constant",
       "title": "Cosmological Constant (non-viable for value; sign/bounds/hierarchy mechanism open)",
-      "reason": "The derivation's own assessment is that the value of Λ cannot be derived — it depends on initial conditions whose ontic/epistemic status is murkier than initially stated (see §Root Cause). Honestly maintained as non-viable for the value. The sign prediction Λ ≥ 0 (observer-loop-viability Thm 5.4) and Planck-scale upper bound (Thm 2.1) are established. The 120-order hierarchy is qualitatively explained (Prop 7.5): the self-consistency equation C₀ = Σ Δcₙ + S_H is the entropy decomposition C₀ = C_accessible + S_A, and the 2nd law (Entropy Thm 4.1) drives S_H/C₀ → 1 monotonically. The hierarchy is thermodynamic inevitability, not fine-tuning. Remaining open: (1) the value of C₀ (initial conditions), (2) quantitative Λ (requires geometry functor, Gap 6), (3) the coincidence problem (why Ω_m ~ Ω_Λ at the current epoch — observer-selection territory, but formalizing within the framework's non-anthropic axiom-selection approach is open)."
+      "reason": "The derivation's own assessment is that the value of \u039b cannot be derived \u2014 it depends on initial conditions whose ontic/epistemic status is murkier than initially stated (see \u00a7Root Cause). Honestly maintained as non-viable for the value. The sign prediction \u039b \u2265 0 (observer-loop-viability Thm 5.4) and Planck-scale upper bound (Thm 2.1) are established. The 120-order hierarchy is qualitatively explained (Prop 7.5): the self-consistency equation C\u2080 = \u03a3 \u0394c\u2099 + S_H is the entropy decomposition C\u2080 = C_accessible + S_A, and the 2nd law (Entropy Thm 4.1) drives S_H/C\u2080 \u2192 1 monotonically. The hierarchy is thermodynamic inevitability, not fine-tuning. Remaining open: (1) the value of C\u2080 (initial conditions), (2) quantitative \u039b (requires geometry functor, Gap 6), (3) the coincidence problem (why \u03a9_m ~ \u03a9_\u039b at the current epoch \u2014 observer-selection territory, but formalizing within the framework's non-anthropic axiom-selection approach is open)."
     },
     {
       "id": "loop-closure-s1",
-      "postulateIds": ["loop-closure-s1"],
+      "postulateIds": [
+        "loop-closure-s1"
+      ],
       "reason": "S1 has been weakened from 'smooth manifold' to 'finite-dimensional topological manifold with free U(1) orbits'. Smooth structure is now derived as Theorem 0.0 via the equivariant smoothing theorem (Illman 1978 / Montgomery-Zippin). The net irreducible content of S1 is: finite dimensionality and local Euclidean regularity. The axiom coherence argument (non-smooth structure severs the Noether mechanism connecting the three axioms) provides additional structural motivation. S2 was previously promoted to Theorem 0.1 via Weyl averaging (2026-03-12). Updated 2026-03-13."
     },
     {
@@ -360,17 +539,24 @@
     {
       "id": "area-scaling-s1",
       "postulateId": "area-scaling-s1",
-      "reason": "Planck-scale resolution is the UV cutoff. While motivated by the convergence of ℏ, G, and c, it is a genuine physical input about the discreteness of the coherence geometry."
+      "reason": "Planck-scale resolution is the UV cutoff. While motivated by the convergence of \u210f, G, and c, it is a genuine physical input about the discreteness of the coherence geometry."
     },
     {
       "id": "particles-postulates",
-      "postulateIds": ["spin-statistics-s1", "mass-hierarchy-s1", "three-generations-s1"],
+      "postulateIds": [
+        "spin-statistics-s1",
+        "mass-hierarchy-s1",
+        "three-generations-s1"
+      ],
       "reason": "These are mechanism-level inputs: topological consistency (Laidlaw-DeWitt quantization), tunneling-crystallization correspondence, and generation-axis correspondence. Each specifies how the abstract framework connects to the particle content. Deriving them would require a much deeper understanding of the bootstrap dynamics."
     },
     {
       "id": "quantum-postulates",
-      "postulateIds": ["born-rule-s1", "preferred-basis-s1"],
-      "reason": "These bridge the coherence framework and quantum mechanics. Born Rule S1 (amplitude-coherence identification) is the deepest — it could in principle be derivable (see postulatePromotions) but this is extremely difficult. Preferred Basis S1 connects interactions to measurement bases."
+      "postulateIds": [
+        "born-rule-s1",
+        "preferred-basis-s1"
+      ],
+      "reason": "These bridge the coherence framework and quantum mechanics. Born Rule S1 (amplitude-coherence identification) is the deepest \u2014 it could in principle be derivable (see postulatePromotions) but this is extremely difficult. Preferred Basis S1 connects interactions to measurement bases."
     },
     {
       "id": "chiral-symmetry-breaking-s1",
