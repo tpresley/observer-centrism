@@ -1,0 +1,746 @@
+---
+import MainLayout from '../components/layouts/MainLayout.astro'
+import PageTitle from '../components/PageTitle.astro'
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+---
+
+<MainLayout title="Observers in the Foundations">
+  <article class="foundations-article">
+    <PageTitle
+      title="Observers in the Foundations"
+      subtitle="Where physics needs observers, and what changes if you define one"
+    />
+
+    <p class="lead">
+      A long-form introduction to Observer-Centrism. The walk is not short and
+      the framework is not finished &mdash; but it is concrete enough to
+      evaluate, and serious enough to be worth thinking about.
+    </p>
+
+    <h2>Prologue: The Question</h2>
+
+    <p>
+      There is a question that anyone who has thought seriously about science
+      has eventually had to set aside. It usually arrives as a small intuitive
+      shock &mdash; the realization that quantum mechanics depends on
+      something called an observer, that the observer plays a role in deciding
+      what becomes real, and that no part of the theory specifies what an
+      observer actually is. The same gap surfaces in general relativity, where
+      physics is written in terms of reference frames without specifying what
+      makes one physical. It surfaces again in thermodynamics, where the
+      second law depends on a coarse-graining that no equation specifies. And
+      it surfaces in the Standard Model, whose nineteen free parameters
+      quietly admit that the framework&rsquo;s most basic numbers are
+      measured rather than derived.
+    </p>
+
+    <p>
+      The question is shelved, eventually, by everyone who runs into it. The
+      reasons are not bad ones. The word &ldquo;observer&rdquo; carries a
+      connotation of consciousness, and consciousness is a problem physics
+      has &mdash; for excellent reasons &mdash; declined to engage with.
+      Defining an observer formally appears to require first solving the
+      hard problem of consciousness, and the hard problem is hard. So the
+      question is bracketed and the work continues. Quantum mechanics works
+      without an account of observers. General relativity works without a
+      definition of reference frames. The pragmatic stance has been good
+      enough.
+    </p>
+
+    <p>
+      But the gap has costs. The measurement problem has resisted resolution
+      for a century. The incompatibility between quantum mechanics and
+      general relativity has resisted resolution for nearly as long. The
+      Standard Model&rsquo;s parameters remain uncalculated, and the
+      hierarchy of scales between Planck physics and observed physics is
+      orders of magnitude wide and unexplained. None of these failures has
+      an obvious shared cause. But the absence of a formal observer is a
+      candidate.
+    </p>
+
+    <p>
+      What follows is a walk through what happens when the question is not
+      set aside. The framework that emerges &mdash; Observer-Centrism &mdash;
+      begins with three axioms about what it means for an observer to exist,
+      and attempts to derive the structure of physics from those axioms.
+      Most of the major results of twentieth-century physics appear along
+      the way, not as inputs but as consequences: quantum mechanics, special
+      and general relativity, the gauge structure of the Standard Model, the
+      area-scaling of black-hole entropy, the arrow of time. So do a handful
+      of testable predictions and a number of philosophical reframings whose
+      shape is determined, not chosen.
+    </p>
+
+    <p>
+      The framework is not finished. Roughly a third of its derivations
+      stand on the three axioms alone; the rest invoke additional structural
+      assumptions whose status is documented openly. The case for taking the
+      framework seriously is what this document attempts to make.
+    </p>
+
+    <h2>1. The Observer Problem</h2>
+
+    <p>
+      Look at any of physics&rsquo; major theories and you will find an
+      observer playing a central role without receiving a formal definition.
+    </p>
+
+    <p>
+      In quantum mechanics, the observer is essential. Nothing can be said
+      about outcomes without specifying a measurement, and a measurement
+      requires an observer to perform it. Yet the theory does not say what an
+      observer is. The wavefunction evolves smoothly according to the
+      Schr&ouml;dinger equation; then, at some point, a measurement happens
+      and the smooth evolution is replaced by a discontinuous jump to a
+      definite outcome. Why this happens, when it happens, and what physical
+      process produces it &mdash; these are collectively known as the
+      measurement problem, and they have resisted resolution for nearly a
+      century. They have resisted resolution in part because the theory
+      lacks the formal tools to describe the entity doing the measuring.
+    </p>
+
+    <p>
+      In general relativity, the observer is a reference frame. The
+      theory&rsquo;s central insight is that physical laws must take the
+      same form for all observers, regardless of their motion. The
+      mathematics of this &mdash; tensors, curved spacetime, the equivalence
+      principle &mdash; is among the most beautiful in physics. But the
+      theory is silent on what distinguishes an actual observer from a
+      coordinate system that an observer might use. Are reference frames
+      physical objects? Are they conventions? The theory works without an
+      answer, but the question does not go away.
+    </p>
+
+    <p>
+      In thermodynamics, the observer enters as a coarse-graining. The
+      second law of thermodynamics &mdash; entropy never decreases &mdash; is
+      famously relative to which microscopic degrees of freedom an observer
+      can and cannot distinguish. A demon with finer-grained perception
+      sees less entropy than the rest of us do. The theory acknowledges
+      this dependence but does not formalize who is doing the perceiving,
+      or why some coarse-grainings are physically privileged.
+    </p>
+
+    <p>
+      In the Standard Model of particle physics, the problem is implicit
+      but no less real. The model catalogues the particles and forces with
+      extraordinary precision; its predictions match experiment to twelve
+      decimal places. It also contains nineteen free parameters &mdash;
+      masses, mixing angles, coupling strengths &mdash; that must be
+      measured rather than derived. Three generations of fermions exist;
+      nobody knows why three. A specific gauge symmetry organizes the
+      forces; nobody knows why this one. The model works, and works
+      exquisitely, but it works as a catalogue.
+    </p>
+
+    <h3>A Shared Shape</h3>
+
+    <p>
+      These four problems look unrelated. They live in different fields,
+      use different mathematics, and resist different kinds of progress.
+      But they share a structural feature: each theory relies on an entity
+      it does not formalize. Quantum mechanics relies on observers. General
+      relativity relies on reference frames. Thermodynamics relies on
+      coarse-grainings. The Standard Model relies on whatever it is that
+      picks out three generations and nineteen parameters from an infinite
+      space of alternatives.
+    </p>
+
+    <p>
+      The framework&rsquo;s claim is that these are facets of a single
+      absence. Each theory contains an observer-shaped hole.
+    </p>
+
+    <h3>Why the Hole Has Persisted</h3>
+
+    <p>
+      Filling the hole has not been a research priority. The reason is not
+      lack of ambition; physics has attacked far harder problems. The
+      reason is more human. The word &ldquo;observer&rdquo; in everyday
+      usage carries connotations of consciousness, awareness, subjective
+      experience &mdash; and consciousness is a problem with no agreed
+      framework, no agreed methodology, and no obvious way in. To
+      formalize the observer in a physics theory looks, on first inspection,
+      like an invitation to import the hard problem of consciousness into
+      the foundations of physics. Most physicists have, very reasonably,
+      declined the invitation.
+    </p>
+
+    <p>
+      A few approaches have engaged with the gap directly, and Observer-Centrism
+      is in their neighborhood without occupying the same ground. Wheeler&rsquo;s
+      &ldquo;it from bit&rdquo; proposed that physics is fundamentally about
+      information and observation, but stopped short of formalizing the
+      observer. Relational quantum mechanics treats all properties as
+      relations between systems but does not specify what counts as a
+      system. QBism interprets the wavefunction as an agent&rsquo;s degree
+      of belief but takes the agent as primitive. Each of these is a serious
+      attempt; each has chosen, for its own reasons, to leave the observer
+      underspecified.
+    </p>
+
+    <p>
+      Observer-Centrism&rsquo;s first move is to show that the conflation
+      of &ldquo;observer&rdquo; with &ldquo;consciousness&rdquo; is
+      unnecessary &mdash; that an observer can be defined structurally,
+      with no commitment about awareness, and that the resulting
+      definition is enough to do real work. The next chapter explains how.
+    </p>
+
+    <!-- ============================================================
+         CHAPTERS BELOW ARE STUBS. EACH WILL BE EXPANDED IN TURN.
+         ============================================================ -->
+
+    <h2>2. A Different Starting Point</h2>
+
+    <p>
+      The first move is to notice that the everyday word
+      &ldquo;observer&rdquo; carries two distinct meanings, and that
+      physics has been using both of them at once. One meaning is
+      psychological: an observer is a conscious agent who perceives and
+      reports. The other is structural: an observer is a system that
+      participates in an interaction in such a way that the interaction
+      leaves a persistent record on it. The first meaning is what makes
+      physicists nervous about formalizing observers. The second meaning
+      is what physics has actually been relying on all along.
+    </p>
+
+    <p>
+      When a particle detector clicks, no consciousness is required for the
+      click to mean what it means. The detector has interacted with a
+      particle; the interaction has left a persistent record &mdash; a
+      click, a trace, a digital tally &mdash; and from that record,
+      properties of the particle can be inferred. That is observation in
+      the sense physics requires. It is the structure of the record-leaving
+      interaction that does the work, not the awareness of any agent who
+      later reads the record.
+    </p>
+
+    <p>
+      Once that distinction is made, the path forward opens. To formalize
+      an observer, the framework does not need to formalize consciousness.
+      It needs to formalize the structure of a system that persists, has
+      an identity, and can participate in interactions that leave
+      persistent records. Three things, all operationally definable, none
+      of which mention awareness.
+    </p>
+
+    <h3>What Counts</h3>
+
+    <p>
+      A structural observer is anything that maintains a conserved
+      quantity through interactions and distinguishes the transformations
+      that preserve that quantity from the transformations that threaten
+      it. The list of things that satisfy this definition is striking.
+    </p>
+
+    <p>
+      A spinning top maintains its angular momentum, and there is an
+      operational difference between a torque that preserves its axis and
+      one that would destabilize it. A free electron carries its charge
+      through every interaction it can survive; the interactions that
+      would not preserve charge are excluded by physical law. A chemical
+      oscillator with a stable limit cycle maintains a definite phase
+      relationship among its concentrations, and small perturbations are
+      damped back toward the cycle rather than amplified outward. A
+      bacterium maintains a metabolic state and operationally separates
+      nutrients from threats. A human maintains, among many other things,
+      a conserved set of commitments about its own identity through time.
+    </p>
+
+    <p>
+      This list spans many orders of magnitude in scale and complexity.
+      The framework&rsquo;s claim is that what these systems share is not
+      incidental. They share the structural minimum that makes persistence
+      possible at all. The differences between an electron and a brain are
+      vast, but they are differences of elaboration on a common scaffold,
+      not differences in kind.
+    </p>
+
+    <p>
+      This is, on first encounter, jarring. Calling an electron an
+      observer sounds either trivializing &mdash; observation is just
+      a fancy word for interaction &mdash; or mystical &mdash; electrons
+      have some hidden form of awareness. It is neither. It is a
+      structural claim: the electron has the form of an observer, and
+      forms have consequences. What an electron can and cannot do
+      &mdash; what states it can occupy, what interactions it can
+      survive, what records it can leave &mdash; follows from the fact
+      that it has this form. The framework&rsquo;s project is to extract
+      those consequences and check whether they line up with physics.
+    </p>
+
+    <h3>The Neighborhood</h3>
+
+    <p>
+      Observer-Centrism is not the first framework to take the observer
+      seriously, and it does not pretend to be. Several existing programs
+      occupy nearby territory and deserve acknowledgement.
+    </p>
+
+    <p>
+      John Wheeler&rsquo;s &ldquo;it from bit&rdquo; proposed that
+      physical reality is fundamentally information-theoretic &mdash;
+      that every &ldquo;it&rdquo; derives from acts of observation that
+      yield &ldquo;bits.&rdquo; The instinct is shared. The framework
+      goes further by giving the entity doing the observing a structural
+      definition, where Wheeler left it open.
+    </p>
+
+    <p>
+      Relational quantum mechanics, developed by Carlo Rovelli and
+      others, holds that physical properties are not absolute but exist
+      only in relation to other systems &mdash; that what is real for
+      one system need not be real for another. Observer-Centrism shares
+      this relational stance. It diverges in giving the relata themselves
+      a structural definition rather than treating &ldquo;system&rdquo;
+      as a primitive.
+    </p>
+
+    <p>
+      QBism interprets the quantum state as an agent&rsquo;s degree of
+      belief. It is a bold and clarifying move, but it leaves the agent
+      unanalyzed. Observer-Centrism asks what an agent must structurally
+      be in order to have beliefs at all, and tries to answer in
+      physics-compatible terms.
+    </p>
+
+    <p>
+      None of these neighbors is wrong; the framework&rsquo;s commitment
+      is just more specific. Start with the structural definition and see
+      how far it goes. The next chapter spells out what that definition
+      actually requires.
+    </p>
+
+    <h2>3. Five Definitions, Three Axioms</h2>
+
+    <p>
+      The structural commitment from the previous chapter is easy to
+      state: an observer is a system with identity, interaction, and
+      persistence. It is harder to take seriously. Taking it seriously
+      means asking what each of those words actually requires, and
+      what falls into place once the requirements are spelled out.
+      Five things turn out to be needed, and they have a natural order.
+    </p>
+
+    <p>
+      Begin with the simplest piece. To say that an observer interacts
+      is to say that it engages in a process &mdash; call it an
+      interaction &mdash; that has a before and an after for both
+      parties, and that leaves a record. If the interaction left no
+      record, it would be invisible to the observer afterward; and an
+      interaction the observer cannot tell happened cannot be said to
+      have informed it. So <strong>observation</strong>, as the
+      framework uses the word, is not a passive registering of facts.
+      It is an active mutual transformation that leaves a residue. The
+      residue is what the observer carries forward into its next moment.
+    </p>
+
+    <p>
+      For the residue to mean anything, the carrier has to survive the
+      interaction. A system that disintegrated in the act of being
+      affected would have nothing to carry the residue forward. So an
+      <strong>observer</strong>, in the framework&rsquo;s usage, is
+      whatever remains identifiable across an interaction &mdash; a
+      system with a self, where &ldquo;self&rdquo; is whatever makes
+      it the same observer before and after. Identity is not
+      decoration. It is what makes the residue belong to anybody.
+    </p>
+
+    <p>
+      But identity across a single interaction is a thin requirement.
+      An observer that survived its first interaction and dissolved in
+      its second would not be persistent in any useful sense. The
+      framework needs something stronger: the observer must keep being
+      itself across many interactions, indefinitely.
+      <strong>Persistence</strong> is identity that holds up under
+      repetition. It is what separates observers, in the framework&rsquo;s
+      sense, from transient configurations that flicker into existence
+      and vanish without a trace.
+    </p>
+
+    <p>
+      Three pieces so far, and two questions still open.
+    </p>
+
+    <p>
+      One question is whether anything can come from outside. If
+      interactions could import content from some external reservoir
+      &mdash; a place neither party belongs to &mdash; or export content
+      out to one, then the residue carried by the observer would not be
+      a faithful record of its history. It would be contaminated by
+      injections from elsewhere, and the very accounting that makes
+      observation meaningful would fail. The framework rules this out
+      by stipulation: there is no outside. Whatever is in the universe
+      of observers came from inside it. This is the
+      <strong>closed ontology</strong> condition, and it is what gives
+      the framework its conservation principle: residue in equals
+      residue out at every node, because there is nowhere else for it
+      to go.
+    </p>
+
+    <p>
+      The other question is whether observers combine. If two observers
+      interact, can the pair be considered an observer in its own right
+      &mdash; with its own identity, its own residue, its own history?
+      The framework says yes. <strong>Composition</strong> is the
+      condition that anything qualifying as observation between two
+      systems also qualifies as observation by the composite they form.
+      This is not an extra ornament. It is what makes hierarchy
+      possible. Every complex observer is a composite of simpler ones,
+      and most of the framework&rsquo;s later results &mdash; particles
+      built from loops, atoms from particles, the whole bootstrapped
+      tower &mdash; depend on this property holding all the way down.
+    </p>
+
+    <p>
+      Five conditions, then, in the order they were needed: observation,
+      observer, persistence, closed ontology, composition. None of them
+      is unusual in isolation. What is unusual is committing to all
+      five at once and asking what mathematical structure the
+      commitment forces. The answer takes the form of three axioms,
+      each crystallizing one facet of the whole.
+    </p>
+
+    <h3>Axiom 1: Coherence Conservation</h3>
+
+    <p>
+      Something must be conserved. Observation leaves residue. Residue
+      is preserved by persistence. Closed ontology forbids importing or
+      leaking that residue. Whatever tracks the accumulated residue must
+      be conserved locally, at every interaction.
+    </p>
+
+    <p>
+      The framework calls this conserved quantity <strong>coherence</strong>.
+      The name is chosen because coherence in physics already refers to
+      stable phase relationships &mdash; the property that makes interference
+      possible, the property that distinguishes an organized laser beam
+      from incoherent light. Coherence in the framework&rsquo;s sense is
+      the generalization: the currency of persistent structure, the
+      quantity that organized, self-maintaining systems carry and preserve.
+      It is not energy, not momentum, not charge. It is a primitive from
+      which those will eventually be derived.
+    </p>
+
+    <p>
+      Coherence conservation is a local statement. At every interaction
+      node, coherence in equals coherence out. No node creates coherence
+      from nothing, and no node discards it into nothing. The web of
+      interactions forms a directed graph &mdash; every interaction has
+      a before and an after, which gives it a direction &mdash; and no
+      sequence of interactions can loop back on itself without making a
+      thing cause itself. The graph is therefore directed and acyclic.
+    </p>
+
+    <p>
+      One condition in this axiom deserves attention. The composite of
+      two subsystems always carries at least as much coherence relative
+      to a third system as either subsystem does on its own. In
+      information-theoretic language, this is
+      <em>strong subadditivity</em> &mdash; a condition that turns out
+      to encode the difference between classical probability and
+      quantum mechanics. The framework derives this condition from
+      composition, not from a separate quantum postulate.
+    </p>
+
+    <h3>Axiom 2: The Observer Definition</h3>
+
+    <p>
+      Something must have identity. The structural observer from the
+      previous chapter is formalized as a triple:
+    </p>
+
+    <p class="equation">Observer = (&Sigma;, I, B)</p>
+
+    <p>
+      where &Sigma; is the state space of internal configurations the
+      observer can occupy, I is the conserved invariant that marks the
+      observer&rsquo;s identity, and B is the boundary that separates
+      transformations preserving I (self) from transformations
+      threatening I (non-self).
+    </p>
+
+    <p>
+      The state space is the inner life: everything the observer can
+      be without ceasing to be itself. The invariant is what stays the
+      same as the state changes &mdash; the observer&rsquo;s signature,
+      the thing that makes this observer <em>this</em> observer and
+      not something else. The boundary is where the observer&rsquo;s
+      identity ends, not in space but in the space of possible
+      transformations. Crossing the boundary is not a change of state;
+      it is a change of identity, which for an observer means
+      dissolution.
+    </p>
+
+    <p>
+      This triple is not a model of what observers are like. It is what
+      an observer <em>is</em>, reduced to the minimum structure the
+      framework requires. Everything else &mdash; spatial extent, mass,
+      charge, complexity &mdash; is elaboration.
+    </p>
+
+    <h3>Axiom 3: Loop Closure</h3>
+
+    <p>
+      Something must persist. The observer&rsquo;s dynamics &mdash;
+      whatever process takes its current state to its next state &mdash;
+      must, when run forward, produce another valid observer state. A
+      system that evolves itself into something that is no longer an
+      observer has not persisted.
+    </p>
+
+    <p>
+      With finite resources, self-consistency of the dynamics forces
+      something stronger than approximate return. Each imperfect cycle
+      accumulates drift; drift eventually crosses the boundary B; and
+      crossing B dissolves the observer. Only exact return &mdash; the
+      state returning to itself after a finite time &mdash; gives
+      indefinite persistence.
+    </p>
+
+    <p>
+      Exact return of a self-consistent flow is periodicity. For some
+      finite period T,
+    </p>
+
+    <p class="equation">&psi;(t + T) = &psi;(t).</p>
+
+    <p>
+      The dynamics of any persistent observer must therefore close in
+      this sense: the state, carried forward by its own rules, must
+      come back to where it started, carrying a phase that advances by
+      a full cycle between returns. This does not mean that observers
+      are simple. Complicated observers contain many such cycles,
+      interacting and reinforcing each other. But every persistent
+      observer, at its deepest level, contains closure of this form.
+    </p>
+
+    <h3>Three Commitments, Not Three Assumptions</h3>
+
+    <p>
+      A fair objection at this point: three axioms sound like three
+      separate guesses about how the universe works. They are not.
+      They are three facets of a single commitment &mdash; what must
+      be true for a persistent observer to exist. Axiom 1 says the
+      observer conserves something, without which there is nothing
+      to be. Axiom 2 says the observer has structure, without which
+      it is indistinguishable from nothing. Axiom 3 says the observer
+      persists, without which it is irrelevant.
+    </p>
+
+    <p>
+      Take any one away, and the remaining two have little to say.
+      Coherence without observers is a featureless fluid. Observers
+      without conservation leak identity on every interaction.
+      Persistence without both is a cycle that obeys no law and
+      carries no content. The axioms stand or fall together.
+    </p>
+
+    <p>
+      The rest of this document is an accounting of what stands when
+      they hold.
+    </p>
+
+    <h2>4. What Must Exist</h2>
+
+    <p class="stub">
+      <em>Forthcoming.</em> Forced consequences from the axioms alone: the
+      minimal observer is a phase oscillator; one observer is impossible;
+      the universe must contain at least three; pairs are
+      particle&ndash;antiparticle pairs; geometry is not pre-given but
+      condenses with the network. Woven reframings on identity and existence.
+    </p>
+
+    <h2>5. How Things Happen</h2>
+
+    <p class="stub">
+      <em>Forthcoming.</em> The three interaction types. Time as phase
+      ordering, not a backdrop. Entropy as inaccessible coherence, not
+      disorder. The bootstrap mechanism &mdash; composite observers built
+      from simpler ones &mdash; and why it matters for the particle
+      spectrum.
+    </p>
+
+    <h2>6. The Shape of Space</h2>
+
+    <p class="stub">
+      <em>Forthcoming.</em> The speed of light from loop closure. Lorentz
+      invariance. Why exactly three spatial dimensions. Gravity as the
+      curvature of the coherence geometry. Einstein&rsquo;s equations as
+      a fixed-point condition. Woven reframings on space and on the ether.
+    </p>
+
+    <h2>7. Why Quantum</h2>
+
+    <p class="stub">
+      <em>Forthcoming.</em> The Born rule from a counting argument. The
+      preferred basis from interaction structure. Measurement as relational
+      invariant generation. The dissolution &mdash; not the solution
+      &mdash; of the measurement problem. Calibrated comparison to
+      Copenhagen, MWI, RQM, decoherence. Woven reframing on determinism.
+    </p>
+
+    <h2>8. The Particle Zoo</h2>
+
+    <p class="stub">
+      <em>Forthcoming.</em> Spin-statistics and Pauli from winding classes.
+      Three generations from internal winding directions. The mass
+      hierarchy. The Standard Model gauge group from division algebras
+      &mdash; sketched lightly, technical machinery left in the references.
+      Woven reframing on reductionism.
+    </p>
+
+    <h2>9. The Edge of Knowledge</h2>
+
+    <p class="stub">
+      <em>Forthcoming.</em> Holography as a definition, not a duality.
+      Black hole entropy. The information paradox resolved by the bootstrap
+      cycle. Woven reframings on holography and on infinity.
+    </p>
+
+    <h2>10. The Two Layers</h2>
+
+    <p class="stub">
+      <em>Forthcoming.</em> The Central Thesis, earned by everything that
+      came before. The smooth coherence manifold and the discrete observer
+      network are co-formed; neither reduces to the other; physics lives
+      at their fixed point. Woven reframings on materialism and on nothing.
+    </p>
+
+    <h2>11. Predictions and Falsifiers</h2>
+
+    <p class="stub">
+      <em>Forthcoming.</em> The testable claims, ordered by sharpness.
+      Holographic noise with the cos&thinsp;&beta; angular structure
+      &mdash; the one fully quantitative prediction. Dark matter
+      granularity with M_J &prop; m^&minus;3/2. Majorana neutrinos at
+      the electroweak scale. The eight structural nulls. What would
+      falsify the framework, plainly stated.
+    </p>
+
+    <h2>12. Where Old Debates Dissolve</h2>
+
+    <p class="stub">
+      <em>Forthcoming.</em> A surprising number of long-running
+      &ldquo;this versus that&rdquo; debates do not need to be resolved
+      under an observer-centric reading &mdash; they dissolve. Not because
+      the questions are illegitimate, but because the framing rests on
+      assumptions the framework no longer makes. Five to seven of the
+      strongest dissolutions: materialism versus idealism (substrate is
+      coherence, neither matter nor mind); reductionism versus holism
+      (co-formed layers, neither reduces); determinism versus free will
+      (a question of level, not metaphysics); realism versus anti-realism
+      (relational invariants are real and observer-relative);
+      objectivity versus subjectivity (no view from nowhere, but
+      observer-relative objectivity is intact); locality versus
+      nonlocality (network distance is not spatial distance); and
+      &ldquo;why is there something rather than nothing&rdquo;
+      (&ldquo;nothing&rdquo; is not a coherent alternative).
+    </p>
+
+    <h2>13. Where This Stands</h2>
+
+    <p class="stub">
+      <em>Forthcoming.</em> Honest accounting: how much of the framework
+      stands on the axioms alone, what additional assumptions the rest
+      requires, what would falsify the whole, and where an interested
+      reader can find the underlying derivations. The framework offered
+      as a contribution to a tradition, not a replacement for it. A
+      return to the prologue&rsquo;s question.
+    </p>
+
+    <div class="foundations-links">
+      <a href={`${base}/`}>Home</a> &nbsp;&middot;&nbsp;
+      <a href={`${base}/central-thesis`}>The Central Thesis</a> &nbsp;&middot;&nbsp;
+      <a href={`${base}/derivations/`}>Derivations</a> &nbsp;&middot;&nbsp;
+      <a href={`${base}/predictions/`}>Predictions</a> &nbsp;&middot;&nbsp;
+      <a href={`${base}/postulates`}>Structural Postulates</a>
+    </div>
+  </article>
+</MainLayout>
+
+<style>
+  .foundations-article {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .foundations-article h2 {
+    font-size: 1.4rem;
+    color: var(--color-heading);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.5rem;
+  }
+
+  .foundations-article h2:first-of-type {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .foundations-article h3 {
+    font-size: 1.15rem;
+    color: var(--color-heading);
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .foundations-article p {
+    margin-bottom: 1rem;
+    line-height: 1.85;
+  }
+
+  .foundations-article ul {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+  }
+
+  .foundations-article li {
+    margin-bottom: 0.75rem;
+    line-height: 1.75;
+  }
+
+  .lead {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .stub {
+    color: var(--color-text-muted);
+    border-left: 2px solid var(--color-border);
+    padding-left: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .equation {
+    text-align: center;
+    font-style: italic;
+    margin: 1.25rem 0;
+    font-size: 1.05rem;
+    color: var(--color-heading);
+  }
+
+  .foundations-links {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .foundations-links a {
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+
+  .foundations-links a:hover {
+    border-bottom-color: var(--color-accent);
+  }
+</style>
