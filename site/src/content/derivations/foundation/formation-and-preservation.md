@@ -239,7 +239,7 @@ Earlier framing of this derivation (when it was a pair theorem) flagged a "joint
 
 6. **Relation to the bootstrap fixed-point structure.** [Bootstrap Fixed-Point Existence](/derivations/foundation/bootstrap-fixed-point-existence) establishes the universe as a Kleene fixed point under compactness, dcpo, and Scott continuity prerequisites. Whether the triplet is a consequence of the fixed-point structure, or an independent structural constraint, is not explicitly established. *Difficulty: MODERATE.*
 
-7. **Coherence Lagrangian common-saddle analysis.** Whether (F), (P), (D) can be understood as different boundary-condition regimes of one Coherence Lagrangian calculation — a shared-origin view that doesn't reduce them but shows common structural origin. *Difficulty: HARD.*
+7. **Coherence Lagrangian common-saddle analysis.** Whether (F), (P), (D) can be understood as different boundary-condition regimes of one Coherence Lagrangian calculation — a shared-origin view that doesn't reduce them but shows common structural origin. *Difficulty: HARD.* *Partially addressed by [Coherence Bounces](/derivations/particles/coherence-bounces) and [Euclidean Coherence Lagrangian](/derivations/foundation/euclidean-coherence-lagrangian)*: the Euclidean formalism on $M_A^E$ now supplies the shared Lagrangian structure hosting both Class A (within-level) and Class B (level-to-level) bounces, and the Majorana bounce for Preservation-side fermionic substrate. A full common-saddle analysis of (F) ∧ (P) ∧ (D) on these saddles is the remaining open content.
 
 ## Addressed Gaps
 

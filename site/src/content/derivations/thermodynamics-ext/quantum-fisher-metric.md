@@ -82,7 +82,7 @@ The framework supplies five candidate sources of additional content that could n
 
 **(4) Bootstrap hierarchy.** [Bootstrap Division Algebras](/derivations/interactions/bootstrap-division-algebras) forces the Cayley–Dickson chain $\mathbb{R} \to \mathbb{C} \to \mathbb{H} \to \mathbb{O}$ at successive observer levels, with reality structure (real / complex / quaternionic / octonionic) on the level's state space.
 
-**(5) Observer-projected geometry.** [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) projects each observer onto its own static de Sitter patch with Gibbons–Hawking temperature $T_{\mathrm{GH}} = \hbar / (2\pi c T_A)$, where $T_A$ is the observer's loop period. This makes every observer's state naturally a KMS thermal state with respect to its own modular Hamiltonian.
+**(5) Observer-projected geometry.** [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) projects each observer onto its own static de Sitter patch with de Sitter radius $L_A = cT_A/2$ and associated Gibbons–Hawking temperature $T_{\mathrm{GH},A} = \hbar c/(2\pi k_B L_A) = \hbar/(\pi k_B T_A)$, where $T_A$ is the observer's loop period. This makes every observer's state naturally a KMS thermal state with respect to its own modular Hamiltonian.
 
 ### Step 3: Selection — Hessian of the Coherence Functional Forces BKM
 
@@ -102,7 +102,7 @@ Strong subadditivity (commitment 1) is automatically consistent: BKM is known to
 
 **Theorem 4.1 (KMS/Gibbons–Hawking narrowing).** *Under commitment (5), each observer's state is naturally a KMS thermal state on its projected de Sitter patch $M_A$. The Petz metric compatible with the KMS modular flow is BKM.*
 
-*Proof.* By [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Theorem 3.1, observer $A$'s projection $M_A$ is the static patch of de Sitter space with radius $L_A = cT_A/2$, whose static Killing vector generates a natural Hamiltonian flow. The Gibbons–Hawking temperature $T_{\mathrm{GH}} = \hbar/(2\pi c T_A)$ is the thermal temperature at which the vacuum on $M_A$ is perceived by $A$.
+*Proof.* By [Observer-Projected Spacetime](/derivations/foundation/observer-projected-spacetime) Theorem 3.1, observer $A$'s projection $M_A$ is the static patch of de Sitter space with radius $L_A = cT_A/2$, whose static Killing vector generates a natural Hamiltonian flow. The Gibbons–Hawking temperature $T_{\mathrm{GH},A} = \hbar c/(2\pi k_B L_A) = \hbar/(\pi k_B T_A)$ is the thermal temperature at which the vacuum on $M_A$ is perceived by $A$ (equivalently, Euclidean time periodicity $\beta_A = 2\pi L_A/c = \pi T_A$).
 
 Any KMS state $\omega_\beta$ at inverse temperature $\beta = 1/T_{\mathrm{GH}}$ satisfies the KMS condition:
 

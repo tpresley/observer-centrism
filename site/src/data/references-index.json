@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-04-22T09:54:43.318Z",
-    "totalReferences": 106,
-    "totalCitations": 124,
-    "citingFiles": 52,
+    "generatedAt": "2026-04-22T22:10:02.875Z",
+    "totalReferences": 109,
+    "totalCitations": 128,
+    "citingFiles": 54,
     "generator": "scripts/extract-references.mjs"
   },
   "categoryNames": {
@@ -39,7 +39,7 @@
     },
     "quantum-information": {
       "name": "Quantum Information",
-      "count": 20
+      "count": 21
     },
     "field-theory": {
       "name": "Field Theory",
@@ -51,7 +51,7 @@
     },
     "particle-physics": {
       "name": "Particle Physics",
-      "count": 19
+      "count": 21
     },
     "holography": {
       "name": "Holography & Black Holes",
@@ -389,6 +389,21 @@
       "category": "quantum-information"
     },
     {
+      "id": "gibbons-hawking-perry-1978",
+      "authors": "Gibbons–Hawking–Perry",
+      "year": 1978,
+      "citedAs": [
+        "Gibbons–Hawking–Perry, 1978"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "foundation/euclidean-coherence-lagrangian",
+          "title": "Euclidean Coherence Lagrangian"
+        }
+      ],
+      "category": "quantum-information"
+    },
+    {
       "id": "groisman-2005",
       "authors": "Groisman et al.",
       "year": 2005,
@@ -471,6 +486,10 @@
         "Lichnerowicz, 1963"
       ],
       "citedIn": [
+        {
+          "derivationId": "foundation/euclidean-coherence-lagrangian",
+          "title": "Euclidean Coherence Lagrangian"
+        },
         {
           "derivationId": "foundation/spinor-coherence-lagrangian",
           "title": "Spinor Sector of the Coherence Lagrangian"
@@ -1221,6 +1240,21 @@
       "category": "particle-physics"
     },
     {
+      "id": "coleman-1977",
+      "authors": "Coleman",
+      "year": 1977,
+      "citedAs": [
+        "Coleman 1977"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "particles/coherence-bounces",
+          "title": "Coherence Bounces and WKB Mass Generation"
+        }
+      ],
+      "category": "particle-physics"
+    },
+    {
       "id": "dhr-1971",
       "authors": "DHR",
       "year": 1971,
@@ -1374,6 +1408,21 @@
         {
           "derivationId": "flavor/mixing-angles",
           "title": "Flavor Mixing from Winding-Axis Geometry"
+        }
+      ],
+      "category": "particle-physics"
+    },
+    {
+      "id": "pdg-2024",
+      "authors": "PDG",
+      "year": 2024,
+      "citedAs": [
+        "PDG 2024"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "particles/coherence-bounces",
+          "title": "Coherence Bounces and WKB Mass Generation"
         }
       ],
       "category": "particle-physics"

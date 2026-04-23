@@ -53,6 +53,8 @@ where $\ell_P = \sqrt{\hbar G / c^3}$ is the Planck length. Entropy scales with 
 
 The irreducible content of S1 reduces to: **the bootstrap fixed-point equation has a unique positive solution, and that solution equals $\ell_P$.** This is equivalent to the bootstrap fixed-point uniqueness conjectures (Conjectures 7.1–7.2 of [Bootstrap](/derivations/interactions/bootstrap)). If those are proved, S1 becomes a theorem.
 
+**Joint dependency with `mass-hierarchy-s1`.** The same Conjectures 7.1–7.2 also carry the irreducible content of `mass-hierarchy-s1` (see [Mass Hierarchy](/derivations/particles/mass-hierarchy) §Candidate promotion routes). Resolution of the bootstrap fixed-point uniqueness conjecture would therefore retire *both* `area-scaling-s1` and `mass-hierarchy-s1` together — two of the framework's five active structural postulates fall jointly under this conjectural resolution.
+
 ### Argument 1: Boundary Observer Counting
 
 #### Step 1: The Boundary as Interaction Surface

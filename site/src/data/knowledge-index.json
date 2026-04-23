@@ -1,22 +1,22 @@
 {
   "meta": {
-    "generatedAt": "2026-04-22T09:54:43.077Z",
-    "derivationCount": 93,
+    "generatedAt": "2026-04-22T22:10:02.613Z",
+    "derivationCount": 95,
     "predictionCount": 12,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
   },
   "stats": {
     "byStatus": {
-      "derived": 29,
-      "provisional": 63,
+      "derived": 30,
+      "provisional": 64,
       "draft": 1
     },
-    "derivationCount": 93,
+    "derivationCount": 95,
     "predictionCount": 12,
-    "edgeCount": 349,
-    "formalObjectCount": 1362,
-    "openGapCount": 328,
+    "edgeCount": 359,
+    "formalObjectCount": 1378,
+    "openGapCount": 334,
     "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -415,6 +415,10 @@
             "context": "Coherence Conservation"
           },
           {
+            "source": "foundation/euclidean-coherence-lagrangian",
+            "context": "Coherence Conservation"
+          },
+          {
             "source": "foundation/knot-theoretic-bootstrap",
             "context": "Coherence Conservation"
           },
@@ -476,6 +480,10 @@
           },
           {
             "source": "minimal-observer/multiplicity",
+            "context": "Coherence Conservation"
+          },
+          {
+            "source": "particles/mass-hierarchy",
             "context": "Coherence Conservation"
           },
           {
@@ -5193,10 +5201,12 @@
       "enablesDerivation": [
         "particles/cpt-theorem",
         "spacetime/gravitational-constant",
-        "foundation/spinor-coherence-lagrangian"
+        "foundation/spinor-coherence-lagrangian",
+        "foundation/euclidean-coherence-lagrangian"
       ],
       "dependedOnBy": [
         "foundation/continuous-discrete-duality",
+        "foundation/euclidean-coherence-lagrangian",
         "foundation/formation-and-preservation",
         "foundation/knot-theoretic-bootstrap",
         "foundation/observer-pattern-signal",
@@ -5338,6 +5348,10 @@
             "context": "Quantum Fisher Metric"
           },
           {
+            "target": "foundation/euclidean-coherence-lagrangian",
+            "context": "Euclidean Coherence Lagrangian"
+          },
+          {
             "target": "thermodynamics-ext/fisher-metric",
             "context": "Proposition 4.1"
           },
@@ -5416,6 +5430,10 @@
             "context": "Coherence Lagrangian"
           },
           {
+            "source": "foundation/euclidean-coherence-lagrangian",
+            "context": "Coherence Lagrangian"
+          },
+          {
             "source": "foundation/formation-and-preservation",
             "context": "Coherence Lagrangian"
           },
@@ -5444,12 +5462,16 @@
             "context": "Coherence Lagrangian"
           },
           {
+            "source": "particles/coherence-bounces",
+            "context": "Coherence Lagrangian"
+          },
+          {
             "source": "particles/cpt-theorem",
             "context": "Coherence Lagrangian"
           },
           {
             "source": "particles/mass-hierarchy",
-            "context": "Theorem 6.0"
+            "context": "Coherence Lagrangian"
           },
           {
             "source": "quantum/preferred-basis",
@@ -5894,6 +5916,180 @@
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
+    "foundation/euclidean-coherence-lagrangian": {
+      "id": "foundation/euclidean-coherence-lagrangian",
+      "filePath": "site/src/content/derivations/foundation/euclidean-coherence-lagrangian.md",
+      "title": "Euclidean Coherence Lagrangian",
+      "status": "derived",
+      "rigorLevel": "formal",
+      "group": "foundation",
+      "tags": [
+        "foundation",
+        "lagrangian",
+        "euclidean"
+      ],
+      "summary": "The Coherence Lagrangian (scalar + gauge + gravity + spinor sectors) admits an unambiguous Euclidean continuation on each observer's projected static de Sitter patch M_A. The static Killing vector of M_A fixes the Wick rotation t → -iτ; the horizon at r = L_A forces Euclidean time periodicity β_A = π T_A, reproducing the Gibbons–Hawking thermal structure. The Euclidean action is positive-definite for the bosonic sectors (modulo the standard conformal-mode treatment) and takes the expected Grassmann determinantal form for the fermionic sector. Cross-observer consistency is inherited from the presheaf structure of observer-projected spacetime; the Euclidean continuation is operationally well-defined on all shared Type III relational content.",
+      "lastUpdated": "2026-04-21",
+      "dependsOn": [
+        "foundation/coherence-lagrangian",
+        "foundation/spinor-coherence-lagrangian",
+        "foundation/observer-projected-spacetime",
+        "thermodynamics-ext/quantum-fisher-metric"
+      ],
+      "enablesDerivation": [
+        "particles/coherence-bounces"
+      ],
+      "dependedOnBy": [
+        "particles/coherence-bounces"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Wick rotation on a single observer's patch"
+        },
+        {
+          "number": 2,
+          "title": "Euclidean bosonic Lagrangian"
+        },
+        {
+          "number": 3,
+          "title": "Euclidean fermionic Lagrangian"
+        },
+        {
+          "number": 4,
+          "title": "Cross-observer consistency"
+        },
+        {
+          "number": 5,
+          "title": "Boundedness"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Proposition",
+          "id": "1.1",
+          "name": "Wick rotation",
+          "statementPreview": "The Euclidean continuation of MA is*"
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Euclidean periodicity",
+          "statementPreview": "To avoid a conical singularity at the horizon r = LA, the Euclidean time coordinate tau must be periodic with period*"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "Euclidean continuation of the bosonic sectors",
+          "statementPreview": "Under the Wick rotation of Proposition 1.1, the bosonic sectors of the Coherence Lagrangian transform as:*"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Euclidean Dirac action",
+          "statementPreview": "Under the Wick rotation of Proposition 1.1 and standard Euclidean conventions, the Dirac action on MAE is*"
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Euclidean Majorana action",
+          "statementPreview": "For a Majorana field nu satisfying the Majorana condition nuc = nu (from [Spinor Coherence Lagrangian](/derivations/f..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.3",
+          "name": "Euclidean Lichnerowicz identity",
+          "statementPreview": "The square of the Euclidean Dirac operator on MAE is*"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Cross-observer compatibility",
+          "statementPreview": "The induced Wick-rotated restriction morphism*"
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Boundedness of the bosonic action",
+          "statementPreview": "For scalar fields phi satisfying V(phi) 0 (which holds by [Coherence Lagrangian](/derivations/foundation/coherence-la..."
+        },
+        {
+          "type": "Theorem",
+          "id": "6.1.",
+          "name": "",
+          "statementPreview": "On the minimal observer's projected patch MA (de Sitter radius LA = cTA/2), the Euclidean Coherence Lagrangian reprod..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Euclidean–Lorentzian correspondence at cosmological scales.",
+          "description": "For observables with characteristic scale comparable to LA (cosmological scale), the simple Wick rotation may receive corrections from boundary conditions at the de Sitter horizon. Addressing these re"
+        },
+        {
+          "number": 2,
+          "title": "Infinite-dimensional rigor.",
+          "description": "The derivation assumes finite-dimensional observer Hilbert spaces. For quantum field theory (infinite-dimensional state spaces), the Wick rotation inherits the standard functional-analytic issues shar"
+        }
+      ],
+      "assessmentVerdict": "Derived. All structural content is standard QFT Wick-rotation applied to the framework's already-derived Lorentzian Lagrangian. The framework-specific content — that the rotation lives on observer-projected spacetime rather than a shared background — inherits consistency from Observer-Projected Spac",
+      "hasConsistencyModel": true,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "foundation/coherence-lagrangian",
+            "context": "Coherence Lagrangian"
+          },
+          {
+            "target": "foundation/spinor-coherence-lagrangian",
+            "context": "Spinor Coherence Lagrangian"
+          },
+          {
+            "target": "foundation/observer-projected-spacetime",
+            "context": "Observer-Projected Spacetime"
+          },
+          {
+            "target": "particles/coherence-bounces",
+            "context": "Coherence Bounces"
+          },
+          {
+            "target": "particles/neutrino-masses",
+            "context": "Neutrino Masses"
+          },
+          {
+            "target": "axioms/coherence-conservation",
+            "context": "Coherence Conservation"
+          }
+        ],
+        "incoming": [
+          {
+            "source": "foundation/coherence-lagrangian",
+            "context": "Euclidean Coherence Lagrangian"
+          },
+          {
+            "source": "foundation/formation-and-preservation",
+            "context": "Euclidean Coherence Lagrangian"
+          },
+          {
+            "source": "particles/coherence-bounces",
+            "context": "Euclidean Coherence Lagrangian"
+          },
+          {
+            "source": "particles/mass-hierarchy",
+            "context": "Euclidean Coherence Lagrangian"
+          }
+        ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
     "foundation/formation-and-preservation": {
       "id": "foundation/formation-and-preservation",
       "filePath": "site/src/content/derivations/foundation/formation-and-preservation.md",
@@ -6112,6 +6308,14 @@
           {
             "target": "foundation/bootstrap-fixed-point-existence",
             "context": "Bootstrap Fixed-Point Existence"
+          },
+          {
+            "target": "particles/coherence-bounces",
+            "context": "Coherence Bounces"
+          },
+          {
+            "target": "foundation/euclidean-coherence-lagrangian",
+            "context": "Euclidean Coherence Lagrangian"
           },
           {
             "target": "foundation/spinor-coherence-lagrangian",
@@ -7952,6 +8156,7 @@
       "dependedOnBy": [
         "cosmology/cosmological-constant",
         "foundation/bootstrap-fixed-point-existence",
+        "foundation/euclidean-coherence-lagrangian",
         "foundation/knot-theoretic-bootstrap",
         "foundation/observer-holographic-equivalence",
         "foundation/observer-level-stack-compactness",
@@ -8163,6 +8368,10 @@
           },
           {
             "source": "foundation/coherence-lagrangian",
+            "context": "Observer-Projected Spacetime"
+          },
+          {
+            "source": "foundation/euclidean-coherence-lagrangian",
             "context": "Observer-Projected Spacetime"
           },
           {
@@ -8457,7 +8666,10 @@
         "interactions/bootstrap-division-algebras"
       ],
       "enablesDerivation": [],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "foundation/euclidean-coherence-lagrangian",
+        "particles/coherence-bounces"
+      ],
       "steps": [
         {
           "number": 1,
@@ -8728,6 +8940,10 @@
             "context": "Spinor Coherence Lagrangian"
           },
           {
+            "source": "foundation/euclidean-coherence-lagrangian",
+            "context": "Spinor Coherence Lagrangian"
+          },
+          {
             "source": "foundation/formation-and-preservation",
             "context": "Spinor Coherence Lagrangian"
           },
@@ -8741,6 +8957,10 @@
           },
           {
             "source": "gauge/weinberg-angle",
+            "context": "Spinor Coherence Lagrangian"
+          },
+          {
+            "source": "particles/coherence-bounces",
             "context": "Spinor Coherence Lagrangian"
           },
           {
@@ -12239,6 +12459,10 @@
             "context": "Bootstrap"
           },
           {
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
+          },
+          {
             "target": "thermodynamics/entropy",
             "context": "Entropy as Inaccessible Coherence"
           },
@@ -12403,6 +12627,10 @@
           {
             "source": "interactions/bootstrap",
             "context": "Holographic Entropy Bound"
+          },
+          {
+            "source": "particles/mass-hierarchy",
+            "context": "Area Scaling"
           },
           {
             "source": "quantum/entanglement",
@@ -14711,6 +14939,10 @@
             "context": "Bootstrap"
           },
           {
+            "source": "particles/coherence-bounces",
+            "context": "Bootstrap Mechanism"
+          },
+          {
             "source": "particles/mass-hierarchy",
             "context": "Bootstrap Mechanism"
           },
@@ -16701,6 +16933,184 @@
       "upgradeEligible": false,
       "upgradeBlockers": []
     },
+    "particles/coherence-bounces": {
+      "id": "particles/coherence-bounces",
+      "filePath": "site/src/content/derivations/particles/coherence-bounces.md",
+      "title": "Coherence Bounces and WKB Mass Generation",
+      "status": "provisional",
+      "rigorLevel": "semi-formal",
+      "group": "particles",
+      "tags": [
+        "particles",
+        "lagrangian",
+        "wkb"
+      ],
+      "summary": "Fermion mass generation in the framework is structurally a semi-classical tunneling (WKB) phenomenon. Two distinct bounce classes carry the mass-hierarchy content: within-level per-generation winding-angle bounces set the Yukawa couplings via y_k = exp(-α_k/g_EW²) (matching Three Generations Theorem 4.2), and level-to-level 1D WKB tunneling through a coherence-geometric barrier sets the bootstrap-scale hierarchy Λ_n/Λ_{n-1} = exp(-c_n/g_n²) (matching Mass Hierarchy Theorem 3.1). The WKB identification is made explicit at the Lagrangian level using the Euclidean Coherence Lagrangian and the one-loop effective potential; empirical consistency checks confirm structural sanity (ordering, magnitude, top-quark pre-alignment, seesaw structure). The identification sharpens mass-hierarchy-s1 without promoting it: the postulate's irreducible content is the specific barrier identification (not the WKB form), which depends on the bootstrap fixed-point structure and is jointly reducible with area-scaling-s1 to Conjectures 7.1–7.2 of Bootstrap Mechanism.",
+      "lastUpdated": "2026-04-21",
+      "dependsOn": [
+        "foundation/euclidean-coherence-lagrangian",
+        "foundation/spinor-coherence-lagrangian",
+        "particles/mass-hierarchy",
+        "particles/three-generations",
+        "particles/neutrino-masses",
+        "thermodynamics-ext/quantum-fisher-metric"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 1,
+          "title": "Bounce formalism on observer-projected Euclidean spacetime"
+        },
+        {
+          "number": 2,
+          "title": "Within-level Dirac bounce (Class A)"
+        },
+        {
+          "number": 3,
+          "title": "Level-to-level bounce (Class B)"
+        },
+        {
+          "number": 4,
+          "title": "Majorana bounce (Class A extension)"
+        },
+        {
+          "number": 5,
+          "title": "Empirical consistency checks"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Proposition",
+          "id": "1.1",
+          "name": "De Sitter curvature correction",
+          "statementPreview": "For bounces with characteristic size rhobounce satisfying rhobounce ll LA, the Euclidean de Sitter curvature RE = 12/..."
+        },
+        {
+          "type": "Proposition",
+          "id": "2.1",
+          "name": "Per-generation Dirac bounce action",
+          "statementPreview": "The O(4)-symmetric Dirac bounce action for within-level Yukawa generation is*"
+        },
+        {
+          "type": "Proposition",
+          "id": "2.2",
+          "name": "Generation ordering",
+          "statementPreview": "The observed mass ordering me < mmu < mtau (and analogous orderings for up-type and down-type quarks) is equivalent t..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.1",
+          "name": "Level-to-level WKB exponent",
+          "statementPreview": "The 1D WKB tunneling exponent for the (n-1) n crystallization is*"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.1",
+          "name": "Majorana bounce action",
+          "statementPreview": "The Majorana bounce action for the MR 0 crystallization at bootstrap level 2 is*"
+        },
+        {
+          "type": "Proposition",
+          "id": "4.2",
+          "name": "Seesaw ratio from bounce actions",
+          "statementPreview": "The seesaw mass ratio is*"
+        },
+        {
+          "type": "Theorem",
+          "id": "6.1.",
+          "name": "",
+          "statementPreview": "The derived WKB identification is consistent with observed fermion masses across all three generations and all three ..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Specific $\\alpha_k$ values.",
+          "description": "Requires derivation of the winding-angle coherence-potential shape from Three Generations' mathfrakso(3) structure. Route 1 of the promotion-route catalog; estimated 1–3 months of additional work."
+        },
+        {
+          "number": 2,
+          "title": "Specific $c_n$ values.",
+          "description": "Requires derivation of the coherence-geometric barrier shape from bootstrap composition. All three promotion routes (Fisher-distance, integer-quantization, RG reinterpretation) address this; each is a"
+        },
+        {
+          "number": 3,
+          "title": "Cross-sector correction mechanism.",
+          "description": "The ~20–50% cross-sector variation in alphak at fixed generation (Check 5) should be derivable from sector-specific gauge couplings contributing one-loop corrections to the bounce action. A first-prin"
+        },
+        {
+          "number": 4,
+          "title": "Top-quark pre-alignment explanation.",
+          "description": "Check 4 confirms the observation; a framework-internal structural argument for *why* the top quark specifically (rather than, e.g., the tau or the bottom) is the pre-aligned third-generation fermion i"
+        }
+      ],
+      "assessmentVerdict": "Semi-formal. The WKB identification (Propositions 2.1, 3.1, 4.1) is rigorous given the framework's structural content. Specific numerical predictions (fermion mass ratios, seesaw ratio, cn values) require framework inputs that are themselves structural. The derivation passes all six empirical consis",
+      "hasConsistencyModel": true,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "target": "particles/three-generations",
+            "context": "Three Generations"
+          },
+          {
+            "target": "foundation/euclidean-coherence-lagrangian",
+            "context": "Euclidean Coherence Lagrangian"
+          },
+          {
+            "target": "foundation/coherence-lagrangian",
+            "context": "Coherence Lagrangian"
+          },
+          {
+            "target": "foundation/spinor-coherence-lagrangian",
+            "context": "Spinor Coherence Lagrangian"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap Mechanism"
+          },
+          {
+            "target": "particles/neutrino-masses",
+            "context": "Neutrino Masses"
+          }
+        ],
+        "incoming": [
+          {
+            "source": "foundation/euclidean-coherence-lagrangian",
+            "context": "Coherence Bounces"
+          },
+          {
+            "source": "foundation/formation-and-preservation",
+            "context": "Coherence Bounces"
+          },
+          {
+            "source": "particles/mass-hierarchy",
+            "context": "Coherence Bounces"
+          },
+          {
+            "source": "particles/neutrino-masses",
+            "context": "Coherence Bounces"
+          },
+          {
+            "source": "particles/three-generations",
+            "context": "Coherence Bounces"
+          }
+        ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
     "particles/cpt-theorem": {
       "id": "particles/cpt-theorem",
       "filePath": "site/src/content/derivations/particles/cpt-theorem.md",
@@ -16976,13 +17386,14 @@
         "particles"
       ],
       "summary": "Mass hierarchy as logarithmically organized crystallization scales — large ratios are exponentials of small coupling ratios, not fine-tuning",
-      "lastUpdated": "2026-03-09",
+      "lastUpdated": "2026-04-21",
       "dependsOn": [
         "interactions/bootstrap"
       ],
       "enablesDerivation": [
         "particles/three-generations",
-        "cosmology/observer-loop-viability"
+        "cosmology/observer-loop-viability",
+        "particles/coherence-bounces"
       ],
       "dependedOnBy": [
         "cosmology/coupling-constants",
@@ -16991,6 +17402,7 @@
         "foundation/formation-and-preservation",
         "foundation/observer-edges-and-mutual-opacity",
         "foundation/observer-pattern-signal",
+        "particles/coherence-bounces",
         "particles/three-generations"
       ],
       "steps": [
@@ -17027,7 +17439,7 @@
         {
           "type": "Structural Postulate",
           "id": "S1",
-          "name": "Tunneling–crystallization correspondence",
+          "name": "Tunneling–crystallization correspondence, sharpened",
           "statementPreview": "The formation of a stable composite observer at level k of the bootstrap hierarchy is mediated by coherence tunneling..."
         },
         {
@@ -17118,7 +17530,7 @@
       "structuralPostulates": [
         {
           "id": "S1",
-          "name": "Tunneling–crystallization correspondence"
+          "name": "Tunneling–crystallization correspondence, sharpened"
         }
       ],
       "openGaps": [
@@ -17154,11 +17566,31 @@
         "outgoing": [
           {
             "target": "foundation/coherence-lagrangian",
-            "context": "Theorem 6.0"
+            "context": "Coherence Lagrangian"
+          },
+          {
+            "target": "particles/coherence-bounces",
+            "context": "Coherence Bounces"
+          },
+          {
+            "target": "foundation/euclidean-coherence-lagrangian",
+            "context": "Euclidean Coherence Lagrangian"
           },
           {
             "target": "interactions/bootstrap",
             "context": "Bootstrap Mechanism"
+          },
+          {
+            "target": "thermodynamics-ext/quantum-fisher-metric",
+            "context": "Quantum Fisher Metric"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
+          },
+          {
+            "target": "axioms/coherence-conservation",
+            "context": "Coherence Conservation"
           },
           {
             "target": "thermodynamics/action-planck",
@@ -17279,6 +17711,14 @@
             "context": "Mass Hierarchy"
           },
           {
+            "source": "holography/area-scaling",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "source": "particles/coherence-bounces",
+            "context": "Mass Hierarchy"
+          },
+          {
             "source": "particles/neutrino-masses",
             "context": "Mass Hierarchy"
           },
@@ -17335,7 +17775,8 @@
       ],
       "dependedOnBy": [
         "cosmology/leptogenesis",
-        "foundation/spinor-coherence-lagrangian"
+        "foundation/spinor-coherence-lagrangian",
+        "particles/coherence-bounces"
       ],
       "steps": [
         {
@@ -17513,6 +17954,10 @@
           {
             "target": "foundation/spinor-coherence-lagrangian",
             "context": "Spinor Coherence Lagrangian"
+          },
+          {
+            "target": "particles/coherence-bounces",
+            "context": "Coherence Bounces"
           }
         ],
         "incoming": [
@@ -17533,11 +17978,19 @@
             "context": "Neutrino Masses"
           },
           {
+            "source": "foundation/euclidean-coherence-lagrangian",
+            "context": "Neutrino Masses"
+          },
+          {
             "source": "foundation/spinor-coherence-lagrangian",
             "context": "Neutrino Masses"
           },
           {
             "source": "foundation/substrate-noise-and-profile-coupling",
+            "context": "Neutrino Masses"
+          },
+          {
+            "source": "particles/coherence-bounces",
             "context": "Neutrino Masses"
           },
           {
@@ -18178,6 +18631,7 @@
         "flavor/mixing-angles",
         "foundation/error-correction-and-standard-model",
         "foundation/spinor-coherence-lagrangian",
+        "particles/coherence-bounces",
         "particles/neutrino-masses"
       ],
       "steps": [
@@ -18351,6 +18805,10 @@
           {
             "target": "particles/neutrino-masses",
             "context": "Neutrino Masses"
+          },
+          {
+            "target": "particles/coherence-bounces",
+            "context": "Coherence Bounces"
           }
         ],
         "incoming": [
@@ -18408,6 +18866,10 @@
           },
           {
             "source": "gauge/weinberg-angle",
+            "context": "Three Generations"
+          },
+          {
+            "source": "particles/coherence-bounces",
             "context": "Three Generations"
           },
           {
@@ -23591,7 +24053,9 @@
         "foundation/spinor-coherence-lagrangian"
       ],
       "dependedOnBy": [
-        "foundation/spinor-coherence-lagrangian"
+        "foundation/euclidean-coherence-lagrangian",
+        "foundation/spinor-coherence-lagrangian",
+        "particles/coherence-bounces"
       ],
       "steps": [
         {
@@ -23782,6 +24246,10 @@
           },
           {
             "source": "foundation/spinor-coherence-lagrangian",
+            "context": "Quantum Fisher Metric"
+          },
+          {
+            "source": "particles/mass-hierarchy",
             "context": "Quantum Fisher Metric"
           },
           {
@@ -29277,6 +29745,69 @@
       "fullRef": "foundation/error-correction-and-standard-model:Proposition 8.2"
     },
     {
+      "derivationId": "foundation/euclidean-coherence-lagrangian",
+      "type": "Proposition",
+      "id": "1.1",
+      "name": "Wick rotation",
+      "fullRef": "foundation/euclidean-coherence-lagrangian:Proposition 1.1"
+    },
+    {
+      "derivationId": "foundation/euclidean-coherence-lagrangian",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "Euclidean periodicity",
+      "fullRef": "foundation/euclidean-coherence-lagrangian:Proposition 1.2"
+    },
+    {
+      "derivationId": "foundation/euclidean-coherence-lagrangian",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "Euclidean continuation of the bosonic sectors",
+      "fullRef": "foundation/euclidean-coherence-lagrangian:Proposition 2.1"
+    },
+    {
+      "derivationId": "foundation/euclidean-coherence-lagrangian",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Euclidean Dirac action",
+      "fullRef": "foundation/euclidean-coherence-lagrangian:Proposition 3.1"
+    },
+    {
+      "derivationId": "foundation/euclidean-coherence-lagrangian",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "Euclidean Majorana action",
+      "fullRef": "foundation/euclidean-coherence-lagrangian:Proposition 3.2"
+    },
+    {
+      "derivationId": "foundation/euclidean-coherence-lagrangian",
+      "type": "Proposition",
+      "id": "3.3",
+      "name": "Euclidean Lichnerowicz identity",
+      "fullRef": "foundation/euclidean-coherence-lagrangian:Proposition 3.3"
+    },
+    {
+      "derivationId": "foundation/euclidean-coherence-lagrangian",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Cross-observer compatibility",
+      "fullRef": "foundation/euclidean-coherence-lagrangian:Proposition 4.1"
+    },
+    {
+      "derivationId": "foundation/euclidean-coherence-lagrangian",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "Boundedness of the bosonic action",
+      "fullRef": "foundation/euclidean-coherence-lagrangian:Proposition 5.1"
+    },
+    {
+      "derivationId": "foundation/euclidean-coherence-lagrangian",
+      "type": "Theorem",
+      "id": "6.1.",
+      "name": "",
+      "fullRef": "foundation/euclidean-coherence-lagrangian:Theorem 6.1."
+    },
+    {
       "derivationId": "foundation/formation-and-preservation",
       "type": "Definition",
       "id": "1.1",
@@ -33015,6 +33546,55 @@
       "fullRef": "minimal-observer/structure:Theorem 9.1."
     },
     {
+      "derivationId": "particles/coherence-bounces",
+      "type": "Proposition",
+      "id": "1.1",
+      "name": "De Sitter curvature correction",
+      "fullRef": "particles/coherence-bounces:Proposition 1.1"
+    },
+    {
+      "derivationId": "particles/coherence-bounces",
+      "type": "Proposition",
+      "id": "2.1",
+      "name": "Per-generation Dirac bounce action",
+      "fullRef": "particles/coherence-bounces:Proposition 2.1"
+    },
+    {
+      "derivationId": "particles/coherence-bounces",
+      "type": "Proposition",
+      "id": "2.2",
+      "name": "Generation ordering",
+      "fullRef": "particles/coherence-bounces:Proposition 2.2"
+    },
+    {
+      "derivationId": "particles/coherence-bounces",
+      "type": "Proposition",
+      "id": "3.1",
+      "name": "Level-to-level WKB exponent",
+      "fullRef": "particles/coherence-bounces:Proposition 3.1"
+    },
+    {
+      "derivationId": "particles/coherence-bounces",
+      "type": "Proposition",
+      "id": "4.1",
+      "name": "Majorana bounce action",
+      "fullRef": "particles/coherence-bounces:Proposition 4.1"
+    },
+    {
+      "derivationId": "particles/coherence-bounces",
+      "type": "Proposition",
+      "id": "4.2",
+      "name": "Seesaw ratio from bounce actions",
+      "fullRef": "particles/coherence-bounces:Proposition 4.2"
+    },
+    {
+      "derivationId": "particles/coherence-bounces",
+      "type": "Theorem",
+      "id": "6.1.",
+      "name": "",
+      "fullRef": "particles/coherence-bounces:Theorem 6.1."
+    },
+    {
       "derivationId": "particles/cpt-theorem",
       "type": "Definition",
       "id": "1.1",
@@ -33151,7 +33731,7 @@
       "derivationId": "particles/mass-hierarchy",
       "type": "Structural Postulate",
       "id": "S1",
-      "name": "Tunneling–crystallization correspondence",
+      "name": "Tunneling–crystallization correspondence, sharpened",
       "fullRef": "particles/mass-hierarchy:Structural Postulate S1"
     },
     {
@@ -37084,6 +37664,20 @@
       "description": "The audit covers the observed SM. Beyond-Standard-Model candidates (dark matter, supersymmetric partners, axions) and composite observers at bootstrap levels beyond 3 (where Mass Hierarchy §7's mass-i"
     },
     {
+      "derivationId": "foundation/euclidean-coherence-lagrangian",
+      "derivationStatus": "derived",
+      "number": 1,
+      "title": "Euclidean–Lorentzian correspondence at cosmological scales.",
+      "description": "For observables with characteristic scale comparable to LA (cosmological scale), the simple Wick rotation may receive corrections from boundary conditions at the de Sitter horizon. Addressing these re"
+    },
+    {
+      "derivationId": "foundation/euclidean-coherence-lagrangian",
+      "derivationStatus": "derived",
+      "number": 2,
+      "title": "Infinite-dimensional rigor.",
+      "description": "The derivation assumes finite-dimensional observer Hilbert spaces. For quantum field theory (infinite-dimensional state spaces), the Wick rotation inherits the standard functional-analytic issues shar"
+    },
+    {
       "derivationId": "foundation/formation-and-preservation",
       "derivationStatus": "provisional",
       "number": 1,
@@ -38153,6 +38747,34 @@
       "number": 1,
       "title": "Non-abelian minimal observers",
       "description": "The minimal observer has GO = U(1). The next-simplest observers would have GO = SU(2) (spin structure) or GO = U(1) U(1) (multiple charges). Classifying the hierarchy of observer complexity connects t"
+    },
+    {
+      "derivationId": "particles/coherence-bounces",
+      "derivationStatus": "provisional",
+      "number": 1,
+      "title": "Specific $\\alpha_k$ values.",
+      "description": "Requires derivation of the winding-angle coherence-potential shape from Three Generations' mathfrakso(3) structure. Route 1 of the promotion-route catalog; estimated 1–3 months of additional work."
+    },
+    {
+      "derivationId": "particles/coherence-bounces",
+      "derivationStatus": "provisional",
+      "number": 2,
+      "title": "Specific $c_n$ values.",
+      "description": "Requires derivation of the coherence-geometric barrier shape from bootstrap composition. All three promotion routes (Fisher-distance, integer-quantization, RG reinterpretation) address this; each is a"
+    },
+    {
+      "derivationId": "particles/coherence-bounces",
+      "derivationStatus": "provisional",
+      "number": 3,
+      "title": "Cross-sector correction mechanism.",
+      "description": "The ~20–50% cross-sector variation in alphak at fixed generation (Check 5) should be derivable from sector-specific gauge couplings contributing one-loop corrections to the bounce action. A first-prin"
+    },
+    {
+      "derivationId": "particles/coherence-bounces",
+      "derivationStatus": "provisional",
+      "number": 4,
+      "title": "Top-quark pre-alignment explanation.",
+      "description": "Check 4 confirms the observation; a framework-internal structural argument for *why* the top quark specifically (rather than, e.g., the tau or the bottom) is the pre-aligned third-generation fermion i"
     },
     {
       "derivationId": "particles/cpt-theorem",

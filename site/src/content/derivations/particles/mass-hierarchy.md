@@ -2,11 +2,11 @@
 title: "The Mass Hierarchy"
 status: "provisional"
 dependsOn: ["interactions/bootstrap"]
-enablesDerivation: ["particles/three-generations", "cosmology/observer-loop-viability"]
+enablesDerivation: ["particles/three-generations", "cosmology/observer-loop-viability", "particles/coherence-bounces"]
 tags: ["particles"]
 summary: "Mass hierarchy as logarithmically organized crystallization scales — large ratios are exponentials of small coupling ratios, not fine-tuning"
 rigorLevel: "formal"
-lastUpdated: 2026-03-09
+lastUpdated: 2026-04-21
 ---
 
 ## Overview
@@ -37,15 +37,31 @@ The top quark is roughly 340,000 times heavier than the electron, and the electr
 
 ### Structural Postulate
 
-**Structural Postulate S1 (Tunneling–crystallization correspondence).** The formation of a stable composite observer at level $k$ of the bootstrap hierarchy is mediated by coherence tunneling through a barrier in the coherence geometry.
+**Structural Postulate S1 (Tunneling–crystallization correspondence, sharpened).** The formation of a stable composite observer at level $k$ of the bootstrap hierarchy is mediated by coherence tunneling through a specific coherence-geometric barrier. The postulate decomposes into three components:
 
-**Remark (Tightened content).** This postulate has two components with different status:
+**(1) WKB form** ($P \sim e^{-\int\sqrt{2V/\hbar^2}\,dx}$): *Theorem*, not postulate. The framework's Lagrangian dynamics ([Coherence Lagrangian](/derivations/foundation/coherence-lagrangian) Theorem 6.0) imply that semi-classical barrier penetration takes WKB form — a standard result of semi-classical analysis (leading-order $\hbar \to 0$ expansion of the path integral). The exponential suppression $e^{-c/g^2}$ responsible for large mass ratios is a mathematical consequence of the Lagrangian structure. [Coherence Bounces](/derivations/particles/coherence-bounces) makes this WKB structure explicit at the Lagrangian level via the Euclidean Coherence Lagrangian ([Euclidean Coherence Lagrangian](/derivations/foundation/euclidean-coherence-lagrangian)) and identifies two distinct bounce classes: within-level $O(4)$-symmetric Euclidean bounces in winding-angle space (Class A) and level-to-level 1D WKB in coherence-geometric barrier space (Class B).
 
-1. **The WKB form** ($P \sim e^{-V \cdot a/\hbar}$): This is a *theorem*, not a postulate. The [Coherence Lagrangian](/derivations/foundation/coherence-lagrangian) (Theorem 6.0) establishes that the framework's dynamics are Lagrangian. For any Lagrangian system, barrier penetration in the semiclassical limit takes WKB form — this is a standard result of semiclassical analysis (the leading-order term in the $\hbar \to 0$ expansion of the path integral). The exponential suppression $e^{-c/g^2}$ responsible for the large mass ratios is a mathematical consequence of the Lagrangian structure, not a physical assumption.
+**(2) Barrier identification** (the irreducible postulate content): The bootstrap crystallization event corresponds to a specific coherence-geometric barrier with:
+- Barrier height $V \sim \Lambda_{k-1}/g_k^2$ (coherence cost of a virtual relational invariant at the lower-level scale, suppressed by the squared coupling).
+- Barrier width $a \sim 1/\Lambda_{k-1}$ (inverse of the lower-level scale).
 
-2. **The identification** (bootstrap crystallization IS barrier tunneling): This remains postulated. The postulate asserts that the formation of a composite observer at bootstrap level $k$ corresponds to penetrating a barrier in the coherence geometry — that the abstract bootstrap fixed-point structure has a geometric realization as barrier tunneling. This identification connects the discrete level structure of the bootstrap ([Bootstrap Mechanism](/derivations/interactions/bootstrap)) to the quantitative scale separations observed in nature (e.g., $\Lambda_{\text{QCD}} \sim M_Z e^{-c/\alpha_s}$). It cannot be derived from the three axioms alone.
+This specific identification — that the bootstrap fixed-point structure has *this* barrier realization — is the irreducible postulate content. It cannot be derived from the axioms alone without further input.
 
-The irreducible content of S1 is therefore the identification (2), not the WKB form (1). The exponential mass hierarchy is forced by the Lagrangian dynamics once the identification is granted.
+**(3) Structural connection to Conjectures 7.1–7.2**: The barrier shape of (2) is expressible as a functional of the bootstrap fixed-point data (Conjectures 7.1–7.2 of [Bootstrap Mechanism](/derivations/interactions/bootstrap)). The Fisher-distance between adjacent fixed points of the bootstrap map $\mathcal{R}$ in the BKM Fisher metric ([Quantum Fisher Metric](/derivations/thermodynamics-ext/quantum-fisher-metric)) determines the barrier's geometric scale. Resolution of Conjectures 7.1–7.2 (together with the formalization of the geometry functor $G: \mathbf{Obs} \to \mathbf{Geom}$) would reduce S1's irreducible content to these conjectures — jointly with `area-scaling-s1`, which depends on the same conjectures (per [Area Scaling](/derivations/holography/area-scaling), `area-scaling-s1` tightened content).
+
+**Joint dependency with `area-scaling-s1`.** Two of the framework's five active structural postulates (`mass-hierarchy-s1` and `area-scaling-s1`) depend on the same conjectural content (Conjectures 7.1–7.2 of [Bootstrap Mechanism](/derivations/interactions/bootstrap)). A resolution of the bootstrap fixed-point uniqueness conjecture would retire *both* postulates together, not just one. This is a significant structural observation for the framework's postulate-reduction roadmap.
+
+### Candidate promotion routes
+
+Three candidate routes have been identified for promoting the barrier identification (2) from postulate to theorem. Each is documented as a separate future research target:
+
+**Route 1 (Fisher-distance scaling on fixed-point manifold).** Rigorously establish that adjacent bootstrap fixed points are separated by Fisher distance $\sim 1/g_n$ in the BKM metric. Would derive the barrier height $V \sim \Lambda_{n-1}/g_n^2$ from the kinetic-energy-times-distance-squared form on the Riemannian fixed-point manifold. Requires formalizing the geometry functor $G: \mathbf{Obs} \to \mathbf{Geom}$ (currently informal). Estimated scope: 1–3 months.
+
+**Route 2 (Integer-quantization via Cauchy-slice integers).** Exploit [Coherence Conservation](/derivations/axioms/coherence-conservation) Corollary 5.5a (Cauchy-slice integer quantization) to derive the barrier from the discrete structure of stable coherence values. Current obstacle: virtual states at inter-level transitions pass *below* the lower-level integer rather than above, producing a non-standard barrier. Requires structural reformulation. Estimated scope: 2–4 months.
+
+**Route 3 (RG reinterpretation of bootstrap iteration).** Investigate whether the bootstrap map $\mathcal{R}$ is structurally an RG flow step (integrating out modes between adjacent crystallization scales). If yes, Mass Hierarchy's exponential form $\Lambda_n/\Lambda_{n-1} = e^{-c_n/g_n^2}$ is standard RG dimensional transmutation rather than WKB tunneling — a potential *restatement* of S1 rather than a promotion. Estimated scope: 2–6 months; involves deriving framework $\beta$-functions from the Coherence Lagrangian. See future-targets entry `rg-reinterpretation-of-bootstrap-iteration`.
+
+**Summary.** The irreducible content of S1 is component (2) — the specific barrier-shape identification. Component (1) is already a theorem via semi-classical analysis (see [Coherence Bounces](/derivations/particles/coherence-bounces)). Component (3) is a structural reduction to Conjectures 7.1–7.2, joint with `area-scaling-s1`. Three candidate promotion routes exist but are out of scope for the current framework state.
 
 ### Step 1: Mass as Rest-Cycle Frequency
 

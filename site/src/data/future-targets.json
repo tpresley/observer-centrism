@@ -99,6 +99,32 @@
 
   "newDerivationTargets": [
     {
+      "id": "rg-reinterpretation-of-bootstrap-iteration",
+      "title": "RG Reinterpretation of Bootstrap Iteration",
+      "difficulty": "HARD",
+      "priority": "MEDIUM",
+      "status": "OPEN — flagged 2026-04-21 during WKB bounce program Step 3a (option-ii exploration)",
+      "rationale": "Mass Hierarchy Theorem 3.1's formula Λ_n/Λ_{n-1} = exp(-c_n/g_n²) has the same functional form as standard RG dimensional transmutation (e.g., Λ_QCD ~ M_Z · exp(-c/α_s)). The WKB bounce program's option-ii exploration identified that if the bootstrap map R is structurally an RG flow step (integrating out modes between adjacent crystallization scales), then Mass Hierarchy's 'barrier tunneling' language may be a reparaphrase of RG running rather than a distinct physical mechanism. If the identification holds, mass-hierarchy-s1's barrier-tunneling formulation would be a *restatement* rather than an additional postulate: the postulate's irreducible content dissolves into the standard RG story once the bootstrap-is-RG identification is rigorously established.",
+      "strategy": "(1) Formalize the candidate identification R ~ RG step: what does it mean for the bootstrap map to be Scott-continuous *and* to generate the $\\beta$-function of the level-n effective theory? (2) Derive framework-internal $\\beta$-function coefficients from the Coherence Lagrangian + Spinor Coherence Lagrangian content (SM gauge content + three generations). (3) Check whether the framework $\\beta$-function applied between levels Λ_{n-1} and Λ_n reproduces the specific c_n/g_n² exponent structure claimed in Mass Hierarchy Theorem 3.1. (4) If yes, restate mass-hierarchy-s1 as 'bootstrap iteration IS RG flow' with the tunneling language understood as heuristic. (5) Evaluate whether this restatement preserves or weakens the postulate's content.",
+      "dependencies": ["particles/mass-hierarchy", "interactions/bootstrap", "foundation/coherence-lagrangian", "foundation/spinor-coherence-lagrangian"],
+      "addressesGaps": ["particles/mass-hierarchy S1 irreducible content", "particles/coherence-bounces §Candidate promotion routes Route 3"],
+      "impact": "If successful: restates mass-hierarchy-s1 in RG-theoretic terms, potentially eliminating the barrier-identification postulate content by identifying it as a special case of running couplings. Does NOT retire the postulate if the RG identification itself is a postulate. Estimated scope 2–6 months.",
+      "surfacedBy": "wkb-bounce-in-coherence-lagrangian Step 3a"
+    },
+    {
+      "id": "fisher-distance-on-bootstrap-fixed-point-manifold",
+      "title": "Fisher Distance on Bootstrap Fixed-Point Manifold",
+      "difficulty": "HARD",
+      "priority": "MEDIUM",
+      "status": "OPEN — flagged 2026-04-21 during WKB bounce program Step 3a",
+      "rationale": "Mass Hierarchy's coherence-geometric barrier parameters (V ~ Λ_{n-1}/g_n², a ~ 1/Λ_{n-1}) should be derivable from the Fisher distance between adjacent bootstrap fixed points on the state-space manifold. At weak coupling g_n << 1, standard gauge-theoretic intuition suggests the Fisher distance between adjacent fixed points in the BKM metric scales as ~1/g_n (compare: vacuum-manifold extent, instanton size, 't Hooft-Polyakov monopole size, etc.). If this scaling can be rigorously established using framework content (Quantum Fisher Metric BKM, Bootstrap Mechanism fixed-point data, geometry functor formalization), the barrier height V ~ Λ_{n-1}/g_n² follows from kinetic-energy-times-distance-squared on the Riemannian fixed-point manifold.",
+      "strategy": "(1) Formalize the geometry functor G: Obs → Geom (prerequisite, itself a separate future target — see 'hierarchical-geometry' entry). (2) Compute the Fisher (BKM) distance between adjacent bootstrap fixed points in the framework's specific gauge content (U(1), SU(2), SU(3) from Bootstrap Division Algebras). (3) Verify the distance scales as ~1/g_n with a computable O(1) prefactor. (4) Derive the barrier height V and width a from the Fisher geometry. (5) Compute c_n values and compare against the consistency-check table of Coherence Bounces §Empirical Consistency.",
+      "dependencies": ["interactions/bootstrap", "thermodynamics-ext/quantum-fisher-metric", "foundation/observer-projected-spacetime"],
+      "addressesGaps": ["particles/mass-hierarchy S1 irreducible content", "particles/coherence-bounces §Candidate promotion routes Route 1"],
+      "impact": "If successful: derives the barrier shape of mass-hierarchy-s1 from framework content, promoting component (2) of the sharpened postulate (the barrier identification) from postulate to theorem. Joint promotion with area-scaling-s1 via shared dependency on Conjectures 7.1–7.2. Would retire two active postulates together. Estimated scope 1–3 months once geometry functor is formalized.",
+      "surfacedBy": "wkb-bounce-in-coherence-lagrangian Step 3a"
+    },
+    {
       "id": "holographic-noise-amplitude",
       "title": "First-principles α_H: structural resolution of the holographic substitution rule",
       "difficulty": "HARD",
@@ -191,7 +217,7 @@
       "strategy": "(1) Promote R to full functor on Obs morphisms (naturality of level-set construction). (2) Define G: Obs → Geom mapping each observer's boundary area to an effective local geometry via ER=EPR, producing level-indexed Λ_n^eff (Step 8, Def 8.2). (3) Show G ∘ R satisfies cross-level consistency (Prop 8.3): geometry at level n+1 restricted to scale λ_n reduces to geometry at level n, with Λ_{n+1}^eff > Λ_n^eff. (4) State the cross-level horizon capacity constraint precisely: for each n, the integer count N^(n) of level-n relational invariants (Coherence Conservation Corollary 5.5a) must satisfy both N^(n) ≤ A_n/(4ℓ_P²) and the inheritance relation N^(n+1) = f(N^(n)) where f is determined by the Type III interaction rate at level n. Joint satisfaction across all levels is the cross-level horizon consistency. (5) Prove that this consistency constrains the relationship between C₀, the increments ΔS_n, and the endpoint Λ = Λ_N^eff. (6) Compute ΔS_n from the known bootstrap structure (division algebra chain, mass hierarchy tunneling factors).",
       "dependencies": ["interactions/bootstrap", "holography/er-epr", "thermodynamics-ext/renormalization", "holography/area-scaling", "cosmology/observer-loop-viability", "axioms/coherence-conservation"],
       "addressesGaps": ["cosmology/observer-loop-viability Gap 6", "interactions/bootstrap Gap 4", "interactions/bootstrap Proposition 6.2 cross-level remark"],
-      "impact": "Could transform the cosmological constant from non-viable to a self-consistency prediction. Connects bootstrap, holography, and RG into a unified geometric framework. Promotes the cross-level horizon consistency remark on Proposition 6.2 from informal observation to a precise constraint that bootstrap fixed points must satisfy."
+      "impact": "Could transform the cosmological constant from non-viable to a self-consistency prediction. Connects bootstrap, holography, and RG into a unified geometric framework. Promotes the cross-level horizon consistency remark on Proposition 6.2 from informal observation to a precise constraint that bootstrap fixed points must satisfy. UPDATE (2026-04-21): also prerequisite for the barrier-shape derivation of mass-hierarchy-s1 (see 'fisher-distance-on-bootstrap-fixed-point-manifold' future target) — both area-scaling-s1 and mass-hierarchy-s1 jointly depend on the geometry functor formalization. Formalizing G would enable joint retirement of two active structural postulates rather than one."
     },
     {
       "id": "combinatorial-bootstrap-fixed-point",

@@ -253,6 +253,18 @@
       "status": "derived"
     },
     {
+      "id": "foundation/euclidean-coherence-lagrangian",
+      "title": "Euclidean Coherence Lagrangian",
+      "group": "foundation",
+      "status": "derived"
+    },
+    {
+      "id": "particles/coherence-bounces",
+      "title": "Coherence Bounces and WKB Mass Generation",
+      "group": "particles",
+      "status": "provisional"
+    },
+    {
       "id": "thermodynamics-ext/renormalization",
       "title": "Renormalization Group",
       "group": "thermo-ext",
@@ -951,6 +963,46 @@
     {
       "from": "thermodynamics-ext/quantum-fisher-metric",
       "to": "foundation/spinor-coherence-lagrangian"
+    },
+    {
+      "from": "foundation/coherence-lagrangian",
+      "to": "foundation/euclidean-coherence-lagrangian"
+    },
+    {
+      "from": "foundation/spinor-coherence-lagrangian",
+      "to": "foundation/euclidean-coherence-lagrangian"
+    },
+    {
+      "from": "foundation/observer-projected-spacetime",
+      "to": "foundation/euclidean-coherence-lagrangian"
+    },
+    {
+      "from": "thermodynamics-ext/quantum-fisher-metric",
+      "to": "foundation/euclidean-coherence-lagrangian"
+    },
+    {
+      "from": "foundation/euclidean-coherence-lagrangian",
+      "to": "particles/coherence-bounces"
+    },
+    {
+      "from": "foundation/spinor-coherence-lagrangian",
+      "to": "particles/coherence-bounces"
+    },
+    {
+      "from": "particles/mass-hierarchy",
+      "to": "particles/coherence-bounces"
+    },
+    {
+      "from": "particles/three-generations",
+      "to": "particles/coherence-bounces"
+    },
+    {
+      "from": "particles/neutrino-masses",
+      "to": "particles/coherence-bounces"
+    },
+    {
+      "from": "thermodynamics-ext/quantum-fisher-metric",
+      "to": "particles/coherence-bounces"
     },
     {
       "from": "particles/spin-statistics",

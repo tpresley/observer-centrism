@@ -2,7 +2,7 @@
 title: "Coherence Lagrangian"
 status: "derived"
 dependsOn: ["thermodynamics/action-planck", "thermodynamics-ext/fisher-metric"]
-enablesDerivation: ["particles/cpt-theorem", "spacetime/gravitational-constant", "foundation/spinor-coherence-lagrangian"]
+enablesDerivation: ["particles/cpt-theorem", "spacetime/gravitational-constant", "foundation/spinor-coherence-lagrangian", "foundation/euclidean-coherence-lagrangian"]
 tags: ["foundation", "lagrangian"]
 summary: "The coherence Lagrangian is constructed from two ingredients: the Fisher information metric provides the unique kinetic term (via Čencov's theorem), and coherence conservation constrains the potential. The resulting action principle S = ∫ℒ reproduces the Euler-Lagrange dynamics of the framework and connects the discrete axiom structure to continuum field theory. The spinor (fermion) sector is derived separately in Spinor Coherence Lagrangian."
 rigorLevel: "formal"
@@ -27,7 +27,7 @@ In standard physics, the Lagrangian (the function that encodes all dynamics) is 
 
 **Why this matters.** If correct, this means the laws of physics are not contingent choices but necessary consequences of self-consistent observation. The Lagrangian is not "designed" -- it is the only one that works.
 
-**An honest caveat.** This derivation presents the scalar + gauge + gravity sectors. The spinor (fermion) sector is derived separately in [Spinor Coherence Lagrangian](/derivations/foundation/spinor-coherence-lagrangian) using the quantum Fisher metric ([Quantum Fisher Metric](/derivations/thermodynamics-ext/quantum-fisher-metric)); together the two derivations cover the full Standard Model fermion and boson content. The path integral measure inherits the standard mathematical ambiguity shared by all continuum quantum field theories.
+**An honest caveat.** This derivation presents the scalar + gauge + gravity sectors. The spinor (fermion) sector is derived separately in [Spinor Coherence Lagrangian](/derivations/foundation/spinor-coherence-lagrangian) using the quantum Fisher metric ([Quantum Fisher Metric](/derivations/thermodynamics-ext/quantum-fisher-metric)); together the two derivations cover the full Standard Model fermion and boson content. The Euclidean continuation (for thermal and WKB/tunneling work) is developed in [Euclidean Coherence Lagrangian](/derivations/foundation/euclidean-coherence-lagrangian). The path integral measure inherits the standard mathematical ambiguity shared by all continuum quantum field theories.
 
 
 ## Statement
