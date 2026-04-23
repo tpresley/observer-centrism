@@ -172,7 +172,10 @@ The framework arrives at the same mathematical structure (causal set) that causa
 
 1. **Metric from order**: Recovering the spacetime metric from the partial order requires a volume measure (event counting). This is the central open problem of causal set theory.
 2. **Quantum time**: The derivation gives a single partial order. Quantum mechanics suggests superpositions of causal orders may be physical (indefinite causal structure). The framework should address this.
-3. **Cosmological arrow**: The structural arrow (increasing $d(v)$) is local. The global cosmological arrow (expansion) may require boundary conditions on the fixed-point solution.
+
+## Cosmological Arrow
+
+The structural arrow established in Theorem 6.1 (monotonically non-decreasing relational invariant depth along directed paths) is a local statement. Its global cosmological manifestation — eternal expansion — follows from [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Theorem 8.10, which establishes $\Lambda > 0$ strictly. The Gibbons-Hawking bath of the resulting de Sitter phase supplies persistent event generation at constant rate per Hubble volume, giving unbounded total DAG depth as $t \to \infty$. Matter-dominated $\Lambda = 0$ cosmologies would give a convergent total event count per comoving volume (integrated two-body interaction rate $\propto t^{-2}$) and hence a saturating structural arrow; this is excluded by Theorem 8.10.
 
 <!-- References -->
 [Bombelli et al., 1987]: /references#bombelli-1987

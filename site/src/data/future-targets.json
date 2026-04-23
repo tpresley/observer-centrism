@@ -371,7 +371,7 @@
       "id": "cosmological-arrow",
       "title": "Cosmological Arrow without Initial Conditions",
       "difficulty": "MODERATE-HARD",
-      "status": "SCOPED 2026-04-22 \u2014 research target doc at research-targets/cosmological-arrow-lambda-sign.md. Exploratory pass found the originally-stated strategy has a gap at step 1 (DAG growth does not by itself force 4-volume growth \u2014 it accumulates in any spacetime including static Minkowski). A sharper argument exists via event-generation rates (matter dilution in \u039b=0 gives finite total events; Gibbons-Hawking bath in \u039b>0 gives divergent events), but this requires showing the axioms force the arrow to be STRICTLY eternal, which is not obviously the case. Route E (Continuous-Discrete Duality: aperiodic-order substrate density lower bound) identified as the most promising concrete path. Estimated scope 2-6 weeks if picked up.",
+      "status": "COMPLETED 2026-04-22 \u2014 resolved as Theorem 8.10 and Corollary 8.11 in cosmology/observer-loop-viability.md Step 8. Strict positivity \u039b > 0 with framework-computable lower bound \u039b \u2265 3\u03c0/(C_0 \u2113_P\u00b2) \u2248 2\u00d710\u207b\u00b9\u00b2\u00b2 \u2113_P\u207b\u00b2. Argument combines Cauchy-slice integer quantization (Coherence Conservation Cor 5.5a) + per-observer structure (OLV Prop 7.4 Remark) + holographic bound on epistemic horizon + level-indexed cosmological parameter (OLV Def 8.2). Time Gap 3 (cosmological arrow) also resolved: OLV Thm 8.10 forces eternal expansion, whose Gibbons-Hawking bath gives persistent event generation. Added Cosmological Arrow section to thermodynamics/time.md. OLV Gaps renumbered (former Gap 3 removed). Historical record in research-targets/cosmological-arrow-lambda-sign.md.",
       "rationale": "The structural arrow of time (increasing relational invariant depth) is already derived without initial conditions. But the cosmological arrow (expansion) is flagged as potentially requiring boundary conditions (time Gap 3). If a growing DAG needs increasing 'room' in the coherence geometry (Planck-density bound prevents packing), the structural arrow implies expansion. This would link the arrow of time to \u039b > 0 and potentially give the sign of \u039b.",
       "strategy": "(1) Show that monotonically increasing relational invariant count requires monotonically increasing 4-volume (from Planck-density bound, singularity-resolution Corollary 2.2). (2) Increasing 4-volume in an FRW spacetime means expansion: da/dt > 0. (3) Eternal expansion requires \u039b > 0 (\u039b = 0 decelerates to zero, \u039b < 0 recollapses). This gives the sign prediction. Key subtlety: does the DAG growth rate actually require eternal expansion, or just initial expansion?",
       "dependencies": [
@@ -383,7 +383,7 @@
         "thermodynamics/time Gap 3"
       ],
       "impact": "Sign of \u039b from structural arrow. Resolves time Gap 3. Connects thermodynamics to cosmology without initial conditions.",
-      "scopingDate": "2026-04-22"
+      "completedDate": "2026-04-22"
     },
     {
       "id": "de-sitter-core-lambda",

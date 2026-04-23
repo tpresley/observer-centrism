@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-23T02:28:31.917Z",
+    "generatedAt": "2026-04-23T03:10:08.083Z",
     "derivationCount": 95,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -14,8 +14,8 @@
     "derivationCount": 95,
     "predictionCount": 12,
     "edgeCount": 364,
-    "formalObjectCount": 1378,
-    "openGapCount": 336,
+    "formalObjectCount": 1380,
+    "openGapCount": 334,
     "upgradeEligibleCount": 0,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -408,6 +408,10 @@
           {
             "source": "cosmology/dark-energy-equation-of-state",
             "context": "Axiom 1"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
+            "context": "Coherence Conservation"
           },
           {
             "source": "foundation/coherence-lagrangian",
@@ -3704,7 +3708,7 @@
         "cosmology",
         "quantum-gravity"
       ],
-      "summary": "The three axioms constrain which spacetimes can host observer networks. The Planck-scale upper bound (Λ < 3/ℓ_P²) follows from geometric viability. The sign prediction (Λ ≥ 0) follows from coherence conservation: a Λ < 0 bounce destroys all observer structures via divergent effective pressure, leaving coherence with no valid carrier — violating Axiom 1.",
+      "summary": "The three axioms constrain which spacetimes can host observer networks. The Planck-scale upper bound (Λ < 3/ℓ_P²) follows from geometric viability. Strict positivity (Λ > 0) follows from coherence conservation on two fronts: a Λ < 0 bounce destroys all observer structures via divergent effective pressure, and Λ = 0 would require infinite per-observer coherence budget, contradicting Cauchy-slice integer quantization and the holographic bound on each observer's epistemic horizon.",
       "lastUpdated": "2026-04-03",
       "dependsOn": [
         "spacetime/singularity-resolution",
@@ -3941,6 +3945,18 @@
           "id": "8.8",
           "name": "The hierarchy requires an independent constraint",
           "statementPreview": "The partition equation C0 = Delta cn + SH cannot determine Lambda on its own — it is an accounting identity. The cosm..."
+        },
+        {
+          "type": "Theorem",
+          "id": "8.10",
+          "name": "Strict positivity of $\\Lambda$",
+          "statementPreview": "Lambda > 0, with lower bound*"
+        },
+        {
+          "type": "Corollary",
+          "id": "8.11",
+          "name": "Numerical lower bound",
+          "statementPreview": "Using the per-observer coherence budget C0 4.6 10122,hbaromega0 of Proposition 8.7, the framework-derived lower bound..."
         }
       ],
       "structuralPostulates": [],
@@ -3957,26 +3973,21 @@
         },
         {
           "number": 3,
-          "title": "Sharpening to $\\Lambda > 0$",
-          "description": "The sign prediction Lambda 0 (Theorem 5.4) does not distinguish Lambda = 0 from Lambda > 0. Does the structural arrow of time (monotonically increasing relational invariant depth) require eternal expa"
-        },
-        {
-          "number": 4,
           "title": "Bounce prohibition scope",
           "description": "Theorem 5.2 prohibits the Planck-density bounce in Lambda < 0 FRW cosmologies via coherence conservation. Does the same argument extend to *all* global recollapse scenarios, including anisotropic cosm"
         },
         {
-          "number": 5,
+          "number": 4,
           "title": "Gibbons-Hawking stability",
           "description": "The de Sitter horizon radiates at the Gibbons-Hawking temperature TGH = hbar H/(2pi kB). Whether this thermal background destabilizes observer loops depends on the detailed interaction between GH radi"
         },
         {
-          "number": 6,
+          "number": 5,
           "title": "Continuous-discrete fixed point and quantitative $\\Lambda$",
           "description": "Step 8 defines the level-indexed quantities (Lambdaneff, S(n)) and the cross-level consistency constraint (Proposition 8.3). Conjecture 8.9 identifies the boundary condition (double saturation). [Cont"
         }
       ],
-      "assessmentVerdict": "Rigorous. The core results form a rigorous chain: the geometric upper bound (Theorem 2.1) follows from the Planck cutoff and de Sitter geometry; the bounce dissolution (Theorem 4.1) follows from the divergent effective pressure exceeding any finite observer energy; the sign prediction (Theorem 5.4) ",
+      "assessmentVerdict": "Rigorous. The core results form a rigorous chain: the geometric upper bound (Theorem 2.1) follows from the Planck cutoff and de Sitter geometry; bounce dissolution (Theorem 4.1) follows from divergent effective pressure exceeding any finite observer energy; the lower sign bound (Theorem 5.4) follows",
       "hasConsistencyModel": false,
       "crossReferences": {
         "outgoing": [
@@ -3987,6 +3998,10 @@
           {
             "target": "holography/area-scaling",
             "context": "Area Scaling"
+          },
+          {
+            "target": "axioms/coherence-conservation",
+            "context": "Coherence Conservation"
           },
           {
             "target": "minimal-observer/multiplicity",
@@ -4041,10 +4056,6 @@
             "context": "Information Paradox"
           },
           {
-            "target": "thermodynamics/time",
-            "context": "Time as Phase Ordering"
-          },
-          {
             "target": "holography/er-epr",
             "context": "Theorem 3.2"
           },
@@ -4097,6 +4108,10 @@
             "context": "Step 7"
           },
           {
+            "target": "thermodynamics/time",
+            "context": "Theorem 6.1"
+          },
+          {
             "target": "cosmology/dark-energy-equation-of-state",
             "context": "Proposition 4.3–4.4"
           },
@@ -4119,6 +4134,10 @@
           {
             "target": "spacetime/singularity-resolution",
             "context": "Singularity Resolution"
+          },
+          {
+            "target": "thermodynamics/time",
+            "context": "Time as Phase Ordering"
           },
           {
             "target": "cosmology/cosmological-constant",
@@ -4192,6 +4211,10 @@
           },
           {
             "source": "particles/mass-hierarchy",
+            "context": "Observer Loop Viability"
+          },
+          {
+            "source": "thermodynamics/time",
             "context": "Observer Loop Viability"
           }
         ]
@@ -25571,11 +25594,6 @@
           "number": 2,
           "title": "Quantum time",
           "description": "The derivation gives a single partial order. Quantum mechanics suggests superpositions of causal orders may be physical (indefinite causal structure). The framework should address this."
-        },
-        {
-          "number": 3,
-          "title": "Cosmological arrow",
-          "description": "The structural arrow (increasing d(v)) is local. The global cosmological arrow (expansion) may require boundary conditions on the fixed-point solution. <!-- References --> [Bombelli et al., 1987]: /re"
         }
       ],
       "assessmentVerdict": "The derivation of time as a partial order is fully rigorous from the axioms. The positive coherence cost (Proposition 2.1) now follows directly from the rigorous Loop Closure derivation without depending on Action-Planck. The arrow of time (Theorem 6.1) follows structurally from relational invariant",
@@ -25605,6 +25623,10 @@
           {
             "target": "interactions/relational-invariants",
             "context": "Relational Invariants"
+          },
+          {
+            "target": "cosmology/observer-loop-viability",
+            "context": "Observer Loop Viability"
           }
         ],
         "incoming": [
@@ -25619,6 +25641,10 @@
           {
             "source": "cosmology/cyclic-cosmology",
             "context": "Time as Phase Ordering"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
+            "context": "Theorem 6.1"
           },
           {
             "source": "cosmology/observer-loop-viability",
@@ -29187,6 +29213,20 @@
       "id": "8.8",
       "name": "The hierarchy requires an independent constraint",
       "fullRef": "cosmology/observer-loop-viability:Proposition 8.8"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Theorem",
+      "id": "8.10",
+      "name": "Strict positivity of $\\Lambda$",
+      "fullRef": "cosmology/observer-loop-viability:Theorem 8.10"
+    },
+    {
+      "derivationId": "cosmology/observer-loop-viability",
+      "type": "Corollary",
+      "id": "8.11",
+      "name": "Numerical lower bound",
+      "fullRef": "cosmology/observer-loop-viability:Corollary 8.11"
     },
     {
       "derivationId": "dimensions/three-dimensions",
@@ -37503,27 +37543,20 @@
       "derivationId": "cosmology/observer-loop-viability",
       "derivationStatus": "provisional",
       "number": 3,
-      "title": "Sharpening to $\\Lambda > 0$",
-      "description": "The sign prediction Lambda 0 (Theorem 5.4) does not distinguish Lambda = 0 from Lambda > 0. Does the structural arrow of time (monotonically increasing relational invariant depth) require eternal expa"
-    },
-    {
-      "derivationId": "cosmology/observer-loop-viability",
-      "derivationStatus": "provisional",
-      "number": 4,
       "title": "Bounce prohibition scope",
       "description": "Theorem 5.2 prohibits the Planck-density bounce in Lambda < 0 FRW cosmologies via coherence conservation. Does the same argument extend to *all* global recollapse scenarios, including anisotropic cosm"
     },
     {
       "derivationId": "cosmology/observer-loop-viability",
       "derivationStatus": "provisional",
-      "number": 5,
+      "number": 4,
       "title": "Gibbons-Hawking stability",
       "description": "The de Sitter horizon radiates at the Gibbons-Hawking temperature TGH = hbar H/(2pi kB). Whether this thermal background destabilizes observer loops depends on the detailed interaction between GH radi"
     },
     {
       "derivationId": "cosmology/observer-loop-viability",
       "derivationStatus": "provisional",
-      "number": 6,
+      "number": 5,
       "title": "Continuous-discrete fixed point and quantitative $\\Lambda$",
       "description": "Step 8 defines the level-indexed quantities (Lambdaneff, S(n)) and the cross-level consistency constraint (Proposition 8.3). Conjecture 8.9 identifies the boundary condition (double saturation). [Cont"
     },
@@ -39563,13 +39596,6 @@
       "number": 2,
       "title": "Quantum time",
       "description": "The derivation gives a single partial order. Quantum mechanics suggests superpositions of causal orders may be physical (indefinite causal structure). The framework should address this."
-    },
-    {
-      "derivationId": "thermodynamics/time",
-      "derivationStatus": "derived",
-      "number": 3,
-      "title": "Cosmological arrow",
-      "description": "The structural arrow (increasing d(v)) is local. The global cosmological arrow (expansion) may require boundary conditions on the fixed-point solution. <!-- References --> [Bombelli et al., 1987]: /re"
     }
   ],
   "upgradeAnalysis": {
