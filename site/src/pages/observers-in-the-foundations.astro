@@ -1596,20 +1596,529 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 
     <h2>8. The Particle Zoo</h2>
 
-    <p class="stub">
-      <em>Forthcoming.</em> Spin-statistics and Pauli from winding classes.
-      Three generations from internal winding directions. The mass
-      hierarchy. The Standard Model gauge group from division algebras
-      &mdash; sketched lightly, technical machinery left in the references.
-      Woven reframing on reductionism.
+    <p>
+      The Standard Model of particle physics is, as catalogues go,
+      spectacular. It predicts particle properties to twelve
+      decimal places. It has survived every experimental test
+      thrown at it for half a century. It is also a catalogue
+      &mdash; three generations of fermions, a specific gauge
+      symmetry, a particular Higgs mechanism, nineteen numerical
+      parameters whose values are measured rather than derived. The
+      framework&rsquo;s reading is that most of this catalogue is
+      not arbitrary. It is a record of which bootstrap towers the
+      axioms permit to stabilize, and the records turn out to have
+      strikingly specific structure once you know where to look.
+    </p>
+
+    <h3>Why Only Bosons and Fermions</h3>
+
+    <p>
+      The argument for three spatial dimensions in the previous
+      chapter gave a specific fact as a by-product: the rotation
+      group of three-dimensional space has exactly two topological
+      winding classes. There are exactly two structurally distinct
+      kinds of observer loop in three dimensions, distinguished by
+      how they behave under a full rotation of the surrounding
+      geometry.
+    </p>
+
+    <p>
+      The first class returns to its starting configuration after
+      a single 360&deg; rotation. These are the bosons: photons,
+      gluons, the Higgs, the graviton. Their relational invariants
+      are symmetric under exchange, which is why multiple identical
+      bosons can share a state. Lasers work, superfluids flow, and
+      Bose-Einstein condensates form because bosons cooperate.
+    </p>
+
+    <p>
+      The second class picks up a sign change under a 360&deg;
+      rotation and requires a full 720&deg; to close. These are
+      the fermions: electrons, quarks, neutrinos. Their relational
+      invariants are antisymmetric under exchange.
+    </p>
+
+    <p>
+      The spin-statistics connection &mdash; the long-standing
+      observation that integer-spin particles are bosons and
+      half-integer-spin particles are fermions &mdash; is not,
+      in the framework, an additional theorem. It is the direct
+      statement of what the two winding classes are. There are
+      exactly two because the fundamental group in three
+      dimensions has exactly two elements. No third class is
+      possible here.
+    </p>
+
+    <h3>Pauli Exclusion</h3>
+
+    <p>
+      Antisymmetry under exchange has an immediate consequence. If
+      two identical fermions occupied the same quantum state,
+      swapping them would change nothing. But antisymmetry demands
+      that swapping changes the sign. The two requirements
+      contradict. The only resolution is that two identical
+      fermions cannot occupy the same state.
+    </p>
+
+    <p>
+      This is not an additional rule that quantum mechanics has to
+      assume. It is a coherence consistency condition forced by
+      fermion winding topology. Its consequences are vast. Electron
+      shells in atoms, the periodic table, the rigidity of matter,
+      the diversity of chemistry &mdash; all trace back to the fact
+      that fermions cannot pile into the same state, which in turn
+      traces back to the two-class winding structure of rotations
+      in three dimensions.
+    </p>
+
+    <h3>Three Generations</h3>
+
+    <p>
+      The Standard Model contains three generations of fermions:
+      the electron and its heavier cousins the muon and the tau,
+      each paired with its own neutrino; the up and down quarks
+      and their heavier cousins charm-strange and top-bottom. Why
+      three? The Standard Model offers no explanation. It is an
+      empirical fact, established by data.
+    </p>
+
+    <p>
+      The framework&rsquo;s answer emerges naturally from what has
+      already been built. Observers, in this framework, are loops
+      &mdash; closed U(1) structures, as established in the early
+      chapters and used in every chapter since. A loop in
+      three-dimensional space does not merely exist; it winds, and
+      there are structurally inequivalent ways in which it can do
+      so. In a framework where observers <em>are</em> loops, the
+      natural question for the next layer of structure is how many
+      independent winding directions a loop can have.
+    </p>
+
+    <p>
+      The count is fixed by the geometry. The rotation group in
+      three dimensions has exactly three independent generators
+      &mdash; three infinitesimal rotations, none reducible to a
+      combination of the others. A loop winding around one of them
+      is structurally distinct from a loop winding around another;
+      the two cannot be continuously deformed into each other. Three
+      independent rotation generators give three independent winding
+      directions, and at the fermion level of the bootstrap each
+      independent winding direction supports one generation of
+      composite observer. Three winding directions. Three
+      generations. No additional step.
+    </p>
+
+    <p>
+      It is worth being specific about what this argument is and is
+      not. A numerological version of the same statement &mdash;
+      three spatial dimensions, three rotation axes, three
+      generations, case closed &mdash; would be matching one three
+      to another three and calling the matter settled. That is not
+      the argument being made. The count of independent rotations
+      in a space is not a separate fact from the space&rsquo;s
+      dimension; it is fixed by the dimension. The same structural
+      feature that forced the spatial dimension to be three in the
+      previous chapter also forces the winding count to be three
+      here. The fermion generations are not matched to the dimension
+      from outside. They are produced by the same geometric
+      structure that fixes the dimension, applied one layer deeper.
+    </p>
+
+    <p>
+      As a side consequence, the framework predicts that no fourth
+      generation of fermions exists. Experimental searches at the
+      LHC and at LEP have not found one. The framework&rsquo;s
+      prediction is that they never will &mdash; because there is
+      no fourth rotation axis in three-dimensional space to support
+      one.
+    </p>
+
+    <h3>The Mass Hierarchy</h3>
+
+    <p>
+      Particle masses span an extraordinary range. The top quark
+      is about 340,000 times heavier than the electron; the
+      electron is roughly a million times heavier than the
+      lightest neutrino. The Standard Model accommodates this
+      through a tuned set of Yukawa couplings to the Higgs field,
+      but the hierarchical <em>pattern</em> is left unexplained.
+      Why a logarithmic ladder of widely separated scales, rather
+      than a narrow band?
+    </p>
+
+    <p>
+      The framework derives the pattern from the bootstrap
+      mechanism. Each generation of fermion corresponds to a
+      specific level of the bootstrap tower &mdash; a specific
+      scale at which observer loops crystallize into stable
+      composite structures. The crystallizations happen via
+      coherence tunneling through the local geometry, and the
+      tunneling rates fall off exponentially with the barrier
+      height separating one level from the next. The result is a
+      ladder of masses separated by exponential factors, which is
+      exactly the pattern observed.
+    </p>
+
+    <p>
+      The precise numerical height of each rung depends on the
+      detailed geometry of the bootstrap, and the framework does
+      not yet compute every mass from first principles. But the
+      logarithmic shape of the hierarchy is not an accident. It is
+      what bootstrap crystallization looks like.
+    </p>
+
+    <h3>The Gauge Group</h3>
+
+    <p>
+      The last entry in the particle catalogue is the specific
+      gauge symmetry organizing the forces: the Standard Model is
+      built on the group SU(3) &times; SU(2) &times; U(1). Why
+      this group, in this combination? Standard physics takes it
+      as empirical input.
+    </p>
+
+    <p>
+      The framework derives the gauge group from the bootstrap,
+      though the derivation involves mathematical machinery it
+      would be dishonest to pretend is light. Here is the essence,
+      without the algebra.
+    </p>
+
+    <p>
+      At each level of the bootstrap, observer loops compose with
+      the structure one level below. For that composition to be
+      consistent with coherence conservation, the algebra of
+      composable loops has to satisfy a particular technical
+      property: the magnitude of a product equals the product of
+      the magnitudes. A classical result in abstract algebra,
+      Hurwitz&rsquo;s theorem, establishes that only four algebras
+      satisfy this property over the real numbers &mdash; the
+      reals, the complex numbers, the quaternions, and the
+      octonions. The sequence from reals to octonions is what the
+      axioms force, and the sequence stops at the octonions
+      because further iteration breaks a property called
+      associativity that the composition law requires.
+    </p>
+
+    <p>
+      Each of the three non-trivial algebras contributes one
+      factor to the Standard Model gauge group. The complex
+      numbers produce the electromagnetic U(1). The quaternions
+      produce the weak SU(2). The octonions produce the strong
+      SU(3). The specific product group of the Standard Model is
+      not a coincidence. It is the algebraic record of how far the
+      bootstrap can climb before non-associativity blocks further
+      iteration.
+    </p>
+
+    <p>
+      A fair reader might observe that reducing the Standard Model
+      gauge group to four algebras and a bootstrap hierarchy is the
+      kind of claim that looks either deeply insightful or
+      suspiciously tidy, depending on one&rsquo;s mood. The framework
+      does not ask for the claim to be taken on faith. The
+      derivation is available in full, with the mathematical
+      details and the honest flags about what remains open, in the
+      site&rsquo;s gauge sector.
+    </p>
+
+    <h3>What &ldquo;Fundamental&rdquo; Means Here</h3>
+
+    <p>
+      A short reframing before moving on. The particle zoo, in the
+      framework&rsquo;s reading, is not the bottom of reality.
+      Nothing is the bottom of reality, not in the sense
+      reductionism usually claims.
+    </p>
+
+    <p>
+      Reductionism says the fundamental level explains everything
+      above it: atoms explain chemistry, particles explain atoms,
+      quarks explain particles, and so on down to whatever sits at
+      the floor. Emergentism says the reverse: higher levels have
+      genuinely new properties that cannot be read off from lower
+      ones. The framework suggests that both are wrong in the same
+      way. Both assume a direction &mdash; a foundation that
+      grounds everything else, or a tower of emergences that rises
+      above it.
+    </p>
+
+    <p>
+      In the framework&rsquo;s picture, there is no foundation and
+      no tower. Each bootstrap level provides the relational
+      invariants that the next level treats as its observers, and
+      each level equally imposes constraints that the levels below
+      it must satisfy for the whole structure to be self-consistent.
+      A particle depends on what can be built from it as much as on
+      what it is built from. The Standard Model is not the bedrock
+      of reality; it is one level in a self-constituting structure
+      in which every level mutually constrains every other.
+    </p>
+
+    <p>
+      This is not a rhetorical flourish. It is why the
+      framework&rsquo;s derivations so often run in both directions
+      at once &mdash; deriving particles from axioms, and in the
+      next breath noting that the axioms themselves are shaped by
+      requirements the particles impose. The whole arrives at
+      once, as a fixed point of consistency. Nothing reduces.
+      Nothing emerges. Everything constitutes everything else.
     </p>
 
     <h2>9. The Edge of Knowledge</h2>
 
-    <p class="stub">
-      <em>Forthcoming.</em> Holography as a definition, not a duality.
-      Black hole entropy. The information paradox resolved by the bootstrap
-      cycle. Woven reframings on holography and on infinity.
+    <p>
+      Some of the deepest puzzles of modern physics come from the
+      edges where information itself seems to behave strangely.
+      The scaling of black-hole entropy, the paradox of information
+      falling past an event horizon, the holographic principle
+      suggesting that a region&rsquo;s physics is encoded on its
+      boundary &mdash; none of these fit comfortably into the
+      volume-based intuitions that work for everyday matter. This
+      chapter traces how the framework handles them. Holography in
+      particular changes shape under the framework: it stops
+      looking like a mystery and starts looking like what
+      observation actually is.
+    </p>
+
+    <h3>Holography as a Definition</h3>
+
+    <p>
+      In standard physics, the holographic principle is usually
+      presented as a deep and partially understood result. The
+      information content of a region scales with its surface area
+      rather than its volume. Bekenstein established the bound for
+      black holes, &rsquo;t&nbsp;Hooft and Susskind generalized it,
+      and the AdS/CFT correspondence of string theory produced a
+      concrete example of a bulk region fully described by physics
+      on its boundary. The result works; <em>why</em> it works is
+      treated as one of the great open problems.
+    </p>
+
+    <p>
+      The framework offers a simpler reading. Holography, in this
+      picture, is not a duality and not a mystery. It is the
+      definition of what &ldquo;observation through a boundary&rdquo;
+      means.
+    </p>
+
+    <p>
+      Every bounded observer has a horizon &mdash; a surface
+      separating what the observer can access from what it cannot,
+      whether that surface is a black-hole event horizon, a
+      cosmological horizon, or the more diffuse boundary of an
+      ordinary observer&rsquo;s coherence domain. Access across
+      any such boundary is not ambient. It is made of specific
+      crossings, and a surface can only carry so many independent
+      crossings per unit area. The minimum area that can distinguish
+      one crossing from the next is one Planck cell, set by the
+      same coherence-geometry considerations that fix the speed of
+      light and the size of the minimal loop. The information
+      available about the interior of any bounded region is
+      therefore of order one bit per Planck area of its boundary,
+      and no amount of clever packing in the interior can exceed
+      this limit.
+    </p>
+
+    <p>
+      Trying to exceed the limit has a specific failure mode. As
+      more and more observer content is loaded into a region, the
+      local coherence density rises; by the metric-response
+      argument from the previous chapter on gravity, the geometry
+      curves; and at the Planck density, the curvature becomes
+      strong enough that loop closure fails in any direction
+      leading out of the region. The region becomes a black hole.
+      Its interior becomes inaccessible to outside observers, and
+      its entropy is pegged to the area of its horizon, one bit
+      per Planck cell, exactly.
+    </p>
+
+    <p>
+      The holographic bound, on this reading, is not a constraint
+      imposed on physics from outside. It is what happens when
+      access through a boundary is all there is. The bound looks
+      miraculous when physics is assumed to live in a volume and
+      its boundary is treated as a secondary structure. It looks
+      natural when the boundary is the thing that defines access.
+    </p>
+
+    <h3>Black Hole Entropy</h3>
+
+    <p>
+      The Bekenstein-Hawking entropy of a black hole is
+    </p>
+
+    <p class="equation">S = A / (4 &ell;<sub>P</sub><sup>2</sup>).</p>
+
+    <p>
+      One bit of entropy per four Planck areas of horizon surface.
+      The formula was derived in the 1970s from a combination of
+      thermodynamic arguments and quantum field theory in curved
+      spacetime, and reproducing it has been an inescapable
+      destination of every serious quantum-gravity program since.
+    </p>
+
+    <p>
+      The framework reads the formula directly off its own
+      structure. A horizon is a surface tiled by the minimal
+      crossings of observer loops. Each Planck cell on the
+      surface can carry at most one bit of distinguishable
+      information about the interior. The factor of four
+      corresponds to the standard geometric factors that arise
+      from counting. The entropy of the black hole is not a
+      mystery that required decades to reproduce; it is the
+      count of how many independent observer-loop crossings the
+      horizon supports, which is exactly what the formula
+      expresses.
+    </p>
+
+    <p>
+      A black hole, on this reading, is the simplest possible
+      observer of its own interior. Its entire coherence
+      relationship with the exterior is carried by its horizon
+      surface. From any outside observer&rsquo;s vantage, the
+      interior is a single boundary&rsquo;s worth of accessible
+      structure &mdash; no more, no less.
+    </p>
+
+    <h3>Hawking Radiation</h3>
+
+    <p>
+      A black hole is not static. It radiates, slowly and
+      thermally, in a process Hawking derived in 1974 from
+      quantum field theory in curved spacetime. The framework
+      reproduces the result from a different argument: loop
+      closure at the horizon.
+    </p>
+
+    <p>
+      A minimal observer loop straddling the horizon &mdash; part
+      of the loop inside, part outside &mdash; cannot close in
+      the ordinary way, because the interior portion cannot
+      return its phase to the exterior. A closure has to be found.
+      One is available. Generate a coherence-dual pair at the
+      horizon, let one member fall inward and dissolve into the
+      interior, and let the other propagate outward as thermal
+      radiation. The pair carries the closure obligation between
+      them. The interior gains one bit of coherence structure;
+      the exterior gains a particle; the loop that could not
+      close has been replaced by two that do.
+    </p>
+
+    <p>
+      This process is not optional. Every horizon of sufficient
+      size continuously generates such pairs as a structural
+      consequence of the loop-closure condition at a causal
+      boundary. The resulting radiation is thermal because the
+      selection of which pairs form is probabilistic, governed by
+      the Born rule applied locally at the horizon. Black holes
+      evaporate because the loop-closure condition at their
+      boundaries requires it.
+    </p>
+
+    <h3>The Information Paradox</h3>
+
+    <p>
+      As a black hole evaporates, it shrinks. Eventually it
+      disappears. The question of what happens to the information
+      that fell in has been the central open problem in
+      black-hole physics for forty years. If nothing can escape a
+      black hole, and the black hole ultimately evaporates, then
+      either the information is destroyed &mdash; violating a
+      principle of quantum mechanics &mdash; or it comes out in
+      the radiation somehow, despite the event horizon blocking
+      its direct escape. Neither option has been easy to make
+      consistent with everything else physics believes.
+    </p>
+
+    <p>
+      The framework&rsquo;s resolution has two pieces, both of
+      them already in the machinery from earlier chapters.
+    </p>
+
+    <p>
+      Coherence is conserved. That is Axiom 1, applied without
+      exception. Every relational invariant generated anywhere
+      in the coherence graph persists permanently as a property
+      of the graph. The information that fell into the black
+      hole still exists, as a set of relational invariants
+      between interior and exterior, unchanged and unchangeable.
+    </p>
+
+    <p>
+      Coherence is observer-indexed. What any particular
+      observer can access is only what lies within that
+      observer&rsquo;s coherence domain, as chapter 5 spelled
+      out for entropy. The information that fell into the black
+      hole is no longer within the domain of any outside
+      observer, and it never will be again in the ordinary
+      sense of local access. It is, from outside, inaccessible.
+    </p>
+
+    <p>
+      These two statements are not in tension. One is about what
+      exists. The other is about what can be reached. Conservation
+      holds globally; accessibility holds locally. The apparent
+      paradox assumed that the two had to be the same condition.
+      They do not. There is no contradiction between the
+      statement that information is preserved across black-hole
+      formation and evaporation and the statement that no outside
+      observer can, in practice, reconstruct it. The conservation
+      is real, the inaccessibility is real, and no law is
+      violated.
+    </p>
+
+    <p>
+      A sufficiently patient and thorough observer &mdash; one
+      that collected every Hawking quantum from the beginning of
+      evaporation and correlated it with the original infalling
+      state &mdash; could in principle reconstruct the
+      information from the entanglement correlations between
+      successive radiation quanta. The reconstruction requires
+      the entirety of the evaporation process to be recorded and
+      processed coherently, which no realistic observer will ever
+      be in a position to do. But the structure supports the
+      reconstruction, and the possibility in principle is what
+      the conservation claim requires.
+    </p>
+
+    <h3>On Horizons and Infinities</h3>
+
+    <p>
+      Two short reframings before moving on.
+    </p>
+
+    <p>
+      The holographic principle, under the framework, looks less
+      like a magical correspondence between bulk and boundary and
+      more like an acknowledgment of what observation through a
+      boundary actually is. Every horizon &mdash; cosmological,
+      black-hole, or the horizon of any bounded observer&rsquo;s
+      coherence domain &mdash; is a surface of crossings. The
+      crossings are what carry information. The information a
+      region can contain from the outside is the information
+      those crossings can transmit. This is not a duality between
+      two equivalent descriptions. It is the recognition that
+      observation is always a boundary phenomenon, and the
+      boundary is where the accounting happens.
+    </p>
+
+    <p>
+      One more thought before leaving this territory. Physics
+      speaks constantly of infinities &mdash; the continuum of
+      spacetime, the infinite-dimensional Hilbert spaces of
+      quantum fields, the unbounded sums of perturbation theory
+      &mdash; and equally constantly of finitenesses &mdash; the
+      finite number of quanta in any observation, the finite
+      area of any horizon, the bounded coherence of any observer.
+      These can look contradictory, and cause friction in every
+      foundational discussion. The framework handles the tension
+      the same way it handles the determinism question: both are
+      true at their respective levels. The physical layer is
+      finite. The mathematical layer is infinite. Infinity is a
+      property of the description, not of the thing described,
+      but the description is not optional, and the finiteness is
+      not an illusion. Both layers do the work they do.
     </p>
 
     <h2>10. The Two Layers</h2>
