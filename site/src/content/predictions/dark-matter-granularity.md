@@ -3,7 +3,7 @@ title: "Dark Matter Granularity"
 status: "semi-quantitative"
 testability: "near-future"
 dependsOn: ["minimal-observer/structure", "axioms/loop-closure", "particles/mass-hierarchy", "holography/causal-set-statistics"]
-currentEvidence: "Missing satellites problem and small-scale structure suppression in dwarf galaxies are consistent; Lyman-alpha forest constrains the free-streaming length"
+currentEvidence: "Missing-satellites and too-big-to-fail observations consistent with M_J ~ 10^6-10^8 M_sun; cored dwarf density profiles favor quantum-pressure solitons over NFW cusps; Lyman-alpha forest and strong-lensing substructure (8 quadruple-image quasars) bound WDM-equivalent mass > ~5 keV, translating to m_DM > ~2×10^-21 eV in the loop-closure scenario (Gaussian cutoff)."
 distinctiveness: "unique"
 ---
 

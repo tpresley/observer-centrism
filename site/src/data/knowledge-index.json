@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-23T01:28:45.654Z",
+    "generatedAt": "2026-04-23T01:41:11.393Z",
     "derivationCount": 95,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -25724,7 +25724,7 @@
         "particles/mass-hierarchy",
         "holography/causal-set-statistics"
       ],
-      "currentEvidence": "Missing satellites problem and small-scale structure suppression in dwarf galaxies are consistent; Lyman-alpha forest constrains the free-streaming length"
+      "currentEvidence": "Missing-satellites and too-big-to-fail observations consistent with M_J ~ 10^6-10^8 M_sun; cored dwarf density profiles favor quantum-pressure solitons over NFW cusps; Lyman-alpha forest and strong-lensing substructure (8 quadruple-image quasars) bound WDM-equivalent mass > ~5 keV, translating to m_DM > ~2×10^-21 eV in the loop-closure scenario (Gaussian cutoff)."
     },
     "exact-unitarity": {
       "id": "exact-unitarity",
@@ -25773,7 +25773,7 @@
       "id": "neutrino-nature",
       "filePath": "site/src/content/predictions/neutrino-nature.md",
       "title": "Neutrino Mass Ordering and Majorana Nature",
-      "status": "qualitative",
+      "status": "semi-quantitative",
       "testability": "near-future",
       "distinctiveness": "shared",
       "dependsOn": [
@@ -25781,7 +25781,7 @@
         "particles/three-generations",
         "flavor/mixing-angles"
       ],
-      "currentEvidence": "NOvA and T2K combined data show mild (~2σ) preference for normal ordering; neutrinoless double-beta decay not yet observed, consistent with normal-ordering Majorana prediction of |m_ββ| ~ 1-5 meV"
+      "currentEvidence": "NOvA and T2K combined data show mild (~2σ) preference for normal ordering; neutrinoless double-beta decay not yet observed, consistent with normal-ordering Majorana expectation |m_ββ| ~ 1-5 meV; no heavy sterile neutrinos at 10²-10³ GeV observed at colliders."
     },
     "no-axion": {
       "id": "no-axion",

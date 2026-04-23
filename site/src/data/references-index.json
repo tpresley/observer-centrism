@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-04-23T01:28:45.932Z",
+    "generatedAt": "2026-04-23T01:41:11.754Z",
     "totalReferences": 109,
-    "totalCitations": 128,
-    "citingFiles": 54,
+    "totalCitations": 129,
+    "citingFiles": 55,
     "generator": "scripts/extract-references.mjs"
   },
   "categoryNames": {
@@ -1447,12 +1447,17 @@
       "authors": "Planck",
       "year": 2018,
       "citedAs": [
+        "Planck 2018",
         "Planck, 2018"
       ],
       "citedIn": [
         {
           "derivationId": "particles/neutrino-masses",
           "title": "Neutrino Mass Mechanism"
+        },
+        {
+          "derivationId": "predictions/neutrino-nature",
+          "title": "Neutrino Mass Ordering and Majorana Nature"
         }
       ],
       "category": "particle-physics"
