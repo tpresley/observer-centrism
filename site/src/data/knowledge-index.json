@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-22T22:10:02.613Z",
+    "generatedAt": "2026-04-23T01:28:45.654Z",
     "derivationCount": 95,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -9,15 +9,14 @@
   "stats": {
     "byStatus": {
       "derived": 30,
-      "provisional": 64,
-      "draft": 1
+      "provisional": 65
     },
     "derivationCount": 95,
     "predictionCount": 12,
-    "edgeCount": 359,
+    "edgeCount": 364,
     "formalObjectCount": 1378,
-    "openGapCount": 334,
-    "upgradeEligibleCount": 1,
+    "openGapCount": 336,
+    "upgradeEligibleCount": 0,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
   },
@@ -777,6 +776,7 @@
         "interactions/moufang-loop-phase-closure",
         "minimal-observer/structure",
         "spacetime/speed-of-light",
+        "thermodynamics-ext/biological-non-ergodicity",
         "thermodynamics-ext/memory-persistence-tradeoff",
         "thermodynamics/action-planck"
       ],
@@ -1298,7 +1298,8 @@
         "minimal-observer/multiplicity",
         "minimal-observer/structure",
         "quantum/observer-relative-objectivity",
-        "quantum/sheaf-section-uniqueness"
+        "quantum/sheaf-section-uniqueness",
+        "thermodynamics-ext/biological-non-ergodicity"
       ],
       "steps": [
         {
@@ -2943,7 +2944,18 @@
         }
       ],
       "structuralPostulates": [],
-      "openGaps": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Quintessence bound",
+          "description": "Theorem 3.1 shows w = -1 is the unique fixed point but does not bound |1 + w|. A rigorous bound from the Lyapunov correction deltalambda sim |1 + w| H would require showing that the correction accumul"
+        },
+        {
+          "number": 2,
+          "title": "Quantitative $\\Lambda$ from horizon distinguishability",
+          "description": "Proposition 4.4 gives bounds on Lambda that are either Planck-scale (minimal observer) or extremely weak (macroscopic observer). A tighter bound requires computing the minimum non-self distinguishabil"
+        }
+      ],
       "assessmentVerdict": "",
       "hasConsistencyModel": false,
       "crossReferences": {
@@ -3007,6 +3019,10 @@
           {
             "target": "holography/holographic-noise",
             "context": "Holographic Noise"
+          },
+          {
+            "target": "foundation/substrate-noise-and-profile-coupling",
+            "context": "Substrate Noise"
           }
         ],
         "incoming": [
@@ -9231,6 +9247,10 @@
         ],
         "incoming": [
           {
+            "source": "cosmology/dark-energy-equation-of-state",
+            "context": "Substrate Noise"
+          },
+          {
             "source": "foundation/error-correction-and-standard-model",
             "context": "Substrate Noise and Profile-Dependent Coupling Modulation"
           },
@@ -14967,6 +14987,10 @@
             "context": "Bootstrap"
           },
           {
+            "source": "thermodynamics-ext/biological-non-ergodicity",
+            "context": "Bootstrap"
+          },
+          {
             "source": "thermodynamics-ext/first-law",
             "context": "Bootstrap"
           },
@@ -15930,6 +15954,10 @@
             "context": "Three Interaction Types"
           },
           {
+            "source": "thermodynamics-ext/biological-non-ergodicity",
+            "context": "Interactions: Three Types"
+          },
+          {
             "source": "thermodynamics-ext/first-law",
             "context": "Three Interaction Types"
           },
@@ -16276,7 +16304,8 @@
         "interactions/three-types",
         "minimal-observer/coherence-dual-pairs",
         "particles/three-generations",
-        "spacetime/gravitational-constant"
+        "spacetime/gravitational-constant",
+        "thermodynamics-ext/biological-non-ergodicity"
       ],
       "steps": [
         {
@@ -22626,6 +22655,10 @@
             "context": "Speed of Light"
           },
           {
+            "source": "thermodynamics-ext/biological-non-ergodicity",
+            "context": "Speed of Light"
+          },
+          {
             "source": "thermodynamics-ext/renormalization",
             "context": "Speed of Light"
           },
@@ -22648,19 +22681,24 @@
       "id": "thermodynamics-ext/biological-non-ergodicity",
       "filePath": "site/src/content/derivations/thermodynamics-ext/biological-non-ergodicity.md",
       "title": "Biological Non-Ergodicity",
-      "status": "draft",
-      "rigorLevel": "informal",
+      "status": "provisional",
+      "rigorLevel": "semi-formal",
       "group": "thermodynamics-ext",
       "tags": [
         "thermo-ext"
       ],
       "summary": "Living systems are non-ergodic because the observer boundary B constrains phase-space exploration — connecting the observer definition to the hallmark features of biological organization: self-maintenance, memory, and adaptive expansion of coherence domains",
-      "lastUpdated": "2026-04-17",
+      "lastUpdated": "2026-04-22",
       "dependsOn": [
         "thermodynamics-ext/non-ergodicity",
         "thermodynamics/entropy",
         "minimal-observer/structure",
-        "interactions/bootstrap"
+        "minimal-observer/multiplicity",
+        "interactions/bootstrap",
+        "axioms/loop-closure",
+        "axioms/observer-definition",
+        "thermodynamics/action-planck",
+        "thermodynamics/time"
       ],
       "enablesDerivation": [],
       "dependedOnBy": [],
@@ -22749,8 +22787,8 @@
         },
         {
           "number": 2,
-          "title": "$\\Gamma_B$ dimension",
-          "description": "Compute the dimension of the B-compatible sector as a function of the complexity of B (number of self/non-self distinctions). This would give a quantitative measure of biological non-ergodicity."
+          "title": "$\\Gamma_B$ dimension scaling",
+          "description": "The Statement's remark flags that dim(GammaB)/dim(Gamma) plausibly decreases with the complexity of B but this is not proved. A rigorous argument would characterize the codimension added per self/non-"
         },
         {
           "number": 3,
@@ -22777,6 +22815,10 @@
             "context": "Non-Ergodicity and Conditional Thermalization"
           },
           {
+            "target": "spacetime/speed-of-light",
+            "context": "Speed of Light"
+          },
+          {
             "target": "axioms/loop-closure",
             "context": "Loop Closure"
           },
@@ -22801,8 +22843,20 @@
             "context": "Entropy as Inaccessible Coherence"
           },
           {
+            "target": "interactions/three-types",
+            "context": "Interactions: Three Types"
+          },
+          {
+            "target": "thermodynamics/entropy",
+            "context": "Entropy"
+          },
+          {
             "target": "minimal-observer/multiplicity",
             "context": "Multiplicity"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap"
           }
         ],
         "incoming": []
@@ -22813,7 +22867,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "thermodynamics-ext/distinguishability-conservation": {
@@ -24624,6 +24678,7 @@
         "quantum/born-rule",
         "spacetime/gravitational-constant",
         "spacetime/speed-of-light",
+        "thermodynamics-ext/biological-non-ergodicity",
         "thermodynamics-ext/first-law",
         "thermodynamics-ext/fisher-metric",
         "thermodynamics-ext/renormalization"
@@ -25322,6 +25377,10 @@
             "context": "Entropy as Inaccessible Coherence"
           },
           {
+            "source": "thermodynamics-ext/biological-non-ergodicity",
+            "context": "Entropy"
+          },
+          {
             "source": "thermodynamics-ext/distinguishability-conservation",
             "context": "Entropy"
           },
@@ -25394,6 +25453,7 @@
         "quantum/born-rule",
         "quantum/observer-relative-objectivity",
         "quantum/sheaf-section-uniqueness",
+        "thermodynamics-ext/biological-non-ergodicity",
         "thermodynamics-ext/non-ergodicity",
         "thermodynamics/action-planck",
         "thermodynamics/entropy"
@@ -25766,14 +25826,14 @@
       "id": "no-phantom-dark-energy",
       "filePath": "site/src/content/predictions/no-phantom-dark-energy.md",
       "title": "No Phantom Dark Energy",
-      "status": "qualitative",
+      "status": "semi-quantitative",
       "testability": "currently-tested",
       "distinctiveness": "shared",
       "dependsOn": [
         "cosmology/dark-energy-equation-of-state",
         "cosmology/observer-loop-viability"
       ],
-      "currentEvidence": "Planck 2018 + DESI 2024 BAO measure w = -1.03 ± 0.04, consistent with w ≥ -1. No evidence for phantom crossing."
+      "currentEvidence": "Planck 2018 + DESI 2024 BAO measure w = -1.03 ± 0.04, consistent with the hard prediction w ≥ -1 and with the preferred value w = -1. No evidence for phantom crossing."
     },
     "no-supersymmetry": {
       "id": "no-supersymmetry",
@@ -37370,6 +37430,20 @@
       "description": "The constraint saturation argument (Step 5) shows that the state is fully determined after D independent constraints. But the dynamics of HOW saturation is reached — which constraints become independe"
     },
     {
+      "derivationId": "cosmology/dark-energy-equation-of-state",
+      "derivationStatus": "provisional",
+      "number": 1,
+      "title": "Quintessence bound",
+      "description": "Theorem 3.1 shows w = -1 is the unique fixed point but does not bound |1 + w|. A rigorous bound from the Lyapunov correction deltalambda sim |1 + w| H would require showing that the correction accumul"
+    },
+    {
+      "derivationId": "cosmology/dark-energy-equation-of-state",
+      "derivationStatus": "provisional",
+      "number": 2,
+      "title": "Quantitative $\\Lambda$ from horizon distinguishability",
+      "description": "Proposition 4.4 gives bounds on Lambda that are either Planck-scale (minimal observer) or extremely weak (macroscopic observer). A tighter bound requires computing the minimum non-self distinguishabil"
+    },
+    {
       "derivationId": "cosmology/geometric-inflation",
       "derivationStatus": "provisional",
       "number": 1,
@@ -39261,35 +39335,35 @@
     },
     {
       "derivationId": "thermodynamics-ext/biological-non-ergodicity",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 1,
       "title": "Metabolic scaling",
       "description": "Derive the scaling of maintenance cost with hierarchy level ell. If the cost scales as ell hbaromegaell where omegaell is the cycling frequency at level ell, this should connect to Kleiber's law (meta"
     },
     {
       "derivationId": "thermodynamics-ext/biological-non-ergodicity",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 2,
-      "title": "$\\Gamma_B$ dimension",
-      "description": "Compute the dimension of the B-compatible sector as a function of the complexity of B (number of self/non-self distinctions). This would give a quantitative measure of biological non-ergodicity."
+      "title": "$\\Gamma_B$ dimension scaling",
+      "description": "The Statement's remark flags that dim(GammaB)/dim(Gamma) plausibly decreases with the complexity of B but this is not proved. A rigorous argument would characterize the codimension added per self/non-"
     },
     {
       "derivationId": "thermodynamics-ext/biological-non-ergodicity",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 3,
       "title": "Autopoiesis connection",
       "description": "Make the relationship to Maturana and Varela's autopoiesis theory precise. The observer triple (Sigma, I, B) with active loop closure appears to be a formal version of autopoietic organization; this s"
     },
     {
       "derivationId": "thermodynamics-ext/biological-non-ergodicity",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 4,
       "title": "Evolutionary dynamics",
       "description": "If adaptation is coherence-domain expansion, natural selection should emerge as the process by which observers compete for coherence access. This would connect to the Fisher-Price equation via the Fis"
     },
     {
       "derivationId": "thermodynamics-ext/biological-non-ergodicity",
-      "derivationStatus": "draft",
+      "derivationStatus": "provisional",
       "number": 5,
       "title": "Abiogenesis",
       "description": "The transition from non-observer chemistry to observer biology is the formation of the first B boundary with active loop closure. The framework should predict conditions under which this transition is"
@@ -39499,14 +39573,7 @@
     }
   ],
   "upgradeAnalysis": {
-    "eligible": [
-      {
-        "id": "thermodynamics-ext/biological-non-ergodicity",
-        "currentStatus": "draft",
-        "gapCount": 5,
-        "formalObjectCount": 8
-      }
-    ],
+    "eligible": [],
     "blocked": []
   },
   "warnings": []

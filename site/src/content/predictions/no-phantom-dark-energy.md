@@ -1,9 +1,9 @@
 ---
 title: "No Phantom Dark Energy"
-status: "qualitative"
+status: "semi-quantitative"
 testability: "currently-tested"
 dependsOn: ["cosmology/dark-energy-equation-of-state", "cosmology/observer-loop-viability"]
-currentEvidence: "Planck 2018 + DESI 2024 BAO measure w = -1.03 ± 0.04, consistent with w ≥ -1. No evidence for phantom crossing."
+currentEvidence: "Planck 2018 + DESI 2024 BAO measure w = -1.03 ± 0.04, consistent with the hard prediction w ≥ -1 and with the preferred value w = -1. No evidence for phantom crossing."
 distinctiveness: "shared"
 ---
 
@@ -50,3 +50,7 @@ Planck 2018 + DESI 2024 BAO: $w = -1.03 \pm 0.04$, consistent with both the hard
 ## Distinctiveness
 
 The hard prediction ($w \geq -1$) is shared with general relativity's null energy condition. The framework's contribution is *deriving* it from coherence conservation rather than imposing it, and identifying $w = -1$ as structurally preferred rather than merely one option among many. Most dark energy models treat $w$ as a free parameter; this framework constrains it.
+
+## Quantitative Status
+
+This prediction is **semi-quantitative**: it specifies a numerical value ($w = -1$ exactly) and a one-sided inequality ($w \geq -1$), both derived rigorously from the axioms. What is missing — and would promote the prediction to fully quantitative — is a framework-internal bound on $|1+w|$ for allowed quintessence ($-1 < w < -1/3$). This is tracked as [Dark Energy Equation of State](/derivations/cosmology/dark-energy-equation-of-state) Gap 1 and is rated HARD.

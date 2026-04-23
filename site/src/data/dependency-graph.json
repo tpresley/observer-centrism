@@ -578,19 +578,19 @@
     },
     {
       "from": "axioms/00-from-observation-to-axioms",
-      "to": "axioms/observer-definition"
+      "to": "axioms/loop-closure"
     },
     {
       "from": "axioms/00-from-observation-to-axioms",
-      "to": "axioms/loop-closure"
+      "to": "axioms/observer-definition"
     },
     {
       "from": "axioms/coherence-conservation",
       "to": "axioms/coherence-operational"
     },
     {
-      "from": "quantum/born-rule",
-      "to": "axioms/coherence-operational"
+      "from": "axioms/coherence-conservation",
+      "to": "axioms/loop-closure"
     },
     {
       "from": "axioms/coherence-conservation",
@@ -598,31 +598,967 @@
     },
     {
       "from": "axioms/coherence-conservation",
-      "to": "axioms/loop-closure"
+      "to": "cosmology/dark-energy-equation-of-state"
     },
     {
-      "from": "axioms/observer-definition",
-      "to": "axioms/loop-closure"
+      "from": "axioms/coherence-conservation",
+      "to": "foundation/aperiodic-order"
+    },
+    {
+      "from": "axioms/coherence-conservation",
+      "to": "foundation/bootstrap-fixed-point-existence"
+    },
+    {
+      "from": "axioms/coherence-conservation",
+      "to": "foundation/continuous-discrete-duality"
+    },
+    {
+      "from": "axioms/coherence-conservation",
+      "to": "foundation/formation-and-preservation"
+    },
+    {
+      "from": "axioms/coherence-conservation",
+      "to": "foundation/observer-as-error-correcting-code"
+    },
+    {
+      "from": "axioms/coherence-conservation",
+      "to": "foundation/observer-holographic-equivalence"
+    },
+    {
+      "from": "axioms/coherence-conservation",
+      "to": "foundation/observer-level-stack-compactness"
+    },
+    {
+      "from": "axioms/coherence-conservation",
+      "to": "foundation/substrate-noise-and-profile-coupling"
+    },
+    {
+      "from": "axioms/coherence-conservation",
+      "to": "gauge/anomaly-cancellation"
+    },
+    {
+      "from": "axioms/coherence-conservation",
+      "to": "gauge/chirality-selection"
+    },
+    {
+      "from": "axioms/coherence-conservation",
+      "to": "holography/information-paradox"
     },
     {
       "from": "axioms/coherence-conservation",
       "to": "minimal-observer/structure"
     },
     {
-      "from": "axioms/observer-definition",
-      "to": "minimal-observer/structure"
+      "from": "axioms/coherence-conservation",
+      "to": "particles/three-generations"
+    },
+    {
+      "from": "axioms/coherence-conservation",
+      "to": "quantum/observer-relative-objectivity"
+    },
+    {
+      "from": "axioms/coherence-conservation",
+      "to": "quantum/sheaf-section-uniqueness"
+    },
+    {
+      "from": "axioms/coherence-conservation",
+      "to": "thermodynamics-ext/distinguishability-conservation"
+    },
+    {
+      "from": "axioms/coherence-operational",
+      "to": "thermodynamics-ext/quantum-fisher-metric"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "cosmology/cyclic-cosmology"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "cosmology/dark-energy-equation-of-state"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "cosmology/observer-loop-viability"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "foundation/continuous-discrete-duality"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "foundation/minimum-bootstrap-closure"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "foundation/observer-as-error-correcting-code"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "foundation/observer-holographic-equivalence"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "foundation/observer-projected-spacetime"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "gauge/electromagnetism"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "holography/horizon-gauge-shell"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "interactions/moufang-loop-phase-closure"
     },
     {
       "from": "axioms/loop-closure",
       "to": "minimal-observer/structure"
     },
     {
-      "from": "minimal-observer/structure",
-      "to": "minimal-observer/multiplicity"
+      "from": "axioms/loop-closure",
+      "to": "spacetime/speed-of-light"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "thermodynamics-ext/biological-non-ergodicity"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "thermodynamics-ext/memory-persistence-tradeoff"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "thermodynamics/action-planck"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "axioms/loop-closure"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "dimensions/three-dimensions"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "foundation/continuous-discrete-duality"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "foundation/minimum-bootstrap-closure"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "foundation/observer-as-error-correcting-code"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "foundation/observer-edges-and-mutual-opacity"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "foundation/observer-holographic-equivalence"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "foundation/observer-level-stack-compactness"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "foundation/observer-pattern-signal"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "foundation/observer-projected-spacetime"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "foundation/spinor-coherence-lagrangian"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "holography/horizon-gauge-shell"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "interactions/moufang-loop-phase-closure"
     },
     {
       "from": "axioms/observer-definition",
       "to": "minimal-observer/multiplicity"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "minimal-observer/structure"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "quantum/observer-relative-objectivity"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "quantum/sheaf-section-uniqueness"
+    },
+    {
+      "from": "axioms/observer-definition",
+      "to": "thermodynamics-ext/biological-non-ergodicity"
+    },
+    {
+      "from": "cosmology/baryogenesis",
+      "to": "cosmology/cosmological-constant"
+    },
+    {
+      "from": "cosmology/baryogenesis",
+      "to": "cosmology/leptogenesis"
+    },
+    {
+      "from": "cosmology/coupling-constants",
+      "to": "foundation/knot-theoretic-bootstrap"
+    },
+    {
+      "from": "cosmology/coupling-constants",
+      "to": "gauge/proton-stability"
+    },
+    {
+      "from": "cosmology/coupling-constants",
+      "to": "gauge/weinberg-angle"
+    },
+    {
+      "from": "cosmology/cyclic-cosmology",
+      "to": "foundation/observer-projected-spacetime"
+    },
+    {
+      "from": "cosmology/cyclic-cosmology",
+      "to": "holography/horizon-gauge-shell"
+    },
+    {
+      "from": "cosmology/dark-energy-equation-of-state",
+      "to": "cosmology/cosmological-constant"
+    },
+    {
+      "from": "cosmology/dark-energy-equation-of-state",
+      "to": "cosmology/cyclic-cosmology"
+    },
+    {
+      "from": "cosmology/geometric-inflation",
+      "to": "cosmology/cosmological-arrow"
+    },
+    {
+      "from": "cosmology/geometric-substrate",
+      "to": "cosmology/cyclic-cosmology"
+    },
+    {
+      "from": "cosmology/observer-loop-viability",
+      "to": "cosmology/cosmological-arrow"
+    },
+    {
+      "from": "cosmology/observer-loop-viability",
+      "to": "cosmology/cosmological-constant"
+    },
+    {
+      "from": "cosmology/observer-loop-viability",
+      "to": "cosmology/cyclic-cosmology"
+    },
+    {
+      "from": "cosmology/observer-loop-viability",
+      "to": "cosmology/dark-energy-equation-of-state"
+    },
+    {
+      "from": "cosmology/observer-loop-viability",
+      "to": "cosmology/geometric-substrate"
+    },
+    {
+      "from": "cosmology/observer-loop-viability",
+      "to": "foundation/observer-level-stack-compactness"
+    },
+    {
+      "from": "cosmology/observer-loop-viability",
+      "to": "foundation/observer-projected-spacetime"
+    },
+    {
+      "from": "dimensions/three-dimensions",
+      "to": "gauge/weak-interaction"
+    },
+    {
+      "from": "dimensions/three-dimensions",
+      "to": "particles/spin-statistics"
+    },
+    {
+      "from": "dimensions/three-dimensions",
+      "to": "particles/supersymmetry-impossibility"
+    },
+    {
+      "from": "dimensions/three-dimensions",
+      "to": "particles/three-generations"
+    },
+    {
+      "from": "dimensions/three-dimensions",
+      "to": "spacetime/einstein-equations"
+    },
+    {
+      "from": "dimensions/three-dimensions",
+      "to": "spacetime/gravity"
+    },
+    {
+      "from": "flavor/mixing-angles",
+      "to": "cosmology/leptogenesis"
+    },
+    {
+      "from": "flavor/mixing-angles",
+      "to": "particles/neutrino-masses"
+    },
+    {
+      "from": "foundation/aperiodic-order",
+      "to": "cosmology/geometric-substrate"
+    },
+    {
+      "from": "foundation/aperiodic-order",
+      "to": "foundation/continuous-discrete-duality"
+    },
+    {
+      "from": "foundation/aperiodic-order",
+      "to": "spacetime/gravitational-constant"
+    },
+    {
+      "from": "foundation/aperiodic-order",
+      "to": "thermodynamics-ext/non-ergodicity"
+    },
+    {
+      "from": "foundation/coherence-lagrangian",
+      "to": "foundation/continuous-discrete-duality"
+    },
+    {
+      "from": "foundation/coherence-lagrangian",
+      "to": "foundation/euclidean-coherence-lagrangian"
+    },
+    {
+      "from": "foundation/coherence-lagrangian",
+      "to": "foundation/formation-and-preservation"
+    },
+    {
+      "from": "foundation/coherence-lagrangian",
+      "to": "foundation/knot-theoretic-bootstrap"
+    },
+    {
+      "from": "foundation/coherence-lagrangian",
+      "to": "foundation/observer-pattern-signal"
+    },
+    {
+      "from": "foundation/coherence-lagrangian",
+      "to": "foundation/spinor-coherence-lagrangian"
+    },
+    {
+      "from": "foundation/coherence-lagrangian",
+      "to": "particles/cpt-theorem"
+    },
+    {
+      "from": "foundation/coherence-lagrangian",
+      "to": "spacetime/gravitational-constant"
+    },
+    {
+      "from": "foundation/continuous-discrete-duality",
+      "to": "foundation/knot-theoretic-bootstrap"
+    },
+    {
+      "from": "foundation/continuous-discrete-duality",
+      "to": "foundation/observer-projected-spacetime"
+    },
+    {
+      "from": "foundation/euclidean-coherence-lagrangian",
+      "to": "particles/coherence-bounces"
+    },
+    {
+      "from": "foundation/formation-and-preservation",
+      "to": "foundation/error-correction-and-standard-model"
+    },
+    {
+      "from": "foundation/minimum-bootstrap-closure",
+      "to": "foundation/bootstrap-fixed-point-existence"
+    },
+    {
+      "from": "foundation/observer-as-error-correcting-code",
+      "to": "foundation/error-correction-and-standard-model"
+    },
+    {
+      "from": "foundation/observer-as-error-correcting-code",
+      "to": "foundation/formation-and-preservation"
+    },
+    {
+      "from": "foundation/observer-as-error-correcting-code",
+      "to": "foundation/observer-pattern-signal"
+    },
+    {
+      "from": "foundation/observer-as-error-correcting-code",
+      "to": "foundation/substrate-noise-and-profile-coupling"
+    },
+    {
+      "from": "foundation/observer-edges-and-mutual-opacity",
+      "to": "foundation/formation-and-preservation"
+    },
+    {
+      "from": "foundation/observer-edges-and-mutual-opacity",
+      "to": "foundation/profile-dependent-edges-and-confinement"
+    },
+    {
+      "from": "foundation/observer-holographic-equivalence",
+      "to": "foundation/bootstrap-fixed-point-existence"
+    },
+    {
+      "from": "foundation/observer-holographic-equivalence",
+      "to": "foundation/knot-theoretic-bootstrap"
+    },
+    {
+      "from": "foundation/observer-holographic-equivalence",
+      "to": "foundation/minimum-bootstrap-closure"
+    },
+    {
+      "from": "foundation/observer-holographic-equivalence",
+      "to": "foundation/observer-as-error-correcting-code"
+    },
+    {
+      "from": "foundation/observer-holographic-equivalence",
+      "to": "foundation/observer-edges-and-mutual-opacity"
+    },
+    {
+      "from": "foundation/observer-holographic-equivalence",
+      "to": "foundation/observer-level-stack-compactness"
+    },
+    {
+      "from": "foundation/observer-holographic-equivalence",
+      "to": "interactions/moufang-loop-phase-closure"
+    },
+    {
+      "from": "foundation/observer-level-stack-compactness",
+      "to": "foundation/bootstrap-fixed-point-existence"
+    },
+    {
+      "from": "foundation/observer-pattern-signal",
+      "to": "foundation/formation-and-preservation"
+    },
+    {
+      "from": "foundation/observer-pattern-signal",
+      "to": "foundation/observer-edges-and-mutual-opacity"
+    },
+    {
+      "from": "foundation/observer-pattern-signal",
+      "to": "foundation/profile-dependent-edges-and-confinement"
+    },
+    {
+      "from": "foundation/observer-projected-spacetime",
+      "to": "cosmology/cosmological-constant"
+    },
+    {
+      "from": "foundation/observer-projected-spacetime",
+      "to": "foundation/bootstrap-fixed-point-existence"
+    },
+    {
+      "from": "foundation/observer-projected-spacetime",
+      "to": "foundation/euclidean-coherence-lagrangian"
+    },
+    {
+      "from": "foundation/observer-projected-spacetime",
+      "to": "foundation/knot-theoretic-bootstrap"
+    },
+    {
+      "from": "foundation/observer-projected-spacetime",
+      "to": "foundation/observer-holographic-equivalence"
+    },
+    {
+      "from": "foundation/observer-projected-spacetime",
+      "to": "foundation/observer-level-stack-compactness"
+    },
+    {
+      "from": "foundation/observer-projected-spacetime",
+      "to": "foundation/spinor-coherence-lagrangian"
+    },
+    {
+      "from": "foundation/observer-projected-spacetime",
+      "to": "thermodynamics-ext/quantum-fisher-metric"
+    },
+    {
+      "from": "foundation/profile-dependent-edges-and-confinement",
+      "to": "foundation/formation-and-preservation"
+    },
+    {
+      "from": "foundation/spinor-coherence-lagrangian",
+      "to": "foundation/euclidean-coherence-lagrangian"
+    },
+    {
+      "from": "foundation/spinor-coherence-lagrangian",
+      "to": "particles/coherence-bounces"
+    },
+    {
+      "from": "foundation/substrate-noise-and-profile-coupling",
+      "to": "foundation/error-correction-and-standard-model"
+    },
+    {
+      "from": "foundation/substrate-noise-and-profile-coupling",
+      "to": "foundation/formation-and-preservation"
+    },
+    {
+      "from": "foundation/substrate-noise-and-profile-coupling",
+      "to": "foundation/profile-dependent-edges-and-confinement"
+    },
+    {
+      "from": "gauge/chirality-selection",
+      "to": "foundation/spinor-coherence-lagrangian"
+    },
+    {
+      "from": "gauge/chirality-selection",
+      "to": "gauge/anomaly-cancellation"
+    },
+    {
+      "from": "gauge/color-force",
+      "to": "foundation/profile-dependent-edges-and-confinement"
+    },
+    {
+      "from": "gauge/color-force",
+      "to": "foundation/substrate-noise-and-profile-coupling"
+    },
+    {
+      "from": "gauge/color-force",
+      "to": "gauge/chiral-symmetry-breaking"
+    },
+    {
+      "from": "gauge/color-force",
+      "to": "gauge/confinement"
+    },
+    {
+      "from": "gauge/color-force",
+      "to": "gauge/standard-model-group"
+    },
+    {
+      "from": "gauge/color-force",
+      "to": "gauge/strong-cp"
+    },
+    {
+      "from": "gauge/confinement",
+      "to": "foundation/error-correction-and-standard-model"
+    },
+    {
+      "from": "gauge/confinement",
+      "to": "foundation/profile-dependent-edges-and-confinement"
+    },
+    {
+      "from": "gauge/confinement",
+      "to": "gauge/chiral-symmetry-breaking"
+    },
+    {
+      "from": "gauge/electromagnetism",
+      "to": "foundation/knot-theoretic-bootstrap"
+    },
+    {
+      "from": "gauge/electromagnetism",
+      "to": "foundation/substrate-noise-and-profile-coupling"
+    },
+    {
+      "from": "gauge/electromagnetism",
+      "to": "gauge/standard-model-group"
+    },
+    {
+      "from": "gauge/electromagnetism",
+      "to": "gauge/weak-interaction"
+    },
+    {
+      "from": "gauge/electroweak-breaking",
+      "to": "gauge/weinberg-angle"
+    },
+    {
+      "from": "gauge/standard-model-group",
+      "to": "cosmology/coupling-constants"
+    },
+    {
+      "from": "gauge/standard-model-group",
+      "to": "gauge/anomaly-cancellation"
+    },
+    {
+      "from": "gauge/standard-model-group",
+      "to": "gauge/electroweak-breaking"
+    },
+    {
+      "from": "gauge/standard-model-group",
+      "to": "gauge/proton-stability"
+    },
+    {
+      "from": "gauge/strong-cp",
+      "to": "foundation/knot-theoretic-bootstrap"
+    },
+    {
+      "from": "gauge/weak-interaction",
+      "to": "cosmology/baryogenesis"
+    },
+    {
+      "from": "gauge/weak-interaction",
+      "to": "flavor/mixing-angles"
+    },
+    {
+      "from": "gauge/weak-interaction",
+      "to": "foundation/substrate-noise-and-profile-coupling"
+    },
+    {
+      "from": "gauge/weak-interaction",
+      "to": "gauge/chirality-selection"
+    },
+    {
+      "from": "gauge/weak-interaction",
+      "to": "gauge/color-force"
+    },
+    {
+      "from": "gauge/weak-interaction",
+      "to": "gauge/electroweak-breaking"
+    },
+    {
+      "from": "gauge/weak-interaction",
+      "to": "gauge/standard-model-group"
+    },
+    {
+      "from": "gauge/weak-interaction",
+      "to": "gauge/weinberg-angle"
+    },
+    {
+      "from": "holography/area-scaling",
+      "to": "cosmology/cosmological-constant"
+    },
+    {
+      "from": "holography/area-scaling",
+      "to": "cosmology/cyclic-cosmology"
+    },
+    {
+      "from": "holography/area-scaling",
+      "to": "cosmology/dark-energy-equation-of-state"
+    },
+    {
+      "from": "holography/area-scaling",
+      "to": "cosmology/geometric-substrate"
+    },
+    {
+      "from": "holography/area-scaling",
+      "to": "cosmology/observer-loop-viability"
+    },
+    {
+      "from": "holography/area-scaling",
+      "to": "foundation/observer-as-error-correcting-code"
+    },
+    {
+      "from": "holography/area-scaling",
+      "to": "foundation/observer-holographic-equivalence"
+    },
+    {
+      "from": "holography/area-scaling",
+      "to": "foundation/observer-level-stack-compactness"
+    },
+    {
+      "from": "holography/area-scaling",
+      "to": "foundation/substrate-noise-and-profile-coupling"
+    },
+    {
+      "from": "holography/area-scaling",
+      "to": "holography/black-hole-entropy"
+    },
+    {
+      "from": "holography/area-scaling",
+      "to": "holography/causal-set-statistics"
+    },
+    {
+      "from": "holography/area-scaling",
+      "to": "holography/er-epr"
+    },
+    {
+      "from": "holography/area-scaling",
+      "to": "holography/horizon-gauge-shell"
+    },
+    {
+      "from": "holography/area-scaling",
+      "to": "spacetime/gravitational-constant"
+    },
+    {
+      "from": "holography/area-scaling",
+      "to": "spacetime/singularity-resolution"
+    },
+    {
+      "from": "holography/black-hole-entropy",
+      "to": "holography/hawking-radiation"
+    },
+    {
+      "from": "holography/black-hole-entropy",
+      "to": "holography/scrambling"
+    },
+    {
+      "from": "holography/causal-set-statistics",
+      "to": "cosmology/geometric-inflation"
+    },
+    {
+      "from": "holography/causal-set-statistics",
+      "to": "cosmology/geometric-substrate"
+    },
+    {
+      "from": "holography/causal-set-statistics",
+      "to": "foundation/substrate-noise-and-profile-coupling"
+    },
+    {
+      "from": "holography/causal-set-statistics",
+      "to": "holography/er-epr"
+    },
+    {
+      "from": "holography/er-epr",
+      "to": "cosmology/geometric-substrate"
+    },
+    {
+      "from": "holography/er-epr",
+      "to": "cosmology/observer-loop-viability"
+    },
+    {
+      "from": "holography/er-epr",
+      "to": "foundation/continuous-discrete-duality"
+    },
+    {
+      "from": "holography/er-epr",
+      "to": "holography/scrambling"
+    },
+    {
+      "from": "holography/hawking-radiation",
+      "to": "holography/information-paradox"
+    },
+    {
+      "from": "holography/horizon-gauge-shell",
+      "to": "foundation/knot-theoretic-bootstrap"
+    },
+    {
+      "from": "holography/horizon-gauge-shell",
+      "to": "foundation/observer-holographic-equivalence"
+    },
+    {
+      "from": "holography/horizon-gauge-shell",
+      "to": "foundation/observer-projected-spacetime"
+    },
+    {
+      "from": "holography/information-paradox",
+      "to": "holography/scrambling"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "cosmology/cosmological-arrow"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "cosmology/coupling-constants"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "cosmology/geometric-inflation"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "cosmology/geometric-substrate"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "cosmology/observer-loop-viability"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "foundation/aperiodic-order"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "foundation/bootstrap-fixed-point-existence"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "foundation/knot-theoretic-bootstrap"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "foundation/minimum-bootstrap-closure"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "foundation/observer-as-error-correcting-code"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "foundation/observer-holographic-equivalence"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "gauge/color-force"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "holography/horizon-gauge-shell"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "interactions/bootstrap-division-algebras"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "interactions/moufang-loop-phase-closure"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "particles/mass-hierarchy"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "spacetime/einstein-equations"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "spacetime/gravitational-constant"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "thermodynamics-ext/biological-non-ergodicity"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "thermodynamics-ext/memory-persistence-tradeoff"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "thermodynamics-ext/non-ergodicity"
+    },
+    {
+      "from": "interactions/bootstrap-division-algebras",
+      "to": "foundation/knot-theoretic-bootstrap"
+    },
+    {
+      "from": "interactions/bootstrap-division-algebras",
+      "to": "foundation/spinor-coherence-lagrangian"
+    },
+    {
+      "from": "interactions/bootstrap-division-algebras",
+      "to": "interactions/moufang-loop-phase-closure"
+    },
+    {
+      "from": "interactions/bootstrap-division-algebras",
+      "to": "thermodynamics-ext/quantum-fisher-metric"
+    },
+    {
+      "from": "interactions/moufang-loop-phase-closure",
+      "to": "foundation/error-correction-and-standard-model"
+    },
+    {
+      "from": "interactions/moufang-loop-phase-closure",
+      "to": "foundation/observer-as-error-correcting-code"
+    },
+    {
+      "from": "interactions/moufang-loop-phase-closure",
+      "to": "foundation/substrate-noise-and-profile-coupling"
+    },
+    {
+      "from": "interactions/relational-invariants",
+      "to": "cosmology/cyclic-cosmology"
+    },
+    {
+      "from": "interactions/relational-invariants",
+      "to": "foundation/minimum-bootstrap-closure"
+    },
+    {
+      "from": "interactions/relational-invariants",
+      "to": "foundation/substrate-noise-and-profile-coupling"
+    },
+    {
+      "from": "interactions/relational-invariants",
+      "to": "gauge/chirality-selection"
+    },
+    {
+      "from": "interactions/relational-invariants",
+      "to": "holography/causal-set-statistics"
+    },
+    {
+      "from": "interactions/relational-invariants",
+      "to": "interactions/bootstrap"
+    },
+    {
+      "from": "interactions/relational-invariants",
+      "to": "quantum/born-rule"
+    },
+    {
+      "from": "interactions/relational-invariants",
+      "to": "quantum/entanglement"
+    },
+    {
+      "from": "interactions/relational-invariants",
+      "to": "quantum/observer-relative-objectivity"
+    },
+    {
+      "from": "interactions/relational-invariants",
+      "to": "quantum/sheaf-section-uniqueness"
+    },
+    {
+      "from": "interactions/relational-invariants",
+      "to": "spacetime/gravity"
+    },
+    {
+      "from": "interactions/relational-invariants",
+      "to": "thermodynamics-ext/memory-persistence-tradeoff"
+    },
+    {
+      "from": "interactions/relational-invariants",
+      "to": "thermodynamics/entropy"
+    },
+    {
+      "from": "interactions/three-types",
+      "to": "foundation/minimum-bootstrap-closure"
+    },
+    {
+      "from": "interactions/three-types",
+      "to": "interactions/relational-invariants"
+    },
+    {
+      "from": "interactions/three-types",
+      "to": "quantum/teleportation"
+    },
+    {
+      "from": "interactions/three-types",
+      "to": "thermodynamics/time"
+    },
+    {
+      "from": "minimal-observer/coherence-dual-pairs",
+      "to": "cosmology/baryogenesis"
+    },
+    {
+      "from": "minimal-observer/coherence-dual-pairs",
+      "to": "foundation/aperiodic-order"
+    },
+    {
+      "from": "minimal-observer/coherence-dual-pairs",
+      "to": "holography/hawking-radiation"
+    },
+    {
+      "from": "minimal-observer/coherence-dual-pairs",
+      "to": "particles/cpt-theorem"
+    },
+    {
+      "from": "minimal-observer/multiplicity",
+      "to": "cosmology/cyclic-cosmology"
+    },
+    {
+      "from": "minimal-observer/multiplicity",
+      "to": "cosmology/geometric-inflation"
+    },
+    {
+      "from": "minimal-observer/multiplicity",
+      "to": "cosmology/observer-loop-viability"
+    },
+    {
+      "from": "minimal-observer/multiplicity",
+      "to": "foundation/aperiodic-order"
+    },
+    {
+      "from": "minimal-observer/multiplicity",
+      "to": "foundation/minimum-bootstrap-closure"
+    },
+    {
+      "from": "minimal-observer/multiplicity",
+      "to": "foundation/observer-projected-spacetime"
+    },
+    {
+      "from": "minimal-observer/multiplicity",
+      "to": "interactions/three-types"
     },
     {
       "from": "minimal-observer/multiplicity",
@@ -630,1383 +1566,467 @@
     },
     {
       "from": "minimal-observer/multiplicity",
-      "to": "interactions/three-types"
-    },
-    {
-      "from": "interactions/three-types",
-      "to": "interactions/relational-invariants"
-    },
-    {
-      "from": "interactions/relational-invariants",
-      "to": "interactions/bootstrap"
-    },
-    {
-      "from": "minimal-observer/structure",
-      "to": "thermodynamics/time"
-    },
-    {
-      "from": "interactions/three-types",
-      "to": "thermodynamics/time"
-    },
-    {
-      "from": "thermodynamics/time",
-      "to": "thermodynamics/entropy"
-    },
-    {
-      "from": "interactions/relational-invariants",
-      "to": "thermodynamics/entropy"
-    },
-    {
-      "from": "axioms/loop-closure",
-      "to": "thermodynamics/action-planck"
-    },
-    {
-      "from": "thermodynamics/time",
-      "to": "thermodynamics/action-planck"
-    },
-    {
-      "from": "thermodynamics/action-planck",
-      "to": "spacetime/speed-of-light"
-    },
-    {
-      "from": "axioms/loop-closure",
-      "to": "spacetime/speed-of-light"
-    },
-    {
-      "from": "spacetime/speed-of-light",
-      "to": "spacetime/lorentz-invariance"
-    },
-    {
-      "from": "interactions/relational-invariants",
-      "to": "spacetime/gravity"
-    },
-    {
-      "from": "spacetime/lorentz-invariance",
-      "to": "spacetime/gravity"
-    },
-    {
-      "from": "dimensions/three-dimensions",
-      "to": "spacetime/gravity"
-    },
-    {
-      "from": "spacetime/gravity",
-      "to": "spacetime/einstein-equations"
-    },
-    {
-      "from": "interactions/bootstrap",
-      "to": "spacetime/einstein-equations"
-    },
-    {
-      "from": "dimensions/three-dimensions",
-      "to": "spacetime/einstein-equations"
-    },
-    {
-      "from": "minimal-observer/structure",
-      "to": "dimensions/three-dimensions"
-    },
-    {
-      "from": "axioms/observer-definition",
-      "to": "dimensions/three-dimensions"
-    },
-    {
-      "from": "dimensions/three-dimensions",
-      "to": "particles/spin-statistics"
-    },
-    {
-      "from": "particles/spin-statistics",
-      "to": "particles/pauli-exclusion"
-    },
-    {
-      "from": "dimensions/three-dimensions",
-      "to": "particles/three-generations"
-    },
-    {
-      "from": "particles/spin-statistics",
-      "to": "particles/three-generations"
-    },
-    {
-      "from": "particles/mass-hierarchy",
       "to": "particles/three-generations"
     },
     {
       "from": "minimal-observer/multiplicity",
-      "to": "particles/three-generations"
+      "to": "spacetime/gravitational-constant"
     },
     {
-      "from": "axioms/coherence-conservation",
-      "to": "particles/three-generations"
+      "from": "minimal-observer/multiplicity",
+      "to": "thermodynamics-ext/biological-non-ergodicity"
     },
     {
-      "from": "interactions/bootstrap",
-      "to": "particles/mass-hierarchy"
+      "from": "minimal-observer/structure",
+      "to": "cosmology/geometric-substrate"
     },
     {
-      "from": "spacetime/gravity",
-      "to": "holography/area-scaling"
+      "from": "minimal-observer/structure",
+      "to": "cosmology/observer-loop-viability"
     },
     {
-      "from": "thermodynamics/action-planck",
-      "to": "holography/area-scaling"
+      "from": "minimal-observer/structure",
+      "to": "dimensions/three-dimensions"
     },
     {
-      "from": "holography/area-scaling",
-      "to": "holography/black-hole-entropy"
+      "from": "minimal-observer/structure",
+      "to": "foundation/minimum-bootstrap-closure"
     },
     {
-      "from": "holography/black-hole-entropy",
-      "to": "holography/hawking-radiation"
+      "from": "minimal-observer/structure",
+      "to": "foundation/observer-as-error-correcting-code"
     },
     {
-      "from": "minimal-observer/coherence-dual-pairs",
-      "to": "holography/hawking-radiation"
+      "from": "minimal-observer/structure",
+      "to": "foundation/observer-level-stack-compactness"
     },
     {
-      "from": "holography/hawking-radiation",
-      "to": "holography/information-paradox"
+      "from": "minimal-observer/structure",
+      "to": "interactions/moufang-loop-phase-closure"
     },
     {
-      "from": "axioms/coherence-conservation",
-      "to": "holography/information-paradox"
+      "from": "minimal-observer/structure",
+      "to": "minimal-observer/multiplicity"
     },
     {
-      "from": "interactions/relational-invariants",
-      "to": "quantum/born-rule"
+      "from": "minimal-observer/structure",
+      "to": "thermodynamics-ext/biological-non-ergodicity"
     },
     {
-      "from": "thermodynamics/time",
-      "to": "quantum/born-rule"
+      "from": "minimal-observer/structure",
+      "to": "thermodynamics-ext/memory-persistence-tradeoff"
     },
     {
-      "from": "quantum/born-rule",
-      "to": "quantum/preferred-basis"
+      "from": "minimal-observer/structure",
+      "to": "thermodynamics/time"
     },
     {
-      "from": "quantum/preferred-basis",
-      "to": "quantum/measurement"
-    },
-    {
-      "from": "axioms/loop-closure",
-      "to": "gauge/electromagnetism"
-    },
-    {
-      "from": "spacetime/speed-of-light",
-      "to": "gauge/electromagnetism"
-    },
-    {
-      "from": "spacetime/lorentz-invariance",
-      "to": "gauge/electromagnetism"
-    },
-    {
-      "from": "gauge/electromagnetism",
-      "to": "gauge/weak-interaction"
-    },
-    {
-      "from": "dimensions/three-dimensions",
-      "to": "gauge/weak-interaction"
-    },
-    {
-      "from": "particles/spin-statistics",
-      "to": "gauge/weak-interaction"
-    },
-    {
-      "from": "gauge/weak-interaction",
-      "to": "gauge/color-force"
-    },
-    {
-      "from": "interactions/bootstrap",
-      "to": "gauge/color-force"
-    },
-    {
-      "from": "gauge/electromagnetism",
-      "to": "gauge/standard-model-group"
-    },
-    {
-      "from": "gauge/weak-interaction",
-      "to": "gauge/standard-model-group"
-    },
-    {
-      "from": "gauge/color-force",
-      "to": "gauge/standard-model-group"
-    },
-    {
-      "from": "particles/three-generations",
-      "to": "flavor/mixing-angles"
-    },
-    {
-      "from": "gauge/weak-interaction",
-      "to": "flavor/mixing-angles"
-    },
-    {
-      "from": "spacetime/einstein-equations",
-      "to": "cosmology/cosmological-constant"
-    },
-    {
-      "from": "holography/area-scaling",
-      "to": "cosmology/cosmological-constant"
-    },
-    {
-      "from": "foundation/observer-projected-spacetime",
-      "to": "cosmology/cosmological-constant"
-    },
-    {
-      "from": "cosmology/observer-loop-viability",
-      "to": "cosmology/cosmological-constant"
-    },
-    {
-      "from": "cosmology/dark-energy-equation-of-state",
-      "to": "cosmology/cosmological-constant"
-    },
-    {
-      "from": "minimal-observer/coherence-dual-pairs",
-      "to": "cosmology/baryogenesis"
-    },
-    {
-      "from": "gauge/weak-interaction",
-      "to": "cosmology/baryogenesis"
-    },
-    {
-      "from": "gauge/standard-model-group",
-      "to": "cosmology/coupling-constants"
-    },
-    {
-      "from": "interactions/bootstrap",
-      "to": "cosmology/coupling-constants"
-    },
-    {
-      "from": "particles/mass-hierarchy",
-      "to": "cosmology/coupling-constants"
-    },
-    {
-      "from": "thermodynamics/entropy",
-      "to": "thermodynamics-ext/first-law"
-    },
-    {
-      "from": "thermodynamics/action-planck",
-      "to": "thermodynamics-ext/first-law"
-    },
-    {
-      "from": "thermodynamics/action-planck",
-      "to": "thermodynamics-ext/fisher-metric"
-    },
-    {
-      "from": "thermodynamics/entropy",
-      "to": "thermodynamics-ext/fisher-metric"
-    },
-    {
-      "from": "thermodynamics/entropy",
-      "to": "thermodynamics-ext/renormalization"
-    },
-    {
-      "from": "thermodynamics/action-planck",
-      "to": "thermodynamics-ext/renormalization"
-    },
-    {
-      "from": "axioms/coherence-conservation",
-      "to": "thermodynamics-ext/distinguishability-conservation"
-    },
-    {
-      "from": "thermodynamics-ext/distinguishability-conservation",
-      "to": "thermodynamics-ext/fisher-metric"
-    },
-    {
-      "from": "gauge/weak-interaction",
-      "to": "gauge/chirality-selection"
-    },
-    {
-      "from": "interactions/relational-invariants",
-      "to": "gauge/chirality-selection"
-    },
-    {
-      "from": "axioms/coherence-conservation",
-      "to": "gauge/chirality-selection"
-    },
-    {
-      "from": "gauge/standard-model-group",
-      "to": "gauge/electroweak-breaking"
-    },
-    {
-      "from": "gauge/weak-interaction",
-      "to": "gauge/electroweak-breaking"
-    },
-    {
-      "from": "thermodynamics/action-planck",
-      "to": "foundation/coherence-lagrangian"
-    },
-    {
-      "from": "thermodynamics-ext/fisher-metric",
-      "to": "foundation/coherence-lagrangian"
-    },
-    {
-      "from": "thermodynamics-ext/fisher-metric",
-      "to": "thermodynamics-ext/quantum-fisher-metric"
-    },
-    {
-      "from": "axioms/coherence-operational",
-      "to": "thermodynamics-ext/quantum-fisher-metric"
-    },
-    {
-      "from": "quantum/born-rule",
-      "to": "thermodynamics-ext/quantum-fisher-metric"
-    },
-    {
-      "from": "foundation/observer-projected-spacetime",
-      "to": "thermodynamics-ext/quantum-fisher-metric"
-    },
-    {
-      "from": "interactions/bootstrap-division-algebras",
-      "to": "thermodynamics-ext/quantum-fisher-metric"
-    },
-    {
-      "from": "foundation/coherence-lagrangian",
-      "to": "foundation/spinor-coherence-lagrangian"
-    },
-    {
-      "from": "thermodynamics-ext/quantum-fisher-metric",
-      "to": "foundation/spinor-coherence-lagrangian"
-    },
-    {
-      "from": "foundation/coherence-lagrangian",
-      "to": "foundation/euclidean-coherence-lagrangian"
-    },
-    {
-      "from": "foundation/spinor-coherence-lagrangian",
-      "to": "foundation/euclidean-coherence-lagrangian"
-    },
-    {
-      "from": "foundation/observer-projected-spacetime",
-      "to": "foundation/euclidean-coherence-lagrangian"
-    },
-    {
-      "from": "thermodynamics-ext/quantum-fisher-metric",
-      "to": "foundation/euclidean-coherence-lagrangian"
-    },
-    {
-      "from": "foundation/euclidean-coherence-lagrangian",
-      "to": "particles/coherence-bounces"
-    },
-    {
-      "from": "foundation/spinor-coherence-lagrangian",
-      "to": "particles/coherence-bounces"
-    },
-    {
-      "from": "particles/mass-hierarchy",
-      "to": "particles/coherence-bounces"
-    },
-    {
-      "from": "particles/three-generations",
-      "to": "particles/coherence-bounces"
-    },
-    {
-      "from": "particles/neutrino-masses",
-      "to": "particles/coherence-bounces"
-    },
-    {
-      "from": "thermodynamics-ext/quantum-fisher-metric",
-      "to": "particles/coherence-bounces"
-    },
-    {
-      "from": "particles/spin-statistics",
-      "to": "foundation/spinor-coherence-lagrangian"
-    },
-    {
-      "from": "particles/three-generations",
-      "to": "foundation/spinor-coherence-lagrangian"
-    },
-    {
-      "from": "gauge/chirality-selection",
-      "to": "foundation/spinor-coherence-lagrangian"
-    },
-    {
-      "from": "particles/neutrino-masses",
-      "to": "foundation/spinor-coherence-lagrangian"
+      "from": "particles/cpt-theorem",
+      "to": "foundation/knot-theoretic-bootstrap"
     },
     {
       "from": "particles/cpt-theorem",
       "to": "foundation/spinor-coherence-lagrangian"
+    },
+    {
+      "from": "particles/mass-hierarchy",
+      "to": "cosmology/coupling-constants"
+    },
+    {
+      "from": "particles/mass-hierarchy",
+      "to": "cosmology/geometric-substrate"
+    },
+    {
+      "from": "particles/mass-hierarchy",
+      "to": "foundation/error-correction-and-standard-model"
+    },
+    {
+      "from": "particles/mass-hierarchy",
+      "to": "foundation/formation-and-preservation"
+    },
+    {
+      "from": "particles/mass-hierarchy",
+      "to": "foundation/observer-edges-and-mutual-opacity"
+    },
+    {
+      "from": "particles/mass-hierarchy",
+      "to": "foundation/observer-pattern-signal"
+    },
+    {
+      "from": "particles/mass-hierarchy",
+      "to": "particles/coherence-bounces"
+    },
+    {
+      "from": "particles/mass-hierarchy",
+      "to": "particles/three-generations"
+    },
+    {
+      "from": "particles/neutrino-masses",
+      "to": "cosmology/leptogenesis"
+    },
+    {
+      "from": "particles/neutrino-masses",
+      "to": "foundation/spinor-coherence-lagrangian"
+    },
+    {
+      "from": "particles/neutrino-masses",
+      "to": "particles/coherence-bounces"
     },
     {
       "from": "particles/pauli-exclusion",
       "to": "foundation/spinor-coherence-lagrangian"
     },
     {
-      "from": "foundation/observer-projected-spacetime",
+      "from": "particles/spin-statistics",
       "to": "foundation/spinor-coherence-lagrangian"
     },
     {
-      "from": "axioms/observer-definition",
+      "from": "particles/spin-statistics",
+      "to": "gauge/weak-interaction"
+    },
+    {
+      "from": "particles/spin-statistics",
+      "to": "particles/cpt-theorem"
+    },
+    {
+      "from": "particles/spin-statistics",
+      "to": "particles/pauli-exclusion"
+    },
+    {
+      "from": "particles/spin-statistics",
+      "to": "particles/supersymmetry-impossibility"
+    },
+    {
+      "from": "particles/spin-statistics",
+      "to": "particles/three-generations"
+    },
+    {
+      "from": "particles/spin-statistics",
+      "to": "spacetime/gravitational-constant"
+    },
+    {
+      "from": "particles/three-generations",
+      "to": "flavor/mixing-angles"
+    },
+    {
+      "from": "particles/three-generations",
+      "to": "foundation/error-correction-and-standard-model"
+    },
+    {
+      "from": "particles/three-generations",
       "to": "foundation/spinor-coherence-lagrangian"
     },
     {
-      "from": "interactions/bootstrap-division-algebras",
-      "to": "foundation/spinor-coherence-lagrangian"
-    },
-    {
-      "from": "interactions/bootstrap",
-      "to": "interactions/bootstrap-division-algebras"
-    },
-    {
-      "from": "interactions/relational-invariants",
-      "to": "quantum/entanglement"
-    },
-    {
-      "from": "quantum/born-rule",
-      "to": "quantum/entanglement"
-    },
-    {
-      "from": "gauge/color-force",
-      "to": "gauge/strong-cp"
-    },
-    {
-      "from": "spacetime/einstein-equations",
-      "to": "spacetime/singularity-resolution"
-    },
-    {
-      "from": "holography/area-scaling",
-      "to": "spacetime/singularity-resolution"
-    },
-    {
-      "from": "gauge/color-force",
-      "to": "gauge/confinement"
-    },
-    {
-      "from": "holography/area-scaling",
-      "to": "holography/causal-set-statistics"
-    },
-    {
-      "from": "interactions/relational-invariants",
-      "to": "holography/causal-set-statistics"
+      "from": "particles/three-generations",
+      "to": "particles/coherence-bounces"
     },
     {
       "from": "particles/three-generations",
       "to": "particles/neutrino-masses"
     },
     {
-      "from": "flavor/mixing-angles",
-      "to": "particles/neutrino-masses"
+      "from": "quantum/born-rule",
+      "to": "axioms/coherence-operational"
     },
     {
-      "from": "gauge/chirality-selection",
-      "to": "gauge/anomaly-cancellation"
-    },
-    {
-      "from": "gauge/standard-model-group",
-      "to": "gauge/anomaly-cancellation"
-    },
-    {
-      "from": "axioms/coherence-conservation",
-      "to": "gauge/anomaly-cancellation"
-    },
-    {
-      "from": "gauge/weak-interaction",
-      "to": "gauge/weinberg-angle"
-    },
-    {
-      "from": "gauge/electroweak-breaking",
-      "to": "gauge/weinberg-angle"
-    },
-    {
-      "from": "cosmology/coupling-constants",
-      "to": "gauge/weinberg-angle"
-    },
-    {
-      "from": "cosmology/baryogenesis",
-      "to": "cosmology/leptogenesis"
-    },
-    {
-      "from": "particles/neutrino-masses",
-      "to": "cosmology/leptogenesis"
-    },
-    {
-      "from": "flavor/mixing-angles",
-      "to": "cosmology/leptogenesis"
-    },
-    {
-      "from": "gauge/color-force",
-      "to": "gauge/chiral-symmetry-breaking"
-    },
-    {
-      "from": "gauge/confinement",
-      "to": "gauge/chiral-symmetry-breaking"
-    },
-    {
-      "from": "quantum/entanglement",
-      "to": "holography/er-epr"
-    },
-    {
-      "from": "holography/area-scaling",
-      "to": "holography/er-epr"
-    },
-    {
-      "from": "holography/causal-set-statistics",
-      "to": "holography/er-epr"
-    },
-    {
-      "from": "spacetime/einstein-equations",
-      "to": "holography/er-epr"
-    },
-    {
-      "from": "particles/spin-statistics",
-      "to": "particles/supersymmetry-impossibility"
-    },
-    {
-      "from": "dimensions/three-dimensions",
-      "to": "particles/supersymmetry-impossibility"
-    },
-    {
-      "from": "quantum/entanglement",
-      "to": "quantum/teleportation"
-    },
-    {
-      "from": "quantum/measurement",
-      "to": "quantum/teleportation"
-    },
-    {
-      "from": "interactions/three-types",
-      "to": "quantum/teleportation"
-    },
-    {
-      "from": "minimal-observer/coherence-dual-pairs",
-      "to": "particles/cpt-theorem"
-    },
-    {
-      "from": "spacetime/lorentz-invariance",
-      "to": "particles/cpt-theorem"
-    },
-    {
-      "from": "particles/spin-statistics",
-      "to": "particles/cpt-theorem"
-    },
-    {
-      "from": "foundation/coherence-lagrangian",
-      "to": "particles/cpt-theorem"
-    },
-    {
-      "from": "gauge/standard-model-group",
-      "to": "gauge/proton-stability"
-    },
-    {
-      "from": "cosmology/coupling-constants",
-      "to": "gauge/proton-stability"
-    },
-    {
-      "from": "spacetime/singularity-resolution",
-      "to": "cosmology/observer-loop-viability"
-    },
-    {
-      "from": "holography/area-scaling",
-      "to": "cosmology/observer-loop-viability"
-    },
-    {
-      "from": "minimal-observer/structure",
-      "to": "cosmology/observer-loop-viability"
-    },
-    {
-      "from": "axioms/loop-closure",
-      "to": "cosmology/observer-loop-viability"
-    },
-    {
-      "from": "minimal-observer/multiplicity",
-      "to": "cosmology/observer-loop-viability"
-    },
-    {
-      "from": "thermodynamics/entropy",
-      "to": "cosmology/observer-loop-viability"
-    },
-    {
-      "from": "interactions/bootstrap",
-      "to": "cosmology/observer-loop-viability"
-    },
-    {
-      "from": "thermodynamics-ext/renormalization",
-      "to": "cosmology/observer-loop-viability"
-    },
-    {
-      "from": "holography/er-epr",
-      "to": "cosmology/observer-loop-viability"
-    },
-    {
-      "from": "axioms/coherence-conservation",
-      "to": "quantum/observer-relative-objectivity"
-    },
-    {
-      "from": "axioms/observer-definition",
-      "to": "quantum/observer-relative-objectivity"
-    },
-    {
-      "from": "interactions/relational-invariants",
-      "to": "quantum/observer-relative-objectivity"
-    },
-    {
-      "from": "quantum/measurement",
-      "to": "quantum/observer-relative-objectivity"
-    },
-    {
-      "from": "quantum/entanglement",
-      "to": "quantum/observer-relative-objectivity"
+      "from": "quantum/born-rule",
+      "to": "quantum/entanglement"
     },
     {
       "from": "quantum/born-rule",
       "to": "quantum/observer-relative-objectivity"
     },
     {
-      "from": "thermodynamics/time",
+      "from": "quantum/born-rule",
+      "to": "quantum/preferred-basis"
+    },
+    {
+      "from": "quantum/born-rule",
+      "to": "quantum/sheaf-section-uniqueness"
+    },
+    {
+      "from": "quantum/born-rule",
+      "to": "thermodynamics-ext/quantum-fisher-metric"
+    },
+    {
+      "from": "quantum/entanglement",
+      "to": "holography/er-epr"
+    },
+    {
+      "from": "quantum/entanglement",
       "to": "quantum/observer-relative-objectivity"
     },
     {
-      "from": "axioms/coherence-conservation",
+      "from": "quantum/entanglement",
       "to": "quantum/sheaf-section-uniqueness"
     },
     {
-      "from": "axioms/observer-definition",
-      "to": "quantum/sheaf-section-uniqueness"
+      "from": "quantum/entanglement",
+      "to": "quantum/teleportation"
     },
     {
-      "from": "interactions/relational-invariants",
-      "to": "quantum/sheaf-section-uniqueness"
+      "from": "quantum/measurement",
+      "to": "quantum/observer-relative-objectivity"
+    },
+    {
+      "from": "quantum/measurement",
+      "to": "quantum/teleportation"
     },
     {
       "from": "quantum/observer-relative-objectivity",
       "to": "quantum/sheaf-section-uniqueness"
     },
     {
-      "from": "quantum/entanglement",
-      "to": "quantum/sheaf-section-uniqueness"
+      "from": "quantum/preferred-basis",
+      "to": "quantum/measurement"
     },
     {
-      "from": "quantum/born-rule",
-      "to": "quantum/sheaf-section-uniqueness"
+      "from": "spacetime/einstein-equations",
+      "to": "cosmology/cosmological-constant"
     },
     {
-      "from": "thermodynamics/time",
-      "to": "quantum/sheaf-section-uniqueness"
+      "from": "spacetime/einstein-equations",
+      "to": "cosmology/geometric-inflation"
+    },
+    {
+      "from": "spacetime/einstein-equations",
+      "to": "holography/er-epr"
+    },
+    {
+      "from": "spacetime/einstein-equations",
+      "to": "spacetime/gravitational-constant"
+    },
+    {
+      "from": "spacetime/einstein-equations",
+      "to": "spacetime/singularity-resolution"
+    },
+    {
+      "from": "spacetime/gravity",
+      "to": "cosmology/geometric-inflation"
+    },
+    {
+      "from": "spacetime/gravity",
+      "to": "holography/area-scaling"
+    },
+    {
+      "from": "spacetime/gravity",
+      "to": "spacetime/einstein-equations"
+    },
+    {
+      "from": "spacetime/gravity",
+      "to": "spacetime/gravitational-constant"
+    },
+    {
+      "from": "spacetime/lorentz-invariance",
+      "to": "gauge/electromagnetism"
+    },
+    {
+      "from": "spacetime/lorentz-invariance",
+      "to": "particles/cpt-theorem"
+    },
+    {
+      "from": "spacetime/lorentz-invariance",
+      "to": "spacetime/gravity"
+    },
+    {
+      "from": "spacetime/singularity-resolution",
+      "to": "cosmology/dark-energy-equation-of-state"
     },
     {
       "from": "spacetime/singularity-resolution",
       "to": "cosmology/geometric-inflation"
     },
     {
-      "from": "holography/causal-set-statistics",
-      "to": "cosmology/geometric-inflation"
+      "from": "spacetime/singularity-resolution",
+      "to": "cosmology/observer-loop-viability"
     },
     {
-      "from": "spacetime/gravity",
-      "to": "cosmology/geometric-inflation"
+      "from": "spacetime/speed-of-light",
+      "to": "gauge/electromagnetism"
     },
     {
-      "from": "spacetime/einstein-equations",
-      "to": "cosmology/geometric-inflation"
+      "from": "spacetime/speed-of-light",
+      "to": "spacetime/lorentz-invariance"
     },
     {
-      "from": "minimal-observer/multiplicity",
-      "to": "cosmology/geometric-inflation"
+      "from": "thermodynamics-ext/distinguishability-conservation",
+      "to": "cosmology/dark-energy-equation-of-state"
     },
     {
-      "from": "interactions/bootstrap",
-      "to": "cosmology/geometric-inflation"
+      "from": "thermodynamics-ext/distinguishability-conservation",
+      "to": "foundation/observer-edges-and-mutual-opacity"
     },
     {
-      "from": "spacetime/gravity",
-      "to": "spacetime/gravitational-constant"
+      "from": "thermodynamics-ext/distinguishability-conservation",
+      "to": "foundation/observer-holographic-equivalence"
     },
     {
-      "from": "spacetime/einstein-equations",
-      "to": "spacetime/gravitational-constant"
+      "from": "thermodynamics-ext/distinguishability-conservation",
+      "to": "thermodynamics-ext/fisher-metric"
     },
     {
-      "from": "thermodynamics/action-planck",
-      "to": "spacetime/gravitational-constant"
+      "from": "thermodynamics-ext/fisher-metric",
+      "to": "foundation/coherence-lagrangian"
+    },
+    {
+      "from": "thermodynamics-ext/fisher-metric",
+      "to": "foundation/continuous-discrete-duality"
+    },
+    {
+      "from": "thermodynamics-ext/fisher-metric",
+      "to": "foundation/observer-edges-and-mutual-opacity"
+    },
+    {
+      "from": "thermodynamics-ext/fisher-metric",
+      "to": "foundation/observer-level-stack-compactness"
     },
     {
       "from": "thermodynamics-ext/fisher-metric",
       "to": "spacetime/gravitational-constant"
     },
     {
-      "from": "foundation/coherence-lagrangian",
-      "to": "spacetime/gravitational-constant"
+      "from": "thermodynamics-ext/fisher-metric",
+      "to": "thermodynamics-ext/quantum-fisher-metric"
     },
     {
-      "from": "holography/area-scaling",
-      "to": "spacetime/gravitational-constant"
+      "from": "thermodynamics-ext/non-ergodicity",
+      "to": "cosmology/cosmological-arrow"
     },
     {
-      "from": "particles/spin-statistics",
-      "to": "spacetime/gravitational-constant"
+      "from": "thermodynamics-ext/non-ergodicity",
+      "to": "holography/scrambling"
     },
     {
-      "from": "minimal-observer/multiplicity",
-      "to": "spacetime/gravitational-constant"
+      "from": "thermodynamics-ext/non-ergodicity",
+      "to": "thermodynamics-ext/biological-non-ergodicity"
     },
     {
-      "from": "interactions/bootstrap",
-      "to": "spacetime/gravitational-constant"
+      "from": "thermodynamics-ext/quantum-fisher-metric",
+      "to": "foundation/euclidean-coherence-lagrangian"
     },
     {
-      "from": "minimal-observer/multiplicity",
-      "to": "foundation/aperiodic-order"
+      "from": "thermodynamics-ext/quantum-fisher-metric",
+      "to": "foundation/spinor-coherence-lagrangian"
     },
     {
-      "from": "interactions/bootstrap",
-      "to": "foundation/aperiodic-order"
+      "from": "thermodynamics-ext/quantum-fisher-metric",
+      "to": "particles/coherence-bounces"
     },
     {
-      "from": "axioms/coherence-conservation",
-      "to": "foundation/aperiodic-order"
-    },
-    {
-      "from": "minimal-observer/coherence-dual-pairs",
-      "to": "foundation/aperiodic-order"
-    },
-    {
-      "from": "foundation/aperiodic-order",
-      "to": "spacetime/gravitational-constant"
-    },
-    {
-      "from": "thermodynamics/entropy",
-      "to": "thermodynamics-ext/non-ergodicity"
-    },
-    {
-      "from": "thermodynamics/time",
-      "to": "thermodynamics-ext/non-ergodicity"
+      "from": "thermodynamics-ext/renormalization",
+      "to": "cosmology/observer-loop-viability"
     },
     {
       "from": "thermodynamics-ext/renormalization",
       "to": "thermodynamics-ext/non-ergodicity"
     },
     {
-      "from": "interactions/bootstrap",
-      "to": "thermodynamics-ext/non-ergodicity"
-    },
-    {
-      "from": "foundation/aperiodic-order",
-      "to": "thermodynamics-ext/non-ergodicity"
-    },
-    {
-      "from": "thermodynamics-ext/non-ergodicity",
-      "to": "cosmology/cosmological-arrow"
-    },
-    {
-      "from": "thermodynamics-ext/non-ergodicity",
-      "to": "thermodynamics-ext/biological-non-ergodicity"
-    },
-    {
-      "from": "thermodynamics-ext/non-ergodicity",
-      "to": "holography/scrambling"
-    },
-    {
-      "from": "holography/black-hole-entropy",
-      "to": "holography/scrambling"
-    },
-    {
-      "from": "holography/er-epr",
-      "to": "holography/scrambling"
-    },
-    {
-      "from": "holography/information-paradox",
-      "to": "holography/scrambling"
-    },
-    {
-      "from": "cosmology/cyclic-cosmology",
-      "to": "holography/horizon-gauge-shell"
-    },
-    {
-      "from": "holography/area-scaling",
-      "to": "holography/horizon-gauge-shell"
-    },
-    {
-      "from": "axioms/loop-closure",
-      "to": "holography/horizon-gauge-shell"
-    },
-    {
-      "from": "axioms/observer-definition",
-      "to": "holography/horizon-gauge-shell"
-    },
-    {
-      "from": "interactions/bootstrap",
-      "to": "holography/horizon-gauge-shell"
-    },
-    {
-      "from": "thermodynamics/entropy",
-      "to": "thermodynamics-ext/biological-non-ergodicity"
-    },
-    {
-      "from": "minimal-observer/structure",
-      "to": "thermodynamics-ext/biological-non-ergodicity"
-    },
-    {
-      "from": "interactions/bootstrap",
-      "to": "thermodynamics-ext/biological-non-ergodicity"
-    },
-    {
-      "from": "thermodynamics/time",
-      "to": "cosmology/cosmological-arrow"
-    },
-    {
-      "from": "thermodynamics/entropy",
-      "to": "cosmology/cosmological-arrow"
-    },
-    {
-      "from": "interactions/bootstrap",
-      "to": "cosmology/cosmological-arrow"
-    },
-    {
-      "from": "cosmology/observer-loop-viability",
-      "to": "cosmology/cosmological-arrow"
-    },
-    {
-      "from": "cosmology/geometric-inflation",
-      "to": "cosmology/cosmological-arrow"
-    },
-    {
-      "from": "thermodynamics-ext/distinguishability-conservation",
-      "to": "cosmology/dark-energy-equation-of-state"
-    },
-    {
-      "from": "cosmology/observer-loop-viability",
-      "to": "cosmology/dark-energy-equation-of-state"
-    },
-    {
-      "from": "axioms/coherence-conservation",
-      "to": "cosmology/dark-energy-equation-of-state"
-    },
-    {
-      "from": "axioms/loop-closure",
-      "to": "cosmology/dark-energy-equation-of-state"
-    },
-    {
-      "from": "holography/area-scaling",
-      "to": "cosmology/dark-energy-equation-of-state"
-    },
-    {
-      "from": "spacetime/singularity-resolution",
-      "to": "cosmology/dark-energy-equation-of-state"
-    },
-    {
-      "from": "holography/area-scaling",
-      "to": "cosmology/geometric-substrate"
-    },
-    {
-      "from": "holography/causal-set-statistics",
-      "to": "cosmology/geometric-substrate"
-    },
-    {
-      "from": "holography/er-epr",
-      "to": "cosmology/geometric-substrate"
-    },
-    {
-      "from": "cosmology/observer-loop-viability",
-      "to": "cosmology/geometric-substrate"
-    },
-    {
-      "from": "particles/mass-hierarchy",
-      "to": "cosmology/geometric-substrate"
-    },
-    {
-      "from": "minimal-observer/structure",
-      "to": "cosmology/geometric-substrate"
-    },
-    {
-      "from": "interactions/bootstrap",
-      "to": "cosmology/geometric-substrate"
-    },
-    {
-      "from": "foundation/aperiodic-order",
-      "to": "cosmology/geometric-substrate"
-    },
-    {
-      "from": "foundation/coherence-lagrangian",
-      "to": "foundation/continuous-discrete-duality"
-    },
-    {
-      "from": "foundation/aperiodic-order",
-      "to": "foundation/continuous-discrete-duality"
-    },
-    {
-      "from": "thermodynamics-ext/fisher-metric",
-      "to": "foundation/continuous-discrete-duality"
-    },
-    {
-      "from": "axioms/coherence-conservation",
-      "to": "foundation/continuous-discrete-duality"
-    },
-    {
-      "from": "axioms/observer-definition",
-      "to": "foundation/continuous-discrete-duality"
-    },
-    {
-      "from": "axioms/loop-closure",
-      "to": "foundation/continuous-discrete-duality"
-    },
-    {
-      "from": "holography/er-epr",
-      "to": "foundation/continuous-discrete-duality"
-    },
-    {
-      "from": "cosmology/observer-loop-viability",
-      "to": "cosmology/cyclic-cosmology"
-    },
-    {
-      "from": "cosmology/dark-energy-equation-of-state",
-      "to": "cosmology/cyclic-cosmology"
-    },
-    {
-      "from": "cosmology/geometric-substrate",
-      "to": "cosmology/cyclic-cosmology"
-    },
-    {
-      "from": "interactions/relational-invariants",
-      "to": "cosmology/cyclic-cosmology"
-    },
-    {
-      "from": "minimal-observer/multiplicity",
-      "to": "cosmology/cyclic-cosmology"
-    },
-    {
-      "from": "thermodynamics/entropy",
-      "to": "cosmology/cyclic-cosmology"
-    },
-    {
-      "from": "thermodynamics/time",
-      "to": "cosmology/cyclic-cosmology"
-    },
-    {
-      "from": "axioms/loop-closure",
-      "to": "cosmology/cyclic-cosmology"
-    },
-    {
-      "from": "holography/area-scaling",
-      "to": "cosmology/cyclic-cosmology"
-    },
-    {
-      "from": "axioms/loop-closure",
-      "to": "thermodynamics-ext/memory-persistence-tradeoff"
-    },
-    {
-      "from": "interactions/relational-invariants",
-      "to": "thermodynamics-ext/memory-persistence-tradeoff"
-    },
-    {
-      "from": "interactions/bootstrap",
-      "to": "thermodynamics-ext/memory-persistence-tradeoff"
-    },
-    {
-      "from": "minimal-observer/structure",
-      "to": "thermodynamics-ext/memory-persistence-tradeoff"
-    },
-    {
-      "from": "thermodynamics/entropy",
-      "to": "thermodynamics-ext/memory-persistence-tradeoff"
-    },
-    {
-      "from": "interactions/bootstrap",
-      "to": "foundation/knot-theoretic-bootstrap"
-    },
-    {
-      "from": "interactions/bootstrap-division-algebras",
-      "to": "foundation/knot-theoretic-bootstrap"
-    },
-    {
-      "from": "foundation/coherence-lagrangian",
-      "to": "foundation/knot-theoretic-bootstrap"
-    },
-    {
-      "from": "foundation/continuous-discrete-duality",
-      "to": "foundation/knot-theoretic-bootstrap"
-    },
-    {
-      "from": "gauge/electromagnetism",
-      "to": "foundation/knot-theoretic-bootstrap"
-    },
-    {
-      "from": "gauge/strong-cp",
-      "to": "foundation/knot-theoretic-bootstrap"
-    },
-    {
-      "from": "cosmology/coupling-constants",
-      "to": "foundation/knot-theoretic-bootstrap"
-    },
-    {
-      "from": "axioms/observer-definition",
-      "to": "foundation/observer-projected-spacetime"
-    },
-    {
-      "from": "axioms/loop-closure",
-      "to": "foundation/observer-projected-spacetime"
-    },
-    {
-      "from": "minimal-observer/multiplicity",
-      "to": "foundation/observer-projected-spacetime"
-    },
-    {
-      "from": "cosmology/cyclic-cosmology",
-      "to": "foundation/observer-projected-spacetime"
-    },
-    {
-      "from": "holography/horizon-gauge-shell",
-      "to": "foundation/observer-projected-spacetime"
-    },
-    {
-      "from": "cosmology/observer-loop-viability",
-      "to": "foundation/observer-projected-spacetime"
-    },
-    {
-      "from": "foundation/continuous-discrete-duality",
-      "to": "foundation/observer-projected-spacetime"
-    },
-    {
-      "from": "axioms/coherence-conservation",
-      "to": "foundation/observer-holographic-equivalence"
-    },
-    {
-      "from": "axioms/observer-definition",
-      "to": "foundation/observer-holographic-equivalence"
-    },
-    {
-      "from": "axioms/loop-closure",
-      "to": "foundation/observer-holographic-equivalence"
-    },
-    {
-      "from": "holography/area-scaling",
-      "to": "foundation/observer-holographic-equivalence"
-    },
-    {
-      "from": "holography/horizon-gauge-shell",
-      "to": "foundation/observer-holographic-equivalence"
-    },
-    {
-      "from": "thermodynamics-ext/distinguishability-conservation",
-      "to": "foundation/observer-holographic-equivalence"
-    },
-    {
-      "from": "foundation/observer-projected-spacetime",
-      "to": "foundation/observer-holographic-equivalence"
-    },
-    {
-      "from": "interactions/bootstrap",
-      "to": "foundation/observer-holographic-equivalence"
-    },
-    {
-      "from": "axioms/observer-definition",
-      "to": "foundation/minimum-bootstrap-closure"
-    },
-    {
-      "from": "axioms/loop-closure",
-      "to": "foundation/minimum-bootstrap-closure"
-    },
-    {
-      "from": "minimal-observer/structure",
-      "to": "foundation/minimum-bootstrap-closure"
-    },
-    {
-      "from": "minimal-observer/multiplicity",
-      "to": "foundation/minimum-bootstrap-closure"
-    },
-    {
-      "from": "interactions/relational-invariants",
-      "to": "foundation/minimum-bootstrap-closure"
-    },
-    {
-      "from": "interactions/three-types",
-      "to": "foundation/minimum-bootstrap-closure"
-    },
-    {
-      "from": "interactions/bootstrap",
-      "to": "foundation/minimum-bootstrap-closure"
-    },
-    {
-      "from": "foundation/observer-holographic-equivalence",
-      "to": "foundation/minimum-bootstrap-closure"
-    },
-    {
-      "from": "axioms/coherence-conservation",
-      "to": "foundation/observer-level-stack-compactness"
-    },
-    {
-      "from": "axioms/observer-definition",
-      "to": "foundation/observer-level-stack-compactness"
-    },
-    {
-      "from": "minimal-observer/structure",
-      "to": "foundation/observer-level-stack-compactness"
-    },
-    {
-      "from": "holography/area-scaling",
-      "to": "foundation/observer-level-stack-compactness"
-    },
-    {
-      "from": "cosmology/observer-loop-viability",
-      "to": "foundation/observer-level-stack-compactness"
-    },
-    {
-      "from": "thermodynamics-ext/fisher-metric",
-      "to": "foundation/observer-level-stack-compactness"
-    },
-    {
-      "from": "foundation/observer-projected-spacetime",
-      "to": "foundation/observer-level-stack-compactness"
-    },
-    {
-      "from": "foundation/observer-holographic-equivalence",
-      "to": "foundation/observer-level-stack-compactness"
-    },
-    {
-      "from": "axioms/coherence-conservation",
-      "to": "foundation/bootstrap-fixed-point-existence"
-    },
-    {
-      "from": "interactions/bootstrap",
-      "to": "foundation/bootstrap-fixed-point-existence"
-    },
-    {
-      "from": "foundation/observer-level-stack-compactness",
-      "to": "foundation/bootstrap-fixed-point-existence"
-    },
-    {
-      "from": "foundation/minimum-bootstrap-closure",
-      "to": "foundation/bootstrap-fixed-point-existence"
-    },
-    {
-      "from": "foundation/observer-projected-spacetime",
-      "to": "foundation/bootstrap-fixed-point-existence"
-    },
-    {
-      "from": "foundation/observer-holographic-equivalence",
-      "to": "foundation/bootstrap-fixed-point-existence"
-    },
-    {
-      "from": "holography/horizon-gauge-shell",
-      "to": "foundation/knot-theoretic-bootstrap"
-    },
-    {
-      "from": "foundation/observer-projected-spacetime",
-      "to": "foundation/knot-theoretic-bootstrap"
-    },
-    {
-      "from": "foundation/observer-holographic-equivalence",
-      "to": "foundation/knot-theoretic-bootstrap"
-    },
-    {
-      "from": "particles/cpt-theorem",
-      "to": "foundation/knot-theoretic-bootstrap"
-    },
-    {
-      "from": "cosmology/baryogenesis",
-      "to": "cosmology/cosmological-constant"
-    },
-    {
-      "from": "axioms/loop-closure",
-      "to": "interactions/moufang-loop-phase-closure"
-    },
-    {
-      "from": "axioms/observer-definition",
-      "to": "interactions/moufang-loop-phase-closure"
-    },
-    {
-      "from": "minimal-observer/structure",
-      "to": "interactions/moufang-loop-phase-closure"
-    },
-    {
-      "from": "interactions/bootstrap",
-      "to": "interactions/moufang-loop-phase-closure"
-    },
-    {
-      "from": "interactions/bootstrap-division-algebras",
-      "to": "interactions/moufang-loop-phase-closure"
-    },
-    {
-      "from": "foundation/observer-holographic-equivalence",
-      "to": "interactions/moufang-loop-phase-closure"
-    },
-    {
-      "from": "axioms/coherence-conservation",
-      "to": "foundation/observer-as-error-correcting-code"
-    },
-    {
-      "from": "axioms/observer-definition",
-      "to": "foundation/observer-as-error-correcting-code"
-    },
-    {
-      "from": "axioms/loop-closure",
-      "to": "foundation/observer-as-error-correcting-code"
-    },
-    {
-      "from": "foundation/observer-holographic-equivalence",
-      "to": "foundation/observer-as-error-correcting-code"
-    },
-    {
-      "from": "holography/area-scaling",
-      "to": "foundation/observer-as-error-correcting-code"
-    },
-    {
-      "from": "interactions/moufang-loop-phase-closure",
-      "to": "foundation/observer-as-error-correcting-code"
-    },
-    {
-      "from": "minimal-observer/structure",
-      "to": "foundation/observer-as-error-correcting-code"
-    },
-    {
-      "from": "interactions/bootstrap",
-      "to": "foundation/observer-as-error-correcting-code"
-    },
-    {
-      "from": "foundation/observer-as-error-correcting-code",
-      "to": "foundation/substrate-noise-and-profile-coupling"
-    },
-    {
-      "from": "holography/causal-set-statistics",
-      "to": "foundation/substrate-noise-and-profile-coupling"
-    },
-    {
-      "from": "holography/area-scaling",
-      "to": "foundation/substrate-noise-and-profile-coupling"
-    },
-    {
-      "from": "interactions/relational-invariants",
-      "to": "foundation/substrate-noise-and-profile-coupling"
-    },
-    {
-      "from": "gauge/electromagnetism",
-      "to": "foundation/substrate-noise-and-profile-coupling"
-    },
-    {
-      "from": "gauge/weak-interaction",
-      "to": "foundation/substrate-noise-and-profile-coupling"
-    },
-    {
-      "from": "gauge/color-force",
-      "to": "foundation/substrate-noise-and-profile-coupling"
-    },
-    {
-      "from": "axioms/coherence-conservation",
-      "to": "foundation/substrate-noise-and-profile-coupling"
-    },
-    {
-      "from": "interactions/moufang-loop-phase-closure",
-      "to": "foundation/substrate-noise-and-profile-coupling"
-    },
-    {
-      "from": "foundation/substrate-noise-and-profile-coupling",
-      "to": "foundation/formation-and-preservation"
-    },
-    {
-      "from": "foundation/observer-as-error-correcting-code",
-      "to": "foundation/formation-and-preservation"
-    },
-    {
-      "from": "particles/mass-hierarchy",
-      "to": "foundation/formation-and-preservation"
-    },
-    {
-      "from": "foundation/coherence-lagrangian",
-      "to": "foundation/formation-and-preservation"
-    },
-    {
-      "from": "axioms/coherence-conservation",
-      "to": "foundation/formation-and-preservation"
-    },
-    {
-      "from": "foundation/formation-and-preservation",
-      "to": "foundation/error-correction-and-standard-model"
-    },
-    {
-      "from": "foundation/substrate-noise-and-profile-coupling",
-      "to": "foundation/error-correction-and-standard-model"
-    },
-    {
-      "from": "foundation/observer-as-error-correcting-code",
-      "to": "foundation/error-correction-and-standard-model"
-    },
-    {
-      "from": "particles/mass-hierarchy",
-      "to": "foundation/error-correction-and-standard-model"
-    },
-    {
-      "from": "particles/three-generations",
-      "to": "foundation/error-correction-and-standard-model"
-    },
-    {
-      "from": "gauge/confinement",
-      "to": "foundation/error-correction-and-standard-model"
-    },
-    {
-      "from": "interactions/moufang-loop-phase-closure",
-      "to": "foundation/error-correction-and-standard-model"
-    },
-    {
-      "from": "foundation/coherence-lagrangian",
-      "to": "foundation/observer-pattern-signal"
-    },
-    {
-      "from": "axioms/observer-definition",
-      "to": "foundation/observer-pattern-signal"
-    },
-    {
-      "from": "particles/mass-hierarchy",
-      "to": "foundation/observer-pattern-signal"
+      "from": "thermodynamics/action-planck",
+      "to": "foundation/coherence-lagrangian"
     },
     {
       "from": "thermodynamics/action-planck",
       "to": "foundation/observer-pattern-signal"
     },
     {
-      "from": "foundation/observer-as-error-correcting-code",
-      "to": "foundation/observer-pattern-signal"
+      "from": "thermodynamics/action-planck",
+      "to": "holography/area-scaling"
     },
     {
-      "from": "foundation/observer-pattern-signal",
-      "to": "foundation/observer-edges-and-mutual-opacity"
+      "from": "thermodynamics/action-planck",
+      "to": "spacetime/gravitational-constant"
     },
     {
-      "from": "foundation/observer-holographic-equivalence",
-      "to": "foundation/observer-edges-and-mutual-opacity"
+      "from": "thermodynamics/action-planck",
+      "to": "spacetime/speed-of-light"
     },
     {
-      "from": "axioms/observer-definition",
-      "to": "foundation/observer-edges-and-mutual-opacity"
+      "from": "thermodynamics/action-planck",
+      "to": "thermodynamics-ext/biological-non-ergodicity"
     },
     {
-      "from": "particles/mass-hierarchy",
-      "to": "foundation/observer-edges-and-mutual-opacity"
+      "from": "thermodynamics/action-planck",
+      "to": "thermodynamics-ext/first-law"
     },
     {
-      "from": "thermodynamics-ext/fisher-metric",
-      "to": "foundation/observer-edges-and-mutual-opacity"
+      "from": "thermodynamics/action-planck",
+      "to": "thermodynamics-ext/fisher-metric"
     },
     {
-      "from": "thermodynamics-ext/distinguishability-conservation",
-      "to": "foundation/observer-edges-and-mutual-opacity"
+      "from": "thermodynamics/action-planck",
+      "to": "thermodynamics-ext/renormalization"
     },
     {
-      "from": "foundation/observer-pattern-signal",
-      "to": "foundation/profile-dependent-edges-and-confinement"
+      "from": "thermodynamics/entropy",
+      "to": "cosmology/cosmological-arrow"
     },
     {
-      "from": "foundation/observer-edges-and-mutual-opacity",
-      "to": "foundation/profile-dependent-edges-and-confinement"
+      "from": "thermodynamics/entropy",
+      "to": "cosmology/cyclic-cosmology"
     },
     {
-      "from": "gauge/confinement",
-      "to": "foundation/profile-dependent-edges-and-confinement"
+      "from": "thermodynamics/entropy",
+      "to": "cosmology/observer-loop-viability"
     },
     {
-      "from": "foundation/substrate-noise-and-profile-coupling",
-      "to": "foundation/profile-dependent-edges-and-confinement"
+      "from": "thermodynamics/entropy",
+      "to": "thermodynamics-ext/biological-non-ergodicity"
     },
     {
-      "from": "gauge/color-force",
-      "to": "foundation/profile-dependent-edges-and-confinement"
+      "from": "thermodynamics/entropy",
+      "to": "thermodynamics-ext/first-law"
     },
     {
-      "from": "foundation/observer-pattern-signal",
-      "to": "foundation/formation-and-preservation"
+      "from": "thermodynamics/entropy",
+      "to": "thermodynamics-ext/fisher-metric"
     },
     {
-      "from": "foundation/observer-edges-and-mutual-opacity",
-      "to": "foundation/formation-and-preservation"
+      "from": "thermodynamics/entropy",
+      "to": "thermodynamics-ext/memory-persistence-tradeoff"
     },
     {
-      "from": "foundation/profile-dependent-edges-and-confinement",
-      "to": "foundation/formation-and-preservation"
+      "from": "thermodynamics/entropy",
+      "to": "thermodynamics-ext/non-ergodicity"
+    },
+    {
+      "from": "thermodynamics/entropy",
+      "to": "thermodynamics-ext/renormalization"
+    },
+    {
+      "from": "thermodynamics/time",
+      "to": "cosmology/cosmological-arrow"
+    },
+    {
+      "from": "thermodynamics/time",
+      "to": "cosmology/cyclic-cosmology"
+    },
+    {
+      "from": "thermodynamics/time",
+      "to": "quantum/born-rule"
+    },
+    {
+      "from": "thermodynamics/time",
+      "to": "quantum/observer-relative-objectivity"
+    },
+    {
+      "from": "thermodynamics/time",
+      "to": "quantum/sheaf-section-uniqueness"
+    },
+    {
+      "from": "thermodynamics/time",
+      "to": "thermodynamics-ext/biological-non-ergodicity"
+    },
+    {
+      "from": "thermodynamics/time",
+      "to": "thermodynamics-ext/non-ergodicity"
+    },
+    {
+      "from": "thermodynamics/time",
+      "to": "thermodynamics/action-planck"
+    },
+    {
+      "from": "thermodynamics/time",
+      "to": "thermodynamics/entropy"
     }
   ]
 }
