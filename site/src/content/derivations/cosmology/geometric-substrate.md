@@ -145,15 +145,15 @@ The electron's epistemic horizon ($\sim 10^{43}$ bits, from [Observer Loop Viabi
 
 ### Step 6: Dual Saturation from the Substrate Perspective
 
-**Proposition 6.1 (Substrate perspective on double saturation).** *The double-saturation boundary condition ([Observer Loop Viability](/derivations/cosmology/observer-loop-viability), Conjecture 8.9) has a natural interpretation in the substrate picture:*
+**Proposition 6.1 (Substrate perspective on endpoint saturation).** *The gravitationally-saturated endpoints of the bootstrap hierarchy ([Observer Loop Viability](/derivations/cosmology/observer-loop-viability), preamble to Conjectures 8.9a–8.9b) have a natural interpretation in the substrate picture:*
 
 **(i) Bottom saturation (Planck).** *Each substrate element is at maximum information density — 1 bit per Planck cell, the holographic bound saturated. The substrate cannot be packed more densely without forming black holes. This is the maximum substrate density.*
 
 **(ii) Top saturation (cosmological).** *The total substrate fills the cosmological horizon to its gravitational collapse limit: the enclosed mass $M_H = c^2 R_H/(2G)$ has Schwarzschild radius $R_S = R_H$. The substrate cannot be larger without collapsing.*
 
-**(iii) The bridge.** *Between these two saturated endpoints, the SM particle content (determined by the division algebra chain) crystallizes a specific fraction of the substrate. The crystallization fraction $\Omega_m$ is determined by the particle content, and $C_0$ is whatever value makes the saturated substrate self-consistent with the observed crystallization.*
+**(iii) The bridge.** *Between these two unconditionally-saturated endpoints, the SM particle content (determined by the division algebra chain) crystallizes a specific fraction of the substrate. The topological contribution (Conjecture 8.9a) is SM-determined and bounded at $O(10^2)$ bits; the structural contribution (Conjecture 8.9b) is epoch-conditional, dominating the observed $\sum \Delta c_n$ and scaling with composite density $\times$ horizon volume in a way that requires an explicit cosmic-epoch selection principle to pin.*
 
-*The fixed-point equation from Conjecture 8.9 becomes: how much substrate must exist so that the SM crystallization, operating between Planck density (bottom) and horizon saturation (top), produces a self-consistent geometry?* $\square$
+*In the substrate picture, the residual question is: at which cosmic epoch is $\Omega_m$ evaluated, and how much substrate does the current observer-accessible horizon contain? Both are framework-open (the former is Conjecture 8.9b's cosmic-epoch selection requirement; the latter is the per-observer $C_0$ budget of Proposition 7.4).* $\square$
 
 **Proposition 6.2 (Holographic bound on crystallization).** *The crystallized coherence cannot exceed the substrate coherence: $\sum \Delta c_n \leq S_H$. This follows from the holographic bound — the information content of matter within the horizon cannot exceed the horizon entropy. In substrate language: you cannot crystallize more coherence than the fabric contains.*
 

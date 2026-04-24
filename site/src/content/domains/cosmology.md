@@ -144,7 +144,7 @@ This is a framework-native cyclic cosmology: complexification &rarr; dissolution
 
 ## What's Honestly Open
 
-**The value of $\Lambda$**: The numerical value depends on the total coherence budget $C_0$, which is boundary data. The double-saturation conjecture (Conjecture 8.9) identifies the structural condition that would determine $C_0$, but proving it requires the geometry functor program &mdash; a major open target.
+**The value of $\Lambda$**: The numerical value depends on the total coherence budget $C_0$, which is boundary data. Conjectures 8.9a&ndash;8.9b of [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) split the bridge-determination question into a topological part (SM-determined in principle, $O(10^2)$ bits, negligible vs $S_H \sim 10^{122}$) and a structural part (epoch-conditional, dominates the budget). Determining the current-epoch value of $\Lambda$ requires both the geometry functor program and a framework-intrinsic cosmic-epoch selection principle &mdash; a major open target.
 
 **Quantitative $\eta_B$**: The Standard Model sphaleron rate gives $\eta_B$ too small by $\sim 8$ orders of magnitude. Leptogenesis fixes this, but the precise value depends on heavy neutrino masses and CP phases that are not yet computed from first principles.
 

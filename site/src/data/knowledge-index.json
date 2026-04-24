@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-23T03:10:08.083Z",
+    "generatedAt": "2026-04-24T03:24:46.585Z",
     "derivationCount": 95,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -412,6 +412,10 @@
           {
             "source": "cosmology/observer-loop-viability",
             "context": "Coherence Conservation"
+          },
+          {
+            "source": "cosmology/observer-loop-viability",
+            "context": "0.5, 1)$ (via the holographic upper bound $\\sum \\Delta c_n \\leq S_H$), consisten"
           },
           {
             "source": "foundation/coherence-lagrangian",
@@ -3361,8 +3365,8 @@
         {
           "type": "Proposition",
           "id": "6.1",
-          "name": "Substrate perspective on double saturation",
-          "statementPreview": "The double-saturation boundary condition ([Observer Loop Viability](/derivations/cosmology/observer-loop-viability), ..."
+          "name": "Substrate perspective on endpoint saturation",
+          "statementPreview": "The gravitationally-saturated endpoints of the bootstrap hierarchy ([Observer Loop Viability](/derivations/cosmology/..."
         },
         {
           "type": "Proposition",
@@ -3984,7 +3988,7 @@
         {
           "number": 5,
           "title": "Continuous-discrete fixed point and quantitative $\\Lambda$",
-          "description": "Step 8 defines the level-indexed quantities (Lambdaneff, S(n)) and the cross-level consistency constraint (Proposition 8.3). Conjecture 8.9 identifies the boundary condition (double saturation). [Cont"
+          "description": "Step 8 defines the level-indexed quantities (Lambdaneff, S(n)) and the cross-level consistency constraint (Proposition 8.3). Conjectures 8.9a–8.9b split the bridge-determination question into a topolo"
         }
       ],
       "assessmentVerdict": "Rigorous. The core results form a rigorous chain: the geometric upper bound (Theorem 2.1) follows from the Planck cutoff and de Sitter geometry; bounce dissolution (Theorem 4.1) follows from divergent effective pressure exceeding any finite observer energy; the lower sign bound (Theorem 5.4) follows",
@@ -4106,6 +4110,10 @@
           {
             "target": "particles/mass-hierarchy",
             "context": "Step 7"
+          },
+          {
+            "target": "axioms/coherence-conservation",
+            "context": "0.5, 1)$ (via the holographic upper bound $\\sum \\Delta c_n \\leq S_H$), consisten"
           },
           {
             "target": "thermodynamics/time",
@@ -5706,6 +5714,10 @@
           {
             "target": "cosmology/observer-loop-viability",
             "context": "Observer Loop Viability"
+          },
+          {
+            "target": "holography/black-hole-entropy",
+            "context": "Black Hole Entropy"
           }
         ],
         "incoming": [
@@ -12894,6 +12906,10 @@
         ],
         "incoming": [
           {
+            "source": "foundation/continuous-discrete-duality",
+            "context": "Black Hole Entropy"
+          },
+          {
             "source": "holography/area-scaling",
             "context": "Black Hole Entropy"
           },
@@ -12907,6 +12923,10 @@
           },
           {
             "source": "holography/scrambling",
+            "context": "Black Hole Entropy"
+          },
+          {
+            "source": "interactions/bootstrap",
             "context": "Black Hole Entropy"
           }
         ]
@@ -14751,7 +14771,7 @@
         {
           "number": 4,
           "title": "Fixed-point uniqueness",
-          "description": "Proving Conjecture 7.2 requires a contraction argument or a rigidity result showing the constraints from Axiom 1 (conditions C1–C5) plus the three axioms admit only one self-consistent solution."
+          "description": "Proving Conjecture 7.2 requires a contraction argument or a rigidity result showing the constraints from Axiom 1 (conditions C1–C5) plus the three axioms admit only one self-consistent solution. *Hori"
         },
         {
           "number": 5,
@@ -14850,6 +14870,10 @@
           {
             "target": "spacetime/gravitational-constant",
             "context": "Gravitational Coupling"
+          },
+          {
+            "target": "holography/black-hole-entropy",
+            "context": "Black Hole Entropy"
           },
           {
             "target": "cosmology/observer-loop-viability",
@@ -28875,7 +28899,7 @@
       "derivationId": "cosmology/geometric-substrate",
       "type": "Proposition",
       "id": "6.1",
-      "name": "Substrate perspective on double saturation",
+      "name": "Substrate perspective on endpoint saturation",
       "fullRef": "cosmology/geometric-substrate:Proposition 6.1"
     },
     {
@@ -37558,7 +37582,7 @@
       "derivationStatus": "provisional",
       "number": 5,
       "title": "Continuous-discrete fixed point and quantitative $\\Lambda$",
-      "description": "Step 8 defines the level-indexed quantities (Lambdaneff, S(n)) and the cross-level consistency constraint (Proposition 8.3). Conjecture 8.9 identifies the boundary condition (double saturation). [Cont"
+      "description": "Step 8 defines the level-indexed quantities (Lambdaneff, S(n)) and the cross-level consistency constraint (Proposition 8.3). Conjectures 8.9a–8.9b split the bridge-determination question into a topolo"
     },
     {
       "derivationId": "dimensions/three-dimensions",
@@ -38713,7 +38737,7 @@
       "derivationStatus": "derived",
       "number": 4,
       "title": "Fixed-point uniqueness",
-      "description": "Proving Conjecture 7.2 requires a contraction argument or a rigidity result showing the constraints from Axiom 1 (conditions C1–C5) plus the three axioms admit only one self-consistent solution."
+      "description": "Proving Conjecture 7.2 requires a contraction argument or a rigidity result showing the constraints from Axiom 1 (conditions C1–C5) plus the three axioms admit only one self-consistent solution. *Hori"
     },
     {
       "derivationId": "interactions/bootstrap",
