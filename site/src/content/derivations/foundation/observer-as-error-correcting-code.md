@@ -6,7 +6,7 @@ enablesDerivation: []
 tags: ["foundation", "error-correction", "holography", "topology"]
 summary: "The observer-projection is a completely positive trace-preserving map from the continuous substrate Hilbert space to the observer's state space, factoring through an integer-invariant profile on three orthogonal axes — spatial (null horizon), temporal (loop closures), and algebraic (bootstrap-scale homotopy classes). The observer is identified with the interior of the code space cut out by these stabilizer-like constraints rather than with any individual codeword: a dual framing that unifies the time-like and space-like holographic theses of Observer Holographic Equivalence as orthogonal slices through the same object. The code family is a tensor product of three established quantum-information code families — HaPPY holographic on the spatial axis (exterior cancellation as subregion duality, horizon mode count as boundary-qubit count), Kitaev topological on the algebraic axis (homotopy-class logical qubits at the bootstrap-level gauge group), and continuous-time Floquet on the temporal axis (Axiom 3 periodic schedule with integer tick count as the dynamically generated logical invariant). The three factors compose under a pairwise-commuting stabilizer condition, and the cross-axis couplings (horizon area fixes spatial qubit count, bootstrap level fixes algebraic target group, observer period fixes Floquet cycle) are framework-specific and novel as a unified family."
 rigorLevel: "semi-formal"
-lastUpdated: 2026-04-19
+lastUpdated: 2026-04-23
 ---
 
 ## Overview
@@ -141,7 +141,7 @@ $$\mathcal{H}_A \;=\; \mathcal{C}_A / \sim_{\mathrm{gauge}}$$
 
 *Proof.* Thesis A parameterizes by $\phi_\tau$ for $\tau \in [0, k_A T_A]$ with integer-tick endpoints (Proposition 1.2) — the temporal slice. Thesis A' parameterizes by the configuration on a Cauchy slice $\Xi$ with horizon endpoint $\partial M_A$ integer-crossing-stable (Proposition 1.1) — the spatial slice. Both parameterize $\mathcal{H}_A$ by Theorem 3.2. $\square$
 
-**Corollary 3.5 (Finite capacity as 4-volume of slack).** *An observer's finite information capacity is the 4-volume of the code-space interior $\mathcal{H}_A$: the product of continuous slack across all three axes bounded by their integer configurations. A minimal observer has minimal slack (collapsed to $S^1$); an electron has substantial slack on all three axes (dominated by the spatial-axis contribution $\sim 2^{N_A}$); a black hole saturates the spatial axis at its horizon area.*
+**Corollary 3.5 (Finite capacity as 4-volume of slack).** *An observer's finite information capacity is the 4-volume of the code-space interior $\mathcal{H}_A$: the product of continuous slack across all three axes bounded by their integer configurations. A minimal observer has minimal slack (collapsed to $S^1$); an electron has substantial slack on all three axes (dominated by the spatial-axis contribution $\sim 2^{N_A}$); a black hole saturates the spatial axis at its horizon area. The spatial-axis logical-qubit count $N_A = A/(4\ell_P^2)$ is the numerator of the code rate of Corollary 4.1.1 below.*
 
 ### Code family identification
 
@@ -156,6 +156,33 @@ Each of the three integer-stable axes, considered individually, is isomorphic in
 - *Complementary recovery* and *operator pushing* follow from the tensor-network structure of the holographic encoding; their explicit framework forms are stated as open gaps.
 
 Boundary-qubit count: each null-generator crossing of $\partial M_A$ records one integer, so the horizon carries $N_A = A_A/4\ell_P^2$ bits ([Area Scaling](/derivations/holography/area-scaling) Theorem 5.2). $\square$
+
+**Corollary 4.1.1 (Spatial-axis code rate).** *The spatial-axis factor of $\mathcal{P}_A$ has code rate*
+
+$$R_{\mathrm{sp}} \;=\; \frac{k_{\mathrm{sp}}}{n_{\mathrm{sp}}} \;=\; \frac{A_A/(4\ell_P^2)}{A_A/\ell_P^2} \;=\; \frac{1}{4},$$
+
+*with physical- and logical-qubit counts*
+
+- *$n_{\mathrm{sp}} = A_A/\ell_P^2$ — the count of minimal-observer-loop positions on the horizon, one per Planck cell ([Area Scaling](/derivations/holography/area-scaling) Proposition 2.1 and Corollary 2.2);*
+- *$k_{\mathrm{sp}} = A_A/(4\ell_P^2) = N_A$ — the count of independent relational-invariant crossings of the horizon accessible to external observers, equivalently the boundary-qubit count $N_A$ of Proposition 4.1 above, equivalently the saturated Bekenstein-Hawking entropy of [Black Hole Entropy](/derivations/holography/black-hole-entropy) Theorem 3.1, equivalently the gravitational-stability-bounded information content of [Area Scaling](/derivations/holography/area-scaling) Theorem 5.1.*
+
+*Proof.* The physical-qubit count $n_{\mathrm{sp}}$ is the count of substrate positions at which a minimal observer loop can be placed on the horizon. [Area Scaling](/derivations/holography/area-scaling) Proposition 2.1 establishes that each such loop occupies cross-sectional area $\ell_P^2$; Corollary 2.2 of the same derivation establishes that the horizon $\partial M_A$ therefore supports at most $A_A/\ell_P^2$ independent minimal-observer-loop positions — the framework's natural physical-substrate count on the spatial axis.
+
+The logical-qubit count $k_{\mathrm{sp}}$ is the count of independent bits of horizon-accessible coherence content after the gravitational-stability constraint fixes the effective area per bit at $4\ell_P^2$ ([Area Scaling](/derivations/holography/area-scaling) Theorem 5.1). Three framework identifications agree on this count: (i) the HaPPY boundary-qubit count $N_A$ of Proposition 4.1 above, (ii) the saturated Bekenstein-Hawking entropy of [Black Hole Entropy](/derivations/holography/black-hole-entropy) Theorem 3.1, and (iii) the holographic-bound coefficient of [Area Scaling](/derivations/holography/area-scaling) Theorem 5.1. All three give $k_{\mathrm{sp}} = A_A/(4\ell_P^2)$.
+
+The ratio $k_{\mathrm{sp}}/n_{\mathrm{sp}} = 1/4$ is the code rate. $\square$
+
+**Remark 4.1.2 (Structural unification of three derivations of $1/4$).** *The coefficient $1/4$ appears three times in the framework, derived three separate ways:*
+
+1. *[Area Scaling](/derivations/holography/area-scaling) Theorem 5.1: $S_{\max} = A/(4\ell_P^2)$, via a gravitational-stability constraint on information readout (effective area per bit $= 4\ell_P^2$).*
+2. *[Black Hole Entropy](/derivations/holography/black-hole-entropy) Proposition 5.1: $S_{BH} = A/(4\ell_P^2)$, via thermodynamic integration with the Hawking temperature of a Schwarzschild horizon.*
+3. *[Causal Set Statistics](/derivations/holography/causal-set-statistics) Heuristic 2.3: $\alpha_H = 1/4$ as the natural target for the holographic-noise amplitude, via holographic coarse-graining over relational-invariant bits in a causal-diamond boundary calculation (cross-referenced in [Holographic Noise](/predictions/holographic-noise) Step 3).*
+
+*Corollary 4.1.1 identifies all three occurrences with a single structural quantity — the code rate of the observer's spatial-axis factor of $\mathcal{P}_A$. Under this reading the factor of $4$ is the substrate-to-code redundancy: four Planck-cell loop positions on the substrate side are required to encode one independent bit of horizon-accessible coherence content on the profile side. The holographic-bound coefficient (view 1), the Bekenstein-Hawking coefficient (view 2), and the natural target for holographic noise (view 3) are three views of the same QEC invariant of $\mathcal{P}_A$.*
+
+*Scope of the identification.* *Corollary 4.1.1 does not independently derive the value $4\ell_P^2$ of the effective area per bit — it inherits this value from the gravitational-stability argument of [Area Scaling](/derivations/holography/area-scaling) Theorem 5.1, which uses Schwarzschild-specific input (the relation $R_S = 2GM/c^2$ and the Hawking temperature of the Schwarzschild horizon). The identification is a reframing: the same numerical content is now recognized as a structural invariant of the observer-projection code rather than as a separate coefficient in each of the three derivations. A geometry-independent derivation of the code rate from the QEC structure alone — which would extend the identification to Kerr and Reissner-Nordström outer horizons, closing [Black Hole Entropy](/derivations/holography/black-hole-entropy) Open Gap 3, and would make the three-way unification fully independent of Schwarzschild input — is tracked as Open Gap 7 below.*
+
+*Remark on extension to the other two axes.* *Corollary 4.1.1 is stated for the spatial-axis factor only. The composite code rate of $\mathcal{P}_A$ (over all three axes) would require separately computing the temporal-axis Floquet-factor rate and the algebraic-axis Kitaev-factor rate; the spatial-axis rate is the only one of the three whose physical- and logical-qubit counts follow directly from existing framework content via area bookkeeping.*
 
 **Proposition 4.2 (Algebraic axis as Kitaev topological code).** *The algebraic-axis factor of $\mathcal{P}_A$ is a Kitaev topological code (Kitaev 2003, "Fault-tolerant quantum computation by anyons") with homotopy-class logical qubits at the bootstrap-level gauge group.*
 
@@ -213,6 +240,8 @@ $$\mathcal{C}_A \;=\; \{|\psi\rangle \in \mathcal{H}_{\mathrm{substrate}} : S|\p
 
 **C6. The observer-projection code is the formal object on which downstream error-correction derivations operate.** [Substrate Noise and Profile-Dependent Coupling](#) (noise mechanics, Planck-cell error rates, and profile-specific coupling modulation), [Formation and Preservation as Complementary Mechanisms](#) (the relationship between code preservation and Mass Hierarchy's WKB tunneling), and [Error Correction and the Standard Model Spectrum](#) (systematic compatibility audit) all take the code structure derived here as input.
 
+**C7. The $1/4$ coefficient is the spatial-axis code rate.** Corollary 4.1.1 identifies the coefficient $1/4$ appearing in the holographic entropy bound ([Area Scaling](/derivations/holography/area-scaling) Theorem 5.1), the Bekenstein-Hawking entropy ([Black Hole Entropy](/derivations/holography/black-hole-entropy) Proposition 5.1), and the holographic-noise natural target ([Causal Set Statistics](/derivations/holography/causal-set-statistics) Heuristic 2.3) as a single structural quantity — the substrate-to-code redundancy of the observer's spatial-axis factor of $\mathcal{P}_A$: four Planck-cell loop positions per encoded bit of horizon-accessible coherence content.
+
 ## Rigor Assessment
 
 **Rigorous (consolidation inheriting from source derivations and standard QEC):**
@@ -220,6 +249,7 @@ $$\mathcal{C}_A \;=\; \{|\psi\rangle \in \mathcal{H}_{\mathrm{substrate}} : S|\p
 - Propositions 1.1–1.3 (three axes of integer content): direct application of existing framework theorems.
 - Theorem 2.3 (CPTP factorization): structurally forced by Axiom 1 (coherence conservation as CPTP) + integer-axis projections.
 - Propositions 4.1–4.3 (per-axis code-family identifications): structural-correspondence arguments grounded in defining properties of each target family.
+- Corollary 4.1.1 (spatial-axis code rate): direct bookkeeping on two established framework counts — the Planck-cell physical count of [Area Scaling](/derivations/holography/area-scaling) Corollary 2.2 and the gravitational-stability-bounded logical count of [Area Scaling](/derivations/holography/area-scaling) Theorem 5.1. The identification inherits the Schwarzschild-specific input of Theorem 5.1 (see Remark 4.1.2 and Open Gap 7 for the geometry-independent goal).
 
 **Semi-formal (stated structurally but not explicitly constructed):**
 
@@ -246,6 +276,8 @@ $$\mathcal{C}_A \;=\; \{|\psi\rangle \in \mathcal{H}_{\mathrm{substrate}} : S|\p
 5. **Category-theoretic moduli quotient.** Theorem 3.2 identifies $\mathcal{H}_A$ with a moduli space under three gauge equivalences. A rigorous category-theoretic formulation would specify the site (observer category or substrate-lift), the gauge groupoid acting on substrate configurations, and the observer state space as an associated stack. *Difficulty: MODERATE-HARD.*
 
 6. **Explicit verification of pairwise commutation on generators.** Given Gaps 2 and 3 (explicit HaPPY and Walker–Wang generators), verify directly that the three stabilizer groups pairwise commute on the substrate Hilbert space. Structural argument for commutation is given in Theorem 5.1; explicit generator-level verification is desirable. *Difficulty: MODERATE; prerequisite is Gaps 2–3.*
+
+7. **Geometry-independent derivation of the spatial-axis code rate.** Corollary 4.1.1 identifies the $1/4$ coefficient as the code rate $R_{\mathrm{sp}} = k_{\mathrm{sp}}/n_{\mathrm{sp}}$ of the spatial-axis factor of $\mathcal{P}_A$ but inherits the factor-$4$ substrate-to-code redundancy from the Schwarzschild-specific gravitational-stability argument of [Area Scaling](/derivations/holography/area-scaling) Theorem 5.1. A geometry-independent derivation of the rate from the observer-projection code structure alone — without routing through Schwarzschild thermodynamics — would extend the identification to Kerr and Reissner-Nordström outer horizons, closing [Black Hole Entropy](/derivations/holography/black-hole-entropy) Open Gap 3, and would make the three-way unification of Remark 4.1.2 fully independent of Schwarzschild input. Candidate route: use the isometric bulk-to-boundary encoding property of the HaPPY family (Proposition 4.1 structural argument) with the minimal-observer-loop area of [Area Scaling](/derivations/holography/area-scaling) Proposition 2.1 as the physical-qubit area and a QEC-structural argument for the $4\ell_P^2$ logical-qubit effective area. *Difficulty: MODERATE-HARD.*
 
 ## References and further reading
 

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-24T03:24:46.585Z",
+    "generatedAt": "2026-04-24T03:54:29.488Z",
     "derivationCount": 95,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -14,8 +14,8 @@
     "derivationCount": 95,
     "predictionCount": 12,
     "edgeCount": 364,
-    "formalObjectCount": 1380,
-    "openGapCount": 334,
+    "formalObjectCount": 1381,
+    "openGapCount": 335,
     "upgradeEligibleCount": 0,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -6899,7 +6899,7 @@
         "topology"
       ],
       "summary": "The observer-projection is a completely positive trace-preserving map from the continuous substrate Hilbert space to the observer's state space, factoring through an integer-invariant profile on three orthogonal axes — spatial (null horizon), temporal (loop closures), and algebraic (bootstrap-scale homotopy classes). The observer is identified with the interior of the code space cut out by these stabilizer-like constraints rather than with any individual codeword: a dual framing that unifies the time-like and space-like holographic theses of Observer Holographic Equivalence as orthogonal slices through the same object. The code family is a tensor product of three established quantum-information code families — HaPPY holographic on the spatial axis (exterior cancellation as subregion duality, horizon mode count as boundary-qubit count), Kitaev topological on the algebraic axis (homotopy-class logical qubits at the bootstrap-level gauge group), and continuous-time Floquet on the temporal axis (Axiom 3 periodic schedule with integer tick count as the dynamically generated logical invariant). The three factors compose under a pairwise-commuting stabilizer condition, and the cross-axis couplings (horizon area fixes spatial qubit count, bootstrap level fixes algebraic target group, observer period fixes Floquet cycle) are framework-specific and novel as a unified family.",
-      "lastUpdated": "2026-04-19",
+      "lastUpdated": "2026-04-23",
       "dependsOn": [
         "axioms/coherence-conservation",
         "axioms/observer-definition",
@@ -6986,6 +6986,12 @@
           "statementPreview": "The spatial-axis factor of PA is a HaPPY holographic code (Pastawski–Yoshida–Harlow–Preskill 2015, \"Holographic quant..."
         },
         {
+          "type": "Corollary",
+          "id": "4.1.1",
+          "name": "Spatial-axis code rate",
+          "statementPreview": "The spatial-axis factor of PA has code rate*"
+        },
+        {
           "type": "Proposition",
           "id": "4.2",
           "name": "Algebraic axis as Kitaev topological code",
@@ -7047,6 +7053,11 @@
           "number": 6,
           "title": "Explicit verification of pairwise commutation on generators.",
           "description": "Given Gaps 2 and 3 (explicit HaPPY and Walker–Wang generators), verify directly that the three stabilizer groups pairwise commute on the substrate Hilbert space. Structural argument for commutation is"
+        },
+        {
+          "number": 7,
+          "title": "Geometry-independent derivation of the spatial-axis code rate.",
+          "description": "Corollary 4.1.1 identifies the 1/4 coefficient as the code rate Rsp = ksp/nsp of the spatial-axis factor of PA but inherits the factor-4 substrate-to-code redundancy from the Schwarzschild-specific gr"
         }
       ],
       "assessmentVerdict": "",
@@ -7098,6 +7109,14 @@
             "context": "Minimal Observer Structure"
           },
           {
+            "target": "holography/black-hole-entropy",
+            "context": "Black Hole Entropy"
+          },
+          {
+            "target": "holography/causal-set-statistics",
+            "context": "Causal Set Statistics"
+          },
+          {
             "target": "interactions/moufang-loop-phase-closure",
             "context": "0, T_A)$. The code space $\\mathcal{C}_A$ is their joint fixed subspace:*\n\n$$\\mat"
           },
@@ -7129,6 +7148,14 @@
           },
           {
             "source": "foundation/substrate-noise-and-profile-coupling",
+            "context": "Observer as an Error-Correcting Code"
+          },
+          {
+            "source": "holography/black-hole-entropy",
+            "context": "Observer as an Error-Correcting Code"
+          },
+          {
+            "source": "holography/causal-set-statistics",
             "context": "Observer as an Error-Correcting Code"
           }
         ]
@@ -12900,6 +12927,10 @@
             "context": "Hawking Radiation"
           },
           {
+            "target": "foundation/observer-as-error-correcting-code",
+            "context": "Observer as an Error-Correcting Code"
+          },
+          {
             "target": "spacetime/gravity",
             "context": "Theorem 4.3"
           }
@@ -12907,6 +12938,10 @@
         "incoming": [
           {
             "source": "foundation/continuous-discrete-duality",
+            "context": "Black Hole Entropy"
+          },
+          {
+            "source": "foundation/observer-as-error-correcting-code",
             "context": "Black Hole Entropy"
           },
           {
@@ -13134,6 +13169,14 @@
             "context": "Fisher Information Metric"
           },
           {
+            "target": "foundation/observer-as-error-correcting-code",
+            "context": "Observer as an Error-Correcting Code"
+          },
+          {
+            "target": "minimal-observer/structure",
+            "context": "Minimal Observer Structure"
+          },
+          {
             "target": "axioms/loop-closure",
             "context": "Loop Closure"
           }
@@ -13145,6 +13188,10 @@
           },
           {
             "source": "cosmology/geometric-substrate",
+            "context": "Causal Set Statistics"
+          },
+          {
+            "source": "foundation/observer-as-error-correcting-code",
             "context": "Causal Set Statistics"
           },
           {
@@ -16949,6 +16996,10 @@
           {
             "source": "holography/black-hole-entropy",
             "context": "0, 2\\pi)$ and conserved charge $Q$ ([Minimal Observer Structure"
+          },
+          {
+            "source": "holography/causal-set-statistics",
+            "context": "Minimal Observer Structure"
           },
           {
             "source": "interactions/bootstrap-division-algebras",
@@ -30248,6 +30299,13 @@
     },
     {
       "derivationId": "foundation/observer-as-error-correcting-code",
+      "type": "Corollary",
+      "id": "4.1.1",
+      "name": "Spatial-axis code rate",
+      "fullRef": "foundation/observer-as-error-correcting-code:Corollary 4.1.1"
+    },
+    {
+      "derivationId": "foundation/observer-as-error-correcting-code",
       "type": "Proposition",
       "id": "4.2",
       "name": "Algebraic axis as Kitaev topological code",
@@ -37989,6 +38047,13 @@
       "number": 6,
       "title": "Explicit verification of pairwise commutation on generators.",
       "description": "Given Gaps 2 and 3 (explicit HaPPY and Walker–Wang generators), verify directly that the three stabilizer groups pairwise commute on the substrate Hilbert space. Structural argument for commutation is"
+    },
+    {
+      "derivationId": "foundation/observer-as-error-correcting-code",
+      "derivationStatus": "provisional",
+      "number": 7,
+      "title": "Geometry-independent derivation of the spatial-axis code rate.",
+      "description": "Corollary 4.1.1 identifies the 1/4 coefficient as the code rate Rsp = ksp/nsp of the spatial-axis factor of PA but inherits the factor-4 substrate-to-code redundancy from the Schwarzschild-specific gr"
     },
     {
       "derivationId": "foundation/observer-edges-and-mutual-opacity",

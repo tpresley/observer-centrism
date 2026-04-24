@@ -112,6 +112,8 @@ $$S = \frac{k_B c^3 A}{4 G \hbar} = \frac{A}{4\ell_P^2}$$
 
 **Argument 2 (Geometric).** The factor $4$ arises from the ratio $A/(4\ell_P^2) = \pi R_S^2/\ell_P^2 \cdot (4/4\pi) \cdot 4\pi$. More directly: the gravitational stability constraint (Theorem 5.1 of [Holographic Entropy Bound](/derivations/holography/area-scaling)) fixes the area per bit to $4\ell_P^2$ through the relationship $R_S = 2GM/c^2$ (factor of 2) and the surface area formula $A = 4\pi R_S^2$ (factor of $4\pi/\pi$), combining to give $A/(4\ell_P^2)$ bits. $\square$
 
+**Remark 5.2 (Third view — QEC code rate).** *A third view of the factor $1/4$ — as the code rate of the observer's spatial-axis HaPPY-family factor of the observer-projection CPTP map — is given in [Observer as an Error-Correcting Code](/derivations/foundation/observer-as-error-correcting-code) Corollary 4.1.1. Under that reading, $A/\ell_P^2$ is the physical-qubit count (Planck-cell loop positions on the horizon, [Area Scaling](/derivations/holography/area-scaling) Corollary 2.2), $A/(4\ell_P^2)$ is the logical-qubit count (Theorem 3.1 above), and the factor $1/4$ is the substrate-to-code redundancy of the spatial-axis code. The QEC-code-rate reading inherits the Schwarzschild-specific factor-$4$ from Theorem 5.1 of [Holographic Entropy Bound](/derivations/holography/area-scaling); a geometry-independent derivation would close Open Gap 3 below by extending the code-rate identification to Kerr and Reissner-Nordström outer horizons.*
+
 ### Step 6: Observer-Indexing
 
 **Proposition 6.1 (Observer-relativity of black hole entropy).** *The Bekenstein-Hawking entropy is the entropy relative to external observers. An observer falling through the horizon does not assign this entropy.*
