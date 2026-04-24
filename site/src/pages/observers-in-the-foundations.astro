@@ -553,6 +553,46 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '')
       already looks remarkably like the world we inhabit.
     </p>
 
+    <h3>Reversing Noether</h3>
+
+    <p>
+      A conceptual note before the consequences begin, because it
+      shapes almost everything that follows.
+    </p>
+
+    <p>
+      In standard physics, symmetries come first and conservation
+      laws follow. Emmy Noether&rsquo;s theorem tells us that
+      rotational symmetry yields conservation of angular momentum,
+      translational symmetry yields conservation of momentum,
+      time-translational symmetry yields conservation of energy.
+      Physics usually begins by noticing the symmetry and then
+      derives the conserved quantity from it.
+    </p>
+
+    <p>
+      In the framework&rsquo;s setup, the argument runs the other
+      way. Observers are defined, by Axiom 2, as systems with
+      conserved invariants. If observers must exist, then conserved
+      quantities must exist. And under the specific conditions the
+      axioms force &mdash; smooth dynamics, compact state spaces,
+      closed ontology &mdash; a conserved quantity implies a
+      symmetry that generates it. The implication runs backward
+      from Noether&rsquo;s usual direction. The symmetries of
+      physics are not arbitrary facts about nature that happen to
+      yield the conservation laws we observe. They are what the
+      existence of observers forces: wherever there is a conserved
+      invariant, there is a symmetry generating it, because that
+      is what conservation under the axioms&rsquo; conditions
+      requires.
+    </p>
+
+    <p>
+      The rest of this chapter is mostly a matter of reading out
+      what those forced symmetries are, beginning with the
+      simplest one of all.
+    </p>
+
     <h3>The Simplest Observer</h3>
 
     <p>
@@ -2862,13 +2902,170 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '')
 
     <h2>13. Where This Stands</h2>
 
-    <p class="stub">
-      <em>Forthcoming.</em> Honest accounting: how much of the framework
-      stands on the axioms alone, what additional assumptions the rest
-      requires, what would falsify the whole, and where an interested
-      reader can find the underlying derivations. The framework offered
-      as a contribution to a tradition, not a replacement for it. A
-      return to the prologue&rsquo;s question.
+    <p>
+      The walk is over. What remains is honest accounting
+      &mdash; where the framework stands, and where it does not.
+    </p>
+
+    <h3>What Has Been Derived</h3>
+
+    <p>
+      The framework contains, at the time of writing, around
+      ninety-five distinct derivations, arranged into chains that
+      trace from the three axioms to specific physical claims.
+      Roughly thirty of these are marked <em>derived</em> on the
+      site, meaning the chain from axioms to conclusion requires
+      no additional assumptions. The remainder are marked
+      <em>provisional</em>, meaning the chain is complete but
+      relies on one or more structural assumptions that are
+      motivated by the framework but not themselves derived from
+      the axioms.
+    </p>
+
+    <p>
+      The derived chain includes most of the foundational results:
+      the three axioms and their operational definitions, the
+      necessity of multiplicity and coherence-dual pairs, the
+      three interaction types, the bootstrap mechanism, the
+      spin-statistics correspondence, Pauli exclusion, the
+      three-generation count, the Born rule as a unique probability
+      measure, the continuous-discrete co-formation of the Central
+      Thesis, and the derivation of the Standard Model gauge group
+      from division algebras. If the three axioms are accepted,
+      these follow without further input.
+    </p>
+
+    <p>
+      The provisional chain includes most of the quantitative
+      physics &mdash; Einstein&rsquo;s field equations, the
+      detailed dynamics of gravity, the specific form of the
+      coherence Lagrangian, the cosmological constant, the
+      quantitative pattern of the mass hierarchy. Each relies on
+      one or more additional structural postulates. Five such
+      postulates remain active, down from fifteen in earlier
+      versions of the framework; several have been promoted to
+      theorems as the work has matured.
+    </p>
+
+    <p>
+      An honest summary: roughly a third of the framework stands
+      on the three axioms alone. The rest stands on the axioms
+      plus a short, tracked list of additional assumptions.
+    </p>
+
+    <h3>What Remains Open</h3>
+
+    <p>
+      The framework is not finished, and the parts that are not
+      finished are labeled as such.
+    </p>
+
+    <p>
+      The five active structural postulates represent the concrete
+      mathematical inputs that have not yet been reduced to
+      axiom-level consequences. Each has a dedicated page on the
+      site explaining what it assumes, why the framework makes the
+      assumption, and what an axiom-level derivation would need to
+      supply to replace it.
+    </p>
+
+    <p>
+      Several specific conjectures remain open. The fixed-point
+      uniqueness conjecture at the heart of the Central Thesis
+      &mdash; the claim that the continuous-discrete compatibility
+      condition has a single solution &mdash; has not been proved.
+      The precise characterization of the bootstrap hierarchy&rsquo;s
+      mass ladder from first principles is still in progress.
+      Some predictions remain semi-quantitative rather than fully
+      pinned down. These are the concrete places where the work
+      continues.
+    </p>
+
+    <h3>What a Reader Can Check</h3>
+
+    <p>
+      Everything in this document is a condensed reading of
+      material available on the framework&rsquo;s site in more
+      detail. An interested reader can follow any claim to its
+      underlying derivation, inspect the assumptions each
+      derivation makes, read the formal statements, and &mdash; in
+      the small but growing number of cases where formal machine
+      proofs exist &mdash; verify the argument in a proof assistant.
+    </p>
+
+    <p>
+      The derivations live under <em>/derivations</em> on the
+      site. The structural postulates live under
+      <em>/postulates</em>. The predictions live under
+      <em>/predictions</em>. The full dependency graph of all
+      derivations is at <em>/map</em>. This document has named
+      enough of the moving parts to make any of them findable.
+    </p>
+
+    <h3>What the Framework Asks For</h3>
+
+    <p>
+      One thing the framework does not ask for is uncritical
+      acceptance.
+    </p>
+
+    <p>
+      It offers a program. Take three axioms about what it means
+      to be a persistent observer. Follow their consequences as
+      far as they go. Compare those consequences with what physics
+      already knows. Test the predictions where they are testable.
+      Decide whether the result is a fruitful way to think about
+      the physical world, or not.
+    </p>
+
+    <p>
+      The program can be wrong. The axioms could be subtly
+      ill-posed. The derivation chains could contain errors not
+      yet found. The testable predictions could fail at the first
+      serious experiment. Each of those outcomes would be noted
+      in the site&rsquo;s usual accounting, and the framework
+      would either adjust or end. Nothing in the picture depends
+      on the result being protected from challenge.
+    </p>
+
+    <p>
+      The framework is offered as a contribution to an ongoing
+      tradition &mdash; the project of trying to say what the
+      physical world is, from the inside, as clearly and
+      concretely as possible. It is not a replacement for the
+      physics of the twentieth century. Quantum mechanics still
+      works. General relativity still works. The Standard Model
+      still catalogues the particles with extraordinary precision.
+      What the framework offers is a proposed reading of why those
+      theories have the shape they do, together with a specific
+      set of predictions about what should and should not be found
+      at the next experimental frontier.
+    </p>
+
+    <h3>Returning to the Question</h3>
+
+    <p>
+      This document opened with a question. The question recurs to
+      anyone who has thought seriously about science: how do
+      observers fit into what we experience? The question tends to
+      get shelved, for reasons that made sense at the time. The
+      shelving has costs.
+    </p>
+
+    <p>
+      The framework is one attempt to take the question seriously,
+      follow it to structural conclusions, and put those
+      conclusions up for evaluation. Whether the conclusions are
+      right, or close to right, or wrong in an interesting way, is
+      not a question the framework can answer alone. What the
+      framework can do is name its claims clearly, track its
+      status honestly, and offer the walk as material for serious
+      thinkers to engage with.
+    </p>
+
+    <p>
+      That is what this document has done. The walk ends here.
+      What happens next is not the framework&rsquo;s to decide.
     </p>
 
     <div class="foundations-links">
