@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-26T09:20:49.684Z",
+    "generatedAt": "2026-04-26T09:35:48.172Z",
     "derivationCount": 97,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -6051,6 +6051,10 @@
             "context": "Entity Category Taxonomy"
           },
           {
+            "source": "gauge/electromagnetism",
+            "context": "Entity Category Taxonomy"
+          },
+          {
             "source": "gauge/electroweak-breaking",
             "context": "Entity Category Taxonomy"
           },
@@ -11099,6 +11103,14 @@
           {
             "target": "gauge/color-force",
             "context": "Color Force"
+          },
+          {
+            "target": "foundation/entity-category-taxonomy",
+            "context": "Entity Category Taxonomy"
+          },
+          {
+            "target": "interactions/three-types",
+            "context": "Three Interaction Types"
           },
           {
             "target": "gauge/color-force",
@@ -16488,6 +16500,10 @@
           },
           {
             "source": "foundation/observer-holographic-equivalence",
+            "context": "Three Interaction Types"
+          },
+          {
+            "source": "gauge/electromagnetism",
             "context": "Three Interaction Types"
           },
           {
