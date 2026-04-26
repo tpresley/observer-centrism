@@ -302,6 +302,26 @@ The boundaries are not sharp natural-units thresholds but heuristic separations 
 
 The cycle-count metric and the mechanism taxonomy thus offer two complementary classifications of the same observer population. The metric reads off the gap between the floor and the ceiling for each observer; the mechanism taxonomy says which mechanism is operative when the gap collapses.
 
+#### Worked case: nuclear beta decay is composite-level reorganization
+
+The Type II clock-pause result ([Memory-Persistence Tradeoff](/derivations/thermodynamics-ext/memory-persistence-tradeoff) Theorem 5.1) gives bound constituents zero individual Type III clock and replaces would-be constituent decay channels with composite-level channels (Corollary 5.2). Nuclear beta decay — a bound neutron in an unstable nucleus undergoing a $d \to u$ transition with $e^- + \bar{\nu}_e$ emission — invites the question:
+
+> If bound constituents have paused individual clocks, how does a bound neutron beta-decay?
+
+The framework's answer is that the bound neutron does not beta-decay. The *nucleus* undergoes a composite-level Type II reverse transition to a different isotope; the constituent-level reading is a description-level artifact of looking through the reorganization at the quark book-keeping. Three cases sharpen the point:
+
+| Case | Composite at this level | Observer on the ledger | Clocks running |
+|---|---|---|---|
+| **Free neutron** | $n$ (Type II composite of $udd$) | Free neutron itself | Both: external Type III accumulation + the neutron's own internal-instability clock against the $n \to p + e^- + \bar{\nu}_e$ channel |
+| **Bound neutron in stable nucleus** ($^{16}$O) | $^{16}$O | $^{16}$O | None on the constituent neutron (paused by Theorem 5.1); none on the composite either, because $^{16}$O sits at a local energy fixed point and has no accessible Type II reverse channel |
+| **Bound neutron in unstable nucleus** ($^{14}$C) | $^{14}$C | $^{14}$C | None on the constituent neutron (paused). The composite $^{14}$C has its own internal-instability clock, ticking against its own Type II reverse channel: $^{14}$C $\to {}^{14}$N $+ e^- + \bar{\nu}_e$ |
+
+In all three cases the framework's accounting respects Theorem 5.1: the constituent's individual clocks are paused while bound; only the composite's clock counts against its own ledger. The free-neutron case is unrelated to the bound-neutron cases because the free neutron is itself the relevant ledgered observer.
+
+**Remark (Composite reorganization vs. constituent leakage).** What looks colloquially like "the bound neutron decayed" inside $^{14}$C is, at the framework level, the *nucleus* reorganizing internally from one Type II configuration ($^{14}$C, $6p+8n$) to a different Type II configuration ($^{14}$N, $7p+7n$) with the binding-coherence excess released to the slice as a Type-I-mediated W exchange (whose subsequent products are $e^- + \bar{\nu}_e$). The nucleus is the observer that crosses the reorganization; its constituent neutrons never enter the ledger as independent observers. Corollary 5.2 of [Memory-Persistence Tradeoff](/derivations/thermodynamics-ext/memory-persistence-tradeoff) is the structural principle: composite-level decay channels are determined by the composite's own bootstrap fixed-point structure, not by the sum of constituent instabilities. The same single quark-level matrix element that is "available" in both isotopes operates at the composite level, where it constitutes a $^{16}$O channel or a $^{14}$C channel depending on the nucleus's net configuration. Whether the channel actually fires depends on whether the *composite* sits at or off a fixed point, not on whether the constituent does.
+
+This is also why the cycle-count metric of the previous subsection reads off the *nucleus*'s lifetime against its own clock, not a putative bound-neutron lifetime: the bound neutron has no lifetime in the framework sense because it has no individually ledgered existence on which a lifetime could be defined. Free neutrons have $N_{\text{cycles}} \sim 2 \times 10^{26}$ (persistent regime); $^{14}$C nuclei have $N_{\text{cycles}}$ set by the carbon-14 half-life ($\sim 5{,}730$ yr) against the $^{14}$C Compton period; $^{16}$O nuclei sit in the effectively-stable regime by the same template that protects the proton (no admissible composite-level Type II reverse channel preserving the energy ordering). The three values reflect three different observers, each with its own clock — not three different fates of the same bound neutron.
+
 ### Step 8: Thermodynamic Asymmetry
 
 The forward and reverse processes are kinematically symmetric — coherence conservation permits both directions equally. The asymmetry between them is thermodynamic.
