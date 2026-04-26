@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-24T03:54:29.488Z",
+    "generatedAt": "2026-04-26T03:41:07.671Z",
     "derivationCount": 95,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -14,7 +14,7 @@
     "derivationCount": 95,
     "predictionCount": 12,
     "edgeCount": 364,
-    "formalObjectCount": 1381,
+    "formalObjectCount": 1383,
     "openGapCount": 335,
     "upgradeEligibleCount": 0,
     "leanVerifiedCount": 8,
@@ -10428,6 +10428,10 @@
             "context": "Color Confinement"
           },
           {
+            "source": "thermodynamics-ext/memory-persistence-tradeoff",
+            "context": "Confinement"
+          },
+          {
             "source": "thermodynamics-ext/renormalization",
             "context": "Confinement"
           }
@@ -15964,6 +15968,10 @@
           {
             "target": "thermodynamics-ext/memory-persistence-tradeoff",
             "context": "Proposition 2.3"
+          },
+          {
+            "target": "thermodynamics-ext/memory-persistence-tradeoff",
+            "context": "Theorem 5.1"
           },
           {
             "target": "axioms/coherence-conservation",
@@ -23794,6 +23802,10 @@
         {
           "number": 4,
           "title": "The Tradeoff"
+        },
+        {
+          "number": 5,
+          "title": "Type II Fusion Pauses Constituent Clocks"
         }
       ],
       "formalObjects": [
@@ -23844,6 +23856,18 @@
           "id": "4.1",
           "name": "Memory-Persistence Tradeoff",
           "statementPreview": "The capacity for epistemic memory and the capacity for permanent persistence are structurally incompatible in the fra..."
+        },
+        {
+          "type": "Theorem",
+          "id": "5.1",
+          "name": "Type II clock-pause",
+          "statementPreview": "Let OC = (SigmaC, IC, BC) be a Type II composite formed by Fusion of constituents O1, O2, ldots, On. For as long as O..."
+        },
+        {
+          "type": "Corollary",
+          "id": "5.2",
+          "name": "Composite-level decay channel replaces constituent decay channel",
+          "statementPreview": "If Ok had a Type II reverse channel available as a free observer (an internal instability — would-be self-decay), thi..."
         }
       ],
       "structuralPostulates": [],
@@ -23894,6 +23918,10 @@
           {
             "target": "minimal-observer/multiplicity",
             "context": "Multiplicity"
+          },
+          {
+            "target": "gauge/confinement",
+            "context": "Confinement"
           }
         ],
         "incoming": [
@@ -23916,6 +23944,10 @@
           {
             "source": "interactions/three-types",
             "context": "Proposition 2.3"
+          },
+          {
+            "source": "interactions/three-types",
+            "context": "Theorem 5.1"
           },
           {
             "source": "minimal-observer/structure",
@@ -36596,6 +36628,20 @@
       "id": "4.1",
       "name": "Memory-Persistence Tradeoff",
       "fullRef": "thermodynamics-ext/memory-persistence-tradeoff:Theorem 4.1"
+    },
+    {
+      "derivationId": "thermodynamics-ext/memory-persistence-tradeoff",
+      "type": "Theorem",
+      "id": "5.1",
+      "name": "Type II clock-pause",
+      "fullRef": "thermodynamics-ext/memory-persistence-tradeoff:Theorem 5.1"
+    },
+    {
+      "derivationId": "thermodynamics-ext/memory-persistence-tradeoff",
+      "type": "Corollary",
+      "id": "5.2",
+      "name": "Composite-level decay channel replaces constituent decay channel",
+      "fullRef": "thermodynamics-ext/memory-persistence-tradeoff:Corollary 5.2"
     },
     {
       "derivationId": "thermodynamics-ext/non-ergodicity",
