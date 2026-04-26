@@ -1,7 +1,7 @@
 # Entity Category Taxonomy and the Status of Boson and Substrate Observers
 
-**Type**: Research target (open — Route A complete; Route B blocked on user consultation)
-**Status**: Scoped 2026-04-25. Route A complete 2026-04-25 (commits e53e2c0, c8d456b). Route A.1 photon recategorization: photons are Type-I quanta on the null trajectory $L = cT$, not "massless observers"; cleanup across [Speed of Light](../site/src/content/derivations/spacetime/speed-of-light.md), [Lorentz Invariance](../site/src/content/derivations/spacetime/lorentz-invariance.md), [Loop Closure](../site/src/content/derivations/axioms/loop-closure.md) (Open Gap 3 → Addressed Gaps), and [Coherence-Dual Pairs](../site/src/content/derivations/minimal-observer/coherence-dual-pairs.md). Route A.2 W/Z Type II framing: massive vectors as Type II composites (transverse gauge mode + Goldstone scalar) at the ledgered-observer-count level; ledgered-count clarification added to [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) Definition 4.3 (resolves S1 below). Step 5 EWSB Type II recasting: new Step 7 in [Electroweak Symmetry Breaking](../site/src/content/derivations/gauge/electroweak-breaking.md) with Proposition 7.1 (massive vectors as Type II composites), Corollary 7.2 (photon as off-ledger Type-I quantum), and three Remarks on bookkeeping, mass as fusion coherence signature, and EWSB-confinement parallel. Higgs placement deferred to Step 2 (Loop Closure Axiom 3 reading). Steps 2–4, 6 still open. The framework's three axioms define observers via $(\Sigma, I, \mathcal{B})$ and [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) classifies *interactions*; this target resolves the parallel ontology of *entities*.
+**Type**: Research target (open — Routes A, B complete; Route C remaining)
+**Status**: Scoped 2026-04-25. Routes A and B complete 2026-04-25 (commits e53e2c0, c8d456b, d7b8c28, 764f27a). The framework's entity ontology is now formalized as a two-axis taxonomy ([Entity Category Taxonomy](../site/src/content/derivations/foundation/entity-category-taxonomy.md)): Axis 1 (Type-I quantum / Elementary observer / Type II composite) × Axis 2 (Internal-charge-carrier / Self-conjugate). Five cells non-empty, one structurally empty. Three of the five framing-observation inconsistencies closed (massless-observer language, W/Z dual status, Higgs status). The pre-axiom operational definition forces Reading I of Loop Closure Axiom 3 (phase-space $U(1)$ suffices); the Higgs is the canonical {Elementary observer, Self-conjugate} entity. Steps 4 (substrate primitive specification) and 6 (Complexity-Minimal Residue Uniqueness conjecture) remain. The minimal-observer four-sense overloading (S3) is the largest remaining cleanup task.
 **Last updated**: 2026-04-25
 
 ## The framing observation
@@ -254,21 +254,29 @@ Hard but not blocked. Most of the conceptual moves are present in the framework 
 
 ## Resolved subitems
 
-**~~S1. EWSB-as-Type-II-fusion: dimensional-reduction criterion does not strictly hold at the polarization level.~~** *Resolved 2026-04-25 (commit c8d456b)*: Adopted reading (a)/(b) — the criterion in Definition 4.3 of [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) operates at the level of **ledgered observer state spaces**, not microscopic polarization fibers. Added a clarifying Remark immediately after Definition 4.3 making this explicit. The existing examples (hadrons, nuclei, atoms) all already operate this way, and the W/Z massive-vector fusion now fits without amendment to Definition 4.3 itself. The polarization arithmetic ($2+1 = 3$) is preservation at the underlying mode level; the ledger-count ($N_{\text{ledgered,after}} < N_{\text{ledgered,before}}$) is reduction — exactly Type II in the framework's intended sense.
+**~~S1. EWSB-as-Type-II-fusion: dimensional-reduction criterion does not strictly hold at the polarization level.~~** *Resolved 2026-04-25 (commit c8d456b)*: Adopted the ledgered-observer-count reading — the criterion in Definition 4.3 of [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) operates at the level of **ledgered observer state spaces**, not microscopic polarization fibers. Added a clarifying Remark immediately after Definition 4.3 making this explicit. The existing examples (hadrons, nuclei, atoms) all already operate this way, and the W/Z massive-vector fusion now fits without amendment to Definition 4.3 itself.
+
+**~~S2. Higgs category placement.~~** *Resolved 2026-04-25 (commit 764f27a)*: Reading I adopted for Loop Closure Axiom 3 (phase-space $U(1)$ suffices) per the operational-ground argument; the Higgs is the canonical {Elementary observer, Self-conjugate} entity in the new two-axis taxonomy. Theorem 0.5 of [Loop Closure](../site/src/content/derivations/axioms/loop-closure.md) records both realizations; the Higgs's placement closes EWSB Open Gap 5 (now Addressed Gap 2). The cycle-count tabulation Remark in [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) Step 8 was updated with explicit cell placements for $W^\pm, Z^0$, and Higgs.
 
 ## Open subitems
-
-**S2. Higgs category placement deferred to Step 2.**
-
-The Higgs has finite Compton period ($T_H \sim 3 \times 10^{-26}$ s, $\sim 5{,}000$ cycles in the persistent regime), well-defined rest frame, and a single Noether pair (oscillator phase, rest energy). It satisfies all observer axioms *if* phase-space U(1) is admitted by Axiom 3; it does not satisfy Axiom 3 *if* internal U(1) is required. The current cycle-count tabulation in [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) (Step 8) lists Higgs alongside W/Z, electron, proton without flagging this dependency.
-
-Action item once Step 2 closes: add a hedging cross-reference at three-types.md:274 indicating the Higgs's category placement depends on Loop Closure Axiom 3's U(1) reading. Do *not* edit the table preemptively.
 
 **S3. "Minimal observer" four-sense overloading not yet addressed.**
 
 The audit identified four incompatible senses currently in use across the framework: substrate (Planck-scale primitive), complexity-minimal ($U(1)$ phase oscillator from [Minimal Observer Structure](../site/src/content/derivations/minimal-observer/structure.md) Theorem 6.1), counting-minimum (at-least-two requirement from [Multiplicity](../site/src/content/derivations/minimal-observer/multiplicity.md)), and generic ("any observer satisfying axioms minimally"). Each is locally correct but cross-document interpretation is fragile.
 
 Resolution scoped under Step 4 (substrate observer specification) and Step 6 of the formalization path. Not part of Route A.
+
+## Refined taxonomy structure (2026-04-25)
+
+The original research target proposed a flat 3-or-4 top-level entity-category taxonomy. During Route B closure, applying the pre-axiom operational definition of an observer to the Higgs ("a system with identity that retains its identity through more than one transformation") forced two structural commitments simultaneously:
+
+1. **Loop Closure Axiom 3 admits both phase-space and internal $U(1)$ realizations** — the operational definition does not specify *which* loop is the identity-maintenance loop, only that *some* closed loop returns the observer to itself across multiple transformations. The phase-space loop (Compton oscillation) suffices.
+
+2. **The phase-space-only-vs-internal-also distinction is structurally significant beyond just enabling the Higgs's observer status** — it is the structural axis along which elementary observers subdivide. Combined with the [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) classification, it generates a 2×3 grid (one cell structurally empty). Multiple downstream consequences become precise: massive-vector and Higgs ledgered-count, $Z^0$ and Higgs as parallel self-conjugate observers across the elementary/composite divide, the Step 6 stretch goal sharpened to "exactly one {Elementary, Self-conjugate} residue per Type II fusion event producing an observer network."
+
+The flat 3-or-4 category proposal collapses into the 2×3 grid; the four candidate categories of the original Step 3 outline are recoverable as cells of the grid (Type-I quanta, Elementary fermion observers = {Elementary, Internal-charge-carrier}, Elementary scalar observers = {Elementary, Self-conjugate}, Type II composites). The two-axis structure is more compact, more derivationally grounded, and more directly connected to the framework's existing structural axioms.
+
+This refinement was surfaced and confirmed mid-program (the user's confirmation of the two-axis adoption preceded the Step 3 derivation work). The research target's Steps 1–6 retain their formalization-path structure; the deliverable in Step 3 is the new [Entity Category Taxonomy](../site/src/content/derivations/foundation/entity-category-taxonomy.md) derivation page, which formalizes the 2×3 grid with its exhaustiveness theorem.
 
 ## Historical record
 
@@ -291,6 +299,20 @@ Pre-existing risk (S1 above) resolved by adding a clarifying Remark to Definitio
 This closes §"The framing observation" §3 (W/Z dual status) and partially resolves §1 (photon ontology fully addressed in Route A.1). §2 (minimal observer overloading), §4 (Higgs status — needs Step 2), and §5 (substrate primitives — needs Step 4) remain open.
 
 The resulting state of Route A: photons are unambiguously Type-I quanta; W/Z are unambiguously Type II composites; Higgs is hedged pending Step 2; the framework's entity-category language across the affected derivations is internally consistent for the first time. The remaining ambiguity is concentrated in §"Open subitems" S2 (Higgs) and S3 (minimal observer four-sense overloading).
+
+### Route B + Step 3: Loop Closure Axiom 3 reading + formal entity-category taxonomy (2026-04-25 — commit 764f27a)
+
+Route B (Loop Closure Axiom 3 clarification, the structural pivot of the program) and Step 3 (the formal entity-category derivation) closed in one structural move. The pre-axiom operational definition of an observer ("a system with identity that retains its identity through more than one transformation") forces Reading I — phase-space $U(1)$ suffices for Axiom 3, because the operational definition does not distinguish phase-space from internal $U(1)$ and the phase-space (Compton oscillator) loop satisfies all of Axiom 3's formal requirements (compactness, periodicity, smooth dynamics, free orbits, Noether link). Restricting Axiom 3's $U(1)$ to internal realizations would be an additional postulate beyond the operational ground.
+
+Reading I was formalized as Theorem 0.5 in [Loop Closure](../site/src/content/derivations/axioms/loop-closure.md) (with Definitions 0.3, 0.4 distinguishing the two realizations) plus a new "Two-Axis Entity Category Taxonomy" subsection cross-referencing the new derivation page. The two realizations of Axiom 3's $U(1)$ generate Axis 2 of the taxonomy; combined with the [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) classification (Axis 1), they define the 2×3 grid.
+
+A new derivation page [Entity Category Taxonomy](../site/src/content/derivations/foundation/entity-category-taxonomy.md) formalizes the grid with: definitions of both axes; Theorem 1.2 (Axis 1 exhaustive) and Theorem 2.2 (Axis 2 exhaustive); Theorem 3.1 (combined exhaustiveness with one structurally empty cell); a worked Standard Model catalog placement table covering every SM entity (Higgs, electron, $Z^0$, proton, neutron, charged hadrons, neutral pion, atoms, nuclei, Dirac/Majorana neutrinos, photon, gluon); Theorem 5.1 ({Type-I quantum, Self-conjugate} cell is structurally empty); consistency model and rigor assessment; and four open gaps (substrate primitive Axis 2 placement, Axis 2 sub-parameterization for multi-charge observers, graviton placement, complexity-minimal residue uniqueness).
+
+EWSB Open Gap 5 (Higgs category placement) closed: the Higgs is the canonical {Elementary observer, Self-conjugate} entity, and the post-EWSB ledgered-observer count of the electroweak sector is unambiguously 4 (not "3 or 4"). The W/Z/Higgs cycle-count Remark in [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) Step 8 was reworked with explicit cell placements for each.
+
+This closes §"The framing observation" §1 (massless observer fully addressed across Route A.1), §3 (W/Z dual status fully addressed across Route A.2 + Step 5), §4 (Higgs status fully addressed). §2 (minimal observer four-sense overloading) and §5 (substrate primitives unspecified) remain — these are the targets of the remaining Route C work (Steps 4 and the S3 cleanup).
+
+The two-axis taxonomy is more structurally grounded than the flat 3-or-4 category proposal of the original target; see "Refined taxonomy structure" above.
 
 ## Intellectual origin
 
