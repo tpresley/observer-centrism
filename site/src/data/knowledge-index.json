@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-26T08:25:37.299Z",
+    "generatedAt": "2026-04-26T08:44:37.625Z",
     "derivationCount": 97,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -14,8 +14,8 @@
     "derivationCount": 97,
     "predictionCount": 12,
     "edgeCount": 378,
-    "formalObjectCount": 1406,
-    "openGapCount": 340,
+    "formalObjectCount": 1409,
+    "openGapCount": 339,
     "upgradeEligibleCount": 0,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -5875,6 +5875,10 @@
         {
           "number": 6,
           "title": "Three Layers and Substrate Co-Creation"
+        },
+        {
+          "number": 7,
+          "title": "Complexity-Minimal Residue Uniqueness"
         }
       ],
       "formalObjects": [
@@ -5927,8 +5931,26 @@
           "statementPreview": "Layer 0 is not external to the observer network. It is the network's projection of itself at sub-observer scales, wit..."
         },
         {
+          "type": "Definition",
+          "id": "7.1",
+          "name": "Gauge-SSB Type II fusion event",
+          "statementPreview": "A *gauge-symmetry-breaking Type II fusion event* (henceforth *gauge-SSB event*) is a Type II fusion in which:"
+        },
+        {
           "type": "Theorem",
-          "id": "7.1.",
+          "id": "7.3",
+          "name": "Existence: EWSB Higgs is the unique self-conjugate residue",
+          "statementPreview": "Conjecture 7.2 holds in the EWSB case: the Higgs is the unique Elementary observer, Self-conjugate entity in the post..."
+        },
+        {
+          "type": "Proposition",
+          "id": "7.4",
+          "name": "Multiplicity formula for single-irrep gauge-SSB",
+          "statementPreview": "Let a gauge-SSB event break G H via a single irrep R of G with H a non-trivial subgroup that is the stabilizer of a g..."
+        },
+        {
+          "type": "Theorem",
+          "id": "8.1.",
           "name": "",
           "statementPreview": "The taxonomy is consistent: each non-empty cell admits at least one Standard Model entity, and the placement of every..."
         }
@@ -5944,11 +5966,6 @@
           "number": 2,
           "title": "Graviton placement",
           "description": "In the limiting-case gravitational gauge, the graviton would be a Type-I quantum of a spacetime symmetry rather than an internal symmetry. Whether the Type-I quantum, Self-conjugate cell is genuinely "
-        },
-        {
-          "number": 3,
-          "title": "Complexity-Minimal Residue Uniqueness",
-          "description": "Whether every Type II fusion event producing an observer network leaves *exactly one* Elementary, Self-conjugate residue is conjectured but not proven. The Higgs's role in EWSB ([Electroweak Symmetry "
         }
       ],
       "assessmentVerdict": "",
@@ -30695,10 +30712,31 @@
     },
     {
       "derivationId": "foundation/entity-category-taxonomy",
+      "type": "Definition",
+      "id": "7.1",
+      "name": "Gauge-SSB Type II fusion event",
+      "fullRef": "foundation/entity-category-taxonomy:Definition 7.1"
+    },
+    {
+      "derivationId": "foundation/entity-category-taxonomy",
       "type": "Theorem",
-      "id": "7.1.",
+      "id": "7.3",
+      "name": "Existence: EWSB Higgs is the unique self-conjugate residue",
+      "fullRef": "foundation/entity-category-taxonomy:Theorem 7.3"
+    },
+    {
+      "derivationId": "foundation/entity-category-taxonomy",
+      "type": "Proposition",
+      "id": "7.4",
+      "name": "Multiplicity formula for single-irrep gauge-SSB",
+      "fullRef": "foundation/entity-category-taxonomy:Proposition 7.4"
+    },
+    {
+      "derivationId": "foundation/entity-category-taxonomy",
+      "type": "Theorem",
+      "id": "8.1.",
       "name": "",
-      "fullRef": "foundation/entity-category-taxonomy:Theorem 7.1."
+      "fullRef": "foundation/entity-category-taxonomy:Theorem 8.1."
     },
     {
       "derivationId": "foundation/error-correction-and-standard-model",
@@ -38765,13 +38803,6 @@
       "number": 2,
       "title": "Graviton placement",
       "description": "In the limiting-case gravitational gauge, the graviton would be a Type-I quantum of a spacetime symmetry rather than an internal symmetry. Whether the Type-I quantum, Self-conjugate cell is genuinely "
-    },
-    {
-      "derivationId": "foundation/entity-category-taxonomy",
-      "derivationStatus": "provisional",
-      "number": 3,
-      "title": "Complexity-Minimal Residue Uniqueness",
-      "description": "Whether every Type II fusion event producing an observer network leaves *exactly one* Elementary, Self-conjugate residue is conjectured but not proven. The Higgs's role in EWSB ([Electroweak Symmetry "
     },
     {
       "derivationId": "foundation/error-correction-and-standard-model",
