@@ -345,7 +345,9 @@ $$E_\mathcal{O} = \frac{S_\mathcal{O}}{T_\mathcal{O}} \geq \frac{S_{\min}}{T_\ma
 
 2. **Non-abelian loops**: The formalization assumes $U(1)$ (abelian) symmetry. Non-abelian internal symmetries ($SU(2)$, $SU(3)$) require replacing the single period $T$ with a representation-theoretic condition on the image of $\phi$ in a non-abelian group.
 
-3. **Massless observers**: Photons have no rest frame and no rest-frame loop. They are limiting cases where $T_\mathcal{O} \to 0$ and $\omega_\mathcal{O} \to \infty$ while $S_\mathcal{O}$ remains finite. This limit needs formal treatment within the approximate closure framework.
+## Addressed Gaps
+
+1. **Null-trajectory boundary** — *Resolved by [Three Interaction Types](/derivations/interactions/three-types) Step 4*: The limit $T_\mathcal{O} \to 0$, $\omega_\mathcal{O} \to \infty$ is the boundary at which observer status fails ([Lorentz Invariance](/derivations/spacetime/lorentz-invariance), Theorem 6.1) — no rest frame, no rest-frame loop, no realizable $(\Sigma, I, \mathcal{B})$. Photons are not limiting-case observers but Type-I quanta — the phase-transfer currency carried between observers along the null boundary. They appear in observer accounting only as the medium of $U(1)_{em}$ phase exchange between charged observers, never as ledger entries themselves.
 
 <!-- References -->
 [Bredon, 1972]: /references#bredon-1972

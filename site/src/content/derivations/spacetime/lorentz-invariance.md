@@ -156,7 +156,7 @@ At $v = c$: $\gamma = \infty$, $T_0 = 0$, $L_0 = 0$. The Minkowski interval vani
 
 At $v > c$: $\gamma$ becomes imaginary, and $ds^2 < 0$ (spacelike). The loop cannot close in the temporal direction — the spatial displacement exceeds $cT$, violating the loop closure constraint $L = cT$ ([Speed of Light](/derivations/spacetime/speed-of-light), Theorem 3.1). $\square$
 
-**Corollary 6.2 (Massless observers).** *Massless observers ($T_0 = 0$) travel at exactly $c$. Their loops are null — zero proper time per cycle, zero rest spatial extent. They exist at the boundary of the loop closure condition. The photon is the physical realization.*
+**Corollary 6.2 (Null-trajectory carriers).** *Theorem 6.1 establishes that the $T_0 \to 0$ limit is precisely where observer status fails — no rest frame, no rest-frame loop, no realizable $(\Sigma, I, \mathcal{B})$. The null trajectory ($ds^2 = 0$) is therefore not an observer trajectory but the propagation boundary of the framework's [Type-I quanta](/derivations/interactions/three-types) — the phase-transfer currency exchanged between observers. The photon is the quantized Type-I carrier of $U(1)_{em}$ phase between charged observers, propagating along this null boundary; it is not itself an observer.*
 
 **Corollary 6.3 (No tachyons).** *Superluminal observers ($v > c$) violate loop closure and therefore do not exist in the framework. There are no tachyons.*
 
@@ -242,7 +242,7 @@ This is the standard Thomas precession formula, now identified as the Berry curv
 - Theorem 4.2: $O(3,1)$ is the isometry group of $\eta_{\mu\nu}$ (definition of orthogonal group)
 - Proposition 5.2: Boost as hyperbolic rotation (standard parametrization)
 - Theorem 6.1: Speed limit from $\gamma \to \infty$ (standard limit + loop closure topology)
-- Corollaries 6.2–6.3: Massless observers at $c$, no tachyons (direct consequences of loop closure)
+- Corollaries 6.2–6.3: Null-trajectory carriers (Type-I quanta) at $c$, no tachyons (direct consequences of loop closure)
 - Theorem 7.1: Poincaré group from S1 + Lorentz (standard semidirect product)
 - Proposition 7.2: Noether charges from Poincaré generators (standard Noether's theorem)
 - Proposition 9.1: Thomas precession as Berry phase — standard identification of Wigner rotation with holonomy on $H^3$, applied to the observer's $U(1)$ loop

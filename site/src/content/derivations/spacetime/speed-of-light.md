@@ -116,7 +116,7 @@ For a path of $n$ edges, the total spatial displacement $\Delta x$ satisfies:
 
 $$|\Delta x| \leq \sum_{i=1}^n c \cdot \Delta\tau_i = c \cdot \Delta\tau_{\text{total}}$$
 
-The total temporal displacement $\Delta t \geq \Delta\tau_{\text{total}}$ (with equality for a single observer; in general $\Delta t \geq \Delta\tau$ by the Minkowski metric, Theorem 5.1 below). Therefore $|\Delta x|/\Delta t \leq c$. Equality is attained by massless observers whose loops saturate $L = cT$ with zero spatial confinement (Proposition 6.2). $\square$
+The total temporal displacement $\Delta t \geq \Delta\tau_{\text{total}}$ (with equality for a single observer; in general $\Delta t \geq \Delta\tau$ by the Minkowski metric, Theorem 5.1 below). Therefore $|\Delta x|/\Delta t \leq c$. Equality is attained on the null-trajectory boundary $L = cT$ along which Type-I quanta propagate (Proposition 6.2). $\square$
 
 ### Step 5: The Minkowski Metric
 
@@ -134,7 +134,7 @@ In the moving frame: the temporal path length is $cT'$ and spatial path length i
 
 By Structural Postulate S1, $ds^2$ is a quadratic form. The unique such form satisfying:
 1. $ds^2 = c^2 dT^2$ for a stationary observer ($dL = 0$)
-2. $ds^2 = 0$ for a massless observer ($L = cT$, so $c^2 dT^2 = dL^2$)
+2. $ds^2 = 0$ on the null-trajectory boundary ($L = cT$, so $c^2 dT^2 = dL^2$ — the propagation locus of Type-I quanta, Proposition 6.2)
 3. $ds^2$ is invariant under change of observer (universality of $c$)
 
 is:
@@ -155,7 +155,7 @@ $$c = \frac{\text{coherence distance per cycle}}{\text{coherence time per cycle}
 
 *Together with $\hbar$, $c$ establishes the conversion between spatial and temporal coherence units. The numerical value $c \approx 3 \times 10^8$ m/s in SI units reflects the human choice of measurement standards.*
 
-**Proposition 6.2 (Massless observers).** *An observer whose loop closure saturates $L = cT$ with zero spatial confinement — whose entire coherence cost is in phase propagation — is a massless observer (photon). Its rest frame does not exist because setting $v = c$ in the Minkowski metric gives $d\tau = 0$. Massless observers are the limiting case of the loop closure geometry.*
+**Proposition 6.2 (Null-trajectory limit and Type-I quanta).** *The degenerate limit $T_0 \to 0$, $L_0 \to 0$ at fixed $L_0/T_0 = c$ traces a null worldline ($d\tau = 0$ everywhere) and does not satisfy the observer axioms: by [Lorentz Invariance](/derivations/spacetime/lorentz-invariance) Theorem 6.1 the loop-closure period diverges as $v \to c$, leaving no rest frame in which to realize the observer's loop and no rest-frame Noether realization for the conserved charge $I$. The null trajectory is therefore the propagation boundary along which the framework's [Type-I quanta](/derivations/interactions/three-types) — the phase-transfer currency carried between observers — propagate. The photon is the quantized Type-I carrier of $U(1)_{em}$ phase exchange between charged observers; it is not itself an observer in $(\Sigma, I, \mathcal{B})$ form.*
 
 ### Consistency Model
 
@@ -168,7 +168,7 @@ $$c = \frac{\text{coherence distance per cycle}}{\text{coherence time per cycle}
 - **Finiteness**: $c > 0$ (non-trivial boundary $L_0 > 0$) and $c < \infty$ (non-zero period $T_0 > 0$). $\checkmark$
 - **Minkowski signature**: The metric $ds^2 = c^2 dt^2 - dx^2$ has signature $(+,-)$, with the minus sign on the spatial term reflecting the conjugacy of spatial and temporal projections. $\checkmark$
 - **Maximal speed**: A signal along a null path ($ds^2 = 0$) travels at $dx/dt = c$. No timelike path exceeds this. $\checkmark$
-- **Massless limit**: An observer with $T_0 \to 0$, $L_0 \to 0$ at fixed $L_0/T_0 = c$ traces a null worldline ($ds^2 = 0$). $\checkmark$ $\square$
+- **Null-trajectory limit**: The degenerate limit $T_0 \to 0$, $L_0 \to 0$ at fixed $L_0/T_0 = c$ traces a null worldline ($ds^2 = 0$) — the propagation boundary for [Type-I quanta](/derivations/interactions/three-types), not an observer trajectory (Proposition 6.2). $\checkmark$ $\square$
 
 ## Physical Interpretation
 
@@ -179,7 +179,7 @@ $$c = \frac{\text{coherence distance per cycle}}{\text{coherence time per cycle}
 | Space and time are independent dimensions | Space and time are two projections of the loop closure geometry |
 | Clock = time-measuring device | Clock = observer whose phase count is readable |
 | Rod = spatial reference | Rod = observer whose coherence extent is readable |
-| Photon has zero rest mass | Massless observer saturates $L = cT$ with zero confinement |
+| Photon has zero rest mass | Photon is a Type-I quantum on the null boundary $L = cT$ ($T_0 \to 0$ limit, beyond observer status) |
 
 ## Rigor Assessment
 
@@ -198,12 +198,12 @@ $$c = \frac{\text{coherence distance per cycle}}{\text{coherence time per cycle}
 
 **Deferred / conjectural:**
 - The continuum limit from the discrete interaction graph $\mathcal{G}$ to the continuous Minkowski metric requires the Hauptvermutung of causal set theory ([Time as Phase Ordering](/derivations/thermodynamics/time), Proposition 7.1), which is an external conjecture. This is the same deferred element as in the time derivation.
-- Propositions 6.1–6.2: The structural determination of $c$ and massless observers are interpretive (no new mathematical content beyond $L = cT$ and its limiting case).
+- Propositions 6.1–6.2: The structural determination of $c$ and the null-trajectory characterization (with the photon as Type-I quantum on the $L = cT$ boundary) are interpretive (no new mathematical content beyond $L = cT$ and its limiting case).
 
 **Assessment:** The derivation of $c$ as a universal phase propagation speed, the $L = cT$ constraint, the maximal signaling speed, and the Minkowski signature are rigorously established from the axioms and S1. The connected-component scope and continuum-limit dependence are clearly flagged.
 
 ## Open Gaps
 
 1. **$c$ from $\hbar$ and $G$**: Whether $c$ is independently determined or derivable from the other fundamental constants is a key open question. The three constants $\hbar$, $c$, $G$ may be reducible to fewer independent structural parameters of $\mathcal{H}$.
-2. **Massless observer spectrum**: The framework should derive which massless observers exist and their properties (spin-1 for photons, spin-2 for gravitons). This requires the spin-statistics connection applied to the $L = cT$ limiting case.
+2. **Type-I quantum spectrum**: The framework should derive which Type-I quanta propagate along null trajectories and their properties (spin-1 photon as $U(1)_{em}$ carrier, spin-2 graviton in the limiting-case gravitational gauge). This requires the spin-statistics connection applied to the $L = cT$ saturation regime.
 3. **Causal structure**: The Minkowski metric determines the causal structure (light cones). The framework should show that this causal structure is equivalent to the partial order $\prec$ on $\mathcal{G}$ in the continuum limit — connecting the microscopic (graph) and macroscopic (metric) descriptions of causality.

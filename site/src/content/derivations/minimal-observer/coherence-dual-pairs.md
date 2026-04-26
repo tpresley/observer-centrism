@@ -124,7 +124,7 @@ The pair persists because each observer independently satisfies the persistence 
 
 *Proof.* If $Q_1 = 0$, then $Q_2 = -Q_1 = 0$ (Theorem 3.1). Both observers have the same charge, same rest frequency (Theorem 2.1), same symmetry group $U(1)$, and the same coherence content $\mathcal{C}(\Sigma_1) = \mathcal{C}(\Sigma_2)$. By the uniqueness part of [Minimal Observer Structure](/derivations/minimal-observer/structure) (Theorem 6.1(b)), they are isomorphic in the observer category. A self-conjugate observer is its own antiparticle. $\square$
 
-**Remark.** Physically, self-conjugate observers correspond to truly neutral particles (photon, $Z^0$, graviton, neutral pion). Particles like the neutron carry non-zero charges under other symmetries (baryon number) despite zero electric charge, so they are not self-conjugate.
+**Remark.** Among ledgered observers, self-conjugacy corresponds to truly neutral entities — the $Z^0$, the neutral pion, and Majorana neutrinos in the framework's [Neutrino Masses](/derivations/particles/neutrino-masses) derivation. Photons are not observers but [Type-I quanta](/derivations/interactions/three-types) carried between charge-conjugate observers; their self-conjugate appearance reflects the symmetry of the $U(1)_{em}$ phase exchange they mediate, not observer-level dual-pair structure. (The same caveat applies to gravitons in the limiting-case gravitational gauge.) Particles like the neutron carry non-zero charges under other symmetries (baryon number) despite zero electric charge, so they are not self-conjugate.
 
 ## Physical Identification
 
