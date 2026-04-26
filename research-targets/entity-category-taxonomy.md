@@ -1,7 +1,7 @@
 # Entity Category Taxonomy and the Status of Boson and Substrate Observers
 
-**Type**: Research target (open — Routes A, B, Step 4 complete; S3 cleanup + Step 6 stretch remain)
-**Status**: Scoped 2026-04-25. Routes A, B, and Step 4 complete 2026-04-25 (commits e53e2c0, c8d456b, d7b8c28, 764f27a, da658aa, 0fdde7f). The framework's entity ontology is now formalized as a three-layer / two-axis structure ([Entity Category Taxonomy](../site/src/content/derivations/foundation/entity-category-taxonomy.md) Steps 1–6): three layers (Layer 0 substrate, Layer 1 minimal observer, Layer 2+ composites), with the 2×3 Axis 1 × Axis 2 grid classifying Layer 1+ observers. The substrate (Layer 0) is co-created with the observer network by the bootstrap fixed-point self-consistency (Theorem 6.2). Four of the five framing-observation inconsistencies closed (massless-observer language, W/Z dual status, Higgs status, substrate primitive specification). The minimal-observer four-sense overloading (S3) is now the only cleanup remaining; Step 6 stretch (Complexity-Minimal Residue Uniqueness) is unblocked.
+**Type**: Research target (open — Routes A, B, Steps 4 + S3 complete; Step 6 stretch remains)
+**Status**: Scoped 2026-04-25. Routes A, B, Step 4, and S3 cleanup complete 2026-04-25 (commits e53e2c0, c8d456b, d7b8c28, 764f27a, da658aa, 0fdde7f, 1cee0e7, 1fc67e1). The framework's entity ontology is now formalized as a three-layer / two-axis structure ([Entity Category Taxonomy](../site/src/content/derivations/foundation/entity-category-taxonomy.md) Steps 1–6): three layers (Layer 0 substrate, Layer 1 minimal observer, Layer 2+ composites), with the 2×3 Axis 1 × Axis 2 grid classifying Layer 1+ observers. The substrate (Layer 0) is co-created with the observer network by the bootstrap fixed-point self-consistency (Theorem 6.2). All five framing-observation inconsistencies are now closed. Step 6 stretch (Complexity-Minimal Residue Uniqueness) is unblocked and remains as the only optional remaining work.
 **Last updated**: 2026-04-25
 
 ## The framing observation
@@ -252,6 +252,10 @@ The target succeeds if, at the end:
 
 Hard but not blocked. Most of the conceptual moves are present in the framework already; the work is consistency-enforcement, formalization, and a small number of genuine derivations. Comparable in scope to the bridge-page / postulate-classification effort that closed 40/40 forced postulates in the 2026-04-11 session, plus one structural axiom clarification (Step 2) and one stretch derivation (Step 6).
 
+## Open subitems
+
+The only remaining work in this program is the Step 6 stretch (Complexity-Minimal Residue Uniqueness conjecture). All Step 1–4 formalization-path items are complete, and the framework's entity ontology is now internally consistent.
+
 ## Resolved subitems
 
 **~~S1. EWSB-as-Type-II-fusion: dimensional-reduction criterion does not strictly hold at the polarization level.~~** *Resolved 2026-04-25 (commit c8d456b)*: Adopted the ledgered-observer-count reading — the criterion in Definition 4.3 of [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) operates at the level of **ledgered observer state spaces**, not microscopic polarization fibers. Added a clarifying Remark immediately after Definition 4.3 making this explicit. The existing examples (hadrons, nuclei, atoms) all already operate this way, and the W/Z massive-vector fusion now fits without amendment to Definition 4.3 itself.
@@ -260,26 +264,9 @@ Hard but not blocked. Most of the conceptual moves are present in the framework 
 
 **~~Step 4. Planck-scale substrate primitive specification.~~** *Resolved 2026-04-25 (commit 0fdde7f)*: Three-layer ontology adopted — Layer 0 substrate (continuous Planck-cell oscillator modes; not observers), Layer 1 minimal observer ($U(1)$ phase oscillator per Theorem 6.1; the structurally smallest entity satisfying all axioms), Layer 2+ composites. The substrate is co-created with the observer network as the bootstrap fixed-point's projection at sub-observer scales (Theorem 6.2 of [Entity Category Taxonomy](../site/src/content/derivations/foundation/entity-category-taxonomy.md)). The original "substrate primitive = qubit" hypothesis is rejected — it would have contradicted Theorem 6.1's uniqueness proof; the QEC chain's "qubit" language refers to the code's *logical* layer (boundary qubits as integer crossing counts, extracted from continuous substrate fluctuations via thresholding), not to the substrate itself. Brief cross-references added to [Bootstrap](../site/src/content/derivations/interactions/bootstrap.md) (clarifying Level 0 = Layer 1) and [Substrate Noise and Profile Coupling](../site/src/content/derivations/foundation/substrate-noise-and-profile-coupling.md) (co-creation note in Overview).
 
-## Open subitems
+**~~S3. "Minimal observer" four-sense overloading.~~** *Resolved 2026-04-25 (commit 1fc67e1, with substantial preceding cleanup in commit 0fdde7f)*: The original Step 1 audit estimated ~178 "minimal observer" occurrences across four senses needing disambiguation. After Step 4's three-layer ontology landed (commit 0fdde7f), a follow-up sweep across all derivation pages found that the substrate-sense conflations had been resolved at the source by the new Layer 0 / Layer 1 vocabulary plus the cross-reference Remarks added in [Bootstrap Mechanism](../site/src/content/derivations/interactions/bootstrap.md) and [Substrate Noise and Profile Coupling](../site/src/content/derivations/foundation/substrate-noise-and-profile-coupling.md). The remaining ~213 audited occurrences in the high-priority files are all using "minimal observer" correctly in the complexity-minimal Layer-1 sense (the $U(1)$ phase oscillator of Theorem 6.1). The original Step 1 audit's hot-spots ([observer-as-error-correcting-code.md:138](../site/src/content/derivations/foundation/observer-as-error-correcting-code.md), [observer-projected-spacetime.md:140](../site/src/content/derivations/foundation/observer-projected-spacetime.md), [born-rule.md:198](../site/src/content/derivations/quantum/born-rule.md)) are clean: they all refer to Layer 1 with explicit cross-references to [Minimal Observer Structure](../site/src/content/derivations/minimal-observer/structure.md). Only the "substrate era" phrase in [Cyclic Cosmology](../site/src/content/derivations/cosmology/cyclic-cosmology.md) was a real conflict (it used "substrate" loosely to mean "ground-floor era," which conflicts with the Layer 0 formal use); renamed to "minimal-observer era" with a clarifying sentence (commit 1fc67e1).
 
-**S3. "Minimal observer" four-sense overloading not yet addressed.**
-
-The audit identified four incompatible senses currently in use across the framework. With Step 4's three-layer resolution in place, they map onto:
-
-- **substrate sense** → Layer 0 (Planck-cell continuous oscillator mode, *not* an observer). Disambiguation: drop "minimal observer" entirely; use "substrate mode" / "Planck-cell oscillator mode."
-- **complexity-minimal sense** → Layer 1 (Theorem 6.1's $U(1)$ phase oscillator, abstract minimal). Disambiguation: keep "minimal observer" — refers to Theorem 6.1's structural minimum, not an actually-realized SM particle.
-- **counting-minimum sense** → multi-Layer-1 (the at-least-N argument in [Multiplicity](../site/src/content/derivations/minimal-observer/multiplicity.md)). Disambiguation: explicit "at least N observers" phrasing.
-- **generic sense** → any observer at any level. Disambiguation: drop "minimal" — just "an observer" or "a ledgered observer."
-
-Files needing the sweep, per the audit:
-- [Observer as an Error-Correcting Code](../site/src/content/derivations/foundation/observer-as-error-correcting-code.md) (line 138 in audit) — uses "minimal observer" in a hybrid sense.
-- [Observer-Projected Spacetime](../site/src/content/derivations/foundation/observer-projected-spacetime.md) (line 140) — uses "minimal observer" with $T_0 \sim T_P$ (substrate sense — Planck timescale).
-- [Bootstrap Mechanism](../site/src/content/derivations/interactions/bootstrap.md) — "Level-0 observers | Fundamental particles" already partially clarified by the new Remark; check for residual conflations.
-- [Multiplicity](../site/src/content/derivations/minimal-observer/multiplicity.md) — counting sense throughout; verify it's clean.
-- [Born Rule](../site/src/content/derivations/quantum/born-rule.md) (line 198) — complexity sense; verify.
-- Any other page using "minimal observer" should be reviewed for which sense applies.
-
-Mechanical sweep with judgment calls; no structural decisions remaining.
+The takeaway: Step 4's three-layer ontology adoption was the structural fix; S3's mechanical disambiguation was largely already accomplished as a side effect.
 
 ## Refined taxonomy structure (2026-04-25)
 
