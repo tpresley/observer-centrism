@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-26T06:28:00.928Z",
+    "generatedAt": "2026-04-26T06:48:41.947Z",
     "derivationCount": 96,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -14,8 +14,8 @@
     "derivationCount": 96,
     "predictionCount": 12,
     "edgeCount": 369,
-    "formalObjectCount": 1392,
-    "openGapCount": 337,
+    "formalObjectCount": 1394,
+    "openGapCount": 338,
     "upgradeEligibleCount": 0,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -1141,6 +1141,10 @@
           },
           {
             "source": "gauge/electromagnetism",
+            "context": "Loop Closure"
+          },
+          {
+            "source": "gauge/electroweak-breaking",
             "context": "Loop Closure"
           },
           {
@@ -10921,6 +10925,10 @@
         {
           "number": 6,
           "title": "Yukawa Couplings from Crystallization Orientation"
+        },
+        {
+          "number": 7,
+          "title": "EWSB as Type II Fusion"
         }
       ],
       "formalObjects": [
@@ -10985,8 +10993,20 @@
           "statementPreview": "Fermion masses arise from the coupling of fermionic winding modes to the crystallization order parameter (Yukawa coup..."
         },
         {
+          "type": "Proposition",
+          "id": "7.1",
+          "name": "Massive vectors as Type II composites",
+          "statementPreview": "Each massive vector observer V in W+, W-, Z is a Type II composite (Definition 4.3 of [Three Interaction Types](/deri..."
+        },
+        {
+          "type": "Corollary",
+          "id": "7.2",
+          "name": "Photon is a Type-I quantum, not on the ledger",
+          "statementPreview": "The unbroken U(1)em generator survives the crystallization, and its quantized phase-carrier — the photon — propagates..."
+        },
+        {
           "type": "Theorem",
-          "id": "7.1.",
+          "id": "8.1.",
           "name": "",
           "statementPreview": "The Standard Model with the Higgs mechanism provides a consistency model.*"
         }
@@ -11012,6 +11032,11 @@
           "number": 4,
           "title": "Electroweak phase transition",
           "description": "The cosmological electroweak phase transition (first-order vs. crossover) depends on the detailed dynamics of the crystallization, relevant for [Baryogenesis](/derivations/cosmology/baryogenesis)."
+        },
+        {
+          "number": 5,
+          "title": "Higgs category placement",
+          "description": "The Higgs radial mode has finite Compton period and a single Noether pair (oscillator phase, rest energy), so it satisfies the observer axioms if [Loop Closure](/derivations/axioms/loop-closure) Axiom"
         }
       ],
       "assessmentVerdict": "Rigorous. All key results have formal proofs: the crystallization mechanism uses the explicit one-loop Coleman-Weinberg potential with numerical coefficient evaluation; the Higgs mechanism and gauge boson masses are standard QFT results verified experimentally; the hierarchy protection uses dimensio",
@@ -11043,12 +11068,24 @@
             "context": "Theorem 4.2"
           },
           {
+            "target": "interactions/three-types",
+            "context": "Three Interaction Types"
+          },
+          {
+            "target": "thermodynamics-ext/memory-persistence-tradeoff",
+            "context": "Memory-Persistence Tradeoff"
+          },
+          {
             "target": "foundation/coherence-lagrangian",
             "context": "Coherence Lagrangian"
           },
           {
             "target": "cosmology/baryogenesis",
             "context": "Baryogenesis"
+          },
+          {
+            "target": "axioms/loop-closure",
+            "context": "Loop Closure"
           },
           {
             "target": "gauge/weinberg-angle",
@@ -11091,6 +11128,10 @@
           {
             "source": "gauge/weinberg-angle",
             "context": "Electroweak Breaking"
+          },
+          {
+            "source": "interactions/three-types",
+            "context": "Electroweak Symmetry Breaking"
           },
           {
             "source": "particles/neutrino-masses",
@@ -16016,6 +16057,10 @@
             "context": "Memory-Persistence Tradeoff"
           },
           {
+            "target": "gauge/electroweak-breaking",
+            "context": "Electroweak Symmetry Breaking"
+          },
+          {
             "target": "quantum/born-rule",
             "context": "Born Rule"
           },
@@ -16079,6 +16124,10 @@
           },
           {
             "source": "foundation/observer-holographic-equivalence",
+            "context": "Three Interaction Types"
+          },
+          {
+            "source": "gauge/electroweak-breaking",
             "context": "Three Interaction Types"
           },
           {
@@ -24261,6 +24310,10 @@
             "context": "Theorem 4.1"
           },
           {
+            "source": "gauge/electroweak-breaking",
+            "context": "Memory-Persistence Tradeoff"
+          },
+          {
             "source": "gauge/proton-stability",
             "context": "Memory-Persistence Tradeoff"
           },
@@ -32098,10 +32151,24 @@
     },
     {
       "derivationId": "gauge/electroweak-breaking",
+      "type": "Proposition",
+      "id": "7.1",
+      "name": "Massive vectors as Type II composites",
+      "fullRef": "gauge/electroweak-breaking:Proposition 7.1"
+    },
+    {
+      "derivationId": "gauge/electroweak-breaking",
+      "type": "Corollary",
+      "id": "7.2",
+      "name": "Photon is a Type-I quantum, not on the ledger",
+      "fullRef": "gauge/electroweak-breaking:Corollary 7.2"
+    },
+    {
+      "derivationId": "gauge/electroweak-breaking",
       "type": "Theorem",
-      "id": "7.1.",
+      "id": "8.1.",
       "name": "",
-      "fullRef": "gauge/electroweak-breaking:Theorem 7.1."
+      "fullRef": "gauge/electroweak-breaking:Theorem 8.1."
     },
     {
       "derivationId": "gauge/proton-stability",
@@ -38901,6 +38968,13 @@
       "number": 4,
       "title": "Electroweak phase transition",
       "description": "The cosmological electroweak phase transition (first-order vs. crossover) depends on the detailed dynamics of the crystallization, relevant for [Baryogenesis](/derivations/cosmology/baryogenesis)."
+    },
+    {
+      "derivationId": "gauge/electroweak-breaking",
+      "derivationStatus": "provisional",
+      "number": 5,
+      "title": "Higgs category placement",
+      "description": "The Higgs radial mode has finite Compton period and a single Noether pair (oscillator phase, rest energy), so it satisfies the observer axioms if [Loop Closure](/derivations/axioms/loop-closure) Axiom"
     },
     {
       "derivationId": "gauge/proton-stability",
