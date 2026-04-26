@@ -1,0 +1,312 @@
+# Entity Category Taxonomy and the Status of Boson and Substrate Observers
+
+**Type**: Research target (open — Route A in progress)
+**Status**: Scoped 2026-04-25. Route A photon recategorization landed 2026-04-25 (commit e53e2c0): photons are Type-I quanta, not "massless observers"; the null-trajectory $L = cT$ is the propagation boundary for Type-I quanta, not a limiting-case observer trajectory. Cleanup applied across [Speed of Light](../site/src/content/derivations/spacetime/speed-of-light.md), [Lorentz Invariance](../site/src/content/derivations/spacetime/lorentz-invariance.md), [Loop Closure](../site/src/content/derivations/axioms/loop-closure.md) (Open Gap 3 closed → Addressed Gaps), and [Coherence-Dual Pairs](../site/src/content/derivations/minimal-observer/coherence-dual-pairs.md). W/Z + EWSB recasting blocked on a structural question (logged in §"Open subitems" below). Higgs placement deferred to Step 2. The framework's three axioms define observers via $(\Sigma, I, \mathcal{B})$ and the [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) classifies *interactions*, but the **ontology of entities** — what kinds of things exist in the framework's furniture — is implicit and inconsistent across pages. This target consolidates the inconsistency, proposes a four-category resolution, and identifies the structural questions that resolution forces.
+**Last updated**: 2026-04-25
+
+## The framing observation
+
+The framework has been operating with an under-specified entity ontology. Several pages independently invoke "observer" or "minimal observer" with implicit but inconsistent meaning, and several entity types (notably massless gauge bosons, massive gauge bosons, scalar bosons, and substrate primitives) sit ambiguously between observer and non-observer status. Five inconsistencies are currently visible:
+
+1. **"Massless observer" language conflicts with the formal axioms.** [Speed of Light](../site/src/content/derivations/spacetime/speed-of-light.md) and [Lorentz Invariance](../site/src/content/derivations/spacetime/lorentz-invariance.md) describe photons as "massless observers" at the limiting case of loop closure. But photons fail three axiom requirements simultaneously: O1 compactness/positivity is degenerate ($d\tau = 0$ everywhere on a null worldline); Axiom 3's finite positive period $T_\mathcal{O}$ is operationally undefined (no rest frame); the self/non-self boundary $\mathcal{B}$ collapses for self-conjugate quanta. Three independent failures is too many to absorb as "boundary case."
+
+2. **"Minimal observer" is used in at least three incompatible senses.** Across [Multiplicity](../site/src/content/derivations/minimal-observer/multiplicity.md), the QEC chain ([Observer as Error-Correcting Code](../site/src/content/derivations/foundation/observer-as-error-correcting-code.md), [Substrate Noise](../site/src/content/derivations/foundation/substrate-noise-and-profile-coupling.md)), and [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) Proposition 7.3 (where "minimal observers" appears as a description of radiation carriers), the term refers to substrate primitives at one place, structurally minimal-complexity configurations at another, and counting-minimum configurations at a third. These are compatible but not identical readings; their conflation has propagated into downstream arguments.
+
+3. **Massive gauge bosons are formally observers but functionally Type II composites.** W and Z clear every observer axiom — finite Compton period, finite-dimensional polarization state space, well-defined invariants, well-defined boundary. But they are *also*, structurally, Type II fusion products of pre-EWSB massless gauge modes and Higgs Goldstone modes (the Equivalence Theorem makes this physical content; the longitudinal polarization is the absorbed Goldstone). The framework currently has no place to record this dual status — the [Electroweak Symmetry Breaking](../site/src/content/derivations/gauge/electroweak-breaking.md) derivation does not invoke the Type II language even though EWSB is structurally a Type II fusion event in framework terms.
+
+4. **The Higgs is a genuine observer with no internal U(1).** A single physical Higgs scalar formally satisfies the observer axioms — finite Compton period $T_H \sim 3 \times 10^{-26}$ s, $\sim 5{,}000$ cycles before decay, well-defined rest frame, single Noether pair (oscillator phase, rest energy). But its only loop is the rest-frame Compton oscillation in phase space; no internal gauge U(1) is attached. This pushes against the implicit reading of [Loop Closure](../site/src/content/derivations/axioms/loop-closure.md) Axiom 3 that the relevant U(1) is internal/gauge-like. Whether Axiom 3 admits phase-space U(1) as a sufficient loop is currently undetermined.
+
+5. **Planck-scale substrate observers are never formally specified.** The QEC chain, the bootstrap hierarchy, the multiplicity argument, and the substrate-noise framework all invoke Planck-scale primitive observers, but no derivation states what their $(\Sigma, I, \mathcal{B})$ actually is. The QEC reading suggests they are qubits ($\mathbb{C}^2$ with $SU(2)$ action, spin-1/2-like). Other readings would suggest scalar primitives, real-bit primitives, or compositional aggregates of both. The downstream arguments are sensitive to the choice.
+
+This research target asks whether these five inconsistencies can be resolved by a single coherent ontological taxonomy, and whether resolving them produces new structural content (not merely cleanup).
+
+## The goal
+
+**Construct and formalize a coherent entity-category taxonomy for the framework, with the following structural outputs in priority order:**
+
+1. **A formal multi-category ontology.** Replace the implicit "observers and everything else" reading with a small number (likely 3 or 4) of formally-defined entity categories, each with explicit axiom-compliance status and canonical examples. Prove exhaustiveness — every entity in the framework's physical catalog should fall into exactly one category.
+
+2. **Loop closure axiom clarification.** Resolve whether [Loop Closure](../site/src/content/derivations/axioms/loop-closure.md) Axiom 3's U(1) requirement permits phase-space U(1) (admitting Higgs and any scalar with finite Compton period as observers) or requires internal/gauge U(1) (excluding scalars). Each choice predicts and falsifies different downstream content; the framework must choose.
+
+3. **Formal Planck-scale minimal observer specification.** Pin down the substrate primitive's $(\Sigma, I, \mathcal{B})$ structure. Test against the QEC, multiplicity, and bootstrap usages. Identify the spin / state-space structure. The most likely outcome is qubit-with-extra-data, but the framework should commit explicitly.
+
+4. **Disambiguation of "minimal observer."** Each occurrence of the term across the framework is mapped to one of the resolved senses. The Multiplicity Theorem's "at least two minimal observers" claim is re-grounded in the chosen sense.
+
+5. **Boson placement.** Massless gauge bosons (photons, gluons), massive gauge bosons (W, Z), and the Higgs each receive an explicit category assignment with derivation. Photons and gluons are recategorized away from "observer" status; W and Z are recorded as Type II composites; the Higgs is placed in whichever category the loop-closure clarification permits (likely a new "elementary scalar observer" category if the phase-space U(1) reading is adopted).
+
+6. **(Stretch) Complexity-Minimal Residue Uniqueness.** Investigate whether the framework supports a structural theorem of the form: at any Type II fusion producing an observer network, exactly one complexity-minimal scalar residue should remain. If derivable, this would derive Higgs uniqueness from first principles rather than from the doublet arithmetic.
+
+## Why the target is plausible
+
+**Six framework commitments stand at the entity level, each supplying a piece of the program:**
+
+1. **The Three Interaction Types derivation already classifies interaction outcomes exhaustively.** [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) Theorem 5.1 establishes that every interaction between two observers falls into Type I (Passage), Type II (Fusion), or Type III (Resonance). What is missing is the parallel classification of *entities* — the things that participate in those interactions. The interaction taxonomy is the natural template; a Type-I quantum is a quantized event of Type I, a Type-II composite is a stable end-state of Type II, and so on.
+
+2. **The structural exemption argument already isolates Type-I quanta.** [Substrate Noise and Profile Coupling](../site/src/content/derivations/foundation/substrate-noise-and-profile-coupling.md) Corollary 6.1 establishes that gauge bosons carry the coupling they mediate, with no logical content exposed to that coupling. This is the structural feature that makes them ontologically distinct from observers — they cannot be charged under the very symmetry whose connection they constitute. The argument is already in framework form; recategorization is bookkeeping.
+
+3. **The QEC chain provides a candidate substrate-observer construction.** The Planck-scale substrate primitive is treated as a minimal QEC code carrier in [Observer as Error-Correcting Code](../site/src/content/derivations/foundation/observer-as-error-correcting-code.md). Qubits are the natural code-carrier units. If substrate primitives are qubits, their $(\Sigma, I, \mathcal{B})$ structure is determined: $\Sigma \cong S^2$ (Bloch sphere), $I = $ spin-1/2 invariant, $\mathcal{B} = $ logical/physical separation. The construction is already present implicitly; making it explicit closes a derivation gap.
+
+4. **Cycle-count $\tau/T$ supplies an empirical regime indicator.** Lifetime-to-Compton-period ratios distinguish ephemeral entities (W/Z $\sim 6$ cycles), genuine but short-lived observers (Higgs $\sim 5{,}000$), nearly-stable observers (free neutron $\sim 10^{24}$), and fixed-point-stable observers (electron, proton — effectively infinite). This metric is framework-intrinsic and cleanly separates "Type II composite at non-fixed-point" from "elementary observer" without requiring further axiom-level commitment.
+
+5. **EWSB is already structurally a Type II fusion event.** [Electroweak Symmetry Breaking](../site/src/content/derivations/gauge/electroweak-breaking.md) presents the mechanism in standard physics language (gauge boson mass via Higgs VEV), but the underlying transformation — three gauge modes and three Goldstone modes merging into three massive vector observers — is exactly Type II fusion: $\Sigma_{\text{gauge}} \times \Sigma_{\text{Goldstone}} \to \Sigma_{\text{massive vector}}$ with observer count reducing from 8 to 5. Recasting in framework language is reformulation rather than new derivation.
+
+6. **The Multiplicity derivation makes the at-least-two argument independent of internal structure.** [Multiplicity](../site/src/content/derivations/minimal-observer/multiplicity.md) requires at least two observers, but the structural argument is about the existence of distinct $(\Sigma, I, \mathcal{B})$ triples, not about specific structure. Disambiguating "minimal observer" to refer specifically to substrate primitives (rather than complexity-minimal configurations) preserves the proof.
+
+## What the target buys
+
+**B1. A coherent ontology that supports current and future derivations.** Many existing derivations implicitly assume one or another reading of "observer" and "minimal observer." Resolving the taxonomy provides a stable foundation for derivations to reference unambiguously. New derivations can identify their entity types with confidence.
+
+**B2. Removal of the "massless observer" inconsistency.** [Speed of Light](../site/src/content/derivations/spacetime/speed-of-light.md), [Lorentz Invariance](../site/src/content/derivations/spacetime/lorentz-invariance.md), and any future derivation discussing photons receive a clear, axiom-respecting characterization. Photons cease to be a "limiting case observer" and become a quantized Type-I event — a well-defined ontological category in its own right.
+
+**B3. Loop Closure axiom clarification.** Whether Axiom 3 admits phase-space U(1) is an unresolved structural choice with downstream consequences. Resolving it is required for the Higgs's status and for any future scalar observer (e.g., scalar dark matter, scalar inflaton candidates, scalar moduli). Either resolution is informative — if phase-space U(1) suffices, scalars are first-class observers; if not, the framework predicts no fundamental scalar observers and the Higgs is in a new category.
+
+**B4. Explicit Planck-scale minimal observer.** The substrate primitive is the foundational unit of the QEC and bootstrap pictures. Specifying it explicitly closes a derivation gap shared by [Observer as Error-Correcting Code](../site/src/content/derivations/foundation/observer-as-error-correcting-code.md), [Substrate Noise and Profile Coupling](../site/src/content/derivations/foundation/substrate-noise-and-profile-coupling.md), the [Bootstrap Mechanism](../site/src/content/derivations/interactions/bootstrap.md) hierarchy, and [Multiplicity](../site/src/content/derivations/minimal-observer/multiplicity.md). Cross-derivation consistency improves.
+
+**B5. Structural derivation of the SM bosonic spectrum's qualitative features.** If the taxonomy includes a Complexity-Minimal Residue Uniqueness theorem (stretch goal B6 below), the Higgs's existence and uniqueness become structural consequences of EWSB rather than consequences of the specific $SU(2) \times U(1)$ doublet count. The number of physical scalars after a Type II fusion event would be a derived quantity.
+
+**B6. (Stretch) Complexity-Minimal Residue Uniqueness conjecture.** A potential structural theorem: at any Type II fusion producing an observer network, exactly one complexity-minimal scalar residue remains. The structural reason: the radial/magnitude mode of any composite-field configuration is the unique mode that does not couple to the gauge-like phase-comparison structure of the resulting network. If derivable, it constrains scalar spectra at every scale (electroweak, GUT, possibly Planck) and provides a falsifiable prediction: discovery of additional fundamental scalars at any scale falsifies the conjecture.
+
+**B7. Foundation for future entity-category derivations.** Several future derivations would benefit from a stable taxonomy: scalar dark matter candidates, inflaton placement, moduli fields, gauge-boson dark photons, hidden-sector entities. Each requires unambiguous category placement; the resolved taxonomy provides it.
+
+## The central challenge: what counts as an "observer"?
+
+The core conceptual difficulty is the framework's under-specification of Axiom 2. The triple $(\Sigma, I, \mathcal{B})$ is well-defined, but several questions are not currently committed:
+
+1. **Internal vs phase-space U(1).** [Loop Closure](../site/src/content/derivations/axioms/loop-closure.md) Axiom 3 specifies U(1) phase dynamics but does not distinguish internal (gauge-like) from external (phase-space, time-translation conjugate) U(1) actions. Every massive field has phase-space U(1); only charged or spinning fields have internal U(1). Whether the axiom admits the phase-space reading is the load-bearing structural question.
+
+2. **Lower bound on $\Sigma$ structure.** The axiom requires connected, compact $\Sigma$ with $\mathcal{C}(\Sigma) > 0$ but does not specify a minimum dimension or topology. Is $\Sigma \cong S^1$ (single oscillator phase) sufficient, or is a higher-dimensional structure required? The Higgs has $\Sigma \cong S^1$; a substrate qubit has $\Sigma \cong S^2$; a fermion has more.
+
+3. **Self-conjugate boundary.** The self/non-self boundary $\mathcal{B}$ is well-defined for charged or Dirac-fermion observers. For self-conjugate entities (Majorana fermions, real scalars, photons), $\mathcal{B}$ may be vacuous or may need a different formalization. Whether self-conjugate entities are observers is currently undetermined.
+
+Resolving these forces explicit commitment on:
+- Whether the Higgs is an observer (depends on internal-vs-phase-space U(1) choice);
+- Whether photons fail observer status by O1 alone or also by $\mathcal{B}$ collapse;
+- Whether Majorana neutrinos and self-conjugate dark matter candidates are observers.
+
+The framework cannot avoid this commitment indefinitely; the taxonomy program forces it.
+
+## Candidate paths
+
+**Three approaches, with different scoping risk:**
+
+**Route A (incremental — recategorize bosons first).** Start with the cleanest cases: photons and gluons recategorize as Type-I quanta (no observer status); W and Z recategorize as Type II composites; Higgs treated as a separate residual case pending the U(1) clarification. Resolve the loop-closure axiom question only as needed. Estimated scope: 6–10 weeks. **Lowest risk; produces immediate consistency improvements but does not close the structural questions.**
+
+**Route B (foundational — clarify Axiom 3 first).** Begin with the loop-closure axiom clarification. Determine whether phase-space U(1) suffices. Then derive the entity taxonomy as a consequence: with phase-space U(1) admitted, scalars are observers; without, they are a separate category. Both choices yield a coherent taxonomy, but the structures differ. Estimated scope: 3–4 months. **Higher risk; the axiom commitment may have downstream consequences for currently-derived results that need to be re-verified.**
+
+**Route C (full program — formalize all four categories simultaneously).** Define all four entity categories with full formal axiom-compliance, derive the substrate-observer structure, resolve the loop-closure question, and prove the Complexity-Minimal Residue Uniqueness conjecture (or refute it) as a coherent package. Estimated scope: 4–6 months. **Highest risk and highest payoff; produces a structurally complete taxonomy plus a new structural theorem if B6 succeeds.**
+
+**Recommended order**: Route A for quick wins → Route B for axiom clarification → Route C as the full program. Route A delivers most of the cleanup value immediately; Route B closes the structural questions; Route C provides the new derivation content if it succeeds.
+
+## Specific predictions
+
+If the program succeeds:
+
+1. **Photon and gluon ontology fixed.** No future derivation describes photons as observers; the "limiting case" framing is retired. Massless gauge bosons are quantized Type-I Passage events.
+
+2. **W, Z observer-status with Type II composite mechanism.** [Electroweak Symmetry Breaking](../site/src/content/derivations/gauge/electroweak-breaking.md) is recast as a Type II fusion event. W/Z mass is the fusion coherence signature, structurally analogous to nuclear binding energy and quark confinement.
+
+3. **Higgs status resolved.** Either elementary scalar observer (if phase-space U(1) suffices for Axiom 3) or new fourth category (if not). Either way, the Higgs has a definite category placement.
+
+4. **Substrate observer structure specified.** Most likely qubit ($\Sigma \cong S^2$, $I = $ spin-1/2, $\mathcal{B} = $ logical/physical), but committed explicitly.
+
+5. **Multiplicity Theorem re-grounded.** "At least two minimal observers" refers specifically to substrate primitives; the proof uses the resolved structure.
+
+6. **(Stretch) Higgs uniqueness as structural consequence.** If Complexity-Minimal Residue Uniqueness holds, the SM's single-Higgs spectrum is derived rather than postulated. Discovery of additional fundamental scalars (at any scale) becomes a falsifying observation.
+
+7. **Cross-derivation consistency.** Every page that uses "observer" or "minimal observer" is internally consistent and consistent across the framework. Future derivations have unambiguous vocabulary.
+
+## What would falsify or require postulating
+
+1. **No coherent four-category resolution exists.** If the entities under consideration cannot be partitioned exhaustively by structural criteria (e.g., if some entity satisfies category A's defining condition and category B's simultaneously, or none of them), the taxonomy program fails and the framework needs richer ontological structure.
+
+2. **Loop Closure axiom under-determined.** If the phase-space-vs-internal U(1) question cannot be resolved from existing axiom structure, the framework must postulate one reading or the other. This is acceptable but reduces the program from "derivation" to "axiom commitment."
+
+3. **Substrate observers cannot be qubit-like.** If the QEC, multiplicity, and bootstrap usages of "minimal observer" are mutually inconsistent under any single resolution, the framework's substrate description has internal tensions that exceed this target's scope.
+
+4. **Complexity-Minimal Residue Uniqueness fails.** If the conjecture cannot be proved, this is informative (Higgs uniqueness remains a doublet-arithmetic consequence rather than a structural one) but does not falsify the rest of the program. If the conjecture is *refuted* (counterexamples exist within the framework), this constrains the taxonomy further.
+
+5. **EWSB is not cleanly Type II.** Most likely outcome is that it is, but if a careful recasting reveals that EWSB has features incompatible with Type II Fusion's formal definition (Definition 4.3 of [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) — strictly $\dim(\Sigma_{12}) < \dim(\Sigma_1) + \dim(\Sigma_2)$), the framework needs either to relax the dimensional reduction criterion or to add a refinement to the interaction taxonomy.
+
+## Formalization path
+
+Concrete steps from target to derivation. Expected scope is 2–6 months depending on chosen route.
+
+### 1. Audit existing usage
+
+**Task**: Sweep every derivation file for occurrences of "observer," "minimal observer," "particle," "field excitation," "quantum," and related terms. Build a consistency table identifying implicit category claims and conflicting usages. Identify which derivations break under each candidate resolution.
+
+**Tools**: Grep across `site/src/content/derivations/`. Existing knowledge index ([build-index.mjs](../scripts/build-index.mjs)). Cross-reference with [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md), [Multiplicity](../site/src/content/derivations/minimal-observer/multiplicity.md), [Loop Closure](../site/src/content/derivations/axioms/loop-closure.md).
+
+**Output**: A table mapping every "observer" / "minimal observer" usage to one of the resolved senses (substrate-minimal, complexity-minimal, multiplicity-minimal, generic observer). A list of derivations that need updates.
+
+**Expected difficulty**: Easy. Mechanical sweep with judgment calls on edge cases.
+
+### 2. Resolve Loop Closure axiom (Routes B or C)
+
+**Task**: Determine whether [Loop Closure](../site/src/content/derivations/axioms/loop-closure.md) Axiom 3 admits phase-space U(1) (rest-frame Compton oscillation with energy as Noether charge) or requires internal U(1) (gauge phase with conserved charge). Approach via the symmetry-action structure: phase-space U(1) is the symplectic rotation in $(\phi, \pi_\phi)$; internal U(1) is the global phase rotation $\phi \to e^{i\theta}\phi$. The axiom's current statement does not distinguish; the program must either prove they are equivalent for the axiom's purposes or commit to one reading.
+
+**Tools**: [Loop Closure](../site/src/content/derivations/axioms/loop-closure.md); [Action and Planck's Constant](../site/src/content/derivations/thermodynamics/action-planck.md) (Noether structure); [Born Rule](../site/src/content/derivations/quantum/born-rule.md) (which reading the Born derivation actually uses).
+
+**Output**: An amendment or clarifying postulate to [Loop Closure](../site/src/content/derivations/axioms/loop-closure.md). Either: "Axiom 3 admits phase-space U(1) with energy as Noether charge" (scalars are observers) or "Axiom 3 requires internal U(1) with non-energy Noether charge" (scalars are a separate category).
+
+**Expected difficulty**: Hard. Touches axiom-level commitment.
+
+### 3. Define entity categories formally
+
+**Task**: For each candidate category, write a formal definition specifying:
+- Which axioms it satisfies and which it fails;
+- Its canonical state space, invariant structure, and boundary;
+- Its interaction profile (which interaction types it can participate in);
+- Its persistence regime (cycle-count expectation);
+- A canonical Standard Model example.
+
+Candidate categories (depending on Step 2 outcome):
+- **Type I quanta**: photons, gluons. Quantized Passage events; not observers; structural exemption from own coupling.
+- **Type II composites**: hadrons, nuclei, atoms, molecules, W, Z. Stable end-states of Type II Fusion; observers in their own right with $(\Sigma_{12}, I_{12}, \mathcal{B}_{12})$.
+- **Elementary fermion observers**: quarks, charged leptons, neutrinos. Satisfy all axioms; have internal U(1); fixed-point or near-fixed-point stable.
+- **Elementary scalar observers** (if Step 2 admits phase-space U(1)): Higgs. Satisfy all axioms with phase-space-only U(1); $\Sigma \cong S^1$.
+- **Substrate primitives**: Planck-scale qubit-like. Satisfy all axioms minimally; $\Sigma \cong S^2$ (or whatever Step 4 resolves).
+
+**Tools**: [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md); [Observer Definition](../site/src/content/derivations/axioms/observer-definition.md); [Loop Closure](../site/src/content/derivations/axioms/loop-closure.md); category-theoretic tools for the partition argument.
+
+**Output**: A new derivation `foundation/entity-category-taxonomy.md` with formal definitions, an exhaustiveness theorem (every entity in the framework's catalog falls into exactly one category), and worked examples.
+
+**Expected difficulty**: Moderate. Mostly consolidation; the hard work is the exhaustiveness theorem.
+
+### 4. Specify substrate observer structure
+
+**Task**: Pin down the formal $(\Sigma, I, \mathcal{B})$ for Planck-scale primitives. Test the qubit hypothesis: $\Sigma \cong S^2$ (Bloch sphere); $I = $ spin-1/2; $\mathcal{B} = $ logical/physical separation under the QEC code. Verify against:
+- [Observer as Error-Correcting Code](../site/src/content/derivations/foundation/observer-as-error-correcting-code.md) — substrate carries QEC code structure.
+- [Substrate Noise and Profile Coupling](../site/src/content/derivations/foundation/substrate-noise-and-profile-coupling.md) — substrate has bit-flip noise rate $p_{\text{phys}}^{\text{geom}}$.
+- [Multiplicity](../site/src/content/derivations/minimal-observer/multiplicity.md) — at least two distinct primitives required; check that distinctness criterion makes sense for qubits.
+- [Bootstrap Mechanism](../site/src/content/derivations/interactions/bootstrap.md) — primitives are level-0 of the hierarchy.
+
+**Tools**: QEC chain; Multiplicity; Bootstrap; [Pauli Exclusion](../site/src/content/derivations/particles/pauli-exclusion.md) (whether substrate primitives satisfy Pauli statistics).
+
+**Output**: A new derivation `foundation/planck-scale-minimal-observer.md` (or section of existing substrate page) specifying the formal structure. Verification checks against each downstream usage.
+
+**Expected difficulty**: Moderate. Most ingredients exist; the work is in joint verification.
+
+### 5. Recast EWSB as Type II fusion
+
+**Task**: Rewrite [Electroweak Symmetry Breaking](../site/src/content/derivations/gauge/electroweak-breaking.md) in framework-intrinsic Type II language. Demonstrate the $8 \to 5$ observer-count reduction (4 gauge + 4 Higgs $\to$ 1 photon + 3 W/Z + 1 Higgs). Show the longitudinal mode is structurally the absorbed Goldstone (Equivalence Theorem as physics's own statement of Type II's "individual identities merge"). Identify mass as fusion coherence signature.
+
+**Tools**: [Electroweak Symmetry Breaking](../site/src/content/derivations/gauge/electroweak-breaking.md); [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) Definition 4.3; [Confinement](../site/src/content/derivations/gauge/confinement.md) for the analogous massive-from-massless mechanism.
+
+**Output**: Updated [Electroweak Symmetry Breaking](../site/src/content/derivations/gauge/electroweak-breaking.md) with explicit Type II language and observer-count argument. Cross-references to [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md). New section on "EWSB as cosmological-scale Type II fusion event."
+
+**Expected difficulty**: Easy-to-moderate. Reformulation rather than new derivation.
+
+### 6. (Stretch) Complexity-Minimal Residue Uniqueness
+
+**Task**: Investigate whether the framework forces, in any Type II fusion producing an observer network, exactly one complexity-minimal scalar residue. Approach via the radial-vs-angular mode decomposition: any composite-field configuration with internal symmetry has angular modes (which become absorbed Goldstones in the fusion) and at most one radial mode (the magnitude). The framework's structure may force the radial mode to be the unique complexity-minimal residue.
+
+Possible proof routes:
+- **Direct**: show that any non-radial residue must couple to the gauge-like phase-comparison structure of the resulting network, hence is not complexity-minimal (has additional internal U(1)).
+- **Categorical**: show that the residue category after Type II fusion has a unique terminal object corresponding to the radial mode.
+- **Constraint-counting**: count gauge fixings vs. broken generators and show the residue dimension is bounded above by 1.
+
+**Tools**: [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) Definition 4.3; [Electroweak Symmetry Breaking](../site/src/content/derivations/gauge/electroweak-breaking.md); [Bootstrap Mechanism](../site/src/content/derivations/interactions/bootstrap.md); category-theoretic tools.
+
+**Output**: Either a proof of the conjecture (in which case Higgs uniqueness is structural), a refutation (counterexample within the framework), or formalization as an open subitem with identified obstructions.
+
+**Expected difficulty**: Hard. Stretch goal.
+
+## Cross-refs and dependencies
+
+**Depends on**:
+- [Loop Closure](../site/src/content/derivations/axioms/loop-closure.md) — Axiom 3 clarification (Step 2)
+- [Observer Definition](../site/src/content/derivations/axioms/observer-definition.md) — base axiom for observer-status check
+- [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) — interaction taxonomy as template for entity taxonomy
+- [Multiplicity](../site/src/content/derivations/minimal-observer/multiplicity.md) — at-least-two argument's grounding
+- [Observer as Error-Correcting Code](../site/src/content/derivations/foundation/observer-as-error-correcting-code.md), [Substrate Noise and Profile Coupling](../site/src/content/derivations/foundation/substrate-noise-and-profile-coupling.md) — substrate primitive specification
+- [Bootstrap Mechanism](../site/src/content/derivations/interactions/bootstrap.md) — substrate primitives as level-0
+- [Electroweak Symmetry Breaking](../site/src/content/derivations/gauge/electroweak-breaking.md) — Type II fusion recasting
+
+**Enables/sharpens**:
+- [Speed of Light](../site/src/content/derivations/spacetime/speed-of-light.md), [Lorentz Invariance](../site/src/content/derivations/spacetime/lorentz-invariance.md) — "massless observer" language cleanup
+- [Memory-Persistence Tradeoff](../site/src/content/derivations/thermodynamics-ext/memory-persistence-tradeoff.md) — Type II clock-pause corollary
+- [Proton Stability](../site/src/content/derivations/particles/proton-stability.md) and any future electron-stability page — shared "no Type II reverse + dissolution-limited" template
+- Future derivations: scalar dark matter, scalar inflaton, hidden-sector entities, axion/ALP placement
+- Possibly mass-hierarchy refinement if scalar observers turn out to have constrained mass spectra
+
+**Risk of overlap with**:
+- Existing [Electroweak Symmetry Breaking](../site/src/content/derivations/gauge/electroweak-breaking.md) content — would need careful merging.
+- The [hierarchical-geometry](../site/src/data/future-targets.json) target — if substrate primitives are formalized, they may need consistency with the geometry functor.
+
+## Success criteria
+
+The target succeeds if, at the end:
+
+1. Every entity in the Standard Model catalog has an unambiguous category assignment with formal justification.
+2. "Minimal observer" has a single resolved meaning per occurrence in the framework; ambiguous usages are eliminated.
+3. Photons and gluons are no longer described as observers anywhere in the framework.
+4. W, Z, and the Higgs each have explicit category placement with derivation.
+5. Planck-scale minimal observers have a formal $(\Sigma, I, \mathcal{B})$ definition usable by all derivations that invoke them.
+6. [Loop Closure](../site/src/content/derivations/axioms/loop-closure.md) Axiom 3's U(1) reading is committed (phase-space, internal, or both).
+7. [Electroweak Symmetry Breaking](../site/src/content/derivations/gauge/electroweak-breaking.md) is recast in Type II fusion language with observer-count argument.
+8. The framework has no internal "observer" / "minimal observer" / "particle" / "quantum" inconsistencies remaining.
+9. (Stretch) Complexity-Minimal Residue Uniqueness is either proved, refuted, or formalized as an open subitem with identified obstructions.
+
+## Estimated difficulty
+
+Hard but not blocked. Most of the conceptual moves are present in the framework already; the work is consistency-enforcement, formalization, and a small number of genuine derivations. Comparable in scope to the bridge-page / postulate-classification effort that closed 40/40 forced postulates in the 2026-04-11 session, plus one structural axiom clarification (Step 2) and one stretch derivation (Step 6).
+
+## Open subitems
+
+### Surfaced 2026-04-25 (after Route A photon cleanup)
+
+**S1. EWSB-as-Type-II-fusion: dimensional-reduction criterion does not strictly hold at the polarization level.**
+
+Context: the research target proposes recasting [Electroweak Symmetry Breaking](../site/src/content/derivations/gauge/electroweak-breaking.md) as a Type II fusion event ($8 \to 5$ observer-count reduction: 4 gauge + 4 Higgs scalar $\to$ 1 photon (Type-I quantum) + 3 W/Z + 1 Higgs).
+
+Risk identified during Route A: each individual W/Z mass acquisition pairs one transverse gauge mode (2 polarizations) with one Goldstone scalar (1 dof) to produce a massive vector (3 polarizations). The polarization-state-space arithmetic is $2 + 1 = 3$ — *dimensional preservation*, not reduction. [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) Definition 4.3 requires strict $\dim(\Sigma_{12}) < \dim(\Sigma_1) + \dim(\Sigma_2)$ for Type II. The polarization-level reading therefore fails the criterion as currently stated.
+
+Three candidate resolutions:
+
+**(a) Total-dof accounting**: count total electroweak-sector degrees of freedom. Pre-EWSB: 4 gauge bosons × 2 (massless polarizations) + 4 Higgs real scalars = 12. Post-EWSB: 1 photon × 2 + 3 massive vectors × 3 + 1 Higgs scalar = 12. Total dof preservation, but the *number of independently ledgered entities* drops from 8 (4+4) to 5 (1+3+1) because Goldstones are absorbed. Type II at the entity-counting level, not the polarization-arithmetic level.
+
+**(b) Refine Definition 4.3**: distinguish "fusion at the polarization-fiber level" from "fusion at the entity-count level." Reformulate the criterion: Type II is dimension reduction in the *count of independently ledgered observer state spaces*, not in the dimension of the resulting $\Sigma_{12}$. A Goldstone-absorption fusion has $\dim(\Sigma_{\text{massive vector}}) = \dim(\Sigma_{\text{transverse gauge}}) + \dim(\Sigma_{\text{Goldstone}})$ but $N_{\text{ledger,after}} = 1 < 2 = N_{\text{ledger,before}}$.
+
+**(c) EWSB is not Type II**: declare EWSB structurally distinct from elementary-fusion Type II events. Either introduce a refined sub-type (Type II$_{\text{absorptive}}$ or similar) or accept that EWSB is sui generis at the framework's interaction-taxonomy level.
+
+These three readings have different downstream consequences. (a) is the closest to the program's intended claim and probably correct; (b) is the cleanest formalization but touches Definition 4.3 directly; (c) is the most conservative but weakens the program's structural payoff.
+
+**Decision needed before Route A.2 + Step 5 can proceed.**
+
+**S2. Higgs category placement deferred to Step 2.**
+
+The Higgs has finite Compton period ($T_H \sim 3 \times 10^{-26}$ s, $\sim 5{,}000$ cycles in the persistent regime), well-defined rest frame, and a single Noether pair (oscillator phase, rest energy). It satisfies all observer axioms *if* phase-space U(1) is admitted by Axiom 3; it does not satisfy Axiom 3 *if* internal U(1) is required. The current cycle-count tabulation in [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) (Step 8) lists Higgs alongside W/Z, electron, proton without flagging this dependency.
+
+Action item once Step 2 closes: add a hedging cross-reference at three-types.md:274 indicating the Higgs's category placement depends on Loop Closure Axiom 3's U(1) reading. Do *not* edit the table preemptively.
+
+**S3. "Minimal observer" four-sense overloading not yet addressed.**
+
+The audit identified four incompatible senses currently in use across the framework: substrate (Planck-scale primitive), complexity-minimal ($U(1)$ phase oscillator from [Minimal Observer Structure](../site/src/content/derivations/minimal-observer/structure.md) Theorem 6.1), counting-minimum (at-least-two requirement from [Multiplicity](../site/src/content/derivations/minimal-observer/multiplicity.md)), and generic ("any observer satisfying axioms minimally"). Each is locally correct but cross-document interpretation is fragile.
+
+Resolution scoped under Step 4 (substrate observer specification) and Step 6 of the formalization path. Not part of Route A.
+
+## Historical record
+
+### Route A.1: Photon recategorization (2026-04-25 — commit e53e2c0)
+
+The framework had been carrying the "massless observer" framing in three load-bearing places ([Speed of Light](../site/src/content/derivations/spacetime/speed-of-light.md) Proposition 6.2, [Lorentz Invariance](../site/src/content/derivations/spacetime/lorentz-invariance.md) Corollary 6.2, [Loop Closure](../site/src/content/derivations/axioms/loop-closure.md) Open Gap 3) plus a self-conjugate-observer mention in [Coherence-Dual Pairs](../site/src/content/derivations/minimal-observer/coherence-dual-pairs.md). The cleaner Type-I-quantum framing was already present in [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) Step 4 and Step 6 (Remarks on Type I as currency, Type III as accounting; the photon as Type I quantum in the worked atom-emits-photon example).
+
+Resolution: the null trajectory $L = cT$ is the propagation boundary for Type-I quanta, not an observer trajectory. The photon is the quantized Type-I carrier of $U(1)_{em}$ phase exchange between charged observers. Observer status fails strictly at the $T_0 \to 0$ limit ([Lorentz Invariance](../site/src/content/derivations/spacetime/lorentz-invariance.md) Theorem 6.1: as $v \to c$, the loop period diverges, the rest frame is absent, and $(\Sigma, I, \mathcal{B})$ has no rest-frame realization). Loop Closure Open Gap 3 moved to a new "Addressed Gaps" subsection on the page.
+
+This closes the "massless observer" inconsistency from §"The framing observation" §1 of this target. It does not yet resolve §2 (minimal observer four-sense overloading), §3 (W/Z dual status), §4 (Higgs status), or §5 (substrate primitives unspecified).
+
+## Intellectual origin
+
+Scoped during the 2026-04-25 framework exploration session investigating the ontological status of bosons (massless and massive), the photon's "massless observer" framing, the Higgs's loop structure, and the relationship between Higgs and Planck-scale minimal observers. The conversation traced through:
+
+1. Photon ontology — identified the three-axiom failure for "massless observer" and the cleaner Type-I-quantum framing.
+2. Eternal-observer ($T \to \infty$) exclusion — symmetric to the photon $T \to 0$ open gap, but axiomatically forbidden rather than gapped.
+3. Type II vs Type III distinction — clarified via dimensional-reduction criterion and worked through atom/molecule edge case.
+4. Type II constituent clock-pause — major insight on why matter persists (constituents not on the ledger while bound).
+5. Three decay mechanisms — Decay (Type II reverse) vs Dissolution (Type III saturation) vs Decoherence (Type III reverse), with ceiling/floor framing.
+6. W, Z as Type II composites — EWSB as Type II fusion event in framework terms.
+7. Higgs as elementary scalar observer — finite cycle count ($\sim 5{,}000$), no internal U(1), phase-space-only loop.
+8. Higgs vs Planck-scale minimal observer comparison — exposed the under-specification of "minimal observer" across the framework.
+
+The cumulative pattern made clear that the framework's entity ontology has been operating under unresolved ambiguity for some time, and that a single coherent taxonomy could resolve multiple inconsistencies at once. This target consolidates the program.
