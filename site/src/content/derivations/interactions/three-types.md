@@ -257,6 +257,51 @@ Definitions 7.2, 7.4, and 7.6 isolate three formally distinct end-of-existence m
 
 The three mechanisms are independent: an observer can be subject to all three, and its actual disappearance is determined by which timescale is shortest in its specific environment. Particle physics is dominated by Decay (every quoted lifetime is a decay timescale); quantum-information experiments are dominated by Decoherence (every quoted decoherence time is mechanism 2); the cosmological dissolution phase ([Cyclic Cosmology](/derivations/cosmology/cyclic-cosmology)) is the regime where mechanism 3 finally dominates because the universe's accelerating expansion has stripped the floor channels.
 
+#### Cycle count $\tau/T$ as observer characterization metric
+
+The framework provides a natural intrinsic clock for any observer: the loop closure period $T$ ([Loop Closure](/derivations/axioms/loop-closure) Theorem 3.1), set by the Compton period $T = 2\pi\hbar / (mc^2)$ for a mass-$m$ observer. The lifetime $\tau$ of the observer against whichever end-of-existence mechanism is shortest, divided by $T$, gives a dimensionless quantity:
+
+$$N_{\text{cycles}}(\mathcal{O}) \equiv \frac{\tau(\mathcal{O})}{T(\mathcal{O})}$$
+
+This is the number of internal loop traversals the observer completes before disappearing. Unlike $\tau$ (which conflates observer-intrinsic structure with environmental factors and unit choice) and unlike $T$ alone (which says nothing about persistence), $N_{\text{cycles}}$ is a framework-intrinsic measure of how observer-like the entity actually is over its existence. An entity that lasts for many internal cycles has time to act as a persistent unit on the observer ledger; an entity that lasts for one or two cycles barely satisfies the loop-closure condition before disappearing.
+
+**Tabulation for selected SM observers.**
+
+| Observer | Mass / energy | $T = 2\pi\hbar/(mc^2)$ | Lifetime $\tau$ | $N_{\text{cycles}} = \tau/T$ |
+|---|---:|---:|---:|---:|
+| W boson | $\sim 80.4$ GeV | $\sim 5 \times 10^{-26}$ s | $\sim 3 \times 10^{-25}$ s | $\sim 6$ |
+| Z boson | $\sim 91.2$ GeV | $\sim 4.5 \times 10^{-26}$ s | $\sim 2.6 \times 10^{-25}$ s | $\sim 6$ |
+| Higgs boson | $\sim 125$ GeV | $\sim 3.3 \times 10^{-26}$ s | $\sim 1.6 \times 10^{-22}$ s | $\sim 5{,}000$ |
+| Free neutron | $\sim 940$ MeV | $\sim 4.4 \times 10^{-24}$ s | $\sim 880$ s | $\sim 2 \times 10^{26}$ |
+| Electron | $\sim 0.511$ MeV | $\sim 8 \times 10^{-21}$ s | $\geq 6.6 \times 10^{28}$ yr | $\geq 2.5 \times 10^{56}$ |
+| Proton | $\sim 938$ MeV | $\sim 4.4 \times 10^{-24}$ s | $> 10^{34}$ yr (gravitational $> 10^{64}$ yr) | $> 7 \times 10^{64}$ |
+
+**Three regimes.** The values above cluster naturally into three regimes separated by many orders of magnitude — gaps that the framework reads as structural rather than incidental:
+
+| Regime | Range of $N_{\text{cycles}}$ | Dominant end-of-existence mechanism | SM examples |
+|---|---|---|---|
+| **Ephemeral** | $N_{\text{cycles}} \lesssim 10^2$ | Decay (mechanism 1, Definition 7.2) — the floor channel is so accessible that the observer barely completes a few internal cycles before splitting | W, Z, top quark, $\Delta$ resonance, most hadronic resonances |
+| **Persistent** | $10^2 \lesssim N_{\text{cycles}} \lesssim 10^{40}$ | Decay (mechanism 1) — an admissible Type II reverse channel exists, but the channel barrier or phase-space suppression spreads the lifetime across many internal cycles | Higgs, free neutron, muon, charged pion, unstable nuclei, atomic excited states |
+| **Effectively stable** | $N_{\text{cycles}} \gtrsim 10^{40}$ | Dissolution (mechanism 3) — no admissible decay channel; lifetime against the saturation ceiling vastly exceeds the age of the universe in the present epoch | Electron, proton (and bound atoms by Type II clock-pause, [Memory-Persistence Tradeoff](/derivations/thermodynamics-ext/memory-persistence-tradeoff) Theorem 5.1) |
+
+The boundaries are not sharp natural-units thresholds but heuristic separations between regimes where qualitatively different physics dominates. The structural content the framework attaches to them is:
+
+- *Ephemeral observers* sit in the regime where the end-of-existence mechanism (Decay, mechanism 1) operates on a timescale comparable to the loop period itself. The "floor and ceiling" gap (three-mechanism taxonomy above) is essentially closed; the floor decay channel saturates the observer's existence almost immediately.
+
+- *Persistent observers* sit where the floor channel is open but slow. The observer completes many internal cycles before its specific Type II reverse channel fires. This is the regime where most of conventional particle physics lives — every quoted lifetime in the PDG of an unstable particle is a decay timescale in this regime.
+
+- *Effectively stable observers* sit where no floor channel exists at all and the saturation ceiling is the only operative mechanism. By the stability template ([Proton Stability](/derivations/gauge/proton-stability) Step 0, [Electron Stability](/derivations/particles/electron-stability) Step 0), this is the regime of the lightest carrier of an exactly conserved charge.
+
+**Remark (cycle-count distinguishes structurally distinct entities sharing a context).** The W/Z/Higgs cluster illustrates the metric's resolving power. All three are produced at the electroweak scale, all three have masses within a factor of two of each other, all three are bosons. By any of mass, production scale, or spin-statistics, the three look like a coherent family. The cycle-count metric separates them by three orders of magnitude: W and Z each at $N_{\text{cycles}} \sim 6$ (deep in the ephemeral regime), the Higgs at $N_{\text{cycles}} \sim 5{,}000$ (squarely in the persistent regime). Whatever the eventual ontological classification of these particles, the metric records that the W and Z barely satisfy loop closure before disappearing, whereas the Higgs persists across thousands of internal cycles before its decay channels fire. The three live in qualitatively different cycle-count regimes despite their shared electroweak origin, and the metric makes this difference visible directly from observable lifetimes and masses without requiring commitment to deeper structural identifications.
+
+**Connection to the three-mechanism taxonomy.** The cycle-count regime correlates predictively with which mechanism dominates the disappearance:
+
+- An observer in the ephemeral regime is necessarily Decay-dominated: $N_{\text{cycles}} \lesssim 10^2$ rules out the saturation-ceiling timescales achievable by mechanism 3 in any ordinary environment.
+- An observer in the persistent regime is Decay-dominated unless its decay channels are environmentally suppressed; in that case Decoherence (mechanism 2) can become operative through external coupling.
+- An observer in the effectively stable regime cannot be Decay-dominated by definition (no floor channel exists); its $N_{\text{cycles}}$ is set by the saturation ceiling against the available Type III rate.
+
+The cycle-count metric and the mechanism taxonomy thus offer two complementary classifications of the same observer population. The metric reads off the gap between the floor and the ceiling for each observer; the mechanism taxonomy says which mechanism is operative when the gap collapses.
+
 ### Step 8: Thermodynamic Asymmetry
 
 The forward and reverse processes are kinematically symmetric — coherence conservation permits both directions equally. The asymmetry between them is thermodynamic.
