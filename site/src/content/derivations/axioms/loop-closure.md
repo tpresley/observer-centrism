@@ -202,6 +202,18 @@ Therefore $P$ is closed and discrete in $(0, \infty)$, so $T_\mathcal{O} = \inf 
 
 **Remark (Discrete case).** If $\Sigma$ is finite, the dynamics is a bijection $\phi: \Sigma \to \Sigma$ with $\phi^n = \text{id}$ for some $n \geq 2$. The minimal period is the order of $\phi$ in $\text{Sym}(\Sigma)$.
 
+**Proposition 3.3 (Eternal observer exclusion).** *No observer satisfies $T_\mathcal{O} = \infty$. The eternal-observer limit is forbidden, not a degenerate boundary case.*
+
+*Proof.* Three independent failure modes, each sufficient on its own.
+
+**(i) Axiom-level failure of the period set.** By Axiom 3 the period set $P = \{T > 0 : \phi_T = \mathrm{id}_\Sigma\}$ is non-empty, and by Proposition 3.2 it is closed and discrete in $(0, \infty)$. Hence $T_\mathcal{O} = \inf P$ is a finite positive number lying in $P$. The interpretation "$T_\mathcal{O} = \infty$" reads as "$P = \emptyset$," which directly negates Axiom 3.
+
+**(ii) Persistence-level failure.** By Theorem 3.1, indefinite persistence ($\tau_\mathcal{O} = \infty$) requires exact closure at *finite* period: the alternative — approximate identity convergence at diverging times $T_n \to \infty$ — is ruled out as not self-sustaining (a system whose renewal period grows without bound is not maintaining itself). Even reading $T_\mathcal{O} \to \infty$ as a limit rather than as axiom violation is therefore inadmissible.
+
+**(iii) Coherence-cost failure.** The coherence cost integral $S_\mathcal{O} = \int_0^{T_\mathcal{O}} \mathcal{C}(\phi_t(\sigma_0)) \sqrt{g(\dot\phi_t, \dot\phi_t)}\, dt$ (Definition 7.1) diverges as $T_\mathcal{O} \to \infty$ unless either $\mathcal{C}(\phi_t) \to 0$ along the loop or $|\dot\phi_t|_g \to 0$. The first is forbidden by C2 (normalization; cf. Proposition 7.2: $\inf_{\sigma \in \gamma_\mathcal{O}} \mathcal{C}(\sigma) > 0$); the second is forbidden by Lemma 0.0 (free orbits — no fixed points of the $U(1)$ action). A divergent $S_\mathcal{O}$ is incompatible with each observer occupying a finite share of the slice's coherence budget $C_0$ ([Coherence Conservation](/derivations/axioms/coherence-conservation)). $\square$
+
+**Remark (Asymmetry with the null-trajectory boundary).** The two endpoints of the period spectrum — $T_\mathcal{O} \to 0$ and $T_\mathcal{O} \to \infty$ — are structurally asymmetric. The null-trajectory limit ($T \to 0$) is a degenerate observer boundary that admits residual content: the Type-I quanta of [Three Interaction Types](/derivations/interactions/three-types) Step 4 propagate along the null trajectory $L = cT$ (see Addressed Gap 1 below). The eternal limit ($T \to \infty$) admits no residual content: no entity, observer or otherwise, resides there. Cosmological-scale composite observers are *not* eternal observers in the sense excluded by Proposition 3.3 — at each bootstrap level $n$ the level-$n$ observer has finite $T_n$, with the framework's epistemic ceiling set by the large but finite horizon period $T_H \sim \sqrt{3/\Lambda}$ ([Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Theorem 8.10). Per-observer finiteness of $T_\mathcal{O}$ is uniform across the bootstrap hierarchy.
+
 **Corollary 3.2 (Universal frequency grid).** *All observer frequencies are commensurate. There exists a fundamental frequency $\omega_0 > 0$ such that every observer $\mathcal{O}$ has $\omega_\mathcal{O} = n_\mathcal{O} \omega_0$ for some positive integer $n_\mathcal{O}$. The discrete energy spectrum $E_n = n\hbar\omega_0$ follows.*
 
 *Proof.* Let $\mathcal{O}_1$ and $\mathcal{O}_2$ be any two observers with minimal periods $T_1 = 2\pi/\omega_1$ and $T_2 = 2\pi/\omega_2$. By Definition 5, their composite is an observer. The composite's dynamics on $\Sigma_1 \times \Sigma_2$ acts as $\phi_t(\sigma_1, \sigma_2) = (\phi^1_t(\sigma_1), \phi^2_t(\sigma_2))$. Axiom 3 applied to the composite requires $\phi_T = \text{id}$ for some $T > 0$, which means $\omega_1 T \in 2\pi\mathbb{Z}$ and $\omega_2 T \in 2\pi\mathbb{Z}$ simultaneously. This is possible if and only if $\omega_1/\omega_2 \in \mathbb{Q}$ — the frequencies are commensurate. Since this holds for *any* pair, all observer frequencies in the universe are pairwise commensurate. Pairwise commensurability over a countable set implies a common fundamental: $\omega_\mathcal{O} = n_\mathcal{O} \omega_0$ for some universal $\omega_0 > 0$ and positive integers $n_\mathcal{O}$.
@@ -347,6 +359,7 @@ $$E_\mathcal{O} = \frac{S_\mathcal{O}}{T_\mathcal{O}} \geq \frac{S_{\min}}{T_\ma
 - Proposition 2.5: Exact closure gives persistence
 - Theorem 3.1: Persistence requires exact closure (drift bound + compactness; quasi-periodicity excluded by composition)
 - Proposition 3.2: Minimal period exists (closed/discrete subgroup argument)
+- Proposition 3.3: Eternal observer exclusion (combines Proposition 3.2 axiom-level finiteness, Theorem 3.1 persistence-level finiteness, and Definition 7.1 + Proposition 7.2 + Lemma 0.0 coherence-cost finiteness)
 - Corollary 3.2: Universal frequency grid (from Definition 5 + Axiom 3; all observer frequencies commensurate)
 - Proposition 4.2: Loop is a smooth embedding $S^1 \hookrightarrow \Sigma$
 - Corollary 4.3: Faithful $U(1)$ action
@@ -372,6 +385,8 @@ $$E_\mathcal{O} = \frac{S_\mathcal{O}}{T_\mathcal{O}} \geq \frac{S_{\min}}{T_\ma
 ## Addressed Gaps
 
 1. **Null-trajectory boundary** — *Resolved by [Three Interaction Types](/derivations/interactions/three-types) Step 4*: The limit $T_\mathcal{O} \to 0$, $\omega_\mathcal{O} \to \infty$ is the boundary at which observer status fails ([Lorentz Invariance](/derivations/spacetime/lorentz-invariance), Theorem 6.1) — no rest frame, no rest-frame loop, no realizable $(\Sigma, I, \mathcal{B})$. Photons are not limiting-case observers but Type-I quanta — the phase-transfer currency carried between observers along the null boundary. They appear in observer accounting only as the medium of $U(1)_{em}$ phase exchange between charged observers, never as ledger entries themselves.
+
+2. **Eternal-observer limit** — *Resolved by Proposition 3.3*: The dual limit $T_\mathcal{O} \to \infty$ is forbidden by three independent failure modes — axiom-level (Proposition 3.2: $P$ is closed and discrete, so $T_\mathcal{O} \in P$ is finite), persistence-level (Theorem 3.1: $\tau_\mathcal{O} = \infty$ requires exact closure at finite period rather than approximate convergence at diverging times), and coherence-cost-level ($S_\mathcal{O}$ diverges as $T \to \infty$ unless coherence cost or velocity vanishes, both forbidden). Asymmetry with Addressed Gap 1: the null-trajectory boundary admits residual content (Type-I quanta), while the eternal limit admits no entity at all. Cosmological-scale composite observers are not eternal in this sense — they have finite $T_n$ at each bootstrap level with epistemic horizon $T_H \sim \sqrt{3/\Lambda}$ from [Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Theorem 8.10.
 
 <!-- References -->
 [Bredon, 1972]: /references#bredon-1972

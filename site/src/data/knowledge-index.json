@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-26T09:35:48.172Z",
+    "generatedAt": "2026-04-26T09:38:47.348Z",
     "derivationCount": 97,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -14,7 +14,7 @@
     "derivationCount": 97,
     "predictionCount": 12,
     "edgeCount": 378,
-    "formalObjectCount": 1409,
+    "formalObjectCount": 1410,
     "openGapCount": 339,
     "upgradeEligibleCount": 0,
     "leanVerifiedCount": 8,
@@ -400,6 +400,10 @@
           {
             "source": "axioms/coherence-operational",
             "context": "Model 2, strictly subadditive"
+          },
+          {
+            "source": "axioms/loop-closure",
+            "context": "Coherence Conservation"
           },
           {
             "source": "axioms/observer-definition",
@@ -933,6 +937,12 @@
           "statementPreview": "Under Axiom 3, the minimal period TO = infT > 0 : phiT = idSigma exists, is positive, and satisfies phiTO = idSigma.*"
         },
         {
+          "type": "Proposition",
+          "id": "3.3",
+          "name": "Eternal observer exclusion",
+          "statementPreview": "No observer satisfies TO = . The eternal-observer limit is forbidden, not a degenerate boundary case.*"
+        },
+        {
           "type": "Corollary",
           "id": "3.2",
           "name": "Universal frequency grid",
@@ -1083,6 +1093,14 @@
           {
             "target": "thermodynamics-ext/memory-persistence-tradeoff",
             "context": "Theorem 4.1"
+          },
+          {
+            "target": "axioms/coherence-conservation",
+            "context": "Coherence Conservation"
+          },
+          {
+            "target": "cosmology/observer-loop-viability",
+            "context": "Observer Loop Viability"
           },
           {
             "target": "thermodynamics/action-planck",
@@ -4204,6 +4222,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "axioms/loop-closure",
+            "context": "Observer Loop Viability"
+          },
           {
             "source": "cosmology/cosmological-arrow",
             "context": "Observer Loop Viability"
@@ -28859,6 +28881,13 @@
       "id": "3.2",
       "name": "Minimal period",
       "fullRef": "axioms/loop-closure:Proposition 3.2"
+    },
+    {
+      "derivationId": "axioms/loop-closure",
+      "type": "Proposition",
+      "id": "3.3",
+      "name": "Eternal observer exclusion",
+      "fullRef": "axioms/loop-closure:Proposition 3.3"
     },
     {
       "derivationId": "axioms/loop-closure",
