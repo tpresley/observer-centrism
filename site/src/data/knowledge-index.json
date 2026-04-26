@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-26T03:41:07.671Z",
+    "generatedAt": "2026-04-26T03:49:51.192Z",
     "derivationCount": 95,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -2800,6 +2800,10 @@
           },
           {
             "source": "interactions/bootstrap",
+            "context": "Cyclic Cosmology"
+          },
+          {
+            "source": "interactions/three-types",
             "context": "Cyclic Cosmology"
           },
           {
@@ -15978,6 +15982,14 @@
             "context": "Coherence Conservation"
           },
           {
+            "target": "thermodynamics-ext/memory-persistence-tradeoff",
+            "context": "Memory-Persistence Tradeoff"
+          },
+          {
+            "target": "cosmology/cyclic-cosmology",
+            "context": "Cyclic Cosmology"
+          },
+          {
             "target": "thermodynamics/entropy",
             "context": "Entropy"
           }
@@ -23948,6 +23960,10 @@
           {
             "source": "interactions/three-types",
             "context": "Theorem 5.1"
+          },
+          {
+            "source": "interactions/three-types",
+            "context": "Memory-Persistence Tradeoff"
           },
           {
             "source": "minimal-observer/structure",
