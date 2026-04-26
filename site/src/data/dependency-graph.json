@@ -499,6 +499,12 @@
       "status": "provisional"
     },
     {
+      "id": "foundation/entity-category-taxonomy",
+      "title": "Entity Category Taxonomy",
+      "group": "foundation",
+      "status": "provisional"
+    },
+    {
       "id": "foundation/observer-as-error-correcting-code",
       "title": "Observer as an Error-Correcting Code",
       "group": "foundation",
@@ -578,6 +584,30 @@
     }
   ],
   "edges": [
+    {
+      "from": "axioms/observer-definition",
+      "to": "foundation/entity-category-taxonomy"
+    },
+    {
+      "from": "axioms/loop-closure",
+      "to": "foundation/entity-category-taxonomy"
+    },
+    {
+      "from": "interactions/three-types",
+      "to": "foundation/entity-category-taxonomy"
+    },
+    {
+      "from": "minimal-observer/coherence-dual-pairs",
+      "to": "foundation/entity-category-taxonomy"
+    },
+    {
+      "from": "thermodynamics-ext/memory-persistence-tradeoff",
+      "to": "foundation/entity-category-taxonomy"
+    },
+    {
+      "from": "foundation/entity-category-taxonomy",
+      "to": "gauge/electroweak-breaking"
+    },
     {
       "from": "axioms/00-from-observation-to-axioms",
       "to": "axioms/coherence-conservation"
