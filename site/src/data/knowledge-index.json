@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-26T08:17:50.042Z",
+    "generatedAt": "2026-04-26T08:25:37.299Z",
     "derivationCount": 97,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -2818,6 +2818,14 @@
           {
             "target": "minimal-observer/multiplicity",
             "context": "Multiplicity"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap Mechanism"
+          },
+          {
+            "target": "foundation/entity-category-taxonomy",
+            "context": "the structurally minimal observers of [Minimal Observer Structure](/derivations/"
           },
           {
             "target": "axioms/loop-closure",
@@ -6012,6 +6020,10 @@
           {
             "source": "axioms/loop-closure",
             "context": "Entity Category Taxonomy"
+          },
+          {
+            "source": "cosmology/cyclic-cosmology",
+            "context": "the structurally minimal observers of [Minimal Observer Structure](/derivations/"
           },
           {
             "source": "foundation/substrate-noise-and-profile-coupling",
@@ -15347,6 +15359,10 @@
           {
             "source": "cosmology/cyclic-cosmology",
             "context": "Bootstrap"
+          },
+          {
+            "source": "cosmology/cyclic-cosmology",
+            "context": "Bootstrap Mechanism"
           },
           {
             "source": "cosmology/geometric-inflation",
