@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-26T08:44:37.625Z",
+    "generatedAt": "2026-04-26T09:20:49.684Z",
     "derivationCount": 97,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -6043,6 +6043,10 @@
             "context": "the structurally minimal observers of [Minimal Observer Structure](/derivations/"
           },
           {
+            "source": "foundation/observer-as-error-correcting-code",
+            "context": "Entity Category Taxonomy"
+          },
+          {
             "source": "foundation/substrate-noise-and-profile-coupling",
             "context": "Entity Category Taxonomy"
           },
@@ -7418,6 +7422,18 @@
             "context": "Causal Set Statistics"
           },
           {
+            "target": "foundation/entity-category-taxonomy",
+            "context": "Entity Category Taxonomy"
+          },
+          {
+            "target": "foundation/substrate-noise-and-profile-coupling",
+            "context": "Substrate Noise and Profile Coupling"
+          },
+          {
+            "target": "foundation/observer-as-error-correcting-code",
+            "context": "Definition 1.1"
+          },
+          {
             "target": "interactions/moufang-loop-phase-closure",
             "context": "0, T_A)$. The code space $\\mathcal{C}_A$ is their joint fixed subspace:*\n\n$$\\mat"
           },
@@ -7438,6 +7454,10 @@
           {
             "source": "foundation/formation-and-preservation",
             "context": "Observer as an Error-Correcting Code"
+          },
+          {
+            "source": "foundation/observer-as-error-correcting-code",
+            "context": "Definition 1.1"
           },
           {
             "source": "foundation/observer-edges-and-mutual-opacity",
@@ -9645,6 +9665,10 @@
           {
             "source": "foundation/formation-and-preservation",
             "context": "Substrate Noise and Profile-Dependent Coupling Modulation"
+          },
+          {
+            "source": "foundation/observer-as-error-correcting-code",
+            "context": "Substrate Noise and Profile Coupling"
           },
           {
             "source": "foundation/observer-edges-and-mutual-opacity",

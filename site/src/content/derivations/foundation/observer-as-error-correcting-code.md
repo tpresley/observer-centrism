@@ -184,6 +184,22 @@ The ratio $k_{\mathrm{sp}}/n_{\mathrm{sp}} = 1/4$ is the code rate. $\square$
 
 *Remark on extension to the other two axes.* *Corollary 4.1.1 is stated for the spatial-axis factor only. The composite code rate of $\mathcal{P}_A$ (over all three axes) would require separately computing the temporal-axis Floquet-factor rate and the algebraic-axis Kitaev-factor rate; the spatial-axis rate is the only one of the three whose physical- and logical-qubit counts follow directly from existing framework content via area bookkeeping.*
 
+**Remark 4.1.3 (What is tiled at the horizon, in three-layer terms).** *The terminology in Corollary 4.1.1 — "minimal-observer-loop positions on the horizon" — is precise but easy to misread as "the horizon is tiled by Planck-scale minimal observers." Under the three-layer ontology of [Entity Category Taxonomy](/derivations/foundation/entity-category-taxonomy) Step 6, the tiles and the loops are at structurally distinct levels:*
+
+- *The **tiles** are Layer 0 substrate cells of area $\ell_P^2$ — continuous Planck-cell oscillator modes ([Substrate Noise and Profile Coupling](/derivations/foundation/substrate-noise-and-profile-coupling) Definition 1.1). They are **not observers**: no $(\Sigma, I, \mathcal{B})$ triple, no loop closure of their own. The substrate-cell count $n_{\mathrm{sp}} = A_A/\ell_P^2$ is a count of Layer 0 positions, one per Planck cell of horizon area.*
+- *What may **occupy** a tile is a Layer 1 minimal observer ($U(1)$ phase oscillator with $\Sigma \cong S^1$ and Compton period $T_P$ at the Planck end of the bootstrap, [Minimal Observer Structure](/derivations/minimal-observer/structure) Theorem 6.1) whose worldline threads the corresponding horizon cell. Such an occupant **is** an observer in the framework's sense; many of them populate the substrate, and at the horizon they intersect the Layer 0 tiling at most one per cell.*
+- *What is **recorded** at each tile is one bit of the integer-stable boundary content $R_{\partial M_A}$ — the QEC code's logical-qubit content ([Definition 1.1](/derivations/foundation/observer-as-error-correcting-code) of this page; Proposition 4.1 above). The logical-qubit count $k_{\mathrm{sp}} = N_A = A_A/(4\ell_P^2)$ is the count of independent integer bits, one per four Layer 0 tiles (after the $1/4$ substrate-to-code redundancy of Corollary 4.1.1).*
+
+*Three Planck-scale objects, three structurally distinct levels:*
+
+| Level | What is at the horizon | Count |
+|---|---|---|
+| Layer 0 (substrate) | Planck-cell oscillator modes | $A_A/\ell_P^2$ tiles |
+| Layer 1 (observer loops at intersection) | Minimal-observer worldlines threading horizon cells | $\leq A_A/\ell_P^2$ instances |
+| Logical (QEC code's profile content) | Integer-stable bits $R_{\partial M_A}$ | $A_A/(4\ell_P^2) = N_A$ bits |
+
+*Conflating these — most easily, conflating the tile (Layer 0 substrate cell) with the loop (Layer 1 minimal observer) — is the implicit move that produces the misleading reading "the horizon is tiled by Planck-scale observers." Under the three-layer ontology, the horizon is tiled by Layer 0 substrate cells; some of these cells host Layer 1 minimal observer loops at horizon-intersection; the QEC code's integer profile records the loop content per cell with a $4{:}1$ substrate-to-logical redundancy.*
+
 **Proposition 4.2 (Algebraic axis as Kitaev topological code).** *The algebraic-axis factor of $\mathcal{P}_A$ is a Kitaev topological code (Kitaev 2003, "Fault-tolerant quantum computation by anyons") with homotopy-class logical qubits at the bootstrap-level gauge group.*
 
 *Structural argument.* The defining property of the Kitaev family is logical-qubit encoding as homotopy-class invariants on the underlying manifold. At bootstrap level 1, the framework's $\pi_1(U(1)) = \mathbb{Z}$ winding matches the 2D toric-code structure (logical qubit as non-contractible cycle). At levels 2 and 3, the framework's $\pi_3(SU(2)), \pi_3(SU(3)) = \mathbb{Z}$ instanton numbers match 4D topological codes / Walker–Wang models (Walker–Wang 2011, "(3+1)-TQFTs and topological insulators") with target Lie group $G_n$. The defining homotopy-class-as-logical correspondence is preserved at each level. $\square$
