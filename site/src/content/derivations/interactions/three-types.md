@@ -110,6 +110,21 @@ $$\nexists \, f: \Sigma_1 \to V, \; g: \Sigma_2 \to V \text{ such that } I_{12}(
 
 The formal criterion distinguishing Type III from Type II is that the product structure of $\Sigma_1 \times \Sigma_2$ is **preserved**: both factors retain their individual identity and dynamics, while a new conserved quantity is added on the joint space.
 
+**Remark (Composite observer is a level-of-description term).** The phrase "composite observer" is used in the framework at two structurally distinct levels, only one of which is an interaction-type term. The diagnostic criterion is *constituent state-space restructuring vs. preservation*, not binding strength, stability, or whether the bound system is colloquially called a "particle." The two cases are:
+
+| | **Type II composite** (Definition 4.3) | **Type III composite** (Definition 4.4) |
+|---|---|---|
+| Constituent state spaces | Restructured: $\dim \Sigma_C < \sum_k \dim \Sigma_k$ via the projection $\pi$ | Preserved as independent factors $\Sigma_1, \Sigma_2$ |
+| Observer ledger after fusion | One new observer $\mathcal{O}_C = (\Sigma_C, I_C, \mathcal{B}_C)$ replaces the constituents | Both constituents remain on the ledger; the relational invariant $I_{12}$ is added |
+| Status of "composite" label | Genuinely new observer with its own $(\Sigma, I, \mathcal{B})$ triple | Informal shorthand for the bound pair — no new triple |
+| External Type III interactions reach | Only $\mathcal{O}_C$ (constituents are off-ledger; clock-paused per Theorem 5.1 of [Memory-Persistence Tradeoff](/derivations/thermodynamics-ext/memory-persistence-tradeoff)) | Either constituent (both still on ledger; their individual clocks tick) |
+| Decay channels | Only $\mathcal{O}_C$'s decay channels are admissible (Corollary 5.2 of [Memory-Persistence Tradeoff](/derivations/thermodynamics-ext/memory-persistence-tradeoff)) | Each constituent retains its individual decay channels alongside the joint invariant |
+| Standard examples | Hadrons (confined quarks), nuclei (bound nucleons), atoms (electron rewritten into discrete orbitals), molecules-as-rigid-bodies, black holes (extremal limit) | Entangled pairs, system + measurement apparatus post-measurement, weak chemical bonds where both atomic state spaces remain operative, atoms-as-loose-aggregates |
+
+The same physical system can sometimes be described at either level — a diatomic molecule treated as a rigid rotor (Type II composite, with an effective $\Sigma$ for rotational/vibrational modes) versus the same molecule treated as two atoms with a bonding invariant (Type III composite, with both atomic state spaces still in play). The choice of description is not arbitrary: it is fixed by which approximation is appropriate to the question being asked, and the formal classification follows from whether the relevant degrees of freedom on either side have been geometrically eliminated by $\pi$ or are still independently addressable.
+
+This level-of-description distinction interacts with the Type-I-as-currency / Type-III-as-accounting reading of the next Remark (Step 6): Type II composite formation is internal reorganization of constituents into a smaller joint manifold; Type III composite formation is the addition of a relational invariant atop preserved factors, and is what is typically meant by "two observers becoming entangled."
+
 ### Step 5: Exhaustiveness Proof
 
 **Theorem 5.1 (Exhaustive classification).** *Every interaction between two observers falls into exactly one of the three types, or into dissolution (which is not an interaction but a destruction event).*

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-26T03:52:13.453Z",
+    "generatedAt": "2026-04-26T03:53:22.979Z",
     "derivationCount": 95,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -15962,6 +15962,10 @@
             "context": "Loop Closure"
           },
           {
+            "target": "thermodynamics-ext/memory-persistence-tradeoff",
+            "context": "Memory-Persistence Tradeoff"
+          },
+          {
             "target": "quantum/born-rule",
             "context": "Born Rule"
           },
@@ -15980,10 +15984,6 @@
           {
             "target": "thermodynamics-ext/memory-persistence-tradeoff",
             "context": "Theorem 5.1"
-          },
-          {
-            "target": "thermodynamics-ext/memory-persistence-tradeoff",
-            "context": "Memory-Persistence Tradeoff"
           },
           {
             "target": "axioms/coherence-conservation",
@@ -23963,15 +23963,15 @@
           },
           {
             "source": "interactions/three-types",
+            "context": "Memory-Persistence Tradeoff"
+          },
+          {
+            "source": "interactions/three-types",
             "context": "Proposition 2.3"
           },
           {
             "source": "interactions/three-types",
             "context": "Theorem 5.1"
-          },
-          {
-            "source": "interactions/three-types",
-            "context": "Memory-Persistence Tradeoff"
           },
           {
             "source": "minimal-observer/structure",
