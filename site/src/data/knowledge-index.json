@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-26T06:48:41.947Z",
+    "generatedAt": "2026-04-26T06:51:50.051Z",
     "derivationCount": 96,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -22924,7 +22924,7 @@
         {
           "number": 2,
           "title": "Type-I quantum spectrum",
-          "description": "The framework should derive which Type-I quanta propagate along null trajectories and their properties (spin-1 photon as U(1)em carrier, spin-2 graviton in the limiting-case gravitational gauge). This"
+          "description": "The framework should derive which Type-I quanta propagate along null trajectories and their properties (spin-1 photon as U(1)em carrier, spin-1 gluons as SU(3)c carriers within hadronic Type II compos"
         },
         {
           "number": 3,
@@ -39982,7 +39982,7 @@
       "derivationStatus": "provisional",
       "number": 2,
       "title": "Type-I quantum spectrum",
-      "description": "The framework should derive which Type-I quanta propagate along null trajectories and their properties (spin-1 photon as U(1)em carrier, spin-2 graviton in the limiting-case gravitational gauge). This"
+      "description": "The framework should derive which Type-I quanta propagate along null trajectories and their properties (spin-1 photon as U(1)em carrier, spin-1 gluons as SU(3)c carriers within hadronic Type II compos"
     },
     {
       "derivationId": "spacetime/speed-of-light",

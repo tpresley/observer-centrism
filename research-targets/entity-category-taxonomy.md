@@ -1,7 +1,7 @@
 # Entity Category Taxonomy and the Status of Boson and Substrate Observers
 
-**Type**: Research target (open — Route A in progress)
-**Status**: Scoped 2026-04-25. Route A photon recategorization landed 2026-04-25 (commit e53e2c0): photons are Type-I quanta, not "massless observers"; the null-trajectory $L = cT$ is the propagation boundary for Type-I quanta, not a limiting-case observer trajectory. Cleanup applied across [Speed of Light](../site/src/content/derivations/spacetime/speed-of-light.md), [Lorentz Invariance](../site/src/content/derivations/spacetime/lorentz-invariance.md), [Loop Closure](../site/src/content/derivations/axioms/loop-closure.md) (Open Gap 3 closed → Addressed Gaps), and [Coherence-Dual Pairs](../site/src/content/derivations/minimal-observer/coherence-dual-pairs.md). W/Z + EWSB recasting blocked on a structural question (logged in §"Open subitems" below). Higgs placement deferred to Step 2. The framework's three axioms define observers via $(\Sigma, I, \mathcal{B})$ and the [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) classifies *interactions*, but the **ontology of entities** — what kinds of things exist in the framework's furniture — is implicit and inconsistent across pages. This target consolidates the inconsistency, proposes a four-category resolution, and identifies the structural questions that resolution forces.
+**Type**: Research target (open — Route A complete; Route B blocked on user consultation)
+**Status**: Scoped 2026-04-25. Route A complete 2026-04-25 (commits e53e2c0, c8d456b). Route A.1 photon recategorization: photons are Type-I quanta on the null trajectory $L = cT$, not "massless observers"; cleanup across [Speed of Light](../site/src/content/derivations/spacetime/speed-of-light.md), [Lorentz Invariance](../site/src/content/derivations/spacetime/lorentz-invariance.md), [Loop Closure](../site/src/content/derivations/axioms/loop-closure.md) (Open Gap 3 → Addressed Gaps), and [Coherence-Dual Pairs](../site/src/content/derivations/minimal-observer/coherence-dual-pairs.md). Route A.2 W/Z Type II framing: massive vectors as Type II composites (transverse gauge mode + Goldstone scalar) at the ledgered-observer-count level; ledgered-count clarification added to [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) Definition 4.3 (resolves S1 below). Step 5 EWSB Type II recasting: new Step 7 in [Electroweak Symmetry Breaking](../site/src/content/derivations/gauge/electroweak-breaking.md) with Proposition 7.1 (massive vectors as Type II composites), Corollary 7.2 (photon as off-ledger Type-I quantum), and three Remarks on bookkeeping, mass as fusion coherence signature, and EWSB-confinement parallel. Higgs placement deferred to Step 2 (Loop Closure Axiom 3 reading). Steps 2–4, 6 still open. The framework's three axioms define observers via $(\Sigma, I, \mathcal{B})$ and [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) classifies *interactions*; this target resolves the parallel ontology of *entities*.
 **Last updated**: 2026-04-25
 
 ## The framing observation
@@ -252,27 +252,11 @@ The target succeeds if, at the end:
 
 Hard but not blocked. Most of the conceptual moves are present in the framework already; the work is consistency-enforcement, formalization, and a small number of genuine derivations. Comparable in scope to the bridge-page / postulate-classification effort that closed 40/40 forced postulates in the 2026-04-11 session, plus one structural axiom clarification (Step 2) and one stretch derivation (Step 6).
 
+## Resolved subitems
+
+**~~S1. EWSB-as-Type-II-fusion: dimensional-reduction criterion does not strictly hold at the polarization level.~~** *Resolved 2026-04-25 (commit c8d456b)*: Adopted reading (a)/(b) — the criterion in Definition 4.3 of [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) operates at the level of **ledgered observer state spaces**, not microscopic polarization fibers. Added a clarifying Remark immediately after Definition 4.3 making this explicit. The existing examples (hadrons, nuclei, atoms) all already operate this way, and the W/Z massive-vector fusion now fits without amendment to Definition 4.3 itself. The polarization arithmetic ($2+1 = 3$) is preservation at the underlying mode level; the ledger-count ($N_{\text{ledgered,after}} < N_{\text{ledgered,before}}$) is reduction — exactly Type II in the framework's intended sense.
+
 ## Open subitems
-
-### Surfaced 2026-04-25 (after Route A photon cleanup)
-
-**S1. EWSB-as-Type-II-fusion: dimensional-reduction criterion does not strictly hold at the polarization level.**
-
-Context: the research target proposes recasting [Electroweak Symmetry Breaking](../site/src/content/derivations/gauge/electroweak-breaking.md) as a Type II fusion event ($8 \to 5$ observer-count reduction: 4 gauge + 4 Higgs scalar $\to$ 1 photon (Type-I quantum) + 3 W/Z + 1 Higgs).
-
-Risk identified during Route A: each individual W/Z mass acquisition pairs one transverse gauge mode (2 polarizations) with one Goldstone scalar (1 dof) to produce a massive vector (3 polarizations). The polarization-state-space arithmetic is $2 + 1 = 3$ — *dimensional preservation*, not reduction. [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) Definition 4.3 requires strict $\dim(\Sigma_{12}) < \dim(\Sigma_1) + \dim(\Sigma_2)$ for Type II. The polarization-level reading therefore fails the criterion as currently stated.
-
-Three candidate resolutions:
-
-**(a) Total-dof accounting**: count total electroweak-sector degrees of freedom. Pre-EWSB: 4 gauge bosons × 2 (massless polarizations) + 4 Higgs real scalars = 12. Post-EWSB: 1 photon × 2 + 3 massive vectors × 3 + 1 Higgs scalar = 12. Total dof preservation, but the *number of independently ledgered entities* drops from 8 (4+4) to 5 (1+3+1) because Goldstones are absorbed. Type II at the entity-counting level, not the polarization-arithmetic level.
-
-**(b) Refine Definition 4.3**: distinguish "fusion at the polarization-fiber level" from "fusion at the entity-count level." Reformulate the criterion: Type II is dimension reduction in the *count of independently ledgered observer state spaces*, not in the dimension of the resulting $\Sigma_{12}$. A Goldstone-absorption fusion has $\dim(\Sigma_{\text{massive vector}}) = \dim(\Sigma_{\text{transverse gauge}}) + \dim(\Sigma_{\text{Goldstone}})$ but $N_{\text{ledger,after}} = 1 < 2 = N_{\text{ledger,before}}$.
-
-**(c) EWSB is not Type II**: declare EWSB structurally distinct from elementary-fusion Type II events. Either introduce a refined sub-type (Type II$_{\text{absorptive}}$ or similar) or accept that EWSB is sui generis at the framework's interaction-taxonomy level.
-
-These three readings have different downstream consequences. (a) is the closest to the program's intended claim and probably correct; (b) is the cleanest formalization but touches Definition 4.3 directly; (c) is the most conservative but weakens the program's structural payoff.
-
-**Decision needed before Route A.2 + Step 5 can proceed.**
 
 **S2. Higgs category placement deferred to Step 2.**
 
@@ -294,7 +278,19 @@ The framework had been carrying the "massless observer" framing in three load-be
 
 Resolution: the null trajectory $L = cT$ is the propagation boundary for Type-I quanta, not an observer trajectory. The photon is the quantized Type-I carrier of $U(1)_{em}$ phase exchange between charged observers. Observer status fails strictly at the $T_0 \to 0$ limit ([Lorentz Invariance](../site/src/content/derivations/spacetime/lorentz-invariance.md) Theorem 6.1: as $v \to c$, the loop period diverges, the rest frame is absent, and $(\Sigma, I, \mathcal{B})$ has no rest-frame realization). Loop Closure Open Gap 3 moved to a new "Addressed Gaps" subsection on the page.
 
-This closes the "massless observer" inconsistency from §"The framing observation" §1 of this target. It does not yet resolve §2 (minimal observer four-sense overloading), §3 (W/Z dual status), §4 (Higgs status), or §5 (substrate primitives unspecified).
+This closes the "massless observer" inconsistency from §"The framing observation" §1 of this target.
+
+### Route A.2 + Step 5: W/Z as Type II composites; EWSB as Type II fusion event (2026-04-25 — commit c8d456b)
+
+Massive vectors $W^+, W^-, Z$ are recast as Type II composites of (transverse pre-EWSB gauge mode, Goldstone scalar) at the ledgered-observer-count level. The Goldstone equivalence theorem operationalizes the absorption (longitudinal mode = absorbed Goldstone), and the [Memory-Persistence Tradeoff](../site/src/content/derivations/thermodynamics-ext/memory-persistence-tradeoff.md) Theorem 5.1 clock-pause result is what makes the constituents off-ledger after fusion. The polarization-fiber arithmetic ($2+1 = 3$) is preserved, but the ledgered-observer count drops — exactly the Type II reading in the ledger-count sense.
+
+Pre-existing risk (S1 above) resolved by adding a clarifying Remark to Definition 4.3 of [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) making the "$\dim \Sigma_k$ counts ledgered observer state spaces, not microscopic polarization fibers" reading explicit. The existing examples (hadrons, nuclei, atoms) all already operate this way, and the W/Z fusion now fits without amendment to Definition 4.3.
+
+[Electroweak Symmetry Breaking](../site/src/content/derivations/gauge/electroweak-breaking.md) gained Step 7 with Proposition 7.1 (massive vectors as Type II composites), Corollary 7.2 (photon as off-ledger Type-I quantum), and three Remarks on bookkeeping, mass as fusion coherence signature, and the EWSB–confinement parallel. Open Gap 5 added for the Higgs category placement, which depends on Step 2 (Loop Closure Axiom 3 reading). [Three Interaction Types](../site/src/content/derivations/interactions/three-types.md) gained a "W and Z are Type II composites; Higgs category placement is open" Remark following the existing W/Z/Higgs cluster discussion.
+
+This closes §"The framing observation" §3 (W/Z dual status) and partially resolves §1 (photon ontology fully addressed in Route A.1). §2 (minimal observer overloading), §4 (Higgs status — needs Step 2), and §5 (substrate primitives — needs Step 4) remain open.
+
+The resulting state of Route A: photons are unambiguously Type-I quanta; W/Z are unambiguously Type II composites; Higgs is hedged pending Step 2; the framework's entity-category language across the affected derivations is internally consistent for the first time. The remaining ambiguity is concentrated in §"Open subitems" S2 (Higgs) and S3 (minimal observer four-sense overloading).
 
 ## Intellectual origin
 
