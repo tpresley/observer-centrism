@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-26T03:49:51.192Z",
+    "generatedAt": "2026-04-26T03:52:13.453Z",
     "derivationCount": 95,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -15562,6 +15562,10 @@
           {
             "target": "interactions/three-types",
             "context": "Three Types"
+          },
+          {
+            "target": "thermodynamics-ext/memory-persistence-tradeoff",
+            "context": "Proposition 2.3"
           }
         ],
         "incoming": [
@@ -15978,12 +15982,12 @@
             "context": "Theorem 5.1"
           },
           {
-            "target": "axioms/coherence-conservation",
-            "context": "Coherence Conservation"
-          },
-          {
             "target": "thermodynamics-ext/memory-persistence-tradeoff",
             "context": "Memory-Persistence Tradeoff"
+          },
+          {
+            "target": "axioms/coherence-conservation",
+            "context": "Coherence Conservation"
           },
           {
             "target": "cosmology/cyclic-cosmology",
@@ -23952,6 +23956,10 @@
           {
             "source": "interactions/relational-invariants",
             "context": "Theorem 4.1"
+          },
+          {
+            "source": "interactions/relational-invariants",
+            "context": "Proposition 2.3"
           },
           {
             "source": "interactions/three-types",

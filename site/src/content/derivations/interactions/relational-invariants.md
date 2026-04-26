@@ -173,6 +173,8 @@ The process iterates: $\mathcal{O}_{(12)3}$ is itself an observer (by the same a
 
 **Quantum entanglement** is the paradigmatic relational invariant: a correlation between two quantum systems that (a) is conserved under local operations, (b) is irreducible to properties of either system, and (c) cannot be created by local operations alone (requires interaction). These are precisely conditions (R1)–(R3).
 
+**Remark (How relational invariants are physically realized).** The Type III interaction that generates a relational invariant is, at the kinematic level, a pattern of phase exchange between the endpoint observers — typically mediated by Type I traffic. The Type III object is the *accounting outcome* (the new conserved relational invariant on the joint state space), not the *mechanism* (the propagating quanta that carry the phase). For the photon-mediated entanglement of two atoms, the photon plays the Type I role of currency in transit while the lasting Type III correlation is the paired receipt left in the two atoms' state spaces after the transfer clears. See [Three Interaction Types](/derivations/interactions/three-types) Step 6 (Remark on Type I as currency, Type III as accounting) for the worked example. This separation is what allows the [Memory-Persistence Tradeoff](/derivations/thermodynamics-ext/memory-persistence-tradeoff) (Proposition 2.3) to count Type III events distinctly from Type I traffic when bounding observer lifetimes.
+
 ## Consistency Model
 
 **Theorem 7.1.** *The relational invariant construction is realized in the product space $\mathcal{H} = S^1 \times S^1$ with the standard product symplectic form.*
