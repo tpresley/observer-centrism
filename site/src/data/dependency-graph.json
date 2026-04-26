@@ -601,7 +601,19 @@
       "to": "foundation/entity-category-taxonomy"
     },
     {
+      "from": "minimal-observer/structure",
+      "to": "foundation/entity-category-taxonomy"
+    },
+    {
       "from": "thermodynamics-ext/memory-persistence-tradeoff",
+      "to": "foundation/entity-category-taxonomy"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "foundation/entity-category-taxonomy"
+    },
+    {
+      "from": "foundation/substrate-noise-and-profile-coupling",
       "to": "foundation/entity-category-taxonomy"
     },
     {

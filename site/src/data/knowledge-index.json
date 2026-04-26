@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-26T07:32:29.512Z",
+    "generatedAt": "2026-04-26T08:17:50.042Z",
     "derivationCount": 97,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -13,9 +13,9 @@
     },
     "derivationCount": 97,
     "predictionCount": 12,
-    "edgeCount": 375,
-    "formalObjectCount": 1404,
-    "openGapCount": 341,
+    "edgeCount": 378,
+    "formalObjectCount": 1406,
+    "openGapCount": 340,
     "upgradeEligibleCount": 0,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -5781,6 +5781,10 @@
             "context": "Continuous-Discrete Duality"
           },
           {
+            "source": "foundation/entity-category-taxonomy",
+            "context": "Continuous-Discrete Duality"
+          },
+          {
             "source": "foundation/knot-theoretic-bootstrap",
             "context": "Continuous-Discrete Duality"
           },
@@ -5829,8 +5833,11 @@
         "axioms/observer-definition",
         "axioms/loop-closure",
         "interactions/three-types",
+        "interactions/bootstrap",
         "minimal-observer/coherence-dual-pairs",
-        "thermodynamics-ext/memory-persistence-tradeoff"
+        "minimal-observer/structure",
+        "thermodynamics-ext/memory-persistence-tradeoff",
+        "foundation/substrate-noise-and-profile-coupling"
       ],
       "enablesDerivation": [
         "gauge/electroweak-breaking"
@@ -5856,6 +5863,10 @@
         {
           "number": 5,
           "title": "The {Type-I Quantum, Self-Conjugate} Cell Is Empty"
+        },
+        {
+          "number": 6,
+          "title": "Three Layers and Substrate Co-Creation"
         }
       ],
       "formalObjects": [
@@ -5896,8 +5907,20 @@
           "statementPreview": "No Type-I quantum is self-conjugate in the Axis-2 sense. Every Type-I quantum carries the gauge U(1) (or non-abelian ..."
         },
         {
+          "type": "Definition",
+          "id": "6.1",
+          "name": "Three Layers of Framework Entities",
+          "statementPreview": "The framework's ontology has three structurally distinct levels:"
+        },
+        {
           "type": "Theorem",
-          "id": "6.1.",
+          "id": "6.2",
+          "name": "Substrate Co-Creation",
+          "statementPreview": "Layer 0 is not external to the observer network. It is the network's projection of itself at sub-observer scales, wit..."
+        },
+        {
+          "type": "Theorem",
+          "id": "7.1.",
           "name": "",
           "statementPreview": "The taxonomy is consistent: each non-empty cell admits at least one Standard Model entity, and the placement of every..."
         }
@@ -5906,21 +5929,16 @@
       "openGaps": [
         {
           "number": 1,
-          "title": "Substrate primitive Axis 2 placement",
-          "description": "Planck-scale primitives (level-0 of the [Bootstrap Mechanism](/derivations/interactions/bootstrap)) are presumably elementary observers, but their internal-symmetry profile is unspecified. The qubit r"
-        },
-        {
-          "number": 2,
           "title": "Axis 2 sub-parameterization for multi-charge observers",
           "description": "Some entities carry multiple internal U(1)s with different conservation properties (e.g., neutron: zero electric charge but nonzero baryon number; neutral atom: zero electric charge but nonzero baryon"
         },
         {
-          "number": 3,
+          "number": 2,
           "title": "Graviton placement",
           "description": "In the limiting-case gravitational gauge, the graviton would be a Type-I quantum of a spacetime symmetry rather than an internal symmetry. Whether the Type-I quantum, Self-conjugate cell is genuinely "
         },
         {
-          "number": 4,
+          "number": 3,
           "title": "Complexity-Minimal Residue Uniqueness",
           "description": "Whether every Type II fusion event producing an observer network leaves *exactly one* Elementary, Self-conjugate residue is conjectured but not proven. The Higgs's role in EWSB ([Electroweak Symmetry "
         }
@@ -5946,10 +5964,6 @@
             "context": "Electroweak Symmetry Breaking"
           },
           {
-            "target": "interactions/bootstrap",
-            "context": "Bootstrap Mechanism"
-          },
-          {
             "target": "spacetime/speed-of-light",
             "context": "Speed of Light"
           },
@@ -5962,6 +5976,34 @@
             "context": "Neutrino Masses"
           },
           {
+            "target": "foundation/substrate-noise-and-profile-coupling",
+            "context": "Substrate Noise and Profile Coupling"
+          },
+          {
+            "target": "minimal-observer/structure",
+            "context": "Minimal Observer Structure"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap Mechanism"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "existence and uniqueness of the bootstrap fixed point"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
+          },
+          {
+            "target": "minimal-observer/multiplicity",
+            "context": "Multiplicity"
+          },
+          {
+            "target": "foundation/continuous-discrete-duality",
+            "context": "Continuous-Discrete Duality"
+          },
+          {
             "target": "foundation/observer-as-error-correcting-code",
             "context": "Observer as Error-Correcting Code"
           }
@@ -5972,7 +6014,15 @@
             "context": "Entity Category Taxonomy"
           },
           {
+            "source": "foundation/substrate-noise-and-profile-coupling",
+            "context": "Entity Category Taxonomy"
+          },
+          {
             "source": "gauge/electroweak-breaking",
+            "context": "Entity Category Taxonomy"
+          },
+          {
+            "source": "interactions/bootstrap",
             "context": "Entity Category Taxonomy"
           },
           {
@@ -9314,6 +9364,7 @@
       ],
       "enablesDerivation": [],
       "dependedOnBy": [
+        "foundation/entity-category-taxonomy",
         "foundation/error-correction-and-standard-model",
         "foundation/formation-and-preservation",
         "foundation/profile-dependent-edges-and-confinement"
@@ -9481,6 +9532,14 @@
             "context": "Causal Set Statistics"
           },
           {
+            "target": "foundation/entity-category-taxonomy",
+            "context": "Entity Category Taxonomy"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
+          },
+          {
             "target": "gauge/confinement",
             "context": "Confinement"
           },
@@ -9537,6 +9596,10 @@
           {
             "source": "cosmology/dark-energy-equation-of-state",
             "context": "Substrate Noise"
+          },
+          {
+            "source": "foundation/entity-category-taxonomy",
+            "context": "Substrate Noise and Profile Coupling"
           },
           {
             "source": "foundation/error-correction-and-standard-model",
@@ -12935,6 +12998,10 @@
             "context": "Area Scaling"
           },
           {
+            "source": "foundation/entity-category-taxonomy",
+            "context": "Area Scaling"
+          },
+          {
             "source": "foundation/knot-theoretic-bootstrap",
             "context": "Area Scaling"
           },
@@ -12952,6 +13019,10 @@
           },
           {
             "source": "foundation/observer-projected-spacetime",
+            "context": "Area Scaling"
+          },
+          {
+            "source": "foundation/substrate-noise-and-profile-coupling",
             "context": "Area Scaling"
           },
           {
@@ -14994,6 +15065,7 @@
         "cosmology/observer-loop-viability",
         "foundation/aperiodic-order",
         "foundation/bootstrap-fixed-point-existence",
+        "foundation/entity-category-taxonomy",
         "foundation/knot-theoretic-bootstrap",
         "foundation/minimum-bootstrap-closure",
         "foundation/observer-as-error-correcting-code",
@@ -15171,6 +15243,10 @@
             "context": "Relational Invariants"
           },
           {
+            "target": "foundation/entity-category-taxonomy",
+            "context": "Entity Category Taxonomy"
+          },
+          {
             "target": "thermodynamics/action-planck",
             "context": "Action and Planck's Constant"
           },
@@ -15311,6 +15387,10 @@
           {
             "source": "foundation/entity-category-taxonomy",
             "context": "Bootstrap Mechanism"
+          },
+          {
+            "source": "foundation/entity-category-taxonomy",
+            "context": "existence and uniqueness of the bootstrap fixed point"
           },
           {
             "source": "foundation/knot-theoretic-bootstrap",
@@ -17059,6 +17139,10 @@
             "context": "Multiplicity"
           },
           {
+            "source": "foundation/entity-category-taxonomy",
+            "context": "Multiplicity"
+          },
+          {
             "source": "foundation/minimum-bootstrap-closure",
             "context": "Multiplicity"
           },
@@ -17181,6 +17265,7 @@
         "cosmology/geometric-substrate",
         "cosmology/observer-loop-viability",
         "dimensions/three-dimensions",
+        "foundation/entity-category-taxonomy",
         "foundation/minimum-bootstrap-closure",
         "foundation/observer-as-error-correcting-code",
         "foundation/observer-level-stack-compactness",
@@ -17366,6 +17451,10 @@
           },
           {
             "source": "foundation/continuous-discrete-duality",
+            "context": "Minimal Observer Structure"
+          },
+          {
+            "source": "foundation/entity-category-taxonomy",
             "context": "Minimal Observer Structure"
           },
           {
@@ -30576,10 +30665,24 @@
     },
     {
       "derivationId": "foundation/entity-category-taxonomy",
+      "type": "Definition",
+      "id": "6.1",
+      "name": "Three Layers of Framework Entities",
+      "fullRef": "foundation/entity-category-taxonomy:Definition 6.1"
+    },
+    {
+      "derivationId": "foundation/entity-category-taxonomy",
       "type": "Theorem",
-      "id": "6.1.",
+      "id": "6.2",
+      "name": "Substrate Co-Creation",
+      "fullRef": "foundation/entity-category-taxonomy:Theorem 6.2"
+    },
+    {
+      "derivationId": "foundation/entity-category-taxonomy",
+      "type": "Theorem",
+      "id": "7.1.",
       "name": "",
-      "fullRef": "foundation/entity-category-taxonomy:Theorem 6.1."
+      "fullRef": "foundation/entity-category-taxonomy:Theorem 7.1."
     },
     {
       "derivationId": "foundation/error-correction-and-standard-model",
@@ -38637,27 +38740,20 @@
       "derivationId": "foundation/entity-category-taxonomy",
       "derivationStatus": "provisional",
       "number": 1,
-      "title": "Substrate primitive Axis 2 placement",
-      "description": "Planck-scale primitives (level-0 of the [Bootstrap Mechanism](/derivations/interactions/bootstrap)) are presumably elementary observers, but their internal-symmetry profile is unspecified. The qubit r"
-    },
-    {
-      "derivationId": "foundation/entity-category-taxonomy",
-      "derivationStatus": "provisional",
-      "number": 2,
       "title": "Axis 2 sub-parameterization for multi-charge observers",
       "description": "Some entities carry multiple internal U(1)s with different conservation properties (e.g., neutron: zero electric charge but nonzero baryon number; neutral atom: zero electric charge but nonzero baryon"
     },
     {
       "derivationId": "foundation/entity-category-taxonomy",
       "derivationStatus": "provisional",
-      "number": 3,
+      "number": 2,
       "title": "Graviton placement",
       "description": "In the limiting-case gravitational gauge, the graviton would be a Type-I quantum of a spacetime symmetry rather than an internal symmetry. Whether the Type-I quantum, Self-conjugate cell is genuinely "
     },
     {
       "derivationId": "foundation/entity-category-taxonomy",
       "derivationStatus": "provisional",
-      "number": 4,
+      "number": 3,
       "title": "Complexity-Minimal Residue Uniqueness",
       "description": "Whether every Type II fusion event producing an observer network leaves *exactly one* Elementary, Self-conjugate residue is conjectured but not proven. The Higgs's role in EWSB ([Electroweak Symmetry "
     },
