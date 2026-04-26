@@ -349,24 +349,9 @@ $$E_\mathcal{O} = \frac{S_\mathcal{O}}{T_\mathcal{O}} \geq \frac{S_{\min}}{T_\ma
 
 ## The Allowed T-Spectrum
 
-Propositions 3.2 and 3.3 together fix that every observer's minimal period $T_\mathcal{O}$ lies in a finite open interval — bounded away from $0$ on the lower side (Proposition 3.2: $P$ closed and discrete, so $T_\mathcal{O} > 0$) and bounded away from $\infty$ on the upper side (Proposition 3.3: three independent failure modes). Combining these axiom-level bounds with downstream cutoffs from related derivations gives the framework's full picture of which periods are admissible. The spectrum has four structurally distinct regions:
+Propositions 3.2 and 3.3 together fix that every observer's minimal period $T_\mathcal{O}$ lies in a finite open interval — bounded away from $0$ on the lower side (Proposition 3.2: $P$ closed and discrete, so $T_\mathcal{O} > 0$) and bounded away from $\infty$ on the upper side (Proposition 3.3: three independent failure modes). Combining these axiom-level bounds with downstream cutoffs from related derivations gives the framework's full picture of which periods are admissible.
 
-```
-T = 0          [ T_P ────── discrete elementary tower ────── T_ν ]          T_H
- │              │                                             │              │
- photon        heaviest                                  lightest          horizon
- (Type-I       allowed                                   elementary        ceiling
-  quantum,     elementary                                 observer          (soft)
-  null)        observer
-                │                                             │
-                └── continuous composites fill here ──────────┴── further composites ──┘
-   ╲────────╱                                                                ╲────────╱
-   forbidden                                                                 forbidden
-   (sub-T_P:                                                                 (T > T_H:
-    BH regime)                                                                coherence
-                                                                              bleeds to
-                                                                              horizon)
-```
+![Six-region map of the allowed observer-period spectrum: a forbidden sub-Planckian region (hatched red) is bounded above by the hard cutoff at T_P; a discrete elementary tower (green ticks) populates structurally selected periods from T_P to T_ν inside the allowed band (blue); a continuous composite spectrum (amber) overlays the band and extends from T_P to T_H; a soft horizon ceiling at T_H fades to a forbidden beyond-horizon region. The lower cutoff is matter-vs-spacetime (hard, gravitational regime change); the upper cutoff is local-vs-cosmological (soft, continuous coherence bleed).](/diagrams/observer-t-spectrum.svg)
 
 **Region 1 — Null boundary ($T = 0$, forbidden as observer).** Type-I quanta of [Three Interaction Types](/derivations/interactions/three-types) Step 4 propagate along the null trajectory $L = cT$. They are off-ledger phase-transfer carriers, not observers (Addressed Gap 1).
 
