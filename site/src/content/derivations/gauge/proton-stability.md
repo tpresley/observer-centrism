@@ -37,6 +37,19 @@ Grand Unified Theories predict that protons should eventually decay, converting 
 
 **Structural postulates:** None. This derivation requires no assumptions beyond the axioms and previously derived results.
 
+### Step 0: Stability Template
+
+The proton's persistence is an instance of a shared structural template that applies to any observer with no accessible decay channel. The template uses the three-mechanism end-of-existence taxonomy ([Three Interaction Types](/derivations/interactions/three-types) §7):
+
+> **Stability template.** *An observer is decay-immune (mechanism 1, Definition 7.2 of [Three Interaction Types](/derivations/interactions/three-types)) if no Type II reverse channel is admissible — i.e., every possible split into product observers is forbidden by conservation laws or kinematics. A decay-immune observer is dissolution-limited only: its lifetime is bounded above by the saturation timescale $\tau_{\text{ceil}} = \mathcal{K}/\dot{\mathcal{C}}_{\text{III}}$ ([Memory-Persistence Tradeoff](/derivations/thermodynamics-ext/memory-persistence-tradeoff) Theorem 4.1), which is the universal ceiling. In a low-energy environment that suppresses Type III interactions, $\tau_{\text{ceil}}$ may vastly exceed the age of the universe, in which case the observer is practically immortal.*
+
+The proton instantiates the template via:
+
+1. **Type II reverse channels are forbidden by exact baryon-number conservation.** No baryon-number-conserving final state exists with smaller total mass than the proton (the proton is the lightest baryon). Theorems 1.1, 3.1 below establish that $B$ is conserved by every gauge interaction in the framework's complete gauge structure.
+2. **Dissolution timescale is set by the gravitational $B$-violating amplitude.** Proposition 4.1 below gives $\tau_p \gtrsim 10^{64}$ years from $(M_P/m_p)^4$ suppression. This is the framework's analog of the saturation ceiling for an otherwise decay-immune observer; in the present cosmological epoch no other Type III channel approaches this rate.
+
+The structurally distinctive claim of this derivation, then, is not just that the proton is long-lived but that it sits at the template's *no-decay-channel* boundary: the observed proton lifetime is dissolution-limited, not decay-limited, because the framework's gauge structure forbids every conceivable Type II reverse channel preserving baryon number.
+
 ### Step 1: No Grand Unified Group
 
 **Theorem 1.1 (Gauge group completeness).** *The Standard Model gauge group $G_{SM} = U(1) \times SU(2) \times SU(3)$ is the unique and complete gauge group consistent with the framework ([Standard Model Gauge Group](/derivations/gauge/standard-model-group), Theorem 2.1). No simple group $G \supset G_{SM}$ arises from the division algebra hierarchy.*

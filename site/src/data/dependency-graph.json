@@ -397,6 +397,12 @@
       "status": "provisional"
     },
     {
+      "id": "particles/electron-stability",
+      "title": "Electron Stability",
+      "group": "particles",
+      "status": "provisional"
+    },
+    {
       "id": "cosmology/observer-loop-viability",
       "title": "Observer Loop Viability Bounds",
       "group": "cosmology",
@@ -1161,6 +1167,10 @@
       "to": "gauge/weak-interaction"
     },
     {
+      "from": "gauge/electromagnetism",
+      "to": "particles/electron-stability"
+    },
+    {
       "from": "gauge/electroweak-breaking",
       "to": "gauge/weinberg-angle"
     },
@@ -1179,6 +1189,10 @@
     {
       "from": "gauge/standard-model-group",
       "to": "gauge/proton-stability"
+    },
+    {
+      "from": "gauge/standard-model-group",
+      "to": "particles/electron-stability"
     },
     {
       "from": "gauge/strong-cp",
@@ -1510,6 +1524,10 @@
     },
     {
       "from": "interactions/three-types",
+      "to": "particles/electron-stability"
+    },
+    {
+      "from": "interactions/three-types",
       "to": "quantum/teleportation"
     },
     {
@@ -1655,6 +1673,10 @@
     {
       "from": "particles/mass-hierarchy",
       "to": "particles/coherence-bounces"
+    },
+    {
+      "from": "particles/mass-hierarchy",
+      "to": "particles/electron-stability"
     },
     {
       "from": "particles/mass-hierarchy",
@@ -1851,6 +1873,10 @@
     {
       "from": "thermodynamics-ext/distinguishability-conservation",
       "to": "cosmology/dark-energy-equation-of-state"
+    },
+    {
+      "from": "thermodynamics-ext/memory-persistence-tradeoff",
+      "to": "particles/electron-stability"
     },
     {
       "from": "thermodynamics-ext/distinguishability-conservation",

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-04-26T03:53:22.979Z",
-    "derivationCount": 95,
+    "generatedAt": "2026-04-26T04:00:30.197Z",
+    "derivationCount": 96,
     "predictionCount": 12,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
@@ -9,13 +9,13 @@
   "stats": {
     "byStatus": {
       "derived": 30,
-      "provisional": 65
+      "provisional": 66
     },
-    "derivationCount": 95,
+    "derivationCount": 96,
     "predictionCount": 12,
-    "edgeCount": 364,
-    "formalObjectCount": 1383,
-    "openGapCount": 335,
+    "edgeCount": 369,
+    "formalObjectCount": 1392,
+    "openGapCount": 338,
     "upgradeEligibleCount": 0,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
@@ -2804,6 +2804,10 @@
           },
           {
             "source": "interactions/three-types",
+            "context": "Cyclic Cosmology"
+          },
+          {
+            "source": "particles/electron-stability",
             "context": "Cyclic Cosmology"
           },
           {
@@ -10475,7 +10479,8 @@
         "foundation/knot-theoretic-bootstrap",
         "foundation/substrate-noise-and-profile-coupling",
         "gauge/standard-model-group",
-        "gauge/weak-interaction"
+        "gauge/weak-interaction",
+        "particles/electron-stability"
       ],
       "steps": [
         {
@@ -10840,6 +10845,10 @@
             "context": "Electromagnetism"
           },
           {
+            "source": "particles/electron-stability",
+            "context": "Electromagnetism"
+          },
+          {
             "source": "particles/neutrino-masses",
             "context": "Electromagnetism"
           },
@@ -11115,6 +11124,10 @@
       "dependedOnBy": [],
       "steps": [
         {
+          "number": 0,
+          "title": "Stability Template"
+        },
+        {
           "number": 1,
           "title": "No Grand Unified Group"
         },
@@ -11264,6 +11277,14 @@
             "context": "Mass Hierarchy"
           },
           {
+            "target": "interactions/three-types",
+            "context": "Three Interaction Types"
+          },
+          {
+            "target": "thermodynamics-ext/memory-persistence-tradeoff",
+            "context": "Memory-Persistence Tradeoff"
+          },
+          {
             "target": "gauge/standard-model-group",
             "context": "Standard Model Gauge Group"
           },
@@ -11283,6 +11304,18 @@
         "incoming": [
           {
             "source": "gauge/standard-model-group",
+            "context": "Proton Stability"
+          },
+          {
+            "source": "particles/electron-stability",
+            "context": "Step 0"
+          },
+          {
+            "source": "particles/electron-stability",
+            "context": "gauge group completeness"
+          },
+          {
+            "source": "particles/electron-stability",
             "context": "Proton Stability"
           }
         ]
@@ -11323,7 +11356,8 @@
         "cosmology/coupling-constants",
         "gauge/anomaly-cancellation",
         "gauge/electroweak-breaking",
-        "gauge/proton-stability"
+        "gauge/proton-stability",
+        "particles/electron-stability"
       ],
       "steps": [
         {
@@ -11541,6 +11575,10 @@
           {
             "source": "interactions/bootstrap-division-algebras",
             "context": "Theorem 2.1"
+          },
+          {
+            "source": "particles/electron-stability",
+            "context": "Standard Model Gauge Group"
           }
         ]
       },
@@ -14145,6 +14183,10 @@
             "context": "Information Paradox"
           },
           {
+            "source": "particles/electron-stability",
+            "context": "Information Paradox"
+          },
+          {
             "source": "spacetime/singularity-resolution",
             "context": "Information Paradox"
           }
@@ -15768,6 +15810,7 @@
         "cosmology/observer-loop-viability",
         "foundation/minimum-bootstrap-closure",
         "interactions/relational-invariants",
+        "particles/electron-stability",
         "quantum/teleportation",
         "thermodynamics/time"
       ],
@@ -16020,6 +16063,10 @@
             "context": "Three Interaction Types"
           },
           {
+            "source": "gauge/proton-stability",
+            "context": "Three Interaction Types"
+          },
+          {
             "source": "holography/er-epr",
             "context": "Three Interaction Types"
           },
@@ -16046,6 +16093,10 @@
           {
             "source": "interactions/relational-invariants",
             "context": "Three Types"
+          },
+          {
+            "source": "particles/electron-stability",
+            "context": "Three Interaction Types"
           },
           {
             "source": "quantum/born-rule",
@@ -17512,10 +17563,191 @@
             "context": "CPT Theorem"
           },
           {
+            "source": "particles/electron-stability",
+            "context": "CPT Theorem"
+          },
+          {
             "source": "spacetime/lorentz-invariance",
             "context": "CPT Theorem"
           }
         ]
+      },
+      "leanVerification": {
+        "hasProofs": false,
+        "proofCount": 0,
+        "modules": [],
+        "propositions": []
+      },
+      "upgradeEligible": false,
+      "upgradeBlockers": []
+    },
+    "particles/electron-stability": {
+      "id": "particles/electron-stability",
+      "filePath": "site/src/content/derivations/particles/electron-stability.md",
+      "title": "Electron Stability from Charge Conservation and Lepton Mass Ordering",
+      "status": "provisional",
+      "rigorLevel": "formal",
+      "group": "particles",
+      "tags": [
+        "particles"
+      ],
+      "summary": "The electron is decay-immune: every conceivable Type II reverse channel is forbidden by exact electric-charge conservation combined with the electron being the lightest electrically charged particle. The lifetime is dissolution-limited only, with a saturation ceiling vastly exceeding the age of the universe in the present epoch.",
+      "lastUpdated": "2026-04-25",
+      "dependsOn": [
+        "interactions/three-types",
+        "thermodynamics-ext/memory-persistence-tradeoff",
+        "particles/mass-hierarchy",
+        "gauge/electromagnetism",
+        "gauge/standard-model-group"
+      ],
+      "enablesDerivation": [],
+      "dependedOnBy": [],
+      "steps": [
+        {
+          "number": 0,
+          "title": "Stability Template"
+        },
+        {
+          "number": 1,
+          "title": "Candidate Type II Reverse Channels"
+        },
+        {
+          "number": 2,
+          "title": "Every Channel is Forbidden"
+        },
+        {
+          "number": 3,
+          "title": "Dissolution-Limited Lifetime"
+        },
+        {
+          "number": 4,
+          "title": "Connection to the Three-Mechanism Taxonomy"
+        }
+      ],
+      "formalObjects": [
+        {
+          "type": "Definition",
+          "id": "1.1",
+          "name": "Admissibility",
+          "statementPreview": "A Type II reverse channel for the electron e- is a transition e- X1 + X2 + cdots + Xn (n 1) into product observers Xk..."
+        },
+        {
+          "type": "Proposition",
+          "id": "1.2",
+          "name": "Enumeration of candidate final states",
+          "statementPreview": "Every candidate final-state set Xk satisfying (K) belongs to one of three exclusive classes:*"
+        },
+        {
+          "type": "Theorem",
+          "id": "2.1",
+          "name": "Charge conservation excludes all-neutral channels",
+          "statementPreview": "Class (a) of Proposition 1.2 contains no admissible channel.*"
+        },
+        {
+          "type": "Theorem",
+          "id": "2.2",
+          "name": "Lightest-charged-lepton condition excludes charged-lepton channels",
+          "statementPreview": "Class (b) of Proposition 1.2 contains no admissible channel.*"
+        },
+        {
+          "type": "Theorem",
+          "id": "2.3",
+          "name": "Mass-gap condition excludes charged-non-lepton channels",
+          "statementPreview": "Class (c) of Proposition 1.2 contains no admissible channel.*"
+        },
+        {
+          "type": "Corollary",
+          "id": "2.4",
+          "name": "Decay-immunity",
+          "statementPreview": "Combining Proposition 1.2 with Theorems 2.1–2.3: every admissibility class is empty. No Type II reverse channel for t..."
+        },
+        {
+          "type": "Theorem",
+          "id": "3.1",
+          "name": "Electron lifetime is dissolution-limited",
+          "statementPreview": "The electron has no Decay (mechanism 1) channel; the only admissible end-of-existence mechanism is Dissolution (mecha..."
+        },
+        {
+          "type": "Proposition",
+          "id": "3.2",
+          "name": "Type III rate in the present epoch",
+          "statementPreview": "In the present cosmological environment, dotCIII(e) for free electrons is dominated by inelastic Compton scattering, ..."
+        },
+        {
+          "type": "Corollary",
+          "id": "3.3",
+          "name": "Practical immortality in the present epoch",
+          "statementPreview": "With dotCIII(e) effectively zero in the bulk environment, tauceil(e) vastly exceeds the age of the universe. The elec..."
+        }
+      ],
+      "structuralPostulates": [],
+      "openGaps": [
+        {
+          "number": 1,
+          "title": "Quantitative saturation ceiling for the electron.",
+          "description": "Computing tauceil(e) = Ke / dotCIII(e) as a precise number requires the perturbation theory of bootstrap fixed points under relational-invariant absorption — the same gap flagged in [Memory-Persistenc"
+        },
+        {
+          "number": 2,
+          "title": "Charge violation by gravitational effects.",
+          "description": "Like proton decay, electron decay through non-perturbative gravitational topology change (virtual black holes, wormholes) would be the only channel consistent with the framework's gauge structure. The"
+        },
+        {
+          "number": 3,
+          "title": "Status promotion conditional on Mass Hierarchy S1.",
+          "description": "Theorem 2.2's lepton mass ordering is the only step that depends on a structural postulate. If [Mass Hierarchy](/derivations/particles/mass-hierarchy) S1 is promoted (the irreducible content is the tu"
+        }
+      ],
+      "assessmentVerdict": "",
+      "hasConsistencyModel": false,
+      "crossReferences": {
+        "outgoing": [
+          {
+            "target": "interactions/three-types",
+            "context": "Three Interaction Types"
+          },
+          {
+            "target": "thermodynamics-ext/memory-persistence-tradeoff",
+            "context": "Memory-Persistence Tradeoff"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "target": "gauge/proton-stability",
+            "context": "Step 0"
+          },
+          {
+            "target": "gauge/standard-model-group",
+            "context": "Standard Model Gauge Group"
+          },
+          {
+            "target": "gauge/electromagnetism",
+            "context": "Electromagnetism"
+          },
+          {
+            "target": "gauge/proton-stability",
+            "context": "gauge group completeness"
+          },
+          {
+            "target": "particles/cpt-theorem",
+            "context": "CPT Theorem"
+          },
+          {
+            "target": "cosmology/cyclic-cosmology",
+            "context": "Cyclic Cosmology"
+          },
+          {
+            "target": "gauge/proton-stability",
+            "context": "Proton Stability"
+          },
+          {
+            "target": "holography/information-paradox",
+            "context": "Information Paradox"
+          }
+        ],
+        "incoming": []
       },
       "leanVerification": {
         "hasProofs": false,
@@ -17554,6 +17786,7 @@
         "foundation/observer-edges-and-mutual-opacity",
         "foundation/observer-pattern-signal",
         "particles/coherence-bounces",
+        "particles/electron-stability",
         "particles/three-generations"
       ],
       "steps": [
@@ -17867,6 +18100,10 @@
           },
           {
             "source": "particles/coherence-bounces",
+            "context": "Mass Hierarchy"
+          },
+          {
+            "source": "particles/electron-stability",
             "context": "Mass Hierarchy"
           },
           {
@@ -23801,7 +24038,9 @@
         "thermodynamics/entropy"
       ],
       "enablesDerivation": [],
-      "dependedOnBy": [],
+      "dependedOnBy": [
+        "particles/electron-stability"
+      ],
       "steps": [
         {
           "number": 1,
@@ -23954,6 +24193,10 @@
             "context": "Theorem 4.1"
           },
           {
+            "source": "gauge/proton-stability",
+            "context": "Memory-Persistence Tradeoff"
+          },
+          {
             "source": "interactions/relational-invariants",
             "context": "Theorem 4.1"
           },
@@ -23976,6 +24219,10 @@
           {
             "source": "minimal-observer/structure",
             "context": "Theorem 4.1, Proposition 3.1"
+          },
+          {
+            "source": "particles/electron-stability",
+            "context": "Memory-Persistence Tradeoff"
           }
         ]
       },
@@ -33966,6 +34213,69 @@
       "fullRef": "particles/cpt-theorem:Corollary 4.3"
     },
     {
+      "derivationId": "particles/electron-stability",
+      "type": "Definition",
+      "id": "1.1",
+      "name": "Admissibility",
+      "fullRef": "particles/electron-stability:Definition 1.1"
+    },
+    {
+      "derivationId": "particles/electron-stability",
+      "type": "Proposition",
+      "id": "1.2",
+      "name": "Enumeration of candidate final states",
+      "fullRef": "particles/electron-stability:Proposition 1.2"
+    },
+    {
+      "derivationId": "particles/electron-stability",
+      "type": "Theorem",
+      "id": "2.1",
+      "name": "Charge conservation excludes all-neutral channels",
+      "fullRef": "particles/electron-stability:Theorem 2.1"
+    },
+    {
+      "derivationId": "particles/electron-stability",
+      "type": "Theorem",
+      "id": "2.2",
+      "name": "Lightest-charged-lepton condition excludes charged-lepton channels",
+      "fullRef": "particles/electron-stability:Theorem 2.2"
+    },
+    {
+      "derivationId": "particles/electron-stability",
+      "type": "Theorem",
+      "id": "2.3",
+      "name": "Mass-gap condition excludes charged-non-lepton channels",
+      "fullRef": "particles/electron-stability:Theorem 2.3"
+    },
+    {
+      "derivationId": "particles/electron-stability",
+      "type": "Corollary",
+      "id": "2.4",
+      "name": "Decay-immunity",
+      "fullRef": "particles/electron-stability:Corollary 2.4"
+    },
+    {
+      "derivationId": "particles/electron-stability",
+      "type": "Theorem",
+      "id": "3.1",
+      "name": "Electron lifetime is dissolution-limited",
+      "fullRef": "particles/electron-stability:Theorem 3.1"
+    },
+    {
+      "derivationId": "particles/electron-stability",
+      "type": "Proposition",
+      "id": "3.2",
+      "name": "Type III rate in the present epoch",
+      "fullRef": "particles/electron-stability:Proposition 3.2"
+    },
+    {
+      "derivationId": "particles/electron-stability",
+      "type": "Corollary",
+      "id": "3.3",
+      "name": "Practical immortality in the present epoch",
+      "fullRef": "particles/electron-stability:Corollary 3.3"
+    },
+    {
       "derivationId": "particles/mass-hierarchy",
       "type": "Structural Postulate",
       "id": "S1",
@@ -39062,6 +39372,27 @@
       "number": 3,
       "title": "Gravitational CPT",
       "description": "Does CPT extend to the gravitational sector? The coherence Lagrangian includes gravity ([Einstein Equations](/derivations/spacetime/einstein-equations)), so the theorem formally applies. However, the "
+    },
+    {
+      "derivationId": "particles/electron-stability",
+      "derivationStatus": "provisional",
+      "number": 1,
+      "title": "Quantitative saturation ceiling for the electron.",
+      "description": "Computing tauceil(e) = Ke / dotCIII(e) as a precise number requires the perturbation theory of bootstrap fixed points under relational-invariant absorption — the same gap flagged in [Memory-Persistenc"
+    },
+    {
+      "derivationId": "particles/electron-stability",
+      "derivationStatus": "provisional",
+      "number": 2,
+      "title": "Charge violation by gravitational effects.",
+      "description": "Like proton decay, electron decay through non-perturbative gravitational topology change (virtual black holes, wormholes) would be the only channel consistent with the framework's gauge structure. The"
+    },
+    {
+      "derivationId": "particles/electron-stability",
+      "derivationStatus": "provisional",
+      "number": 3,
+      "title": "Status promotion conditional on Mass Hierarchy S1.",
+      "description": "Theorem 2.2's lepton mass ordering is the only step that depends on a structural postulate. If [Mass Hierarchy](/derivations/particles/mass-hierarchy) S1 is promoted (the irreducible content is the tu"
     },
     {
       "derivationId": "particles/mass-hierarchy",
