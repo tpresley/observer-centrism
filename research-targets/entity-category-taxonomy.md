@@ -1,7 +1,7 @@
 # Entity Category Taxonomy and the Status of Boson and Substrate Observers
 
-**Type**: Research target (open — Routes A, B, Steps 4 + S3 complete; Step 6 stretch remains)
-**Status**: Scoped 2026-04-25. Routes A, B, Step 4, and S3 cleanup complete 2026-04-25 (commits e53e2c0, c8d456b, d7b8c28, 764f27a, da658aa, 0fdde7f, 1cee0e7, 1fc67e1). The framework's entity ontology is now formalized as a three-layer / two-axis structure ([Entity Category Taxonomy](../site/src/content/derivations/foundation/entity-category-taxonomy.md) Steps 1–6): three layers (Layer 0 substrate, Layer 1 minimal observer, Layer 2+ composites), with the 2×3 Axis 1 × Axis 2 grid classifying Layer 1+ observers. The substrate (Layer 0) is co-created with the observer network by the bootstrap fixed-point self-consistency (Theorem 6.2). All five framing-observation inconsistencies are now closed. Step 6 stretch (Complexity-Minimal Residue Uniqueness) is unblocked and remains as the only optional remaining work.
+**Type**: Research target (program complete — formal artifacts landed)
+**Status**: Scoped 2026-04-25. Program complete 2026-04-25 (commits e53e2c0, c8d456b, d7b8c28, 764f27a, da658aa, 0fdde7f, 1cee0e7, 1fc67e1, 01e36db, b706429). The framework's entity ontology is now formalized as a three-layer / two-axis structure ([Entity Category Taxonomy](../site/src/content/derivations/foundation/entity-category-taxonomy.md) Steps 1–7): three layers (Layer 0 substrate, Layer 1 minimal observer, Layer 2+ composites), with the 2×3 Axis 1 × Axis 2 grid classifying Layer 1+ observers, plus the Complexity-Minimal Residue Uniqueness conjecture formalized as Step 7. All five framing-observation inconsistencies closed. The Higgs is the canonical {Elementary observer, Self-conjugate} entity. Step 6 stretch promoted to formal Conjecture 7.2 with explicit existence theorem (EWSB case rigorous), partial multiplicity-formula result (canonical single-irrep cases unconditional), and identified contingency on bootstrap fixed-point uniqueness for the general claim. The framework's entity ontology is internally consistent and structurally complete; the only unproven structural claim is Conjecture 7.2 in full generality, which is now reduced to bootstrap fixed-point uniqueness — already an existing framework conjecture.
 **Last updated**: 2026-04-25
 
 ## The framing observation
@@ -254,7 +254,7 @@ Hard but not blocked. Most of the conceptual moves are present in the framework 
 
 ## Open subitems
 
-The only remaining work in this program is the Step 6 stretch (Complexity-Minimal Residue Uniqueness conjecture). All Step 1–4 formalization-path items are complete, and the framework's entity ontology is now internally consistent.
+None — all Phase 2 program subitems are now resolved. The framework's entity ontology is internally consistent and structurally complete. The only unproven structural claim from this program (Conjecture 7.2, Complexity-Minimal Residue Uniqueness in full generality) is now formalized in [Entity Category Taxonomy](../site/src/content/derivations/foundation/entity-category-taxonomy.md) Step 7, with its proof reduced to [Bootstrap Mechanism](../site/src/content/derivations/interactions/bootstrap.md) Conjectures 7.1–7.2 — an existing framework conjecture, not a new one.
 
 ## Resolved subitems
 
@@ -279,6 +279,20 @@ The original research target proposed a flat 3-or-4 top-level entity-category ta
 The flat 3-or-4 category proposal collapses into the 2×3 grid; the four candidate categories of the original Step 3 outline are recoverable as cells of the grid (Type-I quanta, Elementary fermion observers = {Elementary, Internal-charge-carrier}, Elementary scalar observers = {Elementary, Self-conjugate}, Type II composites). The two-axis structure is more compact, more derivationally grounded, and more directly connected to the framework's existing structural axioms.
 
 This refinement was surfaced and confirmed mid-program (the user's confirmation of the two-axis adoption preceded the Step 3 derivation work). The research target's Steps 1–6 retain their formalization-path structure; the deliverable in Step 3 is the new [Entity Category Taxonomy](../site/src/content/derivations/foundation/entity-category-taxonomy.md) derivation page, which formalizes the 2×3 grid with its exhaustiveness theorem.
+
+### Step 6 stretch: Complexity-Minimal Residue Uniqueness formalized (2026-04-25 — commit b706429)
+
+The original Step 6 framing was: "Investigate whether the framework forces, in any Type II fusion producing an observer network, exactly one complexity-minimal scalar residue." Acceptable outcomes were proof, refutation, or formalization with identified obstructions. Promoted to formalization as [Entity Category Taxonomy](../site/src/content/derivations/foundation/entity-category-taxonomy.md) Step 7.
+
+The conjecture's structural content is now precisely stated as Conjecture 7.2: every framework-admissible gauge-SSB Type II fusion event leaves exactly one {Elementary observer, Self-conjugate} residue, identified with the radial direction along the orbit-normal subspace at the vacuum. The EWSB case is rigorous (Theorem 7.3): the Higgs is uniquely the radial mode of the Higgs doublet under $SU(2)_L \times U(1)_Y \to U(1)_{em}$. The single-irrep multiplicity formula (Proposition 7.4) is unconditional for canonical cases (SM Higgs doublet, $SU(5)$ adjoint $\mathbf{24}$, generic single-irrep SSB with non-trivial $H$).
+
+Three counterexample classes were identified abstractly but excluded by independent framework commitments: multi-irrep order parameters (excluded by bootstrap fixed-point uniqueness), fully-broken cases ($H = \{e\}$, excluded by the existence of an unbroken gauge subgroup at every framework fusion scale), and composite Goldstones (categorized as Type II composites rather than elementary, so they don't violate the conjecture's scope).
+
+The general conjecture's proof reduces to proving the framework's bootstrap fixed-point uniqueness ([Bootstrap Mechanism](../site/src/content/derivations/interactions/bootstrap.md) Conjectures 7.1–7.2). The conjecture itself is therefore not a new structural commitment — it is a *consequence* of bootstrap fixed-point uniqueness applied to scalar sectors. Its falsification (any additional self-conjugate elementary scalar at any framework scale) is a sharper observational test than the framework's qualitative no-new-physics predictions individually.
+
+Outcome: the conjecture is *formalized* (rigorous on canonical cases, contingent on bootstrap fixed-point uniqueness in full generality) — the third option from the Step 6 acceptable-outcomes list. This is the appropriate landing because (a) the conjecture is non-trivially true on the SM (Theorem 7.3) and on standard GUT extensions (Proposition 7.4 cases), (b) it is non-trivially constrained by bootstrap fixed-point uniqueness, and (c) it provides falsifying observations that would be sharper than current no-new-physics predictions.
+
+This closes §6 of the formalization path and brings the entity-category taxonomy program to a structurally complete state.
 
 ### Step 4: Three-layer ontology + substrate co-creation (2026-04-25 — commit 0fdde7f)
 
