@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-26T09:38:47.348Z",
+    "generatedAt": "2026-04-26T09:42:24.651Z",
     "derivationCount": 97,
     "predictionCount": 12,
     "gaPageCount": 12,
@@ -1113,6 +1113,14 @@
           {
             "target": "thermodynamics/action-planck",
             "context": "0, 2\\pi)$. The physical period $T_\\mathcal{O}$ corresponds to $\\Delta\\theta = 2\\"
+          },
+          {
+            "target": "spacetime/singularity-resolution",
+            "context": "Singularity Resolution"
+          },
+          {
+            "target": "particles/mass-hierarchy",
+            "context": "Yukawa eigenvalues from coherence-bounce zero-mode counting"
           },
           {
             "target": "spacetime/lorentz-invariance",
@@ -18524,6 +18532,10 @@
         ],
         "incoming": [
           {
+            "source": "axioms/loop-closure",
+            "context": "Yukawa eigenvalues from coherence-bounce zero-mode counting"
+          },
+          {
             "source": "cosmology/coupling-constants",
             "context": "Mass Hierarchy"
           },
@@ -23131,6 +23143,10 @@
           }
         ],
         "incoming": [
+          {
+            "source": "axioms/loop-closure",
+            "context": "Singularity Resolution"
+          },
           {
             "source": "cosmology/geometric-inflation",
             "context": "Singularity Resolution"

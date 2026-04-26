@@ -347,6 +347,43 @@ $$E_\mathcal{O} = \frac{S_\mathcal{O}}{T_\mathcal{O}} \geq \frac{S_{\min}}{T_\ma
 
 3. **Mass = rest frequency**: An observer at rest has its loop entirely in the temporal direction, with frequency $\omega = 2\pi/T$. Mass is $m = \hbar\omega/c^2 = E/c^2$ (using results from later derivations).
 
+## The Allowed T-Spectrum
+
+Propositions 3.2 and 3.3 together fix that every observer's minimal period $T_\mathcal{O}$ lies in a finite open interval — bounded away from $0$ on the lower side (Proposition 3.2: $P$ closed and discrete, so $T_\mathcal{O} > 0$) and bounded away from $\infty$ on the upper side (Proposition 3.3: three independent failure modes). Combining these axiom-level bounds with downstream cutoffs from related derivations gives the framework's full picture of which periods are admissible. The spectrum has four structurally distinct regions:
+
+```
+T = 0          [ T_P ────── discrete elementary tower ────── T_ν ]          T_H
+ │              │                                             │              │
+ photon        heaviest                                  lightest          horizon
+ (Type-I       allowed                                   elementary        ceiling
+  quantum,     elementary                                 observer          (soft)
+  null)        observer
+                │                                             │
+                └── continuous composites fill here ──────────┴── further composites ──┘
+   ╲────────╱                                                                ╲────────╱
+   forbidden                                                                 forbidden
+   (sub-T_P:                                                                 (T > T_H:
+    BH regime)                                                                coherence
+                                                                              bleeds to
+                                                                              horizon)
+```
+
+**Region 1 — Null boundary ($T = 0$, forbidden as observer).** Type-I quanta of [Three Interaction Types](/derivations/interactions/three-types) Step 4 propagate along the null trajectory $L = cT$. They are off-ledger phase-transfer carriers, not observers (Addressed Gap 1).
+
+**Region 2 — Sub-Planckian forbidden region ($0 < T < T_P$).** A would-be observer with period below the Planck period has rest energy $E = \hbar/T > E_P = \hbar/T_P$ within Compton radius $r_C = cT < \ell_P$. By [Singularity Resolution](/derivations/spacetime/singularity-resolution) the corresponding mass-energy density forces a horizon — the entity is in the black-hole regime, not the observer regime. The hard lower cutoff is at $T_P$.
+
+**Region 3 — Discrete elementary tower ($T_P \leq T \leq T_\nu$).** Elementary fermion observers populate a finite set of periods in this range, fixed by the WKB tunneling spectrum of [Mass Hierarchy](/derivations/particles/mass-hierarchy) (Yukawa eigenvalues from coherence-bounce zero-mode counting). The tower is *not* a continuous interval — between any two adjacent allowed elementary periods there is a structural gap. The Higgs sits inside the tower as the canonical {Elementary observer, Self-conjugate} entity ([Entity Category Taxonomy](/derivations/foundation/entity-category-taxonomy)).
+
+**Region 4 — Continuous composite spectrum ($T \geq T_P$, extending past $T_\nu$).** Type II composites ([Three Interaction Types](/derivations/interactions/three-types) Definition 4.3) can occupy any period in this range — atoms, nuclei, hadrons, and larger composites populate the band continuously, with the longest periods set by slow collective modes (rotational, vibrational, oscillatory, biological, astrophysical) extending past the elementary tower's upper edge.
+
+**Region 5 — Soft horizon ceiling ($T \to T_H$).** The epistemic horizon $T_H \sim \sqrt{3/\Lambda}$ ([Observer Loop Viability](/derivations/cosmology/observer-loop-viability) Theorem 8.10) sets the upper edge of admissible periods at each bootstrap level. Loops of period exceeding $T_H$ cannot close within the observer's epistemic access — coherence bleeds to the horizon sink before completion. The cutoff is *soft* because the bleed-off rate is continuous, not a sharp inequality. Theorem 8.10 gives a strict positive lower bound on $\Lambda$, so $T_H$ is finite even in the limit.
+
+**Region 6 — Beyond-horizon forbidden region ($T > T_H$).** No observer can sustain a loop longer than the horizon period — Proposition 3.3 forbids the eternal limit, and Theorem 8.10 forbids any escape via $\Lambda \to 0$.
+
+**Asymmetry of the cutoffs.** The two boundaries are structurally distinct. The lower cutoff at $T_P$ is *hard*: a would-be sub-Planckian observer becomes a black hole, and the BH regime is its own mathematical object (not an observer with a degenerate parameter). The upper cutoff at $T_H$ is *soft*: a would-be super-horizon observer experiences continuous coherence bleed, so the cutoff is a rate-limited transition rather than a sharp boundary. The lower cutoff is matter-vs-spacetime (gravitational regime change); the upper cutoff is local-vs-cosmological (epistemic accessibility limit).
+
+**Spectrum shape.** The admissible $T$-axis is a finite-width band $[T_P, T_H]$ with a discrete elementary tower (Region 3) embedded in a continuous composite spectrum (Region 4). The discrete-in-continuous structure mirrors the framework's two-axis entity taxonomy ([Entity Category Taxonomy](/derivations/foundation/entity-category-taxonomy)): elementary observers (Axis 1, middle cell) sit at structurally selected periods, while Type II composites (Axis 1, lower cell) fill the band continuously. The endpoints of the band — $T_P$ and $T_H$ — are both structural (set by Planck-scale and horizon-scale derivations), not empirical inputs.
+
 ## Rigor Assessment
 
 **Fully rigorous:**
