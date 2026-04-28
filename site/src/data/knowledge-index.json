@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-04-26T10:08:16.913Z",
+    "generatedAt": "2026-04-28T09:14:11.842Z",
     "derivationCount": 97,
-    "predictionCount": 12,
+    "predictionCount": 13,
     "gaPageCount": 12,
     "generator": "scripts/build-index.mjs"
   },
@@ -12,7 +12,7 @@
       "provisional": 67
     },
     "derivationCount": 97,
-    "predictionCount": 12,
+    "predictionCount": 13,
     "edgeCount": 378,
     "formalObjectCount": 1410,
     "openGapCount": 339,
@@ -26765,6 +26765,20 @@
         "interactions/bootstrap-division-algebras"
       ],
       "currentEvidence": "No axion detected by ADMX, CASPEr, or other experiments to date; consistent with null prediction"
+    },
+    "no-false-vacuum-decay": {
+      "id": "no-false-vacuum-decay",
+      "filePath": "site/src/content/predictions/no-false-vacuum-decay.md",
+      "title": "No False Vacuum Decay",
+      "status": "qualitative",
+      "testability": "currently-tested",
+      "distinctiveness": "shared",
+      "dependsOn": [
+        "gauge/electroweak-breaking",
+        "foundation/coherence-lagrangian",
+        "particles/coherence-bounces"
+      ],
+      "currentEvidence": "Universe persists 13.8 Gyr without observed bubble-nucleation events. Precision m_t and m_h measurements place the SM-extrapolated Higgs quartic near the stability/metastability boundary, but the framework rejects this extrapolation as exceeding the SM's validity range."
     },
     "no-fourth-generation": {
       "id": "no-fourth-generation",
