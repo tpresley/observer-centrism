@@ -1,0 +1,296 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 620" role="img" aria-labelledby="t-layers-title t-layers-desc" font-family="Inter, ui-sans-serif, system-ui, sans-serif">
+  <title id="t-layers-title">Observer entities on the period × layer-and-level plane</title>
+  <desc id="t-layers-desc">A 2D plot showing observer entities classified by their minimal period T_O (horizontal axis, log scale) and their position in the framework's three-layer ontology with bootstrap-level subdivision (vertical axis, discrete tiers). From bottom to top: Layer 0 substrate (sub-observer Planck-scale modes), Layer 1 elementary observers (Standard Model fundamental particles, the discrete fermion tower plus W, Z, Higgs), Layer 2 bootstrap Level 1 mesons, Level 2 hadrons, Level 3 nuclei, Level 4 atoms, Level 5 molecules, Level 6+ macroscopic and biological, and Level N→∞ cosmological. Forbidden zones at sub-Planckian and beyond-horizon T are hatched red.</desc>
+
+  <defs>
+    <pattern id="forbiddenHatch3" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#fee2e2"/>
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#dc2626" stroke-width="1.4"/>
+    </pattern>
+  </defs>
+
+  <rect width="880" height="620" fill="#fafaf9"/>
+
+  <!-- Title -->
+  <text x="440" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1c1917">
+    Observer entities on the period × layer-and-level plane
+  </text>
+
+  <!-- Plot area outline (Layer 1 + Layer 2+) -->
+  <rect x="140" y="80" width="660" height="380" fill="#ffffff" stroke="#1c1917" stroke-width="1"/>
+
+  <!-- Substrate strip (Layer 0, visually separated) -->
+  <rect x="140" y="478" width="660" height="22" fill="#f5f5f4" stroke="#a8a29e" stroke-width="0.8" stroke-dasharray="3,2"/>
+
+  <!-- Forbidden zones outside plot horizontally -->
+  <rect x="90" y="80" width="50" height="380" fill="url(#forbiddenHatch3)"/>
+  <rect x="90" y="478" width="50" height="22" fill="url(#forbiddenHatch3)" opacity="0.6"/>
+  <rect x="800" y="80" width="50" height="380" fill="url(#forbiddenHatch3)"/>
+  <rect x="800" y="478" width="50" height="22" fill="url(#forbiddenHatch3)" opacity="0.6"/>
+
+  <!-- ========== TIER BACKGROUND BANDS (alternating) ========== -->
+  <!-- Cosmological: y 80-127 -->
+  <rect x="140" y="80" width="660" height="47" fill="#dbeafe" opacity="0.4"/>
+  <!-- Macroscopic / biological: y 127-172 -->
+  <rect x="140" y="127" width="660" height="45" fill="#ffffff"/>
+  <!-- Molecules: y 172-217 -->
+  <rect x="140" y="172" width="660" height="45" fill="#fef3c7" opacity="0.45"/>
+  <!-- Atoms: y 217-262 -->
+  <rect x="140" y="217" width="660" height="45" fill="#ffffff"/>
+  <!-- Nuclei: y 262-307 -->
+  <rect x="140" y="262" width="660" height="45" fill="#fef3c7" opacity="0.45"/>
+  <!-- Hadrons: y 307-352 -->
+  <rect x="140" y="307" width="660" height="45" fill="#ffffff"/>
+  <!-- Mesons: y 352-397 -->
+  <rect x="140" y="352" width="660" height="45" fill="#fef3c7" opacity="0.45"/>
+  <!-- Layer 1 (elementary): y 397-460 (slightly taller, 63px) -->
+  <rect x="140" y="397" width="660" height="63" fill="#dcfce7" opacity="0.55"/>
+
+  <!-- ========== TIER LABELS (right side) ========== -->
+  <g font-size="10.5" fill="#1c1917" font-weight="600">
+    <text x="808" y="106" fill="#2563eb">Cosmological</text>
+    <text x="808" y="118" font-size="9" font-weight="400" fill="#78716c">Level N→∞</text>
+
+    <text x="808" y="151" fill="#a16207">Macro / biological</text>
+    <text x="808" y="163" font-size="9" font-weight="400" fill="#78716c">Level 6+</text>
+
+    <text x="808" y="196" fill="#a16207">Molecules</text>
+    <text x="808" y="208" font-size="9" font-weight="400" fill="#78716c">Level 5</text>
+
+    <text x="808" y="241" fill="#a16207">Atoms</text>
+    <text x="808" y="253" font-size="9" font-weight="400" fill="#78716c">Level 4</text>
+
+    <text x="808" y="286" fill="#a16207">Nuclei</text>
+    <text x="808" y="298" font-size="9" font-weight="400" fill="#78716c">Level 3</text>
+
+    <text x="808" y="331" fill="#a16207">Hadrons</text>
+    <text x="808" y="343" font-size="9" font-weight="400" fill="#78716c">Level 2</text>
+
+    <text x="808" y="376" fill="#a16207">Mesons / pairs</text>
+    <text x="808" y="388" font-size="9" font-weight="400" fill="#78716c">Level 1</text>
+
+    <text x="808" y="425" fill="#16a34a">Elementary</text>
+    <text x="808" y="437" font-size="9" font-weight="400" fill="#78716c">Layer 1</text>
+    <text x="808" y="449" font-size="9" font-weight="400" fill="#78716c">(= boot. L0)</text>
+
+    <text x="808" y="491" fill="#78716c">Substrate</text>
+    <text x="808" y="503" font-size="9" font-weight="400" fill="#a8a29e">Layer 0 (sub-obs.)</text>
+  </g>
+
+  <!-- ========== ENTITY POINTS ========== -->
+
+  <!-- Substrate (Layer 0, y=489): Planck-scale band -->
+  <g>
+    <rect x="143" y="484" width="50" height="10" fill="#a8a29e" opacity="0.5"/>
+    <text x="200" y="492" font-size="10" fill="#78716c" font-style="italic">continuous Planck-cell oscillator modes</text>
+  </g>
+
+  <!-- Layer 1 (Elementary, y=425): the discrete fermion tower + bosons -->
+  <!-- Heavy cluster: W/Z/Higgs/top at log T ≈ -26.3 to -25.4, x ≈ 329-340 -->
+  <g>
+    <circle cx="329" cy="421" r="4" fill="#16a34a"/>
+    <circle cx="333" cy="425" r="4" fill="#16a34a"/>
+    <circle cx="337" cy="421" r="4" fill="#16a34a"/>
+    <circle cx="340" cy="425" r="4" fill="#16a34a"/>
+    <text x="335" y="445" text-anchor="middle" font-size="10" fill="#1c1917">W, Z, H, t</text>
+  </g>
+
+  <!-- Mid fermions: τ, b, c at log T ≈ -24.4 to -25, x ≈ 343-350 -->
+  <g>
+    <circle cx="345" cy="421" r="4" fill="#16a34a"/>
+    <circle cx="350" cy="425" r="4" fill="#16a34a"/>
+    <circle cx="354" cy="421" r="4" fill="#16a34a"/>
+    <text x="370" y="416" font-size="10" fill="#1c1917">τ, b, c</text>
+    <line x1="358" y1="423" x2="368" y2="418" stroke="#78716c" stroke-width="0.5"/>
+  </g>
+
+  <!-- s, μ at log T ≈ -23 to -22, x ≈ 363-374 -->
+  <g>
+    <circle cx="363" cy="425" r="4" fill="#16a34a"/>
+    <circle cx="374" cy="421" r="4" fill="#16a34a"/>
+    <text x="385" y="437" font-size="10" fill="#1c1917">s, μ</text>
+    <line x1="378" y1="423" x2="383" y2="433" stroke="#78716c" stroke-width="0.5"/>
+  </g>
+
+  <!-- u, d, e at log T ≈ -21.5 to -20.9, x ≈ 380-391 -->
+  <g>
+    <circle cx="380" cy="425" r="4" fill="#16a34a"/>
+    <circle cx="383" cy="421" r="4" fill="#16a34a"/>
+    <circle cx="391" cy="425" r="4" fill="#16a34a"/>
+    <text x="405" y="425" font-size="10" fill="#1c1917">u, d, e</text>
+    <line x1="395" y1="425" x2="403" y2="423" stroke="#78716c" stroke-width="0.5"/>
+  </g>
+
+  <!-- Neutrino at log T ≈ -13, x ≈ 470 -->
+  <g>
+    <circle cx="471" cy="425" r="4.5" fill="#16a34a"/>
+    <text x="471" y="416" text-anchor="middle" font-size="10" fill="#1c1917">ν</text>
+  </g>
+
+  <!-- Layer 2 Level 1 — Mesons (y=375) -->
+  <!-- Pion (135 MeV): log T = -23.3, x = 140 + 20.7*10.65 = 360 -->
+  <g>
+    <circle cx="360" cy="375" r="4" fill="#a16207"/>
+    <text x="360" y="367" text-anchor="middle" font-size="10" fill="#1c1917">π</text>
+  </g>
+  <!-- K meson (494 MeV): log T = -23.9, x = 140 + 20.1*10.65 = 354 -->
+  <g>
+    <circle cx="354" cy="375" r="4" fill="#a16207"/>
+    <text x="345" y="367" text-anchor="middle" font-size="10" fill="#1c1917">K</text>
+  </g>
+  <!-- B meson (5279 MeV): log T = -24.9, x = 140 + 19.1*10.65 = 343 -->
+  <g>
+    <circle cx="343" cy="375" r="4" fill="#a16207"/>
+    <text x="333" y="367" text-anchor="middle" font-size="10" fill="#1c1917">B</text>
+  </g>
+
+  <!-- Layer 2 Level 2 — Hadrons (y=330) -->
+  <!-- Proton (938 MeV): log T = -24.15, x = 140 + 19.85*10.65 = 351 -->
+  <g>
+    <circle cx="351" cy="330" r="4.5" fill="#a16207"/>
+    <text x="351" y="321" text-anchor="middle" font-size="10" fill="#1c1917">p, n</text>
+  </g>
+  <!-- Λ baryon -->
+  <g>
+    <circle cx="349" cy="334" r="4" fill="#a16207"/>
+    <text x="362" y="338" font-size="10" fill="#1c1917">Λ</text>
+  </g>
+
+  <!-- Layer 2 Level 3 — Nuclei (y=285) -->
+  <!-- He-4: log T = -24.75, x = 140 + 19.25*10.65 = 345 -->
+  <g>
+    <circle cx="345" cy="285" r="4.5" fill="#a16207"/>
+    <text x="333" y="280" text-anchor="middle" font-size="10" fill="#1c1917">⁴He</text>
+  </g>
+  <!-- C-12: log T = -25.23, x = 140 + 18.77*10.65 = 340 -->
+  <g>
+    <circle cx="340" cy="289" r="4" fill="#a16207"/>
+    <text x="328" y="292" font-size="10" fill="#1c1917">¹²C</text>
+  </g>
+  <!-- ²³⁸U: heavier, smaller T -->
+  <g>
+    <circle cx="332" cy="285" r="4" fill="#a16207"/>
+    <text x="320" y="282" font-size="10" fill="#1c1917">²³⁸U</text>
+  </g>
+
+  <!-- Layer 2 Level 4 — Atoms (y=240) -->
+  <!-- Hydrogen atom (Bohr period ~1.5e-16 s): log T = -15.8, x = 140 + 28.2*10.65 = 440 -->
+  <g>
+    <circle cx="440" cy="240" r="4.5" fill="#a16207"/>
+    <text x="440" y="232" text-anchor="middle" font-size="10" fill="#1c1917">H atom</text>
+  </g>
+  <!-- Heavier atom (Au, ~10^-18 s for inner orbital): log T ≈ -18, x = 416 -->
+  <g>
+    <circle cx="416" cy="244" r="4" fill="#a16207"/>
+    <text x="395" y="244" font-size="10" fill="#1c1917">heavy atoms</text>
+  </g>
+
+  <!-- Layer 2 Level 5 — Molecules (y=195) -->
+  <!-- Water vibrational ~ 10^-13 s: log T = -13, x = 471 -->
+  <g>
+    <circle cx="471" cy="195" r="4.5" fill="#a16207"/>
+    <text x="471" y="187" text-anchor="middle" font-size="10" fill="#1c1917">H₂O</text>
+  </g>
+  <!-- DNA helix vibration ~ 10^-12 s: log T = -12, x = 482 -->
+  <g>
+    <circle cx="482" cy="199" r="4" fill="#a16207"/>
+    <text x="500" y="199" font-size="10" fill="#1c1917">biomolecule</text>
+  </g>
+
+  <!-- Layer 2 Level 6+ — Macroscopic / biological (y=150) -->
+  <!-- Cell cycle ~ 10^4 s: log T = 4, x = 140 + 48*10.65 = 651 -->
+  <g>
+    <circle cx="651" cy="150" r="4.5" fill="#a16207"/>
+    <text x="640" y="142" font-size="10" fill="#1c1917">cell</text>
+  </g>
+  <!-- Organism / human lifespan ~ 10^9 s: log T = 9, x = 140 + 53*10.65 = 705 -->
+  <g>
+    <circle cx="705" cy="150" r="4.5" fill="#a16207"/>
+    <text x="705" y="142" text-anchor="middle" font-size="10" fill="#1c1917">organism</text>
+  </g>
+
+  <!-- Cosmological — Level N→∞ (y=105) -->
+  <!-- Galactic rotation ~ 10^16 s: log T = 16, x = 140 + 60*10.65 = 779 -->
+  <g>
+    <circle cx="775" cy="108" r="4.5" fill="#2563eb"/>
+    <text x="755" y="100" font-size="10" fill="#1c1917">galaxy</text>
+  </g>
+  <!-- Universe horizon ~ T_H: x ≈ 793 -->
+  <g>
+    <circle cx="793" cy="115" r="5" fill="#2563eb"/>
+    <text x="793" y="100" text-anchor="middle" font-size="10" fill="#1c1917">universe</text>
+  </g>
+
+  <!-- ========== INDICATIVE COMPOSITION ARROWS ========== -->
+  <!-- Show how composites build from constituents -->
+  <g stroke="#a16207" stroke-width="1" fill="none" opacity="0.4" stroke-dasharray="2,2">
+    <!-- quarks → mesons -->
+    <line x1="350" y1="423" x2="354" y2="372"/>
+    <!-- mesons/quarks → hadrons -->
+    <line x1="354" y1="378" x2="351" y2="327"/>
+    <!-- hadrons → nuclei -->
+    <line x1="349" y1="327" x2="345" y2="282"/>
+    <!-- nuclei → atoms (electron added) -->
+    <line x1="345" y1="282" x2="440" y2="237"/>
+    <!-- atoms → molecules -->
+    <line x1="440" y1="237" x2="471" y2="192"/>
+    <!-- molecules → biological -->
+    <line x1="471" y1="192" x2="651" y2="147"/>
+    <!-- biological → cosmological -->
+    <line x1="705" y1="147" x2="775" y2="111"/>
+  </g>
+
+  <!-- ========== X-AXIS LABELS ========== -->
+
+  <g font-size="11" fill="#1c1917">
+    <line x1="100" y1="500" x2="100" y2="510" stroke="#1c1917" stroke-width="1"/>
+    <text x="100" y="524" text-anchor="middle" font-weight="600">T = 0</text>
+    <text x="100" y="536" text-anchor="middle" font-size="9" fill="#78716c">photon</text>
+
+    <line x1="140" y1="500" x2="140" y2="510" stroke="#1c1917" stroke-width="1.4"/>
+    <text x="140" y="524" text-anchor="middle">
+      <tspan font-style="italic">T</tspan><tspan font-size="9" baseline-shift="sub">P</tspan>
+    </text>
+
+    <line x1="471" y1="500" x2="471" y2="508" stroke="#16a34a" stroke-width="1"/>
+    <text x="471" y="524" text-anchor="middle" fill="#16a34a">
+      <tspan font-style="italic">T</tspan><tspan font-size="9" baseline-shift="sub">ν</tspan>
+    </text>
+
+    <line x1="800" y1="500" x2="800" y2="510" stroke="#1c1917" stroke-width="1.4" stroke-dasharray="3,2"/>
+    <text x="800" y="524" text-anchor="middle">
+      <tspan font-style="italic">T</tspan><tspan font-size="9" baseline-shift="sub">H</tspan>
+    </text>
+
+    <line x1="850" y1="500" x2="850" y2="510" stroke="#1c1917" stroke-width="1"/>
+    <text x="850" y="524" text-anchor="middle" font-weight="600">
+      <tspan font-style="italic">T</tspan> → ∞
+    </text>
+  </g>
+
+  <text x="470" y="555" text-anchor="middle" font-size="13" fill="#1c1917">
+    Observer minimal period <tspan font-style="italic">T</tspan><tspan font-size="10" baseline-shift="sub">𝒪</tspan> (log scale)
+  </text>
+
+  <!-- ========== LEGEND ========== -->
+  <g transform="translate(120, 580)" font-size="10.5" fill="#1c1917">
+    <circle cx="6" cy="8" r="4.5" fill="#16a34a"/>
+    <text x="16" y="11">elementary observer (Layer 1)</text>
+
+    <circle cx="200" cy="8" r="4.5" fill="#a16207"/>
+    <text x="210" y="11">composite observer (Layer 2+)</text>
+
+    <circle cx="380" cy="8" r="4.5" fill="#2563eb"/>
+    <text x="390" y="11">cosmological observer</text>
+
+    <rect x="510" y="3.5" width="14" height="9" fill="#a8a29e" opacity="0.5"/>
+    <text x="528" y="11">substrate primitive (Layer 0)</text>
+
+    <line x1="690" y1="8" x2="704" y2="8" stroke="#a16207" stroke-width="1" stroke-dasharray="2,2" opacity="0.7"/>
+    <text x="710" y="11">composition arrow</text>
+  </g>
+
+  <text x="440" y="608" text-anchor="middle" font-size="9.5" font-style="italic" fill="#78716c">
+    Composites form to the upper-left of constituents (heavier total mass = smaller T) until atoms, where electron orbital periods take over.
+  </text>
+</svg>
