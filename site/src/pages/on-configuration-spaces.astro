@@ -1,0 +1,580 @@
+---
+import MainLayout from '../components/layouts/MainLayout.astro'
+import PageTitle from '../components/PageTitle.astro'
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+---
+
+<MainLayout title="On Configuration Spaces">
+  <article class="config-article">
+    <PageTitle
+      title="On Configuration Spaces"
+      subtitle="Why you can use a space of possibilities without believing in one"
+    />
+
+    <p class="lead">
+      Several active programs in the foundations of physics &mdash; Tegmark&rsquo;s
+      Mathematical Universe Hypothesis, Wolfram&rsquo;s Ruliad, various rule-space
+      and Hilbert-space multiverses &mdash; share a structural move: posit a vast
+      abstract space of possible configurations, then explain why our universe
+      sits where it does via some selection condition. The framework doesn&rsquo;t
+      officially do this. Its axioms are presented as operational consistency
+      conditions on observers, not as filters on a space of alternatives. But the
+      selection-style reading is <em>available</em> to the framework, sits cleanly
+      in <a href={`${base}/on-existence`}>On Existence</a>&rsquo;s
+      descriptive-mathematical mode, and does explanatory work the operational
+      view leaves on the table. This page locates the framework on the
+      configuration-space map &mdash; what it shares with its predecessors, what
+      it has that they don&rsquo;t, and why it can use the scaffolding without
+      depending on it.
+    </p>
+
+    <h2>The Question</h2>
+
+    <p>
+      Modern physics has accumulated an enormous list of arbitrary-looking
+      parameters &mdash; coupling constants, mass ratios, mixing angles, the
+      cosmological constant &mdash; and an equally long list of structural
+      choices: <em>SU(3) &times; SU(2) &times; U(1)</em> gauge group, three
+      generations, 3+1 spacetime dimensions, Lorentz signature. The first
+      response to this is to treat the values as brute. Physics is what physics
+      is. You measure the constants, you build the theory, you don&rsquo;t demand
+      explanations.
+    </p>
+
+    <p>
+      A second response widens the question. Imagine a vast space of possible
+      configurations, almost all of which never get realized, and ask what
+      structural feature picks out ours. The hope is that the selection feature
+      is something natural &mdash; mathematical consistency, computability,
+      observer-supporting capacity &mdash; and that explaining the selection
+      dissolves the apparent arbitrariness of the result. This is the move
+      Tegmark and Wolfram each make in different ways.
+    </p>
+
+    <p>
+      The framework, on its official reading, takes a third path. The axioms are
+      not postulates whose selection from a space requires explanation; they are
+      operational consistency conditions that follow from defining observation.
+      There is no implied space of unrealized alternatives because the
+      operational direction never invokes one. But the third path and the second
+      path are closer than they look. The same axioms that the operational view
+      <em>states</em>, the selective view <em>explains</em> &mdash; and the
+      selective view is not in conflict with the operational one, just oriented
+      from the opposite side of the same structure. The remainder of this page
+      works out what that means.
+    </p>
+
+    <h2>Two Predecessors</h2>
+
+    <p>
+      Tegmark&rsquo;s Mathematical Universe Hypothesis posits that every
+      mathematically consistent structure exists physically, and that our
+      universe is one such structure among many. The selection feature is bare:
+      if the structure is consistent, it is real. We observe ours because we are
+      inside it.
+    </p>
+
+    <p>
+      Wolfram&rsquo;s Ruliad is the entangled limit of all possible computational
+      rules running on all possible inputs. Our universe, in this picture, is a
+      coherent slice through the Ruliad selected by what observers can perceive
+      consistently. The Ruliad refines Tegmark by privileging computation as the
+      substrate of possibility and by giving observers an active role in the
+      selection &mdash; the observer&rsquo;s computational equivalence with what
+      they observe is the selection mechanism.
+    </p>
+
+    <p>
+      Both are bold and clean, and both have well-known problems. There is no
+      canonical measure on the space of mathematical structures or on the space
+      of computational rules, so &ldquo;most universes look like X&rdquo; is
+      hard to make precise. Most mathematically consistent structures and most
+      computational rule sets have nothing resembling time, observers, or stable
+      physics; saying we live in &ldquo;one of those that does&rdquo; is an
+      anthropic move that struggles to do predictive work. Both surviving sets
+      are <em>underdetermined</em>: enormous, structureless manifolds that
+      selection narrows but doesn&rsquo;t pin down. Saying our universe is in
+      the surviving set is not the same as predicting its specific form.
+    </p>
+
+    <p>
+      These problems are not fatal &mdash; both programs have working defenders,
+      and both have produced genuine insights about what &ldquo;all
+      possibilities&rdquo; could mean. But they motivate the question of whether
+      a sharper selection criterion exists: one that is structural rather than
+      vague, that doesn&rsquo;t require an undefined measure on a featureless
+      space, and that pins down the surviving structure rather than just
+      bounding it. The framework, read through the configuration-space lens, is
+      a candidate for exactly that.
+    </p>
+
+    <h2>The Framework&rsquo;s Filter</h2>
+
+    <p>
+      Take the space of all possible configurations &mdash; whatever
+      &ldquo;possible&rdquo; might mean before any specific axiomatic
+      commitment. Apply three filters:
+      <a href={`${base}/derivations/axioms/coherence-conservation`}>coherence
+      is conserved</a>,
+      <a href={`${base}/derivations/axioms/observer-definition`}>observers have
+      <em>(&Sigma;, I, &Bcy;)</em> structure</a>, and
+      <a href={`${base}/derivations/axioms/loop-closure`}>their internal
+      dynamics close under U(1) phase</a>. The configurations that survive all
+      three filters simultaneously are observer-supporting structures. The ones
+      that don&rsquo;t survive are not annihilated &mdash; they were never
+      candidates in the first place, since they couldn&rsquo;t host the
+      observers needed to make the question meaningful.
+    </p>
+
+    <p>
+      This is where the configuration-space view does work the operational view
+      doesn&rsquo;t. The operational view <em>states</em> the axioms. It does
+      not explain why they hold; the answer is &ldquo;observation requires
+      them.&rdquo; That is informative as an operational starting point but not
+      as a structural explanation. The configuration-space view closes the
+      question. The axioms are not postulates; they are <em>survivor
+      characteristics</em>. Configurations failing coherence conservation, or
+      failing the observer-definition axiom, or failing loop closure, terminate
+      &mdash; they do not host the structures whose existence the question
+      presupposes. The only configurations in which the question can be asked
+      are those in which the answer holds. The fact that the tautology has
+      bite &mdash; that the conditions are sharp enough to specify the structure
+      of physics &mdash; is what makes this an explanation rather than an
+      evasion.
+    </p>
+
+    <p>
+      This is the central explanatory payoff of the configuration-space lens:
+      it converts the framework&rsquo;s axioms from postulates that could in
+      principle be otherwise into survivor characteristics that could not.
+      Same axioms, but their status as foundational has shifted from
+      acceptance to derivation-by-survivorship.
+    </p>
+
+    <h2>Structural Survivorship, Not Awareness</h2>
+
+    <p>
+      The selection-effect machinery just sketched can sound like familiar
+      anthropic reasoning, but it is structurally different in a way worth
+      being precise about. The framework&rsquo;s &ldquo;observer&rdquo; is
+      operationally defined: an <em>(&Sigma;, I, &Bcy;)</em> triple satisfying
+      the three axioms. There is no requirement of awareness, sentience, or
+      &ldquo;observers like us.&rdquo; An electron is an observer in this
+      sense. A proton is. The selection criterion is therefore on
+      observer-<em>form</em>, not on observer-<em>awareness</em> &mdash; a
+      structural condition, not a phenomenal one.
+    </p>
+
+    <p>
+      This distinction matters because it places the configuration-space lens
+      outside the standard anthropic critique. The familiar anthropic move
+      says &ldquo;we observe X because non-X universes don&rsquo;t support
+      beings who can do astronomy.&rdquo; That move depends on a vague
+      life-permitting parameter band, an implicit population of universes with
+      a measure, and a selection mechanism that privileges awareness. Each of
+      these is a known weak point. The configuration-space reading of the
+      framework involves none of them. The selection criterion is sharp (the
+      axioms are specific, not vague). The surviving configurations are
+      determined or near-determined (more on this below). And the criterion
+      is structural &mdash; an electron-style observer satisfies it as much
+      as an astronomer does. The Boltzmann-brain problem, the fine-tuning
+      narrative, and the measure problem all turn out not to apply.
+    </p>
+
+    <p>
+      What survives this reading is the <em>form</em> of selection-effect
+      reasoning &mdash; configurations failing the axioms cannot host the
+      structures whose existence the question presupposes &mdash; without the
+      <em>baggage</em> of standard anthropic arguments. The lens is doing
+      survivorship work, but on observer-form rather than observer-awareness.
+      That is a much cleaner thing, and it is what gives the framework the
+      explanatory benefits of selection-effect thinking without the
+      methodological costs the standard versions pay.
+    </p>
+
+    <h2>Selection at Every Joint</h2>
+
+    <p>
+      One more refinement distinguishes this picture from standard
+      selection-effect arguments. Anthropic reasoning typically selects
+      universes by their initial conditions: we are in the universe whose
+      constants permit us to be here. The configuration-space lens applied to
+      the framework selects more finely than that &mdash; not just universes
+      by initial conditions, but <em>paths</em> through configuration space,
+      joint by joint.
+    </p>
+
+    <p>
+      Every observer-relevant state transition is a branching point.
+      <a href={`${base}/derivations/gauge/electroweak-breaking`}>Electroweak
+      symmetry breaking</a>, QCD confinement, baryogenesis, every
+      bootstrap-level transition, every Type II fusion that constructs a
+      composite observer &mdash; each is a branching where the operative-real
+      branch is whichever path sustains observation forward. Non-sustaining
+      branches don&rsquo;t fail at some future moment. They fail to be
+      operative-real at the branching itself, because no observation along
+      them ever occurs. The framework&rsquo;s history is the unique survivor
+      path through configuration space, where the survivorship operates at
+      every joint of physical evolution rather than only at one
+      cosmic-initial-conditions filter.
+    </p>
+
+    <p>
+      This recasts the framework&rsquo;s &ldquo;thermodynamic
+      inevitability&rdquo; arguments. The operational reading of EWSB-as-forced-
+      crystallization, of <em>&Lambda; &gt; 0</em> as forced by
+      <a href={`${base}/derivations/cosmology/observer-loop-viability`}>observer
+      accounting</a>, of the absence of a false vacuum from the
+      <a href={`${base}/derivations/foundation/coherence-lagrangian`}>coherence
+      Lagrangian&rsquo;s</a> potential structure, all read as &ldquo;the
+      framework derives that these had to be the case.&rdquo; The
+      configuration-space reading reads them as &ldquo;the paths in which
+      these weren&rsquo;t the case terminated; we see the inevitability
+      because the alternatives are not witnessable.&rdquo; Same physics
+      &mdash; the predictions are unchanged &mdash; but the <em>necessity</em>
+      shifts from &ldquo;structurally required by axioms&rdquo; to
+      &ldquo;structurally required by the act of being noticed.&rdquo;
+    </p>
+
+    <h2>Selection Determines, Doesn&rsquo;t Just Narrow</h2>
+
+    <p>
+      The other place the framework distinguishes itself among selection-effect
+      theories is the <em>uniqueness</em> of the surviving structure.
+    </p>
+
+    <p>
+      Tegmark IV&rsquo;s surviving set is &ldquo;all consistent mathematical
+      structures supporting observers,&rdquo; an unbounded manifold with no
+      canonical measure. The Ruliad&rsquo;s surviving set is parameterized by
+      the observer&rsquo;s computational equivalence class. Standard anthropic
+      arguments applied to the Standard Model select &ldquo;parameter values
+      that permit life,&rdquo; a narrow band but a band, with the actual values
+      still in some sense undetermined. In each case, selection narrows but
+      doesn&rsquo;t determine. The surviving manifold is wide enough that
+      &ldquo;why these specific laws and constants&rdquo; remains open even
+      after the selection effect is applied.
+    </p>
+
+    <p>
+      The framework, especially under
+      <a href={`${base}/derivations/interactions/bootstrap`}>Bootstrap Mechanism
+      Conjecture 7.2</a> &mdash; the uniqueness of the bootstrap fixed point
+      &mdash; doesn&rsquo;t have this problem. The surviving slice isn&rsquo;t
+      a parameter space narrowed by selection; it is a <em>fixed structural
+      form</em> picked out by the axioms. If 7.2 holds, it is a singleton.
+      Even without uniqueness, what survives is &ldquo;fixed points of the
+      bootstrap functor satisfying coherence + observer-definition +
+      loop-closure simultaneously&rdquo; &mdash; heavily constrained, not
+      &ldquo;anything observer-supporting.&rdquo; The currently known
+      structural pressures &mdash; dimensional independence of
+      <em>(&hbar;, c, G)</em>, the per-observer coherence budget, the
+      Lovelock-type uniqueness of the coherence Lagrangian &mdash; all push
+      toward a determined survivor. The conjecture is open because nobody has
+      yet proved it, but the structural pressure is in the direction of
+      uniqueness.
+    </p>
+
+    <p>
+      That makes the framework&rsquo;s selection-effect <em>predictive</em>
+      rather than merely <em>narrowing</em>. Same physics is recovered whether
+      you read constructively or selectively, because the axioms underdetermine
+      nothing. This is the structural feature that lets the framework absorb
+      the configuration-space lens without strain: the lens cannot disagree
+      with the operational view&rsquo;s predictions, because the operational
+      view&rsquo;s predictions are the unique consistent ones.
+    </p>
+
+    <h2>Paths and Virtual Particles</h2>
+
+    <p>
+      The configuration-space lens also reframes the framework&rsquo;s
+      relationship to the path integral, and along the way gives virtual
+      particles a precise locus that the operational view leaves implicit.
+    </p>
+
+    <p>
+      Start with <a href={`${base}/derivations/quantum/measurement`}>Measurement</a>&rsquo;s
+      pre-measurement condition: when no relational invariant exists between
+      an observer and a system for some observable, the system relative to
+      the observer is in superposition. Translating into configuration-space
+      language: when no other observer&rsquo;s projection constrains an
+      observer&rsquo;s path through configuration space, the path is <em>not
+      yet defined</em>. Not hidden, not collapsed into a single branch
+      &mdash; just genuinely unspecified. The trajectory is real as a
+      structure, but it has no localized form until projection occurs.
+    </p>
+
+    <p>
+      The path integral is what fills this gap.
+      <a href={`${base}/derivations/quantum/born-rule`}>Born Rule</a> Step 1
+      derives the amplitude as a coherence-cost-weighted sum over admissible
+      paths, <em>&psi;(B|A) = &Sigma;<sub>&gamma;</sub> e<sup>i&Sscr;[&gamma;]/&hbar;</sup></em>.
+      In the configuration-space reading, this is the integration measure
+      over coherence-permitted excursions through configuration space
+      connecting the projection-localized endpoints. When projection occurs
+      &mdash; when a Type III interaction generates a relational invariant
+      &mdash; the integration resolves into a definite path, with the
+      resolution sampled from the distribution that the Born rule uniquely
+      specifies.
+    </p>
+
+    <p>
+      Virtual particles fall out of this picture as a side effect. The
+      path-integral integration extends over all configurations contributing
+      to the amplitude, not just those on the surviving slice. Off-slice
+      configurations &mdash; configurations that almost satisfy the axioms
+      but don&rsquo;t quite &mdash; contribute to the integration measure
+      without contributing to the operative-real ledger. They are anchored
+      to on-slice endpoints (real observers), traverse off-slice regions in
+      between, and never appear as final states. That is structurally what
+      virtual particles do in QFT: external lines real, internal lines
+      off-shell, integration over loops giving definite amplitudes between
+      defined boundaries.
+    </p>
+
+    <p>
+      The picture extends naturally to vacuum fluctuations. The framework&rsquo;s
+      <a href={`${base}/on-vacuum`}>vacuum</a> is observer-saturated but not
+      observer-localized at every point; the path-integral measure over
+      unprojected regions includes off-slice contributions everywhere, which
+      read as the Casimir effect, vacuum polarization, and zero-point modes.
+      Virtual particles are not a separate ontological category; they are the
+      integration-measure contributions in regions where no specific
+      projection has localized a definite path.
+    </p>
+
+    <p>
+      This is the cleanest place the configuration-space lens does work the
+      operational view doesn&rsquo;t make explicit. The path integral and
+      virtual particles both have a precise locus &mdash; off-slice
+      configurations contributing to the integration measure &mdash; that the
+      operational view treats as bookkeeping but doesn&rsquo;t situate
+      ontologically. The lens situates them, and the situation is
+      descriptive-mathematical: real in the integration, not real in the
+      ledger.
+    </p>
+
+    <h2>Where the Scaffolding Lives</h2>
+
+    <p>
+      The framework&rsquo;s ontology is not binary, and the configuration-space
+      lens is best understood as exploiting that fact rather than challenging
+      it. As <a href={`${base}/on-existence`}>On Existence</a> develops,
+      &ldquo;does it exist?&rdquo; resolves into three modes &mdash;
+      ontic-structural, epistemic-constitutive, and descriptive-mathematical
+      &mdash; and many foundational disputes turn out to be about which mode a
+      question invokes rather than about a binary fact.
+    </p>
+
+    <p>
+      The abstract configuration space sits cleanly in the
+      descriptive-mathematical mode. It is not ontic-structural: no observer
+      ever encounters it, no relational invariant lives in it, it carries no
+      coherence. It is not epistemic-constitutive: it is not constituted by
+      any observer&rsquo;s consistency requirements; it is the larger object
+      from which such requirements would carve. But it is real in the
+      descriptive-mathematical sense &mdash; indispensable for stating things
+      like &ldquo;the framework&rsquo;s structures are a measure-zero slice
+      through configuration space,&rdquo; useful as scaffolding for proofs and
+      intuitions, and a legitimate object of mathematical thought.
+    </p>
+
+    <p>
+      This is the same status the framework already grants to several other
+      objects: the pre-bounce phase of cyclic cosmology (logically required,
+      not currently accessible), the bootstrap fixed point as a mathematical
+      object (the network <em>is</em> it, but mathematicians can describe it
+      from outside), the
+      <a href={`${base}/derivations/foundation/entity-category-taxonomy`}>Layer
+      0 substrate</a> (co-created with the network, not independently
+      existing, but indispensable for stating substrate-noise predictions),
+      and the limit constructions of <em>T &rarr; 0</em> photons and
+      <em>T &rarr; &infin;</em> excluded eternal observers. None of these is
+      operative-real. All are framework-accepted descriptive tools. The
+      configuration space is the same kind of object: real in the mode it
+      inhabits, not real in the operative-real mode the observer network
+      inhabits.
+    </p>
+
+    <h2>The Methodological Objection</h2>
+
+    <p>
+      Some philosophers reject selection-effect explanations at the formal
+      level. The argument is that &ldquo;we observe X because non-X universes
+      don&rsquo;t get observed&rdquo; is a tautology dressed as a cause; a
+      genuine explanation has to derive X from a deeper principle, not from
+      the fact that it is observed. On this view, every survivorship-based
+      explanation is non-explanatory by design.
+    </p>
+
+    <p>
+      The objection is worth taking seriously, but it has a methodological
+      cost. It rules out <em>every</em> first-principles theory&rsquo;s
+      foundational acceptance. Brute facts (&ldquo;the laws are what they
+      are, full stop&rdquo;) are tautological in the same way. Logical
+      necessity (&ldquo;the laws couldn&rsquo;t be otherwise&rdquo;) just
+      relocates the question to &ldquo;why this logical necessity?&rdquo;
+      Metaphysical primitives (&ldquo;the universe just is this kind of
+      thing&rdquo;) are by definition unexplained. A critique that no
+      first-principles theory can in principle satisfy is not assessing
+      theories; it is expressing a metaphysical stance about what kind of
+      foundational acceptance one is willing to grant. Either you accept some
+      form of unexplained acceptance at the bottom &mdash; in which case
+      selection-effect is a legitimate candidate among the others &mdash; or
+      you require explanation all the way down, in which case nothing will
+      satisfy you and the demand is empty.
+    </p>
+
+    <p>
+      This is structurally the same move Carnap makes about &ldquo;external&rdquo;
+      questions versus &ldquo;internal&rdquo; questions, and the move
+      Wittgenstein makes when he says some apparent questions have the form
+      of questions but no available form of answer. An argument that cannot
+      in principle be answered by any candidate theory is doing something
+      other than legitimate epistemic work.
+    </p>
+
+    <p>
+      Granting this, the configuration-space lens applied to the framework is
+      unusually well-defended even on the strict reading. The selection
+      criterion is not vague (the axioms are sharp), it is not phenomenal
+      (the criterion is observer-form not awareness), and the surviving
+      structure is not a parameter space (it is fixed by the bootstrap, modulo
+      uniqueness). The standard objections &mdash; Boltzmann brains,
+      fine-tuning narratives, multiverse measure problems &mdash; don&rsquo;t
+      apply. What remains is the formal claim that survivorship is not
+      properly explanatory at all, and that claim is a meta-stance, not a
+      defect.
+    </p>
+
+    <h2>Why the Framework Doesn&rsquo;t Officially Carry the Space</h2>
+
+    <p>
+      Even granting all of this, the framework declines to make the abstract
+      configuration space part of its official commitments. Two reasons.
+    </p>
+
+    <p>
+      First, parsimony. If uniqueness holds, the space adds no operative
+      content &mdash; you can derive everything from the consistency
+      conditions directly. Carrying the space as part of the ontology would
+      mean carrying scaffolding indistinguishable in its predictions from the
+      unscaffolded version. The framework&rsquo;s general aesthetic is to
+      commit only to what is necessary for stating its content. The abstract
+      space is useful but not necessary.
+    </p>
+
+    <p>
+      Second, methodological. The framework starts from observation as
+      operationally given and works outward. That is a different rhetorical
+      move than starting from a space of possibilities and filtering inward.
+      The two directions are equivalent in their physics but tell different
+      stories about how the structure comes to be the structure. The
+      operational story foregrounds observers as the irreducible starting
+      point; the selective story foregrounds the consistency conditions as
+      the irreducible starting point. The framework&rsquo;s choice of the
+      operational story is deliberate &mdash; it builds in
+      observer-centricity from the first move, rather than recovering it as
+      a selection effect at the end.
+    </p>
+
+    <p>
+      But the choice is rhetorical, not metaphysical. The framework
+      doesn&rsquo;t deny the configuration-space reading; it declines to
+      require it. Readers who find the selective story more intuitive can use
+      it freely as scaffolding without conflict. Readers who find the
+      operational story more intuitive can ignore the scaffolding entirely
+      without losing anything. The scaffolding is welcome; it is not
+      load-bearing.
+    </p>
+
+    <h2>What This Reading Costs</h2>
+
+    <p>
+      Almost nothing, if you&rsquo;re careful. The cost is keeping clear what
+      the abstract space is for: a description tool in the
+      descriptive-mathematical mode, useful for connecting the framework to
+      adjacent foundational programs, for sharpening intuitions about why
+      three axioms are sufficient, for giving virtual particles and the path
+      integral a precise locus, and for closing the &ldquo;why these
+      axioms?&rdquo; question. It is not a multiverse one is committed to.
+      It is not an arena one is committed to. It is not &ldquo;real&rdquo; in
+      the operative sense in which observers and relational invariants are
+      real.
+    </p>
+
+    <p>
+      Read this way, the framework gains the explanatory benefits of
+      ensemble-style thinking without inheriting the ontological commitments
+      those programs typically pay. The configuration space is welcome as
+      scaffolding and absent from the load-bearing ontology, all at once.
+      Not Level IV, not the Ruliad, not a denial of either &mdash; a third
+      path that uses the same tools without accepting the same costs.
+    </p>
+
+    <div class="config-links">
+      <a href={`${base}/on-existence`}>On Existence</a> &middot;
+      <a href={`${base}/on-vacuum`}>On Vacuum</a> &middot;
+      <a href={`${base}/on-nothing`}>On Nothing</a> &middot;
+      <a href={`${base}/derivations/axioms/coherence-conservation`}>Coherence Conservation</a> &middot;
+      <a href={`${base}/derivations/axioms/observer-definition`}>Observer Definition</a> &middot;
+      <a href={`${base}/derivations/axioms/loop-closure`}>Loop Closure</a> &middot;
+      <a href={`${base}/derivations/interactions/bootstrap`}>Bootstrap Mechanism</a> &middot;
+      <a href={`${base}/derivations/quantum/born-rule`}>Born Rule</a> &middot;
+      <a href={`${base}/derivations/quantum/measurement`}>Measurement</a> &middot;
+      <a href={`${base}/derivations/foundation/continuous-discrete-duality`}>Continuous-Discrete Duality</a>
+    </div>
+  </article>
+</MainLayout>
+
+<style>
+  .config-article {
+    max-width: 700px;
+  }
+
+  .config-article h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.35rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.5rem;
+  }
+
+  .config-article h2:first-of-type {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .config-article p {
+    margin-bottom: 1rem;
+    line-height: 1.85;
+  }
+
+  .lead {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .config-links {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .config-links a {
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+
+  .config-links a:hover {
+    border-bottom-color: var(--color-accent);
+  }
+</style>

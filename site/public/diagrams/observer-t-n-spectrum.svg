@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 620" role="img" aria-labelledby="t-n-title t-n-desc" font-family="Inter, ui-sans-serif, system-ui, sans-serif">
+  <title id="t-n-title">Two-axis classification of observer entities: period × cycle count</title>
+  <desc id="t-n-desc">A log-log plot with observer minimal period T_𝒪 on the horizontal axis and cycle count N_cycles equals tau over T on the vertical axis. The plot region is bounded on the left by the hard cutoff T_P (Planck period) and on the right by the soft cutoff T_H (epistemic horizon), with hatched-red forbidden zones outside both. Three horizontal regimes appear on the N-axis: ephemeral below N equals 100, persistent above 100, and effectively-stable above a sloped diagonal where N times T exceeds the universe age. Specific Standard Model entities are plotted at their structural log T, log N positions: W and Z and top quark in the low-T ephemeral cluster, Higgs at the ephemeral-persistent boundary at low T, tau and bottom and charm in low-T persistent, muon and free neutron higher in persistent, electron and proton and hydrogen atom on the effectively-stable upper edge, and a cosmological-scale observer at the right edge near T_H with low N. The photon sits separately on the T equals 0 axis as an off-ledger Type-I quantum.</desc>
+
+  <defs>
+    <pattern id="forbiddenHatch2" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#fee2e2"/>
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#dc2626" stroke-width="1.4"/>
+    </pattern>
+  </defs>
+
+  <rect width="880" height="620" fill="#fafaf9"/>
+
+  <!-- Title -->
+  <text x="440" y="30" text-anchor="middle" font-size="15" font-weight="600" fill="#1c1917">
+    Observer entities on the period × cycle-count plane
+  </text>
+
+  <!-- Plot area outline -->
+  <rect x="100" y="80" width="680" height="380" fill="#ffffff" stroke="#1c1917" stroke-width="1"/>
+
+  <!-- Forbidden zones outside plot -->
+  <rect x="50" y="80" width="50" height="380" fill="url(#forbiddenHatch2)"/>
+  <rect x="780" y="80" width="50" height="380" fill="url(#forbiddenHatch2)"/>
+
+  <!-- Three regime horizontal reference lines -->
+  <!-- Ephemeral / persistent boundary at log N = 2 (N = 100) -->
+  <line x1="100" y1="447" x2="780" y2="447" stroke="#dc2626" stroke-width="1" stroke-dasharray="4,3" opacity="0.55"/>
+  <!-- N = 10^30 reference -->
+  <line x1="100" y1="270" x2="780" y2="270" stroke="#a16207" stroke-width="0.8" stroke-dasharray="2,3" opacity="0.4"/>
+
+  <!-- Effectively-stable diagonal: N·T = t_universe (~ 10^17.5 s) -->
+  <!-- log N = 17.5 - log T -->
+  <!-- At log T = -42 (x ≈ 122): log N = 59.5 → y ≈ 84 -->
+  <!-- At log T = 17.5 (x ≈ 775): log N = 0 → y = 460 -->
+  <line x1="122" y1="84" x2="775" y2="460" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.85"/>
+  <text x="500" y="240" font-size="10.5" font-style="italic" fill="#16a34a" transform="rotate(28 500 240)">
+    N · T = t_universe (effectively-stable line)
+  </text>
+
+  <!-- Regime labels at right margin -->
+  <g font-size="10.5" font-weight="600">
+    <text x="788" y="455" fill="#dc2626">ephemeral</text>
+    <text x="788" y="350" fill="#a16207">persistent</text>
+    <text x="788" y="180" fill="#16a34a">effectively</text>
+    <text x="788" y="194" fill="#16a34a">stable</text>
+  </g>
+
+  <!-- ========== ENTITY POINTS ========== -->
+  <!-- Naming convention: green dot = effectively stable, amber = persistent, red = ephemeral -->
+
+  <!-- Photon: T = 0 axis, special marker outside plot left -->
+  <g>
+    <line x1="74" y1="270" x2="74" y2="80" stroke="#1c1917" stroke-width="1" stroke-dasharray="2,2" opacity="0.4"/>
+    <circle cx="74" cy="100" r="5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="74" y="74" text-anchor="middle" font-size="10" fill="#2563eb">photon</text>
+    <text x="74" y="62" text-anchor="middle" font-size="9" fill="#78716c">(off-ledger)</text>
+  </g>
+
+  <!-- W, Z, top cluster (ephemeral, low T) -->
+  <!-- W: x≈296, y≈455. Z: x≈295, y≈455. top: x≈304, y≈454 -->
+  <g>
+    <circle cx="296" cy="455" r="4" fill="#dc2626"/>
+    <circle cx="304" cy="455" r="4" fill="#dc2626"/>
+    <circle cx="312" cy="455" r="4" fill="#dc2626"/>
+    <text x="304" y="476" text-anchor="middle" font-size="10.5" fill="#1c1917">W, Z, t</text>
+    <text x="304" y="488" text-anchor="middle" font-size="9" fill="#78716c">N ≈ 6–10</text>
+  </g>
+
+  <!-- Higgs (low-persistent, low T) -->
+  <!-- log T ≈ -26.3, log N ≈ 3.7 -->
+  <!-- x = 100 + 17.7*10.97 = 294, y = 460 - 3.7*6.33 = 437 -->
+  <g>
+    <circle cx="294" cy="437" r="4.5" fill="#a16207"/>
+    <text x="280" y="430" text-anchor="end" font-size="10.5" fill="#1c1917">Higgs</text>
+    <text x="280" y="442" text-anchor="end" font-size="9" fill="#78716c">N ≈ 5×10³</text>
+    <line x1="280" y1="437" x2="290" y2="437" stroke="#78716c" stroke-width="0.6"/>
+  </g>
+
+  <!-- tau, b, c cluster (mid-persistent, low T) -->
+  <!-- log T ≈ -24.5, log N ≈ 12 -->
+  <!-- x ≈ 314, y ≈ 384 -->
+  <g>
+    <circle cx="312" cy="384" r="4" fill="#a16207"/>
+    <circle cx="318" cy="380" r="4" fill="#a16207"/>
+    <circle cx="324" cy="384" r="4" fill="#a16207"/>
+    <text x="350" y="376" font-size="10.5" fill="#1c1917">τ, b, c</text>
+    <text x="350" y="388" font-size="9" fill="#78716c">N ≈ 10¹²</text>
+    <line x1="332" y1="382" x2="346" y2="382" stroke="#78716c" stroke-width="0.6"/>
+  </g>
+
+  <!-- Muon (high-persistent, low T) -->
+  <!-- log T ≈ -22.2, log N ≈ 16.5 -->
+  <!-- x = 100 + 21.8*10.97 = 339, y = 460 - 16.5*6.33 = 356 -->
+  <g>
+    <circle cx="339" cy="356" r="4.5" fill="#a16207"/>
+    <text x="356" y="352" font-size="10.5" fill="#1c1917">μ</text>
+    <text x="356" y="364" font-size="9" fill="#78716c">N ≈ 3×10¹⁶</text>
+    <line x1="346" y1="356" x2="354" y2="356" stroke="#78716c" stroke-width="0.6"/>
+  </g>
+
+  <!-- Free neutron (border of persistent / effectively-stable, low T) -->
+  <!-- log T ≈ -24.15, log N ≈ 27 -->
+  <!-- x = 100 + 19.85*10.97 = 318, y = 460 - 27*6.33 = 289 -->
+  <g>
+    <circle cx="318" cy="289" r="4.5" fill="#a16207"/>
+    <text x="335" y="285" font-size="10.5" fill="#1c1917">free n</text>
+    <text x="335" y="297" font-size="9" fill="#78716c">N ≈ 2×10²⁶</text>
+    <line x1="325" y1="289" x2="333" y2="289" stroke="#78716c" stroke-width="0.6"/>
+  </g>
+
+  <!-- Electron (effectively-stable, low T, top edge) -->
+  <!-- log T ≈ -20.9 -->
+  <!-- x = 100 + 23.1*10.97 = 353, y near top -->
+  <g>
+    <circle cx="353" cy="92" r="4.5" fill="#16a34a"/>
+    <text x="353" y="84" text-anchor="middle" font-size="10.5" fill="#1c1917">e</text>
+  </g>
+
+  <!-- Proton (effectively-stable, low T, top edge) -->
+  <!-- log T ≈ -24.15, x ≈ 318, top -->
+  <g>
+    <circle cx="318" cy="92" r="4.5" fill="#16a34a"/>
+    <text x="318" y="84" text-anchor="middle" font-size="10.5" fill="#1c1917">p</text>
+  </g>
+
+  <!-- Hydrogen ground state (effectively-stable, mid-low T, top edge) -->
+  <!-- log T ≈ -15.8, x = 100 + 28.2*10.97 = 409, top -->
+  <g>
+    <circle cx="409" cy="92" r="4.5" fill="#16a34a"/>
+    <text x="409" y="84" text-anchor="middle" font-size="10.5" fill="#1c1917">H atom</text>
+  </g>
+
+  <!-- Cosmological observer (low N, high T, near T_H) -->
+  <!-- log T ≈ 17, log N ≈ 1 -->
+  <!-- x = 100 + 61*10.97 = 769, y = 460 - 1*6.33 = 454 -->
+  <g>
+    <circle cx="765" cy="454" r="4.5" fill="#dc2626"/>
+    <text x="730" y="446" text-anchor="end" font-size="10.5" fill="#1c1917">cosmological</text>
+    <text x="730" y="458" text-anchor="end" font-size="9" fill="#78716c">N ~ few</text>
+    <line x1="734" y1="452" x2="758" y2="452" stroke="#78716c" stroke-width="0.6"/>
+  </g>
+
+  <!-- ========== AXIS LABELS ========== -->
+
+  <!-- X-axis tick labels -->
+  <g font-size="11" fill="#1c1917">
+    <line x1="50" y1="460" x2="50" y2="468" stroke="#1c1917" stroke-width="1"/>
+    <text x="50" y="482" text-anchor="middle" font-weight="600">T = 0</text>
+    <text x="50" y="494" text-anchor="middle" font-size="9" fill="#78716c">photon</text>
+
+    <line x1="100" y1="460" x2="100" y2="468" stroke="#1c1917" stroke-width="1.4"/>
+    <text x="100" y="482" text-anchor="middle">
+      <tspan font-style="italic">T</tspan><tspan font-size="9" baseline-shift="sub">P</tspan>
+    </text>
+    <text x="100" y="494" text-anchor="middle" font-size="9" fill="#78716c">hard</text>
+
+    <line x1="440" y1="460" x2="440" y2="466" stroke="#16a34a" stroke-width="1.2"/>
+    <text x="440" y="482" text-anchor="middle" fill="#16a34a">
+      <tspan font-style="italic">T</tspan><tspan font-size="9" baseline-shift="sub">ν</tspan>
+    </text>
+    <text x="440" y="494" text-anchor="middle" font-size="9" fill="#78716c">lightest elementary</text>
+
+    <line x1="780" y1="460" x2="780" y2="468" stroke="#1c1917" stroke-width="1.4" stroke-dasharray="3,2"/>
+    <text x="780" y="482" text-anchor="middle">
+      <tspan font-style="italic">T</tspan><tspan font-size="9" baseline-shift="sub">H</tspan>
+    </text>
+    <text x="780" y="494" text-anchor="middle" font-size="9" fill="#78716c">soft</text>
+
+    <line x1="830" y1="460" x2="830" y2="468" stroke="#1c1917" stroke-width="1"/>
+    <text x="830" y="482" text-anchor="middle" font-weight="600">
+      <tspan font-style="italic">T</tspan> → ∞
+    </text>
+  </g>
+
+  <!-- X-axis title -->
+  <text x="440" y="520" text-anchor="middle" font-size="13" fill="#1c1917">
+    Observer minimal period <tspan font-style="italic">T</tspan><tspan font-size="10" baseline-shift="sub">𝒪</tspan> (log scale; smaller <tspan font-style="italic">T</tspan> = larger rest mass)
+  </text>
+
+  <!-- Y-axis tick labels -->
+  <g font-size="11" fill="#1c1917">
+    <line x1="92" y1="460" x2="100" y2="460" stroke="#1c1917" stroke-width="1.2"/>
+    <text x="86" y="464" text-anchor="end">N = 1</text>
+
+    <line x1="92" y1="447" x2="100" y2="447" stroke="#1c1917" stroke-width="1"/>
+    <text x="86" y="451" text-anchor="end">10²</text>
+
+    <line x1="92" y1="270" x2="100" y2="270" stroke="#1c1917" stroke-width="1"/>
+    <text x="86" y="274" text-anchor="end">10³⁰</text>
+
+    <line x1="92" y1="80" x2="100" y2="80" stroke="#1c1917" stroke-width="1.2"/>
+    <text x="86" y="84" text-anchor="end">10⁶⁰ → ∞</text>
+  </g>
+
+  <!-- Y-axis title -->
+  <text x="36" y="270" text-anchor="middle" font-size="13" fill="#1c1917" transform="rotate(-90 36 270)">
+    Cycle count <tspan font-style="italic">N</tspan><tspan font-size="10" baseline-shift="sub">cycles</tspan> = τ / T (log scale)
+  </text>
+
+  <!-- ========== LEGEND ========== -->
+  <g transform="translate(60, 555)" font-size="11" fill="#1c1917">
+    <text x="0" y="-2" font-weight="600" font-size="11.5" fill="#1c1917">Color: stability regime</text>
+
+    <circle cx="14" cy="14" r="4.5" fill="#dc2626"/>
+    <text x="26" y="18">ephemeral</text>
+
+    <circle cx="120" cy="14" r="4.5" fill="#a16207"/>
+    <text x="132" y="18">persistent</text>
+
+    <circle cx="220" cy="14" r="4.5" fill="#16a34a"/>
+    <text x="232" y="18">effectively stable</text>
+
+    <circle cx="346" cy="14" r="5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="358" y="18">Type-I quantum (off-ledger)</text>
+
+    <rect x="540" y="9" width="14" height="11" fill="url(#forbiddenHatch2)"/>
+    <text x="560" y="18">forbidden region</text>
+
+    <line x1="660" y1="14" x2="676" y2="14" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <text x="682" y="18">effectively-stable line</text>
+  </g>
+
+  <!-- Footnote -->
+  <text x="440" y="600" text-anchor="middle" font-size="10" font-style="italic" fill="#78716c">
+    Same-T-strip entities (e.g., proton, free neutron, top quark near T ≈ 10⁻²⁴–10⁻²⁶ s) sit in different stability regimes — the second axis exposes structure invisible on T alone.
+  </text>
+</svg>
