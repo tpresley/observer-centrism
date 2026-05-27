@@ -451,6 +451,12 @@
       "status": "provisional"
     },
     {
+      "id": "holography/complexity-growth",
+      "title": "Complexity Growth and the Second Law of Complexity",
+      "group": "holography",
+      "status": "draft"
+    },
+    {
       "id": "thermodynamics-ext/biological-non-ergodicity",
       "title": "Biological Non-Ergodicity",
       "group": "thermo-ext",
@@ -2095,6 +2101,38 @@
     {
       "from": "thermodynamics/time",
       "to": "thermodynamics/entropy"
+    },
+    {
+      "from": "axioms/coherence-conservation",
+      "to": "holography/complexity-growth"
+    },
+    {
+      "from": "thermodynamics/time",
+      "to": "holography/complexity-growth"
+    },
+    {
+      "from": "holography/black-hole-entropy",
+      "to": "holography/complexity-growth"
+    },
+    {
+      "from": "holography/er-epr",
+      "to": "holography/complexity-growth"
+    },
+    {
+      "from": "foundation/observer-edges-and-mutual-opacity",
+      "to": "holography/complexity-growth"
+    },
+    {
+      "from": "foundation/substrate-noise-and-profile-coupling",
+      "to": "holography/complexity-growth"
+    },
+    {
+      "from": "interactions/bootstrap",
+      "to": "holography/complexity-growth"
+    },
+    {
+      "from": "cosmology/observer-loop-viability",
+      "to": "holography/complexity-growth"
     }
   ]
 }

@@ -131,6 +131,35 @@
   ],
   "newDerivationTargets": [
     {
+      "id": "complexity-growth-and-second-law",
+      "title": "Complexity Growth and the Second Law of Complexity",
+      "difficulty": "MODERATE",
+      "priority": "MEDIUM",
+      "status": "OPEN — scoped 2026-05-10. All structural inputs already in the framework. Estimated 1–3 weeks for a provisional first draft. Research target file: research-targets/complexity-growth-and-second-law.md.",
+      "rationale": "Susskind's complexity-growth program identifies a structural puzzle (exterior thermalization at t_s ~ β log S vs. interior complexity growth at t_c ~ e^S) that maps cleanly onto OC's detection-noise vs. preservation-noise distinction. The framework has all structural inputs in place: ER=EPR derived (Round 16), integer-quantization of coherence (Coherence Conservation Cor 5.5a), structural-arrow theorem on DAG depth (Time as Phase Ordering Thm 3.1), bootstrap-fixed-point cyclic-closure argument (knot-theoretic-fixed-point findings g). What's missing is a derivation page that packages these into a complexity functional Κ, a derivable Lloyd-rate growth bound, an integer-step substructure prediction (framework-distinctive vs. CV/CA real-valued complexity), a bootstrap-recurrence saturation theorem, and a Second Law of Complexity as a corollary of the structural arrow.",
+      "strategy": "(1) Define substrate-complexity Κ(t) := d(v_t) - d(v_0) on the inaccessible-coherence subgraph beneath the epistemic horizon. Κ ∈ ℤ_≥0 by Cor 5.5a. (2) Derive the Lloyd-rate bound Κ-dot ≤ Sω_0 as a count: each horizon DOF is an observer node (BH entropy Prop 5.1); each observer participates in at most one Type III interaction per natural cycle (Axiom 3). (3) Note the integer-step substructure as framework-distinctive prediction vs. CV/CA real-valued complexity. (4) Derive bootstrap-recurrence saturation at Κ_max = C_0 - N(horizon-accessible) using cyclic-closure argument. (5) Derive Second Law of Complexity as one-paragraph corollary of structural-arrow theorem. (6) Compare to CV/CA conjectures — identify which is framework-canonical. (7) Operational consistency check that substrate Type III count agrees with minimum gate count at leading order. (8) Falsifiability section.",
+      "dependencies": [
+        "holography/black-hole-entropy",
+        "holography/er-epr",
+        "axioms/coherence-conservation",
+        "thermodynamics/time",
+        "foundation/observer-edges-and-mutual-opacity",
+        "foundation/substrate-noise-and-profile-coupling",
+        "interactions/bootstrap",
+        "cosmology/observer-loop-viability"
+      ],
+      "addressesGaps": [
+        "Susskind two-timescale puzzle (no explicit framework gap; addressed via new derivation)"
+      ],
+      "openGapsOnFirstDraft": [
+        "G1: agreement of substrate Κ with operational minimum-gate-count definition (likely schematic, may degrade to 'complexity-like functional')",
+        "G2: CV identification depends on hierarchical-geometry geometry functor",
+        "G3: effective m in Lloyd-rate bound — coordinate-invariant formulation needed"
+      ],
+      "impact": "If successful: framework-derived Second Law of Complexity (currently empirically asserted by Susskind/Aaronson but not derived from a single physical principle); Lloyd bound with a mechanism (currently a thermodynamic-uncertainty assertion); framework-distinctive prediction of integer complexity at substrate scale (below experimental reach for BHs but potentially testable in analog systems); direct comparison to CV/CA holographic-complexity conjectures; conceptual closure of the Susskind two-timescale puzzle as an instance of detection-noise vs. preservation-noise. Estimated provisional status on first draft, upgradable to derived after pattern-edges-style polish.",
+      "surfacedBy": "2026-05-10 conversation about Susskind interview on ER=EPR inception via complexity growth"
+    },
+    {
       "id": "rg-reinterpretation-of-bootstrap-iteration",
       "title": "RG Reinterpretation of Bootstrap Iteration",
       "difficulty": "HARD",
@@ -366,6 +395,33 @@
       ],
       "findings": "Exploration (2026-04-15) established: (a) The CS 3-form tr(A\u2227dA + (2/3)A\u2227A\u2227A) already appears in the strong CP derivation's topological charge formula \u03bd = (1/8\u03c0\u00b2)\u222bCS(A). (b) Wilson loops W(\u03b3) = P exp(-ig\u222eA dx) already appear in the electromagnetism derivation and serve as the framework's 'observer loops carrying gauge phase'. (c) The Cayley-Dickson tower \u211d\u2192\u2102\u2192\u210d\u2192\ud835\udd46 maps to a specific finite sequence of CS theories: U(1) CS, SU(2) CS, SU(3) CS, terminated at \ud835\udd46 by zero-divisor obstruction (sedenions). (d) The identification 'relational coherence C(O\u2081:O\u2082) = Lk(\u03b3\u2081,\u03b3\u2082)\u00b7\u210f\u03c9\u2080' (linking number \u00d7 coherence quantum) is structurally consistent: both are integer-valued, both are conserved under smooth/admissible deformations, both measure irreducible mutual dependence, and the entanglement derivation already identifies relational coherence with von Neumann entropy (Theorem 2.1). In topological quantum computing, linking of anyonic worldlines IS entanglement \u2014 this is a known result. (e) The ER=EPR bridge has a natural topological realization: the wormhole throat area A=4\u2113_P\u00b2S_ent maps to the cross-sectional area of the tube connecting two linked loops, scaling with linking number. (f) The coherence Lagrangian's gauge sector (-\u00bcF\u00b2) may reduce to a CS action on a 3D Cauchy slice via the known relationship between 4D Yang-Mills and 3D Chern-Simons (the CS functional is the Hamiltonian of 4D YM restricted to a spatial slice). (g) CYCLIC REFRAMING (2026-04-15): The bootstrap fixed-point equation U \u2245 R(U,U) has an equivalent dynamical formulation as a periodic orbit condition \u03a6_T(state) = state. Three ingredients force exact cyclic closure: (i) quasi-periodicity exclusion \u2192 commensurable frequencies, (ii) holographic bound \u2192 finite-dimensional state space (D ~ A/4\u2113_P\u00b2), (iii) constraint saturation \u2192 after D independent relational invariants, additional ones are redundant tautologies. The DAG (causal history) grows without bound (Axiom 1 satisfied), but the D-dimensional Cauchy-slice state cycles exactly. This resolves cyclic-cosmology Gap 2 (saturation is exact, by constraint redundancy, not epistemic equivalence) and Gap 3 (no statistical fossils \u2014 state identical across cycles). The cyclic closure is conditional on Conjecture 7.1 but also provides the candidate fixed point. Either both hold or neither does. See cyclic-cosmology.md Step 9.",
       "impact": "If successful: provides a concrete mathematical framework for the fixed-point proof, potentially the most direct path to establishing the consistency of the axioms. Connects the framework to well-developed mathematical tools (3-manifold topology, TQFT, quantum groups). The gauge-group entry point (strategy 1) is the most immediately tractable and connects to existing derivations (bootstrap-division-algebras, coherence-lagrangian). The surgery entry point (strategy 3) most directly addresses the fixed-point equation. The combined approach through all three entry points is the strongest."
+    },
+    {
+      "id": "fraisse-class-of-observer-networks",
+      "title": "Fraïssé-Class Characterization of Admissible Observer Networks",
+      "difficulty": "HARD",
+      "priority": "BACKBURNER",
+      "status": "Stub scoped 2026-05-10 in response to a question about whether OC observer networks are Rado graphs. They are not (four obstructions: DAG acyclicity, forced Pisot aperiodicity, bootstrap-level grading breaking homogeneity, C5 composition being a finitary constraint). The framework's aperiodicity claim is in some sense the formal opposite of the Rado property — Rado = maximum genericity, Pisot substitution = constrained almost-periodicity. This target asks whether the admissible-observer-network class K_OC admits a (categorical) Fraïssé-style characterization. Research target file: research-targets/fraisse-class-of-observer-networks.md. Pursue only if hierarchical-geometry stalls or closes without touching Conjectures 7.1–7.2.",
+      "rationale": "The bootstrap map R has the structural shape of amalgamation (Type III interactions produce level-(n+1) invariants from level-n pairs). Categorical Fraïssé theory (Kubiś 2014 and subsequent) generalizes classical Fraïssé to graded/topological categories — the right setting for OC's bootstrap-level grading. If K_OC is a categorical Fraïssé class with HP + JEP + AP, its limit is unique up to isomorphism by Kubiś's existence theorem. Identifying this limit with the bootstrap fixed point U ≅ R(U,U) translates Fraïssé uniqueness into Conjecture 7.2. With Conjecture 7.2 closed, Gravitational Constant Conjecture 6.3 reduces, and area-scaling-s1 promotes to a theorem.",
+      "strategy": "(1) Define K_OC explicitly — vertex labels for bootstrap level, edge labels for interaction type (Type I/II/III), coherence-conservation constraint on subgraph configurations. (2) Verify HP (closed under finite substructures) and JEP (any two admissibles jointly embed). (3) Probe AP — the hardest check. Given B and C extending common A, does R(B ⊔_A C) remain admissible? Coherence conservation must be checked at every level for every pushout candidate. (4) Apply Kubiś's categorical Fraïssé existence theorem if HP + JEP + AP hold. (5) Identify the limit with the bootstrap fixed point. (6) Translate uniqueness back to Conjecture 7.2, then cascade to area-scaling-s1.",
+      "dependencies": [
+        "interactions/bootstrap",
+        "spacetime/gravitational-constant",
+        "interactions/three-types",
+        "axioms/coherence-conservation",
+        "cosmology/observer-loop-viability"
+      ],
+      "addressesGaps": [
+        "interactions/bootstrap Conjectures 7.1 and 7.2",
+        "spacetime/gravitational-constant Conjecture 6.3",
+        "holography/area-scaling structural postulate S1"
+      ],
+      "impact": "If successful: third independent route to Conjecture 7.2, alongside the combinatorial integer-recurrence approach (combinatorial-bootstrap-fixed-point) and knot-theoretic approach (knot-theoretic-fixed-point). Promotes area-scaling-s1 to theorem. Distinctive payoff vs. the other routes: translates aperiodic order — currently a physical constraint argued in gravitational-constant Step 6 — into a model-theoretic statement about which finite structures embed into the bootstrap limit. Connects OC to active research in categorical Fraïssé theory. Probability of usable result: subjective ~25–40%, lower than hierarchical-geometry but higher than knot-theoretic. Most likely failure mode: amalgamation fails for level-graded structures.",
+      "relatedTargets": [
+        "hierarchical-geometry",
+        "combinatorial-bootstrap-fixed-point",
+        "knot-theoretic-fixed-point"
+      ]
     },
     {
       "id": "cosmological-arrow",
