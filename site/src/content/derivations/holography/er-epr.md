@@ -4,9 +4,9 @@ status: "provisional"
 dependsOn: ["quantum/entanglement", "holography/area-scaling", "holography/causal-set-statistics", "spacetime/einstein-equations"]
 enablesDerivation: ["holography/scrambling"]
 tags: ["holography", "entanglement", "wormhole", "ER-EPR"]
-summary: "Relational invariants between spatially separated observers manifest as both entanglement (EPR) and non-traversable wormholes (ER). The duality is exact because relational invariants are the fundamental objects underlying both quantum correlations and spacetime geometry. The wormhole throat area satisfies A = 4ℓ_P² S_ent, and non-traversability follows from the no-signaling property of relational invariants."
+summary: "Relational invariants between spatially separated observers manifest as both entanglement (EPR) and a localised coherence channel (ER). In AdS/CFT the channel reads cleanly as a non-traversable wormhole; off AdS the geometric reading reduces to a coherence flux tube unless an open structural question (channel as spatial handle vs. tube) is resolved. The channel cross-section satisfies A = 4ℓ_P² S_ent, and non-traversability/no-signaling are dual expressions of the same coherence-saturation constraint."
 rigorLevel: "formal"
-lastUpdated: 2026-03-12
+lastUpdated: 2026-05-27
 ---
 
 ## Overview
@@ -30,6 +30,8 @@ The wormhole cannot be used to send messages, for the same reason that entanglem
 
 
 **Note on status.** This derivation is provisional because its central claims depend on area-scaling S1 (Planck-scale resolution), speed-of-light S1 (pseudo-Riemannian structure) (see [Area Scaling](/derivations/holography/area-scaling), [Speed of Light](/derivations/spacetime/speed-of-light)). If those postulates are promoted to theorems, this derivation would be upgraded to derived.
+
+**Note on non-AdS extension.** The standard formulation of ER=EPR (Maldacena–Susskind 2013) lives in AdS/CFT, where Ryu–Takayanagi supplies the area–entropy identity directly. The argument below is intended to hold *off* AdS as well — for two entangled observers in (e.g.) asymptotically flat space — by replacing RT with the framework's area-scaling result. This non-AdS extension inherits three conditionalities that the AdS version does not, two of which can be made explicit within the present derivation (Section 3.4 and Remark 3.1 below) and one of which remains structurally open (Open Gap 3: flux tube vs. spatial handle). A reader who grants the framework's axioms but is unconvinced by Open Gap 3 should interpret the present derivation as establishing **coherence flux tubes** between entangled observers — a sharper statement than EPR alone, but weaker than ER.
 
 ## Statement
 
@@ -83,6 +85,16 @@ This is the quantum no-signaling theorem, here derived from the conservation law
 
 The coherence channel $\gamma_{12}$ carries a non-zero coherence density $\rho_{\text{coh}}(\gamma_{12}) = \mathcal{C}(I_{12}) / V(\gamma_{12})$ distributed along its extent. By the Einstein equations, this density generates spacetime curvature concentrated near $\gamma_{12}$.
 
+**Remark 3.1 (Dimensional accounting — why the channel curvature is Planck-scale).** A natural objection to applying this in flat space: a Bell pair between two qubits of energy $E \ll m_P c^2$ has total stress-energy budget $\sim 2E$, far below the Planck density needed for visible curvature. How can such a pair source a Planck-scale geometric feature?
+
+The resolution is that the relevant source is **coherence content, not constituent observer energy**. The coherence Lagrangian ([Coherence Lagrangian](/derivations/interactions/coherence-lagrangian), Theorem 6.0) sets the energy quantum per coherence unit at the Planck scale: each unit of conserved coherence corresponds to a stress-energy element of order $\hbar c / \ell_P^4 \cdot \ell_P^4 = \hbar c$ distributed over a cross-section of order $4\ell_P^2$ ([Area Scaling](/derivations/holography/area-scaling), Planck-scale resolution). Concretely, for a Bell pair with $\mathcal{C}(I_{12}) = \ln 2$:
+
+- Tube cross-sectional area: $A_\perp \sim 4\ell_P^2 \ln 2$ (Proposition 3.3, derived below).
+- Coherence energy density in the tube: $\rho_{\text{coh}} \sim \hbar c / \ell_P^4$ (Planck density), independent of $E$.
+- Tube length $L$ (inter-observer distance) and total stress-energy budget $\sim \rho_{\text{coh}} \cdot A_\perp \cdot L$ scale together with $L$, but the *curvature* sourced by the tube is set by the cross-sectional density, not the integrated energy.
+
+In other words, the Planck-density and Planck-cross-section of the channel are not assumptions about the participating observers' energies; they are forced by area-scaling. A low-energy Bell pair still sources a Planck-density coherence stress-energy localized in a Planck-cross-section tube. The constituent qubits' rest-energy budget enters elsewhere (in the formation of the relational invariant), not in the channel geometry. This is the framework-specific content that distinguishes coherence stress-energy from ordinary QFT stress-energy and is the reason the derivation does not collapse to a vacuum statement when $E \to 0$.
+
 **Theorem 3.2 (Wormhole geometry from coherence channel).** The geometry sourced by the coherence channel $\gamma_{12}$ between two separated observers contains a minimal surface $\Sigma_{\min}$ (the wormhole throat) connecting the two observer regions.
 
 *Proof.* The argument proceeds in three steps: causal set topology, continuum geometry, and minimal surface existence.
@@ -114,6 +126,24 @@ $$\mathcal{C}(I_{12}) \leq \frac{A(\Sigma_{\min})}{4\ell_P^2}$$
 $$A(\Sigma_{\min}) \geq 4\ell_P^2\,S_{\text{ent}}$$
 
 Combining the upper and lower bounds: $A(\Sigma_{\min}) = 4\ell_P^2\,S_{\text{ent}}(I_{12})$. $\square$
+
+## 3.4 The Discrete/Continuum Boundary
+
+The proofs in Sections 3.1–3.3 use continuum geometry — minimal surfaces, Cauchy slices, the Einstein equations — while the area formula's lower bound (Proposition 3.3) and the non-pinching argument (Theorem 3.2 Step 2) rely on the *discrete* irreducibility of the channel graph. This subsection makes the join explicit.
+
+**The ER bridge is fundamentally a causal-set object.** The primary object is the channel sub-causal-set $\gamma_{12} \subset \mathcal{C}$. The continuum manifold $(M,g)$ and the smooth wormhole tube $\Omega_{12} \subset M$ are the coarse-grained image of $\gamma_{12}$ under the causal-set → manifold correspondence ([Causal Set Statistics](/derivations/holography/causal-set-statistics), Theorem 3.1).
+
+**The throat area is primarily a link count.** Let $\Sigma_{\min}$ be the bottleneck cross-section. Its causal-set realisation $\Sigma_{\min}^{\mathcal{C}}$ is a *minimal antichain cut* of the channel graph $G_{12}$ — the smallest set of causal-set elements whose removal disconnects the two observer regions. Define the **discrete throat count** $N_{\min}$ as the cardinality of this minimal cut. The continuum area formula
+
+$$A(\Sigma_{\min}) = N_{\min} \cdot 4\ell_P^2 = 4\ell_P^2\,S_{\text{ent}}(I_{12})$$
+
+is the coarse-grained limit of this count via area-scaling's Planck-resolution: each element of the cut contributes $4\ell_P^2$ of effective cross-section, and $N_{\min} = S_{\text{ent}}$ by the irreducibility of $\gamma_{12}$ (each independent coherence unit must traverse a distinct element of the cut). The continuum minimal surface emerges in the limit; the discrete cut is what exists at all scales.
+
+**Topological censorship does not bite.** Friedman–Schleich–Witt (1993) proves that asymptotically flat, globally hyperbolic, smooth Lorentzian manifolds satisfying the averaged null energy condition have trivial spatial topology. The framework's wormhole is not in tension with this theorem because the smooth-manifold premise fails at the relevant scale: the channel is a causal-set object whose continuum approximation is *only* valid above the coarse-graining scale, and the throat is precisely a sub-coarse-graining feature. The FSW theorem applies to the macroscopic background geometry (which the framework agrees has trivial topology in flat-space settings); it does not apply to discrete sub-Planckian topological features of the underlying causal set.
+
+Equivalently: the framework's Einstein-equations language in Sections 3.1–3.3 is the emergent continuum description of channel-induced curvature *above* the channel cross-section scale. At and below that scale, the description switches to causal-set primitive. There is no smooth manifold patch that simultaneously resolves the throat *and* satisfies the FSW premises.
+
+**What this changes for the rest of the derivation.** Sections 4–6 (non-traversability, exact correspondence, thermofield double) all carry through under either reading — continuum-emergent or causal-set-primary — because the load-bearing fact is the coherence-saturation of the bottleneck, not the smoothness of the geometry around it. The non-traversability argument (Theorem 4.1) is most naturally read in the causal-set picture: the cut has exactly $N_{\min} = S_{\text{ent}}$ elements, and an additional independent signal would require an $(N_{\min}+1)^{\text{th}}$ element that is not present.
 
 ## 4. Non-Traversability
 
@@ -199,10 +229,12 @@ is the maximally entangled state (for a given temperature $T = 1/\beta$) between
 | Proposition 1.2 (channel properties) | Derived | Each property follows from axioms and rigorous upstream results (coherence conservation, relational invariant irreducibility) |
 | Proposition 2.1 (entanglement) | Derived | Direct import from [Entanglement](/derivations/quantum/entanglement) (derived), Theorem 2.1 |
 | Proposition 2.2 (no-signaling) | Derived | Derived from Noether conservation of relational invariants; standard partial trace calculation |
-| Theorem 3.2 (wormhole geometry) | Derived | Three-step proof: Step 1 (causal set topology) and Step 2 (continuum limit) rest on [Causal Set Statistics](/derivations/holography/causal-set-statistics) (derived); Step 3 (minimal surface) is the extreme value theorem (standard analysis). Non-pinching from irreducibility (Proposition 1.2c) |
-| Proposition 3.3 (throat area) | Derived | Upper bound from [Area Scaling](/derivations/holography/area-scaling) (derived); lower bound from irreducibility + Planck-scale resolution. Both bounds are tight, giving exact equality |
-| Theorem 4.1 (non-traversability) | Derived | Proof by contradiction using area-coherence saturation (Proposition 3.3, rigorous) and the fact that independent signals carry positive coherence (Axiom 3) |
-| Theorem 5.1 (exact correspondence) | Rigorous (rows 1–4) | Rows 1–4 established by rigorous upstream derivations. Row 5 (Schmidt ↔ quasi-normal mode) is conjectural — motivated by AdS/CFT analogy but not derived from framework axioms (see Gap 1) |
+| Remark 3.1 (dimensional accounting) | Derived (clarification) | Restates the conversion factor from coherence content to Planck-density stress-energy via [Coherence Lagrangian](/derivations/interactions/coherence-lagrangian) Theorem 6.0 + area-scaling. No new content; addresses the natural "low-energy Bell pair" objection |
+| Theorem 3.2 (wormhole geometry) | Partial | Establishes that $\gamma_{12}$ is irreducibly connected and non-pinching, with continuum image $\Omega_{12}$ topologically a tube. Does **not** establish that the ambient Cauchy slice acquires a non-contractible handle (see Open Gap 3). Reading consistent with the present text: $\Omega_{12}$ is a coherence flux tube; the stronger ER-bridge reading requires Gap 3 closed |
+| Proposition 3.3 (throat area) | Derived in AdS, conditional off AdS | Upper bound from [Area Scaling](/derivations/holography/area-scaling); lower bound from irreducibility + Planck-scale resolution. Both bounds tight in AdS (where area-scaling reduces to RT). Off AdS, inherits area-scaling's conditional status (see Open Gap 4) |
+| Section 3.4 (discrete/continuum boundary) | Derived (clarification) | Reinterprets the throat as a causal-set object (minimal antichain cut, count $N_{\min} = S_{\text{ent}}$) with continuum area as the coarse-grained limit. Removes apparent tension with Friedman–Schleich–Witt topological censorship |
+| Theorem 4.1 (non-traversability) | Derived | Proof by contradiction using area-coherence saturation (Proposition 3.3) and the fact that independent signals carry positive coherence (Axiom 3). Most natural reading is causal-set: cut has exactly $N_{\min}$ elements, no room for an additional independent signal |
+| Theorem 5.1 (exact correspondence) | Partial | Rows 1–4 established by rigorous upstream derivations *modulo Gap 3* (the geometric side reads as flux-tube unless Gap 3 is closed). Row 5 (Schmidt ↔ quasi-normal mode) is conjectural (see Gap 1) |
 
 ## Open Gaps
 
@@ -210,7 +242,11 @@ is the maximally entangled state (for a given temperature $T = 1/\beta$) between
 
 **Gap 2 (Thermofield double connection).** The thermofield double model (Proposition 6.1) should be connected to the [Hawking Radiation](/derivations/holography/hawking-radiation) derivation, which describes black hole evaporation as coherence-dual pair annihilation. The ER=EPR correspondence predicts that the entanglement structure of Hawking radiation encodes the wormhole geometry — this should provide a new perspective on the [Information Paradox](/derivations/holography/information-paradox) resolution.
 
+**Gap 3 (flux tube vs. spatial handle — load-bearing for non-AdS extension).** Theorem 3.2 Step 2 establishes that the coherence channel $\gamma_{12}$ is irreducibly connected and non-pinching, and maps in the continuum limit to a tube region $\Omega_{12}$. What the argument as written does *not* establish is that the ambient Cauchy slice acquires a non-trivial handle (a non-contractible $1$-cycle, or equivalently a higher-genus spatial topology) as a result. A localised region of nonzero coherence density in flat $\mathbb{R}^3$ — analogous to the field lines between two opposite charges — has exactly the topology described (tube, non-pinching, irreducibly connected) without forcing the ambient slice to have any handles. The natural framework-internal route is to argue that the channel's causal-set elements *augment* the ambient causal structure (rather than embed in it), so the continuum limit of (ambient ∪ channel) has higher genus than ambient alone. Making this precise requires a definite criterion (in causal-set terms) for when a sub-causal-set is "channel-like" vs. "ambient-like," and a theorem that irreducibility (Proposition 1.2c) entails the channel-like classification. Until this is done, a reader who grants every axiom can still consistently interpret the derivation as establishing **coherence flux tubes** rather than ER bridges. This is the deepest open gap; it is what gates whether the ER=EPR claim extends rigorously outside AdS/CFT.
+
+**Gap 4 (area-scaling postulate dependence in non-AdS settings).** Proposition 3.3 imports the area–entropy bound from [Area Scaling](/derivations/holography/area-scaling), which in AdS/CFT reduces to Ryu–Takayanagi (provable). Off AdS, area-scaling rests on Structural Postulate S1 (Planck-scale resolution), now reduced to the bootstrap fixed-point uniqueness conjecture (Conjectures 7.1–7.2 in [Bootstrap](/derivations/interactions/bootstrap)). The non-AdS extension of ER=EPR therefore inherits exactly this conditionality: it stands or falls with bootstrap fixed-point uniqueness. This is not a new gap relative to the framework's overall postulate budget — it is the same gap, made explicit here for the throat formula's quantitative content.
+
 ## Addresses Gaps In
 
-- [Entanglement](/derivations/quantum/entanglement), Gap: "Make the ER=EPR sketch (Proposition 5.1) rigorous by connecting to the Area Scaling and Causal Set Statistics derivations" — **Resolved**: Full derivation with rigorous dual descriptions, causal set topology argument via rigorous Causal Set Statistics, and area-entropy equality. Only the Schmidt↔quasi-normal-mode identification (row 5) remains open.
-- [Information Paradox](/derivations/holography/information-paradox), Gap: "Relational invariants between coherence-dual pairs are the structural analogue of Einstein-Rosen bridges. Formalizing this connection would strengthen the information paradox resolution." — **Partially resolved**: Theorem 5.1 establishes the structural mapping; Gap 2 identifies the remaining connection to Hawking radiation.
+- [Entanglement](/derivations/quantum/entanglement), Gap: "Make the ER=EPR sketch (Proposition 5.1) rigorous by connecting to the Area Scaling and Causal Set Statistics derivations" — **Partially resolved**: Full derivation with dual descriptions, causal set topology argument via rigorous Causal Set Statistics, and area-entropy equality. In AdS settings the resolution is essentially complete (modulo Gap 1, Schmidt ↔ quasi-normal mode). In non-AdS settings the geometric side reduces to a coherence flux tube unless Open Gap 3 (handle vs. tube) is closed.
+- [Information Paradox](/derivations/holography/information-paradox), Gap: "Relational invariants between coherence-dual pairs are the structural analogue of Einstein-Rosen bridges. Formalizing this connection would strengthen the information paradox resolution." — **Partially resolved**: Theorem 5.1 establishes the structural mapping; Gap 2 identifies the remaining connection to Hawking radiation. Note that the Hawking-radiation setting (asymptotically flat black hole exterior) is non-AdS, so the geometric reading there inherits Open Gap 3.
