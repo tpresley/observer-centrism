@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-04-28T09:14:12.121Z",
-    "totalReferences": 109,
-    "totalCitations": 129,
-    "citingFiles": 55,
+    "generatedAt": "2026-05-27T23:23:20.633Z",
+    "totalReferences": 116,
+    "totalCitations": 138,
+    "citingFiles": 56,
     "generator": "scripts/extract-references.mjs"
   },
   "categoryNames": {
@@ -47,7 +47,7 @@
     },
     "spacetime-geometry": {
       "name": "Spacetime & Geometry",
-      "count": 17
+      "count": 24
     },
     "particle-physics": {
       "name": "Particle Physics",
@@ -250,12 +250,17 @@
     },
     {
       "id": "leinaas-myrheim-1977",
-      "authors": "Leinaas-Myrheim",
+      "authors": "Leinaas–Myrheim",
       "year": 1977,
       "citedAs": [
-        "Leinaas-Myrheim, 1977"
+        "Leinaas-Myrheim, 1977",
+        "Leinaas–Myrheim, 1977"
       ],
       "citedIn": [
+        {
+          "derivationId": "dimensions/three-dimensions",
+          "title": "Three Spatial Dimensions Are Uniquely Stable"
+        },
         {
           "derivationId": "particles/spin-statistics",
           "title": "Spin and Statistics from Winding Classes"
@@ -1003,6 +1008,21 @@
       "category": "spacetime-geometry"
     },
     {
+      "id": "brans-1994",
+      "authors": "Brans",
+      "year": 1994,
+      "citedAs": [
+        "Brans, 1994"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "dimensions/three-dimensions",
+          "title": "Three Spatial Dimensions Are Uniquely Stable"
+        }
+      ],
+      "category": "spacetime-geometry"
+    },
+    {
       "id": "brightwell-gregory-1991",
       "authors": "Brightwell & Gregory",
       "year": 1991,
@@ -1071,6 +1091,21 @@
       "category": "spacetime-geometry"
     },
     {
+      "id": "donaldson-1983",
+      "authors": "Donaldson",
+      "year": 1983,
+      "citedAs": [
+        "Donaldson, 1983"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "dimensions/three-dimensions",
+          "title": "Three Spatial Dimensions Are Uniquely Stable"
+        }
+      ],
+      "category": "spacetime-geometry"
+    },
+    {
       "id": "dowker-2004",
       "authors": "Dowker et al.",
       "year": 2004,
@@ -1081,6 +1116,36 @@
         {
           "derivationId": "holography/causal-set-statistics",
           "title": "Causal Set Statistics"
+        }
+      ],
+      "category": "spacetime-geometry"
+    },
+    {
+      "id": "ehrenfest-1918",
+      "authors": "Ehrenfest",
+      "year": 1918,
+      "citedAs": [
+        "Ehrenfest, 1918"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "dimensions/three-dimensions",
+          "title": "Three Spatial Dimensions Are Uniquely Stable"
+        }
+      ],
+      "category": "spacetime-geometry"
+    },
+    {
+      "id": "freedman-1982",
+      "authors": "Freedman",
+      "year": 1982,
+      "citedAs": [
+        "Freedman, 1982"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "dimensions/three-dimensions",
+          "title": "Three Spatial Dimensions Are Uniquely Stable"
         }
       ],
       "category": "spacetime-geometry"
@@ -1175,6 +1240,51 @@
         {
           "derivationId": "spacetime/singularity-resolution",
           "title": "Singularity Resolution"
+        }
+      ],
+      "category": "spacetime-geometry"
+    },
+    {
+      "id": "tangherlini-1963",
+      "authors": "Tangherlini",
+      "year": 1963,
+      "citedAs": [
+        "Tangherlini, 1963"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "dimensions/three-dimensions",
+          "title": "Three Spatial Dimensions Are Uniquely Stable"
+        }
+      ],
+      "category": "spacetime-geometry"
+    },
+    {
+      "id": "whitrow-1955",
+      "authors": "Whitrow",
+      "year": 1955,
+      "citedAs": [
+        "Whitrow, 1955"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "dimensions/three-dimensions",
+          "title": "Three Spatial Dimensions Are Uniquely Stable"
+        }
+      ],
+      "category": "spacetime-geometry"
+    },
+    {
+      "id": "wilczek-1982",
+      "authors": "Wilczek",
+      "year": 1982,
+      "citedAs": [
+        "Wilczek, 1982"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "dimensions/three-dimensions",
+          "title": "Three Spatial Dimensions Are Uniquely Stable"
         }
       ],
       "category": "spacetime-geometry"
@@ -1587,9 +1697,14 @@
       "authors": "Maldacena & Susskind",
       "year": 2013,
       "citedAs": [
-        "Maldacena & Susskind, 2013"
+        "Maldacena & Susskind, 2013",
+        "Maldacena–Susskind 2013"
       ],
       "citedIn": [
+        {
+          "derivationId": "holography/er-epr",
+          "title": "ER=EPR from Relational Invariants"
+        },
         {
           "derivationId": "quantum/entanglement",
           "title": "Entanglement from Relational Invariants"
