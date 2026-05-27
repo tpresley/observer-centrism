@@ -16,6 +16,18 @@
     "title": "Les groupes réels simples, finis et continus",
     "url": "https://doi.org/10.24033/asens.735"
   },
+  "ehrenfest-1918": {
+    "title": "In What Way Does It Become Manifest in the Fundamental Laws of Physics That Space Has Three Dimensions? (KNAW Proc. 20, 200–209; presented 1917, republished in Annalen der Physik 366, 440–446, 1920)",
+    "url": "https://dwc.knaw.nl/DL/publications/PU00012213.pdf"
+  },
+  "moufang-1935": {
+    "title": "Zur Struktur von Alternativkörpern",
+    "url": "https://doi.org/10.1007/BF01448037"
+  },
+  "yukawa-1935": {
+    "title": "On the Interaction of Elementary Particles. I",
+    "url": "https://doi.org/10.11429/ppmsj1919.17.0_48"
+  },
   "whitney-1936": {
     "title": "Differentiable Manifolds",
     "url": "https://doi.org/10.2307/1968482"
@@ -36,13 +48,37 @@
     "title": "Théorème d'existence pour certains systèmes d'équations aux dérivées partielles non linéaires",
     "url": "https://doi.org/10.1007/BF02392131"
   },
+  "whitrow-1955": {
+    "title": "Why Physical Space Has Three Dimensions",
+    "url": "https://doi.org/10.1093/bjps/VI.21.13"
+  },
   "gleason-1957": {
     "title": "Measures on the Closed Subspaces of a Hilbert Space",
     "url": "https://doi.org/10.1512/iumj.1957.6.56050"
   },
+  "kubo-1957": {
+    "title": "Statistical-Mechanical Theory of Irreversible Processes. I",
+    "url": "https://doi.org/10.1143/JPSJ.12.570"
+  },
+  "wallace-1960": {
+    "title": "Modifications and Cobounding Manifolds",
+    "url": "https://doi.org/10.4153/CJM-1960-045-7"
+  },
   "smale-1961": {
     "title": "Generalized Poincaré's Conjecture in Dimensions Greater than Four",
     "url": "https://doi.org/10.2307/1970239"
+  },
+  "lickorish-1962": {
+    "title": "A Representation of Orientable Combinatorial 3-Manifolds",
+    "url": "https://doi.org/10.2307/1970373"
+  },
+  "lichnerowicz-1963": {
+    "title": "Spineurs harmoniques (C. R. Acad. Sci. Paris 257, 7–9)",
+    "url": "https://gallica.bnf.fr/ark:/12148/bpt6k4007z/f7"
+  },
+  "tangherlini-1963": {
+    "title": "Schwarzschild Field in n Dimensions and the Dimensionality of Space Problem",
+    "url": "https://doi.org/10.1007/BF02784569"
   },
   "penrose-1965": {
     "title": "Gravitational Collapse and Space-Time Singularities",
@@ -116,6 +152,10 @@
     "title": "Symmetry Breaking through Bell-Jackiw Anomalies",
     "url": "https://doi.org/10.1103/PhysRevLett.37.8"
   },
+  "coleman-1977": {
+    "title": "Fate of the False Vacuum: Semiclassical Theory",
+    "url": "https://doi.org/10.1103/PhysRevD.15.2929"
+  },
   "peccei-quinn-1977": {
     "title": "CP Conservation in the Presence of Pseudoparticles",
     "url": "https://doi.org/10.1103/PhysRevLett.38.1440"
@@ -127,6 +167,14 @@
   "leinaas-myrheim-1977": {
     "title": "On the Theory of Identical Particles",
     "url": "https://doi.org/10.1007/BF02727953"
+  },
+  "gibbons-hawking-perry-1978": {
+    "title": "Path Integrals and the Indefiniteness of the Gravitational Action",
+    "url": "https://doi.org/10.1016/0550-3213(78)90161-X"
+  },
+  "kirby-1978": {
+    "title": "A Calculus for Framed Links in S³",
+    "url": "https://doi.org/10.1007/BF01406222"
   },
   "fujikawa-1979": {
     "title": "Path-Integral Measure for Gauge-Invariant Fermion Theories",
@@ -140,6 +188,10 @@
     "title": "Reconstruction of Gauge Potentials from Wilson Loops",
     "url": "https://doi.org/10.1103/PhysRevD.24.2160"
   },
+  "freedman-1982": {
+    "title": "The Topology of Four-Dimensional Manifolds",
+    "url": "https://doi.org/10.4310/jdg/1214437136"
+  },
   "wootters-zurek-1982": {
     "title": "A Single Quantum Cannot Be Cloned",
     "url": "https://doi.org/10.1038/299802a0"
@@ -147,6 +199,14 @@
   "dieks-1982": {
     "title": "Communication by EPR Devices",
     "url": "https://doi.org/10.1016/0375-9601(82)90084-6"
+  },
+  "wilczek-1982": {
+    "title": "Quantum Mechanics of Fractional-Spin Particles",
+    "url": "https://doi.org/10.1103/PhysRevLett.49.957"
+  },
+  "donaldson-1983": {
+    "title": "An Application of Gauge Theory to Four-Dimensional Topology",
+    "url": "https://doi.org/10.4310/jdg/1214437665"
   },
   "illman-1983": {
     "title": "The Equivariant Triangulation Theorem for Actions of Compact Lie Groups",
@@ -188,6 +248,10 @@
     "title": "How the Result of a Measurement of a Component of the Spin of a Spin-1/2 Particle Can Turn Out to Be 100",
     "url": "https://doi.org/10.1103/PhysRevLett.60.1351"
   },
+  "anandan-1988": {
+    "title": "Geometric Phase for Cyclic Motions and the Quantum State Space Metric",
+    "url": "https://doi.org/10.1016/0375-9601(88)91010-9"
+  },
   "aczel-dhombres-1989": {
     "title": "Functional Equations in Several Variables",
     "url": "https://doi.org/10.1017/CBO9781139086578"
@@ -200,6 +264,10 @@
     "title": "The Structure of Random Discrete Spacetime",
     "url": "https://doi.org/10.1103/PhysRevLett.66.260"
   },
+  "zurek-1991": {
+    "title": "Decoherence and the Transition from Quantum to Classical",
+    "url": "https://doi.org/10.1063/1.881293"
+  },
   "wetterich-1993": {
     "title": "Exact Evolution Equation for the Effective Potential",
     "url": "https://doi.org/10.1016/0370-2693(93)90726-X"
@@ -207,6 +275,14 @@
   "page-1993": {
     "title": "Average Entropy of a Subsystem",
     "url": "https://doi.org/10.1103/PhysRevLett.71.1291"
+  },
+  "petz-toth-1993": {
+    "title": "The Bogoliubov Inner Product in Quantum Statistics",
+    "url": "https://doi.org/10.1007/BF00739578"
+  },
+  "brans-1994": {
+    "title": "Localized Exotic Smoothness",
+    "url": "https://doi.org/10.1088/0264-9381/11/7/015"
   },
   "dixon-1994": {
     "title": "Division Algebras: Octonions, Quaternions, Complex Numbers and the Algebraic Design of Physics",
@@ -256,6 +332,14 @@
     "title": "The Uncertainty Principle: A Mathematical Survey",
     "url": "https://doi.org/10.1007/BF02649110"
   },
+  "aravind-1997": {
+    "title": "The Wigner Angle as an Anholonomy in Rapidity Space",
+    "url": "https://doi.org/10.1119/1.18620"
+  },
+  "solomyak-1997": {
+    "title": "Dynamics of Self-Similar Tilings",
+    "url": "https://doi.org/10.1017/S0143385797084988"
+  },
   "tegmark-1997": {
     "title": "On the Dimensionality of Spacetime",
     "url": "https://doi.org/10.1088/0264-9381/14/4/002"
@@ -284,6 +368,10 @@
     "title": "The Octonions",
     "url": "https://doi.org/10.1090/S0273-0979-01-00934-X"
   },
+  "dennis-kitaev-landahl-preskill-2002": {
+    "title": "Topological Quantum Memory",
+    "url": "https://doi.org/10.1063/1.1499754"
+  },
   "dowker-2004": {
     "title": "Causal Set d'Alembertians for Various Dimensions",
     "url": "https://doi.org/10.1088/0264-9381/30/19/195016"
@@ -303,6 +391,10 @@
   "groisman-popescu-winter-2005": {
     "title": "Quantum, Classical, and Total Amount of Correlations in a Quantum State",
     "url": "https://doi.org/10.1103/PhysRevA.72.032317"
+  },
+  "schlosshauer-2007": {
+    "title": "Decoherence and the Quantum-to-Classical Transition",
+    "url": "https://doi.org/10.1007/978-3-540-35775-9"
   },
   "sekino-susskind-2008": {
     "title": "Fast Scramblers",
@@ -363,6 +455,10 @@
   "abel-2020": {
     "title": "Mapping the QCD Phase Diagram from the Lattice: Strong CP Problem",
     "url": "https://doi.org/10.1103/PhysRevD.102.125023"
+  },
+  "pdg-2024": {
+    "title": "Review of Particle Physics (Particle Data Group, 2024)",
+    "url": "https://doi.org/10.1103/PhysRevD.110.030001"
   },
   "born-1957": {
     "title": "The Born-Einstein Letters",
