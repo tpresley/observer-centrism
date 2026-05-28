@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-05-27T23:23:20.633Z",
-    "totalReferences": 116,
-    "totalCitations": 138,
+    "generatedAt": "2026-05-28T01:59:27.500Z",
+    "totalReferences": 117,
+    "totalCitations": 139,
     "citingFiles": 56,
     "generator": "scripts/extract-references.mjs"
   },
@@ -55,7 +55,7 @@
     },
     "holography": {
       "name": "Holography & Black Holes",
-      "count": 8
+      "count": 9
     },
     "cosmology": {
       "name": "Cosmology",
@@ -1673,6 +1673,21 @@
         {
           "derivationId": "holography/area-scaling",
           "title": "Holographic Entropy Bound"
+        }
+      ],
+      "category": "holography"
+    },
+    {
+      "id": "combine-an-explicit-morris-thorne-sprinkling-existence-argument-with-a-flat-space-exclusion-argument-via-major-rideout-surya-2007",
+      "authors": "combine an explicit Morris–Thorne sprinkling existence argument with a flat-space exclusion argument via Major–Rideout–Surya",
+      "year": 2007,
+      "citedAs": [
+        "combine an explicit Morris–Thorne sprinkling existence argument with a flat-space exclusion argument via Major–Rideout–Surya 2007"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "holography/er-epr",
+          "title": "ER=EPR from Relational Invariants"
         }
       ],
       "category": "holography"

@@ -457,6 +457,12 @@
       "status": "draft"
     },
     {
+      "id": "holography/channel-irreducibility-and-discrete-handle",
+      "title": "Channel Irreducibility and the Discrete Handle",
+      "group": "holography",
+      "status": "draft"
+    },
+    {
       "id": "thermodynamics-ext/biological-non-ergodicity",
       "title": "Biological Non-Ergodicity",
       "group": "thermo-ext",
@@ -2133,6 +2139,26 @@
     {
       "from": "cosmology/observer-loop-viability",
       "to": "holography/complexity-growth"
+    },
+    {
+      "from": "axioms/coherence-conservation",
+      "to": "holography/channel-irreducibility-and-discrete-handle"
+    },
+    {
+      "from": "interactions/relational-invariants",
+      "to": "holography/channel-irreducibility-and-discrete-handle"
+    },
+    {
+      "from": "holography/causal-set-statistics",
+      "to": "holography/channel-irreducibility-and-discrete-handle"
+    },
+    {
+      "from": "foundation/substrate-noise-and-profile-coupling",
+      "to": "holography/channel-irreducibility-and-discrete-handle"
+    },
+    {
+      "from": "holography/channel-irreducibility-and-discrete-handle",
+      "to": "holography/er-epr"
     }
   ]
 }
