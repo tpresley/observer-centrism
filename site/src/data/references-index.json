@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-05-28T02:38:51.593Z",
-    "totalReferences": 122,
-    "totalCitations": 144,
+    "generatedAt": "2026-05-28T03:06:25.439Z",
+    "totalReferences": 123,
+    "totalCitations": 145,
     "citingFiles": 57,
     "generator": "scripts/extract-references.mjs"
   },
@@ -55,7 +55,7 @@
     },
     "holography": {
       "name": "Holography & Black Holes",
-      "count": 14
+      "count": 15
     },
     "cosmology": {
       "name": "Cosmology",
@@ -1678,11 +1678,26 @@
       "category": "holography"
     },
     {
+      "id": "bernal-sánchez-2003",
+      "authors": "Bernal–Sánchez",
+      "year": 2003,
+      "citedAs": [
+        "Bernal–Sánchez, 2003"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "holography/channel-irreducibility-and-discrete-handle",
+          "title": "Channel Irreducibility and the Discrete Handle"
+        }
+      ],
+      "category": "holography"
+    },
+    {
       "id": "combine-an-explicit-morris-thorne-sprinkling-existence-argument-with-a-flat-space-exclusion-argument-via-major-rideout-surya-2007",
       "authors": "combine an explicit Morris–Thorne sprinkling existence argument with a flat-space exclusion argument via Major–Rideout–Surya",
       "year": 2007,
       "citedAs": [
-        "combine an explicit Morris–Thorne sprinkling existence argument with a flat-space exclusion argument via Major–Rideout–Surya 2007"
+        "combine an explicit Morris–Thorne sprinkling existence argument with a flat-space exclusion argument via Major–Rideout–Surya 2007, with the spanning antichain construction supplied by Bernal–Sánchez 2003"
       ],
       "citedIn": [
         {

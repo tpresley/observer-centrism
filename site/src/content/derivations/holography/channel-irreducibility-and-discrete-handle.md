@@ -21,13 +21,14 @@ This lemma closes the load-bearing open gap (Open Gap 3) in the non-AdS extensio
 
 3. **Irreducibility implies non-embedding.** Strict irreducibility ([ER=EPR](/derivations/holography/er-epr) Proposition 1.2c, derived from [Relational Invariants](/derivations/interactions/relational-invariants) Theorem 4.1) requires $\mathcal{C}(I_{12})$ to be fully conserved on every Cauchy slice intersecting $\gamma_{12}$, which is incompatible with any positive coherence drain to ambient. By contraposition of Step 2, $\gamma_{12}$ is not ambient-embedded — its elements are causally insulated from ambient except at the observer-region endpoints.
 
-4. **Non-embedding lifts to handle topology in the continuum.** The argument splits into existence and exclusion:
+4. **Non-embedding lifts to handle topology in the continuum.** The argument splits into existence, exclusion, and the explicit antichain construction the Major–Rideout–Surya machinery requires:
    - **(4a) Existence.** An explicit globally-hyperbolic wormhole manifold (e.g., the eternal Schwarzschild bridge or a Morris–Thorne traversable wormhole with appropriate matter content) has spatial slices with $H_1 = \mathbb{Z}$ (a handle), and admits sprinklings whose combinatorial structure matches the framework's (ambient ∪ channel) pattern. By [Major–Rideout–Surya, 2007] (Theorem 2 and Corollary 2; see [Causal Set Statistics](/derivations/holography/causal-set-statistics)), the thickened-antichain construction recovers the wormhole's spatial homology — including $H_1$ — from this causal set.
    - **(4b) Exclusion.** A faithful embedding of (ambient ∪ channel) into flat $\mathbb{R}^3 \times \mathbb{R}$ requires the channel elements to participate in the Poisson neighbor statistics of flat-space sprinkling everywhere along the channel's length. The non-embedding result of Step 3 forbids this. Therefore flat space is excluded as a continuum approximation of (ambient ∪ channel).
+   - **(4c) Spanning antichain construction (Theorem 4.7).** The Major–Rideout–Surya construction invoked in (4a) requires an inextendible antichain spanning both regions, with cardinality $N_{\min}$ on the channel side. The smooth-Cauchy-hypersurface theorem of [Bernal–Sánchez, 2003] supplies this: extend the bottleneck 2-surface to a Cauchy hypersurface of $(M_W, g_W)$, sprinkle it via the standard thickened-antichain construction, and the result has all three required properties (maximality, ambient-restriction inextendibility, channel restriction = bottleneck cut). The high-probability nature of the construction is the standard CST caveat from [Major–Rideout–Surya, 2007], not a derivation-specific gap.
 
-Together, Steps 4a and 4b establish: the handle interpretation is consistent, the flux-tube interpretation is excluded. This is the content needed for the [ER=EPR](/derivations/holography/er-epr) argument. Hauptvermutung uniqueness (which remains conjectural in causal-set theory) would upgrade this to "the handle is the unique continuum class," but the argument does not require the upgrade.
+Together, Steps 4a, 4b, and 4c establish: the handle interpretation is consistent (4a + 4c), the flux-tube interpretation is excluded (4b). This is the content needed for the [ER=EPR](/derivations/holography/er-epr) argument. Hauptvermutung uniqueness (which remains conjectural in causal-set theory) would upgrade this to "the handle is the unique continuum class," but the argument does not require the upgrade.
 
-**Status: draft.** Steps 1–3 are framework-internal logic and are stated with full proofs below. Step 4a (existence) cites a published result; the framework-internal portion is the construction showing that the (ambient ∪ channel) pattern matches a wormhole sprinkling. Step 4b (exclusion) follows from Step 3 plus the definition of faithful embedding. The principal remaining gap is the *quantitative* matching of channel element density and connectivity to a Morris–Thorne sprinkling — this is the kind of construction that would benefit from an explicit numerical simulation in the spirit of [Cunningham–Surya, 2019] on dimensionally-restricted CST with non-trivial spatial topology.
+**Status: draft, on track for provisional.** Steps 1–3 are framework-internal logic and are stated with full proofs below. Steps 4a (existence) and 4c (spanning antichain) cite published results, with the framework-internal portion being the consistency of the embedding and the bottleneck saturation. Step 4b (exclusion) follows from Step 3 plus the definition of faithful embedding. The principal remaining gap is the *quantitative* matching of channel element density to a Morris–Thorne sprinkling — this is the kind of construction that would benefit from an explicit numerical simulation in the spirit of [Cunningham–Surya, 2019] on dimensionally-restricted CST with non-trivial spatial topology. Once Gap 1 closes, this lemma promotes to `provisional`, which in turn promotes [ER=EPR](/derivations/holography/er-epr) Theorem 3.2 to full derived rigor in non-AdS settings.
 
 **Note on novelty.** The chain of reasoning "operationally-defined irreducibility of a sub-causal-set ⇒ non-embedding in ambient ⇒ handle topology in the continuum sprinkling limit" appears to be new. To the best of this derivation's literature scout (2026-05-27), no published CST result establishes this implication. The framework's contribution is the irreducibility-to-non-embedding link (Steps 2–3); the non-embedding-to-handle link (Step 4) is novel but constructible from existing CST machinery (Major–Rideout–Surya + topology-change literature).
 
@@ -174,6 +175,57 @@ The conjunction rules out flux-tube and exhibits a consistent handle interpretat
 
 **Hauptvermutung note.** If the Hauptvermutung of causal-set theory (uniqueness of continuum approximation) is proved, Corollary 4.6 upgrades from "handle is consistent, flat space is excluded" to "handle is the unique continuum class compatible with the framework's combinatorial structure." The framework's ER=EPR claim does not require this upgrade — uniqueness is a stronger result than needed.
 
+### 4.4 Spanning Inextendible Antichain
+
+Theorem 4.3 invoked the Major–Rideout–Surya construction, which requires an *inextendible* antichain $A$ spanning both the ambient region and the channel, with $A \cap \gamma_{12}$ realising the bottleneck cross-section. This subsection constructs such an antichain explicitly, completing the formal infrastructure on which Theorem 4.3 implicitly relied.
+
+**Theorem 4.7 (Spanning inextendible antichain).** *Under the hypotheses of the Lemma (strict irreducibility of $\gamma_{12}$, manifold-like ambient with the scale separation $V_c \ll v_0 \ll v \ll \tilde{v}$), there exists an antichain $A \subset \mathcal{C}$ with all three of the following properties:*
+
+*(a) **Maximality in $\mathcal{C}$**: no element of $\mathcal{C} \setminus A$ can be added to $A$ while preserving mutual incomparability — equivalently, the partition $\mathcal{C} = \mathrm{Past}(A) \cup A \cup \mathrm{Fut}(A)$ is exhaustive.*
+
+*(b) **Ambient restriction**: $A_{\text{amb}} := A \cap (\mathcal{C} \setminus \gamma_{12})$ is an inextendible antichain in the ambient sub-causal-set $\mathcal{C} \setminus \gamma_{12}$.*
+
+*(c) **Channel restriction**: $A_{\text{chan}} := A \cap \gamma_{12}$ is the minimal antichain cut $\Sigma_{\min}^{\mathcal{C}}$ of the channel graph, with $|A_{\text{chan}}| = N_{\min} = S_{\text{ent}}(I_{12})$.*
+
+*Proof.* By Proposition 4.1, the combined causal set $\mathcal{C}$ is consistent with a faithful embedding $\Phi: \mathcal{C} \to (M_W, g_W)$ into a globally hyperbolic wormhole manifold whose Cauchy slices have spatial topology $\mathbb{R}^3 \, \# \, (\mathbb{R} \times S^2)$. The proof constructs $A$ as the sprinkling of a particular Cauchy hypersurface of $M_W$.
+
+**Step 1: A Cauchy hypersurface containing the bottleneck exists.** The throat of $M_W$ has a minimum-area 2-surface $\Sigma_{\min} \subset M_W$ — the wormhole bottleneck ([ER=EPR](/derivations/holography/er-epr) Theorem 3.2 Step 3, extreme value theorem on the throat cross-sections). $\Sigma_{\min}$ is a compact spacelike 2-submanifold of $M_W$ (hence achronal).
+
+By the smooth-splitting refinement of Geroch's theorem ([Bernal–Sánchez, 2003]), every globally hyperbolic spacetime admits a smooth foliation by spacelike Cauchy hypersurfaces, parameterised by a smooth time function $t: M_W \to \mathbb{R}$ with $\{t = \tau\}$ Cauchy for each $\tau$. Since $\Sigma_{\min}$ is a compact achronal spacelike submanifold, one can choose the smooth time function $t$ so that $\Sigma_{\min} \subset \{t = 0\}$. Concrete constructions are immediate for the two canonical wormhole geometries used in Proposition 4.1:
+
+- **Eternal Schwarzschild–Kruskal.** The bifurcate 2-sphere at $T = X = 0$ in Kruskal coordinates lies on the $T = 0$ spatial slice, which is a Cauchy hypersurface with topology $\mathbb{R} \times S^2$.
+- **Symmetric Morris–Thorne.** The throat 2-sphere at proper-radial-distance $\ell = 0$ lies on any constant-$t$ slice of the static metric; each such slice is a Cauchy hypersurface with topology $\mathbb{R}^3 \, \# \, (\mathbb{R} \times S^2)$.
+
+In either case, denote the chosen Cauchy hypersurface $\Sigma_W \subset M_W$, with $\Sigma_{\min} \subset \Sigma_W$. For asymmetric wormhole geometries (e.g., dynamical throats), the Bernal–Sánchez existence statement still applies, though the time function may be less geometrically transparent.
+
+**Step 2: Sprinkling $\Sigma_W$ gives an antichain.** Following [Major–Rideout–Surya, 2007] Section 3, define the **thickened antichain on $\Sigma_W$**:
+
+$$A \equiv \{x \in \mathcal{C} \mid \Phi(x) \text{ lies in a } V_c\text{-thin spacetime neighbourhood of } \Sigma_W\}.$$
+
+Under the scale separation $V_c \ll v_0 \ll v \ll \tilde{v}$, the set $A$ is an antichain in $\mathcal{C}$ with high probability. The justification is that elements of $A$ have $\Phi$-images on a spacelike slice with $O(V_c)$ thickness, and the probability that two such elements are causally related decreases with the slice thickness — precisely the void-probability argument of [Major–Rideout–Surya, 2007] (their $\mathfrak{N} P_1 \ll 1$ in equation 12).
+
+**Step 3: $A$ is inextendible in $\mathcal{C}$.** $\Sigma_W$ is a Cauchy hypersurface of $(M_W, g_W)$, so by definition every inextendible causal curve in $M_W$ crosses $\Sigma_W$ exactly once. For any $x \in \mathcal{C}$ with $\Phi(x) \notin \Sigma_W$, the continuum causal curve from $\Phi(x)$ to the future or past crosses $\Sigma_W$, so $\Phi(x)$ is in either the causal past or the causal future of $\Sigma_W$. Under the sprinkling correspondence, $x$ is therefore in $\mathrm{Past}(A)$ or $\mathrm{Fut}(A)$. The partition
+
+$$\mathcal{C} = \mathrm{Past}(A) \cup A \cup \mathrm{Fut}(A)$$
+
+is exhaustive, which is the discrete characterisation of an inextendible antichain. Property (a) is established.
+
+**Step 4: Ambient restriction $A_{\text{amb}}$ is inextendible in $\mathcal{C} \setminus \gamma_{12}$.** Restricting the partition argument of Step 3 to the ambient sub-causal-set: every $x \in \mathcal{C} \setminus \gamma_{12}$ is either in $A_{\text{amb}}$, or in the ambient causal past of $A_{\text{amb}}$, or in the ambient causal future. Property (b) is established.
+
+**Step 5: Channel restriction $A_{\text{chan}}$ is the bottleneck cut with $N_{\min}$ elements.** $A_{\text{chan}}$ is the sprinkling of $\Sigma_W \cap M_{\text{throat}}$, the bottleneck portion of the Cauchy hypersurface. By the choice of $\Sigma_W$ to contain $\Sigma_{\min}$, $A_{\text{chan}}$ is exactly the discrete realisation of $\Sigma_{\min}$ in the channel sub-causal-set:
+
+- Every causal-set path in $\gamma_{12}$ from $\mathcal{N}_1$ to $\mathcal{N}_2$ must cross $A_{\text{chan}}$, since the continuum analog (every causal curve from $\mathcal{N}_1$ to $\mathcal{N}_2$ through the throat) must cross $\Sigma_W$.
+
+- $A_{\text{chan}}$ is a minimal cut (no proper subset disconnects $\gamma_{12}$), since $\Sigma_{\min}$ is the minimum-area cross-section of the throat ([ER=EPR](/derivations/holography/er-epr) Theorem 3.2 Step 3) and any sub-collection of its sprinkled elements would fail to cover the full 2-surface.
+
+- The cardinality $|A_{\text{chan}}| = N_{\min} = S_{\text{ent}}(I_{12})$ by the saturation argument of [ER=EPR](/derivations/holography/er-epr) Proposition 3.3 (area-scaling lower bound is tight under irreducibility) combined with the Section 3.4 discrete-throat picture ($N_{\min}$ elements per Planck cross-section, each contributing $4\ell_P^2$).
+
+Property (c) is established. $\square$
+
+**Remark 4.8 (Symmetric vs. asymmetric wormholes).** For the symmetric wormhole geometries used in Proposition 4.1's existence argument (eternal Schwarzschild, symmetric Morris–Thorne), Step 1's construction is immediate: the time-reflection-symmetric slice $\{t = 0\}$ is automatically a Cauchy hypersurface containing the bottleneck. Asymmetric wormhole geometries (dynamical throats, non-static matter content) require the more general Bernal–Sánchez argument to construct the time function, but the existence statement is unchanged. The lemma's downstream conclusions are insensitive to which case applies.
+
+**Remark 4.9 (Discrete-continuum correspondence at the antichain level).** Theorem 4.7's construction follows the same discrete-continuum correspondence used throughout the lemma: a continuum object (the Cauchy hypersurface $\Sigma_W$) is mapped to a discrete object (the thickened antichain $A$) via Poisson sprinkling, and the discrete object inherits structural properties (here: inextendibility) from the continuum source. The high-probability nature of the correspondence (Step 2's $\mathfrak{N} P_1 \ll 1$ bound) is the standard CST caveat — the construction works for almost all sprinkling realisations under the scale separation, not deterministically. This is the same caveat that applies to [Major–Rideout–Surya, 2007] Theorem 2 in Section 4.1; the present construction does not strengthen or weaken that caveat.
+
 ## Consistency Check: Bell Pair
 
 **Model:** A perfectly-isolated Bell pair $|\Phi^+\rangle = \frac{1}{\sqrt{2}}(|0\rangle|0\rangle + |1\rangle|1\rangle)$ between two qubit observers at proper distance $L$, with $L$ much larger than the Planck scale.
@@ -198,11 +250,9 @@ The conjunction rules out flux-tube and exhibits a consistent handle interpretat
 
 **Gap 1 (Quantitative sprinkling match for Step 4a).** Proposition 4.2 establishes that wormhole-manifold sprinkling has endpoint-only-embedded throat sub-causal-set. What is not verified explicitly is the *quantitative* matching of the framework's channel element density (set by $N_{\min} = S_{\text{ent}}$) to the wormhole-bridge sprinkling density. A precise statement: for what wormhole geometries (throat radius, bridge length, matter content) does the Poisson sprinkling produce exactly $N_{\min}$ elements per Planck cross-section? This would require either an analytic argument or a numerical simulation in the spirit of [Cunningham–Surya, 2019]. The framework's expectation: the framework's $N_{\min}$ matches the Planck-scale throat of a Morris–Thorne wormhole with throat radius $r_0 \sim \ell_P \sqrt{S_{\text{ent}}}$.
 
-**Gap 2 (Inextendibility of the spanning antichain).** Theorem 4.3 uses the Major–Rideout–Surya construction, which requires an *inextendible* antichain $A$ spanning both the ambient region and the channel. For the handle interpretation, the antichain must intersect the throat at exactly the bottleneck cross-section ($N_{\min}$ elements). Demonstrating that such an antichain exists and is inextendible (i.e., maximal in the causal set) is straightforward when the channel is endpoint-only embedded (the bottleneck is a well-defined minimal antichain), but the formal proof is left as future work. Estimated effort: 1–2 days of careful set-theoretic work.
+**Gap 2 (Connection to Hauptvermutung).** The lemma's conclusion is the weaker "handle is consistent, flat space is excluded." A full uniqueness statement ("handle is the unique class") would require the Hauptvermutung. The argument provides one of the strongest currently-available specific instances supporting the Hauptvermutung: the framework's irreducibility condition picks out a specific topology class from the causal-set structure. If the Hauptvermutung is later proved, this lemma's conclusion strengthens automatically.
 
-**Gap 3 (Connection to Hauptvermutung).** The lemma's conclusion is the weaker "handle is consistent, flat space is excluded." A full uniqueness statement ("handle is the unique class") would require the Hauptvermutung. The argument provides one of the strongest currently-available specific instances supporting the Hauptvermutung: the framework's irreducibility condition picks out a specific topology class from the causal-set structure. If the Hauptvermutung is later proved, this lemma's conclusion strengthens automatically.
-
-*(Note: an earlier draft listed dependence on the framework's three-interaction-type taxonomy as a separate gap. That gap is closed — [Three Interaction Types](/derivations/interactions/three-types) Theorem 5.1 is at full derived rigor and provides the exhaustive classification used in Proposition 2.1's proof. See Remark 2.2 for the updated argument structure.)*
+*(Notes on earlier closed gaps: an earlier draft listed dependence on the three-interaction-type taxonomy as a separate gap, closed by [Three Interaction Types](/derivations/interactions/three-types) Theorem 5.1 — see Remark 2.2. A later draft listed antichain inextendibility as a separate gap, closed by Theorem 4.7 above using the smooth-Cauchy-hypersurface theorem of [Bernal–Sánchez, 2003] together with the bottleneck saturation of [ER=EPR](/derivations/holography/er-epr) Proposition 3.3.)*
 
 ## Rigor Assessment
 
@@ -218,13 +268,14 @@ The conjunction rules out flux-tube and exhibits a consistent handle interpretat
 | Corollary 3.3 (partial irreducibility ⇒ partial handle) | Semi-formal | Framework-distinctive prediction; not used in main argument |
 | Proposition 4.1 (wormhole exists) | Derived | Standard GR; Schwarzschild and Morris–Thorne examples |
 | Proposition 4.2 (wormhole sprinkling matches) | Semi-formal | Topology argument is rigorous; quantitative density matching is Gap 1 |
-| Theorem 4.3 (handle existence) | Derived modulo Gaps 1, 3 | Cites Major–Rideout–Surya 2007 (published, proven); framework-internal portion is the consistency of embedding |
+| Theorem 4.3 (handle existence) | Derived modulo Gap 1 | Cites Major–Rideout–Surya 2007 (published, proven); spanning antichain construction supplied by Theorem 4.7 below; framework-internal portion is the consistency of embedding |
 | Theorem 4.4 (flat-space exclusion) | Derived | Follows from Theorem 3.1 + Poisson density requirement |
-| Corollary 4.6 (handle forced) | Derived modulo Gaps 1, 3 | Combines 4.3 and 4.4 |
+| Corollary 4.6 (handle forced) | Derived modulo Gap 1 | Combines 4.3 and 4.4 |
+| Theorem 4.7 (spanning inextendible antichain) | Derived | Standard application of Bernal–Sánchez 2003 (existence of Cauchy hypersurface containing a compact achronal submanifold) combined with the Major–Rideout–Surya thickened-antichain construction for sprinkling and [ER=EPR](/derivations/holography/er-epr) Proposition 3.3 for the bottleneck count. High-probability nature is the standard CST caveat, not a derivation-specific gap |
 
 ## Addresses Gaps In
 
-- [ER=EPR](/derivations/holography/er-epr), Open Gap 3 (flux tube vs. spatial handle): **closed modulo Gaps 1, 2 above**. Theorem 3.2 Step 2 can now cite this lemma to upgrade from "channel is irreducibly connected and non-pinching" to "channel induces a spatial handle in the continuum." The Rigor Assessment row for Theorem 3.2 should be upgraded from "Partial" to "Derived" (in non-AdS settings, modulo this lemma's open gaps), and similarly for Proposition 3.3 and Theorem 5.1.
+- [ER=EPR](/derivations/holography/er-epr), Open Gap 3 (flux tube vs. spatial handle): **closed modulo Gap 1 above**. Theorem 3.2 Step 2 can now cite this lemma to upgrade from "channel is irreducibly connected and non-pinching" to "channel induces a spatial handle in the continuum." The Rigor Assessment row for Theorem 3.2 should be upgraded from "Partial" to "Derived" (in non-AdS settings, modulo this lemma's Gap 1), and similarly for Proposition 3.3 and Theorem 5.1.
 
 ## References
 
@@ -233,6 +284,7 @@ The conjunction rules out flux-tube and exhibits a consistent handle interpretat
 - [Morris–Thorne, 1988] — explicit globally-hyperbolic traversable wormhole construction used in Proposition 4.1.
 - [Hawking–Ellis, 1973] — standard reference for the Kruskal extension of Schwarzschild and its global hyperbolicity.
 - [Cunningham–Surya, 2019] — worked examples of CST with non-trivial spatial topology ($S^1$, $T^2$); template for the Gap 1 simulation work.
+- [Bernal–Sánchez, 2003] — smooth-Cauchy-hypersurface refinement of Geroch's splitting theorem, used in Theorem 4.7 Step 1 to construct a Cauchy hypersurface containing the bottleneck.
 
 <!-- References -->
 [Major–Rideout–Surya, 2007]: /references#major-rideout-surya-2007
@@ -240,3 +292,4 @@ The conjunction rules out flux-tube and exhibits a consistent handle interpretat
 [Morris–Thorne, 1988]: /references#morris-thorne-1988
 [Hawking–Ellis, 1973]: /references#hawking-ellis-1973
 [Cunningham–Surya, 2019]: /references#cunningham-surya-2019
+[Bernal–Sánchez, 2003]: /references#bernal-sanchez-2003

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-05-28T02:53:34.218Z",
+    "generatedAt": "2026-05-28T03:06:25.191Z",
     "derivationCount": 99,
     "predictionCount": 13,
     "gaPageCount": 12,
@@ -15,7 +15,7 @@
     "derivationCount": 99,
     "predictionCount": 13,
     "edgeCount": 391,
-    "formalObjectCount": 1433,
+    "formalObjectCount": 1434,
     "openGapCount": 339,
     "upgradeEligibleCount": 2,
     "leanVerifiedCount": 8,
@@ -13884,6 +13884,12 @@
           "id": "4.6",
           "name": "Handle topology forced",
           "statementPreview": "Combining Theorems 4.3 (handle existence) and 4.4 (flat-space exclusion):"
+        },
+        {
+          "type": "Theorem",
+          "id": "4.7",
+          "name": "Spanning inextendible antichain",
+          "statementPreview": "Under the hypotheses of the Lemma (strict irreducibility of gamma12, manifold-like ambient with the scale separation ..."
         }
       ],
       "structuralPostulates": [],
@@ -34024,6 +34030,13 @@
       "fullRef": "holography/channel-irreducibility-and-discrete-handle:Corollary 4.6"
     },
     {
+      "derivationId": "holography/channel-irreducibility-and-discrete-handle",
+      "type": "Theorem",
+      "id": "4.7",
+      "name": "Spanning inextendible antichain",
+      "fullRef": "holography/channel-irreducibility-and-discrete-handle:Theorem 4.7"
+    },
+    {
       "derivationId": "holography/complexity-growth",
       "type": "Definition",
       "id": "1.1",
@@ -41375,7 +41388,7 @@
         "id": "holography/channel-irreducibility-and-discrete-handle",
         "currentStatus": "draft",
         "gapCount": 0,
-        "formalObjectCount": 15
+        "formalObjectCount": 16
       },
       {
         "id": "holography/complexity-growth",
