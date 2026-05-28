@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-05-28T03:06:25.439Z",
+    "generatedAt": "2026-05-28T04:02:49.970Z",
     "totalReferences": 123,
     "totalCitations": 145,
     "citingFiles": 57,
@@ -1693,21 +1693,6 @@
       "category": "holography"
     },
     {
-      "id": "combine-an-explicit-morris-thorne-sprinkling-existence-argument-with-a-flat-space-exclusion-argument-via-major-rideout-surya-2007",
-      "authors": "combine an explicit Morris–Thorne sprinkling existence argument with a flat-space exclusion argument via Major–Rideout–Surya",
-      "year": 2007,
-      "citedAs": [
-        "combine an explicit Morris–Thorne sprinkling existence argument with a flat-space exclusion argument via Major–Rideout–Surya 2007, with the spanning antichain construction supplied by Bernal–Sánchez 2003"
-      ],
-      "citedIn": [
-        {
-          "derivationId": "holography/er-epr",
-          "title": "ER=EPR from Relational Invariants"
-        }
-      ],
-      "category": "holography"
-    },
-    {
       "id": "cunningham-surya-2019",
       "authors": "Cunningham–Surya",
       "year": 2019,
@@ -1718,6 +1703,21 @@
         {
           "derivationId": "holography/channel-irreducibility-and-discrete-handle",
           "title": "Channel Irreducibility and the Discrete Handle"
+        }
+      ],
+      "category": "holography"
+    },
+    {
+      "id": "flat-space-exclusion-via-major-rideout-surya-2007",
+      "authors": "flat-space exclusion via Major–Rideout–Surya",
+      "year": 2007,
+      "citedAs": [
+        "flat-space exclusion via Major–Rideout–Surya 2007"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "holography/er-epr",
+          "title": "ER=EPR from Relational Invariants"
         }
       ],
       "category": "holography"

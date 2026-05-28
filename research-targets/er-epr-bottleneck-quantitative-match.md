@@ -1,9 +1,38 @@
 # ER=EPR Bottleneck Quantitative Match (Lemma Gap 1)
 
-**Type**: Handoff document for the next session
-**Status**: Open. Analytic closure attempted 2026-05-27; surfaced a framework-level integer-vs-real ambiguity that must be resolved before a clean closure is writable.
-**Last updated**: 2026-05-27
-**Priority**: HIGH — closing this gap promotes the [Channel Irreducibility and the Discrete Handle](../site/src/content/derivations/holography/channel-irreducibility-and-discrete-handle.md) lemma from `draft` to `provisional`, which in turn promotes [ER=EPR](../site/src/content/derivations/holography/er-epr.md) Theorem 3.2 to full `derived` rigor in non-AdS settings.
+**Type**: Historical record (closed 2026-05-27)
+**Status**: CLOSED 2026-05-27 via Path A under level-stratification reframing. Lemma promoted from `draft` to `provisional`. ER=EPR Theorem 3.2 and Theorem 5.1 promoted to full `derived` rigor in non-AdS settings.
+**Last updated**: 2026-05-27 (closure)
+**Priority**: N/A — task complete.
+
+## Closure Summary (2026-05-27)
+
+Gap 1 was closed by re-reading area-scaling's tile-counting commitment in light of Coherence Conservation Cor 5.5a's **level-stratified** integer quantization. The integer-vs-real ambiguity is resolved without a new framework choice:
+
+- Level-$n$ substrate-vertex coherence is integer-quantized in $\hbar\omega_0$ (Cor 5.5a's per-vertex clause via Bootstrap Cor 2.3).
+- Level-$(n+1)$ relational-invariant coherence ($S_{\text{ent}}$ for $I_{12}$) is real-valued.
+- Identification: $N_{\min} = \lceil S_{\text{ent}}/\hbar\omega_0 \rceil$ at the substrate level, with $N_{\min} = S_{\text{ent}}$ as the macroscopic-entanglement continuum limit.
+
+The two readings agree to $O(\hbar\omega_0/S_{\text{ent}})$ for macroscopic entanglement and disagree by $O(1)\,\ell_P^2$ at the Bell-pair scale — within the framework's Planck-scale resolution and consistent with area-scaling's explicit "discrete count of indistinguishable units" commitment.
+
+**Resolution path:** the handoff's "Path A" (ceiling/floor) but reframed via level-stratification, making it the framework's existing position rather than a new commitment.
+
+**Closure was implemented in three derivations:**
+
+1. **Lemma `channel-irreducibility-and-discrete-handle.md`** — added Section 5 with:
+   - Proposition 5.1: discrete cardinality identification $N_{\min} = \lceil S_{\text{ent}}/\hbar\omega_0 \rceil$ from Cor 5.5a's level-$n$ clause plus irreducibility saturation
+   - Theorem 5.5: Morris–Thorne wormhole existence at each integer $N_{\min}$ with throat area $4\ell_P^2 N_{\min}$ and matching Poisson sprinkling cardinality
+   - Theorem 5.8: quantitative channel-sprinkling match
+   - Front matter promoted from `draft`/`semi-formal` to `provisional`/`formal`
+   - Open Gaps reduced from 2 to 1 (only Hauptvermutung remains, wider-field CST limitation)
+2. **`er-epr.md`** — Section 3.4 gained explicit discrete-vs-continuum identification block; Bell-pair consistency check updated to show both readings; Rigor table upgraded for Theorems 3.2/5.1 and Proposition 3.3 to full Derived (off-AdS); Gap 3 record updated to reflect closure at provisional level.
+3. **`area-scaling.md`** — added forward-reference to lemma Proposition 5.1 in the tile-counting Remark, making the integer-cardinality identification visible from the upstream derivation.
+
+Original handoff content preserved below for historical reference.
+
+---
+
+## Original handoff content (pre-closure)
 
 ## The gap
 

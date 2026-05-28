@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-05-28T03:06:25.191Z",
+    "generatedAt": "2026-05-28T04:02:49.584Z",
     "derivationCount": 99,
     "predictionCount": 13,
     "gaPageCount": 12,
@@ -9,15 +9,15 @@
   "stats": {
     "byStatus": {
       "derived": 30,
-      "provisional": 67,
-      "draft": 2
+      "provisional": 68,
+      "draft": 1
     },
     "derivationCount": 99,
     "predictionCount": 13,
     "edgeCount": 391,
-    "formalObjectCount": 1434,
+    "formalObjectCount": 1437,
     "openGapCount": 339,
-    "upgradeEligibleCount": 2,
+    "upgradeEligibleCount": 1,
     "leanVerifiedCount": 8,
     "leanTheoremCount": 24
   },
@@ -474,6 +474,10 @@
           },
           {
             "source": "holography/complexity-growth",
+            "context": "Coherence Conservation"
+          },
+          {
+            "source": "holography/er-epr",
             "context": "Coherence Conservation"
           },
           {
@@ -13078,6 +13082,10 @@
             "context": "Coherence Conservation"
           },
           {
+            "target": "holography/channel-irreducibility-and-discrete-handle",
+            "context": "Channel Irreducibility and the Discrete Handle"
+          },
+          {
             "target": "thermodynamics/action-planck",
             "context": "Action and Planck's Constant"
           },
@@ -13174,6 +13182,10 @@
           {
             "source": "holography/causal-set-statistics",
             "context": "Structural Postulate S1"
+          },
+          {
+            "source": "holography/channel-irreducibility-and-discrete-handle",
+            "context": "Area Scaling"
           },
           {
             "source": "holography/er-epr",
@@ -13768,8 +13780,8 @@
       "id": "holography/channel-irreducibility-and-discrete-handle",
       "filePath": "site/src/content/derivations/holography/channel-irreducibility-and-discrete-handle.md",
       "title": "Channel Irreducibility and the Discrete Handle",
-      "status": "draft",
-      "rigorLevel": "semi-formal",
+      "status": "provisional",
+      "rigorLevel": "formal",
       "group": "holography",
       "tags": [
         "holography",
@@ -13779,7 +13791,7 @@
         "irreducibility",
         "ER-EPR"
       ],
-      "summary": "Strict irreducibility of a coherence channel between two observers (Relational Invariants Theorem 4.1) forbids the channel's causal-set elements from having ambient neighbors except at the observer endpoints, by an embedding-implies-decoherence argument. The resulting causally-insulated channel forces a spatial handle in the continuum sprinkling limit, via the Major-Rideout-Surya thickened-antichain construction together with a flat-space-exclusion argument that avoids the unproven Hauptvermutung. This is the lemma that upgrades the ER=EPR derivation's Theorem 3.2 Step 2 from coherence-flux-tube to bona-fide Einstein-Rosen bridge in non-AdS settings.",
+      "summary": "Strict irreducibility of a coherence channel between two observers (Relational Invariants Theorem 4.1) forbids the channel's causal-set elements from having ambient neighbors except at the observer endpoints, by an embedding-implies-decoherence argument. The resulting causally-insulated channel forces a spatial handle in the continuum sprinkling limit, via the Major-Rideout-Surya thickened-antichain construction together with a flat-space-exclusion argument that avoids the unproven Hauptvermutung. The integer cardinality N_min = ⌈S_ent/ℏω₀⌉ at the discrete substrate level (sourced by Coherence Conservation Cor 5.5a's level-stratified quantization) matches the Poisson-sprinkling cardinality of an explicit Morris–Thorne wormhole geometry with throat area 4ℓ_P² N_min. This is the lemma that supports the ER=EPR derivation's Theorem 3.2 Step 2 (bona-fide Einstein-Rosen bridge in non-AdS settings).",
       "lastUpdated": "2026-05-27",
       "dependsOn": [
         "axioms/coherence-conservation",
@@ -13890,6 +13902,24 @@
           "id": "4.7",
           "name": "Spanning inextendible antichain",
           "statementPreview": "Under the hypotheses of the Lemma (strict irreducibility of gamma12, manifold-like ambient with the scale separation ..."
+        },
+        {
+          "type": "Proposition",
+          "id": "5.1",
+          "name": "Discrete cardinality identification",
+          "statementPreview": "Let gamma12 be a strictly irreducible channel carrying a relational invariant I12 with coherence content C(I12) = Sen..."
+        },
+        {
+          "type": "Theorem",
+          "id": "5.5",
+          "name": "Sprinkling realization for each $N_{\\min}$",
+          "statementPreview": "For every positive integer Nmin, there exists a globally hyperbolic Morris–Thorne wormhole manifold (MW(Nmin), gW(Nmi..."
+        },
+        {
+          "type": "Theorem",
+          "id": "5.8",
+          "name": "Quantitative channel-sprinkling match",
+          "statementPreview": "The discrete identification Nmin = lceil Sent/hbaromega0 rceil (Proposition 5.1) and the Morris–Thorne sprinkling con..."
         }
       ],
       "structuralPostulates": [],
@@ -13915,19 +13945,31 @@
             "context": "Causal Set Statistics"
           },
           {
-            "target": "interactions/three-types",
-            "context": "Three Interaction Types"
-          },
-          {
             "target": "axioms/coherence-conservation",
             "context": "Coherence Conservation"
           },
           {
+            "target": "interactions/three-types",
+            "context": "Three Interaction Types"
+          },
+          {
             "target": "foundation/substrate-noise-and-profile-coupling",
             "context": "Substrate Noise and Profile Coupling"
+          },
+          {
+            "target": "interactions/bootstrap",
+            "context": "Bootstrap"
+          },
+          {
+            "target": "holography/area-scaling",
+            "context": "Area Scaling"
           }
         ],
         "incoming": [
+          {
+            "source": "holography/area-scaling",
+            "context": "Channel Irreducibility and the Discrete Handle"
+          },
           {
             "source": "holography/er-epr",
             "context": "Channel Irreducibility and the Discrete Handle"
@@ -13940,7 +13982,7 @@
         "modules": [],
         "propositions": []
       },
-      "upgradeEligible": true,
+      "upgradeEligible": false,
       "upgradeBlockers": []
     },
     "holography/complexity-growth": {
@@ -14236,6 +14278,10 @@
           {
             "target": "holography/causal-set-statistics",
             "context": "derived"
+          },
+          {
+            "target": "axioms/coherence-conservation",
+            "context": "Coherence Conservation"
           },
           {
             "target": "quantum/born-rule",
@@ -15900,6 +15946,10 @@
           },
           {
             "source": "holography/area-scaling",
+            "context": "Bootstrap"
+          },
+          {
+            "source": "holography/channel-irreducibility-and-discrete-handle",
             "context": "Bootstrap"
           },
           {
@@ -34037,6 +34087,27 @@
       "fullRef": "holography/channel-irreducibility-and-discrete-handle:Theorem 4.7"
     },
     {
+      "derivationId": "holography/channel-irreducibility-and-discrete-handle",
+      "type": "Proposition",
+      "id": "5.1",
+      "name": "Discrete cardinality identification",
+      "fullRef": "holography/channel-irreducibility-and-discrete-handle:Proposition 5.1"
+    },
+    {
+      "derivationId": "holography/channel-irreducibility-and-discrete-handle",
+      "type": "Theorem",
+      "id": "5.5",
+      "name": "Sprinkling realization for each $N_{\\min}$",
+      "fullRef": "holography/channel-irreducibility-and-discrete-handle:Theorem 5.5"
+    },
+    {
+      "derivationId": "holography/channel-irreducibility-and-discrete-handle",
+      "type": "Theorem",
+      "id": "5.8",
+      "name": "Quantitative channel-sprinkling match",
+      "fullRef": "holography/channel-irreducibility-and-discrete-handle:Theorem 5.8"
+    },
+    {
       "derivationId": "holography/complexity-growth",
       "type": "Definition",
       "id": "1.1",
@@ -41384,12 +41455,6 @@
   ],
   "upgradeAnalysis": {
     "eligible": [
-      {
-        "id": "holography/channel-irreducibility-and-discrete-handle",
-        "currentStatus": "draft",
-        "gapCount": 0,
-        "formalObjectCount": 16
-      },
       {
         "id": "holography/complexity-growth",
         "currentStatus": "draft",

@@ -135,6 +135,8 @@ $$S \leq \frac{A}{4\ell_P^2}$$
 
 **Remark (tile-counting interpretation).** Argument 1 derives the bound by literally counting boundary crossings, each contributing one bit (Proposition 3.1). Combined with the integer-valued bootstrap closure ([Bootstrap](/derivations/interactions/bootstrap) Corollary 2.3, [Coherence Conservation](/derivations/axioms/coherence-conservation) Corollary 5.5a), the holographic bound is operationally a *tile-counting* statement: $A/(4\ell_P^2)$ is the maximum number of integer-quantized observer-equivalents (each carrying one $\hbar\omega_0$-unit of coherence content) that can fit on the boundary. The factor $1/4$ from Argument 2 fixes the effective area per tile at $4\ell_P^2$. There is no continuous degree of freedom in the bound itself — it is a discrete count of indistinguishable units, with all distinguishable structure emerging from how those units are arranged into the bootstrap hierarchy.
 
+The explicit ceiling identification of the tile count for a single relational invariant ($N_{\min} = \lceil S_{\text{ent}}/\hbar\omega_0 \rceil$, with the continuum $N_{\min} = S_{\text{ent}}$ as the macroscopic limit) is established in the [Channel Irreducibility and the Discrete Handle](/derivations/holography/channel-irreducibility-and-discrete-handle) lemma (Proposition 5.1), using Cor 5.5a's level-stratified quantization. That lemma also exhibits an explicit Morris–Thorne wormhole geometry whose Poisson sprinkling realizes the integer cardinality at each integer $N_{\min}$ (lemma Theorem 5.5).
+
 ### Step 6: The Bekenstein Bound
 
 **Proposition 6.1 (Bekenstein bound).** *For a system of energy $E$ enclosed in a sphere of radius $R$:*
