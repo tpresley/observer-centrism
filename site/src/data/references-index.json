@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-05-28T01:59:27.500Z",
-    "totalReferences": 117,
-    "totalCitations": 139,
-    "citingFiles": 56,
+    "generatedAt": "2026-05-28T02:38:51.593Z",
+    "totalReferences": 122,
+    "totalCitations": 144,
+    "citingFiles": 57,
     "generator": "scripts/extract-references.mjs"
   },
   "categoryNames": {
@@ -55,7 +55,7 @@
     },
     "holography": {
       "name": "Holography & Black Holes",
-      "count": 9
+      "count": 14
     },
     "cosmology": {
       "name": "Cosmology",
@@ -1693,6 +1693,21 @@
       "category": "holography"
     },
     {
+      "id": "cunningham-surya-2019",
+      "authors": "Cunningham–Surya",
+      "year": 2019,
+      "citedAs": [
+        "Cunningham–Surya, 2019"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "holography/channel-irreducibility-and-discrete-handle",
+          "title": "Channel Irreducibility and the Discrete Handle"
+        }
+      ],
+      "category": "holography"
+    },
+    {
       "id": "gibbons-hawking-1977",
       "authors": "Gibbons-Hawking",
       "year": 1977,
@@ -1703,6 +1718,36 @@
         {
           "derivationId": "holography/hawking-radiation",
           "title": "Hawking Radiation"
+        }
+      ],
+      "category": "holography"
+    },
+    {
+      "id": "hawking-ellis-1973",
+      "authors": "Hawking–Ellis",
+      "year": 1973,
+      "citedAs": [
+        "Hawking–Ellis, 1973"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "holography/channel-irreducibility-and-discrete-handle",
+          "title": "Channel Irreducibility and the Discrete Handle"
+        }
+      ],
+      "category": "holography"
+    },
+    {
+      "id": "major-rideout-surya-2007",
+      "authors": "Major–Rideout–Surya",
+      "year": 2007,
+      "citedAs": [
+        "Major–Rideout–Surya, 2007"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "holography/channel-irreducibility-and-discrete-handle",
+          "title": "Channel Irreducibility and the Discrete Handle"
         }
       ],
       "category": "holography"
@@ -1723,6 +1768,21 @@
         {
           "derivationId": "quantum/entanglement",
           "title": "Entanglement from Relational Invariants"
+        }
+      ],
+      "category": "holography"
+    },
+    {
+      "id": "morris-thorne-1988",
+      "authors": "Morris–Thorne",
+      "year": 1988,
+      "citedAs": [
+        "Morris–Thorne, 1988"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "holography/channel-irreducibility-and-discrete-handle",
+          "title": "Channel Irreducibility and the Discrete Handle"
         }
       ],
       "category": "holography"
@@ -1753,6 +1813,21 @@
         {
           "derivationId": "holography/information-paradox",
           "title": "Black Hole Information Paradox Resolution"
+        }
+      ],
+      "category": "holography"
+    },
+    {
+      "id": "surya-2008",
+      "authors": "Surya",
+      "year": 2008,
+      "citedAs": [
+        "Surya, 2008"
+      ],
+      "citedIn": [
+        {
+          "derivationId": "holography/channel-irreducibility-and-discrete-handle",
+          "title": "Channel Irreducibility and the Discrete Handle"
         }
       ],
       "category": "holography"

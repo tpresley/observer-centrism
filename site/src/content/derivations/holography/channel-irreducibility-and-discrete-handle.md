@@ -19,25 +19,25 @@ This lemma closes the load-bearing open gap (Open Gap 3) in the non-AdS extensio
 
 2. **Embedding implies decoherence.** If the channel $\gamma_{12}$ is ambient-embedded, then ambient causal-set elements adjacent to channel elements participate in relational invariants with them, siphoning coherence from $I_{12}$ via Coherence Conservation. This is the framework-internal definition of decoherence.
 
-3. **Irreducibility implies non-embedding.** Strict irreducibility (Proposition 1.2c of er-epr.md, derived from [Relational Invariants](/derivations/interactions/relational-invariants) Theorem 4.1) requires $\mathcal{C}(I_{12})$ to be fully conserved on every Cauchy slice intersecting $\gamma_{12}$, which is incompatible with any positive coherence drain to ambient. By contraposition of Step 2, $\gamma_{12}$ is not ambient-embedded — its elements are causally insulated from ambient except at the observer-region endpoints.
+3. **Irreducibility implies non-embedding.** Strict irreducibility ([ER=EPR](/derivations/holography/er-epr) Proposition 1.2c, derived from [Relational Invariants](/derivations/interactions/relational-invariants) Theorem 4.1) requires $\mathcal{C}(I_{12})$ to be fully conserved on every Cauchy slice intersecting $\gamma_{12}$, which is incompatible with any positive coherence drain to ambient. By contraposition of Step 2, $\gamma_{12}$ is not ambient-embedded — its elements are causally insulated from ambient except at the observer-region endpoints.
 
 4. **Non-embedding lifts to handle topology in the continuum.** The argument splits into existence and exclusion:
-   - **(4a) Existence.** An explicit globally-hyperbolic wormhole manifold (e.g., the eternal Schwarzschild bridge or a Morris–Thorne traversable wormhole with appropriate matter content) has spatial slices with $H_1 = \mathbb{Z}$ (a handle), and admits sprinklings whose combinatorial structure matches the framework's (ambient ∪ channel) pattern. By [Major–Rideout–Surya 2007] (Theorem 2 and Corollary 2; see [Causal Set Statistics](/derivations/holography/causal-set-statistics)), the thickened-antichain construction recovers the wormhole's spatial homology — including $H_1$ — from this causal set.
+   - **(4a) Existence.** An explicit globally-hyperbolic wormhole manifold (e.g., the eternal Schwarzschild bridge or a Morris–Thorne traversable wormhole with appropriate matter content) has spatial slices with $H_1 = \mathbb{Z}$ (a handle), and admits sprinklings whose combinatorial structure matches the framework's (ambient ∪ channel) pattern. By [Major–Rideout–Surya, 2007] (Theorem 2 and Corollary 2; see [Causal Set Statistics](/derivations/holography/causal-set-statistics)), the thickened-antichain construction recovers the wormhole's spatial homology — including $H_1$ — from this causal set.
    - **(4b) Exclusion.** A faithful embedding of (ambient ∪ channel) into flat $\mathbb{R}^3 \times \mathbb{R}$ requires the channel elements to participate in the Poisson neighbor statistics of flat-space sprinkling everywhere along the channel's length. The non-embedding result of Step 3 forbids this. Therefore flat space is excluded as a continuum approximation of (ambient ∪ channel).
 
-Together, Steps 4a and 4b establish: the handle interpretation is consistent, the flux-tube interpretation is excluded. This is the content needed for the er-epr.md argument. Hauptvermutung uniqueness (which remains conjectural in causal-set theory) would upgrade this to "the handle is the unique continuum class," but the argument does not require the upgrade.
+Together, Steps 4a and 4b establish: the handle interpretation is consistent, the flux-tube interpretation is excluded. This is the content needed for the [ER=EPR](/derivations/holography/er-epr) argument. Hauptvermutung uniqueness (which remains conjectural in causal-set theory) would upgrade this to "the handle is the unique continuum class," but the argument does not require the upgrade.
 
-**Status: draft.** Steps 1–3 are framework-internal logic and are stated with full proofs below. Step 4a (existence) cites a published result; the framework-internal portion is the construction showing that the (ambient ∪ channel) pattern matches a wormhole sprinkling. Step 4b (exclusion) follows from Step 3 plus the definition of faithful embedding. The principal remaining gap is the *quantitative* matching of channel element density and connectivity to a Morris–Thorne sprinkling — this is the kind of construction that would benefit from an explicit numerical simulation in the spirit of [Cunningham et al. 2019, arXiv:1908.11647] on dimensionally-restricted CST with non-trivial spatial topology.
+**Status: draft.** Steps 1–3 are framework-internal logic and are stated with full proofs below. Step 4a (existence) cites a published result; the framework-internal portion is the construction showing that the (ambient ∪ channel) pattern matches a wormhole sprinkling. Step 4b (exclusion) follows from Step 3 plus the definition of faithful embedding. The principal remaining gap is the *quantitative* matching of channel element density and connectivity to a Morris–Thorne sprinkling — this is the kind of construction that would benefit from an explicit numerical simulation in the spirit of [Cunningham–Surya, 2019] on dimensionally-restricted CST with non-trivial spatial topology.
 
 **Note on novelty.** The chain of reasoning "operationally-defined irreducibility of a sub-causal-set ⇒ non-embedding in ambient ⇒ handle topology in the continuum sprinkling limit" appears to be new. To the best of this derivation's literature scout (2026-05-27), no published CST result establishes this implication. The framework's contribution is the irreducibility-to-non-embedding link (Steps 2–3); the non-embedding-to-handle link (Step 4) is novel but constructible from existing CST machinery (Major–Rideout–Surya + topology-change literature).
 
 ## Statement
 
-**Lemma (Channel Handle).** *Let $\mathcal{O}_1, \mathcal{O}_2$ be two spatially separated observers sharing a coherence channel $\gamma_{12} \subset \mathcal{C}$ generated by a relational invariant $I_{12}$ (Definition 1.1 of er-epr.md). Assume:*
+**Lemma (Channel Handle).** *Let $\mathcal{O}_1, \mathcal{O}_2$ be two spatially separated observers sharing a coherence channel $\gamma_{12} \subset \mathcal{C}$ generated by a relational invariant $I_{12}$ ([ER=EPR](/derivations/holography/er-epr) Definition 1.1). Assume:*
 
-*(i) **Strict irreducibility:** $\gamma_{12}$ satisfies Proposition 1.2c of er-epr.md — it cannot be decomposed into channels via any intermediary observer.*
+*(i) **Strict irreducibility:** $\gamma_{12}$ satisfies [ER=EPR](/derivations/holography/er-epr) Proposition 1.2c — it cannot be decomposed into channels via any intermediary observer.*
 
-*(ii) **Manifold-like ambient:** The ambient causal set $\mathcal{C} \setminus \gamma_{12}$ faithfully embeds into a globally hyperbolic spacetime $(M_{\text{amb}}, g_{\text{amb}})$ at sprinkling density $V_c^{-1}$ satisfying the scale separation $V_c \ll v_0 \ll v \ll \tilde{v}$ of [Major–Rideout–Surya 2007].*
+*(ii) **Manifold-like ambient:** The ambient causal set $\mathcal{C} \setminus \gamma_{12}$ faithfully embeds into a globally hyperbolic spacetime $(M_{\text{amb}}, g_{\text{amb}})$ at sprinkling density $V_c^{-1}$ satisfying the scale separation $V_c \ll v_0 \ll v \ll \tilde{v}$ of [Major–Rideout–Surya, 2007].*
 
 *Then the combined causal set $\mathcal{C} = (\mathcal{C} \setminus \gamma_{12}) \cup \gamma_{12}$ has continuum approximation $(M, g)$ whose Cauchy slice $\Sigma$ satisfies $H_1(\Sigma; \mathbb{Z}) \neq 0$. In particular, there exists a non-contractible loop on $\Sigma$ that traverses the channel in one direction and ambient space in the other.*
 
@@ -83,7 +83,7 @@ In particular, if $\Delta \mathcal{C} > 0$, then $\mathcal{C}(I_{12}) < \mathcal
 
 ## 3. Irreducibility Implies Non-Embedding
 
-**Theorem 3.1 (Strict irreducibility forbids ambient embedding).** Let $\gamma_{12}$ satisfy the strict irreducibility hypothesis of er-epr.md Proposition 1.2c — namely, $\mathcal{C}(\gamma_{12}) = \mathcal{C}(I_{12})$ is conserved on every Cauchy slice that intersects $\gamma_{12}$, and $I_{12}$ does not decompose through any intermediary observer. Then $\gamma_{12}$ is endpoint-only embedded (Definition 1.4) — its interior elements have no ambient causal-set neighbors.
+**Theorem 3.1 (Strict irreducibility forbids ambient embedding).** Let $\gamma_{12}$ satisfy the strict irreducibility hypothesis of [ER=EPR](/derivations/holography/er-epr) Proposition 1.2c — namely, $\mathcal{C}(\gamma_{12}) = \mathcal{C}(I_{12})$ is conserved on every Cauchy slice that intersects $\gamma_{12}$, and $I_{12}$ does not decompose through any intermediary observer. Then $\gamma_{12}$ is endpoint-only embedded (Definition 1.4) — its interior elements have no ambient causal-set neighbors.
 
 *Proof.* By contradiction. Suppose $\gamma_{12}$ has at least one interior element $x \in \gamma_{12}^{\text{int}}$ with an ambient neighbor $y \in \mathcal{C} \setminus \gamma_{12}$. By Proposition 2.1, there exists a relational invariant $I_{x,y}$ with $\mathcal{C}(I_{x,y}) > 0$. By Proposition 2.3, this contributes $\Delta \mathcal{C} \geq \mathcal{C}(I_{x,y}) > 0$ to the boundary-invariant total, draining $\mathcal{C}(I_{12})$ below the full Cauchy-slice coherence: $\mathcal{C}(I_{12}) < \mathcal{C}_{\text{total}}(\Sigma)$.
 
@@ -111,9 +111,9 @@ This section establishes Step 4 of the program: that an endpoint-only-embedded c
 
 *Existence proof.* Two canonical examples:
 
-- **Eternal Schwarzschild–Kruskal extension.** The maximal extension of Schwarzschild has spatial slices $\mathbb{R} \times S^2$ (with one $S^2$ pinch at the bifurcation surface). This satisfies (a) with the two asymptotic regions joined through the Einstein–Rosen bridge, (b) with the handle being the bridge, and (c) by standard arguments (the Kruskal extension is globally hyperbolic; see Hawking–Ellis 1973). However, the Schwarzschild throat is non-traversable and contains a horizon — not all framework applications require this.
+- **Eternal Schwarzschild–Kruskal extension.** The maximal extension of Schwarzschild has spatial slices $\mathbb{R} \times S^2$ (with one $S^2$ pinch at the bifurcation surface). This satisfies (a) with the two asymptotic regions joined through the Einstein–Rosen bridge, (b) with the handle being the bridge, and (c) by standard arguments (the Kruskal extension is globally hyperbolic; see [Hawking–Ellis, 1973]). However, the Schwarzschild throat is non-traversable and contains a horizon — not all framework applications require this.
 
-- **Morris–Thorne traversable wormhole** ([Morris–Thorne 1988]). For appropriate (exotic-matter-violating-the-NEC) stress-energy, this is a globally hyperbolic spacetime with two asymptotically flat regions connected by a throat of finite area. Spatial slices have the connected-sum topology required by (b). $\square$
+- **Morris–Thorne traversable wormhole** ([Morris–Thorne, 1988]). For appropriate (exotic-matter-violating-the-NEC) stress-energy, this is a globally hyperbolic spacetime with two asymptotically flat regions connected by a throat of finite area. Spatial slices have the connected-sum topology required by (b). $\square$
 
 **Proposition 4.2 (Wormhole sprinkling matches the framework's combinatorial pattern).** A Poisson sprinkling of $(M_W, g_W)$ at density $V_c^{-1}$ produces a causal set $\mathcal{C}_W$ that decomposes into:
 
@@ -130,7 +130,7 @@ Therefore, an element $x$ sprinkled into the bridge interior has Planck-ball cau
 
 **Theorem 4.3 (Handle existence for the framework's channel).** Let $\gamma_{12}$ be the framework's strictly irreducible channel (satisfying Theorem 3.1, hence endpoint-only embedded). There exists a globally hyperbolic wormhole manifold $(M_W, g_W)$ (Proposition 4.1) such that the framework's combined causal set $\mathcal{C} = (\mathcal{C} \setminus \gamma_{12}) \cup \gamma_{12}$ is consistent with a faithful embedding into $(M_W, g_W)$: the ambient portion embeds into the asymptotic regions, and the channel $\gamma_{12}$ embeds into the bridge.
 
-By [Major–Rideout–Surya 2007] Theorem 2 and Corollary 2 (also reviewed in [Causal Set Statistics](/derivations/holography/causal-set-statistics)), the thickened-antichain construction $\mathsf{T}_n(A)$ on $\mathcal{C}$ recovers the spatial homology of $(M_W, g_W)$ with high probability under the scale separation $V_c \ll v_0 \ll v \ll \tilde{v}$. In particular, $H_1(\Sigma; \mathbb{Z}) = \mathbb{Z}$ is recoverable: there is a non-contractible 1-cycle in the antichain nerve that corresponds to the manifold's handle.
+By [Major–Rideout–Surya, 2007] Theorem 2 and Corollary 2 (also reviewed in [Causal Set Statistics](/derivations/holography/causal-set-statistics)), the thickened-antichain construction $\mathsf{T}_n(A)$ on $\mathcal{C}$ recovers the spatial homology of $(M_W, g_W)$ with high probability under the scale separation $V_c \ll v_0 \ll v \ll \tilde{v}$. In particular, $H_1(\Sigma; \mathbb{Z}) = \mathbb{Z}$ is recoverable: there is a non-contractible 1-cycle in the antichain nerve that corresponds to the manifold's handle.
 
 *Proof.* The consistency of the embedding follows directly from Propositions 4.1 and 4.2: the manifold exists, its sprinkling has the right combinatorial structure, and the framework's channel maps to the bridge sub-causal-set. The homology recovery is the content of the cited Major–Rideout–Surya theorem, whose hypotheses (globally hyperbolic, scale separation, inextendible antichain through both ambient and channel regions) are all satisfied by the present setup. $\square$
 
@@ -146,11 +146,11 @@ By [Major–Rideout–Surya 2007] Theorem 2 and Corollary 2 (also reviewed in [C
 
 Consider an interior channel element $x \in \gamma_{12}^{\text{int}}$. Under the hypothesized embedding $\Phi$, $\Phi(x)$ is a point in $\mathbb{R}^3 \times \mathbb{R}$. Consider a small spacetime ball around $\Phi(x)$ of volume $V$ with $V_c \ll V \ll v_0$ (Planck-scale region). By the Poisson condition (i), this ball contains on average $V / V_c \gg 1$ elements of $\mathcal{C}$.
 
-But by Theorem 3.1, $x$ has no ambient causal-set neighbors — its only causal-set neighbors are other elements of $\gamma_{12}$. The local density of $\gamma_{12}$ elements near $x$ is at most the "cross-section count" $N_{\min} = S_{\text{ent}}(I_{12})$ per cross-section (er-epr.md Section 3.4 discrete-throat picture). For a microscopic Bell pair, $S_{\text{ent}} = \ln 2$, and the local channel density is at most $\sim \ln 2$ elements per Planck cross-section.
+But by Theorem 3.1, $x$ has no ambient causal-set neighbors — its only causal-set neighbors are other elements of $\gamma_{12}$. The local density of $\gamma_{12}$ elements near $x$ is at most the "cross-section count" $N_{\min} = S_{\text{ent}}(I_{12})$ per cross-section ([ER=EPR](/derivations/holography/er-epr) Section 3.4 discrete-throat picture). For a microscopic Bell pair, $S_{\text{ent}} = \ln 2$, and the local channel density is at most $\sim \ln 2$ elements per Planck cross-section.
 
 The ambient density required by (i) is $V / V_c \gg \ln 2$ for any region above the discreteness scale. Therefore the local element count near $\Phi(x)$ is far below the Poisson mean required by (i). This violates faithful embedding.
 
-Concretely: the channel has $O(1)$ elements per Planck cross-section (set by the irreducible coherence count); flat-space sprinkling at density $V_c^{-1}$ has $V / V_c$ elements in any volume-$V$ region. For $V \gg V_c$, the deficit is enormous (factor of $V / V_c$). This is the "void cutting through" the causal set that the [Major–Rideout–Surya 2007] paper (page 19, $P_0 = \exp(-V/V_c)$) identifies as the principal obstacle to faithful embedding for under-stuffed regions.
+Concretely: the channel has $O(1)$ elements per Planck cross-section (set by the irreducible coherence count); flat-space sprinkling at density $V_c^{-1}$ has $V / V_c$ elements in any volume-$V$ region. For $V \gg V_c$, the deficit is enormous (factor of $V / V_c$). This is the "void cutting through" the causal set that the [Major–Rideout–Surya, 2007] paper (page 19, $P_0 = \exp(-V/V_c)$) identifies as the principal obstacle to faithful embedding for under-stuffed regions.
 
 Therefore $\Phi$ is not faithful, and no faithful embedding into flat space exists. $\square$
 
@@ -164,7 +164,7 @@ Therefore $\Phi$ is not faithful, and no faithful embedding into flat space exis
 
 - The flux-tube interpretation is excluded: the framework's causal set cannot faithfully embed into flat space.
 
-The conjunction rules out flux-tube and exhibits a consistent handle interpretation. This is the content needed for er-epr.md Theorem 3.2 Step 2: the ambient Cauchy slice acquires a non-contractible 1-cycle as a result of the channel's irreducibility.
+The conjunction rules out flux-tube and exhibits a consistent handle interpretation. This is the content needed for [ER=EPR](/derivations/holography/er-epr) Theorem 3.2 Step 2: the ambient Cauchy slice acquires a non-contractible 1-cycle as a result of the channel's irreducibility.
 
 **Hauptvermutung note.** If the Hauptvermutung of causal-set theory (uniqueness of continuum approximation) is proved, Corollary 4.6 upgrades from "handle is consistent, flat space is excluded" to "handle is the unique continuum class compatible with the framework's combinatorial structure." The framework's ER=EPR claim does not require this upgrade — uniqueness is a stronger result than needed.
 
@@ -180,9 +180,9 @@ The conjunction rules out flux-tube and exhibits a consistent handle interpretat
 
 **Handle topology?** Yes, by Corollary 4.6. The channel forces a Planck-scale wormhole connecting the two observer regions.
 
-**Throat area:** $A = 4\ell_P^2 \ln 2$ (er-epr.md Proposition 3.3).
+**Throat area:** $A = 4\ell_P^2 \ln 2$ ([ER=EPR](/derivations/holography/er-epr) Proposition 3.3).
 
-**Throat element count:** $N_{\min} = S_{\text{ent}} = \ln 2$, consistent with the discrete-throat picture (er-epr.md Section 3.4).
+**Throat element count:** $N_{\min} = S_{\text{ent}} = \ln 2$, consistent with the discrete-throat picture ([ER=EPR](/derivations/holography/er-epr) Section 3.4).
 
 **Topologically:** Spatial slice acquires a Planck-scale handle. The non-contractible loop is: leave $\mathcal{O}_1$, traverse flat space to $\mathcal{O}_2$ (length $L$), enter the wormhole, traverse the handle back to $\mathcal{O}_1$ (Planck-scale length). This loop generates $H_1 = \mathbb{Z}$.
 
@@ -190,7 +190,7 @@ The conjunction rules out flux-tube and exhibits a consistent handle interpretat
 
 ## Open Gaps
 
-**Gap 1 (Quantitative sprinkling match for Step 4a).** Proposition 4.2 establishes that wormhole-manifold sprinkling has endpoint-only-embedded throat sub-causal-set. What is not verified explicitly is the *quantitative* matching of the framework's channel element density (set by $N_{\min} = S_{\text{ent}}$) to the wormhole-bridge sprinkling density. A precise statement: for what wormhole geometries (throat radius, bridge length, matter content) does the Poisson sprinkling produce exactly $N_{\min}$ elements per Planck cross-section? This would require either an analytic argument or a numerical simulation in the spirit of [Cunningham et al. 2019, arXiv:1908.11647]. The framework's expectation: the framework's $N_{\min}$ matches the Planck-scale throat of a Morris–Thorne wormhole with throat radius $r_0 \sim \ell_P \sqrt{S_{\text{ent}}}$.
+**Gap 1 (Quantitative sprinkling match for Step 4a).** Proposition 4.2 establishes that wormhole-manifold sprinkling has endpoint-only-embedded throat sub-causal-set. What is not verified explicitly is the *quantitative* matching of the framework's channel element density (set by $N_{\min} = S_{\text{ent}}$) to the wormhole-bridge sprinkling density. A precise statement: for what wormhole geometries (throat radius, bridge length, matter content) does the Poisson sprinkling produce exactly $N_{\min}$ elements per Planck cross-section? This would require either an analytic argument or a numerical simulation in the spirit of [Cunningham–Surya, 2019]. The framework's expectation: the framework's $N_{\min}$ matches the Planck-scale throat of a Morris–Thorne wormhole with throat radius $r_0 \sim \ell_P \sqrt{S_{\text{ent}}}$.
 
 **Gap 2 (Interaction-type taxonomy strengthening).** The proof of Proposition 2.1 uses the framework's claim that every causal-set link corresponds to one of three interaction types (Type I, II, or III). If this taxonomy is incomplete — i.e., there exist "ghost" causal links with no associated interaction type — the proof fails. Mitigation: the framework's [Three Interaction Types](/derivations/interactions/three-types) derivation is rigorous (per memory), so the taxonomy is established within the framework. The gap is only meaningful if a future revision discovers a fourth interaction type or a category of "void" links.
 
@@ -222,8 +222,15 @@ The conjunction rules out flux-tube and exhibits a consistent handle interpretat
 
 ## References
 
-- Major, Rideout, Surya (2007), "On Recovering Continuum Topology from a Causal Set," [arXiv:gr-qc/0604124](https://arxiv.org/abs/gr-qc/0604124). Provides the thickened-antichain construction and the discrete-continuum homology correspondence.
-- Surya (2008), "Causal Set Topology," [arXiv:0712.1648](https://arxiv.org/abs/0712.1648). Review of CST topology results.
-- Morris, Thorne (1988), "Wormholes in spacetime and their use for interstellar travel: A tool for teaching general relativity," American Journal of Physics 56, 395–412.
-- Hawking, Ellis (1973), *The Large Scale Structure of Spacetime*, Cambridge University Press. Standard reference for Kruskal extension of Schwarzschild.
-- Cunningham, Surya, et al. (2019), "Dimensionally Restricted Causal Set Quantum Gravity: Examples in Two and Three Dimensions," [arXiv:1908.11647](https://arxiv.org/abs/1908.11647). Worked examples of CST with non-trivial spatial topology.
+- [Major–Rideout–Surya, 2007] — provides the thickened-antichain construction and the discrete-continuum homology correspondence.
+- [Surya, 2008] — review of CST topology results, including the Hauptvermutung status.
+- [Morris–Thorne, 1988] — explicit globally-hyperbolic traversable wormhole construction used in Proposition 4.1.
+- [Hawking–Ellis, 1973] — standard reference for the Kruskal extension of Schwarzschild and its global hyperbolicity.
+- [Cunningham–Surya, 2019] — worked examples of CST with non-trivial spatial topology ($S^1$, $T^2$); template for the Gap 1 simulation work.
+
+<!-- References -->
+[Major–Rideout–Surya, 2007]: /references#major-rideout-surya-2007
+[Surya, 2008]: /references#surya-2008
+[Morris–Thorne, 1988]: /references#morris-thorne-1988
+[Hawking–Ellis, 1973]: /references#hawking-ellis-1973
+[Cunningham–Surya, 2019]: /references#cunningham-surya-2019

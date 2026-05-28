@@ -136,6 +136,10 @@
     "title": "Proof of the Strong Subadditivity of Quantum-Mechanical Entropy",
     "url": "https://doi.org/10.1063/1.1666274"
   },
+  "hawking-ellis-1973": {
+    "title": "The Large Scale Structure of Space-Time",
+    "url": "https://doi.org/10.1017/CBO9780511524646"
+  },
   "bertrand-1873": {
     "title": "Théorème relatif au mouvement d'un point attiré vers un centre fixe",
     "url": "https://gallica.bnf.fr/ark:/12148/bpt6k3042j/f849"
@@ -187,6 +191,10 @@
   "giles-1981": {
     "title": "Reconstruction of Gauge Potentials from Wilson Loops",
     "url": "https://doi.org/10.1103/PhysRevD.24.2160"
+  },
+  "morris-thorne-1988": {
+    "title": "Wormholes in Spacetime and Their Use for Interstellar Travel: A Tool for Teaching General Relativity",
+    "url": "https://doi.org/10.1119/1.15620"
   },
   "freedman-1982": {
     "title": "The Topology of Four-Dimensional Manifolds",
@@ -396,9 +404,17 @@
     "title": "Decoherence and the Quantum-to-Classical Transition",
     "url": "https://doi.org/10.1007/978-3-540-35775-9"
   },
+  "major-rideout-surya-2007": {
+    "title": "On Recovering Continuum Topology from a Causal Set",
+    "url": "https://arxiv.org/abs/gr-qc/0604124"
+  },
   "sekino-susskind-2008": {
     "title": "Fast Scramblers",
     "url": "https://doi.org/10.1088/1126-6708/2008/10/065"
+  },
+  "surya-2008": {
+    "title": "Causal Set Topology",
+    "url": "https://arxiv.org/abs/0712.1648"
   },
   "ashtekar-singh-2011": {
     "title": "Loop Quantum Cosmology: A Status Report",
@@ -451,6 +467,10 @@
   "almheiri-2019": {
     "title": "The Entropy of Bulk Quantum Fields and the Entanglement Wedge of an Evaporating Black Hole",
     "url": "https://doi.org/10.1007/JHEP12(2019)063"
+  },
+  "cunningham-surya-2019": {
+    "title": "Dimensionally Restricted Causal Set Quantum Gravity: Examples in Two and Three Dimensions",
+    "url": "https://arxiv.org/abs/1908.11647"
   },
   "abel-2020": {
     "title": "Mapping the QCD Phase Diagram from the Lattice: Strong CP Problem",

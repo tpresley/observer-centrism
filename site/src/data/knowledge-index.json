@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-05-28T01:59:27.236Z",
+    "generatedAt": "2026-05-28T02:38:51.211Z",
     "derivationCount": 99,
     "predictionCount": 13,
     "gaPageCount": 12,
@@ -13851,7 +13851,7 @@
           "type": "Theorem",
           "id": "3.1",
           "name": "Strict irreducibility forbids ambient embedding",
-          "statementPreview": "Let gamma12 satisfy the strict irreducibility hypothesis of er-epr.md Proposition 1.2c — namely, C(gamma12) = C(I12) ..."
+          "statementPreview": "Let gamma12 satisfy the strict irreducibility hypothesis of [ER=EPR](/derivations/holography/er-epr) Proposition 1.2c..."
         },
         {
           "type": "Corollary",
@@ -13901,6 +13901,10 @@
             "context": "ER=EPR derivation"
           },
           {
+            "target": "holography/er-epr",
+            "context": "ER=EPR"
+          },
+          {
             "target": "interactions/relational-invariants",
             "context": "Relational Invariants"
           },
@@ -13923,10 +13927,6 @@
           {
             "target": "foundation/substrate-noise-and-profile-coupling",
             "context": "Substrate Noise and Profile Coupling"
-          },
-          {
-            "target": "holography/er-epr",
-            "context": "ER=EPR"
           }
         ],
         "incoming": [
